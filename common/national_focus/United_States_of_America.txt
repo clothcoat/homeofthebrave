@@ -1687,8 +1687,8 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_emergency_intervention"
 			swap_ideas = {
-			remove_idea = 
-			add_idea = 
+			remove_idea = USA_great_depression
+			add_idea = USA_great_depression_Norris_1
 			}
 			add_stability = 0.03
 			hidden_effect = {
@@ -1717,6 +1717,14 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_mcnary_plan"
 			add_stability = 0.02
+			random_owned_state = {
+				limit = {
+					is_core_of = USA
+					is_controlled_by = USA
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+			}
 			random_owned_state = {
 				limit = {
 					is_core_of = USA
@@ -1784,8 +1792,8 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_war_on_unemployment"
 			swap_ideas = {
-			remove_idea = 
-			add_idea = 
+			remove_idea = USA_great_depression_Norris_1
+			add_idea = USA_great_depression_Norris_2
 			}
 		}
 	}
@@ -1914,10 +1922,6 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_square_deal"
-			hidden_effect = {
-			remove_idea = 
-			add_idea = 
-			}
 			add_ideas = USA_the_fair_deal
 		}
 	}
@@ -2036,8 +2040,8 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_dreams_of_henry_george"
 			swap_ideas = {
-			remove_idea = 
-			add_idea = 
+			remove_idea = USA_the_fair_deal
+			add_idea = USA_the_fair_deal_2
 			}
 			add_popularity = { ideology = social_democrat popularity = 0.05 }
 		}
@@ -2062,7 +2066,42 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_forresty_for_america"
-			custom_effect_tooltip = unlock_focuses
+			random_owned_controlled_state = {
+				limit = {
+					is_mainland_america = yes
+					infrastructure < 9
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_mainland_america = yes
+					infrastructure < 9
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_mainland_america = yes
+					infrastructure < 9
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_mainland_america = yes
+					infrastructure < 9
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = USA
+					is_controlled_by = USA
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+			}
 		}
 	}
 	
@@ -2091,6 +2130,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_a_popular_vote"
+			swap_ideas = {
+			remove_idea = USA_the_fair_deal_2
+			add_idea = USA_the_fair_deal_3
+			}
 			add_stability = -0.05
 		}
 	}
