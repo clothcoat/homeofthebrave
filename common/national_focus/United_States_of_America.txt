@@ -2114,7 +2114,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_the_greatest_evil"
-			add_ideas = USA_prohibition
+			add_ideas = USA_prohibition_idea
 		}
 	}
 	
@@ -2160,7 +2160,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_model_legislature"
-			custom_effect_tooltip = unlock_focuses
+			add_political_power = 50
+			add_stability = 0.03
 		}
 	}
 	
