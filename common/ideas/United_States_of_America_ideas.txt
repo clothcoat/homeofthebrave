@@ -72,18 +72,19 @@ ideas = {
 			modifier = {
 				production_factory_max_efficiency_factor = -0.15
 				industrial_capacity_factory = -0.35
+				stability_factor = -0.03
 				production_speed_buildings_factor = -0.25
-				consumer_goods_factor = 0.40
+				consumer_goods_factor = 0.35
 			}
 		}
 		USA_great_depression_garner_2 = { #The Great Depression
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_great_depression_garner_2"}
 			picture = usa_great_depression_2
 			modifier = {
-				production_factory_max_efficiency_factor = -0.15
-				industrial_capacity_factory = -0.35
-				production_speed_buildings_factor = -0.25
-				consumer_goods_factor = 0.40
+				production_factory_max_efficiency_factor = -0.1
+				industrial_capacity_factory = -0.3
+				production_speed_buildings_factor = -0.2
+				consumer_goods_factor = 0.25
 			}
 		}
 		USA_austerity_garner = { #Austerity
@@ -110,7 +111,41 @@ ideas = {
 				consumer_goods_factor = 0.05
 			}
 		}
-		
+		###Norris Response###
+		USA_great_depression_Norris_1 = { #Norris Response
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_great_depression_Norris_1"}
+			picture = usa_great_depression_2
+			modifier = {
+				production_factory_max_efficiency_factor = -0.08
+				industrial_capacity_factory = -0.25
+				monthly_population = -0.05
+				stability_factor = -0.03
+				production_speed_buildings_factor = -0.15
+				consumer_goods_factor = 0.35
+			}
+		}
+		USA_great_depression_Norris_2 = { #Norris Response
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_great_depression_Norris_2"}
+			picture = usa_great_depression_2
+			modifier = {
+				production_factory_max_efficiency_factor = -0.05
+				industrial_capacity_factory = -0.15
+				monthly_population = -0.05
+				production_speed_buildings_factor = -0.15
+				consumer_goods_factor = 0.2
+			}
+		}
+		USA_the_fair_deal = { #Fair Deal
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_great_depression_Norris_2"}
+			picture = usa_great_depression_2
+			modifier = {
+				production_factory_max_efficiency_factor = -0.05
+				industrial_capacity_factory = -0.15
+				monthly_population = -0.05
+				production_speed_buildings_factor = -0.15
+				consumer_goods_factor = 0.2
+			}
+		}
 		### Civil War Ideas ###
 		amcivwar_idea = { #Fighting for America
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea amcivwar_idea"}
