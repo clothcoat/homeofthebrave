@@ -1,0 +1,47 @@
+##################################################
+### Add popularity to Longism ####
+##################################################
+
+
+
+change_to_socdem_popularity = {
+	set_temp_variable = {
+		var = new_socdem_popularity
+		value = party_popularity@authoritarian_democrat
+	}
+	multiply_temp_variable = {
+		var = socdem_popularity
+		value = 0.8
+	}
+	set_temp_variable = {
+		var = new_authoritarian_democrat_popularity
+		value = party_popularity@authoritarian_democrat
+	}
+	multiply_temp_variable = {
+		var = new_authoritarian_democrat_popularity
+		value = -0.2
+	}
+	add_popularity = { ideology = social_democrat popularity = new_socdem_popularity }
+	add_popularity = { ideology = authoritarian_democrat popularity = new_authoritarian_democrat_popularity } 
+	custom_effect_tooltip = long_change_to_socdem_popularity
+	hidden_effect = {
+			create_country_leader = {
+				name = "Julius Evola"
+				desc = "POLITICS_JULIUS_EVOLA_DESC"
+				picture = "gfx/leaders/SIC/Julius_Evola.dds"
+				expire = "1970.1.1"
+				ideology = national_populist_subtype
+				traits = {}
+			}
+		}
+		set_party_name = {
+			ideology = social_democrat
+			long_name = TEX_progressive_AFP_social_democrat_party_long
+			name = TEX_progressive_AFP_social_democrat_party }
+		set_politics = {
+			ruling_party = social_democrat
+			election_frequency = 48
+			last_election = "1936.11.08"
+			elections_allowed = no
+		}
+}

@@ -1,0 +1,329 @@
+music_station = "hotb_main_music"
+
+music = {
+	song = "maintheme"
+	chance = {
+		modifier = {
+			factor = 0.5
+		}
+	}
+}
+
+# SPECIAL
+
+music = {
+	song = "7thcavmarch"
+
+	chance = {
+		modifier = {
+			factor = 1.25
+		}
+		modifier = {
+			factor = 0
+			has_war = no
+		}
+	}
+}
+
+music = {
+	song = "everymanaking"
+
+	chance = {
+		modifier = {
+			factor = 1.25
+		}
+		modifier = {
+			factor = 0
+
+			NOT = {
+				any_war_score > 0.7
+				has_tech = nukes
+			}
+		}
+	}
+}
+
+music = {
+	song = "maidensprayer"
+
+	chance = {
+		modifier = {
+			factor = 2
+			not_has_socialist_government = yes
+		}
+		modifier = {
+			factor = 0
+			has_socialist_government = yes
+		}
+	}
+}
+
+music = {
+	song = "bonnieblueflag"
+
+	chance = {
+		modifier = {
+			factor = 2
+			not_has_socialist_government = yes
+		}
+		modifier = {
+			factor = 0
+			has_socialist_government = yes
+		}
+	}
+}
+
+music = {
+	song = "bunkerhill"
+
+	chance = {
+		modifier = {
+			factor = 2
+			not_has_socialist_government = yes
+		}
+		modifier = {
+			factor = 0
+			has_socialist_government = yes
+		}
+	}
+}
+
+music = {
+	song = "columbiagemoftheocean"
+
+	chance = {
+		modifier = {
+			factor = 2
+			not_has_socialist_government = yes
+		}
+		modifier = {
+			factor = 0
+			has_socialist_government = yes
+		}
+	}
+}
+
+music = {
+	song = "hailcolumbia"
+
+	chance = {
+		modifier = {
+			factor = 2
+			not_has_socialist_government = yes
+		}
+		modifier = {
+			factor = 0
+			has_socialist_government = yes
+		}
+	}
+}
+
+music = {
+	song = "heebiejeebies"
+
+	chance = {
+		modifier = {
+			factor = 2
+			not_has_socialist_government = yes
+		}
+		modifier = {
+			factor = 0
+			has_socialist_government = yes
+		}
+	}
+}
+
+music = {
+	song = "hellonthewabashfifeanddrum"
+
+	chance = {
+		modifier = {
+			factor = 2
+			not_has_socialist_government = yes
+		}
+		modifier = {
+			factor = 0
+			has_socialist_government = yes
+		}
+	}
+}
+
+music = {
+	song = "jubaaliresgospelnoah"
+
+	chance = {
+		modifier = {
+			factor = 2
+			not_has_socialist_government = yes
+		}
+		modifier = {
+			factor = 0
+			has_socialist_government = yes
+		}
+	}
+}
+
+music = {
+	song = "kingcottonmarch"
+
+	chance = {
+		modifier = {
+			factor = 2
+			not_has_socialist_government = yes
+		}
+		modifier = {
+			factor = 0
+			has_socialist_government = yes
+		}
+	}
+}
+
+music = {
+	song = "mechanizedmarch"
+
+	chance = {
+		modifier = {
+			factor = 2
+			not_has_socialist_government = yes
+		}
+		modifier = {
+			factor = 0
+			has_socialist_government = yes
+		}
+	}
+}
+
+music = {
+	song = "mickeymouseclubmarch"
+
+	chance = {
+		modifier = {
+			factor = 2
+			not_has_socialist_government = yes
+		}
+		modifier = {
+			factor = 0
+			has_socialist_government = yes
+		}
+	}
+}
+
+music = {
+	song = "nianiania"
+
+	chance = {
+		modifier = {
+			factor = 2
+			not_has_socialist_government = yes
+		}
+		modifier = {
+			factor = 0
+			has_socialist_government = yes
+		}
+	}
+}
+
+music = {
+	song = "iloveyoucali"
+
+	chance = {
+		modifier = {
+			factor = 2
+			not_has_socialist_government = yes
+		}
+		modifier = {
+			factor = 0
+			has_socialist_government = yes
+		}
+	}
+}
+
+music = {
+	song = "takemehome"
+
+	chance = {
+		modifier = {
+			factor = 2
+			not_has_socialist_government = yes
+		}
+		modifier = {
+			factor = 0
+			has_socialist_government = yes
+		}
+	}
+}
+
+music = {
+	song = "16tons"
+
+	chance = {
+		modifier = {
+			factor = 2
+			not_has_socialist_government = yes
+		}
+		modifier = {
+			factor = 0
+			has_socialist_government = yes
+		}
+	}
+}
+
+music = {
+	song = "thegreenmountaineer"
+
+	chance = {
+		modifier = {
+			factor = 2
+			not_has_socialist_government = yes
+		}
+		modifier = {
+			factor = 0
+			has_socialist_government = yes
+		}
+	}
+}
+
+music = {
+	song = "fightforyournation"
+
+	chance = {
+		modifier = {
+			factor = 2
+			not_has_socialist_government = yes
+		}
+		modifier = {
+			factor = 0
+			has_socialist_government = yes
+		}
+	}
+}
+
+music = {
+	song = "hailtothechief"
+
+	chance = {
+		modifier = {
+			factor = 2
+			not_has_socialist_government = yes
+		}
+		modifier = {
+			factor = 0
+			has_socialist_government = yes
+		}
+	}
+}
+
+music = {
+	song = "yankeedoodle"
+
+	chance = {
+		modifier = {
+			factor = 2
+			not_has_socialist_government = yes
+		}
+		modifier = {
+			factor = 0
+			has_socialist_government = yes
+		}
+	}
+}
