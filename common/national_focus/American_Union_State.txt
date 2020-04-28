@@ -5969,7 +5969,7 @@ focus_tree = {
 	
 	focus = {
 		id = TEX_denounce_oligarchs
-		icon = GFX_goal_aus_fortress
+		icon = GFX_focus_generic_anti_fascist_diplomacy
 		cost = 6.00
 		prerequisite = {
 			focus = TEX_americanist_doctrine
@@ -6003,7 +6003,7 @@ focus_tree = {
 	
 	focus = {
 		id = TEX_investigate_war_lobbyists
-		icon = GFX_goal_aus_fortress
+		icon = GFX_NEE_investigate_the_machines
 		cost = 6.00
 		prerequisite = {
 			focus = TEX_denounce_oligarchs
@@ -6037,7 +6037,7 @@ focus_tree = {
 	###New Populism
 	focus = {
 		id = TEX_popular_monroeism
-		icon = GFX_goal_aus_fortress
+		icon = GFX_goal_USA_spirit_of_monroe
 		cost = 6.00
 		prerequisite = {
 			focus = TEX_americanist_doctrine
@@ -6078,7 +6078,7 @@ focus_tree = {
 	
 	focus = {
 		id = TEX_populist_alliance
-		icon = GFX_goal_aus_fortress
+		icon = GFX_goal_generic_major_alliance
 		cost = 6.00
 		prerequisite = {
 			focus = TEX_popular_monroeism
@@ -6113,7 +6113,7 @@ focus_tree = {
 	
 	focus = {
 		id = TEX_internationale_non_agression_pact
-		icon = GFX_goal_aus_fortress
+		icon = GFX_BBR_internationale_collaboration
 		cost = 6.00
 		prerequisite = {
 			focus = TEX_populist_alliance
@@ -6151,7 +6151,7 @@ focus_tree = {
 	
 	focus = {
 		id = TEX_ideological_neutrality
-		icon = GFX_goal_aus_fortress
+		icon = GFX_goal_generic_neutrality_focus
 		cost = 6.00
 		prerequisite = {
 			focus = TEX_populist_alliance
@@ -6189,7 +6189,7 @@ focus_tree = {
 	
 	focus = {
 		id = TEX_oppose_american_syndicalism
-		icon = GFX_goal_aus_fortress
+		icon = GFX_goal_USA_stop_southern_syndicalism
 		cost = 6.00
 		prerequisite = {
 			focus = TEX_populist_alliance
@@ -6226,7 +6226,7 @@ focus_tree = {
 	
 	focus = {
 		id = TEX_align_nationalists
-		icon = GFX_goal_aus_fortress
+		icon = GFX_goal_COR_deal_with_dixiecrats
 		cost = 6.00
 		prerequisite = {
 			focus = TEX_oppose_american_syndicalism
@@ -6262,7 +6262,7 @@ focus_tree = {
 	
 	focus = {
 		id = TEX_break_war_mongerers
-		icon = GFX_goal_aus_fortress
+		icon = GFX_focus_generic_support_the_left_right
 		cost = 6.00
 		prerequisite = {
 			focus = TEX_oppose_american_syndicalism
@@ -6300,7 +6300,7 @@ focus_tree = {
 	
 	focus = {
 		id = TEX_contain_hostile_leftism
-		icon = GFX_goal_aus_fortress
+		icon = GFX_goal_USA_new_interventionism
 		cost = 6.00
 		prerequisite = {
 			focus = TEX_break_war_mongerers
@@ -6367,7 +6367,7 @@ focus_tree = {
 	
 	focus = {
 		id = TEX_break_militarists
-		icon = GFX_goal_aus_fortress
+		icon = GFX_goal_USA_anti_imperialist_league
 		cost = 6.00
 		prerequisite = {
 			focus = TEX_break_war_mongerers
@@ -6399,7 +6399,7 @@ focus_tree = {
 	}
 	focus = {
 		id = TEX_aid_paraguay
-		icon = GFX_goal_aus_fortress
+		icon = GFX_goal_paraguay
 		cost = 6.00
 		prerequisite = {
 			focus = TEX_break_militarists
@@ -6432,7 +6432,7 @@ focus_tree = {
 	
 	focus = {
 		id = TEX_friendship_in_the_americas
-		icon = GFX_goal_aus_fortress
+		icon = GFX_goal_USA_anti_syndicalist_alignment
 		cost = 6.00
 		prerequisite = {
 			focus = TEX_break_militarists
@@ -6471,7 +6471,7 @@ focus_tree = {
 	
 	focus = {
 		id = TEX_mutual_trade
-		icon = GFX_goal_aus_fortress
+		icon = GFX_goal_generic_positive_trade_relations
 		cost = 6.00
 		prerequisite = {
 			focus = TEX_friendship_in_the_americas
@@ -6504,7 +6504,7 @@ focus_tree = {
 	
 	focus = {
 		id = TEX_research_agreement
-		icon = GFX_goal_aus_fortress
+		icon = GFX_goal_double_research
 		cost = 6.00
 		prerequisite = {
 			focus = TEX_friendship_in_the_americas
@@ -6578,7 +6578,7 @@ focus_tree = {
 
 	focus = {
 		id = TEX_naval_prominence
-		icon = GFX_goal_generic_national_unity
+		icon = GFX_goal_generic_navy_doctrines_tactics
 		cost = 6.00
 		prerequisite = {
 			focus = TEX_fortress_america
@@ -6606,7 +6606,7 @@ focus_tree = {
 	
 	focus = {
 		id = TEX_Northern_boundary_defense
-		icon = GFX_goal_generic_national_unity
+		icon = GFX_goal_fortify_the_westwall
 		cost = 6.00
 		prerequisite = {
 			focus = TEX_fortress_america
@@ -6634,7 +6634,7 @@ focus_tree = {
 	
 	focus = {
 		id = TEX_defensive_doctrine
-		icon = GFX_goal_generic_national_unity
+		icon = GFX_goal_generic_defence
 		cost = 6.00
 		prerequisite = {
 			focus = TEX_naval_prominence
@@ -6665,7 +6665,7 @@ focus_tree = {
 
 	focus = {
 		id = TEX_look_inward
-		icon = GFX_goal_generic_national_unity
+		icon = GFX_focus_usa_guarantee_the_american_dream
 		cost = 6.00
 		prerequisite = {
 			focus = TEX_defensive_doctrine
@@ -6693,7 +6693,7 @@ focus_tree = {
 	
 	focus = {
 		id = TEX_business_of_neutrality
-		icon = GFX_focus_generic_the_giant_wakes
+		icon = GFX_goal_generic_consumer_goods
 		cost = 6.00
 		prerequisite = {
 			focus = TEX_defensive_doctrine
@@ -6725,7 +6725,7 @@ focus_tree = {
 
 	focus = {
 		id = TEX_leap_forward
-		icon = GFX_goal_great_science
+		icon = GFX_focus_research2
 		cost = 6.00
 		prerequisite = {
 			focus = TEX_business_of_neutrality
