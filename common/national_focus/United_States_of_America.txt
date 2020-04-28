@@ -938,10 +938,6 @@ focus_tree = {
 			id = ustates.93
 			days = 2
 				}
-			country_event = {
-			id = ustates.94
-			days = 8
-				}
 			}
 		}
 	}
@@ -977,7 +973,7 @@ focus_tree = {
 	focus = {# Undermine Old Democrats
 		id = USA_undermine_old_democrats
 		icon = GFX_HOL_crackdown_natpop
-		cost = 6.00
+		cost = 3.00
 		prerequisite = {
 			focus = USA_garner_wins
 		}
@@ -1000,7 +996,7 @@ focus_tree = {
 	focus = {# Hoover's Boys
 		id = USA_hoovers_boys
 		icon = GFX_USA_directors_boys
-		cost = 6.00
+		cost = 2.00
 		prerequisite = {
 			focus = USA_smash_radicals
 		}
@@ -1094,7 +1090,7 @@ focus_tree = {
 			add_popularity = { ideology = totalist popularity = -0.05 }
 			hidden_effect = {
 			country_event = {
-			id = ustates.1050
+			id = ustates.99
 			days = 40
 				}
 			}
@@ -1120,6 +1116,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_yay_liquor"
 			add_political_power = 40
+			add_popularity = { ideology = social_conservative popularity = 0.03 }
 		}
 	}
 	
@@ -1142,7 +1139,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_sovereignity_of_legislature"
 			add_political_power = 50
-			add_popularity = { ideology = social_conservative popularity = 0.04 }
+			add_popularity = { ideology = social_conservative popularity = 0.05 }
 			remove_idea = USA_political_crisis
 		}
 	}
@@ -1789,6 +1786,11 @@ focus_tree = {
 		ai_will_do = {
 			factor = 50
 		}
+		select_effect = {
+		hidden_effect = {
+			country_event = { id = ustates.ustates.1133 days = 5 }
+			}
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_war_on_unemployment"
 			swap_ideas = {
@@ -1818,6 +1820,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_war_on_the_klan"
+			add_ideas = USA_southern_occupation
 			add_political_power = -50
 			add_stability = 0.03
 			add_popularity = { ideology = national_populist popularity = -0.05 }
@@ -1894,8 +1897,18 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_jeffersonian_agrarianism"
+			swap_ideas = {
+			remove_idea = USA_southern_occupation
+			add_idea = USA_southern_occupation_2
+			}
 			add_political_power = 30
-			add_popularity = { ideology = social_democrat popularity = 0.04 }
+			add_stability = 0.05
+			add_popularity = { ideology = social_democrat popularity = 0.08 }
+			add_popularity = { ideology = paternal_autocrat popularity = -0.04 }
+			add_popularity = { ideology = national_populist popularity = -0.03 }
+			hidden_effect = {
+			country_event = { id = ustates.ustates.1152 days = 67 }
+			}
 		}
 	}
 	
@@ -2134,6 +2147,7 @@ focus_tree = {
 			remove_idea = USA_the_fair_deal_2
 			add_idea = USA_the_fair_deal_3
 			}
+			remove_ideas = USA_political_crisis
 			add_stability = -0.05
 		}
 	}
@@ -3988,7 +4002,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_little_troopers"
-			add_ideas = USA_empowered_army_idea
+			swap_ideas = {
+			remove_idea = USA_national_youth_idea_2
+			add_idea = USA_national_youth_idea_3
+			}
 			add_popularity = { ideology = paternal_autocrat popularity = 0.03 }
 			add_stability = 0.08
 		}
@@ -4009,7 +4026,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_little_troopers"
-			add_ideas = USA_barracks_capitalism
+			add_ideas = USA_barracks_capitalism_idea
 			add_popularity = { ideology = paternal_autocrat popularity = 0.05 }
 			add_stability = 0.05
 		}
@@ -4035,7 +4052,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_little_troopers"
 			swap_ideas = {
 			remove_idea = USA_american_caeser_idea_4
-			add_idea = USA_american_caeser_idea_5strato
+			add_idea = USA_american_caeser_idea_5
 			}
 			add_popularity = { ideology = paternal_autocrat popularity = 0.15 }
 			add_stability = 0.1
@@ -4070,9 +4087,13 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_the_junta"
+			swap_ideas = {
+			remove_idea = USA_empowered_army_idea
+			add_idea = USA_empowered_army_idea_2Junta
+			}
 			add_stability = 0.15
 			army_experience = 0.05
-			add_political_power = -20
+			add_political_power = -40
 		}
 	}
 	
@@ -4363,6 +4384,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_the_triumverant"
+			swap_ideas = {
+			remove_idea = USA_empowered_army_idea
+			add_idea = USA_empowered_army_idea_2Junta
+			}
 			add_stability = 0.05
 			add_political_power = 50
 			add_command_power = 25
