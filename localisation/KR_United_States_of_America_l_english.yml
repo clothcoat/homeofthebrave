@@ -24,19 +24,12 @@ USA_paternal_autocrat_party_long:0 "Old Democratic Party"
 USA_national_populist_party:0 "Old Democratic Party"
 USA_national_populist_party_long:0 "Old Democratic Party (National White League)"
 
-USA_social_democrat_coalition:0 "National Unity Party"
-USA_social_democrat_coalition_long:0 "National Unity Party"
-USA_social_liberal_coalition:0 "National Unity Party"
-USA_social_liberal_coalition_long:0 "National Unity Party"
-USA_market_liberal_coalition:0 "National Unity Party"
-USA_market_liberal_coalition_long:0 "National Unity Party"
-USA_social_conservative_coalition:0 "National Unity Party"
-USA_social_conservative_coalition_long:0 "National Unity Party"
-
-USA_market_lib_party:0 "Liberal Party"
-USA_market_lib_party_long:0 "Liberal Party"
-USA_social_con_party:0 "Constitution Party"
-USA_social_con_party_long:0 "Constitution Party"
+USA_radical_socialist_coalition:0 "Republican Party"
+USA_radical_socialist_coalition_long:0 "Republican Party (Radicals)"
+USA_social_democrat_coalition:0 "Republican Party"
+USA_social_democrat_coalition_long:0 "Republican Party (Progressive)"
+USA_paternal_autocrat_coalition:0 "Democratic Party"
+USA_paternal_autocrat_coalition_long:0 "Democratic Party (Old Democrats)"
 
 USA_paternal_autocrat_military_junta_long:0 "Military Junta"
 USA_paternal_autocrat_military_junta:0 "Military Junta"
@@ -133,7 +126,7 @@ KR_trade_sanctions:0 "Trade Sanctions"
 USA_demanded_debt_payment:0 "Demanded war debt repayment"
 
 ### Global and Country Flags ###
-USA_civil_war_avoided_flag:0 "The American Civil War has been avoided"
+USA_Civil_War_Averted:0 "The American Civil War has been avoided"
 USA_civil_war_over_flag:0 "The American Civil War is over"
 USA_civil_war_begun_flag:0 "The American Civil War has begun"
 macarthur_keeps_power_flag:0 "MacArthur has kept his emergency powers"
@@ -366,13 +359,25 @@ USA_great_depression_garner_2: "Great Depression Rural Recoverty"
 USA_austerity_garner:0 "Austerity Measures"
 USA_black_monday2_garner:0 "Returning Market Confidence"
 USA_army_expanionism_garner:0 "Army Expansion"
+USA_steel_belt_occupied:0 "Steel Belt Occupation"
+
+# Landon Ideas#
+USA_great_depression_garner_1: "Great Depression Rural Recovery"
+USA_great_depression_garner_2: "Great Depression Rural Recoverty"
+USA_austerity_garner:0 "Austerity Measures"
+USA_black_monday2_garner:0 "Returning Market Confidence"
+USA_army_expanionism_garner:0 "Army Expansion"
+USA_steel_belt_occupied:0 "Steel Belt Occupation"
 
 # Norris Ideas#
 USA_prohibition_idea: "Prohibition"
 USA_the_fair_deal: "The Fair Deal"
 USA_the_fair_deal_2:0 "The Fair Deal"
 USA_the_fair_deal_3:0 "The Fair Deal"
+USA_southern_occupation:0 "White League Occupation"
+USA_southern_occupation_2:0 "Southern Relief Efforts"
 USA_great_depression_Norris_1:0 "Economic Intervention"
+USA_great_depression_Norris_2:0 "Mass Relief Efforts"
 
 # Mac Ideas#
 USA_defenders_of_republicanism_idea:0 "Republican Loyalism"
@@ -1626,8 +1631,8 @@ ustates.91.d:0 "Today John Nance Garner has been sworn in as the 31st president 
 ustates.91.a:0 "God Save America"
 
 ustates.9100.t:0 "President Announces Hard Line"
-ustates.9100.d:0 "President [USA.GetLeader] today announced that a hard line would be taken against the SPA strikers, and indeed against any extremist force that seeks to further destablize America. Executive Orders have been issues to curb the ability of the America First Party and the Socialist Party of America to operate, this despite protests from Senators in both parties. All SPA and AFP Senators walked out of Capitol Hill, to the jeers of their Republican and Democratic colleagues, thus adding to the sense that the country was nearing a political breaking point."
-ustates.9100.a:0 "We will restore order, no matter what"
+ustates.9100.d:0 "President [USA.GetLeader] today announced that a hard line would be taken against the SPA strikers, and indeed against any extremist force that seeks to further destablize America. He has ordered all rioters in the Steel Belt to return home and likewise for all AFP minutemen and ODP militants to stand down before military action is taken. All SPA, AFP and ODP Senators walked out of Capitol Hill, to the jeers of their Republican and Democratic colleagues, thus adding to the sense that the country was nearing a political breaking point."
+ustates.9100.a:0 "We will win"
 
 ustates.9101.t:0 "J. Edgar Hoover's Proposal"
 ustates.9101.d:0 "J. Edgar Hoover, Director of the FBI, arrived at the White House early today to grimly inform President [USA.GetLeader] that civil war is imminent. The best chance for the federal government, he says, is to take decisive action now before the AFP and SPA can become more organized. An assassination of Huey Long would mean the collapse of the AFP, as it centered around his personality. An assassination of Jack Reed, meanwhile, would throw the SPA into disarray while the IWW and AFL competed for leadership... at least long enough for the immediate danger to pass. There would be consequences, Hoover advises, not least of all the rightful suspicion that would fall on a democratic government for taking such an extreme act... but these are desperate times. If the FBI is to act, Hoover says, they must act now, for there is only time for one operation."
@@ -1635,19 +1640,20 @@ ustates.9101.a:0 "Investigate Huey Long"
 ustates.9101.b:0 "Investigate Jack Reed"
 ustates.9101.c:0 "Investigate William H. Murray"
 ustates.9101.e:0 "Investigate D.C. Stephenson"
-ustates.9101.f:0 "Investigate Investigate Earl Browder"
+ustates.9101.f:0 "Investigate Earl Browder"
 
 ustates.9102.t:0 "Investigation turns up little"
-ustates.9102.dreed:0 "Our investigation into Reed has largely been a failure apart! All we have discovered"
-ustates.9102.dlong:0 "Our investigation into Long has only overturned "
-ustates.9102.dbrowder:0 "Our investigation has been a total waste of resources, turning up virtually nothing of value. Let's hope the army can maintain the peace."
+ustates.9102.dreed:0 "Our investigation into Reed has largely been a failure apart! All we have discovered is his more direct connection to SPA Militants but no one would be shocked by this."
+ustates.9102.dlong:0 "Our investigation into Long has only overturned the typical patronage of the AFP and graft the public would basically expect anyways. There is nothing of value here."
+ustates.9102.dbrowder:0 "Our investigation has been a total waste of resources, only discovering that Browder is something of a backroom deal cutter in the SPA. This is virtually nothing of value. Let's hope the army can maintain the peace."
+ustates.9102.dMurray:0 "Our investigation has been a total waste of resources, only discovering that Murray has Klan associates, something most would expect despite him never commenting on it. This is virtually nothing of value. Let's hope the army can maintain the peace."
 ustates.9102.a:0 "Damn!"
-ustates.9102.b:0 "Release it"
 
 ustates.9103.t:0 "Military Action Prepared!"
-ustates.9103.d:0 "Our military is prepared to defend the Republic from the radicals! The only question now is where to use it? MacArthur has suggested using the bulk of the military to occupy the syndicalist occupied territory that is still striking while the cabinet would like to spread out the forces more and occupy all three radical factions."
+ustates.9103.d:0 "Our military is prepared to defend the Republic from the radicals! The only question now is where to use it? Anti-radicals have suggested using the bulk of the military to occupy the syndicalist occupied territory that is still striking while the cabinet would like to spread out the forces more and occupy all three radical factions. George Marshall however would like to split the difference, placing most of our military in the Steel Belt while using counter-espionage in other territories to prevent an immediate revolt, though he warns this will only buy time as they are likely already announcing a revolt against the President's hardline and out of fear that Garner will come after them once the SPA is finished."
 ustates.9103.a:0 "Focus on the Strikers"
 ustates.9103.b:0 "Spread out our forces more evenly"
+ustates.9103.c:0 "Follow Marshall's suggestion"
 
 ustates.9104.t:0 "Resistance Rising in Illinois!"
 ustates.9104.d:0 "Our forces have managed to force back the radical SPA activists and rioters in the Rust Belt. However the occupation is becoming increasingly difficult as the Red Militants organize against us and go beyond merely taking pot shots at our soldiers. The Cabinet is pushing us to retreat and protect Washington before the SPA forces grow too powerful but MacArthur and Eisenhower claim they can hold the territory if given reinforcements."
@@ -1667,12 +1673,16 @@ ustates.9107.t:0 "Revolt in the Rust Belt!"
 ustates.9107.d:0 "Some bad news as the occupation has not gone as planned. More workers have joined in with the SPA as a result of our perceived oppression of the workers and we now lack the forces needed to contain them. With entire platoons being overrun, guerilla attacks, larger riots and barriers being set up by the Red Militia in the streets of Chicago and Detroit we are forced to fallback to Washington DC. MacArthur is furious at the situation feeling victory could have been attained if the government hadn't fumbled the situation and the radicals will soon be on our doorstep due to Garner and his adivsors. Likewise the Old Democrats are furious they're being attacked in SPA controlled areas and many of their supporters are falling back to more southern regions of the Rust Belt."
 ustates.9107.a:0 "Damn!"
 
+ustates.9108.t:0 "Hoover's Dirt"
+ustates.9108.d:0 "Our investigation has uncovered important evidence! J. Edgar Hoover has alerted us that he has evidence of Indiana Klan Leader D.C. Stephenson's corruption, which includes him and his circle engaging in alcohol, drugs, intimidation, 'relations' with minors, sexual assault, and murder. While it is unclear why Hoover kept this information to himself unless he was hedging his bets to use this information as a bargaining chip in case of an Old Democrat or non-establishment victory is unclear but despite Norris' disgust with Hoover for not pursuing this earlier it is obvious publishing this and bringing Stephenson to court could discredit the Klan."
+ustates.9108.a:0 "Arrest Stephenson"
+
 ustates.92.t:0 "The Austerity Bill"
 ustates.92.d:0 "President Garner has introduced an Emergency Austerity Measures bill into Congress today, an almost certainly controversial piece of legislation which would see government spending cuts across the board - especially towards non-army based military spending and federal spending on construction projects. Garner's speech to the Senate spoke of the sacrifice needed if America is to recover from the Great Depression and attempted to boost market confidence by stating that the cut was partially due to the belief of his cabinet that the Depression was already coming to an end, and it was met with mostly skepticism and jeers from radical Senators. Even Garner's own cabinet expressed reservations regarding his choice, suggesting passage of the bill might prove difficult... though, if it can be managed, it would almost certainly save the country by reinvigorating private investor confidence in the nation."
 ustates.92.a:0 "Believe in America"
 
 ustates.93.t:0 "Long Denounces Austerity Measures"
-ustates.93.d:0 "As discussions began in Capitol Hill regarding the austerity bill, the AFP immediately denounced it. Huey Long said in a Louisiana speech that austerity did the exact opposite of what was necessary. Rather than sharing the wealth, it took every last bit of wealth from those who needed it most. Austerity, he claims, would leave the average American more desperately poor than they are now, and would leave them vulnerable to syndicalist and reactionary rhetoric. Long said he would be directing AFP to oppose the bill at every turn, for the sake of the country."
+ustates.93.d:0 "As discussions began in Capitol Hill regarding the austerity bill, the AFP immediately denounced it. Huey Long said in a Louisiana speech that austerity did the exact opposite of what was necessary. Rather than sharing the wealth, it took every last bit of wealth from those who needed it most. Austerity, he claims, would leave the average American more desperately poor than they are now, and would leave them vulnerable to syndicalist and reactionary rhetoric. Long said he would be directing the AFP to oppose the bill at every turn, for the sake of the country."
 ustates.93.a:0 "We shall see"
 
 ustates.94.t:0 "D.C. Demonstration Turns Violent"
@@ -1680,56 +1690,38 @@ ustates.94.d:0 "A demonstration in Washington D.C. by workers and strikers voici
 ustates.94.a:0 "Fanatical Scum!"
 
 ustates.95.t:0 "General Strike Spreads"
-ustates.95.d:0 "The SPA's general strike has spread far and wide, all but bringing the nation to a standstill in many industrial states. The city of St. Louis in particular has become a warzone, day to day life all but ended as strikers clash variously either with Federal forces or with AFP Minutemen. The sense of chaos has led to several riots as protests by regular citizens have turned into looting and civil unrest. People are leaving St. Louis by the thousands, calling for immediate government intervention."
+ustates.95.d:0 "The SPA's general strike has spread far and wide, all but bringing the nation to a standstill in many industrial states. The city of St. Louis in particular has become a warzone, day to day life all but ended as strikers clash variously either with Federal forces or with rival militias. The sense of chaos has led to several riots as protests by regular citizens have turned into looting and civil unrest. People are leaving St. Louis by the thousands, calling for immediate government intervention."
 ustates.95.a:0 "Damned Fools!"
 
 ustates.96.t:0 "Austerity Bill Voting Commences"
-ustates.96.d:0 "Voting on the Emergency Austerity Measures bill began in Congress today, though early indications were not good. While the bill is solidly backed by Democratic Senators, it is rabidly opposed by both the SPA and AFP... and while there are enough Republican Senators remaining on the fence, unwilling to be swayed, that passage may prove unlikely without intervention. The president's cabinet is suggesting calling for a meeting of the major party representatives in Philadelphia, to try and work out a compromise - at least enough of one to make passage easier. It is also possible that President Garner could campaign for the votes of influential Republicans. A coalition may not have been in the cards, but perhaps he could appeal to their sense of civic duty on this one instance alone?"
-ustates.96.a:0 "Arrange the Philadelphia meeting"
-ustates.96.b:0 "Let's campaign for the Republican vote"
+ustates.96.d:0 "Voting on the Emergency Austerity Measures bill began in Congress today, though early indications were not good. While the bill is solidly backed by Democratic Senators, it is rabidly opposed by both the SPA and AFP... and while there are enough Republican and ODP Senators remaining on the fence, passage may prove unlikely without intervention. It is possible that President Garner could campaign for the votes of influential Republicans and hope that enough Old Democrats break party line to vote for the bill. A coalition may not have been in the cards, but perhaps he could appeal to their sense of civic duty on this one instance alone?"
+ustates.96.a:0 "Appeal to other parties"
+ustates.96.b:0 "We don't need them"
 
-ustates.97.t:0 "Philadelphia Meeting Begins"
-ustates.97.d:0 "The historic meeting in Philadelphia began today, with all four major political parties present and President Garner appealing to them that a compromise on the austerity bill was necessary for the sake of national peace and prosperity. As the parties talked, however, it quickly became clear that Huey Long and William H. Murray would both absorb most of the attention. Despite the number of Senators they represent being fairly low everyone in the room knows very well the influence they hold in the country, and both men disagreed on major aspects of the compromise. Murray wanted larger cuts to Hoover's programs and to instead simply put the excess money towards purchasing farm goods and countering syndicalist influence. He also desired a law that the Federal Government would be tied to a "debt ceiling" inorder to "prevent America from becoming enslaved to foreign interests and bankers". Long felt this was a disastrous idea and stated that if Garner wanted to fix the deficit he could simply raise the income tax on wealthy earners and shift military spending onto projects to help the working man with the funds being handled, of course, by the state government. He went on to say that slashing spending on national projects would simply leave more unemployed in the nation which was left Old Democrat accusations that he was a "crypro-Red". While there is evidence that President Garner, Huey Long and William H. Murray see eye-to-eye on some issues, it is quickly becoming clear that compromise will be utterly impossible with both men present."
-ustates.97.a:0 "Eject Long and the AFP"
-ustates.97.b:0 "Eject Murray and the ODP"
-ustates.97.c:0 "We will all go together"
+ustates.97.t:0 "Violence in Atlanta"
+ustates.97.d:0 "Our counter-espionage and light forces in the South can no longer hold the region, despite many ODP members being initially satisifed with our occupation of the Steel Belt. With our agents being increasingly rooted out in NDWL organizations, they have finally retaliated by assassinating several FBI agents at their supposed "Safehouse" in Atanta, with White Leaguers opening fire from outside with shotguns. The NDWL is openly organizing against us, aware that we are coming for them and that our forces are still stuck in the Steel Belt."
+ustates.97.a:0 "Traitors!"
 
-ustates.98.t:0 "Long and the AFP Kicked Out"
-ustates.98.d:0 "President Garner called for Huey Long to be physically removed - which was necessary, since the man refused to leave peacefully. Moments later, he forced his way back into the meeting hall and accused Garner of putting the needs of big business ahead of those of the common man, accusing him of being a fool who was betraying the Republic itself. The president had little choice but to have security forces drag Long from the building, kicking and screaming, shouting that America would not stand for this treachery. It was only after he left that the subdued remaining Senators could continue the negotiations."
-ustates.98.a:0 "That's a bully right there!"
+ustates.98.t:0 "Austerity Bill Fails"
+ustates.98.d:0 "While President Garner campaigned long and hard into the night, at the end of the day there were simply too few Republican and ODP Senators willing to vote for the bill that they didn't have the support of the SPA and AFP, and which would likely result in violence anyhow."
+ustates.98.a:0 "Congress isn't worth piss anyways"
 
-ustates.99.t:0 "Garner and Long Make Progress"
-ustates.99.d:0 "President Garner called for William H. Murray to be ejected from the meeting, though before he left he made a solemn speech to those present. He accused them of bowing to the tyranny of snappers, Jews and "opportunistic false egalitarians" and that a government which didn't understand the traditions of America would meet its ultimate fate at the hand of true patriots. After his departure, however, things went much more smoothly. Long indicated he was willing to make compromises, so long as amendments to the austerity bill supporting Long's Share Our Wealth Society indirectly through tax breaks alongside his other requests. With this, as well as putting Huey Long himself could go to his supporters and say that progress was finally being made. There are those present at the meeting, however, who caution that this will undoubtedly infuriate the ODP who still command massive forces throughout the American Southeast and further still."
-ustates.99.a:0 "We can finally agree"
-ustates.99.b:0 "We will not be blackmailed into such measures!"
+ustates.99.t:0 "Rust Belt Pacified!"
+ustates.99.d:0 "With businesses in the Rust Belt agreeing to pay workers more and the army continuing to push back the Red Militias an increasing number of workers are viewing the Federal government as a more stable source of protection and income than the SPA. With it becoming clear that outright revolt will not succeed many SPA congressional leaders are listening to their more moderate wing and calling for calmness and an end to hostilities saying that better conditions can still be negotiated for through Congress."
+ustates.99.a:0 "Have we saved America?"
 
-ustates.100.t:0 "Louisiana in Revolt"
-ustates.100.d:0 "Just as the remaining members of the meeting began to make headway, and it was looking as if a compromise on the austerity bill would be reached, word arrived that Long was already organizing the Minutemen to retaliate against the ODP for humiliating him and the AFP, riling up citizens with a speech decrying 'Federal Tyranny'. Mississippi congressman and ODP organizer Theodore G. Bilbo has already begun rounding up NDWL members to fight on the border. With our forces still stuck in the Rust Belt there is little we can do"
-ustates.100.a:0 "Not the plan"
-
-ustates.102.t:0 "Austerity Bill Passes"
-ustates.102.d:0 "With the endorsement of the AFP, the Emergency Austerity Measures bill passed - though not before all ODP Senators up and walked out of the chamber in protest. News of the exemptions, as well as the added progressive tax and cuts to military spending has fired up the ODP with accusations of corruption and the SPA with the hope that the hopes of the military occupation in the North have been damaged. Jack Reed has declared the government a dead and useless body, so corrupt it could not even see Long for the snake he truly is, and says the American worker will never get a fair shake unless he fights for it. Demonstrations have erupted across the northern part of the country - as suspected, making the government's efforts to combat SPA control difficult which combined with increased militancy in the South has made the situation near impossible to contain."
-ustates.102.a:0 "A Pyrrhic Victory"
-
-ustates.103.t:0 "Austerity Bill Fails"
-ustates.103.d:0 "While President Garner campaigned long and hard into the night, at the end of the day there were simply too few Republican and ODP Senators willing to vote for the bill that they didn't have the support of the SPA and AFP, and which would likely result in violence anyhow."
-ustates.103.a:0 "Congress isn't worth piss anyways"
+ustates.100.t:0 "Third Parties Stumble"
+ustates.100.d:0 "With the Democratic Party reabsorbing much of their old constiuencies among the Old Democrats, Southern AFP and even part of the Rust Belt that is becoming connected to the Democratic-party based unions and political machines the third parties that once challanged the Democrats and Republicans at the national level have become state-level parties instead, with Long's AFP being the most succesful but becoming relegated to running Louisiana and some assorted populist districts, his influence in Congress remaining only due to his willingness to work with progressives. However, the Progressives are increasingly being reabsorbed by the Republicans with George Norris, Hiram Johnson, and others returning to the Republican fold. Meanwhile the Old Democrats and White Leagues are still present in the American Southeast but most are more or less either rejoining the Democrats or becoming relegated to the fringe elsewhere. SPA no longer commands the power it once did with its revolutionary tendencies being discredited and it's unlikely they will hold any seat higher than the House of Representatives for long. It seems the stability of the two-party system has been preserved at the national level and the radicals have been displaced."
+ustates.100.a:0 "Did they really think they could end liberal democracy?"
 
 ustates.104.t:0 "MacArthur and the Army Remove Garner"
-ustates.104.d:0 "It appears President Garner's time is up. Douglas MacArthur marched into Washington D.C today, having declared Garner an 'ineffective president whose weakness has endangered America'. MacArthur's marchers reminded many in D.C. of Cox's Army of 1932, except these men are motivated to preserve the country from extremist forces. Garner's own cabinet has assured the public that this action is necessary, and have been working with MacArthur to install an emergency government from the White House - even as the majority of America looks on in shock. Civil war is imminent."
-ustates.104.a:0 "So it has come to this"
+ustates.104.d:0 "It appears President Garner's time is up. Douglas MacArthur marched into Washington D.C today, having declared Garner an 'ineffective president whose weakness has endangered America'. MacArthur's marchers reminded many in D.C. of Cox's Army of 1932, except these men are motivated to preserve the country from extremist forces. Garner's own cabinet has assured the public that this action is necessary, and have been working with MacArthur to install an emergency government from the White House - even as the majority of America looks on in shock. Civil war is imminent. Garner himself is forced to choose between fleeing the nation or accepting his new role as a President-in-name only."
+ustates.104.a:0 "I won't resist for the good of the nation"
+ustates.104.b:0 "Get me to California!"
 
 ustates.105.t:0 "Austerity Bill Passes"
 ustates.105.d:0 "President Garner campaigned long and hard into the night and at the end of the day there were just enough Republican Senators and ODP senators willing to vote for a bill that it managed to pass. Garner was fortunate that with the sudden downfall of D.C. Stephenson the ODP's party discipline has weakened to the point that ODP congressmen such as Philip H. Stoll were willing to cross the aisle to make overtures to more traditional democrats and distance themselves somewhat from more militant White Leaguers."
 ustates.105.a:0 "Thank God"
-
-ustates.1050.t:0 "Rust Belt Pacified!"
-ustates.1050.d:0 "With businesses in the Rust Belt agreeing to pay workers more and the army continuing to push back the Red Militias an increasing number of workers are viewing the Federal government as a more stable source of protection and income than the SPA. With it becoming clear that outright revolt will not succeed many SPA congressional leaders are listening to their more moderate wing and calling for calmness and an end to hostilities saying that better conditions can still be negotiated for through Congress."
-ustates.1050.a:0 "Have we saved America?"
-
-ustates.1051.t:0 "Third Parties Stumble"
-ustates.1051.d:0 "With the Democratic Party reabsorbing much of their old constiuencies among the Old Democrats, Southern AFP and even part of the Rust Belt that is becoming connected to the Democratic-party based unions and political machines the third parties that once challanged the Democrats and Republicans at the national level have become state-level parties instead, with Long's AFP being the most succesful but becoming relegated to running Louisiana and some assorted populist districts, his influence in Congress remaining only due to his willingness to work with progressives. However, the Progressives are increasingly being reabsorbed by the Republicans with George Norris, Hiram Johnson, and others returning to the Republican fold. Meanwhile the Old Democrats and White Leagues are still present in the American Southeast but most are more or less either rejoining the Democrats or becoming relegated to the fringe elsewhere. SPA no longer commands the power it once did with its revolutionary tendencies being discredited and it's unlikely they will hold any seat higher than the House of Representatives for long. It seems the stability of the two-party system has been preserved at the national level and the radicals have been displaced."
-ustates.1051.a:0 "Did they really think they could end liberal democracy?"
 
 ### Norris route ###
 
@@ -1780,7 +1772,7 @@ ustates.1133.a:0 "For the moment, we must keep spending"
 ustates.1133.b:0 "Slash Public Projects"
 
 ustates.114.t:0 "Hoover's Dirt"
-ustates.114.d:0 "Our occupation of the South has not been easy, with the Old Democrats resisting us and the National Klan denouncing us as traitors. Nonetheless occupation has prevented an outright uprising for the moment but it is clear that without the Klan losing support through other means we can not finish the job or hold on forever. Today however J. Edgar Hoover has alerted us that he has evidence of Indiana Klan Leader D.C. Stephenson's corruption, which includes him and his circle engaging in alcohol, drugs, intimidation, 'relations' with minors, sexual assault, and murder. While it is unclear why Hoover kept this information to himself unless he was hedging a bets to use this information as a bargaining chip in case of an Old Democrat or non-establishment victory is unclear but despite Curtis' disgust with Hoover for not pursuing this earlier it is obvious publishing this and bringing Stephenson to court could discredit the Klan."
+ustates.114.d:0 "Our occupation of the South has not been easy, with the Old Democrats resisting us and the National Klan denouncing us as traitors. Nonetheless occupation has prevented an outright uprising for the moment but it is clear that without the Klan losing support through other means we can not finish the job or hold on forever. Today however J. Edgar Hoover has alerted us that he has evidence of Indiana Klan Leader D.C. Stephenson's corruption, which includes him and his circle engaging in alcohol, drugs, intimidation, 'relations' with minors, sexual assault, and murder. While it is unclear why Hoover kept this information to himself unless he was hedging his bets to use this information as a bargaining chip in case of an Old Democrat or non-establishment victory is unclear but despite Norris' disgust with Hoover for not pursuing this earlier it is obvious publishing this and bringing Stephenson to court could discredit the Klan."
 ustates.114.a:0 "Arrest Stephenson"
 
 ustates.115.a:0 "Simmons grilled by Congress"
@@ -1797,10 +1789,10 @@ ustates.1151.b:0 "While the militias of the AFP and SPA were helpful to putting 
 ustates.1151.a:0 "Cut the Deal"
 ustates.1151.b:0 "Throw the book at him, followed by the chair"
 
-ustates.peace6.t:0 "Ending the Occupation?"
-ustates.peace6.d:0 "With the South pacified and the NDWL decimated it is likely time to pull out our forces from the South, as we would be only incurring hatred after a certain point and George Marshall claims the occupied counties are exhausted, although he advises that we leave behind some men to protect Black and allied regions. However General Joseph McNarney advises us to pull out altogether."
-ustates.peace6.a:0 "Leave Behind some men"
-ustates.peace6.c:0 "It's time to leave altogether"
+ustates.1152.t:0 "Ending the Occupation?"
+ustates.1152.d:0 "With the South pacified and the NDWL decimated it is likely time to pull out our forces from the South, as we would be only incurring hatred after a certain point and George Marshall claims the occupied counties are exhausted, although he advises that we leave behind some men to protect Black and allied regions. However General Joseph McNarney advises us to pull out altogether."
+ustates.1152.a:0 "Leave behind some men"
+ustates.1152.c:0 "It's time to leave altogether"
 
 ### Victory in the civil war
 
