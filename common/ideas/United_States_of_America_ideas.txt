@@ -77,6 +77,15 @@ ideas = {
 				consumer_goods_factor = 0.35
 			}
 		}
+		USA_army_expanionism_garner = { #The Great Depression
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_great_depression_garner_1"}
+			picture = usa_great_depression_2
+			modifier = {
+				recruitable_population_factor = 0.02
+				dig_in_speed_factor	= 0.05
+				navy_max_range = -0.1
+			}
+		}
 		USA_great_depression_garner_2 = { #The Great Depression
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_great_depression_garner_2"}
 			picture = usa_great_depression_2
@@ -136,14 +145,65 @@ ideas = {
 			}
 		}
 		USA_the_fair_deal = { #Fair Deal
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_great_depression_Norris_2"}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_the_fair_deal"}
 			picture = usa_great_depression_2
 			modifier = {
 				production_factory_max_efficiency_factor = -0.05
-				industrial_capacity_factory = -0.15
-				monthly_population = -0.05
-				production_speed_buildings_factor = -0.15
-				consumer_goods_factor = 0.2
+				production_factory_start_efficiency_factor = 0.05
+				monthly_population = 0.05
+				stability_weekly = 0.002
+				production_speed_buildings_factor = 0.05
+				consumer_goods_factor = -0.02
+			}
+		}
+		USA_the_fair_deal_2 = { #Fair Deal
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_the_fair_deal_2"}
+			picture = usa_great_depression_2
+			modifier = {
+				production_factory_start_efficiency_factor = 0.05
+				monthly_population = 0.08
+				stability_weekly = 0.003
+				production_speed_buildings_factor = 0.08
+				consumer_goods_factor = -0.05
+			}
+		}
+		USA_the_fair_deal_3 = { #Fair Deal
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_the_fair_deal_3"}
+			picture = usa_great_depression_2
+			modifier = {
+				production_factory_start_efficiency_factor = 0.05
+				monthly_population = 0.05
+				political_power_gain = 0.005
+				stability_weekly = 0.008
+				production_speed_buildings_factor = 0.08
+				consumer_goods_factor = -0.05
+			}
+		}
+		USA_southern_occupation = { #Southern Occupation
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_southern_occupation"}
+			picture = usa_great_depression_2
+			modifier = {
+				production_factory_start_efficiency_factor = -0.05
+				production_factory_efficiency_gain_factor = -0.03
+				monthly_population = -0.1
+				recruitable_population_factor = -0.1
+				political_power_gain = -0.1
+				stability_factor = -0.08
+				production_speed_buildings_factor = -0.08
+				war_support_factor = -0.06
+			}
+		}
+		USA_southern_occupation_2 = { #Southern Occupation
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_southern_occupation"}
+			picture = usa_great_depression_2
+			modifier = {
+				production_factory_start_efficiency_factor = -0.02
+				monthly_population = -0.02
+				recruitable_population_factor = -0.1
+				political_power_gain = -0.1
+				stability_factor = -0.03
+				production_speed_buildings_factor = -0.05
+				war_support_factor = -0.02
 			}
 		}
 		### Civil War Ideas ###
@@ -905,8 +965,120 @@ ideas = {
 			picture = general_staff
 			modifier = {
 				army_org_Factor = 0.05
+				political_power_gain = 0.02
+				industrial_capacity_dockyard = -0.02
 				conscription = 0.01
+			}
+		}
+		USA_empowered_army_idea_2 = { #Empowered Army
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_empowered_army_idea_2"}
+			picture = general_staff
+			modifier = {
+				army_org_Factor = 0.08
+				political_power_gain = 0.05
+				industrial_capacity_dockyard = -0.02
+				war_support_weekly = 0.003
+				conscription = 0.02
+				conversion_cost_civ_to_mil_factor = -0.05
+			}
+		}
+		USA_empowered_army_idea_3 = { #Empowered Army
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_empowered_army_idea_3"}
+			picture = general_staff
+			modifier = {
+				army_org_Factor = 0.08
+				political_power_gain = 0.05
+				stability_weekly = 0.001
+				war_support_weekly = 0.003
+				industrial_capacity_dockyard = -0.02
+				conscription = 0.05
+				conversion_cost_civ_to_mil_factor = -0.05
+			}
+		}
+		USA_empowered_army_idea_2Junta = { #Empowered Army
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_empowered_army_idea_2Junta"}
+			picture = general_staff
+			modifier = {
+				army_org_Factor = 0.05
+				army_morale	= 0.1
+				political_power_gain = 0.01
+				stability_weekly = 0.003
+				conscription = 0.01
+			}
+		}
+		USA_empowered_army_idea_2Junta = { #Empowered Army
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_empowered_army_idea_2Junta"}
+			picture = general_staff
+			modifier = {
+				army_org_Factor = 0.05
+				army_morale	= 0.1
+				political_power_gain = 0.01
+				stability_weekly = 0.003
+				conscription = 0.01
+			}
+		}
+		USA_empowered_army_idea_3Junta = { #Empowered Army
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_empowered_army_idea_3Junta"}
+			picture = general_staff
+			modifier = {
+				army_org_Factor = 0.05
+				army_morale	= 0.3
+				political_power_gain = 0.01
+				stability_weekly = 0.005
+				conscription = 0.02
+			}
+		}
+		USA_national_youth_idea = { #National Youth Administration
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_national_youth_idea"}
+			picture = general_staff
+			modifier = {
+				research_speed_factor = 0.05
+				political_power_gain = 0.02
+				production_factory_efficiency_gain_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
+		USA_national_youth_idea_2 = { #National Youth Administration
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_national_youth_idea_2"}
+			picture = general_staff
+			modifier = {
+				research_speed_factor = 0.05
+				political_power_gain = 0.03
+				local_manpower = 0.05
+				army_org_factor	= 0.05
 				training_time_factor = -0.1
+				line_change_production_efficiency_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
+		USA_national_youth_idea_3 = { #National Youth Administration
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_national_youth_idea_3"}
+			picture = general_staff
+			modifier = {
+				research_speed_factor = 0.05
+				political_power_gain = 0.03
+				out_of_supply_factor = -0.1
+				local_manpower = 0.15
+				army_org_factor	= 0.1
+				training_time_factor = -0.15
+				line_change_production_efficiency_factor = 0.08
+				production_factory_efficiency_gain_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
+		USA_barracks_capitalism_idea = { #Barracks Capitalism
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_barracks_capitalism_idea"}
+			picture = general_staff
+			modifier = {
+				political_power_gain = 0.02
+				war_support_weekly = 0.05
+				stability_weekly = 0.001
+				line_change_production_efficiency_factor = 0.03
+				production_speed_arms_factory_factor = 0.2
+				production_speed_infrastructure_factor = 0.05
+				production_speed_industrial_complex_factor = -0.15
+				consumer_goods_factor = -0.02
 			}
 		}
 		USA_purge_rebels_idea = { #Purge Rebels
@@ -928,6 +1100,19 @@ ideas = {
 				defensive_war_stability_factor = 0.5
 				weekly_manpower = 105
 				forced_surrender_limit = 0.1
+			}
+		}
+		USA_martial_law_idea = { #Martial Law
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_martial_law_idea"}
+			picture = general_staff
+			modifier = {
+				political_power_gain = 0.005
+				monthly_population = -0.1
+				local_non_core_manpower	= 0.05
+				stability_factor = -0.05
+				conversion_cost_civ_to_mil_factor = -0.1
+				production_speed_buildings_factor = 0.03
+				production_factory_efficiency_gain_factor = -0.02
 			}
 		}
 		USA_martial_law_idea = { #Martial Law
@@ -1003,6 +1188,37 @@ ideas = {
 				conscription = 0.08
 				production_speed_buildings_factor = 0.1
 				conversion_cost_civ_to_mil_factor = -0.25
+			}
+		}
+		USA_american_protective_league_idea = { #American Protective League
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_american_protective_league_idea"}
+			picture = general_staff
+			modifier = {
+				political_power_gain = 0.02
+				stability_weekly = 0.01
+				war_support_weekly = 0.002
+				local_manpower = 0.05
+				encryption = 0.05
+			}
+		}
+		USA_american_protective_league_idea_2 = { #American Protective League 2
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_american_protective_league_idea_2"}
+			picture = general_staff
+			modifier = {
+				political_power_gain = 0.04
+				stability_weekly = 0.02
+				war_support_weekly = 0.003
+				local_manpower = 0.08
+				encryption = 0.08
+			}
+		}
+		USA_office_of_war_information_idea = { #American Caeser
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_office_of_war_information_idea"}
+			picture = general_staff
+			modifier = {
+				mobilization_speed = 0.05
+				war_support_weekly = 0.003
+				decryption_factor = 0.05
 			}
 		}
 		USA_economic_recovery_idea = { #Civil War Recovery
