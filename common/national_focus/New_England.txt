@@ -245,7 +245,7 @@ focus_tree = {
 	
 	focus = {
 		id = NEE_preserve_the_estates
-		icon = GFX_goal_CAR_american_estates
+		icon = GFX_goal_COR_american_estates
 		cost = 6
 		prerequisite = {
 			focus = NEE_Public_Opinion_Support
@@ -870,7 +870,7 @@ focus_tree = {
 	
 	focus = {
 		id = NEE_food_allotment
-		icon = GFX_goal_CAR_bbbb
+		icon = GFX_goal_COR_bbbb
 		cost = 6
 		prerequisite = {
 			focus = NEE_national_labor_committee
@@ -2743,10 +2743,10 @@ focus_tree = {
 		available_if_capitulated = no
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NEE_dissolving_the_state"
+			add_ideas = NEE_stateless_capitalism
 			add_popularity = { ideology = national_populist popularity = 0.1 }
 			add_political_power = -50
 			add_stability = -0.15
-			add_ideas = NEE_the_sentinels
 		}
 	}
 	
