@@ -1410,8 +1410,8 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_empowered_executive_idea"}
 			allowed = { always = no }
 			modifier = {
-				political_power_gain = 0.05
-				stability_weekly = 0.005
+				political_power_gain = 0.03
+				stability_weekly = 0.003
 				party_popularity_stability_factor = 0.05
 				army_org = 0.05
 				max_command_power = 50
@@ -1432,7 +1432,7 @@ ideas = {
 				conversion_cost_civ_to_mil_factor = -0.1
 				conversion_cost_mil_to_civ_factor = -0.1
 				army_org = 0.05
-				max_command_power = 50
+				max_command_power = 75
 				mobilization_speed = 0.05
 				encryption_factor = 0.05
 			}
@@ -1514,9 +1514,8 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_practical_trade_idea"}
 			allowed = { always = no }
 			modifier = {
-				consumer_goods_factor = -0.03
+				consumer_goods_factor = -0.02
 				production_factory_efficiency_gain_factor = 0.03
-				production_factory_max_efficiency_factor = 0.05
 				research_speed_factor = 0.03
 				production_speed_buildings_factor = 0.03
 				monthly_population = 0.05
@@ -1529,9 +1528,12 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_practical_trade_idea_2"}
 			allowed = { always = no }
 			modifier = {
-				consumer_goods_factor = -0.05
-				production_factory_efficiency_gain_factor = 0.03
-				production_factory_max_efficiency_factor = 0.05
+				consumer_goods_factor = -0.03
+				political_power_gain = 0.03
+				stability_weekly = 0.002
+				production_factory_efficiency_gain_factor = 0.02
+				production_factory_start_efficiency_factor = 0.05
+				production_factory_max_efficiency_factor = -0.05
 				research_speed_factor = 0.03
 				production_speed_buildings_factor = 0.03
 				monthly_population = 0.05
@@ -1544,14 +1546,14 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_practical_trade_idea_3"}
 			allowed = { always = no }
 			modifier = {
-				consumer_goods_factor = -0.08
-				political_power_gain = 0.05
-				stability_weekly = 0.005
-				local_resources_factor = 0.05
-				production_factory_efficiency_gain_factor = 0.05
-				production_factory_max_efficiency_factor = 0.1
+				consumer_goods_factor = -0.03
+				political_power_gain = 0.03
+				stability_weekly = 0.003
+				production_factory_efficiency_gain_factor = 0.03
+				production_factory_start_efficiency_factor = 0.08
+				production_factory_max_efficiency_factor = -0.05
 				research_speed_factor = 0.05
-				production_speed_buildings_factor = 0.05
+				production_speed_buildings_factor = 0.08
 				monthly_population = 0.05
 				research_sharing_per_country_bonus = 0.05
 			}
