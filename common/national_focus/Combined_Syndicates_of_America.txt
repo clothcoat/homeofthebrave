@@ -2998,7 +2998,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_collective_farming"
 			swap_ideas = {
 			remove_idea = CSA_browderism_syndicalism_idea
-			add_idea = CSA_browderism_syndicalism_idea_2
+			add_idea = CSA_browderism_syndicalism_agro_idea_2
 			}
 			396 = {	if = {	limit = { is_owned_and_controlled_by = CSA } add_extra_state_shared_building_slots = 1 } }
 			375 = {	if = {	limit = { is_owned_and_controlled_by = CSA } add_extra_state_shared_building_slots = 1 } }
@@ -3277,8 +3277,8 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_decentralized_planning"
 			swap_ideas = {
-			remove_idea = CSA_browderism_syndicalism_idea_2
-			add_idea = CSA_browderism_syndicalism_idea_3
+			remove_idea = CSA_browderism_syndicalism_agro_idea_2
+			add_idea = CSA_browderism_syndicalism_self_management_idea_3
 			}
 			add_stability = 0.05
 			random_owned_state = {
@@ -5123,7 +5123,7 @@ focus_tree = {
 		id = CSA_second_continental_army
 		icon = GFX_goal_Workers_Paradise
 		cost = 5
-		x = 57
+		x = 62
 		y = 0
 		ai_will_do = {
 			factor = 25
@@ -5140,11 +5140,11 @@ focus_tree = {
 			army_experience = 50
 		}
 	}
-	focus = {#A Gun In Hand
-		id = CSA_a_gun_in_hand
+	focus = {#IWW Army
+		id = CSA_iww_doctrine
 		icon = GFX_goal_national_arsenal
 		cost = 10
-		x = -1
+		x = -6
 		y = 1
 		ai_will_do = {
 			factor = 25
@@ -5164,11 +5164,184 @@ focus_tree = {
 			}
 		}
 	}
-	focus = {#
-		id = CSA_a_boot_under_foot
-		icon = GFX_focus_empty_coffers
+	focus = {#Motor Factories
+		id = CSA_motor_factories
+		icon = GFX_goal_national_arsenal
+		cost = 10
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 25
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+		}
+		prerequisite = { focus = CSA_iww_doctrine }
+		relative_position_id = CSA_iww_doctrine
+		completion_reward = {
+			add_tech_bonus = {
+				name = CSA_gun_bonus
+				bonus = 1
+				uses = 1
+				category = infantry_tech
+			}
+		}
+	}
+	focus = {#The Peoples Vehicles
+		id = CSA_peoples_vehicles
+		icon = GFX_goal_national_arsenal
+		cost = 10
+		x = -2
+		y = 2
+		ai_will_do = {
+			factor = 25
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+		}
+		prerequisite = { focus = CSA_motor_factories }
+		relative_position_id = CSA_iww_doctrine
+		completion_reward = {
+			add_tech_bonus = {
+				name = CSA_gun_bonus
+				bonus = 1
+				uses = 1
+				category = infantry_tech
+			}
+		}
+	}
+	focus = {#Reverse Engineering
+		id = CSA_reverse_engineering
+		icon = GFX_goal_national_arsenal
+		cost = 10
+		x = 0
+		y = 2
+		ai_will_do = {
+			factor = 25
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+		}
+		prerequisite = { focus = CSA_motor_factories }
+		relative_position_id = CSA_iww_doctrine
+		completion_reward = {
+			add_tech_bonus = {
+				name = CSA_gun_bonus
+				bonus = 1
+				uses = 1
+				category = infantry_tech
+			}
+		}
+	}
+	focus = {#Military Industrialization
+		id = CSA_military_industrialization
+		icon = GFX_goal_national_arsenal
+		cost = 10
+		x = 2
+		y = 2
+		ai_will_do = {
+			factor = 25
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+		}
+		prerequisite = { focus = CSA_motor_factories 
+		focus = CSA_artillery_production_lines
+		}
+		relative_position_id = CSA_iww_doctrine
+		completion_reward = {
+			add_tech_bonus = {
+				name = CSA_gun_bonus
+				bonus = 1
+				uses = 1
+				category = infantry_tech
+			}
+		}
+	}
+	focus = {#Tank Advancements
+		id = CSA_tanks_advancements
+		icon = GFX_goal_national_arsenal
 		cost = 10
 		x = 1
+		y = 3
+		ai_will_do = {
+			factor = 25
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+		}
+		prerequisite = { focus = CSA_reverse_engineering }
+		prerequisite = { focus = CSA_military_industrialization }
+		relative_position_id = CSA_iww_doctrine
+		completion_reward = {
+			add_tech_bonus = {
+				name = CSA_gun_bonus
+				bonus = 1
+				uses = 1
+				category = infantry_tech
+			}
+		}
+	}
+	focus = {#Motor Training
+		id = CSA_new_training
+		icon = GFX_goal_national_arsenal
+		cost = 10
+		x = -1
+		y = 3
+		ai_will_do = {
+			factor = 25
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+		}
+		prerequisite = { focus = CSA_reverse_engineering }
+		prerequisite = { focus = CSA_peoples_vehicles }
+		relative_position_id = CSA_iww_doctrine
+		completion_reward = {
+			add_tech_bonus = {
+				name = CSA_gun_bonus
+				bonus = 1
+				uses = 1
+				category = infantry_tech
+			}
+		}
+	}
+	focus = {# IWW
+		id = CSA_IWW_production
+		icon = GFX_goal_national_arsenal
+		cost = 10
+		x = 0
+		y = 4
+		ai_will_do = {
+			factor = 25
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+		}
+		prerequisite = { focus = CSA_new_training }
+		prerequisite = { focus = CSA_tanks_advancements }
+		relative_position_id = CSA_iww_doctrine
+		completion_reward = {
+			add_tech_bonus = {
+				name = CSA_gun_bonus
+				bonus = 1
+				uses = 1
+				category = infantry_tech
+			}
+		}
+	}
+	focus = {#Centralist Military
+		id = CSA_centralist_doctrine
+		icon = GFX_goal_national_arsenal
+		cost = 10
+		x = -2
 		y = 1
 		ai_will_do = {
 			factor = 25
@@ -5181,19 +5354,66 @@ focus_tree = {
 		relative_position_id = CSA_second_continental_army
 		completion_reward = {
 			add_tech_bonus = {
-				name = CSA_support_bonus
+				name = CSA_gun_bonus
 				bonus = 1
 				uses = 1
-				technology = support_weapons
-				technology = support_weapons2
+				category = infantry_tech
 			}
 		}
 	}
-	focus = {#
-		id = CSA_appoint_butler
-		icon = GFX_goal_generic_special_forces
+	focus = {#Artillery Contracts
+		id = CSA_artillery_production_lines
+		icon = GFX_goal_national_arsenal
 		cost = 10
-		x = -2
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 25
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+		}
+		prerequisite = { focus = CSA_centralist_doctrine }
+		relative_position_id = CSA_centralist_doctrine
+		completion_reward = {
+			add_tech_bonus = {
+				name = CSA_gun_bonus
+				bonus = 1
+				uses = 1
+				category = infantry_tech
+			}
+		}
+	}
+	focus = {#Officer Artillery Training
+		id = CSA_artillery_training
+		icon = GFX_goal_national_arsenal
+		cost = 10
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 25
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+		}
+		prerequisite = { focus = CSA_artillery_production_lines }
+		relative_position_id = CSA_artillery_production_lines
+		completion_reward = {
+			add_tech_bonus = {
+				name = CSA_gun_bonus
+				bonus = 1
+				uses = 1
+				category = infantry_tech
+			}
+		}
+	}
+	focus = {#Counter-Reactionary Arnaments
+		id = CSA_canons_of_socialism
+		icon = GFX_goal_national_arsenal
+		cost = 10
+		x = -1
 		y = 2
 		ai_will_do = {
 			factor = 25
@@ -5202,27 +5422,23 @@ focus_tree = {
 				has_war = yes
 			}
 		}
-		prerequisite = { focus = CSA_a_gun_in_hand }
-		prerequisite = { focus = CSA_a_boot_under_foot }
-		relative_position_id = CSA_second_continental_army
-		bypass = {
-			NOT = { has_unit_leader = 960 }
-		}
+		prerequisite = { focus = CSA_artillery_training } 
+		prerequisite = { focus = CSA_military_industrialization }
+		relative_position_id = CSA_artillery_production_lines
 		completion_reward = {
-			random_unit_leader = {
-				limit = {
-					has_id = 960
-				}
-				add_unit_leader_trait = expert_delegator
-				add_unit_leader_trait = adaptable
+			add_tech_bonus = {
+				name = CSA_gun_bonus
+				bonus = 1
+				uses = 1
+				category = infantry_tech
 			}
 		}
 	}
-	focus = {#
-		id = CSA_creating_cohesion
-		icon = GFX_focus_generic_military_mission
+	focus = {#Combined Arms 
+		id = CSA_revolution_arms
+		icon = GFX_goal_national_arsenal
 		cost = 10
-		x = 2
+		x = 1
 		y = 2
 		ai_will_do = {
 			factor = 25
@@ -5231,16 +5447,22 @@ focus_tree = {
 				has_war = yes
 			}
 		}
-		prerequisite = { focus = CSA_a_boot_under_foot }
-		relative_position_id = CSA_second_continental_army
+		prerequisite = { focus = CSA_production_quotas }
+		prerequisite = { focus = CSA_artillery_training }
+		relative_position_id = CSA_artillery_production_lines
 		completion_reward = {
-			add_ideas = CSA_political_officers
+			add_tech_bonus = {
+				name = CSA_gun_bonus
+				bonus = 1
+				uses = 1
+				category = infantry_tech
+			}
 		}
 	}
-	focus = {#
-		id = CSA_the_long_haul
-		icon = GFX_goal_authority
-		cost = 5
+	focus = {#Modernized Army
+		id = CSA_modernized_army
+		icon = GFX_goal_national_arsenal
+		cost = 10
 		x = 0
 		y = 3
 		ai_will_do = {
@@ -5250,22 +5472,24 @@ focus_tree = {
 				has_war = yes
 			}
 		}
-		prerequisite = { focus = CSA_appoint_butler }
-		prerequisite = { focus = CSA_creating_cohesion }
-		relative_position_id = CSA_second_continental_army
+		prerequisite = { focus = CSA_revolution_arms }
+		prerequisite = { focus = CSA_canons_of_socialism }
+		relative_position_id = CSA_artillery_production_lines
 		completion_reward = {
-			add_ideas = CSA_war_syndicalism_idea
+			add_tech_bonus = {
+				name = CSA_gun_bonus
+				bonus = 1
+				uses = 1
+				category = infantry_tech
+			}
 		}
 	}
-	focus = {#
-		id = CSA_disciplinary_standards
-		icon = GFX_goal_HOL_military_union
-		cost = 5
-		x = -4
-		y = 4
-		available = {
-			has_idea = CSA_militia_idea
-		}
+	focus = {# Collectivist Doctrine
+		id = CSA_collectivist_doctrine
+		icon = GFX_goal_national_arsenal
+		cost = 10
+		x = 2
+		y = 1
 		ai_will_do = {
 			factor = 25
 			modifier = {
@@ -5273,66 +5497,172 @@ focus_tree = {
 				has_war = yes
 			}
 		}
-		prerequisite = { focus = CSA_the_long_haul }
-		relative_position_id = CSA_second_continental_army
-		completion_reward = {
-			swap_ideas = {
-				add_idea = CSA_militia_idea2
-				remove_idea = CSA_militia_idea
-			}
-		}
-	}
-	focus = {#
-		id = CSA_the_second_draft
-		icon = GFX_ITA_female_soldiers
-		cost = 5
-		x = -2
-		y = 4
-		ai_will_do = {
-			factor = 25
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-		}
-		prerequisite = { focus = CSA_the_long_haul }
-		relative_position_id = CSA_second_continental_army
-		completion_reward = {
-			add_manpower = 100000
-			add_ideas = CSA_rebel_girl_idea
-			set_rule = { can_generate_female_aces = yes }
-		}
-	}
-	focus = {#
-		id = CSA_upgrade_the_m1
-		icon = GFX_goal_military_academy
-		cost = 5
-		x = 0
-		y = 4
-		ai_will_do = {
-			factor = 25
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-		}
-		prerequisite = { focus = CSA_the_long_haul }
+		prerequisite = { focus = CSA_second_continental_army }
 		relative_position_id = CSA_second_continental_army
 		completion_reward = {
 			add_tech_bonus = {
-				name = CSA_m1_bonus
+				name = CSA_gun_bonus
 				bonus = 1
-				ahead_reduction = 1
 				uses = 1
-				technology = improved_infantry_weapons
+				category = infantry_tech
 			}
 		}
 	}
-	focus = {#
-		id = CSA_baptism_by_fire
-		icon = GFX_goal_revolution
-		cost = 5
+	focus = {# Call to the Masses
+		id = CSA_call_to_the_masses
+		icon = GFX_goal_national_arsenal
+		cost = 10
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 25
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+		}
+		prerequisite = { focus = CSA_collectivist_doctrine }
+		relative_position_id = CSA_collectivist_doctrine
+		completion_reward = {
+			add_tech_bonus = {
+				name = CSA_gun_bonus
+				bonus = 1
+				uses = 1
+				category = infantry_tech
+			}
+		}
+	}
+	focus = {# Arms Quotas
+		id = CSA_production_quotas
+		icon = GFX_goal_national_arsenal
+		cost = 10
+		x = -2
+		y = 2
+		ai_will_do = {
+			factor = 25
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+		}
+		prerequisite = { focus = CSA_call_to_the_masses 
+		focus = CSA_artillery_production_lines
+		}
+		relative_position_id = CSA_collectivist_doctrine
+		completion_reward = {
+			add_tech_bonus = {
+				name = CSA_gun_bonus
+				bonus = 1
+				uses = 1
+				category = infantry_tech
+			}
+		}
+	}
+	focus = {# Overwhelm the enemy
+		id = CSA_overwhelm_the_reactionary
+		icon = GFX_goal_national_arsenal
+		cost = 10
+		x = 0
+		y = 2
+		ai_will_do = {
+			factor = 25
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+		}
+		prerequisite = { focus = CSA_call_to_the_masses }
+		relative_position_id = CSA_collectivist_doctrine
+		completion_reward = {
+			add_tech_bonus = {
+				name = CSA_gun_bonus
+				bonus = 1
+				uses = 1
+				category = infantry_tech
+			}
+		}
+	}
+	focus = {# Socialist Support
+		id = CSA_socialist_support
+		icon = GFX_goal_national_arsenal
+		cost = 10
 		x = 2
+		y = 2
+		ai_will_do = {
+			factor = 25
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+		}
+		prerequisite = { focus = CSA_red_officers 
+		focus = CSA_call_to_the_masses
+		}
+		relative_position_id = CSA_collectivist_doctrine
+		completion_reward = {
+			add_tech_bonus = {
+				name = CSA_gun_bonus
+				bonus = 1
+				uses = 1
+				category = infantry_tech
+			}
+		}
+	}
+	focus = {# Arms of the Proletariat
+		id = CSA_proletariat_arms
+		icon = GFX_goal_national_arsenal
+		cost = 10
+		x = -1
+		y = 3
+		ai_will_do = {
+			factor = 25
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+		}
+		prerequisite = { focus = CSA_socialist_support }
+		prerequisite = { focus = CSA_overwhelm_the_reactionary }
+		relative_position_id = CSA_collectivist_doctrine
+		completion_reward = {
+			add_tech_bonus = {
+				name = CSA_gun_bonus
+				bonus = 1
+				uses = 1
+				category = infantry_tech
+			}
+		}
+	}
+	focus = {# Revolutionary Training Ethos
+		id = CSA_radical_training
+		icon = GFX_goal_national_arsenal
+		cost = 10
+		x = 1
+		y = 3
+		ai_will_do = {
+			factor = 25
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+		}
+		prerequisite = { focus = CSA_overwhelm_the_reactionary }
+		prerequisite = { focus = CSA_socialist_support }
+		relative_position_id = CSA_collectivist_doctrine
+		completion_reward = {
+			add_tech_bonus = {
+				name = CSA_gun_bonus
+				bonus = 1
+				uses = 1
+				category = infantry_tech
+			}
+		}
+	}
+	focus = {# Revolutionary Army
+		id = CSA_revolutionary_army
+		icon = GFX_goal_national_arsenal
+		cost = 10
+		x = 0
 		y = 4
 		ai_will_do = {
 			factor = 25
@@ -5341,24 +5671,24 @@ focus_tree = {
 				has_war = yes
 			}
 		}
-		prerequisite = { focus = CSA_the_long_haul }
-		relative_position_id = CSA_second_continental_army
+		prerequisite = { focus = CSA_proletariat_arms }
+		prerequisite = { focus = CSA_radical_training }
+		relative_position_id = CSA_collectivist_doctrine
 		completion_reward = {
-			every_army_leader = {
-				add_planning = 1
-				add_logistics = 1
+			add_tech_bonus = {
+				name = CSA_gun_bonus
+				bonus = 1
+				uses = 1
+				category = infantry_tech
 			}
 		}
 	}
-	focus = {#
-		id = CSA_standardize_unit_sizes
+	focus = {# Buterlerian Army
+		id = CSA_butlers_doctrine
 		icon = GFX_goal_national_arsenal
-		cost = 5
-		x = -3
-		y = 5
-		available = {
-			has_idea = CSA_militia_idea2
-		}
+		cost = 10
+		x = 6
+		y = 1
 		ai_will_do = {
 			factor = 25
 			modifier = {
@@ -5366,348 +5696,184 @@ focus_tree = {
 				has_war = yes
 			}
 		}
-		prerequisite = { focus = CSA_disciplinary_standards }
-		prerequisite = { focus = CSA_the_second_draft }
+		prerequisite = { focus = CSA_second_continental_army }
 		relative_position_id = CSA_second_continental_army
 		completion_reward = {
-			remove_ideas = CSA_militia_idea2
-		}
-	}
-	focus = {#
-		id = CSA_field_canon
-		icon = GFX_goal_national_artillery
-		cost = 5
-		x = -1
-		y = 5
-		ai_will_do = {
-			factor = 25
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-		}
-		prerequisite = { focus = CSA_upgrade_the_m1 }
-		relative_position_id = CSA_second_continental_army
-		completion_reward = {
-			hidden_effect = { set_technology = { red_dragon = 1 } }
-			custom_effect_tooltip = red_dragon_effect
-		}
-	}
-	focus = {#
-		id = CSA_motorisation
-		icon = GFX_goal_generic_army_motorized
-		cost = 5
-		x = 1
-		y = 5
-		ai_will_do = {
-			factor = 25
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-		}
-		prerequisite = { focus = CSA_upgrade_the_m1 }
-		relative_position_id = CSA_second_continental_army
-		completion_reward = {
-			add_ideas = CSA_motor_production_idea
-		}
-	}
-	focus = {#
-		id = CSA_every_man_a_truck
-		icon = GFX_goal_Automobile_Production
-		cost = 5
-		x = 2
-		y = 6
-		ai_will_do = {
-			factor = 25
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-		}
-		available = { NOT = { has_global_flag = USA_civil_war_over_flag } }
-		prerequisite = {
-			focus = CSA_motorisation
-			focus = CSA_baptism_by_fire
-		}
-		relative_position_id = CSA_second_continental_army
-		completion_reward = {
-			add_ideas = CSA_leveraging_industry
-			add_ideas = tot_economic_mobilisation
-		}
-	}
-	focus = {#
-		id = CSA_reactivate_the_officer_corps
-		icon = GFX_goal_generic_dangerous_deal
-		cost = 5
-		x = -1
-		y = 6
-		ai_will_do = {
-			factor = 25
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-		}
-		prerequisite = { focus = CSA_standardize_unit_sizes }
-		prerequisite = { focus = CSA_field_canon }
-		relative_position_id = CSA_second_continental_army
-		completion_reward = {
-			every_army_leader = {
-				add_defense = 1
-				add_attack = 1
+			add_tech_bonus = {
+				name = CSA_gun_bonus
+				bonus = 1
+				uses = 1
+				category = infantry_tech
 			}
 		}
 	}
-	focus = {#
-		id = CSA_the_dust_settles
-		icon = GFX_goal_generic_isolation
-		cost = 5
+	focus = {# Red Officers Corps
+		id = CSA_red_officers
+		icon = GFX_goal_national_arsenal
+		cost = 10
 		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 25
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+		}
+		prerequisite = { focus = CSA_butlers_doctrine }
+		relative_position_id = CSA_butlers_doctrine
+		completion_reward = {
+			add_tech_bonus = {
+				name = CSA_gun_bonus
+				bonus = 1
+				uses = 1
+				category = infantry_tech
+			}
+		}
+	}
+	focus = {# The People's Academies
+		id = CSA_peoples_academies
+		icon = GFX_goal_national_arsenal
+		cost = 10
+		x = 0
+		y = 2
+		ai_will_do = {
+			factor = 25
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+		}
+		prerequisite = { focus = CSA_red_officers }
+		relative_position_id = CSA_butlers_doctrine
+		completion_reward = {
+			add_tech_bonus = {
+				name = CSA_gun_bonus
+				bonus = 1
+				uses = 1
+				category = infantry_tech
+			}
+		}
+	}
+	focus = {# Professional Drills
+		id = CSA_professional_drills
+		icon = GFX_goal_national_arsenal
+		cost = 10
+		x = 2
+		y = 2
+		ai_will_do = {
+			factor = 25
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+		}
+		prerequisite = { focus = CSA_red_officers }
+		relative_position_id = CSA_butlers_doctrine
+		completion_reward = {
+			add_tech_bonus = {
+				name = CSA_gun_bonus
+				bonus = 1
+				uses = 1
+				category = infantry_tech
+			}
+		}
+	}
+	focus = {# The Red Marines
+		id = CSA_red_marines
+		icon = GFX_goal_national_arsenal
+		cost = 10
+		x = 1
+		y = 3
+		ai_will_do = {
+			factor = 25
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+		}
+		prerequisite = { focus = CSA_professional_drills }
+		prerequisite = { focus = CSA_peoples_academies }
+		relative_position_id = CSA_butlers_doctrine
+		completion_reward = {
+			add_tech_bonus = {
+				name = CSA_gun_bonus
+				bonus = 1
+				uses = 1
+				category = infantry_tech
+			}
+		}
+	}
+	focus = {# Reconnaissance 
+		id = CSA_red_scouts
+		icon = GFX_goal_national_arsenal
+		cost = 10
+		x = -1
+		y = 3
+		ai_will_do = {
+			factor = 25
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+		}
+		prerequisite = { focus = CSA_socialist_support }
+		prerequisite = { focus = CSA_peoples_academies }
+		relative_position_id = CSA_butlers_doctrine
+		completion_reward = {
+			add_tech_bonus = {
+				name = CSA_gun_bonus
+				bonus = 1
+				uses = 1
+				category = infantry_tech
+			}
+		}
+	}
+	focus = {# Red Republican Army
+		id = CSA_red_republican_army
+		icon = GFX_goal_national_arsenal
+		cost = 10
+		x = 0
+		y = 4
+		ai_will_do = {
+			factor = 25
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+		}
+		prerequisite = { focus = CSA_red_scouts }
+		prerequisite = { focus = CSA_red_marines }
+		relative_position_id = CSA_butlers_doctrine
+		completion_reward = {
+			add_tech_bonus = {
+				name = CSA_gun_bonus
+				bonus = 1
+				uses = 1
+				category = infantry_tech
+			}
+		}
+	}
+	####Air Force
+	focus = {#
+		id = CSA_red_air_force
+		icon = GFX_goal_generic_air_bomber
+		cost = 5
+		x = 48
 		y = 7
 		ai_will_do = {
-			factor = 25
+			factor = 10
 			modifier = {
 				factor = 2
 				has_war = yes
 			}
 		}
-		available = { has_global_flag = USA_civil_war_over_flag }
-		prerequisite = { focus = CSA_reactivate_the_officer_corps }
-		prerequisite = { focus = CSA_motorisation }
-		relative_position_id = CSA_second_continental_army
-		completion_reward = {
-			add_stability = 0.15
-			if = {
-				limit = { has_idea = CSA_war_syndicalism_idea }
-				remove_ideas = CSA_war_syndicalism_idea
-			}
-		}
-	}
-	focus = {#
-		id = CSA_tank_development
-		icon = GFX_goal_generic_army_tanks2
-		cost = 5
-		x = -5
-		y = 8
-		ai_will_do = {
-			factor = 25
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-		}
-		prerequisite = { focus = CSA_the_dust_settles }
-		relative_position_id = CSA_second_continental_army
-		completion_reward = {
-			add_tech_bonus = {
-				name = CSA_tank_bonus
-				bonus = 1
-				uses = 1
-				category = cat_light_armor
-			}
-			add_tech_bonus = {
-				name = CSA_tank_bonus
-				bonus = 1
-				uses = 1
-				category = cat_medium_armor
-			}
-		}
-	}
-	focus = {#
-		id = CSA_professionalise_the_airforce
-		icon = GFX_goal_air_red
-		cost = 5
-		x = -3
-		y = 8
-		ai_will_do = {
-			factor = 25
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-		}
-		prerequisite = { focus = CSA_the_dust_settles }
-		relative_position_id = CSA_second_continental_army
 		completion_reward = {
 			add_tech_bonus = {
 				name = CSA_air_doctrine_bonus
-				bonus = 1
+				bonus = 2
 				uses = 2
 				category = air_doctrine
-			}
-			add_ace = {
-				name = "Thomas"
-				surname = "McGuire"
-				callsign = "Buchanan"
-				type = fighter_genius
-			}
-			add_ace = {
-				name = "Francis"
-				surname = "Gabby"
-				callsign = "Gabreski"
-				type = fighter_expert
-			}
-		}
-	}
-	focus = {#
-		id = CSA_lessons_of_the_revolution
-		icon = GFX_socialist_constitution
-		cost = 5
-		x = -1
-		y = 8
-		ai_will_do = {
-			factor = 25
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-		}
-		prerequisite = { focus = CSA_the_dust_settles }
-		relative_position_id = CSA_second_continental_army
-		completion_reward = {
-			add_tech_bonus = {
-				name = CSA_land_doctrine_bonus
-				bonus = 1
-				uses = 2
-				category = land_doctrine
-			}
-		}
-	}
-	focus = {#
-		id = CSA_red_magic
-		icon = GFX_goal_generic_radar
-		cost = 5
-		x = 1
-		y = 8
-		ai_will_do = {
-			factor = 20
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-		}
-		prerequisite = { focus = CSA_the_dust_settles }
-		relative_position_id = CSA_second_continental_army
-		completion_reward = {
-			add_tech_bonus = {
-				name = CSA_magic_bonus
-				bonus = 1
-				uses = 1
-				category = radar_tech
-			}
-		}
-	}
-	focus = {#
-		id = CSA_take_to_the_waves
-		icon = GFX_goal_navy_decision
-		cost = 5
-		x = 3
-		y = 8
-		available = {
-			any_owned_state = {
-				is_controlled_by = CSA
-				is_coastal = yes
-			}
-		}
-		ai_will_do = {
-			factor = 10
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-			modifier = {
-				factor = 2
-				has_global_flag = USA_civil_war_over_flag
-			}
-		}
-		prerequisite = { focus = CSA_the_dust_settles }
-		relative_position_id = CSA_second_continental_army
-		completion_reward = {
-			add_tech_bonus = {
-				name = CSA_naval_doctrine_bonus
-				bonus = 1
-				uses = 3
-				category = naval_doctrine
-			}
-			add_timed_idea = {
-				idea = ACW_building_navy
-				days = 730
-			}
-		}
-	}
-	focus = {#
-		id = CSA_arsenal_of_the_revolution
-		icon = GFX_focus_generic_the_giant_wakes
-		cost = 5
-		x = 5
-		y = 8
-		available = {
-			any_owned_state = {
-				is_controlled_by = CSA
-				is_coastal = yes
-			}
-		}
-		ai_will_do = {
-			factor = 10
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-		}
-		prerequisite = { focus = CSA_the_dust_settles }
-		relative_position_id = CSA_second_continental_army
-		completion_reward = {
-			add_ideas = CSA_liberty_ships_ideas
-		}
-	}
-	focus = {#
-		id = CSA_armoured_thrust
-		icon = GFX_goal_RUS_Markov_plan
-		cost = 5
-		x = -6
-		y = 9
-		ai_will_do = {
-			factor = 20
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-		}
-		mutually_exclusive = { focus = CSA_anti_armour }
-		prerequisite = { focus = CSA_tank_development }
-		relative_position_id = CSA_second_continental_army
-		completion_reward = {
-			add_tech_bonus = {
-				name = CSA_tank_bonus
-				ahead_reduction = 2
-				technology = improved_medium_tank
-				technology = advanced_medium_tank
-			}
-		}
-	}
-	focus = {#
-		id = CSA_anti_armour
-		icon = GFX_focus_usa_tank_destroyer_doctrine
-		cost = 5
-		x = -4
-		y = 9
-		ai_will_do = {
-			factor = 20
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-		}
-		mutually_exclusive = { focus = CSA_armoured_thrust }
-		prerequisite = { focus = CSA_tank_development }
-		relative_position_id = CSA_second_continental_army
-		completion_reward = {
-			add_tech_bonus = {
-				name = CSA_anti_tank_bonus
-				bonus = 1
-				uses = 2
-				category = cat_anti_tank
 			}
 		}
 	}
@@ -5715,8 +5881,8 @@ focus_tree = {
 		id = CSA_bomber_command
 		icon = GFX_goal_generic_air_bomber
 		cost = 5
-		x = -3
-		y = 10
+		x = -2
+		y = 1
 		ai_will_do = {
 			factor = 10
 			modifier = {
@@ -5728,8 +5894,8 @@ focus_tree = {
 			focus = CSA_fighter_command
 			focus = CSA_flexible_airforce
 		}
-		prerequisite = { focus = CSA_professionalise_the_airforce }
-		relative_position_id = CSA_second_continental_army
+		prerequisite = { focus = CSA_red_air_force }
+		relative_position_id = CSA_red_air_force
 		completion_reward = {
 			add_tech_bonus = {
 				name = CSA_bomber_bonus
@@ -5743,8 +5909,8 @@ focus_tree = {
 		id = CSA_fighter_command
 		icon = GFX_goal_generic_air_fighter
 		cost = 5
-		x = 1
-		y = 10
+		x = 0
+		y = 1
 		ai_will_do = {
 			factor = 10
 			modifier = {
@@ -5756,8 +5922,8 @@ focus_tree = {
 			focus = CSA_bomber_command
 			focus = CSA_flexible_airforce
 		}
-		prerequisite = { focus = CSA_professionalise_the_airforce }
-		relative_position_id = CSA_second_continental_army
+		prerequisite = { focus = CSA_red_air_force }
+		relative_position_id = CSA_red_air_force
 		completion_reward = {
 			add_tech_bonus = {
 				name = CSA_fighter_bonus
@@ -5771,8 +5937,8 @@ focus_tree = {
 		id = CSA_flexible_airforce
 		icon = GFX_goal_generic_air_doctrine
 		cost = 5
-		x = -1
-		y = 10
+		x = 2
+		y = 1
 		ai_will_do = {
 			factor = 20
 			modifier = {
@@ -5784,8 +5950,8 @@ focus_tree = {
 			focus = CSA_bomber_command
 			focus = CSA_fighter_command
 		}
-		prerequisite = { focus = CSA_professionalise_the_airforce }
-		relative_position_id = CSA_second_continental_army
+		prerequisite = { focus = CSA_red_air_force }
+		relative_position_id = CSA_red_air_force
 		completion_reward = {
 			add_tech_bonus = {
 				name = CSA_air_doctrine_bonus
@@ -5796,11 +5962,62 @@ focus_tree = {
 		}
 	}
 	focus = {#
+		id = CSA_the_second_draft
+		icon = GFX_ITA_female_soldiers
+		cost = 5
+		x = -1
+		y = 2
+		ai_will_do = {
+			factor = 25
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+		}
+		prerequisite = { focus = CSA_bomber_command 
+		focus = CSA_fighter_command
+		focus = CSA_flexible_airforce
+		}
+		relative_position_id = CSA_red_air_force
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CSA_the_second_draft"
+			add_manpower = 100000
+			add_ideas = CSA_rebel_girl_idea
+			set_rule = { can_generate_female_aces = yes }
+		}
+		search_filters = { FOCUS_FILTER_MANPOWER }
+	}
+	focus = {#
+		id = CSA_the_traditional_army
+		icon = GFX_ITA_female_soldiers
+		cost = 5
+		x = 1
+		y = 2
+		ai_will_do = {
+			factor = 25
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+		}
+		prerequisite = { focus = CSA_bomber_command 
+		focus = CSA_fighter_command
+		focus = CSA_flexible_airforce
+		}
+		relative_position_id = CSA_red_air_force
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CSA_the_second_draft"
+			add_manpower = 15000
+			add_ideas = CSA_rebel_girl_idea
+			set_rule = { can_generate_female_aces = yes }
+		}
+	}
+	focus = {#
 		id = CSA_unleash_the_hellcat
 		icon = GFX_goal_generic_air_fighter2
 		cost = 5
-		x = -1
-		y = 11
+		x = 0
+		y = 3
 		ai_will_do = {
 			factor = 10
 			modifier = {
@@ -5808,230 +6025,16 @@ focus_tree = {
 				has_war = yes
 			}
 		}
-		prerequisite = {
-			focus = CSA_flexible_airforce
-			focus = CSA_bomber_command
-			focus = CSA_fighter_command
+		prerequisite = { 
+		focus = CSA_the_second_draft
+		focus = CSA_the_traditional_army
 		}
-		relative_position_id = CSA_second_continental_army
+		relative_position_id = CSA_red_air_force
 		completion_reward = {
 			hidden_effect = {
 				set_technology = { cv_fighter2 = 1 }
 			}
 			custom_effect_tooltip = CSA_hellcat_focus_effect
-		}
-	}
-	focus = {#
-		id = CSA_disband_the_militias
-		icon = GFX_goal_reform_socialist_army
-		cost = 5
-		x = 0
-		y = 9
-		ai_will_do = {
-			factor = 20
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-			modifier = {
-				factor = 0
-				NOT = { has_global_flag = USA_civil_war_over_flag }
-			}
-		}
-		mutually_exclusive = {
-			focus = CSA_incorporate_the_militias
-		}
-		prerequisite = { focus = CSA_lessons_of_the_revolution }
-		relative_position_id = CSA_second_continental_army
-		completion_reward = {
-			add_ideas = CSA_militia_disbanded
-			set_country_flag = cannot_have_conscription
-		}
-	}
-	focus = {#
-		id = CSA_incorporate_the_militias
-		icon = GFX_goal_intergrate_the_militia
-		cost = 5
-		x = -2
-		y = 9
-		ai_will_do = {
-			factor = 20
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-			modifier = {
-				factor = 0
-				NOT = { has_global_flag = USA_civil_war_over_flag }
-			}
-		}
-		mutually_exclusive = {
-			focus = CSA_disband_the_militias
-		}
-		prerequisite = { focus = CSA_lessons_of_the_revolution }
-		relative_position_id = CSA_second_continental_army
-		completion_reward = {
-			add_ideas = CSA_militia_incorporated
-		}
-	}
-	focus = {#
-		id = CSA_SONAR_project
-		icon = GFX_goal_generic_navy_anti_submarine
-		cost = 5
-		x = 2
-		y = 9
-		available = {
-			any_owned_state = {
-				is_controlled_by = CSA
-				is_coastal = yes
-			}
-		}
-		ai_will_do = {
-			factor = 10
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-		}
-		prerequisite = { focus = CSA_red_magic }
-		prerequisite = { focus = CSA_take_to_the_waves }
-		relative_position_id = CSA_second_continental_army
-		completion_reward = {
-			add_tech_bonus = {
-				name = CSA_SONAR_bonus
-				bonus = 1
-				uses = 1
-				category = asw_tech
-			}
-		}
-	}
-	focus = {#
-		id = CSA_the_atlantic
-		icon = GFX_focus_usa_focus_on_europe
-		cost = 5
-		x = 3
-		y = 10
-		available = {
-			any_owned_state = {
-				is_controlled_by = CSA
-				is_coastal = yes
-			}
-		}
-		ai_will_do = {
-			factor = 10
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-		}
-		mutually_exclusive = { focus = CSA_the_pacific }
-		prerequisite = { focus = CSA_SONAR_project }
-		relative_position_id = CSA_second_continental_army
-		completion_reward = {
-			add_tech_bonus = {
-				name = CSA_navy_bonus
-				bonus = 1
-				uses = 1
-				category = dd_tech
-			}
-			add_tech_bonus = {
-				name = CSA_navy_bonus
-				bonus = 1
-				uses = 1
-				category = bc_tech
-			}
-			add_tech_bonus = {
-				name = CSA_navy_bonus
-				bonus = 1
-				uses = 1
-				category = bb_tech
-			}
-		}
-	}
-	focus = {#
-		id = CSA_the_pacific
-		icon = GFX_focus_usa_focus_on_asia
-		cost = 5
-		x = 5
-		y = 10
-		available = {
-			any_owned_state = {
-				is_controlled_by = CSA
-				is_coastal = yes
-			}
-		}
-		ai_will_do = {
-			factor = 10
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-		}
-		mutually_exclusive = { focus = CSA_the_atlantic }
-		prerequisite = { focus = CSA_SONAR_project }
-		relative_position_id = CSA_second_continental_army
-		completion_reward = {
-			add_tech_bonus = {
-				name = CSA_navy_bonus
-				bonus = 1
-				uses = 1
-				category = bb_tech
-			}
-			add_tech_bonus = {
-				name = CSA_navy_bonus
-				bonus = 1
-				uses = 1
-				category = ss_tech
-			}
-			add_tech_bonus = {
-				name = CSA_navy_bonus
-				bonus = 1
-				uses = 1
-				category = cv_tech
-			}
-		}
-	}
-	focus = {#
-		id = CSA_fuel_for_the_fire
-		icon = GFX_goal_basic_oil
-		cost = 5
-		x = 4
-		y = 9
-		ai_will_do = {
-			factor = 20
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-		}
-		prerequisite = { focus = CSA_arsenal_of_the_revolution }
-		relative_position_id = CSA_second_continental_army
-		completion_reward = {
-			add_ideas = CSA_fuel_stores
-		}
-	}
-	focus = {#
-		id = CSA_synthetic_rubber_experiments
-		icon = GFX_goal_DEI_focus_moar_rubber
-		cost = 5
-		x = 6
-		y = 9
-		ai_will_do = {
-			factor = 20
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-		}
-		prerequisite = { focus = CSA_arsenal_of_the_revolution }
-		relative_position_id = CSA_second_continental_army
-		completion_reward = {
-			add_tech_bonus = {
-				name = CSA_navy_bonus
-				bonus = 2
-				uses = 1
-				category = synth_resources
-			}
 		}
 	}
 
@@ -6041,7 +6044,7 @@ focus_tree = {
 		id = CSA_back_in_business
 		icon = GFX_goal_csa
 		cost = 7.25
-		x = 65
+		x = 75
 		y = 0
 
 		available = {
