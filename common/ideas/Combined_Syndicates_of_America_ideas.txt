@@ -391,15 +391,6 @@ ideas = {
 				}
 		}
 		
-		CSA_lead_revolution_idea = {
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_lead_revolution_idea"}
-			picture = FRA_scw_intervention_republicans_focus
-			modifier = {
-				send_volunteer_divisions_required = -0.5
-				send_volunteer_size = 5		
-			}
-		}
-		
 		CSA_general_defense_comitte_idea = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_general_defense_comitte_idea"}
 			picture = NOR_secret_police_idea_1
@@ -419,15 +410,6 @@ ideas = {
 			}
 		}
 		
-		CSA_revolutionary_guards_idea = {
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_revolutionary_guards_idea"}
-			picture = NOR_secret_police_idea_1
-			modifier = {
-				decryption_factor = 0.05
-				encryption_factor = 0.1
-				enemy_partisan_effect = -0.05
-			}
-		}
 		CSA_cia_idea = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_cia_idea"}
 			picture = NOR_secret_police_idea_1
@@ -1413,7 +1395,7 @@ ideas = {
 				political_power_gain = 0.03
 				stability_weekly = 0.003
 				party_popularity_stability_factor = 0.05
-				army_org = 0.05
+				army_org = 0.1
 				max_command_power = 50
 				mobilization_speed = 0.05
 				encryption_factor = 0.05
@@ -1559,6 +1541,330 @@ ideas = {
 			}
 			removal_cost = -1
 			picture = usa_desegregation_2
+		}
+		
+		### Foster ###
+		CSA_democratic_centralism = {#Democratic Centralism
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_democratic_centralism"}
+			allowed = { always = no }
+			modifier = {
+				political_power_gain = 0.02
+				political_power_cost = -15
+				conscription_factor = 0.02
+				party_popularity_stability_factor = 0.15
+				command_power_gain = 0.02
+			}
+			removal_cost = -1
+			picture = usa_desegregation_2
+		}
+		
+		CSA_democratic_centralism_2 = {#Democratic Centralism (TUUC)
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_democratic_centralism_2"}
+			allowed = { always = no }
+			modifier = {
+				political_power_gain = 0.05
+				political_power_cost = -20
+				conscription_factor = 0.03
+				stability_weekly = 0.001
+				party_popularity_stability_factor = 0.25
+				command_power_gain = 0.03
+			}
+			removal_cost = -1
+			picture = usa_desegregation_2
+		}
+		
+		CSA_revolutionary_guards_idea = {#Revolutionary Guards
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_revolutionary_guards_idea"}
+			allowed = { always = no }
+			modifier = {
+				political_power_gain = 0.05
+				encryption_factor = 0.05
+				local_intel_to_enemies = -0.1
+				army_org = -0.15
+				max_planning = -0.1
+				out_of_supply_factor = -0.2
+				army_core_attack_factor = 0.03
+				org_loss_when_moving = -0.15
+				local_manpower = 0.05
+				max_command_power = 25
+			}
+			removal_cost = -1
+			picture = usa_desegregation_2
+		}
+		
+		CSA_total_collectivism = {#Total Collectivism
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_total_collectivism"}
+			allowed = { always = no }
+			modifier = {
+				production_factory_start_efficiency_factor = 0.3
+				production_factory_max_efficiency_factor = -0.3
+				production_factory_efficiency_gain_factor = -0.05
+				line_change_production_efficiency_factor = 0.2
+				production_lack_of_resource_penalty_factor = -0.05
+				production_oil_factor = 0.03
+				conscription_factor = 0.01
+				local_resources_factor = 0.08
+				production_speed_buildings_factor = 0.15
+				local_building_slots = 1
+				max_command_power = 50
+			}
+			removal_cost = -1
+			picture = usa_desegregation_2
+		}
+		
+		CSA_total_collectivism_2 = {#Total Collectivism
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_total_collectivism_2"}
+			allowed = { always = no }
+			modifier = {
+				production_factory_start_efficiency_factor = 0.3
+				production_factory_max_efficiency_factor = -0.25
+				production_factory_efficiency_gain_factor = -0.03
+				line_change_production_efficiency_factor = 0.2
+				production_oil_factor = 0.05
+				production_lack_of_resource_penalty_factor = -0.05
+				conscription_factor = 0.01
+				local_resources_factor = 0.15
+				monthly_population = 0.15
+				production_speed_buildings_factor = 0.15
+				local_building_slots = 2
+				max_command_power = 75
+			}
+			removal_cost = -1
+			picture = usa_desegregation_2
+		}
+		CSA_total_collectivism_3 = {#Total Collectivism
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_total_collectivism_3"}
+			allowed = { always = no }
+			modifier = {
+				production_factory_start_efficiency_factor = 0.3
+				production_factory_max_efficiency_factor = -0.2
+				production_factory_efficiency_gain_factor = -0.02
+				line_change_production_efficiency_factor = 0.2
+				production_oil_factor = 0.05
+				production_lack_of_resource_penalty_factor = -0.1
+				conscription_factor = 0.01
+				local_resources_factor = 0.2
+				monthly_population = 0.15
+				production_speed_buildings_factor = 0.25
+				local_building_slots = 2
+				max_command_power = 100
+			}
+			removal_cost = -1
+			picture = usa_desegregation_2
+		}
+		CSA_total_collectivism_4 = {#Total Collectivism
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_total_collectivism_4"}
+			allowed = { always = no }
+			modifier = {
+				production_factory_start_efficiency_factor = 0.35
+				production_factory_max_efficiency_factor = -0.1
+				line_change_production_efficiency_factor = 0.2
+				production_lack_of_resource_penalty_factor = -0.2
+				production_oil_factor = 0.05
+				conscription_factor = 0.01
+				industry_free_repair_factor	= 0.1
+				local_resources_factor = 0.25
+				monthly_population = 0.15
+				production_speed_buildings_factor = 0.3
+				local_building_slots = 3
+				max_command_power = 150
+			}
+			removal_cost = -1
+			picture = usa_desegregation_2
+		}
+		CSA_murder_the_political_spectrum = {#Murder the Political Spectrum
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_murder_the_political_spectrum"}
+			allowed = { always = no }
+			modifier = {
+				production_factory_start_efficiency_factor = -0.1
+				production_factory_max_efficiency_factor = -0.1
+				production_factory_efficiency_gain_factor = -0.05
+				monthly_population = -3.15
+				stability_weekly = -0.12
+				political_power_gain = 0.1
+			}
+			removal_cost = -1
+			picture = usa_desegregation_2
+		}
+		CSA_murder_the_insuffiently_radical = {#Murder the Insufficiently Radical
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_murder_the_insuffiently_radical"}
+			allowed = { always = no }
+			modifier = {
+				production_factory_efficiency_gain_factor = -0.05
+				monthly_population = -1.55
+				production_speed_buildings_factor = -0.1
+				stability_weekly = -0.2
+				political_power_gain = 0.15
+			}
+			removal_cost = -1
+			picture = usa_desegregation_2
+		}
+		CSA_minority_radicalization_idea = {#Minority Radicalization
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_minority_radicalization_idea"}
+			allowed = { always = no }
+			modifier = {
+				production_factory_efficiency_gain_factor = -0.08
+				monthly_population = -1.1
+				political_power_gain = 0.06
+				production_speed_buildings_factor = -0.05
+				stability_weekly = -0.05
+			}
+			removal_cost = -1
+			picture = usa_desegregation_2
+		}
+		CSA_war_on_americanism_idea = {#Cultural Revolution
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_war_on_americanism_idea"}
+			allowed = { always = no }
+			modifier = {
+				production_factory_efficiency_gain_factor = -0.08
+				monthly_population = -0.55
+				political_power_gain = 0.1
+				local_manpower = -0.1
+				army_core_defence_factor = -0.05
+				research_speed_factor = -0.1
+				stability_weekly = -0.42
+				resistance_activity	= 0.5
+			}
+			removal_cost = -1
+			picture = usa_desegregation_2
+		}
+		CSA_initial_great_sprint_idea = {#Cultural Revolution
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_initial_great_sprint_idea"}
+			allowed = { always = no }
+			modifier = {
+				production_factory_efficiency_gain_factor = -0.1
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_start_efficiency_factor = -0.1
+				monthly_population = -1.85
+				production_lack_of_resource_penalty_factor = -0.2
+				production_speed_buildings_factor = 0.15
+				conversion_cost_civ_to_mil_factor = -0.5
+				conversion_cost_mil_to_civ_factor = 0.5
+				research_speed_factor = -0.1
+				industry_free_repair_factor	= 0.4
+				stability_weekly = -0.2
+				resistance_activity	= 0.5
+			}
+			removal_cost = -1
+			picture = usa_desegregation_2
+		}
+		CSA_political_rehabilitation = {#Political Rehab
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_political_rehabilitation"}
+			allowed = { always = no }
+			modifier = {
+				political_power_gain = 0.01
+				party_popularity_stability_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.02
+				production_speed_buildings_factor = 0.05
+				local_intel_to_enemies = -0.05
+				local_non_core_manpower = 0.1
+				local_intel_to_enemies = -0.05
+				research_speed_factor = 0.02
+			}
+			removal_cost = -1
+			picture = usa_desegregation_2
+		}
+		CSA_state_media_idea = {#State Media
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_state_media_idea"}
+			allowed = { always = no }
+			modifier = {
+				political_power_gain = 0.01
+				stability_weekly = 0.001
+				max_command_power = 25
+				mobilization_speed = 0.1
+				forced_surrender_limit = 0.03
+				party_popularity_stability_factor = 0.1
+				encryption_factor = 0.05
+				recruitable_population_factor = 0.02
+				resistance_tick = -0.2
+			}
+			removal_cost = -1
+			picture = usa_desegregation_2
+		}
+		CSA_state_media_idea_2 = {#Strike
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_state_media_idea_2"}
+			allowed = { always = no }
+			modifier = {
+				political_power_gain = 0.02
+				stability_weekly = 0.015
+				max_command_power = 50
+				mobilization_speed = 0.15
+				forced_surrender_limit = 0.05
+				party_popularity_stability_factor = 0.2
+				encryption_factor = 0.08
+				dig_in_speed = 1
+				recruitable_population_factor = 0.03
+				resistance_tick = -0.3
+			}
+			removal_cost = -1
+			picture = usa_desegregation_2
+		}
+		CSA_state_media_idea_3 = {#Strike
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_state_media_idea_3"}
+			allowed = { always = no }
+			modifier = {
+				political_power_gain = 0.03
+				production_lack_of_resource_penalty_factor = -0.05
+				stability_weekly = 0.02
+				max_command_power = 100
+				monthly_population = 0.03
+				mobilization_speed = 0.2
+				forced_surrender_limit = 0.08
+				party_popularity_stability_factor = 0.3
+				encryption_factor = 0.1
+				dig_in_speed = 2
+				recruitable_population_factor = 0.05
+				resistance_tick = -0.35
+			}
+			removal_cost = -1
+			picture = usa_desegregation_2
+		}
+		CSA_state_media_idea_4 = {#Strike
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_state_media_idea_4"}
+			allowed = { always = no }
+			modifier = {
+				political_power_gain = 0.05
+				production_lack_of_resource_penalty_factor = -0.05
+				stability_weekly = 0.03
+				max_command_power = 150
+				monthly_population = 0.08
+				mobilization_speed = 0.25
+				forced_surrender_limit = 0.1
+				party_popularity_stability_factor = 0.4
+				encryption_factor = 0.15
+				dig_in_speed = 3
+				defensive_war_stability_factor = 0.05
+				recruitable_population_factor = 0.06
+				resistance_tick = -0.4
+			}
+			removal_cost = -1
+			picture = usa_desegregation_2
+		}
+		CSA_proletariat_science_idea = {#Strike
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_proletariat_science_idea"}
+			allowed = { always = no }
+			modifier = {
+				political_power_gain = 0.003
+				research_speed_factor = 0.05
+				research_sharing_per_country_bonus = 0.05
+				decryption_factor = 0.05
+			}
+			removal_cost = -1
+			picture = usa_desegregation_2
+		}
+		CSA_lead_revolution_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_lead_revolution_idea"}
+			picture = FRA_scw_intervention_republicans_focus
+			modifier = {
+				ai_focus_aggressive_factor = 0.5
+				conscription_factor = 0.03
+				justify_war_goal_time = -0.5
+				special_forces_cap = 0.1
+				offensive_war_stability_factor = 0.05
+				max_planning = 0.1
+				send_volunteer_divisions_required = -0.5
+				send_volunteer_size = 5		
+			}
 		}
 		
 		### Foreign ###
