@@ -5107,7 +5107,7 @@ country_event = { # New England has joined anyhow
 	}
 }
 
-country_event = { # Ancapistan
+country_event = { # Minor Syndie Revolts
 	id = newengland.101
 	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.101"}
 	title = newengland.101.t
@@ -5115,23 +5115,22 @@ country_event = { # Ancapistan
 
 	is_triggered_only = yes
 
-	trigger = {
-			check_variable = { NEE_ancap_power > 1 }
-		NOT = {
-		OR = {
-			has_idea = NEE_sentinel_wealth
-			has_idea = NEE_sentinel_wealth_2
-			}
-		}
-	}
+	fire_only_once = yes
 
 	option = {
 		name = newengland.101.a
-		add_ideas = NEE_sentinel_wealth
+		add_political_power = -20
+		add_stability = -0.02
+		hidden_effect = {
+		country_event = {
+			id = newengland.102
+			days = 3
+			}
+		}
 	}
 }
 
-country_event = { # Ancapistan
+country_event = { # Not Ancaps
 	id = newengland.102
 	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.102"}
 	title = newengland.102.t
@@ -5139,16 +5138,305 @@ country_event = { # Ancapistan
 
 	is_triggered_only = yes
 
-	trigger = {
-			check_variable = { NEE_ancap_power > 4 }
-			has_idea = NEE_sentinel_wealth
-		NOT = {
-			has_idea = NEE_sentinel_wealth_2
-		}
-	}
+	fire_only_once = yes
 
 	option = {
 		name = newengland.102.a
-		add_ideas = NEE_sentinel_wealth_2
+		add_popularity = { ideology = paternal_autocrat popularity = 0.04 }
+		add_popularity = { ideology = national_populist popularity = 0.03 }
+		add_stability = -0.01
+		hidden_effect = {
+		country_event = {
+			id = newengland.103
+			days = 10
+			}
+		}
 	}
 }
+
+country_event = { # The Great Strike
+	id = newengland.103
+	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.103"}
+	title = newengland.103.t
+	desc = newengland.103.d
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = newengland.103.a
+		add_manpower = -1500
+		add_political_power = -50
+		add_stability = -0.1	
+	}
+	option = {
+		name = newengland.103.b
+		add_political_power = -20
+		add_stability = -0.06
+		hidden_effect = {
+		country_event = {
+			id = newengland.104
+			days = 10
+			}
+		}
+	}
+}
+
+country_event = { # Canada gains power
+	id = newengland.104
+	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.104"}
+	title = newengland.104.t
+	desc = newengland.104.d
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = newengland.104.a
+		add_stability = 0.05
+		custom_effect_tooltip = NEE_canadian_influence_plus_10_tt
+			add_to_variable = {
+				var = NEE_canadian_influence
+				value = 10
+		}
+		CAN = {  # Federalist Party
+		country_event = {
+			id = newengland.105
+			hours = 14
+			}
+		}
+	}
+}
+
+country_event = { # Canada's Decision
+	id = newengland.105
+	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.105"}
+	title = newengland.105.t
+	desc = newengland.105.d
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = { # Feds appointed
+		name = newengland.105.a
+		add_political_power = 50
+		NEE = {
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.1 }
+		country_event = {
+			id = newengland.106
+			hours = 14
+			}
+		}
+		}
+	}
+	option = {
+		name = newengland.105.b
+		add_stability = 0.03
+	}
+}
+
+country_event = { # Feds appointed
+	id = newengland.106
+	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.106"}
+	title = newengland.106.t
+	desc = newengland.106.d
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = { # Allow Feds
+		name = newengland.106.a
+		add_popularity
+		
+		}
+	
+	option = { # Work With Radicals
+		name = newengland.106.b
+		
+	}
+	
+}
+
+country_event = { # Feds appointed
+	id = newengland.107
+	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.107"}
+	title = newengland.107.t
+	desc = newengland.107.d
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = { # John Jacob Astor
+		name = newengland.107.a
+		add_political_power = 50
+		add_stability = -0.02
+		add_manpower = 500
+		add_popularity = { ideology = authoritarian_democrat popularity = -0.01 }
+		CAN = {
+		add_political_power = 50
+		add_stability = 0.03
+		add_opinion_modifier = { target = NEE modifier = small_increase }
+		}
+		hidden_effect = {
+			create_country_leader = {
+				name = "John Jacob Astor"
+				desc = "NEE_JOHN_JACOB_ASTOR_DESC"
+				picture = "Portrait_john_jacob_astor.dds"
+				expire = "1965.1.1"
+				ideology = authoritarian_democrat_subtype
+				traits = {}
+			}
+		}
+	}
+	option = { # Vincent Astor
+		name = newengland.107.b
+		add_political_power = 25
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.02 }
+		add_stability = 0.03
+		CAN = {
+		add_political_power = 25
+		add_stability = 0.02
+		add_opinion_modifier = { target = NEE modifier = small_increase }
+		}
+		hidden_effect = {
+			create_country_leader = {
+				name = "Vincent Astor"
+				desc = "NEE_VINCENT_ASTOR_DESC"
+				picture = "Portrait_vincent_astor.dds"
+				expire = "1965.1.1"
+				ideology = authoritarian_democrat_subtype
+				traits = {}
+			}
+		}
+	}
+	
+	option = { # Harold Stirling Vanderbilt
+		name = newengland.107.c
+		hidden_effect = {
+			create_country_leader = {
+				name = "Harold Stirling Vanderbilt"
+				desc = "NEE_HAROLD_STIRLING_VANDERBILT_DESC"
+				picture = "Portrait_harold_stirling_vanderbilt.dds"
+				expire = "1965.1.1"
+				ideology = authoritarian_democrat_subtype
+				traits = {}
+			}
+		}
+	}
+	
+	option = { # William Kissam Vanderbilt
+		name = newengland.107.e
+		hidden_effect = {
+			create_country_leader = {
+				name = "William Kissam Vanderbilt"
+				desc = "NEE_WILLIAM_KISSAM_VANDERBILT_DESC"
+				picture = "Portrait_william_kissam_vanderbilt.dds"
+				expire = "1965.1.1"
+				ideology = authoritarian_democrat_subtype
+				traits = {}
+				}
+			}
+		}
+	}
+	
+	country_event = { # Federalist Party Sworn in
+	id = newengland.1070
+	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.1070"}
+	title = newengland.1070.t
+	desc = newengland.1070.d
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = { # Swearing in
+		name = newengland.1070.a
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.02 }
+		add_stability = 0.02
+		}
+	
+	}
+	
+	country_event = { # Investigate sailors
+	id = newengland.108
+	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.108"}
+	title = newengland.108.t
+	desc = newengland.108.d
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = { # Leave it alone
+		name = newengland.108.a
+		add_popularity = { ideology = authoritarian_democrat popularity = -0.02 }
+		add_stability = 0.02
+		}
+		
+	option = { # Investigate
+		name = newengland.108.b
+		add_political_power = 10
+		add_popularity = { ideology = syndicalist popularity = -0.01 }
+		add_popularity = { ideology = totalist popularity = -0.01 }
+		}
+		
+	option = { # Crackdown
+		name = newengland.108.c
+		add_political_power = 30
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.01 }
+		add_popularity = { ideology = syndicalist popularity = -0.03 }
+		add_popularity = { ideology = totalist popularity = -0.03 }
+		add_stability = -0.05
+		}
+	
+	}
+	
+	country_event = { # The Old Guard
+	id = newengland.109
+	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.109"}
+	title = newengland.109.t
+	desc = newengland.109.d
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = { # Just monitor them
+		name = newengland.109.a
+		add_political_power = -20
+		add_popularity = { ideology = radical_socialist popularity = -0.01 }
+		add_stability = 0.02
+	}
+	
+	option = { # Arrest them
+		name = newengland.109.a
+		add_political_power = 40
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.02 }
+		add_popularity = { ideology = radical_socialist popularity = -0.05 }
+		add_stability = -0.05
+	
+		}
+	}
+	
+	country_event = { # 
+	id = newengland.110
+	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.110"}
+	title = newengland.110.t
+	desc = newengland.110.d
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = { # Just monitor them
+		name = newengland.110.a
+		add_political_power = -20
+		add_popularity = { ideology = radical_socialist popularity = -0.01 }
+		add_stability = 0.02
+		}
+	}
