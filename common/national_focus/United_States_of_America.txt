@@ -1174,25 +1174,46 @@ focus_tree = {
 	focus = {# Home Rule Negotiations
 		id = USA_home_rule_negotiations
 		icon = GFX_america_goal_eagle_deal
-		cost = 6.00
+		cost = 2.50
 		available = {
 			OR = {
 				has_country_leader = { ruling_only = yes name = "Alf Landon" }
 				has_country_leader = { ruling_only = yes name = "Charles Curtis" }
+				NOT = {
+				has_country_flag = USA_compromise_failed
+				}
 			}
+			
 		}
 		prerequisite = {
 			focus = USA_the_republicans
 		}
+		cancel_if_invalid = yes
+		cancelable = no
 		relative_position_id = USA_the_republicans
 		x = 0
 		y = 1
 		ai_will_do = {
 			factor = 50
 		}
+		select_effect = {
+		hidden_effect = {
+			country_event = {
+			id = ustates.65
+			days = 3
+				}
+			}
+			hidden_effect = {
+			country_event = {
+			id = ustates.66
+			days = 4
+				}
+			}
+			set_country_flag = USA_negotiations_begun
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_home_rule_negotiations"
-			custom_effect_tooltip = unlock_focuses
+			
 		}
 	}
 	
@@ -1242,7 +1263,15 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_counter_klan"
-			custom_effect_tooltip = unlock_focuses
+			hidden_effect = {
+			if = {
+			limit = { NOT = {
+			has_country_flag = negotiations_complete}
+				}
+			country_event = { id = amcivwar.6902 days = 4 }
+			set_country_flag = USA_compromise_failed
+				}
+			}
 		}
 	}
 	
@@ -1636,16 +1665,21 @@ focus_tree = {
 	focus = {# Progressive Collaboration
 		id = USA_progressive_collaboration
 		icon = GFX_USA_progressive_victory
-		cost = 2.25
+		cost = 1.50
 		available = {
 			has_government = social_democrat
 			date < 1937.5.1
 			has_country_leader = { ruling_only = yes name = "George Norris" } 
+			has_country_flag = USA_norris_appeasement
+			NOT = {
+			has_country_flag = USA_angered_long_reed
+			}
 		}
 		prerequisite = {
 			focus = USA_norris
 		}
 		relative_position_id = USA_norris
+		cancel_if_invalid = yes
 		x = 0
 		y = 1
 		ai_will_do = {
@@ -1772,7 +1806,7 @@ focus_tree = {
 		cost = 4.00
 		available = {
 			has_government = social_democrat
-			has_country_leader = { ruling_only = yes name = "George Norris" } 
+			has_country_leader = { ruling_only = yes name = "George Norris" }
 		}
 		prerequisite = {
 			focus = USA_mcnary_plan
