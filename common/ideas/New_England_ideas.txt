@@ -441,8 +441,8 @@ ideas = {
 			}
 		}
 		
-		NEE_fea = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NEE_fea"}
+		NEE_fea_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NEE_fea_idea"}
 			allowed = { always = no }
 			removal_cost = -1
 			picture = generic_reserve_divisions
@@ -639,6 +639,20 @@ ideas = {
 				local_resources = 0.05
 				party_popularity_stability_factor = 0.2
 				industry_free_repair_factor	= 0.1
+			}
+		}
+		NEE_national_bank = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NEE_national_bank"}
+			allowed = { always = no }
+			removal_cost = -1
+			picture = generic_reserve_divisions
+			modifier = {
+				consumer_goods_factor = -0.02
+				political_power_gain = 0.03
+				production_factory_start_efficiency_factor = 0.05
+				production_factory_max_efficiency_factor = 0.02
+				production_speed_buildings_factor = 0.05
+				political_power_gain = 0.05
 			}
 		}
 		
