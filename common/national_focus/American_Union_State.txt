@@ -3368,17 +3368,15 @@ focus_tree = {
 		icon = GFX_america_goal_eagle_deal
 		cost = 7.25
 		prerequisite = {
-			focus = TEX_begin_reconstruction
-		}
-		mutually_exclusive = {
+			focus = TEX_reconciliation
 			focus = TEX_harsh_reconstruction
 		}
 		ai_will_do = {
 			factor = 4
 		}
 		relative_position_id = TEX_rebuilding_the_country
-		x = 1
-		y = 3
+		x = 0
+		y = 4
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TEX_reconciliation"
 			add_stability = 0.10
@@ -3390,29 +3388,25 @@ focus_tree = {
 		icon = GFX_america_goal_eagle_deal
 		cost = 7.25
 		prerequisite = {
-			focus = TEX_begin_reconstruction
-		}
-		mutually_exclusive = {
-			focus = TEX_harsh_reconstruction
+			focus = TEX_national_recovery
 		}
 		ai_will_do = {
 			factor = 4
 		}
 		relative_position_id = TEX_rebuilding_the_country
-		x = 4
-		y = 1
+		x = 6
+		y = 2
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TEX_reconciliation"
 			add_stability = 0.10
 		}
 	}
-
-	focus = {# Research Investment
-		id = TEX_create_esmwt
-		icon = GFX_goal_great_science
+	focus = {# State Grants
+		id = TEX_state_grants
+		icon = GFX_america_goal_eagle_deal
 		cost = 7.25
 		prerequisite = {
-			focus = TEX_american_business_is_business
+			focus = TEX_infrastructure_effort
 		}
 		ai_will_do = {
 			factor = 4
@@ -3421,8 +3415,103 @@ focus_tree = {
 		x = 6
 		y = 4
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TEX_create_esmwt"
-			add_research_slot = 1
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_reconciliation"
+			add_stability = 0.10
+		}
+	}
+	
+	focus = {# The Grand Army of the Republic
+		id = TEX_Grand_Army_of_the_Republic
+		icon = GFX_america_goal_eagle_deal
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_national_recovery
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		relative_position_id = TEX_rebuilding_the_country
+		x = 4
+		y = 2
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_Grand_Army_of_the_Republic"
+			add_stability = 0.10
+		}
+	}
+	
+	focus = {# Recognize Philantrophy
+		id = TEX_recognize_philantrophers
+		icon = GFX_america_goal_eagle_deal
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_Grand_Army_of_the_Republic
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		relative_position_id = TEX_Grand_Army_of_the_Republic
+		x = -1
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_recognize_philantrophers"
+			add_stability = 0.10
+		}
+	}
+	
+	focus = {# Dependent and Disability Act
+		id = TEX_dependent_and_disability_act
+		icon = GFX_america_goal_eagle_deal
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_recognize_philantrophers
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		relative_position_id = TEX_Grand_Army_of_the_Republic
+		x = -2
+		y = 2
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_reconciliation"
+			add_stability = 0.10
+		}
+	}
+	
+	focus = {# Department of Public Safety
+		id = TEX_department_of_public_safety
+		icon = GFX_america_goal_eagle_deal
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_Grand_Army_of_the_Republic
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		relative_position_id = TEX_Grand_Army_of_the_Republic
+		x = 1
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_reconciliation"
+			add_stability = 0.10
+		}
+	}
+	
+	focus = {# Work Programs
+		id = TEX_work_programs
+		icon = GFX_america_goal_eagle_deal
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_department_of_public_safety
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		relative_position_id = TEX_Grand_Army_of_the_Republic
+		x = 0
+		y = 2
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_work_programs"
+			add_stability = 0.10
 		}
 	}
 
@@ -3431,16 +3520,25 @@ focus_tree = {
 		icon = GFX_america_goal_champagn
 		cost = 7.25
 		prerequisite = {
-			focus = TEX_harsh_reconstruction
-			focus = TEX_reconciliation
+			focus = TEX_employment_expansion
 		}
 		prerequisite = {
 			focus = TEX_research_projects
+		}
+		prerequisite = {
 			focus = TEX_rural_electrification
+		}
+		prerequisite = {
 			focus = TEX_farm_security_administration
-			focus = TEX_building_grants
-			focus = TEX_military_factories
-			focus = TEX_create_esmwt
+		}
+		prerequisite = {
+			focus = TEX_state_grants
+		}
+		prerequisite = {
+			focus = TEX_dependent_and_disability_act
+		}
+		prerequisite = {
+			focus = TEX_work_programs
 		}
 		available = {
 			custom_trigger_tooltip = {
@@ -4576,7 +4674,7 @@ focus_tree = {
 		id = TEX_air_force_reform
 		icon = GFX_goal_USA_usaaf
 		cost = 5
-		x = 68
+		x = 69
 		y = 0
 		ai_will_do = {
 			factor = 1
@@ -5969,7 +6067,7 @@ focus_tree = {
 	
 	focus = {
 		id = TEX_denounce_oligarchs
-		icon = GFX_focus_generic_anti_fascist_diplomacy
+		icon = GFX_goal_TEX_break_war_racket
 		cost = 6.00
 		prerequisite = {
 			focus = TEX_americanist_doctrine
@@ -6113,7 +6211,7 @@ focus_tree = {
 	
 	focus = {
 		id = TEX_internationale_non_agression_pact
-		icon = GFX_BBR_internationale_collaboration
+		icon = GFX_goal_TEX_internationale_peace_agreement
 		cost = 6.00
 		prerequisite = {
 			focus = TEX_populist_alliance
@@ -6151,7 +6249,7 @@ focus_tree = {
 	
 	focus = {
 		id = TEX_ideological_neutrality
-		icon = GFX_goal_generic_neutrality_focus
+		icon = GFX_goal_TEX_ideoloical_neutrality
 		cost = 6.00
 		prerequisite = {
 			focus = TEX_populist_alliance
@@ -6262,7 +6360,7 @@ focus_tree = {
 	
 	focus = {
 		id = TEX_break_war_mongerers
-		icon = GFX_focus_generic_support_the_left_right
+		icon = GFX_goal_TEX_stop_american_warmongers
 		cost = 6.00
 		prerequisite = {
 			focus = TEX_oppose_american_syndicalism
@@ -6578,7 +6676,7 @@ focus_tree = {
 
 	focus = {
 		id = TEX_naval_prominence
-		icon = GFX_goal_generic_navy_doctrines_tactics
+		icon = GFX_goal_TEX_naval_prominence
 		cost = 6.00
 		prerequisite = {
 			focus = TEX_fortress_america
@@ -6666,7 +6764,7 @@ focus_tree = {
 	focus = {
 		id = TEX_look_inward
 		icon = GFX_focus_usa_guarantee_the_american_dream
-		cost = 6.00
+		cost = 5.00
 		prerequisite = {
 			focus = TEX_defensive_doctrine
 		}
@@ -6693,8 +6791,8 @@ focus_tree = {
 	
 	focus = {
 		id = TEX_business_of_neutrality
-		icon = GFX_goal_generic_consumer_goods
-		cost = 6.00
+		icon = GFX_goal_TEX_pragmatic_trade
+		cost = 5.50
 		prerequisite = {
 			focus = TEX_defensive_doctrine
 		}
@@ -6729,6 +6827,8 @@ focus_tree = {
 		cost = 6.00
 		prerequisite = {
 			focus = TEX_business_of_neutrality
+		}
+		prerequisite = {
 			focus = TEX_look_inward
 		}
 		available = {
