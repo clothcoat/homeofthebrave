@@ -16,11 +16,14 @@ music = {
 
 	chance = {
 		modifier = {
-			factor = 1.25
+			factor = 0
+			NOT = {
+				tag = WCC
+			}
 		}
 		modifier = {
-			factor = 0
-			has_war = no
+			factor = 2
+			tag = WCC			
 		}
 	}
 }
@@ -30,15 +33,14 @@ music = {
 
 	chance = {
 		modifier = {
-			factor = 1.25
+			factor = 0
+			NOT = {
+				tag = TEX
+			}
 		}
 		modifier = {
-			factor = 0
-
-			NOT = {
-				any_war_score > 0.7
-				has_tech = nukes
-			}
+			factor = 2
+			tag = TEX			
 		}
 	}
 }
@@ -48,12 +50,14 @@ music = {
 
 	chance = {
 		modifier = {
-			factor = 2
-			not_has_socialist_government = yes
+			factor = 0
+			NOT = {
+				tag = TEX
+			}
 		}
 		modifier = {
-			factor = 0
-			has_socialist_government = yes
+			factor = 2
+			tag = TEX
 		}
 	}
 }
@@ -63,12 +67,14 @@ music = {
 
 	chance = {
 		modifier = {
-			factor = 2
-			not_has_socialist_government = yes
+			factor = 0
+			NOT = {
+				tag = COR
+			}
 		}
 		modifier = {
-			factor = 0
-			has_socialist_government = yes
+			factor = 2
+			tag = COR
 		}
 	}
 }
@@ -78,12 +84,14 @@ music = {
 
 	chance = {
 		modifier = {
-			factor = 2
-			not_has_socialist_government = yes
+			factor = 0
+			NOT = {
+				tag = NEE
+			}
 		}
 		modifier = {
-			factor = 0
-			has_socialist_government = yes
+			factor = 2
+			tag = NEE
 		}
 	}
 }
@@ -93,27 +101,32 @@ music = {
 
 	chance = {
 		modifier = {
-			factor = 2
-			not_has_socialist_government = yes
+			factor = 0
+			NOT = {
+				tag = USA
+			}
 		}
 		modifier = {
-			factor = 0
-			has_socialist_government = yes
+			factor = 2
+			tag = USA
 		}
 	}
 }
+
 
 music = {
 	song = "hailcolumbia"
 
 	chance = {
 		modifier = {
-			factor = 2
-			not_has_socialist_government = yes
+			factor = 0
+			NOT = {
+				tag = USA
+			}
 		}
 		modifier = {
-			factor = 0
-			has_socialist_government = yes
+			factor = 2
+			tag = USA
 		}
 	}
 }
@@ -123,12 +136,14 @@ music = {
 
 	chance = {
 		modifier = {
-			factor = 2
-			not_has_socialist_government = yes
+			factor = 0
+			NOT = {
+				tag = BBR
+			}
 		}
 		modifier = {
-			factor = 0
-			has_socialist_government = yes
+			factor = 2
+			tag = BBR
 		}
 	}
 }
@@ -138,12 +153,14 @@ music = {
 
 	chance = {
 		modifier = {
-			factor = 2
-			not_has_socialist_government = yes
+			factor = 0
+			NOT = {
+				tag = WCC
+			}
 		}
 		modifier = {
-			factor = 0
-			has_socialist_government = yes
+			factor = 2
+			tag = WCC
 		}
 	}
 }
@@ -153,12 +170,14 @@ music = {
 
 	chance = {
 		modifier = {
-			factor = 2
-			not_has_socialist_government = yes
+			factor = 0
+			NOT = {
+				tag = BBR
+			}
 		}
 		modifier = {
-			factor = 0
-			has_socialist_government = yes
+			factor = 2
+			tag = BBR
 		}
 	}
 }
@@ -168,12 +187,14 @@ music = {
 
 	chance = {
 		modifier = {
-			factor = 2
-			not_has_socialist_government = yes
+			factor = 0
+			NOT = {
+				tag = COR
+			}
 		}
 		modifier = {
-			factor = 0
-			has_socialist_government = yes
+			factor = 2
+			tag = COR
 		}
 	}
 }
@@ -183,12 +204,14 @@ music = {
 
 	chance = {
 		modifier = {
-			factor = 2
-			not_has_socialist_government = yes
+			factor = 0
+			NOT = {
+				tag = WCC
+			}
 		}
 		modifier = {
-			factor = 0
-			has_socialist_government = yes
+			factor = 2
+			tag = WCC
 		}
 	}
 }
@@ -198,27 +221,14 @@ music = {
 
 	chance = {
 		modifier = {
-			factor = 2
-			not_has_socialist_government = yes
-		}
-		modifier = {
 			factor = 0
-			has_socialist_government = yes
+			NOT = {
+				tag = CAL
+			}
 		}
-	}
-}
-
-music = {
-	song = "nianiania"
-
-	chance = {
 		modifier = {
 			factor = 2
-			not_has_socialist_government = yes
-		}
-		modifier = {
-			factor = 0
-			has_socialist_government = yes
+			tag = CAL
 		}
 	}
 }
@@ -228,12 +238,14 @@ music = {
 
 	chance = {
 		modifier = {
-			factor = 2
-			not_has_socialist_government = yes
+			factor = 0
+			NOT = {
+				tag = CAL
+			}
 		}
 		modifier = {
-			factor = 0
-			has_socialist_government = yes
+			factor = 2
+			tag = CAL
 		}
 	}
 }
@@ -243,12 +255,14 @@ music = {
 
 	chance = {
 		modifier = {
-			factor = 2
-			not_has_socialist_government = yes
+			factor = 0
+			NOT = {
+				tag = COR
+			}
 		}
 		modifier = {
-			factor = 0
-			has_socialist_government = yes
+			factor = 2
+			tag = COR
 		}
 	}
 }
@@ -258,12 +272,14 @@ music = {
 
 	chance = {
 		modifier = {
-			factor = 2
-			not_has_socialist_government = yes
+			factor = 0
+			NOT = {
+				tag = TEX
+			}
 		}
 		modifier = {
-			factor = 0
-			has_socialist_government = yes
+			factor = 2 
+			tag = TEX
 		}
 	}
 }
@@ -273,12 +289,14 @@ music = {
 
 	chance = {
 		modifier = {
-			factor = 2
-			not_has_socialist_government = yes
+			factor = 0
+			NOT = {
+				tag = NEE
+			}
 		}
 		modifier = {
-			factor = 0
-			has_socialist_government = yes
+			factor = 2
+			tag = NEE
 		}
 	}
 }
@@ -288,12 +306,14 @@ music = {
 
 	chance = {
 		modifier = {
-			factor = 2
-			not_has_socialist_government = yes
+			factor = 0
+			NOT = {
+				tag = BBR
+			}
 		}
 		modifier = {
-			factor = 0
-			has_socialist_government = yes
+			factor = 2 
+			tag = BBR
 		}
 	}
 }
@@ -303,12 +323,14 @@ music = {
 
 	chance = {
 		modifier = {
-			factor = 2
-			not_has_socialist_government = yes
+			factor = 0
+			NOT = {
+				tag = USA
+			}
 		}
 		modifier = {
-			factor = 0
-			has_socialist_government = yes
+			factor = 2
+			tag = USA
 		}
 	}
 }
@@ -318,12 +340,14 @@ music = {
 
 	chance = {
 		modifier = {
-			factor = 2
-			not_has_socialist_government = yes
+			factor = 0
+			NOT = {
+				tag = NEE
+			}
 		}
 		modifier = {
-			factor = 0
-			has_socialist_government = yes
+			factor = 2
+			tag = NEE
 		}
 	}
 }
