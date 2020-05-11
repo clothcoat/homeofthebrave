@@ -16,7 +16,7 @@ focus_tree = {
 		id = CAL_activate_the_Western_Defense_Command
 		icon = GFX_focus_generic_bastion_of_democracy
 		cost = 5
-		x = 5
+		x = 6
 		y = 0
 		ai_will_do = {
 			factor = 2
@@ -52,12 +52,35 @@ focus_tree = {
 		icon = GFX_goal_national_artillery
 		cost = 5
 		prerequisite = {
-			focus = CAL_deWitt_in_Charge
-			focus = CAL_Marshall_in_command
+			focus = CAL_nativist_appeals
+			focus = CAL_unified_front
+			focus = CAL_modern_training
+			focus = CAL_weapons_development
 		}
 		x = 0
-		y = 2
+		y = 7
 		relative_position_id = CAL_activate_the_Western_Defense_Command
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_prepare_the_artillery"
+			add_tech_bonus = {
+				name = artillery_bonus
+				bonus = 1
+				uses = 1
+				category = artillery
+			}
+			add_ideas = CAL_military_industrial_production_1
+		}
+	}
+	focus = { # Defense Contracts
+		id = CAL_defense_contracts
+		icon = GFX_focus_generic_combined_arms
+		cost = 5
+		prerequisite = {
+			focus = CAL_prepare_the_artillery
+		}
+		x = -1
+		y = 1
+		relative_position_id = CAL_prepare_the_artillery
 		ai_will_do = {
 			factor = 2
 			modifier = {
@@ -70,27 +93,128 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CAL_prepare_the_artillery"
-			add_tech_bonus = {
-				name = artillery_bonus
-				bonus = 1
-				uses = 1
-				category = artillery
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_defense_contracts"
+			swap_ideas = {
+				remove_idea = CAL_military_industrial_production_1
+				add_idea = CAL_military_industrial_production_2
 			}
-			add_ideas = CAL_military_industrial_production_1
+			random_owned_state = {
+				limit = {
+					is_core_of = CAL
+					is_controlled_by = CAL
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
-	focus = {# Joint Chiefs of Staff
-		id = CAL_joint_chiefs_of_staff
-		icon = GFX_CAL_goal_jcs
+	focus = { # Crossing the Rockies
+		id = CAL_crossing_the_rockies
+		icon = GFX_goal_OTT_Land_Reform
 		cost = 5
 		prerequisite = {
-			focus = CAL_defense_contracts
+			focus = CAL_prepare_the_artillery
 		}
+		x = 1
+		y = 1
+		relative_position_id = CAL_prepare_the_artillery
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				NOT = { has_global_flag = CAL_civil_war_over_flag }
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_defense_contracts"
+			custom_effect_tooltip = crossing_the_rockies_tech_effect
+			hidden_effect = {
+				set_technology = {
+					crossing_the_rockies_tech = 1
+				}
+			}
+		}
+	}
+	focus = {# Defense Logistics Agency
+		id = CAL_defense_logistics_agency
+		icon = GFX_goal_famine
+		cost = 5
+		x = 0
+		y = 2
 		prerequisite = {
 			focus = CAL_crossing_the_rockies
 		}
-		x = 0
+		prerequisite = {
+			focus = CAL_defense_contracts
+		}
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				NOT = { has_global_flag = CAL_civil_war_over_flag }
+			}
+		}
+		relative_position_id = CAL_prepare_the_artillery
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_defense_logistics_agency"
+			army_experience = 25
+			add_ideas = CAL_defense_logistics_agency_idea
+		}
+
+	}
+	focus = { # Army Rangers
+		id = CAL_Army_rangers
+		icon = GFX_goal_generic_special_forces
+		cost = 5
+		prerequisite = {
+			focus = CAL_crossing_the_rockies
+		}
+		prerequisite = {
+			focus = CAL_defense_contracts
+		}
+		x = 2
+		y = 2
+		relative_position_id = CAL_prepare_the_artillery
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_Army_rangers"
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				technology = tech_special_forces
+			}
+		}
+	}
+	focus = {# Walkie Talkies
+		id = CAL_walkie_talkies
+		icon = GFX_goal_radio
+		cost = 5
+		prerequisite = {
+			focus = CAL_crossing_the_rockies
+		}
+		prerequisite = {
+			focus = CAL_defense_contracts
+		}
+		x = -2
 		y = 2
 		relative_position_id = CAL_prepare_the_artillery
 		ai_will_do = {
@@ -104,45 +228,15 @@ focus_tree = {
 				NOT = { has_global_flag = CAL_civil_war_over_flag }
 			}
 		}
-		available_if_capitulated = yes
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CAL_joint_chiefs_of_staff"
-			army_experience = 25
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_walkie_talkies"
 			add_tech_bonus = {
-				name = doctrine_bonus
+				name = industrial_bonus
 				bonus = 1
-				uses = 1
-				category = land_doctrine
+				uses = 2
+				category = electronics
 			}
 		}
-	}
-	focus = {# Defense Logistics Agency
-		id = CAL_defense_logistics_agency
-		icon = GFX_goal_famine
-		cost = 5
-		x = 0
-		y = 1
-		prerequisite = {
-			focus = CAL_joint_chiefs_of_staff
-		}
-		ai_will_do = {
-			factor = 2
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-			modifier = {
-				factor = 5
-				NOT = { has_global_flag = CAL_civil_war_over_flag }
-			}
-		}
-		relative_position_id = CAL_joint_chiefs_of_staff
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CAL_joint_chiefs_of_staff"
-			army_experience = 25
-			add_ideas = CAL_defense_logistics_agency_idea
-		}
-
 	}
 	focus = {# DeWitt in Command
 		id = CAL_deWitt_in_Charge
@@ -152,6 +246,8 @@ focus_tree = {
 			focus = CAL_activate_the_Western_Defense_Command
 		}
 		mutually_exclusive = {
+			focus = CAL_kruger_doctrine
+			focus = CAL_mcnair_report
 			focus = CAL_Marshall_in_command
 		}
 		ai_will_do = {
@@ -165,18 +261,544 @@ focus_tree = {
 				NOT = { has_global_flag = CAL_civil_war_over_flag }
 			}
 		}
-		x = -4
+		x = -6
 		y = 1
 		relative_position_id = CAL_activate_the_Western_Defense_Command
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_deWitt_in_Charge"
+			add_ideas = CAL_deWitt_plan_idea_1
+			add_tech_bonus = {
+				name = Dewitt_Planning
+				bonus = 1.5
+				uses = 1
+				category = cat_mass_assault
+			}
+		}
+	}
+	focus = { # Defense is the Best Offense
+		id = CAL_defense_is_the_best_offense
+		icon = GFX_goal_generic_fortify_city
+		cost = 5
+		prerequisite = {
+			focus = CAL_deWitt_in_Charge
+		}
+		x = -1
+		y = 1
+		relative_position_id = CAL_deWitt_in_Charge
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				NOT = { has_global_flag = CAL_civil_war_over_flag }
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_defense_is_the_best_offense"
+			add_ideas = CAL_deWitt_forts_idea
+		}
+	}
+	focus = { # Aggressive Conscription
+		id = CAL_aggressive_conscription
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+		prerequisite = {
+			focus = CAL_deWitt_in_Charge
+		}
+		x = 1
+		y = 1
+		relative_position_id = CAL_deWitt_in_Charge
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_aggressive_conscription"
+			swap_ideas = {
+				remove_idea = CAL_deWitt_plan_idea
+				add_idea = CAL_deWitt_plan_idea_2
+			}
 			add_tech_bonus = {
 				name = doctrine_bonus
-				bonus = 1
+				bonus = 2
 				uses = 1
-				category = land_doctrine
+				category = cat_mass_assault
 			}
-			add_ideas = CAL_deWitt_plan_idea_1
+			add_manpower = 15000
+			
+		}
+	}
+	focus = { # Wake the West
+		id = CAL_wake_the_west
+		icon = GFX_goal_checkmate
+		cost = 5
+		prerequisite = {
+			focus = CAL_defense_is_the_best_offense
+		}
+		prerequisite = {
+			focus = CAL_aggressive_conscription
+		}
+		x = 0
+		y = 2
+		relative_position_id = CAL_deWitt_in_Charge
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_wake_the_west"
+			swap_ideas = {
+				remove_idea = CAL_deWitt_plan_idea_2
+				add_idea = CAL_deWitt_plan_idea_3
+			}
+			add_war_support = 0.15
+			add_manpower = 11500
+		}
+	}
+	focus = { # Traditional Staff College
+		id = CAL_traditional_staff_colleges
+		icon = GFX_goal_checkmate
+		cost = 5
+		prerequisite = {
+			focus = CAL_wake_the_west
+		}
+		x = 0
+		y = 4
+		relative_position_id = CAL_deWitt_in_Charge
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_traditional_staff_colleges"
+			swap_ideas = {
+				remove_idea = CAL_deWitt_plan_idea_3
+				add_idea = CAL_deWitt_plan_idea_4
+			}
+		}
+	}
+	focus = { # Nativist Appeals
+		id = CAL_nativist_appeals
+		icon = GFX_goal_checkmate
+		cost = 5
+		prerequisite = {
+			focus = CAL_traditional_staff_colleges
+		}
+		x = 0
+		y = 5
+		relative_position_id = CAL_deWitt_in_Charge
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_nativist_appeals"
+			swap_ideas = {
+				remove_idea = CAL_deWitt_plan_idea_4
+				add_idea = CAL_deWitt_plan_idea_5
+			}
+			add_war_support = 0.05
+			add_manpower = 2500
+		}
+	}
+	focus = { # Absolute Counter-Espionage
+		id = CAL_counter_espionage
+		icon = GFX_goal_checkmate
+		cost = 5
+		prerequisite = {
+			focus = CAL_wake_the_west
+		}
+		x = -1
+		y = 3
+		relative_position_id = CAL_deWitt_in_Charge
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_counter_espionage"
+			swap_ideas = {
+				remove_idea = CAL_deWitt_forts_idea
+				add_idea = CAL_deWitt_forts_idea_2
+			}
+		}
+	}
+	focus = { # Mass Infantry Arms Purchase
+		id = CAL_infantry_arms
+		icon = GFX_goal_checkmate
+		cost = 5
+		prerequisite = {
+			focus = CAL_wake_the_west
+		}
+		x = 1
+		y = 3
+		relative_position_id = CAL_deWitt_in_Charge
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_infantry_arms"
+			add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 1000
+			producer = CAL
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_mainland_america = yes
+					free_building_slots = { building = arms_factory size > 0 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {# Kruger Doctrine
+		id = CAL_kruger_doctrine
+		icon = GFX_goal_generic_major_war
+		cost = 5
+		prerequisite = {
+			focus = CAL_activate_the_Western_Defense_Command
+		}
+		mutually_exclusive = {
+			focus = CAL_deWitt_in_Charge
+			focus = CAL_mcnair_report
+			focus = CAL_Marshall_in_command
+		}
+		x = 6
+		y = 1
+		relative_position_id = CAL_activate_the_Western_Defense_Command
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_kruger_doctrine"
+			add_ideas = CAL_kruger_doctrine_idea
+			add_tech_bonus = {
+				name = CAL_Extensive_Planning
+				bonus = 1.5
+				uses = 1
+				category = cat_superior_firepower
+			}
+		}
+	}
+	focus = {# Armor Production Lines
+		id = CAL_armor_production_lines
+		icon = GFX_goal_generic_major_war
+		cost = 5
+		prerequisite = {
+			focus = CAL_kruger_doctrine
+		}
+		x = 0
+		y = 1
+		relative_position_id = CAL_kruger_doctrine
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_armor_production_lines"
+			swap_ideas = {
+				remove_idea = CAL_kruger_doctrine_idea
+				add_idea = CAL_kruger_doctrine_idea_2
+			}
+			add_tech_bonus = {
+				name = CAL_Extensive_Planning
+				bonus = 1.5
+				uses = 2
+				category = cat_superior_firepower
+			}
+		}
+	}
+	focus = {# Manuever Exercises
+		id = CAL_manuever_exercises
+		icon = GFX_goal_generic_major_war
+		cost = 5
+		prerequisite = {
+			focus = CAL_armor_production_lines
+		}
+		x = 1
+		y = 2
+		relative_position_id = CAL_kruger_doctrine
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_manuever_exercises"
+			swap_ideas = {
+				remove_idea = CAL_kruger_doctrine_idea_2
+				add_idea = CAL_kruger_doctrine_idea_3
+			}
+			add_tech_bonus = {
+				name = CAL_Extensive_Planning
+				bonus = 1.5
+				uses = 2
+				category = cat_superior_firepower
+			}
+		}
+	}
+	focus = {# Tank Contracts
+		id = CAL_tank_contracts
+		icon = GFX_goal_generic_major_war
+		cost = 5
+		prerequisite = {
+			focus = CAL_armor_production_lines
+		}
+		x = -1
+		y = 2
+		relative_position_id = CAL_kruger_doctrine
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_tank_contracts"
+			add_tech_bonus = {
+				name = CAL_Extensive_Planning
+				bonus = 1.5
+				uses = 1
+				category = cat_grand_battle_plan
+			}
+			add_ideas = CAL_Marshall_plan_idea_1
+			add_equipment_to_stockpile = {
+			type = light_tank_equipment
+			amount = 220
+			producer = COR
+			}
+		}
+	}
+	focus = {# Officer Latitude
+		id = CAL_officer_latitude
+		icon = GFX_goal_generic_major_war
+		cost = 5
+		prerequisite = {
+			focus = CAL_tank_contracts
+		}
+		prerequisite = {
+			focus = CAL_manuever_exercises
+		}
+		x = 0
+		y = 3
+		relative_position_id = CAL_kruger_doctrine
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_officer_latitude"
+			swap_ideas = {
+				remove_idea = CAL_kruger_doctrine_idea_3
+				add_idea = CAL_kruger_doctrine_idea_4
+			}
+			add_ideas = CAL_Marshall_plan_idea_1
+		}
+	}
+	focus = {# Alamo Scouts
+		id = CAL_alamo_scouts
+		icon = GFX_goal_generic_major_war
+		cost = 5
+		prerequisite = {
+			focus = CAL_officer_latitude
+		}
+		x = -1
+		y = 4
+		relative_position_id = CAL_kruger_doctrine
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_alamo_scouts"
+			add_tech_bonus = {
+				name = CAL_Extensive_Planning
+				bonus = 1.5
+				uses = 1
+				category = cat_grand_battle_plan
+			}
+			add_ideas = CAL_Marshall_plan_idea_1
+		}
+	}
+	focus = {# Support Training
+		id = CAL_support_training
+		icon = GFX_goal_generic_major_war
+		cost = 5
+		prerequisite = {
+			focus = CAL_officer_latitude
+		}
+		x = 1
+		y = 4
+		relative_position_id = CAL_kruger_doctrine
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_support_training"
+			swap_ideas = {
+				remove_idea = CAL_kruger_doctrine_idea_4
+				add_idea = CAL_kruger_doctrine_idea_5
+			}
+		}
+	}
+	focus = {# Modernized War Training
+		id = CAL_modern_training
+		icon = GFX_goal_generic_major_war
+		cost = 5
+		prerequisite = {
+			focus = CAL_alamo_scouts
+		}
+		prerequisite = {
+			focus = CAL_support_training
+		}
+		x = 0
+		y = 5
+		relative_position_id = CAL_kruger_doctrine
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_kruger_doctrine"
+			swap_ideas = {
+				remove_idea = CAL_kruger_doctrine_idea_5
+				add_idea = CAL_kruger_doctrine_idea_6
+			}
+			add_tech_bonus = {
+				name = CAL_Extensive_Planning
+				bonus = 1.5
+				uses = 1
+				category = cat_grand_battle_plan
+			}
+		}
+	}
+	focus = {# McNair Report
+		id = CAL_mcnair_report
+		icon = GFX_goal_generic_major_war
+		cost = 5
+		prerequisite = {
+			focus = CAL_activate_the_Western_Defense_Command
+		}
+		mutually_exclusive = {
+			focus = CAL_deWitt_in_Charge
+			focus = CAL_kruger_doctrine
+			focus = CAL_Marshall_in_command
+		}
+		x = 2
+		y = 1
+		relative_position_id = CAL_activate_the_Western_Defense_Command
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_mcnair_report"
+			add_tech_bonus = {
+				name = CAL_Extensive_Planning
+				bonus = 1.5
+				uses = 1
+				category = cat_grand_battle_plan
+			}
+			add_ideas = CAL_Marshall_plan_idea_1
+		}
+	}
+	focus = {# Towed Artillery
+		id = CAL_towed_artillery_yesterday
+		icon = GFX_goal_generic_major_war
+		cost = 5
+		prerequisite = {
+			focus = CAL_mcnair_report
+		}
+		x = -1
+		y = 1
+		relative_position_id = CAL_mcnair_report
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_towed_artillery_yesterday"
+			add_tech_bonus = {
+				name = CAL_Extensive_Planning
+				bonus = 1.5
+				uses = 1
+				category = cat_grand_battle_plan
+			}
+			add_ideas = CAL_Marshall_plan_idea_1
+		}
+	}
+	focus = {# Quasi Arms
+		id = CAL_quasi_arms_factories
+		icon = GFX_goal_generic_major_war
+		cost = 5
+		prerequisite = {
+			focus = CAL_mcnair_report
+		}
+		x = 1
+		y = 1
+		relative_position_id = CAL_mcnair_report
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_quasi_arms_factories"
+			add_tech_bonus = {
+				name = CAL_Extensive_Planning
+				bonus = 1.5
+				uses = 1
+				category = cat_grand_battle_plan
+			}
+			add_ideas = CAL_Marshall_plan_idea_1
+		}
+	}
+	focus = {# Combined Arms Training
+		id = CAL_combined_arms_units
+		icon = GFX_goal_generic_major_war
+		cost = 5
+		prerequisite = {
+			focus = CAL_towed_artillery_yesterday
+		}
+		prerequisite = {
+			focus = CAL_quasi_arms_factories
+		}
+		x = 0
+		y = 2
+		relative_position_id = CAL_mcnair_report
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_combined_arms_units"
+			add_tech_bonus = {
+				name = CAL_Extensive_Planning
+				bonus = 1.5
+				uses = 1
+				category = cat_grand_battle_plan
+			}
+			add_ideas = CAL_Marshall_plan_idea_1
+		}
+	}
+	focus = {# Field Artillery Schools
+		id = CAL_field_artillery_school
+		icon = GFX_goal_generic_major_war
+		cost = 5
+		prerequisite = {
+			focus = CAL_combined_arms_units
+		}
+		x = 0
+		y = 4
+		relative_position_id = CAL_mcnair_report
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_combined_arms_units"
+			add_tech_bonus = {
+				name = CAL_Extensive_Planning
+				bonus = 1.5
+				uses = 1
+				category = cat_grand_battle_plan
+			}
+			add_ideas = CAL_Marshall_plan_idea_1
+		}
+	}
+	focus = {# Weapons Development
+		id = CAL_weapons_development
+		icon = GFX_goal_generic_major_war
+		cost = 5
+		prerequisite = {
+			focus = CAL_field_artillery_school
+		}
+		x = 0
+		y = 5
+		relative_position_id = CAL_mcnair_report
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_combined_arms_units"
+			add_tech_bonus = {
+				name = CAL_Extensive_Planning
+				bonus = 1.5
+				uses = 1
+				category = cat_grand_battle_plan
+			}
+			add_ideas = CAL_Marshall_plan_idea_1
+		}
+	}
+	focus = {# Tank Destroyers
+		id = CAL_tank_destroyers
+		icon = GFX_goal_generic_major_war
+		cost = 5
+		prerequisite = {
+			focus = CAL_combined_arms_units
+		}
+		x = -1
+		y = 3
+		relative_position_id = CAL_mcnair_report
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_kruger_doctrine"
+			add_tech_bonus = {
+				name = CAL_Extensive_Planning
+				bonus = 1.5
+				uses = 1
+				category = cat_grand_battle_plan
+			}
+			add_ideas = CAL_Marshall_plan_idea_1
+		}
+	}
+	focus = {# Bombing Support
+		id = CAL_bombing_support
+		icon = GFX_goal_generic_major_war
+		cost = 5
+		prerequisite = {
+			focus = CAL_combined_arms_units
+		}
+		x = 1
+		y = 3
+		relative_position_id = CAL_mcnair_report
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_kruger_doctrine"
+			add_tech_bonus = {
+				name = CAL_Extensive_Planning
+				bonus = 1.5
+				uses = 1
+				category = cat_grand_battle_plan
+			}
+			add_ideas = CAL_Marshall_plan_idea_1
 		}
 	}
 	focus = {# Marshall in Command
@@ -188,6 +810,8 @@ focus_tree = {
 		}
 		mutually_exclusive = {
 			focus = CAL_deWitt_in_Charge
+			focus = CAL_mcnair_report
+			focus = CAL_kruger_doctrine
 		}
 		ai_will_do = {
 			factor = 2
@@ -200,18 +824,242 @@ focus_tree = {
 				NOT = { has_global_flag = CAL_civil_war_over_flag }
 			}
 		}
-		x = 4
+		x = -2
 		y = 1
 		relative_position_id = CAL_activate_the_Western_Defense_Command
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_Marshall_in_command"
+			add_tech_bonus = {
+				name = CAL_Extensive_Planning
+				bonus = 1.5
+				uses = 1
+				category = cat_grand_battle_plan
+			}
+			add_ideas = CAL_Marshall_plan_idea_1
+		}
+	}
+	focus = {# Supreme Commander
+		id = CAL_supreme_commander
+		icon = GFX_goal_generic_major_war
+		cost = 5
+		prerequisite = {
+			focus = CAL_Marshall_in_command
+		}
+		x = 0
+		y = 1
+		relative_position_id = CAL_Marshall_in_command
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_Marshall_in_command"
+			add_tech_bonus = {
+				name = CAL_Extensive_Planning
+				bonus = 1.5
+				uses = 1
+				category = cat_grand_battle_plan
+			}
+			if = {
+				limit = { has_idea = CAL_Marshall_plan_idea_1 }
+				swap_ideas = {
+					remove_idea = CAL_Marshall_plan_idea_1
+					add_idea = CAL_Marshall_plan_idea_2
+				}
+			}
+		}
+	}
+	focus = {# Organizing Victory
+		id = CAL_organizing_victory
+		icon = GFX_goal_generic_army_motorized
+		cost = 5
+		prerequisite = {
+			focus = CAL_supreme_commander
+		}
+		x = 1
+		y = 2
+		relative_position_id = CAL_Marshall_in_command
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_organizing_victory"
+			if = {
+				limit = { has_idea = CAL_Marshall_plan_idea_2 }
+				swap_ideas = {
+					remove_idea = CAL_Marshall_plan_idea_2
+					add_idea = CAL_Marshall_plan_idea_3_organizing
+				}
+			}
+			if = {
+				limit = { has_idea = CAL_Marshall_plan_idea_3_central }
+				swap_ideas = {
+					remove_idea = CAL_Marshall_plan_idea_3_central
+					add_idea = CAL_Marshall_plan_idea_3
+				}
+			}
+		}
+	}
+	focus = {# Central Strategy
+		id = CAL_central_strategy
+		icon = GFX_goal_generic_army_motorized
+		cost = 4
+		prerequisite = {
+			focus = CAL_supreme_commander
+		}
+		x = -1
+		y = 2
+		relative_position_id = CAL_Marshall_in_command
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_motorization"
+			if = {
+				limit = { has_idea = CAL_Marshall_plan_idea_2 }
+				swap_ideas = {
+					remove_idea = CAL_Marshall_plan_idea_2
+					add_idea = CAL_Marshall_plan_idea_3_central
+				}
+			}
+			if = {
+				limit = { has_idea = CAL_Marshall_plan_idea_3_organizing }
+				swap_ideas = {
+					remove_idea = CAL_Marshall_plan_idea_3_organizing
+					add_idea = CAL_Marshall_plan_idea_3
+				}
+			}
+		}
+	}
+	focus = { #Officer Instruction
+		id = CAL_Officer_instruction
+		icon = GFX_goal_planning_bonus
+		cost = 5
+		prerequisite = {
+			focus = CAL_organizing_victory
+		}
+		prerequisite = {
+			focus = CAL_central_strategy
+		}
+		x = 0
+		y = 3
+		relative_position_id = CAL_Marshall_in_command
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				NOT = { has_global_flag = CAL_civil_war_over_flag }
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_Officer_instruction"
+			if = {
+				limit = { has_idea = CAL_Marshall_plan_idea_3_organizing }
+				swap_ideas = {
+					remove_idea = CAL_Marshall_plan_idea_3_central
+					add_idea = CAL_Marshall_plan_idea_4
+				}
+			}
+			if = {
+				limit = { has_idea = CAL_Marshall_plan_idea_3_organizing }
+				swap_ideas = {
+					remove_idea = CAL_Marshall_plan_idea_3_organizing
+					add_idea = CAL_Marshall_plan_idea_4
+				}
+			}
+		}
+	}
+	focus = { # 90-Division Army Plan
+		id = CAL_90_division_Army
+		icon = GFX_focus_generic_little_entente
+		cost = 5
+		prerequisite = {
+			focus = CAL_Officer_instruction
+		}
+		x = -1
+		y = 4
+		relative_position_id = CAL_Marshall_in_command
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_90_division_Army"
+			if = {
+				limit = { has_idea = CAL_Marshall_plan_idea_1 }
+				swap_ideas = {
+					remove_idea = CAL_Marshall_plan_idea_1
+					add_idea = CAL_Marshall_plan_idea_2_left
+				}
+			}
+			if = {
+				limit = { has_idea = CAL_Marshall_plan_idea_2_right }
+				swap_ideas = {
+					remove_idea = CAL_Marshall_plan_idea_2_right
+					add_idea = CAL_Marshall_plan_idea_3
+				}
+			}
 			add_tech_bonus = {
 				name = doctrine_bonus
 				bonus = 1
 				uses = 1
 				category = land_doctrine
 			}
-			add_ideas = CAL_Marshall_plan_idea_1
+		}
+	}
+	focus = { # Morale Emphasis
+		id = CAL_morale_emphasis
+		icon = GFX_goal_generic_military_sphere
+		cost = 5
+		prerequisite = {
+			focus = CAL_Officer_instruction
+		}
+		x = 1
+		y = 4
+		relative_position_id = CAL_Marshall_in_command
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				NOT = { has_global_flag = CAL_civil_war_over_flag }
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_recon_units"
+		}
+	}
+	focus = { # Unified Front
+		id = CAL_unified_front
+		icon = GFX_focus_generic_provoke_border_clashes
+		cost = 5
+		prerequisite = {
+			focus = CAL_morale_emphasis
+		}
+		prerequisite = {
+			focus = CAL_90_division_Army
+		}
+		available = {
+			797 = {
+				is_controlled_by = CAL 
+			}
+			1107 = {
+				is_controlled_by = CAL
+			}
+			385 = {
+				is_controlled_by = CAL
+			}
+			829 = {
+				is_controlled_by = CAL 
+			}
+		}
+		x = 0
+		y = 5
+		relative_position_id = CAL_Marshall_in_command
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_recon_units"
+			swap_ideas = {
+				remove_idea = CAL_Marshall_plan_idea_5
+				add_idea = CAL_Marshall_plan_idea_6
+			}
+			add_timed_idea = {
+				idea = CAL_the_big_push_westwards
+				days = 150
+			}
+			activate_mission = CAL_Operation_Liberty_mission
 		}
 	}
 	focus = {# Protecting Columbia
@@ -328,513 +1176,6 @@ focus_tree = {
 		}
 
 	}
-	focus = { # Army Rangers
-		id = CAL_Army_rangers
-		icon = GFX_goal_generic_special_forces
-		cost = 5
-		prerequisite = {
-			focus = CAL_joint_chiefs_of_staff
-		}
-		x = 2
-		y = 1
-		relative_position_id = CAL_joint_chiefs_of_staff
-		ai_will_do = {
-			factor = 2
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-		}
-		available_if_capitulated = yes
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CAL_Army_rangers"
-			add_tech_bonus = {
-				bonus = 1
-				uses = 2
-				technology = tech_special_forces
-			}
-		}
-	}
-	focus = { # 90-Division Army Plan
-		id = CAL_90_division_Army
-		icon = GFX_focus_generic_little_entente
-		cost = 5
-		prerequisite = {
-			focus = CAL_Marshall_in_command
-		}
-		x = -1
-		y = 1
-		relative_position_id = CAL_Marshall_in_command
-		ai_will_do = {
-			factor = 2
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-			modifier = {
-				factor = 5
-				NOT = { has_global_flag = CAL_civil_war_over_flag }
-			}
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CAL_90_division_Army"
-			if = {
-				limit = { has_idea = CAL_Marshall_plan_idea_1 }
-				swap_ideas = {
-					remove_idea = CAL_Marshall_plan_idea_1
-					add_idea = CAL_Marshall_plan_idea_2_left
-				}
-			}
-			if = {
-				limit = { has_idea = CAL_Marshall_plan_idea_2_right }
-				swap_ideas = {
-					remove_idea = CAL_Marshall_plan_idea_2_right
-					add_idea = CAL_Marshall_plan_idea_3
-				}
-			}
-			add_tech_bonus = {
-				name = doctrine_bonus
-				bonus = 1
-				uses = 1
-				category = land_doctrine
-			}
-		}
-	}
-	focus = {# Motorization Effort
-		id = CAL_motorization
-		icon = GFX_goal_generic_army_motorized
-		cost = 5
-		prerequisite = {
-			focus = CAL_Marshall_in_command
-		}
-		x = 1
-		y = 1
-		relative_position_id = CAL_Marshall_in_command
-		ai_will_do = {
-			factor = 2
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-			modifier = {
-				factor = 5
-				NOT = { has_global_flag = CAL_civil_war_over_flag }
-			}
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CAL_motorization"
-			if = {
-				limit = { has_idea = CAL_Marshall_plan_idea_1 }
-				swap_ideas = {
-					remove_idea = CAL_Marshall_plan_idea_1
-					add_idea = CAL_Marshall_plan_idea_2_right
-				}
-			}
-			if = {
-				limit = { has_idea = CAL_Marshall_plan_idea_2_left }
-				swap_ideas = {
-					remove_idea = CAL_Marshall_plan_idea_2_left
-					add_idea = CAL_Marshall_plan_idea_3
-				}
-			}
-			country_event = { id = pacificstates.200 days = 7 }
-		}
-	}
-	focus = {# Tank Production
-		id = CAL_tank_production
-		icon = GFX_goal_American_Armor
-		cost = 5
-		prerequisite = {
-			focus = CAL_90_division_Army
-		}
-		prerequisite = {
-			focus = CAL_motorization
-		}
-		x = 0
-		y = 2
-		relative_position_id = CAL_Marshall_in_command
-		ai_will_do = {
-			factor = 2
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-			modifier = {
-				factor = 5
-				NOT = { has_global_flag = CAL_civil_war_over_flag }
-			}
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CAL_tank_production"
-			random_owned_state = {
-				limit = {
-					is_core_of = CAL
-					is_controlled_by = CAL
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
-			swap_ideas = {
-				remove_idea = CAL_Marshall_plan_idea_3
-				add_idea = CAL_Marshall_plan_idea_4
-			}
-		}
-	}
-	focus = { #Officer Instruction
-		id = CAL_Officer_instruction
-		icon = GFX_goal_planning_bonus
-		cost = 5
-		prerequisite = {
-			focus = CAL_tank_production
-		}
-		x = -1
-		y = 1
-		relative_position_id = CAL_tank_production
-		ai_will_do = {
-			factor = 2
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-			modifier = {
-				factor = 5
-				NOT = { has_global_flag = CAL_civil_war_over_flag }
-			}
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CAL_Officer_instruction"
-			swap_ideas = {
-				remove_idea = CAL_Marshall_plan_idea_4
-				add_idea = CAL_Marshall_plan_idea_5
-			}
-		}
-	}
-	focus = { # Reconnossaince Units
-		id = CAL_recon_units
-		icon = GFX_goal_generic_military_sphere
-		cost = 5
-		prerequisite = {
-			focus = CAL_tank_production
-		}
-		x = 1
-		y = 1
-		relative_position_id = CAL_tank_production
-		ai_will_do = {
-			factor = 2
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-			modifier = {
-				factor = 5
-				NOT = { has_global_flag = CAL_civil_war_over_flag }
-			}
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CAL_recon_units"
-			if = {
-				limit = { NOT = { has_tech = tech_recon2 } }
-				set_technology = { tech_recon2 = 1 }
-				else = {
-					add_tech_bonus = {
-						name = infantry_weapons_bonus
-						bonus = 1
-						uses = 1
-						category = recon_tech
-					}
-				}
-			}
-			hidden_effect = {
-				set_technology = { improved_recon_units_tech = 1 }
-			}
-			custom_effect_tooltip = improved_recon_units_tech_effect
-		}
-	}
-	focus = { # One Switft Push
-		id = CAL_one_switft_push
-		icon = GFX_focus_generic_provoke_border_clashes
-		cost = 5
-		prerequisite = {
-			focus = CAL_Officer_instruction
-		}
-		prerequisite = {
-			focus = CAL_recon_units
-		}
-		available = {
-			387 = {
-				NOT = { is_controlled_by = CAL }
-				owner = { has_war_with = CAL }
-			}
-			380 = {
-				NOT = { is_controlled_by = CAL }
-				owner = { has_war_with = CAL }
-			}
-			377 = {
-				NOT = { is_controlled_by = CAL }
-				owner = { has_war_with = CAL }
-			}
-			834 = {
-				NOT = { is_controlled_by = CAL }
-				owner = { has_war_with = CAL }
-			}
-		}
-		bypass = {
-			CAL = {
-				has_full_control_of_state = 387
-				has_full_control_of_state = 380
-				has_full_control_of_state = 377
-				has_full_control_of_state = 834
-			}
-		}
-		x = 0
-		y = 2
-		relative_position_id = CAL_tank_production
-		ai_will_do = {
-			factor = 2
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-			modifier = {
-				factor = 10
-				NOT = { has_global_flag = CAL_civil_war_over_flag }
-			}
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CAL_recon_units"
-			swap_ideas = {
-				remove_idea = CAL_Marshall_plan_idea_5
-				add_idea = CAL_Marshall_plan_idea_6
-			}
-			add_timed_idea = {
-				idea = CAL_the_big_push_westwards
-				days = 150
-			}
-			activate_mission = CAL_Operation_Liberty_mission
-		}
-	}
-	focus = { # Defense is the Best Offense
-		id = CAL_defense_is_the_best_offense
-		icon = GFX_goal_generic_fortify_city
-		cost = 5
-		prerequisite = {
-			focus = CAL_deWitt_in_Charge
-		}
-		x = -1
-		y = 1
-		relative_position_id = CAL_deWitt_in_Charge
-		ai_will_do = {
-			factor = 2
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-			modifier = {
-				factor = 5
-				NOT = { has_global_flag = CAL_civil_war_over_flag }
-			}
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CAL_defense_is_the_best_offense"
-			swap_ideas = {
-				remove_idea = CAL_deWitt_plan_idea_1
-				add_idea = CAL_deWitt_plan_idea_2
-			}
-		}
-	}
-	focus = { # Logistics Security
-		id = CAL_logistic_security
-		icon = GFX_goal_munitions_factories
-		cost = 5
-		prerequisite = {
-			focus = CAL_deWitt_in_Charge
-		}
-		x = 1
-		y = 1
-		relative_position_id = CAL_deWitt_in_Charge
-		ai_will_do = {
-			factor = 2
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-			modifier = {
-				factor = 5
-				NOT = { has_global_flag = CAL_civil_war_over_flag }
-			}
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CAL_logistic_security"
-			random_owned_state = {
-				limit = {
-					is_core_of = CAL
-					is_controlled_by = CAL
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
-			if = {
-				limit = { NOT = { has_tech = tech_logistics_company } }
-				set_technology = { tech_logistics_company = 1 }
-				else = {
-					add_tech_bonus = {
-						name = infantry_weapons_bonus
-						bonus = 1
-						uses = 1
-						category = logistics_tech
-					}
-				}
-			}
-		}
-	}
-	focus = { # Expand the Presidio
-		id = CAL_Expand_the_Presidio
-		icon = GFX_focus_generic_military_mission
-		cost = 5
-		prerequisite = {
-			focus = CAL_defense_is_the_best_offense
-		}
-		prerequisite = {
-			focus = CAL_logistic_security
-		}
-		x = 1
-		y = 1
-		relative_position_id = CAL_defense_is_the_best_offense
-		ai_will_do = {
-			factor = 2
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-			modifier = {
-				factor = 5
-				NOT = { has_global_flag = CAL_civil_war_over_flag }
-			}
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CAL_Expand_the_Presidio"
-			swap_ideas = {
-				remove_idea = CAL_deWitt_plan_idea_2
-				add_idea = CAL_deWitt_plan_idea_3
-			}
-			add_tech_bonus = {
-				name = doctrine_bonus
-				bonus = 1
-				uses = 1
-				category = land_doctrine
-			}
-		}
-	}
-	focus = { # Improve 'Bite and Hold' Tactics
-		id = CAL_improve_bite_and_hold_tactics
-		icon = GFX_goal_CAL_ursine_spirit
-		cost = 5
-		prerequisite = {
-			focus = CAL_Expand_the_Presidio
-		}
-		x = -1
-		y = 1
-		relative_position_id = CAL_Expand_the_Presidio
-		ai_will_do = {
-			factor = 2
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-			modifier = {
-				factor = 5
-				NOT = { has_global_flag = CAL_civil_war_over_flag }
-			}
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CAL_improve_bite_and_hold_tactics"
-			swap_ideas = {
-				remove_idea = CAL_deWitt_plan_idea_3
-				add_idea = CAL_deWitt_plan_idea_4
-			}
-		}
-	}
-	focus = { # Engineer Corps Expansion
-		id = CAL_engineer_corps_expansion
-		icon = GFX_goal_generic_construction2
-		cost = 5
-		prerequisite = {
-			focus = CAL_Expand_the_Presidio
-		}
-		x = 1
-		y = 1
-		relative_position_id = CAL_Expand_the_Presidio
-		ai_will_do = {
-			factor = 2
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-			modifier = {
-				factor = 5
-				NOT = { has_global_flag = CAL_civil_war_over_flag }
-			}
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CAL_engineer_corps_expansion"
-			if = {
-				limit = { NOT = { has_tech = tech_engineers2 } }
-				set_technology = { tech_engineers2 = 1 }
-				else = {
-					add_tech_bonus = {
-						name = infantry_weapons_bonus
-						bonus = 1
-						uses = 1
-						category = engineers_tech
-					}
-				}
-			}
-			hidden_effect = {
-				set_technology = { expanded_engineer_corps_tech = 1 }
-			}
-			custom_effect_tooltip = expanded_engineer_corps_tech_effect
-		}
-	}
-	focus = { # Coast to Coast Planning
-		id = CAL_coast_to_coast_planning
-		icon = GFX_goal_checkmate
-		cost = 5
-		prerequisite = {
-			focus = CAL_improve_bite_and_hold_tactics
-		}
-		prerequisite = {
-			focus = CAL_engineer_corps_expansion
-		}
-		x = 0
-		y = 2
-		relative_position_id = CAL_Expand_the_Presidio
-		ai_will_do = {
-			factor = 2
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-			modifier = {
-				factor = 5
-				NOT = { has_global_flag = CAL_civil_war_over_flag }
-			}
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CAL_coast_to_coast_planning"
-			swap_ideas = {
-				remove_idea = CAL_deWitt_plan_idea_4
-				add_idea = CAL_deWitt_plan_idea_5
-			}
-		}
-	}
 	focus = { # Bring the 'Complex West
 		id = CAL_bring_the_complex_west
 		icon = GFX_goal_Focus_Military_Mobilisation
@@ -845,17 +1186,6 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = CAL_protecting_Columbia
-		ai_will_do = {
-			factor = 2
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-			modifier = {
-				factor = 5
-				NOT = { has_global_flag = CAL_civil_war_over_flag }
-			}
-		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_bring_the_complex_west"
 			swap_ideas = {
@@ -881,19 +1211,10 @@ focus_tree = {
 		icon = GFX_goal_COS_American_Staff
 		cost = 5
 		prerequisite = {
-			focus = CAL_weapon_designs
-		}
-		prerequisite = {
 			focus = CAL_bring_the_complex_west
 		}
-		prerequisite = {
-			focus = CAL_gi_bill
-		}
-		prerequisite = {
-			focus = CAL_war_bonds
-		}
-		x = 0
-		y = 3
+		x = 1
+		y = 2
 		relative_position_id = CAL_protecting_Columbia
 		ai_will_do = {
 			factor = 2
@@ -913,78 +1234,6 @@ focus_tree = {
 				bonus = 1
 				uses = 2
 				category = land_doctrine
-			}
-		}
-	}
-	focus = { # Defense Contracts
-		id = CAL_defense_contracts
-		icon = GFX_focus_generic_combined_arms
-		cost = 5
-		prerequisite = {
-			focus = CAL_prepare_the_artillery
-		}
-		x = -1
-		y = 1
-		relative_position_id = CAL_prepare_the_artillery
-		ai_will_do = {
-			factor = 2
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-			modifier = {
-				factor = 5
-				NOT = { has_global_flag = CAL_civil_war_over_flag }
-			}
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CAL_defense_contracts"
-			swap_ideas = {
-				remove_idea = CAL_military_industrial_production_1
-				add_idea = CAL_military_industrial_production_2
-			}
-			random_owned_state = {
-				limit = {
-					is_core_of = CAL
-					is_controlled_by = CAL
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-	}
-	focus = { # Crossing the Rockies
-		id = CAL_crossing_the_rockies
-		icon = GFX_goal_OTT_Land_Reform
-		cost = 5
-		prerequisite = {
-			focus = CAL_prepare_the_artillery
-		}
-		x = 1
-		y = 1
-		relative_position_id = CAL_prepare_the_artillery
-		ai_will_do = {
-			factor = 2
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-			modifier = {
-				factor = 5
-				NOT = { has_global_flag = CAL_civil_war_over_flag }
-			}
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CAL_defense_contracts"
-			custom_effect_tooltip = crossing_the_rockies_tech_effect
-			hidden_effect = {
-				set_technology = {
-					crossing_the_rockies_tech = 1
-				}
 			}
 		}
 	}
@@ -1022,7 +1271,7 @@ focus_tree = {
 		prerequisite = {
 			focus = CAL_bring_the_complex_west
 		}
-		x = 1
+		x = 2
 		y = 1
 		relative_position_id = CAL_bring_the_complex_west
 		ai_will_do = {
@@ -1052,38 +1301,6 @@ focus_tree = {
 			}
 		}
 	}
-	focus = {# Walkie Talkies
-		id = CAL_walkie_talkies
-		icon = GFX_goal_radio
-		cost = 5
-		prerequisite = {
-			focus = CAL_joint_chiefs_of_staff
-		}
-		x = -2
-		y = 1
-		relative_position_id = CAL_joint_chiefs_of_staff
-		ai_will_do = {
-			factor = 2
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-			modifier = {
-				factor = 5
-				NOT = { has_global_flag = CAL_civil_war_over_flag }
-			}
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CAL_walkie_talkies"
-			add_tech_bonus = {
-				name = industrial_bonus
-				bonus = 1
-				uses = 2
-				category = electronics
-			}
-		}
-	}
-
 
 	### Navy Section ###
 	focus = {# U.S Navy
@@ -1096,7 +1313,7 @@ focus_tree = {
 				is_controlled_by = ROOT
 			}
 		}
-		x = 17
+		x = 19
 		y = 0
 		ai_will_do = {
 			factor = 1
@@ -1832,8 +2049,8 @@ focus_tree = {
 		id = CAL_air_force
 		icon = GFX_goal_CAL_usaaf
 		cost = 5.00
-		x = 12
-		y = 6
+		x = 13
+		y = 7
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -2249,7 +2466,7 @@ focus_tree = {
 		cost = 5.00
 		available = { has_global_flag = CAL_civil_war_over_flag }
 		bypass = { has_global_flag = CAL_civil_war_over_flag }
-		x = 49
+		x = 50
 		y = 0
 		ai_will_do = {
 			factor = 100
@@ -7460,6 +7677,12 @@ focus_tree = {
 			remove_idea = CAL_new_liberal_securities_2
 			add_idea = CAL_new_liberal_securities_3
 			}
+			add_tech_bonus = {
+				name = USA_progressive_medicare
+				bonus = 1
+				uses = 1
+				category = hospital_tech
+			}
 			add_popularity = { ideology = social_liberal popularity = 0.05 }
 		}
 	}
@@ -8780,10 +9003,10 @@ focus_tree = {
 			increase_ruling_party_popularity_by_5 = yes
 			add_war_support = 0.05
 			add_tech_bonus = {
-				name = industrial_bonus
-				bonus = 0.5
+				name = USA_progressive_medicare
+				bonus = 1.5
 				uses = 1
-				category = industry
+				category = hospital_tech
 			}
 			
 		}
@@ -10004,7 +10227,7 @@ focus_tree = {
 		}
 		available_if_capitulated = yes
 		cancel_if_invalid = yes
-		x = 101
+		x = 102
 		y = 0
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_spiritualist_takeover"
@@ -11158,7 +11381,7 @@ focus_tree = {
 		}
 		available_if_capitulated = no
 		cancel_if_invalid = yes
-		x = 119
+		x = 121
 		y = 0
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_back_in_business"
@@ -11206,9 +11429,11 @@ focus_tree = {
 		cancel_if_invalid = yes
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CAL_fortress_america"
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_new_moralism"
+			add_ideas = CAL_new_moralism_idea
 			add_war_support = -0.10
-			add_ideas = CAL_fortress_america_idea_1
+			add_stability = 0.05
+			
 		}
 	}
 	
@@ -11246,9 +11471,12 @@ focus_tree = {
 		cancel_if_invalid = yes
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CAL_fortress_america"
-			add_war_support = -0.10
-			add_ideas = CAL_fortress_america_idea_1
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_patriotic_broadsides"
+			increase_ruling_party_popularity_by_5 = yes
+			add_political_power = 50
+			add_war_support = 0.05
+			add_popularity = { ideology = paternal_autocrat popularity = -0.05 }
+			add_popularity = { ideology = authoritarian_democrat popularity = -0.03 }
 		}
 	}
 	
@@ -11289,8 +11517,8 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_fortress_america"
-			add_war_support = -0.10
 			add_ideas = CAL_fortress_america_idea_1
+			add_political_power = 30
 		}
 	}
 
@@ -11321,6 +11549,34 @@ focus_tree = {
 				remove_idea = CAL_fortress_america_idea_1
 				add_idea = CAL_fortress_america_idea_2
 			}
+			add_tech_bonus = {
+				name = navy_bonus
+				bonus = 1
+				uses = 2
+				category = naval_doctrine
+			}
+			random_owned_controlled_state = {
+				if = {
+					limit = { is_owned_and_controlled_by =  CAL }
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = dockyard
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			random_owned_controlled_state = {
+				if = {
+					limit = { is_owned_and_controlled_by =  CAL }
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = dockyard
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
 		}
 	}
 
@@ -11350,8 +11606,31 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_look_inward"
+			add_ideas = CAL_look_inward
 			add_stability = 0.10
 			add_political_power = 100
+			random_owned_controlled_state = {
+				if = {
+					limit = { is_owned_and_controlled_by =  CAL }
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			random_owned_controlled_state = {
+				if = {
+					limit = { is_owned_and_controlled_by =  CAL }
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
 		}
 	}
 	
@@ -11382,8 +11661,13 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_sprit_of_monroe"
-			add_stability = 0.10
-			add_political_power = 100
+			swap_ideas = {
+			remove_idea = CAL_new_moralism_idea
+			add_idea = CAL_spirit_of_monroe_idea
+			}
+			add_war_support = 0.05
+			add_manpower = 2000
+			unlock_decision_category_tooltip = yes
 		}
 	}
 	
@@ -11411,8 +11695,10 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_look_inward"
-			add_stability = 0.10
-			add_political_power = 100
+			swap_ideas = {
+			remove_idea = CAL_new_moralism
+			add_idea = CAL_look_inward_idea
+			}
 		}
 	}
 	
@@ -11444,7 +11730,17 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_business_of_neutrality"
-			add_ideas = CAL_neutrality_idea
+			swap_ideas = {
+			remove_idea = CAL_look_inward_idea
+			add_idea = CAL_look_inward_idea_2
+			}
+			add_stability = 0.08
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 1
+				uses = 2
+				category = industry
+			}
 		}
 	}
 
@@ -11475,8 +11771,41 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_leap_forward"
 			swap_ideas = {
-				remove_idea = CAL_fortress_america_idea_2
-				add_idea = CAL_fortress_america_idea_3
+			remove_idea = CAL_look_inward_idea_2
+			add_idea = CAL_look_inward_idea_3
+			}
+			random_owned_controlled_state = {
+				if = {
+					limit = { is_owned_and_controlled_by =  CAL }
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			random_owned_controlled_state = {
+				if = {
+					limit = { is_owned_and_controlled_by =  CAL }
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			random_owned_controlled_state = {
+				if = {
+					limit = { is_owned_and_controlled_by =  CAL }
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
 			}
 		}
 	}
@@ -11505,7 +11834,13 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_american_century"
-			add_political_power = 200
+			swap_ideas = {
+			remove_idea = CAL_look_inward_idea_3
+			add_idea = CAL_look_inward_idea_4
+			}
+			add_stability = 0.15
+			add_political_power = 100
+			add_war_support = 0.05
 		}
 	}
 	
@@ -12560,7 +12895,10 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_american_imperialism"
-			add_war_support = 0.20
+			add_ideas = USA_american_imperialism_idea
+			add_war_support = 0.15
+			add_popularity = { ideology = paternal_autocrat popularity = 0.03 }
+			add_popularity = { ideology = national_populist popularity = 0.03 }
 			add_stability = -0.05
 		}
 	}
@@ -12589,8 +12927,14 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_national_rhetoric"
-			add_political_power = 100
-			add_ideas = TEX_manifest_destiny_idea
+			swap_ideas = {
+			remove_idea = USA_american_imperialism_idea
+			add_idea = USA_american_imperialism_idea_2
+			}
+			add_manpower = 12250
+			add_war_support = 0.1
+			add_popularity = { ideology = paternal_autocrat popularity = 0.03 }
+			add_popularity = { ideology = national_populist popularity = 0.03 }
 		}
 	}
 	
@@ -12618,8 +12962,11 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_new_marine_corps"
-			add_political_power = 100
-			add_ideas = TEX_manifest_destiny_idea
+			swap_ideas = {
+			remove_idea = USA_american_imperialism_idea_2
+			add_idea = USA_american_imperialism_idea_3
+			}
+			add_manpower = 5000
 		}
 	}
 	
@@ -12651,8 +12998,9 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_make_mexico_friendly"
-			add_political_power = 100
-			add_ideas = TEX_manifest_destiny_idea
+			unlock_decision_tooltip = TEX_claim_mexico_dec
+			add_war_support = 0.03
+			add_manpower = 1000
 		}
 	}
 
@@ -12795,7 +13143,9 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_western_dominance"
-			add_political_power = 200
+			add_war_support = 0.1
+			add_political_power = 50
+			add_manpower = 3000
 		}
 	}
 	
@@ -12822,7 +13172,18 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_dismantle_the_empire"
-			add_political_power = 200
+			add_war_support = 0.05
+			add_tech_bonus = {
+				bonus = 0.75
+				uses = 1
+				category = land_doctrine
+			}
+			add_tech_bonus = {
+				bonus = 0.75
+				uses = 1
+				category = naval_doctrine
+			}
+			unlock_decision_tooltip = USA_attack_canada
 		}
 	}
 	
@@ -12852,7 +13213,8 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_claim_australasia"
-			add_political_power = 200
+			add_war_support = 0.03
+			unlock_decision_tooltip = USA_attack_australasia
 		}
 	}
 	focus = {
@@ -12878,9 +13240,13 @@ focus_tree = {
 		cancel_if_invalid = yes
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CAL_make_mexico_friendly"
-			add_political_power = 100
-			add_ideas = TEX_manifest_destiny_idea
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_demand_greenland"
+			ROOT = {
+			if = {
+			limit = { controls_state = 101 }
+			country_event = ustates.670
+			}
+			}
 		}
 	}
 	focus = {
