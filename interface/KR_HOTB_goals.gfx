@@ -2412,6 +2412,93 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/CSA_vanguardist_incentives.dds"
 	}
 
+	### CSA Military ###
+	
+	SpriteType = {#
+		name = "GFX_goal_CSA_butlers_plan"
+		texturefile = "gfx/interface/goals/CSA_butlers_plan.dds"
+	}
+	
+	SpriteType = {#
+		name = "GFX_goal_CSA_centralist_reorganization"
+		texturefile = "gfx/interface/goals/CSA_centralist_reorganization.dds"
+	}
+	
+	SpriteType = {#
+		name = "GFX_goal_CSA_collectivist_military"
+		texturefile = "gfx/interface/goals/CSA_collectivist_military.dds"
+	}
+	
+	SpriteType = {#
+		name = "GFX_goal_CSA_drills"
+		texturefile = "gfx/interface/goals/CSA_drills.dds"
+	}
+	
+	SpriteType = {#
+		name = "GFX_goal_CSA_militia_support"
+		texturefile = "gfx/interface/goals/CSA_militia_support.dds"
+	}
+	
+		SpriteType = {#
+		name = "GFX_goal_CSA_overwhelm_reactionaries"
+		texturefile = "gfx/interface/goals/CSA_overwhelm_reactionaries.dds"
+	}
+	
+	SpriteType = {#
+		name = "GFX_goal_CSA_peoples_military_academy"
+		texturefile = "gfx/interface/goals/CSA_peoples_military_academy.dds"
+	}
+	
+	SpriteType = {#
+		name = "GFX_goal_CSA_peoples_republican_army"
+		texturefile = "gfx/interface/goals/CSA_peoples_republican_army.dds"
+	}
+	
+	SpriteType = {#
+		name = "GFX_goal_CSA_professional_red_army"
+		texturefile = "gfx/interface/goals/CSA_professional_red_army.dds"
+	}
+	
+	SpriteType = {#
+		name = "GFX_goal_CSA_proletarian_arms"
+		texturefile = "gfx/interface/goals/CSA_proletarian_arms.dds"
+	}
+	
+	SpriteType = {#
+		name = "GFX_goal_CSA_radicalized_training"
+		texturefile = "gfx/interface/goals/CSA_radicalized_training.dds"
+	}
+	
+	SpriteType = {#
+		name = "GFX_goal_CSA_red_marines"
+		texturefile = "gfx/interface/goals/CSA_red_marines.dds"
+	}
+	
+	SpriteType = {#
+		name = "GFX_goal_CSA_red_scouts"
+		texturefile = "gfx/interface/goals/CSA_red_scouts.dds"
+	}
+	
+	SpriteType = {#
+		name = "GFX_goal_CSA_revolutionary_army"
+		texturefile = "gfx/interface/goals/CSA_revolutionary_army.dds"
+	}
+	
+	SpriteType = {#
+		name = "GFX_goal_CSA_tanks_of_the_revolution"
+		texturefile = "gfx/interface/goals/CSA_tanks_of_the_revolution.dds"
+	}
+	
+	SpriteType = {#
+		name = "GFX_goal_CSA_union_army"
+		texturefile = "gfx/interface/goals/CSA_union_army.dds"
+	}
+	
+	SpriteType = {#
+		name = "GFX_goal_CSA_wobbly_militarization"
+		texturefile = "gfx/interface/goals/CSA_wobbly_militarization.dds"
+	}
+	
 	### American Union State ###
 	
 	SpriteType = {# Accessible Utilities
@@ -2741,11 +2828,16 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/TEX_top_notch_artillery.dds"
 	}
 	
-	### American Union State ###
+	### American Union State Foreign Policy ###
 	
 	SpriteType = {# Americanist Doctrine
 		name = "GFX_goal_TEX_americanist_doctrine"
 		texturefile = "gfx/interface/goals/TEX_americanist_doctrine.dds"
+	}
+	
+	SpriteType = {# Break War Racket
+		name = "GFX_goal_TEX_break_war_racket"
+		texturefile = "gfx/interface/goals/TEX_break_war_racket.dds"
 	}
 	
 	SpriteType = {# Dismantle Argentina
@@ -2753,10 +2845,36 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/TEX_dismantle_arentina.dds"
 	}
 	
+	SpriteType = {# Ideological Neutrality
+		name = "GFX_goal_TEX_ideoloical_neutrality"
+		texturefile = "gfx/interface/goals/TEX_ideoloical_neutrality.dds"
+	}
+	
+	SpriteType = {# International Peace Agreement
+		name = "GFX_goal_TEX_internationale_peace_agreement"
+		texturefile = "gfx/interface/goals/TEX_internationale_peace_agreement.dds"
+	}
+	
 	SpriteType = {# Isolationism
 		name = "GFX_goal_TEX_isolationism"
 		texturefile = "gfx/interface/goals/TEX_isolationism.dds"
 	}
+	
+	SpriteType = {# Naval Prominence
+		name = "GFX_goal_TEX_naval_prominence"
+		texturefile = "gfx/interface/goals/TEX_naval_prominence.dds"
+	}
+	
+	SpriteType = {# Pragmatic Trade
+		name = "GFX_goal_TEX_pragmatic_trade"
+		texturefile = "gfx/interface/goals/TEX_pragmatic_trade.dds"
+	}
+	
+	SpriteType = {# Stop American War Mongers
+		name = "GFX_goal_TEX_stop_american_warmongers"
+		texturefile = "gfx/interface/goals/TEX_stop_american_warmongers.dds"
+	}
+	
 	### WCC ###
 	
 	SpriteType = {# American Pompey
