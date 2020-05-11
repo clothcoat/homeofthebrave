@@ -9446,7 +9446,7 @@ country_event = { # Black Legion Resistance #1
 		}
 	}
 	mean_time_to_happen = {
-	days = 2
+	days = 5
 	}
 	
 	option = { # Level 1 resistance
@@ -9481,7 +9481,7 @@ country_event = { # Black Legion Resistance #1-2
 	}
 	
 	mean_time_to_happen = {
-	days = 5
+	days = 15
 	}
 	
 	option = { # Level 2 resistance
@@ -9551,10 +9551,10 @@ country_event = { # Black Resistance #3
 }	
 
 country_event = { # Black Legion Resistance #4
-	id = amcivwar.621
-	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.621"}
-	title = amcivwar.621.t
-	desc = amcivwar.621.d
+	id = amcivwar.6210
+	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.6210"}
+	title = amcivwar.6210.t
+	desc = amcivwar.6210.d
 	picture = GFX_report_event_SPR_civwar
 	
 	trigger = {
@@ -9572,7 +9572,7 @@ country_event = { # Black Legion Resistance #4
 	}
 	
 	option = { # Level 3 resistance
-		name = amcivwar.621.a
+		name = amcivwar.6210.a
 		if = {
 		limit = {has_idea = ACW_black_legion_resistance_2 }
 		swap_ideas = {
@@ -9669,7 +9669,7 @@ country_event = { # Black Resistance #3-2
 	}
 	
 	mean_time_to_happen = {
-	days = 7
+	days = 15
 	}
 	
 	option = { # Level One Resistance
@@ -9725,7 +9725,7 @@ country_event = { # Legion Falls to 1
 			has_idea = ACW_black_legion_resistance_2 
 		}
 	mean_time_to_happen = {
-	days = 8
+	days = 10
 	}
 	
 	option = { # Level 1 resistance
@@ -9756,7 +9756,7 @@ country_event = { # Black Legion Crushed
 		}
 		
 	mean_time_to_happen = {
-	days = 7
+	days = 15
 	}
 	
 	option = { # No Resistance
