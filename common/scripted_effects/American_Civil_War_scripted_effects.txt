@@ -1534,6 +1534,37 @@ CSA_increase_recovery = {
 	}
 }
 
+COR_american_empire_strenghtens = {
+	if = {
+		limit = { has_idea = COR_american_empire }
+		swap_ideas = {
+			remove_idea = COR_american_empire
+			add_idea = COR_american_empire2
+		}
+	}
+	else_if = {
+		limit = { has_idea = COR_american_empire2 }
+		swap_ideas = {
+			remove_idea = COR_american_empire2
+			add_idea = COR_american_empire3
+		}
+	}
+	else_if = {
+		limit = { has_idea = COR_american_empire3 }
+		swap_ideas = {
+			remove_idea = COR_american_empire3
+			add_idea = COR_american_empire4
+		}
+	}
+	else_if = {
+		limit = { has_idea = COR_american_empire4 }
+		swap_ideas = {
+			remove_idea = COR_american_empire4
+			add_idea = COR_american_empire5
+		}
+	}
+}
+
 remove_ACW_cores = {
 	if = {
 		limit = {
