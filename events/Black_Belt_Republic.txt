@@ -1,0 +1,239 @@
+﻿###########################
+# Black Belt
+###########################
+
+add_namespace = blackbelt
+
+country_event = { # A State Under Siege!
+	id = bbr.1
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.1"}
+	title = bbr.1.t
+	desc = bbr.1.d
+	picture = ACW_soldiers_watching
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = { # Enact a Draft
+		name = bbr.1.a
+		add_stability = -0.05
+		add_war_support = -0.03
+		add_manpower = 20000
+		hidden_effect = {
+			country_event = { id = bbr.2 days = 5 }
+		}
+	}
+	option = { # Oppose a Draft
+		name = bbr.1.a
+		add_stability = 0.05
+		add_political_power = 55
+		hidden_effect = {
+			country_event = { id = bbr.2 days = 5 }
+		}
+	}
+}
+
+country_event = { # Reinforcements Arrive
+	id = bbr.2
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.2"}
+	title = bbr.2.t
+	desc = bbr.2.d
+	picture = ACW_soldiers_watching
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = { # Very well
+		name = bbr.2.a
+		add_stability = -0.05
+		add_popularity = { ideology = syndicalist popularity = 0.03 }
+		add_popularity = { ideology = totalist popularity = 0.03 }
+		hidden_effect = {
+			country_event = { id = bbr.3 days = 5 }
+		}
+	}
+	option = { # We are fine as is
+		name = bbr.2.a
+		add_stability = 0.05
+		add_political_power = 55
+		hidden_effect = {
+			country_event = { id = bbr.3 days = 5 }
+		}
+	}
+}
+
+country_event = { # NOI arrives
+	id = bbr.3
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.3"}
+	title = bbr.3.t
+	desc = bbr.3.d
+	picture = ACW_soldiers_watching
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = { # Very well
+		name = bbr.3.a
+		add_manpower = 1500
+		add_war_support = 0.05
+		add_popularity = { ideology = national_populist popularity = 0.05 }
+		hidden_effect = {
+			country_event = { id = bbr.4 days = 5 }
+		}
+	}
+}
+
+country_event = { # Nationalist Campaign
+	id = bbr.4
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.4"}
+	title = bbr.4.t
+	desc = bbr.4.d
+	picture = ACW_soldiers_watching
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = { # Tolerate them
+		name = bbr.4.a
+		add_manpower = 1500
+		add_war_support = 0.05
+		add_popularity = { ideology = national_populist popularity = 0.05 }
+		hidden_effect = {
+			country_event = { id = bbr.10 days = 5 }
+		}
+	}
+	option = { # Arrest them
+		name = bbr.4.a
+		add_manpower = -1500
+		add_war_support = -0.05
+		add_popularity = { ideology = paternal_autocrat popularity = -0.02 }
+		add_popularity = { ideology = national_populist popularity = -0.02 }
+		hidden_effect = {
+			country_event = { id = bbr.5 days = 5 }
+		}
+	}
+}
+
+country_event = { # Garvey Denounces Us
+	id = bbr.5
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.5"}
+	title = bbr.5.t
+	desc = bbr.5.d
+	picture = ACW_soldiers_watching
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = { # No, we stay the course
+		name = bbr.5.a
+		add_political_power = 40
+		add_stability = -0.03
+		add_manpower = -3500
+		add_war_support = -0.05
+		add_popularity = { ideology = paternal_autocrat popularity = -0.02 }
+		add_popularity = { ideology = national_populist popularity = -0.02 }
+	}
+	option = { # Appoint the ABB
+		name = bbr.5.a
+		add_war_support = 0.05
+		add_popularity = { ideology = totalist popularity = 0.03 }
+		hidden_effect = {
+			country_event = { id = bbr.6 days = 5 }
+		}
+	}
+}
+
+country_event = { # Nationalists Released
+	id = bbr.6
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.6"}
+	title = bbr.6.t
+	desc = bbr.6.d
+	picture = ACW_soldiers_watching
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = { # Appoint the ABB
+		name = bbr.6.a
+		add_manpower = 1500
+		add_war_support = 0.05
+		add_popularity = { ideology = totalist popularity = 0.02 }
+		hidden_effect = {
+			country_event = { id = bbr.7 days = 5 }
+		}
+	}
+}
+
+country_event = { # Duse Muhammad Elected
+	id = bbr.7
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.7"}
+	title = bbr.7.t
+	desc = bbr.7.d
+	picture = ACW_soldiers_watching
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = { # Appoint Young
+		name = bbr.7.a
+		add_manpower = 1500
+		add_war_support = 0.05
+		add_popularity = { ideology = national_populist popularity = 0.05 }
+	}
+	option = { # Appoint the ABB
+		name = bbr.7.a
+		add_manpower = -1500
+		add_war_support = -0.05
+		add_popularity = { ideology = paternal_autocrat popularity = -0.02 }
+		add_popularity = { ideology = national_populist popularity = -0.02 }
+		hidden_effect = {
+			country_event = { id = bbr.8 days = 5 }
+		}
+	}
+}
+
+country_event = { # ABB in Power
+	id = bbr.8
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.7"}
+	title = bbr.7.t
+	desc = bbr.7.d
+	picture = ACW_soldiers_watching
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = { # No, we stay the course
+		name = bbr.7.a
+		hidden_effect = {
+			create_country_leader = {
+				name = "Duse Muhammad"
+				desc = "POLITICS_DUSE_MUHAMMAD_DESC"
+				picture = "gfx/leaders/CUS/Duse_Muhamad.tga"
+				expire = "1965.1.1"
+				ideology = totalist_subtype
+				traits = { }
+			}
+		}
+		set_politics = {
+			ruling_party = totalist
+			elections_allowed = no
+		}
+		add_manpower = -1000
+		add_war_support = 0.05
+		add_stability = -0.03
+		add_popularity = { ideology = totalist popularity = 0.04 }
+	}
+}
+
+
+
+
+
