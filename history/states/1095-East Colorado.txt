@@ -1,0 +1,23 @@
+state = {
+	id = 1095
+	name = "STATE_1095"
+	manpower = 500000
+	resources = {
+		oil = 1
+	}
+
+	state_category = six
+
+	history = {
+		owner = USA
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+		}
+		add_core_of = USA
+	}
+
+	provinces = {
+		1738 1809 7780 11772 12570 12642
+	}
+}

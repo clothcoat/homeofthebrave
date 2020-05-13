@@ -4888,11 +4888,22 @@ focus_tree = {
 				remove_idea = COR_Patton_plan1
 				add_idea = COR_Patton_plan2
 			}
+			add_equipment_to_stockpile = {
+			type = light_tank_equipment
+			amount = 65
+			producer = COR
+			}
 			add_tech_bonus = {
 				name = infantry_weapons_bonus
 				bonus = 1
 				uses = 1
 				category = armor
+			}
+			add_tech_bonus = {
+				name = COR_Spearhead_Doctrine
+				bonus = 0.75
+				uses = 1
+				category = cat_mobile_warfare
 			}
 		}
 	}
@@ -4919,9 +4930,14 @@ focus_tree = {
 				remove_idea = COR_Patton_plan2
 				add_idea = COR_Patton_plan3
 			}
+			add_equipment_to_stockpile = {
+			type = tank_equipment
+			amount = 50
+			producer = COR
+			}
 			add_tech_bonus = {
 				name = infantry_weapons_bonus
-				bonus = 1
+				bonus = 2
 				uses = 1
 				category = armor
 			}
@@ -4943,6 +4959,11 @@ focus_tree = {
 				has_war = yes
 			}
 		}
+		add_equipment_to_stockpile = {
+			type = motorized_equipment
+			amount = 50
+			producer = COR
+			}
 		relative_position_id = COR_tank_commission
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_motorize_the_men"
@@ -4989,6 +5010,10 @@ focus_tree = {
 		relative_position_id = COR_tank_commission
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_streamline_tank_production"
+			swap_ideas = {
+				remove_idea = COR_Patton_plan3
+				add_idea = COR_Patton_plan4
+			}
 			random_owned_controlled_state = {
 				limit = {
 					is_mainland_america = yes
@@ -5001,9 +5026,11 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			swap_ideas = {
-				remove_idea = COR_Patton_plan3
-				add_idea = COR_Patton_plan4
+			add_tech_bonus = {
+				name = COR_Spearhead_Doctrine
+				bonus = 2
+				uses = 1
+				category = cat_mobile_warfare
 			}
 		}
 	}
@@ -5031,10 +5058,10 @@ focus_tree = {
 				add_idea = COR_Patton_plan5
 			}
 			add_tech_bonus = {
-				name = doctrine_bonus
-				bonus = 1
-				uses = 1
-				category = land_doctrine
+				name = COR_Spearhead_Doctrine
+				bonus = 1.5
+				uses = 3
+				category = cat_mobile_warfare
 			}
 		}
 	}
@@ -5105,6 +5132,12 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			add_tech_bonus = {
+				name = COR_Extensive_Planning
+				bonus = 1.5
+				uses = 1
+				category = cat_grand_battle_plan
+			}
 		}
 	}
 	focus = {
@@ -5158,7 +5191,7 @@ focus_tree = {
 			}
 			add_tech_bonus = {
 				name = COR_Extensive_Planning
-				bonus = 1
+				bonus = 1.5
 				uses = 2
 				category = cat_grand_battle_plan
 			}
@@ -5225,10 +5258,10 @@ focus_tree = {
 				add_idea = COR_Moseley_plan5
 			}
 			add_tech_bonus = {
-				name = doctrine_bonus
+				name = COR_Extensive_Planning
 				bonus = 1
-				uses = 1
-				category = land_doctrine
+				uses = 3
+				category = cat_grand_battle_plan
 			}
 		}
 	}
@@ -5304,6 +5337,12 @@ focus_tree = {
 				bonus = 1
 				uses = 2
 				category = cat_anti_air
+			}
+			add_tech_bonus = {
+				name = COR_Overwhelming_Firepower
+				bonus = 1
+				uses = 1
+				category = cat_superior_firepower
 			}
 		}
 	}
@@ -5388,6 +5427,12 @@ focus_tree = {
 				uses = 2
 				category = cat_anti_tank
 			}
+			add_tech_bonus = {
+				name = COR_Overwhelming_Firepower
+				bonus = 1
+				uses = 1
+				category = cat_superior_firepower
+			}
 		}
 	}
 	focus = {
@@ -5423,8 +5468,8 @@ focus_tree = {
 			} 
 			add_tech_bonus = {
 				name = COR_Overwhelming_Firepower
-				bonus = 1.5
-				uses = 1
+				bonus = 1
+				uses = 2
 				category = cat_superior_firepower
 			}
 		}
@@ -5459,7 +5504,7 @@ focus_tree = {
 			}
 			add_tech_bonus = {
 				name = COR_Overwhelming_Firepower
-				bonus = 1.5
+				bonus = 2.5
 				uses = 1
 				category = cat_superior_firepower
 			}
@@ -5488,8 +5533,15 @@ focus_tree = {
 
 		relative_position_id = COR_mcnarney_advisory
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus COR_wickliffe_plan"
-			add_ideas = COR_wickliffe_plan1
+			log = "[GetDateText]: [Root.GetName]: Focus COR_army_war_colleges"
+			army_experience = 40
+			add_manpower = 1000
+			add_tech_bonus = {
+				name = COR_Overwhelming_Firepower
+				bonus = 1.5
+				uses = 2
+				category = cat_superior_firepower
+			}
 		}
 	}
 	focus = {
@@ -5502,6 +5554,9 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = COR_Patton_Plan
 			focus = COR_Moseley_Plan
+		}
+		available = {
+			has_country_flag = draper_plan_unlocked
 		}
 		x = -2
 		y = 1
@@ -5548,11 +5603,13 @@ focus_tree = {
 				remove_idea = COR_wickliffe_plan1
 				add_idea = COR_wickliffe_plan2
 			}
+			add_manpower = 15000
+			add_war_support = 0.1
 			add_tech_bonus = {
-				name = infantry_weapons_bonus
+				name = COR_War_Of_Numbers
 				bonus = 1
-				uses = 1
-				category = artillery
+				uses = 2
+				category = cat_mass_assault
 			}
 		}
 	}
@@ -5575,7 +5632,8 @@ focus_tree = {
 		relative_position_id = COR_from_our_own
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_cavalry_leadership"
-			add_ideas = COR_Cavalry_leaders
+			add_ideas = COR_Cavalry_leaders_idea
+			add_war_support = 0.05
 		}
 	}
 	focus = {
@@ -5603,6 +5661,18 @@ focus_tree = {
 			}
 			add_manpower = 4000
 			add_war_support = 0.05
+			add_tech_bonus = {
+				name = COR_War_Of_Numbers
+				bonus = 1
+				uses = 2
+				category = cat_mass_assault
+			}
+			add_tech_bonus = {
+				name = infantry_weapons_bonus
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons
+			}
 		}
 	}
 	focus = {
@@ -5659,12 +5729,19 @@ focus_tree = {
 		relative_position_id = COR_from_our_own
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_officer_trust"
+			army_experience = 20
 			swap_ideas = {
 				remove_idea = COR_wickliffe_plan4
 				add_idea = COR_wickliffe_plan5
 			}
 			army_experience = 15
 			add_war_support = 0.05
+			add_tech_bonus = {
+				name = COR_War_Of_Numbers
+				bonus = 1
+				uses = 2
+				category = cat_mass_assault
+			}
 		}
 	}
 	focus = {
@@ -5890,6 +5967,7 @@ focus_tree = {
 		relative_position_id = COR_take_the_fight_abroad
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_increase_military_spending"
+			add_ideas = COR_increased_military_spending
 			random_owned_controlled_state = {
 				limit = {
 					is_mainland_america = yes
@@ -5902,7 +5980,6 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			add_ideas = COR_increased_military_spending
 		}
 	}
 	focus = {
@@ -5924,7 +6001,7 @@ focus_tree = {
 		relative_position_id = COR_take_the_fight_abroad
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_military_research"
-			country_event = { id = ustates.300 days = 1 }
+			add_research_slot = 1
 		}
 	}
 	focus = {
@@ -6053,7 +6130,10 @@ focus_tree = {
 		relative_position_id = COR_military_research
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_army_bonus_bill"
-			add_research_slot = 1
+			add_political_power = -50
+			add_war_support = 0.1
+			increase_ruling_party_popularity_by_5 = yes
+			add_manpower = 5500
 		}
 	}
 	focus = {
@@ -7460,6 +7540,11 @@ focus_tree = {
 			is_major = yes
 			has_army_manpower = { size > 250000 }
 			NOT = { country_exists = CAL }
+			OR = {
+			has_government = authoritarian_democrat
+			has_government = paternal_autocrat
+			has_government = national_populist
+			}
 		}
 
 		ai_will_do = {
@@ -7472,15 +7557,26 @@ focus_tree = {
 		available_if_capitulated = no
 		cancel_if_invalid = yes
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus COR_back_in_business"
-			add_political_power = 100
+			log = "[GetDateText]: [Root.GetName]: Focus COR_american_empire"
+			add_political_power = -30
+			if = {
+				limit = { 
+				NOT = {
+				has_government = national_populist }
+				}
+				add_stability = -0.05
+			}
+			add_threat = 10
+			add_popularity = { ideology = national_populist popularity = 0.04 }
+			add_war_support = 0.15
+			add_manpower = 15000
 		}
 	}
 	
 	focus = {
 		id = COR_pacific_pact
 		icon = GFX_goal_align_japan
-		cost = 6.00
+		cost = 1.4
 		prerequisite = {
 			focus = COR_american_empire
 		}
@@ -7500,8 +7596,10 @@ focus_tree = {
 		cancel_if_invalid = yes
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus COR_new_world_power"
-			add_political_power = 100
+			log = "[GetDateText]: [Root.GetName]: Focus COR_pacific_pact"
+			JAP = {
+			country_event = { id = csa.53 days = 90 }
+			}
 		}
 	}
 	
@@ -7558,7 +7656,10 @@ focus_tree = {
 		available = {
 			is_subject = no
 			is_in_faction = no
-			not_has_democratic_government = yes
+			SAF = {
+			is_subject = no
+			exists = yes
+			}
 		}
 		relative_position_id = COR_american_empire
 		x = 2
@@ -7584,9 +7685,8 @@ focus_tree = {
 		cancel_if_invalid = yes
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus COR_manifest_destiny"
-			add_war_support = 0.20
-			add_stability = -0.05
+			log = "[GetDateText]: [Root.GetName]: Focus COR_lead_south_africa"
+			
 		}
 	}
 
@@ -7600,6 +7700,18 @@ focus_tree = {
 		available = {
 			is_major = yes
 			is_subject = no
+			OR = {
+			MEX = {
+			is_puppet_of = COR
+			}
+			controls_state = 277
+			}
+			OR = {
+			GUA = {
+			is_puppet_of = COR
+			}
+			controls_state = 313
+			}
 		}
 		relative_position_id = COR_american_empire
 		x = 1
@@ -7614,7 +7726,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_claim_canada"
-			unlock_decision_tooltip = COR_claim_canada_dec
+			COR_american_empire_strenghtens = yes
 		}
 	}
 
@@ -7628,6 +7740,7 @@ focus_tree = {
 		available = {
 			is_major = yes
 			is_subject = no
+			controls_state = 466
 		}
 		relative_position_id = COR_american_empire
 		x = -1
@@ -7641,8 +7754,11 @@ focus_tree = {
 		cancel_if_invalid = yes
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus COR_claim_mexico"
-			unlock_decision_tooltip = COR_claim_mexico_dec
+			log = "[GetDateText]: [Root.GetName]: Focus COR_quebec_issue"
+			COR_american_empire_strenghtens = yes
+			add_political_power = 30
+			add_stability = 0.03
+			add_manpower = -2000
 		}
 	}
 	
@@ -7702,7 +7818,20 @@ focus_tree = {
 		cancel_if_invalid = yes
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus COR_new_world_guardian"
+			log = "[GetDateText]: [Root.GetName]: Focus COR_the_eagle_spreads_its_wings"
+			create_wargoal = {
+			type = puppet_wargoal_focus
+			target = VEN
+			}
+			create_wargoal = {
+			type = puppet_wargoal_focus
+			target = COL
+			}
+			create_wargoal = {
+			type = puppet_wargoal_focus
+			target = BRA
+			}
+
 		}
 	}
 
@@ -7718,6 +7847,19 @@ focus_tree = {
 			focus = COR_manifest_destiny
 			focus = COR_fortress_america
 			focus = COR_look_to_the_reichsadler
+		}
+		available = {
+		CAN = {
+		exists = yes
+		is_in_faction_with = NFA
+		has_opinion = {
+		target = GER
+		value = 100
+				}
+			}
+		NOT = {
+			has_country_leader = { ruling_only = yes name = "Herbert W. Armstrong" }
+		}
 		}
 		relative_position_id = COR_back_in_business
 		x = -7
@@ -7738,12 +7880,20 @@ focus_tree = {
 		available_if_capitulated = no
 		cancel_if_invalid = yes
 
-		bypass = {
-		}
-
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus COR_enter_the_fray"
+			log = "[GetDateText]: [Root.GetName]: Focus COR_western_brothers"
+			if = {
+			has_country_leader = { ruling_only = yes name = "Charles Lindbergh" }
+			add_political_power = -25
+			add_war_support = 0.05
+			add_stability = 0.03
+			}
+			else = {
 			add_political_power = 30
+			}
+			CAN = {
+			add_to_faction = COR
+			}
 		}
 	}
 
@@ -7757,6 +7907,17 @@ focus_tree = {
 		}
 		available = {
 			is_subject = no
+			SAF = {
+			exists = yes
+			NOT = {
+			OR = {
+			has_government = totalist
+			has_government = syndicalist
+			has_government = radical_socialist
+			has_country_flag = SAF_rejected_cor
+			}
+			}
+			}
 		}
 		relative_position_id = COR_enter_the_fray
 		x = 3
@@ -7770,11 +7931,21 @@ focus_tree = {
 		cancel_if_invalid = yes
 		relative_position_id = COR_western_brothers
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus COR_new_training"
-			army_experience = 25
-			navy_experience = 25
-			air_experience = 25
-			add_ideas = COR_arsenal_of_democracy_idea
+			log = "[GetDateText]: [Root.GetName]: Focus COR_south_african_trade"
+			add_ideas = COR_south_african_trade_idea
+			add_stability = 0.03
+			give_guarantee = SAF
+			SAF = {
+			army_experience = 15
+			add_political_power = 30
+			add_equipment_to_stockpile = {
+			type = infantry_equipment_1
+			amount = 80
+			producer = COR
+			}
+			give_guarantee = COR
+			add_ideas = COR_south_african_trade_idea
+			}
 		}
 	}
 	
@@ -7804,6 +7975,16 @@ focus_tree = {
 			army_experience = 25
 			navy_experience = 25
 			air_experience = 25
+			CAN = {
+			army_experience = 25
+			navy_experience = 25
+			air_experience = 25
+			}
+			NFA = {
+			army_experience = 25
+			navy_experience = 25
+			air_experience = 25
+			}
 			add_ideas = COR_arsenal_of_democracy_idea
 		}
 	}
@@ -7834,7 +8015,25 @@ focus_tree = {
 		cancel_if_invalid = yes
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus COR_anti_syndicalist_action"
+			log = "[GetDateText]: [Root.GetName]: Focus COR_goods_of_britain"
+			add_ideas = COR_british_goods_idea
+			add_political_power = -10
+			CAN = {
+			add_political_power = 30
+			add_stability = 0.05
+			random_owned_controlled_state = {
+				limit = {
+					is_mainland_america = yes
+					free_building_slots = { building = industrial_complex size > 0 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			}
 		}
 	}
 	
@@ -7861,10 +8060,25 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_entente_research"
-			army_experience = 25
-			navy_experience = 25
-			air_experience = 25
-			add_ideas = COR_arsenal_of_democracy_idea
+			add_ideas = COR_american_entente_research_idea
+			ROOT = {
+			is_in_faction_with = COR
+			add_ideas = COR_american_entente_research_idea
+			}
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 1
+				uses = 1
+				category = industry
+			}
+			CAN = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 1
+				uses = 1
+				category = industry
+				}
+			}
 		}
 	}
 
@@ -7894,10 +8108,42 @@ focus_tree = {
 		cancel_if_invalid = yes
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus COR_longer_reach"
+			log = "[GetDateText]: [Root.GetName]: Focus COR_naval_assistance"
 			swap_ideas = {
 				remove_idea = COR_arsenal_of_democracy_idea
 				add_idea = COR_arsenal_of_democracy_idea_2
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = COR
+					is_controlled_by = COR
+					is_coastal = yes
+					dockyard > 0
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			CAN = {
+			random_owned_state = {
+				limit = {
+					is_core_of = CAN
+					is_controlled_by = CAN
+					is_coastal = yes
+					dockyard > 0
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
 			}
 		}
 	}
@@ -7929,7 +8175,17 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_anti_syndicalist_action"
-			add_ideas = USA_on_the_beach_idea
+			add_ideas = COR_counter_syndicalist_idea
+		CAN = {
+			add_ideas = COR_counter_syndicalist_idea
+			}
+			create_wargoal = {
+			type = annex_everything
+			target = ENG
+			}
+		}
+		NFA = {
+		add_ideas = COR_counter_syndicalist_idea
 		}
 	}
 	
@@ -7959,7 +8215,24 @@ focus_tree = {
 		cancel_if_invalid = yes
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus COR_anti_syndicalist_action"
+			log = "[GetDateText]: [Root.GetName]: Focus COR_western_recovery"
+			add_political_power = 75
+			add_stability = 0.1
+			increase_ruling_party_popularity_by_5 = yes
+			CAN = {
+			swap_ideas = {
+			remove_idea = COR_counter_syndicalist_idea
+			add_idea = COR_counter_syndicalist_idea_2
+				}
+			add_stability = 0.05
+			}
+			NFA = {
+			swap_ideas = {
+			remove_idea = COR_counter_syndicalist_idea
+			add_idea = COR_counter_syndicalist_idea_2
+				}
+			add_stability = 0.05
+			}
 		}
 	}
 
@@ -7978,7 +8251,12 @@ focus_tree = {
 		}
 		available = {
 			is_subject = no
-			NOT = { has_government = paternal_autocrat }
+			if = {
+			limit = { ruling_only = yes name = "Herbert W. Armstrong"}
+			}
+			has_completed_focus = {
+			
+			}
 		}
 		relative_position_id = COR_back_in_business
 		x = -2
@@ -8001,8 +8279,10 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_fortress_america"
-			add_war_support = -0.10
 			add_ideas = USA_fortress_america_idea_1
+			add_war_support = -0.10
+			add_stability = 0.1
+			add_political_power = 50
 		}
 	}
 
