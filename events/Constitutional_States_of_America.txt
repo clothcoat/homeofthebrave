@@ -5,10 +5,10 @@
 add_namespace = constitutionstate
 
 country_event = { # The American Legion Appointment
-	id = unionstate.1
-	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.1"}
-	title = unionstate.1.t
-	desc = unionstate.1.d
+	id = constate.1
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.1"}
+	title = constate.1.t
+	desc = constate.1.d
 	picture = ACW_soldiers_watching
 
 	fire_only_once = yes
@@ -23,7 +23,7 @@ country_event = { # The American Legion Appointment
 	}
 
 	option = { # George Patton
-		name = unionstate.1.a
+		name = constate.1.a
 		ai_chance = {
 			factor = 30
 			modifier = {
@@ -40,21 +40,12 @@ country_event = { # The American Legion Appointment
 		}
 	}
 	option = { # George Van Horn Moseley
-		name = unionstate.1.b
+		name = constate.1.b
 		ai_chance = {
 			factor = 10
 			modifier = {
-		    factor = 0
-		    OR = {
-				  has_game_rule = {
-						rule = CON_post_civil_war
-						option = CON_POST_CIVIL_WAR_LONG
-					}
-				  has_game_rule = {
-						rule = CON_post_civil_war
-						option = CON_POST_CIVIL_WAR_PELLEY
-					}
-				}
+		    factor = 8
+			has_country_leader = { ruling_only = yes name = "Charles Lindbergh"}
 		  }
 		}
 		hidden_effect = {
@@ -66,7 +57,7 @@ country_event = { # The American Legion Appointment
 		}
 	}
 	option = { # Draper
-		name = unionstate.1.c
+		name = constate.1.c
 		ai_chance = {
 			factor = 10
 			modifier = {
@@ -82,70 +73,797 @@ country_event = { # The American Legion Appointment
 }
 
 country_event = { # White Defense League requests army promotions
-	id = unionstate.2
-	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.2"}
-	title = unionstate.2.t
-	desc = unionstate.2.d
+	id = constate.2
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.2"}
+	title = constate.2.t
+	desc = constate.2.d
 	picture = AUS_christian_identity
 
 	fire_only_once = yes
 	is_triggered_only = yes
 
-	trigger = {
-		tag = CON
-		has_global_flag = USA_civil_war_over_flag
-		has_government = national_populist
-	}
-
 	option = { # Or course
-		name = unionstate.2.a
+		name = constate.2.a
 		add_popularity = { ideology = national_populist popularity = 0.03 }
 		add_manpower = 4400
+		add_war_support = 0.03
 		add_country_flag = draper_plan_unlocked
+		hidden_effect = {
+			country_event = { id = constate.64 days = 15 }
+		}
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 100
+			producer = COR
+			}
 	}
 	option = { # No
-		name = unionstate.2.b
+		name = constate.2.b
 		add_popularity = { ideology = paternal_autocrat popularity = 0.03 }
 		add_political_power = -20
 		add_stability = 0.03
+		hidden_effect = {
+			country_event = { id = constate.3 days = 15 }
+		}
 	}
 }
 
-country_event = { # White Defense League requests army promotions
-	id = unionstate.2
-	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.2"}
-	title = unionstate.2.t
-	desc = unionstate.2.d
+country_event = { # Fordists
+	id = constate.3
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.3"}
+	title = constate.3.t
+	desc = constate.3.d
 	picture = AUS_christian_identity
 
 	fire_only_once = yes
 	is_triggered_only = yes
 
-	trigger = {
-		tag = CON
-		has_global_flag = USA_civil_war_over_flag
-		has_government = national_populist
-	}
-
 	option = { # Or course
-		name = unionstate.2.a
-		add_popularity = { ideology = national_populist popularity = 0.03 }
-		add_manpower = 7500
+		name = constate.3.a
+		add_equipment_to_stockpile = {
+			type = light_tank_equipment
+			amount = 10
+			producer = COR
+		}
+		add_equipment_to_stockpile = {
+			type = motorized_equipment
+			amount = 45
+			producer = COR
+		}
+		random_owned_state = {
+				limit = {
+					is_core_of = COR
+					is_controlled_by = COR
+					arms_factory > 0
+				}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+			}
+		}
+		hidden_effect = {
+			country_event = { id = constate.4 days = 15 }
+		}
 	}
 	option = { # No
-		name = unionstate.2.b
+		name = constate.3.b
 		add_popularity = { ideology = paternal_autocrat popularity = 0.03 }
-		add_political_power = 20
+		add_political_power = 10
 		add_stability = 0.03
 	}
 }
 
+country_event = { # White Leagues ask us to stop Ford
+	id = constate.4
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.4"}
+	title = constate.4.t
+	desc = constate.4.d
+	picture = AUS_christian_identity
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { # Tell that sommabitch to quit it
+		name = constate.4.a
+		add_stability = -0.08
+		add_manpower = -500
+		add_equipment_to_stockpile = {
+			type = motorized_equipment
+			amount = -10
+			producer = COR
+		}
+		add_tech_bonus = {
+				name = industrial_bonus
+				bonus = -1
+				uses = 1
+				category = industry
+			}
+	}
+	option = { # No
+		name = constate.4.b
+		add_popularity = { ideology = paternal_autocrat popularity = 0.03 }
+		add_political_power = -15
+		hidden_effect = {
+			country_event = { id = constate.5 days = 12 }
+		}
+	}
+}
+
+country_event = { # Dinner with Alfalfa Bill
+	id = constate.5
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.5"}
+	title = constate.5.t
+	desc = constate.5.d
+	picture = AUS_christian_identity
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { # For the Nation, I accept
+		name = constate.5.a
+		add_political_power = -10
+		hidden_effect = {
+			country_event = { id = constate.6 days = 2 }
+		}
+	}
+	option = { # Get Out
+		name = constate.5.b
+		add_political_power = 15
+		add_war_support = -0.1
+		add_stability = -0.1
+		add_tech_bonus = {
+				name = industrial_bonus
+				bonus = -1
+				uses = 1
+				category = industry
+		}
+	}
+}
+
+country_event = { # Murray steps down!
+	id = constate.6
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.5"}
+	title = constate.5.t
+	desc = constate.5.d
+	picture = AUS_christian_identity
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { # The Lone Eagle
+		name = constate.6.a
+		add_stability = -0.02
+		add_political_power = 20
+		hidden_effect = {
+		create_country_leader = {
+			name = "Charles Lindbergh"
+			desc = "COR_CHARLES_LINDBERGH_DESC"
+			picture = "Portrait_TEX_charles_lindbergh.tga"
+			expire = "1965.1.1"
+			ideology = paternal_autocrat_subtype
+			traits = {}
+			}
+		}
+		set_politics = {
+			ruling_party = paternal_autocrat
+			elections_allowed = no
+		}
+		set_party_name = {
+			ideology = paternal_autocrat
+			long_name = COR_national_corporatism_paternal_autocrat_long
+			name = COR_national_corporatism_paternal_autocrat }
+		hidden_effect = {
+			country_event = { id = constate.7 days = 13 }
+		}
+	}
+}
+
+country_event = { # Order of 76 threatened
+	id = constate.7
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.7"}
+	title = constate.7.t
+	desc = constate.7.d
+	picture = AUS_christian_identity
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { # Investigate them
+		name = constate.7.a
+		add_political_power = -20
+		add_popularity = { ideology = national_populist popularity = -0.01 }
+		add_war_support = -0.05
+		hidden_effect = {
+			country_event = { id = constate.8 days = 4 }
+		}
+	}
+	option = { # Ignore them
+		name = constate.7.a
+		add_stability = -0.05
+	}
+}
+
+country_event = { # Order of 76 Recruiter Killed
+	id = constate.8
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.8"}
+	title = constate.8.t
+	desc = constate.8.d
+	picture = AUS_christian_identity
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { # Stop recruiting for now
+		name = constate.8.a
+		add_political_power = -30
+		add_popularity = { ideology = paternal_autocrat popularity = -0.02 }
+		add_war_support = -0.05
+	}
+	option = { # Arrest the heads of the White League
+		name = constate.8.a
+		add_stability = -0.05
+		add_popularity = { ideology = paternal_autocrat popularity = -0.03 }
+		add_war_support = -0.05
+		hidden_effect = {
+			country_event = { id = constate.9 days = 1 }
+		}
+	}
+}
+
+country_event = { # Old Democrats Denounces Us!
+	id = constate.9
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.9"}
+	title = constate.9.t
+	desc = constate.9.d
+	picture = AUS_christian_identity
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { # Stop recruiting for now
+		name = constate.9.a
+		add_political_power = -30
+		add_popularity = { ideology = paternal_autocrat popularity = -0.05 }
+		add_popularity = { ideology = national_populist popularity = 0.05 }
+		add_stability = -0.06
+		hidden_effect = {
+			country_event = { id = constate.10 days = 1 }
+		}
+	}
+}
+
+country_event = { # Order of 76 headquarters ambushed
+	id = constate.10
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.10"}
+	title = constate.10.t
+	desc = constate.10.d
+	picture = AUS_christian_identity
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { # Maybe Germany is nice this time of year
+		name = constate.10.a
+		add_political_power = -50
+		add_stability = -0.12
+		add_popularity = { ideology = paternal_autocrat popularity = -0.08 }
+		add_popularity = { ideology = national_populist popularity = 0.04 }
+		add_war_support = -0.05
+		hidden_effect = {
+			country_event = { id = constate.1000 hours = 12 }
+		}
+	}
+}
+
+country_event = { # The Imperial Wizard Takes Charge
+	id = constate.1000
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.1000"}
+	title = constate.1000.t
+	desc = constate.1000.d
+	picture = AUS_christian_identity
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { # Simmons Totalitarianism
+		name = constate.10.a
+		hidden_effect = {
+			create_country_leader = {
+				name = "William Joseph Simmons"
+				desc = "POLITICS_WILLIAM_JOSEPH_SIMMONS_DESC"
+				picture = "gfx/leaders/CUS/William_Joseph_Simmons.tga"
+				expire = "1965.1.1"
+				ideology = national_populist_subtype
+				traits = { }
+			}
+		}
+		set_politics = {
+			ruling_party = national_populist
+			elections_allowed = no
+		}
+		add_political_power = 30
+		add_stability = 0.1
+		add_popularity = { ideology = national_populist popularity = 0.08 }
+		add_war_support = 0.05
+		
+	}
+}
+
+country_event = { # Simmons Heart Attack
+	id = constate.11
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.11"}
+	title = constate.11.t
+	desc = constate.11.d
+	picture = AUS_christian_identity
+
+	trigger = {
+	has_country_leader = { ruling_only = yes name = "William Joseph Simmons" }
+	NOT = { has_country_flag = NDWL_falls }
+	OR = {
+	AND = {
+	has_completed_focus = COR_american_emperor
+	has_completed_focus = COR_convict_leasing
+	has_completed_focus = COR_fine_non_conformists
+	has_completed_focus = COR_white_welfare
+	date > 1939.05.10
+	}
+	date > 1942.06.12
+	}
+	}
+	mean_time_to_happen = {
+	days = 70
+	}
+	fire_only_once = yes
+
+	option = { # Damn
+		name = constate.11.a
+		add_political_power = -20
+		add_stability = -0.05
+		hidden_effect = {
+			country_event = { id = constate.12 days = 2 }
+		}
+	}
+}
+
+country_event = { # Patton
+	id = constate.1100
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.1100"}
+	title = constate.1100.t
+	desc = constate.1100.d
+	picture = AUS_christian_identity
+
+	trigger = {
+	has_country_leader = { ruling_only = yes name = "William Joseph Simmons" }
+	NOT = {
+	has_completed_focus = COR_american_emperor
+	}
+	date > 1942.06.12
+	}
+	mean_time_to_happen = {
+	days = 70
+	}
+	fire_only_once = yes
+
+	option = { # Damn
+		name = constate.11.a
+		add_political_power = -20
+		set_country_flag = NDWL_falls
+		add_stability = -0.05
+		hidden_effect = {
+			country_event = { id = constate.13 days = 9 }
+		}
+	}
+}
+
+country_event = { # Simmons Death
+	id = constate.12
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.12"}
+	title = constate.12.t
+	desc = constate.12.d
+	picture = AUS_christian_identity
+
+	trigger = {
+	has_country_leader = { ruling_only = yes name = "William Joseph Simmons" }
+	OR = {
+	AND = {
+	has_completed_focus = COR_american_emperor
+	has_completed_focus = COR_convict_leasing
+	has_completed_focus = COR_fine_non_conformists
+	has_completed_focus = COR_white_welfare
+	date > 1939.05.01
+	}
+	date > 1942.06.12
+	}
+	}
+	mean_time_to_happen = {
+	days = 70
+	}
+	fire_only_once = yes
+
+	option = { # 
+		name = constate.12.a
+		hidden_effect = {
+			create_country_leader = {
+				name = "William Bell Riley"
+				desc = "POLITICS_WILLIAM_BELL_RILEY_DESC"
+				picture = "gfx/leaders/CUS/William_Bell_Riley.tga"
+				expire = "1965.1.1"
+				ideology = national_populist_subtype
+				traits = { popular_figurehead }
+			}
+		}
+		set_politics = {
+			ruling_party = national_populist
+			elections_allowed = no
+		}
+		hidden_effect = {
+			country_event = { id = constate.13 days = 8 }
+		}
+	}
+}
+
+country_event = { # Stephenson Allies Effinger
+	id = constate.13
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.13"}
+	title = constate.13.t
+	desc = constate.13.d
+	picture = AUS_christian_identity
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = { # 
+		name = constate.13.a
+		add_stability = -0.03
+		add_political_power = -20
+		hidden_effect = {
+			country_event = { id = constate.14 days = 5 }
+		}
+	}
+}
+
+country_event = { # Stephenson's offer
+	id = constate.14
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.14"}
+	title = constate.14.t
+	desc = constate.14.d
+	picture = AUS_christian_identity
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = { # No
+		name = constate.14.a
+		add_stability = -0.03
+		add_political_power = -20
+		hidden_effect = {
+			country_event = { id = constate.18 days = 7 }
+		}
+	}
+	
+	option = { # Accept
+		name = constate.14.a
+		add_stability = -0.03
+		add_political_power = -20
+		hidden_effect = {
+			country_event = { id = constate.15 days = 13 }
+		}
+	}
+}
+
+country_event = { # Hiram Wesley Evans killed!
+	id = constate.15
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.15"}
+	title = constate.15.t
+	desc = constate.15.d
+	picture = AUS_christian_identity
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = { # No
+		name = constate.14.a
+		add_stability = -0.03
+		add_political_power = -20
+		hidden_effect = {
+			country_event = { id = constate.12 days = 3 }
+		}
+		hidden_effect = {
+			create_country_leader = {
+				name = "D.C. Stephenson"
+				desc = "POLITICSDC_STEPHENSON_DESC"
+				picture = "gfx/leaders/CUS/DC_Stephenson.tga"
+				expire = "1965.1.1"
+				ideology = national_populist_subtype
+				traits = { popular_figurehead }
+			}
+		}
+		set_politics = {
+			ruling_party = national_populist
+			elections_allowed = no
+		}
+		set_party_name = {
+			ideology = national_populist
+			long_name = COR_old_klan_national_populist_long
+			name = COR_old_klan_national_populist }
+	}
+}
+
+country_event = { # Letter to Patton
+	id = constate.18
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.18"}
+	title = constate.18.t
+	desc = constate.18.d
+	picture = AUS_christian_identity
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = { # Arrest Him
+		name = constate.18.a
+		add_stability = -0.03
+		add_political_power = -20
+		hidden_effect = {
+			country_event = { id = constate.19 days = 5 }
+		}
+	}
+	
+	option = { # Stay out of it
+		name = constate.18.a
+		add_stability = -0.05
+		add_political_power = -20
+		add_manpower = -300
+		hidden_effect = {
+			country_event = { id = constate.1800 days = 15 }
+		}
+	}
+}
+
+country_event = { # White League intra-raids
+	id = constate.1800
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.1800"}
+	title = constate.1800.t
+	desc = constate.1800.d
+	picture = AUS_christian_identity
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = { # Reveal the plot
+		name = constate.1800.a
+		add_political_power = 30
+		add_stability = -0.03
+		add_popularity = { ideology = national_populist popularity = -0.02 }
+		hidden_effect = {
+			country_event = { id = constate.1801 days = 1 }
+		}
+	}
+	
+	option = { # Stay out of it
+		name = constate.1800.a
+		hidden_effect = {
+			country_event = { id = constate.1802 days = 3 }
+		}
+	}
+}
+
+country_event = { # Death of Stephenson
+	id = constate.1801
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.1801"}
+	title = constate.1801.t
+	desc = constate.1801.d
+	picture = AUS_christian_identity
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = { # Reveal the plot
+		name = constate.1801.a
+		add_political_power = 30
+		add_stability = 0.03
+		add_popularity = { ideology = national_populist popularity = -0.02 }
+		hidden_effect = {
+			country_event = { id = constate.1801 days = 1 }
+		}
+	}
+	
+	option = { # Stay out of it
+		name = constate.1801.a
+		hidden_effect = {
+			country_event = { id = constate.1802 days = 3 }
+		}
+	}
+}
+
+country_event = { # Meeting Place bombed
+	id = constate.1802
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.1802"}
+	title = constate.1802.t
+	desc = constate.1802.d
+	picture = AUS_christian_identity
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = { # Well that's that
+		name = constate.1802.a
+		hidden_effect = {
+			create_country_leader = {
+				name = "D.C. Stephenson"
+				desc = "POLITICSDC_STEPHENSON_DESC"
+				picture = "gfx/leaders/CUS/DC_Stephenson.tga"
+				expire = "1965.1.1"
+				ideology = national_populist_subtype
+				traits = { }
+			}
+		}
+		set_politics = {
+			ruling_party = national_populist
+			elections_allowed = no
+		}
+		set_party_name = {
+			ideology = national_populist
+			long_name = COR_old_klan_national_populist_long
+			name = COR_old_klan_national_populist }
+	}
+	
+	option = { # Bag Stephenson
+		name = constate.1802.b
+		hidden_effect = {
+			country_event = { id = constate.1803 days = 2 }
+			add_popularity = { ideology = national_populist popularity = -0.03 }
+			add_manpower = -500
+			add_political_power = -30
+			add_stability = 0.05
+		}
+	}
+}
+
+country_event = { # Patton
+	id = constate.1803
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.1803"}
+	title = constate.1803.t
+	desc = constate.1803.d
+	picture = AUS_christian_identity
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = { # Well that's that
+		name = constate.1803.a
+		hidden_effect = {
+			create_country_leader = {
+				name = "George Patton"
+				desc = "POLITICS_GEORGE_PATTON_DESC"
+				picture = "gfx/leaders/CUS/George_Patton.tga"
+				expire = "1965.1.1"
+				ideology = paternal_autocrat_subtype
+				traits = { }
+			}
+		}
+		set_politics = {
+			ruling_party = paternal_autocrat
+			elections_allowed = no
+		}
+		add_popularity = { ideology = paternal_autocrat popularity = 0.1 }
+		add_popularity = { ideology = national_populist popularity = -0.08 }
+	}
+}
+
+country_event = { # Stephenson Killed
+	id = constate.19
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.19"}
+	title = constate.19.t
+	desc = constate.19.d
+	picture = AUS_christian_identity
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = { # Effinger is too dangerous, execute him
+		name = constate.19.a
+		add_stability = 0.05
+		add_political_power = 50
+		add_popularity = { ideology = national_populist popularity = -0.05 }
+		add_manpower = -5000
+		hidden_effect = {
+			country_event = { id = constate.20 days = 9 }
+			add_war_support = 0.05
+			add_stability = -0.05
+		}
+	}
+	
+	option = { # Let Him Go
+		name = constate.19.b
+		hidden_effect = {
+			country_event = { id = constate.20 days = 9 }
+			add_war_support = 0.05
+			add_stability = -0.05
+		}
+	}
+}
+
+country_event = { # Armstrong's Bid
+	id = constate.20
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.20"}
+	title = constate.20.t
+	desc = constate.20.d
+	picture = AUS_christian_identity
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = { # No
+		name = constate.20.a
+		add_stability = -0.03
+		add_political_power = -30
+		hidden_effect = {
+			country_event = { id = constate.21 days = 9 }
+		}
+	}
+	
+	option = { # Go with it
+		name = constate.20.b
+		hidden_effect = {
+			country_event = { id = constate.50 days = 5 }
+		}
+		add_political_power = 30
+		add_stability = 0.03
+	}
+}
+
+country_event = { # Armstrong's Victory
+	id = constate.50
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.50"}
+	title = constate.50.t
+	desc = constate.50.d
+	picture = AUS_christian_identity
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = { # No
+		name = constate.50.a
+		add_stability = -0.03
+		add_political_power = -30
+		hidden_effect = {
+			create_country_leader = {
+				name = "Herbert W. Armstrong"
+				desc = "POLITICS_HERBERT_W_ARMSTRONG_DESC"
+				picture = "gfx/leaders/CUS/Herbert_W_Armstrong.tga"
+				expire = "1965.1.1"
+				ideology = national_populist_subtype
+				traits = { }
+			}
+		}
+		set_politics = {
+			ruling_party = paternal_autocrat
+			elections_allowed = no
+		}
+	}
+}
+
+
+
 
 country_event = { # Divergent Thinking in Christian Identity
-	id = unionstate.54
-	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.54"}
-	title = unionstate.54.t
-	desc = unionstate.54.d
+	id = constate.54
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.54"}
+	title = constate.54.t
+	desc = constate.54.d
 	picture = AUS_christian_identity
 
 	fire_only_once = yes
@@ -158,20 +876,20 @@ country_event = { # Divergent Thinking in Christian Identity
 	}
 
 	option = { # Let the innocent lies rest
-		name = unionstate.54.a
+		name = constate.54.a
 		add_political_power = -50
 	}
 	option = { # Wickedness must be stamped out
-		name = unionstate.54.b
+		name = constate.54.b
 		add_stability = -0.05
 	}
 }
 
 country_event = { # Rise of Speakeasies
-	id = unionstate.55
-	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.55"}
-	title = unionstate.55.t
-	desc = unionstate.55.d
+	id = constate.55
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.55"}
+	title = constate.55.t
+	desc = constate.55.d
 	picture = AUS_prohibition
 
 	fire_only_once = yes
@@ -184,17 +902,17 @@ country_event = { # Rise of Speakeasies
 	}
 
 	option = { # Alcoholism must be stamped out
-		name = unionstate.55.a
+		name = constate.55.a
 		add_political_power = -100
 		add_stability = -0.04
 	}
 }
 
 country_event = { # Second only to The Chief
-	id = unionstate.56
-	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.56"}
-	title = unionstate.56.t
-	desc = unionstate.56.d
+	id = constate.56
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.56"}
+	title = constate.56.t
+	desc = constate.56.d
 	picture = GFX_father_coughlin
 
 	fire_only_once = yes
@@ -212,24 +930,24 @@ country_event = { # Second only to The Chief
 	}
 
 	option = { # Armstrong the Enlightened
-		name = unionstate.56.a
+		name = constate.56.a
 		add_ideas = CON_Herbert_W_Armstrong_hog_npo
 	}
 	option = { # Our loyal Butler
-		name = unionstate.56.b
+		name = constate.56.b
 		add_ideas = CON_Richard_Girnt_Butler_hog_npo
 	}
 	option = { # Smith, the Second Firster
-		name = unionstate.56.c
+		name = constate.56.c
 		add_ideas = CON_Gerald_L_K_Smith_hog_npo
 	}
 }
 
 country_event = { # Legacy of Wilson
-	id = unionstate.57
-	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.57"}
-	title = unionstate.57.t
-	desc = unionstate.57.d
+	id = constate.57
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.57"}
+	title = constate.57.t
+	desc = constate.57.d
 	picture = AUS_silver_legion2
 
 	fire_only_once = yes
@@ -242,7 +960,7 @@ country_event = { # Legacy of Wilson
 	}
 
 	option = { # Take That Harding!
-		name = unionstate.57.a
+		name = constate.57.a
 		add_political_power = 25
 		add_stability = -0.03
 		add_popularity = {
@@ -253,10 +971,10 @@ country_event = { # Legacy of Wilson
 }
 
 country_event = { # The Sound and the Fury in theatres
-	id = unionstate.58
-	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.58"}
-	title = unionstate.58.t
-	desc = unionstate.58.d
+	id = constate.58
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.58"}
+	title = constate.58.t
+	desc = constate.58.d
 	picture = AUS_movie
 
 	fire_only_once = yes
@@ -269,16 +987,16 @@ country_event = { # The Sound and the Fury in theatres
 	}
 
 	option = { # I wrote better films than this!
-		name = unionstate.58.a
+		name = constate.58.a
 		add_political_power = 10
 	}
 }
 
 country_event = { # Black Education Act
-	id = unionstate.59
-	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.59"}
-	title = unionstate.59.t
-	desc = unionstate.59.d
+	id = constate.59
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.59"}
+	title = constate.59.t
+	desc = constate.59.d
 	picture = diplomacy1
 
 	fire_only_once = yes
@@ -291,17 +1009,17 @@ country_event = { # Black Education Act
 	}
 
 	option = { # Flavor
-		name = unionstate.59.a
+		name = constate.59.a
 		add_political_power = 100
 		add_stability = -0.05
 	}
 }
 
 country_event = { # Black Belt Autonomy
-	id = unionstate.60
-	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.60"}
-	title = unionstate.60.t
-	desc = unionstate.60.d
+	id = constate.60
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.60"}
+	title = constate.60.t
+	desc = constate.60.d
 	picture = diplomacy1
 
 	fire_only_once = yes
@@ -314,21 +1032,21 @@ country_event = { # Black Belt Autonomy
 	}
 
 	option = {
-		name = unionstate.60.a
+		name = constate.60.a
 		add_political_power = 50
 		add_stability = -0.15
 	}
 	option = {
-		name = unionstate.60.b
+		name = constate.60.b
 		add_political_power = -100
 	}
 }
 
 country_event = { # Pass Laws
-	id = unionstate.61
-	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.61"}
-	title = unionstate.61.t
-	desc = unionstate.61.d
+	id = constate.61
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.61"}
+	title = constate.61.t
+	desc = constate.61.d
 	picture = diplomacy1
 
 	fire_only_once = yes
@@ -341,17 +1059,17 @@ country_event = { # Pass Laws
 	}
 
 	option = { # Flavor
-		name = unionstate.61.a
+		name = constate.61.a
 		add_political_power = 50
 		add_stability = -0.10
 	}
 }
 
 country_event = { # Penal Labor
-	id = unionstate.62
-	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.62"}
-	title = unionstate.62.t
-	desc = unionstate.62.d
+	id = constate.62
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.62"}
+	title = constate.62.t
+	desc = constate.62.d
 	picture = diplomacy2
 
 	fire_only_once = yes
@@ -364,7 +1082,7 @@ country_event = { # Penal Labor
 	}
 
 	option = { # Flavor
-		name = unionstate.62.a
+		name = constate.62.a
 		add_political_power = 100
 		add_stability = -0.20
 		decrease_ruling_party_popularity_by_10 = yes
@@ -372,10 +1090,10 @@ country_event = { # Penal Labor
 }
 
 country_event = { # The third Great Migration
-	id = unionstate.63
-	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.63"}
-	title = unionstate.63.t
-	desc = unionstate.63.d
+	id = constate.63
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.63"}
+	title = constate.63.t
+	desc = constate.63.d
 	picture = newyork
 
 	fire_only_once = yes
@@ -388,7 +1106,7 @@ country_event = { # The third Great Migration
 	}
 
 	option = { # America is expelling toxins
-		name = unionstate.63.a
+		name = constate.63.a
 		ai_chance = {
 			factor = 60
 		}
@@ -419,14 +1137,14 @@ country_event = { # The third Great Migration
 					}
 				}
 				country_event = {
-					id = unionstate.64
+					id = constate.64
 					days = 2
 				}
 			}
 		}
 	}
 	option = { # Quick, Stop Them!
-		name = unionstate.63.b
+		name = constate.63.b
 		add_stability = -0.10
 		add_political_power = -200
 		add_timed_idea = {
@@ -454,7 +1172,7 @@ country_event = { # The third Great Migration
 					}
 				}
 				country_event = {
-					id = unionstate.64
+					id = constate.64
 					days = 2
 				}
 			}
@@ -463,48 +1181,48 @@ country_event = { # The third Great Migration
 }
 
 country_event = { # The third Great Migration(the other countries)
-	id = unionstate.64
-	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.64"}
-	title = unionstate.64.t
+	id = constate.64
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.64"}
+	title = constate.64.t
 
 	desc = { # Pacific States
-		text = unionstate.64.d.psa
+		text = constate.64.d.psa
 		trigger = {
 			tag = CAL
 		}
 	}
 	desc = { # New England
-		text = unionstate.64.d.new_england
+		text = constate.64.d.new_england
 		trigger = {
 			tag = NEE
 		}
 	}
 	desc = { # Liberia
-		text = unionstate.64.d.liberia
+		text = constate.64.d.liberia
 		trigger = {
 			tag = LIB
 		}
 	}
 	desc = { # Mexico
-		text = unionstate.64.d.mexico
+		text = constate.64.d.mexico
 		trigger = {
 			tag = MEX
 		}
 	}
 	desc = { # Haiti
-		text = unionstate.64.d.haiti
+		text = constate.64.d.haiti
 		trigger = {
 			tag = HAI
 		}
 	}
 	desc = { # Cuba
-		text = unionstate.64.d.cuba
+		text = constate.64.d.cuba
 		trigger = {
 			tag = CUB
 		}
 	}
 	desc = { # Hawaii
-		text = unionstate.64.d.hawaii
+		text = constate.64.d.hawaii
 		trigger = {
 			tag = HAW
 		}
@@ -513,7 +1231,7 @@ country_event = { # The third Great Migration(the other countries)
 	is_triggered_only = yes
 
 	option = { # You are welcome to stay
-		name = unionstate.64.a
+		name = constate.64.a
 		ai_chance = {
 			factor = 50
 		}
@@ -545,7 +1263,7 @@ country_event = { # The third Great Migration(the other countries)
 		}
 	}
 	option = { # We do not want you
-		name = unionstate.64.b
+		name = constate.64.b
 		ai_chance = {
 			factor = 30
 		}
@@ -581,10 +1299,10 @@ country_event = { # The third Great Migration(the other countries)
 }
 
 country_event = { # Pelley's Death
-	id = unionstate.65
-	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.65"}
-	title = unionstate.65.t
-	desc = unionstate.65.d
+	id = constate.65
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.65"}
+	title = constate.65.t
+	desc = constate.65.d
 	picture = GFX_report_event_usa_funeral
 
 	fire_only_once = yes
@@ -605,7 +1323,7 @@ country_event = { # Pelley's Death
 	}
 
 	option = {
-		name = unionstate.65.a
+		name = constate.65.a
 		create_country_leader = {
 			name = "Gerald L. K. Smith"
 			desc = "POLITICS_GERALD_L_K_SMITH"
@@ -619,16 +1337,16 @@ country_event = { # Pelley's Death
 
 ### Foreign Events 71 - 100 ###
 country_event = { # the AUS wishes to join the Entente
-	id = unionstate.71
-	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.71"}
-	title = unionstate.71.t
-	desc = unionstate.71.d
+	id = constate.71
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.71"}
+	title = constate.71.t
+	desc = constate.71.d
 	picture = diplomacy2
 
 	is_triggered_only = yes
 
 	option = { # Of course they may join!
-		name = unionstate.71.a
+		name = constate.71.a
 		ai_chance = {
 			factor = 99
 		}
@@ -636,13 +1354,13 @@ country_event = { # the AUS wishes to join the Entente
 		add_to_faction = CON
 	}
 	option = { # We have no need of them
-		name = unionstate.71.b
+		name = constate.71.b
 		ai_chance = {
 			factor = 1
 		}
 		CON = {
 			country_event = {
-				id = unionstate.72
+				id = constate.72
 				days = 1
 			}
 		}
@@ -650,16 +1368,16 @@ country_event = { # the AUS wishes to join the Entente
 }
 
 country_event = { # Canada refuses
-	id = unionstate.72
-	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.72"}
-	title = unionstate.72.t
-	desc = unionstate.72.d
+	id = constate.72
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.72"}
+	title = constate.72.t
+	desc = constate.72.d
 	picture = diplomacy2
 
 	is_triggered_only = yes
 
 	option = {
-		name = unionstate.72.a
+		name = constate.72.a
 		add_political_power = -50
 		add_opinion_modifier = {
 			target = FROM
@@ -669,16 +1387,16 @@ country_event = { # Canada refuses
 }
 
 country_event = { # the AUS wishes to join the Reichspakt
-	id = unionstate.73
-	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.73"}
-	title = unionstate.73.t
-	desc = unionstate.73.d
+	id = constate.73
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.73"}
+	title = constate.73.t
+	desc = constate.73.d
 	picture = diplomacy2
 
 	is_triggered_only = yes
 
 	option = { # Of course they may join!
-		name = unionstate.73.a
+		name = constate.73.a
 		ai_chance = {
 			factor = 99
 		}
@@ -686,13 +1404,13 @@ country_event = { # the AUS wishes to join the Reichspakt
 		add_to_faction = CON
 	}
 	option = { # We have no need of them
-		name = unionstate.73.b
+		name = constate.73.b
 		ai_chance = {
 			factor = 1
 		}
 		CON = {
 			country_event = {
-				id = unionstate.74
+				id = constate.74
 				days = 1
 			}
 		}
@@ -700,16 +1418,16 @@ country_event = { # the AUS wishes to join the Reichspakt
 }
 
 country_event = { # Germany refuses
-	id = unionstate.74
-	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.74"}
-	title = unionstate.74.t
-	desc = unionstate.74.d
+	id = constate.74
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.74"}
+	title = constate.74.t
+	desc = constate.74.d
 	picture = diplomacy2
 
 	is_triggered_only = yes
 
 	option = {
-		name = unionstate.74.a
+		name = constate.74.a
 		add_political_power = -50
 		add_opinion_modifier = {
 			target = GER
@@ -719,16 +1437,16 @@ country_event = { # Germany refuses
 }
 
 country_event = { # the AUS wishes to ally with us(russia)
-	id = unionstate.75
-	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.75"}
-	title = unionstate.75.t
-	desc = unionstate.75.d
+	id = constate.75
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.75"}
+	title = constate.75.t
+	desc = constate.75.d
 	picture = diplomacy2
 
 	is_triggered_only = yes
 
 	option = {
-		name = unionstate.75.a #Of course they may join!
+		name = constate.75.a #Of course they may join!
 		ai_chance = {
 			factor = 99
 		}
@@ -742,13 +1460,13 @@ country_event = { # the AUS wishes to ally with us(russia)
 		add_to_faction = CON
 	}
 	option = {
-		name = unionstate.75.b #We have no need of them
+		name = constate.75.b #We have no need of them
 		ai_chance = {
 			factor = 1
 		}
 		CON = {
 			country_event = {
-				id = unionstate.76
+				id = constate.76
 				days = 1
 			}
 		}
@@ -756,16 +1474,16 @@ country_event = { # the AUS wishes to ally with us(russia)
 }
 
 country_event = { # Russia refuses
-	id = unionstate.76
-	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.76"}
-	title = unionstate.76.t
-	desc = unionstate.76.d
+	id = constate.76
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.76"}
+	title = constate.76.t
+	desc = constate.76.d
 	picture = diplomacy2
 
 	is_triggered_only = yes
 
 	option = {
-		name = unionstate.32.a
+		name = constate.32.a
 		add_political_power = -50
 		add_opinion_modifier = {
 			target = RUS
@@ -775,10 +1493,10 @@ country_event = { # Russia refuses
 }
 
 country_event = { # Share Our Wealth appoints Gerald Smith CEO
-	id = unionstate.77
-	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.77"}
-	title = unionstate.77.t
-	desc = unionstate.77.d
+	id = constate.77
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.77"}
+	title = constate.77.t
+	desc = constate.77.d
 	picture = congress
 
 	fire_only_once = yes
@@ -789,11 +1507,11 @@ country_event = { # Share Our Wealth appoints Gerald Smith CEO
 	}
 
 	option = { # How Dare He!
-		name = unionstate.77.a
+		name = constate.77.a
 		add_stability = -0.01
 		hidden_effect = {
 			country_event = {
-				id = unionstate.78
+				id = constate.78
 				days = 3
 			}
 		}
@@ -801,10 +1519,10 @@ country_event = { # Share Our Wealth appoints Gerald Smith CEO
 }
 
 country_event = { # Democrat Loyalists Declare AFP Corrupt
-	id = unionstate.78
-	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.78"}
-	title = unionstate.78.t
-	desc = unionstate.78.d
+	id = constate.78
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.78"}
+	title = constate.78.t
+	desc = constate.78.d
 	picture = congress
 
 	fire_only_once = yes
@@ -815,11 +1533,11 @@ country_event = { # Democrat Loyalists Declare AFP Corrupt
 	}
 
 	option = { # Fools, we are their only home.
-		name = unionstate.78.a
+		name = constate.78.a
 		add_political_power = -10
 		hidden_effect = {
 			country_event = {
-				id = unionstate.6
+				id = constate.6
 				days = 3
 			}
 		}
@@ -827,10 +1545,10 @@ country_event = { # Democrat Loyalists Declare AFP Corrupt
 }
 
 country_event = { # The Officers' Revolt
-	id = unionstate.79
-	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.79"}
-	title = unionstate.79.t
-	desc = unionstate.79.d
+	id = constate.79
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.79"}
+	title = constate.79.t
+	desc = constate.79.d
 	picture = GFX_USA_Riots
 
 	fire_only_once = yes
@@ -846,19 +1564,19 @@ country_event = { # The Officers' Revolt
 	}
 
 	option = { # Give Patton free rein
-		name = unionstate.79.a
+		name = constate.79.a
 		hidden_effect = {
 			country_event = {
-				id = unionstate.83
+				id = constate.83
 				days = 5
 			}
 		}
 	}
 	option = { # Only Legion officers may participate
-		name = unionstate.79.b
+		name = constate.79.b
 		hidden_effect = {
 			country_event = {
-				id = unionstate.84
+				id = constate.84
 				days = 5
 			}
 		}
@@ -866,10 +1584,10 @@ country_event = { # The Officers' Revolt
 }
 
 country_event = { # Rebuilding the Constitution
-	id = unionstate.80
-	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.80"}
-	title = unionstate.80.t
-	desc = unionstate.80.d
+	id = constate.80
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.80"}
+	title = constate.80.t
+	desc = constate.80.d
 	picture = congress
 
 	fire_only_once = yes
@@ -885,7 +1603,7 @@ country_event = { # Rebuilding the Constitution
 	}
 
 	option = { # States Rights...for now
-		name = unionstate.80.a
+		name = constate.80.a
 		custom_effect_tooltip = CON_xenophobia
 		add_political_power = -200
 		add_popularity = {
@@ -894,14 +1612,14 @@ country_event = { # Rebuilding the Constitution
 		}
 		hidden_effect = {
 			country_event = {
-				id = unionstate.81
+				id = constate.81
 				days = 20
 				random = 15
 			}
 		}
 	}
 	option = { # Have you read Matthew 20:26-27?
-		name = unionstate.80.b
+		name = constate.80.b
 		add_political_power = 100
 		add_popularity = {
 			ideology = national_populist
@@ -914,7 +1632,7 @@ country_event = { # Rebuilding the Constitution
 				value = 1
 			}
 			country_event = {
-				id = unionstate.81
+				id = constate.81
 				days = 20
 				random = 15
 			}
@@ -923,10 +1641,10 @@ country_event = { # Rebuilding the Constitution
 }
 
 country_event = { # Silver Legion Riots in Baltimore
-	id = unionstate.81
-	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.81"}
-	title = unionstate.81.t
-	desc = unionstate.81.d
+	id = constate.81
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.81"}
+	title = constate.81.t
+	desc = constate.81.d
 	picture = diplomacy2
 
 	fire_only_once = yes
@@ -942,7 +1660,7 @@ country_event = { # Silver Legion Riots in Baltimore
 	}
 
 	option = { # Abandon the Legionaires to their fate
-		name = unionstate.81.a
+		name = constate.81.a
 		add_political_power = 50
 		add_popularity = {
 			ideology = national_populist
@@ -956,19 +1674,19 @@ country_event = { # Silver Legion Riots in Baltimore
 				value = 1
 			}
 			country_event = {
-				id = unionstate.82
+				id = constate.82
 				days = 5
 				random = 5
 			}
 		}
 	}
 	option = { # Pull them out, no matter the cost
-		name = unionstate.81.b
+		name = constate.81.b
 		add_political_power = -200
 		add_manpower = -500
 		hidden_effect = {
 			country_event = {
-				id = unionstate.82
+				id = constate.82
 				days = 5
 				random = 5
 			}
@@ -977,13 +1695,13 @@ country_event = { # Silver Legion Riots in Baltimore
 }
 
 country_event = { # Marching to Zion
-	id = unionstate.82
-	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.82"}
-	title = unionstate.82.t
+	id = constate.82
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.82"}
+	title = constate.82.t
 	picture = congress
 
 	desc = {
-		text = unionstate.82.d.death
+		text = constate.82.d.death
 		trigger = {
 			has_country_flag = {
 				flag = CON_xenophobia
@@ -992,7 +1710,7 @@ country_event = { # Marching to Zion
 		}
 	}
 	desc = {
-		text = unionstate.82.d.freedom
+		text = constate.82.d.freedom
 		trigger = {
 			has_country_flag = {
 				flag = CON_xenophobia
@@ -1001,7 +1719,7 @@ country_event = { # Marching to Zion
 		}
 	}
 	desc = {
-		text = unionstate.82.d.mild
+		text = constate.82.d.mild
 		trigger = {
 			has_country_flag = {
 				flag = CON_xenophobia
@@ -1017,7 +1735,7 @@ country_event = { # Marching to Zion
 	is_triggered_only = yes
 
 	option = {
-		name = unionstate.82.a
+		name = constate.82.a
 		trigger = {
 			has_country_flag = {
 				flag = CON_xenophobia
@@ -1031,7 +1749,7 @@ country_event = { # Marching to Zion
 		add_stability = 0.05
 	}
 	option = {
-		name = unionstate.82.c
+		name = constate.82.c
 		trigger = {
 			has_country_flag = {
 				flag = CON_xenophobia
@@ -1049,7 +1767,7 @@ country_event = { # Marching to Zion
 		add_stability = -0.05
 	}
 	option = {
-		name = unionstate.82.c
+		name = constate.82.c
 		trigger = {
 			has_country_flag = {
 				flag = CON_xenophobia
@@ -1073,7 +1791,7 @@ country_event = { # Marching to Zion
 				value > 2
 			}
 		}
-		name = unionstate.82.b
+		name = constate.82.b
 		if = {
 			limit = {
 				has_country_flag = AUS_america_united
@@ -1125,22 +1843,22 @@ country_event = { # Marching to Zion
 
 			# PatAut Events
 			country_event = {
-				id = unionstate.36
+				id = constate.36
 				days = 90
 				random = 10
 			}
 			country_event = {
-				id = unionstate.32
+				id = constate.32
 				days = 120
 				random = 20
 			}
 			country_event = {
-				id = unionstate.37
+				id = constate.37
 				days = 150
 				random = 30
 			}
 			country_event = {
-				id = unionstate.38
+				id = constate.38
 				days = 180
 				random = 40
 			}
@@ -1149,17 +1867,17 @@ country_event = { # Marching to Zion
 }
 
 country_event = { # The Washington Massacre
-	id = unionstate.83
-	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.83"}
-	title = unionstate.83.t
-	desc = unionstate.83.d
+	id = constate.83
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.83"}
+	title = constate.83.t
+	desc = constate.83.d
 	picture = GFX_report_event_GRE_riot
 
 	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = {
-		name = unionstate.83.a
+		name = constate.83.a
 		custom_effect_tooltip = CON_xenophobia
 		if = {
 			limit = {
@@ -1179,7 +1897,7 @@ country_event = { # The Washington Massacre
 		add_manpower = -320
 		hidden_effect = {
 			country_event = {
-				id = unionstate.80
+				id = constate.80
 				days = 30
 			}
 		}
@@ -1187,17 +1905,17 @@ country_event = { # The Washington Massacre
 }
 
 country_event = { # The Washington March
-	id = unionstate.84
-	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.84"}
-	title = unionstate.84.t
-	desc = unionstate.84.d
+	id = constate.84
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.84"}
+	title = constate.84.t
+	desc = constate.84.d
 	picture = GFX_USA_Riots
 
 	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = {
-		name = unionstate.84.a
+		name = constate.84.a
 		add_political_power = -50
 		add_stability = -0.02
 		hidden_effect = {
@@ -1206,7 +1924,7 @@ country_event = { # The Washington March
 				value = 1
 			}
 			country_event = {
-				id = unionstate.80
+				id = constate.80
 				days = 30
 			}
 		}
@@ -1216,10 +1934,10 @@ country_event = { # The Washington March
 
 ### Flavor Events ###
 country_event = { # The Future of Warfare
-	id = unionstate.101
-	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.101"}
-	title = unionstate.101.t
-	desc = unionstate.101.d
+	id = constate.101
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.101"}
+	title = constate.101.t
+	desc = constate.101.d
 	picture = GFX_report_event_generic_research_lab
 
 	fire_only_once = yes
@@ -1236,19 +1954,19 @@ country_event = { # The Future of Warfare
 	}
 
 	option = { # Goddard's Rocket
-		name = unionstate.101.a
+		name = constate.101.a
 		hidden_effect = {
 			country_event = {
-				id = unionstate.102
+				id = constate.102
 				days = 15
 			}
 		}
 	}
 	option = { # Vannevar Bush's Bomb
-		name = unionstate.101.b
+		name = constate.101.b
 		hidden_effect = {
 			country_event = {
-				id = unionstate.103
+				id = constate.103
 				days = 15
 			}
 		}
@@ -1256,16 +1974,16 @@ country_event = { # The Future of Warfare
 }
 
 country_event = { # Missles over White Sands
-	id = unionstate.102
-	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.102"}
-	title = unionstate.102.t
-	desc = unionstate.102.d
+	id = constate.102
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.102"}
+	title = constate.102.t
+	desc = constate.102.d
 	picture = GFX_report_event_generic_research_lab
 
 	is_triggered_only = yes
 
 	option = { # Nowhere is Safe
-		name = unionstate.102.a
+		name = constate.102.a
 		add_tech_bonus = {
 			name = jet_rocket_bonus
 			bonus = 1
@@ -1277,16 +1995,16 @@ country_event = { # Missles over White Sands
 }
 
 country_event = { # Nuclear Power in New Mexico
-	id = unionstate.103
-	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.103"}
-	title = unionstate.103.t
-	desc = unionstate.103.d
+	id = constate.103
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.103"}
+	title = constate.103.t
+	desc = constate.103.d
 	picture = GFX_report_event_generic_research_lab
 
 	is_triggered_only = yes
 
 	option = { # Of course they may join!
-		name = unionstate.103.a
+		name = constate.103.a
 		add_tech_bonus = {
 			name = nuclear_bonus
 			bonus = 1
@@ -1297,10 +2015,10 @@ country_event = { # Nuclear Power in New Mexico
 }
 
 country_event = { # America is reunited
-	id = unionstate.104
-	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.104"}
-	title = unionstate.104.t
-	desc = unionstate.104.d
+	id = constate.104
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.104"}
+	title = constate.104.t
+	desc = constate.104.d
 	picture = congress
 
 	fire_only_once = yes
@@ -1336,7 +2054,7 @@ country_event = { # America is reunited
 	}
 
 	option = { #Yes! We are the United States, now and forever
-		name = unionstate.104.a
+		name = constate.104.a
 		trigger = {
 			NOT = {
 				has_government = national_populist
@@ -1349,7 +2067,7 @@ country_event = { # America is reunited
 		set_cosmetic_tag = NEE_america
 	}
 	option = { #Never! The American Union State IS America!
-		name = unionstate.104.b
+		name = constate.104.b
 		trigger = {
 			NOT = {
 				has_government = paternal_autocrat
@@ -1363,10 +2081,10 @@ country_event = { # America is reunited
 }
 
 country_event = { # Trial of the Weapons companies
-	id = unionstate.105
-	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.105"}
-	title = unionstate.105.t
-	desc = unionstate.105.d
+	id = constate.105
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.105"}
+	title = constate.105.t
+	desc = constate.105.d
 	picture = USA_reconstruction
 
 	fire_only_once = yes
@@ -1383,26 +2101,26 @@ country_event = { # Trial of the Weapons companies
 	immediate = {
 		hidden_effect = {
 			country_event = {
-				id = unionstate.106
+				id = constate.106
 				days = 7
 			}
 			country_event = {
-				id = unionstate.107
+				id = constate.107
 				days = 14
 			}
 			country_event = {
-				id = unionstate.108
+				id = constate.108
 				days = 21
 			}
 			country_event = {
-				id = unionstate.109
+				id = constate.109
 				days = 28
 			}
 		}
 	}
 
 	option = { # companies allowed
-		name = unionstate.105.a
+		name = constate.105.a
 		ai_chance = {
 			factor = 40
 		}
@@ -1411,7 +2129,7 @@ country_event = { # Trial of the Weapons companies
 		custom_effect_tooltip = USA_allow_companies_tooltip
 	}
 	option = { # companies not allowed
-		name = unionstate.105.b
+		name = constate.105.b
 		ai_chance = {
 			factor = 60
 		}
@@ -1421,17 +2139,17 @@ country_event = { # Trial of the Weapons companies
 }
 
 country_event = { # Trial of the Heavy Equipment companies
-	id = unionstate.106
-	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.106"}
-	title = unionstate.106.t
-	desc = unionstate.106.d
+	id = constate.106
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.106"}
+	title = constate.106.t
+	desc = constate.106.d
 	picture = USA_reconstruction
 
 	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = { # companies allowed
-		name = unionstate.106.a
+		name = constate.106.a
 		ai_chance = {
 			factor = 40
 		}
@@ -1440,7 +2158,7 @@ country_event = { # Trial of the Heavy Equipment companies
 		custom_effect_tooltip = USA_allow_companies_tooltip
 	}
 	option = { # companies not allowed
-		name = unionstate.106.b
+		name = constate.106.b
 		ai_chance = {
 			factor = 60
 		}
@@ -1450,17 +2168,17 @@ country_event = { # Trial of the Heavy Equipment companies
 }
 
 country_event = { # Trial of the Aviation companies
-	id = unionstate.107
-	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.107"}
-	title = unionstate.107.t
-	desc = unionstate.107.d
+	id = constate.107
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.107"}
+	title = constate.107.t
+	desc = constate.107.d
 	picture = USA_reconstruction
 
 	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = { # companies allowed
-		name = unionstate.107.a
+		name = constate.107.a
 		ai_chance = {
 			factor = 40
 		}
@@ -1469,7 +2187,7 @@ country_event = { # Trial of the Aviation companies
 		custom_effect_tooltip = USA_allow_companies_tooltip
 	}
 	option = { # companies not allowed
-		name = unionstate.107.b
+		name = constate.107.b
 		ai_chance = {
 			factor = 60
 		}
@@ -1479,17 +2197,17 @@ country_event = { # Trial of the Aviation companies
 }
 
 country_event = { # Trial of the Naval companies
-	id = unionstate.108
-	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.108"}
-	title = unionstate.108.t
-	desc = unionstate.108.d
+	id = constate.108
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.108"}
+	title = constate.108.t
+	desc = constate.108.d
 	picture = USA_reconstruction
 
 	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = { # companies allowed
-		name = unionstate.108.a
+		name = constate.108.a
 		ai_chance = {
 			factor = 40
 		}
@@ -1498,7 +2216,7 @@ country_event = { # Trial of the Naval companies
 		custom_effect_tooltip = USA_allow_companies_tooltip
 	}
 	option = { # companies not allowed
-		name = unionstate.108.b
+		name = constate.108.b
 		ai_chance = {
 			factor = 60
 		}
@@ -1508,17 +2226,17 @@ country_event = { # Trial of the Naval companies
 }
 
 country_event = { # Trial of the Industry companies
-	id = unionstate.109
-	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.109"}
-	title = unionstate.109.t
-	desc = unionstate.109.d
+	id = constate.109
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.109"}
+	title = constate.109.t
+	desc = constate.109.d
 	picture = USA_reconstruction
 
 	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = { # companies allowed
-		name = unionstate.109.a
+		name = constate.109.a
 		ai_chance = {
 			factor = 40
 		}
@@ -1527,7 +2245,7 @@ country_event = { # Trial of the Industry companies
 		custom_effect_tooltip = USA_allow_companies_tooltip
 	}
 	option = { # companies not allowed
-		name = unionstate.109.b
+		name = constate.109.b
 		ai_chance = {
 			factor = 60
 		}
@@ -1538,70 +2256,70 @@ country_event = { # Trial of the Industry companies
 
 ### Initial Events
 country_event = {
-	id = unionstate.150
-	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.150"}
-	title = unionstate.150.t
-	desc = unionstate.150.d
+	id = constate.150
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.150"}
+	title = constate.150.t
+	desc = constate.150.d
 	picture = GFX_report_event_generic_conference
 
 	is_triggered_only = yes
 
 	immediate = {
 		hidden_effect = {
-			country_event = { id = unionstate.151 days = 3 }
+			country_event = { id = constate.151 days = 3 }
 		}
 	}
 
 	option = {
-		name = unionstate.150.a
+		name = constate.150.a
 	}
 }
 
 country_event = {
-	id = unionstate.151
-	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.151"}
-	title = unionstate.151.t
-	desc = unionstate.151.d
+	id = constate.151
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.151"}
+	title = constate.151.t
+	desc = constate.151.d
 	picture = GFX_Long_Rally
 
 	is_triggered_only = yes
 
 	immediate = {
 		hidden_effect = {
-			country_event = { id = unionstate.152 days = 10 }
+			country_event = { id = constate.152 days = 10 }
 		}
 	}
 
 	option = {
-		name = unionstate.151.a
+		name = constate.151.a
 	}
 }
 
 country_event = {
-	id = unionstate.152
-	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.152"}
-	title = unionstate.152.t
-	desc = unionstate.152.d
+	id = constate.152
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.152"}
+	title = constate.152.t
+	desc = constate.152.d
 	picture = GFX_report_event_generic_rally
 
 	is_triggered_only = yes
 
 	immediate = {
 		hidden_effect = {
-			country_event = { id = unionstate.153 days = 8 }
+			country_event = { id = constate.153 days = 8 }
 		}
 	}
 
 	option = {
-		name = unionstate.152.a
+		name = constate.152.a
 	}
 }
 
 country_event = {
-	id = unionstate.153
-	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.153"}
-	title = unionstate.153.t
-	desc = unionstate.153.d
+	id = constate.153
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.153"}
+	title = constate.153.t
+	desc = constate.153.d
 	picture = GFX_ACW_american_brigade
 
 	is_triggered_only = yes
@@ -1611,17 +2329,17 @@ country_event = {
 	}
 
 	option = {
-		name = unionstate.153.a
+		name = constate.153.a
 	}
 }
 
 
 ### Resistance Events ###
 country_event = { # Socialist terrorism - factory sabotaged
-	id = unionstate.200
-	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.200"}
-	title = unionstate.200.t
-	desc = unionstate.200.d
+	id = constate.200
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.200"}
+	title = constate.200.t
+	desc = constate.200.d
 	picture = GFX_report_event_SRI_bombing
 
 	trigger = {
@@ -1679,7 +2397,7 @@ country_event = { # Socialist terrorism - factory sabotaged
 	}
 
 	option = {
-		name = unionstate.200.a
+		name = constate.200.a
 		add_stability = -0.01
 		event_target:attack_state = {
 			damage_building = {
@@ -1748,10 +2466,10 @@ country_event = { # Socialist terrorism - factory sabotaged
 }
 
 country_event = { # Federalist terrorism - factory sabotaged
-	id = unionstate.204
-	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.204"}
-	title = unionstate.204.t
-	desc = unionstate.204.d
+	id = constate.204
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.204"}
+	title = constate.204.t
+	desc = constate.204.d
 	picture = GFX_report_event_SRI_bombing
 
 	trigger = {
@@ -1882,17 +2600,17 @@ country_event = { # Federalist terrorism - factory sabotaged
 #by Drozdovite#
 ###############
 country_event = { # Requisition of Civilian Trucks
-	id = unionstate.500
-	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.500"}
-	title = unionstate.500.t
-	desc = unionstate.500.d
+	id = constate.500
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.500"}
+	title = constate.500.t
+	desc = constate.500.d
 	picture = USA_reconstruction
 
 	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = { # The Kingfish Thanks you for your service
-		name = unionstate.500.a
+		name = constate.500.a
 		add_equipment_to_stockpile = {
 			type = motorized_equipment
 			amount = 850
@@ -1902,35 +2620,35 @@ country_event = { # Requisition of Civilian Trucks
 }
 
 country_event = { # Airborne Experiments Begin
-	id = unionstate.501
-	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.501"}
-	title = unionstate.501.t
-	desc = unionstate.501.d
+	id = constate.501
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.501"}
+	title = constate.501.t
+	desc = constate.501.d
 	picture = GFX_report_event_ast_paras
 
 	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = { # We shall await the results
-		name = unionstate.501.a
+		name = constate.501.a
 		hidden_effect = {
-			country_event = { id = unionstate.502 days = 55 }
+			country_event = { id = constate.502 days = 55 }
 		}
 	}
 }
 
 country_event = { # Airborne Experiments Succesful
-	id = unionstate.502
-	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.502"}
-	title = unionstate.502.t
-	desc = unionstate.502.d
+	id = constate.502
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.502"}
+	title = constate.502.t
+	desc = constate.502.d
 	picture = GFX_USA_they_got_the_guts
 
 	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = { # To battle!
-		name = unionstate.502.a
+		name = constate.502.a
 		add_equipment_to_stockpile = {
 			type = transport_plane_equipment
 			amount = 50
