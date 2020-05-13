@@ -856,7 +856,7 @@ focus_tree = {
 		icon = GFX_goal_COR_the_lone_eagle
 		cost = 7.25
 		available = {
-			has_global_flag = USA_civil_war_over_flag
+			has_country_flag = COR_fordist_victory
 			has_government = paternal_autocrat
 			has_country_leader = {
 			ruling_only = yes
@@ -8254,9 +8254,7 @@ focus_tree = {
 			if = {
 			limit = { ruling_only = yes name = "Herbert W. Armstrong"}
 			}
-			has_completed_focus = {
-			
-			}
+			has_completed_focus = COR_unite_the_lost_tribes
 		}
 		relative_position_id = COR_back_in_business
 		x = -2
