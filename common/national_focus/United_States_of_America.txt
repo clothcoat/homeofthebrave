@@ -1642,12 +1642,10 @@ focus_tree = {
 		icon = GFX_USA_senator_norris
 		cost = 1.00
 		available = {
-			OR = {
-				has_government = social_democrat
-				date < 1937.5.1
-				has_country_flag = progressive_victory
-				has_country_leader = { ruling_only = yes name = "George Norris" } 
-			}
+			has_government = social_democrat
+			date < 1937.5.1
+			has_country_flag = progressive_victory
+			has_country_leader = { ruling_only = yes name = "George Norris" } 
 		}
 		x = 26
 		y = 0
