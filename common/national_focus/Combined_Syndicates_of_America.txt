@@ -6269,7 +6269,7 @@ focus_tree = {
 
 	focus = {
 		id = CSA_the_revolution_at_home
-		icon = GFX_goal_FRA_World_Revolution
+		icon = GFX_goal_CSA_revolution_at_homee
 		cost = 7.25
 		prerequisite = {
 			focus = CSA_demand_new_england
@@ -6300,7 +6300,7 @@ focus_tree = {
 	
 	focus = {
 		id = CSA_defend_the_front
-		icon = GFX_goal_FRA_World_Revolution
+		icon = GFX_goal_CSA_socialist_defence_doctrine
 		cost = 7.25
 		prerequisite = {
 			focus = CSA_the_revolution_at_home
@@ -6328,7 +6328,7 @@ focus_tree = {
 	
 	focus = {
 		id = CSA_address_the_internationale
-		icon = GFX_goal_FRA_World_Revolution
+		icon = GFX_BBR_internationale_struggle
 		cost = 7.25
 		prerequisite = {
 			focus = CSA_revolutionary_monroeism
@@ -6357,7 +6357,7 @@ focus_tree = {
 	
 	focus = {
 		id = CSA_peace_league
-		icon = GFX_goal_FRA_World_Revolution
+		icon = GFX_goal_CSA_peace_league
 		cost = 7.25
 		prerequisite = {
 			focus = CSA_defend_the_front
@@ -6385,7 +6385,7 @@ focus_tree = {
 	
 	focus = {
 		id = CSA_pacifist_propaganda
-		icon = GFX_goal_FRA_World_Revolution
+		icon = GFX_goal_CSA_pacifist_education
 		cost = 7.25
 		prerequisite = {
 			focus = CSA_peace_league
@@ -6413,7 +6413,7 @@ focus_tree = {
 	
 	focus = {
 		id = CSA_invest_in_the_future
-		icon = GFX_goal_FRA_World_Revolution
+		icon = GFX_BBR_means_of_production
 		cost = 7.25
 		prerequisite = {
 			focus = CSA_peace_league
@@ -6441,7 +6441,7 @@ focus_tree = {
 	
 	focus = {
 		id = CSA_peace_through_socialism
-		icon = GFX_goal_FRA_World_Revolution
+		icon = GFX_BBR_socialist_civi_identity
 		cost = 7.25
 		prerequisite = {
 			focus = CSA_pacifist_propaganda
@@ -6472,7 +6472,7 @@ focus_tree = {
 	
 	focus = {
 		id = CSA_revolutionary_monroeism
-		icon = GFX_goal_FRA_World_Revolution
+		icon = GFX_goal_CSA_revolutionize_monroeism
 		cost = 7.25
 		prerequisite = {
 			focus = CSA_the_revolution_at_home
@@ -6528,7 +6528,7 @@ focus_tree = {
 	
 	focus = {
 		id = CSA_naval_investments
-		icon = GFX_goal_FRA_World_Revolution
+		icon = GFX_goal_CSA_power_of_red_navy_2
 		cost = 7.25
 		prerequisite = {
 			focus = CSA_logistics_management
@@ -6555,7 +6555,7 @@ focus_tree = {
 	
 	focus = {
 		id = CSA_americanist_faction
-		icon = GFX_goal_FRA_World_Revolution
+		icon = GFX_goal_CSA_lead_american_revolution
 		cost = 7.25
 		prerequisite = {
 			focus = CSA_naval_investments
@@ -6583,7 +6583,7 @@ focus_tree = {
 	
 	focus = {
 		id = CSA_scoop_up_local_socialists
-		icon = GFX_goal_FRA_World_Revolution
+		icon = GFX_BBR_approach_local_socialists
 		cost = 7.25
 		prerequisite = {
 			focus = CSA_americanist_faction
@@ -6611,7 +6611,7 @@ focus_tree = {
 	
 	focus = {
 		id = CSA_world_revolution
-		icon = GFX_goal_FRA_World_Revolution
+		icon = GFX_goal_CSA_World_Revolution_csa
 		cost = 7.25
 		prerequisite = {
 			focus = CSA_demand_new_england
@@ -6642,7 +6642,7 @@ focus_tree = {
 	
 	focus = {
 		id = CSA_on_the_beach
-		icon = GFX_human_tsunami
+		icon = GFX_BBR_unionize_yesterday
 		cost = 7.25
 		prerequisite = {
 			focus = CSA_world_revolution
@@ -6674,7 +6674,7 @@ focus_tree = {
 	
 	focus = {
 		id = CSA_join_the_internationale
-		icon = GFX_human_tsunami
+		icon = GFX_BBR_internationale_collaboration
 		cost = 7.25
 		prerequisite = {
 			focus = CSA_on_the_beach
@@ -6738,7 +6738,7 @@ focus_tree = {
 	
 	focus = {
 		id = CSA_invest_in_the_west
-		icon = GFX_human_tsunami
+		icon = GFX_BBR_build_industries
 		cost = 7.25
 		prerequisite = {
 			focus = CSA_new_lend_lease
@@ -6770,7 +6770,7 @@ focus_tree = {
 	
 	focus = {
 		id = CSA_save_the_cnt
-		icon = GFX_human_tsunami
+		icon = GFX_BBR_building_our_arms
 		cost = 7.25
 		prerequisite = {
 			focus = CSA_invest_in_the_west
@@ -6803,7 +6803,7 @@ focus_tree = {
 	
 	focus = {
 		id = CSA_brazilian_socialism
-		icon = GFX_human_tsunami
+		icon = GFX_CAL_union_expansion
 		cost = 7.25
 		prerequisite = {
 			focus = CSA_save_the_cnt
@@ -6835,7 +6835,7 @@ focus_tree = {
 	
 	focus = {
 		id = CSA_denounce_the_internationale
-		icon = GFX_human_tsunami
+		icon = GFX_goal_CSA_internationale_treachery
 		cost = 7.25
 		prerequisite = {
 			focus = CSA_on_the_beach
@@ -6870,7 +6870,7 @@ focus_tree = {
 	
 	focus = {
 		id = CSA_all_to_the_revolution
-		icon = GFX_human_tsunami
+		icon = GFX_goal_CSA_all_for_revolution
 		cost = 7.25
 		prerequisite = {
 			focus = CSA_denounce_the_internationale
@@ -6901,7 +6901,7 @@ focus_tree = {
 	
 	focus = {
 		id = CSA_new_red_faction
-		icon = GFX_human_tsunami
+		icon = GFX_goal_CSA_true_revolutionary_alliance
 		cost = 7.25
 		prerequisite = {
 			focus = CSA_all_to_the_revolution
@@ -6932,7 +6932,7 @@ focus_tree = {
 	
 	focus = {
 		id = CSA_strike_ireland
-		icon = GFX_human_tsunami
+		icon = GFX_BBR_full_employement
 		cost = 7.25
 		prerequisite = {
 			focus = CSA_new_red_faction
@@ -6963,7 +6963,7 @@ focus_tree = {
 	
 	focus = {
 		id = CSA_strike_faux_socialists
-		icon = GFX_human_tsunami
+		icon = GFX_goal_kill_syndies
 		cost = 7.25
 		prerequisite = {
 			focus = CSA_strike_ireland
@@ -6994,7 +6994,7 @@ focus_tree = {
 	
 	focus = {
 		id = CSA_power_of_the_revolution
-		icon = GFX_human_tsunami
+		icon = GFX_BBR_group_economy
 		cost = 7.25
 		prerequisite = {
 			focus = CSA_brazilian_socialism
@@ -7026,7 +7026,7 @@ focus_tree = {
 	
 	focus = {
 		id = CSA_break_japan
-		icon = GFX_human_tsunami
+		icon = GFX_goal_USA_dismantle_empire
 		cost = 7.25
 		prerequisite = {
 			focus = CSA_power_of_the_revolution
@@ -7088,7 +7088,7 @@ focus_tree = {
 	
 	focus = {
 		id = CSA_save_bolshevism
-		icon = GFX_human_tsunami
+		icon = GFX_goal_support_communism
 		cost = 7.25
 		prerequisite = {
 			focus = CSA_break_japan
@@ -7120,7 +7120,7 @@ focus_tree = {
 	
 	focus = {
 		id = CSA_prussian_socialism
-		icon = GFX_human_tsunami
+		icon = GFX_BBR_crush_old_imperialists
 		cost = 7.25
 		prerequisite = {
 			focus = CSA_power_of_the_revolution
@@ -7151,7 +7151,7 @@ focus_tree = {
 	
 	focus = {
 		id = CSA_austria_hungary
-		icon = GFX_human_tsunami
+		icon = GFX_BBR_crush_ultraradicals
 		cost = 7.25
 		prerequisite = {
 			focus = CSA_prussian_socialism
@@ -7182,7 +7182,7 @@ focus_tree = {
 	
 	focus = {
 		id = CSA_world_without_chains
-		icon = GFX_human_tsunami
+		icon = GFX_BBR_intellectual_appeal
 		cost = 7.25
 		prerequisite = {
 			focus = CSA_austria_hungary
@@ -7386,7 +7386,7 @@ focus_tree = {
 	
 	focus = {
 		id = CSA_african_revolution
-		icon = GFX_human_tsunami
+		icon = GFX_BBR_radical_anti_imperialism
 		cost = 7.25
 		prerequisite = {
 			focus = CSA_master_of_the_west
@@ -7417,7 +7417,7 @@ focus_tree = {
 	
 	focus = {
 		id = CSA_break_arab_monarchism
-		icon = GFX_human_tsunami
+		icon = GFX_goal_USA_anti_imperialist_league
 		cost = 7.25
 		prerequisite = {
 			focus = CSA_african_revolution
@@ -7448,7 +7448,7 @@ focus_tree = {
 	
 	focus = {
 		id = CSA_carribean_revolution
-		icon = GFX_goal_CSA_master_west
+		icon = GFX_BBR_hub_of_revolution
 		cost = 7.25
 		prerequisite = {
 			focus = CSA_master_of_the_west
@@ -7477,7 +7477,7 @@ focus_tree = {
 	
 	focus = {
 		id = CSA_gateway_to_south_america
-		icon = GFX_goal_CSA_master_west
+		icon = GFX_CAL_good_neighbor
 		cost = 7.25
 		prerequisite = {
 			focus = CSA_master_of_the_west
@@ -7506,7 +7506,7 @@ focus_tree = {
 	
 	focus = {
 		id = CSA_socialist_liberation
-		icon = GFX_goal_CSA_master_west
+		icon = GFX_BBR_hammer_and_hoe
 		cost = 7.25
 		prerequisite = {
 			focus = CSA_gateway_to_south_america
@@ -7537,7 +7537,7 @@ focus_tree = {
 	
 	focus = {
 		id = CSA_release_suriname
-		icon = GFX_goal_CSA_master_west
+		icon = GFX_BBR_overthrow_capital
 		cost = 2.00
 		prerequisite = {
 			focus = CSA_socialist_liberation
@@ -7566,7 +7566,7 @@ focus_tree = {
 	
 	focus = {
 		id = CSA_fund_chile
-		icon = GFX_goal_CSA_master_west
+		icon = GFX_BBR_party_with_a_state
 		cost = 2.00
 		prerequisite = {
 			focus = CSA_socialist_liberation
@@ -7594,7 +7594,7 @@ focus_tree = {
 	
 	focus = {
 		id = CSA_through_peru
-		icon = GFX_goal_CSA_master_west
+		icon = GFX_BBR_radicalized_unions
 		cost = 2.00
 		prerequisite = {
 			focus = CSA_socialist_liberation
@@ -7622,7 +7622,7 @@ focus_tree = {
 	
 	focus = {
 		id = CSA_break_bolivia
-		icon = GFX_goal_CSA_master_west
+		icon = GFX_BBR_socialist_vanguard
 		cost = 2.00
 		prerequisite = {
 			focus = CSA_through_peru
@@ -7650,7 +7650,7 @@ focus_tree = {
 	
 	focus = {
 		id = CSA_end_argentina
-		icon = GFX_goal_CSA_master_west
+		icon = GFX_goal_TEX_dismantle_arentina
 		cost = 2.00
 		prerequisite = {
 			focus = CSA_break_bolivia
@@ -7678,7 +7678,7 @@ focus_tree = {
 	
 	focus = {
 		id = CSA_socialism_in_one_nation
-		icon = GFX_goal_CSA_master_west
+		icon = GFX_CAL_commonwealth_of_labor
 		cost = 7.25
 		prerequisite = {
 			focus = CSA_gateway_to_south_america
@@ -7742,7 +7742,7 @@ focus_tree = {
 	
 	focus = {
 		id = CSA_greater_california
-		icon = GFX_goal_psa_flag
+		icon = GFX_CAL_focus_collective_housing
 		cost = 8
 		prerequisite = {
 			focus = CSA_reorganize_mexico
