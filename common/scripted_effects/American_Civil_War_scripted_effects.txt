@@ -875,7 +875,7 @@ USA_civil_war_begins = {
 
 		#declarations of war
 		if = {
-			limit = { country_exists = CSA }
+			limit = { country_exists = CSA 	}
 			CSA = { declare_war_on = { target = USA type = annex_everything	} }
 		}
 		if = {
@@ -891,8 +891,24 @@ USA_civil_war_begins = {
 		}
 		if = {
 			limit = { country_exists = CAL }
-			CSA = { declare_war_on = { target = CAL type = annex_everything	} }
-			TEX = { declare_war_on = { target = CAL type = annex_everything	} }
+			CSA = {
+			if = {
+			limit = { NOT = {
+			has_country_flag = PSA_CSA_TREATY
+				}
+			}
+			declare_war_on = { target = CAL type = annex_everything	} 
+			}
+			}
+			TEX = { 
+			if = {
+			limit = { NOT = {
+			has_country_flag = PSA_AUS_TREATY
+				}
+			}
+			declare_war_on = { target = CAL type = annex_everything	} 
+			}
+			declare_war_on = { target = CAL type = annex_everything	} }
 			USA = { declare_war_on = { target = CAL type = annex_everything	} }
 		}
 
