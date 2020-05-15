@@ -6770,7 +6770,7 @@ focus_tree = {
 	
 	focus = {
 		id = CSA_save_the_cnt
-		icon = GFX_BBR_building_our_arms
+		icon = GFX_goal_CSA_iberian_revolution
 		cost = 7.25
 		prerequisite = {
 			focus = CSA_invest_in_the_west
@@ -7722,7 +7722,7 @@ focus_tree = {
 			}
 		}
 		relative_position_id = CSA_socialism_in_one_nation
-		x = 2
+		x = -2
 		y = 1
 
 		ai_will_do = {
@@ -7755,7 +7755,7 @@ focus_tree = {
 			}
 		}
 		relative_position_id = CSA_socialism_in_one_nation
-		x = 2
+		x = -2
 		y = 2
 
 		ai_will_do = {
@@ -7796,7 +7796,7 @@ focus_tree = {
 			}
 		}
 		relative_position_id = CSA_socialism_in_one_nation
-		x = 2
+		x = -2
 		y = 3
 
 		ai_will_do = {
@@ -7877,7 +7877,7 @@ focus_tree = {
 			controls_state = 739
 		}
 		relative_position_id = CSA_socialism_in_one_nation
-		x = 0
+		x = 2
 		y = 1
 
 		ai_will_do = {
@@ -7928,8 +7928,54 @@ focus_tree = {
 			}
 		}
 		relative_position_id = CSA_socialism_in_one_nation
-		x = 0
+		x = 2
 		y = 2
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available_if_capitulated = no
+		cancel_if_invalid = yes
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CSA_the_great_north"
+			CSA = { 
+			country_event = {
+			id = csa.258
+			days = 1
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CSA_appeal_to_socialism
+		icon = GFX_BBR_syndie_media
+		cost = 8
+		prerequisite = {
+			focus = CSA_organize_northern_technates
+		}
+		prerequisite = {
+			focus = CSA_greater_new_england
+		}
+		available = {
+			is_subject = no
+			OR = {
+			CAN = {
+				exists = yes
+				is_subject_of  = CSA
+				not_has_socialist_government = no
+				}
+			AND = {
+				controls_state = 471
+				controls_state = 472
+				}
+			}
+		}
+		relative_position_id = CSA_socialism_in_one_nation
+		x = 1
+		y = 4
 
 		ai_will_do = {
 			factor = 20
@@ -7971,7 +8017,7 @@ focus_tree = {
 			}
 		}
 		relative_position_id = CSA_socialism_in_one_nation
-		x = 0
+		x = 2
 		y = 3
 
 		available_if_capitulated = no
@@ -8011,7 +8057,7 @@ focus_tree = {
 			}
 		}
 		relative_position_id = CSA_socialism_in_one_nation
-		x = -2
+		x = 0
 		y = 1
 
 		ai_will_do = {
@@ -8075,7 +8121,7 @@ focus_tree = {
 			}
 		}
 		relative_position_id = CSA_socialism_in_one_nation
-		x = -2
+		x = 0
 		y = 2
 
 		available_if_capitulated = no
@@ -8106,7 +8152,7 @@ focus_tree = {
 			controls_state = 464
 		}
 		relative_position_id = CSA_socialism_in_one_nation
-		x = -2
+		x = 0
 		y = 3
 
 		ai_will_do = {
@@ -8153,7 +8199,7 @@ focus_tree = {
 		}
 		}
 		relative_position_id = CSA_socialism_in_one_nation
-		x = 0
+		x = -1
 		y = 4
 
 		ai_will_do = {
@@ -8211,6 +8257,7 @@ focus_tree = {
 			}
 		}
 		prerequisite = {focus = CSA_oh_sweet_colombia }
+		prerequisite = {focus = CSA_appeal_to_socialism }
 		available = { has_government = totalist }
 		relative_position_id = CSA_socialism_in_one_nation
 		cancel_if_invalid = yes
