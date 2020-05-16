@@ -480,6 +480,75 @@ USA_release_COR = {
 			add_ideas = {
 				extensive_conscription
 			}
+			if = { ##BONUSES
+			limit = {
+			has_country_flag = {
+				flag = USA_odp_strength
+				value = 1
+				}
+			}
+			add_manpower = 5000
+			add_war_support = 0.05
+			}
+			if = {
+			limit = {
+			has_country_flag = {
+				flag = USA_odp_strength
+				value = 2
+				}
+			}
+			add_manpower = 7500
+			add_war_support = 0.08
+			}
+			if = {
+			limit = {
+			has_country_flag = {
+				flag = USA_odp_strength
+				value = 3
+				}
+			}
+			add_manpower = 10000
+			add_war_support = 0.1
+			}
+			if = {
+			limit = {
+			has_country_flag = {
+				flag = USA_odp_strength
+				value = 4
+				}
+			}
+			add_manpower = 12500
+			add_war_support = 0.12
+			}
+			if = {
+			limit = {
+			has_country_flag = {
+				flag = USA_odp_strength
+				value = 5
+			}
+			add_manpower = 15000
+			add_war_support = 0.15
+			}
+			if = {
+			limit = {
+			has_country_flag = {
+				flag = USA_odp_strength
+				value = 6
+				}
+			}
+			add_manpower = 17500
+			add_war_support = 0.18
+			}
+			if = {
+			limit = {
+			has_country_flag = {
+				flag = USA_odp_strength
+				value > 6
+				}
+			}
+			add_manpower = 20000
+			add_war_support = 0.2
+			}
 		}
 	}
 }
@@ -560,6 +629,24 @@ USA_release_WCC = {
 			}
 			add_claim_by = WCC
 		}
+		
+		every_state = {
+			limit = {
+				is_core_of = CSA
+				NOT = { is_core_of = WCC }
+				NOT = { is_claimed_by = WCC }
+			}
+			add_claim_by = WCC
+		}
+		
+		every_state = {
+			limit = {
+				is_core_of = COR
+				NOT = { is_core_of = WCC }
+				NOT = { is_claimed_by = WCC }
+			}
+			add_claim_by = WCC
+		}
 
 		WCC = {
 			load_oob = "WCC"
@@ -567,6 +654,12 @@ USA_release_WCC = {
 			set_equipment_fraction = 0.35
 			add_ideas = {
 				extensive_conscription
+			}
+			if = {
+			limit = { 
+			has_country_flag = WCC_new_mexico
+			}
+			add_state_core = 376
 			}
 		}
 	}
