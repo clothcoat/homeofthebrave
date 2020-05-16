@@ -841,109 +841,115 @@ country_event = { # Civil War Begins
 
 country_event = { # Last Men Standing
 	id = amcivwar.5000
-	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.5"}
-	title = amcivwar.5.t
+	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.5000"}
+	title = amcivwar.5000.t
 	picture = ACW_soldiers_running
 	
-	desc = {
-	text = amcivwar.5000.d.AUSPSA
-	trigger = {
-	has_country_flag = PSA_AUS_TREATY
-	tag = CAL
-	CAR = {
-		exists = no
-		}
-	CSA = {
-		exists = no
-		}
-	WCC = {
-		exists = no
-		}
-	USA = {
-		exists = no
-		}
-	TEX = {
-		exists = yes
-		}
-	TEX = {
-		has_war = no
-		}
-	PSA = {
-		exists = yes
-		}
-	PSA = {
-		has_war = no
-		}
-		}
-	}
-	desc = {
-	text = amcivwar.5000.d.AUSPSA
 	trigger = {
 	tag = CAL
+	OR = {
 	has_country_flag = PSA_AUS_TREATY
 	has_country_flag = PSA_CSA_TREATY
-	has_global_flag = AUS_CSA_TREATY
-	CAR = {
-		exists = no
-		}
+	}
+	CAL = {
+	has_war	= no
+	exists = yes
+	}
+	TEX = {
+	has_war	= no
+	}
 	CSA = {
-		exists = yes
+	has_war	= no
+	}
+	CAR = {
+		has_war = no
 		}
 	WCC = {
 		exists = no
-		has_war = no
 		}
 	USA = {
 		exists = no
 		}
+	date > 1937.7.1
+	}
+	
+	fire_only_once = yes 
+	
+	desc = { ###AUS AND PSA AT PEACE###
+	text = amcivwar.5000.d.AUSPSA
+	trigger = {
+	has_country_flag = PSA_AUS_TREATY
+	OR = {
+	NOT = {
+	has_country_flag = PSA_CSA_TREATY }
+	CSA = {
+	exists = no
+	}
+	}
 	TEX = {
 		exists = yes
 		has_war = no
 		}
-	PSA = {
+	CSA = {
+		has_war = no
+		}
+	}
+	}
+	desc = { ###ALL FACTIONS AT PEACE###
+	text = amcivwar.5000.d.AUSPSACSA
+	trigger = {
+	has_country_flag = PSA_AUS_TREATY
+	has_country_flag = PSA_CSA_TREATY
+	TEX = {
 		exists = yes
 		has_war = no
 		}
+	CSA = {
+		exists = yes
+		has_war = no
+	}
 	}
 	}
 	
-	desc = {
+	desc = {  ###CSAPSA AT PEACE###
 	text = amcivwar.5000.d.CSAPSA
 	trigger = {
-	tag = CAL
 	has_country_flag = PSA_CSA_TREATY
-	CAR = {
-		exists = no
-		}
+	OR = {
+	NOT = { has_country_flag = PSA_AUS_TREATY }
+	TEX = {
+	exists = no
+	}
+	}
 	CSA = {
 		exists = yes
-		}
-	WCC = {
-		exists = no
-		}
-	USA = {
-		exists = no
+		has_war = no
 		}
 	TEX = {
-		exists = no
-		}
-	PSA = {
-		exists = yes
 		has_war = no
 		}
 	}
 	}
 
-	is_triggered_only = yes
-
-	immediate = {
-		USA_civil_war_begins = yes
-	}
-
-	option = {
+	option = { Send the Offer
 	name = amcivwar.5000.a
 	if = {
-	limit = { has_country_flag = PSA_AUS_TREATY }
+	limit = { has_country_flag = PSA_AUS_TREATY 
+	OR = {
+	NOT = {
+	has_country_flag = PSA_CSA_TREATY }
+	CSA = {
+	exists = no
+	}
+	}
+	TEX = {
+		exists = yes
+		has_war = no
+		}
+	CSA = {
+		has_war = no
+		}
+	}
 	TEX = {
 	country_event = {
 	id = amcivwar.5002
@@ -952,41 +958,390 @@ country_event = { # Last Men Standing
 		}
 	}
 	}
-	option = {
-		name = amcivwar.5001.b
-		trigger = {
-		has_country_flag = PSA_AUS_TREATY
-		tag = CAL
-		CAR = {
-		exists = no
+	if = {
+	limit = { has_country_flag = PSA_AUS_TREATY
+	has_country_flag = PSA_CSA_TREATY
+	TEX = {
+		exists = yes
+		has_war = no
 		}
+	CSA = {
+		exists = yes
+		has_war = no
+	}
+	}
+	TEX = {
+	country_event = {
+	id = amcivwar.5002
+	days = 2
+			}
+		}
+	CSA = {
+	country_event = {
+	id = amcivwar.5002
+	days = 2
+			}
+		}
+	}
+	if = {
+	limit = {
+	has_country_flag = PSA_CSA_TREATY
+	OR = {
+	NOT = { has_country_flag = PSA_AUS_TREATY }
+	TEX = {
+	exists = no
+	}
+	}
+	CSA = {
+		exists = yes
+		has_war = no
+		}
+	TEX = {
+		has_war = no
+		}
+	}
+	CSA = {
+		country_event = {
+		id = amcivwar.5002
+		days = 2
+			}
+		}
+	}
+	option = { #Long's Minutemen must stand down
+	name = amcivwar.5000.b
+	trigger = {
+		has_country_flag = PSA_AUS_TREATY 
+		OR = {
+		NOT = {
+		has_country_flag = PSA_CSA_TREATY }
 		CSA = {
 		exists = no
 		}
-		WCC = {
-		exists = no
-		}
-		USA = {
-		exists = no
 		}
 		TEX = {
 		exists = yes
-		}
-		TEX = {
 		has_war = no
 		}
-		PSA = {
-		exists = yes
-		}
-		PSA = {
+		CSA = {
 		has_war = no
 		}
-		}
+	}
 	TEX = {
 	country_event = {
-	id = amcivwar.5001.t
+	id = amcivwar.5001
+	days = 2
 	}
 	}
+	}
+	option = { #Both Must Stand Down
+	name = amcivwar.5000.c
+	trigger = {
+		has_country_flag = PSA_AUS_TREATY
+		has_country_flag = PSA_CSA_TREATY
+		TEX = {
+		exists = yes
+		has_war = no
+		}
+		CSA = {
+		exists = yes
+		has_war = no
+	}
+	}
+	hidden_effect = {
+	CSA = {
+	country_event = {
+	id = amcivwar.5001
+	days = 2
+		}
+	}
+	TEX = {
+	country_event = {
+	id = amcivwar.5001
+	days = 2
+		}
+	}
+	}
+	}
+	option = { #Reed Must Stand Down
+	name = amcivwar.5000.e
+	trigger = {
+		has_country_flag = PSA_CSA_TREATY
+		OR = {
+		NOT = { has_country_flag = PSA_AUS_TREATY }
+		TEX = {
+		exists = no
+		}
+		}
+	CSA = {
+		exists = yes
+		has_war = no
+		}
+	TEX = {
+		has_war = no
+		}
+	}
+	CSA = {
+	country_event = {
+	id = amcivwar.5001
+	days = 2
+		}
+	}
+	}
+}
+country_event = { # PSA Demands we stand down
+	id = amcivwar.5001
+	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.5001"}
+	title = amcivwar.5001.t
+	picture = ACW_soldiers_running
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes 
+	
+	desc = { ###AUS Must stand down###
+	text = amcivwar.5001.d.AUSPSA
+	trigger = {
+	tag = TEX
+		}
+	}
+	desc = { ###ALL FACTIONS MUST STAND DOWN (For CSA)###
+	text = amcivwar.5001.d.AUSPSACSA
+	trigger = {
+	tag = CSA
+	has_country_flag = PSA_AUS_TREATY
+	has_country_flag = PSA_CSA_TREATY
+	TEX = {
+		exists = yes
+		}
+	}
+	}
+	desc = {  ###CSAPSA AT PEACE###
+	text = amcivwar.5001.d.CSAPSA
+	trigger = {
+	tag = CSA
+	}
+	TEX = {
+		exists = no
+	}
+	}
+	option = {
+		name = amcivwar.5001.a
+		if = {
+		limit = { tag = CSA }
+		declare_war_on = CAL
+		declare_war_on = TEX
+		}
+		if = {
+		limit = { tag = TEX }
+		declare_war_on = CAL
+		}
+	}
+	option = {
+		name = amcivwar.5001.b
+		trigger = {
+		tag = CSA
+		has_global_flag = AUS_CSA_TREATY
+		}
+		declare_war_on = CAL
+		add_political_power = -50
+		add_stability = -0.05
+	}
+}
+
+### PSA OFFER (PEACE) ###
+country_event = { # Huey Long declares Rebellion against MacArthur
+	id = amcivwar.5002
+	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.5002"}
+	title = amcivwar.5002.t
+	picture = GFX_Long_Rally
+
+	desc = { ###AUS offered peace###
+	text = amcivwar.5002.d.AUSPSA
+	trigger = {
+	tag = TEX
+	CSA = {
+	exists = no
+		}
+	}
+	}
+	desc = { ###ALL FACTIONS PEACE (for CSA)###
+	text = amcivwar.5002.d.AUSPSACSA
+	trigger = {
+	tag = TEX
+	has_country_flag = PSA_AUS_TREATY
+	has_country_flag = PSA_CSA_TREATY
+	TEX = {
+		exists = yes
+		}
+	}
+	}
+	desc = {  ###CSA offered peace###
+	text = amcivwar.5002.d.CSAPSA
+	trigger = {
+	tag = CSA
+	}
+	TEX = {
+		exists = no
+	}
+	}
+	option = {  ###Offered peace###
+		name = amcivwar.5002.a
+		if = {
+		limit = { tag = TEX
+		CSA = {
+		exists = yes
+		has_war = no
+		has_country_flag = PSA_CSA_TREATY 
+		}
+		}
+		hidden_effect = {
+		CSA = {
+		country_event = {
+		id = amcivwar.5002
+		hours = 3
+				}
+			}
+		}
+		}
+		if = {
+		limit = { tag = TEX }
+		CAL = {
+		country_event = {
+		id = amcivwar.5003
+		hours = 3
+				}
+			}
+		set_global_flag = ACW_LONG_ACCEPTS_PEACE
+		}
+		if = {
+		limit = { tag = CSA }
+		CAL = {
+		country_event = {
+		id = amcivwar.5004
+		hours = 3
+			}
+		}
+		set_global_flag = ACW_CSA_ACCEPTS_PEACE
+		}
+	}
+	option = {  ###Finish Them###
+		name = amcivwar.5002.b
+		if = {
+		limit = { tag = TEX }
+		declare_war_on = CSA
+		declare_war_on = CAL
+		}
+		if = {
+		limit = { tag = CSA }
+		declare_war_on = CAL
+		declare_war_on = TEX
+		}
+	}
+}
+country_event = { ### Long Accepts ###
+	id = amcivwar.5003
+	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.5003"}
+	title = amcivwar.5003.t
+	desc = amcivwar.5003.d
+	picture = GFX_Long_Rally
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = {
+	add_stability = 0.03
+	}
+}
+
+country_event = { ### CSA Accepts ###
+	id = amcivwar.5004
+	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.5004"}
+	title = amcivwar.5004.t
+	desc = amcivwar.5004.d
+	picture = GFX_Long_Rally
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = {
+	add_stability = 0.03
+	}
+}
+
+country_event = { ### Voting Begins ###
+	id = amcivwar.5005
+	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.5005"}
+	title = amcivwar.5005.t
+	desc = amcivwar.5005.d
+	picture = GFX_Long_Rally
+
+	trigger = {
+	tag = CAL
+	NOT = {
+	has_country_flag = ACW_voting_starts
+	}
+	if = {
+	limit = {
+	CSA = {
+	exists = yes
+	has_global_flag = ACW_CSA_ACCEPTS_PEACE
+		}
+	}
+	tag = CSA
+	}
+	if = {
+	limit = {
+	TEX = {
+	exists = yes
+	has_global_flag = ACW_LONG_ACCEPTS_PEACE
+		}
+	}
+	tag = TEX
+	}
+	OR = {
+	CSA = {
+	exists = yes
+	has_global_flag = ACW_CSA_ACCEPTS_PEACE
+	NOT = {
+	has_war_with = TEX
+	has_war_with = CAL
+			}
+		}
+	TEX = {
+	exists = yes
+	has_global_flag = ACW_LONG_ACCEPTS_PEACE
+	NOT = {
+	has_war_with = CSA
+	has_war_with = CAL
+			}
+		}
+	}
+	}
+	
+	mean_time_to_happen = {
+	months = 1
+	}
+}
+	
+	option = {
+	add_political_power = 25
+	add_stability = 0.05
+	increase_ruling_party_popularity_by_5 = yes
+	hidden_effect = { 
+	set_country_flag = ACW_voting_starts
+	country_event = {
+	id = amcivwar.5006
+	days = 18
+	}
+	}
+	}
+
+	fire_only_once = yes
+	
+	option = {
+	add_stability = 0.03
 	}
 }
 
