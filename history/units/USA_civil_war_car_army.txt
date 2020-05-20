@@ -105,129 +105,234 @@ division_template = {
 
 units = {# Army
 	division = {
-		name = "1st Tennessee National Guard"
+		name = "Tennessee State Guard"
 		location = 12501 #Nashville
 		division_template = "CAR Garrison"
-		start_experience_factor = 0.6
+		start_experience_factor = 0.4
 		start_equipment_factor = 1.0
 	}
 	division = {
-		name = "1st Sons of Kansas Infantry"
+		name = "Alabama State Guard"
+		location = 12735 #Birmingham
+		division_template = "CAR Garrison"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Mississippi State Guard"
+		location = 4565 #Birmingham
+		division_template = "CAR Garrison"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Kentucky State Guard"
+		location = 12709 #Louisville
+		division_template = "CAR Garrison"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Indiana State Guard"
+		location = 1595 #Indianapolis
+		division_template = "CAR Garrison"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "South Carolina State Guard"
+		location = 7527 #Columbia
+		division_template = "CAR Garrison"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Florida State Guard"
+		location = 10407 #Tallahassee
+		division_template = "CAR Garrison"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "North Carolina State Guard"
+		location = 10081 #Raleigh
+		division_template = "CAR Garrison"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "1st 'Davis' Infantry"
+		location = 4464 #Biloxi
+		division_template = "CAR Infantry Division"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "2nd 'Jackson's Bastards' Infantry"
+		location = 12501 #Nashville
+		division_template = "CAR Infantry Division"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "3rd 'Founders' Infantry"
 		location = 12384 #Atlanta
 		division_template = "CAR Infantry Division"
-		start_experience_factor = 0.6
+		start_experience_factor = 0.4
 		start_equipment_factor = 1.0
 	}
 	division = {
-		name = "2nd Davis Infantry"
+		name = "4th 'Loyal Ghosts' Infantry"
 		location = 7202 #Charleston
 		division_template = "CAR Infantry Division"
-		start_experience_factor = 0.6
+		start_experience_factor = 0.4
 		start_equipment_factor = 1.0
 	}
 	division = {
-		name = "3rd 'Jacksons Bastards' Infantry"
+		name = "5th 'Good Old Boys' Infantry"
 		location = 7202 #Charleston
 		division_template = "CAR Infantry Division"
-		start_experience_factor = 0.6
+		start_experience_factor = 0.4
 		start_equipment_factor = 1.0
 	}
 	division = {
-		name = "4th Loyal Ghosts Infantry"
-		location = 7202 #Charleston
-		division_template = "CAR Infantry Division"
-		start_experience_factor = 0.6
-		start_equipment_factor = 1.0
-	}
-	division = {
-		name = "5th 'Founders' Infantry"
-		location = 7202 #Charleston
-		division_template = "CAR Infantry Division"
-		start_experience_factor = 0.6
-		start_equipment_factor = 1.0
-	}
-	division = {
-		name = "6th 'Good Old Boys' Infantry"
-		location = 7202 #Charleston
-		division_template = "CAR Infantry Division"
-		start_experience_factor = 0.6
-		start_equipment_factor = 1.0
-	}
-	division = {
-		name = "1st Georgia Klan Militia"
+		name = "1st 'Georgia Klan' Militia"
 		location = 12384 #Atlanta
 		division_template = "CAR Militia"
-		start_experience_factor = 1.0
+		start_experience_factor = 0.1
 		start_equipment_factor = 1.0
 	}
 	division = {
-		name = "2nd Missouri Klan Militia"
+		name = "2nd 'Missouri Klan' Militia"
 		location = 4569 #Saint Louis
 		division_template = "CAR Militia"
-		start_experience_factor = 1.0
+		start_experience_factor = 0.1
 		start_equipment_factor = 1.0
 	}
 	division = {
-		name = "3rd Carolinian Klan Militia"
+		name = "3rd 'Carolinian Klan' Militia"
 		location = 10081 
 		division_template = "CAR Militia"
-		start_experience_factor = 1.0
+		start_experience_factor = 0.1
 		start_equipment_factor = 1.0
 	}
 	division = {
-		name = "4th Floridian White League Militia"
-		location = 10407 #Tallahasee
+		name = "4th 'Floridian White League' Militia"
+		location = 1843 #Miami
 		division_template = "CAR Militia"
-		start_experience_factor = 1.0
-		start_equipment_factor = 1.0
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
 	}
 	division = {
-		name = "5th Red Shirts Militia"
+		name = "5th 'Red Shirts' Militia"
 		location = 7202 #Charleston
 		division_template = "CAR Militia"
-		start_experience_factor = 1.0
+		start_experience_factor = 0.2
 		start_equipment_factor = 1.0
 	}
 	division = {
-		name = "6th Red Shirts Militia"
+		name = "6th 'Red Shirts' Militia"
 		location = 7202 #Charleston
 		division_template = "CAR Militia"
-		start_experience_factor = 1.0
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "8th 'Indiana Klan' Militia"
+		location = 1595 #Indianapolis
+		division_template = "CAR Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "9th 'Black Legion' Militia"
+		location = 1595 #Indianapolis
+		division_template = "CAR Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "10th 'Black Legion' Militia"
+		location = 4601 #Indianapolis
+		division_template = "CAR Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "11th 'Black Legion' Militia"
+		location = 12497 #Springfield
+		division_template = "CAR Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "12th 'Mississippi Klan' Militia"
+		location = 4565 #Jackson
+		division_template = "CAR Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "13th 'Sons of Kentucky' Militia"
+		location = 6696 #Louisville
+		division_template = "CAR Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "14th 'Alabama Klan' Militia"
+		location = 860 #Alabama
+		division_template = "CAR Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "15th 'Virginia White League' Militia"
+		location = 9931 #Alabama
+		division_template = "CAR Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "16th 'White People's League' Militia"
+		location = 12501 #Alabama
+		division_template = "CAR Militia"
+		start_experience_factor = 0.2
 		start_equipment_factor = 1.0
 	}
 	division = {
 		name = "1st Motorized 'Honorables' Division"
 		location = 12384 #Atlanta
 		division_template = "CAR Motorized Division"
-		start_experience_factor = 0.6
-		start_equipment_factor = 1.0
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
 	}
 	division = {
 		name = "2nd Motorized 'Calhoun' Division"
 		location = 12384 #Atlanta
 		division_template = "CAR Motorized Division"
-		start_experience_factor = 0.6
+		start_experience_factor = 0.2
 		start_equipment_factor = 1.0
 	}
 	division = {
 		name = "1st 'Forrest's Loyal 7th' Calvary"
 		location = 12384 #Atlanta
 		division_template = "Cavalry Division"
-		start_experience_factor = 0.6
+		start_experience_factor = 0.3
 		start_equipment_factor = 1.0
 	}
 	division = {
 		name = "2nd Jeffersonian Calvary""
 		location = 12384 #Atlanta
 		division_template = "Cavalry Division"
-		start_experience_factor = 0.6
+		start_experience_factor = 0.2
 		start_equipment_factor = 1.0
 	}
 	division = {
 		name = "1st John Smith Resistance""
 		location = 12384 #Atlanta
 		division_template = "Mountain Resistance"
-		start_experience_factor = 0.6
+		start_experience_factor = 0.2
 		start_equipment_factor = 1.0
 	}
 }
