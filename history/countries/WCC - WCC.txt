@@ -495,6 +495,22 @@ create_corps_commander = {# John C. H. Lee
 	logistics_skill = 2
 	id = 963
 }
+create_corps_commander = {# Matthew Ridgway
+	name = "Matthew Ridgway"
+	desc = "TEX_MATTHEW_RIDGWAY_ARMY_DESC"
+	portrait_path = "gfx/leaders/TEX/Portrait_TEX_matthew_ridgway.tga"
+	traits = {
+		inflexible_strategist
+		trait_cautious
+		commando
+	}
+	skill = 3
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 4
+	id = 944
+}
 create_corps_commander = {# James Garesche Ord
 	name = "James Garesche Ord"
 	desc = "USA_JAMES_GARESCHE_ORD_ARMY_DESC"
