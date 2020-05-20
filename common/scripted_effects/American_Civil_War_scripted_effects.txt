@@ -366,7 +366,6 @@ USA_release_COR = {
 			add_state_core = 368
 			add_state_core = 369
 			add_state_core = 370
-			add_state_core = 372
 			add_state_core = 373
 			add_state_core = 1096
 			add_state_core = 1098
@@ -431,13 +430,6 @@ USA_release_COR = {
 				if = {
 					limit = { has_idea = isolation }
 					add_ideas = civilian_economy
-				}
-			}
-			if = {
-				limit = { has_country_flag = USA_assassinated_reed }
-				COR = {
-					add_political_power = 100
-					add_manpower = 75000
 				}
 			}
 			if = {
