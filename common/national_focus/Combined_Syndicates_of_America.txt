@@ -3625,7 +3625,7 @@ focus_tree = {
 				add_idea = CSA_empowered_executive_idea_2
 			}
 			add_political_power = 150
-			add_stability = 0.1
+			add_stability = 0.12
 			add_popularity = { ideology = totalist popularity = 0.1 }
 		}
 	}
@@ -3991,9 +3991,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_purge_reactionaries"
-			add_political_power = 30
+			add_political_power = 45
 			add_stability = 0.08
-			army_experience = 5
 			add_manpower = -5000
 			add_war_support = 0.05
 			add_popularity = { ideology = national_populist popularity = -0.05 }
@@ -4067,7 +4066,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_new_prisons"
 			add_ideas = CSA_political_rehabilitation
-			add_stability = 0.1
+			add_stability = 0.05
 			add_popularity = { ideology = totalist popularity = 0.05 }
 			add_manpower = 20000
 		}
@@ -4204,32 +4203,6 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-			random_owned_state = {
-				limit = {
-					is_core_of = CSA
-					is_controlled_by = CSA
-					industrial_complex > 0
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-			random_owned_state = {
-				limit = {
-					is_core_of = CSA
-					is_controlled_by = CSA
-					arms_factory > 0
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
 					level = 1
 					instant_build = yes
 				}
@@ -4415,10 +4388,10 @@ focus_tree = {
 					is_controlled_by = CSA
 					infrastructure > 0
 				}
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
-					level = 3
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -4428,10 +4401,10 @@ focus_tree = {
 					is_controlled_by = CSA
 					industrial_complex > 0
 				}
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
-					level = 3
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -4441,10 +4414,10 @@ focus_tree = {
 					is_controlled_by = CSA
 					industrial_complex > 0
 				}
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
-					level = 3
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -4454,10 +4427,10 @@ focus_tree = {
 					is_controlled_by = CSA
 					arms_factory > 0
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -4467,10 +4440,10 @@ focus_tree = {
 					is_controlled_by = CSA
 					arms_factory > 0
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -4480,10 +4453,10 @@ focus_tree = {
 					is_controlled_by = CSA
 					arms_factory > 0
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}random_owned_state = {
@@ -4492,10 +4465,10 @@ focus_tree = {
 					is_controlled_by = CSA
 					is_coastal = yes
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = dockyard
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -4505,9 +4478,22 @@ focus_tree = {
 					is_controlled_by = CSA
 					is_coastal = yes
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = CSA
+					is_controlled_by = CSA
+					infrastructure > 0
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
 					level = 2
 					instant_build = yes
 				}
@@ -4518,10 +4504,10 @@ focus_tree = {
 					is_controlled_by = CSA
 					infrastructure > 0
 				}
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = infrastructure
-					level = 3
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -4531,36 +4517,10 @@ focus_tree = {
 					is_controlled_by = CSA
 					infrastructure > 0
 				}
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = infrastructure
-					level = 3
-					instant_build = yes
-				}
-			}
-			random_owned_state = {
-				limit = {
-					is_core_of = CSA
-					is_controlled_by = CSA
-					infrastructure > 0
-				}
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = infrastructure
-					level = 3
-					instant_build = yes
-				}
-			}
-			random_owned_state = {
-				limit = {
-					is_core_of = CSA
-					is_controlled_by = CSA
-					infrastructure > 0
-				}
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = infrastructure
-					level = 3
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -5133,11 +5093,17 @@ focus_tree = {
 		prerequisite = { focus = CSA_second_continental_army }
 		relative_position_id = CSA_second_continental_army
 		completion_reward = {
+			add_popularity = { ideology = syndicalist popularity = 0.05 }
 			add_tech_bonus = {
-				name = CSA_gun_bonus
-				bonus = 1
+				name = CSA_iww_doctrine_bonus
+				bonus = 1.5
 				uses = 1
-				category = infantry_tech
+				category = cat_mobile_warfare
+			}
+			add_equipment_to_stockpile = {
+			type = motorized_equipment
+			amount = 15
+			producer = CSA
 			}
 		}
 	}
@@ -5157,11 +5123,35 @@ focus_tree = {
 		prerequisite = { focus = CSA_iww_doctrine }
 		relative_position_id = CSA_iww_doctrine
 		completion_reward = {
-			add_tech_bonus = {
-				name = CSA_gun_bonus
-				bonus = 1
-				uses = 1
-				category = infantry_tech
+			add_ideas = CSA_iww_doctrine_idea
+			add_equipment_to_stockpile = {
+			type = motorized_equipment
+			amount = 55
+			producer = CSA
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_mainland_america = yes
+					free_building_slots = { building = arms_factory size > 0 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_mainland_america = yes
+					free_building_slots = { building = arms_factory size > 0 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
 			}
 		}
 	}
@@ -5181,11 +5171,20 @@ focus_tree = {
 		prerequisite = { focus = CSA_motor_factories }
 		relative_position_id = CSA_iww_doctrine
 		completion_reward = {
+			swap_ideas = {
+			remove_idea = CSA_iww_doctrine_idea
+			add_idea = CSA_iww_doctrine_idea_2
+			}
 			add_tech_bonus = {
-				name = CSA_gun_bonus
+				name = CSA_iww_doctrine_bonus
 				bonus = 1
 				uses = 1
-				category = infantry_tech
+				category = cat_mobile_warfare
+			}
+			add_equipment_to_stockpile = {
+			type = motorized_equipment
+			amount = 120
+			producer = CSA
 			}
 		}
 	}
@@ -5206,10 +5205,22 @@ focus_tree = {
 		relative_position_id = CSA_iww_doctrine
 		completion_reward = {
 			add_tech_bonus = {
-				name = CSA_gun_bonus
+				name = CSA_iww_doctrine_bonus
 				bonus = 1
 				uses = 1
-				category = infantry_tech
+				category = cat_mobile_warfare
+			}
+			add_tech_bonus = {
+				name = CSA_iww_doctrine_bonus
+				bonus = 1
+				uses = 1
+				category = armor
+			}
+			add_tech_bonus = {
+				name = CSA_iww_doctrine_bonus
+				bonus = 1
+				uses = 2
+				category = motorized_equipment
 			}
 		}
 	}
@@ -5232,10 +5243,22 @@ focus_tree = {
 		relative_position_id = CSA_iww_doctrine
 		completion_reward = {
 			add_tech_bonus = {
-				name = CSA_gun_bonus
+				name = CSA_industry
 				bonus = 1
 				uses = 1
-				category = infantry_tech
+				category = industry
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_mainland_america = yes
+					free_building_slots = { building = arms_factory size > 0 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
 			}
 		}
 	}
@@ -5257,10 +5280,15 @@ focus_tree = {
 		relative_position_id = CSA_iww_doctrine
 		completion_reward = {
 			add_tech_bonus = {
-				name = CSA_gun_bonus
+				name = CSA_iww_doctrine_bonus
 				bonus = 1
-				uses = 1
-				category = infantry_tech
+				uses = 2
+				category = armor
+			}
+			add_equipment_to_stockpile = {
+			type = light_tank_equipment
+			amount = 45
+			producer = CSA
 			}
 		}
 	}
@@ -5281,12 +5309,17 @@ focus_tree = {
 		prerequisite = { focus = CSA_peoples_vehicles }
 		relative_position_id = CSA_iww_doctrine
 		completion_reward = {
-			add_tech_bonus = {
-				name = CSA_gun_bonus
-				bonus = 1
-				uses = 1
-				category = infantry_tech
+			swap_ideas = {
+			remove_idea = CSA_iww_doctrine_idea_2
+			add_idea = CSA_iww_doctrine_idea_3
 			}
+			add_tech_bonus = {
+				name = CSA_iww_doctrine_bonus
+				bonus = 1.5
+				uses = 2
+				category = cat_mobile_warfare
+			}
+			army_experience = 15
 		}
 	}
 	focus = {# IWW
@@ -5306,12 +5339,27 @@ focus_tree = {
 		prerequisite = { focus = CSA_tanks_advancements }
 		relative_position_id = CSA_iww_doctrine
 		completion_reward = {
-			add_tech_bonus = {
-				name = CSA_gun_bonus
-				bonus = 1
-				uses = 1
-				category = infantry_tech
+			swap_ideas = {
+			remove_idea = CSA_iww_doctrine_idea_3
+			add_idea = CSA_iww_doctrine_idea_4
 			}
+			add_tech_bonus = {
+				name = CSA_iww_doctrine_bonus
+				bonus = 1
+				uses = 3
+				category = cat_mobile_warfare
+			}
+			add_equipment_to_stockpile = {
+			type = motorized_equipment
+			amount = 40
+			producer = CSA
+			}
+			add_equipment_to_stockpile = {
+			type = light_tank_equipment
+			amount = 30
+			producer = CSA
+			}
+			add_stability = 0.05
 		}
 	}
 	focus = {#Centralist Military
@@ -5330,12 +5378,18 @@ focus_tree = {
 		prerequisite = { focus = CSA_second_continental_army }
 		relative_position_id = CSA_second_continental_army
 		completion_reward = {
+			add_equipment_to_stockpile = {
+			type = artillery
+			amount = 15
+			producer = CSA
+			}
 			add_tech_bonus = {
-				name = CSA_gun_bonus
+				name = CSA_centralist_doctrine_bonus
 				bonus = 1
 				uses = 1
-				category = infantry_tech
+				category = cat_superior_firepower
 			}
+			add_popularity = { ideology = totalist popularity = 0.05 }
 		}
 	}
 	focus = {#Artillery Contracts
@@ -5354,11 +5408,17 @@ focus_tree = {
 		prerequisite = { focus = CSA_centralist_doctrine }
 		relative_position_id = CSA_centralist_doctrine
 		completion_reward = {
+			add_ideas = CSA_centralist_doctrine_idea
 			add_tech_bonus = {
-				name = CSA_gun_bonus
-				bonus = 1
+				name = CSA_artillery
+				bonus = 2
 				uses = 1
-				category = infantry_tech
+				category = artillery
+			}
+			add_equipment_to_stockpile = {
+			type = artillery
+			amount = 55
+			producer = CSA
 			}
 		}
 	}
@@ -5378,11 +5438,16 @@ focus_tree = {
 		prerequisite = { focus = CSA_artillery_production_lines }
 		relative_position_id = CSA_artillery_production_lines
 		completion_reward = {
+			swap_ideas = {
+			remove_idea = CSA_centralist_doctrine_idea
+			add_idea = CSA_centralist_doctrine_idea_2
+			}
+			army_experience = 15
 			add_tech_bonus = {
-				name = CSA_gun_bonus
-				bonus = 1
+				name = CSA_centralist_doctrine_bonus
+				bonus = 2
 				uses = 1
-				category = infantry_tech
+				category = cat_superior_firepower
 			}
 		}
 	}
@@ -5407,7 +5472,23 @@ focus_tree = {
 				name = CSA_gun_bonus
 				bonus = 1
 				uses = 1
-				category = infantry_tech
+				category = antitank
+			}
+			add_tech_bonus = {
+				name = CSA_gun_bonus
+				bonus = 1
+				uses = 1
+				category = antiair
+			}
+			add_equipment_to_stockpile = {
+				type = anti_tank_equipment
+				amount = 65
+				producer = BBR
+			}
+			add_equipment_to_stockpile = {
+				type = anti_air_equipment
+				amount = 30
+				producer = BBR
 			}
 		}
 	}
@@ -5428,11 +5509,45 @@ focus_tree = {
 		prerequisite = { focus = CSA_artillery_training }
 		relative_position_id = CSA_artillery_production_lines
 		completion_reward = {
+			swap_ideas = {
+			remove_idea = CSA_centralist_doctrine_idea_2
+			add_idea = CSA_centralist_doctrine_idea_3
+			}
 			add_tech_bonus = {
-				name = CSA_gun_bonus
-				bonus = 1
+				name = CSA_centralist_doctrine_bonus
+				bonus = 2
 				uses = 1
-				category = infantry_tech
+				category = cat_superior_firepower
+			}
+			add_equipment_to_stockpile = {
+				type = artillery
+				amount = 20
+				producer = BBR
+			}
+			add_equipment_to_stockpile = {
+				type = anti_tank_equipment
+				amount = 15
+				producer = BBR
+			}
+			add_equipment_to_stockpile = {
+				type = anti_air_equipment
+				amount = 15
+				producer = BBR
+			}
+			add_equipment_to_stockpile = { 
+				type = bomber_equipment
+				amount = 30
+				producer = BBR
+			}
+			395 = {
+				if = {
+					limit = { is_owned_and_controlled_by = CSA }
+					add_building_construction = {
+						type = air_base
+						level = 3
+						instant_build = yes
+					}
+				}
 			}
 		}
 	}
@@ -5453,11 +5568,23 @@ focus_tree = {
 		prerequisite = { focus = CSA_canons_of_socialism }
 		relative_position_id = CSA_artillery_production_lines
 		completion_reward = {
+			swap_ideas = {
+			remove_idea = CSA_centralist_doctrine_idea_3
+			add_idea = CSA_centralist_doctrine_idea_4
+			}
+			add_stability = 0.05
+			add_political_power = 30
 			add_tech_bonus = {
-				name = CSA_gun_bonus
+				name = CSA_centralist_doctrine_bonus
 				bonus = 1
 				uses = 1
-				category = infantry_tech
+				category = cat_superior_firepower
+			}
+			add_tech_bonus = {
+				name = CSA_centralist_doctrine_bonus
+				bonus = 1
+				uses = 1
+				category = artillery
 			}
 		}
 	}
@@ -5477,11 +5604,14 @@ focus_tree = {
 		prerequisite = { focus = CSA_second_continental_army }
 		relative_position_id = CSA_second_continental_army
 		completion_reward = {
+			add_popularity = { ideology = totalist popularity = 0.03 }
+			add_popularity = { ideology = syndicalist popularity = 0.02 }
+			add_manpower = 3000
 			add_tech_bonus = {
-				name = CSA_gun_bonus
+				name = CSA_collectivist_doctrine_bonus
 				bonus = 1
 				uses = 1
-				category = infantry_tech
+				category = cat_mass_assault
 			}
 		}
 	}
@@ -5501,11 +5631,14 @@ focus_tree = {
 		prerequisite = { focus = CSA_collectivist_doctrine }
 		relative_position_id = CSA_collectivist_doctrine
 		completion_reward = {
+			add_ideas = CSA_collectivist_doctrine_idea
+			add_manpower = 10000
+			add_war_support = 0.1
 			add_tech_bonus = {
-				name = CSA_gun_bonus
+				name = CSA_collectivist_doctrine_bonus
 				bonus = 1
 				uses = 1
-				category = infantry_tech
+				category = cat_mass_assault
 			}
 		}
 	}
@@ -5527,11 +5660,34 @@ focus_tree = {
 		}
 		relative_position_id = CSA_collectivist_doctrine
 		completion_reward = {
+			add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 120
+			producer = CSA
+			}
+			add_equipment_to_stockpile = {
+			type = artillery_equipment
+			amount = 40
+			producer = CSA
+			}
 			add_tech_bonus = {
-				name = CSA_gun_bonus
-				bonus = 1
+				name = industrial_bonus
+				bonus = 0.5
 				uses = 1
-				category = infantry_tech
+				category = industry
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = CSA
+					is_controlled_by = CSA
+					arms_factory > 0
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
 			}
 		}
 	}
@@ -5551,11 +5707,18 @@ focus_tree = {
 		prerequisite = { focus = CSA_call_to_the_masses }
 		relative_position_id = CSA_collectivist_doctrine
 		completion_reward = {
+			swap_ideas = {
+			remove_idea = CSA_collectivist_doctrine_idea
+			add_idea = CSA_collectivist_doctrine_idea_2
+			}
+			add_manpower = 14500
+			add_war_support = 0.1
+			add_stability = -0.03
 			add_tech_bonus = {
-				name = CSA_gun_bonus
+				name = CSA_collectivist_doctrine_bonus
 				bonus = 1
 				uses = 1
-				category = infantry_tech
+				category = cat_mass_assault
 			}
 		}
 	}
@@ -5577,11 +5740,11 @@ focus_tree = {
 		}
 		relative_position_id = CSA_collectivist_doctrine
 		completion_reward = {
-			add_tech_bonus = {
-				name = CSA_gun_bonus
-				bonus = 1
-				uses = 1
-				category = infantry_tech
+			add_ideas = CSA_militia_support_idea
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 35
+				producer = CSA
 			}
 		}
 	}
@@ -5608,6 +5771,11 @@ focus_tree = {
 				uses = 1
 				category = infantry_tech
 			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 450
+				producer = CSA
+			}
 		}
 	}
 	focus = {# Revolutionary Training Ethos
@@ -5627,11 +5795,16 @@ focus_tree = {
 		prerequisite = { focus = CSA_socialist_support }
 		relative_position_id = CSA_collectivist_doctrine
 		completion_reward = {
+			swap_ideas = {
+			remove_idea = CSA_collectivist_doctrine_idea_2
+			add_idea = CSA_collectivist_doctrine_idea_3
+			}
+			add_war_support = 0.05
 			add_tech_bonus = {
-				name = CSA_gun_bonus
-				bonus = 1
-				uses = 1
-				category = infantry_tech
+				name = CSA_collectivist_doctrine_bonus
+				bonus = 2
+				uses = 2
+				category = cat_mass_assault
 			}
 		}
 	}
@@ -5652,11 +5825,20 @@ focus_tree = {
 		prerequisite = { focus = CSA_radical_training }
 		relative_position_id = CSA_collectivist_doctrine
 		completion_reward = {
+			swap_ideas = {
+			remove_idea = CSA_collectivist_doctrine_idea_3
+			add_idea = CSA_collectivist_doctrine_idea_4
+			}
+			add_manpower = 10000
+			add_popularity = { ideology = syndicalist popularity = 0.03 }
+			add_popularity = { ideology = totalist popularity = 0.03 }
+			add_political_power = 40
+			add_war_support = 0.05
 			add_tech_bonus = {
-				name = CSA_gun_bonus
+				name = CSA_collectivist_doctrine_bonus
 				bonus = 1
-				uses = 1
-				category = infantry_tech
+				uses = 3
+				category = cat_mass_assault
 			}
 		}
 	}
@@ -5676,12 +5858,17 @@ focus_tree = {
 		prerequisite = { focus = CSA_second_continental_army }
 		relative_position_id = CSA_second_continental_army
 		completion_reward = {
+			add_popularity = { ideology = social_democrat popularity = 0.03 }
+			add_popularity = { ideology = radical_socialist popularity = 0.03 }
 			add_tech_bonus = {
-				name = CSA_gun_bonus
-				bonus = 1
+				name = CSA_Plan_bonus
+				bonus = 1.5
 				uses = 1
-				category = infantry_tech
+				category = cat_grand_battle_plan
 			}
+			add_stability = 0.05
+			army_experience = 15
+			add_command_power = 15
 		}
 	}
 	focus = {# Red Officers Corps
@@ -5700,12 +5887,21 @@ focus_tree = {
 		prerequisite = { focus = CSA_butlers_doctrine }
 		relative_position_id = CSA_butlers_doctrine
 		completion_reward = {
+			add_ideas = CSA_butlers_doctrine_idea
 			add_tech_bonus = {
-				name = CSA_gun_bonus
-				bonus = 1
+				name = CSA_Plan_bonus
+				bonus = 1.5
 				uses = 1
-				category = infantry_tech
+				category = cat_grand_battle_plan
 			}
+			add_tech_bonus = {
+				name = CSA_Plan_bonus
+				bonus = 0.75
+				uses = 1
+				category = infantry_weapons
+			}
+			army_experience = 30
+			add_command_power = 30
 		}
 	}
 	focus = {# The People's Academies
@@ -5724,12 +5920,18 @@ focus_tree = {
 		prerequisite = { focus = CSA_red_officers }
 		relative_position_id = CSA_butlers_doctrine
 		completion_reward = {
-			add_tech_bonus = {
-				name = CSA_gun_bonus
-				bonus = 1
-				uses = 1
-				category = infantry_tech
+			swap_ideas = {
+			remove_idea = CSA_butlers_doctrine_idea
+			add_idea = CSA_butlers_doctrine_idea_2
 			}
+			add_tech_bonus = {
+				name = BBR_Young_Plan_bonus
+				bonus = 1.5
+				uses = 3
+				category = cat_grand_battle_plan
+			}
+			add_manpower = 2000
+			army_experience = 30
 		}
 	}
 	focus = {# Professional Drills
@@ -5748,12 +5950,14 @@ focus_tree = {
 		prerequisite = { focus = CSA_red_officers }
 		relative_position_id = CSA_butlers_doctrine
 		completion_reward = {
+			add_ideas = CSA_professional_red_army
 			add_tech_bonus = {
-				name = CSA_gun_bonus
-				bonus = 1
-				uses = 1
-				category = infantry_tech
+				name = CSA_Plan_bonus
+				bonus = 2
+				uses = 2
+				category = cat_grand_battle_plan
 			}
+			army_experience = 40
 		}
 	}
 	focus = {# The Red Marines
@@ -5774,10 +5978,27 @@ focus_tree = {
 		relative_position_id = CSA_butlers_doctrine
 		completion_reward = {
 			add_tech_bonus = {
-				name = CSA_gun_bonus
-				bonus = 1
+				name = CSA_marines
+				bonus = 2
 				uses = 1
-				category = infantry_tech
+				category = marine_tech
+			}
+			add_equipment_to_stockpile = {
+				type = convoys
+				amount = 30
+				producer = CSA
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = CSA
+					dockyard > 0
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
 			}
 		}
 	}
@@ -5799,10 +6020,10 @@ focus_tree = {
 		relative_position_id = CSA_butlers_doctrine
 		completion_reward = {
 			add_tech_bonus = {
-				name = CSA_gun_bonus
+				name = CSA_bonus
 				bonus = 1
-				uses = 1
-				category = infantry_tech
+				uses = 2
+				category = recon_tech
 			}
 		}
 	}
@@ -8286,7 +8507,7 @@ focus_tree = {
 		has_country_leader = { ruling_only = yes name = "James Burnham" }
 		}
 		cancel_if_invalid = yes
-		x = 12
+		x = 22
 		y = 10
 		ai_will_do = {
 			factor = 50
