@@ -1380,10 +1380,7 @@ ideas = {
 				party_popularity_stability_factor = 0.2
 				mobilization_speed = 0.05
 				war_stability_factor = 0.5
-				army_core_attack_factor	= 0.03
 				army_core_defence_factor = 0.03
-				research_speed_factor = 0.05
-				encryption_factor = 0.03
 			}
 			removal_cost = -1
 			picture = usa_desegregation_2
@@ -1393,9 +1390,8 @@ ideas = {
 			allowed = { always = no }
 			modifier = {
 				political_power_gain = 0.03
-				stability_weekly = 0.003
 				party_popularity_stability_factor = 0.05
-				army_org = 0.1
+				army_org = 0.02
 				max_command_power = 50
 				mobilization_speed = 0.05
 				encryption_factor = 0.05
@@ -1408,7 +1404,7 @@ ideas = {
 			allowed = { always = no }
 			modifier = {
 				political_power_gain = 0.05
-				stability_weekly = 0.005
+				stability_weekly = 0.01
 				party_popularity_stability_factor = 0.05
 				conscription_factor = 0.02
 				conversion_cost_civ_to_mil_factor = -0.1
@@ -1426,7 +1422,7 @@ ideas = {
 			allowed = { always = no }
 			modifier = {
 				political_power_gain = 0.02
-				stability_weekly = 0.03
+				stability_weekly = 0.01
 				production_factory_efficiency_gain_factor = 0.05
 				production_factory_start_efficiency_factor = 0.2
 				production_factory_max_efficiency_factor = -0.15
@@ -1439,7 +1435,7 @@ ideas = {
 			allowed = { always = no }
 			modifier = {
 				political_power_gain = 0.03
-				stability_weekly = 0.003
+				stability_weekly = 0.01
 				local_resources_factor = 0.03
 				production_factory_efficiency_gain_factor = 0.05
 				production_factory_start_efficiency_factor = 0.12
@@ -1457,7 +1453,7 @@ ideas = {
 			allowed = { always = no }
 			modifier = {
 				political_power_gain = 0.05
-				stability_weekly = 0.005
+				stability_weekly = 0.01
 				local_resources_factor = 0.05
 				production_factory_efficiency_gain_factor = 0.08
 				production_factory_start_efficiency_factor = 0.12
@@ -1601,12 +1597,10 @@ ideas = {
 				production_factory_efficiency_gain_factor = -0.05
 				line_change_production_efficiency_factor = 0.2
 				production_lack_of_resource_penalty_factor = -0.05
-				production_oil_factor = 0.03
 				conscription_factor = 0.01
 				local_resources_factor = 0.08
 				production_speed_buildings_factor = 0.15
 				local_building_slots = 1
-				max_command_power = 50
 			}
 			removal_cost = -1
 			picture = usa_desegregation_2
@@ -1620,14 +1614,12 @@ ideas = {
 				production_factory_max_efficiency_factor = -0.25
 				production_factory_efficiency_gain_factor = -0.03
 				line_change_production_efficiency_factor = 0.2
-				production_oil_factor = 0.05
 				production_lack_of_resource_penalty_factor = -0.05
 				conscription_factor = 0.01
 				local_resources_factor = 0.15
 				monthly_population = 0.15
 				production_speed_buildings_factor = 0.15
 				local_building_slots = 2
-				max_command_power = 75
 			}
 			removal_cost = -1
 			picture = usa_desegregation_2
@@ -1647,7 +1639,6 @@ ideas = {
 				monthly_population = 0.15
 				production_speed_buildings_factor = 0.25
 				local_building_slots = 2
-				max_command_power = 100
 			}
 			removal_cost = -1
 			picture = usa_desegregation_2
@@ -1667,7 +1658,6 @@ ideas = {
 				monthly_population = 0.15
 				production_speed_buildings_factor = 0.3
 				local_building_slots = 3
-				max_command_power = 150
 			}
 			removal_cost = -1
 			picture = usa_desegregation_2
@@ -1752,11 +1742,9 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_political_rehabilitation"}
 			allowed = { always = no }
 			modifier = {
-				political_power_gain = 0.01
 				party_popularity_stability_factor = 0.05
 				production_factory_efficiency_gain_factor = 0.02
 				production_speed_buildings_factor = 0.05
-				local_intel_to_enemies = -0.05
 				local_non_core_manpower = 0.1
 				local_intel_to_enemies = -0.05
 				research_speed_factor = 0.02
@@ -1768,7 +1756,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_state_media_idea"}
 			allowed = { always = no }
 			modifier = {
-				political_power_gain = 0.01
+				political_power_gain = 0.02
 				stability_weekly = 0.001
 				max_command_power = 25
 				mobilization_speed = 0.1
@@ -1785,14 +1773,13 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_state_media_idea_2"}
 			allowed = { always = no }
 			modifier = {
-				political_power_gain = 0.02
+				political_power_gain = 0.03
 				stability_weekly = 0.015
 				max_command_power = 50
 				mobilization_speed = 0.15
 				forced_surrender_limit = 0.05
 				party_popularity_stability_factor = 0.2
 				encryption_factor = 0.08
-				dig_in_speed = 1
 				recruitable_population_factor = 0.03
 				resistance_tick = -0.3
 			}
@@ -1803,7 +1790,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_state_media_idea_3"}
 			allowed = { always = no }
 			modifier = {
-				political_power_gain = 0.03
+				political_power_gain = 0.04
 				production_lack_of_resource_penalty_factor = -0.05
 				stability_weekly = 0.02
 				max_command_power = 100
@@ -1812,7 +1799,6 @@ ideas = {
 				forced_surrender_limit = 0.08
 				party_popularity_stability_factor = 0.3
 				encryption_factor = 0.1
-				dig_in_speed = 2
 				recruitable_population_factor = 0.05
 				resistance_tick = -0.35
 			}
@@ -1832,7 +1818,6 @@ ideas = {
 				forced_surrender_limit = 0.1
 				party_popularity_stability_factor = 0.4
 				encryption_factor = 0.15
-				dig_in_speed = 3
 				defensive_war_stability_factor = 0.05
 				recruitable_population_factor = 0.06
 				resistance_tick = -0.4
@@ -2001,6 +1986,336 @@ ideas = {
 				global_building_slots_factor = 0.2
 			}
 		}
+		
+	### MILITARY BRANCHES ###
+	
+	CSA_iww_doctrine_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_iww_doctrine_idea"}
+			allowed = { always = no }
+			removal_cost = -1
+			picture = generic_sea_focused_navy
+			modifier = {
+				experience_gain_motorized_training_factor = 0.05
+				army_fuel_consumption_factor = -0.03
+				production_speed_arms_factory_factor = 0.03
+				repair_speed_arms_factory_factor = 0.05
+				repair_speed_fuel_silo_factor = 0.05
+			}
+			equipment_bonus = {	motorized = { build_cost_ic = -0.1 instant = yes }	}
+		}
+		
+		CSA_iww_doctrine_idea_2 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_iww_doctrine_idea_2"}
+			allowed = { always = no }
+			removal_cost = -1
+			picture = generic_sea_focused_navy
+			modifier = {
+				motorized_attack_factor = 0.03
+				motorized_defence_factor = 0.03
+				experience_gain_motorized_training_factor = 0.05
+				army_fuel_consumption_factor = -0.03
+				production_speed_arms_factory_factor = 0.03
+				repair_speed_arms_factory_factor = 0.05
+				repair_speed_fuel_silo_factor = 0.05
+			}
+			equipment_bonus = {	motorized = { build_cost_ic = -0.15 instant = yes }	}
+		}
+		
+		CSA_iww_doctrine_idea_3 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_iww_doctrine_idea_3"}
+			allowed = { always = no }
+			removal_cost = -1
+			picture = generic_sea_focused_navy
+			modifier = {
+				motorized_attack_factor = 0.05
+				motorized_defence_factor = 0.05
+				experience_gain_motorized_training_factor = 0.1
+				army_fuel_consumption_factor = -0.05
+				production_speed_arms_factory_factor = 0.03
+				repair_speed_arms_factory_factor = 0.05
+				repair_speed_fuel_silo_factor = 0.05
+			}
+			equipment_bonus = {	motorized = { build_cost_ic = -0.15 instant = yes }	}
+		}
+		
+		CSA_iww_doctrine_idea_4 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_iww_doctrine_idea_4"}
+			allowed = { always = no }
+			removal_cost = -1
+			picture = generic_sea_focused_navy
+			modifier = {
+				motorized_attack_factor = 0.05
+				motorized_defence_factor = 0.05
+				experience_gain_motorized_training_factor = 0.15
+				army_fuel_consumption_factor = -0.05
+				production_speed_arms_factory_factor = 0.05
+				repair_speed_arms_factory_factor = 0.08
+				repair_speed_fuel_silo_factor = 0.08
+			}
+			equipment_bonus = {	motorized = { build_cost_ic = -0.2 instant = yes }	}
+			equipment_bonus = {	armor = { build_cost_ic = -0.1 instant = yes }	}
+		}
+		
+		CSA_centralist_doctrine_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_centralist_doctrine_idea"}
+			allowed = { always = no }
+			removal_cost = -1
+			picture = generic_sea_focused_navy
+			modifier = {
+				max_planning = 0.5
+				planning_speed = 0.2
+				equipment_conversion_speed = 0.1
+				army_artillery_defence_factor = 0.03
+			}
+			equipment_bonus = {	artillery = { build_cost_ic = -0.1 instant = yes }	}
+		}
+		
+		CSA_centralist_doctrine_idea_2 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_centralist_doctrine_idea_2"}
+			allowed = { always = no }
+			removal_cost = -1
+			picture = generic_sea_focused_navy
+			modifier = {
+				max_planning = 1.0
+				planning_speed = 0.5
+				equipment_conversion_speed = 0.1
+				army_artillery_defence_factor = 0.05
+				army_artillery_attack_factor = 0.05
+				experience_gain_artillery_training_factor = 0.1
+				shore_bombardment_bonus	= 0.05
+			}
+			equipment_bonus = {	artillery = { build_cost_ic = -0.1 instant = yes }	}
+		}
+		
+		CSA_centralist_doctrine_idea_3 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_centralist_doctrine_idea_3"}
+			allowed = { always = no }
+			removal_cost = -1
+			picture = generic_sea_focused_navy
+			modifier = {
+				max_planning = 1.0
+				planning_speed = 0.5
+				equipment_conversion_speed = 0.15
+				army_artillery_defence_factor = 0.05
+				army_artillery_attack_factor = 0.08
+				experience_gain_artillery_training_factor = 0.1
+				shore_bombardment_bonus	= 0.1
+				air_strategic_bomber_attack_factor = 0.05
+			}
+			equipment_bonus = {	artillery = { build_cost_ic = -0.12 instant = yes }	}
+			equipment_bonus = {	antitank = { build_cost_ic = -0.05 instant = yes }	}
+			equipment_bonus = {	antiair = { build_cost_ic = -0.05 instant = yes }	}
+			equipment_bonus = {	bomber = { build_cost_ic = -0.05 instant = yes }	}
+		}
+		
+		CSA_centralist_doctrine_idea_4 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_centralist_doctrine_idea_4"}
+			allowed = { always = no }
+			removal_cost = -1
+			picture = generic_sea_focused_navy
+			modifier = {
+				max_planning = 2.0
+				planning_speed = 1.0
+				equipment_conversion_speed = 0.15
+				army_artillery_defence_factor = 0.1
+				army_artillery_attack_factor = 0.1
+				experience_gain_artillery_training_factor = 0.1
+				shore_bombardment_bonus	= 0.1
+				air_strategic_bomber_attack_factor = 0.1
+			}
+			equipment_bonus = {	artillery = { build_cost_ic = -0.15 instant = yes }	}
+			equipment_bonus = {	antitank = { build_cost_ic = -0.05 instant = yes }	}
+			equipment_bonus = {	antiair = { build_cost_ic = -0.05 instant = yes }	}
+			equipment_bonus = {	bomber = { build_cost_ic = -0.05 instant = yes }	}
+		}
+		
+		CSA_militia_support_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_militia_support_idea"}
+			allowed = { always = no }
+			removal_cost = -1
+			picture = generic_sea_focused_navy
+			modifier = {
+				supply_consumption_factor = 0.05
+				recon_factor_while_entrenched = 0.05
+				attrition = -0.05
+				army_core_defence_factor = 0.03
+				army_core_attack_factor = 0.05
+				supply_consumption_factor = -0.05
+			}
+		}
+		
+		CSA_collectivist_doctrine_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_collectivist_doctrine_idea"}
+			allowed = { always = no }
+			removal_cost = -1
+			picture = generic_sea_focused_navy
+			modifier = {
+				recruitable_population_factor = 0.05
+				surrender_limit	= 0.05
+				non_core_manpower = 0.2
+				war_stability_factor = 0.2
+				mobilization_speed = 0.1
+			}
+		}
+		
+		CSA_collectivist_doctrine_idea_2 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_collectivist_doctrine_idea_2"}
+			allowed = { always = no }
+			removal_cost = -1
+			picture = generic_sea_focused_navy
+			modifier = {
+				recruitable_population_factor = 0.08
+				surrender_limit	= 0.05
+				non_core_manpower = 0.3
+				war_stability_factor = 0.2
+				mobilization_speed = 0.15
+				minimum_training_level = -8
+				land_reinforce_rate = 0.05
+			}
+		}
+		
+		CSA_collectivist_doctrine_idea_3 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_collectivist_doctrine_idea_3"}
+			allowed = { always = no }
+			removal_cost = -1
+			picture = generic_sea_focused_navy
+			modifier = {
+				recruitable_population_factor = 0.08
+				training_time_army = -0.05
+				minimum_training_level = -10
+				army_militia_attack_factor = 0.02
+				surrender_limit	= 0.1
+				non_core_manpower = 0.35
+				war_stability_factor = 0.5
+				mobilization_speed = 0.2
+				out_of_supply_factor = -0.1
+				land_reinforce_rate = 0.1
+			}
+		}
+		
+		CSA_collectivist_doctrine_idea_4 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_collectivist_doctrine_idea_4"}
+			allowed = { always = no }
+			removal_cost = -1
+			picture = generic_sea_focused_navy
+			modifier = {
+				recruitable_population_factor = 0.1
+				training_time_army = -0.05
+				minimum_training_level = -10
+				army_militia_attack_factor = 0.05
+				surrender_limit	= 0.1
+				non_core_manpower = 0.5
+				war_stability_factor = 0.5
+				mobilization_speed = 0.25
+				out_of_supply_factor = -0.1
+				land_reinforce_rate = 0.15
+			}
+		}
+		
+		CSA_butlers_doctrine_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_butlers_doctrine_idea"}
+			allowed = { always = no }
+			removal_cost = -1
+			picture = generic_sea_focused_navy
+			modifier = {
+				max_planning = 1
+				planning_speed = 0.05
+				dig_in_speed = 0.5
+				max_dig_in = 1
+				breakthrough = 0.05
+				max_commander_army_size	= 2
+				max_command_power = 25
+			}
+		}
+		
+		CSA_butlers_doctrine_idea_2 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_butlers_doctrine_idea_2"}
+			allowed = { always = no }
+			removal_cost = -1
+			picture = generic_sea_focused_navy
+			modifier = {
+				max_planning = 2.5
+				planning_speed = 0.05
+				dig_in_speed = 1
+				max_dig_in = 2
+				breakthrough = 0.08
+				max_commander_army_size	= 4
+				max_command_power = 40
+				encryption_factor = 0.03
+				decryption_factor = 0.03
+			}
+		}
+		
+		CSA_butlers_doctrine_idea_3 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_butlers_doctrine_idea_3"}
+			allowed = { always = no }
+			removal_cost = -1
+			picture = generic_sea_focused_navy
+			modifier = {
+				max_planning = 5
+				planning_speed = 0.1
+				dig_in_speed = 1.5
+				max_dig_in = 2
+				breakthrough = 0.1
+				max_commander_army_size	= 4
+				max_command_power = 40
+				encryption_factor = 0.03
+				decryption_factor = 0.05
+				recon_factor = 0.2
+			}
+		}
+		
+		CSA_butlers_doctrine_idea_4 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_butlers_doctrine_idea_4"}
+			allowed = { always = no }
+			removal_cost = -1
+			picture = generic_sea_focused_navy
+			modifier = {
+				max_planning = 10
+				planning_speed = 0.2
+				dig_in_speed = 1.8
+				max_dig_in = 2.5
+				breakthrough = 0.1
+				max_commander_army_size	= 5
+				max_command_power = 50
+				encryption_factor = 0.05
+				decryption_factor = 0.05
+				recon_factor = 0.25
+			}
+		}
+		
+		CSA_professional_red_army = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_professional_red_army"}
+			allowed = { always = no }
+			removal_cost = -1
+			picture = generic_sea_focused_navy
+			modifier = {
+				max_training = 10
+				combat_width_factor	= 0.2
+				army_org = 0.05
+				army_org_regain = 0.1
+				org_loss_when_moving = -0.1
+			}
+		}
+		
+		CSA_professional_red_army_2 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_professional_red_army"}
+			allowed = { always = no }
+			removal_cost = -1
+			picture = generic_sea_focused_navy
+			modifier = {
+				max_training = 10
+				combat_width_factor	= 0.2
+				army_org = 0.05
+				army_org_regain = 0.1
+				org_loss_when_moving = -0.1
+				special_forces_attack_factor = 0.05
+				special_forces_defence_factor = 0.05
+				special_forces_min = 2
+				special_forces_no_supply_grace = 0.15
+			}
+		}
+	
 	### Navy ideas ### 
 		CSA_liberty_ships_ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_liberty_ships_ideas"}
