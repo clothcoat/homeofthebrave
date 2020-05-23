@@ -1148,17 +1148,13 @@ focus_tree = {
 	focus = {# Curtis/Landon
 		id = USA_the_republicans
 		icon = GFX_goal_USA_victory
-		cost = 6.00
+		cost = 1.00
 		available = {
 			OR = {
 				has_country_leader = { ruling_only = yes name = "Alf Landon" }
 				has_country_leader = { ruling_only = yes name = "Charles Curtis" }
 			}
-		}
-		bypass = {
-			OR = {
-				has_country_flag = republican_victory
-			}
+			has_country_flag = USA_president_inaugurated
 		}
 		x = 18
 		y = 0
@@ -1174,7 +1170,7 @@ focus_tree = {
 	focus = {# Home Rule Negotiations
 		id = USA_home_rule_negotiations
 		icon = GFX_america_goal_eagle_deal
-		cost = 2.50
+		cost = 3.50
 		available = {
 			OR = {
 				has_country_leader = { ruling_only = yes name = "Alf Landon" }
@@ -1263,13 +1259,27 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_counter_klan"
+			add_popularity = { ideology = national_populist popularity = -0.03 }
+			custom_effect_tooltip = USA_ODP_loses_strength
+			add_stability = 0.05
+			add_political_power = 25
+			hidden_effect = {
+			add_to_variable = { var = ODP_strength value = -1 }
+			}
 			hidden_effect = {
 			if = {
 			limit = { NOT = {
 			has_country_flag = negotiations_complete}
 				}
-			country_event = { id = amcivwar.6902 days = 4 }
+			country_event = { id = ustates.6902 days = 4 }
 			set_country_flag = USA_compromise_failed
+				}
+			}
+			hidden_effect = {
+			if = {
+			limit = {
+			has_country_flag = negotiations_complete }
+			country_event = { id = ustates.74 days = 200 }
 				}
 			}
 		}
@@ -1296,7 +1306,16 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_moderate_the_unions"
-			custom_effect_tooltip = unlock_focuses
+			add_political_power = 30
+			add_popularity = { ideology = market_liberal popularity = 0.02 }
+			add_popularity = { ideology = social_liberal popularity = 0.02 }
+			add_popularity = { ideology = syndicalist popularity = -0.03 }
+			add_popularity = { ideology = totalist popularity = -0.02 }
+			custom_effect_tooltip = USA_SPA_loses_strength
+			add_stability = 0.05
+			hidden_effect = {
+			add_to_variable = { var = SPA_strength value = -1 }
+			}
 		}
 	}
 	
@@ -1321,7 +1340,14 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_reassure_business"
-			custom_effect_tooltip = unlock_focuses
+			add_popularity = { ideology = market_liberal popularity = 0.03 }
+			add_popularity = { ideology = social_liberal popularity = 0.03 }
+			add_stability = 0.05
+			add_political_power = 30
+			swap_ideas = {
+			remove_idea = USA_great_depression
+			add_idea = USA_great_depression_2
+			}
 		}
 	}
 	
@@ -1346,7 +1372,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_hunt_waste"
-			custom_effect_tooltip = unlock_focuses
+			add_popularity = { ideology = market_liberal popularity = 0.02 }
+			add_popularity = { ideology = social_liberal popularity = 0.02 }
+			add_stability = 0.03
+			add_political_power = 15
 		}
 	}
 	
@@ -1377,7 +1406,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_return_to_normalcy"
-			custom_effect_tooltip = unlock_focuses
+			remove_ideas = USA_political_crisis
+			add_political_power = 50
+			add_stability = 0.1
 		}
 	}
 	
@@ -1402,7 +1433,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_curtis_in_charge"
-			custom_effect_tooltip = unlock_focuses
+			add_popularity = { ideology = market_liberal popularity = 0.05 }
+			add_political_power = 45
+			add_stability = 0.05
 		}
 	}
 	
@@ -1427,7 +1460,13 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_work_sharing_plan"
-			custom_effect_tooltip = unlock_focuses
+			swap_ideas = {
+			remove_idea = USA_great_depression_2
+			add_idea = USA_great_depression_3
+			}
+			add_popularity = { ideology = market_liberal popularity = 0.05 }
+			add_stability = 0.03
+			add_political_power = 45
 		}
 	}
 	
@@ -1452,7 +1491,12 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_new_tariffs"
-			custom_effect_tooltip = unlock_focuses
+			swap_ideas = { 
+			remove_idea = USA_black_monday
+			add_idea = USA_black_monday2
+			}
+			add_political_power = 30
+			add_stability = 0.03
 		}
 	}
 	
@@ -1480,7 +1524,13 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_good_times"
-			custom_effect_tooltip = unlock_focuses
+			swap_ideas = {
+			remove_idea = USA_great_depression_3
+			add_idea = USA_great_depression_4
+			}
+			add_popularity = { ideology = market_liberal popularity = 0.05 }
+			add_political_power = 50
+			add_stability = 0.08
 		}
 	}
 	
@@ -1505,7 +1555,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_new_republicans"
-			custom_effect_tooltip = unlock_focuses
+			add_popularity = { ideology = social_liberal popularity = 0.05 }
+			add_political_power = 25
+			add_stability = 0.03
 		}
 	}
 	
@@ -1530,7 +1582,12 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_peace_through_trade"
-			custom_effect_tooltip = unlock_focuses
+			swap_ideas = { 
+			remove_idea = USA_black_monday
+			add_idea = USA_black_monday2
+			}
+			add_popularity = { ideology = social_liberal popularity = 0.03 }
+			add_stability = 0.03
 		}
 	}
 	
@@ -1555,7 +1612,12 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_landon_plan"
-			custom_effect_tooltip = unlock_focuses
+			swap_ideas = {
+			remove_idea = USA_great_depression_3
+			add_idea = USA_great_depression_4
+			}
+			add_popularity = { ideology = market_liberal popularity = 0.05 }
+			add_stability = 0.05
 		}
 	}
 	
