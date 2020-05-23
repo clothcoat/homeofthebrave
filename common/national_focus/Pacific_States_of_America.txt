@@ -14,7 +14,7 @@ focus_tree = {
 	### Army Section ###
 	focus = {# Form the Western Defense Command
 		id = CAL_activate_the_Western_Defense_Command
-		icon = GFX_focus_generic_bastion_of_democracy
+		icon = GFX_goal_CAL_western_defence_command
 		cost = 5
 		x = 6
 		y = 0
@@ -303,7 +303,7 @@ focus_tree = {
 	}
 	focus = { # Aggressive Conscription
 		id = CAL_aggressive_conscription
-		icon = GFX_focus_generic_military_mission
+		icon = GFX_focus_generic_commonwealth_build_infantry
 		cost = 5
 		prerequisite = {
 			focus = CAL_deWitt_in_Charge
@@ -329,7 +329,7 @@ focus_tree = {
 	}
 	focus = { # Wake the West
 		id = CAL_wake_the_west
-		icon = GFX_goal_checkmate
+		icon = GFX_goal_generic_propaganda
 		cost = 5
 		prerequisite = {
 			focus = CAL_defense_is_the_best_offense
@@ -352,7 +352,7 @@ focus_tree = {
 	}
 	focus = { # Traditional Staff College
 		id = CAL_traditional_staff_colleges
-		icon = GFX_goal_checkmate
+		icon = GFX_focus_generic_military_academy
 		cost = 5
 		prerequisite = {
 			focus = CAL_wake_the_west
@@ -370,7 +370,7 @@ focus_tree = {
 	}
 	focus = { # Nativist Appeals
 		id = CAL_nativist_appeals
-		icon = GFX_goal_checkmate
+		icon = GFX_goal_COR_american_fight
 		cost = 5
 		prerequisite = {
 			focus = CAL_traditional_staff_colleges
@@ -390,7 +390,7 @@ focus_tree = {
 	}
 	focus = { # Absolute Counter-Espionage
 		id = CAL_counter_espionage
-		icon = GFX_goal_checkmate
+		icon = GFX_goal_generic_secret_weapon
 		cost = 5
 		prerequisite = {
 			focus = CAL_wake_the_west
@@ -408,7 +408,7 @@ focus_tree = {
 	}
 	focus = { # Mass Infantry Arms Purchase
 		id = CAL_infantry_arms
-		icon = GFX_goal_checkmate
+		icon = GFX_focus_secret_rearmament
 		cost = 5
 		prerequisite = {
 			focus = CAL_wake_the_west
@@ -439,7 +439,7 @@ focus_tree = {
 	}
 	focus = {# Kruger Doctrine
 		id = CAL_kruger_doctrine
-		icon = GFX_goal_generic_major_war
+		icon = GFX_goal_generic_major_alliance
 		cost = 5
 		prerequisite = {
 			focus = CAL_activate_the_Western_Defense_Command
@@ -465,7 +465,7 @@ focus_tree = {
 	}
 	focus = {# Armor Production Lines
 		id = CAL_armor_production_lines
-		icon = GFX_goal_generic_major_war
+		icon = GFX_goal_generic_army_motorized
 		cost = 5
 		prerequisite = {
 			focus = CAL_kruger_doctrine
@@ -489,7 +489,7 @@ focus_tree = {
 	}
 	focus = {# Manuever Exercises
 		id = CAL_manuever_exercises
-		icon = GFX_goal_generic_major_war
+		icon = GFX_goal_generic_position_armies
 		cost = 5
 		prerequisite = {
 			focus = CAL_armor_production_lines
@@ -513,7 +513,7 @@ focus_tree = {
 	}
 	focus = {# Tank Contracts
 		id = CAL_tank_contracts
-		icon = GFX_goal_generic_major_war
+		icon = GFX_goal_generic_army_tanks
 		cost = 5
 		prerequisite = {
 			focus = CAL_armor_production_lines
@@ -539,7 +539,7 @@ focus_tree = {
 	}
 	focus = {# Officer Latitude
 		id = CAL_officer_latitude
-		icon = GFX_goal_generic_major_war
+		icon = GFX_goal_generic_cavalry
 		cost = 5
 		prerequisite = {
 			focus = CAL_tank_contracts
@@ -561,7 +561,7 @@ focus_tree = {
 	}
 	focus = {# Alamo Scouts
 		id = CAL_alamo_scouts
-		icon = GFX_goal_generic_major_war
+		icon = GFX_focus_prc_infiltration
 		cost = 5
 		prerequisite = {
 			focus = CAL_officer_latitude
@@ -582,7 +582,7 @@ focus_tree = {
 	}
 	focus = {# Support Training
 		id = CAL_support_training
-		icon = GFX_goal_generic_major_war
+		icon = GFX_goal_generic_build_tank
 		cost = 5
 		prerequisite = {
 			focus = CAL_officer_latitude
@@ -600,7 +600,7 @@ focus_tree = {
 	}
 	focus = {# Modernized War Training
 		id = CAL_modern_training
-		icon = GFX_goal_generic_major_war
+		icon = GFX_focus_generic_army_tanks2
 		cost = 5
 		prerequisite = {
 			focus = CAL_alamo_scouts
@@ -627,7 +627,7 @@ focus_tree = {
 	}
 	focus = {# McNair Report
 		id = CAL_mcnair_report
-		icon = GFX_goal_generic_major_war
+		icon = GFX_focus_generic_treaty
 		cost = 5
 		prerequisite = {
 			focus = CAL_activate_the_Western_Defense_Command
@@ -653,7 +653,7 @@ focus_tree = {
 	}
 	focus = {# Towed Artillery
 		id = CAL_towed_artillery_yesterday
-		icon = GFX_goal_generic_major_war
+		icon = GFX_goal_generic_army_artillery2
 		cost = 5
 		prerequisite = {
 			focus = CAL_mcnair_report
@@ -674,7 +674,7 @@ focus_tree = {
 	}
 	focus = {# Quasi Arms
 		id = CAL_quasi_arms_factories
-		icon = GFX_goal_generic_major_war
+		icon = GFX_goal_generic_army_artillery
 		cost = 5
 		prerequisite = {
 			focus = CAL_mcnair_report
@@ -695,7 +695,7 @@ focus_tree = {
 	}
 	focus = {# Combined Arms Training
 		id = CAL_combined_arms_units
-		icon = GFX_goal_generic_major_war
+		icon = GFX_goal_generic_army_doctrines
 		cost = 5
 		prerequisite = {
 			focus = CAL_towed_artillery_yesterday
@@ -719,7 +719,7 @@ focus_tree = {
 	}
 	focus = {# Field Artillery Schools
 		id = CAL_field_artillery_school
-		icon = GFX_goal_generic_major_war
+		icon = GFX_goal_generic_air_doctrine
 		cost = 5
 		prerequisite = {
 			focus = CAL_combined_arms_units
@@ -740,7 +740,7 @@ focus_tree = {
 	}
 	focus = {# Weapons Development
 		id = CAL_weapons_development
-		icon = GFX_goal_generic_major_war
+		icon = GFX_goal_generic_wolf_pack
 		cost = 5
 		prerequisite = {
 			focus = CAL_field_artillery_school
@@ -761,7 +761,7 @@ focus_tree = {
 	}
 	focus = {# Tank Destroyers
 		id = CAL_tank_destroyers
-		icon = GFX_goal_generic_major_war
+		icon = GFX_focus_generic_tank_destroyer
 		cost = 5
 		prerequisite = {
 			focus = CAL_combined_arms_units
@@ -782,7 +782,7 @@ focus_tree = {
 	}
 	focus = {# Bombing Support
 		id = CAL_bombing_support
-		icon = GFX_goal_generic_major_war
+		icon = GFX_goal_generic_air_bomber
 		cost = 5
 		prerequisite = {
 			focus = CAL_combined_arms_units
@@ -840,7 +840,7 @@ focus_tree = {
 	}
 	focus = {# Supreme Commander
 		id = CAL_supreme_commander
-		icon = GFX_goal_generic_major_war
+		icon = GFX_focus_generic_military_mission
 		cost = 5
 		prerequisite = {
 			focus = CAL_Marshall_in_command
@@ -867,7 +867,7 @@ focus_tree = {
 	}
 	focus = {# Organizing Victory
 		id = CAL_organizing_victory
-		icon = GFX_goal_generic_army_motorized
+		icon = GFX_focus_generic_combined_arms
 		cost = 5
 		prerequisite = {
 			focus = CAL_supreme_commander
@@ -895,7 +895,7 @@ focus_tree = {
 	}
 	focus = {# Central Strategy
 		id = CAL_central_strategy
-		icon = GFX_goal_generic_army_motorized
+		icon = GFX_goal_planning_bonus
 		cost = 4
 		prerequisite = {
 			focus = CAL_supreme_commander
@@ -923,7 +923,7 @@ focus_tree = {
 	}
 	focus = { #Officer Instruction
 		id = CAL_Officer_instruction
-		icon = GFX_goal_planning_bonus
+		icon = GFX_goal_generic_military_deal
 		cost = 5
 		prerequisite = {
 			focus = CAL_organizing_victory
@@ -999,7 +999,7 @@ focus_tree = {
 	}
 	focus = { # Morale Emphasis
 		id = CAL_morale_emphasis
-		icon = GFX_goal_generic_military_sphere
+		icon = GFX_goal_generic_small_arms
 		cost = 5
 		prerequisite = {
 			focus = CAL_Officer_instruction
@@ -2047,7 +2047,7 @@ focus_tree = {
 	### Air Force Section ###
 	focus = {# U.S Air Force
 		id = CAL_air_force
-		icon = GFX_goal_CAL_usaaf
+		icon = GFX_goal_generic_build_airforce
 		cost = 5.00
 		x = 13
 		y = 7
