@@ -3181,7 +3181,7 @@ spriteTypes = {
 	###Spreading Socialism
 	SpriteType = {# Bolivian Oligarchs
 		name = "GFX_goal_CSA_bolivian_oligarchs"
-		texturefile = "gfx/interface/goals/CSA_World_Revolution_csa.dds"
+		texturefile = "gfx/interface/goals/CSA_bolivian_oligarchs.dds"
 	}
 	SpriteType = {# Caribbean Revolution
 		name = "GFX_goal_CSA_caribbean_revolution"
@@ -3218,5 +3218,10 @@ spriteTypes = {
 	SpriteType = {# Crush Western Syndies
 		name = "GFX_goal_GER_crush_western_syndies"
 		texturefile = "gfx/interface/goals/GER_crush_western_syndies.dds"
+	}
+	###Western Defense
+	SpriteType = {# Western Defense Command
+		name = "GFX_goal_CAL_western_defence_command"
+		texturefile = "gfx/interface/goals/CAL_western_defence_command.dds"
 	}
 }
