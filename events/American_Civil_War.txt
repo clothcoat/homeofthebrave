@@ -140,8 +140,6 @@ country_event = { # Huey Long declares Rebellion against MacArthur
 	immediate = {
 		log = "[GetDateText]: [Root.GetName]: event amcivwar.2"
 		USA_release_TEX = yes
-		USA_release_COR = yes
-		USA_release_WCC = yes
 	}
 
 	option = {
@@ -550,7 +548,7 @@ country_event = { # Accepted
 	option = {
 		name = amcivwar.4003.a
 		hidden_effect = {
-		add_country_flag = PSA_CSA_TREATY
+		set_country_flag = PSA_CSA_TREATY
 		}
 		add_political_power = 10
 		add_popularity = { ideology = radical_socialist popularity = 0.05 }
