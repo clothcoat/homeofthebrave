@@ -216,7 +216,315 @@ country_event = { # ABB in Power
 			create_country_leader = {
 				name = "Duse Muhammad"
 				desc = "POLITICS_DUSE_MUHAMMAD_DESC"
-				picture = "gfx/leaders/CUS/Duse_Muhamad.tga"
+				picture = "gfx/leaders/BBR/Duse_Mohamed_Ali.tga"
+				expire = "1965.1.1"
+				ideology = totalist_subtype
+				traits = { }
+			}
+			set_party_name = {
+			ideology = totalist
+			long_name = BBR_ABB_totalist_party_long
+			name = BBR_ABB_totalist_party }
+		}
+		set_politics = {
+			ruling_party = totalist
+			elections_allowed = no
+		}
+		add_manpower = -1000
+		add_war_support = 0.05
+		add_stability = -0.03
+		add_popularity = { ideology = totalist popularity = 0.08 }
+	}
+}
+
+country_event = { # Nationalist Treaty
+	id = bbr.9
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.9"}
+	title = bbr.9.t
+	desc = bbr.9.d
+	picture = ACW_soldiers_watching
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = { # We can do nothing
+		name = bbr.9.a
+		add_stability = -0.03
+		add_popularity = { ideology = paternal_autocrat popularity = 0.05 }
+		add_popularity = { ideology = national_populist popularity = 0.05 }
+		hidden_effect = {
+			country_event = { id = bbr.10 days = 11 }
+		}
+	}
+	
+	option = { # Arrest them
+		name = bbr.9.b
+		add_manpower = -5500
+		add_war_support = -0.08
+		add_political_power = -35
+		add_popularity = { ideology = paternal_autocrat popularity = -0.03 }
+		add_popularity = { ideology = national_populist popularity = -0.03 }
+		hidden_effect = {
+			country_event = { id = bbr.5 days = 6 }
+		}
+	}
+}
+
+country_event = { # March
+	id = bbr.10
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.10"}
+	title = bbr.10.t
+	desc = bbr.10.d
+	picture = ACW_soldiers_watching
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = { #We can't afford to stop them
+		name = bbr.10.a
+		hidden_effect = {
+			country_event = { id = bbr.11 days = 4 }
+		}
+		add_stability = -0.05
+	}
+	option = { #Route them
+		name = bbr.10.b		
+		add_manpower = -3500
+		add_stability = -0.03
+		add_popularity = { ideology = totalist popularity = 0.08 }
+		hidden_effect = {
+			country_event = { id = bbr.13 days = 4 }
+		}
+	}
+	option = { #Empower Young
+		name = bbr.10.c
+		add_manpower = -3000
+		add_war_support = 0.05
+		hidden_effect = {
+			country_event = { id = bbr.13 days = 4 }
+		}
+	}
+}
+
+country_event = { # March Succeeds
+	id = bbr.11
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.11"}
+	title = bbr.11.t
+	desc = bbr.11.d
+	picture = ACW_soldiers_watching
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = { #We can't afford to stop them
+		name = bbr.11.a
+		hidden_effect = {
+			country_event = { id = bbr.12 days = 5 }
+		}
+		add_popularity = { ideology = totalist popularity = -0.08 }
+		add_popularity = { ideology = syndicalist popularity = -0.1 }
+		add_popularity = { ideology = radical_socialist popularity = -0.08 }
+		add_popularity = { ideology = social_democrat popularity = -0.05 }
+		add_popularity = { ideology = social_liberal popularity = -0.03 }
+		add_popularity = { ideology = market_liberal popularity = -0.03 }
+		add_popularity = { ideology = social_conservative popularity = -0.03 }
+		add_popularity = { ideology = authoritarian_democrat popularity = -0.03 }
+		add_popularity = { ideology = paternal_autocrat popularity = 0.1 }
+		add_popularity = { ideology = national_populist popularity = 0.1 }
+		add_political_power = -35
+		add_stability = -0.1
+	}
+}
+
+country_event = { # Leadership Election
+	id = bbr.12
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.12"}
+	title = bbr.12.t
+	desc = bbr.12.d
+	picture = ACW_soldiers_watching
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = { #NOI
+		name = bbr.12.a
+		hidden_effect = {
+			country_event = { id = bbr.11 days = 4 }
+		}
+		add_popularity = { ideology = national_populist popularity = 0.1 }
+		add_stability = 0.1
+		add_political_power = 60
+		add_manpower = 1550
+		add_war_support = 0.08
+	}
+	option = { #UNIA
+		name = bbr.12.b		
+		add_popularity = { ideology = paternal_autocrat popularity = 0.1 }
+		add_stability = 0.08
+		add_political_power = 35
+		add_manpower = 2200
+		add_war_support = 0.05
+	}
+}
+
+country_event = { # Nationalists Fail
+	id = bbr.13
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.13"}
+	title = bbr.13.t
+	desc = bbr.13.d
+	picture = ACW_soldiers_watching
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = { #Nationalists Fail
+	name = bbr.13.a
+	add_stability = 0.1
+	add_popularity = { ideology = paternal_autocrat popularity = -0.05 }
+	add_popularity = { ideology = national_populist popularity = -0.08 }
+	add_political_power = 85
+	hidden_effect = {
+			country_event = { id = bbr.14 days = 18 }
+		}
+	}
+}
+
+country_event = { # Future of the Nation
+	id = bbr.14
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.14"}
+	title = bbr.14.t
+	desc = bbr.14.d
+	picture = ACW_soldiers_watching
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = { #People's Amendment's
+	name = bbr.14.a
+	add_stability = 0.08
+	add_war_support = 0.1
+	add_manpower = 5500
+	add_political_power = 65
+	add_popularity = { ideology = radical_socialist popularity = 0.08 }
+	add_popularity = { ideology = syndicalist popularity = 0.1 }
+	add_popularity = { ideology = totalist popularity = 0.1 }
+	hidden_effect = {
+			country_event = { id = bbr.15 days = 7 }
+		}
+	}
+	
+	option = { #Liberal Constitution
+	name = bbr.14.b
+	add_stability = 0.15
+	add_war_support = 0.08
+	add_manpower = 4500
+	add_political_power = 55
+	add_popularity = { ideology = syndicalist popularity = -0.08 }
+	add_popularity = { ideology = totalist popularity = -0.1 }
+	hidden_effect = {
+			country_event = { id = bbr.18 days = 7 }
+		}
+	}
+}
+
+country_event = { # Socialists Celebrate
+	id = bbr.15
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.15"}
+	title = bbr.15.t
+	desc = bbr.15.d
+	picture = ACW_soldiers_watching
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = { #People's Amendment's
+	name = bbr.15.a
+	add_stability = 0.05
+	add_political_power = 45
+	add_popularity = { ideology = radical_socialist popularity = 0.05 }
+	add_popularity = { ideology = syndicalist popularity = 0.05 }
+	add_popularity = { ideology = totalist popularity = 0.03 }
+	hidden_effect = {
+			country_event = { id = bbr.16 days = 10 }
+		}
+	}
+}
+
+country_event = { # Left Vanguard
+	id = bbr.16
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.16"}
+	title = bbr.16.t
+	desc = bbr.16.d
+	picture = ACW_soldiers_watching
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = { #Radicalism Grows
+	name = bbr.16.a
+	add_popularity = { ideology = totalist popularity = 0.1 }
+	hidden_effect = {
+			country_event = { id = bbr.17 days = 10 }
+		}
+	}
+}
+
+country_event = { # Union Elections
+	id = bbr.17
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.17"}
+	title = bbr.17.t
+	desc = bbr.17.d
+	picture = ACW_soldiers_watching
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = { #Du Bois
+	name = bbr.17.a
+	add_popularity = { ideology = radical_socialist popularity = 0.12 }
+	add_stability = 0.12
+	add_political_power = 75
+	}
+	option = { #Paul Robeson
+	name = bbr.17.b
+	add_popularity = { ideology = syndicalist popularity = 0.15 }
+	add_stability = 0.1
+	add_political_power = 50
+	hidden_effect = {
+			create_country_leader = {
+				name = "Paul Robeson"
+				desc = "POLITICS_PAUL_ROBESON_DESC"
+				picture = "gfx/leaders/BBR/Paul_Robeson.tga"
+				expire = "1965.1.1"
+				ideology = syndicalist_subtype
+				traits = { }
+			}
+		}
+		set_politics = {
+			ruling_party = syndicalist
+			elections_allowed = no
+		}
+	}
+	option = { #James Ford
+	name = bbr.17.c
+	add_popularity = { ideology = radical_socialist popularity = 0.02 }
+	add_popularity = { ideology = totalist popularity = 0.1 }
+	add_stability = 0.1
+	add_political_power = 60
+	hidden_effect = {
+			create_country_leader = {
+				name = "James W. Ford"
+				desc = "POLITICS_JAMES_W_FORD_DESC"
+				picture = "gfx/leaders/BBR/James_W_Ford.tga"
 				expire = "1965.1.1"
 				ideology = totalist_subtype
 				traits = { }
@@ -226,14 +534,58 @@ country_event = { # ABB in Power
 			ruling_party = totalist
 			elections_allowed = no
 		}
-		add_manpower = -1000
-		add_war_support = 0.05
-		add_stability = -0.03
-		add_popularity = { ideology = totalist popularity = 0.04 }
+		set_party_name = {
+			ideology = totalist
+			long_name = BBR_SPA_totalist_party_long
+			name = BBR_SPA_totalist_party }
+	}
+	option = { #Ben Davis
+	name = bbr.17.e
+	add_popularity = { ideology = totalist popularity = 0.1 }
+	add_stability = 0.08
+	add_political_power = 60
+	hidden_effect = {
+			create_country_leader = {
+				name = "Ben J Davis"
+				desc = "POLITICS_BEN_J_DAVIS_DESC"
+				picture = "gfx/leaders/BBR/Ben_J_Davis.tga"
+				expire = "1965.1.1"
+				ideology = totalist_subtype
+				traits = { }
+			}
+		}
+		set_politics = {
+			ruling_party = totalist
+			elections_allowed = no
+		}
+		set_party_name = {
+			ideology = totalist
+			long_name = BBR_COM_totalist_party_long
+			name = BBR_COM_totalist_party }
+	}
+	option = { #Harry Haywood
+	name = bbr.17.f
+	add_popularity = { ideology = totalist popularity = 0.1 }
+	add_manpower = 500
+	add_stability = 0.05
+	add_political_power = 60
+	hidden_effect = {
+			create_country_leader = {
+				name = "Harry Haywood"
+				desc = "POLITICS_HARRY_HAYWOOD_DESC"
+				picture = "gfx/leaders/BBR/Harry_Haywood.tga"
+				expire = "1965.1.1"
+				ideology = totalist_subtype
+				traits = { }
+			}
+		}
+		set_politics = {
+			ruling_party = totalist
+			elections_allowed = no
+		}
+		set_party_name = {
+			ideology = totalist
+			long_name = BBR_TUUC_totalist_party_long
+			name = BBR_TUUC_totalist_party }
 	}
 }
-
-
-
-
-

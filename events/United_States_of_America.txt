@@ -3348,20 +3348,24 @@ country_event = { # Reed accepts invitation
 
 	option = {
 		name = ustates.66.a
-		has_country_leader = { ruling_only = yes name = "Charles Curtis" } 
+		trigger = {
+		has_country_leader = { ruling_only = yes name = "Charles Curtis" }
+		}
 		add_stability = 0.02
 		add_political_power = 15
 		hidden_effect = {
 			country_event = {
 			id = ustates.67
 			days = 1
-				}
 			}
+		}
 	}
 	
 	option = {
 		name = ustates.66.b
+		trigger = {
 		has_country_leader = { ruling_only = yes name = "Alf Landon" } 
+		}
 		add_stability = 0.02
 		add_political_power = 15
 		hidden_effect = {
@@ -3369,12 +3373,11 @@ country_event = { # Reed accepts invitation
 			id = ustates.67
 			days = 1
 				}
-			}
+		}
 	}
-	
 }
 
-country_event = { # Meeting begins in Chicago
+country_event = { #Meeting begins in Chicago
 	id = ustates.67
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.67"}
 	title = ustates.67.t
@@ -3473,11 +3476,13 @@ country_event = { # ODP and Long denounce President
 			add_to_variable = { var = AFP_strength value = 1 }
 			add_to_variable = { var = ODP_strength value = 1 }
 			set_country_flag = USA_revolt_against_compromise_flag
+			USA = {
 			country_event = { id = amcivwar.1102 days = 2 }
 			country_event = { id = amcivwar.12 days = 3 }
 			country_event = { id = ustates.78 days = 4 }
 			country_event = { id = amcivwar.11 days = 5 }
 			country_event = { id = amcivwar.3000 days = 6 }
+			}
 		}
 	}
 }
@@ -3733,7 +3738,7 @@ country_event = { # The Compromise Succeeds
 		name = ustates.73.a #Civil War Averted
 		add_stability = 0.15
 		add_political_power = 100
-		add_country_flag = USA_Civil_War_Averted
+		set_country_flag = USA_Civil_War_Averted
 	}
 }
 
@@ -3943,9 +3948,7 @@ country_event = { # Murray declares war on tyranny
 
 	is_triggered_only = yes
 
-	trigger = {
-		NOT = { has_country_flag = USA_macarthur_coup }
-	}
+	fire_only_once = yes
 
 	option = {
 		name = ustates.80.a
@@ -3955,8 +3958,9 @@ country_event = { # Murray declares war on tyranny
 			country_event = { id = amcivwar.6000 days = 2 } ###Murray Revolt
 			country_event = { id = amcivwar.12 days = 3 } ###REED REVOLT
 			country_event = { id = ustates.78 days = 4 } ###MAC REVOLT
-			country_event = { id = amcivwar.11 days = 4 } ###MAC REVOLT
-			country_event = { id = amcivwar.3000 days = 6 } ###WCC REVOLT
+			country_event = { id = amcivwar.11 days = 5 } ###Huey
+			country_event = { id = amcivwar.3 days = 6 } ###PSA
+			country_event = { id = amcivwar.3000 days = 7 } ###WCC REVOLT
 		}
 	}
 }
@@ -3996,7 +4000,11 @@ country_event = { # Clashes in the South
 		NOT = { has_country_flag = USA_macarthur_coup }
 		NOT = { has_country_flag = USA_civil_war }
 		has_country_flag = USA_compromise_failed
-		date = 1937.2.15
+		date > 1937.2.15
+	}
+	
+	mean_time_to_happen = {
+	days = 2
 	}
 
 	option = {
@@ -4049,8 +4057,12 @@ country_event = { # March on Detroit
 		NOT = { has_country_flag = USA_negotiations_begun }
 		NOT = { has_country_flag = USA_compromise_failed }
 		NOT = { has_country_flag = USA_compromise_reached }
-		date = 1937.3.15
+		date > 1937.3.15
 		}
+	}
+	
+	mean_time_to_happen = {
+	days = 5
 	}
 
 	option = {

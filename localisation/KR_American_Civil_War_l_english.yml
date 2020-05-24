@@ -299,7 +299,7 @@ amcivwar.4005.a:0 "Yes, send the offer"
 amcivwar.4005.b:0 "I don't trust snakes"
 
 amcivwar.4006.t:0 "Long's Demands"
-amcivwar.4006.d:0 "President Long has received our offer and has agreed to be constrained by the Constitution. However he has demanded that a national election be held as soon as the region is reunited, desires benefits for the Share the Wealth Society within our territory and has called on the PSA leadership to announce that Long is doing all he can to save American Democracy and to allow recruitemnt within their territory. It seems even in a time of war the Kingfish still has political maneuvering on the mind."
+amcivwar.4006.d:0 "Long has received our offer and has agreed to be constrained by the Constitution. However he has demanded that a national election be held as soon as the region is reunited, desires benefits for the Share the Wealth Society within our territory and has called on the PSA leadership to announce that Long is doing all he can to save American Democracy and to allow recruitemnt within their territory. It seems even in a time of war the Kingfish still has political maneuvering on the mind."
 amcivwar.4006.a:0 "Still accept"
 amcivwar.4006.b:0 "Screw this, withdraw our offer"
 
@@ -328,6 +328,9 @@ amcivwar.4011.a:0 "Fools may have doomed us both!"
 amcivwar.4012.t:0 "CSA Accepts!"
 amcivwar.4011.t:0 "The CSA has accepted the deal! We can now move troops accordingly to fully account for the WCC and CAR. Of course Maverick warns that the syndicalist and ultra-radicals in the CSA where opposed to the deal and it could break down in the future."
 amcivwar.4012.t:0 "It will have to do!"
+
+amcivwar.4013.t:0 "Long Declines!"
+amcivwar.4013.d:0 "Long essentially wants us to be absorbed by his cause which our political class will absolutely class. As such war with him appears inevitable."
 
 amcivwar.5.t:0 "The Second Civil War"
 amcivwar.5.d:0 "The federal government's deadline has come and gone, and with large militia forces having been raised on every side it is clear what their answer truly is. The Second American Civil War has begun."
@@ -421,18 +424,9 @@ amcivwar.8000.a:0 "We should at least try"
 amcivwar.8000.b:0 "We don't negotiate with tyrants"
 
 amcivwar.8001.t:0 "PSA offers peace?"
-amcivwar.8001.d:0 "The Pacific States of America has decided to recognize that we are the victors of the 1936 election and that, therefor, they are willing to ally us. However, if we accept they should show they respect Long as president by giving tax favors to Share the Wealth and allowing the AFP to recruit as freely as they wish."
+amcivwar.8001.d:0 "The Pacific States of America has decided to recognize that we are the victors of the 1936 election and that, therefor, they are willing to ally us. Many in the AFP are annoyed by their questionable loyalty however and apparent hypocrisy in their reluctance to join the Longist cause while claming to support American Democracy, with Long desiring they show respect to the AFP by giving tax favors to Share the Wealth and allowing the AFP to recruit as freely as they wish. Others are pressing Long that this is not enough and they should simpy join the cause outright, although there is no way they would accept it would make for simple propaganda against them."
 amcivwar.8001.a:0 "Of course they are my citizens"
-amcivwar.8001.b:0 "No, they should be part of the AUS"
-
-amcivwar.8002.t:0 "Offer declined"
-amcivwar.8002.d:0 "Unsurprisingly our offer has been declined though we can at least say we tried to achieve peace through reason."
-amcivwar.8002.a:0 "A crying shame"
-
-amcivwar.8003.t:0 "Offer Accepted!"
-amcivwar.8003.d:0 "Long has accepted but appears to want for us to cut his AFP favors such as allowing them to recruit freely, giving tax breaks to all AFP related activities and raising taxes on luxury goods which Long deems neccessary for fighting the war, calling it an "executive order". However it is clear some citizens of our Republic, particuarly in Congress and among the wealthy, are uncomfortable with this arragnement and feel Long has simply proved himself an opportunist who must be opposed like Reed, MacArthur and Murray."
-amcivwar.8003.a:0 "Ignore the naysayers, offer accepted"
-amcivwar.8003.b:0 "We won't bend to a demagogue"
+amcivwar.8001.b:0 "No, they should join us outright!"
 
 amcivwar.9.t:0 "Standoff in America"
 amcivwar.9.d:0 "A tense standoff has erupted in the United States, as democratically-elected President Huey Long fled to the city of New Orleans after being forcibly removed from his position by General Douglas MacArthur. From New Orleans, Long's supporters have declared MacArthur's government illegitimate - as have the northern supporters of syndicalist Jack Reed, based in Chicago, and the Pacific Governors and their Congress. All have been given a deadline by General MacArthur of thirty days to either stand down or face arrest and execution. Considering all sides are rapidly raising forces, the idea that America seems headed into a second civil war seems almost certain."
@@ -497,15 +491,10 @@ amcivwar.1015.a:0 "I see"
 ### Set Up Events - Curtis ###
 
 amcivwar.11.t:0 "Huey Long Condemns the Government"
-amcivwar.11.d:0 "The formation of the CSA, CAR and MacArthur's coup reportedly both scared and inspired Huey Long to found a provisional government that essentially represents his political machine and allies. He has announced that he has been given 'mo choice' but to form a provisional government that will defend the common man from all three, and has demanded the Republican President be reappointed, MacArthur let go and himself appointed on the cabinet to 'ensure a democratic cabinet'. While no one actually expects this to happen his Midwest populist-progressive coalition have joined him support, announcing that do not expect the elite to change their practices, both political economic, unless threatened with direct force."
+amcivwar.11.d.nothing_is_done:0 "The formation of the CSA, CAR and MacArthur's coup reportedly both scared and inspired Huey Long to found a provisional government that essentially represents his political machine and allies. He has announced that he has been given 'mo choice' but to form a provisional government that will defend the common man from all three, and has demanded the Republican President be reappointed, MacArthur let go and himself appointed on the cabinet to 'ensure a democratic cabinet'. While no one actually expects this to happen his Midwest populist-progressive coalition have joined him support, announcing that do not expect the elite to change their practices, both political economic, unless threatened with direct force."
+amcivwar.11.d.revolt_against_compromise:0 "The compromise attempt has failed, and with its failure America has been broken. Huey Long declared on the radio today that the corrupt President Curtis must be stopped for the good of America, and has called for all decent Americans to rise up against them. A number of southern governors have put their support behind him, announcing that they do not see the Curtis government as legitimate, and while they have not yet gone so far as to announce secession from the Union they have made it clear that they do not recognize the government's authority within their borders."
 amcivwar.11.a:0 "Stand by the Republic"
 amcivwar.11.b:0 "Stand by the Country (Lead the AUS)"
-
-amcivwar.1101.t:0 "Huey Long Condemns the Government"
-amcivwar.1101.d.nothing_is_done:0 "The formation of the CSA, CAR and MacArthur's coup reportedly scared Huey Long as all are known to be antagonistic towards him and his Share the Wealth Societies. He has announced that he has been given 'mo choice' but to form a provisional government that will defend the common man from all three, and has demanded MacArthur end his coup and appoint Long on the cabinet to 'ensure a democratic cabinet'. While no one actually expects this to happen his Midwest populist-progressive coalition have joined him support, announcing that do not expect the elite to change their practices, both political economic, unless threatened with direct force."
-amcivwar.1101.d.revolt_against_compromise:0 "The compromise attempt has failed, and with its failure America has been broken. Huey Long declared on the radio today that the corrupt President Curtis must be stopped for the good of America, and has called for all decent Americans to rise up against them. A number of southern governors have put their support behind him, announcing that they do not see the Curtis government as legitimate, and while they have not yet gone so far as to announce secession from the Union they have made it clear that they do not recognize the government's authority within their borders."
-amcivwar.1101.a:0 "Stand by the Republic"
-amcivwar.1101.b:0 "Stand by the Country (Lead the AUS)"
 
 amcivwar.1102.t:0 "Murray Revolts Against Washington!"
 amcivwar.1102.d.nothing_is_done:0 "The violence in the Steel Belt and Reed's proclamation was more than was neccessary for William H. Murray to declare on the radio that the President is a sellout to international bankers who would never side with America over those would destroy it and that he, Long and Reed must be fought to preserve the American way of life. A number of southern governors and virtually all the White Leaguers have put their support behind him, announcing that they do not see the Curtis government as legitimate and thus refuse to recognize its authority."
@@ -537,9 +526,9 @@ amcivwar.15.a:0 "The disaster has begun. Stand by the Republic"
 amcivwar.15.b:0 "The rising has begun. Stand by the Workers (Play as the CSA)"
 
 amcivwar.1500.t:0 "Murray Revolts Against Washington!"
-amcivwar.5000.d:0 "The attacks on the ODP would no longer go unchallenged as White League leaders in Georgia under Sam Green have run out federal forces. As feds retreat from the region William H. Murray went on the radio to declare that President Garner is a tyrant and race traitor trying to hand over the South to social radicals. A number of southern governors and virtually all the White Leaguers have put their support behind him, announcing that they do not see the current federal government as legitimate and thus refuse to recognize its authority, ordering them to stand down."
-amcivwar.1110.a:0 "Stand by the Republic"
-amcivwar.1110.b:0 "Stand by the Nation (Lead the CAR)"
+amcivwar.1500.d:0 "The attacks on the ODP would no longer go unchallenged as White League leaders in Georgia under Sam Green have run out federal forces. As feds retreat from the region William H. Murray went on the radio to declare that President Garner is a tyrant and race traitor trying to hand over the South to social radicals. A number of southern governors and virtually all the White Leaguers have put their support behind him, announcing that they do not see the current federal government as legitimate and thus refuse to recognize its authority, ordering them to stand down."
+amcivwar.1500.a:0 "Stand by the Republic"
+amcivwar.1500.b:0 "Stand by the Nation (Lead the CAR)"
 
 amcivwar.16.t:0 "Standoff in America"
 amcivwar.16.d:0 "President John Nance Garner experienced a major blow today as a large number of governors declared his government illegitimate, throwing their support behind either southern populist Huey Long or the syndicalist leader Jack Reed. They stopped short of seceding from the Union, but declared that the federal government holds no authority within their state borders until Garner steps down and a 'reconciliation council' under their chosen leader is put into place to restore order in the nation. In response, President Garner has given the governors thirty days to stand down - making it all but certain that the United States will descend into civil war for the second time in less than a century."

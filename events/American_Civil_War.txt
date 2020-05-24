@@ -597,7 +597,7 @@ country_event = { #Long offered Peace
 		name = amcivwar.4005.a
 		add_political_power = -10
 		add_manpower = -1250
-		PSA = {
+		CAL = {
 		country_event = {
 		id = amcivwar.4006
 		hours = 6
@@ -692,6 +692,7 @@ country_event = { #Talk Down the CSA
 	picture = ACW_soldiers_running
 
 	trigger = {
+	tag = TEX
 	CSA = {
 	exists = yes
 	}
@@ -707,7 +708,9 @@ country_event = { #Talk Down the CSA
 
 	fire_only_once = yes
 
-	days = 5
+	mean_time_to_happen = {
+	days = 1
+	}
 	
 	option = { #Send Maverick
 		name = amcivwar.4009.a
@@ -819,6 +822,27 @@ country_event = { #CSA Accepts
 	}
 }
 
+country_event = { #Long Declines
+	id = amcivwar.4013
+	title = amcivwar.4013.t
+	desc = amcivwar.4013.d
+	picture = ACW_soldiers_running
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = { #It'll have to do
+		name = amcivwar.4013.a
+		add_political_power = 20
+		add_manpower = 300
+		add_popularity = { ideology = authoritarian_democrat popularity = -0.05 }
+		add_war_support = 0.1
+		add_political_power = -25
+	}
+}
+
+
 country_event = { # Civil War Begins
 	id = amcivwar.5
 	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.5"}
@@ -929,7 +953,7 @@ country_event = { # Last Men Standing
 	}
 	}
 
-	option = { Send the Offer
+	option = { ###Send the Offer
 	name = amcivwar.5000.a
 	if = {
 	limit = { has_country_flag = PSA_AUS_TREATY 
@@ -954,7 +978,6 @@ country_event = { # Last Men Standing
 	days = 2
 			}
 		}
-	}
 	}
 	if = {
 	limit = { has_country_flag = PSA_AUS_TREATY
@@ -1002,6 +1025,7 @@ country_event = { # Last Men Standing
 		country_event = {
 		id = amcivwar.5002
 		days = 2
+				}
 			}
 		}
 	}
@@ -1082,10 +1106,11 @@ country_event = { # Last Men Standing
 	country_event = {
 	id = amcivwar.5001
 	days = 2
+			}
 		}
 	}
-	}
 }
+
 country_event = { # PSA Demands we stand down
 	id = amcivwar.5001
 	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.5001"}
@@ -1117,21 +1142,31 @@ country_event = { # PSA Demands we stand down
 	text = amcivwar.5001.d.CSAPSA
 	trigger = {
 	tag = CSA
-	}
 	TEX = {
 		exists = no
+		}
 	}
 	}
+	
 	option = {
 		name = amcivwar.5001.a
 		if = {
 		limit = { tag = CSA }
-		declare_war_on = CAL
-		declare_war_on = TEX
+		declare_war_on = {
+		target = CAL
+		type = annex_everything
+			}
+		declare_war_on = {
+		target = TEX
+		type = annex_everything
+			}
 		}
 		if = {
 		limit = { tag = TEX }
-		declare_war_on = CAL
+		declare_war_on = {
+		target = CAL
+		type = annex_everything
+			}
 		}
 	}
 	option = {
@@ -1140,19 +1175,26 @@ country_event = { # PSA Demands we stand down
 		tag = CSA
 		has_global_flag = AUS_CSA_TREATY
 		}
-		declare_war_on = CAL
+		declare_war_on = {
+		target = CAL
+		type = annex_everything
+		}
 		add_political_power = -50
 		add_stability = -0.05
 	}
 }
 
 ### PSA OFFER (PEACE) ###
-country_event = { # Huey Long declares Rebellion against MacArthur
+country_event = { # PSA offers peace
 	id = amcivwar.5002
 	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.5002"}
 	title = amcivwar.5002.t
 	picture = GFX_Long_Rally
 
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
 	desc = { ###AUS offered peace###
 	text = amcivwar.5002.d.AUSPSA
 	trigger = {
@@ -1177,9 +1219,9 @@ country_event = { # Huey Long declares Rebellion against MacArthur
 	text = amcivwar.5002.d.CSAPSA
 	trigger = {
 	tag = CSA
-	}
 	TEX = {
 		exists = no
+	}
 	}
 	}
 	option = {  ###Offered peace###
@@ -1226,13 +1268,25 @@ country_event = { # Huey Long declares Rebellion against MacArthur
 		name = amcivwar.5002.b
 		if = {
 		limit = { tag = TEX }
-		declare_war_on = CSA
-		declare_war_on = CAL
+		declare_war_on = {
+		target = CSA
+		type = annex_everything
+		}
+		declare_war_on = {
+		target = CAL
+		type = annex_everything
+			}
 		}
 		if = {
 		limit = { tag = CSA }
-		declare_war_on = CAL
-		declare_war_on = TEX
+		declare_war_on = {
+		target = CAL
+		type = annex_everything
+		}
+		declare_war_on = {
+		target = TEX
+		type = annex_everything
+			}
 		}
 	}
 }
@@ -1402,7 +1456,10 @@ country_event = { # Results are in
 		}
 	}
 	CAL = {
-	annex_country = TEX
+	annex_country = {
+	target = TEX
+	transfer_troops = yes
+		}
 		}
 	}
 	if = {
@@ -1413,7 +1470,9 @@ country_event = { # Results are in
 		}
 	}
 	CAL = {
-	annex_country = CSA
+	annex_country = {
+	target = CSA
+	transfer_troops = yes
 		}
 	}
 	if = {
@@ -1427,6 +1486,7 @@ country_event = { # Results are in
 	CAL = {
 		change_tag_from = CSA
 		}
+		}
 	}
 	}
 	option = {
@@ -1438,8 +1498,11 @@ country_event = { # Results are in
 		}
 	}
 	TEX = {
-	annex_country = CAL
+	annex_country = {
+	target = CAL
+	transfer_troops = yes
 		}
+	}
 	if = {
 	limit = {
 	CSA = {
@@ -1448,7 +1511,10 @@ country_event = { # Results are in
 		}
 	}
 	TEX = {
-	annex_country = CSA
+	annex_country = {
+	target = CSA
+	transfer_troops = yes
+	}
 		}
 	}
 	if = {
@@ -1476,7 +1542,10 @@ country_event = { # Results are in
 		}
 	}
 	CSA = {
-	annex_country = CAL
+	annex_country = {
+	target = CAL
+	transfer_troops = yes
+	}
 		}
 	if = {
 	limit = {
@@ -1486,7 +1555,10 @@ country_event = { # Results are in
 		}
 	}
 	CSA = {
-	annex_country = TEX
+	annex_country = {
+	target = TEX
+	transfer_troops = yes
+		}
 		}
 	}
 	}
@@ -1532,23 +1604,25 @@ country_event = { # Last Men Standing - CSA and AUS
 		CSA = {
 		country_event = { id = amcivwar.5008 hours = 8 }
 		}
+		}
 		add_political_power = -45
 		add_stability = 0.05
-		}
 	}
 	option = {
 		name = amcivwar.5007.b
 		ai_chance = {
 			factor = 10
 		}
-		declare_war_on = CSA
+		declare_war_on = {
+		target = CSA
+		type = annex_everything
+		}
 		add_political_power = 40
 		add_popularity = { ideology = social_conservative popularity = 0.04 }
 		add_popularity = { ideology = authoritarian_democrat popularity = 0.02 }
 		add_popularity = { ideology = paternal_autocrat popularity = 0.04 }
 		add_stability = -0.05
 	}
-	
 }
 
 country_event = { # Last Men Standing - CSA and AUS
@@ -1579,7 +1653,10 @@ country_event = { # Last Men Standing - CSA and AUS
 		ai_chance = {
 			factor = 90
 		}
-		declare_war_on = TEX
+		declare_war_on = {
+		target = TEX
+		type = annex_everything
+		}
 		add_political_power = 30
 		add_stability = -0.05
 		add_war_support = 0.05
@@ -1636,12 +1713,16 @@ country_event = { # Results
 		add_political_power = 50
 		add_stability = 0.05
 	CSA = {
-	annex_country = TEX
+	annex_country = {
+	target = TEX
+	transfer_troops = yes
+	}
 	}
 	if = {
 	limit = { tag = TEX }
 	CSA = {
 		change_tag_from = TEX
+		transfer_troops = yes
 		}
 	}
 	}
@@ -1651,12 +1732,16 @@ country_event = { # Results
 			factor = 90
 		}
 	TEX = {
-	annex_country = CSA
+	annex_country = {
+	target = CSA
+	transfer_troops = yes
+		}
 	}
 	if = {
 	limit = { tag = CSA }
 	TEX = {
 		change_tag_from = CSA
+		transfer_troops = yes
 		}
 	}
 		add_political_power = 50
@@ -1725,6 +1810,85 @@ country_event = { # Huey Long declares Rebellion against MacArthur
 			country_event = { id = amcivwar.7 hours = 8 }
 		}
 		TEX = {
+			change_tag_from = USA
+		}
+	}
+}
+
+country_event = { # Old Democrats Breakoff
+	id = amcivwar.6000
+	title = amcivwar.6000.t
+	picture = GFX_USA_reed
+
+	is_triggered_only = yes
+
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event amcivwar.6000"
+		USA_release_COR = yes
+	}
+
+	desc = { 
+	text = amcivwar.6000.d.long
+	trigger = {
+	has_country_flag = USA_long_was_president
+		}
+	}
+	
+	desc = { 
+	text = amcivwar.6000.d.macarthur
+	trigger = {
+	has_country_leader = { ruling_only = yes name = "Douglas MacArthur" }
+		}
+	}
+	
+	desc = {
+	text = amcivwar.6000.d.liberal
+	trigger = {
+	NOT = {
+	has_country_flag = USA_long_was_president
+	has_country_leader = { ruling_only = yes name = "Douglas MacArthur" }
+		}
+	}
+	}
+	
+	option = {
+		name = amcivwar.6000.a
+		ai_chance = {
+			factor = 100
+		}
+		COR = {
+			set_country_flag = choice_made
+		}
+		add_popularity = {
+			ideology = paternal_autocrat
+			popularity = -0.1
+		}
+		add_popularity = {
+			ideology = national_populist
+			popularity = -0.3
+		}
+		add_stability = 0.15
+		add_war_support = 0.2
+	}
+	option = {
+		name = amcivwar.6000.b
+		ai_chance = {
+			factor = 0
+		}
+		COR = {
+			set_country_flag = choice_made
+		}
+		add_popularity = {
+			ideology = paternal_autocrat
+			popularity = -0.05
+		}
+		add_popularity = {
+			ideology = national_populist
+			popularity = -0.3
+		}
+		add_stability = 0.15
+		add_war_support = 0.2
+		COR = {
 			change_tag_from = USA
 		}
 	}
@@ -1870,6 +2034,83 @@ country_event = { # Pacific States declares revolution against MacArthur
 	}
 }
 
+country_event = { # Reach out to the Victor
+	id = amcivwar.8000
+	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.8000"}
+	title = amcivwar.8000.t
+	desc = amcivwar.8000.d
+	picture = ACW_soldiers_running
+
+	trigger = {
+	tag = CAL
+	has_country_flag = USA_long_was_president
+	CAL = {
+	exists = yes
+	NOT = {
+	has_war_with = TEX
+		}
+	}
+	TEX = {
+	exists = yes
+		}
+	}
+	
+	mean_time_to_happen = {
+	hours = 15
+	}
+	
+	is_triggered_only = yes
+
+	option = {
+		name = amcivwar.8000.a
+		TEX = {
+		country_event = {
+		id = amcivwar.8001
+			}
+		}
+	}
+	
+	option = {
+		name = amcivwar.8000.b
+		add_war_support = 0.05
+		add_stability = -0.05
+		add_popularity = { ideology = authoritarian_democrat popularity = -0.02 }
+	}
+}
+
+country_event = { # PSA Offers Peace
+	id = amcivwar.8001
+	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.8001"}
+	title = amcivwar.8001.t
+	desc = amcivwar.8001.d
+	picture = ACW_soldiers_running
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = {
+		name = amcivwar.8001.a
+		CAL = {
+		country_event = {
+		id = amcivwar.4006
+			}
+		}
+	}
+	
+	option = {
+		name = amcivwar.8001.b
+		add_war_support = 0.1
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.01 }
+		add_political_power = 45
+		CAL = {
+		country_event = {
+		id = amcivwar.4013
+			}
+		}
+	}
+}
+
 news_event = {
 	id = amcivwar.9
 	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.9"}
@@ -1922,8 +2163,6 @@ country_event = { # Huey Long declares Rebellion against Olson
 		trigger = {
 			NOT = {
 				has_country_flag = USA_revolt_against_compromise_flag
-				has_country_flag = USA_fails_to_kill_long_flag
-				has_country_flag = USA_fails_to_kill_reed_flag
 			}
 		}
 	}
@@ -1933,21 +2172,11 @@ country_event = { # Huey Long declares Rebellion against Olson
 			has_country_flag = USA_revolt_against_compromise_flag
 		}
 	}
-	desc = { # failed assassination of Long
-		text = amcivwar.11.d.assassination_long
-		trigger = {
-			has_country_flag = USA_fails_to_kill_long_flag
-		}
-	}
-	desc = { # failed assassination of Reed
-		text = amcivwar.11.d.assassination_reed
-		trigger = {
-			has_country_flag = USA_fails_to_kill_reed_flag
-		}
-	}
 
 	is_triggered_only = yes
 
+	fire_only_once = yes
+	
 	immediate = {
 		set_country_flag = USA_olson_was_president
 		USA_release_TEX = yes
@@ -2015,6 +2244,79 @@ country_event = { # Huey Long declares Rebellion against Olson
 	}
 }
 
+country_event = { # Old Democrats Breakoff
+	id = amcivwar.1102
+	title = amcivwar.1102.t
+	desc = amcivwar.1102.d
+	picture = GFX_USA_reed
+	
+	desc = { # Nothing is done
+		text = amcivwar.11.d.nothing_is_done
+		trigger = {
+			NOT = {
+				has_country_flag = USA_revolt_against_compromise_flag
+			}
+		}
+	}
+	desc = { # Revolt against compromise
+		text = amcivwar.11.d.revolt_against_compromise
+		trigger = {
+			has_country_flag = USA_revolt_against_compromise_flag
+		}
+	}
+
+	is_triggered_only = yes
+
+	fire_only_once = yes 
+	
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event amcivwar.1102"
+		USA_release_COR = yes
+	}
+
+	option = {
+		name = amcivwar.1102.a
+		ai_chance = {
+			factor = 100
+		}
+		COR = {
+			set_country_flag = choice_made
+		}
+		add_popularity = {
+			ideology = paternal_autocrat
+			popularity = -0.1
+		}
+		add_popularity = {
+			ideology = national_populist
+			popularity = -0.15
+		}
+		add_stability = 0.15
+		add_war_support = 0.2
+	}
+	option = {
+		name = amcivwar.1102.b
+		ai_chance = {
+			factor = 0
+		}
+		COR = {
+			set_country_flag = choice_made
+		}
+		add_popularity = {
+			ideology = paternal_autocrat
+			popularity = -0.05
+		}
+		add_popularity = {
+			ideology = national_populist
+			popularity = -0.15
+		}
+		add_stability = 0.15
+		add_war_support = 0.2
+		COR = {
+			change_tag_from = USA
+		}
+	}
+}
+
 country_event = { # Jack Reed declares revolution against Olson
 	id = amcivwar.12
 	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.12"}
@@ -2025,8 +2327,6 @@ country_event = { # Jack Reed declares revolution against Olson
 		trigger = {
 			NOT = {
 				has_country_flag = USA_revolt_against_compromise_flag
-				has_country_flag = USA_fails_to_kill_long_flag
-				has_country_flag = USA_fails_to_kill_reed_flag
 			}
 		}
 	}
@@ -2034,18 +2334,6 @@ country_event = { # Jack Reed declares revolution against Olson
 		text = amcivwar.12.d.revolt_against_compromise
 		trigger = {
 			has_country_flag = USA_revolt_against_compromise_flag
-		}
-	}
-	desc = { # Full demands betrayal
-		text = amcivwar.12.d.full_demands
-		trigger = {
-			has_country_flag = USA_fails_to_kill_long_flag
-		}
-	}
-	desc = { # Attempted assassination of Jack Reed
-		text = amcivwar.12.d.assassination_reed
-		trigger = {
-			has_country_flag = USA_fails_to_kill_reed_flag
 		}
 	}
 
@@ -2080,15 +2368,6 @@ country_event = { # Jack Reed declares revolution against Olson
 		add_war_support = 0.2
 		hidden_effect = {
 			CSA_initial_events = yes
-			if = {
-				limit = { has_country_flag = USA_fails_to_kill_reed_flag }
-				country_event = { id = amcivwar.11 hours = 8 }
-			}
-			else = {
-				USA_initial_events = yes
-				news_event = { id = amcivwar.13 hours = 8 }
-				country_event = { id = amcivwar.20 days = 30 }
-			}
 		}
 	}
 	option = {
@@ -2115,15 +2394,6 @@ country_event = { # Jack Reed declares revolution against Olson
 		add_war_support = 0.2
 		hidden_effect = {
 			CSA_initial_events = yes
-			if = {
-				limit = { has_country_flag = USA_fails_to_kill_reed_flag }
-				country_event = { id = amcivwar.11 hours = 8 }
-			}
-			else = {
-				USA_initial_events = yes
-				news_event = { id = amcivwar.13 hours = 8 }
-				country_event = { id = amcivwar.20 days = 30 }
-			}
 		}
 		CSA = {
 			change_tag_from = USA
@@ -2323,6 +2593,64 @@ country_event = { # Jack Reed declares revolution against Garner
 	}
 }
 
+country_event = { # Old Democrats Breakoff
+	id = amcivwar.1500
+	title = amcivwar.1500.t
+	desc = amcivwar.1500.d
+	picture = GFX_USA_reed
+
+	is_triggered_only = yes
+
+	fire_only_once = yes 
+	
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event amcivwar.1500"
+		USA_release_COR = yes
+	}
+
+	option = {
+		name = amcivwar.1500.a
+		ai_chance = {
+			factor = 100
+		}
+		COR = {
+			set_country_flag = choice_made
+		}
+		add_popularity = {
+			ideology = paternal_autocrat
+			popularity = -0.1
+		}
+		add_popularity = {
+			ideology = national_populist
+			popularity = -0.15
+		}
+		add_stability = 0.15
+		add_war_support = 0.2
+	}
+	option = {
+		name = amcivwar.1500.b
+		ai_chance = {
+			factor = 0
+		}
+		COR = {
+			set_country_flag = choice_made
+		}
+		add_popularity = {
+			ideology = paternal_autocrat
+			popularity = -0.05
+		}
+		add_popularity = {
+			ideology = national_populist
+			popularity = -0.15
+		}
+		add_stability = 0.15
+		add_war_support = 0.2
+		COR = {
+			change_tag_from = USA
+		}
+	}
+}
+
 news_event = {
 	id = amcivwar.16
 	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.16"}
@@ -2346,7 +2674,7 @@ news_event = {
 
 
 ### Landon Was President ###
-country_event = { # Huey Long declares Rebellion against Landon
+country_event = { # Huey Long declares Rebellion against Norris
 	id = amcivwar.17
 	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.17"}
 	title = amcivwar.17.t
@@ -2370,11 +2698,7 @@ country_event = { # Huey Long declares Rebellion against Landon
 		}
 		add_popularity = {
 			ideology = authoritarian_democrat
-			popularity = -0.3
-		}
-		add_popularity = {
-			ideology = national_populist
-			popularity = -0.3
+			popularity = -0.2
 		}
 		add_stability = 0.15
 		add_war_support = 0.2
@@ -2401,11 +2725,7 @@ country_event = { # Huey Long declares Rebellion against Landon
 		}
 		add_popularity = {
 			ideology = authoritarian_democrat
-			popularity = -0.3
-		}
-		add_popularity = {
-			ideology = national_populist
-			popularity = -0.3
+			popularity = -0.2
 		}
 		add_stability = 0.15
 		add_war_support = 0.2
@@ -2427,11 +2747,69 @@ country_event = { # Huey Long declares Rebellion against Landon
 	}
 }
 
-country_event = { # Jack Reed declares revolution against Landon
+country_event = { # Old Democrats Breakoff
 	id = amcivwar.18
-	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.18"}
 	title = amcivwar.18.t
 	desc = amcivwar.18.d
+	picture = GFX_USA_reed
+
+	is_triggered_only = yes
+
+	fire_only_once = yes 
+	
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event amcivwar.18"
+		USA_release_COR = yes
+	}
+
+	option = {
+		name = amcivwar.18.a
+		ai_chance = {
+			factor = 100
+		}
+		COR = {
+			set_country_flag = choice_made
+		}
+		add_popularity = {
+			ideology = paternal_autocrat
+			popularity = -0.1
+		}
+		add_popularity = {
+			ideology = national_populist
+			popularity = -0.15
+		}
+		add_stability = 0.15
+		add_war_support = 0.2
+	}
+	option = {
+		name = amcivwar.18.b
+		ai_chance = {
+			factor = 0
+		}
+		COR = {
+			set_country_flag = choice_made
+		}
+		add_popularity = {
+			ideology = paternal_autocrat
+			popularity = -0.05
+		}
+		add_popularity = {
+			ideology = national_populist
+			popularity = -0.15
+		}
+		add_stability = 0.15
+		add_war_support = 0.2
+		COR = {
+			change_tag_from = USA
+		}
+	}
+}
+
+country_event = { # CSA Decalres against Norris
+	id = amcivwar.1800
+	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.1800"}
+	title = amcivwar.1800.t
+	desc = amcivwar.1800.d
 	picture = GFX_USA_reed
 
 	is_triggered_only = yes
@@ -2441,7 +2819,7 @@ country_event = { # Jack Reed declares revolution against Landon
 	}
 
 	option = {
-		name = amcivwar.18.a
+		name = amcivwar.1800.a
 		ai_chance = {
 			factor = 100
 		}
@@ -2476,7 +2854,7 @@ country_event = { # Jack Reed declares revolution against Landon
 		}
 	}
 	option = {
-		name = amcivwar.18.b
+		name = amcivwar.1800.b
 		ai_chance = {
 			factor = 0
 		}
