@@ -2007,8 +2007,8 @@ focus_tree = {
 			add_manpower = 2000
 			add_stability = -0.06
 			add_ideas = BBR_accelerate_integration_idea
-			popularity = { ideology = national_populist popularity = -0.5 }
-			popularity = { ideology = paternal_autocrat popularity = -0.05 }
+			add_popularity = { ideology = national_populist popularity = -0.03 }
+			add_popularity = { ideology = paternal_autocrat popularity = -0.02 }
 		}
 	}
 	focus = {# Socialist Party
@@ -4128,7 +4128,7 @@ focus_tree = {
 		id = BBR_progressive_democrats
 		icon = GFX_BBR_progressive_democrats
 		available = {
-			has_government = social liberal
+			has_government = social_liberal
 		}
 		cost = 6.00
 		x = 56
