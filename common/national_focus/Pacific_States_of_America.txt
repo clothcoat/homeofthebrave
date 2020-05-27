@@ -968,12 +968,7 @@ focus_tree = {
 				remove_idea = CAL_Marshall_plan_idea_1
 				add_idea = CAL_Marshall_plan_idea_2
 			}
-			add_tech_bonus = {
-				name = CAL_Extensive_Planning
-				bonus = 1
-				uses = 2
-				category = cat_grand_battle_plan
-			}
+		}
 	}
 	focus = {# Organizing Victory
 		id = CAL_organizing_victory
