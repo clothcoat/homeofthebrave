@@ -837,6 +837,62 @@ ideas = {
 				resistance_tick	= 0.05
 			}
 		}
+		ACW_black_nationalist_resistance_1 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ACW_black_nationalist_resistance_1"}
+			allowed = { always = no }
+			removal_cost = -1
+			picture = federalist_activity
+			modifier = {
+				encryption = -0.05
+				military_leader_cost_factor	= 0.1
+				local_resources	= -0.03
+				political_power_gain = -0.02
+				stability_factor = -0.05
+				resistance_tick	= 0.05
+			}
+		}
+		ACW_black_nationalist_resistance_2 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ACW_black_nationalist_resistance_2"}
+			allowed = { always = no }
+			removal_cost = -1
+			picture = federalist_activity
+			modifier = {
+				encryption = -0.05
+				military_leader_cost_factor	= 0.1
+				local_resources	= -0.03
+				political_power_gain = -0.02
+				stability_factor = -0.05
+				resistance_tick	= 0.05
+			}
+		}
+		ACW_black_nationalist_resistance_3 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ACW_black_nationalist_resistance_3"}
+			allowed = { always = no }
+			removal_cost = -1
+			picture = federalist_activity
+			modifier = {
+				encryption = -0.05
+				military_leader_cost_factor	= 0.1
+				local_resources	= -0.03
+				political_power_gain = -0.02
+				stability_factor = -0.05
+				resistance_tick	= 0.05
+			}
+		}
+		ACW_black_nationalist_resistance_4 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ACW_black_nationalist_resistance_4"}
+			allowed = { always = no }
+			removal_cost = -1
+			picture = federalist_activity
+			modifier = {
+				encryption = -0.05
+				military_leader_cost_factor	= 0.1
+				local_resources	= -0.03
+				political_power_gain = -0.02
+				stability_factor = -0.05
+				resistance_tick	= 0.05
+			}
+		}
 		USA_civil_war_aftermath_idea = { #Civil War Aftermath
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_civil_war_aftermath_idea"}
 			allowed = { always = no }

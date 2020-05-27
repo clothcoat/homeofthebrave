@@ -708,7 +708,7 @@ focus_tree = {
 	focus = {
 		id = USA_president_murray
 		icon = GFX_goal_USA_president_murray
-		cost = 0
+		cost = 0.75
 		relative_position_id = USA_president_long
 		x = 4
 		y = 0
@@ -718,34 +718,26 @@ focus_tree = {
 
 		available = {
 			custom_trigger_tooltip = {
-				tooltip = USA_reed_is_president
+				has_country_flag = USA_murray_is_president
 				has_country_flag = USA_election_1936_flag
 				NOT = { has_country_flag = USA_had_1940_election }
-				has_idea = USA_Jack_Reed_hog_syn
 			}
 		}
 
 		available_if_capitulated = yes
 		cancel_if_invalid = yes
 		continue_if_invalid = no
-
-		bypass = {
-			custom_trigger_tooltip = {
-				tooltip = USA_reed_is_president
-				has_country_flag = USA_election_1936_flag
-				NOT = { has_country_flag = USA_had_1940_election }
-				has_idea = USA_Jack_Reed_hog_syn
-			}
-		}
+		
 		completion_reward = {
 			custom_effect_tooltip = unlock_focuses
+			add_political_power = 15
 		}
 	}
 	
 	focus = {
-		id = USA_the_last_word
+		id = USA_attack_the_elite
 		icon = GFX_goal_support_fascism
-		cost = 0
+		cost = 4
 		relative_position_id = USA_president_murray
 		x = 0
 		y = 2
@@ -756,24 +748,39 @@ focus_tree = {
 			focus = USA_president_murray
 		}
 		available = {
-			custom_trigger_tooltip = {
-				tooltip = USA_reed_is_president
-				has_country_flag = USA_election_1936_flag
-				NOT = { has_country_flag = USA_had_1940_election }
-				has_idea = USA_Jack_Reed_hog_syn
+			has_country_leader = {
+			ruling_only = yes name = "William H. Murray"
 			}
 		}
 		available_if_capitulated = yes
 		cancel_if_invalid = yes
 		continue_if_invalid = no
-		bypass = {
-			custom_trigger_tooltip = {
-				tooltip = USA_reed_is_president
-				has_country_flag = USA_election_1936_flag
-				NOT = { has_country_flag = USA_had_1940_election }
-				has_idea = USA_Jack_Reed_hog_syn
+		completion_reward = {
+			custom_effect_tooltip = unlock_focuses
+		}
+	}
+	
+	focus = {
+		id = USA_the_last_word
+		icon = GFX_goal_support_fascism
+		cost = 4
+		relative_position_id = USA_president_murray
+		x = 0
+		y = 2
+		ai_will_do = {
+			factor = 100
+		}
+		prerequisite = {
+			focus = USA_president_murray
+		}
+		available = {
+			has_country_leader = {
+			ruling_only = yes name = "William H. Murray"
 			}
 		}
+		available_if_capitulated = yes
+		cancel_if_invalid = yes
+		continue_if_invalid = no
 		completion_reward = {
 			custom_effect_tooltip = unlock_focuses
 		}
@@ -782,7 +789,7 @@ focus_tree = {
 	focus = {
 		id = USA_crack_the_minutemen
 		icon = GFX_goal_generic_major_war
-		cost = 0
+		cost = 5
 		relative_position_id = USA_president_murray
 		x = 1
 		y = 1
@@ -803,14 +810,6 @@ focus_tree = {
 		available_if_capitulated = yes
 		cancel_if_invalid = yes
 		continue_if_invalid = no
-		bypass = {
-			custom_trigger_tooltip = {
-				tooltip = USA_reed_is_president
-				has_country_flag = USA_election_1936_flag
-				NOT = { has_country_flag = USA_had_1940_election }
-				has_idea = USA_Jack_Reed_hog_syn
-			}
-		}
 		completion_reward = {
 			custom_effect_tooltip = unlock_focuses
 		}
@@ -822,10 +821,9 @@ focus_tree = {
 		icon = GFX_USA_cactusjack
 		cost = 6.00
 		available = {
-			OR = {
+				has_country_flag = USA_president_inaugurated
 				has_country_flag = USA_garner_is_president
 			}
-		}
 		x = 11
 		y = 1
 		ai_will_do = {
@@ -1724,7 +1722,7 @@ focus_tree = {
 	
 	focus = {# Progressive Collaboration
 		id = USA_progressive_collaboration
-		icon = GFX_USA_progressive_victory
+		icon = GFX_CAL_progressive_victory
 		cost = 1.50
 		available = {
 			has_government = social_democrat
@@ -1896,7 +1894,7 @@ focus_tree = {
 	
 	focus = {# War on the Klan
 		id = USA_war_on_the_klan
-		icon = GFX_goal_CON_disband_the_klan
+		icon = GFX_goal_COR_disband_the_klan
 		cost = 4.00
 		available = {
 			has_government = social_democrat

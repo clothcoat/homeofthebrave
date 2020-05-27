@@ -1647,7 +1647,7 @@ country_event = { # Great Heat Wave over
 
 	trigger = {
 	tag = USA
-	date = 1936.10.5
+	date > 10.5.1936
 	}
 
 	fire_only_once = yes
@@ -1840,24 +1840,11 @@ country_event = { # The 1936 Election - Coalition
 		ai_chance = {
 			factor = 10
 			modifier = {
-		    factor = 0
-		    OR = {
-					has_game_rule = {
-						rule = USA_civil_war
-						option = USA_CIVIL_WAR_THREE_SIDES
-					}
-					has_game_rule = {
-						rule = USA_civil_war
-						option = USA_CIVIL_WAR_COMPROMISE_WITH_REED_USA_VS_TEX
-					}
-				}
-			}
-			modifier = {
 				factor = 2
 				check_variable = { SPA_strength > 2 }
 			}
 			modifier = {
-				factor = 2
+				factor = 3
 				check_variable = { SPA_strength > 4 }
 			}
 		}
@@ -1960,19 +1947,6 @@ country_event = { # The 1936 Election - Coalition
 		name = ustates.34.c
 		ai_chance = {
 			factor = 10
-			modifier = {
-		    factor = 0
-		    OR = {
-					has_game_rule = {
-						rule = USA_civil_war
-						option = USA_CIVIL_WAR_THREE_SIDES
-					}
-					has_game_rule = {
-						rule = USA_civil_war
-						option = USA_CIVIL_WAR_COMPROMISE_WITH_REED_USA_VS_TEX
-					}
-				}
-			}
 			modifier = {
 				factor = 2
 				check_variable = { AFP_strength > 2 }
@@ -2081,24 +2055,14 @@ country_event = { # The 1936 Election - Coalition
 			factor = 10
 			modifier = {
 		    factor = 0
-		    OR = {
-					has_game_rule = {
-						rule = USA_civil_war
-						option = USA_CIVIL_WAR_THREE_SIDES
-					}
-					has_game_rule = {
-						rule = USA_civil_war
-						option = USA_CIVIL_WAR_COMPROMISE_WITH_REED_USA_VS_TEX
-					}
-				}
 			}
 			modifier = {
 				factor = 2
-				check_variable = { AFP_strength > 2 }
+				check_variable = { ODP_strength > 2 }
 			}
 			modifier = {
 				factor = 2
-				check_variable = { AFP_strength > 4 }
+				check_variable = { ODP_strength > 4 }
 			}
 		}
 		set_country_flag = USA_had_1936_election
@@ -2118,17 +2082,13 @@ country_event = { # The 1936 Election - Coalition
 			elections_allowed = yes
 		}
 		hidden_effect = {
-			set_country_flag = USA_president_long
+			set_country_flag = USA_murray_is_president
 		}
 		hidden_effect = {
 			add_ideas = USA_William_Murray_hog
 			add_ideas = USA_Robert_Rice_Reynolds_for_npo
 			add_ideas = USA_Henry_Ford_eco_pau
 			add_ideas = USA_John_Elliott_Rankin_sec_pau
-		}
-		add_popularity = {
-			ideology = authoritarian_democrat
-			popularity = 0.11
 		}
 
 		hidden_effect = {
@@ -2612,16 +2572,56 @@ country_event = { # SPA Contest Election Results!
 }
 
 country_event = { # AFP Contest Election Results!
+	id = ustates.3600
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.3600"}
+	title = ustates.3600.t
+	picture = GFX_Long_Rally
+	
+	desc = {
+	text = ustates.3600.d.reed
+	trigger = {
+			has_country_leader = {
+				name = "Jack Reed"
+				ruling_only = yes
+			}
+		}
+	}
+	
+	desc = {
+	text = ustates.3600.d.Murray
+	trigger = {
+			has_country_leader = {
+				name = "William H. Murray"
+				ruling_only = yes
+			}
+		}
+	}
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	option = {
+		name = ustates.3600.a
+		add_political_power = -20
+		add_stability = -0.05
+	}
+}
+
+country_event = { # ODP Contest Election Results!
 	id = ustates.37
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.37"}
 	title = ustates.37.t
 	desc = ustates.37.d
 	picture = GFX_Long_Rally
 
+	fire_only_once = yes
+	
 	is_triggered_only = yes
 
 	option = {
 		name = ustates.37.a
+		add_political_power = -20
 		add_stability = -0.05
 	}
 }
@@ -3463,8 +3463,9 @@ country_event = { # ODP and Long denounce President
 			country_event = { id = amcivwar.1102 days = 2 }
 			country_event = { id = amcivwar.12 days = 3 }
 			country_event = { id = ustates.78 days = 4 }
-			country_event = { id = amcivwar.11 days = 5 }
-			country_event = { id = amcivwar.3000 days = 6 }
+			country_event = { id = amcivwar.11 days = 5 } ###Huey Revolt###
+			country_event = { id = amcivwar.3 days = 6 } ###CAL###
+			country_event = { id = amcivwar.3000 days = 7 }
 			}
 		}
 	}
@@ -3840,7 +3841,7 @@ country_event = { # Murray reject the Compromise
 		hidden_effect = { #CAL
 			country_event = { id = amcivwar.3 days = 9 }
 		}
-		hidden_effect = {
+		hidden_effect = { #WCC
 		country_event = { id = amcivwar.3000 days = 10 }
 		}
 	}
@@ -4111,8 +4112,9 @@ country_event = { # Detroit Bloodbath
 		country_event = { id = amcivwar.12 days = 3 }
 		country_event = { id = amcivwar.1102 days = 4 }
 		country_event = { id = ustates.78 days = 5 }
-		country_event = { id = amcivwar.1101 days = 6 }
+		country_event = { id = amcivwar.11 days = 6 }
 		country_event = { id = amcivwar.3 days = 7 }
+		country_event = { id = amcivwar.3000 days = 7 }
 		}
 		country_event = { id = amcivwar.3000 days = 8 }
 		add_to_variable = { var = SPA_strength value = 2 }
@@ -4140,10 +4142,10 @@ country_event = { # Compromise Fails
 		add_political_power = -15
 		add_country_flag = USA_compromise_failed
 		hidden_effect = {
-		country_event = { id = amcivwar.12 days = 3 }
-		country_event = { id = amcivwar.1102 days = 4 }
+		country_event = { id = amcivwar.12 days = 3 } ###Jack Reed
+		country_event = { id = amcivwar.1102 days = 4 } ###Murray Revolts
 		country_event = { id = ustates.78 days = 5 }
-		country_event = { id = amcivwar.1101 days = 6 }
+		country_event = { id = amcivwar.11 days = 6 } ###LONG
 		country_event = { id = amcivwar.3 days = 7 }
 		country_event = { id = amcivwar.3000 days = 8 }
 		}
@@ -4180,7 +4182,7 @@ country_event = { # Garner Inaugural Address
 	}
 }
 
-country_event = { # Garner's Hardliner
+country_event = { # Garner's Hardline
 	id = ustates.9100
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.9100"}
 	title = ustates.9100.t
@@ -4448,7 +4450,6 @@ country_event = { # Fall of Stephenson
 
 	option = { #
 		name = ustates.9108.a
-		add_popularity = 50
 		add_stability = 0.05
 		add_popularity = { ideology = national_populist popularity = -0.06 }
 		hidden_effect = {

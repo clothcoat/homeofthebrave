@@ -137,6 +137,7 @@ american_russian_alliance:0 "Russian-American Coalition"
 
 ### ToolTips ###
 USA_macarthur_victory_tooltip:0 "§RMacArthur assumes control of America§!\n"
+USA_president_garner:0 ""§YGarner is President§!\n""
 USA_semper_fi_tooltip:0 "§GWill create an elite unit of marines§!\n"
 USA_trade_contracts_tooltip:0 "We shall seek to improve trade relations around the world\n"
 us_research_name:0 "Inter-American Defence College\n"
@@ -471,34 +472,10 @@ USA_fight_longist_terrorists:0 "Fight Longist Terrorists"
 USA_progressive_desegregate_the_military:0 "Desegregate the Military"
 USA_progressive_desegregate_the_military_desc:0 "'Americans of all races come to America seeking a better life, and Americans of all races seek to fight and preserve American Liberty against her enemies regardless of their race. Yet for far too long that has not been the case and we have segregated the Army and diminished the Light of Liberty just a little. Yet, that ends today for the Army shall no longer be Segregated/'"
 USA_progressive_railroad_nationalization:0 "Nationalize the Railroad"
-USA_progressive_western_investment:0 "Invest in the Western States"
-USA_progressive_great_lakes_waterway:0 "Great Lakes Waterway"
-USA_progressive_farming_subsides:0 "Farming Subsidies"
-USA_progressive_tariffs:0 "Protect American Industries"
-USA_progressive_anti_lynching_law:0 "Anti-Lynching Law"
-USA_progressive_public_owned_corporations:0 "Public Owned Corporations"
-USA_progressive_post_office_support:0 "Post Office Expansion"
 
 USA_republican_policies:0 "Republican Policies"
 USA_republican_policies_desc:0 "The Republican Party's platform has a number of laws and policies it will strive to pass."
 USA_republican_desegregate_the_military:0 "Desegregate The Military"
-USA_republican_anti_lynching_law:0 "Anti-Lynching Law"
-USA_republican_energy_companies:0 "Support Energy Companies"
-USA_republican_highway:0 "National Highway Act"
-USA_republican_business_support:0 "Support Businesses"
-
-USA_liberal_democratic_policies:0 "Liberal Democratic Policies"
-USA_liberal_democratic_policies_desc:0 "The Liberal wing of the Democratic Party has a platform involving a number of laws and policies it seeks to pass."
-USA_liberal_highway:0 "National Highway Act"
-USA_liberal_business_support:0 "Support Business"
-
-USA_conservative_democratic_policies:0 "Conservative Democratic Policies"
-USA_conservative_democratic_policies_desc:0 "The Conservative wing of the Democratic Party has a platform involving a number of laws and policies it seeks to pass."
-USA_conservative_social_hygine:0 "Promote Social Hygiene"
-USA_conservative_southern_investment:0 "Southern Investments"
-USA_conservative_moral_education:0 "Moral Education"
-USA_conservative_tarrifs:0 "Support Trade Tariff"
-USA_conservative_gospel_of_wealth:0 "Promote the Gospel of Wealth"
 
 USA_reunite_with_PSA:0 "Re-unite with [From.GetNameDef]"
 USA_reunite_with_PSA_desc:0 "MacArthur has stepped down from power and we are restored to a proper democracy. Thus we should approach [From.GetNameDef] and ask them to rejoin us - after all, was their goal not already accomplished? Democracy in America?"
@@ -1459,6 +1436,26 @@ ustates.6300.t:0 "Murray's Inaugural Address"
 ustates.6300.d:0 "The country's social problems have forced the American people to turn to radical solutions; the two-party system has broken down, and William H. Murray is to be sworn in as the 31st president of the United States with John E. Rankin being sworn in as the Vice President with the support of Conservative Democrats and the right-wing "fringe" of the Republican Party giving him just enough support to take Congress. In a stirring speech in Washington DC, Murray has pledged to defend the interest of the American people and to destroy those who would threaten them. Naturally this has outraged the SPA and the ODP's slim coalition in Congress means that it may find it challenging to pass meaningful legislation, especially in the senate where an assortment of Democratic, Republican, Progressive and of course SPA senators have promised to filibuster any law they see as detrimental to America."
 ustates.6300.a:0 "God Bless America."
 
+ustates.6300.t:0 "Reed and Long reinforce militias!"
+ustates.6300.d:0 "In response to Murray's election both Jack Reed and Huey Long have doubled down on reinforcing their respective militias, seemingly dropping any pretense of not offically being their leaders. Condemning Murray as a threat to democracy, Long demands he stay clear of AFP territory while Reed all but promises future conflict."
+ustates.6300.a:0 "Traitors!"
+
+ustates.6300.t:0 "Bankers Resist!"
+ustates.6300.d:0 "As the establishment class resists our bill to break up banks and have those in ODP territory controlled by the states, it becomes clear we can not pass our desired legislation through Congress and executive orders will have to suffice. On the plus side, Murray's anti-bank activities has increased his popularity with the common people."
+ustates.6300.a:0 "Fools"
+
+ustates.6300.t:0 "Penalizing the corrupt"
+ustates.6300.d:0 "It is obvious that the bankers and lobbyists have to much influence in DC, often working for the good of their own pockets than the people. As such Murray has announced he shall dig through every corrupter working against the ODP to find the crimes they have committed and prosecute them whenever possible. Of course, this announcement has set off a firestorm of hatred among the other parties but will weaken the corrupt establishment."
+ustates.6300.a:0 "Good!"
+
+ustates.6300.t:0 "Rockefeller Investigated!"
+ustates.6300.d:0 "The Oil Tycoon John D. Rockefeller has aligned himself with Republican politics and greed for too long, and now he is paying the price of putting profit among national brotherhood. We have found increased "
+ustates.6300.a:0 "Good!"
+
+ustates.6300.t:0 "Reed and Long reinforce militias!"
+ustates.6300.d:0 "In response to Murray's election both Jack Reed and Huey Long have doubled down on reinforcing their respective militias, seemingly dropping any pretense of not offically being their leaders. Condemning Murray as a threat to democracy, Long demands he stay clear of AFP territory while Reed all but promises future conflict."
+ustates.6300.a:0 "Traitors!"
+
 ### President Curtis/Landon ###
 
 ustates.64.t:0 "Presidential Inauguration"
@@ -1994,7 +1991,7 @@ ustates.182.t:0 "Barkley Ends The Corvee System"
 ustates.182.d:0 "A division appears between President Barkley and the Democratic Party on Fair Deal Infrastructure. A Congressional debate brought up the idea of allowing a smaller community works to be paid by the government, with repair being handled by the Corvée system. The Corvée system is a tax imposed to pay for prisoners to repair public works. President Barkley spoke out against this idea, as his time in Kentucky taught him that penal labour will never surpass contract labour. This stand also puts pressure on Southern Democrats in his own party that support a state-financed and cheap reconstruction plan. National attention to the Corvée system has led to most states outlawing it."
 ustates.182.a:0 "Rightfully So."
 
-ustates.183.t:0 "Russel's Chain Gang Labor Exposed"
+ustates.183.t:0 "Russell's Chain Gang Labor Exposed"
 ustates.183.d:0 "Richard Russell's career in Georgia prior to the White House wasn't without its controversy. As a cost-cutting measure, Russell authorized the use of penal labour to undertake constructions for the state. This free labour was compounded by poor living conditions and has eventually come back to haunt Russell. A former prisoner who had his conviction overturned has written a book entitled 'I Am a Fugitive from a Georgia Chain Gang!'. This book describes a corrupt penal system and puts the blame on now-President Russell. Those critical of the President are having a field day with this. Rumours of Hollywood planning a movie on this book have also circulated."
 ustates.183.a:0 "Who would believe a Prisoner?"
 

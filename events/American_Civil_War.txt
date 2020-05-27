@@ -2411,7 +2411,6 @@ country_event = { # Huey Long declares Rebellion against Olson
 	fire_only_once = yes
 	
 	immediate = {
-		set_country_flag = USA_olson_was_president
 		USA_release_TEX = yes
 	}
 
