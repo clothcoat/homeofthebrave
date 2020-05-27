@@ -72,19 +72,8 @@ country_event = { # Black Monday hits America
 
 	option = {
 		name = ustates.2.a
-		add_stability = -0.01
-		if = {
-			limit = {
-				has_idea = USA_great_depression
-			}
-			swap_ideas = {
-				remove_idea = USA_great_depression
-				add_idea = USA_black_monday
-			}
-		}
-		else = {
+		add_stability = -0.03
 			add_ideas = USA_black_monday
-		}
 	}
 }
 
@@ -206,7 +195,7 @@ country_event = { # Republican Nomination
 			} #Dem Nomination
 		country_event = {
 				id = ustates.6
-				days = 70
+				days = 75
 			} #Speech
 		}
 	}
@@ -224,7 +213,7 @@ country_event = { # Republican Nomination
 			} #Dem Nomination
 		country_event = {
 				id = ustates.6001
-				days = 70
+				days = 75
 			} #Speech
 		}
 	}
@@ -634,9 +623,9 @@ country_event = { # Democrat voters align with the ODP
 			ideology = national_populist
 			popularity = 0.01
 		}
-		custom_effect_tooltip = USA_AFP_gains_strength
+		custom_effect_tooltip = USA_ODP_gains_strength
 		hidden_effect = {
-			add_to_variable = { var = AFP_strength value = 1 }
+			add_to_variable = { var = ODP_strength value = 1 }
 		}
 		hidden_effect = {
 		country_event = {
@@ -1217,7 +1206,7 @@ country_event = { # Red Summer
 	}
 }
 
-country_event = { # Special Election(Senate) - Texas
+country_event = { # Special Election Jersey
 	id = ustates.25
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.25"}
 	title = ustates.25.t
@@ -1264,7 +1253,7 @@ country_event = { # Special Election(Senate) - Texas
 			ideology = paternal_autocrat
 			popularity = 0.02
 		}
-		custom_effect_tooltip = USA_ODP_loses_strength
+		custom_effect_tooltip = USA_ODP_gains_strength
 		hidden_effect = {
 			add_to_variable = { var = ODP_strength value = 1 }
 		}
@@ -1535,8 +1524,8 @@ country_event = { # Fighting in Arkansas
 		name = ustates.30011.a
 		add_political_power = -95
 		add_manpower = -780
-		add_popularity = { ideology = authoritarian_democrat popularity = -0.01 }
-		add_popularity = { ideology = national_populist popularity = -0.01 }
+		add_popularity = { ideology = authoritarian_democrat popularity = -0.02 }
+		add_popularity = { ideology = national_populist popularity = -0.02 }
 		custom_effect_tooltip = USA_ODP_loses_strength
 		custom_effect_tooltip = USA_AFP_loses_strength
 		hidden_effect = {
@@ -1563,7 +1552,7 @@ country_event = { # Fighting in Arkansas
 		add_political_power = -40
 		add_stability = -0.01
 		add_manpower = -250
-		add_popularity = { ideology = national_populist popularity = -0.04 }
+		add_popularity = { ideology = authoritarian_democrat popularity = -0.04 }
 		custom_effect_tooltip = USA_AFP_loses_strength
 		hidden_effect = {
 			add_to_variable = { var = AFP_strength value = 1 }
@@ -1994,16 +1983,6 @@ country_event = { # The 1936 Election - Coalition
 			}
 		}
 		set_country_flag = USA_had_1936_election
-		hidden_effect = {
-			create_country_leader = {
-				name = "Huey Long"
-				desc = "POLITICS_HUEY_LONG_DESC"
-				picture = "Portrait_USA_Huey_Long.tga"
-				expire = "1965.1.1"
-				ideology = authoritarian_democrat_subtype
-				traits = {}
-			}
-		}
 		set_politics = {
 			ruling_party = authoritarian_democrat
 			election_frequency = 48
@@ -2015,7 +1994,7 @@ country_event = { # The 1936 Election - Coalition
 		hidden_effect = {
 			add_ideas = USA_Huey_Long_hog_ade
 			add_ideas = USA_Charles_Coughlin_for_ade
-			add_ideas = USA_William_Frederick_Lemke_eco_ade
+			add_ideas = TEX_William_Frederick_Lemke_hog_ade
 			add_ideas = USA_Gerald_K_Smith_sec_pau
 		}
 		add_popularity = {
@@ -2127,7 +2106,7 @@ country_event = { # The 1936 Election - Coalition
 			create_country_leader = {
 				name = "William H. Murray"
 				desc = "POLITICS_WILLIAM_H_MURRAY_DESC"
-				picture = "gfx/leaders/USA/Portrait_William_H_Murray_2.tga"
+				picture = "gfx/leaders/CUR/Portrait_William_H_Murray_2.tga"
 				expire = "1965.1.1"
 				ideology = paternal_autocrat_subtype
 				traits = {}
@@ -2143,7 +2122,7 @@ country_event = { # The 1936 Election - Coalition
 		}
 		hidden_effect = {
 			add_ideas = USA_William_Murray_hog
-			add_ideas = TEX_Robert_Rice_Reynolds_for_npo
+			add_ideas = USA_Robert_Rice_Reynolds_for_npo
 			add_ideas = USA_Henry_Ford_eco_pau
 			add_ideas = USA_John_Elliott_Rankin_sec_pau
 		}
@@ -2446,12 +2425,16 @@ country_event = { # The 1936 Election - You're Fucked (Or are you...)
 				news_event = { id = worldnews.97 days = 1 }
 			}
 			USA = {
-			country_event = { id = amcivwar.1000 days = 5 }
+			country_event = { id = amcivwar.1001 days = 5 }
 			country_event = { id = amcivwar.7 days = 6 }
 			country_event = { id = amcivwar.2 days = 7 }
 			country_event = { id = amcivwar.3 days = 8 }
 			country_event = { id = amcivwar.3000 days = 8 }
 			}
+		}
+		set_politics = {
+			ruling_party = paternal_autocrat
+			elections_allowed = no
 		}
 	}
 
@@ -3845,14 +3828,20 @@ country_event = { # Murray reject the Compromise
 		hidden_effect = {
 			country_event = { id = ustates.78 days = 5 }
 		}
-		hidden_effect = {
+		hidden_effect = { #Murray
 			country_event = { id = amcivwar.6000 days = 6 }
 		}
-		hidden_effect = {
+		hidden_effect = { #Reed
 			country_event = { id = amcivwar.7 days = 7 }
 		}
-		hidden_effect = {
+		hidden_effect = { #Long
 			country_event = { id = amcivwar.6 days = 8 }
+		}
+		hidden_effect = { #CAL
+			country_event = { id = amcivwar.3 days = 9 }
+		}
+		hidden_effect = {
+		country_event = { id = amcivwar.3000 days = 10 }
 		}
 	}
 }
@@ -3882,6 +3871,10 @@ country_event = { # MacArthur and the Army Remove Olson
 				ideology = paternal_autocrat_subtype
 				traits = {}
 			}
+		}
+		add_popularity = {
+		ideology = paternal_autocrat
+		popularity = 0.2
 		}
 	}
 
@@ -4036,8 +4029,10 @@ country_event = { # Pittsburgh Massacre
 			add_to_variable = { var = SPA_strength value = 1 }
 			country_event = { id = amcivwar.11 days = 3 }
 			country_event = { id = ustates.78 days = 4 }
-			country_event = { id = amcivwar.1000 hours = 12 }
-			country_event = { id = amcivwar.2 hours = 10 }
+			country_event = { id = amcivwar.1001 hours = 5 }
+			country_event = { id = amcivwar.2 hours = 6 }
+			country_event = { id = amcivwar.3 days = 7 }
+			country_event = { id = amcivwar.3000 days = 8 }
 		}
 	}
 }

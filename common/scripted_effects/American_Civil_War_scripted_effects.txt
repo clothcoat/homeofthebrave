@@ -8,33 +8,6 @@ USA_initial_events = {
 	JAP = {
 		country_event = { id = japfor.225 days = 30 }
 	}
-	if = {
-		limit = { has_country_flag = USA_ACW_compromise_rejected }
-		country_event = { id = amcivwar.322 days = 7 } #North Carolina
-		country_event = { id = amcivwar.324 days = 9 } #Tennessee
-		country_event = { id = amcivwar.329 days = 12 } #Southern Texas
-		country_event = { id = amcivwar.334 days = 15 } #Kentucky
-		country_event = { id = amcivwar.335 days = 20 } #Virginia
-	}
-	else_if = {
-		limit = { has_country_flag = USA_ACW_austerity_rejected }
-		country_event = { id = amcivwar.320 days = 5 } #Minnesota
-		country_event = { id = amcivwar.326 days = 9 } #New York/New Jersey
-		country_event = { id = amcivwar.330 days = 12 } #Iowa
-		country_event = { id = amcivwar.332 days = 15 } #Missouri
-		country_event = { id = amcivwar.333 days = 20 } #Upstate New York
-	}
-	else = {
-		random_other_country = {
-			limit = { is_ai = yes }
-			country_event = { id = amcivwar.301 days = 5 } #Minnesota
-			country_event = { id = amcivwar.302 days = 7 } #North Carolina
-			country_event = { id = amcivwar.303 days = 9 } #Tennessee
-			country_event = { id = amcivwar.304 days = 12 } #New York/New Jersey
-			country_event = { id = amcivwar.306 days = 18 } #Southern Texas
-			country_event = { id = amcivwar.307 days = 20 } #Iowa
-		}
-	}
 }
 
 CSA_initial_events = {
@@ -43,7 +16,6 @@ CSA_initial_events = {
 			limit = {
 				USA = {
 					NOT = {
-						has_country_flag = USA_assassinated_long
 						has_country_flag = USA_reed_was_president
 						has_country_flag = USA_ACW_austerity_rejected
 					}
@@ -641,6 +613,9 @@ USA_release_WCC = {
 			add_claim_by = WCC
 		}
 
+		USA = {
+		puppet = WCC
+		}
 		WCC = {
 			load_oob = "WCC"
 			country_event = { id = amcivwar.336 days = 1 }
@@ -964,15 +939,46 @@ USA_civil_war_begins = {
 			CSA = { declare_war_on = { target = USA type = annex_everything	} }
 		}
 		if = {
-			limit = { country_exists = TEX }
+			limit = { country_exists = COR 	}
+			COR = { declare_war_on = { target = USA type = annex_everything	} }
+		}
+		if = {
+			limit = { country_exists = TEX 
+			NOT = {
+			has_global_flag = AUS_CSA_TREATY
+				}
+			}
 			TEX = { declare_war_on = { target = USA type = annex_everything	} }
 		}
 		if = {
 			limit = {
 				country_exists = CSA
 				country_exists = TEX
+				NOT = {
+				has_global_flag = AUS_CSA_TREATY
+				}
 			}
 			CSA = { declare_war_on = { target = TEX type = annex_everything	} }
+		}
+		if = {
+			limit = {
+				country_exists = COR
+				country_exists = TEX
+				country_exists = CSA
+			}
+			CSA = { declare_war_on = { target = COR type = annex_everything	} }
+			TEX = { declare_war_on = { target = COR type = annex_everything	} }
+		}
+		if = {
+			limit = {
+				country_exists = COR
+				country_exists = USA
+				NOT = {
+				has_country_flag = CAR_USA_TREATY
+				}
+			}
+			CSA = { declare_war_on = { target = COR type = annex_everything	} }
+			TEX = { declare_war_on = { target = COR type = annex_everything	} }
 		}
 		if = {
 			limit = { country_exists = CAL }

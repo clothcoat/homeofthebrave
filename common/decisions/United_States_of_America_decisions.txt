@@ -169,31 +169,20 @@ USA_american_imperialism = {
 	USA_attack_mexico = {
 		icon = generic_prepare_civil_war
 
-		allowed = { original_tag = USA }
+		allowed = { original_tag = USA 
+		original_tag = CAL }
 
 		available = {
 			is_subject = no
 			controls_all_owned_states = yes
 			can_declare_war_on = MEX
-			MEX = {
-				OR = {
-					has_socialist_government = yes
-					has_government = national_populist
-					custom_trigger_tooltip = {
-						tooltip = USA_subject_of_foreign_power
-						is_subject = yes
-						NOT = { is_subject_of = USA }
-					}
-					custom_trigger_tooltip = {
-						tooltip = USA_owns_american_cores
-						any_owned_state = { is_claim_or_core_of_ROOT = yes }
-					}
-				}
-			}
 		}
 
 		visible = {
-			has_completed_focus = USA_rightful_domain
+			OR = {
+			has_completed_focus = CAL_make_mexico_friendly
+			has_completed_focus = USA_make_mexico_friendly
+			}
 			MEX = {
 				exists = yes
 				NOT = {
@@ -206,7 +195,7 @@ USA_american_imperialism = {
 		}
 
 		fire_only_once = yes
-		cost = 50
+		cost = 10
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -221,7 +210,6 @@ USA_american_imperialism = {
 
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision USA_attack_mexico"
-			add_war_support = 0.10
 			create_wargoal = {
 				type = annex_everything
 				target = MEX
@@ -229,6 +217,618 @@ USA_american_imperialism = {
 		}
 	}
 
+	USA_attack_guatemala = {
+		icon = generic_prepare_civil_war
+
+		allowed = { original_tag = USA 
+		original_tag = CAL }
+
+		available = {
+			is_subject = no
+			controls_all_owned_states = yes
+			can_declare_war_on = GUA
+		}
+
+		visible = {
+			OR = {
+			has_completed_focus = CAL_banana_republics
+			has_completed_focus = USA_banana_republics
+			}
+			GUA = {
+				exists = yes
+				NOT = {
+					has_war_with = ROOT
+					has_war_together_with = ROOT
+					is_in_faction_with = ROOT
+					is_subject_of = ROOT
+				}
+			}
+		}
+
+		fire_only_once = yes
+		cost = 5
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+			modifier = {
+				factor = 0
+				strength_ratio = { tag = GUA ratio < 3.0 }
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision USA_attack_mexico"
+			create_wargoal = {
+				type = annex_everything
+				target = GUA
+			}
+		}
+	}
+	
+	USA_attack_nicaragua = {
+		icon = generic_prepare_civil_war
+
+		allowed = { original_tag = USA 
+		original_tag = CAL }
+
+		available = {
+			is_subject = no
+			controls_all_owned_states = yes
+			can_declare_war_on = NIC
+		}
+
+		visible = {
+			OR = {
+			has_completed_focus = CAL_banana_republics
+			has_completed_focus = USA_banana_republics
+			}
+			NIC = {
+				exists = yes
+				NOT = {
+					has_war_with = ROOT
+					has_war_together_with = ROOT
+					is_in_faction_with = ROOT
+					is_subject_of = ROOT
+				}
+			}
+		}
+
+		fire_only_once = yes
+		cost = 5
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+			modifier = {
+				factor = 0
+				strength_ratio = { tag = NIC ratio < 3.0 }
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision USA_attack_mexico"
+			create_wargoal = {
+				type = annex_everything
+				target = NIC
+			}
+		}
+	}
+	
+	USA_attack_el_salvador = {
+		icon = generic_prepare_civil_war
+
+		allowed = { original_tag = USA 
+		original_tag = CAL }
+
+		available = {
+			is_subject = no
+			controls_all_owned_states = yes
+			can_declare_war_on = ELS
+		}
+
+		visible = {
+			OR = {
+			has_completed_focus = CAL_banana_republics
+			has_completed_focus = USA_banana_republics
+			}
+			ELS = {
+				exists = yes
+				NOT = {
+					has_war_with = ROOT
+					has_war_together_with = ROOT
+					is_in_faction_with = ROOT
+					is_subject_of = ROOT
+				}
+			}
+		}
+
+		fire_only_once = yes
+		cost = 5
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+			modifier = {
+				factor = 0
+				strength_ratio = { tag = ELS ratio < 3.0 }
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision USA_attack_mexico"
+			create_wargoal = {
+				type = annex_everything
+				target = ELS
+			}
+		}
+	}
+	
+	USA_attack_costa_rica = {
+		icon = generic_prepare_civil_war
+
+		allowed = { original_tag = USA 
+		original_tag = CAL }
+
+		available = {
+			is_subject = no
+			controls_all_owned_states = yes
+			can_declare_war_on = COS	
+		}
+
+		visible = {
+			OR = {
+			has_completed_focus = CAL_banana_republics
+			has_completed_focus = USA_banana_republics
+			}
+			COS = {
+				exists = yes
+				NOT = {
+					has_war_with = ROOT
+					has_war_together_with = ROOT
+					is_in_faction_with = ROOT
+					is_subject_of = ROOT
+				}
+			}
+		}
+
+		fire_only_once = yes
+		cost = 5
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+			modifier = {
+				factor = 0
+				strength_ratio = { tag = COS ratio < 3.0 }
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision USA_attack_mexico"
+			create_wargoal = {
+				type = annex_everything
+				target = COS
+			}
+		}
+	}
+	
+	USA_attack_costa_rica = {
+		icon = generic_prepare_civil_war
+
+		allowed = { original_tag = USA 
+		original_tag = CAL }
+
+		available = {
+			is_subject = no
+			controls_all_owned_states = yes
+			can_declare_war_on = COS	
+		}
+
+		visible = {
+			OR = {
+			has_completed_focus = CAL_banana_republics
+			has_completed_focus = USA_banana_republics
+			}
+			COS = {
+				exists = yes
+				NOT = {
+					has_war_with = ROOT
+					has_war_together_with = ROOT
+					is_in_faction_with = ROOT
+					is_subject_of = ROOT
+				}
+			}
+		}
+
+		fire_only_once = yes
+		cost = 5
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+			modifier = {
+				factor = 0
+				strength_ratio = { tag = COS ratio < 3.0 }
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision USA_attack_mexico"
+			create_wargoal = {
+				type = annex_everything
+				target = COS
+			}
+		}
+	}
+	
+	USA_attack_costa_rica = {
+		icon = generic_prepare_civil_war
+
+		allowed = { original_tag = USA 
+		original_tag = CAL }
+
+		available = {
+			is_subject = no
+			controls_all_owned_states = yes
+			can_declare_war_on = COS	
+		}
+
+		visible = {
+			OR = {
+			has_completed_focus = CAL_banana_republics
+			has_completed_focus = USA_banana_republics
+			}
+			COS = {
+				exists = yes
+				NOT = {
+					has_war_with = ROOT
+					has_war_together_with = ROOT
+					is_in_faction_with = ROOT
+					is_subject_of = ROOT
+				}
+			}
+		}
+
+		fire_only_once = yes
+		cost = 5
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+			modifier = {
+				factor = 0
+				strength_ratio = { tag = COS ratio < 3.0 }
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision USA_attack_mexico"
+			create_wargoal = {
+				type = annex_everything
+				target = COS
+			}
+		}
+	}
+	
+	USA_attack_cuba = {
+		icon = generic_prepare_civil_war
+
+		allowed = { original_tag = USA 
+		original_tag = CAL }
+
+		available = {
+			is_subject = no
+			controls_all_owned_states = yes
+			can_declare_war_on = CUB
+		}
+
+		visible = {
+			OR = {
+			has_completed_focus = CAL_banana_republics
+			has_completed_focus = USA_banana_republics
+			}
+			CUB = {
+				exists = yes
+				NOT = {
+					has_war_with = ROOT
+					has_war_together_with = ROOT
+					is_in_faction_with = ROOT
+					is_subject_of = ROOT
+				}
+			}
+		}
+
+		fire_only_once = yes
+		cost = 5
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+			modifier = {
+				factor = 0
+				strength_ratio = { tag = CUB ratio < 3.0 }
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision USA_attack_mexico"
+			create_wargoal = {
+				type = annex_everything
+				target = CUB
+			}
+		}
+	}
+	
+	USA_attack_hai = {
+		icon = generic_prepare_civil_war
+
+		allowed = { original_tag = USA 
+		original_tag = CAL }
+
+		available = {
+			is_subject = no
+			controls_all_owned_states = yes
+			can_declare_war_on = HAI
+		}
+
+		visible = {
+			OR = {
+			has_completed_focus = CAL_banana_republics
+			has_completed_focus = USA_banana_republics
+			}
+			HAI = {
+				exists = yes
+				NOT = {
+					has_war_with = ROOT
+					has_war_together_with = ROOT
+					is_in_faction_with = ROOT
+					is_subject_of = ROOT
+				}
+			}
+		}
+
+		fire_only_once = yes
+		cost = 5
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+			modifier = {
+				factor = 0
+				strength_ratio = { tag = HAI ratio < 3.0 }
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision USA_attack_mexico"
+			create_wargoal = {
+				type = annex_everything
+				target = HAI
+			}
+		}
+	}
+	
+	USA_attack_dom = {
+		icon = generic_prepare_civil_war
+
+		allowed = { original_tag = USA 
+		original_tag = CAL }
+
+		available = {
+			is_subject = no
+			controls_all_owned_states = yes
+			can_declare_war_on = DOM
+		}
+
+		visible = {
+			OR = {
+			has_completed_focus = CAL_banana_republics
+			has_completed_focus = USA_banana_republics
+			}
+			DOM = {
+				exists = yes
+				NOT = {
+					has_war_with = ROOT
+					has_war_together_with = ROOT
+					is_in_faction_with = ROOT
+					is_subject_of = ROOT
+				}
+			}
+		}
+
+		fire_only_once = yes
+		cost = 5
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+			modifier = {
+				factor = 0
+				strength_ratio = { tag = DOM ratio < 3.0 }
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision USA_attack_dom"
+			create_wargoal = {
+				type = annex_everything
+				target = DOM
+			}
+		}
+	}
+	
+	USA_attack_colombia = {
+		icon = generic_prepare_civil_war
+
+		allowed = { original_tag = USA 
+		original_tag = CAL }
+
+		available = {
+			is_subject = no
+			controls_all_owned_states = yes
+			can_declare_war_on = COL	
+		}
+
+		visible = {
+			OR = {
+			has_completed_focus = CAL_push_further
+			has_completed_focus = USA_push_further
+			}
+			COL = {
+				exists = yes
+				NOT = {
+					has_war_with = ROOT
+					has_war_together_with = ROOT
+					is_in_faction_with = ROOT
+					is_subject_of = ROOT
+				}
+			}
+		}
+
+		fire_only_once = yes
+		cost = 5
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+			modifier = {
+				factor = 0
+				strength_ratio = { tag = COL ratio < 3.0 }
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision USA_attack_colombia"
+			create_wargoal = {
+				type = annex_everything
+				target = COL
+			}
+		}
+	}
+	
+	USA_attack_venezuela = {
+		icon = generic_prepare_civil_war
+
+		allowed = { original_tag = USA 
+		original_tag = CAL }
+
+		available = {
+			is_subject = no
+			controls_all_owned_states = yes
+			can_declare_war_on = VEN
+		}
+
+		visible = {
+			OR = {
+			has_completed_focus = CAL_push_further
+			has_completed_focus = USA_push_further
+			}
+			VEN = {
+				exists = yes
+				NOT = {
+					has_war_with = ROOT
+					has_war_together_with = ROOT
+					is_in_faction_with = ROOT
+					is_subject_of = ROOT
+				}
+			}
+		}
+
+		fire_only_once = yes
+		cost = 5
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+			modifier = {
+				factor = 0
+				strength_ratio = { tag = VEN ratio < 3.0 }
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision USA_attack_venezuela"
+			create_wargoal = {
+				type = annex_everything
+				target = VEN
+			}
+		}
+	}
+	
+	USA_attack_peru = {
+		icon = generic_prepare_civil_war
+
+		allowed = { original_tag = USA 
+		original_tag = CAL }
+
+		available = {
+			is_subject = no
+			controls_all_owned_states = yes
+			can_declare_war_on = PRU	
+		}
+
+		visible = {
+			OR = {
+			has_completed_focus = CAL_push_further
+			has_completed_focus = USA_push_further
+			}
+			PRU = {
+				exists = yes
+				NOT = {
+					has_war_with = ROOT
+					has_war_together_with = ROOT
+					is_in_faction_with = ROOT
+					is_subject_of = ROOT
+				}
+			}
+		}
+
+		fire_only_once = yes
+		cost = 5
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+			modifier = {
+				factor = 0
+				strength_ratio = { tag = PRU ratio < 3.0 }
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision USA_attack_peru"
+			create_wargoal = {
+				type = annex_everything
+				target = PRU
+			}
+		}
+	}
+	
 	USA_attack_phillipines = {
 		icon = generic_prepare_civil_war
 
