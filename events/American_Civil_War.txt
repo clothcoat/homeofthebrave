@@ -3217,8 +3217,8 @@ country_event = { # CSA wins the civil war
 		USA_civil_war_ends = yes
 		add_ideas = USA_civil_war_aftermath_idea
 		add_ideas = USA_civil_war_depression_idea
-		add_ideas = USA_federalist_resistance1
-		add_ideas = USA_longist_resistance1
+		add_ideas = ACW_fed_resistance_1
+		add_ideas = ACW_minutemen_resistance_1
 		hidden_effect = {
 			add_ideas = {
 				civilian_economy
@@ -3289,8 +3289,8 @@ country_event = { # AUS wins the civil war
 		USA_civil_war_ends = yes
 		add_ideas = USA_civil_war_aftermath_idea
 		add_ideas = USA_civil_war_depression_idea
-		add_ideas = USA_federalist_resistance1
-		add_ideas = USA_socialist_resistance1
+		add_ideas = ACW_fed_resistance_1
+		add_ideas = ACW_socialist_resistance_1
 		hidden_effect = {
 			add_ideas = {
 				civilian_economy
@@ -3368,7 +3368,7 @@ country_event = { # USA wins the civil war
 					has_country_flag = USA_ACW_compromise_rejected
 				}
 			}
-			add_ideas = USA_socialist_resistance1
+			add_ideas = ACW_socialist_resistance_1
 		}
 		if = {
 			limit = {
@@ -3377,7 +3377,7 @@ country_event = { # USA wins the civil war
 					has_country_flag = USA_ACW_austerity_rejected
 				}
 			}
-			add_ideas = USA_longist_resistance1
+			add_ideas = ACW_minutemen_resistance_1
 		}
 		hidden_effect = {
 			add_ideas = {
@@ -3462,8 +3462,8 @@ country_event = { # PSA wins the civil war
 		USA_civil_war_ends = yes
 		add_ideas = USA_civil_war_aftermath_idea
 		add_ideas = USA_civil_war_depression_idea
-		add_ideas = USA_longist_resistance1
-		add_ideas = USA_socialist_resistance1
+		add_ideas = ACW_minutemen_resistance_1
+		add_ideas = ACW_socialist_resistance_1
 		hidden_effect = {
 			add_ideas = {
 				civilian_economy
@@ -3931,14 +3931,6 @@ country_event = { # TUUL Ultimatum
 
 	fire_only_once = yes
 	is_triggered_only = yes
-
-	trigger = {
-	has_country_flag = {
-		flag = CSA_social_patriot_power
-		value > 3
-		} 
-	
-	}
 	
 	mean_time_to_happen = {
 	days = 20
@@ -7434,12 +7426,12 @@ country_event = {
 			}
 			add_opinion_modifier = {
 				target = event_target:survivor
-				modifier = ITA_dislikes_govt
+				modifier = small_decrease
 			}
 			else = {
 				add_opinion_modifier = {
 					target = CAL
-					modifier = ITA_dislikes_govt
+					modifier = small_decrease
 				}
 			}
 		}
@@ -12986,7 +12978,6 @@ country_event = { # crime Resistance #1
 		NOT = { 
 			has_idea = ACW_crime_resistance_1
 			has_idea = ACW_crime_resistance_2 
-			has_idea = ACW_crime_resistance_3 
 		}
 	}
 	mean_time_to_happen = {
@@ -13020,7 +13011,6 @@ country_event = { # crime Resistance #1-2
 		}
 		NOT = {
 			has_idea = ACW_crime_resistance_2 
-			has_idea = ACW_crime_resistance_3 
 		}
 	}
 	
@@ -13042,198 +13032,6 @@ country_event = { # crime Resistance #1-2
 		}
 	}
 }	
-
-
-country_event = { # crime Resistance #3
-	id = amcivwar.659
-	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.659"}
-	title = amcivwar.659.t
-	desc = amcivwar.659.d
-	picture = GFX_report_event_SPR_civwar
-	
-	trigger = {
-		OR = {
-		has_country_flag = {
-			flag = ACW_crime_resistance
-			  value > 15
-			}
-		has_country_flag = {
-			flag = ACW_crime_resistance
-			  value = 15
-			}
-		}
-		NOT = {
-			has_idea = ACW_crime_resistance_3
-		}
-	}
-	
-	mean_time_to_happen = {
-	days = 7
-	}
-	
-	option = { # Level 3 resistance
-		name = amcivwar.659.a
-		if = {
-		limit = {has_idea = ACW_crime_resistance_2 }
-		swap_ideas = {
-			remove_idea = ACW_crime_resistance_2
-			add_idea = ACW_crime_resistance_3
-			}
-		}
-		if = {
-		limit = {has_idea = ACW_crime_resistance_1 }
-		swap_ideas = {
-			remove_idea = ACW_crime_resistance_1
-			add_idea = ACW_crime_resistance_3
-			}
-		}
-		else = {
-		add_ideas = ACW_crime_resistance_3
-		}
-	}	
-}	
-
-country_event = { # crime Resistance #4
-	id = amcivwar.660
-	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.660"}
-	title = amcivwar.660.t
-	desc = amcivwar.660.d
-	picture = GFX_report_event_SPR_civwar
-	
-	trigger = {
-		has_country_flag = {
-			flag = ACW_crime_resistance
-			  value > 20
-			}
-		NOT = {
-			has_idea = ACW_crime_resistance_4
-		}
-	}
-	
-	mean_time_to_happen = {
-	days = 7
-	}
-	
-	option = { # Level 3 resistance
-		name = amcivwar.660.a
-		if = {
-		limit = {has_idea = ACW_crime_resistance_2 }
-		swap_ideas = {
-			remove_idea = ACW_crime_resistance_2
-			add_idea = ACW_crime_resistance_4
-			}
-		}
-		if = {
-		limit = {has_idea = ACW_crime_resistance_1 }
-		swap_ideas = {
-			remove_idea = ACW_crime_resistance_1
-			add_idea = ACW_crime_resistance_4
-			}
-		}
-		if = {
-		limit = {has_idea = ACW_crime_resistance_3 }
-		swap_ideas = {
-			remove_idea = ACW_crime_resistance_3
-			add_idea = ACW_crime_resistance_4
-			}
-		}
-		else = {
-		add_ideas = ACW_crime_resistance_4
-		}
-	}	
-}
-
-country_event = { # crime Resistance #4-3
-	id = amcivwar.661
-	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.661"}
-	title = amcivwar.661.t
-	desc = amcivwar.661.d
-	picture = GFX_report_event_SPR_civwar3
-	
-	trigger = {
-		has_country_flag = {
-			flag = ACW_crime_resistance
-			value < 20
-			}
-			has_idea = ACW_crime_resistance_4
-	}
-	
-	mean_time_to_happen = {
-	days = 7
-	}
-	
-	option = { # Level Three Resistance
-		name = amcivwar.661.a
-		trigger = {
-		has_country_flag = {
-			flag = ACW_crime_resistance
-			value < 20
-				}
-			}
-		if = {
-		limit = { has_idea = ACW_crime_resistance_4 }
-		}
-		swap_ideas = {
-		remove_idea = ACW_crime_resistance_4
-		add_idea = ACW_crime_resistance_3
-		}	
-	}
-}
-
-
-country_event = { # crime Resistance #3-2
-	id = amcivwar.662
-	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.662"}
-	title = amcivwar.662.t
-	desc = amcivwar.662.d
-	picture = GFX_report_event_SPR_civwar3
-	
-	trigger = {
-		has_country_flag = {
-			flag = ACW_crime_resistance
-			value < 15
-			}
-			has_idea = ACW_crime_resistance_3
-	}
-	
-	mean_time_to_happen = {
-	days = 7
-	}
-	
-	option = { # Level One Resistance
-		name = amcivwar.662.a
-		trigger = {
-		has_country_flag = {
-			flag = ACW_crime_resistance
-			value < 10
-				}
-			}
-		if = {
-		limit = { has_idea = ACW_crime_resistance_3 }
-		swap_ideas = {
-		remove_idea = ACW_crime_resistance_3
-		add_idea = ACW_crime_resistance_1
-			}
-		}
-	}
-	option = { # Level Two Resistance
-		name = amcivwar.662.b
-		trigger = {
-		has_country_flag = {
-			flag = ACW_crime_resistance
-			value > 10
-				}
-			}
-		if = {
-		limit = { has_idea = ACW_crime_resistance_3 }
-		}
-		swap_ideas = {
-		remove_idea = ACW_crime_resistance_3
-		add_idea = ACW_crime_resistance_2
-		}	
-	}
-}
-
 
 country_event = { # crime Crushed
 	id = amcivwar.663
@@ -13262,10 +13060,6 @@ country_event = { # crime Crushed
 		if = {
 		limit = { has_idea = ACW_crime_resistance_2 }
 		remove_ideas = ACW_crime_resistance_2
-		}
-		if = {
-		limit = { has_idea = ACW_crime_resistance_3 }
-		remove_ideas = ACW_crime_resistance_3
 		}
 		else = {
 		remove_ideas = ACW_crime_resistance_1

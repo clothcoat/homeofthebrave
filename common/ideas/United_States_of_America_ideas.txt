@@ -526,34 +526,6 @@ ideas = {
 				resistance_tick	= 0.05
 			}
 		}
-		ACW_crime_resistance_3 = {
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ACW_crime_resistance_3"}
-			allowed = { always = no }
-			removal_cost = -1
-			picture = mob_activity
-			modifier = {
-				political_power_gain = -0.05
-				production_factory_efficiency_gain_factor = -0.03
-				local_intel_to_enemies = 0.1
-				local_supplies = -0.05
-				stability_factor = -0.05
-				resistance_tick	= 0.1
-			}
-		}
-		ACW_crime_resistance_4 = {
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ACW_crime_resistance_4"}
-			allowed = { always = no }
-			removal_cost = -1
-			picture = mob_activity
-			modifier = {
-				political_power_gain = -0.05
-				production_factory_efficiency_gain_factor = -0.03
-				local_intel_to_enemies = 0.1
-				local_supplies = -0.05
-				stability_factor = -0.05
-				resistance_tick	= 0.1
-			}
-		}
 		USA_mob_activity_alliance_idea = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea USA_mob_activity_alliance_idea"}
 			allowed = { always = no }
@@ -689,7 +661,7 @@ ideas = {
 				resistance_tick	= 0.05
 			}
 		}
-		USA_longist_resistance1 = {
+		ACW_minutemen_resistance_1 = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea USA_longist_resistance_1_idea"}
 			allowed = { always = no }
 			removal_cost = -1
@@ -704,7 +676,7 @@ ideas = {
 				resistance_tick	= 0.05
 			}
 		}
-		USA_longist_resistance2 = {
+		ACW_minutemen_resistance_2 = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea USA_longist_resistance_2_idea"}
 			allowed = { always = no }
 			removal_cost = -1
@@ -719,7 +691,7 @@ ideas = {
 				resistance_tick	= 0.07
 			}
 		}
-		USA_longist_resistance3 = {
+		ACW_minutemen_resistance_3 = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea USA_longist_resistance_3_idea"}
 			allowed = { always = no }
 			removal_cost = -1
@@ -734,7 +706,7 @@ ideas = {
 				resistance_tick	= 0.1
 			}
 		}
-		USA_longist_resistance4 = {
+		ACW_minutemen_resistance_4 = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea USA_longist_resistance_3_idea"}
 			allowed = { always = no }
 			removal_cost = -1

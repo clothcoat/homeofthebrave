@@ -210,49 +210,14 @@ create_country_leader = {# Omar Bradley
 
 add_ideas = {
 	### cabinet ###
-	USA_Herbert_Hoover_hog_sli
-	USA_Henry_Lewis_Stimson_for_sli
-	USA_Roy_Dikeman_Chapin_Sr_eco_mli
-	USA_Charles_Evans_Hughes_Sr_sec_sli
+	USA_John_Sparkman_hog_sco
+	USA_John_William_Davis_for_pau
+	USA_Robert_Abercrombie_Lovett_eco_pau
+	USA_Martin_Dies_Jr_sec_sco
 	# national ideas
 	USA_great_depression
 	isolation
 	free_trade
-}
-
-### Field Marshal
-create_field_marshal = {# Malin Craig
-	name = "Malin Craig"
-	desc = "USA_MALIN_CRAIG_ARMY_DESC"
-	portrait_path = "gfx/leaders/USA/Portrait_USA_Malin_Craig.tga"
-	traits = { 
-		logistics_wizard
-		organizer
-		trait_cautious
-	}
-	skill = 4
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 4
-	logistics_skill = 5
-	id = 932
-}
-create_field_marshal = {# George Marshall
-	name = "George Marshall"
-	desc = "USA_GEORGE_MARSHALL_ARMY_DESC"
-	portrait_path = "gfx/leaders/USA/Portrait_USA_george_marshall.tga"
-	traits = {
-		career_officer
-		politically_connected
-		offensive_doctrine
-		organizer
-	}
-	skill = 4
-	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 4
-	logistics_skill = 3
-	id = 64
 }
 
 ### Generals ###
@@ -268,7 +233,7 @@ create_corps_commander = {# Clarence Huebner
 	defense_skill = 2
 	planning_skill = 2
 	logistics_skill = 2
-	id = 952
+	id = 9520
 }
 create_corps_commander = {# Edward H. Brooks
 	name = "Edward H. Brooks"
@@ -284,7 +249,7 @@ create_corps_commander = {# Edward H. Brooks
 	defense_skill = 1
 	planning_skill = 2
 	logistics_skill = 2
-	id = 953
+	id = 9530
 }
 create_corps_commander = {# Geoffrey Keyes
 	name = "Geoffrey Keyes"
@@ -300,7 +265,7 @@ create_corps_commander = {# Geoffrey Keyes
 	defense_skill = 2
 	planning_skill = 2
 	logistics_skill = 1
-	id = 954
+	id = 9540
 }
 create_corps_commander = {# Jonathan M. Wainwright
 	name = "Jonathan M. Wainwright"
@@ -315,24 +280,7 @@ create_corps_commander = {# Jonathan M. Wainwright
 	defense_skill = 1
 	planning_skill = 1
 	logistics_skill = 1
-	id = 955
-}
-create_corps_commander = {# Joseph Stilwell
-	name = "Joseph Stilwell"
-	desc = "USA_JOSEPH_STILWELL_ARMY_DESC"
-	portrait_path = "gfx/leaders/USA/Portrait_USA_gen_Joseph_Stilwell.tga"
-	traits = {
-		politically_connected
-		infantry_officer
-		career_officer
-		harsh_leader
-	}
-	skill = 1
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-	id = 956 #I dunno but I feel someone in China will thank me for this
+	id = 9550
 }
 create_corps_commander = {# Leonard Gerow
 	name = "Leonard Gerow"
@@ -344,24 +292,7 @@ create_corps_commander = {# Leonard Gerow
 	defense_skill = 2
 	planning_skill = 2
 	logistics_skill = 3
-	id = 957
-}
-create_corps_commander = {# Leslie McNair
-	name = "Leslie McNair"
-	desc = "USA_LESLIE_MCNAIR_ARMY_DESC"
-	portrait_path = "gfx/leaders/USA/Portrait_USA_gen_Leslie_Mcnair.tga"
-	traits = {
-		old_guard
-		career_officer
-		artillery_officer
-	}
-	skill = 3
-
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 4
-	logistics_skill = 2
-	id = 958
+	id = 9570
 }
 create_corps_commander = {# Lloyd Fredendall
 	name = "Lloyd Fredendall"
@@ -378,7 +309,7 @@ create_corps_commander = {# Lloyd Fredendall
 	defense_skill = 2
 	planning_skill = 1
 	logistics_skill = 1
-	id = 959
+	id = 9590
 }
 create_corps_commander = {# Lucian Truscott
 	name = "Lucian Truscott"
@@ -395,53 +326,8 @@ create_corps_commander = {# Lucian Truscott
 	defense_skill = 3
 	planning_skill = 2
 	logistics_skill = 2
-	id = 934
+	id = 9340
 }
-create_corps_commander = {# Oscar Griswold
-	name = "Oscar Griswold"
-	desc = "USA_OSCAR_GRISWOLD_ARMY_DESC"
-	portrait_path = "gfx/leaders/USA/Portrait_USA_oscar_griswold.dds"
-	traits = { infantry_officer  }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 1
-	planning_skill = 2
-	logistics_skill = 2
-	id = 948
-}
-create_corps_commander = {# Walter Krueger
-	name = "Walter Krueger"
-	desc = "USA_WALTER_KRUEGER_ARMY_DESC"
-	portrait_path = "gfx/leaders/USA/Portrait_USA_gen_Walter_Krueger.tga"
-	traits = {
-		armor_officer
-		career_officer
-		brilliant_strategist
-	}
-	skill = 3
-
-	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 2
-	logistics_skill = 2
-	id = 961
-}
-create_corps_commander = {# Adna Chaffee
-	name = "Adna R. Chaffee"
-	desc = "USA_ADNA_CHAFFEE_ARMY_DESC"
-	portrait_path = "gfx/leaders/USA/Portrait_USA_Adna_Chaffee.tga"
-	traits = {
-		armor_officer
-	}
-	skill = 4
-
-	attack_skill = 4
-	defense_skill = 3
-	planning_skill = 3
-	logistics_skill = 3
-	id = 933
-}
-
 create_corps_commander = {# Omar Bradley
 	name = "Omar Bradley"
 	desc = "USA_OMAR_BRADLEY_ARMY_DESC"
@@ -457,7 +343,7 @@ create_corps_commander = {# Omar Bradley
 	defense_skill = 2
 	planning_skill = 2
 	logistics_skill = 2
-	id = 951
+	id = 9510
 }
 create_corps_commander = {# Dwight D. Eisenhower
 	name = "Dwight D. Eisenhower"
@@ -473,7 +359,7 @@ create_corps_commander = {# Dwight D. Eisenhower
 	defense_skill = 2
 	planning_skill = 2
 	logistics_skill = 3
-	id = 950
+	id = 9500
 }
 
 create_corps_commander = {# Daniel Van Voorhis
@@ -486,7 +372,7 @@ create_corps_commander = {# Daniel Van Voorhis
 	defense_skill = 2
 	planning_skill = 3
 	logistics_skill = 2
-	id = 647
+	id = 6470
 }
 create_corps_commander = {# John C. H. Lee
 	name = "John C. H. Lee"
@@ -502,7 +388,7 @@ create_corps_commander = {# John C. H. Lee
 	defense_skill = 3
 	planning_skill = 3
 	logistics_skill = 2
-	id = 963
+	id = 9630
 }
 create_corps_commander = {# Matthew Ridgway
 	name = "Matthew Ridgway"
@@ -518,7 +404,7 @@ create_corps_commander = {# Matthew Ridgway
 	defense_skill = 2
 	planning_skill = 2
 	logistics_skill = 4
-	id = 944
+	id = 9440
 }
 create_corps_commander = {# James Garesche Ord
 	name = "James Garesche Ord"
@@ -534,7 +420,7 @@ create_corps_commander = {# James Garesche Ord
 	defense_skill = 1
 	planning_skill = 1
 	logistics_skill = 2
-	id = 964
+	id = 9640
 }
 create_corps_commander = {# Edwin F. Harding
 	name = "Edwin F. Harding"
@@ -550,24 +436,7 @@ create_corps_commander = {# Edwin F. Harding
 	defense_skill = 2
 	planning_skill = 3
 	logistics_skill = 4
-	id = 965
-}
-
-create_corps_commander = {# Smedley Butler
-	name = "Smedley Butler"
-	desc = "USA_SMEDLEY_BUTLER_ARMY_DESC"
-	portrait_path = "gfx/leaders/CSA/Portrait_CSA_smedly_butler_G.tga"
-	traits = {
-		offensive_doctrine
-		inspirational_leader
-		commando
-	}
-	skill = 4
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 4
-	logistics_skill = 4
-	id = 60
+	id = 9650
 }
 create_corps_commander = {# Herbert Holdridge
 	name = "Herbert Charles Heitke"
@@ -579,93 +448,5 @@ create_corps_commander = {# Herbert Holdridge
 	defense_skill = 2
 	planning_skill = 4
 	logistics_skill = 2
-	id = 61
-}
-create_corps_commander = {# George Van Horn Moseley
-	name = "George Van Horn Moseley"
-	desc = "USA_GEORGE_VAN_HORN_MOSELEY_ARMY_DESC"
-	portrait_path = "gfx/leaders/TEX/Portrait_TEX_George_Van_Horn_Moseley.tga"
-	traits = {
-		politically_connected
-		brilliant_strategist
-	}
-	skill = 3
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 3
-	id = 59
-}
-create_corps_commander = {# George S. Patton Jr.
-	name = "George S. Patton"
-	desc = "USA_GEORGE_PATTON_ARMY_DESC"
-	portrait_path = "gfx/leaders/TEX/Portrait_TEX_george_patton.tga"
-	traits = {
-		trickster
-		armor_officer
-		panzer_leader
-		war_hero
-		trait_reckless
-	}
-	skill = 3
-	attack_skill = 5
-	defense_skill = 2
-	planning_skill = 1
-	logistics_skill = 2
-	id = 57
-}
-### Navy Leader
-create_navy_leader = {# Chester W. Nimitz
-	name = "Chester W. Nimitz"
-	portrait_path = "gfx/leaders/USA/Portrait_USA_Chester_W_Nimitz.dds"
-	traits = {
-		superior_tactician
-		spotter
-	}
-	skill = 3
-	attack_skill = 3
-	defense_skill = 2
-	maneuvering_skill = 2
-	coordination_skill = 3
-	id = 62
-}
-create_navy_leader = {# Frank Jack Fletcher
-	name = "Frank Jack Fletcher"
-	portrait_path = "gfx/leaders/USA/Portrait_USA_adm_Frank_Fletcher.tga"
-	traits = {spotter superior_tactician}
-	skill = 3
-	attack_skill = 3
-	defense_skill = 3
-	maneuvering_skill = 2
-	coordination_skill = 3
-}
-create_navy_leader = {# Harold Rainsford Stark
-	name = "Harold Rainsford Stark"
-	portrait_path = "gfx/leaders/USA/Portrait_USA_harold_rainsford_stark.dds"
-	traits = {spotter blockade_runner}
-	skill = 2
-	attack_skill = 2
-	defense_skill = 2
-	maneuvering_skill = 1
-	coordination_skill = 2
-}
-create_navy_leader = {# Raymond A. Spruance
-	name = "Raymond A. Spruance"
-	portrait_path = "gfx/leaders/USA/Portrait_USA_raymond_a_spruance.dds"
-	traits = {superior_tactician}
-	skill = 4
-	attack_skill = 3
-	defense_skill = 3
-	maneuvering_skill = 4
-	coordination_skill = 4
-}
-create_navy_leader = {# Willis Augustus Lee
-	name = "Willis Augustus Lee"
-	portrait_path = "gfx/leaders/USA/Portrait_USA_willis_lee.tga"
-	traits = {}
-	skill = 2
-	attack_skill = 2
-	defense_skill = 2
-	maneuvering_skill = 1
-	coordination_skill = 2
+	id = 610
 }
