@@ -3258,6 +3258,66 @@ country_event = { # MacArthur and the Army Removes Long
 	}
 }
 
+country_event = { # Murray's Inaugural Address
+	id = ustates.6300
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.6300"}
+	title = ustates.6300.t
+	desc = ustates.6300.d
+	picture = GFX_report_event_usa_macarthur_speech
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = ustates.6300.a
+		hidden_effect = {
+			country_event = { id = amcivwar.6301 days = 4 }
+		}
+	}
+}
+
+country_event = { # Reed and Long reinforce militias
+	id = ustates.6301
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.6301"}
+	title = ustates.6301.t
+	desc = ustates.6301.d
+	picture = GFX_report_event_usa_macarthur_speech
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = ustates.6301.a
+		hidden_effect = {
+			country_event = { id = amcivwar.6301 days = 1 }
+		}
+	}
+}
+
+country_event = { # Bankers Resist!
+	id = ustates.6302
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.6302"}
+	title = ustates.6302.t
+	desc = ustates.6302.d
+	picture = GFX_report_event_usa_macarthur_speech
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = ustates.6302.a
+		custom_effect_tooltip = USA_ODP_gains_strength
+		hidden_effect = {
+			add_to_variable = { var = AFP_strength value = 2 }
+			add_to_variable = { var = ODP_strength value = 2 }
+			country_event = { id = amcivwar.6303 days = 6 }
+		}
+	}
+	
+}
 
 ### Republican Presidency ###
 country_event = { # Rep Inaugural Address
