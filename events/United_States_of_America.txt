@@ -56,6 +56,14 @@ country_event = { # Chapin Death
 		name = ustates.1000.a
 		add_political_power = -25
 		add_stability = -0.03
+		hidden_effect = {
+		set_country_flag = Roy_Dikeman_Chapin_Sr_dead
+		}
+		if = {
+		limit = { has_idea = USA_Roy_Dikeman_Chapin_Sr_eco_mli }
+		remove_ideas = USA_Roy_Dikeman_Chapin_Sr_eco_mli
+		add_ideas = USA_Ray_Lyman_Wilbur_Sr_eco_mli
+		}
 	}
 }
 
@@ -4629,7 +4637,7 @@ country_event = { # Austerity Bill Voting Commences
 	}
 }
 
-country_event = { # General Strike Spreads
+country_event = { # Violence in Atlanta
 	id = ustates.97
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.97"}
 	title = ustates.97.t
@@ -4648,7 +4656,7 @@ country_event = { # General Strike Spreads
 		country_exists = CSA
 		country_exists = AUS
 		country_exists = CAR
-		USA_Civil_War_Averted
+		has_country_flag = USA_Civil_War_Averted
 		}
 		}
 		date = 1937.3.5
