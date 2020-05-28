@@ -1857,16 +1857,6 @@ country_event = { # The 1936 Election - Coalition
 			}
 		}
 		set_country_flag = USA_had_1936_election
-		hidden_effect = {
-			create_country_leader = {
-				name = "Jack Reed"
-				desc = "POLITICS_JACK_REED_DESC"
-				picture = "Portrait_USA_Jack_Reed.tga"
-				expire = "1965.1.1"
-				ideology = syndicalist_subtype
-				traits = {}
-			}
-		}
 		set_politics = {
 			ruling_party = syndicalist
 			election_frequency = 48
@@ -3316,7 +3306,208 @@ country_event = { # Bankers Resist!
 			country_event = { id = amcivwar.6303 days = 6 }
 		}
 	}
-	
+}
+
+country_event = { # Penalizing the corrupt
+	id = ustates.6303
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.6303"}
+	title = ustates.6303.t
+	desc = ustates.6303.d
+	picture = GFX_report_event_usa_macarthur_speech
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = ustates.6303.a
+		custom_effect_tooltip = USA_ODP_gains_strength
+		hidden_effect = {
+			add_to_variable = { var = AFP_strength value = 2 }
+			add_to_variable = { var = ODP_strength value = 2 }
+			country_event = { id = amcivwar.6304 days = 6 }
+		}
+	}
+}
+
+country_event = { # Rockefeller Investigated
+	id = ustates.6304
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.6304"}
+	title = ustates.6304.t
+	desc = ustates.6304.d
+	picture = GFX_report_event_usa_macarthur_speech
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = ustates.6304.a
+		custom_effect_tooltip = USA_ODP_gains_strength
+		hidden_effect = {
+			add_to_variable = { var = AFP_strength value = 2 }
+			add_to_variable = { var = ODP_strength value = 2 }
+			country_event = { id = amcivwar.6303 days = 6 }
+		}
+	}
+}
+
+country_event = { # Reed and Long reinforce militias
+	id = ustates.6305
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.6305"}
+	title = ustates.6305.t
+	desc = ustates.6305.d
+	picture = GFX_report_event_usa_macarthur_speech
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = ustates.6305.a
+		custom_effect_tooltip = USA_ODP_gains_strength
+		hidden_effect = {
+			add_to_variable = { var = AFP_strength value = 2 }
+			add_to_variable = { var = ODP_strength value = 2 }
+			country_event = { id = amcivwar.6303 days = 6 }
+		}
+	}
+}
+
+country_event = { # Smith Act Blocked
+	id = ustates.6306
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.6306"}
+	title = ustates.6306.t
+	desc = ustates.6306.d
+	picture = GFX_report_event_usa_macarthur_speech
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = ustates.6306.a
+		custom_effect_tooltip = USA_ODP_gains_strength
+		hidden_effect = {
+			add_to_variable = { var = AFP_strength value = 2 }
+			add_to_variable = { var = ODP_strength value = 2 }
+			country_event = { id = amcivwar.6303 days = 6 }
+		}
+	}
+}
+
+country_event = { # Congress Protests
+	id = ustates.6307
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.6307"}
+	title = ustates.6307.t
+	desc = ustates.6307.d
+	picture = GFX_report_event_usa_macarthur_speech
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = ustates.6307.a
+		add_political_power = -50
+		add_stability = -0.08
+		hidden_effect = {
+			country_event = { id = amcivwar.6308 days = 6 }
+		}
+	}
+}
+
+country_event = { # MacArthur forces out Murray
+	id = ustates.6308
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.6308"}
+	title = ustates.6308.t
+	desc = ustates.6308.d
+	picture = GFX_report_event_usa_macarthur_speech
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = USA_macarthur_coup
+			set_party_name = {
+				ideology = paternal_autocrat
+				long_name = USA_paternal_autocrat_military_junta_long
+				name = USA_paternal_autocrat_military_junta
+			}
+			create_country_leader = {
+				name = "Douglas MacArthur"
+				desc = "POLITICS_DOUGLAS_MACARTHUR_DESC"
+				picture = "Portrait_USA_gen_douglas_macarthur.tga"
+				expire = "1965.1.1"
+				ideology = paternal_autocrat_subtype
+				traits = {}
+			}
+		}
+		add_popularity = {
+		ideology = paternal_autocrat
+		popularity = 0.2
+		}
+	}
+
+	trigger = {
+		NOT = { has_country_flag = USA_macarthur_coup }
+	}
+
+	option = {
+		name = ustates.6308.a
+		set_politics = {
+			ruling_party = paternal_autocrat
+			elections_allowed = no
+		}
+		hidden_effect = {
+			add_ideas = USA_Douglas_MacArthur_hog_pau
+			add_ideas = USA_John_William_Davis_for_pau
+			add_ideas = USA_William_Harrison_Standley_eco_pau
+			add_ideas = USA_William_Randolph_Hearst_Sr_sec_pau
+		}
+	}
+}
+
+country_event = { # Hitting Long
+	id = ustates.6309
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.6309"}
+	title = ustates.6309.t
+	desc = ustates.6309.d
+	picture = GFX_report_event_usa_macarthur_speech
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = ustates.6309.a
+		custom_effect_tooltip = USA_AFP_loses_strength2
+		hidden_effect = {
+			add_to_variable = { var = SPA_strength value = -3 }
+		}
+	}
+}
+
+country_event = { # Hitting Reed
+	id = ustates.6310
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.6310"}
+	title = ustates.6310.t
+	desc = ustates.6310.d
+	picture = GFX_report_event_usa_macarthur_speech
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = ustates.6310.a
+		custom_effect_tooltip = USA_SPA_loses_strength2
+		hidden_effect = {
+			add_to_variable = { var = SPA_strength value = -3 }
+		}
+	}
 }
 
 ### Republican Presidency ###
@@ -3915,7 +4106,7 @@ country_event = { # Murray reject the Compromise
 	}
 }
 
-country_event = { # MacArthur and the Army Remove Olson
+country_event = { # MacArthur and the Army Remove Republicans
 	id = ustates.78
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.78"}
 	title = ustates.78.t
