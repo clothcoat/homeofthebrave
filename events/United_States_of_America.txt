@@ -4148,7 +4148,7 @@ country_event = { # Compromise Fails
 		name = ustates.87.a
 		add_stability = -0.08
 		add_political_power = -15
-		add_country_flag = USA_compromise_failed
+		set_country_flag = USA_compromise_failed
 		hidden_effect = {
 		country_event = { id = amcivwar.12 days = 3 } ###Jack Reed
 		country_event = { id = amcivwar.1102 days = 4 } ###Murray Revolts
@@ -4564,7 +4564,11 @@ country_event = { # General Strike Spreads (Too Long)
 		country_exists = CAR
 		}
 		}
-		date = 1937.3.5
+		date > 1937.3.5
+	}
+	
+	mean_time_to_happen = {
+	days = 1
 	}
 
 	option = {
@@ -4659,7 +4663,11 @@ country_event = { # Violence in Atlanta
 		has_country_flag = USA_Civil_War_Averted
 		}
 		}
-		date = 1937.3.5
+		date > 1937.3.5
+	}
+	
+	mean_time_to_happen = {
+	days = 1
 	}
 
 	option = {
