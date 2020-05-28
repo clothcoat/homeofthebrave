@@ -2,9 +2,9 @@
 # Black Belt
 ###########################
 
-add_namespace = blackbelt
+add_namespace = bbr
 
-country_event = { # A State Under Siege!
+country_event = { #A State Under Siege!
 	id = bbr.1
 	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.1"}
 	title = bbr.1.t
@@ -562,7 +562,7 @@ country_event = { # Union Elections
 			ideology = totalist
 			long_name = BBR_COM_totalist_party_long
 			name = BBR_COM_totalist_party }
-	}
+	} 
 	option = { #Harry Haywood
 	name = bbr.17.f
 	add_popularity = { ideology = totalist popularity = 0.1 }
