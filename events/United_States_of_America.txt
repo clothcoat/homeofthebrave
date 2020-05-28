@@ -2946,6 +2946,8 @@ country_event = { # MacArthur Marches onto Washington
 	trigger = {
 		NOT = { has_country_flag = USA_macarthur_coup }
 	}
+	
+	fire_only_once = yes
 
 	option = {
 		name = ustates.51.a
@@ -3262,7 +3264,7 @@ country_event = { # Murray's Inaugural Address
 	option = {
 		name = ustates.6300.a
 		hidden_effect = {
-			country_event = { id = amcivwar.6301 days = 4 }
+			country_event = { id = ustates.6301 days = 4 }
 		}
 	}
 }
@@ -3280,9 +3282,15 @@ country_event = { # Reed and Long reinforce militias
 
 	option = {
 		name = ustates.6301.a
+		add_stability = -0.05
+		add_political_power = -30
+		custom_effect_tooltip = USA_SPA_gains_strength
+		custom_effect_tooltip = USA_AFP_gains_strength
 		hidden_effect = {
-			country_event = { id = amcivwar.6301 days = 1 }
+			add_to_variable = { var = SPA_strength value = 1 }
+			add_to_variable = { var = AFP_strength value = 1 }
 		}
+		add_manpower = -2000
 	}
 }
 
@@ -3300,10 +3308,10 @@ country_event = { # Bankers Resist!
 	option = {
 		name = ustates.6302.a
 		custom_effect_tooltip = USA_ODP_gains_strength
+		add_political_power = -20
 		hidden_effect = {
-			add_to_variable = { var = AFP_strength value = 2 }
-			add_to_variable = { var = ODP_strength value = 2 }
-			country_event = { id = amcivwar.6303 days = 6 }
+			add_to_variable = { var = ODP_strength value = 1 }
+			country_event = { id = ustates.6303 days = 6 }
 		}
 	}
 }
@@ -3323,10 +3331,10 @@ country_event = { # Penalizing the corrupt
 		name = ustates.6303.a
 		custom_effect_tooltip = USA_ODP_gains_strength
 		hidden_effect = {
-			add_to_variable = { var = AFP_strength value = 2 }
-			add_to_variable = { var = ODP_strength value = 2 }
-			country_event = { id = amcivwar.6304 days = 6 }
+			add_to_variable = { var = ODP_strength value = 1 }
+			country_event = { id = ustates.6307 days = 10 }
 		}
+		set_country_flag = USA_Feds_weakened
 	}
 }
 
@@ -3343,34 +3351,9 @@ country_event = { # Rockefeller Investigated
 
 	option = {
 		name = ustates.6304.a
-		custom_effect_tooltip = USA_ODP_gains_strength
-		hidden_effect = {
-			add_to_variable = { var = AFP_strength value = 2 }
-			add_to_variable = { var = ODP_strength value = 2 }
-			country_event = { id = amcivwar.6303 days = 6 }
-		}
-	}
-}
-
-country_event = { # Reed and Long reinforce militias
-	id = ustates.6305
-	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.6305"}
-	title = ustates.6305.t
-	desc = ustates.6305.d
-	picture = GFX_report_event_usa_macarthur_speech
-
-	is_triggered_only = yes
-
-	fire_only_once = yes
-
-	option = {
-		name = ustates.6305.a
-		custom_effect_tooltip = USA_ODP_gains_strength
-		hidden_effect = {
-			add_to_variable = { var = AFP_strength value = 2 }
-			add_to_variable = { var = ODP_strength value = 2 }
-			country_event = { id = amcivwar.6303 days = 6 }
-		}
+		add_stability = -0.05
+		increase_ruling_party_popularity_by_5 = yes
+		
 	}
 }
 
@@ -3389,9 +3372,10 @@ country_event = { # Smith Act Blocked
 		name = ustates.6306.a
 		custom_effect_tooltip = USA_ODP_gains_strength
 		hidden_effect = {
-			add_to_variable = { var = AFP_strength value = 2 }
 			add_to_variable = { var = ODP_strength value = 2 }
-			country_event = { id = amcivwar.6303 days = 6 }
+			country_event = { id = amcivwar.6307 days = 6 }
+			add_stability = -0.05
+			add_political_power = -15
 		}
 	}
 }
@@ -3409,10 +3393,16 @@ country_event = { # Congress Protests
 
 	option = {
 		name = ustates.6307.a
-		add_political_power = -50
-		add_stability = -0.08
+		add_political_power = -40
+		add_stability = -0.1
 		hidden_effect = {
-			country_event = { id = amcivwar.6308 days = 6 }
+			country_event = { id = ustates.6308 days = 5 }
+			country_event = { id = amcivwar.1011 days = 5 }
+			country_event = { id = amcivwar.1012 days = 6 }
+			country_event = { id = amcivwar.1013 days = 7 }
+			country_event = { id = ustates.6308 days = 8 }
+			country_event = { id = amcivwar.3 days = 9 }
+			country_event = { id = amcivwar.3000 days = 10 }
 		}
 	}
 }
@@ -3486,6 +3476,7 @@ country_event = { # Hitting Long
 		custom_effect_tooltip = USA_AFP_loses_strength2
 		hidden_effect = {
 			add_to_variable = { var = SPA_strength value = -3 }
+			country_event = { id = amcivwar.6307 days = 6 }
 		}
 	}
 }
@@ -3506,6 +3497,7 @@ country_event = { # Hitting Reed
 		custom_effect_tooltip = USA_SPA_loses_strength2
 		hidden_effect = {
 			add_to_variable = { var = SPA_strength value = -3 }
+			country_event = { id = amcivwar.6307 days = 6 }
 		}
 	}
 }

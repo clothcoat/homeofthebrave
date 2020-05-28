@@ -649,25 +649,43 @@ focus_tree = {
 		}
 		available = {
 			has_country_flag = USA_president_inaugurated
+			OR = {
+			has_country_leader = { ruling_only = yes name = "William H. Murray" }
+			has_country_leader = { ruling_only = yes name = "Huey Long" }
+			}
 		}
 		available_if_capitulated = yes
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		select_effect = {
-			country_event = ustates.520
+			if = { 
+			limit = { has_country_leader = { ruling_only = yes name = "William H. Murray" } }
+			country_event = { id = amcivwar.6310 days = 8 }
+			}
 		}
 		bypass = {
 			has_country_flag = USA_macarthur_coup
 		}
 		completion_reward = {
-			country_event = ustates.59
+		if = { 
+			limit = { has_country_leader = { ruling_only = yes name = "William H. Murray" } }
+			custom_effect_tooltip = USA_ODP_gains_strength
+			hidden_effect = {
+			add_to_variable = { var = ODP_strength value = 1 }
+			}
+			increase_ruling_party_popularity_by_5 = yes
+			}
+			custom_effect_tooltip = USA_SPA_loses_strength
+			hidden_effect = {
+			add_to_variable = { var = SPA_strength value = -1 }
+			}
 		}
 	}
 	
 	focus = {
 		id = USA_hit_bankers
 		icon = GFX_goal_bankruptcy
-		cost = 0
+		cost = 4
 		relative_position_id = USA_president_long
 		x = 1
 		y = 1
@@ -677,31 +695,43 @@ focus_tree = {
 		mutually_exclusive = {
 		focus = USA_fight_anarchists
 		}
+		select_effect = {
+		if = { 
+		limit = { has_country_leader = { ruling_only = yes name = "William H. Murray" } }
+		country_event = { id = amcivwar.6302 days = 6 }
+		}
+		}
 		prerequisite = {
 			focus = USA_president_long
 			focus = USA_president_murray
 		}
 		available = {
-			custom_trigger_tooltip = {
-				tooltip = USA_reed_is_president
-				has_country_flag = USA_election_1936_flag
-				NOT = { has_country_flag = USA_had_1940_election }
-				has_idea = USA_Jack_Reed_hog_syn
+			has_country_flag = USA_president_inaugurated
+			OR = {
+			has_country_leader = { ruling_only = yes name = "William H. Murray" }
+			has_country_leader = { ruling_only = yes name = "Huey Long" }
 			}
 		}
 		available_if_capitulated = yes
 		cancel_if_invalid = yes
 		continue_if_invalid = no
-		bypass = {
-			custom_trigger_tooltip = {
-				tooltip = USA_reed_is_president
-				has_country_flag = USA_election_1936_flag
-				NOT = { has_country_flag = USA_had_1940_election }
-				has_idea = USA_Jack_Reed_hog_syn
-			}
-		}
 		completion_reward = {
-			custom_effect_tooltip = unlock_focuses
+			if = { 
+			limit = { has_country_leader = { ruling_only = yes name = "Huey Long" } }
+			custom_effect_tooltip = USA_AFP_gains_strength
+			hidden_effect = {
+			add_to_variable = { var = AFP_strength value = 1 }
+			}
+			increase_ruling_party_popularity_by_5 = yes
+			}
+			if = { 
+			limit = { has_country_leader = { ruling_only = yes name = "William H. Murray" } }
+			custom_effect_tooltip = USA_ODP_gains_strength
+			hidden_effect = {
+			add_to_variable = { var = ODP_strength value = 1 }
+			}
+			increase_ruling_party_popularity_by_5 = yes
+			}
 		}
 	}
 	
@@ -715,7 +745,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 100
 		}
-
 		available = {
 			custom_trigger_tooltip = {
 				has_country_flag = USA_murray_is_president
@@ -723,7 +752,6 @@ focus_tree = {
 				NOT = { has_country_flag = USA_had_1940_election }
 			}
 		}
-
 		available_if_capitulated = yes
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -735,35 +763,9 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = USA_attack_the_elite
-		icon = GFX_goal_support_fascism
-		cost = 4
-		relative_position_id = USA_president_murray
-		x = 0
-		y = 2
-		ai_will_do = {
-			factor = 100
-		}
-		prerequisite = {
-			focus = USA_president_murray
-		}
-		available = {
-			has_country_leader = {
-			ruling_only = yes name = "William H. Murray"
-			}
-		}
-		available_if_capitulated = yes
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		completion_reward = {
-			custom_effect_tooltip = unlock_focuses
-		}
-	}
-	
-	focus = {
 		id = USA_the_last_word
 		icon = GFX_goal_support_fascism
-		cost = 4
+		cost = 5
 		relative_position_id = USA_president_murray
 		x = 0
 		y = 2
@@ -772,6 +774,9 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = USA_president_murray
+		}
+		select_effect = {
+			country_event = { id = amcivwar.6306 days = 8 }
 		}
 		available = {
 			has_country_leader = {
@@ -782,7 +787,8 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		completion_reward = {
-			custom_effect_tooltip = unlock_focuses
+			
+			add_popularity = { ideology = national_populist popularity = 0.05 }
 		}
 	}
 	
@@ -799,19 +805,22 @@ focus_tree = {
 		prerequisite = {
 			focus = USA_president_murray
 		}
+		select_effect = {
+			country_event = { id = amcivwar.6309 days = 10 }
+		}
 		available = {
-			custom_trigger_tooltip = {
-				tooltip = USA_reed_is_president
-				has_country_flag = USA_election_1936_flag
-				NOT = { has_country_flag = USA_had_1940_election }
-				has_idea = USA_Jack_Reed_hog_syn
+			has_country_leader = {
+			ruling_only = yes name = "William H. Murray"
 			}
 		}
 		available_if_capitulated = yes
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		completion_reward = {
-			custom_effect_tooltip = unlock_focuses
+			custom_effect_tooltip = USA_SPA_gains_strength
+			hidden_effect = {
+			add_to_variable = { var = SPA_strength value = -1 }
+			}
 		}
 	}
 	
