@@ -8030,7 +8030,6 @@ focus_tree = {
 		304 = {
 		add_state_modifier = {
 			modifier = {
-			resistance_tick_auto = -2	
 			local_resources_factor	= 0.1
 			local_non_core_manpower	= 0.05
 			}
@@ -8041,7 +8040,6 @@ focus_tree = {
 		315 = {
 		add_state_modifier = {
 			modifier = {
-			resistance_tick_auto = -2	
 			local_resources_factor	= 0.1
 			local_non_core_manpower	= 0.05
 			}
@@ -8052,7 +8050,6 @@ focus_tree = {
 		312 = {
 		add_state_modifier = {
 			modifier = {
-			resistance_tick_auto = -2	
 			local_resources_factor	= 0.1
 			local_non_core_manpower	= 0.05
 			}
@@ -8063,7 +8060,6 @@ focus_tree = {
 		313 = {
 		add_state_modifier = {
 			modifier = {
-			resistance_tick_auto = -2	
 			local_resources_factor	= 0.1
 			local_non_core_manpower	= 0.05
 			}
@@ -8074,7 +8070,6 @@ focus_tree = {
 		314 = {
 		add_state_modifier = {
 			modifier = {
-			resistance_tick_auto = -2	
 			local_resources_factor	= 0.1
 			local_non_core_manpower	= 0.05
 			}
@@ -8432,7 +8427,6 @@ focus_tree = {
 		305 = {
 		add_state_modifier = {
 			modifier = {
-			resistance_tick_auto = -2	
 			local_resources_factor	= 0.1
 			local_non_core_manpower	= 0.05
 			}
@@ -8443,7 +8437,6 @@ focus_tree = {
 		306 = {
 		add_state_modifier = {
 			modifier = {
-			resistance_tick_auto = -2	
 			local_resources_factor	= 0.1
 			local_non_core_manpower	= 0.05
 			}
@@ -8454,7 +8447,6 @@ focus_tree = {
 		307 = {
 		add_state_modifier = {
 			modifier = {
-			resistance_tick_auto = -2	
 			local_resources_factor	= 0.1
 			local_non_core_manpower	= 0.05
 			}
@@ -9082,7 +9074,6 @@ focus_tree = {
 		available = { 
 		CAN = {
 				exists = yes
-				is_valid_war_target = yes
 				NOT = {
 					has_socialist_government = yes
 					has_government = social_democrat

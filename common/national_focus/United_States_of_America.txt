@@ -4357,12 +4357,12 @@ focus_tree = {
 						category = recon_tech
 			}
 			add_equipment_to_stockpile = {
-			type = fighter
+			type = fighter_equipment
 			amount = 1000
 			producer = CAL
 			}
 			add_equipment_to_stockpile = {
-			type = infantry_weapons
+			type = infantry_equipment
 			amount = 1500
 			producer = CAL
 			}

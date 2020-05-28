@@ -3918,10 +3918,6 @@ focus_tree = {
 		prerequisite = {
 			focus = TEX_unpredictable_planning
 		}
-		mutually_exclusive = {
-			focus = TEX_Terrible_Terry
-			focus = TEX_Devers_Plan
-		}
 		x = -1
 		y = 3
 		ai_will_do = {
@@ -3945,10 +3941,6 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = TEX_combat_ready
-		}
-		mutually_exclusive = {
-			focus = TEX_Terrible_Terry
-			focus = TEX_Devers_Plan
 		}
 		x = 0
 		y = 4

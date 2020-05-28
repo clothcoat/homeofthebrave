@@ -341,18 +341,18 @@ focus_tree = {
 		country_event = {
 			id = newengland.112
 			days = 5
-			}	
+				}	
 		country_event = {
 			id = newengland.113
 			days = 11
-			}	
+				}	
 		country_event = {
 			id = newengland.113
 			days = 20
-			}	
+				}	
+			}
 		}
 		cancel_if_invalid = yes
-		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NEE_hamiltionian_victory"
@@ -365,7 +365,6 @@ focus_tree = {
 			}
 		}
 	}
-	
 	focus = {
 		id = NEE_elite_contracts
 		icon = GFX_NEE_elite_contracts
@@ -3870,7 +3869,6 @@ focus_tree = {
 			}
 		}
 	}
-
 	focus = {
 		id = NEE_Settlement_Movement
 		icon = GFX_focus_generic_self_management

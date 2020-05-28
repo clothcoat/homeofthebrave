@@ -432,9 +432,8 @@ ideas = {
 			removal_cost = -1
 			picture = klan_resistance
 			modifier = {
-				political_power_gain = -0.15
-				stability_factor = -0.05
-				resistance_tick	= 0.05
+				political_power_gain = -0.2
+				stability_factor = -0.08
 				conscription_factor = -0.08
 			}
 		}
@@ -446,7 +445,6 @@ ideas = {
 			modifier = {
 				political_power_gain = -0.1
 				stability_factor = -0.03
-				resistance_tick	= 0.03
 				conscription_factor = -0.05
 			}
 		}
@@ -458,7 +456,6 @@ ideas = {
 			modifier = {
 				political_power_gain = -0.02
 				stability_factor = -0.03
-				resistance_tick	= 0.05
 				conscription_factor = -0.08
 			}
 		}
@@ -470,7 +467,6 @@ ideas = {
 			modifier = {
 				political_power_gain = -0.02
 				stability_factor = -0.03
-				resistance_tick	= 0.05
 				conscription_factor = -0.08
 			}
 		}
@@ -482,7 +478,6 @@ ideas = {
 			modifier = {
 				political_power_gain = -0.02
 				stability_factor = -0.03
-				resistance_tick	= 0.05
 				conscription_factor = -0.08
 			}
 		}
@@ -494,7 +489,6 @@ ideas = {
 			modifier = {
 				political_power_gain = -0.02
 				stability_factor = -0.03
-				resistance_tick	= 0.05
 				conscription_factor = -0.08
 			}
 		}
@@ -509,7 +503,6 @@ ideas = {
 				local_intel_to_enemies = 0.05
 				local_supplies = -0.02
 				stability_factor = -0.03
-				resistance_tick	= 0.05
 			}
 		}
 		ACW_crime_resistance_2 = {
@@ -523,7 +516,6 @@ ideas = {
 				local_intel_to_enemies = 0.05
 				local_supplies = -0.02
 				stability_factor = -0.03
-				resistance_tick	= 0.05
 			}
 		}
 		USA_mob_activity_alliance_idea = {
@@ -538,7 +530,6 @@ ideas = {
 				encryption_factor = 0.05
 				decryption_factor = 0.05
 				stability_factor = -0.02
-				resistance_tick	= -0.05
 			}
 		}
 		ACW_black_legion_resistance_1 = {
@@ -553,7 +544,6 @@ ideas = {
 				encryption_factor = 0.05
 				decryption_factor = 0.05
 				stability_factor = -0.02
-				resistance_tick	= -0.05
 			}
 		}
 		ACW_black_legion_resistance_2 = {
@@ -568,7 +558,6 @@ ideas = {
 				encryption_factor = 0.05
 				decryption_factor = 0.05
 				stability_factor = -0.02
-				resistance_tick	= -0.05
 			}
 		}
 		ACW_black_legion_resistance_3 = {
@@ -583,7 +572,6 @@ ideas = {
 				encryption_factor = 0.05
 				decryption_factor = 0.05
 				stability_factor = -0.02
-				resistance_tick	= -0.05
 			}
 		}
 		ACW_black_legion_resistance_4 = {
@@ -598,7 +586,6 @@ ideas = {
 				encryption_factor = 0.05
 				decryption_factor = 0.05
 				stability_factor = -0.02
-				resistance_tick	= -0.05
 			}
 		}
 		ACW_liberal_resistance_1 = {
@@ -613,7 +600,6 @@ ideas = {
 				local_supplies = -0.02
 				supply_consumption_factor = 0.01
 				stability_factor = -0.03
-				resistance_tick	= 0.05
 			}
 		}
 		ACW_liberal_resistance_2 = {
@@ -628,7 +614,6 @@ ideas = {
 				local_supplies = -0.02
 				supply_consumption_factor = 0.01
 				stability_factor = -0.03
-				resistance_tick	= 0.05
 			}
 		}
 		ACW_liberal_resistance_3 = {
@@ -643,7 +628,6 @@ ideas = {
 				local_supplies = -0.02
 				supply_consumption_factor = 0.01
 				stability_factor = -0.03
-				resistance_tick	= 0.05
 			}
 		}
 		ACW_liberal_resistance_4 = {
@@ -658,7 +642,6 @@ ideas = {
 				local_supplies = -0.02
 				supply_consumption_factor = 0.01
 				stability_factor = -0.03
-				resistance_tick	= 0.05
 			}
 		}
 		ACW_minutemen_resistance_1 = {
@@ -673,7 +656,6 @@ ideas = {
 				local_supplies = -0.02
 				supply_consumption_factor = 0.01
 				stability_factor = -0.03
-				resistance_tick	= 0.05
 			}
 		}
 		ACW_minutemen_resistance_2 = {
@@ -688,7 +670,6 @@ ideas = {
 				local_supplies = -0.04
 				supply_consumption_factor = 0.02
 				stability_factor = -0.05
-				resistance_tick	= 0.07
 			}
 		}
 		ACW_minutemen_resistance_3 = {
@@ -703,7 +684,6 @@ ideas = {
 				local_supplies = -0.08
 				supply_consumption_factor = 0.04
 				stability_factor = -0.08
-				resistance_tick	= 0.1
 			}
 		}
 		ACW_minutemen_resistance_4 = {
@@ -718,7 +698,6 @@ ideas = {
 				local_supplies = -0.08
 				supply_consumption_factor = 0.04
 				stability_factor = -0.08
-				resistance_tick	= 0.1
 			}
 		}
 		ACW_socialist_resistance_1 = {
@@ -733,7 +712,6 @@ ideas = {
 				local_supplies = -0.02
 				supply_consumption_factor = 0.01
 				stability_factor = -0.03
-				resistance_tick	= 0.05
 			}
 		}
 		ACW_socialist_resistance_2 = {
@@ -748,7 +726,6 @@ ideas = {
 				local_supplies = -0.02
 				supply_consumption_factor = 0.01
 				stability_factor = -0.03
-				resistance_tick	= 0.05
 			}
 		}
 		ACW_socialist_resistance_3 = {
@@ -763,7 +740,6 @@ ideas = {
 				local_supplies = -0.02
 				supply_consumption_factor = 0.01
 				stability_factor = -0.03
-				resistance_tick	= 0.05
 			}
 		}
 		ACW_socialist_resistance_4 = {
@@ -778,7 +754,6 @@ ideas = {
 				local_supplies = -0.02
 				supply_consumption_factor = 0.01
 				stability_factor = -0.03
-				resistance_tick	= 0.05
 			}
 		}
 		ACW_fed_resistance_1 = {
@@ -792,7 +767,6 @@ ideas = {
 				local_resources	= -0.03
 				political_power_gain = -0.02
 				stability_factor = -0.05
-				resistance_tick	= 0.05
 			}
 		}
 		ACW_fed_resistance_2 = {
@@ -806,7 +780,6 @@ ideas = {
 				local_resources	= -0.03
 				political_power_gain = -0.02
 				stability_factor = -0.05
-				resistance_tick	= 0.05
 			}
 		}
 		ACW_fed_resistance_3 = {
@@ -820,7 +793,6 @@ ideas = {
 				local_resources	= -0.03
 				political_power_gain = -0.02
 				stability_factor = -0.05
-				resistance_tick	= 0.05
 			}
 		}
 		ACW_fed_resistance_4 = {
@@ -834,7 +806,6 @@ ideas = {
 				local_resources	= -0.03
 				political_power_gain = -0.02
 				stability_factor = -0.05
-				resistance_tick	= 0.05
 			}
 		}
 		ACW_black_nationalist_resistance_1 = {
@@ -848,7 +819,6 @@ ideas = {
 				local_resources	= -0.03
 				political_power_gain = -0.02
 				stability_factor = -0.05
-				resistance_tick	= 0.05
 			}
 		}
 		ACW_black_nationalist_resistance_2 = {
@@ -862,7 +832,6 @@ ideas = {
 				local_resources	= -0.03
 				political_power_gain = -0.02
 				stability_factor = -0.05
-				resistance_tick	= 0.05
 			}
 		}
 		ACW_black_nationalist_resistance_3 = {
@@ -876,7 +845,6 @@ ideas = {
 				local_resources	= -0.03
 				political_power_gain = -0.02
 				stability_factor = -0.05
-				resistance_tick	= 0.05
 			}
 		}
 		ACW_black_nationalist_resistance_4 = {
@@ -890,7 +858,6 @@ ideas = {
 				local_resources	= -0.03
 				political_power_gain = -0.02
 				stability_factor = -0.05
-				resistance_tick	= 0.05
 			}
 		}
 		USA_civil_war_aftermath_idea = { #Civil War Aftermath
@@ -1023,7 +990,6 @@ ideas = {
 			modifier = {
 				army_core_attack_factor = 0.1
 				army_core_defence_factor = 0.1
-				enemy_partisan_effect = -0.1
 			}
 		}
 		USA_american_values_ideas = { #American Values
@@ -1393,7 +1359,6 @@ ideas = {
 			modifier = {
 				army_core_attack_factor = 0.1
 				army_core_defence_factor = 0.1
-				enemy_partisan_effect = -0.1
 			}
 		}
 		USA_restoring_confidence = { #Restoring Confidence

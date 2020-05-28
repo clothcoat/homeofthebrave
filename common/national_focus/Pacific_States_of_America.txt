@@ -5423,9 +5423,9 @@ focus_tree = {
 		y = 2
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_levering_act"
-			popularity = { ideology = social_conservative popularity = 0.05 }
-			popularity = { ideology = syndicalist popularity = -0.03 }
-			popularity = { ideology = totalist popularity = -0.03 }
+			add_popularity = { ideology = social_conservative popularity = 0.05 }
+			add_popularity = { ideology = syndicalist popularity = -0.03 }
+			add_popularity = { ideology = totalist popularity = -0.03 }
 			add_stability = 0.03
 			add_war_support = 0.03
 		}
