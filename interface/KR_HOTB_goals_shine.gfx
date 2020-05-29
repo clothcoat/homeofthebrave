@@ -3,11 +3,11 @@ spriteTypes = {
 	###HOTB###
 	
 	SpriteType = {
-		name = "GFX_BBR_ABB"
-		texturefile = "gfx/interface/goals/BBR__ABB.dds"
+		name = "GFX_BBR_ABB_shine"
+		texturefile = "gfx/interface/goals/BBR_ABB.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/BBR__ABB.dds"
+			animationmaskfile = "gfx/interface/goals/BBR_ABB.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -20,7 +20,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/BBR__ABB.dds"
+			animationmaskfile = "gfx/interface/goals/BBR_ABB.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -35,7 +35,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_BBR_accelerate_integration"
+		name = "GFX_BBR_accelerate_integration_shine"
 		texturefile = "gfx/interface/goals/BBR_accelerate_integration.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -67,7 +67,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_acricultural_revolution"
+		name = "GFX_BBR_acricultural_revolution_shine"
 		texturefile = "gfx/interface/goals/BBR_acricultural_revolution.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -99,7 +99,7 @@ spriteTypes = {
 	}
 
 		SpriteType = {
-		name = "GFX_BBR_affirmative_action"
+		name = "GFX_BBR_affirmative_action_shine"
 		texturefile = "gfx/interface/goals/BBR_affirmative_action.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -131,7 +131,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_american_identity"
+		name = "GFX_BBR_american_identity_shine"
 		texturefile = "gfx/interface/goals/BBR_american_identity.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -163,7 +163,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_american_traditions"
+		name = "GFX_BBR_american_traditions_shine"
 		texturefile = "gfx/interface/goals/BBR_american_traditions.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -195,7 +195,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_americanists"
+		name = "GFX_BBR_americanists_shine"
 		texturefile = "gfx/interface/goals/BBR_americanists.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -227,7 +227,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_approach_afp"
+		name = "GFX_BBR_approach_afp_shine"
 		texturefile = "gfx/interface/goals/BBR_approach_afp.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -259,7 +259,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_approach_local_socialists"
+		name = "GFX_BBR_approach_local_socialists_shine"
 		texturefile = "gfx/interface/goals/BBR_approach_local_socialists.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -291,7 +291,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_art_centers"
+		name = "GFX_BBR_art_centers_shine"
 		texturefile = "gfx/interface/goals/BBR_art_centers.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -323,7 +323,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_BBR_black_cross"
+		name = "GFX_BBR_black_cross_shine"
 		texturefile = "gfx/interface/goals/BBR_black_cross.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -355,7 +355,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_black_dragon_society"
+		name = "GFX_BBR_black_dragon_society_shine"
 		texturefile = "gfx/interface/goals/BBR_black_dragon_society.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -387,7 +387,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_black_mercantilism"
+		name = "GFX_BBR_black_mercantilism_shine"
 		texturefile = "gfx/interface/goals/BBR_black_mercantilism.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -419,7 +419,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_black_national_syndicalism"
+		name = "GFX_BBR_black_national_syndicalism_shine"
 		texturefile = "gfx/interface/goals/BBR_black_national_syndicalism.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -451,7 +451,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_black_nobility"
+		name = "GFX_BBR_black_nobility_shine"
 		texturefile = "gfx/interface/goals/BBR_black_nobility.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -483,7 +483,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_black_separatism"
+		name = "GFX_BBR_black_separatism_shine"
 		texturefile = "gfx/interface/goals/BBR_black_separatism.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -515,7 +515,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_black_star_line"
+		name = "GFX_BBR_black_star_line_shine"
 		texturefile = "gfx/interface/goals/BBR_black_star_line.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -547,7 +547,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_bourgeoisie_to_knees"
+		name = "GFX_BBR_bourgeoisie_to_knees_shine"
 		texturefile = "gfx/interface/goals/BBR_bourgeoisie_to_knees.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -579,7 +579,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_buffalo_soldiers"
+		name = "GFX_BBR_buffalo_soldiers_shine"
 		texturefile = "gfx/interface/goals/BBR_buffalo_soldiers.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -611,7 +611,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_building"
+		name = "GFX_BBR_building_shine"
 		texturefile = "gfx/interface/goals/BBR_building.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -643,7 +643,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_build_industries"
+		name = "GFX_BBR_build_industries_shine"
 		texturefile = "gfx/interface/goals/BBR_build_industries.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -675,7 +675,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_building_our_arms"
+		name = "GFX_BBR_building_our_arms_shine"
 		texturefile = "gfx/interface/goals/BBR_building_our_arms.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -707,7 +707,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_capital_buyout"
+		name = "GFX_BBR_capital_buyout_shine"
 		texturefile = "gfx/interface/goals/BBR_capital_buyout.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -739,7 +739,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_captain_at_helm"
+		name = "GFX_BBR_captain_at_helm_shine"
 		texturefile = "gfx/interface/goals/BBR_captain_at_helm.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -771,7 +771,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_BBR_centralists"
+		name = "GFX_BBR_centralists_shine"
 		texturefile = "gfx/interface/goals/BBR_centralists.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -803,7 +803,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_children_of_the_sun"
+		name = "GFX_BBR_children_of_the_sun_shine"
 		texturefile = "gfx/interface/goals/BBR_children_of_the_sun.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -835,7 +835,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_civil_rights_amendment"
+		name = "GFX_BBR_civil_rights_amendment_shine"
 		texturefile = "gfx/interface/goals/BBR_civil_rights_amendment.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -867,7 +867,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_collective_management"
+		name = "GFX_BBR_collective_management_shine"
 		texturefile = "gfx/interface/goals/BBR_collective_management.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -899,7 +899,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_corral_the_left"
+		name = "GFX_BBR_corral_the_left_shine"
 		texturefile = "gfx/interface/goals/BBR_corral_the_left.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -931,7 +931,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_crusaders"
+		name = "GFX_BBR_crusaders_shine"
 		texturefile = "gfx/interface/goals/BBR_crusaders.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -963,7 +963,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_crush_old_imperialists"
+		name = "GFX_BBR_crush_old_imperialists_shine"
 		texturefile = "gfx/interface/goals/BBR_crush_old_imperialists.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -995,7 +995,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_crush_black_socialists"
+		name = "GFX_BBR_crush_black_socialists_shine"
 		texturefile = "gfx/interface/goals/BBR_crush_black_socialists.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -1027,7 +1027,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_crush_race_extremists"
+		name = "GFX_BBR_crush_race_extremists_shine"
 		texturefile = "gfx/interface/goals/BBR_crush_race_extremists.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -1059,7 +1059,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_crush_ultraradicals"
+		name = "GFX_BBR_crush_ultraradicals_shine"
 		texturefile = "gfx/interface/goals/BBR_crush_ultraradicals.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -1091,7 +1091,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_davis_plan"
+		name = "GFX_BBR_davis_plan_shine"
 		texturefile = "gfx/interface/goals/BBR_davis_plan.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -1123,7 +1123,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_declaration_of_rights"
+		name = "GFX_BBR_declaration_of_rights_shine"
 		texturefile = "gfx/interface/goals/BBR_declaration_of_rights.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -1155,7 +1155,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_de_leonist_elections"
+		name = "GFX_BBR_de_leonist_elections_shine"
 		texturefile = "gfx/interface/goals/BBR_de_leonist_elections.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -1187,7 +1187,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_discredit_racism"
+		name = "GFX_BBR_discredit_racism_shine"
 		texturefile = "gfx/interface/goals/BBR_discredit_racism.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -1219,7 +1219,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_economic_independence"
+		name = "GFX_BBR_economic_independence_shine"
 		texturefile = "gfx/interface/goals/BBR_economic_independence.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -1251,7 +1251,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_elderly_dignities"
+		name = "GFX_BBR_elderly_dignities_shine"
 		texturefile = "gfx/interface/goals/BBR_elderly_dignities.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -1283,7 +1283,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_equality_of_wealth"
+		name = "GFX_BBR_equality_of_wealth_shine"
 		texturefile = "gfx/interface/goals/BBR_equality_of_wealth.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -1315,7 +1315,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_expand_nnbl"
+		name = "GFX_BBR_expand_nnbl_shine"
 		texturefile = "gfx/interface/goals/BBR_expand_nnbl.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -1347,7 +1347,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_expanding_the_party"
+		name = "GFX_BBR_expanding_the_party_shine"
 		texturefile = "gfx/interface/goals/BBR_expanding_the_party.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -1379,7 +1379,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_feed_the_poor"
+		name = "GFX_BBR_feed_the_poor_shine"
 		texturefile = "gfx/interface/goals/BBR_feed_the_poor.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -1411,7 +1411,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_flipper_plan"
+		name = "GFX_BBR_flipper_plan_shine"
 		texturefile = "gfx/interface/goals/BBR_flipper_plan.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -1443,7 +1443,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_freedom_budget"
+		name = "GFX_BBR_freedom_budget_shine"
 		texturefile = "gfx/interface/goals/BBR_freedom_budget.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -1475,7 +1475,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_fruit_of_islam"
+		name = "GFX_BBR_fruit_of_islam_shine"
 		texturefile = "gfx/interface/goals/BBR_fruit_of_islam.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -1507,7 +1507,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_full_employement"
+		name = "GFX_BBR_full_employement_shine"
 		texturefile = "gfx/interface/goals/BBR_full_employement.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -1539,7 +1539,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_full_honors_act"
+		name = "GFX_BBR_full_honors_act_shine"
 		texturefile = "gfx/interface/goals/BBR_full_honors_act.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -1571,7 +1571,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_group_economy"
+		name = "GFX_BBR_group_economy_shine"
 		texturefile = "gfx/interface/goals/BBR_group_economy.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -1603,7 +1603,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_hammer_and_hoe"
+		name = "GFX_BBR_hammer_and_hoe_shine"
 		texturefile = "gfx/interface/goals/BBR_hammer_and_hoe.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -1635,7 +1635,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_healthcare"
+		name = "GFX_BBR_healthcare_shine"
 		texturefile = "gfx/interface/goals/BBR_healthcare.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -1667,7 +1667,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_higher_culture"
+		name = "GFX_BBR_higher_culture_shine"
 		texturefile = "gfx/interface/goals/BBR_higher_culture.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -1699,7 +1699,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_HLW"
+		name = "GFX_BBR_HLW_shine"
 		texturefile = "gfx/interface/goals/BBR_HLW.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -1731,7 +1731,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_hub_of_revolution"
+		name = "GFX_BBR_hub_of_revolution_shine"
 		texturefile = "gfx/interface/goals/BBR_hub_of_revolution.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -1763,7 +1763,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_industrializing_land"
+		name = "GFX_BBR_industrializing_land_shine"
 		texturefile = "gfx/interface/goals/BBR_industrializing_land.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -1795,7 +1795,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_internationale_collaboration"
+		name = "GFX_BBR_internationale_collaboration_shine"
 		texturefile = "gfx/interface/goals/BBR_internationale_collaboration.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -1827,7 +1827,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_International_Peace_movement"
+		name = "GFX_BBR_International_Peace_movement_shine"
 		texturefile = "gfx/interface/goals/BBR_International_Peace_movement.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -1859,7 +1859,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_insurance_societies"
+		name = "GFX_BBR_insurance_societies_shine"
 		texturefile = "gfx/interface/goals/BBR_insurance_societies.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -1891,7 +1891,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_islamic_education"
+		name = "GFX_BBR_islamic_education_shine"
 		texturefile = "gfx/interface/goals/BBR_islamic_education.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -1923,7 +1923,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_intellectual_appeal"
+		name = "GFX_BBR_intellectual_appeal_shine"
 		texturefile = "gfx/interface/goals/BBR_intellectual_appeal.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -1955,7 +1955,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_internationale_struggle"
+		name = "GFX_BBR_internationale_struggle_shine"
 		texturefile = "gfx/interface/goals/BBR_internationale_struggle.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -1987,7 +1987,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_lwiu"
+		name = "GFX_BBR_lwiu_shine"
 		texturefile = "gfx/interface/goals/BBR_lwiu.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -2019,7 +2019,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_jacobin_police"
+		name = "GFX_BBR_jacobin_police_shine"
 		texturefile = "gfx/interface/goals/BBR_jacobin_police.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -2051,7 +2051,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_labor_board"
+		name = "GFX_BBR_labor_board_shine"
 		texturefile = "gfx/interface/goals/BBR_labor_board.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -2083,7 +2083,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_labor_ladies"
+		name = "GFX_BBR_labor_ladies_shine"
 		texturefile = "gfx/interface/goals/BBR_labor_ladies.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -2115,7 +2115,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_land_preservation"
+		name = "GFX_BBR_land_preservation_shine"
 		texturefile = "gfx/interface/goals/BBR_land_preservation.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -2147,7 +2147,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_land_redistribution"
+		name = "GFX_BBR_land_redistribution_shine"
 		texturefile = "gfx/interface/goals/BBR_land_redistribution.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -2179,7 +2179,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_law_of_allah"
+		name = "GFX_BBR_law_of_allah_shine"
 		texturefile = "gfx/interface/goals/BBR_law_of_allah.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -2211,7 +2211,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_league_of_revolutionary_struggle"
+		name = "GFX_BBR_league_of_revolutionary_struggle_shine"
 		texturefile = "gfx/interface/goals/BBR_league_of_revolutionary_struggle.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -2243,7 +2243,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_legacy_of_roosevelt"
+		name = "GFX_BBR_legacy_of_roosevelt_shine"
 		texturefile = "gfx/interface/goals/BBR_legacy_of_roosevelt.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -2275,7 +2275,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_liberian_connection"
+		name = "GFX_BBR_liberian_connection_shine"
 		texturefile = "gfx/interface/goals/BBR_liberian_connection.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -2307,7 +2307,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_lodges"
+		name = "GFX_BBR_lodges_shine"
 		texturefile = "gfx/interface/goals/BBR_lodges.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -2339,7 +2339,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_lodges"
+		name = "GFX_BBR_BBR_man_churches_one_voice_shine"
 		texturefile = "gfx/interface/goals/BBR_man_churches_one_voice.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -2371,7 +2371,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_marches_against_oppression"
+		name = "GFX_BBR_marches_against_oppression_shine"
 		texturefile = "gfx/interface/goals/BBR_marches_against_oppression.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -2403,39 +2403,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_marches_against_oppression"
-		texturefile = "gfx/interface/goals/BBR_marches_against_oppression.dds"
-		effectFile = "gfx/FX/buttonstate.lua"
-		animation = {
-			animationmaskfile = "gfx/interface/goals/BBR_marches_against_oppression.dds"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = -90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-
-		animation = {
-			animationmaskfile = "gfx/interface/goals/BBR_marches_against_oppression.dds"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = 90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-		legacy_lazy_load = no
-	}
-
-	SpriteType = {
-		name = "GFX_BBR_mass_recruitment"
+		name = "GFX_BBR_mass_recruitment_shine"
 		texturefile = "gfx/interface/goals/BBR_mass_recruitment.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -2467,7 +2435,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_means_of_production"
+		name = "GFX_BBR_means_of_production_shine"
 		texturefile = "gfx/interface/goals/BBR_means_of_production.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -2499,7 +2467,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_military_sciences"
+		name = "GFX_BBR_military_sciences_shine"
 		texturefile = "gfx/interface/goals/BBR_military_sciences.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -2531,7 +2499,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_multiracial_congregations"
+		name = "GFX_BBR_multiracial_congregations_shine"
 		texturefile = "gfx/interface/goals/BBR_multiracial_congregations.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -2563,7 +2531,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_muslim_girl_training"
+		name = "GFX_BBR_muslim_girl_training_shine"
 		texturefile = "gfx/interface/goals/BBR_muslim_girl_training.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -2595,7 +2563,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_mutual_savings_bank"
+		name = "GFX_BBR_mutual_savings_bank_shine"
 		texturefile = "gfx/interface/goals/BBR_mutual_savings_bank.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -2627,7 +2595,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_national_savings_plan"
+		name = "GFX_BBR_national_savings_plan_shine"
 		texturefile = "gfx/interface/goals/BBR_national_savings_plan.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -2659,7 +2627,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_negro_corp"
+		name = "GFX_BBR_negro_corp_shine"
 		texturefile = "gfx/interface/goals/BBR_negro_corp.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -2691,7 +2659,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_neobookerite_machine"
+		name = "GFX_BBR_neobookerite_machine_shine"
 		texturefile = "gfx/interface/goals/BBR_neobookerite_machine.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -2723,7 +2691,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_new_afrikan_manifest_destiny"
+		name = "GFX_BBR_new_afrikan_manifest_destiny_shine"
 		texturefile = "gfx/interface/goals/BBR_new_afrikan_manifest_destiny.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -2755,7 +2723,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_new_communist_league"
+		name = "GFX_BBR_new_communist_league_shine"
 		texturefile = "gfx/interface/goals/BBR_new_communist_league.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -2787,7 +2755,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_no_whites"
+		name = "GFX_BBR_no_whites_shine"
 		texturefile = "gfx/interface/goals/BBR_no_whites.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -2819,7 +2787,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_NOI"
+		name = "GFX_BBR_NOI_shine"
 		texturefile = "gfx/interface/goals/BBR_NOI.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -2851,7 +2819,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_page_plan"
+		name = "GFX_BBR_page_plan_shine"
 		texturefile = "gfx/interface/goals/BBR_page_plan.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -2883,7 +2851,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_one_party"
+		name = "GFX_BBR_one_party_shine"
 		texturefile = "gfx/interface/goals/BBR_one_party.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -2915,7 +2883,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_organize_tenant_farmers"
+		name = "GFX_BBR_organize_tenant_farmers_shine"
 		texturefile = "gfx/interface/goals/BBR_organize_tenant_farmers.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -2947,7 +2915,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_overthrow_capital"
+		name = "GFX_BBR_overthrow_capital_shine"
 		texturefile = "gfx/interface/goals/BBR_overthrow_capital.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -2979,7 +2947,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_party_with_a_state"
+		name = "GFX_BBR_party_with_a_state_shine"
 		texturefile = "gfx/interface/goals/BBR_party_with_a_state.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -3011,7 +2979,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_paternalistic_economy"
+		name = "GFX_BBR_paternalistic_economy_shine"
 		texturefile = "gfx/interface/goals/BBR_paternalistic_economy.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -3043,7 +3011,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_peace_party"
+		name = "GFX_BBR_peace_party_shine"
 		texturefile = "gfx/interface/goals/BBR_peace_party.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -3075,7 +3043,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_porters_unions"
+		name = "GFX_BBR_porters_unions_shine"
 		texturefile = "gfx/interface/goals/BBR_porters_unions.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -3107,7 +3075,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_porters_unions"
+		name = "GFX_BBR_porters_unions_shine"
 		texturefile = "gfx/interface/goals/BBR_porters_unions.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -3139,7 +3107,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_BBR_power_of_faith"
+		name = "GFX_BBR_power_of_faith_shine"
 		texturefile = "gfx/interface/goals/BBR_power_of_faith.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -3171,7 +3139,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_progressive_democrats"
+		name = "GFX_BBR_progressive_democrats_shine"
 		texturefile = "gfx/interface/goals/BBR_progressive_democrats.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -3203,7 +3171,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_purge_radicals"
+		name = "GFX_BBR_purge_radicals_shine"
 		texturefile = "gfx/interface/goals/BBR_purge_radicals.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -3235,7 +3203,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_racial_expropriations"
+		name = "GFX_BBR_racial_expropriations_shine"
 		texturefile = "gfx/interface/goals/BBR_racial_expropriations.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -3267,39 +3235,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_racial_expropriations"
-		texturefile = "gfx/interface/goals/BBR_racial_expropriations.dds"
-		effectFile = "gfx/FX/buttonstate.lua"
-		animation = {
-			animationmaskfile = "gfx/interface/goals/BBR_racial_expropriations.dds"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = -90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-
-		animation = {
-			animationmaskfile = "gfx/interface/goals/BBR_racial_expropriations.dds"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = 90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-		legacy_lazy_load = no
-	}
-
-	SpriteType = {
-		name = "GFX_BBR_radical_anti_imperialism"
+		name = "GFX_BBR_radical_anti_imperialism_shine"
 		texturefile = "gfx/interface/goals/BBR_radical_anti_imperialism.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -3331,7 +3267,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_radicalized_unions"
+		name = "GFX_BBR_radicalized_unions_shine"
 		texturefile = "gfx/interface/goals/BBR_radicalized_unions.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -3363,7 +3299,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_rapid_nationalisation"
+		name = "GFX_BBR_rapid_nationalisation_shine"
 		texturefile = "gfx/interface/goals/BBR_rapid_nationalisation.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -3395,7 +3331,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_reclaim_ancient_world"
+		name = "GFX_BBR_reclaim_ancient_world_shine"
 		texturefile = "gfx/interface/goals/BBR_reclaim_ancient_world.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -3427,7 +3363,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_reclaim_the_homeland"
+		name = "GFX_BBR_reclaim_the_homeland_shine"
 		texturefile = "gfx/interface/goals/BBR_reclaim_the_homeland.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -3459,7 +3395,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_redeem_afrika"
+		name = "GFX_BBR_redeem_afrika_shine"
 		texturefile = "gfx/interface/goals/BBR_redeem_afrika.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -3491,7 +3427,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_red_militia_justice"
+		name = "GFX_BBR_red_militia_justice_shine"
 		texturefile = "gfx/interface/goals/BBR_red_militia_justice.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -3523,7 +3459,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_reform_afl"
+		name = "GFX_BBR_reform_afl_shine"
 		texturefile = "gfx/interface/goals/BBR_reform_afl.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -3555,7 +3491,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_resources_of_black_america"
+		name = "GFX_BBR_resources_of_black_america_shine"
 		texturefile = "gfx/interface/goals/BBR_resources_of_black_america.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -3587,7 +3523,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_rituals"
+		name = "GFX_BBR_rituals_shine"
 		texturefile = "gfx/interface/goals/BBR_rituals.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -3619,7 +3555,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_rubber_stamped_urbanization"
+		name = "GFX_BBR_rubber_stamped_urbanization_shine"
 		texturefile = "gfx/interface/goals/BBR_rubber_stamped_urbanization.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -3651,7 +3587,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_rural_schools"
+		name = "GFX_BBR_rural_schools_shine"
 		texturefile = "gfx/interface/goals/BBR_rural_schools.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -3683,7 +3619,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_seize_jewish_wealth"
+		name = "GFX_BBR_seize_jewish_wealth_shine"
 		texturefile = "gfx/interface/goals/BBR_seize_jewish_wealth.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -3715,7 +3651,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_socialist_civi_identity"
+		name = "GFX_BBR_socialist_civi_identity_shine"
 		texturefile = "gfx/interface/goals/BBR_socialist_civi_identity.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -3747,7 +3683,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_socialist_party"
+		name = "GFX_BBR_socialist_party_shine"
 		texturefile = "gfx/interface/goals/BBR_socialist_party.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -3779,7 +3715,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_socialist_reformers"
+		name = "GFX_BBR_socialist_reformers_shine"
 		texturefile = "gfx/interface/goals/BBR_socialist_reformers.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -3811,7 +3747,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_socialist_vanguard"
+		name = "GFX_BBR_socialist_vanguard_shine"
 		texturefile = "gfx/interface/goals/BBR_socialist_vanguard.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -3843,7 +3779,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_solidarity_economics"
+		name = "GFX_BBR_solidarity_economics_shine"
 		texturefile = "gfx/interface/goals/BBR_solidarity_economics.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -3875,7 +3811,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_southern_class_consciousness"
+		name = "GFX_BBR_southern_class_consciousness_shine"
 		texturefile = "gfx/interface/goals/BBR_southern_class_consciousness.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -3907,7 +3843,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_southern_socialist_upsurge"
+		name = "GFX_BBR_southern_socialist_upsurge_shine"
 		texturefile = "gfx/interface/goals/BBR_southern_socialist_upsurge.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -3939,7 +3875,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_spiritual_patriotism"
+		name = "GFX_BBR_spiritual_patriotism_shine"
 		texturefile = "gfx/interface/goals/BBR_spiritual_patriotism.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -3971,7 +3907,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_state_employement"
+		name = "GFX_BBR_state_employement_shine"
 		texturefile = "gfx/interface/goals/BBR_state_employement.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -4003,7 +3939,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_state_quotas"
+		name = "GFX_BBR_state_quotas_shine"
 		texturefile = "gfx/interface/goals/BBR_state_quotas.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -4035,7 +3971,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_support_black_middle_class"
+		name = "GFX_BBR_support_black_middle_class_shine"
 		texturefile = "gfx/interface/goals/BBR_support_black_middle_class.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -4067,7 +4003,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_talented_tenth"
+		name = "GFX_BBR_talented_tenth_shine"
 		texturefile = "gfx/interface/goals/BBR_talented_tenth.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -4099,7 +4035,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_the_black_pharaoh"
+		name = "GFX_BBR_the_black_pharaoh_shine"
 		texturefile = "gfx/interface/goals/BBR_the_black_pharaoh.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -4131,7 +4067,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_the_final_call"
+		name = "GFX_BBR_the_final_call_shine"
 		texturefile = "gfx/interface/goals/BBR_the_final_call.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -4163,7 +4099,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_the_prophet"
+		name = "GFX_BBR_the_prophet_shine"
 		texturefile = "gfx/interface/goals/BBR_the_prophet.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -4195,7 +4131,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_trade_union_congress"
+		name = "GFX_BBR_trade_union_congress_shine"
 		texturefile = "gfx/interface/goals/BBR_trade_union_congress.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -4227,7 +4163,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_top_down_army"
+		name = "GFX_BBR_top_down_army_shine"
 		texturefile = "gfx/interface/goals/BBR_top_down_army.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -4259,7 +4195,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_total_liberation"
+		name = "GFX_BBR_total_liberation_shine"
 		texturefile = "gfx/interface/goals/BBR_total_liberation.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -4291,7 +4227,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_tuskegee_airmen"
+		name = "GFX_BBR_tuskegee_airmen_shine"
 		texturefile = "GFX_BBR_tuskegee_airmen"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -4323,7 +4259,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_unia"
+		name = "GFX_BBR_unia_shine"
 		texturefile = "gfx/interface/goals/BBR_unia.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -4355,7 +4291,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_unionize_yesterday"
+		name = "GFX_BBR_unionize_yesterday_shine"
 		texturefile = "gfx/interface/goals/BBR_unionize_yesterday.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -4387,7 +4323,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_urbanization"
+		name = "GFX_BBR_urbanization_shine"
 		texturefile = "gfx/interface/goals/BBR_urbanization.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -4419,7 +4355,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_veteran_healthcare"
+		name = "GFX_BBR_veteran_healthcare_shine"
 		texturefile = "gfx/interface/goals/BBR_veteran_healthcare.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -4451,7 +4387,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_washingtonianism"
+		name = "GFX_BBR_washingtonianism_shine"
 		texturefile = "gfx/interface/goals/BBR_washingtonianism.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -4483,7 +4419,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_work_communes"
+		name = "GFX_BBR_work_communes_shine"
 		texturefile = "gfx/interface/goals/BBR_work_communes.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -4515,7 +4451,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_worker_coupons"
+		name = "GFX_BBR_worker_coupons_shine"
 		texturefile = "gfx/interface/goals/BBR_worker_coupons.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -4547,39 +4483,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BBR_young_plan"
-		texturefile = "gfx/interface/goals/BBR_young_plan.dds"
-		effectFile = "gfx/FX/buttonstate.lua"
-		animation = {
-			animationmaskfile = "gfx/interface/goals/BBR_young_plan.dds"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = -90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-
-		animation = {
-			animationmaskfile = "gfx/interface/goals/BBR_young_plan.dds"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = 90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-		legacy_lazy_load = no
-	}
-
-	SpriteType = {
-		name = "GFX_BBR_young_and_old"
+		name = "GFX_BBR_young_and_old_shine"
 		texturefile = "gfx/interface/goals/BBR_young_and_old.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -4611,7 +4515,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_CAL_aaa"
+		name = "GFX_CAL_aaa_shine"
 		texturefile = "gfx/interface/goals/CAL_aaa.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -4643,7 +4547,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_CAL_absorb_remaining_democrats"
+		name = "GFX_CAL_absorb_remaining_democrats_shine"
 		texturefile = "gfx/interface/goals/CAL_absorb_remaining_democrats.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -4675,7 +4579,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_CAL_aerial_contracts"
+		name = "GFX_CAL_aerial_contracts_shine"
 		texturefile = "gfx/interface/goals/CAL_aerial_contracts.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -4707,7 +4611,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_CAL_aim_for_the_heart"
+		name = "GFX_CAL_aim_for_the_heart_shine"
 		texturefile = "gfx/interface/goals/CAL_aim_for_the_heart.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -4739,7 +4643,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_CAL_american_festivals"
+		name = "GFX_CAL_american_festivals_shine"
 		texturefile = "gfx/interface/goals/CAL_american_festivals.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -4771,7 +4675,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_CAL_bonus_bill"
+		name = "GFX_CAL_bonus_bill_shine"
 		texturefile = "gfx/interface/goals/CAL_bonus_bill.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -4803,7 +4707,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_CAL_canadian_tribute"
+		name = "GFX_CAL_canadian_tribute_shine"
 		texturefile = "gfx/interface/goals/CAL_canadian_tribute.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -4835,7 +4739,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_CAL_ccc"
+		name = "GFX_CAL_ccc_shine"
 		texturefile = "gfx/interface/goals/CAL_ccc.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -4867,7 +4771,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_CAL_charity"
+		name = "GFX_CAL_charity_shine"
 		texturefile = "gfx/interface/goals/CAL_charity.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -4899,7 +4803,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_CAL_citizen_education"
+		name = "GFX_CAL_citizen_education_shine"
 		texturefile = "gfx/interface/goals/CAL_citizen_education.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -4931,7 +4835,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_CAL_focus_collective_housing"
+		name = "GFX_CAL_focus_collective_housing_shine"
 		texturefile = "gfx/interface/goals/CAL_focus_collective_housing.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -4963,7 +4867,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_CAL_commonwealth_of_labor"
+		name = "GFX_CAL_commonwealth_of_labor_shine"
 		texturefile = "gfx/interface/goals/CAL_commonwealth_of_labor.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -4995,7 +4899,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_CAL_commonwealth_victory"
+		name = "GFX_CAL_commonwealth_victory_shine"
 		texturefile = "gfx/interface/goals/CAL_commonwealth_victory.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -5027,7 +4931,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_CAL_copperheads"
+		name = "GFX_CAL_copperheads_shine"
 		texturefile = "gfx/interface/goals/CAL_copperheads.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -5059,7 +4963,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_CAL_democratic_victory"
+		name = "GFX_CAL_democratic_victory_shine"
 		texturefile = "gfx/interface/goals/CAL_democratic_victory.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -5091,7 +4995,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_CAL_dewitt_raids"
+		name = "GFX_CAL_dewitt_raids_shine"
 		texturefile = "gfx/interface/goals/CAL_dewitt_raids.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -5123,7 +5027,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_CAL_eastern_patronage"
+		name = "GFX_CAL_eastern_patronage_shine"
 		texturefile = "gfx/interface/goals/CAL_eastern_patronage.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -5155,7 +5059,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_CAL_electricity"
+		name = "GFX_CAL_electricity_shine"
 		texturefile = "gfx/interface/goals/CAL_electricity.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -5187,7 +5091,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_CAL_encourage_temperance"
+		name = "GFX_CAL_encourage_temperance_shine"
 		texturefile = "gfx/interface/goals/CAL_encourage_temperance.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -5219,7 +5123,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_CAL_executive_construction_projects"
+		name = "GFX_CAL_executive_construction_projects_shine"
 		texturefile = "gfx/interface/goals/CAL_executive_construction_projects.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -5251,7 +5155,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_CAL_expand_war_powers"
+		name = "GFX_CAL_expand_war_powers_shine"
 		texturefile = "gfx/interface/goals/CAL_expand_war_powers.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -5283,7 +5187,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_CAL_farm_bankruptcy_act"
+		name = "GFX_CAL_farm_bankruptcy_act_shine"
 		texturefile = "gfx/interface/goals/CAL_farm_bankruptcy_act.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -5315,7 +5219,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_CAL_federal_civil_works_administration"
+		name = "GFX_CAL_federal_civil_works_administration_shine"
 		texturefile = "gfx/interface/goals/GFX_CAL_federal_civil_works_administration.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -5347,7 +5251,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_CAL_federal_police"
+		name = "GFX_CAL_federal_police_shine"
 		texturefile = "gfx/interface/goals/CAL_federal_police.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -5379,7 +5283,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_CAL_federal_project_one"
+		name = "GFX_CAL_federal_project_one_shine"
 		texturefile = "gfx/interface/goals/CAL_federal_project_one.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -5411,39 +5315,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_CAL_federal_project_one"
-		texturefile = "gfx/interface/goals/CAL_federal_project_one.dds"
-		effectFile = "gfx/FX/buttonstate.lua"
-		animation = {
-			animationmaskfile = "gfx/interface/goals/CAL_federal_project_one.dds"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = -90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-
-		animation = {
-			animationmaskfile = "gfx/interface/goals/CAL_federal_project_one.dds"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = 90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-		legacy_lazy_load = no
-	}
-
-	SpriteType = {
-		name = "GFX_CAL_food_stamps"
+		name = "GFX_CAL_food_stamps_shine"
 		texturefile = "gfx/interface/goals/CAL_food_stamps.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -5475,7 +5347,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_CAL_good_neighbor"
+		name = "GFX_CAL_good_neighbor_shine"
 		texturefile = "gfx/interface/goals/CAL_good_neighbor.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -5507,7 +5379,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_CAL_gop_victory"
+		name = "GFX_CAL_gop_victory_shine"
 		texturefile = "gfx/interface/goals/CAL_gop_victory.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -5539,7 +5411,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_CAL_government_pensions"
+		name = "GFX_CAL_government_pensions_shine"
 		texturefile = "gfx/interface/goals/CAL_government_pensions.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -5571,7 +5443,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_CAL_hays_code"
+		name = "GFX_CAL_hays_code_shine"
 		texturefile = "gfx/interface/goals/CAL_hays_code.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -5603,7 +5475,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_CAL_hit_the_stomach"
+		name = "GFX_CAL_hit_the_stomach_shine"
 		texturefile = "gfx/interface/goals/CAL_hit_the_stomach.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -5635,7 +5507,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_CAL_nationalize_communications"
+		name = "GFX_CAL_nationalize_communications_shine"
 		texturefile = "gfx/interface/goals/CAL_nationalize_communications.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -5667,7 +5539,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_CAL_new_antitrust_laws"
+		name = "GFX_CAL_new_antitrust_laws_shine"
 		texturefile = "gfx/interface/goals/CAL_new_antitrust_laws.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -5699,7 +5571,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_CAL_new_nationalism"
+		name = "GFX_CAL_new_nationalism_shine"
 		texturefile = "gfx/interface/goals/CAL_new_nationalism.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -5731,7 +5603,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_CAL_pivot_of_civilization"
+		name = "GFX_CAL_pivot_of_civilization_shine"
 		texturefile = "gfx/interface/goals/CAL_pivot_of_civilization.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -5763,7 +5635,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_CAL_hearst"
+		name = "GFX_CAL_hearst_shine"
 		texturefile = "gfx/interface/goals/CAL_hearst.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -5795,7 +5667,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_CAL_profits_of_the_church"
+		name = "GFX_CAL_profits_of_the_church_shine"
 		texturefile = "gfx/interface/goals/CAL_profits_of_the_church.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -5827,39 +5699,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_CAL_profits_of_the_church"
-		texturefile = "gfx/interface/goals/CAL_profits_of_the_church.dds"
-		effectFile = "gfx/FX/buttonstate.lua"
-		animation = {
-			animationmaskfile = "gfx/interface/goals/CAL_profits_of_the_church.dds"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = -90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-
-		animation = {
-			animationmaskfile = "gfx/interface/goals/CAL_profits_of_the_church.dds"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = 90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-		legacy_lazy_load = no
-	}
-
-	SpriteType = {
-		name = "GFX_CAL_prohibition"
+		name = "GFX_CAL_prohibition_shine"
 		texturefile = "gfx/interface/goals/CAL_prohibition.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -5891,7 +5731,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_CAL_quota_act"
+		name = "GFX_CAL_quota_act_shine"
 		texturefile = "gfx/interface/goals/CAL_quota_act.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -5923,7 +5763,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_CAL_radical_taxation"
+		name = "GFX_CAL_radical_taxation_shine"
 		texturefile = "gfx/interface/goals/CAL_radical_taxation.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -5955,7 +5795,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_CAL_socialize_education"
+		name = "GFX_CAL_socialize_education_shine"
 		texturefile = "gfx/interface/goals/CAL_socialize_education.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -5987,7 +5827,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_CAL_support_aclu"
+		name = "GFX_CAL_support_aclu_shine"
 		texturefile = "gfx/interface/goals/CAL_support_aclu.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -6019,7 +5859,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_CAL_the_jungle"
+		name = "GFX_CAL_the_jungle_shine"
 		texturefile = "gfx/interface/goals/CAL_the_jungle.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -6051,7 +5891,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_CAL_union_expansion"
+		name = "GFX_CAL_union_expansion_shine"
 		texturefile = "gfx/interface/goals/CAL_union_expansion.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -6083,7 +5923,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_CAL_hollywood_glamour"
+		name = "GFX_CAL_hollywood_glamour_shine"
 		texturefile = "gfx/interface/goals/CAL_hollywood_glamour.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -6115,7 +5955,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_CAL_immigration"
+		name = "GFX_CAL_immigration_shine"
 		texturefile = "gfx/interface/goals/CAL_immigration.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -6147,7 +5987,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_CAL_investigate_gop"
+		name = "GFX_CAL_investigate_gop_shine"
 		texturefile = "gfx/interface/goals/CAL_investigate_gop.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -6179,7 +6019,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_CAL_levering_act"
+		name = "GFX_CAL_levering_act_shine"
 		texturefile = "gfx/interface/goals/CAL_levering_act.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -6211,7 +6051,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_CAL_liberal_union_party"
+		name = "GFX_CAL_liberal_union_party_shine"
 		texturefile = "gfx/interface/goals/CAL_liberal_union_party.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -6243,7 +6083,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_CAL_media_regulation_act"
+		name = "GFX_CAL_media_regulation_act_shine"
 		texturefile = "gfx/interface/goals/CAL_media_regulation_act.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -6275,7 +6115,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_CAL_media_empire"
+		name = "GFX_CAL_media_empire_shine"
 		texturefile = "gfx/interface/goals/CAL_media_empire.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -6307,7 +6147,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_CAL_mexican_border_raids"
+		name = "GFX_CAL_mexican_border_raids_shine"
 		texturefile = "gfx/interface/goals/CAL_mexican_border_raids.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -6339,7 +6179,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_CAL_military_lobby"
+		name = "GFX_CAL_military_lobby_shine"
 		texturefile = "gfx/interface/goals/CAL_military_lobby.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -6371,7 +6211,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_CAL_military_tribunals"
+		name = "GFX_CAL_military_tribunals_shine"
 		texturefile = "gfx/interface/goals/CAL_military_tribunals.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -6403,7 +6243,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_CAL_national_guard"
+		name = "GFX_CAL_national_guard_shine"
 		texturefile = "gfx/interface/goals/CAL_national_guard.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -6435,7 +6275,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_CAL_national_housing"
+		name = "GFX_CAL_national_housing_shine"
 		texturefile = "gfx/interface/goals/CAL_national_housing.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -6467,7 +6307,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_CAL_national_independents"
+		name = "GFX_CAL_national_independents_shine"
 		texturefile = "gfx/interface/goals/CAL_national_independents.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -6499,7 +6339,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_CAL_national_unions"
+		name = "GFX_CAL_national_unions_shine"
 		texturefile = "gfx/interface/goals/CAL_national_unions.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -6531,7 +6371,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_CAL_nationalize_liquor"
+		name = "GFX_CAL_nationalize_liquor_shine"
 		texturefile = "gfx/interface/goals/CAL_nationalize_liquor.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -6563,7 +6403,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_CAL_nationalize_oil"
+		name = "GFX_CAL_nationalize_oil_shine"
 		texturefile = "gfx/interface/goals/CAL_nationalize_oil.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -6595,7 +6435,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_CAL_nhs"
+		name = "GFX_CAL_nhs_shine"
 		texturefile = "gfx/interface/goals/CAL_nhs.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -6627,7 +6467,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_CAL_NYA"
+		name = "GFX_CAL_NYA_shine"
 		texturefile = "gfx/interface/goals/CAL_NYA.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -6659,7 +6499,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_CAL_NIO"
+		name = "GFX_CAL_NIO_shine"
 		texturefile = "gfx/interface/goals/CAL_NIO.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -6691,7 +6531,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_CAL_patriotic_shorts"
+		name = "GFX_CAL_patriotic_shorts_shine"
 		texturefile = "gfx/interface/goals/CAL_patriotic_shorts.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -6723,7 +6563,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_CAL_punish_hawaii"
+		name = "GFX_CAL_punish_hawaii_shine"
 		texturefile = "gfx/interface/goals/CAL_punish_hawaii.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -6755,7 +6595,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_CAL_progressive_victory"
+		name = "GFX_CAL_progressive_victory_shine"
 		texturefile = "gfx/interface/goals/CAL_progressive_victory.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -6787,7 +6627,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_CAL_pwa"
+		name = "GFX_CAL_pwa_shine"
 		texturefile = "gfx/interface/goals/CAL_pwa.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -6819,7 +6659,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_CAL_ra"
+		name = "GFX_CAL_ra_shine"
 		texturefile = "gfx/interface/goals/CAL_ra.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -6851,7 +6691,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_CAL_rea"
+		name = "GFX_CAL_rea_shine"
 		texturefile = "gfx/interface/goals/CAL_rea.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -6883,7 +6723,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_CAL_reefer_madness"
+		name = "GFX_CAL_reefer_madness_shine"
 		texturefile = "gfx/interface/goals/CAL_reefer_madness.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -6915,7 +6755,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_CAL_reward_success"
+		name = "GFX_CAL_reward_success_shine"
 		texturefile = "gfx/interface/goals/CAL_reward_success.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -6947,7 +6787,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_CAL_rich_taxation"
+		name = "GFX_CAL_rich_taxation_shine"
 		texturefile = "gfx/interface/goals/CAL_rich_taxation.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -6979,7 +6819,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_CAL_roaring_parties"
+		name = "GFX_CAL_roaring_parties_shine"
 		texturefile = "gfx/interface/goals/CAL_roaring_parties.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -7011,7 +6851,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_CAL_safety_reforms"
+		name = "GFX_CAL_safety_reforms_shine"
 		texturefile = "gfx/interface/goals/CAL_safety_reforms.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -7043,7 +6883,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_CAL_save_Kingfish"
+		name = "GFX_CAL_save_Kingfish_shine"
 		texturefile = "gfx/interface/goals/CAL_save_Kingfish.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -7075,7 +6915,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_CAL_self_regulation"
+		name = "GFX_CAL_self_regulation_shine"
 		texturefile = "gfx/interface/goals/CAL_self_regulation.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -7107,7 +6947,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_CAL_social_security"
+		name = "GFX_CAL_social_security_shine"
 		texturefile = "gfx/interface/goals/CAL_social_security.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -7139,7 +6979,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_CAL_support_credit_unions"
+		name = "GFX_CAL_support_credit_unions_shine"
 		texturefile = "gfx/interface/goals/CAL_support_credit_unions.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -7171,7 +7011,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_CAL_tenney_committee"
+		name = "GFX_CAL_tenney_committee_shine"
 		texturefile = "gfx/interface/goals/CAL_tenney_committee.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -7203,7 +7043,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_CAL_wpa"
+		name = "GFX_CAL_wpa_shine"
 		texturefile = "gfx/interface/goals/CAL_wpa.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -7235,7 +7075,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_CAL_white_house_socials"
+		name = "GFX_CAL_white_house_socials_shine"
 		texturefile = "gfx/interface/goals/CAL_white_house_socials.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -7267,7 +7107,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_CAL_workers_compensation_act"
+		name = "GFX_CAL_workers_compensation_act_shine"
 		texturefile = "gfx/interface/goals/CAL_workers_compensation_act.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -7299,7 +7139,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_CAL_yellow_peril"
+		name = "GFX_CAL_yellow_peril_shine"
 		texturefile = "gfx/interface/goals/CAL_yellow_peril.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -7331,7 +7171,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_ban_on_race_mixing"
+		name = "GFX_ban_on_race_mixing_shine"
 		texturefile = "gfx/interface/goals/CAL_ban_on_race_mixing.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -7363,7 +7203,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_calm_racial_conservatives"
+		name = "GFX_calm_racial_conservatives_shine"
 		texturefile = "gfx/interface/goals/CAL_calm_racial_conservatives.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -7395,7 +7235,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_conditional_black_help"
+		name = "GFX_conditional_black_help_shine"
 		texturefile = "gfx/interface/goals/CAL_conditional_black_help.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -7427,7 +7267,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_denounce_race_hatred"
+		name = "GFX_denounce_race_hatred_shine"
 		texturefile = "gfx/interface/goals/CAL_denounce_race_hatred.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -7459,7 +7299,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_encourage_integration"
+		name = "GFX_encourage_integration_shine"
 		texturefile = "gfx/interface/goals/CAL_encourage_integration.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -7491,7 +7331,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_fund_local_segregation"
+		name = "GFX_fund_local_segregation_shine"
 		texturefile = "gfx/interface/goals/CAL_fund_local_segregation.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -7523,7 +7363,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_hire_black_americans"
+		name = "GFX_hire_black_americans_shine"
 		texturefile = "gfx/interface/goals/CAL_hire_black_americans.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -7555,7 +7395,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_immigration_act_reformed"
+		name = "GFX_immigration_act_reformed_shine"
 		texturefile = "gfx/interface/goals/CAL_immigration_act_reformed.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -7587,7 +7427,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_jazz_cracdown"
+		name = "GFX_jazz_cracdown_shine"
 		texturefile = "gfx/interface/goals/CAL_jazz_cracdown.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -7619,7 +7459,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_mexican_repatriation"
+		name = "GFX_mexican_repatriation_shine"
 		texturefile = "gfx/interface/goals/CAL_mexican_repatriation.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -7651,7 +7491,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_negro_bureau"
+		name = "GFX_negro_bureau_shine"
 		texturefile = "gfx/interface/goals/CAL_negro_bureau.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -7683,7 +7523,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_new_lily_white_movement"
+		name = "GFX_new_lily_white_movement_shine"
 		texturefile = "gfx/interface/goals/CAL_new_lily_white_movement.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -7715,7 +7555,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_oppose_radicals"
+		name = "GFX_oppose_radicals_shine"
 		texturefile = "gfx/interface/goals/CAL_oppose_radicals.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -7747,7 +7587,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_quota_adjustments"
+		name = "GFX_quota_adjustments_shine"
 		texturefile = "gfx/interface/goals/CAL_quota_adjustments.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -7779,7 +7619,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_turn_blind_eye"
+		name = "GFX_turn_blind_eye_shine"
 		texturefile = "gfx/interface/goals/CAL_turn_blind_eye.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -7811,7 +7651,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_CAL_avenge_1776"
+		name = "GFX_CAL_avenge_1776_shine"
 		texturefile = "gfx/interface/goals/CAL_avenge_1776.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -7843,7 +7683,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_CAL_betray_japan"
+		name = "GFX_CAL_betray_japan_shine"
 		texturefile = "gfx/interface/goals/CAL_betray_japan.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -7875,7 +7715,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_CAL_celebrity_endorcements"
+		name = "GFX_CAL_celebrity_endorcements_shine"
 		texturefile = "gfx/interface/goals/CAL_celebrity_endorcements.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -7907,7 +7747,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_CAL_christian_mysticism"
+		name = "GFX_CAL_christian_mysticism_shine"
 		texturefile = "gfx/interface/goals/CAL_christian_mysticism.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -7939,7 +7779,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_CAL_excalibur"
+		name = "GFX_CAL_excalibur_shine"
 		texturefile = "gfx/interface/goals/CAL_excalibur.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -7971,7 +7811,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_CAL_investigate_paranormal"
+		name = "GFX_CAL_investigate_paranormal_shine"
 		texturefile = "gfx/interface/goals/CAL_investigate_paranormal.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -8003,7 +7843,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_CAL_media_blackout"
+		name = "GFX_CAL_media_blackout_shine"
 		texturefile = "gfx/interface/goals/CAL_media_blackout.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -8035,7 +7875,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_CAL_most_profitable_religion"
+		name = "GFX_CAL_most_profitable_religion_shine"
 		texturefile = "gfx/interface/goals/CAL_most_profitable_religion.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -8067,7 +7907,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_CAL_new_sciences"
+		name = "GFX_CAL_new_sciences_shine"
 		texturefile = "gfx/interface/goals/CAL_new_sciences.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -8099,7 +7939,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_CAL_redshirt_plot"
+		name = "GFX_CAL_redshirt_plot_shine"
 		texturefile = "gfx/interface/goals/CAL_redshirt_plot.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -8131,7 +7971,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_CAL_shadow_recruitment"
+		name = "GFX_CAL_shadow_recruitment_shine"
 		texturefile = "gfx/interface/goals/CAL_shadow_recruitment.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -8163,7 +8003,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_CAL_the_messengers"
+		name = "GFX_CAL_the_messengers_shine"
 		texturefile = "gfx/interface/goals/CAL_the_messengers.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -8195,7 +8035,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_CAL_ufology"
+		name = "GFX_CAL_ufology_shine"
 		texturefile = "gfx/interface/goals/CAL_ufology.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -8227,7 +8067,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_CAL_voice_of_the_nation"
+		name = "GFX_CAL_voice_of_the_nation_shine"
 		texturefile = "gfx/interface/goals/CAL_voice_of_the_nation.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -8259,7 +8099,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_alfalfa_bill"
+		name = "GFX_goal_COR_alfalfa_bill_shine"
 		texturefile = "gfx/interface/goals/COR_alfalfa_bill.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -8291,7 +8131,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_american_fight"
+		name = "GFX_goal_COR_american_fight_shine"
 		texturefile = "gfx/interface/goals/COR_american_fight.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -8323,7 +8163,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_The_Arm_of_the_Lord"
+		name = "GFX_goal_COR_The_Arm_of_the_Lord_shine"
 		texturefile = "gfx/interface/goals/COR_The_Arm_of_the_Lord.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -8355,7 +8195,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_birth_of_a_nation"
+		name = "GFX_goal_COR_birth_of_a_nation_shine"
 		texturefile = "gfx/interface/goals/COR_birth_of_a_nation.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -8387,7 +8227,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_ceasefire"
+		name = "GFX_goal_COR_ceasefire_shine"
 		texturefile = "gfx/interface/goals/COR_ceasefire.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -8419,7 +8259,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_Expand_Labor_Camps"
+		name = "GFX_goal_COR_Expand_Labor_Camps_shine"
 		texturefile = "gfx/interface/goals/COR_Expand_Labor_Camps.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -8451,7 +8291,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_Klan_Kapitalism"
+		name = "GFX_goal_COR_Klan_Kapitalism_shine"
 		texturefile = "gfx/interface/goals/COR_Klan_Kapitalism.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -8483,7 +8323,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_Knights_of_the_Red"
+		name = "GFX_goal_COR_Knights_of_the_Red_shine"
 		texturefile = "gfx/interface/goals/COR_Knights_of_the_Red.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -8515,7 +8355,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_kommon_law"
+		name = "GFX_goal_COR_kommon_law_shine"
 		texturefile = "gfx/interface/goals/COR_kommon_law.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -8547,7 +8387,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_legacy_of_the_know_nothings"
+		name = "GFX_goal_COR_legacy_of_the_know_nothings_shine"
 		texturefile = "gfx/interface/goals/COR_legacy_of_the_know_nothings.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -8579,7 +8419,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_american_emperor"
+		name = "GFX_goal_COR_american_emperor_shine"
 		texturefile = "gfx/interface/goals/COR_american_emperor.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -8611,7 +8451,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_aztec_gold"
+		name = "GFX_goal_COR_aztec_gold_shine"
 		texturefile = "gfx/interface/goals/COR_aztec_gold.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -8643,7 +8483,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_big_tex"
+		name = "GFX_goal_COR_big_tex_shine"
 		texturefile = "gfx/interface/goals/COR_big tex.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -8675,7 +8515,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_black_legion_in_command"
+		name = "GFX_goal_COR_black_legion_in_command_shine"
 		texturefile = "gfx/interface/goals/COR_black_legion_in_command.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -8707,7 +8547,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_cavalier"
+		name = "GFX_goal_COR_cavalier_shine"
 		texturefile = "gfx/interface/goals/COR_cavalier.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -8739,7 +8579,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_cherokeebraves"
+		name = "GFX_goal_COR_cherokeebraves_shine"
 		texturefile = "gfx/interface/goals/COR_cherokeebraves.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -8771,7 +8611,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_christian_dominance"
+		name = "GFX_goal_COR_christian_dominance_shine"
 		texturefile = "gfx/interface/goals/COR_compromise_with_catholics.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -8803,7 +8643,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_christian_work"
+		name = "GFX_goal_COR_christian_work_shine"
 		texturefile = "gfx/interface/goals/COR_christian_work.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -8835,7 +8675,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_Controlled_Klan"
+		name = "GFX_goal_COR_Controlled_Klan_shine"
 		texturefile = "gfx/interface/goals/COR_Controlled_Klan.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -8867,7 +8707,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_The_Covenant"
+		name = "GFX_goal_COR_The_Covenant_shine"
 		texturefile = "gfx/interface/goals/COR_The_Covenant.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -8899,7 +8739,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_crossburn"
+		name = "GFX_goal_COR_crossburn_shine"
 		texturefile = "gfx/interface/goals/COR_crossburn.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -8931,7 +8771,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_cult_to_the_chief"
+		name = "GFX_goal_COR_cult_to_the_chief_shine"
 		texturefile = "gfx/interface/goals/COR_cult_to_the_chief.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -8963,7 +8803,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_deal_with_dixiecrats"
+		name = "GFX_goal_COR_deal_with_dixiecrats_shine"
 		texturefile = "gfx/interface/goals/COR_deal_with_dixiecrats.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -8995,7 +8835,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_destroy_the_legion"
+		name = "GFX_goal_COR_destroy_the_legion_shine"
 		texturefile = "gfx/interface/goals/COR_destroy_the_legion.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -9027,7 +8867,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_eyes_of_god"
+		name = "GFX_goal_COR_eyes_of_god_shine"
 		texturefile = "gfx/interface/goals/COR_eyes_of_god.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -9059,7 +8899,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_family_programs"
+		name = "GFX_goal_COR_family_programs_shine"
 		texturefile = "gfx/interface/goals/COR_family_programs.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -9091,7 +8931,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_fine"
+		name = "GFX_goal_COR_fine_shine"
 		texturefile = "gfx/interface/goals/COR_fine.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -9123,7 +8963,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_goods_of_cuba"
+		name = "GFX_goal_COR_goods_of_cuba_shine"
 		texturefile = "gfx/interface/goals/COR_goods_of_cuba.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -9155,7 +8995,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_Golden_circle"
+		name = "GFX_goal_COR_Golden_circle_shine"
 		texturefile = "gfx/interface/goals/COR_Golden_circle.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -9187,7 +9027,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_klan"
+		name = "GFX_goal_COR_klan_shine"
 		texturefile = "gfx/interface/goals/COR_klan.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -9219,7 +9059,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_klan_education"
+		name = "GFX_goal_COR_klan_education_shine"
 		texturefile = "gfx/interface/goals/COR_klan_education.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -9251,7 +9091,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_legacy_of_jackson"
+		name = "GFX_goal_COR_legacy_of_jackson_shine"
 		texturefile = "gfx/interface/goals/COR_legacy_of_jackson.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -9283,7 +9123,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_legion_chiefs"
+		name = "GFX_goal_COR_legion_chiefs_shine"
 		texturefile = "gfx/interface/goals/COR_legion_chiefs.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -9315,7 +9155,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_midnight_klan"
+		name = "GFX_goal_COR_midnight_klan_shine"
 		texturefile = "gfx/interface/goals/COR_midnight_klan.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -9347,7 +9187,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_militant_hoosiers"
+		name = "GFX_goal_COR_militant_hoosiers_shine"
 		texturefile = "gfx/interface/goals/COR_goal_militaristic_hoosiers.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -9379,7 +9219,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_night_rides"
+		name = "GFX_goal_COR_night_rides_shine"
 		texturefile = "gfx/interface/goals/COR_night_rides.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -9411,7 +9251,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_old_klan"
+		name = "GFX_goal_COR_old_klan_shine"
 		texturefile = "gfx/interface/goals/COR_old_klan.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -9443,7 +9283,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_one_nation_under_god"
+		name = "GFX_goal_COR_one_nation_under_god_shine"
 		texturefile = "gfx/interface/goals/COR_one_nation_under_god.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -9475,7 +9315,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_patriotic_states"
+		name = "GFX_goal_COR_patriotic_states_shine"
 		texturefile = "gfx/interface/goals/COR_patriotic_states.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -9507,7 +9347,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_phernology"
+		name = "GFX_goal_COR_phernology_shine"
 		texturefile = "gfx/interface/goals/COR_phernology.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -9539,7 +9379,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_Posse"
+		name = "GFX_goal_COR_Posse_shine"
 		texturefile = "gfx/interface/goals/COR_Posse.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -9571,7 +9411,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_protocols_of_zion"
+		name = "GFX_goal_COR_protocols_of_zion_shine"
 		texturefile = "gfx/interface/goals/COR_protocols_of_zion.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -9603,7 +9443,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_riches_of_africa"
+		name = "GFX_goal_COR_riches_of_africa_shine"
 		texturefile = "gfx/interface/goals/COR_riches_of_africa.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -9635,7 +9475,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_stomp_out_rome"
+		name = "GFX_goal_COR_stomp_out_rome_shine"
 		texturefile = "gfx/interface/goals/COR_stomp_out_rome.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -9667,7 +9507,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_sundowntown"
+		name = "GFX_goal_COR_sundowntown_shine"
 		texturefile = "gfx/interface/goals/COR_sundowntown.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -9699,7 +9539,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_Terror_in_the_night"
+		name = "GFX_goal_COR_Terror_in_the_night_shine"
 		texturefile = "gfx/interface/goals/COR_Terror_in_the_night.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -9731,7 +9571,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_The_Third_Klan"
+		name = "GFX_goal_COR_The_Third_Klan_shine"
 		texturefile = "gfx/interface/goals/COR_The_Third_Klan.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -9763,7 +9603,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_The_Wickedness_of_Eve"
+		name = "GFX_goal_COR_The_Wickedness_of_Eve_shine"
 		texturefile = "gfx/interface/goals/COR_The_Wickedness_of_Eve.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -9795,7 +9635,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_westward"
+		name = "GFX_goal_COR_westward_shine"
 		texturefile = "gfx/interface/goals/COR_westward.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -9827,7 +9667,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_convict_leasing"
+		name = "GFX_goal_COR_convict_leasing_shine"
 		texturefile = "gfx/interface/goals/COR_convict_leasing.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -9859,7 +9699,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_american_estates"
+		name = "GFX_goal_COR_american_estates_shine"
 		texturefile = "gfx/interface/goals/COR_american_estates.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -9891,7 +9731,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_bbbb"
+		name = "GFX_goal_COR_bbbb_shine"
 		texturefile = "gfx/interface/goals/COR_bbbb.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -9923,7 +9763,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_black_chamber"
+		name = "GFX_goal_COR_black_chamber_shine"
 		texturefile = "gfx/interface/goals/COR_black_chamber.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -9955,7 +9795,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_carpetbaggers_and_scalawags"
+		name = "GFX_goal_COR_carpetbaggers_and_scalawags_shine"
 		texturefile = "gfx/interface/goals/COR_carpetbaggers_and_scalawags.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -9987,7 +9827,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_captains_of_industry"
+		name = "GFX_goal_COR_captains_of_industry_shine"
 		texturefile = "gfx/interface/goals/COR_captains_of_industry.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -10019,7 +9859,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_christian_education"
+		name = "GFX_goal_COR_christian_education_shine"
 		texturefile = "gfx/interface/goals/COR_christian_education.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -10051,7 +9891,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_christian_identity"
+		name = "GFX_goal_COR_christian_identity_shine"
 		texturefile = "gfx/interface/goals/COR_christian_identity.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -10083,7 +9923,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_christian_service_brigade"
+		name = "GFX_goal_COR_christian_service_brigade_shine"
 		texturefile = "gfx/interface/goals/COR_christian_service_brigade.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -10115,7 +9955,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_church_economy"
+		name = "GFX_goal_COR_church_economy_shine"
 		texturefile = "gfx/interface/goals/COR_church_economy.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -10147,7 +9987,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_church_of_zion"
+		name = "GFX_goal_COR_church_of_zion_shine"
 		texturefile = "gfx/interface/goals/COR_church_of_zion.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -10179,7 +10019,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_COINTELPRO"
+		name = "GFX_goal_COR_COINTELPRO_shine"
 		texturefile = "gfx/interface/goals/COR_COINTELPRO.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -10211,7 +10051,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_confront_assyrians"
+		name = "GFX_goal_COR_confront_assyrians_shine"
 		texturefile = "gfx/interface/goals/COR_confront_assyrians.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -10243,7 +10083,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_control_boy_scouts"
+		name = "GFX_goal_COR_control_boy_scouts_shine"
 		texturefile = "gfx/interface/goals/COR_control_boy_scouts.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -10275,7 +10115,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_denounce_the_world"
+		name = "GFX_goal_COR_denounce_the_world_shine"
 		texturefile = "gfx/interface/goals/COR_denounce_the_world.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -10307,7 +10147,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_erase_false_hebrewism"
+		name = "GFX_goal_COR_erase_false_hebrewism_shine"
 		texturefile = "gfx/interface/goals/COR_erase_false_hebrewism.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -10339,7 +10179,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_eyes_of_the_lord"
+		name = "GFX_goal_COR_eyes_of_the_lord_shine"
 		texturefile = "gfx/interface/goals/COR_eyes_of_the_lord.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -10371,7 +10211,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_fight_modernity"
+		name = "GFX_goal_COR_fight_modernity_shine"
 		texturefile = "gfx/interface/goals/COR_fight_modernity.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -10403,7 +10243,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_fordism"
+		name = "GFX_goal_COR_fordism_shine"
 		texturefile = "gfx/interface/goals/COR_fordism.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -10435,7 +10275,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_global_missionaries"
+		name = "GFX_goal_COR_global_missionaries_shine"
 		texturefile = "gfx/interface/goals/COR_global_missionaries.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -10467,7 +10307,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_holy_land"
+		name = "GFX_goal_COR_holy_land_shine"
 		texturefile = "gfx/interface/goals/COR_holy_land.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -10499,7 +10339,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_jewish_segregation"
+		name = "GFX_goal_COR_jewish_segregation_shine"
 		texturefile = "gfx/interface/goals/COR_jewish_segregation.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -10531,7 +10371,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_klan_proselytizing"
+		name = "GFX_goal_COR_klan_proselytizing_shine"
 		texturefile = "gfx/interface/goals/COR_klan_proselytizing.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -10563,7 +10403,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_national_tithe"
+		name = "GFX_goal_COR_national_tithe_shine"
 		texturefile = "gfx/interface/goals/COR_national_tithe.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -10595,7 +10435,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_New_alien_and_sedition_acts"
+		name = "GFX_goal_COR_New_alien_and_sedition_acts_shine"
 		texturefile = "gfx/interface/goals/COR_New_alien_and_sedition_acts.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -10627,7 +10467,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_new_pacifism"
+		name = "GFX_goal_COR_new_pacifism_shine"
 		texturefile = "gfx/interface/goals/COR_new_pacifism.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -10659,7 +10499,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_old_covenant"
+		name = "GFX_goal_COR_old_covenant_shine"
 		texturefile = "gfx/interface/goals/COR_old_covenant.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -10691,7 +10531,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_order_of_76"
+		name = "GFX_goal_COR_order_of_76_shine"
 		texturefile = "gfx/interface/goals/COR_order_of_76.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -10723,7 +10563,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_protestant_corporatism"
+		name = "GFX_goal_COR_protestant_corporatism_shine"
 		texturefile = "gfx/interface/goals/COR_protestant_corporatism.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -10755,7 +10595,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_the_apostle"
+		name = "GFX_goal_COR_the_apostle_shine"
 		texturefile = "gfx/interface/goals/COR_the_apostle.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -10787,7 +10627,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_The_Arm_of_the_Lord"
+		name = "GFX_goal_COR_The_Arm_of_the_Lord_shine"
 		texturefile = "gfx/interface/goals/COR_The_Arm_of_the_Lord.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -10819,7 +10659,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_their_rightful_place"
+		name = "GFX_goal_COR_their_rightful_place_shine"
 		texturefile = "gfx/interface/goals/COR_their_rightful_place.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -10851,7 +10691,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_the_lone_eagle"
+		name = "GFX_goal_COR_the_lone_eagle_shine"
 		texturefile = "gfx/interface/goals/COR_the_lone_eagle.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -10883,7 +10723,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_unite_lost_tribes"
+		name = "GFX_goal_COR_unite_lost_tribes_shine"
 		texturefile = "gfx/interface/goals/COR_unite_lost_tribes.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -10915,7 +10755,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_warriors_of_elijah"
+		name = "GFX_goal_COR_warriors_of_elijah_shine"
 		texturefile = "gfx/interface/goals/COR_warriors_of_elijah.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -10947,7 +10787,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_citizen_monitor"
+		name = "GFX_goal_COR_citizen_monitor_shine"
 		texturefile = "gfx/interface/goals/COR_citizen_monitor.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -10979,7 +10819,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_corporate_alliance"
+		name = "GFX_goal_COR_corporate_alliance_shine"
 		texturefile = "gfx/interface/goals/COR_corporate_alliance.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -11011,7 +10851,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_disband_the_klan"
+		name = "GFX_goal_COR_disband_the_klan_shine"
 		texturefile = "gfx/interface/goals/COR_disband_the_klan.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -11043,7 +10883,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_industrial_security_act"
+		name = "GFX_goal_COR_industrial_security_act_shine"
 		texturefile = "gfx/interface/goals/COR_industrial_security_act.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -11075,7 +10915,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_labor_control_act"
+		name = "GFX_goal_COR_labor_control_act_shine"
 		texturefile = "gfx/interface/goals/COR_labor_control_act.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -11107,7 +10947,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_pinkertons"
+		name = "GFX_goal_COR_pinkertons_shine"
 		texturefile = "gfx/interface/goals/COR_pinkertons.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -11139,7 +10979,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_american_empire"
+		name = "GFX_goal_COR_american_empire_shine"
 		texturefile = "gfx/interface/goals/COR_american_empire.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -11171,7 +11011,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_car"
+		name = "GFX_goal_COR_car_shine"
 		texturefile = "gfx/interface/goals/COR_car.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -11203,7 +11043,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_eagle_spread_wings"
+		name = "GFX_goal_COR_eagle_spread_wings_shine"
 		texturefile = "gfx/interface/goals/COR_eagle_spread_wings.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -11235,7 +11075,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_expand_fort_benning"
+		name = "GFX_goal_COR_expand_fort_benning_shine"
 		texturefile = "gfx/interface/goals/COR_expand_fort_benning.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -11267,7 +11107,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_expand_rangers"
+		name = "GFX_goal_COR_expand_rangers_shine"
 		texturefile = "gfx/interface/goals/COR_expand_rangers.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -11299,7 +11139,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_follow_the_feather_of_Stuart"
+		name = "GFX_goal_COR_follow_the_feather_of_Stuart_shine"
 		texturefile = "gfx/interface/goals/COR_follow_the_feather_of_Stuart.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -11331,7 +11171,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_fortress_america"
+		name = "GFX_goal_COR_fortress_america_shine"
 		texturefile = "gfx/interface/goals/COR_fortress_america.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -11363,7 +11203,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_joint_chiefs"
+		name = "GFX_goal_COR_joint_chiefs_shine"
 		texturefile = "gfx/interface/goals/COR_joint_chiefs.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -11395,7 +11235,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_patton"
+		name = "GFX_goal_COR_patton_shine"
 		texturefile = "gfx/interface/goals/COR_patton.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -11427,7 +11267,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_pattons_plan_1"
+		name = "GFX_goal_COR_pattons_plan_1_shine"
 		texturefile = "gfx/interface/goals/COR_pattons_plan_1.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -11459,7 +11299,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_restore_tredegar"
+		name = "GFX_goal_COR_restore_tredegar_shine"
 		texturefile = "gfx/interface/goals/COR_restore_tredegar.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -11491,7 +11331,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_take_the_fight_abroad"
+		name = "GFX_goal_COR_take_the_fight_abroad_shine"
 		texturefile = "gfx/interface/goals/COR_take_the_fight_abroad.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -11523,7 +11363,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_tank_commitee"
+		name = "GFX_goal_COR_tank_commitee_shine"
 		texturefile = "gfx/interface/goals/COR_tank_commitee.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -11555,7 +11395,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_COR_this_well_defend"
+		name = "GFX_goal_COR_this_well_defend_shine"
 		texturefile = "gfx/interface/goals/COR_this_well_defend.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -11587,7 +11427,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_NEE_housing_expansion"
+		name = "GFX_NEE_housing_expansion_shine"
 		texturefile = "gfx/interface/goals/NEE_housing_expansion.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -11619,7 +11459,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_NEE_interstate_highway"
+		name = "GFX_NEE_interstate_highway_shine"
 		texturefile = "gfx/interface/goals/NEE_interstate_highway.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -11651,7 +11491,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_NEE_investigate_the_machines"
+		name = "GFX_NEE_investigate_the_machines_shine"
 		texturefile = "gfx/interface/goals/NEE_investigate_the_machines.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -11683,7 +11523,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_NEE_modern_republicanism"
+		name = "GFX_NEE_modern_republicanism_shine"
 		texturefile = "gfx/interface/goals/NEE_modern_republicanism.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -11715,7 +11555,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_NEE_abolish_public_education"
+		name = "GFX_NEE_abolish_public_education_shine"
 		texturefile = "gfx/interface/goals/NEE_abolish_public_education.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -11747,7 +11587,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_NEE_american_aristocracy"
+		name = "GFX_NEE_american_aristocracy_shine"
 		texturefile = "gfx/interface/goals/NEE_american_aristocracy.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -11779,7 +11619,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_NEE_beyond_new_england"
+		name = "GFX_NEE_beyond_new_england_shine"
 		texturefile = "gfx/interface/goals/NEE_beyond_new_england.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -11811,7 +11651,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_NEE_beyond_privatization"
+		name = "GFX_NEE_beyond_privatization_shine"
 		texturefile = "gfx/interface/goals/NEE_beyond_privatization.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -11843,7 +11683,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_NEE_centrist_opinions"
+		name = "GFX_NEE_centrist_opinions_shine"
 		texturefile = "gfx/interface/goals/NEE_centrist_opinions.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -11875,7 +11715,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_NEE_controlled_vice"
+		name = "GFX_NEE_controlled_vice_shine"
 		texturefile = "gfx/interface/goals/NEE_controlled_vice.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -11907,7 +11747,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_NEE_court_catholics"
+		name = "GFX_NEE_court_catholics_shine"
 		texturefile = "gfx/interface/goals/NEE_court_catholics.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -11939,7 +11779,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_NEE_crop_insurance"
+		name = "GFX_NEE_crop_insurance_shine"
 		texturefile = "gfx/interface/goals/NEE_crop_insurance.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -11971,7 +11811,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_NEE_crush_statists"
+		name = "GFX_NEE_crush_statists_shine"
 		texturefile = "gfx/interface/goals/NEE_crush_statists.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -12003,7 +11843,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_NEE_cultural_liberalism"
+		name = "GFX_NEE_cultural_liberalism_shine"
 		texturefile = "gfx/interface/goals/NEE_cultural_liberalism.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -12035,7 +11875,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_NEE_decentralized_money"
+		name = "GFX_NEE_decentralized_money_shine"
 		texturefile = "gfx/interface/goals/NEE_decentralized_money.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -12067,7 +11907,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_NEE_defend_freedom_from_democracy"
+		name = "GFX_NEE_defend_freedom_from_democracy_shine"
 		texturefile = "gfx/interface/goals/NEE_defend_freedom_from_democracy.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -12099,7 +11939,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_NEE_demand_home_rule"
+		name = "GFX_NEE_demand_home_rule_shine"
 		texturefile = "gfx/interface/goals/NEE_demand_home_rule.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -12131,7 +11971,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_NEE_democratic_machine"
+		name = "GFX_NEE_democratic_machine_shine"
 		texturefile = "gfx/interface/goals/NEE_democratic_machine.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -12163,7 +12003,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_NEE_dissolving_the_state"
+		name = "GFX_NEE_dissolving_the_state_shine"
 		texturefile = "gfx/interface/goals/NEE_dissolving_the_state.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -12195,7 +12035,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_NEE_education_administration"
+		name = "GFX_NEE_education_administration_shine"
 		texturefile = "gfx/interface/goals/NEE_education_administration.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -12227,7 +12067,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_NEE_education_spending"
+		name = "GFX_NEE_education_spending_shine"
 		texturefile = "gfx/interface/goals/NEE_education_spending.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -12259,7 +12099,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_NEE_elite_contracts"
+		name = "GFX_NEE_elite_contracts_shine"
 		texturefile = "gfx/interface/goals/NEE_elite_contracts.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -12291,7 +12131,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_NEE_entente_support"
+		name = "GFX_NEE_entente_support_shine"
 		texturefile = "gfx/interface/goals/NEE_entente_support.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -12323,7 +12163,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_NEE_expand_civil_service"
+		name = "GFX_NEE_expand_civil_service_shine"
 		texturefile = "gfx/interface/goals/NEE_expand_civil_service.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -12355,7 +12195,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_NEE_expand_labor_pool"
+		name = "GFX_NEE_expand_labor_pool_shine"
 		texturefile = "gfx/interface/goals/NEE_expand_labor_pool.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -12387,7 +12227,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_NEE_expand_machines"
+		name = "GFX_NEE_expand_machines_shine"
 		texturefile = "gfx/interface/goals/NEE_expand_machines.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -12419,7 +12259,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_NEE_expand_organization"
+		name = "GFX_NEE_expand_organization_shine"
 		texturefile = "gfx/interface/goals/NEE_expand_organization.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -12451,7 +12291,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_NEE_federalist_party_in_control"
+		name = "GFX_NEE_federalist_party_in_control_shine"
 		texturefile = "gfx/interface/goals/NEE_federalist_party_in_control.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -12483,7 +12323,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_NEE_fee_for_our_aid"
+		name = "GFX_NEE_fee_for_our_aid_shine"
 		texturefile = "gfx/interface/goals/NEE_fee_for_our_aid.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -12515,7 +12355,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_NEE_fight_the_mob"
+		name = "GFX_NEE_fight_the_mob_shine"
 		texturefile = "gfx/interface/goals/NEE_fight_the_mob.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -12547,7 +12387,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_NEE_full_employement"
+		name = "GFX_NEE_full_employement_shine"
 		texturefile = "gfx/interface/goals/NEE_full_employement.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -12579,7 +12419,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_NEE_hamiltonian_constitution"
+		name = "GFX_NEE_hamiltonian_constitution_shine"
 		texturefile = "gfx/interface/goals/NEE_hamiltonian_constitution.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -12611,7 +12451,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_NEE_hostile_takeover"
+		name = "GFX_NEE_hostile_takeover_shine"
 		texturefile = "gfx/interface/goals/NEE_hostile_takeover.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -12643,7 +12483,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_NEE_immigrant_aid"
+		name = "GFX_NEE_immigrant_aid_shine"
 		texturefile = "gfx/interface/goals/NEE_immigrant_aid.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -12675,7 +12515,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_NEE_invest_in_wards"
+		name = "GFX_NEE_invest_in_wards_shine"
 		texturefile = "gfx/interface/goals/NEE_invest_in_wards.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -12707,7 +12547,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_NEE_irish_ties"
+		name = "GFX_NEE_irish_ties_shine"
 		texturefile = "gfx/interface/goals/NEE_irish_ties.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -12739,7 +12579,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_NEE_ivy_league"
+		name = "GFX_NEE_ivy_league_shine"
 		texturefile = "gfx/interface/goals/NEE_ivy_league.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -12771,7 +12611,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_NEE_jeffersonian_confederacy"
+		name = "GFX_NEE_jeffersonian_confederacy_shine"
 		texturefile = "gfx/interface/goals/NEE_jeffersonian_confederacy.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -12803,7 +12643,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_NEE_Labor_Committee"
+		name = "GFX_NEE_Labor_Committee_shine"
 		texturefile = "gfx/interface/goals/NEE_Labor_Committee.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -12835,7 +12675,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_NEE_lincolnian_republic_1"
+		name = "GFX_NEE_lincolnian_republic_1_shine"
 		texturefile = "gfx/interface/goals/NEE_lincolnian_republic_1.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -12867,7 +12707,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_NEE_abe"
+		name = "GFX_NEE_abe_shine"
 		texturefile = "gfx/interface/goals/NEE_abe.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -12899,7 +12739,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_NEE_might_makes_right"
+		name = "GFX_NEE_might_makes_right_shine"
 		texturefile = "gfx/interface/goals/NEE_might_makes_right.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -12931,7 +12771,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_NEE_new_england_nationalism"
+		name = "GFX_NEE_new_england_nationalism_shine"
 		texturefile = "gfx/interface/goals/NEE_new_england_nationalism.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -12963,7 +12803,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_NEE_Night_Watchmen_state"
+		name = "GFX_NEE_Night_Watchmen_state_shine"
 		texturefile = "gfx/interface/goals/NEE_Night_Watchmen_state.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -12995,7 +12835,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_NEE_powers_of_the_governor"
+		name = "GFX_NEE_powers_of_the_governor_shine"
 		texturefile = "gfx/interface/goals/NEE_powers_of_the_governor.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -13027,7 +12867,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_NEE_private_defence_forces"
+		name = "GFX_NEE_private_defence_forces_shine"
 		texturefile = "gfx/interface/goals/NEE_private_defence_forces.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -13059,7 +12899,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_NEE_private_initiative"
+		name = "GFX_NEE_private_initiative_shine"
 		texturefile = "gfx/interface/goals/NEE_private_initiative.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -13091,7 +12931,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_NEE_progressives"
+		name = "GFX_NEE_progressives_shine"
 		texturefile = "gfx/interface/goals/NEE_progressives.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -13123,7 +12963,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_NEE_protecting_our_heritage"
+		name = "GFX_NEE_protecting_our_heritage_shine"
 		texturefile = "gfx/interface/goals/NEE_protecting_our_heritage.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -13155,7 +12995,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_NEE_public_kickbacks"
+		name = "GFX_NEE_public_kickbacks_shine"
 		texturefile = "gfx/interface/goals/NEE_public_kickbacks.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -13187,7 +13027,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_NEE_radical_victory"
+		name = "GFX_NEE_radical_victory_shine"
 		texturefile = "gfx/interface/goals/NEE_radical_victory.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -13219,7 +13059,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_NEE_raise_minimum_wage"
+		name = "GFX_NEE_raise_minimum_wage_shine"
 		texturefile = "gfx/interface/goals/NEE_raise_minimum_wage.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -13251,7 +13091,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_NEE_right_of_contract"
+		name = "GFX_NEE_right_of_contract_shine"
 		texturefile = "gfx/interface/goals/NEE_right_of_contract.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -13283,7 +13123,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_NEE_single_tax"
+		name = "GFX_NEE_single_tax_shine"
 		texturefile = "gfx/interface/goals/NEE_single_tax.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -13315,7 +13155,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_NEE_st_lawrence_seaway_2"
+		name = "GFX_NEE_st_lawrence_seaway_2_shine"
 		texturefile = "gfx/interface/goals/NEE_st_lawrence_seaway_2.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -13347,7 +13187,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_NEE_state_militias"
+		name = "GFX_NEE_state_militias_shine"
 		texturefile = "gfx/interface/goals/NEE_state_militias.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -13379,7 +13219,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_NEE_special_relationships"
+		name = "GFX_NEE_special_relationships_shine"
 		texturefile = "gfx/interface/goals/NEE_special_relationships.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -13411,7 +13251,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_NEE_support_small_businesses"
+		name = "GFX_NEE_support_small_businesses_shine"
 		texturefile = "gfx/interface/goals/NEE_support_small_businesses.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -13443,7 +13283,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_NEE_swaying_public_opinion"
+		name = "GFX_NEE_swaying_public_opinion_shine"
 		texturefile = "gfx/interface/goals/NEE_swaying_public_opinion.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -13475,7 +13315,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_NEE_tacit_agreement"
+		name = "GFX_NEE_tacit_agreement_shine"
 		texturefile = "gfx/interface/goals/NEE_tacit_agreement.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -13507,7 +13347,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_NEE_the_remnant"
+		name = "GFX_NEE_the_remnant_shine"
 		texturefile = "gfx/interface/goals/NEE_the_remnant.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -13539,7 +13379,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_NEE_union_ties"
+		name = "GFX_NEE_union_ties_shine"
 		texturefile = "gfx/interface/goals/NEE_union_ties.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -13571,7 +13411,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_NEE_syndie_crackdown"
+		name = "GFX_NEE_syndie_crackdown_shine"
 		texturefile = "gfx/interface/goals/NEE_syndie_crackdown.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -13603,7 +13443,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_NEE_salute_red_white_blue"
+		name = "GFX_NEE_salute_red_white_blue_shine"
 		texturefile = "gfx/interface/goals/NEE_salute_red_white_blue.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -13635,7 +13475,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_NEE_save_the_constitution"
+		name = "GFX_NEE_save_the_constitution_shine"
 		texturefile = "gfx/interface/goals/NEE_save_the_constitution.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -13667,7 +13507,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_USA_president_reed"
+		name = "GFX_goal_USA_president_reed_shine"
 		texturefile = "gfx/interface/goals/USA_goal_reed.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -13699,7 +13539,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_USA_president_long"
+		name = "GFX_goal_USA_president_long_shine"
 		texturefile = "gfx/interface/goals/USA_goal_long.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -13731,7 +13571,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_USA_president_garner"
+		name = "GFX_goal_USA_president_garner_shine"
 		texturefile = "gfx/interface/goals/USA_goal_garner.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -13763,7 +13603,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_USA_president_curtis"
+		name = "GFX_goal_USA_president_curtis_shine"
 		texturefile = "gfx/interface/goals/USA_goal_curtis.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -13795,7 +13635,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_CSA_biological_weapons"
+		name = "GFX_CSA_biological_weapons_shine"
 		texturefile = "gfx/interface/goals/CSA/CSA_biological_weapons.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -13827,7 +13667,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_CSA_Burnhams_red_scare"
+		name = "GFX_CSA_Burnhams_red_scare_shine"
 		texturefile = "gfx/interface/goals/CSA_Burnhams_red_scare.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -13859,7 +13699,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_CSA_proletariat_commander"
+		name = "GFX_CSA_proletariat_commander_shine"
 		texturefile = "gfx/interface/goals/CSA_proletariat_commander.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -13891,7 +13731,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_CSA_Socialist_Empire"
+		name = "GFX_CSA_Socialist_Empire_shine"
 		texturefile = "gfx/interface/goals/CSA_Socialist_Empire.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -13923,7 +13763,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_CSA_continental_socialist_society"
+		name = "GFX_CSA_continental_socialist_society_shine"
 		texturefile = "gfx/interface/goals/CSA_continental_socialist_society.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -13955,7 +13795,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_CSA_vertical_integration"
+		name = "GFX_CSA_vertical_integration_shine"
 		texturefile = "gfx/interface/goals/CSA_vertical_integration.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -13987,7 +13827,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_CSA_president_burhham"
+		name = "GFX_CSA_president_burhham_shine"
 		texturefile = "gfx/interface/goals/CSA_president_burhham.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -14019,7 +13859,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_CSA_protection_wall"
+		name = "GFX_CSA_protection_wall_shine"
 		texturefile = "gfx/interface/goals/CSA_protection_wall.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -14051,7 +13891,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_CSA_red_senate"
+		name = "GFX_CSA_red_senate_shine"
 		texturefile = "gfx/interface/goals/CSA_red_senate.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -14083,7 +13923,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_USA_power_projection"
+		name = "GFX_goal_USA_power_projection_shine"
 		texturefile = "gfx/interface/goals/USA_power_projection.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -14115,7 +13955,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_USA_republican_victory"
+		name = "GFX_goal_USA_republican_victory_shine"
 		texturefile = "gfx/interface/goals/USA_republican_victory.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -14147,7 +13987,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_USA_republican_victory_2"
+		name = "GFX_goal_USA_republican_victory_2_shine"
 		texturefile = "gfx/interface/goals/USA_republican_victory_2.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -14179,7 +14019,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_USA_antileftist_action"
+		name = "GFX_goal_USA_antileftist_action_shine"
 		texturefile = "gfx/interface/goals/USA_antileftist_action.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -14211,7 +14051,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_USA_2nd_American_Protective_League"
+		name = "GFX_goal_USA_2nd_American_Protective_League_shine"
 		texturefile = "gfx/interface/goals/USA_2nd_American_Protective_League.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -14243,7 +14083,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_USA_american_caesar"
+		name = "GFX_USA_american_caesar_shine"
 		texturefile = "gfx/interface/goals/USA_american_caesar.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -14275,7 +14115,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_USA_american_cincinnatus"
+		name = "GFX_goal_USA_american_cincinnatus_shine"
 		texturefile = "gfx/interface/goals/USA_american_cincinnatus.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -14307,7 +14147,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_USA_american_junta"
+		name = "GFX_USA_american_junta_shine"
 		texturefile = "gfx/interface/goals/USA_american_junta.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -14339,7 +14179,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_USA_a_pile_of_fucking_cash"
+		name = "GFX_USA_a_pile_of_fucking_cash_shine"
 		texturefile = "gfx/interface/goals/USA_a_pile_of_fucking_cash.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -14371,7 +14211,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_USA_austerity_measures"
+		name = "GFX_USA_austerity_measures_shine"
 		texturefile = "gfx/interface/goals/USA_austerity_measures.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -14403,7 +14243,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_USA_barrack_capitalism"
+		name = "GFX_USA_barrack_capitalism_shine"
 		texturefile = "gfx/interface/goals/USA_barrack_capitalism.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -14435,7 +14275,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_USA_cactusjack"
+		name = "GFX_USA_cactusjack_shine"
 		texturefile = "gfx/interface/goals/USA_cactusjack.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -14467,7 +14307,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_USA_congress_released"
+		name = "GFX_USA_congress_released_shine"
 		texturefile = "gfx/interface/goals/USA_congress_released.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -14499,7 +14339,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_USA_defenders_of_the_republic"
+		name = "GFX_USA_defenders_of_the_republic_shine"
 		texturefile = "gfx/interface/goals/USA_defenders_of_the_republic.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -14531,7 +14371,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_USA_directors_boys"
+		name = "GFX_USA_directors_boys_shine"
 		texturefile = "gfx/interface/goals/USA_directors_boys.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -14563,7 +14403,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_USA_dreams_of_henry_george"
+		name = "GFX_USA_dreams_of_henry_george_shine"
 		texturefile = "gfx/interface/goals/USA_dreams_of_henry_george.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -14595,7 +14435,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_USA_I_Will_Not_Promise_The_Moon"
+		name = "GFX_USA_I_Will_Not_Promise_The_Moon_shine"
 		texturefile = "gfx/interface/goals/USA_I_Will_Not_Promise_The_Moon.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -14627,7 +14467,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_USA_jeffersonian_agrarianism"
+		name = "GFX_USA_jeffersonian_agrarianism_shine"
 		texturefile = "gfx/interface/goals/USA_jeffersonian_agrarianism.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -14659,7 +14499,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_USA_national_youth_administration"
+		name = "GFX_USA_national_youth_administration_shine"
 		texturefile = "gfx/interface/goals/USA_national_youth_administration.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -14691,7 +14531,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_USA_new_republicans"
+		name = "GFX_USA_new_republicans_shine"
 		texturefile = "gfx/interface/goals/USA_new_republicans.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -14723,7 +14563,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_USA_old_guard"
+		name = "GFX_USA_old_guard_shine"
 		texturefile = "gfx/interface/goals/USA_old_guard.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -14755,7 +14595,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_USA_reforming_the_legion"
+		name = "GFX_USA_reforming_the_legion_shine"
 		texturefile = "gfx/interface/goals/USA_reforming_the_legion.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -14787,7 +14627,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_USA_rural_investments"
+		name = "GFX_USA_rural_investments_shine"
 		texturefile = "gfx/interface/goals/USA_rural_investments.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -14819,7 +14659,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_USA_salute_the_chief"
+		name = "GFX_USA_salute_the_chief_shine"
 		texturefile = "gfx/interface/goals/USA_salute_the_chief.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -14851,7 +14691,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_USA_senator_norris"
+		name = "GFX_USA_senator_norris_shine"
 		texturefile = "gfx/interface/goals/USA_senator_norris.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -14883,7 +14723,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_USA_SIS"
+		name = "GFX_USA_SIS_shine"
 		texturefile = "gfx/interface/goals/USA_SIS.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -14915,7 +14755,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_USA_Square_deal"
+		name = "GFX_USA_Square_deal_shine"
 		texturefile = "gfx/interface/goals/USA_Square_deal.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -14947,7 +14787,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_USA_sweep_farm_tariffs"
+		name = "GFX_USA_sweep_farm_tariffs_shine"
 		texturefile = "gfx/interface/goals/USA_sweep_farm_tariffs.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -14979,7 +14819,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_USA_triumvirate"
+		name = "GFX_USA_triumvirate_shine"
 		texturefile = "gfx/interface/goals/USA_triumvirate.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -15011,7 +14851,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_USA_young_troopers"
+		name = "GFX_USA_young_troopers_shine"
 		texturefile = "gfx/interface/goals/USA_young_troopers.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -15043,7 +14883,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_WCC_great_reorganization"
+		name = "GFX_WCC_great_reorganization_shine"
 		texturefile = "gfx/interface/goals/WCC_great_reorganization.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -15075,7 +14915,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_CSA_agricultural_revolution"
+		name = "GFX_goal_CSA_agricultural_revolution_shine"
 		texturefile = "gfx/interface/goals/CSA_agricultural_revolution.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -15107,7 +14947,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_CSA_all_industrial_congress"
+		name = "GFX_goal_CSA_all_industrial_congress_shine"
 		texturefile = "gfx/interface/goals/CSA_all_industrial_congress.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -15139,7 +14979,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_CSA_american_guildism"
+		name = "GFX_goal_CSA_american_guildism_shine"
 		texturefile = "gfx/interface/goals/CSA_american_guildism.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -15171,7 +15011,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_CSA_business_unionism"
+		name = "GFX_goal_CSA_business_unionism_shine"
 		texturefile = "gfx/interface/goals/CSA_business_unionism.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -15203,7 +15043,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_CSA_calm_moderates"
+		name = "GFX_goal_CSA_calm_moderates_shine"
 		texturefile = "gfx/interface/goals/CSA_calm_moderates.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -15235,7 +15075,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_CSA_capital_investments"
+		name = "GFX_goal_CSA_capital_investments_shine"
 		texturefile = "gfx/interface/goals/CSA_capital_investments.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -15267,7 +15107,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_CSA_closed_shops"
+		name = "GFX_goal_CSA_closed_shops_shine"
 		texturefile = "gfx/interface/goals/CSA_closed_shops.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -15299,7 +15139,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_CSA_committee_of_strategoc_services"
+		name = "GFX_goal_CSA_committee_of_strategoc_services_shine"
 		texturefile = "gfx/interface/goals/CSA_committee_of_strategoc_services.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -15331,7 +15171,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_CSA_communications_infrastructure"
+		name = "GFX_goal_CSA_communications_infrastructure_shine"
 		texturefile = "gfx/interface/goals/CSA_communications_infrastructure.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -15363,7 +15203,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_CSA_coop_clubs"
+		name = "GFX_goal_CSA_coop_clubs_shine"
 		texturefile = "gfx/interface/goals/CSA_coop_clubs.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -15395,7 +15235,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_CSA_craft_unions_committee"
+		name = "GFX_goal_CSA_craft_unions_committee_shine"
 		texturefile = "gfx/interface/goals/CSA_craft_unions_committee.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -15427,7 +15267,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_CSA_curing_social_ills"
+		name = "GFX_goal_CSA_curing_social_ills_shine"
 		texturefile = "gfx/interface/goals/CSA_curing_social_ills.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -15459,7 +15299,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_CSA_democratic_press"
+		name = "GFX_goal_CSA_democratic_press_shine"
 		texturefile = "gfx/interface/goals/CSA_democratic_press.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -15491,7 +15331,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_CSA_department_of_production"
+		name = "GFX_goal_CSA_department_of_production_shine"
 		texturefile = "gfx/interface/goals/CSA_department_of_production.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -15523,7 +15363,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_CSA_economy_of_scale"
+		name = "GFX_goal_CSA_economy_of_scale_shine"
 		texturefile = "gfx/interface/goals/CSA_economy_of_scale.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -15555,7 +15395,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_CSA_empower_congress"
+		name = "GFX_goal_CSA_empower_congress_shine"
 		texturefile = "gfx/interface/goals/CSA_empower_congress.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -15587,7 +15427,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_CSA_empower_red_militias"
+		name = "GFX_goal_CSA_empower_red_militias_shine"
 		texturefile = "gfx/interface/goals/CSA_empower_red_militias.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -15619,7 +15459,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_CSA_equality"
+		name = "GFX_goal_CSA_equality_shine"
 		texturefile = "gfx/interface/goals/CSA_equality.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -15651,7 +15491,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_CSA_fair_days_pay"
+		name = "GFX_goal_CSA_fair_days_pay_shine"
 		texturefile = "gfx/interface/goals/CSA_fair_days_pay.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -15683,7 +15523,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_CSA_for_fair_days_work"
+		name = "GFX_goal_CSA_for_fair_days_work_shine"
 		texturefile = "gfx/interface/goals/CSA_for_fair_days_work.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -15715,7 +15555,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_CSA_general_defence_committee"
+		name = "GFX_goal_CSA_general_defence_committee_shine"
 		texturefile = "gfx/interface/goals/CSA_general_defence_committee.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -15747,7 +15587,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_CSA_gift_economy"
+		name = "GFX_goal_CSA_gift_economy_shine"
 		texturefile = "gfx/interface/goals/CSA_gift_economy.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -15779,7 +15619,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_CSA_heresy"
+		name = "GFX_goal_CSA_heresy_shine"
 		texturefile = "gfx/interface/goals/CSA_heresy.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -15811,7 +15651,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_CSA_industrial_army"
+		name = "GFX_goal_CSA_industrial_army_shine"
 		texturefile = "gfx/interface/goals/CSA_industrial_army.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -15843,7 +15683,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_CSA_industrial_democracy"
+		name = "GFX_goal_CSA_industrial_democracy_shine"
 		texturefile = "gfx/interface/goals/CSA_industrial_democracy.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -15875,7 +15715,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_CSA_industrial_unionism"
+		name = "GFX_goal_CSA_industrial_unionism_shine"
 		texturefile = "gfx/interface/goals/CSA_industrial_unionism.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -15907,7 +15747,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_CSA_looking_backwards"
+		name = "GFX_goal_CSA_looking_backwards_shine"
 		texturefile = "gfx/interface/goals/CSA_looking_backwards.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -15939,7 +15779,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_CSA_nationalism"
+		name = "GFX_goal_CSA_nationalism_shine"
 		texturefile = "gfx/interface/goals/CSA_nationalism.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -15971,7 +15811,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_CSA_new_american_syndicalism"
+		name = "GFX_goal_CSA_new_american_syndicalism_shine"
 		texturefile = "gfx/interface/goals/CSA_new_american_syndicalism.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -16003,7 +15843,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_CSA_organizing_the_party"
+		name = "GFX_goal_CSA_organizing_the_party_shine"
 		texturefile = "gfx/interface/goals/CSA_organizing_the_party.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -16035,7 +15875,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_CSA_peaceful_revolution"
+		name = "GFX_goal_CSA_peaceful_revolution_shine"
 		texturefile = "gfx/interface/goals/CSA_peaceful_revolution.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -16067,7 +15907,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_CSA_power_to_the_people"
+		name = "GFX_goal_CSA_power_to_the_people_shine"
 		texturefile = "gfx/interface/goals/CSA_power_to_the_people.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -16099,7 +15939,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_CSA_protect_freedom_of_speech"
+		name = "GFX_goal_CSA_protect_freedom_of_speech_shine"
 		texturefile = "gfx/interface/goals/CSA_protect_freedom_of_speech.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -16131,7 +15971,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_CSA_protect_working_class"
+		name = "GFX_goal_CSA_protect_working_class_shine"
 		texturefile = "gfx/interface/goals/CSA_protect_working_class.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -16163,7 +16003,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_CSA_public_kitchens"
+		name = "GFX_goal_CSA_public_kitchens_shine"
 		texturefile = "gfx/interface/goals/CSA_public_kitchens.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -16195,7 +16035,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_CSA_recruitment_campaign"
+		name = "GFX_goal_CSA_recruitment_campaign_shine"
 		texturefile = "gfx/interface/goals/CSA_recruitment_campaign.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -16227,7 +16067,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_CSA_social_dividends"
+		name = "GFX_goal_CSA_social_dividends_shine"
 		texturefile = "gfx/interface/goals/CSA_social_dividends.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -16259,7 +16099,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_CSA_social_patriotism"
+		name = "GFX_goal_CSA_social_patriotism_shine"
 		texturefile = "gfx/interface/goals/CSA_social_patriotism.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -16291,7 +16131,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_CSA_socialist_confederation"
+		name = "GFX_goal_CSA_socialist_confederation_shine"
 		texturefile = "gfx/interface/goals/CSA_socialist_confederation.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -16323,7 +16163,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_CSA_townhall_democarcy"
+		name = "GFX_goal_CSA_townhall_democarcy_shine"
 		texturefile = "gfx/interface/goals/CSA_townhall_democarcy.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -16355,7 +16195,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_CSA_apple_pie_communism"
+		name = "GFX_goal_CSA_apple_pie_communism_shine"
 		texturefile = "gfx/interface/goals/CSA_apple_pie_communism.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -16387,7 +16227,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_CSA_asserting_the_apparatus"
+		name = "GFX_goal_CSA_asserting_the_apparatus_shine"
 		texturefile = "gfx/interface/goals/CSA_asserting_the_apparatus.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -16419,7 +16259,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_CSA_black_autonomy"
+		name = "GFX_goal_CSA_black_autonomy_shine"
 		texturefile = "gfx/interface/goals/CSA_black_autonomy.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -16451,7 +16291,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_CSA_centralised_syndicalism"
+		name = "GFX_goal_CSA_centralised_syndicalism_shine"
 		texturefile = "gfx/interface/goals/CSA_centralised_syndicalism.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -16483,7 +16323,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_CSA_collective_farms"
+		name = "GFX_goal_CSA_collective_farms_shine"
 		texturefile = "gfx/interface/goals/CSA_collective_farms.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -16515,7 +16355,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_CSA_deal_with_communes"
+		name = "GFX_goal_CSA_deal_with_communes_shine"
 		texturefile = "gfx/interface/goals/CSA_deal_with_communes.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -16547,7 +16387,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_CSA_democratic_centralism"
+		name = "GFX_goal_CSA_democratic_centralism_shine"
 		texturefile = "gfx/interface/goals/CSA_democratic_centralism.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -16579,7 +16419,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_CSA_destroy_social_capitalists"
+		name = "GFX_goal_CSA_destroy_social_capitalists_shine"
 		texturefile = "gfx/interface/goals/CSA_destroy_social_capitalists.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -16611,7 +16451,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_CSA_dictatorship_of_proletariat"
+		name = "GFX_goal_CSA_dictatorship_of_proletariat_shine"
 		texturefile = "gfx/interface/goals/CSA_dictatorship_of_proletariat.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -16643,7 +16483,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_CSA_empower_chairman"
+		name = "GFX_goal_CSA_empower_chairman_shine"
 		texturefile = "gfx/interface/goals/CSA_empower_chairman.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -16675,7 +16515,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_CSA_fosters_anticapitalist_society"
+		name = "GFX_goal_CSA_fosters_anticapitalist_society_shine"
 		texturefile = "gfx/interface/goals/CSA_fosters_anticapitalist_society.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -16707,7 +16547,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_CSA_great_sprint"
+		name = "GFX_goal_CSA_great_sprint_shine"
 		texturefile = "gfx/interface/goals/CSA_great_sprint.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -16739,7 +16579,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_CSA_green_fields_program"
+		name = "GFX_goal_CSA_green_fields_program_shine"
 		texturefile = "gfx/interface/goals/CSA_green_fields_program.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -16771,7 +16611,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_CSA_hit_the_superstructure"
+		name = "GFX_goal_CSA_hit_the_superstructure_shine"
 		texturefile = "gfx/interface/goals/CSA_hit_the_superstructure.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -16803,7 +16643,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_CSA_lead_the_revolution"
+		name = "GFX_goal_CSA_lead_the_revolution_shine"
 		texturefile = "gfx/interface/goals/CSA_lead_the_revolution.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -16835,7 +16675,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_CSA_liquidate_bourgeoisie"
+		name = "GFX_goal_CSA_liquidate_bourgeoisie_shine"
 		texturefile = "gfx/interface/goals/CSA_liquidate_bourgeoisie.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -16867,7 +16707,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_CSA_peoples_commissars"
+		name = "GFX_goal_CSA_peoples_commissars_shine"
 		texturefile = "gfx/interface/goals/CSA_peoples_commissars.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -16899,39 +16739,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_CSA_peoples_commissars"
-		texturefile = "gfx/interface/goals/CSA_peoples_commissars.dds"
-		effectFile = "gfx/FX/buttonstate.lua"
-		animation = {
-			animationmaskfile = "gfx/interface/goals/CSA_peoples_commissars.dds"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = -90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-
-		animation = {
-			animationmaskfile = "gfx/interface/goals/CSA_peoples_commissars.dds"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = 90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-		legacy_lazy_load = no
-	}
-	
-	SpriteType = {
-		name = "GFX_goal_CSA_popular_front"
+		name = "GFX_goal_CSA_popular_front_shine"
 		texturefile = "gfx/interface/goals/CSA_popular_front.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -16963,7 +16771,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_CSA_practical_trade"
+		name = "GFX_goal_CSA_practical_trade_shine"
 		texturefile = "gfx/interface/goals/CSA_practical_trade.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -16995,7 +16803,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_CSA_price_controls"
+		name = "GFX_goal_CSA_price_controls_shine"
 		texturefile = "gfx/interface/goals/CSA_price_controls.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -17027,7 +16835,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_CSA_proletarian_science"
+		name = "GFX_goal_CSA_proletarian_science_shine"
 		texturefile = "gfx/interface/goals/CSA_proletarian_science.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -17059,7 +16867,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_CSA_purge_reactionaries"
+		name = "GFX_goal_CSA_purge_reactionaries_shine"
 		texturefile = "gfx/interface/goals/CSA_purge_reactionaries.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -17091,7 +16899,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_CSA_rehab_centers"
+		name = "GFX_goal_CSA_rehab_centers_shine"
 		texturefile = "gfx/interface/goals/CSA_rehab_centers.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -17123,7 +16931,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_CSA_resource_nationalisation"
+		name = "GFX_goal_CSA_resource_nationalisation_shine"
 		texturefile = "gfx/interface/goals/CSA_resource_nationalisation.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -17155,7 +16963,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_CSA_restructure_iww"
+		name = "GFX_goal_CSA_restructure_iww_shine"
 		texturefile = "gfx/interface/goals/CSA_restructure_iww.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -17187,7 +16995,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_CSA_revolution_will_be_broadcasted_2"
+		name = "GFX_goal_CSA_revolution_will_be_broadcasted_2_shine"
 		texturefile = "gfx/interface/goals/CSA_revolution_will_be_broadcasted_2.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -17219,7 +17027,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_CSA_socialist_friendly_media"
+		name = "GFX_goal_CSA_socialist_friendly_media_shine"
 		texturefile = "gfx/interface/goals/CSA_socialist_friendly_media.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -17251,7 +17059,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_CSA_strenght_through_industry"
+		name = "GFX_goal_CSA_strenght_through_industry_shine"
 		texturefile = "gfx/interface/goals/CSA_strenght_through_industry.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -17283,7 +17091,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_CSA_subdue_bourgeoisie"
+		name = "GFX_goal_CSA_subdue_bourgeoisie_shine"
 		texturefile = "gfx/interface/goals/CSA_subdue_bourgeoisie.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -17315,7 +17123,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_CSA_vanguardist_incentives"
+		name = "GFX_goal_CSA_vanguardist_incentives_shine"
 		texturefile = "gfx/interface/goals/CSA_vanguardist_incentives.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {

@@ -499,16 +499,6 @@ country_event = { # Union Elections
 	add_popularity = { ideology = syndicalist popularity = 0.15 }
 	add_stability = 0.1
 	add_political_power = 50
-	hidden_effect = {
-			create_country_leader = {
-				name = "Paul Robeson"
-				desc = "POLITICS_PAUL_ROBESON_DESC"
-				picture = "gfx/leaders/BBR/Paul_Robeson.tga"
-				expire = "1965.1.1"
-				ideology = syndicalist_subtype
-				traits = { }
-			}
-		}
 		set_politics = {
 			ruling_party = syndicalist
 			elections_allowed = no
@@ -589,3 +579,263 @@ country_event = { # Union Elections
 			name = BBR_TUUC_totalist_party }
 	}
 }
+
+country_event = { # The Liberal Republic
+	id = bbr.18
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.18"}
+	title = bbr.18.t
+	desc = bbr.18.d
+	picture = ACW_soldiers_watching
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = { #Good
+	name = bbr.18.a
+	hidden_effect = {
+			country_event = { id = bbr.19 days = 13 }
+		}
+	}
+}
+
+country_event = { # Socialist Party Candidates
+	id = bbr.19
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.19"}
+	title = bbr.19.t
+	desc = bbr.19.d
+	picture = ACW_soldiers_watching
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = { #Randolph
+	name = bbr.19.a
+	add_popularity = { ideology = social_democrat popularity = 0.05 }
+	hidden_effect = {
+			country_event = { id = bbr.20 days = 5 }
+			set_country_flag = SPA_Randolph
+		}
+	}
+	
+	option = { #
+	name = bbr.19.b
+	add_popularity = { ideology = radical_socialist popularity = 0.05 }
+	hidden_effect = {
+			country_event = { id = bbr.20 days = 5 }
+			set_country_flag = SPA_dubois
+		}
+	}
+	
+	option = { #
+	name = bbr.19.c
+	add_popularity = { ideology = social_democrat popularity = 0.05 }
+	hidden_effect = {
+			country_event = { id = bbr.20 days = 5 }
+			set_country_flag = SPA_abbott
+		}
+	}
+}
+
+country_event = { # Liberal Candidates
+	id = bbr.20
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.20"}
+	title = bbr.20.t
+	desc = bbr.20.d
+	picture = ACW_soldiers_watching
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = { #
+	name = bbr.20.a
+	add_popularity = { ideology = social_liberal popularity = 0.05 }
+	hidden_effect = {
+			country_event = { id = bbr.21 days = 13 }
+			set_country_flag = LP_Wilkins
+		}
+	}
+	option = { #
+	name = bbr.20.b
+	add_popularity = { ideology = social_liberal popularity = 0.05 }
+	hidden_effect = {
+			country_event = { id = bbr.21 days = 13 }
+			set_country_flag = LP_Sampson
+		}
+	}
+	option = { #
+	name = bbr.20.c
+	add_popularity = { ideology = social_liberal popularity = 0.05 }
+	hidden_effect = {
+			country_event = { id = bbr.21 days = 13 }
+			set_country_flag = LP_Marshall
+		}
+	}
+}
+
+country_event = { # Republican Party
+	id = bbr.21
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.21"}
+	title = bbr.21.t
+	desc = bbr.21.d
+	picture = ACW_soldiers_watching
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = { #Hurston
+	name = bbr.21.a
+	add_popularity = { ideology = market_liberal popularity = 0.05 }
+	hidden_effect = {
+			country_event = { id = bbr.22 days = 13 }
+			set_country_flag = RP_Hurston
+		}
+	}
+	option = { #Spaulding
+	name = bbr.21.b
+	add_popularity = { ideology = market_liberal popularity = 0.05 }
+	hidden_effect = {
+			country_event = { id = bbr.22 days = 13 }
+			set_country_flag = RP_Spaulding
+		}
+	}
+}
+
+country_event = { # The Peace Party
+	id = bbr.22
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.22"}
+	title = bbr.22.t
+	desc = bbr.22.d
+	picture = ACW_soldiers_watching
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = { #
+	name = bbr.22.a
+	add_popularity = { ideology = social_conservative popularity = 0.05 }
+	hidden_effect = {
+			country_event = { id = bbr.22 days = 13 }
+		}
+	}
+}
+
+country_event = { # The Liberal Election
+	id = bbr.23
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.23"}
+	title = bbr.23.t
+	desc = bbr.23.d
+	picture = ACW_soldiers_watching
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = { #SPA
+	name = bbr.23.a
+	if = { limit = { has_country_flag = SPA_Randolph }
+	add_popularity = { ideology = social_democrat popularity = 0.1 }
+	set_politics = {
+			ruling_party = social_democrat
+			elections_allowed = yes
+		}
+	}
+	if = { limit = { has_country_flag = SPA_abbott }
+	add_popularity = { ideology = social_democrat popularity = 0.1 }
+	create_country_leader = {
+				name = "Robert Sengstacke Abbott"
+				desc = "POLITICS_ROBERT_ABBOTT_DESC"
+				picture = "gfx/leaders/BBR/Robert Sengstacke Abbott.tga"
+				expire = "1965.1.1"
+				ideology = social_democrat_subtype
+				traits = { }
+			}
+	set_politics = {
+			ruling_party = social_democrat
+			elections_allowed = yes
+		}
+	}
+	if = { limit = { has_country_flag = SPA_dubois }
+	add_popularity = { ideology = radical_socialist popularity = 0.1 }
+	set_politics = {
+			ruling_party = radical_socialist
+			elections_allowed = yes
+		}
+	}
+	}
+	option = { # Soc Lib
+	name = bbr.23.b
+	add_popularity = { ideology = social_liberal popularity = 0.1 }
+	if = { limit = { has_country_flag = LP_Sampson }
+	set_politics = {
+			ruling_party = social_liberal
+			elections_allowed = yes
+		}
+	create_country_leader = {
+				name = "Edith Sampson"
+				desc = "POLITICS_EDITH SAMPSON_DESC"
+				picture = "gfx/leaders/BBR/Edith_Sampson.tga"
+				expire = "1965.1.1"
+				ideology = social_liberal_subtype
+				traits = { }
+			}
+	}
+	if = { limit = { has_country_flag = LP_Marshall }
+	set_politics = {
+			ruling_party = social_liberal
+			elections_allowed = yes
+		}
+	create_country_leader = {
+				name = "Thurgood Marshall"
+				desc = "POLITICS_THURGOOD_MARSHALL_DESC"
+				picture = "gfx/leaders/BBR/Thurgood_Marshall.tga"
+				expire = "1965.1.1"
+				ideology = social_liberal_subtype
+				traits = { }
+			}
+	}
+	if = { limit = { has_country_flag = LP_Wilkins }
+	set_politics = {
+			ruling_party = social_liberal
+			elections_allowed = yes
+		}
+	}
+	}
+	option = { # Market Liberal
+	name = bbr.23.c
+	add_popularity = { ideology = market_liberal popularity = 0.1 }
+	if = { limit = { has_country_flag = RP_Hurston }
+	set_politics = {
+			ruling_party = market_liberal
+			elections_allowed = yes
+		}
+	create_country_leader = {
+				name = "Zora Neale Hurston"
+				desc = "POLITICS_ZORA_NEALE_HURSTON_DESC"
+				picture = "gfx/leaders/BBR/Zora_Neale_Hurston.tga"
+				expire = "1965.1.1"
+				ideology = market_liberal_subtype
+				traits = { }
+			}
+	}
+	if = { limit = { has_country_flag = RP_Spaulding }
+	set_politics = {
+			ruling_party = market_liberal
+			elections_allowed = yes
+		}
+	}
+	}
+	option = { #Social Conservative
+	name = bbr.23.e
+	add_popularity = { ideology = social_conservative popularity = 0.1 }
+	set_politics = {
+			ruling_party = social_conservative
+			elections_allowed = yes
+		}
+	}
+}
+
