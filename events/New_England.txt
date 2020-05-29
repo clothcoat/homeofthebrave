@@ -709,31 +709,33 @@ country_event = { # 1940 Liberal Primary
 	desc = newengland.21.d
 	picture = congress
 
-	trigger = {
-		tag = NEE
-		date > 1940.6.10
-		has_elected_government = yes
-		NOT = {
-			has_country_flag = NEE_had_1940_election
-		}
-	}
-
-	mean_time_to_happen = {
-		days = 10
-	}
+	is_triggered_only = yes
 
 	fire_only_once = yes
 
-	option = { # John Gilbert Winant
+	option = { # George Aiken
 		name = newengland.21.a
 		hidden_effect = {
 			set_country_flag = NEE_1940_liberal_primary_winant
 		}
+		hidden_effect = {
+		country_event = {
+			id = newengland.22
+			days = 4
+			}
+		}
 	}
-	option = { # Herbert H. Lehman
+	option = { # Frances Perkins
 		name = newengland.21.b
 		hidden_effect = {
 			set_country_flag = NEE_1940_liberal_primary_lehman
+			
+		}
+		hidden_effect = {
+		country_event = {
+			id = newengland.22
+			days = 4
+			}
 		}
 	}
 }
@@ -741,46 +743,15 @@ country_event = { # 1940 Liberal Primary
 country_event = { # 1940 Republican Primary
 	id = newengland.22
 	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.22"}
+	desc = newengland.22.d
 	title = newengland.22.t
 	picture = congress
 
-	desc = {
-		text = newengland.22.d.baxter
-		trigger = {
-			has_country_leader = {
-				ruling_only = yes
-				name = "Percival P. Baxter"
-			}
-		}
-	}
-	desc = {
-		text = newengland.22.d.nobaxter
-		trigger = {
-			NOT = {
-				has_country_leader = {
-					ruling_only = yes
-					name = "Percival P. Baxter"
-				}
-			}
-		}
-	}
-
-	trigger = {
-		tag = NEE
-		date > 1940.6.10
-		has_elected_government = yes
-		NOT = {
-			has_country_flag = NEE_had_1940_election
-		}
-	}
-
-	mean_time_to_happen = {
-		days = 10
-	}
-
+	is_triggered_only = yes
+	
 	fire_only_once = yes
 
-	option = { # Percival P. Baxter
+	option = { # Hamilton Fish III
 		name = newengland.22.a
 		ai_chance = {
 			factor = 50
@@ -793,7 +764,13 @@ country_event = { # 1940 Republican Primary
 			}
 		}
 		hidden_effect = {
-			set_country_flag = NEE_1940_republican_primary_baxter
+			set_country_flag = NEE_1940_republican_primary_fish
+		}
+		hidden_effect = {
+		country_event = {
+			id = newengland.23
+			days = 6
+			}
 		}
 	}
 	option = { # Joseph Kennedy Sr.
@@ -813,6 +790,12 @@ country_event = { # 1940 Republican Primary
 		hidden_effect = {
 			set_country_flag = NEE_1940_republican_primary_kennedy
 		}
+		hidden_effect = {
+		country_event = {
+			id = newengland.23
+			days = 6
+			}
+		}
 	}
 }
 
@@ -820,41 +803,10 @@ country_event = { # 1940 Democrat Primary
 	id = newengland.23
 	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.23"}
 	title = newengland.23.t
+	desc = newengland.23.d
 	picture = congress
 
-	desc = {
-		text = newengland.23.d.martin
-		trigger = {
-			has_country_leader = {
-				ruling_only = yes
-				name = "Joseph William Martin Jr."
-			}
-		}
-	}
-	desc = {
-		text = newengland.23.d.nomartin
-		trigger = {
-			NOT = {
-				has_country_leader = {
-					ruling_only = yes
-					name = "Joseph William Martin Jr."
-				}
-			}
-		}
-	}
-
-	trigger = {
-		tag = NEE
-		date > 1940.6.10
-		has_elected_government = yes
-		NOT = {
-			has_country_flag = NEE_had_1940_election
-		}
-	}
-
-	mean_time_to_happen = {
-		days = 10
-	}
+	is_triggered_only = yes
 
 	fire_only_once = yes
 
@@ -865,6 +817,12 @@ country_event = { # 1940 Democrat Primary
 		}
 		hidden_effect = {
 			set_country_flag = NEE_1940_democratic_primary_herter
+		}
+		hidden_effect = {
+		country_event = {
+			id = newengland.24
+			days = 9
+			}
 		}
 	}
 	option = { # Joseph William Martin Jr.
@@ -882,6 +840,12 @@ country_event = { # 1940 Democrat Primary
 		hidden_effect = {
 			set_country_flag = NEE_1940_democratic_primary_martin
 		}
+		hidden_effect = {
+		country_event = {
+			id = newengland.24
+			days = 9
+			}
+		}
 	}
 }
 
@@ -895,55 +859,8 @@ country_event = { # 1940 Election
 	is_triggered_only = yes
 	fire_only_once = yes
 
-	trigger = {
-		tag = NEE
-		has_elected_government = yes
-		NOT = {
-			has_country_flag = NEE_had_1940_election
-		}
-	}
-
 	immediate = {
 		hidden_effect = {
-			if = { # John Gilbert Winant
-				limit = {
-					has_country_flag = NEE_1940_liberal_primary_winant
-				}
-				create_country_leader = {
-					name = "John Gilbert Winant"
-					desc = "POLITICS_JOHN_WINANT_DESC"
-					picture = "Portrait_NEE_john_winant.tga"
-					expire = "1965.1.1"
-					ideology = social_liberal_subtype
-					traits = {}
-				}
-			}
-			else_if = { # Herbert H. Lehman
-				limit = {
-					has_country_flag = NEE_1940_liberal_primary_lehman
-				}
-				create_country_leader = {
-					name = " Herbert H. Lehman"
-					desc = "POLITICS_HERBERT_LEHMAN_DESC"
-					picture = "Portrait_NEE_Robert_Lehman.tga"
-					expire = "1965.1.1"
-					ideology = social_liberal_subtype
-					traits = {}
-				}
-			}
-			if = { # Percival P. Baxter
-				limit = {
-					has_country_flag = NEE_1940_republican_primary_baxter
-				}
-				create_country_leader = {
-					name = "Percival P. Baxter"
-					desc = "POLITICS_PERCIVAL_BAXTER_DESC"
-					picture = "Portrait_NEE_Percival_P_Baxter.tga"
-					expire = "1965.1.1"
-					ideology = market_liberal_subtype
-					traits = {}
-				}
-			}
 			else_if = { # Joseph Kennedy Sr.
 				limit = {
 					has_country_flag = NEE_1940_republican_primary_kennedy
@@ -952,19 +869,6 @@ country_event = { # 1940 Election
 					name = "Joseph Kennedy Sr."
 					desc = "POLITICS_JOSEPH_KENNEDY_DESC"
 					picture = "Portrait_NEE_joseph_kennedy_sr.tga"
-					expire = "1965.1.1"
-					ideology = market_liberal_subtype
-					traits = {}
-				}
-			}
-			if = { # Christian Herter
-				limit = {
-					has_country_flag = NEE_1940_democratic_primary_herter
-				}
-				create_country_leader = {
-					name = "Christian Herter"
-					desc = "POLITICS_CHRISTIAN_HERTER_DESC"
-					picture = "Portrait_NEE_Christian_Archibald_Herter.tga"
 					expire = "1965.1.1"
 					ideology = social_conservative_subtype
 					traits = {}
@@ -986,7 +890,7 @@ country_event = { # 1940 Election
 		}
 	}
 
-	option = { # Liberal
+	option = { # Progressive
 		name = newengland.24.a
 		set_country_flag = NEE_had_1940_election
 		hidden_effect = {
@@ -5575,5 +5479,205 @@ country_event = { # Absinthe
 		add_political_power = -20
 		add_popularity = { ideology = radical_socialist popularity = -0.01 }
 		add_stability = 0.02
+	}
+}
+
+country_event = { # Hamiltonian Constitution
+	id = newengland.116
+	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.116"}
+	title = newengland.116.t
+	desc = newengland.116.d
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = { # Appoint the Senators
+		name = newengland.116.a
+		add_political_power = 40
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.04 }
+		add_stability = -0.04
+	}
+	option = { # Just Remove Them
+		name = newengland.116.a
+		add_political_power = 20
+		add_popularity = { ideology = social_democrat popularity = -0.02 }
+		add_popularity = { ideology = social_liberal popularity = -0.01 }
+		add_popularity = { ideology = market_liberal popularity = -0.01 }
+	}
+}
+
+country_event = { # Radicals Push Back
+	id = newengland.117
+	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.117"}
+	title = newengland.117.t
+	desc = newengland.117.d
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = { # Great
+		name = newengland.117.a
+		add_political_power = 40
+		add_popularity = { ideology = authoritarian_democrat popularity = -0.05 }
+		add_stability = -0.04
+		add_manpower = -150
+		hidden_effect = {
+		country_event = {
+			id = newengland.118
+			days = 2
+			}	
+		}
+	}
+}
+
+country_event = { # Out of the Frying Pot
+	id = newengland.118
+	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.118"}
+	title = newengland.118.t
+	desc = newengland.118.d
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = { # Great
+		name = newengland.118.a
+		add_political_power = 40
+		add_popularity = { ideology = authoritarian_democrat popularity = -0.05 }
+		add_popularity = { ideology = market_liberal popularity = 0.04 }
+		add_popularity = { ideology = paternal_autocrat popularity = 0.04 }
+		add_popularity = { ideology = national_populist popularity = 0.04 }
+		add_stability = -0.04
+		add_manpower = -150
+		hidden_effect = {
+		country_event = {
+			id = newengland.119
+			days = 2
+			}	
+		}
+	}
+}
+
+country_event = { # Out of the Frying Pot
+	id = newengland.119
+	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.119"}
+	title = newengland.119.t
+	desc = newengland.119.d
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = { # Great
+		name = newengland.119.a
+		add_political_power = 20
+		add_popularity = { ideology = market_liberal popularity = 0.04 }
+		add_popularity = { ideology = paternal_autocrat popularity = 0.03 }
+		add_popularity = { ideology = national_populist popularity = 0.03 }
+		hidden_effect = {
+		country_event = {
+			id = newengland.120
+			days = 2
+			}	
+		}
+	}
+}
+
+country_event = { # Radical Split
+	id = newengland.120
+	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.120"}
+	title = newengland.120.t
+	desc = newengland.120.d
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = { # Great
+		name = newengland.120.a
+		add_political_power = 20
+		set_politics = {
+			ruling_party = national_populist
+			election_frequency = 48
+			elections_allowed = yes
+		}
+	}
+	option = { # Great
+		name = newengland.120.b
+		add_political_power = 20
+		country_event = {
+			id = newengland.121
+			days = 4
+		}
+	}
+}
+
+country_event = { # Remnant Leader Election
+	id = newengland.121
+	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.121"}
+	title = newengland.121.t
+	desc = newengland.121.d
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = { # Albert Jay Nock
+		name = newengland.121.a
+		add_political_power = 20
+		create_country_leader = {
+			name = "Albert Jay Nock"
+			desc = "POLITICS_THOMAS_HART_DESC"
+			picture = "gfx/leaders/BBR/Albert_Jay_Nock.tga"
+			expire = "1965.1.1"
+			ideology = paternal_autocrat
+			traits = {}
+		}
+		set_politics = {
+			ruling_party = paternal_autocrat
+			election_frequency = 48
+			elections_allowed = yes
+		}
+	}
+	option = { # Robert McCormick
+		name = newengland.121.a
+		add_political_power = 20
+		create_country_leader = {
+			name = "Robert McCormick"
+			desc = "POLITICS_THOMAS_HART_DESC"
+			picture = "gfx/leaders/BBR/Robert McCormick.tga"
+			expire = "1965.1.1"
+			ideology = paternal_autocrat
+			traits = {}
+		}
+		set_politics = {
+			ruling_party = paternal_autocrat
+			election_frequency = 48
+			elections_allowed = yes
+		}
+	}
+}
+
+country_event = { # Radical Split
+	id = newengland.122
+	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.122"}
+	title = newengland.122.t
+	desc = newengland.122.d
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = { # Great
+		name = newengland.122.a
+		add_political_power = 20
+		hidden_effect = {
+		country_event = {
+			id = newengland.21
+			days = 20
+			}
+		}
 	}
 }
