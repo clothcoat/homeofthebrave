@@ -429,7 +429,7 @@ focus_tree = {
 	focus = {
 		id = USA_president_long
 		icon = GFX_goal_USA_president_long
-		cost = 0
+		cost = 0.75
 		relative_position_id = USA_old_order_prevails
 		x = 3
 		y = 6
@@ -437,25 +437,16 @@ focus_tree = {
 			factor = 100
 		}
 		available = {
-			custom_trigger_tooltip = {
-				tooltip = USA_long_is_president
-				has_country_flag = USA_election_1936_flag
-				NOT = { has_country_flag = USA_had_1940_election }
-				has_idea = USA_Huey_Long_hog_ade
-			}
+			has_country_leader = { ruling_only = yes name = "Huey Long" }
+			has_country_flag = USA_president_inaugurated
+			has_country_flag = USA_election_1936_flag
+		}
+		select_effect = {
+		country_event = { id = ustates.53 days = 3 }
 		}
 		available_if_capitulated = yes
 		cancel_if_invalid = yes
 		continue_if_invalid = no
-
-		bypass = {
-			custom_trigger_tooltip = {
-				tooltip = USA_long_is_president
-				has_country_flag = USA_election_1936_flag
-				NOT = { has_country_flag = USA_had_1940_election }
-				has_idea = USA_Huey_Long_hog_ade
-			}
-		}
 		completion_reward = {
 			custom_effect_tooltip = unlock_focuses
 		}
@@ -478,26 +469,30 @@ focus_tree = {
 			factor = 100
 		}
 		available = {
-			has_country_flag = USA_president_inaugurated
+			has_country_leader = { ruling_only = yes name = "Huey Long" }
 		}
 		available_if_capitulated = yes
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		select_effect = {
-			country_event = ustates.53
+		country_event = { id = ustates.54 days = 5 }
 		}
 		bypass = {
 			has_country_flag = USA_macarthur_coup
 		}
 		completion_reward = {
-			country_event = ustates.56
+			custom_effect_tooltip = USA_AFP_gains_strength
+			add_popularity = { ideology = authoritarian_democrat popularity = 0.04 }
+			hidden_effect = {
+			add_to_variable = { var = AFP_strength value = 2 }
+			}
 		}
 	}
 
 	focus = {
 		id = USA_president_reed
 		icon = GFX_goal_USA_president_reed
-		cost = 0
+		cost = 1
 		relative_position_id = USA_president_long
 		x = -2
 		y = 0
@@ -505,26 +500,22 @@ focus_tree = {
 			factor = 100
 		}
 		available = {
-			custom_trigger_tooltip = {
-				tooltip = USA_reed_is_president
-				has_country_flag = USA_election_1936_flag
-				NOT = { has_country_flag = USA_had_1940_election }
-				has_idea = USA_Jack_Reed_hog_syn
-			}
+			has_country_leader = { ruling_only = yes name = "Jack Reed" }
+			has_country_flag = USA_president_inaugurated
+			has_country_flag = USA_election_1936_flag
+		}
+		select_effect = {
+		hidden_effect = {
+			country_event = { id = ustates.42 days = 4 }
+		}
 		}
 		available_if_capitulated = yes
 		cancel_if_invalid = yes
 		continue_if_invalid = no
-		bypass = {
-			custom_trigger_tooltip = {
-				tooltip = USA_reed_is_president
-				has_country_flag = USA_election_1936_flag
-				NOT = { has_country_flag = USA_had_1940_election }
-				has_idea = USA_Jack_Reed_hog_syn
-			}
-		}
 		completion_reward = {
 			custom_effect_tooltip = unlock_focuses
+			add_political_power = 10
+			add_popularity = { ideology = syndicalist popularity = 0.01 }
 		}
 	}
 
@@ -544,25 +535,27 @@ focus_tree = {
 		ai_will_do = {
 			factor = 100
 		}
-
 		available = {
 			has_country_flag = USA_president_inaugurated
+			has_country_leader = { ruling_only = yes name = "Jack Reed" }
 		}
 		available_if_capitulated = yes
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		select_effect = {
-			country_event = ustates.42
+		hidden_effect = {
+			country_event = { id = ustates.48 days = 4 }
+		}
 		}
 		bypass = {
 			has_country_flag = USA_macarthur_coup
 		}
 		completion_reward = {
-			country_event = ustates.45
+			country_event = ustates.47
 		}
 	}
 	
-	focus = { 
+	focus = {
 		id = USA_the_means_of_production
 		icon = GFX_focus_eng_liberate_the_home_of_marx
 		cost = 3.00
@@ -578,21 +571,23 @@ focus_tree = {
 		ai_will_do = {
 			factor = 100
 		}
-
 		available = {
 			has_country_flag = USA_president_inaugurated
+			has_country_leader = { ruling_only = yes name = "Jack Reed" }
 		}
 		available_if_capitulated = yes
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		select_effect = {
-			country_event = ustates.42
+		hidden_effect = {
+			country_event = { id = ustates.45 days = 5 }
+			}
 		}
 		bypass = {
 			has_country_flag = USA_macarthur_coup
 		}
 		completion_reward = {
-			country_event = ustates.45
+			custom_effect_tooltip = USA_SPA_gains_strength2
 		}
 	}
 
@@ -607,6 +602,20 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = USA_sweeping_reforms
 		}
+		select_effect = {
+		if = {
+		limit = { has_country_leader = { ruling_only = yes name = "Jack Reed" } }
+		hidden_effect = {
+			country_event = { id = ustates.4900 days = 7 }
+				}
+			}
+		if = {
+		limit = { has_country_leader = { ruling_only = yes name = "Huey Long" } }
+		hidden_effect = {
+			country_event = { id = ustates.6200 days = 7 }
+				}
+			}
+		}
 		relative_position_id = USA_president_reed
 		x = 1
 		y = 1
@@ -614,19 +623,22 @@ focus_tree = {
 			factor = 25
 		}
 		available = {
-			has_country_flag = USA_president_inaugurated
+			OR = {
+			has_country_leader = { ruling_only = yes name = "Jack Reed" }
+			has_country_leader = { ruling_only = yes name = "Huey Long" }
+			}
 		}
 		available_if_capitulated = yes
 		cancel_if_invalid = yes
 		continue_if_invalid = no
-		select_effect = {
-			country_event = ustates.521
-		}
 		bypass = {
 			has_country_flag = USA_macarthur_coup
 		}
 		completion_reward = {
-			country_event = ustates.522
+			add_popularity = { ideology = paternal_autocrat popularity = -0.03 }
+			add_popularity = { ideology = national_populist popularity = -0.03 }
+			custom_effect_tooltip = USA_ODP_loses_strength2
+			
 		}
 	}
 	
@@ -662,22 +674,20 @@ focus_tree = {
 			limit = { has_country_leader = { ruling_only = yes name = "William H. Murray" } }
 			country_event = { id = amcivwar.6310 days = 8 }
 			}
+			if = { 
+			limit = { has_country_leader = { ruling_only = yes name = "Huey Long" } }
+			country_event = { id = amcivwar.59 days = 8 }
+			}
 		}
 		bypass = {
 			has_country_flag = USA_macarthur_coup
 		}
 		completion_reward = {
-		if = { 
-			limit = { has_country_leader = { ruling_only = yes name = "William H. Murray" } }
-			custom_effect_tooltip = USA_ODP_gains_strength
+		add_popularity = { ideology = syndicalist popularity = -0.05 }
+		add_popularity = { ideology = totalist popularity = -0.05 }
+			custom_effect_tooltip = USA_SPA_loses_strength2
 			hidden_effect = {
-			add_to_variable = { var = ODP_strength value = 1 }
-			}
-			increase_ruling_party_popularity_by_5 = yes
-			}
-			custom_effect_tooltip = USA_SPA_loses_strength
-			hidden_effect = {
-			add_to_variable = { var = SPA_strength value = -1 }
+			add_to_variable = { var = SPA_strength value = -3 }
 			}
 		}
 	}
@@ -1711,9 +1721,8 @@ focus_tree = {
 		icon = GFX_USA_senator_norris
 		cost = 1.00
 		available = {
-			has_government = social_democrat
+			has_country_flag = USA_president_inaugurated
 			date < 1937.5.1
-			has_country_flag = progressive_victory
 			has_country_leader = { ruling_only = yes name = "George Norris" } 
 		}
 		x = 26

@@ -896,7 +896,7 @@ focus_tree = {
 		relative_position_id = CAL_mcnair_report
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_bombing_support"
-			add_equipment_to_stockpile = { type = naval_bomber amount = 40 }
+			add_equipment_to_stockpile = { type = naval_bomber_equipment amount = 40 }
 			add_tech_bonus = {
 				bonus = 1
 				uses = 1

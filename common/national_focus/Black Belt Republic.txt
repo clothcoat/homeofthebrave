@@ -6729,7 +6729,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BBR_coastal_support"
-			add_equipment_to_stockpile = { type = naval_bomber amount = 20 }
+			add_equipment_to_stockpile = { type = naval_bomber_equipment amount = 20 }
 			add_tech_bonus = {
 				name = navy_air_bonus
 				bonus = 1

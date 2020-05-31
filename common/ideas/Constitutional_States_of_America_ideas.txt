@@ -1644,49 +1644,6 @@ ideas = {
 				resistance_tick	= 0.15
 			}
 		}
-		COR_mob_activity_1_idea = {
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea COR_mob_activity_1_idea"}
-			allowed = { always = no }
-			removal_cost = -1
-			picture = mob_activity
-			modifier = {
-				political_power_gain = -0.02
-				production_factory_efficiency_gain_factor = -0.01
-				local_intel_to_enemies = 0.05
-				local_supplies = -0.02
-				stability_factor = -0.03
-				resistance_tick	= 0.05
-			}
-		}
-		COR_mob_activity_2_idea = {
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea COR_mob_activity_2_idea"}
-			allowed = { always = no }
-			removal_cost = -1
-			picture = mob_activity
-			modifier = {
-				political_power_gain = -0.05
-				production_factory_efficiency_gain_factor = -0.03
-				local_intel_to_enemies = 0.1
-				local_supplies = -0.05
-				stability_factor = -0.05
-				resistance_tick	= 0.1
-			}
-		}
-		COR_mob_activity_alliance_idea = {
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea COR_mob_activity_alliance_idea"}
-			allowed = { always = no }
-			removal_cost = -1
-			picture = mob_activity
-			modifier = {
-				local_manpower = 0.05
-				political_power_gain = -0.1
-				party_popularity_stability_factor = -0.05
-				encryption_factor = 0.05
-				decryption_factor = 0.05
-				stability_factor = -0.02
-				resistance_tick	= -0.05
-			}
-		}
 		COR_longist_resistance_1_idea = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea COR_longist_resistance_1_idea"}
 			allowed = { always = no }

@@ -937,10 +937,12 @@ USA_civil_war_begins = {
 		if = {
 			limit = { country_exists = CSA 	}
 			CSA = { declare_war_on = { target = USA type = annex_everything	} }
+			CSA = { declare_war_on = { target = WCC type = annex_everything	} }
 		}
 		if = {
 			limit = { country_exists = COR 	}
 			COR = { declare_war_on = { target = USA type = annex_everything	} }
+			COR = { declare_war_on = { target = WCC type = annex_everything	} }
 		}
 		if = {
 			limit = { country_exists = TEX 
@@ -949,6 +951,7 @@ USA_civil_war_begins = {
 				}
 			}
 			TEX = { declare_war_on = { target = USA type = annex_everything	} }
+			TEX = { declare_war_on = { target = WCC type = annex_everything	} }
 		}
 		if = {
 			limit = {

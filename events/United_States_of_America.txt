@@ -1961,7 +1961,7 @@ country_event = { # The 1936 Election - Coalition
 			elections_allowed = yes
 		}
 		hidden_effect = {
-			set_country_flag = USA_president_long
+			set_country_flag = USA_long_is_president
 		}
 		hidden_effect = {
 			add_ideas = USA_Huey_Long_hog_ade
@@ -2395,7 +2395,7 @@ country_event = { # The 1936 Election - You're Fucked (Or are you...)
 			country_event = { id = amcivwar.7 days = 6 }
 			country_event = { id = amcivwar.2 days = 7 }
 			country_event = { id = amcivwar.3 days = 8 }
-			country_event = { id = amcivwar.3000 days = 8 }
+			country_event = { id = amcivwar.3000 days = 9 }
 			}
 		}
 		set_politics = {
@@ -2712,6 +2712,8 @@ country_event = { # Inauguration of Reed
 
 	is_triggered_only = yes
 
+	fire_only_once = yes
+	
 	option = { #
 		name = ustates.41.a
 		add_political_power = 20
@@ -2728,21 +2730,27 @@ country_event = { # Trade Union Law
 
 	is_triggered_only = yes
 
+	fire_only_once = yes
+	
 	trigger = {
 		NOT = { has_country_flag = USA_macarthur_coup }
 	}
 
 	option = {
 		name = ustates.42.a
-		custom_effect_tooltip = USA_SPA_gains_strength2
+		custom_effect_tooltip = USA_SPA_gains_strength
 		hidden_effect = {
-			add_to_variable = { var = SPA_strength value = 3 }
+			add_to_variable = { var = SPA_strength value = 1 }
 			country_event = { id = ustates.43 days = 5 }
 		}
+		add_stability = -0.03
+		add_political_power = -30
+		add_popularity = { ideology = syndicalist popularity = 0.05 }
+		add_popularity = { ideology = totalist popularity = 0.05 }
 	}
 }
 
-country_event = { # The Rich are angry
+country_event = { # Fury of Reaction
 	id = ustates.43
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.43"}
 	title = ustates.43.t
@@ -2750,6 +2758,8 @@ country_event = { # The Rich are angry
 	picture = GFX_USA_Riots
 
 	is_triggered_only = yes
+	
+	fire_only_once = yes
 
 	trigger = {
 		NOT = { has_country_flag = USA_macarthur_coup }
@@ -2757,14 +2767,18 @@ country_event = { # The Rich are angry
 
 	option = {
 		name = ustates.43.a
-		add_political_power = -50
+		add_political_power = -45
 		hidden_effect = {
-			country_event = { id = ustates.44 days = 5 }
+			country_event = { id = ustates.44 days = 10 }
+		}
+		custom_effect_tooltip = USA_ODP_gains_strength
+		hidden_effect = {
+			add_to_variable = { var = ODP_strength value = 1 }
 		}
 	}
 }
 
-country_event = { # Long denounces Reed as a tyrant
+country_event = { # Reed as a tyrant
 	id = ustates.44
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.44"}
 	title = ustates.44.t
@@ -2773,6 +2787,8 @@ country_event = { # Long denounces Reed as a tyrant
 
 	is_triggered_only = yes
 
+	fire_only_once = yes
+	
 	trigger = {
 		NOT = { has_country_flag = USA_macarthur_coup }
 	}
@@ -2780,13 +2796,14 @@ country_event = { # Long denounces Reed as a tyrant
 	option = {
 		name = ustates.44.a
 		custom_effect_tooltip = USA_AFP_gains_strength
+		add_popularity = { ideology = syndicalist = -0.02 }
 		hidden_effect = {
 			add_to_variable = { var = AFP_strength value = 1 }
 		}
 	}
 }
 
-country_event = { # Nationalization of the banking system
+country_event = { # Halt of Forclosure
 	id = ustates.45
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.45"}
 	title = ustates.45.t
@@ -2795,6 +2812,8 @@ country_event = { # Nationalization of the banking system
 
 	is_triggered_only = yes
 
+	fire_only_once = yes
+	
 	trigger = {
 		NOT = { has_country_flag = USA_macarthur_coup }
 	}
@@ -2803,8 +2822,8 @@ country_event = { # Nationalization of the banking system
 		name = ustates.45.a
 		custom_effect_tooltip = USA_SPA_gains_strength2
 		hidden_effect = {
-			add_to_variable = { var = SPA_strength value = 2 }
-			country_event = { id = ustates.46 days = 5 }
+			add_to_variable = { var = SPA_strength value = 3 }
+			country_event = { id = ustates.4800 days = 5 }
 		}
 	}
 }
@@ -2818,6 +2837,8 @@ country_event = { # Democrats and Republicans Denounce Reed as a Tyrant
 
 	is_triggered_only = yes
 
+	fire_only_once = yes
+	
 	trigger = {
 		NOT = { has_country_flag = USA_macarthur_coup }
 	}
@@ -2839,6 +2860,8 @@ country_event = { # Nationalization of Resources
 
 	is_triggered_only = yes
 
+	fire_only_once = yes
+	
 	trigger = {
 		NOT = { has_country_flag = USA_macarthur_coup }
 	}
@@ -2846,12 +2869,12 @@ country_event = { # Nationalization of Resources
 	option = {
 		name = ustates.47.a
 		hidden_effect = {
-			country_event = { id = ustates.48 days = 5 }
+			country_event = { id = ustates.48 days = 7 }
 		}
 	}
 }
 
-country_event = { # Packing the Court
+country_event = { # Red Executive Agreement
 	id = ustates.48
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.48"}
 	title = ustates.48.t
@@ -2860,6 +2883,8 @@ country_event = { # Packing the Court
 
 	is_triggered_only = yes
 
+	fire_only_once = yes
+	
 	trigger = {
 		NOT = { has_country_flag = USA_macarthur_coup }
 	}
@@ -2868,6 +2893,231 @@ country_event = { # Packing the Court
 		name = ustates.48.a
 		hidden_effect = {
 			country_event = { id = ustates.49 days = 5 }
+		}
+	}
+	option = {
+		name = ustates.48.b
+		hidden_effect = {
+			country_event = { id = ustates.49 days = 5 }
+		}
+	}
+}
+
+country_event = { # The Steel Belt fortified
+	id = ustates.4800
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.4800"}
+	title = ustates.4800.t
+	desc = ustates.4800.d
+	picture = USA_Wall_Street
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	trigger = {
+		NOT = { has_country_flag = USA_macarthur_coup }
+	}
+
+	option = {
+		name = ustates.4800.a ###Cities
+		custom_effect_tooltip = USA_SPA_gains_strength2
+		hidden_effect = {
+			add_to_variable = { var = SPA_strength value = 2 }
+			country_event = { id = ustates.4801 days = 5 }
+		}
+		393 = {
+			add_building_construction = {
+				type = bunker
+				province = 6710
+				level = 1
+				instant_build = yes
+			}
+		}
+		395 = {
+			add_building_construction = {
+				type = bunker
+				province = 9450
+				level = 2
+				instant_build = yes
+			}
+		}
+		360 = {
+			add_building_construction = {
+				type = bunker
+				province = 6845
+				level = 1
+				instant_build = yes
+			}
+		}
+		360 = {
+			add_building_construction = {
+				type = bunker
+				province = 11800
+				level = 1
+				instant_build = yes
+			}
+		}
+		261 = {
+			add_building_construction = {
+				type = bunker
+				province = 6890
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+	option = {
+		name = ustates.4800.b
+		custom_effect_tooltip = USA_SPA_gains_strength2
+		hidden_effect = {
+			add_to_variable = { var = SPA_strength value = 2 }
+			country_event = { id = ustates.4801 days = 5 }
+		}
+		396 = {
+			add_building_construction = {
+				type = bunker
+				province = 4437
+				level = 1
+				instant_build = yes
+			}
+		}
+		395 = {
+			add_building_construction = {
+				type = bunker
+				province = 10461
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				province = 7611
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				province = 10399
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				province = 6737
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				province = 11589
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+}
+
+country_event = { # Butler recommends moving armaments
+	id = ustates.4801
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.4801"}
+	title = ustates.4801.t
+	desc = ustates.4801.d
+	picture = USA_Wall_Street
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	trigger = {
+		NOT = { has_country_flag = USA_macarthur_coup }
+	}
+
+	option = {
+		name = ustates.4801.a
+		custom_effect_tooltip = USA_SPA_gains_strength2
+		set_country_flag = CSA_additional_guns
+		hidden_effect = {
+			add_to_variable = { var = SPA_strength value = 2 }
+			country_event = { id = ustates.4802 days = 5 }
+		}
+		add_equipment_to_stockpile = {
+			type = infantry_equipment_1
+			amount = -1200
+			producer = USA
+			}
+		add_equipment_to_stockpile = {
+			type = support_equipment_1
+			amount = -500
+			producer = USA
+			}
+		add_equipment_to_stockpile = {
+			type = light_tank_equipment
+			amount = -20
+			producer = USA
+			}
+	}
+}
+
+country_event = { # Hit the AFP
+	id = ustates.4802
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.4802"}
+	title = ustates.4802.t
+	desc = ustates.4802.d
+	picture = USA_Wall_Street
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	trigger = {
+		NOT = { has_country_flag = USA_macarthur_coup }
+	}
+
+	option = {
+		name = ustates.4802.a
+		custom_effect_tooltip = USA_AFP_loses_strength2
+		add_political_power = -50
+		add_manpower = -3000
+		add_stability = -0.05
+		hidden_effect = {
+			add_to_variable = { var = AFP_strength value = -3 }
+			country_event = { id = ustates.4803 days = 5 }
+			set_country_flag = AFP_SPA_HATRED
+		}
+	}
+	option = {
+		name = ustates.4802.b
+		hidden_effect = {
+			country_event = { id = ustates.4803 days = 5 }
+		}
+	}
+}
+
+country_event = { ###Denounced by Congress###
+	id = ustates.4803
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.4803"}
+	title = ustates.4803.t
+	desc = ustates.4803.d
+	picture = USA_Wall_Street
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	trigger = {
+		NOT = { has_country_flag = USA_macarthur_coup }
+	}
+
+	option = {
+		name = ustates.4803.a
+		add_political_power = -35
+		add_stability = -0.1
+		hidden_effect = {
+			country_event = { id = ustates.51 days = 5 }
+			country_event = { id = amcivwar.1 days = 5 }
+			country_event = { id = amcivwar.1001 days = 6 }
+			country_event = { id = amcivwar.2 days = 7 }
+			country_event = { id = amcivwar.3 days = 5 }
+			country_event = { id = amcivwar.3000 days = 5 }
 		}
 	}
 }
@@ -2881,20 +3131,50 @@ country_event = { # Violence and Chaos Spreads
 
 	is_triggered_only = yes
 
-	trigger = {
-		NOT = { has_country_flag = USA_macarthur_coup }
-	}
+	fire_only_once = yes
 
 	option = {
 		name = ustates.49.a
 		add_stability = -0.05
 		hidden_effect = {
+			country_event = { id = ustates.51 days = 5 }
+			country_event = { id = amcivwar.1 days = 5 }
+			country_event = { id = amcivwar.1001 days = 6 }
+			country_event = { id = amcivwar.2 days = 7 }
+			country_event = { id = amcivwar.3 days = 8 }
+			country_event = { id = amcivwar.3000 days = 9 }
+		}
+	}
+}
+
+country_event = { # ODP Walks Out
+	id = ustates.4900
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.4900"}
+	title = ustates.4900.t
+	desc = ustates.4900.d
+	picture = GFX_USA_Riots
+
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_country_flag = USA_macarthur_coup }
+	}
+
+	option = {
+		name = ustates.4900.a
+		custom_effect_tooltip = USA_ODP_loses_strength2
+		add_political_power = -40
+		add_stability = -0.05
+		add_popularity = { ideology = paternal_autocrat popularity = -0.03 }
+		add_popularity = { ideology = national_populist popularity = -0.03 }
+		hidden_effect = {
+			add_to_variable = { var = ODP_strength value = -3 }
 			country_event = { id = ustates.50 days = 5 }
 		}
 	}
 }
 
-country_event = { # Clashes with the Minutemen and Police
+country_event = { # Clashes with the Klan and Police
 	id = ustates.50
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.50"}
 	title = ustates.50.t
@@ -2909,8 +3189,16 @@ country_event = { # Clashes with the Minutemen and Police
 
 	option = {
 		name = ustates.50.a
+		add_manpower = -2500
+		add_political_power = -40
+		add_stability = -0.08
 		hidden_effect = {
-			country_event = { id = ustates.51 days = 5 }
+			country_event = { id = amcivwar.1001 days = 6 }
+			country_event = { id = ustates.51 days = 7 }
+			country_event = { id = amcivwar.1 days = 7 }
+			country_event = { id = amcivwar.2 days = 8 }
+			country_event = { id = amcivwar.3 days = 9 }
+			country_event = { id = amcivwar.3000 days = 10 }
 		}
 	}
 }
@@ -2979,6 +3267,9 @@ country_event = { # Long's Inaugural Address
 		name = ustates.52.a
 		add_political_power = 20
 		set_country_flag = USA_president_inaugurated
+		hidden_effect = {
+			country_event = { id = ustates.53 days = 5 }
+		}
 	}
 }
 
@@ -2997,15 +3288,14 @@ country_event = { # Long's Agricultural Reforms
 
 	option = {
 		name = ustates.53.a
-		custom_effect_tooltip = USA_AFP_gains_strength2
+		custom_effect_tooltip = USA_AFP_gains_strength
 		hidden_effect = {
-			add_to_variable = { var = AFP_strength value = 3 }
-			country_event = { id = ustates.54 days = 5 }
+			add_to_variable = { var = AFP_strength value = 2 }
 		}
 	}
 }
 
-country_event = { # Reed denounces Long as a Tyrant
+country_event = { # Assembling the Cabinet
 	id = ustates.54
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.54"}
 	title = ustates.54.t
@@ -3018,15 +3308,123 @@ country_event = { # Reed denounces Long as a Tyrant
 		NOT = { has_country_flag = USA_macarthur_coup }
 	}
 
-	option = {
+	option = { #Lean Towards Conservative Appointees
 		name = ustates.54.a
+		add_political_power = 55
+		add_stability = 0.05
+		add_popularity = { ideology = market_liberal popularity = 0.03 }
+		add_popularity = { ideology = social_conservative popularity = 0.02 }
 		hidden_effect = {
-			country_event = { id = ustates.55 days = 5 }
+			country_event = { id = ustates.5400 days = 5 }
+		}
+	}
+	option = { #We only need the AFP
+		name = ustates.54.b
+		custom_effect_tooltip = USA_AFP_gains_strength
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.04 }
+		hidden_effect = {
+			add_to_variable = { var = AFP_strength value = 2 }
+		}
+		hidden_effect = {
+			country_event = { id = ustates.5400 days = 5 }
+		}
+	}
+	option = { #Lean Towards Socialist Appointees
+		name = ustates.54.c
+		add_popularity = { ideology = radical_socialist popularity = 0.02 }
+		add_popularity = { ideology = syndicalist popularity = 0.03 }
+		custom_effect_tooltip = USA_SPA_gains_strength
+		custom_effect_tooltip = USA_AFP_gains_strength
+		hidden_effect = {
+			add_to_variable = { var = AFP_strength value = 1 }
+			add_to_variable = { var = SPA_strength value = 1 }
+		}
+		hidden_effect = {
+			country_event = { id = ustates.5400 days = 5 }
 		}
 	}
 }
 
-country_event = { # The rich are angry
+country_event = { # Masters of Finance decline Share Our Wealth
+	id = ustates.5400
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.5400"}
+	title = ustates.5400.t
+	desc = ustates.5400.d
+	picture = GFX_USA_Riots
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	trigger = {
+		NOT = { has_country_flag = USA_macarthur_coup }
+	}
+
+	option = {
+		name = ustates.5400.a
+		add_political_power = -40
+		hidden_effect = {
+			country_event = { id = ustates.5401 days = 5 }
+		}
+	}
+}
+
+country_event = { # Trust Busting
+	id = ustates.5401
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.5401"}
+	title = ustates.5401.t
+	desc = ustates.5401.d
+	picture = GFX_USA_Riots
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	trigger = {
+		NOT = { has_country_flag = USA_macarthur_coup }
+	}
+
+	option = {
+		name = ustates.5401.a
+		hidden_effect = {
+			country_event = { id = ustates.5402 days = 5 }
+		}
+	}
+}
+
+country_event = { # The Long Order
+	id = ustates.5402
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.5402"}
+	title = ustates.5402.t
+	desc = ustates.5402.d
+	picture = GFX_USA_Riots
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	trigger = {
+		NOT = { has_country_flag = USA_macarthur_coup }
+	}
+
+	option = {
+		name = ustates.5402.a
+		custom_effect_tooltip = USA_AFP_gains_strength2
+		hidden_effect = {
+			add_to_variable = { var = AFP_strength value = 3 }
+			country_event = { id = ustates.63 days = 7 }
+			country_event = { id = amcivwar.6 days = 7 }
+			country_event = { id = amcivwar.6000 days = 8 }
+			country_event = { id = amcivwar.7 days = 9 }
+			country_event = { id = amcivwar.8 days = 10 }
+			country_event = { id = amcivwar.3000 days = 11 }
+		}
+		add_political_power = -40
+		add_stability = -0.04
+	}
+}
+
+country_event = { # Coughlin-Banking Bill Debate
 	id = ustates.55
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.55"}
 	title = ustates.55.t
@@ -3041,11 +3439,16 @@ country_event = { # The rich are angry
 
 	option = {
 		name = ustates.55.a
-		add_political_power = -50
+		add_political_power = -40
+		custom_effect_tooltip = USA_AFP_gains_strength
+		hidden_effect = {
+			add_to_variable = { var = AFP_strength value = 1 }
+			country_event = { id = ustates.56 days = 7 }
+		}
 	}
 }
 
-country_event = { # Executive Order 7048
+country_event = { # AFP Machine Growth
 	id = ustates.56
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.56"}
 	title = ustates.56.t
@@ -3061,16 +3464,16 @@ country_event = { # Executive Order 7048
 	option = {
 		name = ustates.56.a
 		add_stability = 0.05
-		add_political_power = -100
-		custom_effect_tooltip = USA_AFP_gains_strength2
+		add_political_power = 25
+		custom_effect_tooltip = USA_AFP_gains_strength
 		hidden_effect = {
-			add_to_variable = { var = AFP_strength value = 2 }
+			add_to_variable = { var = AFP_strength value = 1 }
 			country_event = { id = ustates.57 days = 5 }
 		}
 	}
 }
 
-country_event = { # Executive Order 7048 is declared Unconstitutional
+country_event = { # ODP retreats South
 	id = ustates.57
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.57"}
 	title = ustates.57.t
@@ -3085,14 +3488,14 @@ country_event = { # Executive Order 7048 is declared Unconstitutional
 
 	option = {
 		name = ustates.57.a
-		add_political_power = -50
+		custom_effect_tooltip = USA_ODP_loses_strength
 		hidden_effect = {
-			country_event = { id = ustates.58 days = 5 }
+			add_to_variable = { var = ODP_strength value = 1 }
 		}
 	}
 }
 
-country_event = { # Packing the Court
+country_event = { # The Long investigation
 	id = ustates.58
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.58"}
 	title = ustates.58.t
@@ -3107,14 +3510,20 @@ country_event = { # Packing the Court
 
 	option = {
 		name = ustates.58.a
-		add_stability = -0.05
+		add_political_power = -50
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.05 }
 		hidden_effect = {
 			country_event = { id = ustates.63 days = 5 }
+			country_event = { id = amcivwar.6 days = 5 }
+			country_event = { id = amcivwar.6000 days = 6 }
+			country_event = { id = amcivwar.7 days = 8 }
+			country_event = { id = amcivwar.8 days = 9 }
+			country_event = { id = amcivwar.3000 days = 10 }
 		}
 	}
 }
 
-country_event = { # Executive Order 7050
+country_event = { # Long Demands Order
 	id = ustates.59
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.59"}
 	title = ustates.59.t
@@ -3137,7 +3546,7 @@ country_event = { # Executive Order 7050
 	}
 }
 
-country_event = { # Reed Defies the Bill
+country_event = { # SPA filibusters Congress
 	id = ustates.60
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.60"}
 	title = ustates.60.t
@@ -3146,6 +3555,8 @@ country_event = { # Reed Defies the Bill
 
 	is_triggered_only = yes
 
+	fire_only_once = yes
+	
 	trigger = {
 		NOT = { has_country_flag = USA_macarthur_coup }
 	}
@@ -3158,7 +3569,7 @@ country_event = { # Reed Defies the Bill
 	}
 }
 
-country_event = { # Union Workers and Police Clash
+country_event = { # Red Guard Barricades Steel Belt
 	id = ustates.61
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.61"}
 	title = ustates.61.t
@@ -3179,7 +3590,7 @@ country_event = { # Union Workers and Police Clash
 	}
 }
 
-country_event = { # The Minute Men clash with the CSA
+country_event = { # The Minutemen clash with the SPA
 	id = ustates.62
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.62"}
 	title = ustates.62.t
@@ -3195,7 +3606,59 @@ country_event = { # The Minute Men clash with the CSA
 	option = {
 		name = ustates.62.a
 		hidden_effect = {
-			country_event = { id = ustates.63 days = 5 }
+			country_event = { id = amcivwar.7 days = 5 }
+			country_event = { id = ustates.63 days = 6 }
+			country_event = { id = amcivwar.6 days = 6 }
+			country_event = { id = amcivwar.6000 days = 7 }
+			country_event = { id = amcivwar.8 days = 8 }
+			country_event = { id = amcivwar.3000 days = 9 }
+		}
+	}
+}
+
+country_event = { # NDWL Declares Long a traitor
+	id = ustates.6200
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.6200"}
+	title = ustates.6200.t
+	desc = ustates.6200.d
+	picture = GFX_USA_Riots
+
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_country_flag = USA_macarthur_coup }
+	}
+
+	option = {
+		name = ustates.6200.a
+		hidden_effect = {
+			country_event = { id = ustates.6201 days = 5 }
+		}
+	}
+}
+
+country_event = { # The Minutemen battle the Old Democrats
+	id = ustates.6201
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.6201"}
+	title = ustates.6201.t
+	desc = ustates.6201.d
+	picture = GFX_USA_Riots
+
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_country_flag = USA_macarthur_coup }
+	}
+
+	option = {
+		name = ustates.6201.a
+		hidden_effect = {
+			country_event = { id = amcivwar.6000 days = 5 }
+			country_event = { id = ustates.63 days = 6 }
+			country_event = { id = amcivwar.6 days = 6 }
+			country_event = { id = amcivwar.7 days = 7 }
+			country_event = { id = amcivwar.8 days = 8 }
+			country_event = { id = amcivwar.3000 days = 9 }
 		}
 	}
 }
@@ -5114,6 +5577,7 @@ country_event = { # Norris' intervention
 		
 		add_popularity = { ideology = social_democrat popularity = 0.01 }
 		hidden_effect = {
+		set_country_flag = USA_president_inaugurated
 		add_country_flag = USA_norris_appeasement
 		}
 	}
@@ -5122,6 +5586,7 @@ country_event = { # Norris' intervention
 		add_political_power = 25
 		add_stability = 0.02
 		hidden_effect = {
+			set_country_flag = USA_president_inaugurated
 			country_event = { id = ustates.113 days = 5 }
 		}
 	}

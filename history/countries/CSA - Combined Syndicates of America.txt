@@ -157,6 +157,13 @@ add_opinion_modifier = { target = NEE modifier = embargo }
 add_opinion_modifier = { target = OTT modifier = embargo }
 add_opinion_modifier = { target = GBR modifier = embargo }
 
+CSA = {
+	add_ideas = USA_klan_activity_idea
+	add_ideas = COR_federalist_activity_1_idea
+	add_ideas = COR_mob_activity_1_idea
+	add_ideas = ACW_black_legion_resistance_1
+	}
+
 set_politics = {
 	ruling_party = syndicalist
 	last_election = "1936.11.08"
