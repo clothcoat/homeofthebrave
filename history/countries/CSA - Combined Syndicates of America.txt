@@ -120,10 +120,11 @@ add_opinion_modifier = { target = OTT modifier = embargo }
 add_opinion_modifier = { target = GBR modifier = embargo }
 
 CSA = {
-	add_ideas = USA_klan_activity_idea
-	add_ideas = COR_federalist_activity_1_idea
-	add_ideas = COR_mob_activity_1_idea
-	add_ideas = ACW_black_legion_resistance_1
+	add_ideas = ACW_black_legion_resistance_3
+	add_ideas = ACW_klan_resistance_2
+	add_ideas = ACW_fed_resistance_2
+	add_ideas = ACW_minutemen_resistance_1
+	add_ideas = ACW_liberal_resistance_1
 	}
 
 set_politics = {
@@ -177,11 +178,6 @@ add_ideas = {
 	CSA_Upton_Sinclair_eco_rso
 	CSA_Steve_Nelson_sec_tot
 	###AmericanCivilWar
-	ACW_black_legion_resistance_3
-	ACW_klan_resistance_2
-	ACW_fed_resistance_2
-	ACW_minutemen_resistance_1
-	ACW_liberal_resistance_1
 }
 
 ### Field Marshal

@@ -1103,6 +1103,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus WCC_i_shall_return"
+			add_war_support = 0.1
+			add_political_power = 40
 			add_popularity = { ideology = paternal_autocrat popularity = 0.03 }
 			add_popularity = { ideology = national_populist popularity = 0.03 }
 		}
@@ -1449,7 +1451,7 @@ focus_tree = {
 		}
 	}
 	
-	focus = {# Dissident Fate
+	focus = {# Dissident Fates
 		id = WCC_dissident_fate
 		icon = GFX_goal_generic_imprison_people
 		cost = 6.00

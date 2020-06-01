@@ -250,5 +250,130 @@ ideas = {
 			max_planning = 5
 		}
 	}
+	###Military With a State
+	WCC_aggressive_training = { #Aggressive Training
+		on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_aggressive_training"}
+		picture = usa_great_depression_2
+		modifier = {
+			training_time_army_factor = -0.1
+			conscription = 0.1
+			non_core_manpower = 0.2
+			mobilization_speed = 0.1
+			war_support_weekly = 0.02
+			supply_consumption_factor = -0.1
+			production_speed_buildings_factor = 0.1
+		}
+	}
+	WCC_aggressive_training_2 = { #Aggressive Training
+		on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_aggressive_training_2"}
+		picture = usa_great_depression_2
+		modifier = {
+			training_time_army_factor = -0.1
+			conscription = 0.1
+			non_core_manpower = 0.2
+			mobilization_speed = 0.15
+			war_support_weekly = 0.02
+			supply_consumption_factor = -0.1
+			production_speed_industrial_complex_factor = 0.08
+			conversion_cost_civ_to_mil_factor = 0.15
+			political_power_gain = 0.05
+		}
+	}
+	WCC_aggressive_training_3 = { #Aggressive Training
+		on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_aggressive_training_3"}
+		picture = usa_great_depression_2
+		modifier = {
+			party_popularity_stability_factor = 0.15
+			training_time_army_factor = -0.1
+			conscription = 0.12
+			non_core_manpower = 0.25
+			mobilization_speed = 0.2
+			war_support_weekly = 0.03
+			supply_consumption_factor = -0.12
+			production_speed_industrial_complex_factor = 0.08
+			conversion_cost_civ_to_mil_factor = 0.35
+			political_power_gain = 0.08
+		}
+	}
+	WCC_advanced_security_forces_idea = { #Aggressive Training
+		on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_advanced_security_forces_idea"}
+		picture = usa_great_depression_2
+		modifier = {
+			special_forces_cap = 3
+			special_forces_training_time_factor = -0.1
+			special_forces_no_supply_grace = -0.2
+		}
+	}
+	WCC_advanced_security_forces_idea_2 = { #Aggressive Training
+		on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_advanced_security_forces_idea_2"}
+		picture = usa_great_depression_2
+		modifier = {
+			special_forces_cap = 3
+			special_forces_training_time_factor = -0.1
+			special_forces_no_supply_grace = -0.3
+			special_forces_attack_factor = 0.05
+			special_forces_defence_factor = 0.05
+			resistance_tick_in_states_controlled_by_enemy = 0.1
+		}
+	}
+	WCC_advanced_security_forces_idea_3 = { #Aggressive Training
+		on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_advanced_security_forces_idea_3"}
+		picture = usa_great_depression_2
+		modifier = {
+			party_popularity_stability_factor = 0.15
+			special_forces_cap = 4
+			special_forces_training_time_factor = -0.15
+			special_forces_no_supply_grace = -0.35
+			special_forces_attack_factor = 0.08
+			special_forces_defence_factor = 0.08
+			subversive_activites_upkeep = -20
+			encryption = 0.03
+			resistance_tick_in_states_controlled_by_enemy = 0.15
+		}
+	}
+	WCC_central_bureau_idea = { #Aggressive Training
+		on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_central_bureau_idea"}
+		picture = usa_great_depression_2
+		modifier = {
+			max_command_power = 65
+			max_planning = 3
+			planning_speed = 0.2
+			experience_gain_army = 0.2
+			army_speed_factor = 0.05
+			army_core_attack_factor	= 0.05
+			breakthrough_factor	= 0.02
+			dig_in_speed = 1
+		}
+	}
+	WCC_central_bureau_idea = { #Aggressive Training
+		on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_central_bureau_idea"}
+		picture = usa_great_depression_2
+		modifier = {
+			max_command_power = 65
+			max_planning = 2
+			planning_speed = 0.2
+			experience_gain_army = 0.2
+			army_speed_factor = 0.05
+			army_core_attack_factor	= 0.05
+			breakthrough_factor	= 0.02
+			dig_in_speed = 1
+		}
+	}
+	WCC_central_bureau_idea_2 = { #Aggressive Training
+		on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_central_bureau_idea_2"}
+		picture = usa_great_depression_2
+		modifier = {
+			max_command_power = 100
+			max_planning = 4
+			planning_speed = 0.5
+			experience_gain_army = 0.2
+			army_speed_factor = 0.08
+			army_core_attack_factor	= 0.05
+			breakthrough_factor	= 0.05
+			dig_in_speed = 4
+			non_core_manpower = 0.15
+			encryption = 0.05
+		}
+	}
 }
 }
