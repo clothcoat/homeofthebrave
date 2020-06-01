@@ -22,7 +22,7 @@ focus_tree = {
 		x = 3
 		y = 0
 		ai_will_do = {
-			factor = 50
+			factor = 100
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus WCC_grand_reorganization"
@@ -51,7 +51,7 @@ focus_tree = {
 			add_manpower = 350
 			add_equipment_to_stockpile = {
 			type = infantry_equipment
-			amount = 1100
+			amount = 450
 			producer = WCC
 			}
 			add_equipment_to_stockpile = {
@@ -539,7 +539,11 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus WCC_copper"
-			
+			add_resource = {
+				type = steel
+				amount = 20
+				state = 388
+			}
 		}
 	}
 	focus = {# American Pompey
@@ -559,7 +563,7 @@ focus_tree = {
 	focus = {# Fate of Marshall
 		id = WCC_fate_of_marshall
 		icon = GFX_goal_WCC_marshalls_soldiers
-		cost = 6.00
+		cost = 1.50
 		prerequisite = {
 			focus = WCC_american_pompey
 		}
@@ -571,6 +575,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus WCC_fate_of_marshall"
+			country_event = {
+			id = wcc.4
+			days = 1
+			}
 		}
 	}
 	focus = {# Fate of MacArthur
@@ -588,6 +596,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus WCC_fate_of_macarthur"
+			country_event = {
+			id = wcc.5
+			days = 1
+			}
 		}
 	}
 	focus = {# Fate of Patton
@@ -605,6 +617,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus WCC_patton"
+			country_event = {
+			id = wcc.6
+			days = 1
+			}
 		}
 	}
 	focus = {# Vet Affairs
@@ -746,7 +762,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus WCC_bureaucratic_justice"
 			add_stability = 0.1
 			add_popularity = { ideology = authoritarian_democrat popularity = 0.05 }
-			add_political_power = 30
+			add_political_power = 35
 		}
 	}
 	
@@ -768,10 +784,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus WCC_the_fourth_branch"
-			swap_ideas = {
-			remove_idea = WCC_bradley_plan_3
-			add_idea = WCC_bradley_plan_4
-			}
+			add_ideas = WCC_fourth_branch_idea
 			add_popularity = { ideology = authoritarian_democrat popularity = 0.08 }
 			add_stability = 0.03
 			army_experience = 10
@@ -818,7 +831,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus WCC_the_wise_men"
-			add_ideas = WCC_the_wise_men_idea
+			swap_ideas = {
+			remove_idea = WCC_fourth_branch_idea
+			add_idea = WCC_the_wise_men_idea
+			}
 			add_stability = 0.05
 			add_popularity = { ideology = authoritarian_democrat popularity = 0.03 }
 			add_political_power = 50

@@ -4545,17 +4545,11 @@ focus_tree = {
 		}
 		available = {
 			OR = {
-				CSA = {
-					exists = yes
-				}
-				TEX = {
-					exists = yes
-				}
 				USA = {
-					exists = yes
+				has_war = yes
 				}
 				has_global_flag = USA_civil_war_over_flag 
-				has_global_flag = USA_civil_war_avoided_flag
+				has_global_flag = USA_Civil_War_Averted
 			}
 		}
 		ai_will_do = {
@@ -4598,7 +4592,7 @@ focus_tree = {
 				has_global_flag = USA_civil_war_avoided_flag
 			}
 		}
-		x = 6
+		x = 16
 		y = 1
 		ai_will_do = {
 			factor = 40
@@ -4625,6 +4619,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = USA_McNair_Plan
 			focus = USA_Craig_plan
+			focus = USA_macarthur_army_plan
 		}
 		x = -6
 		y = 1
@@ -4660,6 +4655,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = USA_chaffee_plan
 			focus = USA_Craig_plan
+			focus = USA_macarthur_army_plan
 		}
 		x = 0
 		y = 1
@@ -6047,6 +6043,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = USA_McNair_Plan
 			focus = USA_chaffee_plan
+			focus = USA_macarthur_army_plan
 		}
 		x = 6
 		y = 1
@@ -6287,8 +6284,634 @@ focus_tree = {
 			}
 		}
 	}
+	focus = {
+		id = USA_macarthur_army_plan
+		icon = GFX_goal_USA_police_state
+		cost = 5.00
+		prerequisite = {
+			focus = USA_reform_plan
+		}
+		available = {
+			always = no
+		}
+		mutually_exclusive = {
+			focus = USA_McNair_Plan
+			focus = USA_chaffee_plan
+			focus = USA_Craig_plan
+		}
+		x = 13
+		y = 1
+		ai_will_do = {
+			factor = 1.5
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+		}
+		relative_position_id = USA_reform_plan
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_macarthur_army_plan"
+			add_ideas = USA_Craig_plan1
+			add_tech_bonus = {
+				name = doctrine_bonus
+				bonus = 1
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	
+	focus = {
+		id = USA_the_general_staff
+		icon = GFX_goal_USA_police_state
+		cost = 5.00
+		prerequisite = {
+			focus = USA_macarthur_army_plan
+		}
+		available = {
+			always = no
+		}
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 1.5
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+		}
+		relative_position_id = USA_macarthur_army_plan
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_the_general_staff"
+			add_ideas = USA_Craig_plan1
+			add_tech_bonus = {
+				name = doctrine_bonus
+				bonus = 1
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	
+	focus = {
+		id = USA_grand_leadership
+		icon = GFX_goal_USA_police_state
+		cost = 5.00
+		prerequisite = {
+			focus = USA_the_general_staff
+		}
+		available = {
+			always = no
+		}
+		x = -2
+		y = 2
+		ai_will_do = {
+			factor = 1.5
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+		}
+		relative_position_id = USA_macarthur_army_plan
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_grand_leadership"
+			add_ideas = USA_Craig_plan1
+			add_tech_bonus = {
+				name = doctrine_bonus
+				bonus = 1
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	
+	focus = {
+		id = USA_integrated_mechanization
+		icon = GFX_goal_USA_police_state
+		cost = 5.00
+		prerequisite = {
+			focus = USA_grand_leadership
+		}
+		available = {
+			always = no
+		}
+		x = -3
+		y = 3
+		ai_will_do = {
+			factor = 1.5
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+		}
+		relative_position_id = USA_macarthur_army_plan
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_the_general_staff"
+			add_ideas = USA_Craig_plan1
+			add_tech_bonus = {
+				name = doctrine_bonus
+				bonus = 1
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	
+	focus = {
+		id = USA_organic_air_support
+		icon = GFX_goal_USA_police_state
+		cost = 5.00
+		prerequisite = {
+			focus = USA_integrated_mechanization
+		}
+		available = {
+			always = no
+		}
+		x = -4
+		y = 4
+		ai_will_do = {
+			factor = 1.5
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+		}
+		relative_position_id = USA_macarthur_army_plan
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_the_general_staff"
+			add_ideas = USA_Craig_plan1
+			add_tech_bonus = {
+				name = doctrine_bonus
+				bonus = 1
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
 
-
+	focus = {
+		id = USA_delegated_functions
+		icon = GFX_goal_USA_police_state
+		cost = 5.00
+		prerequisite = {
+			focus = USA_grand_leadership
+		}
+		available = {
+			always = no
+		}
+		x = -1
+		y = 3
+		ai_will_do = {
+			factor = 1.5
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+		}
+		relative_position_id = USA_macarthur_army_plan
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_the_general_staff"
+			add_ideas = USA_Craig_plan1
+			add_tech_bonus = {
+				name = doctrine_bonus
+				bonus = 1
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	
+	focus = {
+		id = USA_modern_recon
+		icon = GFX_goal_USA_police_state
+		cost = 5.00
+		prerequisite = {
+			focus = USA_integrated_mechanization
+		}
+		prerequisite = {
+			focus = USA_delegated_functions
+		}
+		available = {
+			always = no
+		}
+		x = -2
+		y = 4
+		ai_will_do = {
+			factor = 1.5
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+		}
+		relative_position_id = USA_macarthur_army_plan
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_the_general_staff"
+			add_ideas = USA_Craig_plan1
+			add_tech_bonus = {
+				name = doctrine_bonus
+				bonus = 1
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	
+	focus = {
+		id = USA_marine_support
+		icon = GFX_goal_USA_police_state
+		cost = 5.00
+		prerequisite = {
+			focus = USA_modern_recon
+		}
+		available = {
+			always = no
+		}
+		x = -1
+		y = 5
+		ai_will_do = {
+			factor = 1.5
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+		}
+		relative_position_id = USA_macarthur_army_plan
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_the_general_staff"
+			add_ideas = USA_Craig_plan1
+			add_tech_bonus = {
+				name = doctrine_bonus
+				bonus = 1
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	
+	focus = {
+		id = USA_military_feignts
+		icon = GFX_goal_USA_police_state
+		cost = 5.00
+		prerequisite = {
+			focus = USA_modern_recon
+		}
+		available = {
+			always = no
+		}
+		x = -3
+		y = 5
+		ai_will_do = {
+			factor = 1.5
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+		}
+		relative_position_id = USA_macarthur_army_plan
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_the_general_staff"
+			add_ideas = USA_Craig_plan1
+			add_tech_bonus = {
+				name = doctrine_bonus
+				bonus = 1
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	
+	focus = {
+		id = USA_the_strategic_offensive
+		icon = GFX_goal_USA_police_state
+		cost = 5.00
+		prerequisite = {
+			focus = USA_marine_support
+		}
+		prerequisite = {
+			focus = USA_military_feignts
+		}
+		available = {
+			always = no
+		}
+		x = -2
+		y = 6
+		ai_will_do = {
+			factor = 1.5
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+		}
+		relative_position_id = USA_macarthur_army_plan
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_the_general_staff"
+			add_ideas = USA_Craig_plan1
+			add_tech_bonus = {
+				name = doctrine_bonus
+				bonus = 1
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	
+	focus = {
+		id = USA_mobilization_plan
+		icon = GFX_goal_USA_police_state
+		cost = 5.00
+		prerequisite = {
+			focus = USA_the_general_staff
+		}
+		available = {
+			always = no
+		}
+		x = 2
+		y = 2
+		ai_will_do = {
+			factor = 1.5
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+		}
+		relative_position_id = USA_macarthur_army_plan
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_the_general_staff"
+			add_ideas = USA_Craig_plan1
+			add_tech_bonus = {
+				name = doctrine_bonus
+				bonus = 1
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	
+	focus = {
+		id = USA_selective_service
+		icon = GFX_goal_USA_police_state
+		cost = 5.00
+		prerequisite = {
+			focus = USA_mobilization_plan
+		}
+		available = {
+			always = no
+		}
+		x = 1
+		y = 3
+		ai_will_do = {
+			factor = 1.5
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+		}
+		relative_position_id = USA_macarthur_army_plan
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_the_general_staff"
+			add_ideas = USA_Craig_plan1
+			add_tech_bonus = {
+				name = doctrine_bonus
+				bonus = 1
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	
+	focus = {
+		id = USA_honor_academies
+		icon = GFX_goal_USA_police_state
+		cost = 5.00
+		prerequisite = {
+			focus = USA_selective_service
+		}
+		prerequisite = {
+			focus = USA_delegated_functions
+		}
+		available = {
+			always = no
+		}
+		x = 0
+		y = 4
+		ai_will_do = {
+			factor = 1.5
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+		}
+		relative_position_id = USA_macarthur_army_plan
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_the_general_staff"
+			add_ideas = USA_Craig_plan1
+			add_tech_bonus = {
+				name = doctrine_bonus
+				bonus = 1
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	
+	focus = {
+		id = USA_munitions_procurement
+		icon = GFX_goal_USA_police_state
+		cost = 5.00
+		prerequisite = {
+			focus = USA_mobilization_plan
+		}
+		available = {
+			always = no
+		}
+		x = 3
+		y = 3
+		ai_will_do = {
+			factor = 1.5
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+		}
+		relative_position_id = USA_macarthur_army_plan
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_the_general_staff"
+			add_ideas = USA_Craig_plan1
+			add_tech_bonus = {
+				name = doctrine_bonus
+				bonus = 1
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	
+	focus = {
+		id = USA_industrial_base_planning
+		icon = GFX_goal_USA_police_state
+		cost = 5.00
+		prerequisite = {
+			focus = USA_selective_service
+		}
+		prerequisite = {
+			focus = USA_munitions_procurement
+		}
+		available = {
+			always = no
+		}
+		x = 2
+		y = 4
+		ai_will_do = {
+			factor = 1.5
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+		}
+		relative_position_id = USA_macarthur_army_plan
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_the_general_staff"
+			add_ideas = USA_Craig_plan1
+			add_tech_bonus = {
+				name = doctrine_bonus
+				bonus = 1
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	
+	focus = {
+		id = USA_price_controls
+		icon = GFX_goal_USA_police_state
+		cost = 5.00
+		prerequisite = {
+			focus = USA_industrial_base_planning
+		}
+		available = {
+			always = no
+		}
+		x = 2
+		y = 5
+		ai_will_do = {
+			factor = 1.5
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+		}
+		relative_position_id = USA_macarthur_army_plan
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_the_general_staff"
+			add_ideas = USA_Craig_plan1
+			add_tech_bonus = {
+				name = doctrine_bonus
+				bonus = 1
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	
+	focus = {
+		id = USA_USACE
+		icon = GFX_goal_USA_police_state
+		cost = 5.00
+		prerequisite = {
+			focus = USA_price_controls
+		}
+		prerequisite = {
+			focus = USA_marine_support
+		}
+		available = {
+			always = no
+		}
+		x = 2
+		y = 6
+		ai_will_do = {
+			factor = 1.5
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+		}
+		relative_position_id = USA_macarthur_army_plan
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_the_general_staff"
+			add_ideas = USA_Craig_plan1
+			add_tech_bonus = {
+				name = doctrine_bonus
+				bonus = 1
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	
+	focus = {
+		id = USA_USAAC
+		icon = GFX_goal_USA_police_state
+		cost = 5.00
+		prerequisite = {
+			focus = USA_price_controls
+		}
+		available = {
+			always = no
+		}
+		x = 0
+		y = 6
+		ai_will_do = {
+			factor = 1.5
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+		}
+		relative_position_id = USA_macarthur_army_plan
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_the_general_staff"
+			add_ideas = USA_Craig_plan1
+			add_tech_bonus = {
+				name = doctrine_bonus
+				bonus = 1
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	
+	focus = {
+		id = USA_enlistment_campaign
+		icon = GFX_goal_USA_police_state
+		cost = 5.00
+		prerequisite = {
+			focus = USA_price_controls
+		}
+		available = {
+			always = no
+		}
+		x = 4
+		y = 6
+		ai_will_do = {
+			factor = 1.5
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+		}
+		relative_position_id = USA_macarthur_army_plan
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_the_general_staff"
+			add_ideas = USA_Craig_plan1
+			add_tech_bonus = {
+				name = doctrine_bonus
+				bonus = 1
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	
 	### Military - Navy ###
 	focus = {# US Navy
 		id = USA_navy
@@ -6300,7 +6923,7 @@ focus_tree = {
 			}
 		}
 		cost = 6.00
-		x = 54
+		x = 64
 		y = 7
 		
 		offset = {
@@ -7103,7 +7726,7 @@ focus_tree = {
 		}
 		available_if_capitulated = no
 		cancel_if_invalid = yes
-		x = 70
+		x = 80
 		y = 0
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_back_in_business"
@@ -8481,7 +9104,7 @@ focus_tree = {
 			is_in_faction = no
 			not_has_democratic_government = yes
 		}
-		x = 77
+		x = 87
 		y = 1
 
 		ai_will_do = {

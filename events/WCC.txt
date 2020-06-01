@@ -1,0 +1,96 @@
+﻿###########################
+# WCC Events
+###########################
+
+add_namespace = wcc
+
+###Start of the War###
+
+country_event = { #Entente Aid
+	id = wcc.1
+	immediate = {log = "[GetDateText]: [Root.GetName]: event wcc.1"}
+	title = wcc.1.t
+	desc = wcc.1.d
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	hidden = yes
+
+	option = {
+		name = wcc.1.a
+		ai_chance = {
+			factor = 100
+		}
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = -425
+			producer = CAN
+		}
+		add_equipment_to_stockpile = {
+			type = fighter_equipment
+			amount = -110
+			producer = CAN
+		}
+		add_political_power = -15
+		country_event = {
+				id = wcc.2
+				days = 20
+		} #WCC Aided
+	}
+	option = {
+		name = wcc.1.b
+		country_event = {
+				id = wcc.3
+				days = 20
+		} #WCC Denied
+	}
+}
+
+country_event = { #Entente Aid Received
+	id = wcc.2
+	immediate = {log = "[GetDateText]: [Root.GetName]: event wcc.2"}
+	title = wcc.2.t
+	desc = wcc.2.d
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	hidden = yes
+
+	option = {
+		name = wcc.2.a
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 425
+			producer = CAN
+			}
+		add_equipment_to_stockpile = {
+			type = fighter_equipment
+			amount = 110
+			producer = CAN
+			}
+		add_political_power = 40
+		add_opinion_modifier = { target = CAN modifier = medium_increase }
+	}
+}
+
+country_event = { #Entente Aid Declined
+	id = wcc.3
+	immediate = {log = "[GetDateText]: [Root.GetName]: event wcc.3"}
+	title = wcc.3.t
+	desc = wcc.3.d
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	hidden = yes
+
+	option = {
+		name = wcc.3.a
+		add_opinion_modifier = { target = CAN modifier = medium_decrease }
+	}
+}
