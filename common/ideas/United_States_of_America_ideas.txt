@@ -438,7 +438,7 @@ ideas = {
 			}
 		}
 		USA_klan_activity_idea_2 = {
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea USA_klan_activity_idea"}
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea USA_klan_activity_idea_2"}
 			allowed = { always = no }
 			removal_cost = -1
 			picture = klan_resistance
@@ -536,7 +536,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ACW_black_legion_resistance_1"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = mob_activity
+			picture = black_legion_activity
 			modifier = {
 				local_manpower = 0.05
 				political_power_gain = 0.02
@@ -550,7 +550,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ACW_black_legion_resistance_2"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = mob_activity
+			picture = black_legion_activity
 			modifier = {
 				local_manpower = 0.05
 				political_power_gain = 0.02
@@ -564,7 +564,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ACW_black_legion_resistance_3"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = mob_activity
+			picture = black_legion_activity
 			modifier = {
 				local_manpower = 0.05
 				political_power_gain = 0.02
@@ -578,7 +578,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ACW_black_legion_resistance_4"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = mob_activity
+			picture = black_legion_activity
 			modifier = {
 				local_manpower = 0.05
 				political_power_gain = 0.02
@@ -592,7 +592,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ACW_liberal_resistance_1"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = longist_resistance
+			picture = liberal_resistance
 			modifier = {
 				monthly_population = -0.05
 				local_resources	= -0.02
@@ -606,7 +606,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ACW_liberal_resistance_2"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = longist_resistance
+			picture = liberal_resistance
 			modifier = {
 				monthly_population = -0.05
 				local_resources	= -0.02
@@ -620,7 +620,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ACW_liberal_resistance_3"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = longist_resistance
+			picture = liberal_resistance
 			modifier = {
 				monthly_population = -0.05
 				local_resources	= -0.02
@@ -634,7 +634,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ACW_liberal_resistance_4"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = longist_resistance
+			picture = liberal_resistance
 			modifier = {
 				monthly_population = -0.05
 				local_resources	= -0.02

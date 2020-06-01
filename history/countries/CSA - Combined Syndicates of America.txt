@@ -1,6 +1,7 @@
 ﻿capital = 395
 OOB = "empty"
 
+# Starting tech
 set_technology = {
 	### MOD ###
 	### Tanks ###
@@ -14,6 +15,7 @@ set_technology = {
 	tech_recon = 1
 	motorised_infantry = 1
 	gw_artillery = 1
+	marines = 1
 	### AIR ###
 	early_fighter = 1
 	naval_bomber1 = 1
@@ -33,75 +35,35 @@ if = {
 	}
 	set_technology = {
 		weltkrieg_light_ship_hull = 1
-		basic_naval_mines = 1
-		interwar_light_ship_hull = 1
-		improved_light_ship_hull = 1
+		contact_mine = 1
+		light_ship_hull_1936 = 1
 		weltkrieg_cruiser_hull = 1
-		interwar_cruiser_hull = 1
-		improved_cruiser_hull = 1
+		cruiser_hull_1936 = 1
 		weltkrieg_submarine_hull = 1
-		submarine_mine_laying = 1
-		interwar_submarine_hull = 1
-		improved_submarine_hull = 1
-		weltkrieg_carrier_hull = 1
-		interwar_carrier_hull = 1
-		weltkrieg_panzerschiff_hull = 1
-		interwar_panzerschiff_hull = 1
-		improved_panzerschiff_hull = 1
-		weltkrieg_fast_battleship_hull = 1
-		interwar_fast_battleship_hull = 1
-		improved_fast_battleship_hull = 1
-		weltkrieg_dreadnought_hull = 1
-		interwar_dreadnought_hull = 1
-		improved_dreadnought_hull = 1
-		interwar_heavy_carrier_hull = 1
+		submarine_hull_1936 = 1
+		cruiser_submarine = 1
+		carrier_conversion = 1
+		carrier_hull_1936 = 1
+		ship_hull_revived_ac = 1
+		weltkrieg_heavy_ship_hull = 1
+		heavy_ship_hull_1936 = 1
+		ship_hull_super_heavy = 1
 
 		## Modules##
-		torpedo_tech_one = 1
-		torpedo_tech_two = 1
-		torpedo_tech_three = 1
-		gunnery_tech_one = 1
-		gunnery_tech_two = 1
-		gunnery_tech_three = 1
-		ss_torpedo_module_one = 1
-		ss_torpedo_module_two = 1
-		ss_utility_one = 1
-		dd_gun_module_one = 1
-		dd_gun_module_two = 1
-		dd_asw_module_one = 1
-		dd_asw_module_two = 1
-		dd_utility_module_one = 1
-		dd_utility_module_two = 1
-		dd_torpedo_module_one = 1
-		dd_torpedo_module_two = 1
-		cruiser_gun_module_one = 1
-		cruiser_gun_module_two = 1
-		cruiser_specialisation_module_one = 1
-		cruiser_specialisation_module_two = 1
-		ps_gun_module_one = 1
-		ps_gun_module_two = 1
-		ps_hull_module_one = 1
-		ps_hull_module_two = 1
-		fbb_gunnery_tech_one = 1
-		fbb_gunnery_tech_two = 1
-		fbb_gunnery_tech_three = 1
-		fbb_hull_module_one = 1
-		fbb_hull_module_two = 1
-		fbb_gun_module_one = 1
-		fbb_gun_module_two = 1
-		fbb_sh_gun_module_one = 1
-		fbb_sh_gun_module_two = 1
-		dn_gunnery_tech_one = 1
-		dn_gunnery_tech_two = 1
-		dn_gunnery_tech_three = 1
-		dn_hull_module_one = 1
-		dn_hull_module_two = 1
-		dn_sh_gun_module_one = 1
-		dn_sh_gun_module_two = 1
-		catapult_plane_two = 1
-		carrier_armoured_deck = 1
-		heavy_secondaries = 1
-		heavy_carrier_armoured_deck = 1
+		early_torpedo = 1
+		weltkrieg_naval_gunnery = 1
+		naval_ammo_one = 1
+		light_battery_one = 1
+		improved_ship_torpedo_launcher = 1
+		basic_cruiser_armor_scheme = 1
+		weltkrieg_naval_gunnery = 1
+		naval_ammo_one = 1
+		basic_heavy_armor_scheme = 1
+		capital_gunnery_one = 1
+		weltkrieg_naval_gunnery = 1
+		naval_ammo_one = 1
+
+		### Transport ###
 		transport = 1
 	}
 }
@@ -214,6 +176,12 @@ add_ideas = {
 	CSA_Ralph_Chaplin_for_syn
 	CSA_Upton_Sinclair_eco_rso
 	CSA_Steve_Nelson_sec_tot
+	###AmericanCivilWar
+	ACW_black_legion_resistance_3
+	ACW_klan_resistance_2
+	ACW_fed_resistance_2
+	ACW_minutemen_resistance_1
+	ACW_liberal_resistance_1
 }
 
 ### Field Marshal
