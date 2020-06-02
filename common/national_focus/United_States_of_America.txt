@@ -1722,7 +1722,6 @@ focus_tree = {
 		cost = 1.00
 		available = {
 			has_country_flag = USA_president_inaugurated
-			date < 1937.5.1
 			has_country_leader = { ruling_only = yes name = "George Norris" } 
 		}
 		x = 26
@@ -1733,7 +1732,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_norris"
 			hidden_effect = {
-			country_event = { id = ustates.106 days = 5 }
+			country_event = { id = ustates.107 days = 5 }
 			}
 		}
 	}
@@ -1743,8 +1742,6 @@ focus_tree = {
 		icon = GFX_CAL_progressive_victory
 		cost = 1.50
 		available = {
-			has_government = social_democrat
-			date < 1937.5.1
 			has_country_leader = { ruling_only = yes name = "George Norris" } 
 			has_country_flag = USA_norris_appeasement
 			NOT = {

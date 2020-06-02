@@ -5570,23 +5570,44 @@ country_event = { # Norris' intervention
 
 	is_triggered_only = yes
 
+	fire_only_once = yes
+	
 	option = {
 		name = ustates.106.a
-		add_political_power = -35
-		add_stability = -0.02
-		
-		add_popularity = { ideology = social_democrat popularity = 0.01 }
+		add_political_power = 25
+		add_stability = 0.05
+		add_popularity = { ideology = social_democrat popularity = 0.02 }
 		hidden_effect = {
 		set_country_flag = USA_president_inaugurated
+		}
+	}
+}
+
+country_event = { # Norris' intervention
+	id = ustates.107
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.106"}
+	title = ustates.107.t
+	desc = ustates.107.d
+	picture = GFX_USA_Inauguration
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = {
+		name = ustates.107.a
+		add_political_power = -35
+		add_stability = -0.02
+		add_popularity = { ideology = social_democrat popularity = 0.03 }
+		hidden_effect = {
 		add_country_flag = USA_norris_appeasement
 		}
 	}
 	option = {
-		name = ustates.106.b
+		name = ustates.107.b
 		add_political_power = 25
 		add_stability = 0.02
 		hidden_effect = {
-			set_country_flag = USA_president_inaugurated
 			country_event = { id = ustates.113 days = 5 }
 		}
 	}
@@ -5655,8 +5676,24 @@ country_event = { # General Strike Spreads
 
 	is_triggered_only = yes
 
+	fire_only_once = yes
+	
 	trigger = {
+		OR = {
+		AND = {
+		NOT = { has_country_flag = USA_progressive_collaboration }
+		date > 1937.3.27
+		}
+		AND = {
+		NOT = { has_completed_focus =  USA_emergency_intervention }
+		date > 1937.5.1
+		}
+		}
 		NOT = { has_country_flag = USA_macarthur_coup }
+	}
+	
+	mean_time_to_happen = {
+	days = 5
 	}
 
 	option = {
