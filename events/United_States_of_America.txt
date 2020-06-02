@@ -5679,6 +5679,7 @@ country_event = { # General Strike Spreads
 	fire_only_once = yes
 	
 	trigger = {
+		has_country_leader = { ruling_only = yes name = "George Norris" }
 		OR = {
 		AND = {
 		NOT = { has_country_flag = USA_progressive_collaboration }
