@@ -97,3 +97,34 @@ country_event = { #Entente Aid Declined
 		add_opinion_modifier = { target = CAN modifier = medium_decrease }
 	}
 }
+
+country_event = { #PSA Fate
+	id = wcc.4
+	immediate = {log = "[GetDateText]: [Root.GetName]: event wcc.4"}
+	title = wcc.4.t
+	desc = wcc.4.d
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	hidden = yes
+
+	option = {
+		name = wcc.4.a
+		add_political_power = -40
+		add_popularity = { ideology = social_democrat popularity = 0.02 }
+		add_popularity = { ideology = social_liberal popularity = 0.02 }
+		add_popularity = { ideology = market_liberal popularity = 0.02 }
+		add_popularity = { ideology = social_conservative popularity = 0.02 }
+		add_manpower = 20000
+		add_stability = 0.05
+	}
+	option = {
+		name = wcc.4.b
+		add_political_power = 45
+		increase_ruling_party_popularity_by_5 = yes
+		add_stability = -0.03
+		
+	}
+}
