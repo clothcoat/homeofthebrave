@@ -375,5 +375,14 @@ ideas = {
 			encryption = 0.05
 		}
 	}
+	WCC_strangle_the_cobra_idea = { #Strangle the Cobra
+		on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_strangle_the_cobra_idea"}
+		picture = usa_great_depression_2
+		modifier = {
+			justify_war_goal_time = -0.5
+			puppet_cost_factor = -50
+			ai_focus_aggressive_factor = 0.5
+		}
+	}
 }
 }

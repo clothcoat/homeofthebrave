@@ -33,6 +33,7 @@ country_event = { #Entente Aid
 			amount = -110
 			producer = CAN
 		}
+		add_manpower -650
 		add_political_power = -15
 		country_event = {
 				id = wcc.2
@@ -72,6 +73,8 @@ country_event = { #Entente Aid Received
 			amount = 110
 			producer = CAN
 			}
+		add_manpower = 650
+		army_experience = 15
 		add_political_power = 40
 		add_opinion_modifier = { target = CAN modifier = medium_increase }
 	}

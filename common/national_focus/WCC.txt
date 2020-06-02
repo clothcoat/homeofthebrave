@@ -1389,8 +1389,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus WCC_strangle_the_cobra"
-			add_popularity = { ideology = national_populist popularity = 0.05 }
 			add_ideas = WCC_strangle_the_cobra_idea
+			add_popularity = { ideology = national_populist popularity = 0.05 }
 			add_war_support = 0.2
 			random_owned_state = {
 				limit = {
