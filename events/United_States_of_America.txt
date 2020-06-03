@@ -5600,7 +5600,7 @@ country_event = { # Norris' intervention
 		add_stability = -0.02
 		add_popularity = { ideology = social_democrat popularity = 0.03 }
 		hidden_effect = {
-		add_country_flag = USA_norris_appeasement
+		set_country_flag = USA_norris_appeasement
 		}
 	}
 	option = {
@@ -5668,13 +5668,11 @@ country_event = { # Murray Denounces Both
 }
 
 country_event = { # General Strike Spreads
-	id = ustates.111
-	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.111"}
-	title = ustates.111.t
-	desc = ustates.111.d
+	id = ustates.1100
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.1100"}
+	title = ustates.1100.t
+	desc = ustates.1100.d
 	picture = GFX_HOL_february_strike2
-
-	is_triggered_only = yes
 
 	fire_only_once = yes
 	
@@ -5682,7 +5680,61 @@ country_event = { # General Strike Spreads
 		has_country_leader = { ruling_only = yes name = "George Norris" }
 		OR = {
 		AND = {
-		NOT = { has_country_flag = USA_progressive_collaboration }
+		NOT = { has_completed_focus = USA_war_on_the_klan }
+		date > 1937.4.10
+		}
+		AND = {
+		NOT = { has_completed_focus =  USA_southern_investments }
+		date > 1937.5.30
+		}
+		}
+		NOT = { has_country_flag = USA_macarthur_coup }
+	}
+	
+	mean_time_to_happen = {
+	days = 5
+	}
+
+	option = {
+		name = ustates.1100.a
+		add_stability = -0.1
+		add_political_power = -20
+		add_popularity = { ideology = social_democrat popularity = -0.1 }
+		hidden_effect = {
+			country_event = { id = amcivwar.18 days = 5 }
+		}
+		hidden_effect = {
+			country_event = { id = ustates.78 days = 6 }
+		}
+		hidden_effect = {
+			country_event = { id = amcivwar.1012 days = 7 }
+		}
+		hidden_effect = {
+			country_event = { id = amcivwar.17 days = 8 }
+		}
+		hidden_effect = {
+			country_event = { id = amcivwar.3 days = 9 }
+		}
+		hidden_effect = { #WCC Rises
+			country_event = { id = amcivwar.3000 days = 10 }
+		}
+	}
+}
+
+country_event = { # General Strike Spreads
+	id = ustates.111
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.111"}
+	title = ustates.111.t
+	desc = ustates.111.d
+	picture = GFX_HOL_february_strike2
+
+	fire_only_once = yes
+	
+	trigger = {
+		has_country_leader = { ruling_only = yes name = "George Norris" }
+		OR = {
+		AND = {
+		NOT = { has_completed_focus = USA_progressive_collaboration }
 		date > 1937.3.27
 		}
 		AND = {

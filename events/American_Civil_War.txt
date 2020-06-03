@@ -3142,15 +3142,6 @@ country_event = { # Huey Long declares Rebellion against Norris
 		add_war_support = 0.2
 		hidden_effect = {
 			TEX_initial_events = yes
-			if = {
-				limit = { has_country_flag = USA_fails_to_kill_reed_flag }
-				USA_initial_events = yes
-				news_event = { id = amcivwar.19 hours = 8 }
-				country_event = { id = amcivwar.20 days = 30 }
-			}
-			else = {
-				country_event = { id = amcivwar.18 days = 8 }
-			}
 		}
 	}
 	option = {
@@ -3169,15 +3160,6 @@ country_event = { # Huey Long declares Rebellion against Norris
 		add_war_support = 0.2
 		hidden_effect = {
 			TEX_initial_events = yes
-			if = {
-				limit = { has_country_flag = USA_fails_to_kill_reed_flag }
-				USA_initial_events = yes
-				news_event = { id = amcivwar.19 hours = 8 }
-				country_event = { id = amcivwar.20 days = 30 }
-			}
-			else = {
-				country_event = { id = amcivwar.18 days = 8 }
-			}
 		}
 		TEX = {
 			change_tag_from = USA
