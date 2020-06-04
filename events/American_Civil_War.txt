@@ -1162,9 +1162,9 @@ country_event = { # Last Men Standing
 	CSA = {
 	has_war	= no
 	}
-	CAR = {
-		has_war = no
-		}
+	COR = {
+		exists = no
+	}
 	WCC = {
 		exists = no
 		}
@@ -1174,7 +1174,9 @@ country_event = { # Last Men Standing
 	date > 1937.7.1
 	}
 	
-	fire_only_once = yes 
+	is_triggered_only = yes
+	
+	fire_only_once = yes
 	
 	desc = { ###AUS AND PSA AT PEACE###
 	text = amcivwar.5000.d.AUSPSA
@@ -1855,25 +1857,40 @@ country_event = { # Last Men Standing - CSA and AUS
 	tag = TEX
 	TEX = {
 	exists = yes
+	has_war = no
 	}
 	CSA = {
 	exists = yes
+	has_war = no
+	}
+	COR = {
+	exists = no
+	}
+	USA = {
+	exists = no
+	}
+	WCC = {
+	exists = no
+	}
+	CAL = {
+	has_war = no
 	}
 	has_global_flag = AUS_CSA_TREATY
 	OR = {
-	CAL = {
-	exists = no
-	}
 	NOT = {
 	has_country_flag = PSA_AUS_TREATY
 	has_country_flag = PSA_CSA_TREATY
 	}
 	}
+	date > 1937.7.30
 	}
 	
 	mean_time_to_happen = {
 	days = 20
 	}
+	
+	fire_only_once = yes
+	
 	option = {
 		name = amcivwar.5007.a
 		ai_chance = {
@@ -4510,130 +4527,6 @@ country_event = { # Leader of the People's Air Force
 
 
 ### AUS Events 46 - 61 ###
-country_event = { # Appeal to Reason
-	id = amcivwar.46
-	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.46"}
-	title = amcivwar.46.t
-	desc = amcivwar.46.d
-	picture = ACW_american_brigade
-
-	fire_only_once = yes
-	is_triggered_only = yes
-
-	trigger = {
-		tag = TEX
-		has_global_flag = USA_civil_war_begun_flag
-		NOT = {
-			has_global_flag = USA_civil_war_over_flag
-		}
-	}
-
-	option = { # agree to the deal
-		name = amcivwar.46.a
-		ai_chance = {
-			factor = 95
-		}
-		decrease_ruling_party_popularity_by_5 = yes
-		add_ideas = TEX_industries_support
-		hidden_effect = {
-			set_country_flag = TEX_war_committee_formed
-			country_event = {
-				id = amcivwar.47
-				days = 30
-				random = 10
-			}
-		}
-	}
-	option = { # don't agree to the deal
-		name = amcivwar.46.b
-		ai_chance = {
-			factor = 5
-			modifier = {
-		    factor = 0
-			  has_game_rule = {
-					rule = TEX_post_civil_war
-					option = TEX_POST_CIVIL_WAR_MOSELEY
-				}
-		  }
-		}
-		add_timed_idea = {
-			idea = TEX_industries_no_support
-			days = 1095
-		}
-	}
-}
-
-country_event = { # War Industries Committee
-	id = amcivwar.47
-	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.47"}
-	title = amcivwar.47.t
-	desc = amcivwar.47.d
-	picture = ACW_soldiers_climbing
-
-	fire_only_once = yes
-	is_triggered_only = yes
-
-	trigger = {
-		tag = TEX
-		has_global_flag = USA_civil_war_begun_flag
-		NOT = {
-			has_global_flag = USA_civil_war_over_flag
-		}
-		has_country_flag = TEX_war_committee_formed
-	}
-
-	option = {
-		name = amcivwar.47.a
-		random_owned_controlled_state = {
-			limit = {
-				is_in_home_area = yes
-				free_building_slots = {
-					building = arms_factory
-					size > 0
-					include_locked = yes
-				}
-			}
-			add_extra_state_shared_building_slots = 1
-			add_building_construction = {
-				type = arms_factory
-				level = 1
-				instant_build = yes
-			}
-		}
-		random_owned_controlled_state = {
-			limit = {
-				is_in_home_area = yes
-				free_building_slots = {
-					building = arms_factory
-					size > 0
-					include_locked = yes
-				}
-			}
-			add_extra_state_shared_building_slots = 1
-			add_building_construction = {
-				type = arms_factory
-				level = 1
-				instant_build = yes
-			}
-		}
-		random_owned_controlled_state = {
-			limit = {
-				is_in_home_area = yes
-				free_building_slots = {
-					building = arms_factory
-					size > 0
-					include_locked = yes
-				}
-			}
-			add_extra_state_shared_building_slots = 1
-			add_building_construction = {
-				type = arms_factory
-				level = 1
-				instant_build = yes
-			}
-		}
-	}
-}
 
 country_event = { # Pledge of Alliegence
 	id = amcivwar.48
@@ -4659,7 +4552,6 @@ country_event = { # Pledge of Alliegence
 			factor = 95
 		}
 		decrease_ruling_party_popularity_by_5 = yes
-		unlock_decision_tooltip = TEX_call_up_silver_legion
 		unlock_decision_tooltip = TEX_silver_legion_support
 		hidden_effect = {
 			set_country_flag = TEX_silver_legion_supported

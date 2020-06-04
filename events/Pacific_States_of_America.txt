@@ -257,16 +257,29 @@ country_event = { # 1937 Election
 
 	immediate = {
 		hidden_effect = {
-			if = { # Charles McNary
+			if = { # Upton Sinclair
 				limit = {
 					has_country_flag = PSA_1937_progressive_primary_mcnary
 				}
 				create_country_leader = {
-					name = "Charles McNary"
-					desc = "POLITICS_CHARLES_MCNARY_DESC"
-					picture = "Portrait_CAL_Charles_L_McNary.tga"
+					name = "Upton Sinclair"
+					desc = "POLITICS_UPTON_SINCLAIR_DESC"
+					picture = "Portrait_CAL_Upton_Sinclair.tga"
 					expire = "1965.1.1"
-					ideology = social_democrat_subtype
+					ideology = radical_socialist_subtype
+					traits = {}
+				}
+			}
+			if = { # Culbert Olson
+				limit = {
+					has_country_flag = PSA_1937_progressive_primary_mcnary
+				}
+				create_country_leader = {
+					name = "Culbert Olson"
+					desc = "POLITICS_UPTON_SINCLAIR_DESC"
+					picture = "Portrait_CAL_Culbert_Olson.tga"
+					expire = "1965.1.1"
+					ideology = radical_socialist_subtype
 					traits = {}
 				}
 			}
@@ -283,19 +296,6 @@ country_event = { # 1937 Election
 					traits = {}
 				}
 			}
-			if = { # CC Young
-				limit = {
-					has_country_flag = PSA_1937_progressive_primary_young
-				}
-				create_country_leader = {
-					name = "CC Young"
-					desc = "POLITICS_CC_YOUNG_DESC"
-					picture = "Portrait_CAL_Charles_L_McNary.tga"
-					expire = "1965.1.1"
-					ideology = social_democrat_subtype
-					traits = {}
-				}
-			}
 			if = { # Charles McNary
 				limit = {
 					has_country_flag = PSA_1937_progressive_primary_mcnary
@@ -309,16 +309,29 @@ country_event = { # 1937 Election
 					traits = {}
 				}
 			}
-			if = { # Earl Warren
+			if = { # Hiram Johnson
 				limit = {
-					has_country_flag = PSA_1937_liberal_primary_warren
+					has_country_flag = PSA_1937_progressive_primary_mcnary
 				}
 				create_country_leader = {
-					name = "Earl Warren"
-					desc = "POLITICS_EARL_WARREN_DESC"
-					picture = "Portrait_CAL_Earl_Warren.tga"
+					name = "Hiram Johnson"
+					desc = "POLITICS_HIRAM_JOHNSON_DESC"
+					picture = "Portrait_CAL_Hiram_Johnson.tga"
 					expire = "1965.1.1"
-					ideology = social_liberal_subtype
+					ideology = social_democrat_subtype
+					traits = {}
+				}
+			}
+			if = { # C.C. Young
+				limit = {
+					has_country_flag = PSA_1937_progressive_primary_young
+				}
+				create_country_leader = {
+					name = "C.C. Young"
+					desc = "POLITICS_CC_YOUNG_DESC"
+					picture = "picture = "gfx/leaders/CUS/CC_Young.tga".tga"
+					expire = "1965.1.1"
+					ideology = social_democrat_subtype
 					traits = {}
 				}
 			}
@@ -335,19 +348,72 @@ country_event = { # 1937 Election
 					traits = {}
 				}
 			}
-			if = { # John Arthur Gellatly
+			if = { # William Gibbs McAdoo
 				limit = {
-					has_country_flag = PSA_1937_republican_primary_gellatly
+					has_country_flag = PSA_1937_liberal_primary_mccadoo
 				}
 				create_country_leader = {
-					name = "John Arthur Gellatly"
-					desc = "POLITICS_JOHN_GELLATLY_DESC"
-					picture = "Portrait_CAL_John_Arthur_Gellatly.tga"
+					name = "William Gibbs McAdoo"
+					desc = "POLITICS_EARL_WARREN_DESC"
+					picture = "Portrait_CAL_Earl_Warren.tga"
+					expire = "1965.1.1"
+					ideology = social_liberal_subtype
+					traits = {}
+				}
+			}
+			if = { # Clarence D. Martin
+				limit = {
+					has_country_flag = PSA_1937_liberal_primary_martin
+				}
+				create_country_leader = {
+					name = "Clarence D. Martin"
+					desc = "POLITICS_CLARENCE_MARTIN_DESC"
+					picture = "Portrait_CAL_Clarence_Martin.tga"
+					expire = "1965.1.1"
+					ideology = social_liberal_subtype
+					traits = {}
+				}
+			}
+			if = { # Charles A. Sprague
+				limit = {
+					has_country_flag = PSA_1937_liberal_primary_sprague
+				}
+				create_country_leader = {
+					name = "Charles A. Sprague"
+					desc = "POLITICS_CHARLES_SPRAGUE_DESC"
+					picture = "Portrait_CAL_Charles_A_Sprague.tga"
+					expire = "1965.1.1"
+					ideology = social_liberal_subtype
+					traits = {}
+				}
+			}
+			if = { # Manchester Boddy
+				limit = {
+					has_country_flag = PSA_1937_liberal_primary_boddy
+				}
+				create_country_leader = {
+					name = "Manchester Boddy"
+					desc = "POLITICS_MANCHESTOR_BODDY_DESC"
+					picture = "Portrait_CAL_Manchestor_Boddy.tga"
+					expire = "1965.1.1"
+					ideology = social_liberal_subtype
+					traits = {}
+				}
+			}
+			if = { # Robert Taft
+				limit = {
+					has_country_flag = PSA_1937_republican_primary_taft
+				}
+				create_country_leader = {
+					name = "Robert Taft"
+					desc = "POLITICS_Robert_Taft_DESC"
+					picture = "Portrait_CAL_Robert_Taft.tga"
 					expire = "1965.1.1"
 					ideology = market_liberal_subtype
 					traits = {}
 				}
 			}
+			
 			if = { # Harry Chandler
 				limit = {
 					has_country_flag = PSA_1937_republican_primary_chandler
@@ -376,20 +442,6 @@ country_event = { # 1937 Election
 				}
 			}
 			
-			if = { # Theodore Roosevelt Jr.
-				limit = {
-					has_country_flag = PSA_1937_republican_primary_roosevelt
-				}
-				create_country_leader = {
-					name = "Theodore Roosevelt Jr."
-					desc = "POLITICS_THEODORE_ROOSEVELT_JR_DESC"
-					picture = "Portrait_CAL_Theodore_Roosevelt_Jr.tga"
-					expire = "1965.1.1"
-					ideology = market_liberal_subtype
-					traits = {}
-				}
-			}
-			
 			if = { # Frank Merriam
 				limit = {
 					has_country_flag = PSA_1937_democratic_primary_merriam
@@ -399,7 +451,7 @@ country_event = { # 1937 Election
 					desc = "POLITICS_FRANK_MERRIAM_DESC"
 					picture = "Portrait_CAL_Frank_Merrimam.tga"
 					expire = "1965.1.1"
-					ideology = social_conservative_subtype
+					ideology = market_liberal_subtype
 					traits = {}
 				}
 			}
@@ -416,6 +468,19 @@ country_event = { # 1937 Election
 					traits = {}
 				}
 			}
+			if = { # Henry J. Kaiser
+				limit = {
+					has_country_flag = PSA_1937_democratic_primary_kaiser
+				}
+				create_country_leader = {
+					name = "Henry J. Kaiser"
+					desc = "POLITICS_HENRY_J_KAISER_DESC"
+					picture = "Portrait_CAL_Henry_J_Kaiser.tga"
+					expire = "1965.1.1"
+					ideology = social_conservative_subtype
+					traits = {}
+				}
+			}
 			if = { # Walt Disney
 				limit = {
 					has_country_flag = PSA_1937_democratic_primary_disney
@@ -426,19 +491,6 @@ country_event = { # 1937 Election
 					picture = "Portrait_CAL_Walt_Disney.tga"
 					expire = "1965.1.1"
 					ideology = social_conservative_subtype
-					traits = {}
-				}
-			}
-			if = { # Culbert Olson
-				limit = {
-					has_country_flag = PSA_1937_commonwealth_primary_olson
-				}
-				create_country_leader = {
-					name = "Culbert Olson"
-					desc = "POLITICS_CULBERT_OLSON_DESC"
-					picture = "Portrait_CAL_Culbert_Olson.tga"
-					expire = "1965.1.1"
-					ideology = radical_socialist_subtype
 					traits = {}
 				}
 			}

@@ -108,7 +108,6 @@ USA_release_CSA = {
 			if = {
 				limit = {
 					OR = {
-						has_country_flag = USA_assassinated_long
 						has_country_flag = USA_ACW_austerity_rejected
 					}
 				}
@@ -118,7 +117,6 @@ USA_release_CSA = {
 				limit = {
 					OR = {
 						country_exists = TEX
-						has_country_flag = USA_assassinated_long
 						has_country_flag = USA_ACW_austerity_rejected
 					}
 				}
@@ -228,15 +226,6 @@ USA_release_TEX = {
 			if = {
 				limit = { country_exists = CSA }
 				load_oob = "USA_civil_war_reenforcments"
-			}
-			if = {
-				limit = {
-					OR = {
-						has_country_flag = USA_assassinated_reed
-						has_country_flag = USA_ACW_compromise_rejected
-					}
-				}
-				load_oob = "USA_civil_war_reenforcments2"
 			}
 			if = {
 				limit = {
@@ -361,15 +350,6 @@ USA_release_COR = {
 			if = {
 				limit = { country_exists = CSA }
 				load_oob = "USA_civil_war_reenforcments"
-			}
-			if = {
-				limit = {
-					OR = {
-						has_country_flag = USA_assassinated_reed
-						has_country_flag = USA_ACW_compromise_rejected
-					}
-				}
-				load_oob = "USA_civil_war_reenforcments2"
 			}
 			if = {
 				limit = {
@@ -945,10 +925,7 @@ USA_civil_war_begins = {
 			COR = { declare_war_on = { target = WCC type = annex_everything	} }
 		}
 		if = {
-			limit = { country_exists = TEX 
-			NOT = {
-			has_global_flag = AUS_CSA_TREATY
-				}
+			limit = { country_exists = TEX
 			}
 			TEX = { declare_war_on = { target = USA type = annex_everything	} }
 			TEX = { declare_war_on = { target = WCC type = annex_everything	} }

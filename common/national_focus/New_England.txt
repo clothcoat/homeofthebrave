@@ -4453,8 +4453,8 @@ focus_tree = {
 		prerequisite = {
 			focus = NEE_Reestablish_Minutemen
 		}
-		x = 6
-		y = 2
+		x = 5
+		y = 1
 		relative_position_id = NEE_Reestablish_Minutemen
 		ai_will_do = {
 			factor = 4
@@ -4600,6 +4600,1190 @@ focus_tree = {
 				uses = 1
 				category = industry
 			}
+		}
+	}
+	
+	focus = {
+		id = NEE_the_future_of_new_england_army
+		icon = GFX_goal_national_mobilization
+		cost = 5
+		x = 70
+		y = 0
+		relative_position_id = NEE_Legitimate_America
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		available = {
+			has_completed_focus = NEE_Home_of_the_Brave
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_Reestablish_Minutemen"
+			army_experience = 50
+			add_ideas = NEE_Minutemen
+		}
+	}
+	
+	focus = {
+		id = NEE_appoint_chaffee
+		icon = GFX_goal_national_mobilization
+		cost = 6
+		x = -7
+		y = 1
+		relative_position_id = NEE_the_future_of_new_england_army
+		prerequisite = {
+			focus = NEE_the_future_of_new_england_army
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		available = {
+			has_completed_focus = NEE_Home_of_the_Brave
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_Reestablish_Minutemen"
+			army_experience = 50
+			add_ideas = NEE_Minutemen
+		}
+	}
+	focus = {
+		id = NEE_mechanical_cavalry
+		icon = GFX_goal_national_mobilization
+		cost = 6
+		x = 0
+		y = 1
+		relative_position_id = NEE_appoint_chaffee
+		prerequisite = {
+			focus = NEE_appoint_chaffee
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		available = {
+			has_completed_focus = NEE_Home_of_the_Brave
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_Reestablish_Minutemen"
+			army_experience = 50
+			add_ideas = NEE_Minutemen
+		}
+	}
+	focus = {
+		id = NEE_coordination_principal
+		icon = GFX_goal_national_mobilization
+		cost = 6
+		x = 0
+		y = 2
+		relative_position_id = NEE_appoint_chaffee
+		prerequisite = {
+			focus = NEE_mechanical_cavalry
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		available = {
+			has_completed_focus = NEE_Home_of_the_Brave
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_Reestablish_Minutemen"
+			army_experience = 50
+			add_ideas = NEE_Minutemen
+		}
+	}
+	focus = {
+		id = NEE_experimental_organization
+		icon = GFX_goal_national_mobilization
+		cost = 6
+		x = 1
+		y = 3
+		relative_position_id = NEE_appoint_chaffee
+		prerequisite = {
+			focus = NEE_coordination_principal
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		available = {
+			has_completed_focus = NEE_Home_of_the_Brave
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_Reestablish_Minutemen"
+			army_experience = 50
+			add_ideas = NEE_Minutemen
+		}
+	}
+	focus = {
+		id = NEE_mobile_emphasis
+		icon = GFX_goal_national_mobilization
+		cost = 6
+		x = 1
+		y = 4
+		relative_position_id = NEE_appoint_chaffee
+		prerequisite = {
+			focus = NEE_experimental_organization
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		available = {
+			has_completed_focus = NEE_Home_of_the_Brave
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_Reestablish_Minutemen"
+			army_experience = 50
+			add_ideas = NEE_Minutemen
+		}
+	}
+	focus = {
+		id = NEE_equipment_update
+		icon = GFX_goal_national_mobilization
+		cost = 6
+		x = -1
+		y = 3
+		relative_position_id = NEE_appoint_chaffee
+		prerequisite = {
+			focus = NEE_coordination_principal
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		available = {
+			has_completed_focus = NEE_Home_of_the_Brave
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_Reestablish_Minutemen"
+			army_experience = 50
+			add_ideas = NEE_Minutemen
+		}
+	}
+	focus = {
+		id = NEE_armor_production
+		icon = GFX_goal_national_mobilization
+		cost = 6
+		x = -1
+		y = 4
+		relative_position_id = NEE_appoint_chaffee
+		prerequisite = {
+			focus = NEE_equipment_update
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		available = {
+			has_completed_focus = NEE_Home_of_the_Brave
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_Reestablish_Minutemen"
+			army_experience = 50
+			add_ideas = NEE_Minutemen
+		}
+	}
+	focus = {
+		id = NEE_tank_deployment
+		icon = GFX_goal_national_mobilization
+		cost = 6
+		x = 0
+		y = 5
+		relative_position_id = NEE_appoint_chaffee
+		prerequisite = {
+			focus = NEE_armor_production
+		}
+		prerequisite = {
+			focus = NEE_mobile_emphasis
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		available = {
+			has_completed_focus = NEE_Home_of_the_Brave
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_Reestablish_Minutemen"
+			army_experience = 50
+			add_ideas = NEE_Minutemen
+		}
+	}
+	focus = {
+		id = NEE_research_grants
+		icon = GFX_goal_national_mobilization
+		cost = 6
+		x = 1
+		y = 6
+		relative_position_id = NEE_appoint_chaffee
+		prerequisite = {
+			focus = NEE_tank_deployment
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		available = {
+			has_completed_focus = NEE_Home_of_the_Brave
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_Reestablish_Minutemen"
+			army_experience = 50
+			add_ideas = NEE_Minutemen
+		}
+	}
+	focus = {
+		id = NEE_industrial_grants
+		icon = GFX_goal_national_mobilization
+		cost = 5
+		x = -1
+		y = 6
+		relative_position_id = NEE_appoint_chaffee
+		prerequisite = {
+			focus = NEE_tank_deployment
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		available = {
+			has_completed_focus = NEE_Home_of_the_Brave
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_Reestablish_Minutemen"
+			army_experience = 50
+			add_ideas = NEE_Minutemen
+		}
+	}
+	focus = {
+		id = NEE_industrial_grants
+		icon = GFX_goal_national_mobilization
+		cost = 5
+		x = -1
+		y = 6
+		relative_position_id = NEE_appoint_chaffee
+		prerequisite = {
+			focus = NEE_tank_deployment
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		available = {
+			has_completed_focus = NEE_Home_of_the_Brave
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_Reestablish_Minutemen"
+			army_experience = 50
+			add_ideas = NEE_Minutemen
+		}
+	}
+	focus = {
+		id = NEE_general_pershing
+		icon = GFX_goal_national_mobilization
+		cost = 5
+		x = -1
+		y = 1
+		relative_position_id = NEE_the_future_of_new_england_army
+		prerequisite = {
+			focus = NEE_the_future_of_new_england_army
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_Reestablish_Minutemen"
+			army_experience = 50
+			add_ideas = NEE_Minutemen
+		}
+	}
+	focus = {
+		id = NEE_infantry_investments
+		icon = GFX_goal_national_mobilization
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = NEE_general_pershing
+		prerequisite = {
+			focus = NEE_general_pershing
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_Reestablish_Minutemen"
+			army_experience = 50
+			add_ideas = NEE_Minutemen
+		}
+	}
+	focus = {
+		id = NEE_streamlined_staff
+		icon = GFX_goal_national_mobilization
+		cost = 5
+		x = -2
+		y = 1
+		relative_position_id = NEE_general_pershing
+		prerequisite = {
+			focus = NEE_general_pershing
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_Reestablish_Minutemen"
+			army_experience = 50
+			add_ideas = NEE_Minutemen
+		}
+	}
+	focus = {
+		id = NEE_open_warfare
+		icon = GFX_goal_national_mobilization
+		cost = 5
+		x = -3
+		y = 2
+		relative_position_id = NEE_general_pershing
+		prerequisite = {
+			focus = NEE_streamlined_staff
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_Reestablish_Minutemen"
+			army_experience = 50
+			add_ideas = NEE_Minutemen
+		}
+	}
+	focus = {
+		id = NEE_natural_defenses
+		icon = GFX_goal_national_mobilization
+		cost = 5
+		x = -1
+		y = 2
+		relative_position_id = NEE_general_pershing
+		prerequisite = {
+			focus = NEE_streamlined_staff
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_Reestablish_Minutemen"
+			army_experience = 50
+			add_ideas = NEE_Minutemen
+		}
+	}
+	focus = {
+		id = NEE_breakthrough_emphasis
+		icon = GFX_goal_national_mobilization
+		cost = 5
+		x = -2
+		y = 3
+		relative_position_id = NEE_general_pershing
+		prerequisite = {
+			focus = NEE_natural_defenses
+		}
+		prerequisite = {
+			focus = NEE_open_warfare
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_Reestablish_Minutemen"
+			army_experience = 50
+			add_ideas = NEE_Minutemen
+		}
+	}
+	focus = {
+		id = NEE_long_range_logistics
+		icon = GFX_goal_national_mobilization
+		cost = 5
+		x = -2
+		y = 4
+		relative_position_id = NEE_general_pershing
+		prerequisite = {
+			focus = NEE_breakthrough_emphasis
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_Reestablish_Minutemen"
+			army_experience = 50
+			add_ideas = NEE_Minutemen
+		}
+	}
+	focus = {
+		id = NEE_expand_westpoint
+		icon = GFX_goal_national_mobilization
+		cost = 5
+		x = 2
+		y = 1
+		relative_position_id = NEE_general_pershing
+		prerequisite = {
+			focus = NEE_general_pershing
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_Reestablish_Minutemen"
+			army_experience = 50
+			add_ideas = NEE_Minutemen
+		}
+	}
+	focus = {
+		id = NEE_american_marksmenship
+		icon = GFX_goal_national_mobilization
+		cost = 5
+		x = 3
+		y = 2
+		relative_position_id = NEE_general_pershing
+		prerequisite = {
+			focus = NEE_expand_westpoint
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_Reestablish_Minutemen"
+			army_experience = 50
+			add_ideas = NEE_Minutemen
+		}
+	}
+	focus = {
+		id = NEE_iron_discipline
+		icon = GFX_goal_national_mobilization
+		cost = 5
+		x = 1
+		y = 2
+		relative_position_id = NEE_general_pershing
+		prerequisite = {
+			focus = NEE_expand_westpoint
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_Reestablish_Minutemen"
+			army_experience = 50
+			add_ideas = NEE_Minutemen
+		}
+	}
+	focus = {
+		id = NEE_merit_promotion
+		icon = GFX_goal_national_mobilization
+		cost = 5
+		x = 2
+		y = 3
+		relative_position_id = NEE_general_pershing
+		prerequisite = {
+			focus = NEE_american_marksmenship
+		}
+		prerequisite = {
+			focus = NEE_iron_discipline
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_Reestablish_Minutemen"
+			army_experience = 50
+			add_ideas = NEE_Minutemen
+		}
+	}
+	focus = {
+		id = NEE_black_combat_troops
+		icon = GFX_goal_national_mobilization
+		cost = 5
+		x = 2
+		y = 4
+		relative_position_id = NEE_general_pershing
+		prerequisite = {
+			focus = NEE_merit_promotion
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_black_combat_troops"
+			army_experience = 50
+			add_ideas = NEE_Minutemen
+		}
+	}
+	focus = {
+		id = NEE_assault_the_line
+		icon = GFX_goal_national_mobilization
+		cost = 5
+		x = 0
+		y = 4
+		relative_position_id = NEE_general_pershing
+		prerequisite = {
+			focus = NEE_merit_promotion
+		}
+		prerequisite = {
+			focus = NEE_breakthrough_emphasis
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_assault_the_line"
+			army_experience = 50
+			add_ideas = NEE_Minutemen
+		}
+	}
+	focus = {
+		id = NEE_old_gravel_voice
+		icon = GFX_goal_national_mobilization
+		cost = 5
+		x = 6
+		y = 1
+		relative_position_id = NEE_the_future_of_new_england_army
+		prerequisite = {
+			focus = NEE_the_future_of_new_england_army
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_assault_the_line"
+			army_experience = 50
+			add_ideas = NEE_Minutemen
+		}
+	}
+	focus = {
+		id = NEE_integrated_armor
+		icon = GFX_goal_national_mobilization
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = NEE_old_gravel_voice
+		prerequisite = {
+			focus = NEE_old_gravel_voice
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_assault_the_line"
+			army_experience = 50
+			add_ideas = NEE_Minutemen
+		}
+	}
+	focus = {
+		id = NEE_decisive_tactics
+		icon = GFX_goal_national_mobilization
+		cost = 5
+		x = -1
+		y = 2
+		relative_position_id = NEE_old_gravel_voice
+		prerequisite = {
+			focus = NEE_integrated_armor
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_assault_the_line"
+			army_experience = 50
+			add_ideas = NEE_Minutemen
+		}
+	}
+	focus = {
+		id = NEE_artillery_line
+		icon = GFX_goal_national_mobilization
+		cost = 5
+		x = 1
+		y = 2
+		relative_position_id = NEE_old_gravel_voice
+		prerequisite = {
+			focus = NEE_integrated_armor
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_assault_the_line"
+			army_experience = 50
+			add_ideas = NEE_Minutemen
+		}
+	}
+	focus = {
+		id = NEE_bombing_support
+		icon = GFX_goal_national_mobilization
+		cost = 5
+		x = 2
+		y = 3
+		relative_position_id = NEE_old_gravel_voice
+		prerequisite = {
+			focus = NEE_artillery_line
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_assault_the_line"
+			army_experience = 50
+			add_ideas = NEE_Minutemen
+		}
+	}
+	focus = {
+		id = NEE_shore_bombardment
+		icon = GFX_goal_national_mobilization
+		cost = 5
+		x = 2
+		y = 4
+		relative_position_id = NEE_old_gravel_voice
+		prerequisite = {
+			focus = NEE_bombing_support
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_assault_the_line"
+			army_experience = 50
+			add_ideas = NEE_Minutemen
+		}
+	}
+	focus = {
+		id = NEE_counter_attack
+		icon = GFX_goal_national_mobilization
+		cost = 5
+		x = 0
+		y = 3
+		relative_position_id = NEE_old_gravel_voice
+		prerequisite = {
+			focus = NEE_decisive_tactics
+		}
+		prerequisite = {
+			focus = NEE_artillery_line
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_assault_the_line"
+			army_experience = 50
+			add_ideas = NEE_Minutemen
+		}
+	}
+	focus = {
+		id = NEE_armored_spearhead
+		icon = GFX_goal_national_mobilization
+		cost = 5
+		x = 0
+		y = 4
+		relative_position_id = NEE_old_gravel_voice
+		prerequisite = {
+			focus = NEE_old_gravel_voice
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_assault_the_line"
+			army_experience = 50
+			add_ideas = NEE_Minutemen
+		}
+	}
+	focus = {
+		id = NEE_mechanical_drawing
+		icon = GFX_goal_national_mobilization
+		cost = 5
+		x = -2
+		y = 3
+		relative_position_id = NEE_old_gravel_voice
+		prerequisite = {
+			focus = NEE_decisive_tactics
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_assault_the_line"
+			army_experience = 50
+			add_ideas = NEE_Minutemen
+		}
+	}
+	focus = {
+		id = NEE_firepower_purchase
+		icon = GFX_goal_national_mobilization
+		cost = 5
+		x = -2
+		y = 4
+		relative_position_id = NEE_old_gravel_voice
+		prerequisite = {
+			focus = NEE_mechanical_drawing
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_assault_the_line"
+			army_experience = 50
+			add_ideas = NEE_Minutemen
+		}
+	}
+	focus = {
+		id = NEE_green_policy
+		icon = GFX_goal_national_mobilization
+		cost = 5
+		x = 12
+		y = 1
+		relative_position_id = NEE_the_future_of_new_england_army
+		prerequisite = {
+			focus = NEE_the_future_of_new_england_army
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_assault_the_line"
+			army_experience = 50
+			add_ideas = NEE_Minutemen
+		}
+	}
+	focus = {
+		id = NEE_consistant_conscription
+		icon = GFX_goal_national_mobilization
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = NEE_green_policy
+		prerequisite = {
+			focus = NEE_green_policy
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_assault_the_line"
+			army_experience = 50
+			add_ideas = NEE_Minutemen
+		}
+	}
+	focus = {
+		id = NEE_moral_idealism
+		icon = GFX_goal_national_mobilization
+		cost = 5
+		x = 2
+		y = 2
+		relative_position_id = NEE_green_policy
+		prerequisite = {
+			focus = NEE_consistant_conscription
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_assault_the_line"
+			army_experience = 50
+			add_ideas = NEE_Minutemen
+		}
+	}
+	focus = {
+		id = NEE_yankee_nationalism
+		icon = GFX_goal_national_mobilization
+		cost = 5
+		x = -2
+		y = 2
+		relative_position_id = NEE_green_policy
+		prerequisite = {
+			focus = NEE_consistant_conscription
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_assault_the_line"
+			army_experience = 50
+			add_ideas = NEE_Minutemen
+		}
+	}
+	focus = {
+		id = NEE_farmer_soldiers
+		icon = GFX_goal_national_mobilization
+		cost = 5
+		x = 0
+		y = 2
+		relative_position_id = NEE_green_policy
+		prerequisite = {
+			focus = NEE_consistant_conscription
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_assault_the_line"
+			army_experience = 50
+			add_ideas = NEE_Minutemen
+		}
+	}
+	focus = {
+		id = NEE_silver_military_lease
+		icon = GFX_goal_national_mobilization
+		cost = 5
+		x = 0
+		y = 3
+		relative_position_id = NEE_green_policy
+		prerequisite = {
+			focus = NEE_farmer_soldiers
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_assault_the_line"
+			army_experience = 50
+			add_ideas = NEE_Minutemen
+		}
+	}
+	focus = {
+		id = NEE_mass_spending
+		icon = GFX_goal_national_mobilization
+		cost = 5
+		x = 0
+		y = 4
+		relative_position_id = NEE_green_policy
+		prerequisite = {
+			focus = NEE_silver_military_lease
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_assault_the_line"
+			army_experience = 50
+			add_ideas = NEE_Minutemen
 		}
 	}
 }
