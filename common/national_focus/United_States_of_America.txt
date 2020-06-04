@@ -6283,7 +6283,7 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_macarthur_army_plan
-		icon = GFX_goal_USA_police_state
+		icon = GFX_goal_USA_mac_in_command
 		cost = 5.00
 		prerequisite = {
 			focus = USA_reform_plan
@@ -6320,7 +6320,7 @@ focus_tree = {
 	
 	focus = {
 		id = USA_the_general_staff
-		icon = GFX_goal_USA_police_state
+		icon = GFX_goal_USA_all_to_staff
 		cost = 5.00
 		prerequisite = {
 			focus = USA_macarthur_army_plan
@@ -6352,7 +6352,7 @@ focus_tree = {
 	
 	focus = {
 		id = USA_grand_leadership
-		icon = GFX_goal_USA_police_state
+		icon = GFX_goal_USA_grand_leadership
 		cost = 5.00
 		prerequisite = {
 			focus = USA_the_general_staff
@@ -6384,7 +6384,7 @@ focus_tree = {
 	
 	focus = {
 		id = USA_integrated_mechanization
-		icon = GFX_goal_USA_police_state
+		icon = GFX_goal_USA_integral_mechanization
 		cost = 5.00
 		prerequisite = {
 			focus = USA_grand_leadership
@@ -6416,7 +6416,7 @@ focus_tree = {
 	
 	focus = {
 		id = USA_organic_air_support
-		icon = GFX_goal_USA_police_state
+		icon = GFX_goal_USA_organic_air_support
 		cost = 5.00
 		prerequisite = {
 			focus = USA_integrated_mechanization
@@ -6448,7 +6448,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_delegated_functions
-		icon = GFX_goal_USA_police_state
+		icon = GFX_focus_generic_military_academy
 		cost = 5.00
 		prerequisite = {
 			focus = USA_grand_leadership
@@ -6480,7 +6480,7 @@ focus_tree = {
 	
 	focus = {
 		id = USA_modern_recon
-		icon = GFX_goal_USA_police_state
+		icon = GFX_goal_USA_modern_recon
 		cost = 5.00
 		prerequisite = {
 			focus = USA_integrated_mechanization
@@ -6515,7 +6515,7 @@ focus_tree = {
 	
 	focus = {
 		id = USA_marine_support
-		icon = GFX_goal_USA_police_state
+		icon = GFX_goal_WCC_watchmen
 		cost = 5.00
 		prerequisite = {
 			focus = USA_modern_recon
@@ -6547,7 +6547,7 @@ focus_tree = {
 	
 	focus = {
 		id = USA_military_feignts
-		icon = GFX_goal_USA_police_state
+		icon = GFX_goal_USA_military_feints
 		cost = 5.00
 		prerequisite = {
 			focus = USA_modern_recon
@@ -6579,7 +6579,7 @@ focus_tree = {
 	
 	focus = {
 		id = USA_the_strategic_offensive
-		icon = GFX_goal_USA_police_state
+		icon = GFX_focus_usa_recruit_the_free_corps
 		cost = 5.00
 		prerequisite = {
 			focus = USA_marine_support
@@ -6614,7 +6614,7 @@ focus_tree = {
 	
 	focus = {
 		id = USA_mobilization_plan
-		icon = GFX_goal_USA_police_state
+		icon = GFX_goal_TEX_americanist_doctrine
 		cost = 5.00
 		prerequisite = {
 			focus = USA_the_general_staff
@@ -6646,7 +6646,7 @@ focus_tree = {
 	
 	focus = {
 		id = USA_selective_service
-		icon = GFX_goal_USA_police_state
+		icon = GFX_goal_USA_selective_service
 		cost = 5.00
 		prerequisite = {
 			focus = USA_mobilization_plan
@@ -6678,7 +6678,7 @@ focus_tree = {
 	
 	focus = {
 		id = USA_honor_academies
-		icon = GFX_goal_USA_police_state
+		icon = GFX_goal_USA_honor_academies
 		cost = 5.00
 		prerequisite = {
 			focus = USA_selective_service
@@ -6713,7 +6713,7 @@ focus_tree = {
 	
 	focus = {
 		id = USA_munitions_procurement
-		icon = GFX_goal_USA_police_state
+		icon = GFX_focus_generic_combined_arms
 		cost = 5.00
 		prerequisite = {
 			focus = USA_mobilization_plan
@@ -6745,7 +6745,7 @@ focus_tree = {
 	
 	focus = {
 		id = USA_industrial_base_planning
-		icon = GFX_goal_USA_police_state
+		icon = GFX_goal_generic_construct_mil_factory
 		cost = 5.00
 		prerequisite = {
 			focus = USA_selective_service
@@ -6780,7 +6780,7 @@ focus_tree = {
 	
 	focus = {
 		id = USA_price_controls
-		icon = GFX_goal_USA_police_state
+		icon = GFX_goal_USA_price_control
 		cost = 5.00
 		prerequisite = {
 			focus = USA_industrial_base_planning
@@ -6812,7 +6812,7 @@ focus_tree = {
 	
 	focus = {
 		id = USA_USACE
-		icon = GFX_goal_USA_police_state
+		icon = GFX_goal_USA_usace_modernization
 		cost = 5.00
 		prerequisite = {
 			focus = USA_price_controls
@@ -6847,7 +6847,7 @@ focus_tree = {
 	
 	focus = {
 		id = USA_USAAC
-		icon = GFX_goal_USA_police_state
+		icon = GFX_goal_generic_air_naval_bomber
 		cost = 5.00
 		prerequisite = {
 			focus = USA_price_controls
@@ -6879,7 +6879,7 @@ focus_tree = {
 	
 	focus = {
 		id = USA_enlistment_campaign
-		icon = GFX_goal_USA_police_state
+		icon = GFX_BBR_mass_recruitment
 		cost = 5.00
 		prerequisite = {
 			focus = USA_price_controls
