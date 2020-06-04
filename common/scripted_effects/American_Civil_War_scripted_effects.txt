@@ -971,18 +971,15 @@ USA_civil_war_begins = {
 			declare_war_on = { target = CAL type = annex_everything	} 
 			}
 			}
-			TEX = { 
-			if = {
+		}
+		if = {
 			limit = { NOT = {
 			has_country_flag = PSA_AUS_TREATY
-				}
-			}
+				} }
+			TEX = {
 			declare_war_on = { target = CAL type = annex_everything	} 
 			}
-			declare_war_on = { target = CAL type = annex_everything	} }
-			USA = { declare_war_on = { target = CAL type = annex_everything	} }
 		}
-
 		if = {
 			limit = { country_exists = CSA }
 			CSA = {
