@@ -1160,7 +1160,7 @@ country_event = { # Last Men Standing
 	has_war	= no
 	}
 	CSA = {
-	has_war	= no
+		has_war	= no
 	}
 	COR = {
 		exists = no
@@ -4063,10 +4063,6 @@ country_event = { # Internal Conflicts
 		add_war_support = 0.05
 		add_political_power = 25
 		hidden_effect = {
-		modify_country_flag = {
-				flag = CSA_radical_power
-				value = 2
-			}
 		country_event = { id = csa.3600 days = 24 }
 		}
 	}
@@ -4082,10 +4078,6 @@ country_event = { # Internal Conflicts
 			popularity = 0.02
 		}
 		hidden_effect = {
-		modify_country_flag = {
-				flag = CSA_social_patriot_power
-				value = 2
-			}
 		country_event = { id = csa.3600 days = 18 }
 		}
 		add_political_power = -30
@@ -4116,10 +4108,7 @@ country_event = { # Social Patriots Unity Legislation
 		add_war_support = 0.05
 		add_political_power = 25
 		hidden_effect = {
-		modify_country_flag = {
-				flag = CSA_social_patriot_power
-				value = 2
-			}
+		country_event = { id = csa.3601 days = 11 }
 		}
 	}
 	option = {
@@ -4132,12 +4121,6 @@ country_event = { # Social Patriots Unity Legislation
 		add_popularity = {
 			ideology = totalist
 			popularity = 0.02
-		}
-		hidden_effect = {
-		modify_country_flag = {
-				flag = CSA_social_patriot_power
-				value = 2
-			}
 		}
 		add_political_power = -30
 		add_war_support = -0.03
@@ -4167,12 +4150,6 @@ country_event = { # TUUL Ultimatum
 		add_war_support = 0.05
 		add_political_power = -25
 		add_stability = -0.05
-		hidden_effect = {
-		modify_country_flag = {
-				flag = CSA_social_patriot_power
-				value = -4
-			}
-		}
 	}
 	option = {
 		name = amcivwar.3601.b
@@ -4182,16 +4159,73 @@ country_event = { # TUUL Ultimatum
 			popularity = -0.02
 		}
 		hidden_effect = {
-		modify_country_flag = {
-				flag = CSA_social_patriot_power
-				value = 2
-			}
-		set_country_flag = CSA_social_patriot_victory
+		country_event = { id = csa.3601 days = 11 }
 		}
 		add_political_power = -30
 		add_war_support = -0.03
 	}
 }
+
+country_event = { # TUUL Weakened
+	id = amcivwar.3602
+	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.3602"}
+	title = amcivwar.3602.t
+	desc = amcivwar.3602.d
+	picture = GFX_ACW_civil_war
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = amcivwar.3602.a
+		add_popularity = {
+			ideology = totalist
+			popularity = -0.03
+		}
+		add_manpower = -300
+		add_political_power = 25
+		add_stability = 0.02
+		hidden_effect = {
+		country_event = { id = csa.3603 days = 20 }
+		}
+		hidden_effect = {
+		modify_country_flag = {
+				flag = CSA_social_patriot_power
+				value = 2
+			}
+		}
+	}
+}
+
+country_event = { # Social Patriots in power
+	id = amcivwar.3603
+	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.3603"}
+	title = amcivwar.3603.t
+	desc = amcivwar.3603.d
+	picture = GFX_ACW_civil_war
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = amcivwar.3603.a
+		add_popularity = {
+			ideology = totalist
+			popularity = -0.03
+		}
+		add_manpower = -300
+		add_political_power = 25
+		add_stability = 0.02
+		hidden_effect = {
+		modify_country_flag = {
+				flag = CSA_social_patriot_power
+				value = 2
+			}
+		}
+	}
+}
+
+
 
 country_event = { # Hardship of the Revolution
 	id = amcivwar.37

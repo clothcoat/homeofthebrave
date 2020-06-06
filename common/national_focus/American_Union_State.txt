@@ -20,6 +20,7 @@ focus_tree = {
 		cost = 7.25
 		available = {
 			has_global_flag = USA_civil_war_over_flag
+			has_country_flag = AUS_election_occured
 			has_government = authoritarian_democrat
 		}
 		bypass = {
@@ -1465,6 +1466,7 @@ focus_tree = {
 		cost = 7.25
 		available = {
 			has_global_flag = USA_civil_war_over_flag
+			has_country_flag = AUS_election_occured
 			has_government = social_liberal
 		}
 		bypass = {
@@ -2246,6 +2248,7 @@ focus_tree = {
 		available = {
 			has_global_flag = USA_civil_war_over_flag
 			has_government = social_conservative
+			has_country_flag = AUS_election_occured
 		}
 		cancel_if_invalid = yes
 		available_if_capitulated = yes

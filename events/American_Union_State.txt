@@ -829,45 +829,110 @@ country_event = { # Black No More by George Schuyler
 	}
 }
 
-country_event = { # Death of the King
-	id = unionstate.21
-	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.21"}
-	title = unionstate.21.t
-	desc = unionstate.21.d
+country_event = { # AUS Election
+	id = unionstate.2300
+	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.2300"}
+	title = unionstate.2300.t
 	picture = GFX_report_event_usa_funeral
 
 	fire_only_once = yes
 
 	trigger = {
 		tag = TEX
-		has_country_leader = {
-			ruling_only = yes
-			name = "Huey Long"
-		}
+		controls_all_owned_states = yes
+		date > 1937.07.15
+		OR = {
 		has_global_flag = USA_civil_war_over_flag
-		has_government = authoritarian_democrat
-		date > 1952.01.01
-		NOT = {
-			has_country_flag = Huey_Long_dead
+		AND = {
+			CSA = {
+			exists = no
+				}
+			CAL = {
+			exists = no
+				}
+			}
+			NOT = {
+			has_country_flag = PSA_AUS_TREATY
+			has_global_flag = AUS_CSA_TREATY
+			}
 		}
 	}
 
 	mean_time_to_happen = {
-		months = 6
+		months = 1
 	}
 
-	option = { # With a Sigh, We Say Goodbye Huey Long
-		name = unionstate.21.a
-		set_country_flag = Huey_Long_dead
-		create_country_leader = {
-			name = "Earl Kemp Long"
-			desc = "POLITICS_EARL_KEMP_LONG_DESC"
-			picture = "Portrait_TEX_Earl_Kemp_Long.tga"
-			expire = "1965.1.1"
-			ideology = authoritarian_democrat_subtype
-			traits = {}
+	desc = { ###Marland in the election###
+	text = amcivwar.2300.d.marland
+	trigger = {
+	CAL = {
+	exists = yes
+	has_war_with = 
+			}
 		}
 	}
+	
+	desc = { ###Marland in the election###
+	text = amcivwar.2300.d.generic
+	trigger = {
+	CAL = {
+	exists = yes
+			}
+		}
+	}
+
+	option = { # AFP
+		name = unionstate.2300.a
+		add_political_power = 50
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.05 }
+		add_stability = 0.1
+		hidden_effect = {
+		set_country_flag = AUS_election_occured
+		}
+	}
+	option = { # NPP
+		name = unionstate.2300.b
+		add_political_power = 50
+		add_popularity = { ideology = social_liberal popularity = 0.1 }
+		
+		set_politics = {
+		ruling_party = social_liberal
+		election_frequency = 48
+		elections_allowed = yes
+		}
+		hidden_effect = {
+		set_country_flag = AUS_election_occured
+		}
+	}
+	option = { # Christian Party
+		name = unionstate.2300.c
+		add_political_power = 50
+		add_popularity = { ideology = social_liberal popularity = 0.1 }
+		
+		set_politics = {
+		ruling_party = social_conservative
+		election_frequency = 48
+		elections_allowed = yes
+		}
+		hidden_effect = {
+		set_country_flag = AUS_election_occured
+		}
+	}
+	option = { # The Democratic Party
+		name = unionstate.2300.e
+		add_political_power = 50
+		add_popularity = { ideology = market_liberal popularity = 0.1 }
+		
+		set_politics = {
+		ruling_party = market_liberal
+		election_frequency = 48
+		elections_allowed = yes
+		}
+		hidden_effect = {
+		set_country_flag = AUS_election_occured
+		}
+	}
+	
 }
 
 

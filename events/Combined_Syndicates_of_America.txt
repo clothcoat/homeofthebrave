@@ -8114,5 +8114,69 @@ country_event = { # Industrial Democracy
 	value = 2
 		}
 	}
-}	
+}
 
+country_event = { # Industrial Democracy
+	id = csa.500
+	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.500"}
+	title = csa.500.t
+	desc = csa.500.d
+	picture = congress
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = { # Send Funds
+	name = csa.500.a
+	add_political_power = -40
+	FRA = {
+	add_political_power = 40
+	add_opinion_modifier = { target = CSA modifier = small_increase }
+	}
+	diplomatic_relation = {
+    country = FRA
+    relation = non_aggression_pact
+    active = no
+		}
+	}
+	option = { # Send Military Aid
+	name = csa.500.b
+	add_political_power = -40
+	add_manpower = -15000
+	add_equipment_to_stockpile = {
+		type = infantry_equipment
+		amount = -5000
+		producer = CSA
+		}
+	add_opinion_modifier = { target = CSA modifier = medium_increase }
+	diplomatic_relation = {
+    country = FRA
+    relation = non_aggression_pact
+    active = no
+		}
+	FRA = {
+	add_political_power = 40
+	add_manpower = 15000
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 5000
+			producer = CSA
+			}
+		}
+	}
+	option = { # Disavow them
+	name = csa.500.c
+	add_political_power = 30
+	decrease_ruling_party_popularity_by_5 = yes
+	add_opinion_modifier = { target = CSA modifier = medium_decrease }
+	}
+	option = { # Non-Aggression
+	name = csa.500.e
+	diplomatic_relation = {
+    country = FRA
+    relation = non_aggression_pact
+    active = no
+		}
+	}
+}

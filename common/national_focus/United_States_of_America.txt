@@ -6515,7 +6515,7 @@ focus_tree = {
 	
 	focus = {
 		id = USA_marine_support
-		icon = GFX_goal_WCC_watchmen
+		icon = GFX_goal_USA_primaris_marines
 		cost = 5.00
 		prerequisite = {
 			focus = USA_modern_recon
@@ -6614,7 +6614,7 @@ focus_tree = {
 	
 	focus = {
 		id = USA_mobilization_plan
-		icon = GFX_goal_TEX_americanist_doctrine
+		icon = GFX_goal_CAL_aggressive_conscription
 		cost = 5.00
 		prerequisite = {
 			focus = USA_the_general_staff
@@ -6713,7 +6713,7 @@ focus_tree = {
 	
 	focus = {
 		id = USA_munitions_procurement
-		icon = GFX_focus_generic_combined_arms
+		icon = GFX_goal_munitions_factories
 		cost = 5.00
 		prerequisite = {
 			focus = USA_mobilization_plan
