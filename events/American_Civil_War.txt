@@ -4188,12 +4188,6 @@ country_event = { # TUUL Weakened
 		hidden_effect = {
 		country_event = { id = csa.3603 days = 20 }
 		}
-		hidden_effect = {
-		modify_country_flag = {
-				flag = CSA_social_patriot_power
-				value = 2
-			}
-		}
 	}
 }
 
@@ -4217,15 +4211,97 @@ country_event = { # Social Patriots in power
 		add_political_power = 25
 		add_stability = 0.02
 		hidden_effect = {
-		modify_country_flag = {
-				flag = CSA_social_patriot_power
-				value = 2
-			}
+		country_event = { id = csa.3604 days = 7 }
 		}
 	}
 }
 
+country_event = { # Radical Revolts
+	id = amcivwar.3604
+	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.3604"}
+	title = amcivwar.3604.t
+	desc = amcivwar.3604.d
+	picture = GFX_ACW_civil_war
 
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = amcivwar.3604.a
+		if = {
+		limit = {
+		has_completed_focus = CSA_collectivist_doctrine
+			}
+		country_event = { id = csa.3605 days = 7 }
+		}
+		else = {
+		country_event = { id = csa.3607 days = 7 }
+		}
+		add_popularity = {
+			ideology = totalist
+			popularity = -0.03
+		}
+		add_manpower = -300
+		add_political_power = 25
+		add_stability = 0.02
+	}
+}
+
+country_event = { # Military Demands Amnesty
+	id = amcivwar.3605
+	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.3605"}
+	title = amcivwar.3605.t
+	desc = amcivwar.3605.d
+	picture = GFX_ACW_civil_war
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = amcivwar.3605.a
+		add_popularity = {
+			ideology = totalist
+			popularity = 0.015
+		}
+		hidden_effect = {
+		country_event = { id = csa.3606 days = 7 }
+		}
+	}
+	option = {
+		name = amcivwar.3605.b
+		hidden_effect = {
+		country_event = { id = csa.3607 days = 7 }
+		}
+	}
+}
+
+country_event = { # Fosterite Coup
+	id = amcivwar.3606
+	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.3606"}
+	title = amcivwar.3606.t
+	desc = amcivwar.3606.d
+	picture = GFX_ACW_civil_war
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = amcivwar.3606.a
+		add_popularity = {
+			ideology = totalist
+			popularity = 0.015
+		}
+		hidden_effect = {
+		country_event = { id = csa.3606 days = 7 }
+		}
+	}
+	option = {
+		name = amcivwar.3606.b
+		hidden_effect = {
+		country_event = { id = csa.3607 days = 7 }
+		}
+	}
+}
 
 country_event = { # Hardship of the Revolution
 	id = amcivwar.37

@@ -2327,25 +2327,30 @@ ideas = {
 		CSA_peace_league_ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_peace_league_ideas"}
 			picture = liberty_ships_focus
+			modifier = {
 			trade_opinion_factor = 0.2
 			justify_war_goal_time = 0.5
 			stability_weekly = 0.02
 			enemy_justify_war_goal_time = 0.5
 			party_popularity_stability_factor = 0.05
+			}
 		}
 		CSA_peace_league2_ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_peace_league2_ideas"}
 			picture = liberty_ships_focus
+			modifier = {
 			trade_opinion_factor = 0.25
 			research_speed_factor = 0.05
 			justify_war_goal_time = 0.5
 			stability_weekly = 0.02
 			enemy_justify_war_goal_time = 0.75
 			party_popularity_stability_factor = 0.1
+			}
 		}
 		CSA_peace_league3_ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_peace_league3_ideas"}
 			picture = liberty_ships_focus
+			modifier = {
 			trade_opinion_factor = 0.25
 			research_speed_factor = 0.05
 			production_speed_industrial_complex_factor = 0.1
@@ -2353,27 +2358,33 @@ ideas = {
 			stability_weekly = 0.02
 			enemy_justify_war_goal_time = 0.75
 			party_popularity_stability_factor = 0.2
+			}
 		}
 		CSA_revolutionary_monroeism_idea = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_revolutionary_monroeism_idea"}
 			picture = liberty_ships_focus
+			modifier = {
 			guarantee_cost = -25
 			crypto_strength = 1
 			operative_slot = 0.1
 			partisan_effect = 0.1
 			local_manpower = 0.05
+			}
 		}
 		red_navy_idea = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea red_navy_idea"}
 			picture = liberty_ships_focus
+			modifier = {
 			naval_invasion_prep_speed = -0.2
 			naval_invasion_capacity	= 2
 			naval_attrition	= -0.05
 			supply_consumption_factor = -0.1
+			}
 		}
 		red_navy_idea_2 = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea red_navy_idea_2"}
 			picture = liberty_ships_focus
+			modifier = {
 			naval_invasion_prep_speed = -0.3
 			naval_invasion_capacity	= 3
 			naval_attrition	= -0.1
@@ -2382,6 +2393,7 @@ ideas = {
 			naval_speed_factor = 2
 			shore_bombardment_bonus = 0.1
 			navy_anti_air_attack = 0.1
+			}
 		}
 	}
 ### Companies ###

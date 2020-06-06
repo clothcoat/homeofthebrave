@@ -1758,6 +1758,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_all_industrial_congress"
+			country_event = {
+				id = csa.301
+				days = 1
+			}
 			add_stability = 0.03
 			add_political_power = 30
 			add_tech_bonus = {
@@ -1791,6 +1795,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_party_organizers"
+			country_event = {
+				id = csa.302
+				days = 1
+			}
 			add_popularity = { ideology = syndicalist popularity = 0.08 }
 			add_political_power = 50
 		}
@@ -1818,6 +1826,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_worker_takeover"
+			country_event = {
+				id = csa.303
+				days = 1
+			}
 			add_popularity = { ideology = syndicalist popularity = 0.05 }
 			random_owned_controlled_state = {
 				limit = {
@@ -1922,6 +1934,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_general_defense_comitte"
+			country_event = {
+				id = csa.304
+				days = 1
+			}
 			add_ideas = CSA_general_defense_comitte_idea
 			add_political_power = 25
 			add_war_support = 0.05
@@ -1990,6 +2006,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_workers_self_managment"
+			country_event = {
+				id = csa.306
+				days = 1
+			}
 			add_stability = 0.05
 			add_popularity = { ideology = syndicalist popularity = 0.05 }
 			add_political_power = 35
@@ -2017,6 +2037,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_industrial_democracy"
+			country_event = {
+				id = csa.307
+				days = 1
+			}
 			add_stability = 0.05
 			add_political_power = 20
 			add_war_support = 0.05
@@ -2052,6 +2076,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_protect_the_revolution"
+			country_event = {
+				id = csa.305
+				days = 1
+			}
 			add_political_power = 30
 			add_stability = 0.03
 		}
@@ -7173,7 +7201,36 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_invest_in_the_west"
-			add_ideas = USA_on_the_beach_idea
+			FRA = {
+			add_offsite_building = {
+				type = arms_factory
+				level = 1
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = FRA
+					is_controlled_by = FRA
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_equipment_to_stockpile = {
+			type = light_tank
+			amount = 40
+			producer = CSA
+				}
+			}
 		}
 	}
 	
@@ -7206,7 +7263,33 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_save_the_cnt"
-			add_ideas = USA_on_the_beach_idea
+			if = {
+			limit = {
+			CNT = {
+			is_in_faction_with = CSA
+				}
+			}
+			CNT = {
+			add_equipment_to_stockpile = {
+			type = infantry_equipment_1
+			amount = 500
+			producer = CSA
+					}
+				}
+			add_equipment_to_stockpile = {
+			type = infantry_equipment_1
+			amount = -500
+			producer = CSA
+				}
+			}
+			create_wargoal = {
+			type = puppet_wargoal_focus
+			target = SPR
+			}
+			create_wargoal = {
+			type = puppet_wargoal_focus
+			target = CAR
+			}
 		}
 	}
 	
@@ -7237,8 +7320,11 @@ focus_tree = {
 		cancel_if_invalid = yes
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CSA_on_the_beach"
-			add_ideas = USA_on_the_beach_idea
+			log = "[GetDateText]: [Root.GetName]: Focus CSA_brazilian_socialism"
+			create_wargoal = {
+			type = puppet_wargoal_focus
+			target = BRA
+			}
 		}
 	}
 	
@@ -7272,7 +7358,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CSA_on_the_beach"
+			log = "[GetDateText]: [Root.GetName]: Focus CSA_denounce_the_internationale"
 			add_stability = -0.05
 			add_political_power = 50
 			FRA = {
@@ -7310,8 +7396,20 @@ focus_tree = {
 		cancel_if_invalid = yes
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CSA_on_the_beach"
+			log = "[GetDateText]: [Root.GetName]: Focus CSA_all_to_the_revolution"
 			add_manpower = 7500
+			random_owned_controlled_state = {
+				limit = {
+					is_mainland_america = yes
+					free_building_slots = { building = arms_factory size > 0 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
 			random_owned_controlled_state = {
 				limit = {
 					is_mainland_america = yes
@@ -7385,7 +7483,10 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_on_the_beach"
-			add_ideas = USA_on_the_beach_idea
+			create_wargoal = {
+			type = puppet_wargoal_focus
+			target = IRE
+			}
 		}
 	}
 	
@@ -7416,7 +7517,17 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_on_the_beach"
-			add_ideas = USA_on_the_beach_idea
+			add_war_support = 0.05
+			increase_ruling_party_popularity_by_5 = yes
+			add_stability = -0.03
+			create_wargoal = {
+			type = puppet_wargoal_focus
+			target = FRA
+			}
+			create_wargoal = {
+			type = puppet_wargoal_focus
+			target = ENG
+			}
 		}
 	}
 	
@@ -7448,7 +7559,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_power_of_the_revolution"
-			add_ideas = USA_on_the_beach_idea
+			add_ideas = CSA_power_of_the_revolution_idea
 		}
 	}
 	
@@ -7478,8 +7589,12 @@ focus_tree = {
 		cancel_if_invalid = yes
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CSA_on_the_beach"
-			add_ideas = USA_on_the_beach_idea
+			log = "[GetDateText]: [Root.GetName]: Focus CSA_break_japan"
+			add_war_support = 0.05
+			create_wargoal = {
+			type = puppet_wargoal_focus
+			target = JAP
+			}
 		}
 	}
 	
@@ -7509,8 +7624,15 @@ focus_tree = {
 		cancel_if_invalid = yes
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CSA_on_the_beach"
-			add_ideas = USA_on_the_beach_idea
+			log = "[GetDateText]: [Root.GetName]: Focus CSA_eastern_revolution"
+			create_wargoal = {
+			type = puppet_wargoal_focus
+			target = CHI
+			}
+			create_wargoal = {
+			type = puppet_wargoal_focus
+			target = VIE
+			}
 		}
 	}
 	
@@ -7541,8 +7663,11 @@ focus_tree = {
 		cancel_if_invalid = yes
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CSA_on_the_beach"
-			add_ideas = USA_on_the_beach_idea
+			log = "[GetDateText]: [Root.GetName]: Focus CSA_save_bolshevism"
+			create_wargoal = {
+			type = puppet_wargoal_focus
+			target = RUS
+			}
 		}
 	}
 	
@@ -7572,8 +7697,12 @@ focus_tree = {
 		cancel_if_invalid = yes
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CSA_on_the_beach"
-			add_ideas = USA_on_the_beach_idea
+			log = "[GetDateText]: [Root.GetName]: Focus CSA_prussian_socialism"
+			add_war_support = 0.05
+			create_wargoal = {
+			type = puppet_wargoal_focus
+			target = GER
+			}
 		}
 	}
 	
@@ -7604,7 +7733,10 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_on_the_beach"
-			add_ideas = USA_on_the_beach_idea
+			create_wargoal = {
+			type = puppet_wargoal_focus
+			target = AUS
+			}
 		}
 	}
 	
