@@ -1617,6 +1617,232 @@ ideas = {
 				}
 			}
 		}
+		MacArthur_plan_idea = { #MacArthur Plan
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MacArthur_plan_idea"}
+			allowed = { always = no }
+			removal_cost = -1
+			picture = generic_artillery_regiments
+			modifier = {
+				max_command_power = 25
+				max_command_power_mult = 1.2
+				max_planning = 2
+				max_commander_army_size	= 2
+			}
+		}
+		MacArthur_plan_idea_2 = { #MacArthur Plan
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MacArthur_plan_idea_2"}
+			allowed = { always = no }
+			removal_cost = -1
+			picture = generic_artillery_regiments
+			modifier = {
+				max_command_power = 50
+				max_command_power_mult = 2.0
+				army_org_factor = 0.05
+				max_planning = 4
+				max_commander_army_size	= 3
+			}
+		}
+		MacArthur_plan_idea_3 = { #MacArthur Plan
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MacArthur_plan_idea_3"}
+			allowed = { always = no }
+			removal_cost = -1
+			picture = generic_artillery_regiments
+			modifier = {
+				max_command_power = 50
+				max_command_power_mult = 2.0
+				army_org_factor = 0.15
+				army_morale	= 0.2
+				max_planning = 5
+				max_commander_army_size	= 4
+			}
+		}
+		MacArthur_plan_idea_3 = { #MacArthur Plan
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MacArthur_plan_idea_3"}
+			allowed = { always = no }
+			removal_cost = -1
+			picture = generic_artillery_regiments
+			modifier = {
+				max_command_power = 50
+				max_command_power_mult = 2.0
+				army_org_factor = 0.15
+				army_morale	= 0.2
+				max_planning = 5
+				max_commander_army_size	= 4
+			}
+		}
+		MacArthur_plan_idea_4 = { #MacArthur Plan
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MacArthur_plan_idea_4"}
+			allowed = { always = no }
+			removal_cost = -1
+			picture = generic_artillery_regiments
+			modifier = {
+				max_command_power = 50
+				max_command_power_mult = 2.0
+				army_org_factor = 0.2
+				recon_factor = 0.1
+				special_forces_out_of_supply_factor = -0.1
+				army_morale	= 0.3
+				max_planning = 7
+				max_commander_army_size	= 4
+			}
+		}
+		MacArthur_plan_idea_5 = { #MacArthur Plan
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MacArthur_plan_idea_5"}
+			allowed = { always = no }
+			removal_cost = -1
+			picture = generic_artillery_regiments
+			modifier = {
+				max_command_power = 50
+				max_command_power_mult = 2.0
+				army_org_factor = 0.3
+				recon_factor = 0.1
+				special_forces_out_of_supply_factor = -0.1
+				army_morale	= 0.4
+				river_crossing_factor = -0.1
+				max_planning = 10
+				encryption_factor = 0.05
+				naval_invasion_penalty = -0.08
+				attack_bonus_against_cores = 0.05
+				max_commander_army_size	= 4
+			}
+		}
+		MacArthur_plan_idea_6 = { #MacArthur Plan
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MacArthur_plan_idea_6"}
+			allowed = { always = no }
+			removal_cost = -1
+			picture = generic_artillery_regiments
+			modifier = {
+				max_command_power = 75
+				max_command_power_mult = 2.5
+				army_infantry_attack_factor = 0.05
+				army_org_factor = 0.4
+				recon_factor = 0.1
+				river_crossing_factor = -0.2
+				special_forces_out_of_supply_factor = -0.1
+				army_morale	= 0.5
+				max_planning = 12
+				encryption_factor = 0.05
+				naval_invasion_penalty = -0.1
+				attack_bonus_against_cores = 0.05
+				max_commander_army_size	= 4
+			}
+		}
+		USA_mobilization_plan_idea = { #MacArthur Plan
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_mobilization_plan_idea"}
+			allowed = { always = no }
+			removal_cost = -1
+			picture = generic_artillery_regiments
+			modifier = {
+				mobilization_speed = 0.1
+				conscription_factor	= 0.02
+				conversion_cost_mil_to_civ_factor = -0.05
+				production_speed_buildings_factor = 0.03
+				production_speed_industrial_complex_factor = -0.05
+				army_core_defence_factor = 0.05
+			}
+		}
+		USA_mobilization_plan_idea_2 = { #MacArthur Plan
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_mobilization_plan_idea_2"}
+			allowed = { always = no }
+			removal_cost = -1
+			picture = generic_artillery_regiments
+			modifier = {
+				mobilization_speed = 0.15
+				conscription_factor	= 0.1
+				army_core_defence_factor = 0.05
+				conversion_cost_mil_to_civ_factor = -0.05
+				production_speed_buildings_factor = 0.03
+				production_speed_industrial_complex_factor = -0.05
+			}
+		}
+		USA_mobilization_plan_idea_3 = { #MacArthur Plan
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_mobilization_plan_idea_3"}
+			allowed = { always = no }
+			removal_cost = -1
+			picture = generic_artillery_regiments
+			modifier = {
+				mobilization_speed = 0.15
+				conscription_factor	= 0.1
+				army_core_defence_factor = 0.05
+				local_resources	= 0.05
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+				conversion_cost_mil_to_civ_factor = -0.2
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		USA_mobilization_plan_idea_4 = { #MacArthur Plan
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_mobilization_plan_idea_4"}
+			allowed = { always = no }
+			removal_cost = -1
+			picture = generic_artillery_regiments
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+			}
+			modifier = {
+				mobilization_speed = 0.2
+				conscription_factor	= 0.1
+				army_core_defence_factor = 0.05
+				local_resources	= 0.05
+				industrial_capacity_factory = 0.08
+				industrial_capacity_dockyard = 0.08
+				conversion_cost_mil_to_civ_factor = -0.25
+				production_speed_buildings_factor = 0.08
+			}
+		}
+		USA_mobilization_plan_idea_5 = { #MacArthur Plan
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_mobilization_plan_idea_5"}
+			allowed = { always = no }
+			removal_cost = -1
+			picture = generic_artillery_regiments
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+			}
+			modifier = {
+				mobilization_speed = 0.25
+				conscription_factor	= 0.1
+				army_core_defence_factor = 0.08
+				local_resources	= 0.08
+				static_anti_air_damage_factor = 0.05
+				production_speed_bunker_factor = 0.1
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				conversion_cost_mil_to_civ_factor = -0.3
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		USA_honor_academies = { #Honor Academies
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_honor_academies"}
+			allowed = { always = no }
+			removal_cost = -1
+			picture = generic_artillery_regiments
+			modifier = {
+				max_training = 0.1
+				experience_gain_infantry_training_factor = 0.05
+				training_time_army_factor = 0.03
+				land_reinforce_rate	= 0.1
+			}
+		}
+		USA_subordinated_mechanization = { #Subordinated Mechanization
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_subordinated_mechanization"}
+			allowed = { always = no }
+			removal_cost = -1
+			picture = generic_artillery_regiments
+			modifier = {
+				army_armor_attack_factor = 0.03
+				army_armor_defence_factor = 0.03
+				mechanized_attack_factor = 0.03
+				mechanized_defence_factor = 0.03
+				experience_gain_motorized_training_factor = -0.05
+				experience_gain_armored_car_training_factor = -0.05
+			}
+		}
 		USA_Chaffee_plan1 = { #Chaffee Plan
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_Chaffee_plan1"}
 			allowed = { always = no }

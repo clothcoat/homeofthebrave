@@ -6308,13 +6308,9 @@ focus_tree = {
 		relative_position_id = USA_reform_plan
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_macarthur_army_plan"
-			add_ideas = USA_Craig_plan1
-			add_tech_bonus = {
-				name = doctrine_bonus
-				bonus = 1
-				uses = 1
-				category = land_doctrine
-			}
+			add_command_power = 15
+			army_experience = 10
+			add_political_power = 20
 		}
 	}
 	
@@ -6340,7 +6336,9 @@ focus_tree = {
 		relative_position_id = USA_macarthur_army_plan
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_the_general_staff"
-			add_ideas = USA_Craig_plan1
+			add_ideas = MacArthur_plan_idea
+			add_command_power = 35
+			add_political_power = 20
 			add_tech_bonus = {
 				name = doctrine_bonus
 				bonus = 1
@@ -6372,10 +6370,14 @@ focus_tree = {
 		relative_position_id = USA_macarthur_army_plan
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_grand_leadership"
-			add_ideas = USA_Craig_plan1
+			swap_ideas = {
+			remove_idea = MacArthur_plan_idea
+			add_idea = MacArthur_plan_idea_2
+			}
+			add_command_power = 40
 			add_tech_bonus = {
 				name = doctrine_bonus
-				bonus = 1
+				bonus = 2
 				uses = 1
 				category = land_doctrine
 			}
@@ -6404,12 +6406,13 @@ focus_tree = {
 		relative_position_id = USA_macarthur_army_plan
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_the_general_staff"
-			add_ideas = USA_Craig_plan1
+			add_ideas = USA_subordinated_mechanization
+			add_command_power = 40
 			add_tech_bonus = {
-				name = doctrine_bonus
+				name = motor_bonus
 				bonus = 1
 				uses = 1
-				category = land_doctrine
+				category = motorized_equipment
 			}
 		}
 	}
@@ -6436,12 +6439,27 @@ focus_tree = {
 		relative_position_id = USA_macarthur_army_plan
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_the_general_staff"
-			add_ideas = USA_Craig_plan1
+			swap_ideas = {
+			remove_idea = USA_subordinated_mechanization
+			add_idea = USA_subordinated_mechanization_2
+			}
+			air_experience = 5
 			add_tech_bonus = {
 				name = doctrine_bonus
-				bonus = 1
+				bonus = 0.5
 				uses = 1
-				category = land_doctrine
+				category = air_doctrine
+			}
+			361 = {
+				if = {
+					limit = { is_owned_and_controlled_by = USA }
+					add_building_construction = {
+						type = air_base
+						level = 3
+						instant_build = yes
+						province = 3957
+					}
+				}
 			}
 		}
 	}
@@ -6468,11 +6486,14 @@ focus_tree = {
 		relative_position_id = USA_macarthur_army_plan
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_the_general_staff"
-			add_ideas = USA_Craig_plan1
+			swap_ideas = {
+			remove_idea = MacArthur_plan_idea_2
+			add_idea = MacArthur_plan_idea_3
+			}
 			add_tech_bonus = {
 				name = doctrine_bonus
-				bonus = 1
-				uses = 1
+				bonus = 0.5
+				uses = 2
 				category = land_doctrine
 			}
 		}
@@ -6503,12 +6524,21 @@ focus_tree = {
 		relative_position_id = USA_macarthur_army_plan
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_the_general_staff"
-			add_ideas = USA_Craig_plan1
+			swap_ideas = {
+			remove_idea = MacArthur_plan_idea_3
+			add_idea = MacArthur_plan_idea_4
+			}
 			add_tech_bonus = {
 				name = doctrine_bonus
-				bonus = 1
+				bonus = 0.75
 				uses = 1
 				category = land_doctrine
+			}
+			add_tech_bonus = {
+					name = radar_weapons_bonus
+					bonus = 1
+					uses = 1
+					category = recon_tech
 			}
 		}
 	}
@@ -6534,13 +6564,17 @@ focus_tree = {
 		}
 		relative_position_id = USA_macarthur_army_plan
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus USA_the_general_staff"
-			add_ideas = USA_Craig_plan1
+			log = "[GetDateText]: [Root.GetName]: Focus USA_marine_support"
+			add_equipment_to_stockpile = {
+			type = convoys
+			amount = 25
+			producer = CSA
+			}
 			add_tech_bonus = {
 				name = doctrine_bonus
-				bonus = 1
+				bonus = 0.5
 				uses = 1
-				category = land_doctrine
+				category = marine_tech
 			}
 		}
 	}
@@ -6566,11 +6600,14 @@ focus_tree = {
 		}
 		relative_position_id = USA_macarthur_army_plan
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus USA_the_general_staff"
-			add_ideas = USA_Craig_plan1
+			log = "[GetDateText]: [Root.GetName]: Focus USA_military_feignts"
+			swap_ideas = {
+			remove_idea = MacArthur_plan_idea_4
+			add_idea = MacArthur_plan_idea_5
+			}
 			add_tech_bonus = {
 				name = doctrine_bonus
-				bonus = 1
+				bonus = 1.5
 				uses = 1
 				category = land_doctrine
 			}
@@ -6601,11 +6638,17 @@ focus_tree = {
 		}
 		relative_position_id = USA_macarthur_army_plan
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus USA_the_general_staff"
-			add_ideas = USA_Craig_plan1
+			log = "[GetDateText]: [Root.GetName]: Focus USA_the_strategic_offensive"
+			swap_ideas = {
+			remove_idea = MacArthur_plan_idea_5
+			add_idea = MacArthur_plan_idea_6
+			}
+			add_war_support = 0.05
+			add_manpower = 2000
+			add_command_power = 25
 			add_tech_bonus = {
 				name = doctrine_bonus
-				bonus = 1
+				bonus = 3
 				uses = 1
 				category = land_doctrine
 			}
@@ -6633,14 +6676,11 @@ focus_tree = {
 		}
 		relative_position_id = USA_macarthur_army_plan
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus USA_the_general_staff"
-			add_ideas = USA_Craig_plan1
-			add_tech_bonus = {
-				name = doctrine_bonus
-				bonus = 1
-				uses = 1
-				category = land_doctrine
-			}
+			log = "[GetDateText]: [Root.GetName]: Focus USA_mobilization_plan"
+			add_ideas = USA_mobilization_plan_idea
+			add_command_power = 15
+			add_war_support = 0.1
+			add_manpower = 6000
 		}
 	}
 	
@@ -6665,14 +6705,12 @@ focus_tree = {
 		}
 		relative_position_id = USA_macarthur_army_plan
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus USA_the_general_staff"
-			add_ideas = USA_Craig_plan1
-			add_tech_bonus = {
-				name = doctrine_bonus
-				bonus = 1
-				uses = 1
-				category = land_doctrine
+			log = "[GetDateText]: [Root.GetName]: Focus USA_selective_service"
+			swap_ideas = {
+			remove_idea = USA_mobilization_plan_idea
+			add_idea = USA_mobilization_plan_idea_2
 			}
+			add_manpower = 15000
 		}
 	}
 	
@@ -6700,14 +6738,17 @@ focus_tree = {
 		}
 		relative_position_id = USA_macarthur_army_plan
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus USA_the_general_staff"
-			add_ideas = USA_Craig_plan1
+			log = "[GetDateText]: [Root.GetName]: Focus USA_honor_academies"
+			add_ideas = USA_honor_academies
 			add_tech_bonus = {
 				name = doctrine_bonus
-				bonus = 1
+				bonus = 2
 				uses = 1
 				category = land_doctrine
 			}
+			army_experience = 25
+			add_manpower = 3000
+			
 		}
 	}
 	
@@ -6732,13 +6773,33 @@ focus_tree = {
 		}
 		relative_position_id = USA_macarthur_army_plan
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus USA_the_general_staff"
-			add_ideas = USA_Craig_plan1
-			add_tech_bonus = {
-				name = doctrine_bonus
-				bonus = 1
-				uses = 1
-				category = land_doctrine
+			log = "[GetDateText]: [Root.GetName]: Focus USA_munitions_procurement"
+			random_owned_controlled_state = {
+				limit = {
+					is_mainland_america = yes
+					free_building_slots = { building = arms_factory size > 0 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 200
+			producer = USA
+			}
+			add_equipment_to_stockpile = {
+			type = artillery_equipment
+			amount = 120
+			producer = USA
+			}
+			add_equipment_to_stockpile = {
+			type = light_tank_equipment
+			amount = 55
+			producer = USA
 			}
 		}
 	}
@@ -6767,13 +6828,41 @@ focus_tree = {
 		}
 		relative_position_id = USA_macarthur_army_plan
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus USA_the_general_staff"
-			add_ideas = USA_Craig_plan1
-			add_tech_bonus = {
-				name = doctrine_bonus
-				bonus = 1
-				uses = 1
-				category = land_doctrine
+			log = "[GetDateText]: [Root.GetName]: Focus USA_industrial_base_planning"
+			swap_ideas = {
+			remove_idea = USA_mobilization_plan_idea_2
+			add_idea = USA_mobilization_plan_idea_3
+			}
+			361 = {
+				limit = {
+					is_mainland_america = yes
+					free_building_slots = { building = arms_factory size > 0 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			361 = {
+				limit = {
+					is_mainland_america = yes
+					free_building_slots = { building = dockyard size > 0 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			361 = {
+				limit = {
+					is_mainland_america = yes
+					free_building_slots = { building = arms_factory size > 0 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 2
 			}
 		}
 	}
@@ -6799,13 +6888,15 @@ focus_tree = {
 		}
 		relative_position_id = USA_macarthur_army_plan
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus USA_the_general_staff"
-			add_ideas = USA_Craig_plan1
-			add_tech_bonus = {
-				name = doctrine_bonus
-				bonus = 1
-				uses = 1
-				category = land_doctrine
+			log = "[GetDateText]: [Root.GetName]: Focus USA_price_controls"
+			swap_ideas = {
+			remove_idea = USA_mobilization_plan_idea_3
+			add_idea = USA_mobilization_plan_idea_4
+			}
+			add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 450
+			producer = USA
 			}
 		}
 	}
@@ -6834,13 +6925,51 @@ focus_tree = {
 		}
 		relative_position_id = USA_macarthur_army_plan
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus USA_the_general_staff"
-			add_ideas = USA_Craig_plan1
-			add_tech_bonus = {
-				name = doctrine_bonus
-				bonus = 1
-				uses = 1
-				category = land_doctrine
+			log = "[GetDateText]: [Root.GetName]: Focus USA_USACE"
+			swap_ideas = {
+			remove_idea = USA_mobilization_plan_idea_4
+			add_idea = USA_mobilization_plan_idea_5
+			}
+			361 = {
+				limit = {
+					is_mainland_america = yes
+				}
+				add_extra_state_shared_building_slots = 6
+				add_building_construction = {
+					type = bunker
+					level = 4
+					instant_build = yes
+					province = 3957
+				}
+				add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
+			}
+			361 = {
+				limit = {
+					is_mainland_america = yes
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = 11892
+				}
+			}
+			361 = {
+				limit = {
+					is_mainland_america = yes
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = 6984
+				}
 			}
 		}
 	}
@@ -6866,13 +6995,39 @@ focus_tree = {
 		}
 		relative_position_id = USA_macarthur_army_plan
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus USA_the_general_staff"
-			add_ideas = USA_Craig_plan1
+			log = "[GetDateText]: [Root.GetName]: Focus USA_USAAC"
+			add_equipment_to_stockpile = { type = naval_bomber_equipment amount = 30 }
+			361 = {
+				limit = {
+					is_mainland_america = yes
+					free_building_slots = { building = dockyard size > 0 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					instant_build = yes
+					province = 3957
+				}
+			}
+			361 = {
+				limit = {
+					is_mainland_america = yes
+					free_building_slots = { building = dockyard size > 0 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					instant_build = yes
+					province = 6984
+				}
+			}
 			add_tech_bonus = {
-				name = doctrine_bonus
+				name = navy_air_bonus
 				bonus = 1
-				uses = 1
-				category = land_doctrine
+				uses = 2
+				category = naval_air
 			}
 		}
 	}
@@ -6898,14 +7053,10 @@ focus_tree = {
 		}
 		relative_position_id = USA_macarthur_army_plan
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus USA_the_general_staff"
-			add_ideas = USA_Craig_plan1
-			add_tech_bonus = {
-				name = doctrine_bonus
-				bonus = 1
-				uses = 1
-				category = land_doctrine
-			}
+			log = "[GetDateText]: [Root.GetName]: Focus USA_enlistment_campaign"
+			add_manpower = 16000
+			add_war_support = 0.1
+			
 		}
 	}
 	

@@ -4263,8 +4263,10 @@ country_event = { # Military Demands Amnesty
 			ideology = totalist
 			popularity = 0.015
 		}
+		CSA = {
 		hidden_effect = {
 		country_event = { id = csa.3606 days = 7 }
+			}
 		}
 	}
 	option = {
@@ -4291,14 +4293,133 @@ country_event = { # Fosterite Coup
 			ideology = totalist
 			popularity = 0.015
 		}
+		CSA = {
 		hidden_effect = {
 		country_event = { id = csa.3606 days = 7 }
+			}
 		}
 	}
 	option = {
 		name = amcivwar.3606.b
+		CSA = {
 		hidden_effect = {
 		country_event = { id = csa.3607 days = 7 }
+			}
+		}
+	}
+}
+
+country_event = { # Radicals Crushed
+	id = amcivwar.3607
+	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.3607"}
+	title = amcivwar.3607.t
+	desc = amcivwar.3607.d
+	picture = GFX_ACW_civil_war
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = amcivwar.3607.a
+		add_popularity = { ideology = social_democrat popularity = 0.01 }
+		add_popularity = { ideology = radical_socialist popularity = 0.01 }
+		add_popularity = { ideology = syndicalist popularity = 0.005 }
+		CSA = {
+		hidden_effect = {
+		country_event = { id = csa.3608 days = 5 }
+			}
+		}
+	}
+}
+
+country_event = { # Congress calls for a vote
+	id = amcivwar.3608
+	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.3608"}
+	title = amcivwar.3608.t
+	desc = amcivwar.3608.d
+	picture = GFX_ACW_civil_war
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = amcivwar.3608.a
+		add_stability = 0.02
+		hidden_effect = {
+		CSA = {
+			country_event = {
+			id = amcivwar.3609
+			days = 1
+				}
+			}
+		}
+	}
+}
+
+country_event = { # Congressional Vote
+	id = amcivwar.3609
+	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.3609"}
+	title = amcivwar.3609.t
+	desc = amcivwar.3609.d
+	picture = GFX_ACW_civil_war
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { #The Independence League
+		name = amcivwar.3609.a
+		CSA = {
+			country_event = {
+			id = csa.330
+			days = 1
+			}
+		}
+	}
+	option = { #The AFL
+		name = amcivwar.3609.b
+		CSA = {
+			country_event = {
+			id = csa.325
+			days = 1
+			}
+		}
+	}
+	option = { #Browder's SPA Centralist Ticket
+		name = amcivwar.3609.c
+		hidden_effect = {
+			create_country_leader = {
+				name = "Earl Browder"
+				desc = "POLITICS_EARL_BROWDER_DESC"
+				picture = "Portrait_CSA_Earl_Bowder.tga"
+				expire = "1965.1.1"
+				ideology = totalist_subtype
+				traits = {}
+			}
+		}
+		set_politics = {
+			ruling_party = totalist
+			election_frequency = 48
+			last_election = "1936.11.08"
+			elections_allowed = no
+		}
+	}
+	option = { #The American Worker's Party
+		name = amcivwar.3609.e
+		hidden_effect = {
+			create_country_leader = {
+				name = "James Burnham"
+				desc = "POLITICS_JAMES_BURNHAM_DESC"
+				picture = "gfx/leaders/CSA/Portrait_CSA_burnham.dds"
+				expire = "1965.1.1"
+				ideology = totalist_subtype
+				traits = { }
+			}
+		}
+		set_politics = {
+			ruling_party = totalist
+			election_frequency = 48
+			last_election = "1936.11.08"
+			elections_allowed = no
 		}
 	}
 }

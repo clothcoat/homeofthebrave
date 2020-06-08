@@ -8116,6 +8116,146 @@ country_event = { # Industrial Democracy
 	}
 }
 
+country_event = { # AFL Leadership Contest
+	id = csa.325
+	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.325"}
+	title = csa.325.t
+	desc = csa.325.d
+	picture = congress
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = { # John Lewis
+	name = csa.325.a
+	hidden_effect = {
+		create_country_leader = {
+			name = "John Lewis"
+			desc = "POLITICS_JOHN_LEWIS_DESC"
+			picture = "gfx/leaders/CSA/Portrait_John_Lewis.dds"
+			expire = "1965.1.1"
+			ideology = social_democrat_subtype
+			traits = { }
+			}
+		}
+		set_politics = {
+			ruling_party = social_democrat
+			election_frequency = 48
+			last_election = "1936.11.08"
+			elections_allowed = no
+		}
+	}
+	option = { # Samuel Green
+	name = csa.325.b
+	hidden_effect = {
+		create_country_leader = {
+			name = "Samuel Green"
+			desc = "POLITICS_SAMEUL_GREEN_DESC"
+			picture = "gfx/leaders/CSA/Portrait_Samuel_Green.dds"
+			expire = "1965.1.1"
+			ideology = social_democrat_subtype
+			traits = { }
+			}
+		}
+		set_politics = {
+			ruling_party = social_democrat
+			election_frequency = 48
+			last_election = "1936.11.08"
+			elections_allowed = no
+		}
+	}
+}
+
+country_event = { # Independence League Leadership Contest
+	id = csa.330
+	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.330"}
+	title = csa.330.t
+	desc = csa.330.d
+	picture = congress
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = { # John Dewey
+	name = csa.330.a
+	hidden_effect = {
+		create_country_leader = {
+			name = "John Dewey"
+			desc = "POLITICS_JOHN_DEWEY_DESC"
+			picture = "gfx/leaders/CSA/Portrait_John_Dewey.dds"
+			expire = "1965.1.1"
+			ideology = radical_socialist_subtype
+			traits = { }
+			}
+		}
+		set_politics = {
+			ruling_party = radical_socialist
+			election_frequency = 48
+			last_election = "1936.11.08"
+			elections_allowed = no
+		}
+	}
+	option = { # Roger Nash Baldwin
+	name = csa.330.b
+	hidden_effect = {
+		create_country_leader = {
+			name = "Roger Nash Baldwin"
+			desc = "POLITICS_ROGER_NASH_BALDWIN_DESC"
+			picture = "gfx/leaders/CSA/Portrait_Roger_Nash_Baldwin.dds"
+			expire = "1965.1.1"
+			ideology = radical_socialist_subtype
+			traits = { }
+			}
+		}
+		set_politics = {
+			ruling_party = radical_socialist
+			election_frequency = 48
+			last_election = "1936.11.08"
+			elections_allowed = no
+		}
+	}
+	option = { # Heywood Broun
+	name = csa.330.c
+	hidden_effect = {
+		create_country_leader = {
+			name = "Heywood Broun"
+			desc = "POLITICS_HEYWOOD_BROUN_DESC"
+			picture = "gfx/leaders/CSA/Portrait_Heywood_Broun.dds"
+			expire = "1965.1.1"
+			ideology = radical_socialist_subtype
+			traits = { }
+			}
+		}
+		set_politics = {
+			ruling_party = radical_socialist
+			election_frequency = 48
+			last_election = "1936.11.08"
+			elections_allowed = no
+		}
+	}
+	option = { # Arthur Ernest Morgan
+	name = csa.330.c
+	hidden_effect = {
+		create_country_leader = {
+			name = "Arthur Ernest Morgan"
+			desc = "POLITICS_HEYWOOD_BROUN_DESC"
+			picture = "gfx/leaders/CSA/Portrait_Arthur_Ernest_Morgan.dds"
+			expire = "1965.1.1"
+			ideology = radical_socialist_subtype
+			traits = { }
+			}
+		}
+		set_politics = {
+			ruling_party = radical_socialist
+			election_frequency = 48
+			last_election = "1936.11.08"
+			elections_allowed = no
+		}
+	}
+}
+
 country_event = { # Industrial Democracy
 	id = csa.500
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.500"}
