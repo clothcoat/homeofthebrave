@@ -102,18 +102,6 @@ USA_release_CSA = {
 		USA = {
 			CSA = { transfer_technology = yes }
 			if = {
-				limit = { country_exists = TEX }
-				load_oob = "USA_civil_war_reenforcments"
-			}
-			if = {
-				limit = {
-					OR = {
-						has_country_flag = USA_ACW_austerity_rejected
-					}
-				}
-				load_oob = "USA_civil_war_reenforcments2"
-			}
-			if = {
 				limit = {
 					OR = {
 						country_exists = TEX
@@ -224,14 +212,9 @@ USA_release_TEX = {
 		USA = {
 			TEX = { transfer_technology = yes }
 			if = {
-				limit = { country_exists = CSA }
-				load_oob = "USA_civil_war_reenforcments"
-			}
-			if = {
 				limit = {
 					OR = {
 						country_exists = CSA
-						has_country_flag = USA_assassinated_reed
 						has_country_flag = USA_ACW_compromise_rejected
 					}
 				}
@@ -347,15 +330,11 @@ USA_release_COR = {
 
 		USA = {
 			COR = { transfer_technology = yes }
-			if = {
-				limit = { country_exists = CSA }
-				load_oob = "USA_civil_war_reenforcments"
-			}
+			load_oob = "USA_civil_war_reenforcments"
 			if = {
 				limit = {
 					OR = {
 						country_exists = CSA
-						has_country_flag = USA_assassinated_reed
 						has_country_flag = USA_ACW_compromise_rejected
 					}
 				}

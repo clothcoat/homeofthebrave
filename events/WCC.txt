@@ -16,8 +16,6 @@ country_event = { #Entente Aid
 
 	is_triggered_only = yes
 
-	hidden = yes
-
 	option = {
 		name = wcc.1.a
 		ai_chance = {
@@ -59,8 +57,6 @@ country_event = { #Entente Aid Received
 
 	is_triggered_only = yes
 
-	hidden = yes
-
 	option = {
 		name = wcc.2.a
 		add_equipment_to_stockpile = {
@@ -90,8 +86,6 @@ country_event = { #Entente Aid Declined
 
 	is_triggered_only = yes
 
-	hidden = yes
-
 	option = {
 		name = wcc.3.a
 		add_opinion_modifier = { target = CAN modifier = medium_decrease }
@@ -107,8 +101,6 @@ country_event = { #PSA Fate
 	fire_only_once = yes
 
 	is_triggered_only = yes
-
-	hidden = yes
 
 	option = {
 		name = wcc.4.a
@@ -138,8 +130,6 @@ country_event = { #The Fallen Cause
 
 	is_triggered_only = yes
 
-	hidden = yes
-
 	option = {
 		name = wcc.5.a
 		add_political_power = -40
@@ -159,19 +149,40 @@ country_event = { #The Fallen Cause
 }
 
 country_event = { #WCC-USA Victory
-	id = wcc.6
-	immediate = {log = "[GetDateText]: [Root.GetName]: event wcc.6"}
-	title = wcc.6.t
-	desc = wcc.6.d
+	id = wcc.7
+	immediate = {log = "[GetDateText]: [Root.GetName]: event wcc.7"}
+	title = wcc.7.t
+	desc = wcc.7.d
 
+	trigger = {
+	USA = {
+	exists = yes
+		}
+	WCC = {
+	exists = yes
+		}
+	COR = {
+	exists = no
+		}
+	CSA = {
+	exists = no
+		}
+	NOT = {
+	CAL = {
+	has_war_with = WCC
+		} 
+	}
+	NOT = {
+	CAL = {
+	has_war_with = USA
+		} 
+	}
 	fire_only_once = yes
 
 	is_triggered_only = yes
 
-	hidden = yes
-
 	option = {
-		name = wcc.6.a
+		name = wcc.7.a
 		add_political_power = -40
 		add_popularity = { ideology = social_democrat popularity = 0.02 }
 		add_popularity = { ideology = social_liberal popularity = 0.02 }
@@ -181,7 +192,7 @@ country_event = { #WCC-USA Victory
 		add_stability = 0.05
 	}
 	option = {
-		name = wcc.6.b
+		name = wcc.7.b
 		add_political_power = 45
 		add_popularity = { ideology = authoritarian_democrat popularity = 0.05 }
 		add_stability = -0.03

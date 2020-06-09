@@ -6405,7 +6405,7 @@ focus_tree = {
 		}
 		relative_position_id = USA_macarthur_army_plan
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus USA_the_general_staff"
+			log = "[GetDateText]: [Root.GetName]: Focus USA_integrated_mechanization"
 			add_ideas = USA_subordinated_mechanization
 			add_command_power = 40
 			add_tech_bonus = {
@@ -6438,7 +6438,7 @@ focus_tree = {
 		}
 		relative_position_id = USA_macarthur_army_plan
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus USA_the_general_staff"
+			log = "[GetDateText]: [Root.GetName]: Focus USA_organic_air_support"
 			swap_ideas = {
 			remove_idea = USA_subordinated_mechanization
 			add_idea = USA_subordinated_mechanization_2
@@ -6485,7 +6485,7 @@ focus_tree = {
 		}
 		relative_position_id = USA_macarthur_army_plan
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus USA_the_general_staff"
+			log = "[GetDateText]: [Root.GetName]: Focus USA_delegated_functions"
 			swap_ideas = {
 			remove_idea = MacArthur_plan_idea_2
 			add_idea = MacArthur_plan_idea_3
@@ -6523,7 +6523,7 @@ focus_tree = {
 		}
 		relative_position_id = USA_macarthur_army_plan
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus USA_the_general_staff"
+			log = "[GetDateText]: [Root.GetName]: Focus USA_modern_recon"
 			swap_ideas = {
 			remove_idea = MacArthur_plan_idea_3
 			add_idea = MacArthur_plan_idea_4

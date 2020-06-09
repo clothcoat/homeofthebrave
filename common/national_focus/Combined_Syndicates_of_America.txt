@@ -62,7 +62,7 @@ focus_tree = {
 		available = {
 			has_country_flag = CSA_constitutional_convention_done
 			OR = {
-				has_government = syndicalist
+				has_government = social_democrat
 				has_government = radical_socialist
 			}
 		}
@@ -79,7 +79,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_american_commonwealth"
 			if = {
 				limit = {
-					has_government = syndicalist
+					has_government = social_democrat
 					NOT = { has_country_flag = CSA_butlers_counter_coup }
 				}
 				set_cosmetic_tag = CSA_commonwealth_america
@@ -113,7 +113,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_federalism"
-			add_stability = 0.02
+			add_stability = 0.03
 		}
 	}
 	
@@ -7341,6 +7341,32 @@ focus_tree = {
 		available = {
 			is_major = yes
 			is_subject = no
+			OR = {
+			AND = {
+			has_country_leader = { ruling_only = yes name = "William Z. Foster" }
+			NOT = {
+			FRA = { has_country_leader = { ruling_only = yes name = "Marcel Déat" } }
+				}
+			}
+			AND = {
+			has_country_leader = { ruling_only = yes name = "James Burnham" }
+			NOT = {
+			FRA = { has_country_leader = { ruling_only = yes name = "Georges Valois" } }
+			ENG = { has_country_leader = { ruling_only = yes name = "Oswald Mosley" } }
+				}
+			}
+			AND = {
+			OR = {
+			has_government = radical_socialist
+			has_government = syndicalist
+			}
+			FRA = { has_government = totalist }
+			OR = {
+			ENG = { has_government = totalist }
+			SRI = { has_government = totalist }
+					}
+				}
+			}
 		}
 		relative_position_id = CSA_world_revolution
 		x = 2
@@ -7366,6 +7392,7 @@ focus_tree = {
 			country_event = {
 			id = csa.1560
 			days = 1
+				}
 			}
 		}
 	}
@@ -7398,6 +7425,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_all_to_the_revolution"
 			add_manpower = 7500
+			add_war_support = 0.1
 			random_owned_controlled_state = {
 				limit = {
 					is_mainland_america = yes
@@ -7452,7 +7480,10 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_on_the_beach"
-			add_ideas = USA_on_the_beach_idea
+			country_event = {
+			id = csa.305
+			}
+			
 		}
 	}
 	
@@ -7523,10 +7554,6 @@ focus_tree = {
 			create_wargoal = {
 			type = puppet_wargoal_focus
 			target = FRA
-			}
-			create_wargoal = {
-			type = puppet_wargoal_focus
-			target = ENG
 			}
 		}
 	}
@@ -7627,7 +7654,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_eastern_revolution"
 			create_wargoal = {
 			type = puppet_wargoal_focus
-			target = CHI
+			target = PHI
 			}
 			create_wargoal = {
 			type = puppet_wargoal_focus

@@ -26,11 +26,11 @@ change_to_socdem_popularity = {
 	custom_effect_tooltip = long_change_to_socdem_popularity
 	hidden_effect = {
 			create_country_leader = {
-				name = "Julius Evola"
-				desc = "POLITICS_JULIUS_EVOLA_DESC"
-				picture = "gfx/leaders/SIC/Julius_Evola.dds"
+				name = "Huey Long"
+				desc = "POLITICS_HUEY_LONG_DESC"
+				picture = "gfx/leaders/USA/Huey_long.tga"
 				expire = "1970.1.1"
-				ideology = national_populist_subtype
+				ideology = social_democrat_subtype
 				traits = {}
 			}
 		}
