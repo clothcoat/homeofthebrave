@@ -4023,7 +4023,9 @@ focus_tree = {
 		focus = USA_the_junta }
 		
 		available = {
-			has_idea = USA_civil_war_aftermath_idea5
+		NOT = {
+			has_country_flag = USA_mac_shared_power
+			}
 		}
 		relative_position_id = USA_american_caeser
 		x = 1
@@ -4184,7 +4186,9 @@ focus_tree = {
 			focus = USA_army_education
 		}
 		available = {
-			has_idea = USA_civil_war_aftermath_idea5
+			NOT = {
+			has_country_flag = USA_defeated_wcc
+			}
 		}
 		relative_position_id = USA_american_caeser
 		x = -1

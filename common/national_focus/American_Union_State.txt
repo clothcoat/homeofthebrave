@@ -3604,16 +3604,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TEX_From_a_Militia_to_a_force"
-			add_tech_bonus = {
-				name = doctrine_bonus
-				bonus = 1
-				uses = 1
-				category = land_doctrine
-			}
-			army_experience = 50
-			hidden_effect = {	
-				country_event = { id = ustates.619 days = 670 }
-			}
+			army_experience = 30
 		}
 	}
 	focus = {
@@ -3647,9 +3638,19 @@ focus_tree = {
 				uses = 1
 				category = land_doctrine
 			}
-			army_experience = 50
-			hidden_effect = {	
-				country_event = { id = ustates.619 days = 670 }
+			371 = {
+				limit = {
+					is_controlled_by = TEX
+				}
+				add_building_construction = {
+					type = bunker
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+					}
+					level = 2
+					instant_build = yes
+				}
 			}
 		}
 	}
@@ -3662,31 +3663,28 @@ focus_tree = {
 		prerequisite = {
 			focus = TEX_makeshift_forts
 		}
-		ai_will_do = {
-			factor = 2
-			modifier = {
-				factor = 1.5
-				has_war = yes
-			}
-			modifier = {
-				factor = 0
-				NOT = {
-					has_country_flag = choice_made
-				}
-			}
-		}
 		relative_position_id = TEX_From_a_Militia_to_a_force
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TEX_coastal_forts"
-			add_tech_bonus = {
-				name = doctrine_bonus
-				bonus = 1
-				uses = 1
-				category = land_doctrine
-			}
-			army_experience = 50
-			hidden_effect = {	
-				country_event = { id = ustates.619 days = 670 }
+			375 = {
+				limit = {
+					is_controlled_by = TEX
+					is_coastal = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					province = {
+						all_provinces = yes
+						dockyard > 0
+					}
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
 			}
 		}
 	}
@@ -3716,15 +3714,14 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TEX_minutemen_professionalism"
 			add_tech_bonus = {
-				name = doctrine_bonus
+				name = infantry_weapons_bonus
 				bonus = 1
 				uses = 1
-				category = land_doctrine
+				category = infantry_weapons
 			}
-			army_experience = 50
-			hidden_effect = {	
-				country_event = { id = ustates.619 days = 670 }
-			}
+			add_command_power = 20
+			army_experience = 10
+			add_manpower = 2000
 		}
 	}
 	focus = {
@@ -3752,16 +3749,9 @@ focus_tree = {
 		relative_position_id = TEX_From_a_Militia_to_a_force
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TEX_war_propaganda"
-			add_tech_bonus = {
-				name = doctrine_bonus
-				bonus = 1
-				uses = 1
-				category = land_doctrine
-			}
-			army_experience = 50
-			hidden_effect = {	
-				country_event = { id = ustates.619 days = 670 }
-			}
+			add_war_support = 0.1
+			add_manpower = 12500
+			add_political_power = 25
 		}
 	}
 	focus = {
@@ -3791,16 +3781,22 @@ focus_tree = {
 		}
 		relative_position_id = TEX_From_a_Militia_to_a_force
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TEX_From_a_Militia_to_a_force"
-			add_tech_bonus = {
-				name = doctrine_bonus
-				bonus = 1
-				uses = 1
-				category = land_doctrine
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_seize_equipment"
+			add_stability = -0.03
+			add_political_power = -20
+			add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 1100
+			producer = TEX
 			}
-			army_experience = 50
-			hidden_effect = {	
-				country_event = { id = ustates.619 days = 670 }
+			type = support_equipment
+			amount = 500
+			producer = TEX
+			}
+			add_equipment_to_stockpile = {
+			type = motorized_equipment
+			amount = 20
+			producer = TEX
 			}
 		}
 	}
@@ -4173,7 +4169,7 @@ focus_tree = {
 		relative_position_id = TEX_minister_smith
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TEX_draft_for_america"
-			add_stability = -0.1
+			add_stability = -0.05
 			add_manpower = 25000
 			add_command_power = 30
 		}
@@ -4236,14 +4232,14 @@ focus_tree = {
 			}
 			add_tech_bonus = {
 				name = infantry_weapons_bonus
-				bonus = 1
+				bonus = 0.5
 				uses = 1
 				category = infantry_weapons
 			}
 			add_tech_bonus = {
 				name = TEX_War_Of_Numbers
 				bonus = 1
-				uses = 3
+				uses = 2
 				category = cat_mass_assault
 			}
 		}
@@ -4317,6 +4313,11 @@ focus_tree = {
 				uses = 1
 				category = artillery
 			}
+			add_equipment_to_stockpile = {
+			type = artillery
+			amount = 15
+			producer = TEX
+			}
 		}
 	}
 	focus = {
@@ -4354,6 +4355,11 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			add_equipment_to_stockpile = {
+			type = artillery
+			amount = 30
+			producer = TEX
+			}
 		}
 	}
 	focus = {
@@ -4384,12 +4390,28 @@ focus_tree = {
 				}
 				else = {
 					add_tech_bonus = {
-						name = infantry_weapons_bonus
-						bonus = 1
+						name = artillery_weapons_bonus
+						bonus = 1.5
 						uses = 1
 						category = artillery
 					}
 				}
+			}
+			add_tech_bonus = {
+				name = anti_air
+				bonus = 1
+				uses = 1
+				category = cat_anti_air
+			}
+			add_equipment_to_stockpile = {
+			type = artillery_equipment
+			amount = 40
+			producer = TEX
+			}
+			add_equipment_to_stockpile = {
+			type = anti_air_equipment
+			amount = 30
+			producer = TEX
 			}
 		}
 	}
@@ -4412,16 +4434,27 @@ focus_tree = {
 		}
 		relative_position_id = TEX_Assembly_line_modifications
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TEX_top_of_the_line_artillery"
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_foreign_firearms"
+			add_political_power = -30
 			add_equipment_to_stockpile = {
-			type = infantry_equipment_1
-			amount = 200
-			producer = GER
+			type = infantry_equipment
+			amount = 75
+			producer = BRA
+			}
+			add_equipment_to_stockpile = {
+			type = support_equipment
+			amount = 30
+			producer = BRA
 			}
 			add_equipment_to_stockpile = {
 				type = artillery_equipment
-				amount = 60
-				producer = GER
+				amount = 20
+				producer = BRA
+			}
+			add_equipment_to_stockpile = {
+				type = anti_tank_equipment
+				amount = 10
+				producer = BRA
 			}
 		}
 	}
@@ -4444,6 +4477,10 @@ focus_tree = {
 		relative_position_id = TEX_Assembly_line_modifications
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TEX_coordinated_fire"
+			swap_ideas = {
+			remove_idea = TEX_lighning_joe_idea_3
+			add_idea = TEX_lighning_joe_idea_4
+			}
 			add_tech_bonus = {
 				name = COR_Overwhelming_Firepower
 				bonus = 2
@@ -4475,8 +4512,8 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TEX_focus_on_concentration"
 			swap_ideas = {
-				remove_idea = TEX_Devers_plan4
-				add_idea = TEX_Devers_plan5
+				remove_idea = TEX_lighning_joe_idea_4
+				add_idea = TEX_lighning_joe_idea_5
 			}
 			add_tech_bonus = {
 				name = COR_Overwhelming_Firepower
@@ -4532,16 +4569,33 @@ focus_tree = {
 		}
 		relative_position_id = TEX_Devers_Plan
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TEX_tank_commission"
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_towards_motorization"
 			swap_ideas = {
-				remove_idea = TEX_Patton_plan1
-				add_idea = TEX_Patton_plan2
+				remove_idea = TEX_Devers_plan1
+				add_idea = TEX_Devers_plan2
+			}
+			add_equipment_to_stockpile = {
+			type = motorized_equipment
+			amount = 45
+			producer = COR
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_mainland_america = yes
+					free_building_slots = { building = arms_factory size > 0 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
 			}
 			add_tech_bonus = {
-				name = infantry_weapons_bonus
+				name = motorized_bonus
 				bonus = 1
 				uses = 1
-				category = armor
+				category = motorized
 			}
 		}
 	}
@@ -4563,16 +4617,27 @@ focus_tree = {
 		}
 		relative_position_id = TEX_Devers_Plan
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TEX_tank_commission"
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_new_tank_designs"
 			swap_ideas = {
-				remove_idea = TEX_Patton_plan1
-				add_idea = TEX_Patton_plan2
+				remove_idea = TEX_Devers_plan2
+				add_idea = TEX_Devers_plan3
 			}
 			add_tech_bonus = {
-				name = infantry_weapons_bonus
+				name = armor
 				bonus = 1
-				uses = 1
+				uses = 2
 				category = armor
+			}
+			add_tech_bonus = {
+				name = COR_Spearhead_Doctrine
+				bonus = 1
+				uses = 2
+				category = cat_mobile_warfare
+			}
+			add_equipment_to_stockpile = {
+			type = light_tank_equipment
+			amount = 30
+			producer = TEX
 			}
 		}
 	}
@@ -4594,16 +4659,21 @@ focus_tree = {
 		}
 		relative_position_id = TEX_Devers_Plan
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TEX_tank_commission"
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_the_medium_tank"
 			swap_ideas = {
-				remove_idea = TEX_Patton_plan1
-				add_idea = TEX_Patton_plan2
+				remove_idea = TEX_Devers_plan3
+				add_idea = TEX_Devers_plan4
 			}
 			add_tech_bonus = {
-				name = infantry_weapons_bonus
-				bonus = 1
+				name = medium_tank_bonus
+				bonus = 2.5
 				uses = 1
-				category = armor
+				category = cat_medium_armor
+			}
+			add_equipment_to_stockpile = {
+			type = medium_tank_equipment
+			amount = 10
+			producer = TEX
 			}
 		}
 	}
@@ -4627,14 +4697,14 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TEX_tank_commission"
 			swap_ideas = {
-				remove_idea = TEX_Patton_plan1
-				add_idea = TEX_Patton_plan2
+				remove_idea = TEX_Devers_plan2
+				add_idea = TEX_Devers_plan3
 			}
 			add_tech_bonus = {
-				name = infantry_weapons_bonus
-				bonus = 1
+				name = industry_bonus
+				bonus = 0.25
 				uses = 1
-				category = armor
+				category = industry
 			}
 		}
 	}
@@ -4658,14 +4728,15 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TEX_tank_commission"
 			swap_ideas = {
-				remove_idea = TEX_Patton_plan1
-				add_idea = TEX_Patton_plan2
+				remove_idea = TEX_Devers_plan3
+				add_idea = TEX_Devers_plan4
 			}
+			army_experience = 15
 			add_tech_bonus = {
-				name = infantry_weapons_bonus
-				bonus = 1
+				name = COR_Spearhead_Doctrine
+				bonus = 2
 				uses = 1
-				category = armor
+				category = cat_mobile_warfare
 			}
 		}
 	}
@@ -4692,15 +4763,17 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TEX_tank_commission"
 			swap_ideas = {
-				remove_idea = TEX_Patton_plan1
-				add_idea = TEX_Patton_plan2
+				remove_idea = TEX_Devers_plan4
+				add_idea = TEX_Devers_plan5
 			}
 			add_tech_bonus = {
-				name = infantry_weapons_bonus
-				bonus = 1
-				uses = 1
-				category = armor
+				name = COR_Spearhead_Doctrine
+				bonus = 1.25
+				uses = 3
+				category = cat_mobile_warfare
 			}
+			add_command_power = 20
+			air_experience = 10
 		}
 	}
 	focus = {
@@ -4723,13 +4796,9 @@ focus_tree = {
 		relative_position_id = TEX_Assembly_line_modifications
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TEX_coordinated_fire"
-			swap_ideas = {
-				remove_idea = TEX_Devers_plan3
-				add_idea = TEX_Devers_plan4
-			}
 			add_tech_bonus = {
 				name = infantry_weapons_bonus
-				bonus = 1
+				bonus = 2
 				uses = 1
 				category = artillery
 			}

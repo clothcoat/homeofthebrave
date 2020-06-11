@@ -1,5 +1,348 @@
 #### American Civil War Decisions by Herkles ####
 
+ACW_deal_with_terrorists_decisions = {# dealing with terrorists
+	ACW_fight_socialist_terrorists = {# fight socialists
+		icon = GFX_decision_generic_industry
+		allowed = { original_tag = TEX 
+		original_tag = WCC
+		original_tag = USA
+		original_tag = PSA }
+		visible = {
+			OR = {
+				has_idea = ACW_socialist_resistance_1
+				has_idea = ACW_socialist_resistance_2
+				has_idea = ACW_socialist_resistance_3
+				has_idea = ACW_socialist_resistance_4
+			}
+			OR = {
+				has_manpower > 30000
+				has_political_power > 100
+				has_country_flag = USA_civil_war_over_flag
+			}
+		}
+
+		cost = 25
+
+		days_re_enable = 55
+		days_remove = 100
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove ACW_fight_socialist_terrorists"
+			custom_effect_tooltip = ACW_combat_socialists
+			modify_country_flag = {
+				flag = ACW_socialist_resistance
+				value = -2
+			}
+		}
+	}
+	ACW_fight_klan_terrorists = {# fight Klan
+		icon = GFX_decision_generic_industry
+		allowed = { original_tag = TEX 
+		original_tag = WCC
+		original_tag = USA
+		original_tag = PSA }
+		visible = {
+			OR = {
+				has_idea = ACW_klan_resistance_1
+				has_idea = ACW_klan_resistance_2
+				has_idea = ACW_klan_resistance_3
+				has_idea = ACW_klan_resistance_4
+			}
+			OR = {
+				has_manpower > 25000
+				has_political_power > 120
+				has_country_flag = USA_civil_war_over_flag
+			}
+		}
+
+		cost = 25
+
+		days_re_enable = 55
+		days_remove = 100
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove ACW_fight_klan_terrorists"
+			custom_effect_tooltip = ACW_combat_klan
+			modify_country_flag = {
+				flag = ACW_klan_resistance
+				value = -2
+			}
+		}
+	}
+	ACW_fight_black_legion_terrorists = {# fight black legion
+		icon = GFX_decision_generic_industry
+		allowed = { original_tag = TEX 
+		original_tag = WCC
+		original_tag = USA
+		original_tag = PSA }
+		visible = {
+			OR = {
+				has_idea = ACW_black_legion_resistance_1
+				has_idea = ACW_black_legion_resistance_2
+				has_idea = ACW_black_legion_resistance_3
+				has_idea = ACW_black_legion_resistance_4
+			}
+			OR = {
+				has_manpower > 25000
+				has_political_power > 70
+				has_country_flag = USA_civil_war_over_flag
+			}
+		}
+
+		cost = 25
+
+		days_re_enable = 55
+		days_remove = 100
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove ACW_fight_black_legion_terrorists"
+			custom_effect_tooltip = ACW_combat_legion
+			modify_country_flag = {
+				flag = ACW_black_legion_resistance
+				value = -2
+			}
+		}
+	}
+	ACW_fight_longist_terrorists = {# fight longists
+		icon = GFX_decision_generic_industry
+		allowed = { original_tag = CSA 
+		original_tag = WCC
+		original_tag = USA
+		original_tag = PSA }
+		visible = {
+			OR = {
+				has_idea = ACW_minutemen_resistance_1
+				has_idea = ACW_minutemen_resistance_2
+				has_idea = ACW_minutemen_resistance_3
+				has_idea = ACW_minutemen_resistance_4
+			}
+			OR = {
+				has_manpower > 25000
+				has_political_power > 90
+				has_country_flag = USA_civil_war_over_flag
+			}
+		}
+
+		cost = 25
+
+		days_re_enable = 55
+		days_remove = 100
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove ACW_fight_longist_terrorists"
+			custom_effect_tooltip = ACW_combat_minuteman
+			modify_country_flag = {
+				flag = ACW_minutemen_resistance
+				value = -2
+			}
+		}
+	}
+	ACW_fight_longist_terrorists = {# fight longists
+		icon = GFX_decision_generic_industry
+		allowed = { original_tag = CSA 
+		original_tag = WCC
+		original_tag = USA
+		original_tag = PSA }
+		visible = {
+			OR = {
+				has_idea = ACW_minutemen_resistance_1
+				has_idea = ACW_minutemen_resistance_2
+				has_idea = ACW_minutemen_resistance_3
+				has_idea = ACW_minutemen_resistance_4
+			}
+			OR = {
+				has_manpower > 25000
+				has_political_power > 90
+				has_country_flag = USA_civil_war_over_flag
+			}
+		}
+
+		cost = 25
+
+		days_re_enable = 55
+		days_remove = 100
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove ACW_fight_longist_terrorists"
+			custom_effect_tooltip = ACW_combat_minuteman
+			modify_country_flag = {
+				flag = ACW_minutemen_resistance
+				value = -2
+			}
+		}
+	}
+	ACW_fight_fed_terrorists = {# fight federalists
+		icon = GFX_decision_generic_industry
+		allowed = { original_tag = CSA 
+		original_tag = PSA }
+		visible = {
+			OR = {
+				has_idea = ACW_fed_resistance_1
+				has_idea = ACW_fed_resistance_2
+				has_idea = ACW_fed_resistance_3
+				has_idea = ACW_fed_resistance_4
+			}
+			OR = {
+				has_manpower > 25000
+				has_political_power > 90
+				has_country_flag = USA_civil_war_over_flag
+			}
+		}
+
+		cost = 25
+
+		days_re_enable = 55
+		days_remove = 100
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove ACW_fight_fed_terrorists"
+			custom_effect_tooltip = ACW_combat_minuteman
+			modify_country_flag = {
+				flag = ACW_fed_resistance
+				value = -2
+			}
+		}
+	}
+	ACW_fight_crime = {# fight crime
+		icon = GFX_decision_generic_industry
+		allowed = { original_tag = CSA
+		original_tag = TEX
+		original_tag = WCC
+		original_tag = USA
+		original_tag = PSA }
+		visible = {
+			OR = {
+				has_idea = ACW_crime_resistance_2
+			}
+			OR = {
+				has_manpower > 25000
+				has_political_power > 90
+				has_country_flag = USA_civil_war_over_flag
+			}
+		}
+
+		cost = 25
+
+		days_re_enable = 55
+		days_remove = 100
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove ACW_fight_crime"
+			custom_effect_tooltip = ACW_combat_crime
+			modify_country_flag = {
+				flag = ACW_crime_resistance
+				value = -2
+			}
+		}
+	}
+	ACW_fight_black_nationalist = {# fight black rebels
+		icon = GFX_decision_generic_industry
+		allowed = { original_tag = CSA
+		original_tag = TEX
+		original_tag = WCC
+		original_tag = USA
+		original_tag = PSA }
+		visible = {
+			OR = {
+				has_idea = ACW_black_nationalist_resistance_1
+				has_idea = ACW_black_nationalist_resistance_2
+				has_idea = ACW_black_nationalist_resistance_3
+				has_idea = ACW_black_nationalist_resistance_4
+			}
+			OR = {
+				has_manpower > 20000
+				has_political_power > 50
+				has_country_flag = USA_civil_war_over_flag
+			}
+		}
+
+		cost = 30
+
+		days_re_enable = 55
+		days_remove = 100
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove ACW_fight_black_nationalist"
+			custom_effect_tooltip = ACW_combat_crime
+			modify_country_flag = {
+				flag = ACW_black_nationalist_resistance
+				value = -2
+			}
+		}
+	}
+	ACW_fight_ACW_liberal_resistance = {# fight black rebels
+		icon = GFX_decision_generic_industry
+		allowed = { original_tag = CSA
+		original_tag = TEX
+		original_tag = WCC
+		original_tag = USA
+		original_tag = PSA }
+		visible = {
+			OR = {
+				has_idea = ACW_liberal_resistance_1
+				has_idea = ACW_liberal_resistance_2
+				has_idea = ACW_liberal_resistance_3
+				has_idea = ACW_liberal_resistance_4
+			}
+			OR = {
+				has_manpower > 20000
+				has_political_power > 50
+				has_country_flag = USA_civil_war_over_flag
+			}
+		}
+
+		cost = 30
+
+		days_re_enable = 55
+		days_remove = 100
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove ACW_fight_ACW_liberal_resistance"
+			custom_effect_tooltip = ACW_combat_crime
+			modify_country_flag = {
+				flag = ACW_liberal_resistance
+				value = -2
+			}
+		}
+	}
+}
+
 ACW_foreign_volunteer_decisions = {# Foreign Volunteers
 	ACW_support_csa_dec = {# Support the CSA
 		icon = ger_military_buildup
@@ -308,356 +651,7 @@ ACW_civil_war_decisions = {
 			factor = 100
 		}
 	}
-
-	CAL_deal_with_devil = {
-		icon = generic_agreement
-
-		allowed = {
-			tag = CAL
-		}
-		available = {
-			has_war_with = FROM
-		}
-		visible = {
-			has_global_flag = USA_civil_war_begun_flag
-			has_global_flag = { flag = USA_civil_war_begun_flag days > 90 }
-			NOT = { has_global_flag = USA_civil_war_over_flag }
-			is_in_faction = no
-			OR = {
-				AND = {
-					NOT = { country_exists = USA }
-					CSA = {
-						exists = yes
-						has_war_with = ROOT
-						has_war_with = FROM
-					}
-				}
-				AND = {
-					NOT = { country_exists = CSA }
-					USA = {
-						exists = yes
-						has_war_with = ROOT
-						has_war_with = FROM
-					}
-				}
-			}
-			FROM = {
-				exists = yes
-				is_in_faction = no
-				surrender_progress < 0.80
-				OR = {
-					tag = USA
-					tag = TEX
-				}
-				NOT = {
-					has_country_flag = ACW_refused_truce
-					has_country_flag = ACW_accepted_truce
-					has_country_flag = ACW_proposed_truce
-				}
-			}
-
-			set_temp_variable = { enemy_advantage = 0 }
-			if = {
-				limit = { NOT = { country_exists = USA } }
-				add_to_temp_variable = { enemy_advantage = CSA.num_of_military_factories }
-				add_to_temp_variable = { enemy_advantage = CSA.num_of_controlled_states }
-			}
-			else = {
-				add_to_temp_variable = { enemy_advantage = USA.num_of_military_factories }
-				add_to_temp_variable = { enemy_advantage = USA.num_of_controlled_states }
-			}
-			subtract_from_temp_variable = { enemy_advantage = ROOT.num_of_military_factories }
-			subtract_from_temp_variable = { enemy_advantage = ROOT.num_of_controlled_states }
-			subtract_from_temp_variable = { enemy_advantage = FROM.num_of_military_factories }
-			subtract_from_temp_variable = { enemy_advantage = FROM.num_of_controlled_states }
-			check_variable = { enemy_advantage > 0 }
-		}
-
-		targets = { USA TEX }
-
-		target_trigger = {
-			FROM = {
-				exists = yes
-				is_in_faction = no
-				surrender_progress < 0.80
-				NOT = {
-					has_country_flag = ACW_refused_truce
-					has_country_flag = ACW_proposed_truce
-				}
-			}
-		}
-
-		cost = 0
-		fire_only_once = yes
-
-		ai_will_do = {
-			factor = 100
-		}
-
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision CAL_deal_with_devil target: [From.GetName]"
-			set_country_flag = ACW_proposed_truce
-			if = {
-				limit = {
-					NOT = { country_exists = USA }
-				}
-				CSA = { save_event_target_as = enemy_country }
-			}
-			else = {
-				USA = { save_event_target_as = enemy_country }
-			}
-			FROM = {
-				country_event = amcivwar.520
-			}
-		}
-	}
-
-	TEX_deal_with_devil = {
-		icon = generic_agreement
-
-		allowed = {
-			tag = TEX
-		}
-		available = {
-			has_war_with = FROM
-		}
-		visible = {
-			has_global_flag = USA_civil_war_begun_flag
-			has_global_flag = { flag = USA_civil_war_begun_flag days > 90 }
-			NOT = { has_global_flag = USA_civil_war_over_flag }
-			NOT = { country_exists = CAL }
-			is_in_faction = no
-			country_exists = CSA
-			country_exists = USA
-			FROM = {
-				exists = yes
-				is_in_faction = no
-				surrender_progress < 0.80
-				NOT = {
-					has_country_flag = ACW_refused_truce
-					has_country_flag = ACW_accepted_truce
-					has_country_flag = ACW_proposed_truce
-				}
-			}
-			OR = {
-				AND = {
-					USA = {
-						has_war_with = ROOT
-						has_war_with = FROM
-					}
-					set_temp_variable = { USA_advantage = 0 }
-					add_to_temp_variable = { USA_advantage = USA.num_of_military_factories }
-					add_to_temp_variable = { USA_advantage = USA.num_of_controlled_states }
-					subtract_from_temp_variable = { USA_advantage = ROOT.num_of_military_factories }
-					subtract_from_temp_variable = { USA_advantage = ROOT.num_of_controlled_states }
-					subtract_from_temp_variable = { USA_advantage = FROM.num_of_military_factories }
-					subtract_from_temp_variable = { USA_advantage = FROM.num_of_controlled_states }
-					check_variable = { USA_advantage > 0 }
-				}
-				AND = {
-					CSA = {
-						has_war_with = ROOT
-						has_war_with = FROM
-					}
-					set_temp_variable = { CSA_advantage = 0 }
-					add_to_temp_variable = { CSA_advantage = CSA.num_of_military_factories }
-					add_to_temp_variable = { CSA_advantage = CSA.num_of_controlled_states }
-					subtract_from_temp_variable = { CSA_advantage = ROOT.num_of_military_factories }
-					subtract_from_temp_variable = { CSA_advantage = ROOT.num_of_controlled_states }
-					subtract_from_temp_variable = { CSA_advantage = FROM.num_of_military_factories }
-					subtract_from_temp_variable = { CSA_advantage = FROM.num_of_controlled_states }
-					check_variable = { CSA_advantage > 0 }
-				}
-			}
-		}
-
-		targets = { USA CSA }
-
-		target_trigger = {
-			FROM = {
-				exists = yes
-				is_in_faction = no
-				surrender_progress < 0.80
-				NOT = {
-					has_country_flag = ACW_refused_truce
-					has_country_flag = ACW_accepted_truce
-					has_country_flag = ACW_proposed_truce
-				}
-			}
-		}
-
-		cost = 0
-		fire_only_once = yes
-
-		ai_will_do = {
-			factor = 100
-		}
-
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision TEX_deal_with_devil target: [From.GetName]"
-			set_country_flag = ACW_proposed_truce
-			if = {
-				limit = {
-					FROM = { tag = USA }
-				}
-				CSA = { save_event_target_as = enemy_country }
-			}
-			else = {
-				USA = { save_event_target_as = enemy_country }
-			}
-			FROM = {
-				country_event = amcivwar.520
-			}
-		}
-	}
-
-	ACW_break_deal_with_devil = {
-		icon = generic_prepare_civil_war
-
-		allowed = {
-			OR = {
-				tag = TEX
-				tag = CAL
-			}
-		}
-		available = {
-			NOT = { has_war_with = FROM }
-		}
-		visible = {
-			has_country_flag = ACW_has_deal_with_devil
-			has_global_flag = USA_civil_war_begun_flag
-			NOT = { has_global_flag = USA_civil_war_over_flag }
-			FROM = {
-				exists = yes
-				has_country_flag = ACW_deal_with_devil_@ROOT
-				NOT = {
-					tag = ROOT
-					has_war_with = ROOT
-				}
-			}
-		}
-
-		targets = { USA CSA CAL TEX }
-
-		target_trigger = {
-			FROM = {
-				has_country_flag = ACW_deal_with_devil_@ROOT
-				NOT = {
-					tag = ROOT
-					has_war_with = ROOT
-				}
-			}
-		}
-
-		cost = 0
-		fire_only_once = yes
-
-		ai_will_do = {
-			factor = 100
-			modifier = {
-				factor = 0
-				FROM = { surrender_progress < 0.80 }
-				has_war = yes
-			}
-			modifier = {
-				factor = 0
-				strength_ratio = { tag = FROM ratio < 0.75 }
-			}
-		}
-
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision ACW_break_deal_with_devil target: [From.GetName]"
-			clr_country_flag = ACW_has_deal_with_devil
-			clr_country_flag = ACW_deal_with_devil_@FROM
-			FROM = {
-				clr_country_flag = ACW_has_deal_with_devil
-				clr_country_flag = ACW_deal_with_devil_@ROOT
-			}
-			declare_war_on = {
-				target = FROM
-				type = annex_everything
-			}
-			if = {
-				limit = {
-					CAN = {
-						has_country_flag = CAN_deal_with_devil_@ROOT
-						NOT = {
-							has_war_with = ROOT
-							has_war_with = FROM
-						}
-					}
-				}
-				hidden_effect = {
-					save_event_target_as = can_ally
-					FROM = { save_event_target_as = can_enemy }
-					CAN = { country_event = amcivwar.526 }
-				}
-			}
-			else_if = {
-				limit = {
-					CAN = {
-						has_country_flag = CAN_deal_with_devil_@FROM
-						NOT = {
-							has_war_with = ROOT
-							has_war_with = FROM
-						}
-					}
-				}
-				hidden_effect = {
-					save_event_target_as = can_enemy
-					FROM = { save_event_target_as = can_ally }
-					CAN = { country_event = amcivwar.526 }
-				}
-			}
-		}
-	}
-
-	USA_relocate_capital_civil_war = {
-		icon = generic_political_discourse
-		allowed = { original_tag = USA }
-		available = {
-			capital_scope = { state = 361 }
-		}
-		visible = {
-			has_global_flag = USA_civil_war_begun_flag
-			NOT = {
-				has_global_flag = USA_civil_war_over_flag
-				has_country_flag = USA_assassinated_reed
-				has_country_flag = USA_ACW_compromise_rejected
-				has_country_flag = USA_assassinated_long
-				has_country_flag = USA_ACW_austerity_rejected
-			}
-			OR = {
-				382 = { is_owned_and_controlled_by = USA }
-				797 = { is_owned_and_controlled_by = USA }
-				388 = { is_owned_and_controlled_by = USA }
-				377 = { is_owned_and_controlled_by = USA }
-			}
-		}
-		fire_only_once = yes
-		cost = 0
-		ai_will_do = {
-			factor = 20
-			modifier = {
-				factor = 0
-				361 = { is_fully_controlled_by = USA }
-			}
-			modifier = {
-				factor = 0
-				controls_state = 361 #Maryland
-				controls_state = 369 #Kentucky
-				OR = {
-					controls_state = 929 #West Virginia
-					controls_state = 362 #Virginia
-				}
-			}
-		}
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision USA_relocate_capital_civil_war"
-			set_country_flag = USA_relocate_capital_flag
-			USA = {	country_event = amcivwar.76 }
-		}
-	}
+}
 
 	USA_emergency_reserve = {
 		icon = ger_military_buildup
@@ -938,635 +932,6 @@ ACW_civil_war_decisions = {
 		}
 	}
 
-	CAL_inspire_resistance = {
-		icon = generic_prepare_civil_war
-		allowed = { tag = CAL }
-		available = {
-			FROM = {
-				OR = {
-					controls_state = 360 #Pennsylvania
-					controls_state = 931 #Connecticut
-					controls_state = 366 #Florida
-					controls_state = 391 #Minnesota
-				}
-			}
-		}
-		visible = {
-			surrender_progress > 0.20
-			has_capitulated = no
-			has_global_flag = { flag = USA_civil_war_begun_flag days > 60 }
-			NOT = { has_global_flag = USA_civil_war_over_flag }
-			FROM = {
-				exists = yes
-				has_war_with = ROOT
-				surrender_progress < 0.20
-				NOT = { has_country_flag = ACW_rebels_raised_@ROOT }
-			}
-		}
-
-		target_root_trigger = {
-			surrender_progress > 0.20
-		}
-
-		cancel_trigger = {
-			has_global_flag = USA_civil_war_over_flag
-		}
-
-		targets = { USA CSA TEX }
-
-		target_trigger = {
-			FROM = {
-				has_war_with = ROOT
-				surrender_progress < 0.20
-				NOT = { has_country_flag = ACW_rebels_raised_@ROOT }
-			}
-		}
-
-		fire_only_once = no
-		days_remove = 15
-		days_re_enable = 90
-		cost = 0
-
-		ai_will_do = {
-			factor = 100
-			modifier = {
-				factor = 2
-				FROM = { tag = USA }
-			}
-			modifier = {
-				factor = 0.1
-				surrender_progress > 0
-			}
-			modifier = {
-				factor = 2
-				any_owned_state = { is_controlled_by = FROM }
-			}
-		}
-
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision CAL_inspire_resistance target: [From.GetName]"
-			add_political_power = -100
-			FROM = { set_country_flag = ACW_rebels_raised_@ROOT }
-		}
-		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove CAL_inspire_resistance target: [From.GetName]"
-			if = {
-				limit = {
-					any_state = {
-						is_controlled_by = FROM
-						OR = {
-							state = 360 #Pennsylvania
-							state = 931 #Connecticut
-							state = 366 #Florida
-							state = 391 #Minnesota
-						}
-					}
-				}
-				FROM = { country_event = amcivwar.97 }
-				every_state = {
-					limit = {
-						is_controlled_by = FROM
-						OR = {
-							state = 360 #Pennsylvania
-							state = 931 #Connecticut
-							state = 366 #Florida
-							state = 391 #Minnesota
-						}
-					}
-					custom_effect_tooltip = ACW_recruit_5_rebels
-					hidden_effect = {
-						if = {
-							limit = { state = 360 }
-							ROOT = { load_oob = "ACW_PSA_inspire_florida" }
-						}
-						if = {
-							limit = { state = 931 }
-							ROOT = { load_oob = "ACW_PSA_inspire_connecticut" }
-						}
-						if = {
-							limit = { state = 366 }
-							ROOT = { load_oob = "ACW_PSA_inspire_pennsylvania" }
-						}
-						if = {
-							limit = { state = 391 }
-							ROOT = { load_oob = "ACW_PSA_inspire_minnesota" }
-						}
-					}
-				}
-			}
-			else = {
-				add_political_power = 50
-				FROM = { clr_country_flag = ACW_rebels_raised_@ROOT }
-			}
-
-			if = {
-				limit = {
-					NOT = {
-						has_idea = ACW_federal_front_idea
-						has_idea = ACW_syndicalist_front_idea
-						has_idea = ACW_longist_front_idea
-						has_idea = ACW_pacific_front_idea
-					}
-				}
-				if = {
-					limit = { FROM = { tag = USA } }
-					add_timed_idea = {
-						idea = ACW_federal_front_idea
-						days = 20
-					}
-				}
-				else_if = {
-					limit = { FROM = { tag = CSA } }
-					add_timed_idea = {
-						idea = ACW_syndicalist_front_idea
-						days = 20
-					}
-				}
-				else_if = {
-					limit = { FROM = { tag = TEX } }
-					add_timed_idea = {
-						idea = ACW_longist_front_idea
-						days = 20
-					}
-				}
-			}
-		}
-	}
-
-	TEX_inspire_longists = {
-		icon = generic_prepare_civil_war
-		allowed = { tag = TEX }
-		available = {
-			FROM = {
-				OR = {
-					controls_state = 368 #Tennessee
-					controls_state = 359 #New Jersey
-					controls_state = 829 #Southern California
-					controls_state = 362 #Virginia
-				}
-			}
-		}
-		visible = {
-			surrender_progress > 0.20
-			has_capitulated = no
-			has_global_flag = { flag = USA_civil_war_begun_flag days > 60 }
-			NOT = { has_global_flag = USA_civil_war_over_flag }
-			FROM = {
-				exists = yes
-				has_war_with = ROOT
-				surrender_progress < 0.20
-				NOT = { has_country_flag = ACW_rebels_raised_@ROOT }
-			}
-		}
-
-		target_root_trigger = {
-			surrender_progress > 0.20
-		}
-
-		targets = { USA CSA CAL }
-
-		target_trigger = {
-			FROM = {
-				has_war_with = ROOT
-				surrender_progress < 0.20
-				NOT = { has_country_flag = ACW_rebels_raised_@ROOT }
-			}
-		}
-
-		cancel_trigger = {
-			has_global_flag = USA_civil_war_over_flag
-		}
-
-		fire_only_once = no
-		days_remove = 15
-		days_re_enable = 90
-		cost = 0
-
-		ai_will_do = {
-			factor = 100
-			modifier = {
-				factor = 2
-				FROM = { tag = CSA }
-			}
-			modifier = {
-				factor = 0.25
-				FROM = { tag = CAL }
-			}
-			modifier = {
-				factor = 0.1
-				surrender_progress > 0
-			}
-			modifier = {
-				factor = 2
-				any_owned_state = { is_controlled_by = FROM }
-			}
-		}
-
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision TEX_inspire_longists target: [From.GetName]"
-			add_political_power = -100
-			FROM = { set_country_flag = ACW_rebels_raised_@ROOT }
-		}
-		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove TEX_inspire_longists target: [From.GetName]"
-			if = {
-				limit = {
-					any_state = {
-						is_controlled_by = FROM
-						OR = {
-							state = 368 #Tennessee
-							state = 359 #New Jersey
-							state = 829 #Southern California
-							state = 362 #Virginia
-						}
-					}
-				}
-				FROM = { country_event = amcivwar.97 }
-				every_state = {
-					limit = {
-						is_controlled_by = FROM
-						OR = {
-							state = 368 #Tennessee
-							state = 359 #New Jersey
-							state = 829 #Southern California
-							state = 362 #Virginia
-						}
-					}
-					custom_effect_tooltip = ACW_recruit_5_rebels
-					hidden_effect = {
-						if = {
-							limit = { state = 368 }
-							ROOT = { load_oob = "ACW_AUS_inspire_tennessee" }
-						}
-						if = {
-							limit = { state = 359 }
-							ROOT = { load_oob = "ACW_AUS_inspire_newjersey" }
-						}
-						if = {
-							limit = { state = 829 }
-							ROOT = { load_oob = "ACW_AUS_inspire_southcal" }
-						}
-						if = {
-							limit = { state = 362 }
-							ROOT = { load_oob = "ACW_AUS_inspire_virginia" }
-						}
-					}
-				}
-			}
-			else = {
-				add_political_power = 50
-				FROM = { clr_country_flag = ACW_rebels_raised_@ROOT }
-			}
-
-			if = {
-				limit = {
-					NOT = {
-						has_idea = ACW_federal_front_idea
-						has_idea = ACW_syndicalist_front_idea
-						has_idea = ACW_longist_front_idea
-						has_idea = ACW_pacific_front_idea
-					}
-				}
-				if = {
-					limit = { FROM = { tag = USA } }
-					add_timed_idea = {
-						idea = ACW_federal_front_idea
-						days = 20
-					}
-				}
-				else_if = {
-					limit = { FROM = { tag = CSA } }
-					add_timed_idea = {
-						idea = ACW_syndicalist_front_idea
-						days = 20
-					}
-				}
-				else_if = {
-					limit = { FROM = { tag = CAL } }
-					add_timed_idea = {
-						idea = ACW_pacific_front_idea
-						days = 20
-					}
-				}
-			}
-		}
-	}
-
-	CSA_inspire_syndicalists = {
-		icon = generic_prepare_civil_war
-		allowed = { tag = CSA }
-		available = {
-			FROM = {
-				OR = {
-					controls_state = 386 #Washington
-					controls_state = 365 #Georgia
-					controls_state = 796 #New York
-					controls_state = 373 #Missouri
-				}
-			}
-		}
-		visible = {
-			surrender_progress > 0.20
-			has_capitulated = no
-			has_global_flag = { flag = USA_civil_war_begun_flag days > 60 }
-			NOT = { has_global_flag = USA_civil_war_over_flag }
-			FROM = {
-				exists = yes
-				has_war_with = ROOT
-				surrender_progress < 0.20
-				NOT = { has_country_flag = ACW_rebels_raised_@ROOT }
-			}
-		}
-
-		target_root_trigger = {
-			surrender_progress > 0.20
-		}
-
-		targets = { USA TEX CAL }
-
-		target_trigger = {
-			FROM = {
-				has_war_with = ROOT
-				surrender_progress < 0.20
-				NOT = { has_country_flag = ACW_rebels_raised_@ROOT }
-			}
-		}
-
-		cancel_trigger = {
-			has_global_flag = USA_civil_war_over_flag
-		}
-
-		fire_only_once = no
-		days_remove = 15
-		days_re_enable = 90
-		cost = 0
-
-		ai_will_do = {
-			factor = 100
-			modifier = {
-				factor = 0.25
-				FROM = { tag = CAL }
-			}
-			modifier = {
-				factor = 0.1
-				surrender_progress > 0
-			}
-			modifier = {
-				factor = 2
-				any_owned_state = { is_controlled_by = FROM }
-			}
-		}
-
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision CSA_inspire_syndicalists target: [From.GetName]"
-			add_political_power = -100
-			FROM = { set_country_flag = ACW_rebels_raised_@ROOT }
-		}
-		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove CSA_inspire_syndicalists target: [From.GetName]"
-			if = {
-				limit = {
-					any_state = {
-						is_controlled_by = FROM
-						OR = {
-							state = 386 #Washington
-							state = 365 #Georgia
-							state = 796 #New York
-							state = 373 #Missouri
-						}
-					}
-				}
-				FROM = { country_event = amcivwar.97 }
-				every_state = {
-					limit = {
-						is_controlled_by = FROM
-						OR = {
-							state = 386 #Washington
-							state = 365 #Georgia
-							state = 796 #New York
-							state = 373 #Missouri
-						}
-					}
-					custom_effect_tooltip = ACW_recruit_5_rebels
-					hidden_effect = {
-						if = {
-							limit = { state = 386 }
-							ROOT = { load_oob = "ACW_CSA_inspire_washington" }
-						}
-						if = {
-							limit = { state = 365 }
-							ROOT = { load_oob = "ACW_CSA_inspire_georgia" }
-						}
-						if = {
-							limit = { state = 796 }
-							ROOT = { load_oob = "ACW_CSA_inspire_newyork" }
-						}
-						if = {
-							limit = { state = 373 }
-							ROOT = { load_oob = "ACW_CSA_inspire_missouri" }
-						}
-					}
-				}
-			}
-			else = {
-				add_political_power = 50
-				FROM = { clr_country_flag = ACW_rebels_raised_@ROOT }
-			}
-
-			if = {
-				limit = {
-					NOT = {
-						has_idea = ACW_federal_front_idea
-						has_idea = ACW_syndicalist_front_idea
-						has_idea = ACW_longist_front_idea
-						has_idea = ACW_pacific_front_idea
-					}
-				}
-				if = {
-					limit = { FROM = { tag = USA } }
-					add_timed_idea = {
-						idea = ACW_federal_front_idea
-						days = 20
-					}
-				}
-				else_if = {
-					limit = { FROM = { tag = TEX } }
-					add_timed_idea = {
-						idea = ACW_longist_front_idea
-						days = 20
-					}
-				}
-				else_if = {
-					limit = { FROM = { tag = CAL } }
-					add_timed_idea = {
-						idea = ACW_pacific_front_idea
-						days = 20
-					}
-				}
-			}
-		}
-	}
-
-	USA_inspire_loyalists = {
-		icon = generic_prepare_civil_war
-		allowed = { tag = USA }
-		available = {
-			FROM = {
-				OR = {
-					controls_state = 797 #San Francisco
-					controls_state = 358 #New York City
-					controls_state = 932 #Massachusetts
-					controls_state = 375 #Northern Texas
-				}
-			}
-		}
-		visible = {
-			surrender_progress > 0.20
-			has_capitulated = no
-			has_global_flag = { flag = USA_civil_war_begun_flag days > 60 }
-			NOT = {
-				has_global_flag = USA_civil_war_over_flag
-				has_country_flag = USA_assassinated_reed
-				has_country_flag = USA_ACW_compromise_rejected
-				has_country_flag = USA_assassinated_long
-				has_country_flag = USA_ACW_austerity_rejected
-			}
-			FROM = {
-				exists = yes
-				has_war_with = ROOT
-				surrender_progress < 0.20
-				NOT = { has_country_flag = ACW_rebels_raised_@ROOT }
-			}
-		}
-
-		target_root_trigger = {
-			surrender_progress > 0.20
-		}
-
-		targets = { CSA TEX CAL }
-
-		target_trigger = {
-			FROM = {
-				has_war_with = ROOT
-				surrender_progress < 0.20
-				NOT = { has_country_flag = ACW_rebels_raised_@ROOT }
-			}
-		}
-
-		cancel_trigger = {
-			has_global_flag = USA_civil_war_over_flag
-		}
-
-		fire_only_once = no
-		days_remove = 15
-		days_re_enable = 90
-		cost = 0
-
-		ai_will_do = {
-			factor = 100
-			modifier = {
-				factor = 2
-				FROM = { tag = CSA }
-			}
-			modifier = {
-				factor = 0.1
-				surrender_progress > 0
-			}
-			modifier = {
-				factor = 2
-				any_owned_state = { is_controlled_by = FROM }
-			}
-		}
-
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision USA_inspire_loyalists target: [From.GetName]"
-			add_political_power = -100
-			FROM = { set_country_flag = ACW_rebels_raised_@ROOT }
-		}
-		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove USA_inspire_loyalists target: [From.GetName]"
-			if = {
-				limit = {
-					any_state = {
-						is_controlled_by = FROM
-						OR = {
-							state = 797 #San Francisco
-							state = 358 #New York City
-							state = 932 #Massachusetts
-							state = 375 #Northern Texas
-						}
-					}
-				}
-				FROM = { country_event = amcivwar.97 }
-				every_state = {
-					limit = {
-						is_controlled_by = FROM
-						OR = {
-							state = 797 #San Francisco
-							state = 358 #New York City
-							state = 932 #Massachusetts
-							state = 375 #Northern Texas
-						}
-					}
-					custom_effect_tooltip = ACW_recruit_5_rebels
-					hidden_effect = {
-						if = {
-							limit = { state = 797 }
-							ROOT = { load_oob = "ACW_USA_inspire_sanfran" }
-						}
-						if = {
-							limit = { state = 358 }
-							ROOT = { load_oob = "ACW_USA_inspire_nyc" }
-						}
-						if = {
-							limit = { state = 932 }
-							ROOT = { load_oob = "ACW_USA_inspire_massachusetts" }
-						}
-						if = {
-							limit = { state = 375 }
-							ROOT = { load_oob = "ACW_USA_inspire_northtex" }
-						}
-					}
-				}
-			}
-			else = {
-				add_political_power = 50
-				FROM = { clr_country_flag = ACW_rebels_raised_@ROOT }
-			}
-
-			if = {
-				limit = {
-					NOT = {
-						has_idea = ACW_syndicalist_front_idea
-						has_idea = ACW_longist_front_idea
-						has_idea = ACW_pacific_front_idea
-					}
-				}
-				if = {
-					limit = { FROM = { tag = CSA } }
-					add_timed_idea = {
-						idea = ACW_syndicalist_front_idea
-						days = 20
-					}
-				}
-				else_if = {
-					limit = { FROM = { tag = TEX } }
-					add_timed_idea = {
-						idea = ACW_longist_front_idea
-						days = 20
-					}
-				}
-				else_if = {
-					limit = { FROM = { tag = CAL } }
-					add_timed_idea = {
-						idea = ACW_pacific_front_idea
-						days = 20
-					}
-				}
-			}
-		}
-	}
-
 	ACW_federal_front = {
 		icon = generic_prepare_civil_war
 		allowed = {
@@ -1691,7 +1056,6 @@ ACW_civil_war_decisions = {
 				has_idea = ACW_syndicalist_front_idea
 				has_idea = ACW_longist_front_idea
 				has_idea = ACW_pacific_front_idea
-				has_idea = ACW_assassinated_long
 			}
 		}
 		visible = {

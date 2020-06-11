@@ -177,24 +177,114 @@ country_event = { #WCC-USA Victory
 	has_war_with = USA
 		} 
 	}
+	}
 	fire_only_once = yes
 
 	is_triggered_only = yes
 
 	option = {
 		name = wcc.7.a
-		add_political_power = -40
-		add_popularity = { ideology = social_democrat popularity = 0.02 }
-		add_popularity = { ideology = social_liberal popularity = 0.02 }
-		add_popularity = { ideology = market_liberal popularity = 0.02 }
-		add_popularity = { ideology = social_conservative popularity = 0.02 }
-		add_manpower = 20000
-		add_stability = 0.05
+		USA = {
+		country_event = {
+				id = wcc.8
+				days = 1
+			} #
+		}
 	}
 	option = {
 		name = wcc.7.b
-		add_political_power = 45
-		add_popularity = { ideology = authoritarian_democrat popularity = 0.05 }
-		add_stability = -0.03
+		add_political_power = -40
+		add_stability = -0.08
+		add_war_support = -0.2
+		declare_war_on = {
+			target = USA
+			type = annex_everything
+		}
+	}
+	option = {
+		name = wcc.7.c
+		USA = {
+		country_event = {
+				id = wcc.10
+				days = 1
+			} #
+		}
+	}
+}
+
+country_event = { #WCC Demands
+	id = wcc.8
+	immediate = {log = "[GetDateText]: [Root.GetName]: event wcc.8"}
+	title = wcc.8.t
+	desc = wcc.8.d
+	
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #Agree
+		name = wcc.8.a
+		set_country_flag = USA_mac_shared_power
+		USA = {
+		country_event = {
+				id = wcc.9
+				days = 1
+			} #
+		}
+	}
+	option = { #Disagree
+		name = wcc.8.b
+		add_political_power = -30
+		add_stability = -0.1
+		add_command_power = -15
+		add_war_support = 0.05
+		declare_war_on = {
+			target = WCC
+			type = annex_everything
+		}
+	}
+}
+
+country_event = { #MacArthur Accepts
+	id = wcc.9
+	immediate = {log = "[GetDateText]: [Root.GetName]: event wcc.8"}
+	title = wcc.8.t
+	desc = wcc.8.d
+	
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #Agree
+		name = wcc.8.a
+		USA = {
+		annex_country = {
+		target = WCC
+		transfer_troops = yes
+			}
+		}
+	}
+}
+
+country_event = { #WCC Reintegrates
+	id = wcc.10
+	immediate = {log = "[GetDateText]: [Root.GetName]: event wcc.10"}
+	title = wcc.10.t
+	desc = wcc.10.d
+	
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #Agree
+		name = wcc.10.a
+		add_political_power = 30
+		add_stability = 0.05
+		USA = {
+		annex_country = {
+		target = WCC
+		transfer_troops = yes
+			}
+		}
 	}
 }
