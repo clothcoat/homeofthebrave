@@ -5050,7 +5050,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus NEE_Reestablish_Minutemen"
 			add_tech_bonus = {
 				name = NEE_industry_bonus
-				bonus = 2
+				bonus = 1.5
 				uses = 1
 				category = industry
 			}
@@ -5067,36 +5067,6 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-		}
-	}
-	focus = {
-		id = NEE_industrial_grants
-		icon = GFX_goal_national_mobilization
-		cost = 5
-		x = -1
-		y = 6
-		relative_position_id = NEE_appoint_chaffee
-		prerequisite = {
-			focus = NEE_tank_deployment
-		}
-		ai_will_do = {
-			factor = 3
-			modifier = {
-				factor = 3
-				has_war = yes
-			}
-		}
-		available = {
-			has_completed_focus = NEE_Home_of_the_Brave
-		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-		complete_tooltip = {}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus NEE_Reestablish_Minutemen"
-			army_experience = 50
-			add_ideas = NEE_Minutemen
 		}
 	}
 	focus = {
@@ -5121,9 +5091,10 @@ focus_tree = {
 		available_if_capitulated = yes
 		complete_tooltip = {}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus NEE_Reestablish_Minutemen"
-			army_experience = 50
-			add_ideas = NEE_Minutemen
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_general_pershing"
+			add_ideas = NEE_pershing_plan_idea
+			army_experience = 30
+			add_command_power = 20
 		}
 	}
 	focus = {
@@ -5148,9 +5119,24 @@ focus_tree = {
 		available_if_capitulated = yes
 		complete_tooltip = {}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus NEE_Reestablish_Minutemen"
-			army_experience = 50
-			add_ideas = NEE_Minutemen
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_infantry_investments"
+			swap_ideas = {
+			remove_idea = NEE_pershing_plan_idea
+			add_idea = NEE_pershing_plan_idea_2
+			}
+			add_manpower = 3000
+			add_tech_bonus = {
+				name = infantry_bonus
+				bonus = 1
+				uses = 2
+				category = infantry_weapons
+			}
+			add_tech_bonus = {
+				name = NEE_grand_battleplan
+				bonus = 1
+				uses = 1
+				category = cat_grand_battle_plan
+			}
 		}
 	}
 	focus = {
@@ -5175,9 +5161,18 @@ focus_tree = {
 		available_if_capitulated = yes
 		complete_tooltip = {}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus NEE_Reestablish_Minutemen"
-			army_experience = 50
-			add_ideas = NEE_Minutemen
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_streamlined_staff"
+			swap_ideas = {
+			remove_idea = NEE_pershing_plan_idea_2
+			add_idea = NEE_pershing_plan_idea_3
+			}
+			add_command_power = 30
+			add_tech_bonus = {
+				name = NEE_grand_battleplan
+				bonus = 1
+				uses = 1
+				category = cat_grand_battle_plan
+			}
 		}
 	}
 	focus = {
@@ -5202,9 +5197,15 @@ focus_tree = {
 		available_if_capitulated = yes
 		complete_tooltip = {}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus NEE_Reestablish_Minutemen"
-			army_experience = 50
-			add_ideas = NEE_Minutemen
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_open_warfare"
+			add_ideas = NEE_open_warfare_idea
+			army_experience = 10
+			add_tech_bonus = {
+				name = NEE_grand_battleplan
+				bonus = 1.25
+				uses = 2
+				category = cat_grand_battle_plan
+			}
 		}
 	}
 	focus = {
@@ -5229,9 +5230,17 @@ focus_tree = {
 		available_if_capitulated = yes
 		complete_tooltip = {}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus NEE_Reestablish_Minutemen"
-			army_experience = 50
-			add_ideas = NEE_Minutemen
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_natural_defenses"
+			swap_ideas = {
+			remove_idea = NEE_pershing_plan_idea_3
+			add_idea = NEE_pershing_plan_idea_4
+			}
+			add_tech_bonus = {
+				name = NEE_grand_battleplan
+				bonus = 1
+				uses = 1
+				category = cat_grand_battle_plan
+			}
 		}
 	}
 	focus = {
@@ -5259,9 +5268,18 @@ focus_tree = {
 		available_if_capitulated = yes
 		complete_tooltip = {}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus NEE_Reestablish_Minutemen"
-			army_experience = 50
-			add_ideas = NEE_Minutemen
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_breakthrough_emphasis"
+			swap_ideas = {
+			remove_idea = NEE_pershing_plan_idea_4
+			add_idea = NEE_pershing_plan_idea_5
+			}
+			add_tech_bonus = {
+				name = NEE_grand_battleplan
+				bonus = 2
+				uses = 2
+				category = cat_grand_battle_plan
+			}
+			add_war_support = 0.05
 		}
 	}
 	focus = {
@@ -5286,9 +5304,22 @@ focus_tree = {
 		available_if_capitulated = yes
 		complete_tooltip = {}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus NEE_Reestablish_Minutemen"
-			army_experience = 50
-			add_ideas = NEE_Minutemen
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_long_range_logistics"
+			swap_ideas = {
+			remove_idea = NEE_open_warfare_idea
+			add_idea = NEE_open_warfare_idea_2
+			}
+			add_tech_bonus = {
+				name = NEE_grand_battleplan
+				bonus = 0.5
+				uses = 1
+				category = cat_grand_battle_plan
+			}
+			add_equipment_to_stockpile = {
+				type = motorized_equipment
+				amount = 100
+				producer = NEE
+			}
 		}
 	}
 	focus = {
@@ -5301,21 +5332,19 @@ focus_tree = {
 		prerequisite = {
 			focus = NEE_general_pershing
 		}
-		ai_will_do = {
-			factor = 3
-			modifier = {
-				factor = 3
-				has_war = yes
-			}
-		}
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		complete_tooltip = {}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus NEE_Reestablish_Minutemen"
-			army_experience = 50
-			add_ideas = NEE_Minutemen
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_expand_westpoint"
+			add_ideas = NEE_westpoint_idea
+			add_tech_bonus = {
+				name = NEE_grand_battleplan
+				bonus = 2.5
+				uses = 1
+				category = cat_grand_battle_plan
+			}
 		}
 	}
 	focus = {
@@ -5328,21 +5357,18 @@ focus_tree = {
 		prerequisite = {
 			focus = NEE_expand_westpoint
 		}
-		ai_will_do = {
-			factor = 3
-			modifier = {
-				factor = 3
-				has_war = yes
-			}
-		}
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		complete_tooltip = {}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus NEE_Reestablish_Minutemen"
-			army_experience = 50
-			add_ideas = NEE_Minutemen
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_american_marksmenship"
+			add_ideas = NEE_american_marksmenship_idea
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 150
+				producer = NEE
+			}
 		}
 	}
 	focus = {
@@ -5367,9 +5393,17 @@ focus_tree = {
 		available_if_capitulated = yes
 		complete_tooltip = {}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus NEE_Reestablish_Minutemen"
-			army_experience = 50
-			add_ideas = NEE_Minutemen
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_iron_discipline"
+			swap_ideas = {
+			remove_idea = NEE_westpoint_idea
+			add_idea = NEE_westpoint_idea_2
+			}
+			add_tech_bonus = {
+				name = NEE_grand_battleplan
+				bonus = 1
+				uses = 1
+				category = cat_grand_battle_plan
+			}
 		}
 	}
 	focus = {
@@ -5395,11 +5429,19 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-		complete_tooltip = {}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus NEE_Reestablish_Minutemen"
-			army_experience = 50
-			add_ideas = NEE_Minutemen
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_merit_promotion"
+			swap_ideas = {
+			remove_idea = NEE_westpoint_idea_2
+			add_idea = NEE_westpoint_idea_3
+			}
+			army_experience = 25
+			add_tech_bonus = {
+				name = NEE_grand_battleplan
+				bonus = 1.5
+				uses = 1
+				category = cat_grand_battle_plan
+			}
 		}
 	}
 	focus = {
@@ -5412,21 +5454,16 @@ focus_tree = {
 		prerequisite = {
 			focus = NEE_merit_promotion
 		}
-		ai_will_do = {
-			factor = 3
-			modifier = {
-				factor = 3
-				has_war = yes
-			}
-		}
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-		complete_tooltip = {}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NEE_black_combat_troops"
-			army_experience = 50
-			add_ideas = NEE_Minutemen
+			swap_ideas = {
+			remove_idea = NEE_american_marksmenship_idea
+			add_idea = NEE_american_marksmenship_idea_2
+			}
+			add_manpower = 10000
 		}
 	}
 	focus = {
@@ -5442,21 +5479,22 @@ focus_tree = {
 		prerequisite = {
 			focus = NEE_breakthrough_emphasis
 		}
-		ai_will_do = {
-			factor = 3
-			modifier = {
-				factor = 3
-				has_war = yes
-			}
-		}
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-		complete_tooltip = {}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NEE_assault_the_line"
-			army_experience = 50
-			add_ideas = NEE_Minutemen
+			swap_ideas = {
+			remove_idea = NEE_pershing_plan_idea_5
+			add_idea = NEE_pershing_plan_idea_6
+			}
+			add_tech_bonus = {
+				name = NEE_grand_battleplan
+				bonus = 1.25
+				uses = 3
+				category = cat_grand_battle_plan
+			}
+			add_command_power = 25
 		}
 	}
 	focus = {
@@ -5481,9 +5519,8 @@ focus_tree = {
 		available_if_capitulated = yes
 		complete_tooltip = {}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus NEE_assault_the_line"
-			army_experience = 50
-			add_ideas = NEE_Minutemen
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_old_gravel_voice"
+			
 		}
 	}
 	focus = {

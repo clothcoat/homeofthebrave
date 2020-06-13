@@ -2810,9 +2810,11 @@ focus_tree = {
 				}
 				add_extra_state_shared_building_slots = 2
 			}
+			hidden_effect = {
 			country_event = {
 			id = pacificstates.238
 			days = 1
+				}
 			}
 		}
 	}
@@ -2845,6 +2847,12 @@ focus_tree = {
 			}
 			add_popularity = { ideology = authoritarian_democrat popularity = 0.05 }
 			add_political_power = 50
+			hidden_effect = {
+			country_event = {
+			id = pacificstates.221
+			days = 30
+				}
+			}
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_roaring_parties"
 		}
 	}
@@ -2959,6 +2967,12 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_nationalize_liquor"
 			add_ideas = CAL_nationalized_liquor
 			add_political_power = 45
+			hidden_effect = {
+			country_event = {
+			id = pacificstates.236
+			days = 2
+				}
+			}
 		}
 	}
 	
@@ -2991,6 +3005,12 @@ focus_tree = {
 			}
 			add_political_power = 50
 			add_stability = 0.03
+			hidden_effect = {
+			country_event = {
+			id = pacificstates.237
+			days = 2
+				}
+			}
 		}
 	}
 	
@@ -3031,8 +3051,11 @@ focus_tree = {
 		available = {
 			has_government = authoritarian_democrat
 		}
-		ai_will_do = {
-			factor = 5
+		select_effect = {
+		country_event = {
+			id = pacificstates.350
+			days = 10
+			}
 		}
 		available_if_capitulated = yes
 		cancel_if_invalid = yes
@@ -3045,8 +3068,8 @@ focus_tree = {
 			add_political_power = 40
 			hidden_effect = {
 			country_event = {
-			id = pacificstates.223
-			days = 10
+			id = pacificstates.224
+			days = 12
 				}
 			}
 		}
@@ -3077,13 +3100,9 @@ focus_tree = {
 			add_popularity = { ideology = authoritarian_democrat popularity = 0.03 }
 			hidden_effect = {
 			country_event = {
-			id = pacificstates.224
-			days = 15
-				}
-			}
-			country_event = {
 			id = pacificstates.225
 			days = 2
+				}
 			}
 		}
 	}
@@ -3176,6 +3195,7 @@ focus_tree = {
 		select_effect = {
 			country_event = {
 			id = pacificstates.226
+			days = 4
 			}
 		}
 		completion_reward = {
@@ -3200,6 +3220,12 @@ focus_tree = {
 		}
 		ai_will_do = {
 			factor = 5
+		}
+		select_effect = {
+		country_event = {
+		id = pacificstates.218
+		days = 30
+				}
 		}
 		available_if_capitulated = yes
 		cancel_if_invalid = yes
@@ -3236,6 +3262,12 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_punish_hawaii"
 			add_war_support = 0.05
+			hidden_effect = {
+			country_event = {
+			id = pacificstates.243
+			days = 1
+				}
+			}
 		}
 	}
 	
@@ -3260,7 +3292,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_mexican_border_raids"
 			add_war_support = 0.05
-			CAN = {
+			MEX = {
 			country_event = {
 			id = pacificstates.239
 			days = 1
@@ -3340,7 +3372,7 @@ focus_tree = {
 		icon = GFX_goal_ideology_paternal_autocrat
 		cost = 5.00
 		available = {
-			has_government = authoritarian_democrat
+			has_government = paternal_autocrat
 		}
 		ai_will_do = {
 			factor = 5
@@ -5268,6 +5300,12 @@ focus_tree = {
 		ai_will_do = {
 			factor = 5
 		}
+		select_effect = {
+		country_event = {
+			id = ustates.263
+			days = 20
+			}
+		}
 		available_if_capitulated = yes
 		relative_position_id = CAL_authoritarian_democrats_in_power
 		x = -6
@@ -5280,6 +5318,12 @@ focus_tree = {
 			add_popularity = { ideology = radical_socialist popularity = -0.02 }
 			add_popularity = { ideology = syndicalist popularity = -0.02 }
 			add_popularity = { ideology = totalist popularity = -0.02 }
+			hidden_effect = {
+			country_event = {
+			id = ustates.264
+			days = 20
+				}
+			}
 		}
 	}
 
@@ -5336,6 +5380,12 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_social_hygiene"
 			add_ideas = CAL_social_hygiene_idea
 			add_stability = 0.05
+			hidden_effect = {
+			country_event = {
+			id = ustates.266
+			days = 35
+				}
+			}
 		}
 	}
 	
@@ -5368,6 +5418,23 @@ focus_tree = {
 			add_popularity = { ideology = radical_socialist popularity = -0.02 }
 			add_popularity = { ideology = syndicalist popularity = -0.05 }
 			add_popularity = { ideology = totalist popularity = -0.05 }
+			hidden_effect = {
+				if = {
+				limit = { has_country_leader = { ruling_only = yes name = "William Randolph Hearst" } }
+				country_event = {
+				id = pacificstates.234
+				days = 5
+					}
+				}
+				country_event = {
+				id = pacificstates.269
+				days = 12
+				}
+				country_event = {
+				id = pacificstates.270
+				days = 20
+				}
+			}
 		}
 	}
 
@@ -5423,6 +5490,12 @@ focus_tree = {
 		y = 2
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_levering_act"
+			hidden_effect = {
+			country_event = { 
+			id = pacificstates.253
+			days = 14
+				}
+			}
 			add_popularity = { ideology = social_conservative popularity = 0.05 }
 			add_popularity = { ideology = syndicalist popularity = -0.03 }
 			add_popularity = { ideology = totalist popularity = -0.03 }
@@ -5526,17 +5599,10 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			random_owned_state = {
-				limit = {
-					is_core_of = CAL
-					is_controlled_by = CAL
-					industrial_complex > 0
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
+			hidden_effect = {
+			country_event = {
+			id = pacificstates.254
+			days = 3
 				}
 			}
 		}
@@ -5710,6 +5776,9 @@ focus_tree = {
 			add_political_power = 45
 			add_war_support = 0.05
 			add_manpower = 1200
+			hidden_effect = {
+			country_event = { id = ustates.255 days = 45 }
+			}
 		}
 	}
 	
@@ -5816,6 +5885,12 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_entente_support"
 			add_war_support = 0.03
+			hidden_effect = {
+			country_event = {
+			id = ustates.258
+			days = 2
+				}
+			}
 		}
 	}
 	
@@ -5846,6 +5921,20 @@ focus_tree = {
 			remove_idea = CAL_business_grants_idea_2
 			add_idea = CAL_business_grants_idea_3
 			}
+			hidden_effect = {
+			country_event = {
+			id = ustates.259
+			days = 30
+				}
+			country_event = {
+			id = ustates.260
+			days = 60
+				}
+			country_event = {
+			id = ustates.261
+			days = 100
+				}
+			}
 		}
 	}
 	
@@ -5874,6 +5963,16 @@ focus_tree = {
 			}
 			add_stability = 0.05
 			add_popularity = { ideology = social_conservative popularity = 0.05 }
+			hidden_effect = {
+			country_event = { 
+			id = pacificstates.271
+			days = 120
+				}
+			country_event = { 
+			id = pacificstates.272
+			days = 170
+				}
+			}
 		}
 	}
 	
@@ -6508,6 +6607,12 @@ focus_tree = {
 			}
 			custom_effect_tooltip = CAL_political_recovery_tooltip
 			CAL_increase_recovery = yes
+			hidden_effect = {
+			country_event = {
+			id = ustates.273
+			days = 40
+				}
+			}
 		}
 	}
 
@@ -6534,7 +6639,13 @@ focus_tree = {
 			add_manpower = 500
 			add_stability = 0.05
 			add_political_power = 25
-			add_popularity = { ideology = market_liberal popularity = 0.03 }
+			add_popularity = { ideology = market_liberal popularity = 0.04 }
+			hidden_effect = {
+			country_event = {
+			id = ustates.278
+			days = 20
+				}
+			}
 		}
 	}
 	
@@ -6594,6 +6705,12 @@ focus_tree = {
 			add_political_power = 25
 			add_stability = 0.05
 			add_popularity = { ideology = market_liberal popularity = 0.08 }
+			hidden_effect = {
+			country_event = {
+			id = ustates.275
+			days = 40
+				}
+			}
 		}
 	}
 	
@@ -6685,6 +6802,12 @@ focus_tree = {
 					type = dockyard
 					level = 
 					instant_build = yes
+				}
+			}
+			hidden_effect = {
+			country_event = {
+			id = ustates.282
+			days = 70
 				}
 			}
 		}
@@ -6851,6 +6974,16 @@ focus_tree = {
 				}
 				add_extra_state_shared_building_slots = 1
 			}
+			hidden_effect = {
+			country_event = {
+			id = ustates.283
+			days = 45
+				}
+			country_event = {
+			id = ustates.284
+			days = 100
+				}
+			}
 		}
 	}
 	
@@ -6890,7 +7023,6 @@ focus_tree = {
 		}
 		available = {
 			has_government = market_liberal
-			has_idea = CAL_civil_war_aftermath_idea5
 		}
 		ai_will_do = {
 			factor = 5
@@ -6933,7 +7065,6 @@ focus_tree = {
 		}
 		available = {
 			has_government = market_liberal
-			has_idea = CAL_civil_war_aftermath_idea5
 		}
 		ai_will_do = {
 			factor = 5
@@ -6968,7 +7099,6 @@ focus_tree = {
 		}
 		available = {
 			has_government = market_liberal
-			has_idea = CAL_civil_war_aftermath_idea5
 		}
 		ai_will_do = {
 			factor = 5
@@ -7591,6 +7721,16 @@ focus_tree = {
 				}
 				add_extra_state_shared_building_slots = 1
 			}
+			hidden_effect = {
+			country_event = {
+			id = ustates.292
+			days = 80
+				}
+			country_event = {
+			id = ustates.291
+			days = 120
+				}
+			}
 		}
 	}
 	
@@ -7675,6 +7815,12 @@ focus_tree = {
 				bonus = 1
 				uses = 1
 				category = industry
+			}
+			hidden_effect = {
+			country_event = {
+			id = ustates.301
+			days = 95
+				}
 			}
 		}
 	}
@@ -7852,13 +7998,7 @@ focus_tree = {
 				name = electronics_bonus
 				bonus = 1
 				uses = 2
-				category = industry
-			}
-			add_tech_bonus = {
-				name = assembly_bonus
-				bonus = 1
-				uses = 1
-				category = industry
+				category = electronics
 			}
 		}
 	}
@@ -7927,6 +8067,12 @@ focus_tree = {
 			}
 			add_political_power = 75
 			add_stability = 0.05
+			hidden_effect = {
+			country_event = {
+			id = ustates.296
+			days = 120
+				}
+			}
 		}
 	}
 	
@@ -8542,6 +8688,12 @@ focus_tree = {
 			}
 			add_political_power = 20
 			add_popularity = { ideology = social_democrat popularity = 0.02 }
+			hidden_effect = {
+			country_event = {
+			id = ustates.313
+			days = 7
+				}
+			}
 		}
 	}
 	
@@ -9102,6 +9254,12 @@ focus_tree = {
 				bonus = 0.55
 				uses = 2
 				category = electronics
+			}
+			hidden_effect = {
+			country_event = {
+			id = ustates.312
+			days = 15
+				}
 			}
 		}
 	}
@@ -11292,6 +11450,12 @@ focus_tree = {
 		y = 0
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_denounce_race_hatred"
+			hidden_effect = {
+			country_event = {
+			id = ustates.308
+			days = 15
+				}
+			}
 		}
 	}
 	
@@ -11368,6 +11532,12 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_negro_bureau"
+			hidden_effect = {
+			country_event = {
+			id = ustates.290
+			days = 20
+				}
+			}
 		}
 	}
 	

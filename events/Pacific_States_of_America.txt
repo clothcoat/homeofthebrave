@@ -16,22 +16,24 @@ country_event = { # Commonwealth Nomination
 	fire_only_once = yes
 	is_triggered_only = yes
 
-	immediate = {
-		hidden_effect = {
-			country_event = { id = pacificstates.154 days = 2 }
-		}
-	}
-
 	option = { # Upton Sinclair
 		name = pacificstates.1.a
 		hidden_effect = {
 			set_country_flag = PSA_1937_commonwealth_primary_sinclair
+			country_event = {
+				id = pacificstates.6
+				days = 35
+			}
 		}
 	}
 	option = { # Culbert Olson
 		name = pacificstates.1.b
 		hidden_effect = {
 			set_country_flag = PSA_1937_commonwealth_primary_olson
+			country_event = {
+				id = pacificstates.6
+				days = 35
+			}
 		}
 	}
 }
@@ -53,7 +55,7 @@ country_event = { # Progressive Primary
 		set_country_flag = PSA_1937_progressive_primary_wallace
 		country_event = {
 				id = pacificstates.1
-				days = 2
+				days = 8
 			}
 		}	
 	}
@@ -63,7 +65,7 @@ country_event = { # Progressive Primary
 		set_country_flag = PSA_1937_progressive_primary_johnson
 		country_event = {
 				id = pacificstates.1
-				days = 2
+				days = 8
 			}
 		}
 	}
@@ -73,7 +75,7 @@ country_event = { # Progressive Primary
 		set_country_flag = PSA_1937_progressive_primary_mcnary
 		country_event = {
 				id = pacificstates.1
-				days = 2
+				days = 8
 			}
 		}
 	}
@@ -83,7 +85,7 @@ country_event = { # Progressive Primary
 		set_country_flag = PSA_1937_progressive_primary_young
 		country_event = {
 				id = pacificstates.1
-				days = 2
+				days = 8
 			}
 		}
 	}
@@ -106,7 +108,7 @@ country_event = { # 1937 Dem-Rep Primary
 			set_country_flag = PSA_1937_liberal_primary_warren
 			country_event = {
 				id = pacificstates.2
-				days = 3
+				days = 6
 			}
 		}
 	}
@@ -116,7 +118,7 @@ country_event = { # 1937 Dem-Rep Primary
 			set_country_flag = PSA_1937_liberal_primary_mcadoo
 			country_event = {
 				id = pacificstates.2
-				days = 3
+				days = 6
 			}
 		}
 	}
@@ -126,7 +128,7 @@ country_event = { # 1937 Dem-Rep Primary
 			set_country_flag = PSA_1937_liberal_primary_martin
 			country_event = {
 				id = pacificstates.2
-				days = 3
+				days = 6
 			}
 		}
 	}
@@ -152,7 +154,7 @@ country_event = { # 1937 Republican Primary
 			set_country_flag = PSA_1937_republican_primary_taft
 			country_event = {
 				id = pacificstates.3
-				days = 3
+				days = 5
 			}
 		}
 	}
@@ -169,7 +171,7 @@ country_event = { # 1937 Republican Primary
 			set_country_flag = PSA_1937_republican_primary_gellatly
 			country_event = {
 				id = pacificstates.3
-				days = 3
+				days = 5
 			}
 		}
 	}
@@ -182,7 +184,7 @@ country_event = { # 1937 Republican Primary
 			set_country_flag = PSA_1937_republican_primary_hughes
 			country_event = {
 				id = pacificstates.3
-				days = 3
+				days = 5
 			}
 		}
 	}
@@ -206,7 +208,7 @@ country_event = { # 1937 Democrat Primary
 		}
 		country_event = {
 		id = pacificstates.4
-		days = 3
+		days = 6
 		}
 	}
 	
@@ -217,7 +219,7 @@ country_event = { # 1937 Democrat Primary
 		}
 		country_event = {
 		id = pacificstates.4
-		days = 3
+		days = 6
 		}
 	}
 	
@@ -227,11 +229,11 @@ country_event = { # 1937 Democrat Primary
 			set_country_flag = PSA_1937_democratic_primary_disney
 			country_event = {
 				id = pacificstates.4
-				days = 3
+				days = 6
 			}
 			country_event = {
 				id = pacificstates.251
-				days = 1
+				days = 2
 			}
 		}
 	}
@@ -4422,6 +4424,9 @@ country_event = {
 
 	option = {
 		name = pacificstates.154.a
+		hidden_effect = {
+			country_event = { id = pacificstates.1 days = 5 }
+		}
 	}
 }
 ####################
@@ -4520,7 +4525,6 @@ country_event = {# Election Declared
 
 	is_triggered_only = yes
 
-
 	option = {# Let's focus on more reliable models
 		name = pacificstates.205.a
 		hidden_effect = {
@@ -4550,7 +4554,19 @@ country_event = {# The Campaigns
 		hidden_effect = {
 		country_event = {
 		id = pacificstates.2
-		days = 6
+		days = 25
+		}
+		country_event = {
+		id = pacificstates.207
+		days = 37
+		}
+		country_event = {
+		id = pacificstates.209
+		days = 18
+		}
+		country_event = {
+		id = pacificstates.211
+		days = 10
 		}
 		}
 	}
@@ -4574,142 +4590,9 @@ country_event = {# President Arrives
 	option = {# Curtis Arrives
 		set_country_flag = PSA_curtis_arrives
 	}
-	option = {# Norris Arrives
-	set_country_flag = PSA_norris_arrives
-	}
-}
-
-country_event = {# WCC Amnesty
-	id = pacificstates.2060
-	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.2060"}
-	title = pacificstates.2060.t
-	desc = pacificstates.2060.d
-	picture = GFX_ACW_american_brigade
-
-	is_triggered_only = yes
-
-
-	option = {# Let's focus on more reliable models
-		name = pacificstates.206.a
-		set_party_name = {
-			ideology = paternal_autocrat
-			long_name = CAL_new_paternal_autocrat_party_long
-			name = CAL_new_paternal_autocrat_party }
-			
-		create_country_leader = {
-			name = "William Randolph Hearst"
-			desc = "POLITICS_WILLIAM_RANDOLPH_HEARST_DESC"
-			picture = "Portrait_CAL_William_Randolph_Hearst.tga"
-			expire = "1965.1.1"
-			ideology = radical_socialist_subtype
-			traits = {}
-		}
-	}
-}
-
-country_event = {# Offer for amnesty
-	id = pacificstates.2061
-	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.2061"}
-	title = pacificstates.2061.t
-	desc = pacificstates.2061.d
-	picture = GFX_ACW_american_brigade
-
-	trigger = {
-		USA = {
-		exists = no
-		}
-		WCC = {
-		exists = yes
-		}
-	}
-	mean_time_to_happen = {
-	days = 3
-	}
-
-	option = {# No
-		name = pacificstates.2061.a
-		add_political_power = -10
-		WCC = {
-		country_event = {
-		id = pacificstates.2064
-		days = 1
-			}
-		}
-	}
-	
-	option = {# Yes
-		name = pacificstates.2061.b
-		add_war_support = -0.01
-		WCC = {
-		country_event = {
-		id = pacificstates.2062
-		days = 1
-			}
-		}
-	}
-}
-
-country_event = {# Amnesty accepted
-	id = pacificstates.2062
-	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.2062"}
-	title = pacificstates.2062.t
-	desc = pacificstates.2062.d
-	picture = GFX_ACW_american_brigade
-
-	is_triggered_only = yes
-
-	option = {# Great
-		name = pacificstates.2062.a
-		CAL = {
-		annex = WCC
-		}
-	}
 }
 
 country_event = {# Hearst Runs
-	id = pacificstates.2063
-	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.2063"}
-	title = pacificstates.2063.t
-	desc = pacificstates.2063.d
-	picture = GFX_ACW_american_brigade
-
-	is_triggered_only = yes
-
-
-	option = {# Heartism
-		name = pacificstates.2063.a
-		set_party_name = {
-			ideology = paternal_autocrat
-			long_name = CAL_new_paternal_autocrat_party_long
-			name = CAL_new_paternal_autocrat_party }
-			
-		create_country_leader = {
-			name = "William Randolph Hearst"
-			desc = "POLITICS_WILLIAM_RANDOLPH_HEARST_DESC"
-			picture = "Portrait_CAL_William_Randolph_Hearst.tga"
-			expire = "1965.1.1"
-			ideology = paternal_autocrat_subtype
-			traits = {}
-		}
-	}
-}
-
-country_event = {# Amnesty accepted
-	id = pacificstates.2064
-	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.2064"}
-	title = pacificstates.2064.t
-	desc = pacificstates.2064.d
-	picture = GFX_ACW_american_brigade
-
-	is_triggered_only = yes
-
-	option = {# Dang
-		name = pacificstates.2064.a
-		add_political_power = -10
-	}
-}
-
-country_event = {# Long's Demands
 	id = pacificstates.207
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.207"}
 	title = pacificstates.207.t
@@ -4719,21 +4602,38 @@ country_event = {# Long's Demands
 	is_triggered_only = yes
 
 
-	option = {# Agree
+	option = {# Heartism
 		name = pacificstates.207.a
-		diplomatic_relation = {
-			country = TEX
-			relation = non_aggression_pact
-			active = yes
+		set_party_name = {
+			ideology = paternal_autocrat
+			long_name = CAL_new_paternal_autocrat_party_long
+			name = CAL_new_paternal_autocrat_party }			
+		create_country_leader = {
+			name = "William Randolph Hearst"
+			desc = "POLITICS_WILLIAM_RANDOLPH_HEARST_DESC"
+			picture = "Portrait_CAL_William_Randolph_Hearst.tga"
+			expire = "1965.1.1"
+			ideology = paternal_autocrat_subtype
+			traits = {}
 		}
+		if = {
+		limit = { NOT = {
+		has_war_with = TEX
+		} 
+		}
+		hidden_effect = {
 		country_event = {
 		id = pacificstates.208
-		days = 1
+		days = 5
+				}
+			}
 		}
-	}
-	
-	option = {# No
-		name = pacificstates.207.b
+		hidden_effect = {
+		country_event = {
+		id = pacificstates.210
+		days = 30
+				}
+			}
 	}
 }
 
@@ -4771,7 +4671,7 @@ country_event = {# Celebrity Endorsements
 		add_popularity {ideology = market_liberal popularity = 0.03 }
 		add_popularity {ideology = social_conservative popularity = 0.02 }
 
-		}
+	}
 }
 
 country_event = {# Hearst's Horror Stories
@@ -4788,6 +4688,12 @@ country_event = {# Hearst's Horror Stories
 		name = pacificstates.210.a
 		add_war_support = -0.01
 		add_popularity {ideology = paternal_autocrat popularity = 0.02 }
+		hidden_effect = {
+			country_event = {
+			id = pacificstates.222
+			days = 30
+			}
+		}
 	}
 }
 
@@ -4816,13 +4722,7 @@ country_event = {# Ceasefire with MacArthur
 	desc = pacificstates.214.d
 	picture = GFX_ACW_american_brigade
 
-	trigger = {
-	has_country_leader = {
-		name = "William Randolph Hearst"
-		ruling_only = yes
-	}
-	has_war_with = USA
-	}
+	is_triggered_only = yes
 
 	fire_only_once = yes
 	
@@ -4833,38 +4733,31 @@ country_event = {# Ceasefire with MacArthur
 	option = {# 
 		name = pacificstates.214.a
 		white_peace = USA
+		white_peace = WCC
+		USA = {
+		add_opinion_modifier = { target = CAL modifier = small_increase }
+		}
 	}
 	option = {# 
 		name = pacificstates.214.b
 		white_peace = USA
+		add_political_power = -20
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = -100
+			producer = CAL
+			}
 		WCC = {
-		country_event = {
-		id = pacificstates.215
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 100
+			producer = CAL
+			}
+		add_opinion_modifier = { target = CAL modifier = medium_increase }
 		}
+		USA = {
+		add_opinion_modifier = { target = CAL modifier = medium_increase }
 		}
-	}
-}
-
-country_event = {# Expand Hearst Castle
-	id = pacificstates.216
-	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.216"}
-	title = pacificstates.216.t
-	desc = pacificstates.216.d
-	picture = GFX_ACW_american_brigade
-
-	trigger = { has_completed_focus = CAL_renovate_california }
-
-	fire_only_once = yes
-	
-	option = {# Let's focus on more reliable models
-		name = pacificstates.216.a
-		add_political_power = -5
-		add_popularity = { ideology = paternal_autocrat ideology = 0.02 }
-	}
-	option = {# Let's focus on more reliable models
-		name = pacificstates.216.a
-		add_political_power = -10
-		add_popularity = { ideology = paternal_autocrat ideology = 0.03 }
 	}
 }
 
@@ -4875,7 +4768,11 @@ country_event = {# Papers Report Our Parties
 	desc = pacificstates.217.d
 	picture = GFX_ACW_american_brigade
 
-	trigger = { has_completed_focus = CAL_roaring_parties }
+	trigger = { has_completed_focus = CAL_roaring_parties 
+	NOT = {
+	has_completed_focus = CAL_investigate_gop
+	}
+	}
 	
 	fire_only_once = yes
 	
@@ -4905,11 +4802,12 @@ country_event = {# Media Resistance
 		name = pacificstates.218.a
 		add_stability = 0.02
 		add_popularity = { ideology = paternal_autocrat popularity = 0.01 }
+		add_political_power = -10
 	}
 	option = {# Get em
 		name = pacificstates.218.b
-		add_stability = -0.01
-		add_political_power = 10
+		add_stability = -0.03
+		add_political_power = 20
 	}
 }
 
@@ -4950,6 +4848,10 @@ country_event = {# The Hearst Deficit
 	option = {# Let's focus on more reliable models
 		name = pacificstates.221.a
 		add_ideas = CAL_hearst_debt
+		set_country_flag = {
+		flag = CAL_Hearst_debt
+		value = 4
+		}
 	}
 }
 
@@ -4964,35 +4866,12 @@ country_event = {# Mankind United Cult
 
 	fire_only_once = yes
 	
-	option = {# Let's focus on more reliable models
+	option = {#Odd
 		name = pacificstates.222.a
 		add_popularity = { ideology = paternal_autocrat popularity = 0.01 }
 	}
 }
 
-country_event = {# Anti-Syndicalist Organizations
-	id = pacificstates.223
-	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.223"}
-	title = pacificstates.223.t
-	desc = pacificstates.223.d
-	picture = GFX_ACW_american_brigade
-
-	is_triggered_only = yes
-
-	fire_only_once = yes
-	
-	option = {# Support them
-		name = pacificstates.223.a
-		add_manpower = 100
-		add_political_power = -10
-		add_war_support = 0.02
-		add_popularity = { ideology = national_populist popularity = 0.03 }
-	}
-	option = {# Don't
-		name = pacificstates.223.b
-		add_political_power = -10
-	}
-}
 country_event = {# Bodin Working with Japan?
 	id = pacificstates.224
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.224"}
@@ -5101,16 +4980,20 @@ country_event = {# Protests Increase
 	
 	option = {#  Send them both
 		name = pacificstates.228.a
+		hidden_effect = {
 		country_event = {
 		id = pacificstates.230
 		days = 3
+			}
 		}
 	}
 	option = {# Keep Arnold
 		name = pacificstates.228.b
+		hidden_effect = {
 		country_event = {
 		id = pacificstates.245
 		days = 4
+			}
 		}
 	}
 }
@@ -5124,19 +5007,23 @@ country_event = {# Hearst couped by Arnold and Marshall
 	is_triggered_only = yes
 
 	fire_only_once = yes
-	
+
 	option = {# I surrender
 	name = pacificstates.229.a
+	hidden_effect = {
 		country_event = {
 		id = pacificstates.245
-		hours = 3
+		days = 3
+			}
 		}
 	}
 	option = {# Hold Them Off!
 	name = pacificstates.229.a
+		hidden_effect = {
 		country_event = {
-		id = pacificstates.245
-		hours = 3
+		id = pacificstates.2301
+		days = 3
+			}
 		}
 	}
 }
@@ -5154,9 +5041,11 @@ country_event = {# Protests Put Down
 	
 	option = {# 
 		name = pacificstates.230.a
+		hidden_effect = {
 		country_event = {
 		id = pacificstates.229
 		days = 1
+			}
 		}
 	}
 }
@@ -5169,18 +5058,19 @@ country_event = {# Feds push them back
 
 	is_triggered_only = yes
 
-
+	fire_only_once = yes
+	
 	option = {# Let's focus on more reliable models
 		name = pacificstates.2301.a
+		add_stability = 0.08
+		add_political_power = 60
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.05 }
+		add_manpower = -2500
 		hidden_effect = {
 		country_event = {
 		id = pacificstates.231
 			}
 		}
-		add_stability = 0.08
-		add_political_power = 60
-		add_popularity = { ideology = authoritarian_democrat popularity = 0.05 }
-		add_manpower = -2500
 	}
 }
 
@@ -5193,7 +5083,8 @@ country_event = {# Opposition Crushed
 
 	is_triggered_only = yes
 
-
+	fire_only_once = yes
+	
 	option = {# Victory
 		name = pacificstates.231.a
 		add_popularity = { ideology = market_liberal popularity = -0.03 }
@@ -5204,6 +5095,10 @@ country_event = {# Opposition Crushed
 		country_event = {
 		id = pacificstates.219
 		days = 3
+			}
+		country_event = {
+		id = pacificstates.232
+		days = 10
 			}
 		}
 	}
@@ -5218,7 +5113,8 @@ country_event = {# Federalist Aid
 
 	is_triggered_only = yes
 
-
+	fire_only_once = yes
+	
 	option = {# Yes
 		name = pacificstates.232.a
 		add_manpower = 8500
@@ -5231,44 +5127,6 @@ country_event = {# Federalist Aid
 	}
 }
 
-country_event = {# Denounce Long
-	id = pacificstates.233
-	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.233"}
-	title = pacificstates.233.t
-	desc = pacificstates.233.d
-	picture = GFX_ACW_american_brigade
-
-	is_triggered_only = yes
-
-
-	option = {# Ban it
-		name = pacificstates.233.a
-		add_political_power = -10
-	}
-	option = {# Fine them
-		name = pacificstates.233.b
-		add_political_power = -15
-		add_popularity = { ideology = social_democrat popularity = -0.02 }
-	}
-	
-	option = {# Do nothing
-		name = pacificstates.233.c
-		add_stability = -0.01
-	}
-	
-	option = {# Support the WCC
-		name = pacificstates.233.e
-		add_manpower = -1300
-		WCC = {
-		add_manpower = 1300
-		}
-		army_experience = 5
-		add_war_support = 0.02
-		add_stability = -0.02
-		add_political_power = -20
-	}
-}
-
 country_event = {# Leftists Rounded Up
 	id = pacificstates.234
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.234"}
@@ -5278,8 +5136,9 @@ country_event = {# Leftists Rounded Up
 
 	is_triggered_only = yes
 
+	fire_only_once = yes
 
-	option = {# Let's focus on more reliable models
+	option = {# Err good I suppose
 		name = pacificstates.234.a
 		add_popularity = { ideology = radicial_socialist popularity = -0.04 }
 		add_political_power = 10
@@ -5297,6 +5156,7 @@ country_event = {# Cohen Shot
 
 	is_triggered_only = yes
 
+	fire_only_once = yes
 
 	option = {# Great
 		name = pacificstates.235.a
@@ -5315,6 +5175,7 @@ country_event = {# Liquor Laws
 
 	is_triggered_only = yes
 
+	fire_only_once = yes
 
 	option = {# 21
 		name = pacificstates.236.a
@@ -5346,7 +5207,8 @@ country_event = {# Oil and Electricity
 
 	is_triggered_only = yes
 
-
+	fire_only_once = yes
+	
 	option = {# 
 		name = pacificstates.237.a
 		add_political_power = 30
@@ -5369,7 +5231,8 @@ country_event = {# Hearst Castle Expansion
 
 	is_triggered_only = yes
 
-
+	fire_only_once = yes
+	
 	option = {# Marble
 		name = pacificstates.238.a
 	}
@@ -5387,7 +5250,8 @@ country_event = {# Border Raids
 
 	is_triggered_only = yes
 
-
+	fire_only_once = yes
+	
 	option = {# Warn them
 		name = pacificstates.239.a
 		ai_chance = {
@@ -5414,7 +5278,8 @@ country_event = {# Border Raids Response
 
 	is_triggered_only = yes
 
-
+	fire_only_once = yes
+	
 	option = {# FINE I WANTED TO STOP ANYWAYS 
 		name = pacificstates.2390.a
 		add_political_power = 40
@@ -5447,7 +5312,8 @@ country_event = {# Canadian Demands
 
 	is_triggered_only = yes
 
-
+	fire_only_once = yes
+	
 	option = {# Pay him off
 		name = pacificstates.240.a
 		ai_chance = {
@@ -5479,7 +5345,8 @@ country_event = {# Canadian Demands Refused
 
 	is_triggered_only = yes
 
-
+	fire_only_once = yes
+	
 	option = {# Oh well
 		name = pacificstates.241.a
 		add_political_power = -20
@@ -5512,6 +5379,8 @@ country_event = {# Canadian Demands Met
 
 	is_triggered_only = yes
 
+	fire_only_once = yes
+	
 	option = {# Thanks
 		name = pacificstates.2410.a
 		add_political_power = 30
@@ -5550,17 +5419,31 @@ country_event = {# Nature Reserves
 
 	is_triggered_only = yes
 
+	fire_only_once = yes
 
-	option = {# Preserve them
-		name = pacificstates.242.a
-	}
 	option = {# Drill Baby Drill
+		name = pacificstates.242.a
+		ai_chance = {
+			factor = 10
+		}
+		add_stability = -0.03
+		add_political_power = 30
+		add_resource = {
+			type = oil
+			amount = 9
+			state = 378
+		}
+		modify_country_flag = {
+				flag = CAL_Hearst_debt
+				value = -2
+		}
+	}
+	option = {# Preserve Them
 		name = pacificstates.242.b
 		ai_chance = {
 			factor = 10
 		}
-		add_stability = -0.02
-		add_political_power = -20
+		add_political_power = 20
 		add_resource = {
 			type = oil
 			amount = 6
@@ -5582,14 +5465,18 @@ country_event = {# Pillage Hawaii
 
 	is_triggered_only = yes
 
-
+	fire_only_once = yes
+	
 	option = {# It'll do
 		name = pacificstates.243.a
 		modify_country_flag = {
 				flag = CAL_Hearst_debt
 				value = -2
 		}
-		increase_ruling_party_popularity_by_5 = yes
+		add_popularity = {
+		ideology = paternal_autocrat
+		popularity = 0.03
+		}
 	}
 }
 
@@ -5599,12 +5486,15 @@ country_event = {# Debt under control
 	title = pacificstates.244.t
 	desc = pacificstates.244.d
 	picture = GFX_ACW_american_brigade
+	
 	is_triggered_only = yes
 
+	fire_only_once = yes
+	
 	trigger = {
 	has_country_flag = {
-		flag = CAL_
-		value < 1
+		flag = CAL_Hearst_debt
+		value < 2
 		}
 	}
 	
@@ -5614,7 +5504,7 @@ country_event = {# Debt under control
 	option = {# Let's focus on more reliable models
 		name = pacificstates.244.a
 		remove_ideas = CAL_hearst_debt_idea
-		add_stability = 0.05
+		add_stability = 0.08
 		increase_ruling_party_popularity_by_5 = yes
 	}
 }
@@ -5629,6 +5519,8 @@ country_event = {# Military Coups Hearst
 
 	is_triggered_only = yes
 
+	fire_only_once = yes
+	
 	option = {# Cool Hap
 	name = pacificstates.229.a
 		add_popularity = {
@@ -5647,7 +5539,23 @@ country_event = {# Military Coups Hearst
 			expire = "1965.1.1"
 			ideology = authoritarian_democrat_subtype
 			traits = {}
+		}
+		hidden_effect = {
+		if = {
+		limit = { has_country_flag = CAL_Spiritualist_Aid }
+			country_event = {
+			id = pacificstates.351
+			days = 1
 				}
+			}
+		else = {
+		country_event = {
+			id = pacificstates.246
+			days = 1
+				}
+			}
+		}
+		
 	}
 }
 
@@ -5660,14 +5568,20 @@ country_event = {# Federal Police Purged
 
 	is_triggered_only = yes
 
+	fire_only_once = yes
 
-	option = {# Let's focus on more reliable models
+	option = {# Their tyranny finally ends
 		name = pacificstates.246.a
-	}
-	option = {# I like it how it is
-		name = pacificstates.246.b
-		ai_chance = {
-			factor = 10
+		add_popularity = { ideology = paternal_autocrat popularity = -0.03 }
+		add_manpower = -2000
+		WCC = {
+		add_manpower = 2000
+		}
+		hidden_effect = {
+		country_event = {
+			id = pacificstates.247
+			days = 2
+			}
 		}
 	}
 }
@@ -5681,35 +5595,71 @@ country_event = {# MacArthur's Demands
 
 	is_triggered_only = yes
 
-
-	option = {# Let's focus on more reliable models
+	fire_only_once = yes
+	
+	option = {# 
 		name = pacificstates.247.a
+		hidden_effect = {
+		country_event = {
+			id = pacificstates.247
+			days = 3
+			}
+		}
 	}
 	option = {# I like it how it is
 		name = pacificstates.247.b
-		ai_chance = {
-			factor = 10
+		declare_war_on = {
+			target = USA
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = WCC
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = CSA
+			type = annex_everything
+		}
+		hidden_effect = {
+		country_event = {
+			id = pacificstates.247
+			days = 3
+			}
 		}
 	}
 }
 
-country_event = {# Keep the Junta
+country_event = {# Speech to California
 	id = pacificstates.248
-	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.248"}
-	title = pacificstates.248.t
-	desc = pacificstates.248.d
+	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.249"}
+	title = pacificstates.249.t
+	desc = pacificstates.249.d
 	picture = GFX_ACW_american_brigade
 
 	is_triggered_only = yes
 
+	fire_only_once = yes
 
-	option = {# Let's focus on more reliable models
-		name = pacificstates.248.a
+	option = {# Announce our intent to retake the West
+		name = pacificstates.249.a
+		add_war_support = 0.05
+		WCC = add_opinion_modifier = { target = CAL modifier = large_decrease }
+		USA = add_opinion_modifier = { target = CAL modifier = large_decrease }
+		hidden_effect = {
+		country_event = {
+			id = pacificstates.249
+			days = 3
+			}
+		}
 	}
-	option = {# I like it how it is
-		name = pacificstates.248.b
-		ai_chance = {
-			factor = 10
+	option = {# We are Pacificans Now
+		name = pacificstates.249.b
+		add_stability = 0.05
+		hidden_effect = {
+		country_event = {
+			id = pacificstates.249
+			days = 3
+			}
 		}
 	}
 }
@@ -5723,15 +5673,58 @@ country_event = {# Re-Open Congress
 
 	is_triggered_only = yes
 
+	fire_only_once = yes
 
-	option = {# Let's focus on more reliable models
+	option = {# Very well, I will run
 		name = pacificstates.249.a
-	}
-	option = {# I like it how it is
-		name = pacificstates.249.b
-		ai_chance = {
-			factor = 10
+		hidden_effect = {
+		country_event = {
+			id = pacificstates.2500
+			days = 6
+			}
 		}
+	}
+	option = {# No, military and politics must stay seperate
+		name = pacificstates.249.b
+		hidden_effect = {
+		country_event = {
+			id = pacificstates.2500
+			days = 6
+			}
+		}
+	}
+}
+
+country_event = {# Snap Election Results
+	id = pacificstates.2490
+	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.2490"}
+	title = pacificstates.2490.t
+	desc = pacificstates.2490.d
+	picture = GFX_ACW_american_brigade
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = {# George Marshall
+		name = pacificstates.2490.a
+		
+	}
+	option = {# Hiram Johnson
+		name = pacificstates.2490.b
+		
+	}
+	option = {# Howard Hughes
+		name = pacificstates.2490.c
+		
+	}
+	option = {# Charles Sprague
+		name = pacificstates.2490.e
+		
+	}
+	option = {# Henry J. Kaiser
+		name = pacificstates.2490.f
+		
 	}
 }
 
@@ -5742,18 +5735,29 @@ country_event = {# RAND
 	desc = pacificstates.250.d
 	picture = GFX_ACW_american_brigade
 
-	is_triggered_only = yes
-
-
-	option = {# Let's focus on more reliable models
-		name = pacificstates.250.a
-	}
-	option = {# I like it how it is
-		name = pacificstates.250.b
-		ai_chance = {
-			factor = 10
+	trigger = {
+	has_completed_focus = CAL_military_research
+	NOT = {
+	has_government = national_populist
+	has_government = paternal_autocrat
 		}
 	}
+
+	mean_time_to_happen = {
+	days = 16
+	}
+	fire_only_once = yes
+
+	option = {# 
+		name = pacificstates.250.a
+		add_tech_bonus = {
+			name = electronics_bonus
+			bonus = 1.5
+			uses = 1
+			category = electronics
+		}
+	}
+	
 }
 
 ##Soc Con PSA##
@@ -5767,15 +5771,13 @@ country_event = {# Walt Disney Accepts
 
 	is_triggered_only = yes
 
-
-	option = {# Let's focus on more reliable models
+	fire_only_once = yes
+	
+	option = {#We're saved
 		name = pacificstates.251.a
-	}
-	option = {# I like it how it is
-		name = pacificstates.251.b
-		ai_chance = {
-			factor = 10
-		}
+		add_political_power = -20
+		add_popularity = { ideology = social_conservative popularity = 0.01 }
+		set_country_flag = CAL_D
 	}
 }
 
@@ -5788,15 +5790,48 @@ country_event = {# Welfare Reforms
 
 	is_triggered_only = yes
 
-
-	option = {# Let's focus on more reliable models
+	fire_only_once = yes
+	
+	option = {# Have stronger work requirements
 		name = pacificstates.252.a
-	}
-	option = {# I like it how it is
-		name = pacificstates.252.b
-		ai_chance = {
-			factor = 10
+		add_political_power = 25
+		random_owned_state = {
+				limit = {
+					is_core_of = CAL
+					is_controlled_by = CAL
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
 		}
+	}
+	option = {# Make it more exclusive
+		name = pacificstates.252.a
+		add_stability = 0.02
+		add_political_power = 45
+	}
+}
+
+country_event = {# Left Democrats Fired
+	id = pacificstates.253
+	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.253"}
+	title = pacificstates.253.t
+	desc = pacificstates.253.d
+	picture = GFX_ACW_american_brigade
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = {# Let's backtrack a bit...
+		name = pacificstates.253.a
+		add_popularity = { ideology = radicial_socialist popularity = -0.01 }
+		add_stability = 0.01
+	}
+	option = {# Feel bad for Pinkos? No.
+		name = pacificstates.253.a
+		add_popularity = { ideology = radicial_socialist popularity = -0.03 }
+		add_political_power = 20
+		add_stability = -0.01
 	}
 }
 
@@ -5809,7 +5844,8 @@ country_event = {# Competing Grants - Shell VS Chevron
 
 	is_triggered_only = yes
 
-
+	fire_only_once = yes
+	
 	option = {# Farms
 		name = pacificstates.254.a
 		add_stability = 0.02
@@ -5843,7 +5879,8 @@ country_event = {# Release of Education for Death: Syndicalist Madness
 
 	is_triggered_only = yes
 
-
+	fire_only_once = yes
+	
 	option = {# Wonderful
 		name = pacificstates.255.a
 		add_popularity = { ideology = social_conservative popularity = 0.02 }
@@ -5859,6 +5896,7 @@ country_event = {# Release of Education for Death: Syndicalist Madness
 		add_manpower = 1550
 	}
 }
+
 country_event = {# Commando Duck vs the Klan
 	id = pacificstates.256
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.205"}
@@ -5866,16 +5904,30 @@ country_event = {# Commando Duck vs the Klan
 	desc = pacificstates.256.d
 	picture = GFX_ACW_american_brigade
 
-	is_triggered_only = yes
+	trigger = {
+	COR = {
+	exists = yes
+	}
+	OR = {
+	date > 1938.1.05
+	has_country_leader = { ruling_only = yes name = "Walt Disney" } 
+		}
+	}
 
-	option = {# Let's focus on more reliable models
+	mean_time_to_happen = {
+	days = 10
+	}
+	
+	fire_only_once = yes
+	
+	option = {# Hilarious
 		name = pacificstates.256.a
 		add_war_support = 0.02
 		add_popularity = { ideology = social_conservative popularity = 0.02 }
 		add_popularity = { ideology = national_populist popularity = -0.02 }
 		add_manpower = 500
 	}
-	option = {# I like it how it is
+	option = {# Kids get in for free
 		name = pacificstates.256.b
 		add_war_support = 0.04
 		increase_ruling_party_popularity_by_5 = yes
@@ -5891,16 +5943,25 @@ country_event = {# The Chief's Face
 	desc = pacificstates.257.d
 	picture = GFX_ACW_american_brigade
 
-	is_triggered_only = yes
+	trigger = {
+	has_war_with = USA
+	has_completed_focus = CAL_patriotic_shorts
+	}
 
-	option = {# Let's focus on more reliable models
+	mean_time_to_happen = {
+	days = 10
+	}
+	
+	fire_only_once = yes
+	
+	option = {# Wonderful
 		name = pacificstates.257.a
 		add_war_support = 0.04
 		add_popularity = { ideology = social_conservative popularity = 0.02 }
 		add_popularity = { ideology = authoritarian_democrat popularity = -0.02 }
 		add_manpower = 1000
 	}
-	option = {# I like it how it is
+	option = {# Deals for families
 		name = pacificstates.256.b
 		add_war_support = 0.05
 		increase_ruling_party_popularity_by_5 = yes
@@ -5918,12 +5979,14 @@ country_event = {# Entente sends goods
 
 	is_triggered_only = yes
 
-	option = {# Let's focus on more reliable models
+	fire_only_once = yes
+	
+	option = {# For Democracy
 		name = pacificstates.258.a
 		add_equipment_to_stockpile = {
 			type = infantry_equipment_1
-			amount = 1000
-			producer = SIC
+			amount = 500
+			producer = CAN
 		}
 	}
 }
@@ -5937,7 +6000,9 @@ country_event = {# Comic Codes Authority
 
 	is_triggered_only = yes
 
-	option = {# Let's focus on more reliable models
+	fire_only_once = yes
+	
+	option = {# Very well
 		name = pacificstates.259.a
 		add_popularity = { ideology = social_conservative popularity = 0.01 }
 	}
@@ -5952,7 +6017,9 @@ country_event = {# Universities Refuse to Support Immorality
 
 	is_triggered_only = yes
 
-	option = {# 
+	fire_only_once = yes
+	
+	option = {# A productive development
 		name = pacificstates.260.a
 		add_political_power = 10
 		add_stability = 0.02
@@ -5971,37 +6038,13 @@ country_event = {# Industrial League for Clean Living
 
 	is_triggered_only = yes
 
-	option = {# Let's focus on more reliable models
+	fire_only_once = yes
+	
+	option = {#	A positive event
 		name = pacificstates.261.a
 	}
-	option = {# I like it how it is
-		name = pacificstates.261.b
-		ai_chance = {
-			factor = 10
-		}
-	}
 }
 
-
-country_event = {# Flag Laws
-	id = pacificstates.262
-	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.262"}
-	title = pacificstates.262.t
-	desc = pacificstates.262.d
-	picture = GFX_ACW_american_brigade
-
-	is_triggered_only = yes
-
-	option = {# Let's focus on more reliable models
-		name = pacificstates.262.a
-	}
-	option = {# I like it how it is
-		name = pacificstates.262.b
-		ai_chance = {
-			factor = 10
-		}
-	}
-}
 
 country_event = {# Prominent Syndicalists arrested
 	id = pacificstates.263
@@ -6012,14 +6055,11 @@ country_event = {# Prominent Syndicalists arrested
 
 	is_triggered_only = yes
 
-	option = {# Let's focus on more reliable models
+	fire_only_once = yes
+	
+	option = {# Good
 		name = pacificstates.263.a
-	}
-	option = {# I like it how it is
-		name = pacificstates.263.b
-		ai_chance = {
-			factor = 10
-		}
+		add_popularity = { ideology = syndicalist popularity = -0.03 }
 	}
 }
 
@@ -6032,33 +6072,17 @@ country_event = {# Defense Attorney's Attacked
 
 	is_triggered_only = yes
 
-	option = {# Let's focus on more reliable models
+	fire_only_once = yes
+
+	option = {# Assign Protection
 		name = pacificstates.264.a
 	}
-	option = {# I like it how it is
+	option = {#	Have the Military handle remaining cases
 		name = pacificstates.264.b
-		ai_chance = {
-			factor = 10
-		}
-	}
-}
-
-country_event = {# Immigration restrictions
-	id = pacificstates.265
-	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.265"}
-	title = pacificstates.265.t
-	desc = pacificstates.265.d
-	picture = GFX_ACW_american_brigade
-
-	is_triggered_only = yes
-
-	option = {# Let's focus on more reliable models
-		name = pacificstates.265.a
-	}
-	option = {# I like it how it is
-		name = pacificstates.265.b
-		ai_chance = {
-			factor = 10
+		trigger = {
+		has_government = authoritarian_democrat
+		has_government = paternal_autocrat
+		has_government = national_populist
 		}
 	}
 }
@@ -6072,54 +6096,22 @@ country_event = {# Is Social Hygiene going too far?
 
 	is_triggered_only = yes
 
-	option = {# Let's focus on more reliable models
+	fire_only_once = yes
+	
+	option = {# Investigate these institutions
 		name = pacificstates.266.a
 	}
-	option = {# I like it how it is
+	option = {# Raise the bar to be sent to these areas
 		name = pacificstates.266.b
-		ai_chance = {
-			factor = 10
+	}
+	option = {# They're criminals so what's the problem
+		name = pacificstates.266.b
+		trigger = {
+		has_government = authoritarian_democrat
+		has_government = paternal_autocrat
+		has_government = national_populist
 		}
-	}
-}
-
-country_event = {# Syndicalist Papers shut down
-	id = pacificstates.267
-	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.267"}
-	title = pacificstates.267.t
-	desc = pacificstates.267.d
-	picture = GFX_ACW_american_brigade
-
-	is_triggered_only = yes
-
-	option = {# Let's focus on more reliable models
-		name = pacificstates.267.a
-	}
-	option = {# I like it how it is
-		name = pacificstates.267.b
-		ai_chance = {
-			factor = 10
-		}
-	}
-}
-
-country_event = {# Union Leaders publicly investigated
-	id = pacificstates.268
-	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.268"}
-	title = pacificstates.268.t
-	desc = pacificstates.268.d
-	picture = GFX_ACW_american_brigade
-
-	is_triggered_only = yes
-
-	option = {# Let's focus on more reliable models
-		name = pacificstates.268.a
-	}
-	option = {# I like it how it is
-		name = pacificstates.268.b
-		ai_chance = {
-			factor = 10
-		}
+		
 	}
 }
 
@@ -6132,14 +6124,10 @@ country_event = {# The Hollywood Ten
 
 	is_triggered_only = yes
 
-	option = {# Let's focus on more reliable models
+	fire_only_once = yes
+	
+	option = {# Commies
 		name = pacificstates.269.a
-	}
-	option = {# I like it how it is
-		name = pacificstates.269.b
-		ai_chance = {
-			factor = 10
-		}
 	}
 }
 
@@ -6152,14 +6140,16 @@ country_event = {# Hollywood Blacklist
 
 	is_triggered_only = yes
 
-	option = {# Let's focus on more reliable models
+	fire_only_once = yes
+	
+	option = {# Back the Backlist
 		name = pacificstates.270.a
 	}
-	option = {# I like it how it is
+	option = {# Denounce the Blacklist
 		name = pacificstates.203.b
-		ai_chance = {
-			factor = 10
-		}
+	}
+	option = {# Remain Silent
+		name = pacificstates.203.c
 	}
 }
 
@@ -6172,14 +6162,34 @@ country_event = {# Hays Code Backlash
 
 	is_triggered_only = yes
 
-	option = {# Let's focus on more reliable models
+	fire_only_once = yes
+	
+	option = {# Talk to them
 		name = pacificstates.271.a
 	}
-	option = {# I like it how it is
+	option = {# No, the Hays Code stays
 		name = pacificstates.271.b
-		ai_chance = {
-			factor = 10
-		}
+		
+	}
+}
+
+country_event = {# Protests
+	id = pacificstates.272
+	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.271"}
+	title = pacificstates.271.t
+	desc = pacificstates.271.d
+	picture = GFX_ACW_american_brigade
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = {# Talk to administrators
+		name = pacificstates.271.a
+	}
+	option = {# Counter these fellow-travelors
+		name = pacificstates.271.b
+		
 	}
 }
 
@@ -6193,34 +6203,10 @@ country_event = {# Mass Produced TV
 
 	is_triggered_only = yes
 
-	option = {# Let's focus on more reliable models
+	fire_only_once = yes
+	
+	option = {# Great
 		name = pacificstates.273.a
-	}
-	option = {# I like it how it is
-		name = pacificstates.273.b
-		ai_chance = {
-			factor = 10
-		}
-	}
-}
-
-country_event = {# Longshoreman Strike
-	id = pacificstates.274
-	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.274"}
-	title = pacificstates.274.t
-	desc = pacificstates.274.d
-	picture = GFX_ACW_american_brigade
-
-	is_triggered_only = yes
-
-	option = {# Let's focus on more reliable models
-		name = pacificstates.274.a
-	}
-	option = {# I like it how it is
-		name = pacificstates.274.b
-		ai_chance = {
-			factor = 10
-		}
 	}
 }
 
@@ -6233,14 +6219,10 @@ country_event = {# International Film making explodes
 
 	is_triggered_only = yes
 
-	option = {# Let's focus on more reliable models
+	fire_only_once = yes
+	
+	option = {# Wonderful
 		name = pacificstates.275.a
-	}
-	option = {# I like it how it is
-		name = pacificstates.275.b
-		ai_chance = {
-			factor = 10
-		}
 	}
 }
 
@@ -6251,15 +6233,23 @@ country_event = {# Panic!
 	desc = pacificstates.276.d
 	picture = GFX_ACW_american_brigade
 
-	is_triggered_only = yes
-
-	option = {# Let's focus on more reliable models
-		name = pacificstates.276.a
+	trigger = {
+	has_completed_focus = CAL_american_laisze_faire
 	}
-	option = {# I like it how it is
-		name = pacificstates.276.b
-		ai_chance = {
-			factor = 10
+	
+	mean_time_to_happen = {
+	days = 20
+	}
+
+	fire_only_once = yes
+	
+	option = {# Damn
+		name = pacificstates.276.a
+		hidden_effect = {
+			country_event = {
+			id = ustates.277
+			days = 65
+			}
 		}
 	}
 }
@@ -6273,14 +6263,10 @@ country_event = {# Recovery
 
 	is_triggered_only = yes
 
-	option = {# Let's focus on more reliable models
+	fire_only_once = yes
+	
+	option = {# Thank God for Laissez-Faires
 		name = pacificstates.277.a
-	}
-	option = {# I like it how it is
-		name = pacificstates.277.b
-		ai_chance = {
-			factor = 10
-		}
 	}
 }
 
@@ -6293,74 +6279,10 @@ country_event = {# Rotary Club
 
 	is_triggered_only = yes
 
-	option = {# Let's focus on more reliable models
+	fire_only_once = yes
+	
+	option = {# There are always Men willing to do good
 		name = pacificstates.278.a
-	}
-	option = {# I like it how it is
-		name = pacificstates.278.b
-		ai_chance = {
-			factor = 10
-		}
-	}
-}
-
-country_event = {# Pepperdine University
-	id = pacificstates.279
-	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.279"}
-	title = pacificstates.279.t
-	desc = pacificstates.279.d
-	picture = GFX_ACW_american_brigade
-
-	is_triggered_only = yes
-
-	option = {# Let's focus on more reliable models
-		name = pacificstates.279.a
-	}
-	option = {# I like it how it is
-		name = pacificstates.279.b
-		ai_chance = {
-			factor = 10
-		}
-	}
-}
-
-country_event = {# Central American Relations
-	id = pacificstates.280
-	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.280"}
-	title = pacificstates.280.t
-	desc = pacificstates.280.d
-	picture = GFX_ACW_american_brigade
-
-	is_triggered_only = yes
-
-	option = {# Let's focus on more reliable models
-		name = pacificstates.280.a
-	}
-	option = {# I like it how it is
-		name = pacificstates.280.b
-		ai_chance = {
-			factor = 10
-		}
-	}
-}
-
-country_event = {# Asian Trade
-	id = pacificstates.281
-	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.281"}
-	title = pacificstates.281.t
-	desc = pacificstates.281.d
-	picture = GFX_ACW_american_brigade
-
-	is_triggered_only = yes
-
-	option = {# Let's focus on more reliable models
-		name = pacificstates.281.a
-	}
-	option = {# I like it how it is
-		name = pacificstates.281.b
-		ai_chance = {
-			factor = 10
-		}
 	}
 }
 
@@ -6373,14 +6295,10 @@ country_event = {# USS Roosevelt
 
 	is_triggered_only = yes
 
-	option = {# Let's focus on more reliable models
+	fire_only_once = yes
+	
+	option = {# Finally
 		name = pacificstates.282.a
-	}
-	option = {# I like it how it is
-		name = pacificstates.282.b
-		ai_chance = {
-			factor = 10
-		}
 	}
 }
 
@@ -6393,14 +6311,13 @@ country_event = {# Refugee Influx
 
 	is_triggered_only = yes
 
-	option = {# Let's focus on more reliable models
+	fire_only_once = yes
+	
+	option = {# A positive development
 		name = pacificstates.283.a
 	}
-	option = {# I like it how it is
+	option = {# Attempt to recruit them
 		name = pacificstates.283.b
-		ai_chance = {
-			factor = 10
-		}
 	}
 }
 
@@ -6413,94 +6330,14 @@ country_event = {# Workingman's Party
 
 	is_triggered_only = yes
 
-	option = {# Let's focus on more reliable models
+	fire_only_once = yes
+	
+	option = {# Investigate them
 		name = pacificstates.284.a
 	}
-	option = {# I like it how it is
+	option = {# Unfortunate but it's their right
 		name = pacificstates.284.b
-		ai_chance = {
-			factor = 10
-		}
-	}
-}
-
-country_event = {# USS Jefferson
-	id = pacificstates.285
-	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.285"}
-	title = pacificstates.285.t
-	desc = pacificstates.285.d
-	picture = GFX_ACW_american_brigade
-
-	is_triggered_only = yes
-
-	option = {# Let's focus on more reliable models
-		name = pacificstates.285.a
-	}
-	option = {# I like it how it is
-		name = pacificstates.285.b
-		ai_chance = {
-			factor = 10
-		}
-	}
-}
-
-country_event = {# Meeting with Black Leaders
-	id = pacificstates.286
-	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.286"}
-	title = pacificstates.286.t
-	desc = pacificstates.286.d
-	picture = GFX_ACW_american_brigade
-
-	is_triggered_only = yes
-
-	option = {# Let's focus on more reliable models
-		name = pacificstates.286.a
-	}
-	option = {# I like it how it is
-		name = pacificstates.286.b
-		ai_chance = {
-			factor = 10
-		}
-	}
-}
-
-country_event = {# SPAM
-	id = pacificstates.287
-	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.287"}
-	title = pacificstates.287.t
-	desc = pacificstates.287.d
-	picture = GFX_ACW_american_brigade
-
-	is_triggered_only = yes
-
-	option = {# Let's focus on more reliable models
-		name = pacificstates.287.a
-	}
-	option = {# I like it how it is
-		name = pacificstates.287.b
-		ai_chance = {
-			factor = 10
-		}
-	}
-}
-
-country_event = {# Coffee Imports
-	id = pacificstates.288
-	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.288"}
-	title = pacificstates.288.t
-	desc = pacificstates.288.d
-	picture = GFX_ACW_american_brigade
-
-	is_triggered_only = yes
-
-	option = {# Let's focus on more reliable models
-		name = pacificstates.288.a
-	}
-	option = {# I like it how it is
-		name = pacificstates.288.b
-		ai_chance = {
-			factor = 10
-		}
+		
 	}
 }
 
@@ -6511,16 +6348,17 @@ country_event = {# Automatic transmission
 	desc = pacificstates.289.d
 	picture = GFX_ACW_american_brigade
 
-	is_triggered_only = yes
-
-	option = {# Let's focus on more reliable models
-		name = pacificstates.289.a
-	}
-	option = {# I like it how it is
-		name = pacificstates.289.b
-		ai_chance = {
-			factor = 10
+	trigger = {
+	OR = {
+	date > 1938.4.5
+	has_completed_focus = CAL_american_laisze_faire
 		}
+	}
+
+	fire_only_once = yes
+	
+	option = {# A Welcome Break!
+		name = pacificstates.289.a
 	}
 }
 
@@ -6535,14 +6373,13 @@ country_event = {# Office of Minority Affairs
 
 	is_triggered_only = yes
 
-	option = {# Let's focus on more reliable models
+	fire_only_once = yes
+	
+	option = {# Fund it
 		name = pacificstates.290.a
 	}
-	option = {# I like it how it is
+	option = {# It's not needed
 		name = pacificstates.290.b
-		ai_chance = {
-			factor = 10
-		}
 	}
 }
 
@@ -6555,14 +6392,10 @@ country_event = {# Pride of the Bowery
 
 	is_triggered_only = yes
 
-	option = {# Let's focus on more reliable models
+	fire_only_once = yes
+	
+	option = {# Great
 		name = pacificstates.291.a
-	}
-	option = {# I like it how it is
-		name = pacificstates.291.b
-		ai_chance = {
-			factor = 10
-		}
 	}
 }
 
@@ -6575,14 +6408,10 @@ country_event = {# CCC Statues
 
 	is_triggered_only = yes
 
-	option = {# Let's focus on more reliable models
+	fire_only_once = yes
+	
+	option = {# Saving America
 		name = pacificstates.292.a
-	}
-	option = {# I like it how it is
-		name = pacificstates.292.b
-		ai_chance = {
-			factor = 10
-		}
 	}
 }
 
@@ -6595,34 +6424,13 @@ country_event = {# AAA disdained
 
 	is_triggered_only = yes
 
-	option = {# Let's focus on more reliable models
+	fire_only_once = yes
+	
+	option = {# Tone down the law
 		name = pacificstates.296.a
 	}
-	option = {# I like it how it is
+	option = {# Keep it as is
 		name = pacificstates.296.b
-		ai_chance = {
-			factor = 10
-		}
-	}
-}
-
-country_event = {# Native Relations
-	id = pacificstates.298
-	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.298"}
-	title = pacificstates.298.t
-	desc = pacificstates.298.d
-	picture = GFX_ACW_american_brigade
-
-	is_triggered_only = yes
-
-	option = {# Let's focus on more reliable models
-		name = pacificstates.298.a
-	}
-	option = {# I like it how it is
-		name = pacificstates.298.b
-		ai_chance = {
-			factor = 10
-		}
 	}
 }
 
@@ -6633,16 +6441,19 @@ country_event = {# Steinbeck
 	desc = pacificstates.300.d
 	picture = GFX_ACW_american_brigade
 
-	is_triggered_only = yes
-
-	option = {# Let's focus on more reliable models
-		name = pacificstates.300.a
-	}
-	option = {# I like it how it is
-		name = pacificstates.300.b
-		ai_chance = {
-			factor = 10
+	trigger = {
+	OR = {
+	has_government = social_liberal
+	has_government = social_democrat
+	has_government = radicial_socialist
 		}
+	date > 1938.5.1
+	}
+
+	fire_only_once = yes
+	
+	option = {# Interesting
+		name = pacificstates.300.a
 	}
 }
 
@@ -6655,34 +6466,11 @@ country_event = {# LORAN Breakthrough
 
 	is_triggered_only = yes
 
-	option = {# Let's focus on more reliable models
+	fire_only_once = yes
+	
+	option = {# A Step Forward
 		name = pacificstates.301.a
-	}
-	option = {# I like it how it is
-		name = pacificstates.301.b
-		ai_chance = {
-			factor = 10
-		}
-	}
-}
-
-country_event = {# Syndicalist Unions Moderate
-	id = pacificstates.302
-	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.302"}
-	title = pacificstates.302.t
-	desc = pacificstates.302.d
-	picture = GFX_ACW_american_brigade
-
-	is_triggered_only = yes
-
-	option = {# Let's focus on more reliable models
-		name = pacificstates.288.a
-	}
-	option = {# I like it how it is
-		name = pacificstates.288.b
-		ai_chance = {
-			factor = 10
-		}
+		
 	}
 }
 
@@ -6693,33 +6481,24 @@ country_event = {# Hearst Denounces New Liberalism
 	desc = pacificstates.303.d
 	picture = GFX_ACW_american_brigade
 
-	is_triggered_only = yes
+	trigger = {
+	OR = {
+	has_completed_focus = CAL_progressive_taxation
+	has_completed_focus = CAL_wealth_taxation
+	has_completed_focus = CAL_radical_taxation
+		}
+	}
 
+	mean_time_to_happen = {
+	days = 15
+	}
+	fire_only_once = yes
+	
 	option = {# Let's focus on more reliable models
 		name = pacificstates.303.a
 	}
 	option = {# I like it how it is
 		name = pacificstates.303.b
-		ai_chance = {
-			factor = 10
-		}
-	}
-}
-
-country_event = {# Bank Holiday
-	id = pacificstates.304
-	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.304"}
-	title = pacificstates.304.t
-	desc = pacificstates.304.d
-	picture = GFX_ACW_american_brigade
-
-	is_triggered_only = yes
-
-	option = {# Let's focus on more reliable models
-		name = pacificstates.304.a
-	}
-	option = {# I like it how it is
-		name = pacificstates.304.b
 		ai_chance = {
 			factor = 10
 		}
@@ -6733,56 +6512,22 @@ country_event = {# American Liberty League
 	desc = pacificstates.305.d
 	picture = GFX_ACW_american_brigade
 
-	is_triggered_only = yes
+	trigger = {
+	OR = {
+	has_completed_focus = CAL_progressive_taxation
+	has_completed_focus = CAL_wealth_taxation
+	has_completed_focus = CAL_radical_taxation
+		}
+	}
 
-	option = {# Let's focus on more reliable models
+	mean_time_to_happen = {
+	days = 40
+	}
+	
+	fire_only_once = yes
+	
+	option = {# Attack them
 		name = pacificstates.305.a
-	}
-	option = {# I like it how it is
-		name = pacificstates.305.b
-		ai_chance = {
-			factor = 10
-		}
-	}
-}
-
-country_event = {# Fireside Chats?
-	id = pacificstates.306
-	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.306"}
-	title = pacificstates.306.t
-	desc = pacificstates.306.d
-	picture = GFX_ACW_american_brigade
-
-	is_triggered_only = yes
-
-	option = {# Let's focus on more reliable models
-		name = pacificstates.306.a
-	}
-	option = {# I like it how it is
-		name = pacificstates.306.b
-		ai_chance = {
-			factor = 10
-		}
-	}
-}
-
-country_event = {# Four Freedoms
-	id = pacificstates.307
-	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.307"}
-	title = pacificstates.307.t
-	desc = pacificstates.307.d
-	picture = GFX_ACW_american_brigade
-
-	is_triggered_only = yes
-
-	option = {# Let's focus on more reliable models
-		name = pacificstates.307.a
-	}
-	option = {# I like it how it is
-		name = pacificstates.307.b
-		ai_chance = {
-			factor = 10
-		}
 	}
 }
 
@@ -6795,57 +6540,16 @@ country_event = {# Fair Employment Practice Committee
 
 	is_triggered_only = yes
 
-	option = {# Let's focus on more reliable models
+	fire_only_once = yes
+	
+	option = {# Yes
 		name = pacificstates.308.a
 	}
-	option = {# I like it how it is
+	option = {# Nope
 		name = pacificstates.308.b
-		ai_chance = {
-			factor = 10
-		}
 	}
 }
 
-
-country_event = {# Timberline Lodge/Griffith Observatory
-	id = pacificstates.309
-	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.309"}
-	title = pacificstates.309.t
-	desc = pacificstates.309.d
-	picture = GFX_ACW_american_brigade
-
-	is_triggered_only = yes
-
-	option = {# Let's focus on more reliable models
-		name = pacificstates.309.a
-	}
-	option = {# I like it how it is
-		name = pacificstates.309.b
-		ai_chance = {
-			factor = 10
-		}
-	}
-}
-
-country_event = {# Unions and Business
-	id = pacificstates.310
-	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.310"}
-	title = pacificstates.310.t
-	desc = pacificstates.310.d
-	picture = GFX_ACW_american_brigade
-
-	is_triggered_only = yes
-
-	option = {# Let's focus on more reliable models
-		name = pacificstates.310.a
-	}
-	option = {# I like it how it is
-		name = pacificstates.310.b
-		ai_chance = {
-			factor = 10
-		}
-	}
-}
 
 country_event = {# American Guide Series
 	id = pacificstates.311
@@ -6856,6 +6560,8 @@ country_event = {# American Guide Series
 
 	is_triggered_only = yes
 
+	fire_only_once = yes
+	
 	option = {# Let's focus on more reliable models
 		name = pacificstates.311.a
 	}
@@ -6876,6 +6582,8 @@ country_event = {# Wrangle Edison
 
 	is_triggered_only = yes
 
+	fire_only_once = yes
+	
 	option = {# Let's focus on more reliable models
 		name = pacificstates.312.a
 	}
@@ -6887,7 +6595,9 @@ country_event = {# Wrangle Edison
 	}
 }
 
-country_event = {# OPC
+##Soc Dem ##
+
+country_event = {# Temperance Fountains
 	id = pacificstates.313
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.313"}
 	title = pacificstates.313.t
@@ -6896,97 +6606,44 @@ country_event = {# OPC
 
 	is_triggered_only = yes
 
-	option = {# Let's focus on more reliable models
+	fire_only_once = yes
+	
+	option = {# They are better than not having it
 		name = pacificstates.313.a
-	}
-	option = {# I like it how it is
-		name = pacificstates.313.b
-		ai_chance = {
-			factor = 10
-		}
-	}
-}
-
-
-##Soc Dem ##
-
-country_event = {# Temperance Fountains
-	id = pacificstates.318
-	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.318"}
-	title = pacificstates.318.t
-	desc = pacificstates.318.d
-	picture = GFX_ACW_american_brigade
-
-	is_triggered_only = yes
-
-	option = {# Let's focus on more reliable models
-		name = pacificstates.318.a
-	}
-	option = {# I like it how it is
-		name = pacificstates.318.b
-		ai_chance = {
-			factor = 10
-		}
 	}
 }
 
 country_event = {# Liberty Lobby Growth
-	id = pacificstates.319
-	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.319"}
-	title = pacificstates.319.t
-	desc = pacificstates.319.d
+	id = pacificstates.314
+	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.314"}
+	title = pacificstates.314.t
+	desc = pacificstates.314.d
 	picture = GFX_ACW_american_brigade
 
-	is_triggered_only = yes
-
-	option = {# Let's focus on more reliable models
-		name = pacificstates.319.a
+	trigger = {
+	has_completed_focus = CAL_radical_taxation
 	}
-	option = {# I like it how it is
-		name = pacificstates.319.b
-		ai_chance = {
-			factor = 10
-		}
+
+	fire_only_once = yes
+	
+	option = {# Damn them
+		name = pacificstates.314.a
 	}
 }
 
 country_event = {# Progressive Unity
-	id = pacificstates.320
-	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.320"}
-	title = pacificstates.320.t
-	desc = pacificstates.320.d
+	id = pacificstates.315
+	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.315"}
+	title = pacificstates.315.t
+	desc = pacificstates.315.d
 	picture = GFX_ACW_american_brigade
 
 	is_triggered_only = yes
 
-	option = {# Let's focus on more reliable models
-		name = pacificstates.320.a
-	}
-	option = {# I like it how it is
-		name = pacificstates.320.b
-		ai_chance = {
-			factor = 10
-		}
-	}
-}
-
-country_event = {# Dealing with Edison
-	id = pacificstates.322
-	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.322"}
-	title = pacificstates.322.t
-	desc = pacificstates.322.d
-	picture = GFX_ACW_american_brigade
-
-	is_triggered_only = yes
-
-	option = {# Let's focus on more reliable models
-		name = pacificstates.322.a
-	}
-	option = {# I like it how it is
-		name = pacificstates.322.b
-		ai_chance = {
-			factor = 10
-		}
+	fire_only_once = yes
+	
+	option = {# Good
+		name = pacificstates.315.a
 	}
 }
 
@@ -6999,6 +6656,8 @@ country_event = {# Cut the Tape
 
 	is_triggered_only = yes
 
+	fire_only_once = yes
+	
 	option = {# Let's focus on more reliable models
 		name = pacificstates.323.a
 	}
@@ -7010,27 +6669,9 @@ country_event = {# Cut the Tape
 	}
 }
 
-country_event = {# National Health Services
-	id = pacificstates.324
-	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.324"}
-	title = pacificstates.324.t
-	desc = pacificstates.324.d
-	picture = GFX_ACW_american_brigade
+##Rad Soc##
 
-	is_triggered_only = yes
-
-	option = {# Let's focus on more reliable models
-		name = pacificstates.324.a
-	}
-	option = {# I like it how it is
-		name = pacificstates.324.b
-		ai_chance = {
-			factor = 10
-		}
-	}
-}
-
-country_event = {# Supporting Long
+country_event = {# Capital Flight
 	id = pacificstates.325
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.325"}
 	title = pacificstates.325.t
@@ -7039,41 +6680,15 @@ country_event = {# Supporting Long
 
 	is_triggered_only = yes
 
-	option = {# Let's focus on more reliable models
+	fire_only_once = yes
+	
+	option = {# We Will Manage it
 		name = pacificstates.325.a
 	}
-	option = {# I like it how it is
+	option = {# Create Coops to manage it
 		name = pacificstates.325.b
-		ai_chance = {
-			factor = 10
-		}
 	}
 }
-
-
-
-
-country_event = {# Dealing with Gold
-	id = pacificstates.330
-	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.330"}
-	title = pacificstates.330.t
-	desc = pacificstates.330.d
-	picture = GFX_ACW_american_brigade
-
-	is_triggered_only = yes
-
-	option = {# Let's focus on more reliable models
-		name = pacificstates.330.a
-	}
-	option = {# I like it how it is
-		name = pacificstates.330.b
-		ai_chance = {
-			factor = 10
-		}
-	}
-}
-
-##Rad Soc##
 
 country_event = {# Negotiate with CSA?
 	id = pacificstates.326
@@ -7084,6 +6699,8 @@ country_event = {# Negotiate with CSA?
 
 	is_triggered_only = yes
 
+	fire_only_once = yes
+	
 	option = {# Let's focus on more reliable models
 		name = pacificstates.326.a
 	}
@@ -7103,6 +6720,8 @@ country_event = {# Humanist Manifesto
 	picture = GFX_ACW_american_brigade
 
 	is_triggered_only = yes
+
+	fire_only_once = yes
 
 	option = {# Let's focus on more reliable models
 		name = pacificstates.327.a
@@ -7124,6 +6743,8 @@ country_event = {# Knights of Labor
 
 	is_triggered_only = yes
 
+	fire_only_once = yes
+	
 	option = {# Let's focus on more reliable models
 		name = pacificstates.328.a
 	}
@@ -7144,11 +6765,35 @@ country_event = {# Experience and Education
 
 	is_triggered_only = yes
 
+	fire_only_once = yes
+
 	option = {# Let's focus on more reliable models
 		name = pacificstates.329.a
 	}
 	option = {# I like it how it is
 		name = pacificstates.329.b
+		ai_chance = {
+			factor = 10
+		}
+	}
+}
+
+country_event = {# Dealing with Gold
+	id = pacificstates.330
+	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.330"}
+	title = pacificstates.330.t
+	desc = pacificstates.330.d
+	picture = GFX_ACW_american_brigade
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = {# Let's focus on more reliable models
+		name = pacificstates.330.a
+	}
+	option = {# I like it how it is
+		name = pacificstates.330.b
 		ai_chance = {
 			factor = 10
 		}
@@ -7163,6 +6808,8 @@ country_event = {# Hearst Defects
 	picture = GFX_ACW_american_brigade
 
 	is_triggered_only = yes
+
+	fire_only_once = yes
 
 	option = {# Let's focus on more reliable models
 		name = pacificstates.331.a
@@ -7186,6 +6833,8 @@ country_event = {# Japanese Internment
 
 	is_triggered_only = yes
 
+	fire_only_once = yes
+
 	option = {# Let's focus on more reliable models
 		name = pacificstates.3310.a
 	}
@@ -7205,6 +6854,8 @@ country_event = {# Deport Canadians
 	picture = GFX_ACW_american_brigade
 
 	is_triggered_only = yes
+
+	fire_only_once = yes
 
 	option = {# Let's focus on more reliable models
 		name = pacificstates.332.a
@@ -7226,6 +6877,8 @@ country_event = {# War Power Act
 
 	is_triggered_only = yes
 
+	fire_only_once = yes
+
 	option = {# Let's focus on more reliable models
 		name = pacificstates.333.a
 	}
@@ -7236,3 +6889,191 @@ country_event = {# War Power Act
 		}
 	}
 }
+
+###Spiritualism
+country_event = {# Anti-Syndicalist Organizations
+	id = pacificstates.350
+	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.350"}
+	title = pacificstates.350.t
+	desc = pacificstates.350.d
+	picture = GFX_ACW_american_brigade
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = {# Support them
+		name = pacificstates.350.a
+		add_manpower = 100
+		add_political_power = -10
+		add_war_support = 0.02
+		add_popularity = { ideology = national_populist popularity = 0.03 }
+		hidden_effect = {
+		country_event = {
+			id = pacificstates.3500
+			days = 10
+			}
+		}
+	}
+	option = {# Don't
+		name = pacificstates.350.b
+		add_political_power = -10
+		hidden_effect = {
+		country_event = {
+			id = pacificstates.3500
+			days = 5
+			}
+		}
+	}
+}
+
+country_event = {# Bodin Working With Japan
+	id = pacificstates.3500
+	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.3500"}
+	title = pacificstates.3500.t
+	desc = pacificstates.3500.d
+	picture = GFX_ACW_american_brigade
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = {# Support them
+		name = pacificstates.3500.a
+		add_manpower = 100
+		add_political_power = -10
+		add_war_support = 0.02
+		add_popularity = { ideology = national_populist popularity = 0.03 }
+	}
+	option = {# Stop Supporting Them
+		name = pacificstates.3500.b
+		hidden_effect = {
+		set_country_flag = CAL_Spiritualist_Aid
+		}
+		add_political_power = -10
+	}
+}
+
+country_event = {# Spiritualist Counter-Coup
+	id = pacificstates.351
+	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.351"}
+	title = pacificstates.351.t
+	desc = pacificstates.351.d
+	picture = GFX_ACW_american_brigade
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = {# Support them
+		name = pacificstates.351.a
+		add_manpower = 100
+		add_political_power = -10
+		add_war_support = 0.02
+		add_popularity = { ideology = national_populist popularity = 0.03 }
+	}
+	option = {# Stop Supporting Them
+		name = pacificstates.351.b
+		add_political_power = -10
+	}
+}
+
+country_event = {# Spiritualist Counter-Coup
+	id = pacificstates.352
+	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.352"}
+	title = pacificstates.352.t
+	desc = pacificstates.352.d
+	picture = GFX_ACW_american_brigade
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = {# Support them
+		name = pacificstates.352.a
+		add_manpower = 100
+		add_political_power = -10
+		add_war_support = 0.02
+		add_popularity = { ideology = national_populist popularity = 0.03 }
+	}
+	option = {# Stop Supporting Them
+		name = pacificstates.352.b
+		add_political_power = -10
+	}
+}
+
+country_event = {# Spiritualist Counter-Coup
+	id = pacificstates.353
+	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.353"}
+	title = pacificstates.353.t
+	desc = pacificstates.353.d
+	picture = GFX_ACW_american_brigade
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = {# Support them
+		name = pacificstates.353.a
+		add_manpower = 100
+		add_political_power = -10
+		add_war_support = 0.02
+		add_popularity = { ideology = national_populist popularity = 0.03 }
+	}
+	option = {# Stop Supporting Them
+		name = pacificstates.353.b
+		add_political_power = -10
+	}
+}
+
+country_event = {# Spiritualist Counter-Coup
+	id = pacificstates.354
+	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.354"}
+	title = pacificstates.354.t
+	desc = pacificstates.354.d
+	picture = GFX_ACW_american_brigade
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = {# Very well, warn them they must flee
+		name = pacificstates.354.a
+		add_manpower = 100
+		add_political_power = -10
+		add_war_support = 0.02
+		add_popularity = { ideology = national_populist popularity = 0.03 }
+	}
+	option = {# And let them strike later? I think not
+		name = pacificstates.354.b
+		add_political_power = -10
+	}
+}
+
+country_event = {# Spiritualist Counter-Coup
+	id = pacificstates.355
+	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.355"}
+	title = pacificstates.355.t
+	desc = pacificstates.355.d
+	picture = GFX_ACW_american_brigade
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = {# Agreed
+		name = pacificstates.355.a
+		add_manpower = 100
+		add_political_power = -10
+		add_war_support = 0.02
+		add_popularity = { ideology = national_populist popularity = 0.03 }
+	}
+	option = {# Stop Supporting Them
+		name = pacificstates.354.b
+		add_political_power = -10
+	}
+}
+
+
+
+

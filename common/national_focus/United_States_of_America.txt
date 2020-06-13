@@ -1937,7 +1937,7 @@ focus_tree = {
 	focus = {# Southern Investments
 		id = USA_southern_investments
 		icon = GFX_goal_generic_foreign_investments
-		cost = 6.00
+		cost = 5.00
 		available = {
 			has_government = social_democrat
 			has_country_leader = { ruling_only = yes name = "George Norris" } 
@@ -1955,6 +1955,39 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_southern_investments"
 			add_popularity = { ideology = paternal_autocrat popularity = -0.03 }
 			add_popularity = { ideology = national_populist popularity = -0.05 }
+			368 = {
+				limit = {
+					is_core_of = USA
+					is_controlled_by = USA
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			1115 = {
+				limit = {
+					is_core_of = USA
+					is_controlled_by = USA
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			1116 = {
+				limit = {
+					is_core_of = USA
+					is_controlled_by = USA
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			1117 = {
+				limit = {
+					is_core_of = USA
+					is_controlled_by = USA
+				}
+				add_extra_state_shared_building_slots = 1
+			}
 		}
 	}
 	
@@ -1977,8 +2010,11 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_radical_republican_constiuency"
+			add_political_power = 40
+			add_stability = 0.03
 			add_popularity = { ideology = paternal_autocrat popularity = -0.03 }
 			add_popularity = { ideology = national_populist popularity = -0.05 }
+			add_popularity = { ideology = social_democrat popularity = 0.05 }
 		}
 	}
 	
@@ -2014,7 +2050,7 @@ focus_tree = {
 			add_popularity = { ideology = paternal_autocrat popularity = -0.04 }
 			add_popularity = { ideology = national_populist popularity = -0.03 }
 			hidden_effect = {
-			country_event = { id = ustates.ustates.1152 days = 67 }
+			country_event = { id = ustates.1152 days = 67 }
 			}
 		}
 	}

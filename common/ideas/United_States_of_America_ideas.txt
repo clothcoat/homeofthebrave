@@ -1624,8 +1624,8 @@ ideas = {
 			picture = generic_artillery_regiments
 			modifier = {
 				max_command_power = 25
-				max_command_power_mult = 1.2
-				max_planning = 2
+				max_command_power_mult = 0.05
+				max_planning = 0.1
 				max_commander_army_size	= 2
 			}
 		}
@@ -1636,9 +1636,9 @@ ideas = {
 			picture = generic_artillery_regiments
 			modifier = {
 				max_command_power = 50
-				max_command_power_mult = 2.0
+				max_command_power_mult = 0.1
 				army_org_factor = 0.05
-				max_planning = 4
+				max_planning = 0.15
 				max_commander_army_size	= 3
 			}
 		}
@@ -1649,10 +1649,10 @@ ideas = {
 			picture = generic_artillery_regiments
 			modifier = {
 				max_command_power = 50
-				max_command_power_mult = 2.0
+				max_command_power_mult = 0.15
 				army_org_factor = 0.15
 				army_morale	= 0.2
-				max_planning = 5
+				max_planning = 0.2
 				max_commander_army_size	= 4
 			}
 		}
@@ -1663,11 +1663,11 @@ ideas = {
 			picture = generic_artillery_regiments
 			modifier = {
 				max_command_power = 50
-				max_command_power_mult = 2.0
+				max_command_power_mult = 0.2
 				army_org_factor = 0.15
 				army_morale	= 0.2
-				max_planning = 5
-				max_commander_army_size	= 4
+				max_planning = 0.25
+				max_commander_army_size	= 5
 			}
 		}
 		MacArthur_plan_idea_4 = { #MacArthur Plan
@@ -1677,13 +1677,13 @@ ideas = {
 			picture = generic_artillery_regiments
 			modifier = {
 				max_command_power = 50
-				max_command_power_mult = 2.0
+				max_command_power_mult = 0.2
 				army_org_factor = 0.2
 				recon_factor = 0.1
 				special_forces_out_of_supply_factor = -0.1
 				army_morale	= 0.3
-				max_planning = 7
-				max_commander_army_size	= 4
+				max_planning = 0.3
+				max_commander_army_size	= 5
 			}
 		}
 		MacArthur_plan_idea_5 = { #MacArthur Plan
@@ -1693,17 +1693,17 @@ ideas = {
 			picture = generic_artillery_regiments
 			modifier = {
 				max_command_power = 50
-				max_command_power_mult = 2.0
+				max_command_power_mult = 0.2
 				army_org_factor = 0.3
 				recon_factor = 0.1
 				special_forces_out_of_supply_factor = -0.1
 				army_morale	= 0.4
 				river_crossing_factor = -0.1
-				max_planning = 10
+				max_planning = 0.35
 				encryption_factor = 0.05
 				naval_invasion_penalty = -0.08
 				attack_bonus_against_cores = 0.05
-				max_commander_army_size	= 4
+				max_commander_army_size	= 5
 			}
 		}
 		MacArthur_plan_idea_6 = { #MacArthur Plan
@@ -1713,18 +1713,18 @@ ideas = {
 			picture = generic_artillery_regiments
 			modifier = {
 				max_command_power = 75
-				max_command_power_mult = 2.5
+				max_command_power_mult = 0.25
 				army_infantry_attack_factor = 0.05
 				army_org_factor = 0.4
 				recon_factor = 0.1
 				river_crossing_factor = -0.2
 				special_forces_out_of_supply_factor = -0.1
 				army_morale	= 0.5
-				max_planning = 12
+				max_planning = 0.4
 				encryption_factor = 0.05
 				naval_invasion_penalty = -0.1
 				attack_bonus_against_cores = 0.05
-				max_commander_army_size	= 4
+				max_commander_army_size	= 6
 			}
 		}
 		USA_mobilization_plan_idea = { #MacArthur Plan
