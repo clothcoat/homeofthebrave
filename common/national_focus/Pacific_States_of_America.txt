@@ -5426,14 +5426,6 @@ focus_tree = {
 				days = 5
 					}
 				}
-				country_event = {
-				id = pacificstates.269
-				days = 12
-				}
-				country_event = {
-				id = pacificstates.270
-				days = 20
-				}
 			}
 		}
 	}
@@ -8202,6 +8194,12 @@ focus_tree = {
 			add_manpower = 4500
 			add_political_power = 60
 			add_war_support = 0.1
+			hidden_effect = {
+			country_event = {
+			id = pacificstates.311
+			days = 50
+				}
+			}
 		}
 	}
 
@@ -9258,7 +9256,7 @@ focus_tree = {
 			hidden_effect = {
 			country_event = {
 			id = ustates.312
-			days = 15
+			days = 5
 				}
 			}
 		}

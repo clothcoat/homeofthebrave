@@ -6122,12 +6122,25 @@ country_event = {# The Hollywood Ten
 	desc = pacificstates.269.d
 	picture = GFX_ACW_american_brigade
 
-	is_triggered_only = yes
+	trigger = {
+	OR = {
+	has_completed_focus = CAL_anti_unionism
+	has_war_with = CSA
+		}
+	}
 
 	fire_only_once = yes
 	
 	option = {# Commies
 		name = pacificstates.269.a
+		add_popularity = { ideology = totalist popularity = -0.01 }
+		add_popularity = { ideology = syndicalist popularity = -0.01 }
+		hidden_effect = {
+		country_event = {
+			id = pacificstates.270
+			days = 12
+			}
+		}
 	}
 }
 
@@ -6144,12 +6157,30 @@ country_event = {# Hollywood Blacklist
 	
 	option = {# Back the Backlist
 		name = pacificstates.270.a
+		trigger = {
+		NOT = {
+			has_government = authoritarian_democrat
+			has_government = paternal_autocrat
+			has_government = national_populist
+			}
+		}
+		add_political_power = 40
+		add_popularity = { ideology = totalist popularity = -0.02 }
+		add_popularity = { ideology = syndicalist popularity = -0.02 }
+		add_popularity = { ideology = radicial_socialist popularity = -0.02 }
+		add_stability = -0.02
+		
 	}
 	option = {# Denounce the Blacklist
 		name = pacificstates.203.b
+		add_stability = 0.02
+		add_political_power = -30
 	}
 	option = {# Remain Silent
 		name = pacificstates.203.c
+		add_popularity = { ideology = totalist popularity = -0.02 }
+		add_popularity = { ideology = syndicalist popularity = -0.02 }
+		add_popularity = { ideology = radicial_socialist popularity = -0.02 }
 	}
 }
 
@@ -6166,10 +6197,15 @@ country_event = {# Hays Code Backlash
 	
 	option = {# Talk to them
 		name = pacificstates.271.a
+		add_political_power = -30
+		add_popularity = { ideology = social_conservative popularity = 0.01 }
 	}
 	option = {# No, the Hays Code stays
 		name = pacificstates.271.b
-		
+		add_political_power = 15
+		add_popularity = { ideology = social_liberal popularity = 0.01 }
+		add_popularity = { ideology = social_democrat popularity = 0.01 }
+		add_popularity = { ideology = radicial_socialist popularity = 0.01 }
 	}
 }
 
@@ -6186,9 +6222,15 @@ country_event = {# Protests
 	
 	option = {# Talk to administrators
 		name = pacificstates.271.a
+		add_stability = -0.02
+		add_political_power = -30
+		add_popularity = { ideology = social_conservative popularity = 0.02 }
 	}
 	option = {# Counter these fellow-travelors
 		name = pacificstates.271.b
+		add_stability = -0.05
+		add_political_power = 40
+		add_popularity = { ideology = radicial_socialist popularity = -0.03 }
 		
 	}
 }
@@ -6207,6 +6249,9 @@ country_event = {# Mass Produced TV
 	
 	option = {# Great
 		name = pacificstates.273.a
+		add_popularity = { ideology = market_liberal popularity = 0.01 }
+		add_political_power = 15
+		add_stability = 0.02
 	}
 }
 
@@ -6223,6 +6268,9 @@ country_event = {# International Film making explodes
 	
 	option = {# Wonderful
 		name = pacificstates.275.a
+		add_popularity = { ideology = market_liberal popularity = 0.03 }
+		add_political_power = 40
+		add_stability = 0.04
 	}
 }
 
@@ -6245,6 +6293,9 @@ country_event = {# Panic!
 	
 	option = {# Damn
 		name = pacificstates.276.a
+		add_stability = -0.1
+		add_political_power = -50
+		add_popularity = { ideology = market_liberal popularity = -0.05 }
 		hidden_effect = {
 			country_event = {
 			id = ustates.277
@@ -6267,6 +6318,17 @@ country_event = {# Recovery
 	
 	option = {# Thank God for Laissez-Faires
 		name = pacificstates.277.a
+		add_stability = 0.12
+		add_political_power = 65
+		add_popularity = { ideology = market_liberal popularity = 0.07 }
+		random_owned_state = {
+			limit = {
+				is_core_of = CAL
+				is_controlled_by = CAL
+				industrial_complex > 0
+			}
+			add_extra_state_shared_building_slots = 1
+		}
 	}
 }
 
@@ -6283,6 +6345,15 @@ country_event = {# Rotary Club
 	
 	option = {# There are always Men willing to do good
 		name = pacificstates.278.a
+		add_stability = 0.02
+		add_political_power = 25
+		add_popularity = { ideology = market_liberal popularity = 0.02 }
+		add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.25
+				uses = 1
+				category = industry
+			}
 	}
 }
 
@@ -6315,9 +6386,19 @@ country_event = {# Refugee Influx
 	
 	option = {# A positive development
 		name = pacificstates.283.a
+		add_manpower = 1200
+		random_owned_state = {
+			limit = {
+				is_core_of = CAL
+				is_controlled_by = CAL
+				industrial_complex > 0
+			}
+			add_extra_state_shared_building_slots = 1
+		}
 	}
 	option = {# Attempt to recruit them
 		name = pacificstates.283.b
+		add_manpower = 4000
 	}
 }
 
@@ -6334,9 +6415,15 @@ country_event = {# Workingman's Party
 	
 	option = {# Investigate them
 		name = pacificstates.284.a
+		add_political_power = -35
+		add_manpower = -200
+		add_war_support = 0.02
 	}
 	option = {# Unfortunate but it's their right
 		name = pacificstates.284.b
+		add_stability = -0.03
+		add_war_support = -0.02
+		add_popularity = { ideology = market_liberal popularity = -0.02 }
 		
 	}
 }
@@ -6359,6 +6446,13 @@ country_event = {# Automatic transmission
 	
 	option = {# A Welcome Break!
 		name = pacificstates.289.a
+		add_political_power = 10
+		add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.35
+				uses = 1
+				category = industry
+			}
 	}
 }
 
@@ -6377,9 +6471,13 @@ country_event = {# Office of Minority Affairs
 	
 	option = {# Fund it
 		name = pacificstates.290.a
+		add_stability = 0.03
+		add_manpower = 2500
+		add_political_power = -40
 	}
 	option = {# It's not needed
 		name = pacificstates.290.b
+		add_political_power = 30
 	}
 }
 
@@ -6396,6 +6494,9 @@ country_event = {# Pride of the Bowery
 	
 	option = {# Great
 		name = pacificstates.291.a
+		add_popularity = { ideology = social_liberal popularity = 0.02 }
+		add_political_power = 20
+		add_war_support = 0.03
 	}
 }
 
@@ -6412,6 +6513,9 @@ country_event = {# CCC Statues
 	
 	option = {# Saving America
 		name = pacificstates.292.a
+		add_popularity = { ideology = social_liberal popularity = 0.02 }
+		add_stability = 0.02
+		add_political_power = 10
 	}
 }
 
@@ -6428,9 +6532,12 @@ country_event = {# AAA disdained
 	
 	option = {# Tone down the law
 		name = pacificstates.296.a
+		add_political_power = -30
 	}
 	option = {# Keep it as is
 		name = pacificstates.296.b
+		add_popularity = { ideology = social_liberal popularity = -0.03 }
+		add_stability = -0.01
 	}
 }
 
@@ -6454,6 +6561,7 @@ country_event = {# Steinbeck
 	
 	option = {# Interesting
 		name = pacificstates.300.a
+		add_popularity = { ideology = authoritarian_democrat popularity = -0.02 }
 	}
 }
 
@@ -6470,7 +6578,13 @@ country_event = {# LORAN Breakthrough
 	
 	option = {# A Step Forward
 		name = pacificstates.301.a
-		
+		add_popularity = { ideology = social_liberal popularity = 0.02 }
+		add_tech_bonus = {
+			name = SRI_support_uri
+			bonus = 1
+			uses = 1
+			category = radar_tech
+		}
 	}
 }
 
@@ -6492,12 +6606,20 @@ country_event = {# Hearst Denounces New Liberalism
 	mean_time_to_happen = {
 	days = 15
 	}
+	
 	fire_only_once = yes
 	
-	option = {# Let's focus on more reliable models
+	option = {# Investigate him and his papers
 		name = pacificstates.303.a
+		if = {
+		limit = { has_completed_focus = CAL_radical_taxation }
+		country_event = {
+			id = ustates.303
+			days = 15
+			}
+		}
 	}
-	option = {# I like it how it is
+	option = {# It's his right
 		name = pacificstates.303.b
 		ai_chance = {
 			factor = 10
@@ -6528,6 +6650,15 @@ country_event = {# American Liberty League
 	
 	option = {# Attack them
 		name = pacificstates.305.a
+		add_political_power = -45
+		add_popularity = { ideology = social_conservative popularity = -0.03 }
+		add_popularity = { ideology = market_liberal popularity = -0.03 }
+	}
+	option = {# Ignore them
+		name = pacificstates.305.a
+		add_popularity = { ideology = social_liberal popularity = -0.02 }
+		add_popularity = { ideology = social_democrat popularity = -0.02 }
+		add_popularity = { ideology = radicial_socialist popularity = -0.02 }
 	}
 }
 
@@ -6544,9 +6675,17 @@ country_event = {# Fair Employment Practice Committee
 	
 	option = {# Yes
 		name = pacificstates.308.a
+		add_manpower = 4000
+		add_political_power = -30
+		add_war_support = 0.03
+		add_stability = -0.03
 	}
 	option = {# Nope
 		name = pacificstates.308.b
+		add_stability = 0.02
+		add_political_power = 10
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.02 }
+		add_popularity = { ideology = national_populist popularity = 0.01 }
 	}
 }
 
@@ -6562,14 +6701,10 @@ country_event = {# American Guide Series
 
 	fire_only_once = yes
 	
-	option = {# Let's focus on more reliable models
+	option = {# Very good
 		name = pacificstates.311.a
-	}
-	option = {# I like it how it is
-		name = pacificstates.311.b
-		ai_chance = {
-			factor = 10
-		}
+		add_political_power = 20
+		add_stability = 0.02
 	}
 }
 
@@ -6584,13 +6719,28 @@ country_event = {# Wrangle Edison
 
 	fire_only_once = yes
 	
-	option = {# Let's focus on more reliable models
+	option = {# Break them up
 		name = pacificstates.312.a
+		add_political_power = 50
+		add_popularity = { ideology = social_liberal popularity = 0.03 }
+		add_popularity = { ideology = social_democrat popularity = 0.03}
 	}
-	option = {# I like it how it is
+	option = {# Buy Stocks
 		name = pacificstates.312.b
-		ai_chance = {
-			factor = 10
+		add_political_power = -55
+		add_stability = 0.05
+		random_owned_state = {
+			limit = {
+				is_core_of = CAL
+				is_controlled_by = CAL
+				industrial_complex > 0
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
 		}
 	}
 }
@@ -6610,6 +6760,8 @@ country_event = {# Temperance Fountains
 	
 	option = {# They are better than not having it
 		name = pacificstates.313.a
+		add_political_power = 10
+		add_popularity = { ideology = social_democrat popularity = 0.01 }
 	}
 }
 
@@ -6624,10 +6776,18 @@ country_event = {# Liberty Lobby Growth
 	has_completed_focus = CAL_radical_taxation
 	}
 
+	mean_time_to_happen = {
+	days = 6
+	}
+	
 	fire_only_once = yes
 	
 	option = {# Damn them
 		name = pacificstates.314.a
+		add_political_power = -20
+		add_war_support = -0.04
+		add_popularity = { ideology = social_conservative popularity = 0.02 }
+		add_popularity = { ideology = market_liberal popularity = 0.03 }
 	}
 }
 
@@ -6638,34 +6798,81 @@ country_event = {# Progressive Unity
 	desc = pacificstates.315.d
 	picture = GFX_ACW_american_brigade
 
-	is_triggered_only = yes
+	trigger = {
+	has_government = social_democrat
+	has_completed_focus = CAL_new_nationalism
+	}
 
 	fire_only_once = yes
 	
 	option = {# Good
 		name = pacificstates.315.a
+		add_political_power = 60
+		add_stability = 0.04
 	}
 }
 
-country_event = {# Cut the Tape
-	id = pacificstates.323
-	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.323"}
-	title = pacificstates.323.t
-	desc = pacificstates.323.d
+country_event = {# Hearst's treachery
+	id = pacificstates.316
+	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.316"}
+	title = pacificstates.316.t
+	desc = pacificstates.316.d
 	picture = GFX_ACW_american_brigade
 
 	is_triggered_only = yes
 
 	fire_only_once = yes
 	
-	option = {# Let's focus on more reliable models
-		name = pacificstates.323.a
+	option = {# Take them down
+		name = pacificstates.316.a
+		add_popularity = { ideology = authoritarian_democrat popularity = -0.1 }
+		add_stability = -0.03
+		add_political_power = -40
 	}
-	option = {# I like it how it is
-		name = pacificstates.323.b
-		ai_chance = {
-			factor = 10
-		}
+	option = {# Leave them be
+		name = pacificstates.316.b
+		add_popularity = { ideology = authoritarian_democrat popularity = -0.05 }
+		add_stability = -0.05
+		add_political_power = -10
+		add_war_support = -0.04
+	}
+}
+
+country_event = {# Land Compensation
+	id = pacificstates.317
+	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.317"}
+	title = pacificstates.317.t
+	desc = pacificstates.317.d
+	picture = GFX_ACW_american_brigade
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = {#Compensate them
+		name = pacificstates.317.a
+	}
+	option = {#Only compensate the poorer farmers
+		name = pacificstates.317.b
+	}
+	option = {#No, the land is idle anyways
+		name = pacificstates.317.b
+	}
+}
+
+country_event = {# Religious Conservatives Organize
+	id = pacificstates.319
+	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.319"}
+	title = pacificstates.319.t
+	desc = pacificstates.319.d
+	picture = GFX_ACW_american_brigade
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = {#Oh my
+		name = pacificstates.319.a
 	}
 }
 
