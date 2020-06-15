@@ -144,6 +144,20 @@ units = {
 		start_equipment_factor = 1.0
 	}
 	division = {
+		name = "2nd Delaware National Guard"
+		location = 9758 #Louisville
+		division_template = "Army Loyalists"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "3rd 'Washington's Sword' National Guard"
+		location = 9758 #Nashville
+		division_template = "Army Loyalists"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1.0
+	}
+	division = {
 		name = "1st Maryland National Guard"
 		location = 6984 #Baltimore
 		division_template = "Army Loyalists"
@@ -158,29 +172,15 @@ units = {
 		start_equipment_factor = 1.0
 	}
 	division = {
-		name = "1st North Carolina National Guard"
-		location = 10081 #Raleigh
+		name = "1st North Carolina National Guard Loyalists"
+		location = 3823 #Raleigh
 		division_template = "Army Loyalists"
 		start_experience_factor = 0.4
 		start_equipment_factor = 1.0
 	}
 	division = {
-		name = "2nd North Carolina National Guard"
-		location = 10081 #Raleigh
-		division_template = "Army Loyalists"
-		start_experience_factor = 0.4
-		start_equipment_factor = 1.0
-	}
-	division = {
-		name = "1st Kentucky National Guard"
-		location = 6696 #Louisville
-		division_template = "Army Loyalists"
-		start_experience_factor = 0.4
-		start_equipment_factor = 1.0
-	}
-	division = {
-		name = "1st Tennessee National Guard"
-		location = 12501 #Nashville
+		name = "2nd North Carolina National Guard Loyalists"
+		location = 3823 #Raleigh
 		division_template = "Army Loyalists"
 		start_experience_factor = 0.4
 		start_equipment_factor = 1.0
@@ -200,30 +200,16 @@ units = {
 		start_equipment_factor = 1.0
 	}
 	division = {
-		name = "1st Nebraska National Guard"
-		location = 3708 #Lincoln
-		division_template = "Army Loyalists"
-		start_experience_factor = 0.4
-		start_equipment_factor = 1.0
-	}
-	division = {
-		name = "1st Kansas National Guard"
-		location = 1352 #Topeka
-		division_template = "Army Loyalists"
-		start_experience_factor = 0.4
-		start_equipment_factor = 1.0
-	}
-	division = {
-		name = "1st Colorado National Guard"
-		location = 1827 #Denver
-		division_template = "Army Loyalists"
-		start_experience_factor = 0.4
-		start_equipment_factor = 1.0
-	}
-	division = {
 		name = "1st Ohio National Guard Loyalists"
 		location = 6929 #Bismarck
 		division_template = "Loyalist Garrison"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "2nd 'Five Lakes' National Guard Loyalists"
+		location = 3708 #6929
+		division_template = "Army Loyalists"
 		start_experience_factor = 0.4
 		start_equipment_factor = 1.0
 	}
