@@ -825,6 +825,14 @@ country_event = { #AUS Peace Offer
 			}
 		}
 		hidden_effect = {
+		COR = {
+		country_event = {
+		id = amcivwar.4017
+		days = 2
+			}
+		}
+		}
+		hidden_effect = {
 		set_global_flag = AUS_CSA_TREATY
 		}
 	}
