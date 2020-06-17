@@ -37,7 +37,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_second_convention"
 			if = {
 			limit = {
-			NOT = has_country_flag = CSA_social_patriot_victory
+			NOT =  { has_country_flag = CSA_social_patriot_victory }
 			}
 			country_event = { id = csa.1 days = 4 }
 			}
@@ -48,7 +48,7 @@ focus_tree = {
 			country_event = { id = csa.1000 days = 4 }
 			}
 			hidden_effect = {
-				# let's fire allll the flavour events
+				#let's fire allll the flavour events
 				country_event = { id = csa.85 days = 60 random = 10 }
 				country_event = { id = csa.76 days = 90 random = 10 }
 				country_event = { id = csa.77 days = 120 random = 10 }
@@ -71,8 +71,8 @@ focus_tree = {
 			}
 		}
 	}
-
-	### American Commonwealth	
+	
+	###American Commonwealth	
 	focus = {# American Commonwealth
 		id = CSA_american_commonwealth
 		icon = GFX_goal_red_star_green_wreath
@@ -3348,7 +3348,6 @@ focus_tree = {
 			361 = {	if = {	limit = { is_owned_and_controlled_by = CSA } add_extra_state_shared_building_slots = 2 } }
 		}
 	}
-	
 	focus = {# Reform the IWW
 		id = CSA_reform_the_iww
 		icon = GFX_goal_CSA_restructure_iww
@@ -9599,4 +9598,4 @@ focus_tree = {
 			}
 		}
 	}
-}
+}   

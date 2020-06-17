@@ -61,8 +61,9 @@ country_event = { # Jack Reed declares revolution against MacArthur
 		}
 		add_stability = 0.15
 		add_war_support = 0.2
+		CSA_initial_events = yes
 		hidden_effect = {
-		CAL= {
+		CAL = {
 		country_event = {
 				id = amcivwar.4000
 				days = 10
@@ -110,6 +111,7 @@ country_event = { # Jack Reed declares revolution against MacArthur
 		}
 		add_stability = 0.15
 		add_war_support = 0.2
+		CSA_initial_events = yes
 		CSA = {
 			change_tag_from = USA
 		}
@@ -204,6 +206,7 @@ country_event = { # Huey Long declares Rebellion against MacArthur
 		}
 		add_stability = 0.15
 		add_war_support = 0.2
+		TEX_initial_events = yes
 	}
 	option = {
 		name = amcivwar.2.b
@@ -223,6 +226,7 @@ country_event = { # Huey Long declares Rebellion against MacArthur
 		}
 		add_stability = 0.15
 		add_war_support = 0.2
+		TEX_initial_events = yes
 		TEX = {
 			change_tag_from = USA
 		}
@@ -2089,7 +2093,6 @@ country_event = { # Huey Long declares Rebellion against MacArthur
 		}
 		hidden_effect = {
 			TEX_initial_events = yes
-			country_event = { id = amcivwar.7 hours = 8 }
 		}
 	}
 	option = {
@@ -2112,7 +2115,6 @@ country_event = { # Huey Long declares Rebellion against MacArthur
 		}
 		hidden_effect = {
 			TEX_initial_events = yes
-			country_event = { id = amcivwar.7 hours = 8 }
 		}
 		TEX = {
 			change_tag_from = USA
@@ -2236,7 +2238,6 @@ country_event = { # Jack Reed declares revolution against MacArthur
 		add_war_support = 0.2
 		hidden_effect = {
 			CSA_initial_events = yes
-			country_event = { id = amcivwar.8 hours = 8 }
 		}
 	}
 	option = {
@@ -2263,7 +2264,6 @@ country_event = { # Jack Reed declares revolution against MacArthur
 		add_war_support = 0.2
 		hidden_effect = {
 			CSA_initial_events = yes
-			country_event = { id = amcivwar.8 hours = 8 }
 		}
 		CSA = {
 			change_tag_from = USA
@@ -2306,7 +2306,6 @@ country_event = { # Pacific States declares revolution against MacArthur
 			USA_initial_events = yes
 			CAL_initial_events = yes
 			news_event = { id = amcivwar.9 hours = 8 }
-			country_event = { id = amcivwar.10 days = 30 }
 		}
 	}
 	option = {
@@ -2331,7 +2330,6 @@ country_event = { # Pacific States declares revolution against MacArthur
 			USA_initial_events = yes
 			CAL_initial_events = yes
 			news_event = { id = amcivwar.9 hours = 8 }
-			country_event = { id = amcivwar.10 days = 30 }
 		}
 		CAL = {
 			change_tag_from = USA
@@ -4078,13 +4076,17 @@ country_event = { # Internal Conflicts
 		has_country_flag = csa_republican_army
 			}
 		}
+		CSA = {
 		country_event = { id = csa.360003 days = 30 }
 			}
-		if = {
+		}
+		else_if = {
 		limit = {
 		has_country_flag = csa_republican_army
 		}
+		CSA = {
 		country_event = { id = csa.3600 days = 24 }
+				}
 			}
 		}
 	}
@@ -4100,7 +4102,9 @@ country_event = { # Internal Conflicts
 			popularity = 0.02
 		}
 		hidden_effect = {
+		CSA = {
 		country_event = { id = csa.3600 days = 18 }
+			}
 		}
 	}
 }
@@ -4134,7 +4138,9 @@ country_event = { # Social Patriot Demands
 			popularity = 0.03
 		}
 		hidden_effect = {
+		CSA = {
 		country_event = { id = csa.3600 days = 18 }
+			}
 		}
 		add_political_power = -40
 		add_war_support = -0.03
@@ -4163,7 +4169,9 @@ country_event = { # Military Takeover
 			popularity = 0.08
 		}
 		hidden_effect = {
+		CSA = {
 		country_event = { id = csa.3601 days = 18 }
+			}
 		}
 		add_stability = -0.1
 		add_political_power = -50
@@ -4222,7 +4230,9 @@ country_event = { # Social Patriots Unity Legislation
 		add_war_support = 0.05
 		add_political_power = 25
 		hidden_effect = {
+		CSA = {
 		country_event = { id = csa.3601 days = 11 }
+			}
 		}
 	}
 	option = {
@@ -4239,7 +4249,9 @@ country_event = { # Social Patriots Unity Legislation
 		add_political_power = -30
 		add_war_support = -0.03
 		hidden_effect = {
+		CSA = {
 		country_event = { id = csa.360003 days = 30 }
+			}
 		}
 	}
 }
@@ -4269,7 +4281,9 @@ country_event = { # TUUL Ultimatum
 		army_experience = -10
 		add_stability = -0.08
 		hidden_effect = {
+		CSA = {
 		country_event = { id = csa.360003 days = 10 }
+			}
 		}
 	}
 	option = {
@@ -4280,7 +4294,9 @@ country_event = { # TUUL Ultimatum
 			popularity = -0.02
 		}
 		hidden_effect = {
+		CSA = {
 		country_event = { id = csa.3602 days = 11 }
+			}
 		}
 		add_political_power = -15
 		add_manpower = -400
@@ -4309,7 +4325,9 @@ country_event = { # TUUL Weakened
 		add_political_power = 25
 		add_stability = 0.02
 		hidden_effect = {
+		CSA = {
 		country_event = { id = csa.3603 days = 20 }
+			}
 		}
 	}
 }
@@ -4334,7 +4352,9 @@ country_event = { # Social Patriots in power
 		add_political_power = 25
 		add_stability = 0.02
 		hidden_effect = {
+		CSA = {
 		country_event = { id = csa.3604 days = 7 }
+			}
 		}
 	}
 }
@@ -4358,6 +4378,11 @@ country_event = { # Radical Revolts
 		add_manpower = -800
 		add_political_power = -25
 		add_stability = 0.02
+		hidden_effect = {
+		CSA = {
+		country_event = { id = csa.3605 days = 5 }
+			}
+		}
 	}
 }
 
@@ -4388,10 +4413,14 @@ country_event = { # Radicals Crushed
 		limit = {
 		has_country_flag = csa_union_army
 			}
+		CSA = {
 		country_event = { id = csa.3608 days = 7 }
+			}
 		}
 		else = {
+		CSA = {
 		country_event = { id = csa.3608 days = 40 }
+				}
 			}
 		}
 	}
@@ -4420,16 +4449,16 @@ country_event = { # Military Demands Amnesty
 		add_political_power = -40
 		add_stability = -0.05
 		add_war_support = 0.05
-		CSA = {
 		hidden_effect = {
+		CSA = {
 		country_event = { id = csa.3606 days = 7 }
 			}
 		}
 	}
 	option = {
 		name = amcivwar.3606.b
-		CSA = {
 		hidden_effect = {
+		CSA = {
 		country_event = { id = csa.3607 days = 7 }
 			}
 		}
@@ -4467,8 +4496,8 @@ country_event = { # Fosterite Coup
 			last_election = "1936.11.08"
 			elections_allowed = yes
 		}
-		CSA = {
 		hidden_effect = {
+		CSA = {
 		country_event = { id = csa.360003 days = 5 }
 		set_country_flag = CSA_Foster_coup
 			}

@@ -3112,12 +3112,12 @@ country_event = { ###Denounced by Congress###
 		add_political_power = -35
 		add_stability = -0.1
 		hidden_effect = {
-			country_event = { id = ustates.51 days = 5 }
+			country_event = { id = ustates.51 days = 4 }
 			country_event = { id = amcivwar.1 days = 5 }
 			country_event = { id = amcivwar.1001 days = 6 }
 			country_event = { id = amcivwar.2 days = 7 }
-			country_event = { id = amcivwar.3 days = 5 }
-			country_event = { id = amcivwar.3000 days = 5 }
+			country_event = { id = amcivwar.3 days = 8 }
+			country_event = { id = amcivwar.3000 days = 9 }
 		}
 	}
 }
@@ -3137,7 +3137,7 @@ country_event = { # Violence and Chaos Spreads
 		name = ustates.49.a
 		add_stability = -0.05
 		hidden_effect = {
-			country_event = { id = ustates.51 days = 5 }
+			country_event = { id = ustates.51 days = 4 }
 			country_event = { id = amcivwar.1 days = 5 }
 			country_event = { id = amcivwar.1001 days = 6 }
 			country_event = { id = amcivwar.2 days = 7 }
