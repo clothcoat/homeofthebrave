@@ -1141,6 +1141,9 @@ country_event = { # Civil War Begins
 
 	immediate = {
 		USA_civil_war_begins = yes
+		set_country_flag = {
+		has_global_flag = USA_civil_war_begun_flag
+		}
 	}
 
 	option = {
@@ -3413,7 +3416,7 @@ country_event = { # CSA wins the civil war
 			has_war_with = CAL
 			country_exists = USA
 			country_exists = TEX
-			has_country_flag = ACW_has_deal_with_devil
+			country_exists = COR
 		}
 		OR = {
 			has_global_flag = PSA_rockies_ceasefire
@@ -3504,6 +3507,7 @@ country_event = { # AUS wins the civil war
 			has_war_with = CAL
 			country_exists = USA
 			country_exists = CSA
+			country_exists = COR
 			has_country_flag = ACW_has_deal_with_devil
 		}
 		OR = {
@@ -3955,7 +3959,7 @@ country_event = { # The Rich Flee
 	}
 }
 
-country_event = { # Life in the CSA during the war
+country_event = { # Military Debate
 	id = amcivwar.32
 	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.32"}
 	title = amcivwar.32.t
@@ -3964,22 +3968,32 @@ country_event = { # Life in the CSA during the war
 
 	fire_only_once = yes
 
-	trigger = {
-		tag = CSA
-		has_global_flag = USA_civil_war_begun_flag
-		NOT = {
-			has_global_flag = USA_civil_war_over_flag
-		}
-	}
+	is_triggered_only = yes
 
-	mean_time_to_happen = {
-		months = 12
-	}
-
-	option = {
+	option = { #The IWW
 		name = amcivwar.32.a
-		add_war_support = 0.1
+		add_stability = 0.02
+		add_popularity = { ideology = syndicalist popularity = 0.02 }
+		set_country_flag = csa_union_army
+	}
+	option = { #The Social Patriot Plan
+		name = amcivwar.32.b
+		add_stability = 0.02
+		add_popularity = { ideology = social_democrat popularity = 0.01 }
+		add_popularity = { ideology = radical_socialist popularity = 0.01 }
+		set_country_flag = csa_republican_army
+	}
+	option = { #The Collectivist Plan
+		name = amcivwar.32.c
+		add_war_support = 0.05
+		add_popularity = { ideology = totalist popularity = 0.02 }
+		set_country_flag = csa_collectivist_army
+	}
+	option = { #The Centralist Plan
+		name = amcivwar.32.e
 		add_political_power = 10
+		add_popularity = { ideology = totalist popularity = 0.02 }
+		set_country_flag = csa_centralist_army
 	}
 }
 
@@ -3992,17 +4006,7 @@ country_event = { # Red Witches
 
 	fire_only_once = yes
 
-	trigger = {
-		tag = CSA
-		has_global_flag = USA_civil_war_begun_flag
-		NOT = {
-			has_global_flag = USA_civil_war_over_flag
-		}
-	}
-
-	mean_time_to_happen = {
-		months = 6
-	}
+	is_triggered_only = yes
 
 	option = { # Death from above
 		name = amcivwar.34.a
@@ -4052,11 +4056,6 @@ country_event = { # Internal Conflicts
 
 	fire_only_once = yes
 	is_triggered_only = yes
-		
-	immediate = {
-	set_country_flag = CSA_social_patriot_power
-	set_country_flag = CSA_radical_power
-	}
 
 	option = {
 		name = amcivwar.36.a
@@ -4068,10 +4067,25 @@ country_event = { # Internal Conflicts
 			ideology = totalist
 			popularity = 0.05
 		}
-		add_war_support = 0.05
-		add_political_power = 25
+		add_war_support = -0.05
+		add_political_power = -25
+		add_stability = -0.03
+		add_manpower = -1200
 		hidden_effect = {
+		if = {
+		limit = {
+		NOT = {
+		has_country_flag = csa_republican_army
+			}
+		}
+		country_event = { id = csa.360003 days = 30 }
+			}
+		if = {
+		limit = {
+		has_country_flag = csa_republican_army
+		}
 		country_event = { id = csa.3600 days = 24 }
+			}
 		}
 	}
 	option = {
@@ -4088,8 +4102,100 @@ country_event = { # Internal Conflicts
 		hidden_effect = {
 		country_event = { id = csa.3600 days = 18 }
 		}
-		add_political_power = -30
+	}
+}
+
+country_event = { # Social Patriot Demands
+	id = amcivwar.360001
+	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.360001"}
+	title = amcivwar.360001.t
+	desc = amcivwar.360001.d
+	picture = GFX_ACW_civil_war
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #No
+		name = amcivwar.360001.a
+		add_political_power = -20
+		hidden_effect = {
+		country_event = { id = csa.360002 days = 5 }
+		}
+	}
+	option = { #Agree
+		name = amcivwar.360001.b
+		add_war_support = 0.05
+		add_popularity = {
+			ideology = social_democrat
+			popularity = 0.03
+		}
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.03
+		}
+		hidden_effect = {
+		country_event = { id = csa.3600 days = 18 }
+		}
+		add_political_power = -40
 		add_war_support = -0.03
+	}
+}
+
+country_event = { # Military Takeover
+	id = amcivwar.360002
+	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.360002"}
+	title = amcivwar.360002.t
+	desc = amcivwar.360002.d
+	picture = GFX_ACW_civil_war
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #Agree
+		name = amcivwar.360002.a
+		add_war_support = 0.05
+		add_popularity = {
+			ideology = social_democrat
+			popularity = 0.08
+		}
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.08
+		}
+		hidden_effect = {
+		country_event = { id = csa.3601 days = 18 }
+		}
+		add_stability = -0.1
+		add_political_power = -50
+		add_war_support = -0.05
+	}
+}
+
+country_event = { # Syndicalist Victory
+	id = amcivwar.360003
+	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.360003"}
+	title = amcivwar.360003.t
+	desc = amcivwar.360003.d
+	picture = GFX_ACW_civil_war
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #Agree
+		name = amcivwar.360002.a
+		set_country_flag = CSA_syndicalist_victory
+		add_war_support = 0.05
+		add_popularity = {
+			ideology = social_democrat
+			popularity = -0.04
+		}
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = -0.04
+		}
+		add_stability = 0.05
+		add_political_power = 45
+		add_war_support = 0.08
 	}
 }
 
@@ -4132,6 +4238,9 @@ country_event = { # Social Patriots Unity Legislation
 		}
 		add_political_power = -30
 		add_war_support = -0.03
+		hidden_effect = {
+		country_event = { id = csa.360003 days = 30 }
+		}
 	}
 }
 
@@ -4149,15 +4258,19 @@ country_event = { # TUUL Ultimatum
 		name = amcivwar.3601.a
 		add_popularity = {
 			ideology = syndicalist
-			popularity = 0.02
+			popularity = 0.05
 		}
 		add_popularity = {
 			ideology = totalist
-			popularity = 0.03
+			popularity = 0.05
 		}
 		add_war_support = 0.05
 		add_political_power = -25
-		add_stability = -0.05
+		army_experience = -10
+		add_stability = -0.08
+		hidden_effect = {
+		country_event = { id = csa.360003 days = 10 }
+		}
 	}
 	option = {
 		name = amcivwar.3601.b
@@ -4167,9 +4280,11 @@ country_event = { # TUUL Ultimatum
 			popularity = -0.02
 		}
 		hidden_effect = {
-		country_event = { id = csa.3601 days = 11 }
+		country_event = { id = csa.3602 days = 11 }
 		}
-		add_political_power = -30
+		add_political_power = -15
+		add_manpower = -400
+		add_stability = -0.05
 		add_war_support = -0.03
 	}
 }
@@ -4190,7 +4305,7 @@ country_event = { # TUUL Weakened
 			ideology = totalist
 			popularity = -0.03
 		}
-		add_manpower = -300
+		add_manpower = -3000
 		add_political_power = 25
 		add_stability = 0.02
 		hidden_effect = {
@@ -4236,26 +4351,17 @@ country_event = { # Radical Revolts
 	
 	option = {
 		name = amcivwar.3604.a
-		if = {
-		limit = {
-		has_completed_focus = CSA_collectivist_doctrine
-			}
-		country_event = { id = csa.3605 days = 7 }
-		}
-		else = {
-		country_event = { id = csa.3607 days = 7 }
-		}
 		add_popularity = {
 			ideology = totalist
 			popularity = -0.03
 		}
-		add_manpower = -300
-		add_political_power = 25
+		add_manpower = -800
+		add_political_power = -25
 		add_stability = 0.02
 	}
 }
 
-country_event = { # Military Demands Amnesty
+country_event = { # Radicals Crushed
 	id = amcivwar.3605
 	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.3605"}
 	title = amcivwar.3605.t
@@ -4271,21 +4377,27 @@ country_event = { # Military Demands Amnesty
 			ideology = totalist
 			popularity = 0.015
 		}
-		CSA = {
 		hidden_effect = {
-		country_event = { id = csa.3606 days = 7 }
+		if = {
+		limit = {
+		has_country_flag = csa_collectivist_army
 			}
+		country_event = { id = csa.3606 days = 7 }
 		}
-	}
-	option = {
-		name = amcivwar.3605.b
-		hidden_effect = {
-		country_event = { id = csa.3607 days = 7 }
+		if = {
+		limit = {
+		has_country_flag = csa_union_army
+			}
+		country_event = { id = csa.3608 days = 7 }
+		}
+		else = {
+		country_event = { id = csa.3608 days = 40 }
+			}
 		}
 	}
 }
 
-country_event = { # Fosterite Coup
+country_event = { # Military Demands Amnesty
 	id = amcivwar.3606
 	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.3606"}
 	title = amcivwar.3606.t
@@ -4298,9 +4410,16 @@ country_event = { # Fosterite Coup
 	option = {
 		name = amcivwar.3606.a
 		add_popularity = {
-			ideology = totalist
-			popularity = 0.015
+			ideology = syndicalist
+			popularity = 0.01
 		}
+		add_popularity = {
+			ideology = totalist
+			popularity = 0.03
+		}
+		add_political_power = -40
+		add_stability = -0.05
+		add_war_support = 0.05
 		CSA = {
 		hidden_effect = {
 		country_event = { id = csa.3606 days = 7 }
@@ -4317,7 +4436,7 @@ country_event = { # Fosterite Coup
 	}
 }
 
-country_event = { # Radicals Crushed
+country_event = { # Fosterite Coup
 	id = amcivwar.3607
 	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.3607"}
 	title = amcivwar.3607.t
@@ -4332,73 +4451,11 @@ country_event = { # Radicals Crushed
 		add_popularity = { ideology = social_democrat popularity = 0.01 }
 		add_popularity = { ideology = radical_socialist popularity = 0.01 }
 		add_popularity = { ideology = syndicalist popularity = 0.005 }
-		CSA = {
-		hidden_effect = {
-		country_event = { id = csa.3608 days = 5 }
-			}
-		}
-	}
-}
-
-country_event = { # Congress calls for a vote
-	id = amcivwar.3608
-	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.3608"}
-	title = amcivwar.3608.t
-	desc = amcivwar.3608.d
-	picture = GFX_ACW_civil_war
-
-	fire_only_once = yes
-	is_triggered_only = yes
-	
-	option = {
-		name = amcivwar.3608.a
-		add_stability = 0.02
-		hidden_effect = {
-		CSA = {
-			country_event = {
-			id = amcivwar.3609
-			days = 1
-				}
-			}
-		}
-	}
-}
-
-country_event = { # Congressional Vote
-	id = amcivwar.3609
-	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.3609"}
-	title = amcivwar.3609.t
-	desc = amcivwar.3609.d
-	picture = GFX_ACW_civil_war
-
-	fire_only_once = yes
-	is_triggered_only = yes
-	
-	option = { #The Independence League
-		name = amcivwar.3609.a
-		CSA = {
-			country_event = {
-			id = csa.330
-			days = 1
-			}
-		}
-	}
-	option = { #The AFL
-		name = amcivwar.3609.b
-		CSA = {
-			country_event = {
-			id = csa.325
-			days = 1
-			}
-		}
-	}
-	option = { #Browder's SPA Centralist Ticket
-		name = amcivwar.3609.c
 		hidden_effect = {
 			create_country_leader = {
-				name = "Earl Browder"
-				desc = "POLITICS_EARL_BROWDER_DESC"
-				picture = "Portrait_CSA_Earl_Bowder.tga"
+				name = "William Z. Foster"
+				desc = "POLITICS_WILLIAM_FOSTER_DESC"
+				picture = "Portrait_CSA_William_Z_Foster.tga"
 				expire = "1965.1.1"
 				ideology = totalist_subtype
 				traits = {}
@@ -4408,26 +4465,151 @@ country_event = { # Congressional Vote
 			ruling_party = totalist
 			election_frequency = 48
 			last_election = "1936.11.08"
-			elections_allowed = no
+			elections_allowed = yes
+		}
+		CSA = {
+		hidden_effect = {
+		country_event = { id = csa.360003 days = 5 }
+		set_country_flag = CSA_Foster_coup
+			}
 		}
 	}
-	option = { #The American Worker's Party
-		name = amcivwar.3609.e
+}
+
+country_event = { # Military Demands IWW Support
+	id = amcivwar.3608
+	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.3608"}
+	title = amcivwar.3608.t
+	desc = amcivwar.3608.d
+	picture = GFX_ACW_civil_war
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { #Agree
+		name = amcivwar.3608.a
+		add_stability = 0.02
 		hidden_effect = {
-			create_country_leader = {
-				name = "James Burnham"
-				desc = "POLITICS_JAMES_BURNHAM_DESC"
-				picture = "gfx/leaders/CSA/Portrait_CSA_burnham.dds"
+		CSA = {
+			country_event = {
+			id = amcivwar.3610
+			days = 55
+				}
+			}
+		}
+	}
+	option = { #Unacceptable
+		name = amcivwar.3608.a
+		add_stability = 0.02
+		hidden_effect = {
+		CSA = {
+			country_event = {
+			id = amcivwar.3609
+			days = 3
+				}
+			}
+		}
+	}
+}
+
+country_event = { # Syndicalist Coup
+	id = amcivwar.3609
+	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.3609"}
+	title = amcivwar.3609.t
+	desc = amcivwar.3609.d
+	picture = GFX_ACW_civil_war
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { #Purge them
+		name = amcivwar.3609.a
+		add_political_power = 75
+		add_stability = -0.1
+		add_popularity = { ideology = social_democrat popularity = -0.07 }
+		add_popularity = { ideology = radical_socialist popularity = -0.07 }
+		add_manpower = -5500
+		hidden_effect = {
+		CSA = {
+			country_event = {
+			id = csa.360003
+			days = 20
+				}
+			}
+		}
+	}
+	option = { #Purge them
+		name = amcivwar.3609.a
+		add_political_power = -20
+		add_stability = 0.05
+		add_popularity = { ideology = syndicalist popularity = 0.05 }
+		add_manpower = -500
+		hidden_effect = {
+		CSA = {
+			country_event = {
+			id = csa.360003
+			days = 20
+				}
+			}
+		}
+	}
+}
+
+country_event = { # Social Patriots Cement Power
+	id = amcivwar.3610
+	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.3610"}
+	title = amcivwar.3610.t
+	desc = amcivwar.3610.d
+	picture = GFX_ACW_civil_war
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { #We've Won
+		name = amcivwar.3610.a
+		set_country_flag = CSA_social_patriot_victory
+		add_stability = 0.1
+		add_popularity = { ideology = social_democrat popularity = 0.05 }
+		add_popularity = { ideology = radical_socialist popularity = 0.05 }
+		add_popularity = { ideology = totalist popularity = 0.06 }
+		hidden_effect = {
+		create_country_leader = {
+				name = "Socialist American Congress"
+				desc = "CSA_CENTRAL_COMITTEE_DESC"
+				picture = "Portrait_CSA_committee.tga"
+				expire = "1965.1.1"
+				ideology = social_democratic_subtype
+				traits = {}
+		}
+		create_country_leader = {
+				name = "Socialist American Congress"
+				desc = "CSA_CENTRAL_COMITTEE_DESC"
+				picture = "Portrait_CSA_committee.tga"
+				expire = "1965.1.1"
+				ideology = radical_socialist_subtype
+				traits = {}
+			}
+		create_country_leader = {
+				name = "Socialist American Congress"
+				desc = "CSA_CENTRAL_COMITTEE_DESC"
+				picture = "Portrait_CSA_committee.tga"
+				expire = "1965.1.1"
+				ideology = syndicalist_subtype
+				traits = {}
+			}
+		create_country_leader = {
+				name = "Socialist American Congress"
+				desc = "CSA_CENTRAL_COMITTEE_DESC"
+				picture = "Portrait_CSA_committee.tga"
 				expire = "1965.1.1"
 				ideology = totalist_subtype
-				traits = { }
+				traits = {}
 			}
 		}
 		set_politics = {
-			ruling_party = totalist
+			ruling_party = social_democrat
 			election_frequency = 48
-			last_election = "1936.11.08"
-			elections_allowed = no
+			elections_allowed = yes
 		}
 	}
 }

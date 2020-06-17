@@ -6,6 +6,235 @@
 add_namespace = csa
 
 ### Constitution Events ###
+
+###Social Patriots
+country_event = { # Socialist Constitution - Property Debate
+	id = csa.1000
+	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.1000"}
+	title = csa.1000.t
+	desc = csa.1000.d
+	picture = congress
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = { #The Laborists win out
+		name = csa.1000.a	
+		country_event = {
+			id = csa.1001
+			days = 7
+			hidden_effect = {
+			modify_country_flag = {
+			flag = CSA_afl
+			value = 1
+				}
+			modify_country_flag = {
+			flag = CSA_browder
+			value = 1
+				}
+			}
+		}
+	}
+	option = { # The Nationalists win out
+		name = csa.1000.a	
+		country_event = {
+			id = csa.1001
+			days = 7
+			}
+		hidden_effect = {
+			modify_country_flag = {
+			flag = CSA_nationalists
+			value = 1
+			}
+			modify_country_flag = {
+			flag = CSA_burnham
+			value = 1
+			}
+		}
+	}
+}
+
+country_event = { # Socialist Constitution - Social Radicalism
+	id = csa.1001
+	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.1001"}
+	title = csa.1001.t
+	desc = csa.1001.d
+	picture = congress
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = { #The Laborists win out
+		name = csa.1001.a	
+		country_event = {
+			id = csa.1002
+			days = 7
+			hidden_effect = {
+			modify_country_flag = {
+			flag = CSA_afl
+			value = 1
+				}
+			modify_country_flag = {
+			flag = CSA_burnham
+			value = 1
+				}
+			}
+		}
+	}
+	option = { # The Nationalists win out
+		name = csa.1001.a	
+		country_event = {
+			id = csa.1002
+			days = 7
+			}
+		hidden_effect = {
+			modify_country_flag = {
+			flag = CSA_nationalists
+			value = 1
+			}
+			modify_country_flag = {
+			flag = CSA_browder
+			value = 1
+			}
+		}
+	}
+}
+
+country_event = { # Socialist Constitution - Voting Rights
+	id = csa.1002
+	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.1002"}
+	title = csa.1002.t
+	desc = csa.1002.d
+	picture = congress
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = { #The Laborite Plan
+		name = csa.1002.a	
+		country_event = {
+			id = csa.1003
+			days = 6
+			hidden_effect = {
+			set_country_flag = CSA_Laborite_Plan
+			}
+		}
+	}
+	option = { # The Nationalist Plan
+		name = csa.1002.a	
+		country_event = {
+			id = csa.1003
+			days = 6
+			}
+		hidden_effect = {
+		set_country_flag = CSA_Nationalist_Plan
+		}
+	}
+	option = { # The Centralist Plan
+		name = csa.1002.a	
+		country_event = {
+			id = csa.1003
+			days = 6
+			}
+		hidden_effect = {
+		set_country_flag = CSA_Centralist_Plan
+		}
+	}
+}
+
+country_event = { # Socialist Congressional Election Arrives
+	id = csa.1003
+	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.1003"}
+	title = csa.1003.t
+	desc = csa.1003.d
+	picture = congress
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = { #The Independence League
+		name = csa.1003.a
+		trigger = {
+		NOT = {
+		has_country_flag = CSA_Laborite_Plan
+		}
+		}
+		hidden_effect = {
+		set_country_flag = CSA_Nationalist_Victory
+		}
+		set_country_flag = CSA_constitutional_convention_done
+		set_politics = {
+			ruling_party = radical_socialist
+			election_frequency = 48
+			elections_allowed = yes
+		}
+	}
+	option = { # The AFL
+		name = csa.1003.b
+		set_country_flag = CSA_constitutional_convention_done
+		hidden_effect = {
+		set_country_flag = CSA_AFL_In_Power
+		}
+		set_politics = {
+			ruling_party = social_democrat
+			election_frequency = 48
+			elections_allowed = yes
+		}
+	}
+	option = { # Browder's SPA Centralist Ticket
+		name = csa.1003.c
+		set_country_flag = CSA_constitutional_convention_done
+		hidden_effect = {
+			add_ideas = USA_Alf_Landon_hog_sli
+			add_ideas = USA_Cordell_Hull_for_mli
+			add_ideas = USA_Ray_Lyman_Wilbur_Sr_eco_mli
+			add_ideas = USA_Charles_Douglas_Jackson_sec_mli
+			create_country_leader = {
+				name = "Earl Browder"
+				desc = "POLITICS_EARL_BROWDER_DESC"
+				picture = "Portrait_CSA_Earl_Bowder.tga"
+				expire = "1965.1.1"
+				ideology = totalist_subtype
+				traits = {}
+			}
+		}
+		set_politics = {
+			ruling_party = totalist
+			election_frequency = 48
+			elections_allowed = yes
+		}
+		set_party_name = {
+			ideology = totalist
+			long_name = CSA_totalist_syndicalism_party_long
+			name = CSA_totalist_syndicalism_party
+		}
+		hidden_effect = {
+		set_country_flag = CSA_Nationalists_in_power
+		}
+	}
+	option = { # The American Worker's Party
+		name = csa.1003.e
+		hidden_effect = {
+		set_country_flag = CSA_burnham_is_leader
+		}
+		set_country_flag = CSA_constitutional_convention_done
+		hidden_effect = {
+			create_country_leader = {
+				name = "James Burnham"
+				desc = "POLITICS_JAMES_BURNHAM_DESC"
+				picture = "gfx/leaders/CSA/Portrait_CSA_burnham.dds"
+				expire = "1965.1.1"
+				ideology = totalist_subtype
+				traits = { }
+			}
+		}
+	}
+}
+
 country_event = { # Constitutional Convention begins
 	id = csa.1
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.1"}
@@ -43,11 +272,11 @@ country_event = { # Constitutional Convention begins
 				traits = {}
 			}
 			set_country_flag = {
-				flag = CSA_commonwealth
+				flag = CSA_centralists
 				value = 0
 			}
 			set_country_flag = {
-				flag = CSA_usas
+				flag = CSA_radicals
 				value = 0
 			}
 			country_event = {
@@ -69,20 +298,20 @@ country_event = { # Socialist Constitution - System of Government
 
 	option = {
 		name = csa.2.a
-		custom_effect_tooltip = CSA_totalists_gain_power
+		custom_effect_tooltip = CSA_radicals_gain_power
 		add_popularity = {
 			ideology = syndicalist
-			popularity = 0.03
+			popularity = 0.05
 		}
 		add_popularity = {
 			ideology = totalist
-			popularity = 0.07
+			popularity = 0.05
 		}
 		hidden_effect = {
 			set_country_flag = CSA_syndicalism
 			modify_country_flag = {
-				flag = CSA_usas
-				value = 2
+				flag = CSA_radicals
+				value = 1
 			}
 			country_event = {
 				id = csa.3
@@ -92,16 +321,16 @@ country_event = { # Socialist Constitution - System of Government
 	}
 	option = {
 		name = csa.2.b
-		custom_effect_tooltip = CSA_radsocs_gain_power
+		custom_effect_tooltip = CSA_centralists_gain_power
 		add_popularity = {
-			ideology = radical_socialist
+			ideology = totalist
 			popularity = 0.10
 		}
 		hidden_effect = {
-			set_country_flag = CSA_socialist
+			set_country_flag = CSA_party
 			modify_country_flag = {
-				flag = CSA_commonwealth
-				value = 2
+				flag = CSA_centralists
+				value = 1
 			}
 			country_event = {
 				id = csa.3
@@ -124,7 +353,7 @@ country_event = { # Socialist Constitution - Framework
 	desc = { # Syndicalism
 		text = csa.3.d.socialist
 		trigger = {
-			has_country_flag = CSA_socialist
+			has_country_flag = CSA_party
 		}
 	}
 	picture = congress
@@ -133,27 +362,6 @@ country_event = { # Socialist Constitution - Framework
 
 	option = {
 		name = csa.3.a
-		add_political_power = 20
-		hidden_effect = {
-			country_event = {
-				id = csa.4
-				days = 1
-			}
-		}
-	}
-}
-
-country_event = { # Socialist Constitution - Human Rights and Workers Rights
-	id = csa.4
-	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.4"}
-	title = csa.4.t
-	desc = csa.4.d
-	picture = congress
-
-	is_triggered_only = yes
-
-	option = {
-		name = csa.4.a
 		add_political_power = 20
 		hidden_effect = {
 			country_event = {
@@ -173,68 +381,47 @@ country_event = { # Socialist Constitution - Judiciary
 
 	is_triggered_only = yes
 
-	option = {
+	option = { #Enshrine Judicial Review of the Court
 		name = csa.5.a
-		custom_effect_tooltip = CSA_syndicalists_gain_power
+		custom_effect_tooltip = CSA_centralists_gain_power
 		add_popularity = {
-			ideology = syndicalist
-			popularity = 0.05
-		}
-		add_popularity = {
-			ideology = radical_socialist
-			popularity = 0.05
+			ideology = totalist
+			popularity = 0.1
 		}
 		hidden_effect = {
 			country_event = {
-				id = csa.6
+				id = csa.7
 				days = 1
 			}
 		}
 		hidden_effect = {
 			modify_country_flag = {
-				flag = CSA_commonwealth
+				flag = CSA_centralists
 				value = 1
 			}
 		}
 	}
 	option = {
 		name = csa.5.b
-		custom_effect_tooltip = CSA_totalists_gain_power
+		custom_effect_tooltip = CSA_radicals_gain_power
+		add_popularity = {
+			ideology = syndicalist
+			popularity = 0.07
+		}
 		add_popularity = {
 			ideology = totalist
-			popularity = 0.10
+			popularity = 0.03
 		}
 		hidden_effect = {
 			country_event = {
-				id = csa.6
+				id = csa.7
 				days = 1
 			}
 		}
 		hidden_effect = {
 			modify_country_flag = {
-				flag = CSA_usas
+				flag = CSA_radicals
 				value = 1
-			}
-		}
-	}
-}
-
-country_event = { # Socialist Constitution - Economic System
-	id = csa.6
-	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.6"}
-	title = csa.6.t
-	desc = csa.6.d
-	picture = congress
-
-	is_triggered_only = yes
-
-	option = {
-		name = csa.6.a
-		add_political_power = 20
-		hidden_effect = {
-			country_event = {
-				id = csa.7
-				days = 1
 			}
 		}
 	}
@@ -249,16 +436,16 @@ country_event = { # Socialist Constitution - Congress and the President
 
 	is_triggered_only = yes
 
-	option = {
+	option = { #A Controlled President
 		name = csa.7.a
-		custom_effect_tooltip = CSA_syndicalists_gain_power
+		custom_effect_tooltip = CSA_radicals_gain_power
 		add_popularity = {
 			ideology = syndicalist
-			popularity = 0.05
+			popularity = 0.07
 		}
 		add_popularity = {
-			ideology = radical_socialist
-			popularity = 0.05
+			ideology = totalist
+			popularity = 0.03
 		}
 		hidden_effect = {
 			country_event = {
@@ -268,17 +455,17 @@ country_event = { # Socialist Constitution - Congress and the President
 		}
 		hidden_effect = {
 			modify_country_flag = {
-				flag = CSA_commonwealth
+				flag = CSA_radicals
 				value = 1
 			}
 		}
 	}
-	option = {
+	option = {  #An Independent President
 		name = csa.7.b
-		custom_effect_tooltip = CSA_totalists_gain_power
+		custom_effect_tooltip = CSA_centralists_gain_power
 		add_popularity = {
 			ideology = totalist
-			popularity = 0.10
+			popularity = 0.1
 		}
 		hidden_effect = {
 			country_event = {
@@ -288,7 +475,28 @@ country_event = { # Socialist Constitution - Congress and the President
 		}
 		hidden_effect = {
 			modify_country_flag = {
-				flag = CSA_usas
+				flag = CSA_centralists
+				value = 1
+			}
+		}
+	}
+	option = {  #A Symbolic Head of State
+		name = csa.7.c
+		custom_effect_tooltip = CSA_radicals_gain_power
+		add_popularity = {
+			ideology = syndicalist
+			popularity = 0.1
+		}
+		hidden_effect = {
+		set_country_flag = CSA_Anarchist_Leadership
+			country_event = {
+				id = csa.8
+				days = 1
+			}
+		}
+		hidden_effect = {
+			modify_country_flag = {
+				flag = CSA_radicals
 				value = 1
 			}
 		}
@@ -306,18 +514,18 @@ country_event = { # Socialist Constitution - Centralization or decentralization
 
 	option = {
 		name = csa.8.a
-		custom_effect_tooltip = CSA_syndicalists_gain_power
+		custom_effect_tooltip = CSA_radicals_gain_power
 		add_popularity = {
 			ideology = syndicalist
 			popularity = 0.05
 		}
 		add_popularity = {
-			ideology = radical_socialist
+			ideology = totalist
 			popularity = 0.05
 		}
 		hidden_effect = {
 			modify_country_flag = {
-				flag = CSA_commonwealth
+				flag = CSA_radicals
 				value = 1
 			}
 		}
@@ -344,16 +552,16 @@ country_event = { # Socialist Constitution - Centralization or decentralization
 			}
 		}
 	}
-	option = {
+	option = { #Wage Labor
 		name = csa.8.b
-		custom_effect_tooltip = CSA_totalists_gain_power
+		custom_effect_tooltip = CSA_centralists_gain_power
 		add_popularity = {
 			ideology = totalist
-			popularity = 0.10
+			popularity = 0.08
 		}
 		hidden_effect = {
 			modify_country_flag = {
-				flag = CSA_usas
+				flag = CSA_centralists
 				value = 1
 			}
 		}
@@ -543,7 +751,7 @@ country_event = { # Constitutional Convention over
 	}
 }
 
-country_event = { # Socialist Constitution - Leader till election
+country_event = { # Socialist Constitution - Election
 	id = csa.11
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.11"}
 	title = csa.11.t
@@ -552,8 +760,11 @@ country_event = { # Socialist Constitution - Leader till election
 	desc = {
 		text = csa.11.d.commonwealth
 		trigger = {
+			NOT = {
+			has_country_flag = CSA_Anarchist_Leadership
+			}
 			has_country_flag = {
-				flag = CSA_commonwealth
+				flag = CSA_centralists
 				value > 2
 			}
 		}
@@ -561,9 +772,12 @@ country_event = { # Socialist Constitution - Leader till election
 	desc = {
 		text = csa.11.d.usas
 		trigger = {
+			OR = {
+			has_country_flag = CSA_Anarchist_Leadership
 			has_country_flag = {
-				flag = CSA_usas
+				flag = CSA_radicals
 				value > 2
+			}
 			}
 		}
 	}
