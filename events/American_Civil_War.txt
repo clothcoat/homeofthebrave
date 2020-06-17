@@ -62,14 +62,6 @@ country_event = { # Jack Reed declares revolution against MacArthur
 		add_stability = 0.15
 		add_war_support = 0.2
 		CSA_initial_events = yes
-		hidden_effect = {
-		CAL = {
-		country_event = {
-				id = amcivwar.4000
-				days = 10
-			}
-		}
-		}
 	}
 	option = {
 		name = amcivwar.1.b
@@ -90,6 +82,14 @@ country_event = { # Jack Reed declares revolution against MacArthur
 		add_popularity = {
 			ideology = radical_socialist
 			popularity = -0.3
+		}
+		hidden_effect = {
+		CAL = {
+		country_event = {
+				id = amcivwar.4000
+				days = 10
+			}
+		}
 		}
 		if = {
 		limit = { has_country_flag = CSA_additional_guns }
@@ -116,7 +116,7 @@ country_event = { # Jack Reed declares revolution against MacArthur
 			change_tag_from = USA
 		}
 		hidden_effect = {
-		CAL= {
+		CAL = {
 		country_event = {
 				id = amcivwar.4000
 				days = 10
