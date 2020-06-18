@@ -35,6 +35,7 @@ CSA_initial_events = {
 				days = 90
 			}
 		}
+		hidden_effect = {
 		country_event = { id = csa.150 days = 6 } # Initialization event
 		country_event = { id = amcivwar.32 days = 14 } # Revolutionary Military
 		country_event = { id = amcivwar.44 days = 21 } # Revolutionary Staff Leader
@@ -44,6 +45,7 @@ CSA_initial_events = {
 		country_event = { id = amcivwar.36 days = 85 random = 20 } # Internal Conflicts
 		country_event = { id = amcivwar.40 days = 130 random = 20 } # Protecting against Saboteurs
 		country_event = { id = amcivwar.41 days = 160 random = 20 } # Red Terror
+		}
 	}
 	set_global_flag = USA_CSA_existed
 }
@@ -59,6 +61,7 @@ TEX_initial_events = {
 				days = 90
 			}
 		}
+		hidden_effect = {
 		country_event = { id = unionstate.150 days = 7 } #Initial Events
 		country_event = { id = amcivwar.54 days = 7 } # Longist Navy
 		country_event = { id = amcivwar.50 days = 14 } # Chief of Staff
@@ -67,12 +70,13 @@ TEX_initial_events = {
 		country_event = { id = amcivwar.52 days = 35 } # Chief of Navy
 		country_event = { id = amcivwar.46 days = 40 random = 10 } # Appeal to Reason
 		country_event = { id = amcivwar.48 days = 60 random = 20 } # Pledge of Alliegence
-	
+		}
 	}
 	set_global_flag = USA_TEX_existed
 }
 
 CAL_initial_events = {
+	hidden_effect = {
 	CAL = {
 		country_event = { id = pacificstates.150 days = 1 } #Initial Events
 		country_event = { id = amcivwar.77 days = 7 } #Chief of Staff
@@ -81,6 +85,7 @@ CAL_initial_events = {
 		country_event = { id = amcivwar.79 days = 28 } #Chief of Navy
 	}
 	set_global_flag = USA_CAL_existed
+	}
 }
 
 USA_release_CSA = {
@@ -329,6 +334,7 @@ USA_release_COR = {
 		}
 
 		USA = {
+			set_country_flag = John_Elliott_Rankin_dead
 			COR = { transfer_technology = yes }
 			load_oob = "USA_civil_war_reenforcments"
 			if = {
@@ -654,7 +660,6 @@ USA_release_CAL = {
 		set_country_flag = John_Foster_Dulles_dead
 		set_country_flag = Charles_Evans_Hughes_Sr_dead
 		set_country_flag = Chester_William_Nimitz_Sr_dead
-		set_country_flag = John_Elliott_Rankin_dead
 		set_country_flag = John_Lesesne_DeWitt_dead
 		set_country_flag = William_Randolph_Hearst_Sr_dead
 
