@@ -83,14 +83,6 @@ country_event = { # Jack Reed declares revolution against MacArthur
 			ideology = radical_socialist
 			popularity = -0.3
 		}
-		hidden_effect = {
-		CAL = {
-		country_event = {
-				id = amcivwar.4000
-				days = 10
-			}
-		}
-		}
 		if = {
 		limit = { has_country_flag = CSA_additional_guns }
 		add_equipment_to_stockpile = {
@@ -115,14 +107,6 @@ country_event = { # Jack Reed declares revolution against MacArthur
 		CSA = {
 			change_tag_from = USA
 		}
-		hidden_effect = {
-		CAL = {
-		country_event = {
-				id = amcivwar.4000
-				days = 10
-			}
-		}
-		}
 	}
 }
 
@@ -130,7 +114,7 @@ country_event = { # Old Democrats Breakoff
 	id = amcivwar.1001
 	title = amcivwar.1001.t
 	desc = amcivwar.1001.d
-	picture = GFX_USA_reed
+	picture = GFX_USA_murray
 
 	is_triggered_only = yes
 
@@ -625,10 +609,26 @@ country_event = { ### HUEY LONG PEACE OUT###
 	desc = amcivwar.4004.d
 	picture = ACW_soldiers_running
 
-	is_triggered_only = yes
+	trigger = {
+	NOT = {
+	has_global_flag = USA_long_is_president
+		}
+	TEX = {
+	exists = yes
+	}
+	CAL = {
+	exists = yes
+	}
+	NOT = {
+	CAL = {
+	has_war_with = TEX
+		}
+	}
+	date < 1939.1.1
+	}
 
-	fire_only_once = yes
-
+	fire_only_once = yes 
+	
 	option = {
 		name = amcivwar.4004.a
 		add_political_power = -10
@@ -925,9 +925,7 @@ country_event = { #AUS-CSA Treaty Collapses
 
 	trigger = {
 	tag = CSA
-	NOT = {
-	has_country_flag = CSA_social_patriot_victory
-	}
+	has_country_flag = CSA_syndicalist_victory
 	OR = {
 	date > 1938.2.15
 	USA = {
@@ -940,7 +938,7 @@ country_event = { #AUS-CSA Treaty Collapses
 	CSA = {
 	surrender_progress < 0.15
 	}
-	has_country_flag = AUS_CSA_TREATY
+	has_global_flag = AUS_CSA_TREATY
 	TEX = {
 	exists = yes
 	}
@@ -1189,7 +1187,9 @@ country_event = { # Last Men Standing
 	date > 1937.7.1
 	}
 	
-	is_triggered_only = yes
+	mean_time_to_happen = {
+	days = 1
+	}
 	
 	fire_only_once = yes
 	
@@ -1888,15 +1888,9 @@ country_event = { # Last Men Standing - CSA and AUS
 	exists = no
 	}
 	CAL = {
-	has_war = no
+	exists = no
 	}
 	has_global_flag = AUS_CSA_TREATY
-	OR = {
-	NOT = {
-	has_country_flag = PSA_AUS_TREATY
-	has_country_flag = PSA_CSA_TREATY
-	}
-	}
 	date > 1937.7.30
 	}
 	
@@ -2346,7 +2340,7 @@ country_event = { # Reach out to the Victor
 
 	trigger = {
 	tag = CAL
-	has_country_flag = USA_long_was_president
+	has_global_flag = USA_long_is_president
 	CAL = {
 	exists = yes
 	NOT = {

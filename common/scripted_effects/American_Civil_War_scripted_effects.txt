@@ -498,6 +498,12 @@ USA_release_WCC = {
 			add_state_core = 1110
 			add_state_core = 1112
 			set_cosmetic_tag = WCC_ACW
+			set_politics = {
+				ruling_party = authoritarian_democrat
+				last_election = "1936.11.08"
+				election_frequency = 48
+				elections_allowed = no
+			}
 		}
 
 		USA = {

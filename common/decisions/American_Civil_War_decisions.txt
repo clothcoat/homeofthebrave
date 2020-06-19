@@ -3,21 +3,25 @@
 ACW_deal_with_terrorists_decisions = {# dealing with terrorists
 	ACW_fight_socialist_terrorists = {# fight socialists
 		icon = GFX_decision_generic_industry
-		allowed = { original_tag = TEX 
+		allowed = { 
+		OR = {
+		original_tag = TEX 
 		original_tag = WCC
 		original_tag = USA
-		original_tag = PSA }
+		original_tag = PSA 
+		}
+		OR = {
+				has_manpower > 30000
+				has_political_power > 100
+				has_country_flag = USA_civil_war_over_flag
+			}
+		}
 		visible = {
 			OR = {
 				has_idea = ACW_socialist_resistance_1
 				has_idea = ACW_socialist_resistance_2
 				has_idea = ACW_socialist_resistance_3
 				has_idea = ACW_socialist_resistance_4
-			}
-			OR = {
-				has_manpower > 30000
-				has_political_power > 100
-				has_country_flag = USA_civil_war_over_flag
 			}
 		}
 
@@ -41,10 +45,14 @@ ACW_deal_with_terrorists_decisions = {# dealing with terrorists
 	}
 	ACW_fight_klan_terrorists = {# fight Klan
 		icon = GFX_decision_generic_industry
-		allowed = { original_tag = TEX 
+		allowed = { 
+		OR = {
+		original_tag = TEX 
 		original_tag = WCC
 		original_tag = USA
-		original_tag = PSA }
+		original_tag = PSA 
+			}
+		}
 		visible = {
 			OR = {
 				has_idea = ACW_klan_resistance_1
@@ -79,10 +87,14 @@ ACW_deal_with_terrorists_decisions = {# dealing with terrorists
 	}
 	ACW_fight_black_legion_terrorists = {# fight black legion
 		icon = GFX_decision_generic_industry
-		allowed = { original_tag = TEX 
+		allowed = { 
+		OR = {
+		original_tag = TEX 
 		original_tag = WCC
 		original_tag = USA
-		original_tag = PSA }
+		original_tag = PSA 
+			}
+		}
 		visible = {
 			OR = {
 				has_idea = ACW_black_legion_resistance_1
@@ -117,10 +129,14 @@ ACW_deal_with_terrorists_decisions = {# dealing with terrorists
 	}
 	ACW_fight_longist_terrorists = {# fight longists
 		icon = GFX_decision_generic_industry
-		allowed = { original_tag = CSA 
+		allowed = { 
+		OR = {
+		original_tag = CSA 
 		original_tag = WCC
 		original_tag = USA
-		original_tag = PSA }
+		original_tag = PSA 
+			}
+		}
 		visible = {
 			OR = {
 				has_idea = ACW_minutemen_resistance_1
@@ -155,10 +171,14 @@ ACW_deal_with_terrorists_decisions = {# dealing with terrorists
 	}
 	ACW_fight_longist_terrorists = {# fight longists
 		icon = GFX_decision_generic_industry
-		allowed = { original_tag = CSA 
+		allowed = { 
+		OR = {
+		original_tag = CSA 
 		original_tag = WCC
 		original_tag = USA
-		original_tag = PSA }
+		original_tag = PSA 
+			}
+		}
 		visible = {
 			OR = {
 				has_idea = ACW_minutemen_resistance_1
@@ -193,8 +213,12 @@ ACW_deal_with_terrorists_decisions = {# dealing with terrorists
 	}
 	ACW_fight_fed_terrorists = {# fight federalists
 		icon = GFX_decision_generic_industry
-		allowed = { original_tag = CSA 
-		original_tag = PSA }
+		allowed = { 
+		OR = {
+		original_tag = CSA 
+		original_tag = PSA 
+			}
+		}
 		visible = {
 			OR = {
 				has_idea = ACW_fed_resistance_1
@@ -229,11 +253,15 @@ ACW_deal_with_terrorists_decisions = {# dealing with terrorists
 	}
 	ACW_fight_crime = {# fight crime
 		icon = GFX_decision_generic_industry
-		allowed = { original_tag = CSA
+		allowed = { 
+		OR = {
+		original_tag = CSA
 		original_tag = TEX
 		original_tag = WCC
 		original_tag = USA
-		original_tag = PSA }
+		original_tag = PSA 
+			}
+		}
 		visible = {
 			OR = {
 				has_idea = ACW_crime_resistance_2
@@ -265,11 +293,15 @@ ACW_deal_with_terrorists_decisions = {# dealing with terrorists
 	}
 	ACW_fight_black_nationalist = {# fight black rebels
 		icon = GFX_decision_generic_industry
-		allowed = { original_tag = CSA
+		allowed = {
+		OR = {
+		original_tag = CSA
 		original_tag = TEX
 		original_tag = WCC
 		original_tag = USA
-		original_tag = PSA }
+		original_tag = PSA 
+			}
+		}
 		visible = {
 			OR = {
 				has_idea = ACW_black_nationalist_resistance_1
@@ -304,11 +336,15 @@ ACW_deal_with_terrorists_decisions = {# dealing with terrorists
 	}
 	ACW_fight_ACW_liberal_resistance = {# fight black rebels
 		icon = GFX_decision_generic_industry
-		allowed = { original_tag = CSA
+		allowed = { 
+		OR = {
+		original_tag = CSA
 		original_tag = TEX
 		original_tag = WCC
 		original_tag = USA
-		original_tag = PSA }
+		original_tag = PSA 
+			}
+		}
 		visible = {
 			OR = {
 				has_idea = ACW_liberal_resistance_1
