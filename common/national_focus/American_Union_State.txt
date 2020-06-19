@@ -3225,7 +3225,7 @@ focus_tree = {
 
 	focus = {# Farm Security Administration
 		id = TEX_farm_security_administration
-		icon = GFX_IRE_farms
+		icon = GFX_CAL_farm_bankruptcy_act
 		cost = 7.25
 		prerequisite = {
 			focus = TEX_the_aaa
@@ -3368,7 +3368,7 @@ focus_tree = {
 	
 	focus = {# Employment Expansion
 		id = TEX_employment_expansion
-		icon = GFX_america_goal_eagle_deal
+		icon = GFX_NEE_full_employement
 		cost = 7.25
 		prerequisite = {
 			focus = TEX_reconciliation
@@ -3381,14 +3381,14 @@ focus_tree = {
 		x = 0
 		y = 4
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TEX_reconciliation"
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_employment_expansion"
 			add_stability = 0.10
 		}
 	}
 	
 	focus = {# Infrastructure Program
 		id = TEX_infrastructure_effort
-		icon = GFX_america_goal_eagle_deal
+		icon = GFX_goal_generic_construct_civilian
 		cost = 7.25
 		prerequisite = {
 			focus = TEX_national_recovery
@@ -3400,13 +3400,13 @@ focus_tree = {
 		x = 6
 		y = 2
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TEX_reconciliation"
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_infrastructure_effort"
 			add_stability = 0.10
 		}
 	}
 	focus = {# State Grants
 		id = TEX_state_grants
-		icon = GFX_america_goal_eagle_deal
+		icon = GFX_goal_generic_construct_civ_factory
 		cost = 7.25
 		prerequisite = {
 			focus = TEX_infrastructure_effort
@@ -3418,7 +3418,7 @@ focus_tree = {
 		x = 6
 		y = 4
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TEX_reconciliation"
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_state_grants"
 			add_stability = 0.10
 		}
 	}
@@ -3444,7 +3444,7 @@ focus_tree = {
 	
 	focus = {# Recognize Philantrophy
 		id = TEX_recognize_philantrophers
-		icon = GFX_america_goal_eagle_deal
+		icon = GFX_CAL_charity
 		cost = 7.25
 		prerequisite = {
 			focus = TEX_Grand_Army_of_the_Republic
@@ -3463,7 +3463,7 @@ focus_tree = {
 	
 	focus = {# Dependent and Disability Act
 		id = TEX_dependent_and_disability_act
-		icon = GFX_america_goal_eagle_deal
+		icon = GFX_BBR_elderly_dignities
 		cost = 7.25
 		prerequisite = {
 			focus = TEX_recognize_philantrophers
@@ -3482,7 +3482,7 @@ focus_tree = {
 	
 	focus = {# Department of Public Safety
 		id = TEX_department_of_public_safety
-		icon = GFX_america_goal_eagle_deal
+		icon = GFX_NEE_full_employement
 		cost = 7.25
 		prerequisite = {
 			focus = TEX_Grand_Army_of_the_Republic
@@ -3501,7 +3501,7 @@ focus_tree = {
 	
 	focus = {# Work Programs
 		id = TEX_work_programs
-		icon = GFX_america_goal_eagle_deal
+		icon = GFX_CAL_national_unions
 		cost = 7.25
 		prerequisite = {
 			focus = TEX_department_of_public_safety
@@ -3673,16 +3673,26 @@ focus_tree = {
 				}
 				add_building_construction = {
 					type = coastal_bunker
-					province = {
-						all_provinces = yes
-						dockyard > 0
-					}
-					level = 2
+					province = 6785
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					province = 10337
+					level = 1
 					instant_build = yes
 				}
 				add_building_construction = {
 					type = dockyard
-					level = 2
+					province = 10337
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = dockyard
+					province = 6785
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -6174,7 +6184,7 @@ focus_tree = {
 		}
 		available = {
 			is_subject = no
-			NOT = { has_government = paternal_autocrat }
+			NOT = { has_government = national_populist }
 		}
 		relative_position_id = TEX_back_in_business
 		x = 3
@@ -6806,8 +6816,8 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TEX_fortress_america"
-			add_war_support = -0.10
-			add_ideas = USA_fortress_america_idea_1
+			add_war_support = 0.05
+			add_ideas = TEX_fortress_america_idea_1
 		}
 	}
 
@@ -6833,9 +6843,34 @@ focus_tree = {
 		cancel_if_invalid = yes
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TEX_look_inward"
-			add_stability = 0.10
-			add_political_power = 100
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_naval_prominence"
+			833 = {
+				if = {
+					limit = { is_owned_and_controlled_by = TEX }
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+			}
+			371 = {
+				if = {
+					limit = { is_owned_and_controlled_by = TEX }
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+			}
+			add_tech_bonus = {
+				bonus = 2
+				uses = 1
+				category = naval_doctrine
+			}
 		}
 	}
 	
@@ -6861,9 +6896,134 @@ focus_tree = {
 		cancel_if_invalid = yes
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TEX_look_inward"
-			add_stability = 0.10
-			add_political_power = 100
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_Northern_boundary_defense"
+			add_command_power = 15
+			388 = {
+				limit = {
+					is_core_of = TEX
+					is_controlled_by = TEX
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 7883
+				}
+			}
+			389 = {
+				limit = {
+					is_core_of = TEX
+					is_controlled_by = TEX
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 4759
+				}
+			}
+			389 = {
+				limit = {
+					is_core_of = TEX
+					is_controlled_by = TEX
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 12685
+				}
+			}
+			389 = {
+				limit = {
+					is_core_of = TEX
+					is_controlled_by = TEX
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 1870
+				}
+			}
+			391 = {
+				limit = {
+					is_core_of = TEX
+					is_controlled_by = TEX
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 11667
+				}
+			}
+			391 = {
+				limit = {
+					is_core_of = TEX
+					is_controlled_by = TEX
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 12588
+				}
+			}
+			1119 = {
+				limit = {
+					is_core_of = TEX
+					is_controlled_by = TEX
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 7896
+				}
+			}
+			1119 = {
+				limit = {
+					is_core_of = TEX
+					is_controlled_by = TEX
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 6767
+				}
+			}
+			393 = {
+				limit = {
+					is_core_of = TEX
+					is_controlled_by = TEX
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 5205
+				}
+			}
 		}
 	}
 	
@@ -6893,8 +7053,10 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TEX_look_inward"
-			add_stability = 0.10
-			add_political_power = 100
+			swap_ideas = {
+			remove_idea = TEX_fortress_america_idea_1
+			add_idea = TEX_fortress_america_idea_2
+			}
 		}
 	}
 
@@ -6922,7 +7084,33 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TEX_look_inward"
 			add_stability = 0.10
-			add_political_power = 100
+			increase_ruling_party_popularity_by_5 = yes
+			random_owned_state = {
+				limit = {
+					is_core_of = TEX
+					is_controlled_by = TEX
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = TEX
+					is_controlled_by = TEX
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 	
@@ -6985,8 +7173,8 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TEX_leap_forward"
 			swap_ideas = {
-				remove_idea = USA_fortress_america_idea_2
-				add_idea = USA_fortress_america_idea_3
+			remove_idea = TEX_fortress_america_idea_2
+			add_idea = TEX_fortress_america_idea_3
 			}
 		}
 	}

@@ -3409,6 +3409,7 @@ country_event = { # CSA wins the civil war
 			country_exists = USA
 			country_exists = TEX
 			country_exists = COR
+			country_exists = WCC
 		}
 		OR = {
 			has_global_flag = PSA_rockies_ceasefire
@@ -3498,8 +3499,9 @@ country_event = { # AUS wins the civil war
 			has_war_with = NEE
 			has_war_with = CAL
 			country_exists = USA
-			country_exists = CSA
 			country_exists = COR
+			country_exists = CSA
+			country_exists = WCC
 			has_country_flag = ACW_has_deal_with_devil
 		}
 		OR = {
@@ -3572,10 +3574,113 @@ country_event = { # USA wins the civil war
 			has_war_with = CAL
 			country_exists = TEX
 			country_exists = CSA
-			has_country_flag = ACW_has_deal_with_devil
+			country_exists = WCC
+			country_exists = COR
 		}
 		OR = {
 			has_global_flag = PSA_rockies_ceasefire
+			has_global_flag = CAL_seperatist_claim
+			NOT = {
+				country_exists = CAL
+			}
+		}
+	}
+
+	option = {
+		name = amcivwar.26.a
+		USA_civil_war_ends = yes
+		add_ideas = USA_civil_war_aftermath_idea
+		add_ideas = USA_civil_war_depression_idea
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = USA_assassinated_reed
+					has_country_flag = USA_ACW_compromise_rejected
+				}
+			}
+			add_ideas = ACW_socialist_resistance_1
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = USA_assassinated_long
+					has_country_flag = USA_ACW_austerity_rejected
+				}
+			}
+			add_ideas = ACW_minutemen_resistance_1
+		}
+		hidden_effect = {
+			add_ideas = {
+				civilian_economy
+				volunteer_only
+			}
+			USA_demobilize_forces = yes
+
+			if = {
+				limit = {
+					NOT = {
+						has_global_flag = PSA_rockies_ceasefire
+					}
+				}
+				if = {
+					limit = {
+						has_government = paternal_autocrat
+					}
+					news_event = {
+						id = worldnews.39
+						days = 1
+					}
+					else = {
+						news_event = {
+							id = worldnews.38
+							days = 1
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = { # COR wins the civil war
+	id = amcivwar.2600
+	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.2600"}
+	title = amcivwar.2600.t
+	picture = USA_victory_celebration
+
+	desc = {
+		text = amcivwar.2600.d.noceasefire
+		trigger = {
+			NOT = {
+				has_global_flag = PSA_rockies_ceasefire
+			}
+		}
+	}
+	desc = {
+		text = amcivwar.2600.d.ceasefire
+		trigger = {
+			has_global_flag = PSA_rockies_ceasefire
+		}
+	}
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = COR
+		has_global_flag = USA_civil_war_begun_flag
+		NOT = {
+			has_war_with = CAN
+			has_war_with = MEX
+			has_war_with = NEE
+			has_war_with = CAL
+			country_exists = TEX
+			country_exists = CSA
+			country_exists = WCC
+			country_exists = USA
+		}
+		OR = {
+			has_global_flag = PSA_rockies_ceasefire
+			has_global_flag = CAL_seperatist_claim
 			NOT = {
 				country_exists = CAL
 			}
@@ -3670,6 +3775,8 @@ country_event = { # PSA wins the civil war
 			has_war_with = NEE
 			has_war_with = USA
 			has_war_with = TEX
+			has_war_with = COR
+			has_war_with = WCC
 			has_war_with = CSA
 			has_country_flag = ACW_has_deal_with_devil
 		}
@@ -3677,6 +3784,7 @@ country_event = { # PSA wins the civil war
 			has_global_flag = PSA_rockies_ceasefire
 			NOT = {
 				country_exists = USA
+				country_exists = COR
 				country_exists = TEX
 				country_exists = CSA
 			}

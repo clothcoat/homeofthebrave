@@ -296,7 +296,7 @@ USA_release_TEX = {
 		TEX = {
 			load_oob = "USA_civil_war_aus_army"
 			country_event = { id = amcivwar.336 days = 1 }
-			set_equipment_fraction = 0.35
+			set_equipment_fraction = 0.8
 			add_ideas = {
 				extensive_conscription
 			}
