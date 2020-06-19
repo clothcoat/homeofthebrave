@@ -5798,7 +5798,7 @@ focus_tree = {
 			add_ideas = CSA_militia_support_idea
 			add_equipment_to_stockpile = {
 				type = support_equipment
-				amount = 35
+				amount = 135
 				producer = CSA
 			}
 		}
@@ -6035,6 +6035,10 @@ focus_tree = {
 		prerequisite = { focus = CSA_peoples_academies }
 		relative_position_id = CSA_butlers_doctrine
 		completion_reward = {
+			swap_ideas = {
+			remove_idea = CSA_professional_red_army
+			add_idea = CSA_professional_red_army_2
+			}
 			add_tech_bonus = {
 				name = CSA_marines
 				bonus = 2
@@ -6077,6 +6081,10 @@ focus_tree = {
 		prerequisite = { focus = CSA_peoples_academies }
 		relative_position_id = CSA_butlers_doctrine
 		completion_reward = {
+			swap_ideas = {
+			remove_idea = CSA_butlers_doctrine_idea_2
+			add_idea = CSA_butlers_doctrine_idea_3
+			}
 			add_tech_bonus = {
 				name = CSA_bonus
 				bonus = 1
@@ -6102,6 +6110,10 @@ focus_tree = {
 		prerequisite = { focus = CSA_red_marines }
 		relative_position_id = CSA_butlers_doctrine
 		completion_reward = {
+			swap_ideas = {
+			remove_idea = CSA_butlers_doctrine_idea_3
+			add_idea = CSA_butlers_doctrine_idea_4
+			}
 			add_tech_bonus = {
 				name = CSA_gun_bonus
 				bonus = 1
@@ -6219,8 +6231,8 @@ focus_tree = {
 	}
 	focus = {#
 		id = CSA_the_second_draft
-		icon = GFX_ITA_female_soldiers
-		cost = 5
+		icon = GFX_goal_generic_build_airforce
+		cost = 4
 		x = -1
 		y = 2
 		ai_will_do = {
@@ -6234,6 +6246,9 @@ focus_tree = {
 		focus = CSA_fighter_command
 		focus = CSA_flexible_airforce
 		}
+		mutually_exclusive = {
+		focus = CSA_the_traditional_army
+		}
 		relative_position_id = CSA_red_air_force
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_the_second_draft"
@@ -6245,8 +6260,8 @@ focus_tree = {
 	}
 	focus = {#
 		id = CSA_the_traditional_army
-		icon = GFX_ITA_female_soldiers
-		cost = 5
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 4
 		x = 1
 		y = 2
 		ai_will_do = {
@@ -6255,6 +6270,9 @@ focus_tree = {
 				factor = 2
 				has_war = yes
 			}
+		}
+		mutually_exclusive = {
+		focus = CSA_the_second_draft
 		}
 		prerequisite = { focus = CSA_bomber_command 
 		focus = CSA_fighter_command
