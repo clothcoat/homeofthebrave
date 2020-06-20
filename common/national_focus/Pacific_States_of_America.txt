@@ -136,11 +136,18 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_defense_contracts"
 			custom_effect_tooltip = crossing_the_rockies_tech_effect
-			hidden_effect = {
-				set_technology = {
-					crossing_the_rockies_tech = 1
+				add_tech_bonus = {
+				name = infantry_bonus
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons
 				}
-			}
+				add_tech_bonus = {
+				name = mountain_bonus
+				bonus = 0.5
+				uses = 1
+				category = mountaineers_tech
+				}
 		}
 	}
 	focus = {# Defense Logistics Agency
@@ -1440,7 +1447,7 @@ focus_tree = {
 	### Navy Section ###
 	focus = {# U.S Navy
 		id = CAL_navy
-		icon = GFX_goal_CAL_navy
+		icon = GFX_goal_generic_build_navy
 		cost = 5.00
 		available = {
 			any_owned_state = {
@@ -1677,7 +1684,7 @@ focus_tree = {
 
 	focus = {# Coast Guard
 		id = CAL_coast_guard
-		icon = GFX_goal_CAL_coast_guard
+		icon = GFX_focus_generic_destroyer
 		cost = 5.00
 		prerequisite = {
 			focus = CAL_protect_american_trade
@@ -1874,7 +1881,7 @@ focus_tree = {
 
 	focus = {# Liberty ships
 		id = CAL_liberty_ships
-		icon = GFX_goal_CAL_liberty_ships
+		icon = GFX_goal_generic_navy_cruiser
 		cost = 5.00
 		prerequisite = {
 			focus = CAL_expand_dockyards
@@ -1971,7 +1978,7 @@ focus_tree = {
 
 	focus = {# Expand the WAVEs
 		id = CAL_expand_the_waves
-		icon = GFX_ITA_female_soldiers
+		icon = GFX_goal_continuous_naval_production
 		cost = 5.00
 		prerequisite = {
 			focus = CAL_new_admirals
@@ -2005,7 +2012,7 @@ focus_tree = {
 
 	focus = {# Expand the Marine Corps
 		id = CAL_expand_marine_corps
-		icon = GFX_goal_CAL_usmc
+		icon = GFX_goal_generic_amphibious_assault
 		cost = 5.00
 		prerequisite = {
 			focus = CAL_naval_aviation
@@ -2105,7 +2112,7 @@ focus_tree = {
 
 	focus = {# Sempre Fi
 		id = CAL_sempre_fi
-		icon = GFX_goal_CAL_usmc
+		icon = GFX_goal_USA_primaris_marines
 		cost = 5.00
 		prerequisite = {
 			focus = CAL_naval_training
@@ -2261,7 +2268,7 @@ focus_tree = {
 
 	focus = {# Screaming Eagles
 		id = CAL_air_production
-		icon = GFX_goal_CAL_screaming_eagles
+		icon = GFX_goal_generic_air_doctrine
 		cost = 5.00
 		prerequisite = {
 			focus = CAL_air_force
@@ -2423,7 +2430,7 @@ focus_tree = {
 
 	focus = {# Fighter Development
 		id = CAL_fighters
-		icon = GFX_goal_CAL_freedom_fighters
+		icon = GFX_goal_generic_air_fighter2
 		cost = 5.00
 		prerequisite = {
 			focus = CAL_air_supremcy
@@ -2478,7 +2485,7 @@ focus_tree = {
 
 	focus = {# Expand the WASPs
 		id = CAL_expand_wasps
-		icon = GFX_ITA_female_soldiers
+		icon = GFX_goal_continuous_air_production
 		cost = 5.00
 		prerequisite = {
 			focus = CAL_bombers
@@ -6734,7 +6741,7 @@ focus_tree = {
 	
 	focus = {# Naval Expansion 
 		id = CAL_naval_expansion
-		icon = GFX_goal_CAL_navy
+		icon = GFX_goal_TEX_naval_prominence
 		cost = 5.00
 		prerequisite = {
 			focus = CAL_local_budgeting
@@ -11964,9 +11971,15 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_sprit_of_monroe"
+			if = {
+			limit = { has_idea = CAL_new_moralism_idea }
 			swap_ideas = {
 			remove_idea = CAL_new_moralism_idea
 			add_idea = CAL_spirit_of_monroe_idea
+				}
+			else = {
+			add_ideas = CAL_spirit_of_monroe_idea
+				}
 			}
 			add_war_support = 0.05
 			add_manpower = 2000
@@ -11998,9 +12011,33 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_look_inward"
-			swap_ideas = {
-			remove_idea = CAL_new_moralism
-			add_idea = CAL_look_inward_idea
+			add_stability = 0.05
+			add_manpower = 2000
+			random_owned_state = {
+				limit = {
+					is_core_of = CAL
+					is_controlled_by = CAL
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = CAL
+					is_controlled_by = CAL
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
 			}
 		}
 	}
@@ -12184,8 +12221,8 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_fortress_america"
-			add_war_support = -0.10
-			add_ideas = CAL_fortress_america_idea_1
+			add_war_support = 0.05
+			add_ideas = CAL_anti_imperialism_idea
 		}
 	}
 	
@@ -12225,9 +12262,8 @@ focus_tree = {
 		cancel_if_invalid = yes
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CAL_fortress_america"
-			add_war_support = -0.10
-			add_ideas = CAL_fortress_america_idea_1
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_league_of_anti_imperialism"
+			unlock_decision_category_tooltip = CAL_anti_imperialism_decisions
 		}
 	}
 	
@@ -12268,9 +12304,61 @@ focus_tree = {
 		cancel_if_invalid = yes
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CAL_fortress_america"
-			add_war_support = -0.10
-			add_ideas = CAL_fortress_america_idea_1
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_warn_japan"
+			add_war_support = 0.1
+			JAP = {
+			add_opinion_modifier = { target = USA modifier = medium_decrease }
+			}
+			PHI = {
+			add_opinion_modifier = { target = USA modifier = medium_increase }
+			}
+			QIE = {
+			add_opinion_modifier = { target = USA modifier = medium_increase }
+			}
+			VIE = {
+			add_opinion_modifier = { target = USA modifier = medium_increase }
+			}
+			CHI = {
+			add_opinion_modifier = { target = USA modifier = medium_increase }
+			}
+			if = {
+			limit = { 
+			NOT = {
+			PHI = {is_puppet_of	= JAP }
+					}
+			PHI = {
+			exists = yes
+			}
+				}
+			give_guarantee = PHI
+			}
+			if = {
+			limit = { 
+			NOT = {
+			QIE = { is_puppet_of = JAP	}
+					}
+				}
+			give_guarantee = QIE
+			}
+			if = {
+			limit = { 
+			NOT = {
+			QIE = { is_puppet_of = CHI	}
+					}
+				}
+			give_guarantee = CHI
+			}
+			if = {
+			limit = { 
+			NOT = {
+			VIE = { is_puppet_of = CHI	}
+					}
+			VIE = {
+			exists = yes
+				}
+			}
+			give_guarantee = VIE
+			}
 		}
 	}
 	
@@ -12351,8 +12439,54 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_embargo_japan"
-			add_war_support = -0.10
-			add_ideas = CAL_fortress_america_idea_1
+			add_war_support = 0.1
+			JAP = {
+			add_opinion_modifier = { target = USA modifier = medium_decrease }
+			}
+			PHI = {
+			add_opinion_modifier = { target = USA modifier = medium_increase }
+			}
+			QIE = {
+			add_opinion_modifier = { target = USA modifier = medium_increase }
+			}
+			VIE = {
+			add_opinion_modifier = { target = USA modifier = medium_increase }
+			}
+			CHI = {
+			add_opinion_modifier = { target = USA modifier = medium_increase }
+			}
+			if = {
+			limit = { 
+			NOT = {
+			PHI = {is_puppet_of	= JAP }
+					}
+				}
+			give_guarantee = PHI
+			}
+			if = {
+			limit = { 
+			NOT = {
+			QIE = { is_puppet_of = JAP	}
+					}
+				}
+			give_guarantee = QIE
+			}
+			if = {
+			limit = { 
+			NOT = {
+			QIE = { is_puppet_of = CHI	}
+					}
+				}
+			give_guarantee = CHI
+			}
+			if = {
+			limit = { 
+			NOT = {
+			VIE = { is_puppet_of = CHI	}
+					}
+				}
+			give_guarantee = VIE
+			}
 		}
 	}
 	
@@ -12645,7 +12779,7 @@ focus_tree = {
 	}
 	focus = {
 		id = CAL_longer_reach
-		icon = GFX_goal_USA_liberty_ships
+		icon = GFX_goal_generic_navy_carrier
 		cost = 5.00
 		prerequisite = {
 			focus = CAL_new_interventionism
@@ -13174,7 +13308,7 @@ focus_tree = {
 			is_in_faction = no
 			not_has_democratic_government = yes
 		}
-		x = 126
+		x = 128
 		y = 1
 
 		ai_will_do = {
