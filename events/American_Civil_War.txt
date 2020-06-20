@@ -4174,20 +4174,15 @@ country_event = { # Internal Conflicts
 		hidden_effect = {
 		if = {
 		limit = {
-		NOT = {
-		has_country_flag = csa_republican_army
-			}
-		}
-		CSA = {
-		country_event = { id = csa.360003 days = 30 }
-			}
-		}
-		else_if = {
-		limit = {
 		has_country_flag = csa_republican_army
 		}
 		CSA = {
-		country_event = { id = csa.3600 days = 24 }
+		country_event = { id = amcivwar.36001 days = 1 }
+				}
+		else = {
+		CSA = {
+		country_event = { id = amcivwar.36003 days = 1 }
+					}
 				}
 			}
 		}
@@ -4205,31 +4200,31 @@ country_event = { # Internal Conflicts
 		}
 		hidden_effect = {
 		CSA = {
-		country_event = { id = csa.3600 days = 18 }
+		country_event = { id = amcivwar.3600 days = 1 }
 			}
 		}
 	}
 }
 
 country_event = { # Social Patriot Demands
-	id = amcivwar.360001
-	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.360001"}
-	title = amcivwar.360001.t
-	desc = amcivwar.360001.d
+	id = amcivwar.36001
+	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.36001"}
+	title = amcivwar.36001.t
+	desc = amcivwar.36001.d
 	picture = GFX_ACW_civil_war
 
 	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = { #No
-		name = amcivwar.360001.a
+		name = amcivwar.36001.a
 		add_political_power = -20
 		hidden_effect = {
-		country_event = { id = csa.360002 days = 5 }
+		country_event = { id = amcivwar.36002 days = 5 }
 		}
 	}
 	option = { #Agree
-		name = amcivwar.360001.b
+		name = amcivwar.36001.b
 		add_war_support = 0.05
 		add_popularity = {
 			ideology = social_democrat
@@ -4241,7 +4236,7 @@ country_event = { # Social Patriot Demands
 		}
 		hidden_effect = {
 		CSA = {
-		country_event = { id = csa.3600 days = 18 }
+		country_event = { id = amcivwar.3600 days = 18 }
 			}
 		}
 		add_political_power = -40
@@ -4250,17 +4245,17 @@ country_event = { # Social Patriot Demands
 }
 
 country_event = { # Military Takeover
-	id = amcivwar.360002
-	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.360002"}
-	title = amcivwar.360002.t
-	desc = amcivwar.360002.d
+	id = amcivwar.36002
+	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.36002"}
+	title = amcivwar.36002.t
+	desc = amcivwar.36002.d
 	picture = GFX_ACW_civil_war
 
 	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = { #Agree
-		name = amcivwar.360002.a
+		name = amcivwar.36002.a
 		add_war_support = 0.05
 		add_popularity = {
 			ideology = social_democrat
@@ -4272,7 +4267,7 @@ country_event = { # Military Takeover
 		}
 		hidden_effect = {
 		CSA = {
-		country_event = { id = csa.3601 days = 18 }
+		country_event = { id = amcivwar.3601 days = 18 }
 			}
 		}
 		add_stability = -0.1
@@ -4282,10 +4277,10 @@ country_event = { # Military Takeover
 }
 
 country_event = { # Syndicalist Victory
-	id = amcivwar.360003
-	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.360003"}
-	title = amcivwar.360003.t
-	desc = amcivwar.360003.d
+	id = amcivwar.36003
+	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.36003"}
+	title = amcivwar.36003.t
+	desc = amcivwar.36003.d
 	picture = GFX_ACW_civil_war
 
 	fire_only_once = yes
@@ -4333,7 +4328,7 @@ country_event = { # Social Patriots Unity Legislation
 		add_political_power = 25
 		hidden_effect = {
 		CSA = {
-		country_event = { id = csa.3601 days = 11 }
+		country_event = { id = amcivwar.3601 days = 11 }
 			}
 		}
 	}
@@ -4352,7 +4347,7 @@ country_event = { # Social Patriots Unity Legislation
 		add_war_support = -0.03
 		hidden_effect = {
 		CSA = {
-		country_event = { id = csa.360003 days = 30 }
+		country_event = { id = amcivwar.36003 days = 30 }
 			}
 		}
 	}
@@ -4384,7 +4379,7 @@ country_event = { # TUUL Ultimatum
 		add_stability = -0.08
 		hidden_effect = {
 		CSA = {
-		country_event = { id = csa.360003 days = 10 }
+		country_event = { id = amcivwar.36003 days = 10 }
 			}
 		}
 	}
@@ -4397,7 +4392,7 @@ country_event = { # TUUL Ultimatum
 		}
 		hidden_effect = {
 		CSA = {
-		country_event = { id = csa.3602 days = 11 }
+		country_event = { id = amcivwar.3602 days = 11 }
 			}
 		}
 		add_political_power = -15
@@ -4428,7 +4423,7 @@ country_event = { # TUUL Weakened
 		add_stability = 0.02
 		hidden_effect = {
 		CSA = {
-		country_event = { id = csa.3603 days = 20 }
+		country_event = { id = amcivwar.3603 days = 20 }
 			}
 		}
 	}
@@ -4455,7 +4450,7 @@ country_event = { # Social Patriots in power
 		add_stability = 0.02
 		hidden_effect = {
 		CSA = {
-		country_event = { id = csa.3604 days = 7 }
+		country_event = { id = amcivwar.3604 days = 7 }
 			}
 		}
 	}
@@ -4482,7 +4477,7 @@ country_event = { # Radical Revolts
 		add_stability = 0.02
 		hidden_effect = {
 		CSA = {
-		country_event = { id = csa.3605 days = 5 }
+		country_event = { id = amcivwar.3605 days = 5 }
 			}
 		}
 	}
@@ -4502,26 +4497,26 @@ country_event = { # Radicals Crushed
 		name = amcivwar.3605.a
 		add_popularity = {
 			ideology = totalist
-			popularity = 0.015
+			popularity = -0.015
 		}
 		hidden_effect = {
 		if = {
 		limit = {
 		has_country_flag = csa_collectivist_army
 			}
-		country_event = { id = csa.3606 days = 7 }
+		country_event = { id = amcivwar.3606 days = 7 }
 		}
 		if = {
 		limit = {
 		has_country_flag = csa_union_army
 			}
 		CSA = {
-		country_event = { id = csa.3608 days = 7 }
+		country_event = { id = amcivwar.3608 days = 7 }
 			}
 		}
 		else = {
 		CSA = {
-		country_event = { id = csa.3608 days = 40 }
+		country_event = { id = amcivwar.3610 days = 40 }
 				}
 			}
 		}
@@ -4538,7 +4533,7 @@ country_event = { # Military Demands Amnesty
 	fire_only_once = yes
 	is_triggered_only = yes
 	
-	option = {
+	option = { #Fine, give amnesty
 		name = amcivwar.3606.a
 		add_popularity = {
 			ideology = syndicalist
@@ -4553,7 +4548,7 @@ country_event = { # Military Demands Amnesty
 		add_war_support = 0.05
 		hidden_effect = {
 		CSA = {
-		country_event = { id = csa.3606 days = 7 }
+		country_event = { id = amcivwar.3610 days = 35 }
 			}
 		}
 	}
@@ -4561,7 +4556,7 @@ country_event = { # Military Demands Amnesty
 		name = amcivwar.3606.b
 		hidden_effect = {
 		CSA = {
-		country_event = { id = csa.3607 days = 7 }
+		country_event = { id = amcivwar.3607 days = 7 }
 			}
 		}
 	}
@@ -4600,7 +4595,7 @@ country_event = { # Fosterite Coup
 		}
 		hidden_effect = {
 		CSA = {
-		country_event = { id = csa.360003 days = 5 }
+		country_event = { id = amcivwar.36003 days = 5 }
 		set_country_flag = CSA_Foster_coup
 			}
 		}
@@ -4663,7 +4658,7 @@ country_event = { # Syndicalist Coup
 		hidden_effect = {
 		CSA = {
 			country_event = {
-			id = csa.360003
+			id = amcivwar.36003
 			days = 20
 				}
 			}
@@ -4678,8 +4673,8 @@ country_event = { # Syndicalist Coup
 		hidden_effect = {
 		CSA = {
 			country_event = {
-			id = csa.360003
-			days = 20
+			id = amcivwar.36003
+			days = 10
 				}
 			}
 		}
@@ -6194,484 +6189,6 @@ country_event = { # USA support
 		}
 	}
 }
-
-country_event = { # Syndicalist uprising
-	id = amcivwar.94
-	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.94"}
-	title = amcivwar.94.t
-	desc = amcivwar.94.d
-	picture = GFX_ACW_civil_war
-
-	fire_only_once = yes
-
-	trigger = {
-		tag = CSA
-		exists = yes
-		surrender_progress > 0.20
-		has_capitulated = no
-		386 = { controller = { has_war_with = CSA } }
-		385 = { controller = { has_war_with = CSA }	}
-		has_global_flag = { flag = USA_civil_war_begun_flag days > 90 }
-		NOT = { has_global_flag = USA_civil_war_over_flag }
-	}
-
-	mean_time_to_happen = {
-		days = 15
-	}
-
-	immediate = {
-		hidden_effect = {
-			load_oob = "USA_civil_war_csa_rebels"
-			if = {
-				limit = {
-					CAL = { controls_state = 386 }
-					NOT = {
-						has_idea = ACW_federal_front_idea
-						has_idea = ACW_syndicalist_front_idea
-						has_idea = ACW_longist_front_idea
-						has_idea = ACW_pacific_front_idea
-					}
-				}
-				add_timed_idea = {
-					idea = ACW_pacific_front_idea
-					days = 60
-				}
-			}
-			every_country = {
-				limit = {
-					OR = {
-						tag = CAL
-						tag = TEX
-						tag = USA
-					}
-				}
-				country_event = amcivwar.940
-			}
-		}
-	}
-
-	option = {
-		name = amcivwar.94.a
-		add_manpower = 25000
-	}
-}
-
-country_event = { # Syndicalist uprising - inform
-	id = amcivwar.940
-	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.940"}
-	title = amcivwar.94.t
-	desc = amcivwar.94.d
-	picture = GFX_ACW_civil_war
-
-	is_triggered_only = yes
-
-	trigger = { is_ai = no }
-
-	option = {
-		name = amcivwar.94.b
-	}
-}
-
-country_event = { # Longist uprising
-	id = amcivwar.95
-	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.95"}
-	title = amcivwar.95.t
-	desc = amcivwar.95.d
-	picture = GFX_ACW_civil_war
-
-	fire_only_once = yes
-
-	trigger = {
-		tag = TEX
-		exists = yes
-		has_capitulated = no
-		369 = { controller = { has_war_with = TEX } } #Kentucky
-		396 = { controller = { has_war_with = TEX }	} #Indiana
-		OR = {
-			NOT = { controls_state = 368 } #Tennessee
-			NOT = { controls_state = 363 } #North Carolina
-		}
-		has_global_flag = { flag = USA_civil_war_begun_flag days > 90 }
-		NOT = { has_global_flag = USA_civil_war_over_flag }
-	}
-
-	mean_time_to_happen = {
-		days = 30
-	}
-
-	immediate = {
-		hidden_effect = {
-			load_oob = "USA_civil_war_aus_rebels"
-			if = {
-				limit = {
-					NOT = {
-						has_idea = ACW_federal_front_idea
-						has_idea = ACW_syndicalist_front_idea
-						has_idea = ACW_longist_front_idea
-						has_idea = ACW_pacific_front_idea
-					}
-				}
-				if = {
-					limit = {
-						CSA = { controls_state = 369 }
-					}
-					add_timed_idea = {
-						idea = ACW_syndicalist_front_idea
-						days = 60
-					}
-				}
-				if = {
-					limit = {
-						USA = { controls_state = 369 }
-					}
-					add_timed_idea = {
-						idea = ACW_federal_front_idea
-						days = 60
-					}
-				}
-			}
-			every_country = {
-				limit = {
-					OR = {
-						tag = CAL
-						tag = CSA
-						tag = USA
-					}
-				}
-				country_event = amcivwar.950
-			}
-		}
-	}
-
-	option = {
-		name = amcivwar.95.a
-		add_manpower = 25000
-	}
-}
-
-country_event = { # Longist uprising - inform
-	id = amcivwar.950
-	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.950"}
-	title = amcivwar.95.t
-	desc = amcivwar.95.d
-	picture = GFX_ACW_civil_war
-
-	is_triggered_only = yes
-
-	trigger = { is_ai = no }
-
-	option = {
-		name = amcivwar.95.b
-	}
-}
-
-country_event = { # Loyalist uprising
-	id = amcivwar.96
-	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.96"}
-	title = amcivwar.96.t
-	desc = amcivwar.96.d
-	picture = GFX_ACW_civil_war
-
-	fire_only_once = yes
-
-	trigger = {
-		tag = USA
-		exists = yes
-		surrender_progress > 0.20
-		has_capitulated = no
-		360 = { controller = { has_war_with = USA } }
-		359 = { controller = { has_war_with = USA }	}
-		NOT = { controls_state = 796 } #Upstate New York
-		NOT = { controls_state = 359 } #New Jersey
-		has_global_flag = { flag = USA_civil_war_begun_flag days > 90 }
-		NOT = {
-			has_global_flag = USA_civil_war_over_flag
-			has_country_flag = USA_assassinated_reed
-			has_country_flag = USA_ACW_compromise_rejected
-			has_country_flag = USA_assassinated_long
-			has_country_flag = USA_ACW_austerity_rejected
-		}
-	}
-
-	mean_time_to_happen = {
-		days = 15
-	}
-
-	immediate = {
-		hidden_effect = {
-			load_oob = "USA_civil_war_usa_rebels"
-			if = {
-				limit = {
-					CSA = { controls_state = 360 }
-					NOT = {
-						has_idea = ACW_federal_front_idea
-						has_idea = ACW_syndicalist_front_idea
-						has_idea = ACW_longist_front_idea
-						has_idea = ACW_pacific_front_idea
-					}
-				}
-				add_timed_idea = {
-					idea = ACW_syndicalist_front_idea
-					days = 60
-				}
-			}
-			every_country = {
-				limit = {
-					OR = {
-						tag = CAL
-						tag = CSA
-						tag = TEX
-					}
-				}
-				country_event = amcivwar.960
-			}
-		}
-	}
-
-	option = {
-		name = amcivwar.96.a
-		add_manpower = 25000
-	}
-}
-
-country_event = { # Loyalist uprising - inform
-	id = amcivwar.960
-	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.960"}
-	title = amcivwar.96.t
-	desc = amcivwar.96.d
-	picture = GFX_ACW_civil_war
-
-	is_triggered_only = yes
-
-	trigger = { is_ai = no }
-
-	option = {
-		name = amcivwar.96.b
-	}
-}
-
-country_event = { # Rebels sponsored by other faction
-	id = amcivwar.97
-	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.97"}
-	title = amcivwar.97.t
-	desc = amcivwar.97.d
-	picture = GFX_ACW_civil_war
-
-	is_triggered_only = yes
-
-	option = {
-		name = amcivwar.97.a
-		add_stability = -0.05
-	}
-}
-
-country_event = { # Resistance uprising
-	id = amcivwar.98
-	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.98"}
-	title = amcivwar.98.t
-	desc = amcivwar.98.d
-	picture = GFX_ACW_civil_war
-
-	fire_only_once = yes
-
-	trigger = {
-		tag = CAL
-		exists = yes
-		has_capitulated = no
-		382 = { controller = { has_war_with = CAL } }
-		384 = { controller = { has_war_with = CAL }	}
-		has_global_flag = USA_civil_war_begun_flag
-		NOT = { has_global_flag = USA_civil_war_over_flag }
-	}
-
-	mean_time_to_happen = {
-		days = 40
-	}
-
-	immediate = {
-		hidden_effect = {
-			load_oob = "USA_civil_war_psa_rebels"
-			every_country = {
-				limit = {
-					OR = {
-						tag = USA
-						tag = CSA
-						tag = TEX
-					}
-				}
-				country_event = amcivwar.99
-			}
-		}
-	}
-
-	option = {
-		name = amcivwar.98.a
-		add_manpower = 50000
-	}
-}
-
-country_event = { # Resistance uprising - inform
-	id = amcivwar.99
-	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.99"}
-	title = amcivwar.98.t
-	desc = amcivwar.98.d
-	picture = GFX_ACW_civil_war
-
-	is_triggered_only = yes
-
-	trigger = { is_ai = no }
-
-	option = {
-		name = amcivwar.98.b
-	}
-}
-
-country_event = { # Syndicalist uprising in Georgia
-	id = amcivwar.100
-	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.100"}
-	title = amcivwar.100.t
-	desc = amcivwar.100.d
-	picture = GFX_ACW_civil_war
-
-	fire_only_once = yes
-
-	trigger = {
-		tag = CSA
-		exists = yes
-		has_capitulated = no
-		365 = { controller = { has_war_with = CSA }	}
-		has_global_flag = { flag = USA_civil_war_begun_flag days > 90 }
-		NOT = { has_global_flag = USA_civil_war_over_flag }
-		USA = {
-			OR = {
-				has_country_flag = USA_assassinated_long
-				has_country_flag = USA_ACW_austerity_rejected
-			}
-		}
-	}
-
-	mean_time_to_happen = {
-		days = 30
-		modifier = {
-			factor = 2
-			USA = { has_country_flag = USA_ACW_austerity_rejected }
-		}
-	}
-
-	immediate = {
-		hidden_effect = {
-			load_oob = "USA_civil_war_csa_rebels2"
-			if = {
-				limit = {
-					USA = { controls_state = 386 }
-					NOT = { has_idea = ACW_federal_front_idea }
-				}
-				add_timed_idea = {
-					idea = ACW_federal_front_idea
-					days = 60
-				}
-			}
-			USA = {
-				country_event = amcivwar.101
-			}
-		}
-	}
-
-	option = {
-		name = amcivwar.100.a
-		add_manpower = 50000
-	}
-}
-
-country_event = { # Syndicalist uprising in Georgia - inform
-	id = amcivwar.101
-	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.101"}
-	title = amcivwar.100.t
-	desc = amcivwar.100.d
-	picture = GFX_ACW_civil_war
-
-	is_triggered_only = yes
-
-	trigger = { is_ai = no }
-
-	option = {
-		name = amcivwar.100.b
-	}
-}
-
-country_event = { # Longist uprising in California
-	id = amcivwar.102
-	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.102"}
-	title = amcivwar.102.t
-	desc = amcivwar.102.d
-	picture = GFX_ACW_civil_war
-
-	fire_only_once = yes
-
-	trigger = {
-		tag = TEX
-		exists = yes
-		has_capitulated = no
-		829 = { controller = { has_war_with = TEX }	}
-		has_global_flag = { flag = USA_civil_war_begun_flag days > 90 }
-		NOT = { has_global_flag = USA_civil_war_over_flag }
-		USA = {
-			OR = {
-				has_country_flag = USA_assassinated_reed
-				has_country_flag = USA_ACW_compromise_rejected
-			}
-		}
-	}
-
-	mean_time_to_happen = {
-		days = 30
-		modifier = {
-			factor = 2
-			USA = { has_country_flag = USA_ACW_compromise_rejected }
-		}
-	}
-
-	immediate = {
-		hidden_effect = {
-			load_oob = "USA_civil_war_aus_rebels2"
-			if = {
-				limit = {
-					USA = { controls_state = 829 }
-					NOT = { has_idea = ACW_federal_front_idea }
-				}
-				add_timed_idea = {
-					idea = ACW_federal_front_idea
-					days = 60
-				}
-			}
-			USA = {
-				country_event = amcivwar.103
-			}
-		}
-	}
-
-	option = {
-		name = amcivwar.100.a
-		add_manpower = 50000
-	}
-}
-
-country_event = { # Longist uprising in California - inform
-	id = amcivwar.103
-	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.103"}
-	title = amcivwar.102.t
-	desc = amcivwar.102.d
-	picture = GFX_ACW_civil_war
-
-	is_triggered_only = yes
-
-	trigger = { is_ai = no }
-
-	option = {
-		name = amcivwar.102.b
-	}
-}
-
 
 ### CSA Rises Alone Setup ###
 

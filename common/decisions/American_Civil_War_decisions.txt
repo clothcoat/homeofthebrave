@@ -3,15 +3,14 @@
 ACW_deal_with_terrorists_decisions = {# dealing with terrorists
 	ACW_fight_socialist_terrorists = {# fight socialists
 		icon = GFX_decision_generic_industry
-		allowed = { 
+		allowed = {
 		OR = {
-		original_tag = TEX 
-		original_tag = WCC
-		original_tag = USA
-		original_tag = PSA 
+		tag = TEX 
+		tag = WCC
+		tag = USA
+		tag = CAL 
 		}
 		OR = {
-				has_manpower > 30000
 				has_political_power > 100
 				has_country_flag = USA_civil_war_over_flag
 			}
@@ -45,12 +44,16 @@ ACW_deal_with_terrorists_decisions = {# dealing with terrorists
 	}
 	ACW_fight_klan_terrorists = {# fight Klan
 		icon = GFX_decision_generic_industry
-		allowed = { 
+		allowed = {
 		OR = {
-		original_tag = TEX 
-		original_tag = WCC
-		original_tag = USA
-		original_tag = PSA 
+		tag = TEX 
+		tag = WCC
+		tag = USA
+		tag = CAL
+			}
+		OR = {
+				has_political_power > 120
+				has_country_flag = USA_civil_war_over_flag
 			}
 		}
 		visible = {
@@ -59,11 +62,6 @@ ACW_deal_with_terrorists_decisions = {# dealing with terrorists
 				has_idea = ACW_klan_resistance_2
 				has_idea = ACW_klan_resistance_3
 				has_idea = ACW_klan_resistance_4
-			}
-			OR = {
-				has_manpower > 25000
-				has_political_power > 120
-				has_country_flag = USA_civil_war_over_flag
 			}
 		}
 
@@ -87,12 +85,18 @@ ACW_deal_with_terrorists_decisions = {# dealing with terrorists
 	}
 	ACW_fight_black_legion_terrorists = {# fight black legion
 		icon = GFX_decision_generic_industry
-		allowed = { 
+		allowed = {
 		OR = {
-		original_tag = TEX 
-		original_tag = WCC
-		original_tag = USA
-		original_tag = PSA 
+		tag = TEX
+		tag = CSA
+		tag = WCC
+		tag = USA
+		tag = CAL
+		tag = NEE
+			}
+		OR = {
+			has_political_power > 70
+			has_country_flag = USA_civil_war_over_flag
 			}
 		}
 		visible = {
@@ -101,11 +105,6 @@ ACW_deal_with_terrorists_decisions = {# dealing with terrorists
 				has_idea = ACW_black_legion_resistance_2
 				has_idea = ACW_black_legion_resistance_3
 				has_idea = ACW_black_legion_resistance_4
-			}
-			OR = {
-				has_manpower > 25000
-				has_political_power > 70
-				has_country_flag = USA_civil_war_over_flag
 			}
 		}
 
@@ -131,52 +130,16 @@ ACW_deal_with_terrorists_decisions = {# dealing with terrorists
 		icon = GFX_decision_generic_industry
 		allowed = { 
 		OR = {
-		original_tag = CSA 
-		original_tag = WCC
-		original_tag = USA
-		original_tag = PSA 
+		tag = COR
+		tag = CSA
+		tag = WCC
+		tag = USA
+		tag = CAL
+		tag = NEE
 			}
-		}
-		visible = {
-			OR = {
-				has_idea = ACW_minutemen_resistance_1
-				has_idea = ACW_minutemen_resistance_2
-				has_idea = ACW_minutemen_resistance_3
-				has_idea = ACW_minutemen_resistance_4
-			}
-			OR = {
-				has_manpower > 25000
-				has_political_power > 90
-				has_country_flag = USA_civil_war_over_flag
-			}
-		}
-
-		cost = 25
-
-		days_re_enable = 55
-		days_remove = 100
-
-		ai_will_do = {
-			factor = 100
-		}
-
-		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove ACW_fight_longist_terrorists"
-			custom_effect_tooltip = ACW_combat_minuteman
-			modify_country_flag = {
-				flag = ACW_minutemen_resistance
-				value = -2
-			}
-		}
-	}
-	ACW_fight_longist_terrorists = {# fight longists
-		icon = GFX_decision_generic_industry
-		allowed = { 
 		OR = {
-		original_tag = CSA 
-		original_tag = WCC
-		original_tag = USA
-		original_tag = PSA 
+			has_political_power > 90
+			has_country_flag = USA_civil_war_over_flag
 			}
 		}
 		visible = {
@@ -185,11 +148,6 @@ ACW_deal_with_terrorists_decisions = {# dealing with terrorists
 				has_idea = ACW_minutemen_resistance_2
 				has_idea = ACW_minutemen_resistance_3
 				has_idea = ACW_minutemen_resistance_4
-			}
-			OR = {
-				has_manpower > 25000
-				has_political_power > 90
-				has_country_flag = USA_civil_war_over_flag
 			}
 		}
 
@@ -215,8 +173,10 @@ ACW_deal_with_terrorists_decisions = {# dealing with terrorists
 		icon = GFX_decision_generic_industry
 		allowed = { 
 		OR = {
-		original_tag = CSA 
-		original_tag = PSA 
+		tag = CSA 
+		tag = CAL
+		tag = 
+		tag = PSA
 			}
 		}
 		visible = {
@@ -227,7 +187,6 @@ ACW_deal_with_terrorists_decisions = {# dealing with terrorists
 				has_idea = ACW_fed_resistance_4
 			}
 			OR = {
-				has_manpower > 25000
 				has_political_power > 90
 				has_country_flag = USA_civil_war_over_flag
 			}
@@ -255,21 +214,20 @@ ACW_deal_with_terrorists_decisions = {# dealing with terrorists
 		icon = GFX_decision_generic_industry
 		allowed = { 
 		OR = {
-		original_tag = CSA
-		original_tag = TEX
-		original_tag = WCC
-		original_tag = USA
-		original_tag = PSA 
+		tag = CSA
+		tag = TEX
+		tag = WCC
+		tag = USA
+		tag = PSA 
+			}
+		OR = {
+			has_political_power > 90
+			has_country_flag = USA_civil_war_over_flag
 			}
 		}
 		visible = {
 			OR = {
 				has_idea = ACW_crime_resistance_2
-			}
-			OR = {
-				has_manpower > 25000
-				has_political_power > 90
-				has_country_flag = USA_civil_war_over_flag
 			}
 		}
 
@@ -295,11 +253,11 @@ ACW_deal_with_terrorists_decisions = {# dealing with terrorists
 		icon = GFX_decision_generic_industry
 		allowed = {
 		OR = {
-		original_tag = CSA
-		original_tag = TEX
-		original_tag = WCC
-		original_tag = USA
-		original_tag = PSA 
+		tag = CSA
+		tag = TEX
+		tag = WCC
+		tag = USA
+		tag = PSA 
 			}
 		}
 		visible = {
@@ -338,11 +296,11 @@ ACW_deal_with_terrorists_decisions = {# dealing with terrorists
 		icon = GFX_decision_generic_industry
 		allowed = { 
 		OR = {
-		original_tag = CSA
-		original_tag = TEX
-		original_tag = WCC
-		original_tag = USA
-		original_tag = PSA 
+		tag = CSA
+		tag = TEX
+		tag = WCC
+		tag = USA
+		tag = PSA 
 			}
 		}
 		visible = {

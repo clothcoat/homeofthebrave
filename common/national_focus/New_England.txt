@@ -4633,7 +4633,7 @@ focus_tree = {
 	
 	focus = {
 		id = NEE_appoint_chaffee
-		icon = GFX_goal_national_mobilization
+		icon = GFX_goal_NEE_chaffee
 		cost = 6
 		x = -7
 		y = 1
@@ -4683,7 +4683,7 @@ focus_tree = {
 	}
 	focus = {
 		id = NEE_mechanical_cavalry
-		icon = GFX_goal_national_mobilization
+		icon = GFX_goal_generic_cavalry
 		cost = 6
 		x = 0
 		y = 1
@@ -4722,7 +4722,7 @@ focus_tree = {
 	}
 	focus = {
 		id = NEE_coordination_principal
-		icon = GFX_goal_national_mobilization
+		icon = GFX_goal_USA_organic_air_support
 		cost = 6
 		x = 0
 		y = 2
@@ -4755,7 +4755,7 @@ focus_tree = {
 	}
 	focus = {
 		id = NEE_experimental_organization
-		icon = GFX_goal_national_mobilization
+		icon = GFX_focus_generic_army_tanks2
 		cost = 6
 		x = 1
 		y = 3
@@ -4792,7 +4792,7 @@ focus_tree = {
 	}
 	focus = {
 		id = NEE_mobile_emphasis
-		icon = GFX_goal_national_mobilization
+		icon = GFX_goal_generic_position_armies
 		cost = 6
 		x = 1
 		y = 4
@@ -4831,7 +4831,7 @@ focus_tree = {
 	}
 	focus = {
 		id = NEE_equipment_update
-		icon = GFX_goal_national_mobilization
+		icon = GFX_goal_generic_small_arms
 		cost = 6
 		x = -1
 		y = 3
@@ -4891,7 +4891,7 @@ focus_tree = {
 	}
 	focus = {
 		id = NEE_armor_production
-		icon = GFX_goal_national_mobilization
+		icon = GFX_focus_generic_tank_production
 		cost = 6
 		x = -1
 		y = 4
@@ -4943,7 +4943,7 @@ focus_tree = {
 	}
 	focus = {
 		id = NEE_tank_deployment
-		icon = GFX_goal_national_mobilization
+		icon = GFX_goal_generic_army_tanks
 		cost = 6
 		x = 0
 		y = 5
@@ -4984,7 +4984,7 @@ focus_tree = {
 	}
 	focus = {
 		id = NEE_research_grants
-		icon = GFX_goal_national_mobilization
+		icon = GFX_goal_generic_scientific_exchange
 		cost = 6
 		x = 1
 		y = 6
@@ -5024,7 +5024,7 @@ focus_tree = {
 	}
 	focus = {
 		id = NEE_industrial_grants
-		icon = GFX_goal_national_mobilization
+		icon = GFX_goal_generic_construction
 		cost = 5
 		x = -1
 		y = 6
@@ -5071,7 +5071,7 @@ focus_tree = {
 	}
 	focus = {
 		id = NEE_general_pershing
-		icon = GFX_goal_national_mobilization
+		icon = GFX_goal_NEE_pershing
 		cost = 5
 		x = -1
 		y = 1
@@ -5099,7 +5099,7 @@ focus_tree = {
 	}
 	focus = {
 		id = NEE_infantry_investments
-		icon = GFX_goal_national_mobilization
+		icon = GFX_goal_generic_military_sphere
 		cost = 5
 		x = 0
 		y = 1
@@ -5141,7 +5141,7 @@ focus_tree = {
 	}
 	focus = {
 		id = NEE_streamlined_staff
-		icon = GFX_goal_national_mobilization
+		icon = GFX_focus_generic_military_mission
 		cost = 5
 		x = -2
 		y = 1
@@ -5177,7 +5177,7 @@ focus_tree = {
 	}
 	focus = {
 		id = NEE_open_warfare
-		icon = GFX_goal_national_mobilization
+		icon = GFX_goal_TEX_maneuver_excersices
 		cost = 5
 		x = -3
 		y = 2
@@ -5210,7 +5210,7 @@ focus_tree = {
 	}
 	focus = {
 		id = NEE_natural_defenses
-		icon = GFX_goal_national_mobilization
+		icon = GFX_goal_fortify_the_westwall
 		cost = 5
 		x = -1
 		y = 2
@@ -5245,7 +5245,7 @@ focus_tree = {
 	}
 	focus = {
 		id = NEE_breakthrough_emphasis
-		icon = GFX_goal_national_mobilization
+		icon = GFX_goal_generic_demand_territory
 		cost = 5
 		x = -2
 		y = 3
@@ -5284,7 +5284,7 @@ focus_tree = {
 	}
 	focus = {
 		id = NEE_long_range_logistics
-		icon = GFX_goal_national_mobilization
+		icon = GFX_focus_generic_license_production
 		cost = 5
 		x = -2
 		y = 4
@@ -5324,7 +5324,7 @@ focus_tree = {
 	}
 	focus = {
 		id = NEE_expand_westpoint
-		icon = GFX_goal_national_mobilization
+		icon = GFX_focus_generic_military_academy
 		cost = 5
 		x = 2
 		y = 1
@@ -5349,7 +5349,7 @@ focus_tree = {
 	}
 	focus = {
 		id = NEE_american_marksmenship
-		icon = GFX_goal_national_mobilization
+		icon = GFX_goal_NEE_american_marksmanship
 		cost = 5
 		x = 3
 		y = 2
@@ -5373,7 +5373,7 @@ focus_tree = {
 	}
 	focus = {
 		id = NEE_iron_discipline
-		icon = GFX_goal_national_mobilization
+		icon = GFX_goal_CAL_aggressive_conscription
 		cost = 5
 		x = 1
 		y = 2
@@ -5408,7 +5408,7 @@ focus_tree = {
 	}
 	focus = {
 		id = NEE_merit_promotion
-		icon = GFX_goal_national_mobilization
+		icon = GFX_focus_generic_military_academy
 		cost = 5
 		x = 2
 		y = 3
@@ -5446,7 +5446,7 @@ focus_tree = {
 	}
 	focus = {
 		id = NEE_black_combat_troops
-		icon = GFX_goal_national_mobilization
+		icon = GFX_BBR_buffalo_soldiers
 		cost = 5
 		x = 2
 		y = 4
@@ -5468,7 +5468,7 @@ focus_tree = {
 	}
 	focus = {
 		id = NEE_assault_the_line
-		icon = GFX_goal_national_mobilization
+		icon = GFX_goal_TEX_night_assaults
 		cost = 5
 		x = 0
 		y = 4
@@ -5499,7 +5499,7 @@ focus_tree = {
 	}
 	focus = {
 		id = NEE_old_gravel_voice
-		icon = GFX_goal_national_mobilization
+		icon = GFX_goal_NEE_old_gravel_voice
 		cost = 5
 		x = 6
 		y = 1
@@ -5525,7 +5525,7 @@ focus_tree = {
 	}
 	focus = {
 		id = NEE_integrated_armor
-		icon = GFX_goal_national_mobilization
+		icon = GFX_focus_generic_combined_arms
 		cost = 5
 		x = 0
 		y = 1
@@ -5552,7 +5552,7 @@ focus_tree = {
 	}
 	focus = {
 		id = NEE_decisive_tactics
-		icon = GFX_goal_national_mobilization
+		icon = GFX_goal_generic_more_territorial_claims
 		cost = 5
 		x = -1
 		y = 2
@@ -5579,7 +5579,7 @@ focus_tree = {
 	}
 	focus = {
 		id = NEE_artillery_line
-		icon = GFX_goal_national_mobilization
+		icon = GFX_goal_generic_army_artillery2
 		cost = 5
 		x = 1
 		y = 2
@@ -5606,7 +5606,7 @@ focus_tree = {
 	}
 	focus = {
 		id = NEE_bombing_support
-		icon = GFX_goal_national_mobilization
+		icon = GFX_goal_generic_air_bomber
 		cost = 5
 		x = 2
 		y = 3
@@ -5633,7 +5633,7 @@ focus_tree = {
 	}
 	focus = {
 		id = NEE_shore_bombardment
-		icon = GFX_goal_national_mobilization
+		icon = GFX_goal_generic_amphibious_assault
 		cost = 5
 		x = 2
 		y = 4
@@ -5660,7 +5660,7 @@ focus_tree = {
 	}
 	focus = {
 		id = NEE_counter_attack
-		icon = GFX_goal_national_mobilization
+		icon = GFX_goal_generic_major_war
 		cost = 5
 		x = 0
 		y = 3
@@ -5690,13 +5690,13 @@ focus_tree = {
 	}
 	focus = {
 		id = NEE_armored_spearhead
-		icon = GFX_goal_national_mobilization
+		icon = GFX_goal_generic_special_forces
 		cost = 5
 		x = 0
 		y = 4
 		relative_position_id = NEE_old_gravel_voice
 		prerequisite = {
-			focus = NEE_old_gravel_voice
+			focus = NEE_counter_attack
 		}
 		ai_will_do = {
 			factor = 3
@@ -5717,7 +5717,7 @@ focus_tree = {
 	}
 	focus = {
 		id = NEE_mechanical_drawing
-		icon = GFX_goal_national_mobilization
+		icon = GFX_goal_USA_integral_mechanization
 		cost = 5
 		x = -2
 		y = 3
@@ -5744,7 +5744,7 @@ focus_tree = {
 	}
 	focus = {
 		id = NEE_firepower_purchase
-		icon = GFX_goal_national_mobilization
+		icon = GFX_goal_generic_army_artillery
 		cost = 5
 		x = -2
 		y = 4
@@ -5771,7 +5771,7 @@ focus_tree = {
 	}
 	focus = {
 		id = NEE_green_policy
-		icon = GFX_goal_national_mobilization
+		icon = GFX_goal_NEE_green_policy
 		cost = 5
 		x = 12
 		y = 1
@@ -5798,7 +5798,7 @@ focus_tree = {
 	}
 	focus = {
 		id = NEE_consistant_conscription
-		icon = GFX_goal_national_mobilization
+		icon = GFX_BBR_mass_recruitment
 		cost = 5
 		x = 0
 		y = 1
@@ -5825,7 +5825,7 @@ focus_tree = {
 	}
 	focus = {
 		id = NEE_moral_idealism
-		icon = GFX_goal_national_mobilization
+		icon = GFX_goal_USA_new_interventionism
 		cost = 5
 		x = 2
 		y = 2
@@ -5852,7 +5852,7 @@ focus_tree = {
 	}
 	focus = {
 		id = NEE_yankee_nationalism
-		icon = GFX_goal_national_mobilization
+		icon = GFX_goal_USA_patriotic_broadsides
 		cost = 5
 		x = -2
 		y = 2
@@ -5879,7 +5879,7 @@ focus_tree = {
 	}
 	focus = {
 		id = NEE_farmer_soldiers
-		icon = GFX_goal_national_mobilization
+		icon = GFX_goal_USA_nationalist_rhetoric
 		cost = 5
 		x = 0
 		y = 2
@@ -5906,7 +5906,7 @@ focus_tree = {
 	}
 	focus = {
 		id = NEE_silver_military_lease
-		icon = GFX_goal_national_mobilization
+		icon = GFX_goal_generic_military_deal
 		cost = 5
 		x = 0
 		y = 3
@@ -5933,7 +5933,7 @@ focus_tree = {
 	}
 	focus = {
 		id = NEE_mass_spending
-		icon = GFX_goal_national_mobilization
+		icon = GFX_CAL_bonus_bill
 		cost = 5
 		x = 0
 		y = 4

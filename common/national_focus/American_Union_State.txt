@@ -3546,26 +3546,6 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = TEX_reconstruction_is_over_tooltip
-				OR = {
-					AND = {# National Recovery Administration
-						has_completed_focus = TEX_research_projects
-						has_completed_focus = TEX_rural_electrification
-						has_completed_focus = TEX_farm_security_administration
-						OR = {
-							has_completed_focus = TEX_reconciliation
-							has_completed_focus = TEX_harsh_reconstruction
-						}
-					}
-					AND = {# Military Industrial Complex
-						has_completed_focus = TEX_building_grants
-						has_completed_focus = TEX_military_factories
-						has_completed_focus = TEX_create_esmwt
-						OR = {
-							has_completed_focus = TEX_reconciliation
-							has_completed_focus = TEX_harsh_reconstruction
-						}
-					}
-				}
 			}
 		}
 		ai_will_do = {

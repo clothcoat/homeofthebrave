@@ -51,12 +51,12 @@ ideas = {
 			modifier = {
 				license_armor_purchase_cost = -25
 				production_speed_bunker_factor = 0.15
-				conversion_cost_civ_to_mil_factor = 0.3
+				conversion_cost_civ_to_mil_factor = -0.3
 				industry_free_repair_factor	= 0.05
 				experience_gain_light_armor_training_factor = 0.05
 				experience_gain_light_armor_combat_factor = 0.05
 				army_armor_defence_factor = 0.02
-				army_org_factor	= 0.5
+				army_org_factor	= 0.15
 			}
 			equipment_bonus = {
 				armor = {
@@ -80,12 +80,12 @@ ideas = {
 			modifier = {
 				license_armor_purchase_cost = -25
 				production_speed_bunker_factor = 0.15
-				conversion_cost_civ_to_mil_factor = 0.3
+				conversion_cost_civ_to_mil_factor = -0.3
 				industry_free_repair_factor	= 0.05
 				experience_gain_light_armor_training_factor = 0.15
 				experience_gain_light_armor_combat_factor = 0.05
 				army_armor_defence_factor = 0.05
-				army_org_factor	= 1
+				army_org_factor	= 0.2
 			}
 			equipment_bonus = {
 				armor = {
@@ -112,12 +112,12 @@ ideas = {
 			modifier = {
 				license_armor_purchase_cost = -25
 				production_speed_bunker_factor = 0.15
-				conversion_cost_civ_to_mil_factor = 0.3
+				conversion_cost_civ_to_mil_factor = -0.3
 				industry_free_repair_factor	= 0.05
 				experience_gain_light_armor_training_factor = 0.15
 				experience_gain_light_armor_combat_factor = 0.15
 				army_armor_defence_factor = 0.1
-				army_org_factor	= 1
+				army_org_factor	= 0.2
 				breakthrough = 0.1
 			}
 			equipment_bonus = {
@@ -1249,7 +1249,6 @@ ideas = {
 				surrender_limit = 0.15
 			}
 		}
-		### Fortress Ideas ###
 		### National Recovery Act ###
 		TEX_national_recovery_idea1 = { #National Recovery Administration
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_national_recovery_idea1"}

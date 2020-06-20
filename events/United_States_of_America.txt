@@ -2783,7 +2783,7 @@ country_event = { # Reed as a tyrant
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.44"}
 	title = ustates.44.t
 	desc = ustates.44.d
-	picture = GFX_Long_Rally
+	picture = GFX_USA_Riots
 
 	is_triggered_only = yes
 
@@ -2796,7 +2796,7 @@ country_event = { # Reed as a tyrant
 	option = {
 		name = ustates.44.a
 		custom_effect_tooltip = USA_AFP_gains_strength
-		add_popularity = { ideology = syndicalist = -0.02 }
+		add_popularity = { ideology = syndicalist popularity = -0.02 }
 		hidden_effect = {
 			add_to_variable = { var = AFP_strength value = 1 }
 		}

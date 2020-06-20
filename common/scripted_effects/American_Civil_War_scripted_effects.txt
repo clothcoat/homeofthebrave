@@ -37,12 +37,12 @@ CSA_initial_events = {
 		}
 		hidden_effect = {
 		country_event = { id = csa.150 days = 6 } # Initialization event
-		country_event = { id = amcivwar.32 days = 14 } # Revolutionary Military
+		country_event = { id = amcivwar.32 days = 1 } # Revolutionary Military
 		country_event = { id = amcivwar.44 days = 21 } # Revolutionary Staff Leader
 		country_event = { id = amcivwar.45 days = 28 } # Leader of the People's Air Force
 		country_event = { id = amcivwar.30 days = 40 random = 10 } # Dealing with the Rich
 		country_event = { id = amcivwar.38 days = 70 random = 20 } # Revolutionary Propaganda
-		country_event = { id = amcivwar.36 days = 85 random = 20 } # Internal Conflicts
+		country_event = { id = amcivwar.36 days = 2 } # Internal Conflicts
 		country_event = { id = amcivwar.40 days = 130 random = 20 } # Protecting against Saboteurs
 		country_event = { id = amcivwar.41 days = 160 random = 20 } # Red Terror
 		}
@@ -180,8 +180,6 @@ USA_release_CSA = {
 
 		CSA = {
 			load_oob = "USA_civil_war_csa_army"
-			country_event = { id = amcivwar.337 days = 1 }
-			set_equipment_fraction = 0.35
 			add_ideas = {
 				CSA_militia_idea
 				extensive_conscription
@@ -295,8 +293,11 @@ USA_release_TEX = {
 
 		TEX = {
 			load_oob = "USA_civil_war_aus_army"
-			country_event = { id = amcivwar.336 days = 1 }
-			set_equipment_fraction = 0.8
+			add_equipment_to_stockpile = {
+			type = infantry_equipment_1
+			amount = 5500
+			producer = USA
+			}
 			add_ideas = {
 				extensive_conscription
 			}
@@ -404,8 +405,11 @@ USA_release_COR = {
 
 		COR = {
 			load_oob = "USA_civil_war_car_army"
-			country_event = { id = amcivwar.336 days = 1 }
-			set_equipment_fraction = 0.35
+			add_equipment_to_stockpile = {
+			type = infantry_equipment_1
+			amount = 3500
+			producer = USA
+			}
 			add_ideas = {
 				extensive_conscription
 			}
@@ -589,8 +593,6 @@ USA_release_WCC = {
 		}
 		WCC = {
 			load_oob = "WCC"
-			country_event = { id = amcivwar.336 days = 1 }
-			set_equipment_fraction = 0.35
 			add_ideas = {
 				extensive_conscription
 			}
@@ -671,7 +673,6 @@ USA_release_CAL = {
 
 		CAL = {
 			load_oob = "USA_civil_war_psa_army"
-			set_equipment_fraction = 0.35
 			add_ideas = {
 				extensive_conscription
 			}
@@ -796,8 +797,7 @@ COR_release_BBR = {
 
 		BBR = {
 			load_oob = "BBR"
-			country_event = { id = amcivwar.336 days = 1 }
-			set_equipment_fraction = 0.35
+			set_equipment_fraction = 0.9
 			add_ideas = {
 				extensive_conscription
 			}

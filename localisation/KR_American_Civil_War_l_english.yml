@@ -142,6 +142,20 @@ ACW_support_aus_dec_desc:0 "We should support Huey Long and the American Union S
 ACW_support_psa_dec:0 "Support the PSA"
 ACW_support_psa_dec_desc:0 "We should support the legitimate America on the West Coast fighting against tyranny from all sides in America."
 
+ACW_deal_with_terrorists_decisions:0 "Combat terrorists"
+ACW_fight_klan_terrorists:0 "Weed out the Klan"
+ACW_fight_black_legion_terrorists:0 "Strike Black Legion Cells"
+ACW_fight_socialist_terrorists:0 "Attack Red Guard Cells"
+ACW_fight_longist_terrorists:0 "Weaken Minuteman Resistance"
+ACW_fight_fed_terrorists:0 "Hit Federalist Militants"
+ACW_fight_crime:0 "Fight Criminals"
+ACW_fight_black_nationalist:0 "Counter Black Liberation Units"
+ACW_fight_ACW_liberal_resistance:0 "Smack Liberal Rebels"
+
+ACW_combat_socialists:0 "Socialist Resistance will be damaged"
+ACW_combat_klan:0 "Klan Resistance will be damaged"
+
+
 ACW_civil_war_decisions:0 "The Civil War"
 ACW_civil_war_decisions_desc:0 "The Second American Civil War is here and we must bring about our victory within it for America."
 ACW_move_quickly:0 "We Must Move Quickly"
@@ -697,18 +711,18 @@ amcivwar.36.d:0 "At the offset of the revolution, John Reed placed the IWW as th
 amcivwar.36.a:0 "This is a syndicalist nation now"
 amcivwar.36.b:0 "A single 'traditional' vote is fair"
 
-amcivwar.360001.t:0 "Social Patriots Demand Election!"
-amcivwar.360001.d:0 "The Social Patriots within the military have demanded a traditional vote to decide remaining seats, something that can only help their faction! They claim that it is undemocratic to exclude voters from the process and claim we are 'rigging' the process against the Social Patriots. While some of the IWW is offended by the militaries demand, viewing it as entitled and undemocratic, others claim we should listen."
-amcivwar.360001.a:0 "No"
-amcivwar.360001.b:0 "Very Well"
+amcivwar.36001.t:0 "Social Patriots Demand Election!"
+amcivwar.36001.d:0 "The Social Patriots within the military have demanded a traditional vote to decide remaining seats, something that can only help their faction! They claim that it is undemocratic to exclude voters from the process and claim we are 'rigging' the process against the Social Patriots. While some of the IWW is offended by the militaries demand, viewing it as entitled and undemocratic, others claim we should listen."
+amcivwar.36001.a:0 "No"
+amcivwar.36001.b:0 "Very Well"
 
 amcivwar.36002.t:0 "Military Takeover!"
 amcivwar.36002.d:0 "Smedley Butler and his military clique have denounced the decision of the Revolutionary Congress and sidelined them, entering Congress with a large force and declaring that the remaining seats will indeed be decided by a traditional vote. With Butler in command, the Social Patriots have further strengthened their position by adopting 'Unity Legislation' that attempts to give amnesty to more citizens suspected of treachery. However, they have no intention of actively forcing out the IWW and left-radicals, allowing them to stay in Congress."
 amcivwar.36001.a:0 "Whoops"
 
-amcivwar.360003.t:0 "Syndicalist Dominance"
-amcivwar.360003.d:0 "The Social Patriots within Congress have utterly failed to throw around their influence in such a way as to cut left radical influence while gaining their own. With the majority of Congress controlled by syndicalist unions who have the lion's share of control, it is clear that the Social Patriots will have to take a backseat to the revolution, hoping to gain whatever favors and union influence they can to prop up local power bases and get rewards for members."
-amcivwar.360003.a:0 "The Revoution is Secure!"
+amcivwar.36003.t:0 "Syndicalist Dominance"
+amcivwar.36003.d:0 "The Social Patriots within Congress have utterly failed to throw around their influence in such a way as to cut left radical influence while gaining their own. With the majority of Congress controlled by syndicalist unions who have the lion's share of control, it is clear that the Social Patriots will have to take a backseat to the revolution, hoping to gain whatever favors and union influence they can to prop up local power bases and get rewards for members."
+amcivwar.36003.a:0 "The Revoution is Secure!"
 
 amcivwar.3600.t:0 "Social Patriots Unity Legislation!"
 amcivwar.3600.d:0 "The Social Patriots within Congress have put forward a controversial bill that would allow former agents of capitalism to be granted amnesty if they back our war effort. Furthermore, those considered politically 'suspect' will be offered amnesty as well if they join our army and/or unions. Naturally the Radicals are strongly opposed to this, believing they are too dangerous to given so much power and influence and instead desire we simply use them for either menial labor or house arrest until the war is over, depending on who they are."
@@ -722,31 +736,31 @@ amcivwar.3601.b:0 "Act against Fosterite threat"
 
 amcivwar.3602.t:0 "TUUL Weakened"
 amcivwar.3602.d:0 "As several TUUL rallies have been disrupted by the military and some of their soldiers and loyalists have met sudden and violent deaths in the past week Foster has little choice but to take Butler's direct warning to him today to heart, agreeing to stand down and allow for politics to be settled after the war is over so long as we cease anti-TUUL activity."
-amcivwar.3602.b:0 "Good"
+amcivwar.3602.a:0 "Good"
 
 amcivwar.3603.t:0 "Social Patriots in power"
-amcivwar.3603.d:0 "As they have a clear majority in Congress and now enough popular support that even the IWW can not stop them, the Social Patriots are essentially running congress to the consternation of the Radicals."
-amcivwar.3603.b:0 "It's how it had to happen"
+amcivwar.3603.d:0 "As they have an increasing majority in Congress and enough popular support that even the IWW is losing ground to them, the Social Patriots are increasingly running congress to the consternation of the Left Radicals, especially as their legislation often favors their faction."
+amcivwar.3603.a:0 "It's how it had to happen"
 
-amcivwar.3604.t:0 "Radical Revolts!"
-amcivwar.3604.d:0 "A small segment of the Left Radicals have decided to endanger the entire CSA over the issue of the Social Patriots gaining power. Calling themselves the Vanguard of the Revolution, they are a grouping of Collectivist-Syndicalists, the most militant wing of Syndicalists such as Galleanist and some militant anarcho-Communists whom have taken up small strongholds in the cities and have set up blockades. With Foster now having much of his TUUL defect to them they are warning us to surrender before they retake the nation. However, while their actions have been a thorn in our side, it has not endangered much love amongst the populace and them endangering the existance of the CSA has angered even many syndicalists, with even part of the TUUL itself breaking off from Foster. We can end the threat, but it will be bloody."
-amcivwar.3604.b:0 "Take them out"
+amcivwar.3604.t:0 "Left Radical Revolt!"
+amcivwar.3604.d:0 "A small segment of the Left Radicals have decided to endanger the entire CSA over the issue of the Social Patriots gaining power. Calling themselves the Vanguard of the Revolution, they are a grouping of Collectivist-Syndicalists, Galleanists and some militant anarcho-communists whom have taken up small strongholds in the cities and have set up blockades. With Foster now having much of his TUUL defect to them they are warning us to surrender before they retake the nation. However, while their actions have been a thorn in our side, it has not endangered much love amongst the populace and them endangering the existence of the CSA has angered even many syndicalists, with even part of the TUUL itself breaking off from Foster. We can end the threat, but it will be bloody."
+amcivwar.3604.a:0 "Take them out"
 
 amcivwar.3605.t:0 "Radicals Crushed!"
-amcivwar.3605.d:0 "The Ultra-Radicals have been crushed and with it our position cemented. With even many TUUC leaders appearing to have fled for the Commune of France we are at last victorious. With the Social Patriots passing legislation to mimick more traditional democracies by making it easier for non-union voters to influence elections the future of the nation appears to be in their hands. though the IWW still remains as a force with local syndicates as continuing the war without them would be impossible."
+amcivwar.3605.d:0 "The Ultra-Radicals have been crushed and with it our position cemented. With even many TUUC leaders appearing to have fled for the Commune of France we are at last victorious. With the Social Patriots passing legislation to mimic more traditional democracies by making it easier for non-union voters to influence elections the future of the nation appears to be in their hands. Though the IWW still remains as a force with local syndicates as continuing the war without them would be impossible."
 amcivwar.3605.a:0 "Very Well"
 
 amcivwar.3606.t:0 "Military Demands Amnesty!"
-amcivwar.3606.d:0 "The rebellion has been crushed but as much of our Collectivist-influenced military is sympathetic to the revolutionaries they demand amnesty for the surviving ones, especially Foster, saying they were simply pushed too far and disrespected by our current political leadership."
+amcivwar.3606.d:0 "The rebellion has been crushed but as much of our Collectivist-influenced military is sympathetic to the revolutionaries they demand amnesty for the surviving ones, especially Foster's right-hand man Eugene Dennis, saying they were simply pushed too far and disrespected by our current political leadership."
 amcivwar.3606.a:0 "Fine, give amnesty"
 amcivwar.3606.b:0 "I don't think so"
 
 amcivwar.3607.t:0 "Fosterite Coup!"
-amcivwar.3607.d:0 "The military has joined forces with the former revolters, with Jack Shullman releasing the supposedly imprisoned Foster to gather TUUC militants. With the Fosterite military having turned on us it is clear that Foster is in command, causing many of the Social Patriots to either agree to step down or flee the nation."
+amcivwar.3607.d:0 "The military has joined forces with the former rebels, with Jack Shullman releasing the supposedly imprisoned TUUC militants, including Eugene Dennis. With the Fosterite military having turned on us it is clear that Foster is in command, causing many of the Social Patriots to either agree to step down or flee the nation."
 amcivwar.3607.a:0 "We're finished"
 
 amcivwar.3608.t:0 "Military Demands IWW Support!"
-amcivwar.3608.d:0 "The IWW-leaning military has been distrubed by the Social Patriots dominating Congress and have called on a compromise in which we grant greater local power to syndicates and communes so they are not overly influenced by our agenda. Of course this decentralization will weaken us."
+amcivwar.3608.d:0 "The IWW-leaning military has been disturbed by the Social Patriots dominating Congress and have called on a compromise in which we grant greater local power to syndicates and communes so they are not overly influenced by our agenda. Of course this decentralization will weaken us."
 amcivwar.3608.a:0 "Agree"
 amcivwar.3608.b:0 "Unacceptable"
 

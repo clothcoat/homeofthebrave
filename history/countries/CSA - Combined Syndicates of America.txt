@@ -72,33 +72,29 @@ if = {
 
 if = {
 	limit = {
-		not = {
+		NOT = {
 			has_dlc = "Man the Guns"
 		}
 	}
 	set_technology = {
-		weltkrieg_light_ship_hull_nonmtg = 1
-		interwar_light_ship_hull_nonmtg = 1
-		improved_light_ship_hull_nonmtg = 1
-		weltkrieg_cruiser_hull_nonmtg = 1
-		interwar_cruiser_hull_nonmtg = 1
-		improved_cruiser_hull_nonmtg = 1
-		weltkrieg_submarine_hull_nonmtg = 1
-		interwar_submarine_hull_nonmtg = 1
-		improved_submarine_hull_nonmtg = 1
-		weltkrieg_carrier_hull_nonmtg = 1
-		interwar_carrier_hull_nonmtg = 1
-		weltkrieg_panzerschiff_hull_nonmtg = 1
-		interwar_panzerschiff_hull_nonmtg = 1
-		improved_panzerschiff_hull_nonmtg = 1
-		weltkrieg_fast_battleship_hull_nonmtg = 1
-		interwar_fast_battleship_hull_nonmtg = 1
-		improved_fast_battleship_hull_nonmtg = 1
-		weltkrieg_dreadnought_hull_nonmtg = 1
-		interwar_dreadnought_hull_nonmtg = 1
-		improved_dreadnought_hull_nonmtg = 1
-		interwar_heavy_carrier_hull_nonmtg = 1
-		transport = 1
+		weltkrieg_destroyer_nonmtg = 1
+		interwar_destroyer_nonmtg = 1
+		weltkrieg_cruiser_nonmtg = 1
+		interwar_cruiser_nonmtg = 1
+		weltkrieg_submarine_nonmtg = 1
+		interwar_submarine_nonmtg = 1
+		weltkrieg_armored_cruiser_nonmtg = 1
+		interwar_armored_cruiser_nonmtg = 1
+		weltkrieg_fast_battleship_nonmtg = 1
+		interwar_fast_battleship_nonmtg = 1
+		weltkrieg_dreadnought_nonmtg = 1
+		super_heavy_dreadnought_nonmtg = 1
+		weltkrieg_carrier_nonmtg = 1
+		interwar_carrier_nonmtg = 1
+		heavy_carrier_nonmtg = 1
+
+		### Transport ###
+		transport_n = 1
 	}
 }
 
