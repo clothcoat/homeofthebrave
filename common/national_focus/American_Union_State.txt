@@ -6186,9 +6186,9 @@ focus_tree = {
 		cancel_if_invalid = yes
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TEX_fortress_america"
-			add_war_support = -0.10
-			add_ideas = USA_fortress_america_idea_1
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_americanist_doctrine"
+			add_war_support = 0.03
+			add_manpower = 5000
 		}
 	}
 	
@@ -6220,9 +6220,63 @@ focus_tree = {
 		available_if_capitulated = no
 		cancel_if_invalid = yes
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TEX_fortress_america"
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_denounce_oligarchs"
 			add_war_support = -0.10
-			add_ideas = USA_fortress_america_idea_1
+			add_ideas = TEX_denounce_war_racket
+			if = {
+			limit = { MEX = {
+			exists = yes
+				}
+			}
+			MEX = {
+			add_opinion_modifier = { target = USA modifier = small_increase }
+			}
+			}
+			if = {
+			limit = { PER = {
+			exists = yes
+				}
+			}
+			VEN = {
+			add_opinion_modifier = { target = USA modifier = small_increase }
+			}
+			}
+			if = {
+			limit = { VEN = {
+			exists = yes
+				}
+			}
+			CUB = {
+			add_opinion_modifier = { target = USA modifier = small_increase }
+			}
+			}
+			if = {
+			limit = { HAI = {
+			exists = yes
+				}
+			}
+			HAI = {
+			add_opinion_modifier = { target = USA modifier = small_increase }
+			}
+			}
+			if = {
+			limit = { DOM = {
+			exists = yes
+				}
+			}
+			DOM = {
+			add_opinion_modifier = { target = USA modifier = small_increase }
+			}
+			}
+			if = {
+			limit = { GUA = {
+			exists = yes
+				}
+			}
+			GUA = {
+			add_opinion_modifier = { target = USA modifier = small_increase }
+			}
+			}
 		}
 	}
 	
@@ -6254,8 +6308,12 @@ focus_tree = {
 		cancel_if_invalid = yes
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TEX_investigate_war_lobbyists"
-			add_war_support = -0.10
-			add_ideas = USA_fortress_america_idea_1
+			add_war_support = -0.05
+			increase_ruling_party_popularity_by_5 = yes
+			add_political_power = 30
+			add_command_power = 10
+			add_stability = 0.03
+			add_threat = -3
 		}
 	}
 	
@@ -6295,9 +6353,9 @@ focus_tree = {
 		cancel_if_invalid = yes
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TEX_fortress_america"
-			add_war_support = -0.10
-			add_ideas = USA_fortress_america_idea_1
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_popular_monroeism"
+			add_ideas = TEX_popular_monroeism_idea
+			add_political_power = 25
 		}
 	}
 	
@@ -6330,16 +6388,15 @@ focus_tree = {
 		cancel_if_invalid = yes
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TEX_fortress_america"
-			add_war_support = -0.10
-			add_ideas = USA_fortress_america_idea_1
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_populist_alliance"
+			unlock_decision_category_tooltip = TEX_populist_alliance_decision
 		}
 	}
 	
 	focus = {
 		id = TEX_internationale_non_agression_pact
 		icon = GFX_goal_TEX_internationale_peace_agreement
-		cost = 6.00
+		cost = 1.00
 		prerequisite = {
 			focus = TEX_populist_alliance
 			focus = TEX_investigate_war_lobbyists
@@ -6368,9 +6425,12 @@ focus_tree = {
 		available_if_capitulated = no
 		cancel_if_invalid = yes
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TEX_fortress_america"
-			add_war_support = -0.10
-			add_ideas = USA_fortress_america_idea_1
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_internationale_non_agression_pact"
+			add_political_power = -15
+			country_event = {
+				id = unionstate.155
+				days = 1
+			}
 		}
 	}
 	
@@ -6406,9 +6466,8 @@ focus_tree = {
 		available_if_capitulated = no
 		cancel_if_invalid = yes
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TEX_fortress_america"
-			add_war_support = -0.10
-			add_ideas = USA_fortress_america_idea_1
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_ideological_neutrality"
+			add_stability = 0.03
 		}
 	}
 	
@@ -6443,9 +6502,7 @@ focus_tree = {
 		available_if_capitulated = no
 		cancel_if_invalid = yes
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TEX_fortress_america"
-			add_war_support = -0.10
-			add_ideas = USA_fortress_america_idea_1
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_oppose_american_syndicalism"
 		}
 	}
 	
@@ -6479,7 +6536,7 @@ focus_tree = {
 		available_if_capitulated = no
 		cancel_if_invalid = yes
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TEX_fortress_america"
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_align_nationalists"
 			add_war_support = -0.10
 			add_ideas = USA_fortress_america_idea_1
 		}
@@ -6517,7 +6574,7 @@ focus_tree = {
 		available_if_capitulated = no
 		cancel_if_invalid = yes
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TEX_fortress_america"
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_break_war_mongerers"
 			add_war_support = -0.10
 			add_ideas = USA_fortress_america_idea_1
 		}
@@ -6551,7 +6608,7 @@ focus_tree = {
 		available_if_capitulated = no
 		cancel_if_invalid = yes
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TEX_fortress_america"
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_contain_hostile_leftism"
 			add_war_support = -0.10
 			add_ideas = USA_fortress_america_idea_1
 		}
@@ -6584,7 +6641,7 @@ focus_tree = {
 		available_if_capitulated = no
 		cancel_if_invalid = yes
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TEX_fortress_america"
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_end_carles"
 			add_war_support = -0.10
 			add_ideas = USA_fortress_america_idea_1
 		}
@@ -6617,7 +6674,7 @@ focus_tree = {
 		available_if_capitulated = no
 		cancel_if_invalid = yes
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TEX_fortress_america"
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_break_militarists"
 			add_war_support = -0.10
 			add_ideas = USA_fortress_america_idea_1
 		}
@@ -6649,7 +6706,7 @@ focus_tree = {
 		available_if_capitulated = no
 		cancel_if_invalid = yes
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TEX_fortress_america"
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_aid_paraguay"
 			add_war_support = -0.10
 			add_ideas = USA_fortress_america_idea_1
 		}
@@ -6688,7 +6745,7 @@ focus_tree = {
 		available_if_capitulated = no
 		cancel_if_invalid = yes
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TEX_fortress_america"
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_friendship_in_the_americas"
 			add_war_support = -0.10
 			add_ideas = USA_fortress_america_idea_1
 		}
@@ -6721,7 +6778,7 @@ focus_tree = {
 		available_if_capitulated = no
 		cancel_if_invalid = yes
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TEX_fortress_america"
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_mutual_trade"
 			add_war_support = -0.10
 			add_ideas = USA_fortress_america_idea_1
 		}
@@ -6754,7 +6811,7 @@ focus_tree = {
 		available_if_capitulated = no
 		cancel_if_invalid = yes
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TEX_fortress_america"
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_research_agreement"
 			add_war_support = -0.10
 			add_ideas = USA_fortress_america_idea_1
 		}

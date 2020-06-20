@@ -5219,29 +5219,6 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = USA_gi_bill
-		icon = GFX_goal_brain
-		cost = 5.00
-		prerequisite = {
-			focus = USA_military_research
-		}
-		x = -1
-		y = 1
-		relative_position_id = USA_military_research
-		ai_will_do = {
-			factor = 2
-			modifier = {
-				factor = 1.5
-				has_war = yes
-			}
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus USA_gi_bill"
-			add_ideas = USA_gi_bill_idea
-			increase_ruling_party_popularity_by_5 = yes
-		}
-	}
-	focus = {
 		id = USA_fighter_development
 		icon = GFX_goal_generic_air_fighter
 		cost = 5.00
@@ -5293,7 +5270,7 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_expand_wasps
-		icon = GFX_ITA_female_soldiers
+		icon = GFX_goal_continuous_air_production
 		cost = 5.00
 		prerequisite = {
 			focus = USA_expand_air_corps_tactical_school
@@ -5987,12 +5964,12 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_woman_army_corps
-		icon = GFX_IRE_women_industry
+		icon = GFX_goal_continuous_reduce_training_time
 		cost = 5.00
 		prerequisite = {
 			focus = USA_military_research
 		}
-		x = 1
+		x = 0
 		y = 1
 		ai_will_do = {
 			factor = 1.5
@@ -7668,7 +7645,7 @@ focus_tree = {
 
 	focus = {# Expand WAVEs
 		id = USA_expand_waves
-		icon = GFX_ITA_female_soldiers
+		icon = GFX_goal_continuous_naval_production
 		cost = 6.00
 		prerequisite = {
 			focus = USA_new_admirals

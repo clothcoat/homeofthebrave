@@ -426,6 +426,7 @@ USA_same_wars_as_AUS:0 "Any enemy is also at war with [AUS.GetNameDef]"
 USA_same_wars_as_Entente:0 "Any enemy is also at war with the Entente"
 FROM_same_wars_as_us:0 "Any enemy is also at war with us"
 USA_is_neutral_country:0 "is not in any faction (unless in a faction with us)"
+USA_american_anti_imperialism:0 "American Anti-Imperial League"
 
 USA_Pan_American_Development_Foundation:0 "Pan-American Development Foundation"
 USA_Pan_American_Development_Foundation_desc:0 "The Pan-American Development Foundation(PADF) is the developmental arm of the League of American States. In this role, PADF works with public and private partners to implement socio-economic development and disaster relief for the members of the League of American States so that the goal of a Hemisphere of Opportunity for All can be achieved. We do this by engaging community-based groups, non-governmental organizations, national and local governments, multilateral organizations, and the private sector in the process of implementing appropriate solutions for sustainable development."
@@ -2287,7 +2288,7 @@ ustates.230.d:0 "The [From.GetAdjective] government has refused our request to j
 ustates.230.a:0 "A poor decision on their part."
 
 ustates.250.t:0 "Join the League of American States?"
-ustates.250.d:0 "[From.GetNameDefCap] has sent an envoy with an invitation for [Root.GetNameDef] to join the so-called 'League of American States'. This is not an alliance, per se, but rather an association of countries in North and South America under American guidance and protection. They would guarantee our independence and offer us military and economic advisers, and in return we would provide them military access and preferential treatment for our exports. It is not a bad deal, though some suggest it ties us too closely to the Americans - and, considering our neutrality would be required, also prevents us from seeking alliances elsewhere. The question is, with the Americans protecting us, do we even need them?"
+ustates.250.d:0 "[From.GetNameDefCap] has sent an envoy with an invitation for [Root.GetNameDef] to join the so-called 'League of American States'. This is not an alliance, per se, but rather an association of countries under American guidance and protection. They would guarantee our independence and offer us military and economic advisers, and in return we would provide them military access and preferential treatment for our exports. It is not a bad deal, though some suggest it ties us too closely to the Americans - and, considering our neutrality would be required, also prevents us from seeking alliances elsewhere. The question is, with the Americans protecting us, do we even need them?"
 ustates.250.a:0 "Of course we shall join the League."
 ustates.250.b:0 "It is not in our interests."
 
