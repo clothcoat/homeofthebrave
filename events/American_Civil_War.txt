@@ -3443,8 +3443,6 @@ country_event = { # CSA wins the civil war
 		USA_civil_war_ends = yes
 		add_ideas = USA_civil_war_aftermath_idea
 		add_ideas = USA_civil_war_depression_idea
-		add_ideas = ACW_fed_resistance_1
-		add_ideas = ACW_minutemen_resistance_1
 		hidden_effect = {
 			add_ideas = {
 				civilian_economy
@@ -3517,8 +3515,6 @@ country_event = { # AUS wins the civil war
 		USA_civil_war_ends = yes
 		add_ideas = USA_civil_war_aftermath_idea
 		add_ideas = USA_civil_war_depression_idea
-		add_ideas = ACW_fed_resistance_1
-		add_ideas = ACW_socialist_resistance_1
 		hidden_effect = {
 			add_ideas = {
 				civilian_economy
@@ -3594,20 +3590,16 @@ country_event = { # USA wins the civil war
 		if = {
 			limit = {
 				NOT = {
-					has_country_flag = USA_assassinated_reed
 					has_country_flag = USA_ACW_compromise_rejected
 				}
 			}
-			add_ideas = ACW_socialist_resistance_1
 		}
 		if = {
 			limit = {
 				NOT = {
-					has_country_flag = USA_assassinated_long
 					has_country_flag = USA_ACW_austerity_rejected
 				}
 			}
-			add_ideas = ACW_minutemen_resistance_1
 		}
 		hidden_effect = {
 			add_ideas = {
@@ -3695,7 +3687,6 @@ country_event = { # COR wins the civil war
 		if = {
 			limit = {
 				NOT = {
-					has_country_flag = USA_assassinated_reed
 					has_country_flag = USA_ACW_compromise_rejected
 				}
 			}
@@ -3704,11 +3695,9 @@ country_event = { # COR wins the civil war
 		if = {
 			limit = {
 				NOT = {
-					has_country_flag = USA_assassinated_long
 					has_country_flag = USA_ACW_austerity_rejected
 				}
 			}
-			add_ideas = ACW_minutemen_resistance_1
 		}
 		hidden_effect = {
 			add_ideas = {
@@ -3796,8 +3785,6 @@ country_event = { # PSA wins the civil war
 		USA_civil_war_ends = yes
 		add_ideas = USA_civil_war_aftermath_idea
 		add_ideas = USA_civil_war_depression_idea
-		add_ideas = ACW_minutemen_resistance_1
-		add_ideas = ACW_socialist_resistance_1
 		hidden_effect = {
 			add_ideas = {
 				civilian_economy
