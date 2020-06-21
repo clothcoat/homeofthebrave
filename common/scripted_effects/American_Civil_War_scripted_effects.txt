@@ -37,12 +37,12 @@ CSA_initial_events = {
 		}
 		hidden_effect = {
 		country_event = { id = csa.150 days = 6 } # Initialization event
-		country_event = { id = amcivwar.32 days = 1 } # Revolutionary Military
+		country_event = { id = amcivwar.32 days = 10 } # Revolutionary Military
 		country_event = { id = amcivwar.44 days = 21 } # Revolutionary Staff Leader
 		country_event = { id = amcivwar.45 days = 28 } # Leader of the People's Air Force
 		country_event = { id = amcivwar.30 days = 40 random = 10 } # Dealing with the Rich
 		country_event = { id = amcivwar.38 days = 70 random = 20 } # Revolutionary Propaganda
-		country_event = { id = amcivwar.36 days = 2 } # Internal Conflicts
+		country_event = { id = amcivwar.36 days = 35 } # Internal Conflicts
 		country_event = { id = amcivwar.40 days = 130 random = 20 } # Protecting against Saboteurs
 		country_event = { id = amcivwar.41 days = 160 random = 20 } # Red Terror
 		}
