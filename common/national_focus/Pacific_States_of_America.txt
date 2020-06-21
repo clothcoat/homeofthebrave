@@ -4060,6 +4060,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_classical_liberal_mandate"
 			custom_effect_tooltip = unlock_focuses
+			add_stability = 0.03
 		}
 	}
 
@@ -4078,7 +4079,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_future_of_the_afp"
-			add_ideas = CAL_american_values_ideas
+			add_political_power = 25
 		}
 	}
 	
@@ -4100,7 +4101,12 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_court_populists"
-			add_research_slot = 1
+			add_political_power = 45
+			custom_effect_tooltip = ACW_combat_minuteman
+			modify_country_flag = {
+				flag = ACW_minutemen_resistance
+				value = -2
+			}
 		}
 	}
 	
@@ -4122,7 +4128,11 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_political_traditionalism"
-			add_research_slot = 1
+			add_stability = 0.04
+			add_popularity = { ideology = social_conservative popularity = 0.02 }
+			add_popularity = { ideology = market_liberal popularity = 0.02 }
+			add_popularity = { ideology = social_liberal popularity = 0.02 }
+			add_popularity = { ideology = social_democrat popularity = 0.02 }
 		}
 	}
 	
@@ -4143,6 +4153,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_american_values1"
 			add_ideas = CAL_american_values_ideas
+			USA_political_recovery = yes
 		}
 	}
 	
@@ -4163,9 +4174,14 @@ focus_tree = {
 			factor = 50
 		}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CAL_bill_of_rights"
-			custom_effect_tooltip = CAL_political_recovery_tooltip
-			CAL_increase_recovery = yes
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_finish_spa"
+			add_popularity = { ideology = syndicalist popularity = -0.03 }
+			add_popularity = { ideology = totalist popularity = -0.03 }
+			custom_effect_tooltip = ACW_combat_socialists
+			modify_country_flag = {
+				flag = ACW_socialist_resistance
+				value = -2
+			}
 		}
 	}
 	focus = {# Local Controls
@@ -4185,9 +4201,14 @@ focus_tree = {
 			factor = 50
 		}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CAL_bill_of_rights"
-			custom_effect_tooltip = CAL_political_recovery_tooltip
-			CAL_increase_recovery = yes
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_local_control"
+			custom_effect_tooltip = ACW_combat_socialists
+			modify_country_flag = {
+				flag = ACW_socialist_resistance
+				value = -2
+			}
+			add_stability = 0.05
+			increase_ruling_party_popularity_by_5 = yes
 		}
 	}
 	focus = {# Maintain Nationalizations
@@ -4207,9 +4228,22 @@ focus_tree = {
 			factor = 50
 		}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CAL_bill_of_rights"
-			custom_effect_tooltip = CAL_political_recovery_tooltip
-			CAL_increase_recovery = yes
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_maintain_nationalizations"
+			add_political_power = 75
+			add_command_power = 20
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = CAL
+					is_controlled_by = CAL
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 	}
 	focus = {# Fate of the Unions
@@ -4229,6 +4263,8 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_esmwt"
 			country_event = { id = ustates.125 days = 1 }
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			USA_political_recovery = yes
 		}
 	}
 	focus = {# Freedman's Bureau
@@ -4249,8 +4285,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_fight_the_poll_tax"
-			custom_effect_tooltip = CAL_political_recovery_tooltip
-			CAL_increase_recovery = yes
+			add_popularity = { ideology = national_populist popularity = -0.05 }
+			add_war_support = 0.05
+			add_political_power = 45
+			increase_ruling_party_popularity_by_5 = yes
 		}
 	}
 	
@@ -4271,9 +4309,13 @@ focus_tree = {
 			factor = 50
 		}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CAL_defend_democracy"
-			custom_effect_tooltip = CAL_political_recovery_tooltip
-			CAL_increase_recovery = yes
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_redeemer_collaboration"
+			add_stability = 0.05
+			custom_effect_tooltip = ACW_combat_klan
+			modify_country_flag = {
+				flag = ACW_klan_resistance
+				value = -2
+			}
 		}
 	}
 	
@@ -4292,9 +4334,14 @@ focus_tree = {
 			factor = 50
 		}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CAL_civil_liberties"
-			increase_ruling_party_popularity_by_5 = yes
-			add_war_support = 0.05
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_hit_radical_redshirts"
+			add_popularity = { ideology = paternal_autocrat popularity = -0.03 }
+			add_popularity = { ideology = national_populist popularity = -0.05 }
+			custom_effect_tooltip = ACW_combat_legion
+			modify_country_flag = {
+				flag = ACW_black_legion_resistance
+				value = -3
+			}
 		}
 	}
 	
@@ -4315,9 +4362,12 @@ focus_tree = {
 			factor = 50
 		}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CAL_defend_democracy"
-			custom_effect_tooltip = CAL_political_recovery_tooltip
-			CAL_increase_recovery = yes
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_end_jim_crow"
+			add_stability = -0.03
+			add_popularity = { ideology = national_populist popularity = -0.03 }
+			add_manpower = 1500
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			USA_political_recovery = yes
 		}
 	}
 	
@@ -4338,9 +4388,11 @@ focus_tree = {
 			factor = 50
 		}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CAL_defend_democracy"
-			custom_effect_tooltip = CAL_political_recovery_tooltip
-			CAL_increase_recovery = yes
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_traditional_machines"
+			add_stability = 0.08
+			add_political_power = 40
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			USA_political_recovery = yes
 		}
 	}
 	
@@ -4371,7 +4423,11 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_trial_of_the_federalists"
 			custom_effect_tooltip = CAL_political_recovery_tooltip
-			CAL_increase_recovery = yes
+			USA_political_recovery = yes
+			add_manpower = -3000
+			add_war_support = -0.05
+			add_popularity = { ideology = paternal_autocrat popularity = -0.08 }
+			add_political_power = 70
 		}
 	}
 	
@@ -4401,8 +4457,15 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_loyal_army"
-			custom_effect_tooltip = CAL_political_recovery_tooltip
-			CAL_increase_recovery = yes
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			USA_political_recovery = yes
+			add_stability = 0.05
+			add_political_power = 25
+			custom_effect_tooltip = ACW_fight_fed_terrorists_tooltip
+			modify_country_flag = {
+				flag = ACW_fed_resistance
+				value = -2
+			}
 		}
 	}
 	
@@ -4432,8 +4495,18 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_salute_the_patriots"
-			custom_effect_tooltip = CAL_political_recovery_tooltip
-			CAL_increase_recovery = yes
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			USA_political_recovery = yes
+			add_popularity = { ideology = paternal_autocrat popularity = 0.05 }
+			add_political_power = -40
+			army_experience = 25
+			add_command_power = 20
+			add_manpower = 25000
+			custom_effect_tooltip = ACW_fight_fed_terrorists_tooltip
+			modify_country_flag = {
+				flag = ACW_fed_resistance
+				value = -2
+			}
 		}
 	}
 	
@@ -4453,8 +4526,75 @@ focus_tree = {
 			factor = 50
 		}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CAL_malice_and_charity"
-			country_event = { id = ustates.118 days = 1 }
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_the_gi_bill"
+			add_stability = 0.05
+			add_war_support = 0.08
+			add_command_power = 30.5
+			army_experience = 15
+			increase_ruling_party_popularity_by_5 = yes
+			random_owned_state = {
+				limit = {
+					is_core_of = CAL
+					is_controlled_by = CAL
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = CAL
+					is_controlled_by = CAL
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = CAL
+					is_controlled_by = CAL
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = CAL
+					is_controlled_by = CAL
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = CAL
+					is_controlled_by = CAL
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = CAL
+					is_controlled_by = CAL
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+			}
 		}
 	}
 	
@@ -4475,7 +4615,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_malice_and_charity"
-			country_event = { id = ustates.118 days = 1 }
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			USA_political_recovery = yes
 		}
 	}
 	
@@ -4497,8 +4638,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_civil_liberties"
-			increase_ruling_party_popularity_by_5 = yes
-			add_war_support = 0.05
+			add_stability = 0.1
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			USA_political_recovery = yes
 		}
 	}
 	

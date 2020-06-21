@@ -175,8 +175,13 @@ ACW_deal_with_terrorists_decisions = {# dealing with terrorists
 		OR = {
 		tag = CSA 
 		tag = CAL
-		tag = 
+		tag = TEX
+		tag = COR
 		tag = PSA
+			}
+			OR = {
+				has_political_power > 90
+				has_country_flag = USA_civil_war_over_flag
 			}
 		}
 		visible = {
@@ -185,10 +190,6 @@ ACW_deal_with_terrorists_decisions = {# dealing with terrorists
 				has_idea = ACW_fed_resistance_2
 				has_idea = ACW_fed_resistance_3
 				has_idea = ACW_fed_resistance_4
-			}
-			OR = {
-				has_political_power > 90
-				has_country_flag = USA_civil_war_over_flag
 			}
 		}
 
@@ -203,7 +204,7 @@ ACW_deal_with_terrorists_decisions = {# dealing with terrorists
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove ACW_fight_fed_terrorists"
-			custom_effect_tooltip = ACW_combat_minuteman
+			custom_effect_tooltip = ACW_fight_fed_terrorists_tooltip
 			modify_country_flag = {
 				flag = ACW_fed_resistance
 				value = -2
@@ -216,6 +217,7 @@ ACW_deal_with_terrorists_decisions = {# dealing with terrorists
 		OR = {
 		tag = CSA
 		tag = TEX
+		tag = COR
 		tag = WCC
 		tag = USA
 		tag = PSA 
@@ -255,9 +257,14 @@ ACW_deal_with_terrorists_decisions = {# dealing with terrorists
 		OR = {
 		tag = CSA
 		tag = TEX
+		tag = COR
 		tag = WCC
 		tag = USA
 		tag = PSA 
+			}
+		OR = {
+			has_political_power > 50
+			has_country_flag = USA_civil_war_over_flag
 			}
 		}
 		visible = {
@@ -266,11 +273,6 @@ ACW_deal_with_terrorists_decisions = {# dealing with terrorists
 				has_idea = ACW_black_nationalist_resistance_2
 				has_idea = ACW_black_nationalist_resistance_3
 				has_idea = ACW_black_nationalist_resistance_4
-			}
-			OR = {
-				has_manpower > 20000
-				has_political_power > 50
-				has_country_flag = USA_civil_war_over_flag
 			}
 		}
 
@@ -302,6 +304,10 @@ ACW_deal_with_terrorists_decisions = {# dealing with terrorists
 		tag = USA
 		tag = PSA 
 			}
+		OR = {
+			has_political_power > 50
+			has_country_flag = USA_civil_war_over_flag
+			}
 		}
 		visible = {
 			OR = {
@@ -309,11 +315,6 @@ ACW_deal_with_terrorists_decisions = {# dealing with terrorists
 				has_idea = ACW_liberal_resistance_2
 				has_idea = ACW_liberal_resistance_3
 				has_idea = ACW_liberal_resistance_4
-			}
-			OR = {
-				has_manpower > 20000
-				has_political_power > 50
-				has_country_flag = USA_civil_war_over_flag
 			}
 		}
 

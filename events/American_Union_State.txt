@@ -1934,6 +1934,23 @@ country_event = {
 	}
 }
 
+country_event = { ###Join Alliance###
+	id = unionstate.155
+	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.155"}
+	title = unionstate.155.t
+	desc = unionstate.155.d
+	picture = GFX_ACW_american_brigade
+
+	is_triggered_only = yes
+
+	option = {
+		name = unionstate.155.a
+		TEX = {
+		add_to_faction = FROM
+		}
+	}
+}
+
 
 ### Resistance Events ###
 country_event = { # Socialist terrorism - factory sabotaged

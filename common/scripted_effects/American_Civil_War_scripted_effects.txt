@@ -1271,47 +1271,11 @@ USA_demobilize_forces = {
 			limit = { has_template = "Revolutionary Union Militia" }
 			delete_unit_template_and_units = { division_template = "Revolutionary Union Militia" }
 		}
-		if = {
-			limit = { has_template = "Revolutionary Militia" }
-			delete_unit_template_and_units = { division_template = "Revolutionary Militia" }
-		}
-		if = {
-			limit = { has_template = "Revolutionary Garrison" }
-			delete_unit_template_and_units = { division_template = "Revolutionary Garrison" }
-		}
-		if = {
-			limit = { has_template = "Mounted Revolutionary Militia" }
-			delete_unit_template_and_units = { division_template = "Mounted Revolutionary Militia" }
-		}
-		if = {
-			limit = { has_template = "Amerikavrijwilligers" }
-			delete_unit_template_and_units = { division_template = "Amerikavrijwilligers" }
-		}
-		if = {
-			limit = { has_template = "German Militia Division" }
-			delete_unit_template_and_units = { division_template = "German Militia Division" }
-		}
-		if = {
-			limit = { has_template = "CSA Resistance" }
-			delete_unit_template_and_units = { division_template = "CSA Resistance" }
-		}
 	}
 	TEX = {
 		if = {
 			limit = { has_template = "AUS Militia" }
 			delete_unit_template_and_units = { division_template = "AUS Militia" }
-		}
-		if = {
-			limit = { has_template = "Mounted AUS Militia" }
-			delete_unit_template_and_units = { division_template = "Mounted AUS Militia" }
-		}
-		if = {
-			limit = { has_template = "AUS Garrison" }
-			delete_unit_template_and_units = { division_template = "AUS Garrison" }
-		}
-		if = {
-			limit = { has_template = "AUS Resistance" }
-			delete_unit_template_and_units = { division_template = "AUS Resistance" }
 		}
 	}
 	USA = {
@@ -1330,10 +1294,6 @@ USA_demobilize_forces = {
 		if = {
 			limit = { has_template = "Loyalist Motorized Guard" }
 			delete_unit_template_and_units = { division_template = "Loyalist Motorized Guard" }
-		}
-		if = {
-			limit = { has_template = "USA Resistance" }
-			delete_unit_template_and_units = { division_template = "USA Resistance" }
 		}
 	}
 	CAL = {
@@ -1449,34 +1409,80 @@ ACW_surrender_effect = {
 	}
 }
 
-USA_increase_recovery = {
+USA_political_recovery = {
 	if = {
-		limit = { has_idea = USA_civil_war_aftermath_idea }
+		limit = { has_idea = USA_civil_war_political_aftermath_idea }
 		swap_ideas = {
-			remove_idea = USA_civil_war_aftermath_idea
-			add_idea = USA_civil_war_aftermath_idea2
+			remove_idea = USA_civil_war_political_aftermath_idea
+			add_idea = USA_civil_war_political_aftermath_idea2
 		}
 	}
 	else_if = {
-		limit = { has_idea = USA_civil_war_aftermath_idea2 }
+		limit = { has_idea = USA_civil_war_political_aftermath_idea2 }
 		swap_ideas = {
-			remove_idea = USA_civil_war_aftermath_idea2
-			add_idea = USA_civil_war_aftermath_idea3
+			remove_idea = USA_civil_war_political_aftermath_idea2
+			add_idea = USA_civil_war_political_aftermath_idea3
 		}
 	}
 	else_if = {
-		limit = { has_idea = USA_civil_war_aftermath_idea3 }
+		limit = { has_idea = USA_civil_war_political_aftermath_idea3 }
 		swap_ideas = {
-			remove_idea = USA_civil_war_aftermath_idea3
-			add_idea = USA_civil_war_aftermath_idea4
+			remove_idea = USA_civil_war_political_aftermath_idea3
+			add_idea = USA_civil_war_political_aftermath_idea4
 		}
 	}
 	else_if = {
-		limit = { has_idea = USA_civil_war_aftermath_idea4 }
+		limit = { has_idea = USA_civil_war_political_aftermath_idea4 }
 		swap_ideas = {
-			remove_idea = USA_civil_war_aftermath_idea4
-			add_idea = USA_civil_war_aftermath_idea5
+			remove_idea = USA_civil_war_political_aftermath_idea4
+			add_idea = USA_civil_war_political_aftermath_idea5
 		}
+	}
+	else_if = {
+		limit = { has_idea = USA_civil_war_political_aftermath_idea5 }
+		swap_ideas = {
+			remove_idea = USA_civil_war_political_aftermath_idea5
+			add_idea = USA_civil_war_political_aftermath_idea6
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_civil_war_political_aftermath_idea6 }
+			remove_ideas = USA_civil_war_political_aftermath_idea6
+	}
+}
+
+USA_depression_recovery = {
+	if = {
+		limit = { has_idea = USA_civil_war_war_aftermath_idea }
+		swap_ideas = {
+			remove_idea = USA_civil_war_war_aftermath_idea
+			add_idea = USA_civil_war_war_aftermath_idea2
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_civil_war_war_aftermath_idea2 }
+		swap_ideas = {
+			remove_idea = USA_civil_war_war_aftermath_idea2
+			add_idea = USA_civil_war_war_aftermath_idea3
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_civil_war_war_aftermath_idea3 }
+		swap_ideas = {
+			remove_idea = USA_civil_war_war_aftermath_idea3
+			add_idea = USA_civil_war_war_aftermath_idea4
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_civil_war_war_aftermath_idea4 }
+		swap_ideas = {
+			remove_idea = USA_civil_war_war_aftermath_idea4
+			add_idea = USA_civil_war_war_aftermath_idea5
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_civil_war_war_aftermath_idea5 }
+			remove_ideas = USA_civil_war_war_aftermath_idea5
 	}
 }
 
