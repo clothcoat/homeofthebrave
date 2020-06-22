@@ -188,6 +188,32 @@ country_event = { # 1937 Republican Primary
 			}
 		}
 	}
+	option = { # Charles A. Sprague
+		name = pacificstates.4.e
+		ai_chance = {
+			factor = 50
+		}
+		hidden_effect = {
+			set_country_flag = PSA_1937_republican_primary_sprague
+			country_event = {
+				id = pacificstates.3
+				days = 5
+			}
+		}
+	}
+	option = { # Manchester Boddy
+		name = pacificstates.4.f
+		ai_chance = {
+			factor = 50
+		}
+		hidden_effect = {
+			set_country_flag = PSA_1937_republican_primary_boddy
+			country_event = {
+				id = pacificstates.3
+				days = 5
+			}
+		}
+	}
 }
 
 country_event = { # 1937 Democrat Primary
@@ -331,7 +357,7 @@ country_event = { # 1937 Election
 				create_country_leader = {
 					name = "C.C. Young"
 					desc = "POLITICS_CC_YOUNG_DESC"
-					picture = "picture = "gfx/leaders/CUS/CC_Young.tga".tga"
+					picture = "gfx/leaders/PSA/CAL_CC_Young.tga"
 					expire = "1965.1.1"
 					ideology = social_democrat_subtype
 					traits = {}
@@ -356,8 +382,8 @@ country_event = { # 1937 Election
 				}
 				create_country_leader = {
 					name = "William Gibbs McAdoo"
-					desc = "POLITICS_EARL_WARREN_DESC"
-					picture = "Portrait_CAL_Earl_Warren.tga"
+					desc = "POLITICS_WILLIAM_GIBBS_MCADOO_DESC"
+					picture = "gfx/leaders/PSA/CAL_William_Gibbs_Mcaddo.tga"
 					expire = "1965.1.1"
 					ideology = social_liberal_subtype
 					traits = {}
@@ -396,7 +422,7 @@ country_event = { # 1937 Election
 				create_country_leader = {
 					name = "Manchester Boddy"
 					desc = "POLITICS_MANCHESTOR_BODDY_DESC"
-					picture = "Portrait_CAL_Manchestor_Boddy.tga"
+					picture = "gfx/leaders/PSA/CAL_Manchester_Boddy.tga"
 					expire = "1965.1.1"
 					ideology = social_liberal_subtype
 					traits = {}
@@ -409,7 +435,7 @@ country_event = { # 1937 Election
 				create_country_leader = {
 					name = "Robert Taft"
 					desc = "POLITICS_Robert_Taft_DESC"
-					picture = "Portrait_CAL_Robert_Taft.tga"
+					picture = "gfx/leaders/PSA/CAL_R_A_Taft.tga"
 					expire = "1965.1.1"
 					ideology = market_liberal_subtype
 					traits = {}
@@ -423,7 +449,7 @@ country_event = { # 1937 Election
 				create_country_leader = {
 					name = "Harry Chandler"
 					desc = "POLITICS_HARRY_CHANDLER_DESC"
-					picture = "Portrait_CAL_Harry_Chandler.tga"
+					picture = "gfx/leaders/PSA/CAL_HarryChandler.tga.tga"
 					expire = "1965.1.1"
 					ideology = market_liberal_subtype
 					traits = {}
@@ -437,7 +463,7 @@ country_event = { # 1937 Election
 				create_country_leader = {
 					name = "Howard Hughes"
 					desc = "POLITICS_HOWARD_HUGES_DESC"
-					picture = "Portrait_CAL_howard_hughes.tga"
+					picture = "gfx/leaders/PSA/Portrait_CAL_howard_hughes.tga"
 					expire = "1965.1.1"
 					ideology = market_liberal_subtype
 					traits = {}
@@ -464,7 +490,7 @@ country_event = { # 1937 Election
 				create_country_leader = {
 					name = "Charles Martin"
 					desc = "POLITICS_CHARLES_MARTIN_DESC"
-					picture = "Portrait_CAL_Charles_Martin.tga"
+					picture = "gfx/leaders/PSA/CAL_Charles_Henry_Martin.tga"
 					expire = "1965.1.1"
 					ideology = social_conservative_subtype
 					traits = {}
@@ -477,7 +503,7 @@ country_event = { # 1937 Election
 				create_country_leader = {
 					name = "Henry J. Kaiser"
 					desc = "POLITICS_HENRY_J_KAISER_DESC"
-					picture = "Portrait_CAL_Henry_J_Kaiser.tga"
+					picture = "gfx/leaders/PSA/CAL_Henry_J_kaiser.tga"
 					expire = "1965.1.1"
 					ideology = social_conservative_subtype
 					traits = {}
@@ -490,7 +516,7 @@ country_event = { # 1937 Election
 				create_country_leader = {
 					name = "Walt Disney"
 					desc = "POLITICS_WALT_DISNEY_DESC"
-					picture = "Portrait_CAL_Walt_Disney.tga"
+					picture = "gfx/leaders/PSA/CAL_Walt_Disney.tga"
 					expire = "1965.1.1"
 					ideology = social_conservative_subtype
 					traits = {}
@@ -834,7 +860,7 @@ country_event = { # 1940 Progressive Primary
 	fire_only_once = yes
 	is_triggered_only = yes
 
-	option = { # Henry Wallace
+	option = { # Homer Bone
 		name = pacificstates.7.a
 		trigger = {
 			NOT = {
@@ -842,10 +868,10 @@ country_event = { # 1940 Progressive Primary
 			}
 		}
 		hidden_effect = {
-			set_country_flag = PSA_1940_progressive_primary_wallace
+			set_country_flag = PSA_1940_progressive_primary_bone
 		}
 	}
-	option = { # Philip La Follette
+	option = { # Sheridan Downey
 		name = pacificstates.7.b
 		trigger = {
 			NOT = {
@@ -853,7 +879,7 @@ country_event = { # 1940 Progressive Primary
 			}
 		}
 		hidden_effect = {
-			set_country_flag = PSA_1940_progressive_primary_folette
+			set_country_flag = PSA_1940_progressive_primary_downey
 		}
 	}
 	option = { # Keep the President
@@ -862,19 +888,30 @@ country_event = { # 1940 Progressive Primary
 			has_government = social_democrat
 		}
 	}
+	option = { # Oswald West
+		name = pacificstates.7.b
+		trigger = {
+			NOT = {
+				has_government = social_democrat
+			}
+		}
+		hidden_effect = {
+			set_country_flag = PSA_1940_progressive_primary_west
+		}
+	}
 }
 
-country_event = { # 1940 Progressive Primary
+country_event = { # 1940 Democratic-Republican Primary
 	id = pacificstates.8
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.8"}
 	title = pacificstates.8.t
-	desc = { # Progressive Party has the Presidency
+	desc = { # Democratic-Republican Party has the Presidency
 		text = pacificstates.8.d.president
 		trigger = {
 			has_government = social_liberal
 		}
 	}
-	desc = { # Progressive Party does not have the Presidency
+	desc = { # Democratic-Republican Party does not have the Presidency
 		text = pacificstates.8.d.not_president
 		trigger = {
 			NOT = {
@@ -907,7 +944,7 @@ country_event = { # 1940 Progressive Primary
 			set_country_flag = PSA_1940_progressive_primary_warren
 		}
 	}
-	option = { # Clarence D. Martin
+	option = { # Edourd Izac
 		name = pacificstates.8.b
 		trigger = {
 			NOT = {
@@ -915,10 +952,10 @@ country_event = { # 1940 Progressive Primary
 			}
 		}
 		hidden_effect = {
-			set_country_flag = PSA_1940_progressive_primary_martin
+			set_country_flag = PSA_1940_progressive_primary_izac
 		}
 	}
-	option = { # Oswald West
+	option = { # Goodwin Knight
 		name = pacificstates.8.c
 		trigger = {
 			NOT = {
@@ -926,7 +963,7 @@ country_event = { # 1940 Progressive Primary
 			}
 		}
 		hidden_effect = {
-			set_country_flag = PSA_1940_progressive_primary_west
+			set_country_flag = PSA_1940_progressive_primary_knight
 		}
 	}
 	option = { # President is re-elected
@@ -969,7 +1006,7 @@ country_event = { # 1940 Republican Primary
 	fire_only_once = yes
 	is_triggered_only = yes
 
-	option = { # Charles A. Sprague
+	option = { # Robert Taft
 		name = pacificstates.9.a
 		trigger = {
 			NOT = {
@@ -977,7 +1014,7 @@ country_event = { # 1940 Republican Primary
 			}
 		}
 		hidden_effect = {
-			set_country_flag = PSA_1940_republican_primary_sprague
+			set_country_flag = PSA_1940_republican_primary_taft
 		}
 	}
 	option = { # Ralph Lawrence Carr
@@ -995,6 +1032,17 @@ country_event = { # 1940 Republican Primary
 		name = pacificstates.9.c
 		trigger = {
 			has_government = market_liberal
+		}
+	}
+	option = { # William Wadsworth Hodkinson
+		name = pacificstates.9.e
+		trigger = {
+			NOT = {
+				has_government = market_liberal
+			}
+		}
+		hidden_effect = {
+			set_country_flag = PSA_1940_republican_primary_hodkinson
 		}
 	}
 }
