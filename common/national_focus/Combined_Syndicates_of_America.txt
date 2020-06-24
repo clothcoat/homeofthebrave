@@ -4795,9 +4795,9 @@ focus_tree = {
 		}
 	}
 
-	focus = {# The Social Revolution
-		id = CSA_social_revolution
-		icon = GFX_goal_revolution_tools
+	focus = {# Redistribute Wealth
+		id = CSA_redistribute_wealth
+		icon = GFX_goal_gold_reserve
 		cost = 7.25
 		prerequisite = {
 			focus = CSA_rebuilding_the_country
@@ -4809,84 +4809,24 @@ focus_tree = {
 			factor = 50
 		}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CSA_social_revolution"
-			CSA_increase_recovery = yes
-			hidden_effect = {
-				country_event = { id = csa.22 days = 335 random = 10 }
-				country_event = { id = csa.14 days = 365 random = 10 }
-				country_event = { id = csa.15 days = 395 random = 10 }
-				country_event = { id = csa.20 days = 425 random = 10 }
-			}
-		}
-	}
-
-	focus = {# Redistribute Wealth
-		id = CSA_redistribute_wealth
-		icon = GFX_goal_gold_reserve
-		cost = 7.25
-		prerequisite = {
-			focus = CSA_social_revolution
-		}
-		relative_position_id = CSA_rebuilding_the_country
-		x = -3
-		y = 2
-		ai_will_do = {
-			factor = 50
-		}
-		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_redistribute_wealth"
 			CSA_increase_recovery = yes
 		}
 	}
-
-	focus = {# Homes for the People
-		id = CSA_homes_for_the_people
-		icon = GFX_goal_factory_complex
+	
+	focus = {# Women's Liberation
+		id = CSA_womens_liberation
+		icon = GFX_focus_generic_female_voting
 		cost = 7.25
 		prerequisite = {
 			focus = CSA_redistribute_wealth
 		}
-		relative_position_id = CSA_rebuilding_the_country
-		x = -3
-		y = 3
-		ai_will_do = {
-			factor = 50
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CSA_homes_for_the_people"
-			CSA_increase_recovery = yes
-		}
-	}
-
-	focus = {# Emancipation for All
-		id = CSA_emancipation_for_all
-		icon = GFX_goal_LIB_whiter_pale
-		cost = 7.25
-		prerequisite = {
+		mutually_exclusive = {
 			focus = CSA_social_revolution
 		}
 		relative_position_id = CSA_rebuilding_the_country
-		x = -1
+		x = -3
 		y = 2
-		ai_will_do = {
-			factor = 50
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CSA_emancipation_for_all"
-			CSA_increase_recovery = yes
-		}
-	}
-
-	focus = {# Women's Liberation
-		id = CSA_womens_liberation
-		icon = GFX_ITA_female_soldiers
-		cost = 7.25
-		prerequisite = {
-			focus = CSA_emancipation_for_all
-		}
-		relative_position_id = CSA_rebuilding_the_country
-		x = -1
-		y = 3
 		ai_will_do = {
 			factor = 50
 		}
@@ -4903,19 +4843,91 @@ focus_tree = {
 			}
 		}
 	}
+	
+	focus = {# The Social Revolution
+		id = CSA_social_revolution
+		icon = GFX_goal_revolution_tools
+		cost = 7.25
+		prerequisite = {
+			focus = CSA_redistribute_wealth
+		}
+		mutually_exclusive = {
+			focus = CSA_womens_liberation
+		}
+		relative_position_id = CSA_rebuilding_the_country
+		x = -1
+		y = 2
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CSA_social_revolution"
+			CSA_increase_recovery = yes
+			hidden_effect = {
+				country_event = { id = csa.22 days = 335 random = 10 }
+				country_event = { id = csa.14 days = 365 random = 10 }
+				country_event = { id = csa.15 days = 395 random = 10 }
+				country_event = { id = csa.20 days = 425 random = 10 }
+			}
+		}
+	}
+	
+	focus = {# Equality Before the Law
+		id = CSA_emancipation_for_all
+		icon = GFX_goal_LIB_whiter_pale
+		cost = 7.25
+		prerequisite = {
+			focus = CSA_social_revolution
+			focus = CSA_womens_liberation
+		}
+		mutually_exclusive = {
+		focus = CSA_illegalize_racism
+		}
+		relative_position_id = CSA_rebuilding_the_country
+		x = -3
+		y = 3
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CSA_emancipation_for_all"
+			CSA_increase_recovery = yes
+		}
+	}
 
+	focus = {# Stomp Nationalism
+		id = CSA_illegalize_racism
+		icon = GFX_goal_LIB_whiter_pale
+		cost = 7.25
+		prerequisite = {
+			focus = CSA_social_revolution
+			focus = CSA_womens_liberation
+		}
+		mutually_exclusive = {
+		focus = CSA_emancipation_for_all
+		}
+		relative_position_id = CSA_rebuilding_the_country
+		x = -1
+		y = 3
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CSA_emancipation_for_all"
+			CSA_increase_recovery = yes
+		}
+	}
+	
 	focus = {# Revolutionary Education
 		id = CSA_revolutionary_education
 		icon = GFX_goal_KTG_Bookstack
 		cost = 7.25
 		prerequisite = {
-			focus = CSA_homes_for_the_people
-		}
-		prerequisite = {
-			focus = CSA_womens_liberation
+			focus = CSA_emancipation_for_all
+			focus = CSA_illegalize_racism
 		}
 		relative_position_id = CSA_rebuilding_the_country
-		x = -3
+		x = -2
 		y = 4
 		ai_will_do = {
 			factor = 40
@@ -5023,21 +5035,19 @@ focus_tree = {
 		}
 	}
 
-	focus = {# Equality for All
-		id = CSA_equality_for_all
-		icon = GFX_goal_generic_national_unity
+	focus = {# Homes for the People
+		id = CSA_homes_for_the_people
+		icon = GFX_goal_factory_complex
 		cost = 7.25
 		prerequisite = {
-			focus = CSA_homes_for_the_people
-		}
-		prerequisite = {
-			focus = CSA_womens_liberation
+			focus = CSA_destroy_jim_crow
 		}
 		prerequisite = {
 			focus = CSA_transformitive_justice
 		}
 		prerequisite = {
-			focus = CSA_destroy_jim_crow
+			focus = CSA_emancipation_for_all
+			focus = CSA_illegalize_racism
 		}
 		relative_position_id = CSA_rebuilding_the_country
 		x = 0
@@ -5046,13 +5056,13 @@ focus_tree = {
 			factor = 50
 		}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CSA_equality_for_all"
+			log = "[GetDateText]: [Root.GetName]: Focus CSA_homes_for_the_people"
 			CSA_increase_recovery = yes
 		}
 	}
 
-	focus = {# Reconstruction is over
-		id = CSA_reconstruction_is_over
+	focus = {# Southern Investment
+		id = CSA_expanded_investments
 		icon = GFX_goal_red_star_dove
 		cost = 7.25
 		prerequisite = {
@@ -5072,23 +5082,42 @@ focus_tree = {
 			CSA_increase_recovery = yes
 		}
 	}
+	
+	focus = {# Reconstruction
+		id = CSA_reconstruction_is_over
+		icon = GFX_goal_red_star_dove
+		cost = 7.25
+		prerequisite = {
+			focus = CSA_revolutionary_education
+		}
+		prerequisite = {
+			focus = CSA_homes_for_the_people
+		}
+		prerequisite = {
+			focus = CSA_expanded_investments
+		}
+		relative_position_id = CSA_rebuilding_the_country
+		x = 0
+		y = 5
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CSA_reconstruction_is_over"
+			remove_ideas = USA_civil_reconstruction_idea
+			add_stability = 0.1
+			add_political_power = 100
+			CSA_increase_recovery = yes
+		}
+	}
 
 	focus = {# A new America
 		id = CSA_a_new_america
 		icon = GFX_america_goal_champagn
 		cost = 7.25
 		prerequisite = {
-			focus = CSA_revolutionary_education
-		}
-		prerequisite = {
-			focus = CSA_equality_for_all
-		}
-		prerequisite = {
 			focus = CSA_reconstruction_is_over
 		}
 		relative_position_id = CSA_rebuilding_the_country
 		x = 0
-		y = 5
+		y = 6
 		ai_will_do = {
 			factor = 50
 		}
@@ -6127,8 +6156,8 @@ focus_tree = {
 		id = CSA_red_air_force
 		icon = GFX_goal_generic_air_bomber
 		cost = 5
-		x = 48
-		y = 7
+		x = 53
+		y = 6
 		ai_will_do = {
 			factor = 10
 			modifier = {

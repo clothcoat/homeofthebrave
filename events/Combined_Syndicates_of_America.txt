@@ -482,7 +482,13 @@ country_event = { # Socialist Constitution - Congress and the President
 	}
 	option = {  #A Symbolic Head of State
 		name = csa.7.c
-		custom_effect_tooltip = CSA_radicals_gain_power
+		trigger = {
+			has_country_flag = {
+				flag = CSA_centralists
+				value < 1
+			}
+		}
+		custom_effect_tooltip = CSA_Anarchist_Leadership
 		add_popularity = {
 			ideology = syndicalist
 			popularity = 0.1
@@ -758,7 +764,7 @@ country_event = { # Socialist Constitution - Election
 	picture = congress
 
 	desc = {
-		text = csa.11.d.commonwealth
+		text = csa.11.d.usas
 		trigger = {
 			NOT = {
 			has_country_flag = CSA_Anarchist_Leadership
@@ -770,55 +776,29 @@ country_event = { # Socialist Constitution - Election
 		}
 	}
 	desc = {
-		text = csa.11.d.usas
+		text = csa.11.d.commonwealth
 		trigger = {
 			OR = {
 			has_country_flag = CSA_Anarchist_Leadership
 			has_country_flag = {
 				flag = CSA_radicals
 				value > 2
-			}
+				}
 			}
 		}
 	}
 
 	is_triggered_only = yes
 
-	immediate = {
-		hidden_effect = {
-			create_country_leader = {
-				name = "Elizabeth Gurley Flynn"
-				desc = "POLITICS_ELIZABETH_FLYNN_DESC"
-				picture = "Portrait_CSA_Elizabeth_Gurley_Flynn.tga"
-				expire = "1965.1.1"
-				ideology = syndicalist_subtype
-				traits = {}
-			}
-			create_country_leader = {
-				name = "Norman Thomas"
-				desc = "POLITICS_NORMAN_THOMAS_DESC"
-				picture = "Portrait_CSA_Norman_Thomas.tga"
-				expire = "1965.1.1"
-				ideology = radical_socialist_subtype
-				traits = {}
-			}
-			create_country_leader = {
-				name = "Earl Browder"
-				desc = "POLITICS_EARL_BROWDER_DESC"
-				picture = "Portrait_CSA_Earl_Bowder.tga"
-				expire = "1965.1.1"
-				ideology = totalist_subtype
-				traits = {}
-			}
-		}
-	}
-
-	option = { # Syndicalist - Elizabeth Gurley Flynn
+	option = { # Syndicalist - IWW
 		name = csa.11.a
 		trigger = {
+			OR = {
+			has_country_flag = CSA_Anarchist_Leadership
 			has_country_flag = {
-				flag = CSA_commonwealth
+				flag = CSA_radicals
 				value > 2
+				}
 			}
 		}
 		set_country_flag = CSA_constitutional_convention_done
@@ -828,53 +808,28 @@ country_event = { # Socialist Constitution - Election
 			last_election = "1936.11.08"
 			elections_allowed = yes
 		}
-		hidden_effect = {
-			country_event = {
-				id = csa.25
-				days = 210
-			}
-			country_event = {
-				id = csa.26
-				days = 217
-			}
-		}
 	}
-	option = { # Radical Socialist - Norman Thomas
+	option = { # Bruhder
 		name = csa.11.b
 		trigger = {
+			NOT = {
+			has_country_flag = CSA_Anarchist_Leadership
+			}
 			has_country_flag = {
-				flag = CSA_commonwealth
+				flag = CSA_centralists
 				value > 2
 			}
 		}
 		set_country_flag = CSA_constitutional_convention_done
-		set_politics = {
-			ruling_party = radical_socialist
-			election_frequency = 48
-			last_election = "1936.11.08"
-			elections_allowed = yes
-		}
 		hidden_effect = {
-			country_event = {
-				id = csa.25
-				days = 210
-			}
-			country_event = {
-				id = csa.26
-				days = 217
-			}
-		}
-	}
-	option = { # Totalist - Earl Browder
-		name = csa.11.c
-		trigger = {
-			has_country_flag = {
-				flag = CSA_usas
-				value > 2
+		create_country_leader = {
+				name = "Earl Browder"
+				desc = "POLITICS_EARL_BROWDER_DESC"
+				picture = "gfx/leaders/CSA/Browder_2.tga"
+				expire = "1965.1.1"
+				ideology = totalist_subtype
 			}
 		}
-		set_country_flag = CSA_browder_is_leader
-		set_country_flag = CSA_constitutional_convention_done
 		set_politics = {
 			ruling_party = totalist
 			election_frequency = 48
@@ -892,11 +847,11 @@ country_event = { # Socialist Constitution - Election
 			}
 		}
 	}
-	option = { # Totalist - William Z. Foster
-		name = csa.11.e
+	option = { # Totalist - Foster
+		name = csa.11.c
 		trigger = {
 			has_country_flag = {
-				flag = CSA_usas
+				flag = CSA_radicals
 				value > 2
 			}
 		}
@@ -930,10 +885,10 @@ country_event = { # Socialist Constitution - Election
 		}
 	}
 	option = { # Totalist - James Burnham
-		name = csa.11.f
+		name = csa.11.e
 		trigger = {
 			has_country_flag = {
-				flag = CSA_usas
+				flag = CSA_centralists
 				value > 2
 			}
 		}
@@ -943,7 +898,7 @@ country_event = { # Socialist Constitution - Election
 			create_country_leader = {
 				name = "James Burnham"
 				desc = "POLITICS_JAMES_BURNHAM_DESC"
-				picture = "gfx/leaders/CSA/Portrait_CSA_burnham.dds"
+				picture = "gfx/leaders/CSA/Portrait_CSA_burnham.tga"
 				expire = "1965.1.1"
 				ideology = totalist_subtype
 				traits = { }
@@ -8398,7 +8353,7 @@ country_event = { # Independence League Leadership Contest
 		create_country_leader = {
 			name = "John Dewey"
 			desc = "POLITICS_JOHN_DEWEY_DESC"
-			picture = "gfx/leaders/CSA/Portrait_John_Dewey.dds"
+			picture = "gfx/leaders/CSA/Portrait_John_Dewey.tga"
 			expire = "1965.1.1"
 			ideology = radical_socialist_subtype
 			traits = { }
@@ -8417,7 +8372,7 @@ country_event = { # Independence League Leadership Contest
 		create_country_leader = {
 			name = "Roger Nash Baldwin"
 			desc = "POLITICS_ROGER_NASH_BALDWIN_DESC"
-			picture = "gfx/leaders/CSA/Portrait_Roger_Nash_Baldwin.dds"
+			picture = "gfx/leaders/CSA/Portrait_Roger_Nash_Baldwin.tga"
 			expire = "1965.1.1"
 			ideology = radical_socialist_subtype
 			traits = { }
@@ -8436,7 +8391,7 @@ country_event = { # Independence League Leadership Contest
 		create_country_leader = {
 			name = "Heywood Broun"
 			desc = "POLITICS_HEYWOOD_BROUN_DESC"
-			picture = "gfx/leaders/CSA/Portrait_Heywood_Broun.dds"
+			picture = "gfx/leaders/CSA/Portrait_Heywood_Broun.tga"
 			expire = "1965.1.1"
 			ideology = radical_socialist_subtype
 			traits = { }
@@ -8455,7 +8410,7 @@ country_event = { # Independence League Leadership Contest
 		create_country_leader = {
 			name = "Arthur Ernest Morgan"
 			desc = "POLITICS_HEYWOOD_BROUN_DESC"
-			picture = "gfx/leaders/CSA/Portrait_Arthur_Ernest_Morgan.dds"
+			picture = "gfx/leaders/CSA/Portrait_Arthur_Ernest_Morgan.tga"
 			expire = "1965.1.1"
 			ideology = radical_socialist_subtype
 			traits = { }
@@ -8470,7 +8425,261 @@ country_event = { # Independence League Leadership Contest
 	}
 }
 
-country_event = { # Industrial Democracy
+###Foster###
+country_event = { # Gathering the Land
+	id = csa.400
+	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.400"}
+	title = csa.400.t
+	desc = csa.400.d
+	picture = congress
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	immediate = {
+	set_country_flag = CAL_fosters_farms
+	}
+
+	option = { #Collectivize Now
+	name = csa.400.a
+	add_political_power = 40
+	add_stability = -0.05
+	add_war_support = 0.02
+	add_manpower = -200
+	modify_country_flag = {
+	flag = CAL_fosters_farms
+	value = 1
+		}
+	add_popularity = { ideology = totalist popularity = 0.01 }
+	}
+	
+	option = { #Raise the purchasing price
+	name = csa.400.a
+	add_political_power = -50
+	add_war_support = -0.02
+	add_popularity = { ideology = totalist popularity = -0.02 }
+	add_stability = 0.02
+	}
+}
+
+country_event = { #Production Debate
+	id = csa.401
+	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.401"}
+	title = csa.401.t
+	desc = csa.401.d
+	picture = congress
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	immediate = {
+	set_country_flag = CAL_fosters_farms
+	}
+
+	option = { #Appoint technical experts
+	name = csa.401.a
+	add_political_power = -25
+	add_popularity = { ideology = radical_socialist popularity = 0.02 }
+	}
+	
+	option = { #Appoint TUUL hardliners
+	name = csa.401.a
+	add_political_power = 50
+	add_command_power = 20
+	add_stability = 0.03
+	modify_country_flag = {
+	flag = CAL_fosters_farms
+	value = 1
+		}
+	add_popularity = { ideology = totalist popularity = 0.02 }
+	}
+}
+
+country_event = { #Export Debate
+	id = csa.402
+	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.402"}
+	title = csa.402.t
+	desc = csa.402.d
+	picture = congress
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	immediate = {
+	set_country_flag = CAL_fosters_farms
+	}
+
+	option = { #Export it
+	name = csa.402.a
+	add_political_power = -25
+	add_popularity = { ideology = radical_socialist popularity = 0.02 }
+	}
+	
+	option = { #We can't afford it
+	name = csa.402.a
+	add_political_power = 50
+	add_command_power = 20
+	add_stability = 0.03
+	modify_country_flag = {
+	flag = CAL_fosters_farms
+	value = 1
+		}
+	add_popularity = { ideology = totalist popularity = 0.02 }
+	}
+}
+
+country_event = { #Anger over TUUL Expansion
+	id = csa.403
+	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.403"}
+	title = csa.403.t
+	desc = csa.403.d
+	picture = congress
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	immediate = {
+	set_country_flag = CAL_fosters_farms
+	}
+
+	option = { #Export it
+	name = csa.403.a
+	add_political_power = -25
+	add_popularity = { ideology = radical_socialist popularity = 0.02 }
+	}
+	
+	option = { #We can't afford it
+	name = csa.403.a
+	add_political_power = 50
+	add_command_power = 20
+	add_stability = 0.03
+	modify_country_flag = {
+	flag = CAL_fosters_farms
+	value = 1
+		}
+	add_popularity = { ideology = totalist popularity = 0.02 }
+	}
+}
+
+country_event = { #Minor Food Shortage
+	id = csa.404
+	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.404"}
+	title = csa.404.t
+	desc = csa.404.d
+	picture = congress
+
+	trigger = {
+	has_country_flag = {
+	flag = CAL_fosters_farms
+	value = 1
+	}
+	has_completed_focus = CSA_collective_farming
+	}
+	
+	mean_time_to_happen = {
+	days = 50
+	}
+	
+	fire_only_once = yes
+	
+	immediate = {
+	set_country_flag = CAL_fosters_farms
+	}
+
+	option = { #Export it
+	name = csa.404.a
+	add_political_power = -25
+	add_stability = -0.04
+	add_popularity = { ideology = totalist popularity = -0.03 }
+	add_timed_idea = {
+		idea = CSA_famine_1
+		days = 50
+		}
+	}
+}
+
+country_event = { #Food Shortage
+	id = csa.405
+	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.405"}
+	title = csa.405.t
+	desc = csa.405.d
+	picture = congress
+
+	trigger = {
+	has_country_flag = {
+	flag = CAL_fosters_farms
+	value = 2
+	}
+	has_completed_focus = CSA_collective_farming
+	}
+	
+	mean_time_to_happen = {
+	days = 50
+	}
+	
+	fire_only_once = yes
+	
+	immediate = {
+	set_country_flag = CAL_fosters_farms
+	}
+
+	option = { #Export it
+	name = csa.405.a
+	add_political_power = -50
+	add_stability = -0.08
+	add_manpower = -800
+	add_popularity = { ideology = totalist popularity = -0.06 }
+	add_timed_idea = {
+		idea = CSA_famine_2
+		days = 100
+		}
+	}
+}
+
+country_event = { #American Famine
+	id = csa.406
+	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.406"}
+	title = csa.406.t
+	desc = csa.406.d
+	picture = congress
+
+	trigger = {
+	has_country_flag = {
+	flag = CAL_fosters_farms
+	value = 2
+	}
+	has_completed_focus = CSA_collective_farming
+	}
+	
+	mean_time_to_happen = {
+	days = 50
+	}
+	
+	fire_only_once = yes
+	
+	immediate = {
+	set_country_flag = CAL_fosters_farms
+	}
+
+	option = { #Export it
+	name = csa.406.a
+	add_political_power = -100
+	add_stability = -0.15
+	add_manpower = -5560
+	add_popularity = { ideology = totalist popularity = -0.12 }
+	add_timed_idea = {
+		idea = CSA_famine_3
+		days = 160
+		}
+	}
+}
+
+###Foreign Policy###
+country_event = { # La Internationale
 	id = csa.500
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.500"}
 	title = csa.500.t
