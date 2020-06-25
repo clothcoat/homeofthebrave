@@ -76152,20 +76152,480 @@ spriteTypes = {
   ################################################################################################################################################################################################
   
   ### Head of Government
-  
+  spriteType = {
+		name = "GFX_idea_BBR_Benjamin_J_Davis_Jr_hog_tot"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Benjamin_J_Davis_Jr.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_Cyril_Briggs_hog_tot"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Cyril_Briggs.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_Dusé_Mohamed_Ali_hog_tot"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Dusé_Mohamed_Ali.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_Harry_Haywood_hog_tot"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Harry_Haywood.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_James_W_Ford_hog_tot"
+		texturefile = "gfx/interface/ministers/BBR/BBR_James_W_Ford.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_Paul_Robeson_hog_syn"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Paul_Robeson.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_WEB_Du_Bois_hog_rso"
+		texturefile = "gfx/interface/ministers/BBR/BBR_WEB_Du_Bois.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_Frank_Crosswaith_hog_sde"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Frank_Crosswaith.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_Adam_Clayton_Powell_Jr_hog_sli"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Adam_Clayton_Powell_Jr.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_Thurgood_Marshall_hog_sli"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Thurgood_Marshall.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_Oscar_Stanton_De_Priest_hog_mli"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Oscar_Stanton_De_Priest.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_Zora_Neale_Hurston_hog_mli"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Zora_Neale_Hurston.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_James_F_Jones_hog_sco"
+		texturefile = "gfx/interface/ministers/BBR/BBR_James_F_Jones.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_Charles_Young_hog_ade"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Charles_Young.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_James_R_Stewart_hog_pau"
+		texturefile = "gfx/interface/ministers/BBR/BBR_James_R_Stewart.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_Marcus_Garvey_hog_pau"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Marcus_Garvey.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_Elijah_Muhammad_hog_npo"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Elijah_Muhammad.tga"
+	}
+	
   ### Foreign Minister
   
+	spriteType = {
+		name = "GFX_idea_BBR_Angelo_Herndon_for_tot"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Angelo_Herndon.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_Cyril_Briggs_for_tot"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Cyril_Briggs.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_George_Padmore_for_tot"
+		texturefile = "gfx/interface/ministers/BBR/BBR_George_Padmore.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_Langston_Hughes_for_tot"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Langston_Hughes.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_Eslanda_Goode_Robeson_for_syn"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Eslanda_Goode_Robeson.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_Hubert_Henry_Harrison_for_syn"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Hubert_Henry_Harrison.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_Ella_Baker_for_rso"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Ella_Baker.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_Theophilus_Lewis_for_rso"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Theophilus_Lewis.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_Alain_LeRoy_Locke_for_sde"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Alain_LeRoy_Locke.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_Frank_Marshall_Davis_for_sde"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Frank_Marshall_Davis.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_Clifton_Reginald_Wharton_Sr_for_sli"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Clifton_Reginald_Wharton_Sr.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_Mary_McLeod_Bethune_for_sli"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Mary_McLeod_Bethune.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_Ralph_Bunche_for_sli"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Ralph_Bunche.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_Frederick_D_Patterson_for_mli"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Frederick_D_Patterson.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_Zora_Neale_Hurston_for_mli"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Zora_Neale_Hurston.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_Frederick_Asbury_Cullen_for_sco"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Frederick_Asbury_Cullen.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_Vernon_Johns_for_sco"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Vernon_Johns.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_James_Weldon_Johnson_for_ade"
+		texturefile = "gfx/interface/ministers/BBR/BBR_James_Weldon_Johnson.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_Audley_Moore_for_pau"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Audley_Moore.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_Henrietta_Vinton_Davis_for_pau"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Henrietta_Vinton_Davis.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_Robert_Lincoln_Poston_for_pau"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Robert_Lincoln_Poston.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_james_pasha_for_npo"
+		texturefile = "gfx/interface/ministers/BBR/BBR_james_pasha.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_shelby_karriem_for_npo"
+		texturefile = "gfx/interface/ministers/BBR/BBR_shelby_karriem.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_willie_muhammad_for_npo"
+		texturefile = "gfx/interface/ministers/BBR/BBR_willie_muhammad.tga"
+	}
   ### Economy Minister
-  
+	spriteType = {
+		name = "GFX_idea_BBR_Milton_Herndon_sec_tot"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Milton_Herndon.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_Wilfred_Adolphus_Domingo_eco_tot"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Wilfred_Adolphus_Domingo.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_Williana_Burroughs_eco_tot"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Williana_Burroughs.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_Hosea_Hudson_eco_syn"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Hosea_Hudson.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_Ned_Cobb_eco_syn"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Ned_Cobb.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_Howard_Thurman_eco_rso"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Howard_Thurman.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_Edgar_Daniel_Nixon_eco_sde"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Edgar_Daniel_Nixon.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_Robert_C_Weaver_eco_sde"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Robert_C_Weaver.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_Theodore_David_McNeal_eco_sde"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Theodore_David_McNeal.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_John_Wesley_Dobbs_eco_sli"
+		texturefile = "gfx/interface/ministers/BBR/BBR_John_Wesley_Dobbs.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_Percy_Lavon_Julian_eco_sli"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Percy_Lavon_Julian.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_Roy_Wilkins_eco_sli"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Roy_Wilkins.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_Warren_Elliot_Henry_eco_sli"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Warren_Elliot_Henry.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_Archie_Alexander_eco_mli"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Archie_Alexander.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_George_Washington_Lee_eco_mli"
+		texturefile = "gfx/interface/ministers/BBR/BBR_George_Washington_Lee.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_David_Crosthwait_eco_mli"
+		texturefile = "gfx/interface/ministers/BBR/BBR_David_Crosthwait.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_Scipio_Africanus_Jones_eco_mli"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Scipio_Africanus_Jones.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_T_R_M_Howard_eco_mli"
+		texturefile = "gfx/interface/ministers/BBR/BBR_T_R_M_Howard.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_George_Schuyler_eco_sco"
+		texturefile = "gfx/interface/ministers/BBR/BBR_George_Schuyler.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_George_Washington_Carver_eco_sco"
+		texturefile = "gfx/interface/ministers/BBR/BBR_George_Washington_Carver.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_Eugene_Bullard_eco_ade"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Eugene_Bullard.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_Henry_Ossian_Flipper_eco_ade"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Henry_Ossian_Flipper.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_E_B_McKinney_eco_pau"
+		texturefile = "gfx/interface/ministers/BBR/BBR_E_B_McKinney.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_George_Osborne_Marke_eco_pau"
+		texturefile = "gfx/interface/ministers/BBR/BBR_George_Osborne_Marke.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_Kojo_Tovalu_Houenou_eco_pau"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Kojo_Tovalu_Houenou.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_edward_ali_eco_npo"
+		texturefile = "gfx/interface/ministers/BBR/BBR_edward_ali.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_john_muhammad_npo"
+		texturefile = "gfx/interface/ministers/BBR/BBR_john_muhammad.tga"
+	}
   ### Security Minister
-  
+  spriteType = {
+		name = "GFX_idea_BBR_Louise_Thompson_Patterson_sec_tot"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Louise_Thompson_Patterson.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_Richard_B_Moore_sec_tot"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Richard_B_Moore.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_William_L_Patterson_sec_tot"
+		texturefile = "gfx/interface/ministers/BBR/BBR_William_L_Patterson.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_Williana_Burroughs_sec_tot"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Williana_Burroughs.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_Claude_Lightfoot_sec_syn"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Claude_Lightfoot.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_Claude_McKay_sec_syn"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Claude_McKay.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_Richard_Nathaniel_Wright_sec_syn"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Richard_Nathaniel_Wright.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_George_Williamson_Crawford_sec_rso"
+		texturefile = "gfx/interface/ministers/BBR/BBR_George_Williamson_Crawford.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_Sterling_Allen_Brown_sec_rso"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Sterling_Allen_Brown.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_Wallace_Thurman_eco_rso"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Wallace_Thurman.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_Chandler_Owen_sec_sde"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Chandler_Owen.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_Eunice_Carter_sec_sde"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Eunice_Carter.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_Austin_Thomas_Walden_sec_sli"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Austin_Thomas_Walden.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_Benjamin_Mays_sec_sli"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Benjamin_Mays.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_Charles_Richard_Drew_sec_sli"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Charles_Richard_Drew.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_Arthur_Wergs_Mitchell_sec_mli"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Arthur_Wergs_Mitchell.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_Charles_S_Johnson_sec_mli"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Charles_S_Johnson.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_Everett_Frederic_Morrow_sec_mli"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Everett_Frederic_Morrow.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_Raymond_Pace_Alexander_sec_mli"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Raymond_Pace_Alexander.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_Charles_Harrison_Mason_sec_sco"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Charles_Harrison_Mason.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_Marcelino_Manuel_da_Graça_sec_sco"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Marcelino_Manuel_da_Graça.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_William_Henry_Johnson_sec_ade"
+		texturefile = "gfx/interface/ministers/BBR/BBR_William_Henry_Johnson.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_Gabriel_Johnson_sec_pau"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Gabriel_Johnson.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_George_Alexander_McGuire_sec_pau"
+		texturefile = "gfx/interface/ministers/BBR/BBR_George_Alexander_McGuire.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_J_W_H_Eason_sec_pau"
+		texturefile = "gfx/interface/ministers/BBR/BBR_J_W_H_Eason.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_isaiah_karriem_sec_npo"
+		texturefile = "gfx/interface/ministers/BBR/BBR_isaiah_karriem.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_lucius_bey_muhammad_sec_npo"
+		texturefile = "gfx/interface/ministers/BBR/BBR_lucius_bey_muhammad.tga"
+	}
   ### Intel Minister
   
+	spriteType = {
+		name = "GFX_idea_BBR_Milton_Herndon_int_tot"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Milton_Herndon.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_Williana_Burroughs_int_tot"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Williana_Burroughs.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_Annie_Lee_Moss_int_syn"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Annie_Lee_Moss.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_Edward_A_Carter_Jr_int_sde"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Edward_A_Carter_Jr.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_Robert_Robinson_Taylor_int_mli"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Robert_Robinson_Taylor.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_Frank_Calvin_Mann_int_mli"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Frank_Calvin_Mann.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_Noble_Drew_Ali_int_pau"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Noble_Drew_Ali.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_Satokata_Takahashi_int_pau"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Satokata_Takahashi.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_frank_x_int_npo"
+		texturefile = "gfx/interface/ministers/BBR/BBR_frank_x.tga"
+	}
   ### Chief of Staff
-  
+	spriteType = {
+		name = "GFX_idea_BBR_Benjamin_O_Davis_Sr_cos"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Benjamin_O_Davis_Sr.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_Charles_Young_cos"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Charles_Young.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_Henry_Ossian_Flipper_cos"
+		texturefile = "gfx/interface/ministers/BBR/Henry_Ossian_Flipper.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_Thomas_Page_cos"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Thomas_Page.tga"
+	}
   ### Chief of Army
-  
+	spriteType = {
+		name = "GFX_idea_BBR_Claude_Lightfoot_carm"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Claude_Lightfoot.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_William_Henry_Johnson_carm"
+		texturefile = "gfx/interface/ministers/BBR/BBR_William_Henry_Johnson.tga"
+	}
   ### Chief of Navy
-  
+	spriteType = {
+		name = "GFX_idea_BBR_Hugh_Mulzac_cnav"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Hugh_Mulzac.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_William_Sylvester_White_cnav"
+		texturefile = "gfx/interface/ministers/BBR/BBR_William_Sylvester_White.tga"
+	}
   ### Chief of Air
+  
+	spriteType = {
+		name = "GFX_idea_BBR_Benjamin_O_Davis_Jr_cair"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Benjamin_O_Davis_Jr.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_Bessie_Coleman_cair"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Bessie_Coleman.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_Eugene_Bullard_cair"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Eugene_Bullard.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_John_Charles_Robinson_cair"
+		texturefile = "gfx/interface/ministers/BBR/BBR_John_Charles_Robinson.tga"
+	}
 }
