@@ -3329,9 +3329,24 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/NEE_american_marksmanship.dds"
 	}
 	
+	SpriteType = {# Armored Spearhead
+		name = "GFX_goal_NEE_armored_spearhead"
+		texturefile = "gfx/interface/goals/NEE_armored_spearhead.dds"
+	}
+	
+	SpriteType = {# Assault the Line
+		name = "GFX_goal_NEE_assault_the_line"
+		texturefile = "gfx/interface/goals/NEE_assault_the_line.dds"
+	}
+	
 	SpriteType = {# Chaffee
 		name = "GFX_goal_NEE_chaffee"
 		texturefile = "gfx/interface/goals/NEE_chaffee.dds"
+	}
+	
+	SpriteType = {# Farmers into Soldiers
+		name = "GFX_goal_NEE_farmers_into_soldiers"
+		texturefile = "gfx/interface/goals/NEE_farmers_into_soldiers.dds"
 	}
 	
 	SpriteType = {# Green Policy
@@ -3339,14 +3354,29 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/NEE_green_policy.dds"
 	}
 	
+	SpriteType = {# Mechanical Cavalry
+		name = "GFX_goal_NEE_mechanical_cavalry"
+		texturefile = "gfx/interface/goals/NEE_mechanical_cavalry.dds"
+	}
+	
 	SpriteType = {# Old Gravel Voice
 		name = "GFX_goal_NEE_old_gravel_voice"
 		texturefile = "gfx/interface/goals/NEE_old_gravel_voice.dds"
 	}
 	
+	SpriteType = {# Open Warfare
+		name = "GFX_goal_NEE_open_warfare"
+		texturefile = "gfx/interface/goals/NEE_open_warfare.dds"
+	}
+	
 	SpriteType = {# Pershing
 		name = "GFX_goal_NEE_pershing"
 		texturefile = "gfx/interface/goals/NEE_pershing.dds"
+	}
+	
+	SpriteType = {# Silver Leasing
+		name = "GFX_goal_NEE_silver_lease"
+		texturefile = "gfx/interface/goals/NEE_silver_lease.dds"
 	}
 	
 }
