@@ -165,10 +165,12 @@ create_country_leader = {# Omar Bradley
 
 add_ideas = {
 	### cabinet ###
-	USA_John_Sparkman_hog_sco
-	USA_John_William_Davis_for_pau
-	USA_Robert_Abercrombie_Lovett_eco_pau
-	USA_Martin_Dies_Jr_sec_sco
+	WCC_Dwight_D_Eisenhower_hog_ade
+	WCC_Edwin_C_Johnson_for_ade
+	WCC_James_Garesche_Ord_eco_ade
+	WCC_Leonard_T_Gerow_sec_ade
+	WCC_Omar_Nelson_Bradley_cos
+	WCC_Dwight_D_Eisenhower_carm
 	# national ideas
 	USA_great_depression
 	isolation
@@ -179,6 +181,40 @@ add_ideas = {
 }
 
 ### Generals ###
+create_corps_commander = {# Omar Bradley
+	name = "Omar Bradley"
+	desc = "USA_OMAR_BRADLEY_ARMY_DESC"
+	portrait_path = "gfx/leaders/USA/Portrait_USA_gen_omar_bradley.tga"
+	traits = {
+		trait_engineer
+		trait_cautious
+		brilliant_strategist
+	}
+	skill = 3
+
+	attack_skill = 4
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+	id = 9510
+}
+create_corps_commander = {# Dwight D. Eisenhower
+	name = "Dwight D. Eisenhower"
+	desc = "USA_DWIGHT_EISENHOWER_ARMY_DESC"
+	portrait_path = "gfx/leaders/USA/Portrait_USA_gen_Dwight_Eisenhower.tga"
+	traits = { 
+		organizer
+		trait_cautious
+		armor_officer
+	}
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 3
+	id = 9500
+}
+
 create_corps_commander = {# Clarence Huebner
 	name = "Clarence Huebner"
 	desc = "USA_CLARENCE_HUEBNER_ARMY_DESC"
@@ -286,40 +322,6 @@ create_corps_commander = {# Lucian Truscott
 	logistics_skill = 2
 	id = 9340
 }
-create_corps_commander = {# Omar Bradley
-	name = "Omar Bradley"
-	desc = "USA_OMAR_BRADLEY_ARMY_DESC"
-	portrait_path = "gfx/leaders/USA/Portrait_USA_gen_omar_bradley.tga"
-	traits = {
-		trait_engineer
-		trait_cautious
-		brilliant_strategist
-	}
-	skill = 3
-
-	attack_skill = 4
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 2
-	id = 9510
-}
-create_corps_commander = {# Dwight D. Eisenhower
-	name = "Dwight D. Eisenhower"
-	desc = "USA_DWIGHT_EISENHOWER_ARMY_DESC"
-	portrait_path = "gfx/leaders/USA/Portrait_USA_gen_Dwight_Eisenhower.tga"
-	traits = { 
-		organizer
-		trait_cautious
-		armor_officer
-	}
-	skill = 3
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 3
-	id = 9500
-}
-
 create_corps_commander = {# Daniel Van Voorhis
 	name = "Daniel Van Voorhis"
 	desc = "USA_DANIEL_VAN_VOORHIS_ARMY_DESC"

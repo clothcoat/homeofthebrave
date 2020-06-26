@@ -141,6 +141,16 @@ country_event = { # Old Democrats Breakoff
 		}
 		add_stability = 0.15
 		add_war_support = 0.2
+		hidden_effect = {
+		WCC = {
+		set_politics = {
+				ruling_party = authoritarian_democrat
+				last_election = "1936.11.08"
+				election_frequency = 48
+				elections_allowed = no
+				}
+			}
+		}
 	}
 	option = {
 		name = amcivwar.1001.b
@@ -154,6 +164,16 @@ country_event = { # Old Democrats Breakoff
 		add_war_support = 0.2
 		COR = {
 			change_tag_from = USA
+		}
+		hidden_effect = {
+		WCC = {
+		set_politics = {
+				ruling_party = authoritarian_democrat
+				last_election = "1936.11.08"
+				election_frequency = 48
+				elections_allowed = no
+				}
+			}
 		}
 	}
 }

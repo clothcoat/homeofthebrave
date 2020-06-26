@@ -3712,3 +3712,34 @@ USA_conservative_democratic_policies = {# Conservative Democratic Policies
 	}
 }
 
+USA_MacArthur_policies = {
+	USA_mac_retreats = {
+		icon = GFX_decision_generic_independence
+		allowed = { original_tag = USA }
+		available = { has_government = paternal_autocrat 
+		NOT = {
+		WCC = {
+		has_war_with = USA
+				}
+			}
+		USA = {
+		has_War = yes
+			}
+		}
+		visible = {
+		WCC = {
+		exists = yes
+			} 
+		}
+		cost = 40
+		fire_only_once = yes
+
+		ai_will_do = { factor = 40 }
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision USA_mac_retreats"
+			
+		}
+	}
+}
+

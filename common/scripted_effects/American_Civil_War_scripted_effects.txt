@@ -137,6 +137,10 @@ USA_release_CSA = {
 					limit = { has_idea = isolation }
 					add_ideas = civilian_economy
 				}
+				if = {
+					limit = { has_idea = USA_syndicalist_strike_idea }
+					add_ideas = civilian_economy
+				}
 			}
 			if = {
 				limit = { has_country_flag = USA_assassinated_long }
@@ -185,6 +189,62 @@ USA_release_CSA = {
 				extensive_conscription
 			}
 			add_stability = -0.25
+			if = {
+				limit = { has_template = "National Guard Division" }
+				delete_unit_template_and_units = { division_template = "National Guard Division" }
+			}
+			if = {
+				limit = { has_template = "Infantry Division" }
+				delete_unit_template_and_units = { division_template = "Infantry Division" }
+			}
+			if = {
+				limit = { has_template = "Cavalry Division" }
+				delete_unit_template_and_units = { division_template = "Cavalry Division" }
+			}
+			if = {
+				limit = { has_template = "Armored Division" }
+				delete_unit_template_and_units = { division_template = "Armored Division" }
+			}
+			if = {
+				limit = { has_template = "Heavy Armor Division" }
+				delete_unit_template_and_units = { division_template = "Heavy Armor Division" }
+			}
+			if = {
+				limit = { has_template = "Marine Division" }
+				delete_unit_template_and_units = { division_template = "Marine Division" }
+			}
+			if = {
+				limit = { has_template = "Panama Canal Garrison" }
+				delete_unit_template_and_units = { division_template = "Panama Canal Garrison" }
+			}
+			if = {
+				limit = { has_template = "Motorized Division" }
+				delete_unit_template_and_units = { division_template = "Motorized Division" }
+			}
+			if = {
+				limit = { has_template = "Loyalist Militia" }
+				delete_unit_template_and_units = { division_template = "Loyalist Militia" }
+			}
+			if = {
+				limit = { has_template = "Mounted Loyalists" }
+				delete_unit_template_and_units = { division_template = "Mounted Loyalists" }
+			}
+			if = {
+				limit = { has_template = "Loyalist Garrison" }
+				delete_unit_template_and_units = { division_template = "Loyalist Garrison" }
+			}
+			if = {
+				limit = { has_template = "Loyalist Motorized Guard" }
+				delete_unit_template_and_units = { division_template = "Loyalist Motorized Guard" }
+			}
+			if = {
+				limit = { has_template = "Army Loyalists" }
+				delete_unit_template_and_units = { division_template = "Army Loyalists" }
+			}
+			if = {
+				limit = { has_template = "USA Resistance" }
+				delete_unit_template_and_units = { division_template = "USA Resistance" }
+			}
 		}
 	}
 }
@@ -301,6 +361,62 @@ USA_release_TEX = {
 			add_ideas = {
 				extensive_conscription
 			}
+			if = {
+				limit = { has_template = "National Guard Division" }
+				delete_unit_template_and_units = { division_template = "National Guard Division" }
+			}
+			if = {
+				limit = { has_template = "Infantry Division" }
+				delete_unit_template_and_units = { division_template = "Infantry Division" }
+			}
+			if = {
+				limit = { has_template = "Cavalry Division" }
+				delete_unit_template_and_units = { division_template = "Cavalry Division" }
+			}
+			if = {
+				limit = { has_template = "Armored Division" }
+				delete_unit_template_and_units = { division_template = "Armored Division" }
+			}
+			if = {
+				limit = { has_template = "Heavy Armor Division" }
+				delete_unit_template_and_units = { division_template = "Heavy Armor Division" }
+			}
+			if = {
+				limit = { has_template = "Marine Division" }
+				delete_unit_template_and_units = { division_template = "Marine Division" }
+			}
+			if = {
+				limit = { has_template = "Panama Canal Garrison" }
+				delete_unit_template_and_units = { division_template = "Panama Canal Garrison" }
+			}
+			if = {
+				limit = { has_template = "Motorized Division" }
+				delete_unit_template_and_units = { division_template = "Motorized Division" }
+			}
+			if = {
+				limit = { has_template = "Loyalist Militia" }
+				delete_unit_template_and_units = { division_template = "Loyalist Militia" }
+			}
+			if = {
+				limit = { has_template = "Mounted Loyalists" }
+				delete_unit_template_and_units = { division_template = "Mounted Loyalists" }
+			}
+			if = {
+				limit = { has_template = "Loyalist Garrison" }
+				delete_unit_template_and_units = { division_template = "Loyalist Garrison" }
+			}
+			if = {
+				limit = { has_template = "Loyalist Motorized Guard" }
+				delete_unit_template_and_units = { division_template = "Loyalist Motorized Guard" }
+			}
+			if = {
+				limit = { has_template = "Army Loyalists" }
+				delete_unit_template_and_units = { division_template = "Army Loyalists" }
+			}
+			if = {
+				limit = { has_template = "USA Resistance" }
+				delete_unit_template_and_units = { division_template = "USA Resistance" }
+			}
 		}
 	}
 }
@@ -368,6 +484,13 @@ USA_release_COR = {
 				if = {
 					limit = { has_idea = isolation }
 					add_ideas = civilian_economy
+				}
+				if = {
+					limit = { has_idea = USA_klan_activity_idea }
+					swap_ideas = {
+					remove_idea = USA_klan_activity_idea
+					add_idea = ACW_klan_resistance_1
+					}
 				}
 			}
 			if = {
@@ -483,6 +606,62 @@ USA_release_COR = {
 			add_manpower = 20000
 			add_war_support = 0.2
 			}
+			if = {
+				limit = { has_template = "National Guard Division" }
+				delete_unit_template_and_units = { division_template = "National Guard Division" }
+			}
+			if = {
+				limit = { has_template = "Infantry Division" }
+				delete_unit_template_and_units = { division_template = "Infantry Division" }
+			}
+			if = {
+				limit = { has_template = "Cavalry Division" }
+				delete_unit_template_and_units = { division_template = "Cavalry Division" }
+			}
+			if = {
+				limit = { has_template = "Armored Division" }
+				delete_unit_template_and_units = { division_template = "Armored Division" }
+			}
+			if = {
+				limit = { has_template = "Heavy Armor Division" }
+				delete_unit_template_and_units = { division_template = "Heavy Armor Division" }
+			}
+			if = {
+				limit = { has_template = "Marine Division" }
+				delete_unit_template_and_units = { division_template = "Marine Division" }
+			}
+			if = {
+				limit = { has_template = "Panama Canal Garrison" }
+				delete_unit_template_and_units = { division_template = "Panama Canal Garrison" }
+			}
+			if = {
+				limit = { has_template = "Motorized Division" }
+				delete_unit_template_and_units = { division_template = "Motorized Division" }
+			}
+			if = {
+				limit = { has_template = "Loyalist Militia" }
+				delete_unit_template_and_units = { division_template = "Loyalist Militia" }
+			}
+			if = {
+				limit = { has_template = "Mounted Loyalists" }
+				delete_unit_template_and_units = { division_template = "Mounted Loyalists" }
+			}
+			if = {
+				limit = { has_template = "Loyalist Garrison" }
+				delete_unit_template_and_units = { division_template = "Loyalist Garrison" }
+			}
+			if = {
+				limit = { has_template = "Loyalist Motorized Guard" }
+				delete_unit_template_and_units = { division_template = "Loyalist Motorized Guard" }
+			}
+			if = {
+				limit = { has_template = "Army Loyalists" }
+				delete_unit_template_and_units = { division_template = "Army Loyalists" }
+			}
+			if = {
+				limit = { has_template = "USA Resistance" }
+				delete_unit_template_and_units = { division_template = "USA Resistance" }
+			}
 		}
 	}
 }
@@ -502,12 +681,6 @@ USA_release_WCC = {
 			add_state_core = 1110
 			add_state_core = 1112
 			set_cosmetic_tag = WCC_ACW
-			set_politics = {
-				ruling_party = authoritarian_democrat
-				last_election = "1936.11.08"
-				election_frequency = 48
-				elections_allowed = no
-			}
 		}
 
 		USA = {
