@@ -26,7 +26,7 @@ change_to_socdem_popularity = {
 			create_country_leader = {
 				name = "Huey Long"
 				desc = "POLITICS_HUEY_LONG_DESC"
-				picture = "gfx/leaders/USA/Huey_long.tga"
+				picture = "gfx/leaders/USA/Portrait_TEX_Huey_Long.tga"
 				expire = "1970.1.1"
 				ideology = social_democrat_subtype
 				traits = {}
@@ -68,7 +68,7 @@ change_to_soclib_popularity = {
 			create_country_leader = {
 				name = "Huey Long"
 				desc = "POLITICS_HUEY_LONG_DESC"
-				picture = "gfx/leaders/USA/Huey_long.tga"
+				picture = "gfx/leaders/USA/Portrait_TEX_Huey_Long.tga"
 				expire = "1970.1.1"
 				ideology = social_liberal_subtype
 				traits = {}
@@ -86,7 +86,7 @@ change_to_soclib_popularity = {
 		}
 }
 
-change_to_soclib_popularity = {
+change_to_soccon_popularity = {
 	set_temp_variable = {
 		var = new_social_conservative_popularity
 		value = party_popularity@authoritarian_democrat
@@ -103,14 +103,14 @@ change_to_soclib_popularity = {
 		var = new_authoritarian_democrat_popularity
 		value = -0.2
 	}
-	add_popularity = { ideology = social_conservative popularity = new_soclib_popularity }
+	add_popularity = { ideology = social_conservative popularity = new_social_conservative_popularity }
 	add_popularity = { ideology = authoritarian_democrat popularity = new_authoritarian_democrat_popularity } 
 	custom_effect_tooltip = long_change_to_socdem_popularity
 	hidden_effect = {
 			create_country_leader = {
 				name = "Huey Long"
 				desc = "POLITICS_HUEY_LONG_DESC"
-				picture = "gfx/leaders/USA/Huey_long.tga"
+				picture = "gfx/leaders/USA/Portrait_TEX_Huey_Long.tga"
 				expire = "1970.1.1"
 				ideology = social_conservative_subtype
 				traits = {}
@@ -128,7 +128,7 @@ change_to_soclib_popularity = {
 		}
 }
 
-change_to_soclib_popularity = {
+change_to_pataut_popularity = {
 	set_temp_variable = {
 		var = new_paternal_popularity
 		value = party_popularity@authoritarian_democrat
@@ -145,14 +145,14 @@ change_to_soclib_popularity = {
 		var = new_authoritarian_democrat_popularity
 		value = -0.2
 	}
-	add_popularity = { ideology = paternal_autocrat popularity = new_soclib_popularity }
+	add_popularity = { ideology = paternal_autocrat popularity = new_paternal_popularity }
 	add_popularity = { ideology = authoritarian_democrat popularity = new_authoritarian_democrat_popularity } 
 	custom_effect_tooltip = long_change_to_paternal_autocrat_popularity
 	hidden_effect = {
 			create_country_leader = {
 				name = "Huey Long"
 				desc = "POLITICS_HUEY_LONG_DESC"
-				picture = "gfx/leaders/USA/Huey_long.tga"
+				picture = "gfx/leaders/USA/Portrait_TEX_Huey_Long.tga"
 				expire = "1970.1.1"
 				ideology = paternal_autocrat_subtype
 				traits = {}

@@ -4605,7 +4605,7 @@ focus_tree = {
 	
 	focus = {
 		id = NEE_the_future_of_new_england_army
-		icon = GFX_goal_national_mobilization
+		icon = GFX_goal_NEE_army
 		cost = 5
 		x = 70
 		y = 0
@@ -4716,7 +4716,7 @@ focus_tree = {
 				name = mechanized_bonus
 				bonus = 1
 				uses = 1
-				category = mechanized_equipment
+				category = armor
 			}
 		}
 	}
@@ -4879,7 +4879,7 @@ focus_tree = {
 				name = mechanized_bonus
 				bonus = 1
 				uses = 1
-				category = mechanized_equipment
+				category = armor
 			}
 			add_tech_bonus = {
 				name = mechanized_bonus

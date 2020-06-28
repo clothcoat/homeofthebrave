@@ -829,11 +829,12 @@ country_event = { # Black No More by George Schuyler
 	}
 }
 
-country_event = { # AUS Election
-	id = unionstate.2300
-	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.2300"}
-	title = unionstate.2300.t
-	picture = GFX_report_event_usa_funeral
+country_event = { # Election Demands
+	id = unionstate.21
+	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.21"}
+	title = unionstate.21.t
+	desc = unionstate.21.d
+	picture = books
 
 	fire_only_once = yes
 
@@ -858,6 +859,116 @@ country_event = { # AUS Election
 		}
 	}
 
+	option = { # Very well
+		name = unionstate.21.a
+		hidden_effect = {
+		country_event = {
+			id = unionstate.201
+			days = 14
+			}
+		}
+	}
+}
+
+country_event = { # National Progressive Campaign
+	id = unionstate.2100
+	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.2100"}
+	title = unionstate.2100.t
+	desc = unionstate.2100.d
+	picture = books
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #Promise them more
+		name = unionstate.2100.a
+		add_political_power = 5
+		hidden_effect = {
+		country_event = {
+			id = unionstate.22
+			days = 30
+			}
+		}
+	}
+	option = { #No, we would alienate the right
+		name = unionstate.2100.a
+		add_political_power = 5
+		hidden_effect = {
+		country_event = {
+			id = unionstate.22
+			days = 130
+			}
+		}
+	}
+}
+
+country_event = { # Formation of the Christian Party
+	id = unionstate.22
+	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.22"}
+	title = unionstate.22.t
+	desc = unionstate.22.d
+	picture = books
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #Promise them more
+		name = unionstate.22.a
+		add_political_power = 5
+		hidden_effect = {
+		country_event = {
+			id = unionstate.23
+			days = 14
+			}
+		}
+	}
+	option = { #No, we would alienate the right
+		name = unionstate.22.a
+		add_political_power = 5
+		hidden_effect = {
+		country_event = {
+			id = unionstate.23
+			days = 14
+			}
+		}
+	}
+}
+
+country_event = { # Long associate disappears
+	id = unionstate.23
+	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.23"}
+	title = unionstate.23.t
+	desc = unionstate.23.d
+	picture = books
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #Promise them more
+		name = unionstate.23.a
+		add_political_power = -10
+		add_stability = -0.01
+		hidden_effect = {
+		country_event = {
+			id = unionstate.2300
+			days = 7
+			}
+		country_event = {
+			id = unionstate.24
+			days = 7
+			}
+		}
+	}
+}
+
+country_event = { # AUS Election
+	id = unionstate.2300
+	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.2300"}
+	title = unionstate.2300.t
+	picture = GFX_report_event_usa_funeral
+
+	fire_only_once = yes
+
 	mean_time_to_happen = {
 		months = 1
 	}
@@ -867,7 +978,6 @@ country_event = { # AUS Election
 	trigger = {
 	CAL = {
 	exists = yes
-	has_war_with = 
 			}
 		}
 	}
@@ -876,7 +986,7 @@ country_event = { # AUS Election
 	text = amcivwar.2300.d.generic
 	trigger = {
 	CAL = {
-	exists = yes
+	exists = no
 			}
 		}
 	}
@@ -920,6 +1030,11 @@ country_event = { # AUS Election
 	}
 	option = { # The Democratic Party
 		name = unionstate.2300.e
+		trigger = {
+		CAL = {
+		exists = yes
+			}
+		}
 		add_political_power = 50
 		add_popularity = { ideology = market_liberal popularity = 0.1 }
 		
@@ -932,9 +1047,734 @@ country_event = { # AUS Election
 		set_country_flag = AUS_election_occured
 		}
 	}
-	
 }
 
+country_event = { # Long associate reappears
+	id = unionstate.24
+	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.24"}
+	title = unionstate.24.t
+	desc = unionstate.24.d
+	picture = books
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #Yay
+		name = unionstate.24.a
+	}
+}
+
+country_event = { # Texas Devils
+	id = unionstate.26
+	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.26"}
+	title = unionstate.26.t
+	desc = unionstate.26.d
+	picture = books
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #Greenlight it
+		name = unionstate.26.a
+		add_manpower = 1000
+		add_popularity = { ideology = national_populist popularity = -0.02 }
+		hidden_effect = {
+		modify_country_flag = {
+				flag = ACW_klan_resistance
+				value = -2
+			}
+		}
+		hidden_effect = {
+		country_event = {
+			id = unionstate.27
+			days = 12
+			}
+		}
+	}
+	option = { #Target generic robbers instead
+		name = unionstate.26.b
+		add_manpower = 1000
+		add_stability = 0.05
+		add_political_power = 25
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.01 }
+		modify_country_flag = {
+			flag = ACW_crime_resistance
+			value = -2
+		}
+		hidden_effect = {
+		country_event = {
+			id = unionstate.27
+			days = 12
+			}
+		}
+	}
+	option = { #Have them help train the troops
+		name = unionstate.26.c
+		add_manpower = 1000
+		army_experience = 10
+		add_command_power = 10
+		hidden_effect = {
+		country_event = {
+			id = unionstate.27
+			days = 12
+			}
+		}
+		hidden_effect = {
+		country_event = {
+			id = unionstate.28
+			days = 7
+			}
+		}
+	}
+}
+
+country_event = { # Bonnie and Clyde gang
+	id = unionstate.27
+	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.27"}
+	title = unionstate.27.t
+	desc = unionstate.27.d
+	picture = books
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #Send the Texas Rangers
+		name = unionstate.27.a
+		add_manpower = -50
+		add_stability = 0.02
+		add_political_power = 10
+		modify_country_flag = {
+			flag = ACW_crime_resistance
+			value = -1
+		}
+	}
+	option = { #Send the National Guard
+		name = unionstate.27.b
+		add_manpower = -150
+		add_stability = 0.04
+		add_political_power = 10
+		add_popularity = { ideology = authoritarian_democrat}
+		modify_country_flag = {
+			flag = ACW_crime_resistance
+			value = -2
+		}
+	}
+	option = { #We don't have the resources for this
+		name = unionstate.27.c
+		add_popularity = { ideology = authoritarian_democrat popularity = -0.01 }
+	}
+}
+
+country_event = { # Pendergast Machine
+	id = unionstate.28
+	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.28"}
+	title = unionstate.28.t
+	desc = unionstate.28.d
+	picture = books
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #Make the alliance
+		name = unionstate.29.a
+		add_manpower = 9500
+		add_political_power = 50
+		add_war_support = 0.05
+		add_command_power = 10
+		add_popularity = { ideology = paternal_autocrat popularity = 0.05 }
+		add_stability = -0.03
+		hidden_effect = {
+		country_event = {
+			id = unionstate.29
+			days = 12
+			}
+		}
+	}
+	option = { #Kansas City
+		name = unionstate.28.b
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.01 }
+		add_stability = 0.03
+		add_political_power = -20
+		hidden_effect = {
+		country_event = {
+			id = unionstate.29
+			days = 12
+			}
+		}
+	}
+}
+
+country_event = { #The Southern Tenant Farmers Union
+	id = unionstate.29
+	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.29"}
+	title = unionstate.29.t
+	desc = unionstate.29.d
+	picture = books
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #Provide some support
+		name = unionstate.29.a
+		add_political_power = -10
+		add_stability = 0.02
+		add_manpower = 2000
+		add_popularity = { ideology = social_democrat popularity = 0.02 }
+		add_popularity = { ideology = radical_socialist popularity = 0.01 }
+		hidden_effect = {
+		country_event = {
+			id = unionstate.29
+			days = 12
+			}
+		}
+	}
+	option = { #Put them on Our Cabinet
+		name = unionstate.29.b
+		add_political_power = 0.03
+		add_war_support = -0.02
+		add_stability = 0.02
+		add_manpower = 3400
+		add_popularity = { ideology = social_democrat popularity = 0.03 }
+		add_popularity = { ideology = radical_socialist popularity = 0.02 }
+		hidden_effect = {
+		country_event = {
+			id = unionstate.29
+			days = 12
+			}
+		}
+	}
+	option = { #I don't think so
+		name = unionstate.29.c
+		add_political_power = 20
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.03 }
+	}
+}
+
+country_event = { #Progressive Merger Proposed
+	id = unionstate.30
+	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.30"}
+	title = unionstate.30.t
+	desc = unionstate.30.d
+	picture = books
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #Of Course Not
+		name = unionstate.30.a
+		add_political_power = 30
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.03 }
+		add_popularity = { ideology = social_democrat popularity = 0.02 }
+		add_popularity = { ideology = radical_socialist popularity = 0.01 }
+	}
+	option = { #Absolutely, a fantastic opportunity
+		name = unionstate.30.b
+		add_political_power = 30
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.03 }
+		add_popularity = { ideology = social_democrat popularity = 0.02 }
+		add_popularity = { ideology = radical_socialist popularity = 0.01 }
+	}
+}
+
+country_event = { #Second Great Migration
+	id = unionstate.3001
+	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.3001"}
+	title = unionstate.3001.t
+	desc = unionstate.3001.d
+	picture = books
+
+	fire_only_once = yes
+	
+	trigger = {
+	COR = {
+	exists = yes
+		}
+	}
+	
+	mean_time_to_happen = {
+	days = 120
+	}
+
+	option = { #Let them in
+		name = unionstate.3001.a
+		add_manpower = 13000
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.01 }
+		add_war_support = -0.05
+		add_stability = -0.04
+		add_political_power = -20
+		hidden_effect = {
+		country_event = {
+			id = unionstate.3004
+			days = 20
+			}
+		}
+	}
+	option = { #Let them in, but they can't vote
+		name = unionstate.3001.b
+		add_manpower = 9800
+		add_popularity = { ideology = authoritarian_democrat popularity = -0.01 }
+		add_stability = -0.01
+		add_political_power = -15
+		hidden_effect = {
+		country_event = {
+			id = unionstate.3004
+			days = 20
+			}
+		}
+	}
+	option = { #Announce we won't be taking in anymore
+		name = unionstate.3001.c
+		add_stability = 0.05
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.01 }
+		add_political_power = 20
+		add_war_support = 0.05
+		hidden_effect = {
+		country_event = {
+			id = unionstate.3004
+			days = 20
+			}
+		}
+	}
+}
+
+country_event = { #The Old Regulars
+	id = unionstate.3002
+	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.3002"}
+	title = unionstate.3002.t
+	desc = unionstate.3002.d
+	picture = books
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #Cede part of Louisiana
+		name = unionstate.3002.a
+		add_popularity = { ideology = authoritarian_democrat popularity = -0.02 }
+		add_political_power = -40
+		add_stability = 0.02
+	}
+	option = { #Investigate them
+		name = unionstate.3002.b
+		add_manpower = -5000
+		add_political_power = 30
+		add_stability = 0.02
+	}
+}
+
+country_event = { #Black Troop Debate
+	id = unionstate.3003
+	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.3003"}
+	title = unionstate.3003.t
+	desc = unionstate.3003.d
+	picture = books
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #We need black troops
+		name = unionstate.3003.a
+		add_manpower = 15000
+		add_stability = -0.05
+		add_political_power = -30
+		army_experience = 5
+	}
+	option = { #We can not allow it
+		name = unionstate.3003.b
+		add_political_power = 30
+		add_stability = 0.03
+	}
+}
+
+country_event = { #Minneapolis Syndicalists Strike
+	id = unionstate.3004
+	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.3004"}
+	title = unionstate.3004.t
+	desc = unionstate.3004.d
+	picture = books
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #Pay them off
+		name = unionstate.3004.a
+		add_political_power = -40
+		add_popularity = { ideology = totalist popularity = 0.01 }
+		add_popularity = { ideology = syndicalist popularity = 0.02 }
+	}
+	option = { #Break them
+		name = unionstate.3004.b
+		add_manpower = -350
+		add_stability = -0.02
+		CSA = {
+			add_opinion_modifier = { target = TEX modifier = small_decrease }
+		}
+		modify_country_flag = {
+				flag = ACW_socialist_resistance
+				value = 1
+			}
+	}
+	option = { #Give them some autonomy
+		name = unionstate.3004.c
+		add_political_power = -35
+		add_popularity = { ideology = totalist popularity = 0.01 }
+		add_popularity = { ideology = syndicalist popularity = 0.03 }
+		add_war_support = -0.04
+		CSA = {
+			add_opinion_modifier = { target = TEX modifier = small_increase }
+		}
+		modify_country_flag = {
+				flag = ACW_socialist_resistance
+				value = -1
+		}
+	}
+}
+
+### AFP Events ###
+country_event = { #Fate of the wealthiest opponents
+	id = unionstate.34
+	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.34"}
+	title = unionstate.34.t
+	desc = unionstate.34.d
+	picture = books
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #Repossess their property if found guilty
+		name = unionstate.34.a
+		add_political_power = 100
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.02 }
+		add_command_power = 20
+		add_stability = -0.05
+	}
+	option = { #Massive fines will do
+		name = unionstate.34.b
+		add_political_power = 50
+		add_popularity = { ideology = totalist popularity = 0.01 }
+		add_popularity = { ideology = syndicalist popularity = 0.02 }
+		hidden_effect = {
+		modify_country_flag = {
+				flag = ACW_fed_resistance
+				value = -1
+			}
+		}
+	}
+}
+
+country_event = { #Smith Walks Out
+	id = unionstate.35
+	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.35"}
+	title = unionstate.35.t
+	desc = unionstate.35.d
+	picture = books
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #So be it
+		name = unionstate.35.a
+		add_political_power = -60
+		add_popularity = { ideology = authoritarian_democrat popularity = -0.02 }
+		add_command_power = -10
+		add_war_support = -0.05
+		add_stability = -0.05
+	}
+}
+
+country_event = { #Virgil Effinger killed
+	id = unionstate.36
+	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.36"}
+	title = unionstate.36.t
+	desc = unionstate.36.d
+	picture = books
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #So be it
+		name = unionstate.36.a
+		add_popularity = { ideology = national_populist popularity = -0.03 }
+		add_political_power = 25
+		modify_country_flag = {
+			flag = ACW_black_legion_resistance
+			value = -2
+		}
+	}
+}
+
+country_event = { #Klan Clemency
+	id = unionstate.38
+	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.38"}
+	title = unionstate.38.t
+	desc = unionstate.38.d
+	picture = books
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #So be it
+		name = unionstate.38.a
+		add_popularity = { ideology = national_populist popularity = 0.03 }
+		add_political_power = 35
+		modify_country_flag = {
+			flag = ACW_klan_resistance
+			value = -2
+			}
+	}
+	option = { #So be it
+		name = unionstate.38.b
+		add_stability = 0.03
+		modify_country_flag = {
+			flag = ACW_klan_resistance
+			value = -1
+			}
+	}
+}
+
+country_event = { #Southern Party Head
+	id = unionstate.39
+	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.39"}
+	title = unionstate.39.t
+	desc = unionstate.39.d
+	picture = books
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #Richard Russell Jr
+		name = unionstate.39.a
+		add_popularity = { ideology = social_conservative popularity = 0.03 }
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.02 }
+		add_stability = 0.05
+	}
+	option = { #James Eastland
+		name = unionstate.39.b
+		add_political_power = 30
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.03 }
+		add_popularity = { ideology = paternal_autocrat popularity = 0.02 }
+	}
+	option = { #Earl Long
+		name = unionstate.39.c
+		add_political_power = -20
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.04 }
+	}
+}
+
+country_event = { #Black Share our Wealth Chapters Close
+	id = unionstate.40
+	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.40"}
+	title = unionstate.40.t
+	desc = unionstate.40.d
+	picture = books
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #Damn
+		name = unionstate.40.a
+		add_political_power = -40
+		add_popularity = { ideology = authoritarian_democrat popularity = -0.03 }
+	}
+}
+
+country_event = { #Dallas Klan Attacks Share Our Wealth
+	id = unionstate.41
+	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.41"}
+	title = unionstate.41.t
+	desc = unionstate.41.d
+	picture = books
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #Focus on them now
+		name = unionstate.41.a
+		add_political_power = -20
+		add_manpower = -150
+		add_popularity = { ideology = national_populist popularity = -0.01 }
+	}
+	option = { #We will deal with them later
+		name = unionstate.41.b
+		add_stability = -0.03
+		add_popularity = { ideology = national_populist popularity = 0.01 }
+		hidden_effect = {
+		modify_country_flag = {
+			flag = ACW_klan_resistance
+			value = 2
+			}
+		}
+	}
+}
+
+country_event = { #AFP Southern Leader
+	id = unionstate.42
+	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.42"}
+	title = unionstate.42.t
+	desc = unionstate.42.d
+	picture = books
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #Rush Limbaugh Sr
+		name = unionstate.42.a
+		add_political_power = 40
+		add_stability = 0.03
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.03 }
+		add_popularity = { ideology = social_democrat popularity = 0.01 }
+	}
+	option = { #Sid McMath
+		name = unionstate.42.b
+		add_political_power = 30
+		add_command_power = 5
+		add_stability = 0.02
+		add_war_support = 0.05
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.02 }
+		add_popularity = { ideology = social_democrat popularity = 0.02 }
+	}
+	option = { #Earl Long
+		name = unionstate.42.c
+		add_political_power = -30
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.05 }
+	}
+}
+
+country_event = { #Old Democrats resist
+	id = unionstate.43
+	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.43"}
+	title = unionstate.43.t
+	desc = unionstate.43.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #Damn
+		name = unionstate.43.a
+		add_political_power = -40
+		add_stability = -0.05
+		add_popularity = { ideology = authoritarian_democrat popularity = -0.02 }
+	}
+}
+
+country_event = { #New Film: My First 100 Days
+	id = unionstate.44
+	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.44"}
+	title = unionstate.44.t
+	desc = unionstate.44.d
+
+	fire_only_once = yes
+	
+	trigger = {
+	OR = {
+	has_completed_focus = TEX_perfect_democracy
+	has_completed_focus = TEX_imperial_presidency
+		}
+	}
+
+	mean_time_to_happen = {
+	days = 120
+	}
+	option = { #Very Good
+		name = unionstate.44.a
+		add_political_power = 30
+		add_war_support = 0.05
+		add_stability = 0.05
+		increase_ruling_party_popularity_by_5 = yes
+	}
+}
+
+country_event = { #Fate of Standard Oil
+	id = unionstate.45
+	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.45"}
+	title = unionstate.45.t
+	desc = unionstate.45.d
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { #Break it up
+		name = unionstate.45.a
+		add_political_power = 30
+		add_stability = 0.03
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.03 }
+	}
+	option = { #Nationalize it
+		name = unionstate.45.b
+		add_political_power = 100
+		add_command_power = 25
+	}
+}
+
+country_event = { #Power of Congress
+	id = unionstate.46
+	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.46"}
+	title = unionstate.46.t
+	desc = unionstate.46.d
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { #Don't Pass the Act
+		name = unionstate.46.a
+		add_stability = 0.05
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.05 }
+	}
+	option = { #Pass the Act
+		name = unionstate.46.b
+		add_political_power = 100
+		add_command_power = 25
+		add_stability = -0.1
+		change_to_pataut_popularity = yes
+	}
+}
+
+country_event = { #Power of Congress
+	id = unionstate.46
+	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.46"}
+	title = unionstate.46.t
+	desc = unionstate.46.d
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { #Don't Pass the Act
+		name = unionstate.46.a
+		add_stability = 0.05
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.05 }
+	}
+	option = { #Pass the Act
+		name = unionstate.46.b
+		add_political_power = 100
+		add_command_power = 25
+		add_stability = -0.1
+		change_to_pataut_popularity = yes
+	}
+}
+
+country_event = { #Protests
+	id = unionstate.47
+	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.47"}
+	title = unionstate.47.t
+	desc = unionstate.47.d
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { #Don't Pass the Act
+		name = unionstate.47.a
+		add_political_power = -30
+	}
+	option = { #Pass the Act
+		name = unionstate.47.b
+		add_manpower = -2000
+		add_command_power = 25
+	}
+}
 
 ### Foreign Events 71 - 100 ###
 country_event = { # the AUS wishes to join the Entente
@@ -1454,11 +2294,6 @@ country_event = { # Marching to Zion
 				random = 20
 			}
 			country_event = {
-				id = unionstate.37
-				days = 150
-				random = 30
-			}
-			country_event = {
 				id = unionstate.38
 				days = 180
 				random = 40
@@ -1856,25 +2691,6 @@ country_event = { # Trial of the Industry companies
 }
 
 ### Initial Events
-country_event = {
-	id = unionstate.150
-	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.150"}
-	title = unionstate.150.t
-	desc = unionstate.150.d
-	picture = GFX_report_event_generic_conference
-
-	is_triggered_only = yes
-
-	immediate = {
-		hidden_effect = {
-			country_event = { id = unionstate.151 days = 3 }
-		}
-	}
-
-	option = {
-		name = unionstate.150.a
-	}
-}
 
 country_event = {
 	id = unionstate.151
@@ -2210,69 +3026,5 @@ country_event = { # Federalist terrorism - factory sabotaged
 				}
 			}
 		}
-	}
-}
-
-###############
-##Army Events##
-#by Drozdovite#
-###############
-country_event = { # Requisition of Civilian Trucks
-	id = unionstate.500
-	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.500"}
-	title = unionstate.500.t
-	desc = unionstate.500.d
-	picture = USA_reconstruction
-
-	fire_only_once = yes
-	is_triggered_only = yes
-
-	option = { # The Kingfish Thanks you for your service
-		name = unionstate.500.a
-		add_equipment_to_stockpile = {
-			type = motorized_equipment
-			amount = 850
-			producer = TEX
-		}
-	}
-}
-
-country_event = { # Airborne Experiments Begin
-	id = unionstate.501
-	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.501"}
-	title = unionstate.501.t
-	desc = unionstate.501.d
-	picture = GFX_report_event_ast_paras
-
-	fire_only_once = yes
-	is_triggered_only = yes
-
-	option = { # We shall await the results
-		name = unionstate.501.a
-		hidden_effect = {
-			country_event = { id = unionstate.502 days = 55 }
-		}
-	}
-}
-
-country_event = { # Airborne Experiments Succesful
-	id = unionstate.502
-	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.502"}
-	title = unionstate.502.t
-	desc = unionstate.502.d
-	picture = GFX_USA_they_got_the_guts
-
-	fire_only_once = yes
-	is_triggered_only = yes
-
-	option = { # To battle!
-		name = unionstate.502.a
-		add_equipment_to_stockpile = {
-			type = transport_plane_equipment
-			amount = 50
-			producer = TEX
-		}
-		hidden_effect = { load_oob = TEX_airborne_divisions }
-		custom_effect_tooltip = TEX_paratroopers_spawn
 	}
 }

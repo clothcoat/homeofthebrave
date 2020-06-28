@@ -47,6 +47,14 @@ TEX_commonwealth_national_populist:0 "Commonwealth of America"
 TEX_commonwealth_national_populist_ADJ:0 "American"
 TEX_commonwealth_national_populist_DEF:0 "the Commonwealth of America"
 
+TEX_progressive_AFP_social_democrat_party:0 "America First Party"
+TEX_progressive_AFP_social_democrat_party_long:0 "America First Party"
+TEX_liberal_AFP_social_liberal_party:0 "America First Party"
+TEX_liberal_AFP_social_conservative_party:0 "America First Party"
+TEX_liberal_AFP_social_conservative_party_long:0 "America First Party"
+TEX_liberal_AFP_paternal_autocrat_party:0 "America First Party"
+TEX_liberal_AFP_paternal_autocrat_party_long:0 "America First Party"
+
 ### Ideas ###
 TEX_righteous_nation:0 "The Rightful President"
 TEX_industries_no_support:0 "Lack of Industrial Support"
@@ -593,10 +601,10 @@ TEX_peace_at_last_desc:0 "Our efforts have borne fruit, and at last America know
 ### internal conflict stuff ###
 
 unionstate.1.t:0 "The American Legion Appointment"
-unionstate.1.d:0 "With the end of the civil war comes a vacancy in the ever important position of the American Legion's National Commander. This last title holder, Smedley Butler, had foolishly sided with the syndicalists. Whomever taken this position will symbolically represent the veterans of the United States military in society, and thus our choice is important. The most common name floated up is General Terry de la Mesa Allen Jr, although he would need to pressured into the position given his hatred of bureaucracy. Right-wing Longists that Gerald L.K. Smith should be given the postion, as a show of his loyalty and activism in Legion recruitment. Left-wing Longists on the other hand. Who shall be appointed?"
-unionstate.1.a:0 "Appoint Fox Conner."
-unionstate.1.b:0 "Appoint George Van Horn Moseley."
-unionstate.1.c:0 "Appoint William Pelley."
+unionstate.1.d:0 "With the end of the civil war comes a vacancy in the ever important position of the American Legion's National Commander. This last title holder, Smedley Butler, had foolishly sided with the syndicalists. Whomever taken this position will symbolically represent the veterans of the United States military in society, and thus our choice is important. The most common name floated up is General Terry de la Mesa Allen Jr, although he would need to pressured into the position given his hatred of bureaucracy. Right-wing Longists that Gerald L.K. Smith should be given the position, as a show of his loyalty and activism in Legion recruitment. Left-wing Longists on the other hand seem to prefer veteran Sid McMath. Who shall be appointed?"
+unionstate.1.a:0 "Appoint Terry de la Mesa Allen Jr."
+unionstate.1.b:0 "Appoint Sid McMath"
+unionstate.1.c:0 "Appoint Gerald L.K. Smith"
 
 unionstate.7.t:0 "Capital of America"
 unionstate.7.d:0 "With the civil war over, the question of what should be the capital for the new America has been brought up. Of the many cities within the country, four are the most promising. What city will be chosen as the new capital?"
@@ -627,7 +635,7 @@ unionstate.12.a:0 "That's going too far."
 unionstate.12.b:0 "You can't go wrong with Long."
 
 unionstate.13.t:0 "Improve the Southern Tenant Farmers Union"
-unionstate.13.d:0 "Although the work of the Southern Tenant Farmers Union is well appreciated, the name itself that provides homes to thousands is still the butt of jokes. The tenants are exasperated about the name of their organisation. A visit to the office and a reprint is all it takes to correct that snafu. While [TEX.GetLeader] was inside, he decided to improve and integrate other parts of the newly christened American Tenant Farmers Union into his political machine."
+unionstate.13.d:0 "Although the work of the Southern Tenant Farmers Union is well appreciated, the name itself that provides homes to thousands is still the butt of jokes. The tenants are exasperated about the name of their organization. A visit to the office and a reprint is all it takes to correct that snafu. While [TEX.GetLeader] was inside, he decided to improve and integrate other parts of the newly christened American Tenant Farmers Union into his political machine."
 unionstate.13.a:0 "Say hello to the AFTU."
 
 unionstate.14.t:0 "The Truth about Hugo Black"
@@ -636,9 +644,9 @@ unionstate.14.a:0 "An intolerable association."
 unionstate.14.b:0 "A man can change."
 
 unionstate.15.t:0 "Schism in Share Our Wealth Societies"
-unionstate.15.d:0 "To Share Our Wealth societies throughout America, [TEX.GetLeader] has enlisted not only party members but also former government employees. These new employees were directed by Marine Veteran Sidney McMath, and were paid on the federal payroll. Now there exists a tension between the old and the new in Share Our Wealth. Old guard leader Francis Townsend advocates for Share Our Wealth to remain a non-governmental entity to prevent partisan politics, while McMath wishes to officiate it as a Federal Department."
+unionstate.15.d:0 "To Share Our Wealth societies throughout America, [TEX.GetLeader] has enlisted not only party members but also former government employees. These new employees were directed by William Lemke, and were paid on the federal payroll. Now there exists a tension between the old and the new in Share Our Wealth. Old guard leader Francis Townsend advocates for Share Our Wealth to remain a non-governmental entity to prevent partisan politics, while Lemke wishes to officiate it as a Federal Department."
 unionstate.15.a:0 "Side with Townsend."
-unionstate.15.b:0 "Side with McMath."
+unionstate.15.b:0 "Side with Lemke"
 
 unionstate.16.t:0 "McTeague released in theaters"
 unionstate.16.d:0 "A tale of greed and betrayal that once littered America is now encapsulated in the new film McTeague. A social commentary by director Erich von Stroheim about the corrupting power of wealth is seen by many as a parable to the state of America before the Civil War. This massive four-hour epic film had it's ending altered from the original book, where a kind stranger intervenes in the death struggle of McTeague and whisks him away from Death Valley back to civilisation."
@@ -667,7 +675,7 @@ unionstate.21.d:0 "As it is clear the AUS is attempting to take up the former ma
 unionstate.21.a:0 "Very well!"
 
 unionstate.2100.t:0 "National Progressive Campaign"
-unionstate.2100.d:0 "The National Progressive Party has expanded beyond the La Follete families immediate domain and is now dominant in many farm regions in the far north . Campaigning on a platform of political reform and of endorsing progressive economics free of "corruption", a clear reference to the AFP. Having already absorbed most of the remaining Republican Party, they poss a significant threat to the left-wing of the AFP and, of course, have already eaten into "
+unionstate.2100.d:0 "The National Progressive Party has expanded beyond the La Follete families immediate domain and is now dominant in many farm regions in the North and Mid-West. Campaigning on a platform of political reform and of endorsing progressive economics free of "corruption", a clear reference to the AFP. Having already absorbed most of the remaining Republican Party, they poss a significant threat to the left-wing of the AFP and, of course, have already eaten into our progressive and farmer support, leaving some to say we should pay more lip service to our left-wing."
 unionstate.2100.a:0 "Promise them more!"
 unionstate.2100.b:0 "No, we would alienate the right"
 
@@ -689,19 +697,15 @@ unionstate.2300.c:0 "The Christian Party"
 unionstate.2300.e:0 "The Democratic Party"
 
 unionstate.24.t:0 "Missing man reappears!"
-unionstate.24.d:0 "The man widely reported kidnapped earlier this week, Sam Irby, has reappeared unharmed! Irby claims that he kidnapped himself to throw off 'less than friendly loaners', a story few actually believe. AFP opponents accuse Long of wanting to hide Irby until the election was over to avoid potential scandals that would result from the man selling stoies about Huey to the press but with Irby and his dapper new clothes claiming otherwise there is nothing they can do."
-unionstate.24.a:0 "Farewell to a fine president!"
+unionstate.24.d:0 "The man widely reported kidnapped earlier this week, Sam Irby, has reappeared unharmed! Irby claims that he kidnapped himself to throw off 'less than friendly loaners', a story few actually believe. AFP opponents accuse Long of wanting to hide Irby until the election was over to avoid potential scandals that would result from the man selling stories about Huey to the press but with Irby and his dapper new clothes claiming otherwise there is nothing they can do."
+unionstate.24.a:0 "How about that!"
 
-unionstate.25.t:0 "Fate of the wealthiest opponents"
-unionstate.25.d:0 "The wealthiest American families whom aligned themselves with MacArthur such as Rockefeller and DuPont made a point to destroy Long so that they may end the notion of a wealth ceiling that would see them far less enourmously wealthy.  "
-unionstate.25.a:0 "Repossess their property if found guilty"
-unionstate.25.b:0 "Massive fines will do"
-
+###INITIAL EVENTS###
 unionstate.26.t:0 "The Texas Devils"
 unionstate.26.d:0 "The Texas Rangers are under our jurisdiction and their leader Col. Lee Simmons are loyal to us. They are currently struggling to contain the many domestic terrorist threats in our nation however. He has requested that we green light a plan to bring back famed Ranger Frank Hamer to once again tackle the Klan in our territory and provide funding to do so. This would undoubtedly weaken the Klan but perhaps their efforts would be more useful elsewhere?"
 unionstate.26.a:0 "Greenlight it"
 unionstate.26.b:0 "Target generic robbers instead"
-unionstate.27.c:0 "Have them help train the troops"
+unionstate.27.c:0 "Have them help train the troops instead"
 
 unionstate.27.t:0 "Bonnie and Clyde gang"
 unionstate.27.d:0 "While crime in rampant throughout the territory as criminals look to make a easy buck from the unstable nature of America one criminal group in particular has gained infamy, namely the Barrow gang. This is largely due to the sensationalist takes on Clyde Barrow and Bonnie Parker, a couple apparently leading the gang and whom are often called Bonnie and Clyde for short. The activities of the whole gang involve mainly robberies sometimes even of banks, but increasingly members of law enforcement are getting gunned down, partly due to the heavy firepower the gang is packing. Famously Clyde Barrow himself carries a Browning Automatic Rifle. Unfortunately the gang is gaining an undeserved folksy reputation and undermining the legitimacy of the state, how should we respond?"
@@ -711,7 +715,7 @@ unionstate.27.c:0 "We don't have the resources for this"
 
 unionstate.28.t:0 "Pendergast Machine"
 unionstate.28.d:0 "Tom Pendergast is the political boss of Kansas City and Jackson County with a reputation for running his cities as his personal fiefdom. Nonetheless, he is not very welcoming towards the COnstitutional American Republic whom hope to displace him and his system with the Old Democrats and other more hardcore white supremacists and prohibitionists whom view Pendergast as a seller of vice which in all honesty he is. Certainly this does not make him the greater evil to us nor are we to him, leading to him asking for protection. His machine would undermine the AFP power and not be wholly popular but would provide the AUS as a whole with greater resources, men who could be recruited in his territory and assistance from Pendergast's organized crime allies who could make our lives easier and CAR's more difficult. On the other hand we could just run AFP candidates in his territory and scare off him and his ally mobster Charles Carrollo by threatening to charge them should they not leave. What should we do?"
-unionstate.28.a:0 "Make the damn alliance"
+unionstate.28.a:0 "Make the alliance"
 unionstate.28.b:0 "Kansas City ain't big enough for the two of us"
 
 unionstate.29.t:0 "The Southern Tenant Farmers Union"
@@ -721,12 +725,12 @@ unionstate.29.b:0 "Put them on Our Cabinet"
 unionstate.29.c:0 "I don't think so"
 
 unionstate.30.t:0 "Progressive Merger Proposed"
-unionstate.30.d:0 "Huey's main ally in Congress and now in the AUS has long been the Midwest Progressive and Farmer-Labor organizations despite an occasionally tense relationship due to disagreements with Huey Long's style of populism. However a recent proposal would strengthen this alliance. It comes from Alfred Mitchell Bingham, a radical activist and lead editor of the periodical Common Sense, is supportive of progressivism, the AFP and the right-wing of the CSA and is responsible for running the American Farmer-Labor Federation. The AFLF is made up of middle-class activists organizing mainly for the working class and which has connections with the AFP, the Progressives and even Bellaymists in the CSA. Despite the Federations flexibility it's stance on economic issues revolves around economic planning when it comes to agrarian goods and recently Bingham and other members of the Federation have begun to see the AFP as the best possible route to a radical but patriotic future. They have proposed forming the American Commonwealth Co-operative Movement, under which they would openly join the AFP in a political alliance. While this would shore up our support among left-leaning activists and undermine the National Progressive Party has potential competition it could tie us to more left-wing economic policies than some of our party members are comfortable with."
+unionstate.30.d:0 "Huey's main ally in Congress and now in the AUS has long been the Midwest Progressive and Farmer-Labor organizations despite an occasionally tense relationship due to disagreements with Long's style of populism and alleged demagoguery. However a recent proposal would strengthen this alliance. It comes from Alfred Mitchell Bingham, a radical activist and lead editor of the periodical Common Sense, is supportive of progressivism, the AFP and the right-wing of the CSA and is responsible for running the American Farmer-Labor Federation. The AFLF is made up of middle-class activists organizing mainly for the working class and which has connections with the AFP, the Progressives and even Bellaymists in the CSA. Despite the Federations flexibility it's stance on economic issues revolves around economic planning when it comes to agrarian goods and recently Bingham and other members of the Federation have begun to see the AFP as the best possible route to a radical but patriotic future. They have proposed forming the American Commonwealth Co-operative Movement, under which they would openly join the AFP in a political alliance. While this would shore up our support among left-leaning activists and undermine the National Progressive Party has potential competition it could tie us to more left-wing economic policies than some of our party members are comfortable with."
 unionstate.30.a:0 "Of Course Not"
 unionstate.30.b:0 "Absolutely, a fantastic opportunity"
 
 unionstate.3001.t:0 "Second Great Migration"
-unionstate.3001.d:0 "Despite the attempts of the COnstitutal American Republic to force black Americans to stay in their territory, an increasingly large number of Black Americans are fleeing to the North and West. The total is likely numbering in at least a million, with many seeking to settle in our territory due to its obvious proximity. In particular, the urban regions of Texas are seeing an inflow of Black migrants but the machines representing many whites, particularly the questionably loyal local Democratic Parties as well as part of the AFP, are demanding we take away their right to vote so as to not threaten their political supremacy. White populists such as Gerald L.K. Smith suggest also stopping anymore blacks from entering so as to not threaten the white working class. However, much of the AFP and Progressives disagree with this and alongside our generals see an opportunity for recruitment and potential factory workers. They recommend allowing the migrants to settle and recruiting them at once."
+unionstate.3001.d:0 "Despite the attempts of the Constitutional American Republic to force black Americans to stay in their territory, an increasingly large number of Black Americans are fleeing to the North and West. The total is likely numbering in at least a million, with many seeking to settle in our territory due to its obvious proximity. In particular, the urban regions of Texas are seeing an inflow of Black migrants but the machines representing many whites, particularly the questionably loyal local Democratic Parties as well as part of the AFP, are demanding we take away their right to vote so as to not threaten their political supremacy. White populists such as Gerald L.K. Smith suggest also stopping anymore blacks from entering so as to not threaten the white working class. However, much of the AFP and Progressives disagree with this and alongside our generals see an opportunity for recruitment and potential factory workers. They recommend allowing the migrants to settle and recruiting them at once."
 unionstate.3001.a:0 "Let them in"
 unionstate.3001.b:0 "Let them in, but they can't vote"
 unionstate.3001.c:0 "Announce we won't be taking in anymore"
@@ -736,46 +740,80 @@ unionstate.3002.d:0 "The Regular Democratic Organization is Louisian's political
 unionstate.3002.a:0 "Cede part of Louisiana"
 unionstate.3002.b:0 "Investigate them"
 
-unionstate.3003.t:0 "Minneapolis Syndicalists Strike!"
-unionstate.3003.d:0 "While the state of Minnesota is in the control of the farmer-labor party, there remains a strong IWW element within Minneapolis whom have grown increasingly unstable since former governor Floyd Olson, whom held amicable relations with them, died. Now they are clearly desiring to join the CSA, and putting down their strikes would not only antagonize the socialists but cost us some manpower. Either we will have to pay them off of send national guard to quell them. Of course some radicals in the AFP would prefer to just give them semi-autonomy in part Minneapolis, allowing them to run it along more syndicalist lines so long as they do not attack members of the middle and upper class living there, and instead we will pay off business owners. They claim this will quell their anger altogether."
-unionstate.3003.a:0 "Pay them off"
-unionstate.3003.b:0 "Break them"
-unionstate.3003.c:0 "Give them some autonomy"
+unionstate.3003.t:0 "Black Troop Debate!"
+unionstate.3003.d:0 "The question of black combat troops has long been a contentious one in the United States, with race traditionalists insisting that blacks lack the intellectual faculties to be combat troops whereas others insist this is an absurd position and simply robs us of much needed soldiers. Currently Gerald L.K. Smith leads the charge on behalf of race traditionalists, insisting that blacks can not be expected to be soldiers and gain the same benefits as white soldiers. Charles Coughlin and much the Silver Legion are in accordance with this, although Pelley himself is ambivalent about letting Northern Blacks join as combat troops he is a hardliner when it comes to Southern Blacks, insisting they lack the 'intelligence and civility' to be troops. On the other side, Jacob Devers, the AFP machine in Louisiana and the Radicals in the AUS such as the Non-Partisan League, have pushed for black combat troops, admonishing the traditionalists for wanting to choose defeat just to spite blacks. They insist we should have Devers lead a recruitment campaign."
+unionstate.3003.a:0 "We need black troops"
+unionstate.3003.b:0 "We can not allow it"
 
-unionstate.3004.t:0 "Black Troop Debate!"
-unionstate.3004.d:0 "The question of black combat troops has long been a contentious one in the United States, with race traditionalists insisting that blacks lack the intellectual faculties to be combat troops whereas others insist this is an absurd position and simply robs us of much needed soldiers. Currently Gerald L.K. Smith leads the charge on behalf of race traditionalists, insisting that blacks can not be expected to be soldiers and gain the same benefits as white soldiers. Charles Coughlin and much the Silver Legion are in accordance with this, although Pelley himself is ambivalent about letting Northern Blacks join as combat troops he is a hardliner when it comes to Southern Blacks, insisting they lack the 'intelligence and civility' to be troops. On the other side, Jacob Devers, the AFP machine in Louisiana and the Radicals in the AUS such as the Non-Partisan League, have pushed for black combat troops, admonishing the traditionalists for wanting to choose defeat just to spite blacks. They insist we should have Devers lead a recruitment campaign."
-unionstate.3004.a:0 "We need black troops"
-unionstate.3004.b:0 "We can not allow it"
+unionstate.3004.t:0 "Minneapolis Syndicalists Strike!"
+unionstate.3004.d:0 "While the state of Minnesota is in the control of the farmer-labor party, there remains a strong IWW element within Minneapolis whom have grown increasingly unstable since former governor Floyd Olson, whom held amicable relations with them, died. Now they are clearly desiring to join the CSA, and putting down their strikes would not only antagonize the socialists but cost us some manpower. Either we will have to pay them off of send national guard to quell them. Of course some radicals in the AFP would prefer to just give them semi-autonomy in part Minneapolis, allowing them to run it along more syndicalist lines so long as they do not attack members of the middle and upper class living there, and instead we will pay off business owners. They claim this will quell their anger altogether."
+unionstate.3004.a:0 "Pay them off"
+unionstate.3004.b:0 "Break them"
+unionstate.3004.c:0 "Give them some autonomy"
 
-### Business Plot Events 31 - 50 ###
+### AFP Events ###
 
-unionstate.31.t:0 "The Hollywood List"
-unionstate.31.d:0 "We know that Hollywood has always acted above the law. It's mere existence in California an attempt to dodge intellectual property laws. Moreover, it is no secret that some artists there had hoped for a syndicalist victory over our great American Republic. Their folly must be exposed and their sedition prosecuted."
-unionstate.31.a:0 "We'll film their trials."
+unionstate.34.t:0 "Fate of the wealthiest opponents"
+unionstate.34.d:0 "The wealthiest American families whom aligned themselves with MacArthur such as Rockefeller and Morgan made a point to destroy Long so that they may end the notion of a wealth ceiling that would see them far less wealthy. Their gambled failed however, and while they have fled the nation we have taken control of their businesses left here in the states. For the large stockholders, we will have to decide if we should wholly take control of these businesses, and sell them to someone new, or allow them to retake control under new corporate leadership so long as they pay fines."
+unionstate.34.a:0 "Repossess their property if found guilty"
+unionstate.34.b:0 "Massive fines will do"
 
-unionstate.32.t:0 "Persistence of Antisemitism"
-unionstate.32.d:0 "With the great success of Fordism in America, there comes as well some critics of the ideas presented in Ford literature. Especially within the Dearborn Independent, articles describing a massive worldwide conspiracy of Jews has created backlash against Fordism. The public at large is beginning to question Ford's aging logic, and as Ford is not a very public man, his responses to the press have only damned him further. To Ford's critics, including other Committee members, racial rhetoric must be pushed subtly and anonymously. Most of the Committee including [TEX.GetLeader] still agree with Ford's theories, but disagree on the medium to propagate those ideas as to not destabilize the new America's international relations."
-unionstate.32.a:0 "Side with Ford."
-unionstate.32.b:0 "Side with The Committee."
+unionstate.35.t:0 "Smith Walks Out!"
+unionstate.35.d:0 "Gerald L.K. Smith has finally had 'enough' of our shifting the party to the left and declared that he is formally joining the Christian Party, declaring us race traitors who are unwilling to stand against 'Jewish Power and syndicalist radicals'. He takes with him much of the right-wing of the AFP, leaving us more reliant on collecting former leftists to vote for us."
+unionstate.35.a:0 "So be it"
 
-unionstate.33.t:0 "Tying up Loose Ends"
-unionstate.33.d:0 "Weaving spiders are the many members of the press that continue their fruitless search for Huey Long. Although the FBI has made the best public display of effort possible, there persist some underground press who do not believe syndicalists did the deed. While most pamphlets on this are published anonymously, the FBI have traced their origin, and surprisingly found them to be coming from both the left and right, politically speaking. These conspiracy theorists, as we call them, could destabilize our new government if they continue their publications."
-unionstate.33.a:0 "Do whatever it takes to silence them!"
-unionstate.33.b:0 "Leave them be - this will blow over."
-TEX_covers_up:0 "§YThe government's ability to cover up the plot will improve§!"						 
+unionstate.36.t:0 "Virgil Effinger killed!"
+unionstate.36.d:0 "In a cabin in Tennessee, Virgil Effinger and 12 members of the Black Legion were killed today when they were tracked down by AFP Minutemen who opened fire on the cabin in the dead of night. The Black Legion has decied this as a war crime, claiming that Effinger was not only given no chance to surrender but that Black Legion watchmen were killed before they could issue a warning, meaning the Minutemen had no intention of giving them a chance to surrender. However the operation is being celebrated across America and Ranger Manuel T. Gonzaullas, whom lead the raid, is already being awared with medals as this will most assuredly kneecap the Black Legion."
+unionstate.36.a:0 "Even more victories!"
 
-unionstate.34.t:0 "Every Girl a Queen?"
-unionstate.34.d:0 "The most delicate part of the Business Plot is upon us. It appears Huey Long's will dictates that, in an event of his injury or incapacitation, his wife Rose Long was to take his post. Many die-hard Long followers have come to Washington, demanding Rose occupy the Presidential Mansion until Huey Long be found. They are met with an equal number of former Federalists who insist Huey Long's running mate, William Lemke, is the constitutionally-correct President. Siding with the constitution as our best defence is perhaps the more prudent path, though it could also be seen as an insult to Huey Long's widow and enflame the anger of the public even further."
-unionstate.34.a:0 "Make a public show of sympathy for Rose Long's cause."
-unionstate.34.b:0 "The Constitution is not subject to sentiment."
+unionstate.38.t:0 "Klan Clemency?"
+unionstate.38.d:0 "With our decision to reconciliate the South old class we must decide how far to go in granting clemency to the Klan. Should we pardon lower-level members whom have take an oath of loyalty or simply force the American First Party in the South keep them in prison and try to keep Klan presence to a minimum, threatening them with retaliation if they go beyond talk."
+unionstate.38.a:0 "Grant Clemency"
+unionstate.38.b:0 "No, we can't let the Klan grow"
 
-unionstate.35.t:0 "But No One Wears A Crown"
-unionstate.35.d.coverup:0 "Finally the Business Plot's master stroke is ready: exhausting and unresolved debates have worn down the willpower of Congress to elect a Vice President with absolute majority. A group of our more trustworthy Senators are ready to bring George Moseley into his own as Vice President, and to then serve as President until Huey is found. This involves a very specific alteration to Article II and the 12th Amendment to allow for Moseley as President Pro Tempore to assume office. Any attempts to uncover the truth behind Huey's disappearance have gone nowhere."
-unionstate.35.d.uncovered:0 "Although he was maligned during the war for his almost nihilistic attitude, the journalist Westbrook Pegler has more than redeemed himself to the public today. Through investigative journalism, dodging government goons, and a dedication to facts over his own political reservations, the truth has been uncovered to the public. The underground press has exposed the true killers of Huey Long: his own bodygaurds. The blood money was traced right back to none other than interim president, George Moseley. The whole apparatus of state has moved to arrest Moseley, who implicated the War Powers Committee in what people are calling the 'Business Plot'. These men will be brought to justice, wherever they lay."
-unionstate.35.d.scandal:0 "The Business Plot has succeeded, though it has come at great cost. Journalist Westbrook Pegler published an 'expose', accusing Moseley and others of conspiring to have Huey Long killed. Since its publication, Pegler's evidence has been proven flimsy and circumstantial - enough so that George Mosely was, in the end, considered more victim that perpetrator. The scandal has left a lingering taste among the public, but Moseley's allies in Congress were able to prevent any official hearings... and, after months of exhaustive and unresolved depates, have managed to arrange for him to serve as President until Huey is found. This involves a very specific alteration to Article II and the 12th Amendment, to allow for Moseley as President Pro Tempore to assume office."					
-unionstate.35.a:0 "I love the Republic, I hate Democracy."
-unionstate.35.b:0 "Walls Come Crumbling Down."
-unionstate.35.c:0 "Nothing like a good scandal."								
+unionstate.39.t:0 "Southern Party Head"
+unionstate.39.d:0 "The AFP has successfully expanded into the South using the old Democrat machines in the region for our own gain, but who should lead the organization in the deep south? There is Richard Russell Jr, who was a known moderate during the war and one of the more reluctant members of CAR, openly hoping they would shift closer to the center, however he is somewhat too socially conservative for many. Then there is James Eastland, who is more hardline on race issues but far more open to Long's economic agenda. Finally, we could pull some strings to place Earl Long in charge of the region."
+unionstate.39.a:0 "Richard Russell Jr."
+unionstate.39.b:0 "James Eastland"
+unionstate.39.c:0 "Earl Long"
+
+unionstate.40.t:0 "Black Share our Wealth Chapters Close"
+unionstate.40.d:0 "Feeling betrayed by our decision to reconciliate with the Southern Democrats and push them aside politically speaking, many black Share Our Wealth clubs have shut down, most prominent being the one ran by Reverend J.H. Scott whom called Long a snake for betraying the same blacks who bled for him in favor of the opportunists who would have destroyed him just for political power, and said he would eventually turn on poor whites as well."
+unionstate.40.a:0 "Damn!"
+
+unionstate.41.t:0 "Dallas Klan Attacks Share Our Wealth!"
+unionstate.41.d:0 "The Dallas Klan is known for having had a a more ambiguous relationship with the National Klan and did not outright side with the CAR, saving itself from the state crackdowns that destroyed or damaged other Klans in the American Union State. However, with our embrace of the black vote they seem to think they have made a mistake, and have vandalized a local Share Our Wealth club, followed by sending threatening letters to black reverends now embracing Huey Long. What should we do?"
+unionstate.41.a:0 "Focus on them now"
+unionstate.41.b:0 "We will deal with them later"
+
+unionstate.42.t:0 "AFP Southern Leader"
+unionstate.42.d:0 "As the AFP machine consumes the Southern Democrats and Old Democrats machines we will need to entrust a leader to oversee that our sympathizers, including black voters, are put on the voting rolls there. We could place longtime loyalist Rush Limbaugh Sr, who lead the AFP in the region throughout the war in the region, in charge. Another choice is Civil War veteran and AFP rising star Sid McMath. Finally, we could pull some strings to put Earl in charge."
+unionstate.42.a:0 "Rush Limbaugh Sr."
+unionstate.42.b:0 "Sid McMath"
+unionstate.42.c:0 "Earl Long"
+
+unionstate.43.t:0 "Old Democrats resist!"
+unionstate.43.d:0 "The Old Democrats have seen a small revival among the Southern aristocracy that is resisting our attempts to absorb them, and funding local Klan chapters to attack us. While we can deal with them in time, damage is being done."
+unionstate.43.a:0 "Damn!"
+
+unionstate.44.t:0 "New Film: My First 100 Days!"
+unionstate.44.d:0 "The newest political film out of Hollywood is proving to be a smashing success! My First One Hundred Days is a film about Huey Long's first 100 Days after winning the America Civil War and bringing peace and prosperity to the United States, as directed by Gregory La Cava. With an opening with the actual Huey Long endorsing the film and wishing all Americans well, critics claim that the film being funded by the AFP makes it little more than a piece of government propaganda. Nonetheless, it is popular with Americans looking for an optimistic view of the nation, a promise of unity and a leader who will protect them."
+unionstate.44.a:0 "Very Good!"
+
+unionstate.45.t:0 "Fate of Standard Oil"
+unionstate.45.d:0 "With Standard Oil coming under our control, we have decided to keep the oil in Louisiana under government control. However the fate of the rest of our national reserves has come under debate, with some wanting us to break up Standard Oil into many companies and the US government simply owning a share of it while hardliners in the AFP would prefer if we just keep the oil nationalized and use the funds towards national projects."
+unionstate.45.a:0 "Break it up"
+unionstate.45.b:0 "Nationalize it"
+
+unionstate.46.t:0 "Power of Congress"
+unionstate.46.d:0 "Huey Long has made it clear that he will not leave the White House unless it's in a box, signing executive acts that expands his powers and declaring the AFP a government organization that is now virtually unchallengeable and has full control over voter rolls for the Presidential elections, with the army now lower ranking than the Minutemen politically speaking. Congress is another issue however, and some AFP members claim legitimate opposition should be allowed to exist there and in the Supreme Court. The Protect America Act put forward by hardliners and backed by the Louisiana machine and Townsend would effectively give the president full legislative and judicial power, and all him to remove troublesome congressmen from power, although this would drop all pretense of national democracy even if local elections and interaction with the government through town councils and party machines continue to exist."
+unionstate.46.a:0 "Don't Pass the Act"
+unionstate.46.b:0 "Pass the Act"
+
+unionstate.47.t:0 "Protests throughout the Nation"
+unionstate.47.d:0 "The Protect America Act has caused a wave of protests throughout the nation in opposition to Long's new status as America's presidential dictator. Civil liberties advocates in the ACLU have organized the largest protests in Louisiana and D.C. as both symbolize the wedding of the AFP machine with the American Government. The AFP inner circle believe light intimidation tactics such as scaring critical journalists will be enough, although Earl Long would prefer we just outright break up the protests through the national guard."
+unionstate.a:0 "Intimidate the ACLU"
+unionstate.b:0 "Shut down the protests"
 
 ### Pelley Events ###
 
@@ -788,14 +826,6 @@ unionstate.53.t:0 "Can You See The Real Pelley?"
 unionstate.53.d:0 "Although only known to the highest-ranking members of The Silver Legion, there is a hidden depth in the mind of our Chief Pelley. To his closest friends, Pelley is more than a leader and a friend. He is their political, religious, and moral guide. Until now, a sort of secret doctrine has been hidden from the public at large due to their unwillingness to accept that religious and temporal authority are one and the same. Now that our enlightened leader is well-accepted in this brave new American society, should we go public with some of his more... esoteric ideas? Pelley's handlers, as it is, can barely keep him from exposing his deeper thoughts to the public at large. Is the mystery of Pelley enough for the history books?"
 unionstate.53.a:0 "Too many would fear this."
 unionstate.53.b:0 "The world is ready."
-
-unionstate.55.t:0 "Rise of Speakeasies"
-unionstate.55.d:0 "Despite the overwhelming wave of approval Prohibition received within the loyal Christian community, there were some with reservations. In the cities and up high in the mountains, illegal alcohol production has been reported by our agents. The demon drink is being produced by these moral traitors and is transported overnight to underground bars across the nation. We must stop this affront against our values, and catch the deviants responsible."
-unionstate.55.a:0 "Alcoholism must be stamped out."
-
-unionstate.57.t:0 "The Great Lie"
-unionstate.57.d:0 "The official record in America has always been biased in favour of the ruling party. Once in office, Thomas Jefferson slandered the memory of the great patriot, John Adams, and fooled subsequent generations into believing his love for Nativism was tyranny. Now we must erase the great lie perpetrated by presidential candidate and Governor of Ohio, Warren G. Harding, to hide his black ancestry. We have the papers to prove beyond a shadow of a doubt that Harding's father was a black man and therefore complicit in a worldwide conspiracy against the Commonwealth."
-unionstate.57.a:0 "Take that, Harding!"
 
 ### Foreign Events ###
 unionstate.71.t:0 "[From.GetNameDefCap] Wants to Join the Entente"
@@ -890,10 +920,6 @@ unionstate.109.d:0 "A number of Industrial companies have fought for the various
 unionstate.109.a:0 "Allow them to operate again."
 unionstate.109.b:0 "They are traitors and should be treated as such."
 
-unionstate.150.t:0 "Southern Governors Meet in Baton Rouge"
-unionstate.150.d:0 "A large crowd recently gathered outside the statehouse in Baton Rouge to congradulate Huey Long for defying the federal government. News agencies were soon to arrive on the scene, when suddenly the crowd began unfurling the battle flag of the old Confederacy. Sensing an impending political disaster, Huey Long had his men to confiscate these radical symbols of the Civil War. When the governors arrived, the press only saw the image of a defiant America determined to fight the illegitimate powers of federal corruption and syndicalist oppression. The governors are now meeting with Long inside the statehouse to determine the proper response to the federal government's deadline."
-unionstate.150.a:0 "A close call."
-
 unionstate.151.t:0 "The Second Declaration of Independence"
 unionstate.151.d:0 "While many of the southern governors were in favour of drafting a new constitution on the spot, the urge to emulate the original rebellion against the British monarchy prevailed. A second Declaration of Independence was drafted in Baton Rouge over the course of a few days, painstakingly emulating the original conceit of the American Revolution. This declaration outlined the lack of protection the federal government gave to citizens, and the role of the state to protect the welfare of the poor. The signatories declare that it is within their constitutional right to organize a militia against tyranny, and that the federal government's deadline should not only be ignored it must be defied."
 unionstate.151.a:0 "Annuit coeptis."
@@ -927,23 +953,6 @@ unionstate.200.a:0 "We shall crush these terrorists."
 unionstate.204.t:0 "Federalist Bombing"
 unionstate.204.d:0 "Federalists who still fight for their delusions of capitalism and exploitation have targeted factories, railways, and troop installations throughout [attack_state.GetName], causing a great deal of damage and the loss of many lives. The National Guard are on the scene in [attack_state.GetName], and claim they are closer to catching the ringleaders behind these groups than they were before."
 unionstate.204.a:0 "We shall crush these terrorists."
-
-#########################
-#####Army Events#########
-####By Drozdovite########
-#########################
-
-unionstate.500.t:0 "The Army Requisitions Civilian Trucks"
-unionstate.500.d:0 "After Patton announced his Motorisation program for the new American Army, a proposal was sent to President Long to decide on the requisition of civilian vehicles in order to supply our fast-growing army. With his approval, we have begun seizing vehicles from the civilian populace, although to our surprise, some proud patriots line up next to our storages to volunteer their vehicles for the incoming fight. While not all their vehicles have proven to be useful for us, we have managed to requisition a fair amount of trucks which can either be modified to transport troops with ease or which are sturdy enough to transport our troops at once."
-unionstate.500.a:0 "The Kingfish Thanks your Service"
-
-unionstate.501.t:0 "First Paradrop Exercise"
-unionstate.501.d:0 "While technically speaking, the first paradropping excercises were practiced in 1930 with biplanes dropping machine gun squads, today a major breakthrough has been achieved in the airborne department. After finishing a rigorous conditioning and training program started two weeks ago, a lottery was made to decide the jumping order of the experimental paradropping platoon made up of volunteers. When the Douglas C-33 took off from the Lawson Air Field and finally was put into position to start the experiment, Second Lieutenant William T. Ryder became the first American Paratrooper after making his jump and landing near Fort Benning. The second man, however, refused to jump, and so the first enlisted man to become a paratrooper was Pvt. William N. "Red" King, and then the remaining 8 platoon members in the aircraft. After their touchdown, they quickly reached the rendezvous point and completed their excercise goals, making the experiment a success."
-unionstate.501.a:0 "Start Scheduling New Jumps"
-
-unionstate.502.t:0 "Formation of the First Paratrooper Divisions"
-unionstate.502.d:0 "With the success of our scheduled mass jumps and with the blessing of General Patton, Fort Benning had begun taking volunteers for paratrooper units. While originally the high training standards and relatively high mortal risk initially caused few volunteers to show up, the high command authorized a triplication of the paratrooper wage as opposed to the foot soldier wage. Soon enough, the 501st Parachute Battalion was formed, quickly followed by other battalions and regiments. After a week recruitment, the number of volunteers was enough to form 5 paratrooper divisions for us to utilize. While these divisions still lack combat experience, this breakthrough in Airborne tactics should not be underestimated, and the High Command is looking forward to seeing their investment in these divisions pay off."
-unionstate.502.a:0 "'Death from Above'"
 
 ###############################################
 #AUS's Army General Descriptions by Drozdovite#

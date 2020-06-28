@@ -39,7 +39,7 @@ focus_tree = {
 	focus = {# To the Victor
 		id = TEX_to_the_victor
 		icon = GFX_goal_TEX_to_the_victor
-		cost = 7.25
+		cost = 6
 		prerequisite = {
 			focus = TEX_new_washington
 		}
@@ -65,7 +65,7 @@ focus_tree = {
 	focus = {# Expand the Minutemen
 		id = TEX_expand_the_minute_men
 		icon = GFX_goal_USA_national_guard
-		cost = 7.25
+		cost = 4
 		prerequisite = {
 			focus = TEX_to_the_victor
 		}
@@ -91,7 +91,7 @@ focus_tree = {
 	focus = {# Root Out Traitors
 		id = TEX_root_out_out_traitors
 		icon = GFX_goal_purge_opposition
-		cost = 7.25
+		cost = 6.25
 		prerequisite = {
 			focus = TEX_expand_the_minute_men
 		}
@@ -106,25 +106,41 @@ focus_tree = {
 		ai_will_do = {
 			factor = 5
 		}
+		select_effect = {
+		country_event = {
+			id = unionstate.34
+			days = 10
+			}
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TEX_root_out_out_traitors"
 			add_popularity = { ideology = totalist popularity = -0.05 }
 			add_popularity = { ideology = syndicalist popularity = -0.05  }
 			add_popularity = { ideology = paternal_autocrat popularity = -0.05 }
 			add_popularity = { ideology = national_populist popularity = -0.1 }
+			country_event = {
+				id = unionstate.36
+				days = 23
+			}
 		}
 	}
 	
 	focus = {# Reconcile the Left
 		id = TEX_reconcile_the_left
 		icon = GFX_goal_TEX_reconcile_the_left
-		cost = 7.25
+		cost = 5
 		mutually_exclusive = {
 		focus = TEX_reconcile_the_right
 		focus = TEX_afp_alone
 		}
 		prerequisite = {
 			focus = TEX_root_out_out_traitors
+		}
+		select_effect = {
+		country_event = {
+			id = unionstate.35
+			days = 10
+			}
 		}
 		available = {
 			has_government = authoritarian_democrat
@@ -147,13 +163,17 @@ focus_tree = {
 			add_stability = 0.1
 			add_war_support = -0.05
 			TEX_reconcile_left_tooltip = yes
+			modify_country_flag = {
+			flag = AFP_leftism
+			value = -2
+			}
 		}
 	}
 
 	focus = {# AFP Alone
 		id = TEX_afp_alone
 		icon = GFX_goal_TEX_AFP_alone
-		cost = 7.25
+		cost = 5
 		mutually_exclusive = {
 		focus = TEX_reconcile_the_right
 		focus = TEX_reconcile_the_left
@@ -184,7 +204,7 @@ focus_tree = {
 	focus = {# Reconcile the Right
 		id = TEX_reconcile_the_right
 		icon = GFX_goal_TEX_reconcile_the_right_2
-		cost = 7.25
+		cost = 5
 		mutually_exclusive = {
 		focus = TEX_afp_alone
 		focus = TEX_reconcile_the_left
@@ -213,6 +233,10 @@ focus_tree = {
 			add_stability = 0.1
 			add_war_support = -0.05
 			TEX_reconcile_right_tooltip = yes
+			modify_country_flag = {
+			flag = AFP_leftism
+			value = -2
+			}
 		}
 	}
 	
@@ -238,6 +262,16 @@ focus_tree = {
 		ai_will_do = {
 			factor = 5
 		}
+		select_effect = {
+		country_event = {
+			id = unionstate.41
+			days = 21
+			}
+		country_event = {
+			id = unionstate.42
+			days = 35
+			}
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TEX_dismantle_the_dixiecrats"
 			add_manpower = -2500
@@ -248,7 +282,7 @@ focus_tree = {
 	focus = {# Black Spending
 		id = TEX_black_support
 		icon = GFX_goal_TEX_black_support
-		cost = 7.25
+		cost = 5
 		prerequisite = {
 			focus = TEX_dismantle_the_dixiecrats
 		}
@@ -263,12 +297,22 @@ focus_tree = {
 		ai_will_do = {
 			factor = 5
 		}
+		select_effect = {
+		country_event = {
+			id = unionstate.43
+			days = 14
+			}
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TEX_black_support"
 			add_manpower = 10000
 			add_political_power = 75
 			add_stability = 0.1
 			add_popularity = { ideology = authoritarian_democrat popularity = 0.08 }
+			modify_country_flag = {
+			flag = AFP_leftism
+			value = -1
+			}
 		}
 	}
 	
@@ -294,6 +338,16 @@ focus_tree = {
 		ai_will_do = {
 			factor = 5
 		}
+		select_effect = {
+		country_event = {
+			id = unionstate.38
+			days = 14
+			}
+		country_event = {
+			id = unionstate.40
+			days = 21
+			}
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TEX_shake_hands_with_dixie"
 			add_stability = 0.05
@@ -301,13 +355,19 @@ focus_tree = {
 			add_popularity = { ideology = social_conservative popularity = 0.03 }
 			add_popularity = { ideology = authoritarian_democrat popularity = 0.03 }
 			add_popularity = { ideology = paternal_autocrat popularity = 0.03 }
+			hidden_effect = {
+			country_event = {
+			id = unionstate.39
+			days = 6
+			}
+			}
 		}
 	}
 	
 	focus = {# A New Solid South
 		id = TEX_a_new_solid_south
 		icon = GFX_goal_TEX_new_solid_south
-		cost = 7.25
+		cost = 5
 		prerequisite = {
 			focus = TEX_shake_hands_with_dixie
 		}
@@ -327,13 +387,17 @@ focus_tree = {
 			add_stability = 0.05
 			add_political_power = 50
 			add_popularity = { ideology = authoritarian_democrat popularity = 0.05 }
+			modify_country_flag = {
+			flag = AFP_leftism
+			value = 1
+			}
 		}
 	}
 	
 	focus = {# Strike Oil
 		id = TEX_strike_oil
 		icon = GFX_goal_TEX_strike_oil
-		cost = 7.25
+		cost = 6.5
 		prerequisite = {
 			focus = TEX_new_washington
 		}
@@ -379,13 +443,19 @@ focus_tree = {
 				amount = 5
 					}
 				}
+			hidden_effect = {
+			country_event = {
+			id = unionstate.45
+			days = 6
+				}
 			}
+		}
 	}
 	
 	focus = {# Reward Loyalty
 		id = TEX_reward_loyalty
 		icon = GFX_goal_TEX_reward_loyalty
-		cost = 7.25
+		cost = 3.5
 		prerequisite = {
 			focus = TEX_strike_oil
 		}
@@ -411,7 +481,7 @@ focus_tree = {
 	focus = {# The American Progress
 		id = TEX_the_american_progress
 		icon = GFX_goal_TEX_the_american_progress
-		cost = 7.25
+		cost = 3.5
 		prerequisite = {
 			focus = TEX_reward_loyalty
 		}
@@ -436,7 +506,7 @@ focus_tree = {
 	focus = {# Veteran Benefits
 		id = TEX_veteran_benefits
 		icon = GFX_goal_TEX_veteran_benefits
-		cost = 7.25
+		cost = 4
 		prerequisite = {
 			focus = TEX_reward_loyalty
 		}
@@ -465,7 +535,7 @@ focus_tree = {
 	focus = {# National Political machine
 		id = TEX_national_political_machine
 		icon = GFX_goal_TEX_national_political_machine
-		cost = 7.25
+		cost = 5
 		prerequisite = {
 			focus = TEX_veteran_benefits
 		}
@@ -497,7 +567,7 @@ focus_tree = {
 	focus = {# Election Monitoring
 		id = TEX_election_monitoring
 		icon = GFX_goal_TEX_monitor_elections
-		cost = 7.25
+		cost = 6.5
 		prerequisite = {
 			focus = TEX_national_political_machine
 		}
@@ -525,7 +595,7 @@ focus_tree = {
 	focus = {# People's Commission
 		id = TEX_peoples_commission
 		icon = GFX_goal_government_icon
-		cost = 7.25
+		cost = 6
 		prerequisite = {
 			focus = TEX_election_monitoring
 		}
@@ -576,7 +646,7 @@ focus_tree = {
 	focus = {# Wealth Ceiling
 		id = TEX_wealth_ceiling
 		icon = GFX_goal_TEX_wealth_ceiling
-		cost = 7.25
+		cost = 5
 		prerequisite = {
 			focus = TEX_new_washington
 		}
@@ -601,7 +671,7 @@ focus_tree = {
 	focus = {# For the Poor Man
 		id = TEX_for_the_poor_man
 		icon = GFX_goal_TEX_for_the_poor_man
-		cost = 7.25
+		cost = 5
 		prerequisite = {
 			focus = TEX_wealth_ceiling
 		}
@@ -655,7 +725,7 @@ focus_tree = {
 	focus = {# Share the Wealth
 		id = TEX_share_the_wealth
 		icon = GFX_goal_TEX_share_our_wealth
-		cost = 7.25
+		cost = 6.5
 		prerequisite = {
 			focus = TEX_for_the_poor_man
 		}
@@ -738,7 +808,7 @@ focus_tree = {
 	focus = {# Populist Education
 		id = TEX_populist_education
 		icon = GFX_goal_KTG_Bookstack
-		cost = 7.25
+		cost = 6.5
 		prerequisite = {
 			focus = TEX_share_the_wealth
 		}
@@ -763,7 +833,7 @@ focus_tree = {
 	focus = {# Townsend Plan
 		id = TEX_townsend_plan
 		icon = GFX_goal_TEX_townsend_plan
-		cost = 7.25
+		cost = 5
 		prerequisite = {
 			focus = TEX_share_the_wealth
 		}
@@ -848,7 +918,7 @@ focus_tree = {
 	focus = {# Commodity Controls
 		id = TEX_commodity_controls
 		icon = GFX_goal_TEX_commodities_control
-		cost = 7.25
+		cost = 6
 		prerequisite = {
 			focus = TEX_new_washington
 		}
@@ -878,7 +948,7 @@ focus_tree = {
 	focus = {# Public Trusts
 		id = TEX_utility_regulation
 		icon = GFX_goal_TEX_accessible_utilities
-		cost = 7.25
+		cost = 5
 		mutually_exclusive = {
 		focus = TEX_scientific_board
 		}
@@ -907,7 +977,7 @@ focus_tree = {
 	focus = {# Farm Subsidies
 		id = TEX_farm_subsidies
 		icon = GFX_goal_agricultural_aid
-		cost = 7.25
+		cost = 7
 		prerequisite = {
 			focus = TEX_utility_regulation
 		}
@@ -1055,13 +1125,17 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			modify_country_flag = {
+			flag = AFP_leftism
+			value = 1
+			}
 		}
 	}
 	
 	focus = {# Scientific Board
 		id = TEX_scientific_board
 		icon = GFX_goal_TEX_scientific_board
-		cost = 7.25
+		cost = 5.5
 		prerequisite = {
 			focus = TEX_commodity_controls
 		}
@@ -1111,13 +1185,17 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			modify_country_flag = {
+			flag = AFP_leftism
+			value = -1
+			}
 		}
 	}
 	
 	focus = {# Co-ops
 		id = TEX_coops_plan
 		icon = GFX_goal_TEX_coop_plan
-		cost = 7.25
+		cost = 7
 		prerequisite = {
 			focus = TEX_scientific_board
 		}
@@ -1388,7 +1466,7 @@ focus_tree = {
 	focus = {# Imperial presidency
 		id = TEX_imperial_presidency
 		icon = GFX_goal_TEX_imperial_presidency
-		cost = 7.25
+		cost = 5
 		mutually_exclusive = {
 		focus = TEX_perfect_democracy
 		}
@@ -1419,13 +1497,19 @@ focus_tree = {
 			add_command_power = 50
 			add_stability = -0.1
 			add_popularity = { ideology = paternal_autocrat popularity = 0.15 }
+			hidden_effect = {
+			country_event = {
+			id = unionstate.46
+			days = 2
+				}
+			}
 		}
 	}
 
 	focus = {# a Perfect Democracy
 		id = TEX_perfect_democracy
 		icon = GFX_goal_TEX_perfect_democracy
-		cost = 7.25
+		cost = 5
 		mutually_exclusive = {
 		focus = TEX_imperial_presidency
 		}
@@ -1456,6 +1540,45 @@ focus_tree = {
 			add_political_power = 50
 			add_stability = 0.1
 			add_popularity = { ideology = authoritarian_democrat popularity = 0.05 }
+			if = {
+			limit = {
+				OR = {
+				has_country_flag = {
+				flag = AFP_leftism
+				value < 3
+						}
+				has_country_flag = {
+				flag = AFP_leftism
+				value = 3
+						}
+					}
+				}
+			change_to_socdem_popularity = yes
+			}
+			if = {
+			limit = {
+				OR = {
+				has_country_flag = {
+				flag = AFP_leftism
+				value = 5
+						}
+				has_country_flag = {
+				flag = AFP_leftism
+				value = 4
+						}
+					}
+				}
+			change_to_soclib_popularity = yes
+			}
+			if = {
+			limit = {
+				has_country_flag = {
+				flag = AFP_leftism
+				value > 5
+					}
+				}
+			change_to_soccon_popularity = yes
+			}
 		}
 	}
 	

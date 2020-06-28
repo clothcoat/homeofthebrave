@@ -76,6 +76,10 @@ add_opinion_modifier = { target = USA modifier = embargo }
 add_opinion_modifier = { target = NEE modifier = embargo }
 add_opinion_modifier = { target = SOV modifier = embargo }
 
+set_country_flag = {
+	flag = AFP_leftism
+	value = 5
+}
 set_politics = {
 	ruling_party = authoritarian_democrat
 	last_election = "1936.11.08"

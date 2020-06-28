@@ -62,14 +62,15 @@ TEX_initial_events = {
 			}
 		}
 		hidden_effect = {
-		country_event = { id = unionstate.150 days = 7 } #Initial Events
+		country_event = { id = unionstate.26 days = 5 } #Initial Events - Texas Rangers
+		country_event = { id = unionstate.3002 days = 2 } #The Old Regulars
+		country_event = { id = unionstate.3004 days = 10 } #Minneapolis Syndicalists Strike
 		country_event = { id = amcivwar.54 days = 7 } # Longist Navy
 		country_event = { id = amcivwar.50 days = 14 } # Chief of Staff
 		country_event = { id = amcivwar.51 days = 21 } # Chief of Army
 		country_event = { id = amcivwar.53 days = 28 } # Chief of Air Force
 		country_event = { id = amcivwar.52 days = 35 } # Chief of Navy
-		country_event = { id = amcivwar.46 days = 40 random = 10 } # Appeal to Reason
-		country_event = { id = amcivwar.48 days = 60 random = 20 } # Pledge of Alliegence
+		country_event = { id = amcivwar.48 days = 60 random = 20 } # Pelley Pledge of Alliegence
 		}
 	}
 	set_global_flag = USA_TEX_existed
