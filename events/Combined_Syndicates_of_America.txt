@@ -1408,320 +1408,160 @@ country_event = { # family law
 
 
 ### Commonwealth events 25 - 50 ###
-country_event = { # 1940 IWW / Socialist Labor Party Primary
+country_event = { # Centralist IWW Faction
 	id = csa.25
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.25"}
 	title = csa.25.t
 	desc = csa.25.d
 	picture = GFX_report_event_election_vote
 
-	trigger = {
-		tag = CSA
-		has_country_flag = CSA_constitutional_convention_done
-		NOT = {
-			has_country_flag = CSA_had_1940_election
-		}
-		OR = {
-			has_government = radical_socialist
-			has_government = syndicalist
-		}
-	}
-
 	fire_only_once = yes
 	is_triggered_only = yes
 
-	option = { # Elizabeth Gurley Flynn
+	option = { # Big Bill Haywood
 		name = csa.25.a
-		hidden_effect = {
-			set_country_flag = CSA_1940_iww_primary_flynn
-		}
-	}
-	option = { # James P. Cannon
-		name = csa.25.b
-		hidden_effect = {
-			set_country_flag = CSA_1940_iww_primary_cannon
-		}
-	}
-	option = { # Arturo Giovannitti
-		name = csa.25.c
-		hidden_effect = {
-			set_country_flag = CSA_1940_iww_primary_giovannitti
-		}
-	}
-}
-
-country_event = { # 1940 AFL / Socialist Party Primary
-	id = csa.26
-	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.26"}
-	title = csa.26.t
-	desc = csa.26.d
-	picture = GFX_report_event_election_vote
-
-	trigger = {
-		tag = CSA
-		has_country_flag = CSA_constitutional_convention_done
-		NOT = {
-			has_country_flag = CSA_had_1940_election
-		}
-		OR = {
-			has_government = radical_socialist
-			has_government = syndicalist
-		}
-	}
-
-	fire_only_once = yes
-	is_triggered_only = yes
-
-	option = { # Meyer London
-		name = csa.26.a
-		hidden_effect = {
-			set_country_flag = CSA_1940_cio_primary_london
-		}
-	}
-	option = { # Upton Sinclair
-		name = csa.26.b
-		hidden_effect = {
-			set_country_flag = CSA_1940_cio_primary_sinclair
-		}
-	}
-	option = { # Norman Thomas
-		name = csa.26.c
-		hidden_effect = {
-			set_country_flag = CSA_1940_cio_primary_thomas
-		}
-	}
-}
-
-country_event = { # 1940 Election
-	id = csa.27
-	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.27"}
-	title = csa.27.t
-	desc = csa.27.d
-	picture = GFX_report_event_election_vote
-
-	trigger = {
-		tag = CSA
-		has_country_flag = CSA_constitutional_convention_done
-		NOT = {
-			has_country_flag = CSA_had_1940_election
-		}
-		OR = {
-			has_government = radical_socialist
-			has_government = syndicalist
-		}
-	}
-
-	is_triggered_only = yes
-	fire_only_once = yes
-
-	immediate = {
-		hidden_effect = {
-			if = { # Elizabeth Gurley Flynn
-				limit = {
-					NOT = {
-						has_country_flag = CSA_1940_iww_primary_cannon
-						has_country_flag = CSA_1940_iww_primary_giovannitti
-					}
-				}
-				create_country_leader = {
-					name = "Elizabeth Gurley Flynn"
-					desc = "POLITICS_ELIZABETH_FLYNN_DESC"
-					picture = "Portrait_CSA_Elizabeth_Gurley_Flynn.tga"
-					expire = "1965.1.1"
-					ideology = syndicalist_subtype
-					traits = {}
-				}
-			}
-			if = { # James P. Cannon
-				limit = {
-					has_country_flag = CSA_1940_iww_primary_cannon
-				}
-				create_country_leader = {
-					name = "James P. Cannon"
-					desc = "POLITICS_JAMES_CANNON_DESC"
-					picture = "Portrait_CSA_James_P_Cannon.tga"
-					expire = "1965.1.1"
-					ideology = syndicalist_subtype
-					traits = {}
-				}
-			}
-			if = { # Arturo Giovannitti
-				limit = {
-					has_country_flag = CSA_1940_iww_primary_giovannitti
-				}
-				create_country_leader = {
-					name = "Arturo Giovannitti"
-					desc = "POLITICS_ARTURO_GIOVANNITTI_DESC"
-					picture = "Portrait_CSA_Arturo_Giovannitti.tga"
-					expire = "1965.1.1"
-					ideology = syndicalist_subtype
-					traits = {}
-				}
-			}
-			if = { # Meyer London
-				limit = {
-					NOT = {
-						has_country_flag = CSA_1940_cio_primary_sinclair
-						has_country_flag = CSA_1940_cio_primary_thomas
-					}
-				}
-				create_country_leader = {
-					name = "Meyer London"
-					desc = "POLITICS_MEYER_LONDON_DESC"
-					picture = "Portrait_CSA_Meyer_London.tga"
-					expire = "1965.1.1"
-					ideology = radical_socialist_subtype
-					traits = {}
-				}
-			}
-			if = { # Upton Sinclair
-				limit = {
-					has_country_flag = CSA_1940_cio_primary_sinclair
-				}
-				create_country_leader = {
-					name = "Upton Sinclair"
-					desc = "POLITICS_UPTON_SINCLAIR_DESC"
-					picture = "Portrait_CSA_Upton_Sinclair.tga"
-					expire = "1965.1.1"
-					ideology = radical_socialist_subtype
-					traits = {}
-				}
-			}
-			if = { # Norman Thomas
-				limit = {
-					has_country_flag = CSA_1940_cio_primary_thomas
-				}
-				create_country_leader = {
-					name = "Norman Thomas"
-					desc = "POLITICS_NORMAN_THOMAS_DESC"
-					picture = "Portrait_CSA_Norman_Thomas.tga"
-					expire = "1965.1.1"
-					ideology = radical_socialist_subtype
-					traits = {}
-				}
-			}
-		}
-	}
-
-	option = {
-		name = csa.27.a
-		set_country_flag = CSA_had_1940_election
-		hidden_effect = {
-			set_country_flag = csa_1940_election_iww
-		}
-		add_popularity = {
-			ideology = syndicalist
-			popularity = 0.05
+		create_country_leader = {
+			name = "Big Bill Haywood"
+			desc = "POLITICS_BIG_BILL_HAYWOOD_DESC"
+			picture = "gfx/leaders/CSA/Bill_Haywood.tga"
+			expire = "1965.1.1"
+			ideology = syndicalist_subtype
+			traits = {}
 		}
 		set_politics = {
 			ruling_party = syndicalist
 			election_frequency = 48
 			elections_allowed = yes
 		}
-		hidden_effect = {
-			country_event = {
-				id = csa.37
-				days = 1
-			}
-			country_event = {
-				id = csa.28
-				days = 1230
-			}
-			country_event = {
-				id = csa.29
-				days = 1237
-			}
-		}
 	}
-	option = {
-		name = csa.27.c
-		set_country_flag = CSA_had_1940_election
-		hidden_effect = {
-			set_country_flag = csa_1940_election_cio
-		}
-		add_popularity = {
-			ideology = radical_socialist
-			popularity = 0.20
-		}
+	option = { # James P. Cannon
+		name = csa.25.b
+		create_country_leader = {
+				name = "James P. Cannon"
+				desc = "POLITICS_JAMES_CANNON_DESC"
+				picture = "Portrait_CSA_James_P_Cannon.tga"
+				expire = "1965.1.1"
+				ideology = syndicalist_subtype
+				traits = {
+					smooth_talking_charmer
+				}
+			}
 		set_politics = {
-			ruling_party = radical_socialist
+			ruling_party = syndicalist
 			election_frequency = 48
 			elections_allowed = yes
 		}
-		hidden_effect = {
-			country_event = {
-				id = csa.37
-				days = 1
+	}
+	option = { # Arturo Giovannitti
+		name = csa.25.c
+		create_country_leader = {
+			name = "Arturo Giovannitti"
+			desc = "POLITICS_ARTURO_GIOVANNITTI_DESC"
+			picture = "Portrait_CSA_Arturo_Giovannitti.tga"
+			expire = "1965.1.1"
+			ideology = syndicalist_subtype
+			traits = {
+				great_survivor
 			}
-			country_event = {
-				id = csa.28
-				days = 1230
+		}
+		set_politics = {
+			ruling_party = syndicalist
+			election_frequency = 48
+			elections_allowed = yes
+		}
+	}
+	option = { # Harry Bridges
+		name = csa.25.e
+		create_country_leader = {
+					name = "Harry Bridges"
+					desc = "POLITICS_HARRY_BRIDGES_DESC"
+					picture = "Portrait_CSA_Harry_Bridges.tga"
+					expire = "1965.1.1"
+					ideology = syndicalist_subtype
+					traits = {
+						anarchist_zeal
+					}
+				}
+		set_politics = {
+			ruling_party = syndicalist
+			election_frequency = 48
+			elections_allowed = yes
+		}
+	}
+	option = { # Elmer Allison
+		name = csa.25.e
+		create_country_leader = {
+				name = "Elmer Allison"
+				desc = "POLITICS_ELMER_ALLISON_DESC"
+				picture = "Portrait_CSA_Elmer_Allison.tga"
+				expire = "1965.1.1"
+				ideology = syndicalist_subtype
+				traits = {
+					editor
+				}
 			}
-			country_event = {
-				id = csa.29
-				days = 1237
-			}
+		set_politics = {
+			ruling_party = syndicalist
+			election_frequency = 48
+			elections_allowed = yes
+		}
+	}
+	option = { # Elmer Allison
+		name = csa.25.e
+		create_country_leader = {
+				name = "Ludwig E. Katterfeld"
+				desc = "POLITICS_LUDWIG_KATTERFELD_DESC"
+				picture = "Portrait_CSA_L_E_Katterfeld.tga"
+				expire = "1965.1.1"
+				ideology = radical_socialist_subtype
+				traits = {
+					editor
+					}
+				}
+			set_politics = {
+			ruling_party = syndicalist
+			election_frequency = 48
+			elections_allowed = yes
 		}
 	}
 }
 
-country_event = { # 1944 IWW/SLP Primary
-	id = csa.28
-	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.28"}
-	title = csa.28.t
+country_event = { # Orthodox Syndicalist Election
+	id = csa.26
+	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.26"}
+	title = csa.26.t
 	picture = GFX_report_event_election_vote
-
-	desc = { # IWW has the Presidency
-		text = csa.28.d.president
-		trigger = {
-			has_government = syndicalist
-		}
-	}
-	desc = { # IWW does not have the Presidency
-		text = csa.28.d.not_president
-		trigger = {
-			NOT = {
-				has_government = syndicalist
-			}
-		}
-	}
-
-	trigger = {
-		tag = CSA
-		has_country_flag = CSA_constitutional_convention_done
-		has_country_flag = CSA_had_1940_election
-		NOT = {
-			has_country_flag = CSA_had_1944_election
-		}
-		OR = {
-			has_government = radical_socialist
-			has_government = syndicalist
-		}
-	}
 
 	fire_only_once = yes
 	is_triggered_only = yes
 
-	option = { # Harry Bridges
-		name = csa.28.a
-		trigger = {
-			NOT = {
-				has_government = syndicalist
-			}
+	option = { # Big Bill Haywood
+		name = csa.25.a
+		create_country_leader = {
+			name = "Big Bill Haywood"
+			desc = "POLITICS_BIG_BILL_HAYWOOD_DESC"
+			picture = "gfx/leaders/CSA/Bill_Haywood.tga"
+			expire = "1965.1.1"
+			ideology = syndicalist_subtype
+			traits = {}
 		}
-		hidden_effect = {
-			set_country_flag = CSA_1944_iww_primary_bridges
+		set_politics = {
+			ruling_party = syndicalist
+			election_frequency = 48
+			elections_allowed = yes
 		}
 	}
 	option = { # Frank T. Johns
 		name = csa.28.b
-		trigger = {
-			NOT = {
-				has_government = syndicalist
+		create_country_leader = {
+			name = "Frank T. Johns"
+			desc = "POLITICS_FRANK_JOHNS_DESC"
+			picture = "Portrait_CSA_Frank_T_Johns.tga"
+			expire = "1965.1.1"
+			ideology = syndicalist_subtype
+			traits = {
+				great_survivor
 			}
-		}
-		hidden_effect = {
-			set_country_flag = CSA_1944_iww_primary_johns
 		}
 	}
 	option = { # Frank Little

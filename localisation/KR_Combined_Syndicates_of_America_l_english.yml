@@ -42,6 +42,9 @@ CSA_radical_socialist_federalist_party:0 "Socialist Party of America"
 CSA_radical_socialist_federalist_party_long:0 "Socialist Party of America"
 CSA_radical_socialist_federalist_party_abbrev:0 "SPA"
 
+CSA_totalist_centralist_party:0 "American Worker's Party"
+CSA_totalist_centralist_party_long:0 "American Worker's Party - The American Worker's Party has become dominant within Socialist America, and embraces a mix of Technocracy, Nationalism and Socialism, desiring for the Manangerial class to work on behalf of socialism."
+
 ### Cosmetic Tag ###
 
 CSA_socialist_republic_totalist:0 "Socialist Republic of America"
@@ -1232,33 +1235,32 @@ csa.24.t:0 "Family Code of [GetYear]"
 csa.24.d:0 "With the social revolution in full swing, Congress has passed the Family Code of [GetYear]. The Family Code is a revolutionary code that is driven by an ideological desire to wither away the capitalist model of the family to be replaced by a socialist model of the familial free unions based on mutual love and respect.\n\nThus to that end the code included a number of revolutionary changes. It abolishes all impediments to marriage, the biggest one being the abolition of anti-miscegenation laws. Civil marriage is now the only legal type of marriage. The code establishes no-grounds divorce, with both spouses receiving equal division of the property at the time of divorce. Also abolished is the concept of illegitimacy. Now all children are entitled to parental support and equal rights under the law.\n\nFurthermore in accordance with the revolutionary laws regarding the family, adoption of children that were made homeless by the revolution is subsidized. The European concept of Free Love is still under consideration, as well as decriminalizing homosexual behaviour. A Committee of Sexology, led by Magnus Hirschfeld, Wilhelm Reich, Harry Hay and Alain Leroy Locke are still locked in debate over how to approach this."
 csa.24.a:0 "The world is changing."
 
-### Commonwealth Events ###
+### Election Syndicalist Events ###
 
 csa.25.t:0 "The [GetYear] Convention of the [CSA_synd_name]"
 csa.25.d:0 "Today marks the [GetYear] convention of the [CSA_synd_name]. While there are many things to discuss at the convention, the biggest is whom shall the workers pick to represent the [CSA_synd_name_abbrev] now that we settle on the Centralist syndicalists carrying the torch of the revolution. The main nominees at the convention are: Big Bill Haywood, James P. Cannon, and Arturo Giovannitti."
-csa.25.a:0 "Elizabeth Gurley Flynn."
-csa.25.b:0 "James P. Cannon."
-csa.25.c:0 "Arturo Giovannitti."
+csa.25.a:0 "Big Bill Haywood"
+csa.25.b:0 "James P. Cannon"
+csa.25.c:0 "Arturo Giovannitti"
+csa.25.e:0 "Harry Bridges"
+csa.25.f:0 "Elmer Allison"
+csa.32.g:0 "L. E. Katterfeld."
 
-csa.26.t:0 "The [GetYear] Convention of the [CSA_radsoc_name]"
-csa.26.d:0 "Today marks the [GetYear] convention of the [CSA_radsoc_name]. While there are many things to discuss at the convention, the biggest is whom shall the workers pick to represent the [CSA_radsoc_name_abbrev] in the [GetYear] presidential election. The main nominees at the convention are: Meyer London, Upton Sinclair, Frank Bohn, and Norman Thomas"
-csa.26.a:0 "Meyer London."
-csa.26.b:0 "Upton Sinclair."
-csa.26.c:0 "Frank Bohn."
-csa.26.e:0 "Norman Thomas."
+csa.26.t:0 "The [GetYear] Convention of the [CSA_synd_name]"
+csa.26.d:0 "The [GetYear] convention of the [CSA_synd_name] is here and, while there are many important things to be discussed at this convention, one of the more important is who shall lead the nation now that the orthodox syndicalist agenda has succeeded in being pushed through Congress."
+csa.26.a:0 "Big Bill Haywood"
+csa.26.b:0 "Frank T. Johns"
+csa.26.c:0 "Frank Little"
+csa.26.e:0 "Elizabeth Gurley Flynn"
+csa.26.f:0 "Robert Minor"
+csa.26.g:0 "Dorothy Day"
+csa.32.h:0 "John Bernard."
 
-csa.27.t:0 "The [GetYear] Presidential Election"
-csa.27.d:0 "Today marks the [GetYear] Presidential Election. Which party will gain the most votes, and thus their nominee will become the next president of [Root.GetNameDef]?"
-csa.27.a:0 "The [CSA_synd_name]"
-csa.27.c:0 "The [CSA_radsoc_name]"
-
-csa.28.t:0 "The [GetYear] Convention of the [CSA_synd_name]"
-csa.28.d.president:0 "The [CSA_synd_name] has unanimously re-nominated [CSA.GetLeader] for the upcoming presidential election."
-csa.28.d.not_president:0 "The [GetYear] convention of the [CSA_synd_name] is here and, while there are many important things to be discussed at this convention, one of the more important is who shall be their nominee for the upcoming presidential election."
-csa.28.a:0 "Harry Bridges."
-csa.28.b:0 "Frank T. Johns."
-csa.28.c:0 "Frank Little."
-csa.28.e:0 "Congratulations, [CSA.GetLeader]!"
+csa.27.t:0 "The [GetYear] Convention of the [CSA_synd_name]"
+csa.27.d:0 "The [GetYear] convention of the [CSA_synd_name] is here and, while there are many important things to be discussed at this convention, one of the more important is who shall lead the nation now that the radical anarcho-syndicalist and anarcho-communist agenda has come out on top of the industrial Congress."
+csa.27.a:0 "Emma Goldman"
+csa.27.b:0 "Dorothy Day"
+csa.27.c:0 "Modest Stein"
 
 csa.29.t:0 "The [GetYear] Convention of the [CSA_radsoc_name]"
 csa.29.d.president:0 "The [CSA_radsoc_name] has unanimously re-nominated [CSA.GetLeader] for the upcoming presidential election."
@@ -1273,22 +1275,6 @@ csa.30.d:0 "Today marks the [GetYear] Presidential Election. Which party will ga
 csa.30.a:0 "The [CSA_synd_name]"
 csa.30.c:0 "The [CSA_radsoc_name]"
 
-csa.31.t:0 "The [GetYear] Convention of the [CSA_synd_name]"
-csa.31.d.president:0 "The [CSA_synd_name] has unanimously re-nominated [CSA.GetLeader] for the upcoming presidential election."
-csa.31.d.president_steps_down:0 "[CSA.GetLeader] is term-limited and thus will be stepping down. As such, at the [GetYear] Convention of the [CSA_synd_name], the topic of who shall be the next nominee for the upcoming presidential election is one of the main topics on the agenda."
-csa.31.d.not_president:0 "The [GetYear] convention of the [CSA_synd_name] is here and, while there are many important things to be discussed at this convention, one of the more important things is who shall be their nominee for the upcoming presidential election."
-csa.31.a:0 "Eugene Dennis."
-csa.31.b:0 "Elmer Allison."
-csa.31.c:0 "Elizabeth Nord."
-csa.31.e:0 "Congratulations, [CSA.GetLeader]!"
-
-csa.32.t:0 "The [GetYear] Convention of the [CSA_radsoc_name]"
-csa.32.d.president:0 "The [CSA_radsoc_name] has unanimously re-nominated [CSA.GetLeader] for the upcoming presidential election."
-csa.32.d.president_steps_down:0 "[CSA.GetLeader] is term-limited and thus will be stepping down. As such, at the [GetYear] Convention of the [CSA_radsoc_name], the topic of who shall be the next nominee for the upcoming presidential election is one of the main topics on the agenda."
-csa.32.d.not_president:0 "The [GetYear] convention of the [CSA_radsoc_name] is here and, while there are many important things to be discussed at this convention, one of the more important things is who shall be their nominee for the upcoming presidential election."
-csa.32.a:0 "David Dubinsky."
-csa.32.b:0 "John L. Lewis."
-csa.32.c:0 "L. E. Katterfeld."
 csa.32.e:0 "Congratulations, [CSA.GetLeader]!"
 
 csa.33.t:0 "The [GetYear] Presidential Election"
@@ -1302,7 +1288,6 @@ csa.34.d.president_steps_down:0 "[CSA.GetLeader] is term-limited and thus will b
 csa.34.d.not_president:0 "The [GetYear] convention of the [CSA_synd_name] is here and, while there are many important things to be discussed at this convention, one of the more important things is who shall be their nominee for the upcoming presidential election."
 csa.34.a:0 "Eugene Dennis."
 csa.34.b:0 "Henning A. Blomen."
-csa.34.c:0 "John Bernard."
 csa.34.e:0 "Congratulations, [CSA.GetLeader]!"
 
 csa.35.t:0 "The [GetYear] Convention of the [CSA_radsoc_name]"
@@ -2119,6 +2104,7 @@ csa.325.t:0 "AFL Leadership contest!"
 csa.325.d:0 "The AFL has come out on top, and now must appoint someone to the Presidency of the Combined Syndicates of America. AFL leaders Samuel Green and John Lewis are the leading candidates, but only one can come out on top, with Lewis being more experienced and popular but also more controversial in his bombastic personality, espesscially due to his involvement in founding the CIO that is now considered generally more radical than him and lead him to merge part of the CIO into the AFL."
 csa.325.a:0 "John Lewis"
 csa.325.b:0 "William Green"
+csa.325.c:0 "David Dubinsky"
 
 ### Independence League Leadership ###
 
