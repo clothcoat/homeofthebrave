@@ -24,32 +24,8 @@ country_event = { # The American Legion Appointment
 		days = 10
 	}
 
-	option = { # Connor Fox
-		name = unionstate.1.a
-		ai_chance = {
-			factor = 30
-			modifier = {
-		    factor = 0
-		    OR = {
-				  has_game_rule = {
-						rule = TEX_post_civil_war
-						option = TEX_POST_CIVIL_WAR_MOSELEY
-					}
-				  has_game_rule = {
-						rule = TEX_post_civil_war
-						option = TEX_POST_CIVIL_WAR_PELLEY
-					}
-				}
-		  }
-		}
-		hidden_effect = {
-			set_country_flag = TEX_fox_legion_head
-		}
-		add_popularity = {
-			ideology = authoritarian_democrat
-			popularity = 0.1
-		}
-		hidden_effect = {
+	immediate = {
+	hidden_effect = {
 			country_event = {
 				id = unionstate.2
 				days = 7
@@ -108,295 +84,50 @@ country_event = { # The American Legion Appointment
 			}
 		}
 	}
-	option = { # George Van Horn Moseley
+	option = { # Terry de la Mesa Allen Jr
+		name = unionstate.1.a
+		ai_chance = {
+			factor = 70
+		}
+		add_popularity = {
+			ideology = authoritarian_democrat
+			popularity = 0.1
+		}
+	}
+	option = { # Sid McMath
 		name = unionstate.1.b
 		ai_chance = {
 			factor = 10
-			modifier = {
-		    factor = 0
-		    OR = {
-				  has_game_rule = {
-						rule = TEX_post_civil_war
-						option = TEX_POST_CIVIL_WAR_LONG
-					}
-				  has_game_rule = {
-						rule = TEX_post_civil_war
-						option = TEX_POST_CIVIL_WAR_PELLEY
-					}
-				}
-		  }
-		}
-		hidden_effect = {
-			set_country_flag = TEX_moseley_legion_head
 		}
 		add_popularity = {
-			ideology = paternal_autocrat
-			popularity = 0.1
+			ideology = social_democrat
+			popularity = 0.04
 		}
-		hidden_effect = {
-			country_event = {
-				id = unionstate.3
-				days = 10
-				} # A special Session of Congress
+		add_popularity = {
+			ideology = social_liberal
+			popularity = 0.04
+		}
+		modify_country_flag = {
+			flag = AFP_leftism
+			value = -1
 		}
 	}
-	option = { # William Pelley
+	option = { # Gerald L.K. Smith
 		name = unionstate.1.c
 		ai_chance = {
 			factor = 10
-			modifier = {
-				factor = 3
-				has_country_flag = TEX_silver_legion_supported
-			}
-			modifier = {
-		    factor = 0
-		    OR = {
-				  has_game_rule = {
-						rule = TEX_post_civil_war
-						option = TEX_POST_CIVIL_WAR_LONG
-					}
-				  has_game_rule = {
-						rule = TEX_post_civil_war
-						option = TEX_POST_CIVIL_WAR_MOSELEY
-					}
-				}
-		  }
-		}
-		hidden_effect = {
-			set_country_flag = TEX_pelley_legion_head
 		}
 		add_popularity = {
-			ideology = national_populist
-			popularity = 0.1
+			ideology = social_conservative
+			popularity = 0.03
 		}
-		hidden_effect = {
-			country_event = {
-				id = unionstate.2
-				days = 7
-				} # The Business Plot
-			country_event = {
-				id = unionstate.3
-				days = 14
-				} # A special Session of Congress
-		}
-	}
-}
-
-country_event = { # The Business Plot
-	id = unionstate.2
-	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.2"}
-	title = unionstate.2.t
-	desc = { # Fox Conor exposes the Business Plot
-		text = unionstate.2.d.huey
-		trigger = {
-			has_country_flag = TEX_fox_legion_head
-		}
-	}
-	desc = { # Pelley exposes the Business Plot
-		text = unionstate.2.d.pellley
-		trigger = {
-			has_country_flag = TEX_pelley_legion_head
-		}
-	}
-	picture = diplomacy2
-
-	fire_only_once = yes
-	is_triggered_only = yes
-
-	trigger = {
-		has_country_flag = TEX_war_committee_formed
-		OR = {
-			has_country_flag = TEX_fox_legion_head
-			has_country_flag = TEX_pelley_legion_head
-		}
-	}
-
-	option = { # The Plot is uncovered
-		name = unionstate.2.a
 		add_popularity = {
 			ideology = paternal_autocrat
-			popularity = -0.1
+			popularity = 0.05
 		}
-		if = {
-			limit = {
-				has_idea = TEX_George_Van_Horn_Moseley_cos
-			}
-			remove_ideas = TEX_George_Van_Horn_Moseley_cos
-		}
-		if = {
-			limit = {
-				has_unit_leader = 75
-			}
-			remove_unit_leader = 75
-		}
-		set_country_flag = George_Van_Horn_Moseley_dead
-		hidden_effect = {
-			create_country_leader = {
-				name = "Charles Lindbergh"
-				desc = "POLITICS_CHARLES_LINDBERGH_DESC"
-				picture = "Portrait_TEX_charles_lindbergh.tga"
-				expire = "1965.1.1"
-				ideology = paternal_autocrat_subtype
-				traits = {}
-			}
-		}
-	}
-}
-
-country_event = { # A special Session of Congress
-	id = unionstate.3
-	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.3"}
-	title = unionstate.3.t
-	desc = unionstate.3.d
-	picture = congress
-
-	fire_only_once = yes
-	is_triggered_only = yes
-
-	trigger = {
-		tag = TEX
-		has_global_flag = USA_civil_war_over_flag
-		OR = {
-			has_country_flag = TEX_moseley_legion_head
-			has_country_flag = TEX_pelley_legion_head
-		}
-	}
-
-	option = { # pass the law
-		name = unionstate.3.a
-		ai_chance = {
-			factor = 50
-			modifier = {
-		    factor = 0
-		    OR = {
-				  has_game_rule = {
-						rule = TEX_post_civil_war
-						option = TEX_POST_CIVIL_WAR_MOSELEY
-					}
-				  has_game_rule = {
-						rule = TEX_post_civil_war
-						option = TEX_POST_CIVIL_WAR_PELLEY
-					}
-				}
-		  }
-		}
-		hidden_effect = {
-			country_event = {
-				id = unionstate.5
-				days = 3
-			}
-		}
-		add_ideas = TEX_prohibition_bill
-	}
-	option = { # do not pass the law
-		name = unionstate.3.b
-		ai_chance = {
-			factor = 50
-		}
-		hidden_effect = {
-			if = {
-				limit = {
-					has_country_flag = TEX_moseley_legion_head
-				}
-				country_event = {
-					id = unionstate.4
-					days = 5
-				}
-			}
-			else_if = {
-				limit = {
-					has_country_flag = TEX_pelley_legion_head
-				}
-				country_event = {
-					id = unionstate.77
-					days = 3
-				}
-			}
-		}
-	}
-}
-
-country_event = { # A midnight Dinner
-	id = unionstate.4
-	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.4"}
-	title = unionstate.4.t
-	desc = unionstate.4.d
-	picture = congress
-
-	is_triggered_only = yes
-
-	trigger = {
-		has_country_flag = TEX_war_committee_formed
-	}
-
-	option = { # Moseley set in charge
-		name = unionstate.4.a
-		add_popularity = {
-			ideology = paternal_autocrat
-			popularity = 0.1
-		}
-		add_stability = -0.10
-		if = {
-			limit = {
-				has_country_flag = AUS_america_united
-			}
-			set_cosmetic_tag = NEE_america
-		}
-		hidden_effect = {
-			set_country_flag = Huey_Long_dead
-			hidden_effect = {
-				add_ideas = TEX_Henry_Ford_hog_pau
-				add_ideas = TEX_Fred_Chase_Koch_for_pau
-				add_ideas = TEX_Haroldson_Lafayette_Hunt_Jr_eco_pau
-				add_ideas = TEX_John_Elliott_Rankin_sec_pau
-			}
-			create_country_leader = {
-				name = "Earl Kemp Long"
-				desc = "POLITICS_EARL_KEMP_LONG_DESC"
-				picture = "Portrait_TEX_Earl_Kemp_Long.tga"
-				expire = "1965.1.1"
-				ideology = authoritarian_democrat_subtype
-				traits = {}
-			}
-			random_other_country = {
-				news_event = {
-					id = worldnews.203
-				}
-			}
-			set_country_flag = {
-				flag = TEX_uncovered
-				value = 0
-			}
-			country_event = {
-				id = unionstate.33
-				days = 30
-			}
-
-			# PatAut Events
-			country_event = {
-				id = unionstate.36
-				days = 90
-				random = 10
-			}
-			country_event = {
-				id = unionstate.32
-				days = 120
-				random = 20
-			}
-			country_event = {
-				id = unionstate.37
-				days = 150
-				random = 30
-			}
-			country_event = {
-				id = unionstate.38
-				days = 180
-				random = 40
-			}
-		}
-		set_politics = {
-			ruling_party = paternal_autocrat
-			elections_allowed = no
+		modify_country_flag = {
+			flag = AFP_leftism
+			value = 1
 		}
 	}
 }

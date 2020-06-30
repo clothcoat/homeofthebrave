@@ -1563,22 +1563,48 @@ country_event = { # Orthodox Syndicalist Election
 				great_survivor
 			}
 		}
+		set_politics = {
+			ruling_party = syndicalist
+			election_frequency = 48
+			elections_allowed = yes
+		}
 	}
-	option = { # Frank Little
+	option = { # Elizabeth Gurley Flynn
 		name = csa.28.c
-		trigger = {
-			NOT = {
-				has_government = syndicalist
+		create_country_leader = {
+				name = "Elizabeth Gurley Flynn"
+				desc = "POLITICS_ELIZABETH_FLYNN_DESC"
+				picture = "Portrait_CSA_Elizabeth_Gurley_Flynn.tga"
+				expire = "1965.1.1"
+				ideology = syndicalist_subtype
+				female = yes
+				traits = {
+					appeaser
 			}
 		}
-		hidden_effect = {
-			set_country_flag = CSA_1944_iww_primary_little
+		set_politics = {
+			ruling_party = syndicalist
+			election_frequency = 48
+			elections_allowed = yes
 		}
 	}
-	option = { # Nominate the President
-		name = csa.28.e
-		trigger = {
-			has_government = syndicalist
+	option = { # Robert Minor
+		name = csa.28.c
+		create_country_leader = {
+				name = "Robert Minor"
+				desc = "POLITICS_ROBERT_MINOR_DESC"
+				picture = "gfx/leaders/CSA/Bill_Haywood.tga"
+				expire = "1965.1.1"
+				ideology = syndicalist_subtype
+				female = yes
+				traits = {
+					appeaser
+			}
+		}
+		set_politics = {
+			ruling_party = syndicalist
+			election_frequency = 48
+			elections_allowed = yes
 		}
 	}
 }

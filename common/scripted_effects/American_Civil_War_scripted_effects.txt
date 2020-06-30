@@ -1691,37 +1691,6 @@ TEX_increase_recovery = {
 	}
 }
 
-TEX_increase_military_complex = {
-	if = {
-		limit = { has_idea = TEX_military_industrial_complex_idea1 }
-		swap_ideas = {
-			remove_idea = TEX_military_industrial_complex_idea1
-			add_idea = TEX_military_industrial_complex_idea2
-		}
-	}
-	else_if = {
-		limit = { has_idea = TEX_military_industrial_complex_idea2 }
-		swap_ideas = {
-			remove_idea = TEX_military_industrial_complex_idea2
-			add_idea = TEX_military_industrial_complex_idea3
-		}
-	}
-	else_if = {
-		limit = { has_idea = TEX_military_industrial_complex_idea3 }
-		swap_ideas = {
-			remove_idea = TEX_military_industrial_complex_idea3
-			add_idea = TEX_military_industrial_complex_idea4
-		}
-	}
-	else_if = {
-		limit = { has_idea = TEX_military_industrial_complex_idea4 }
-		swap_ideas = {
-			remove_idea = TEX_military_industrial_complex_idea4
-			add_idea = TEX_military_industrial_complex_idea5
-		}
-	}
-}
-
 CSA_increase_recovery = {
 	if = {
 		limit = { has_idea = USA_civil_war_aftermath_idea }

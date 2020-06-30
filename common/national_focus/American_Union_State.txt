@@ -3130,9 +3130,6 @@ focus_tree = {
 		id = TEX_national_recovery
 		icon = GFX_goal_USA_nra
 		cost = 7.25
-		available = {
-			has_idea = USA_civil_war_depression_idea
-		}
 		prerequisite = {
 			focus = TEX_rebuilding_the_country
 		}
@@ -4158,6 +4155,10 @@ focus_tree = {
 				bonus = 1
 				uses = 1
 				category = cat_mass_assault
+			}
+			modify_country_flag = {
+				flag = AFP_leftism
+				value = 2
 			}
 		}
 	}
