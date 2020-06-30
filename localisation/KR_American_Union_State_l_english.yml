@@ -186,6 +186,10 @@ TEX_reconstruction_is_over_tooltip:0 "§GWe have successfully recovered from the
 TEX_anti_syndicalist_pact_tooltip:0 "We shall seek to oppose the International\n"
 TEX_fight_terrorists_tooltip:0 "§GWe shall root out traitors and destroy terrorists!§!\n"
 TEX_silver_legion_code:0 "§GWe shall settle on a code for the Silver Legion§!\n"
+TEX_align_nationalists_tooltip:0 "We Will Align Nationalists in the Americans"
+TEX_align_leftists_tooltip:0 "We Will Consider Aligning Leftists in the Americas"
+
+
 ### Flags ###
 AUS_election_occured:0 "The American Union State's Government is Settled"
 
@@ -212,6 +216,14 @@ TEX_deal_with_terrorists_decisions:0 "Deal with rebels"
 TEX_deal_with_terrorists_decisions_desc:0 "Now that the civil war is over, we must deal with the various rebels that shall challenge our rule over America and refuse to lay down their arms."
 TEX_fight_socialist_terrorists:0 "Fight Socialist Terrorists"
 TEX_fight_federalist_terrorists:0 "Fight Federalist Terrorists"
+
+TEX_populist_alliance_decision:0 "Populist Alliance Decisions"
+TEX_populist_allies:0 "Offer an Alliance"
+TEX_leftist_allies:0 "Offer an Alliance with Leftists"
+TEX_nationalist_allies:0 "Ally Ultra-Nationalists"
+TEX_hit_totalists:0 "Attack American Left Extremism"
+
+
 
 ### Huey Long Path ###
 TEX_new_washington:0 "The New Washington"
@@ -942,15 +954,24 @@ unionstate.153.a:0 "It is only a matter of time."
 unionstate.155.t:0 "American People's Alliance?"
 unionstate.155.d:0 "The American Union State has offered us a place in their populist alliance, promising us mutual protection against aggressors and beneficial trade, stating it is the only way to keep out the major powers across the seas. Many are pushing us to accept, although it would ruin our chances of allying others."
 unionstate.155.a:0 "Accept"
+unionstate.155.b:0 "Decline"
 
-unionstate.156.t:0 "Union State Non-Aggression Pact"
-unionstate.156.d:0 "The American Union State has sent an embassy stating that they have no intention of fighting us or protecting the European imperial powers that have aims on the Americas, offering us a non-aggression pact in which we mutually agree not to interfere with one another. Some are surprised by this given their non-socialist nature although it is consistent with their isolationism. Revolutionaries are split on agreeing with the terms so we can focus on Europe or throwing out the deal so that we may avenge the CSA."
-unionstate.156.a:0 "Agree"
-unionstate.156.b:0 "No"
+unionstate.156.t:0 "[FROM.GetNameDefCap] Agrees"
+unionstate.156.d:0 "[FROM.GetNameDefCap] has agreed to our treaty, we are closer to peace in the Americas and the containment of militarism."
+unionstate.156.a:0 "Great!"
 
-unionstate.157.t:0 ""
-unionstate.157.d:0 ""
-unionstate.157.a:0 ""
+unionstate.157.t:0 "[FROM.GetNameDefCap] Declined"
+unionstate.157.d:0 "[FROM.GetNameDefCap] has declined our treaty, making fools of us and targets of us both."
+unionstate.157.a:0 "Idiots!"
+
+unionstate.158.t:0 "Union State Non-Aggression Pact"
+unionstate.158.d:0 "The American Union State has sent an embassy stating that they have no intention of fighting us or protecting the European imperial powers that have aims on the Americas, offering us a non-aggression pact in which we mutually agree not to interfere with one another. Some are surprised by this given their non-socialist nature although it is consistent with their isolationism. Revolutionaries are split on agreeing with the terms so we can focus on Europe or throwing out the deal so that we may avenge the CSA."
+unionstate.158.a:0 "Agree"
+unionstate.158.b:0 "No"
+
+unionstate.159.t:0 "The Internationale Accepts!"
+unionstate.159.d:0 "The Internationale has accepted our offer! At long last we need not worry of revolutionary incursions on American soil from Europe."
+unionstate.159.a:0 "Yes!"
 
 ### Resistance Events ###
 unionstate.200.t:0 "Syndicalist Bombing"

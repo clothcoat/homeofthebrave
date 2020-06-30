@@ -1689,6 +1689,51 @@ TEX_increase_recovery = {
 			add_idea = TEX_national_recovery_idea5
 		}
 	}
+	else_if = {
+		limit = { has_idea = TEX_national_recovery_idea5 }
+		swap_ideas = {
+			remove_idea = TEX_national_recovery_idea5
+			add_idea = TEX_national_recovery_idea6
+		}
+	}
+}
+
+TEX_increase_political_recovery = {
+	if = {
+		limit = { has_idea = TEX_political_instability_1 }
+		swap_ideas = {
+			remove_idea = TEX_political_instability_1
+			add_idea = TEX_political_instability_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = TEX_political_instability_2 }
+		swap_ideas = {
+			remove_idea = TEX_political_instability_2
+			add_idea = TEX_political_instability_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = TEX_political_instability_3 }
+		swap_ideas = {
+			remove_idea = TEX_political_instability_3
+			add_idea = TEX_political_instability_4
+		}
+	}
+	else_if = {
+		limit = { has_idea = TEX_political_instability_4 }
+		swap_ideas = {
+			remove_idea = TEX_political_instability_4
+			add_idea = TEX_political_instability_5
+		}
+	}
+	else_if = {
+		limit = { has_idea = TEX_political_instability_5 }
+		swap_ideas = {
+			remove_idea = TEX_political_instability_5
+			add_idea = TEX_political_instability_6
+		}
+	}
 }
 
 CSA_increase_recovery = {

@@ -3142,15 +3142,10 @@ focus_tree = {
 		relative_position_id = TEX_rebuilding_the_country
 		x = 0
 		y = 1
-		bypass = {
-			NOT = { has_idea = USA_civil_war_depression_idea }
-		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TEX_national_recovery"
-			swap_ideas = {
-				remove_idea = USA_civil_war_depression_idea
-				add_idea = TEX_national_recovery_idea1
-			}
+			TEX_increase_recovery = yes
+			custom_effect_tooltip = USA_economic_recovery_tooltip
 		}
 	}
 
@@ -3222,19 +3217,8 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			random_owned_state = {
-				limit = {
-					is_core_of = TEX
-					is_controlled_by = TEX
-					industrial_complex > 0
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
+			TEX_increase_recovery = yes
+			custom_effect_tooltip = USA_economic_recovery_tooltip
 		}
 	}
 
@@ -3461,6 +3445,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TEX_harsh_reconstruction"
 			add_political_power = 100
+			add_manpower = -3000
 		}
 	}
 
@@ -3482,7 +3467,8 @@ focus_tree = {
 		y = 3
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TEX_reconciliation"
-			add_stability = 0.10
+			add_stability = 0.1
+			add_political_power = -25
 		}
 	}
 	
@@ -3502,7 +3488,9 @@ focus_tree = {
 		y = 4
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TEX_employment_expansion"
-			add_stability = 0.10
+			TEX_increase_political_recovery = yes
+			custom_effect_tooltip = USA_economic_recovery_tooltip
+			increase_ruling_party_popularity_by_5 = yes
 		}
 	}
 	
@@ -3521,7 +3509,58 @@ focus_tree = {
 		y = 2
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TEX_infrastructure_effort"
-			add_stability = 0.10
+			random_owned_state = {
+				limit = {
+					is_core_of = TEX
+					is_controlled_by = TEX
+					infrastructure > 0
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = TEX
+					is_controlled_by = TEX
+					infrastructure > 0
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = TEX
+					is_controlled_by = TEX
+					infrastructure > 0
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = TEX
+					is_controlled_by = TEX
+					infrastructure > 0
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 	focus = {# State Grants
@@ -3539,7 +3578,7 @@ focus_tree = {
 		y = 4
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TEX_state_grants"
-			add_stability = 0.10
+			TEX_increase_political_recovery = yes
 		}
 	}
 	
@@ -3558,7 +3597,7 @@ focus_tree = {
 		y = 2
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TEX_Grand_Army_of_the_Republic"
-			add_stability = 0.10
+			TEX_increase_political_recovery = yes
 		}
 	}
 	
@@ -3577,7 +3616,35 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TEX_recognize_philantrophers"
-			add_stability = 0.10
+			random_owned_state = {
+				limit = {
+					is_core_of = TEX
+					is_controlled_by = TEX
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = TEX
+					is_controlled_by = TEX
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = TEX
+					is_controlled_by = TEX
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+			}
 		}
 	}
 	
@@ -3596,7 +3663,8 @@ focus_tree = {
 		y = 2
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TEX_reconciliation"
-			add_stability = 0.10
+			TEX_increase_political_recovery = yes
+			add_political_power = -40
 		}
 	}
 	
@@ -3614,8 +3682,20 @@ focus_tree = {
 		x = 1
 		y = 1
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TEX_reconciliation"
-			add_stability = 0.10
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_department_of_public_safety"
+			random_owned_state = {
+				limit = {
+					is_core_of = TEX
+					is_controlled_by = TEX
+					infrastructure > 0
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 	}
 	
@@ -3634,7 +3714,58 @@ focus_tree = {
 		y = 2
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TEX_work_programs"
-			add_stability = 0.10
+			random_owned_state = {
+				limit = {
+					is_core_of = TEX
+					is_controlled_by = TEX
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = TEX
+					is_controlled_by = TEX
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = TEX
+					is_controlled_by = TEX
+					infrastructure > 0
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = TEX
+					is_controlled_by = TEX
+					infrastructure > 0
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 
@@ -3676,8 +3807,9 @@ focus_tree = {
 		y = 5
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TEX_reconstruction_is_over"
-			TEX_increase_recovery = yes
-			TEX_increase_military_complex = yes
+			TEX_increase_political_recovery = yes
+			add_stability = 0.1
+			add_political_power = 100
 		}
 	}
 
@@ -6551,10 +6683,13 @@ focus_tree = {
 		cancel_if_invalid = yes
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TEX_internationale_non_agression_pact"
+			custom_effect_tooltip = TEX_align_leftists_tooltip
 			add_political_power = -15
+			FRA = {
 			country_event = {
-				id = unionstate.156
+				id = unionstate.158
 				days = 1
+				}
 			}
 		}
 	}
@@ -6628,6 +6763,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TEX_oppose_american_syndicalism"
+			add_war_support = 0.1
 		}
 	}
 	
@@ -6662,8 +6798,62 @@ focus_tree = {
 		cancel_if_invalid = yes
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TEX_align_nationalists"
-			add_war_support = -0.10
-			add_ideas = USA_fortress_america_idea_1
+			add_war_support = 0.05
+			custom_effect_tooltip = TEX_align_nationalists_tooltip
+			if = {
+			limit = {
+			tag = ARG
+			has_government = national_populist
+			}
+			ARG = {
+			add_opinion_modifier = { target = TEX modifier = medium_increase }
+				}
+			}
+			if = {
+			limit = {
+			tag = BRA
+			has_government = national_populist
+			}
+			BRA = {
+			add_opinion_modifier = { target = BRA modifier = medium_increase }
+				}
+			}
+			if = {
+			limit = {
+			tag = CUB
+			has_government = national_populist
+			}
+			CUB = {
+			add_opinion_modifier = { target = BRA modifier = medium_increase }
+				}
+			}
+			if = {
+			limit = {
+			tag = PER
+			has_government = national_populist
+			}
+			PER = {
+			add_opinion_modifier = { target = BRA modifier = medium_increase }
+				}
+			}
+			if = {
+			limit = {
+			tag = ELS
+			has_government = national_populist
+			}
+			ELS = {
+			add_opinion_modifier = { target = BRA modifier = medium_increase }
+				}
+			}
+			if = {
+			limit = {
+			tag = BOL
+			has_government = national_populist
+			}
+			BOL = {
+			add_opinion_modifier = { target = BRA modifier = medium_increase }
+				}
+			}
 		}
 	}
 	
@@ -6734,8 +6924,53 @@ focus_tree = {
 		cancel_if_invalid = yes
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TEX_contain_hostile_leftism"
-			add_war_support = -0.10
-			add_ideas = USA_fortress_america_idea_1
+			add_war_support = 0.05
+			add_popularity = { ideology = syndicalist popularity = -0.02 }
+			add_popularity = { ideology = totalist popularity = -0.03 }
+			if = {
+			limit = { 
+			MEX = {
+			has_government = totalist
+				}
+			}
+			create_wargoal = {
+			type = puppet_wargoal_focus
+			target = MEX
+				}
+			}
+			if = {
+			limit = { 
+			NIC = {
+			has_government = totalist
+				}
+			}
+			create_wargoal = {
+			type = puppet_wargoal_focus
+			target = NIC
+				}
+			}
+			if = {
+			limit = { 
+			CHI = {
+			has_government = totalist
+				}
+			}
+			create_wargoal = {
+			type = puppet_wargoal_focus
+			target = CHI
+				}
+			}
+			if = {
+			limit = { 
+			CUB = {
+			has_government = totalist
+				}
+			}
+			create_wargoal = {
+			type = puppet_wargoal_focus
+			target = CUB
+				}
+			}
 		}
 	}
 	

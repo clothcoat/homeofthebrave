@@ -26,11 +26,6 @@ country_event = { # The American Legion Appointment
 
 	immediate = {
 	hidden_effect = {
-			country_event = {
-				id = unionstate.2
-				days = 7
-				} # The Business Plot
-
 			# AuthDem Events
 			country_event = {
 				id = unionstate.15
@@ -729,6 +724,59 @@ country_event = { # AUS Election
 		add_stability = 0.1
 		hidden_effect = {
 		set_country_flag = AUS_election_occured
+		}
+		hidden_effect = {
+			# AuthDem Events
+			country_event = {
+				id = unionstate.15
+				days = 90
+				random = 10
+			}
+			country_event = {
+				id = unionstate.14
+				days = 120
+				random = 10
+			}
+			country_event = {
+				id = unionstate.13
+				days = 150
+				random = 20
+			}
+			country_event = {
+				id = unionstate.11
+				days = 180
+				random = 20
+			}
+			country_event = {
+				id = unionstate.16
+				days = 210
+				random = 30
+			}
+			country_event = {
+				id = unionstate.17
+				days = 240
+				random = 30
+			}
+			country_event = {
+				id = unionstate.18
+				days = 270
+				random = 40
+			}
+			country_event = {
+				id = unionstate.19
+				days = 300
+				random = 40
+			}
+			country_event = {
+				id = unionstate.20
+				days = 330
+				random = 50
+			}
+			country_event = {
+				id = unionstate.12
+				days = 400
+				random = 50
+			}
 		}
 	}
 	option = { # NPP
@@ -2196,11 +2244,117 @@ country_event = { ###Join Alliance###
 	option = {
 		name = unionstate.155.a
 		TEX = {
-		add_to_faction = FROM
+		country_event = {
+			id = unionstate.156
+			days = 1
+			}
+		}
+	}
+	option = {
+		name = unionstate.155.b
+		TEX = {
+		country_event = {
+			id = unionstate.157
+			days = 1
+			}
 		}
 	}
 }
 
+country_event = { ###Americas Alliance###
+	id = unionstate.156
+	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.156"}
+	title = unionstate.156.t
+	desc = unionstate.156.d
+	picture = GFX_ACW_american_brigade
+
+	is_triggered_only = yes
+
+	option = {
+		name = unionstate.156.a
+		TEX = {
+		add_to_faction = FROM
+		}
+		add_political_power = 10
+	}
+}
+
+country_event = { ###Declines Alliance###
+	id = unionstate.157
+	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.157"}
+	title = unionstate.157.t
+	desc = unionstate.157.d
+	picture = GFX_ACW_american_brigade
+
+	is_triggered_only = yes
+
+	option = {
+		name = unionstate.157.a
+		add_political_power = -10
+		add_opinion_modifier = { target = FROM modifier = small_decrease }
+	}
+}
+
+
+country_event = { ###Internationale Treaty###
+	id = unionstate.158
+	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.158"}
+	title = unionstate.158.t
+	desc = unionstate.158.d
+	picture = GFX_ACW_american_brigade
+
+	is_triggered_only = yes
+
+	option = {
+		name = unionstate.158.a
+		diplomatic_relation = {
+		country = TEX
+		relation = non_aggression_pact
+		active = no
+		}
+		add_stability = 0.05
+		add_political_power = -10
+		add_war_support = -0.03
+		TEX = {
+		country_event = {
+		id = unionstate.159
+		days = 1
+			}
+		}
+	}
+	option = {
+		name = unionstate.158.a
+		TEX = {
+		country_event = {
+		id = unionstate.157
+		days = 1
+			}
+		}
+	}
+}
+
+country_event = { ###Internationale Accepts###
+	id = unionstate.159
+	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.159"}
+	title = unionstate.159.t
+	desc = unionstate.159.d
+	picture = GFX_ACW_american_brigade
+
+	is_triggered_only = yes
+
+	option = {
+		name = unionstate.159.a
+		diplomatic_relation = {
+		country = FRA
+		relation = non_aggression_pact
+		active = no
+		}
+		add_stability = 0.05
+		add_political_power = 10
+		add_popularity = { ideology = radical_socialist popularity = 0.02 }
+		add_popularity = { ideology = social_democrat popularity = 0.02 }
+	}
+}
 
 ### Resistance Events ###
 country_event = { # Socialist terrorism - factory sabotaged

@@ -17,13 +17,11 @@ TEX_populist_alliance_decision = {
 				has_war = no
 				is_subject = no
 				OR = {
-					is_in_north_america = yes
-					is_in_south_america = yes
-				}
-				OR = {
 				has_government = social_democrat
 				has_government = social_liberal
+				has_government = social_conservative
 				has_government = authoritarian_democrat
+				has_government = paternal_autocrat
 				}
 			}
 		}
@@ -58,6 +56,140 @@ TEX_populist_alliance_decision = {
 				has_government = authoritarian_democrat
 			}
 		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TEX_defend_new_world target: [From.GetName]"
+			FROM = {
+			country_event = {
+				id = unionstate.156
+				days = 1
+			}
+			}
+		}
+	}
+	TEX_leftist_allies = {
+		icon = generic_prepare_civil_war
+		allowed = { original_tag = TEX }
+		available = {
+			is_major = yes
+			has_war = no
+			is_subject = no
+		}
+		visible = {
+			FROM = {
+				is_major = no
+				has_war = no
+				is_subject = no
+				OR = {
+				has_government = social_democrat
+				has_government = social_liberal
+				has_government = social_conservative
+				has_government = authoritarian_democrat
+				has_government = paternal_autocrat
+				}
+			}
+		}
+
+		target_root_trigger = {
+			has_completed_focus = TEX_internationale_non_agression_pact
+		}
+
+		target_trigger = {
+			can_declare_war_on = FROM
+			FROM = {
+				OR = {
+					is_in_north_america = yes
+					is_in_south_america = yes
+				}
+				OR = {
+				has_government = radical_socialist
+				has_government = syndicalist
+				}
+			}
+		}
+
+		cost = 25
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TEX_defend_new_world target: [From.GetName]"
+			FROM = {
+			country_event = {
+				id = unionstate.156
+				days = 1
+			}
+			}
+		}
+	}
+	TEX_hit_totalists = {
+		icon = generic_prepare_civil_war
+		allowed = { original_tag = TEX }
+		available = {
+			is_major = yes
+			has_war = no
+			is_subject = no
+		}
+		visible = {
+			has_completed_focus = TEX_contain_hostile_leftism
+		}
+		target_root_trigger = {
+			has_completed_focus = TEX_contain_hostile_leftism
+		}
+
+		target_trigger = {
+			can_declare_war_on = FROM
+			FROM = {
+				OR = {
+					is_in_north_america = yes
+					is_in_south_america = yes
+				}
+				has_government = totalist
+			}
+		}
+
+		cost = 25
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TEX_hit_totalists target: [From.GetName]"
+			declare_war_on = {	type = annex_everything	target = FROM }
+		}
+	}
+	TEX_nationalist_allies = {
+		icon = generic_prepare_civil_war
+		allowed = { original_tag = TEX }
+		available = {
+			is_major = yes
+			has_war = no
+			is_subject = no
+		}
+		visible = {
+			FROM = {
+				is_major = no
+				has_war = no
+				is_subject = no
+				OR = {
+				has_government = social_democrat
+				has_government = social_liberal
+				has_government = social_conservative
+				has_government = authoritarian_democrat
+				has_government = paternal_autocrat
+				has_government = national_populist
+				}
+			}
+		}
+
+		target_root_trigger = {
+			has_completed_focus = TEX_align_nationalists
+		}
+
+		target_trigger = {
+			can_declare_war_on = FROM
+			FROM = {
+				OR = {
+					is_in_north_america = yes
+					is_in_south_america = yes
+				}
+				has_government = national_populist
+			}
+		}
+
+		cost = 25
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision TEX_defend_new_world target: [From.GetName]"
 			FROM = {

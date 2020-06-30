@@ -3533,8 +3533,8 @@ country_event = { # AUS wins the civil war
 	option = {
 		name = amcivwar.25.a
 		USA_civil_war_ends = yes
-		add_ideas = USA_civil_war_aftermath_idea
-		add_ideas = USA_civil_war_depression_idea
+		add_ideas = TEX_political_instability_1
+		add_ideas = TEX_national_recovery_idea1
 		hidden_effect = {
 			add_ideas = {
 				civilian_economy
