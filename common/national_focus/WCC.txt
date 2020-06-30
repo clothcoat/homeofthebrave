@@ -627,6 +627,13 @@ focus_tree = {
 		cost = 6.00
 		x = 11
 		y = 0
+		available = {
+		has_global_flag = USA_civil_war_over_flag
+		has_government = authoritarian_democrat
+		USA = {
+		exists = no
+			}
+		}
 		ai_will_do = {
 			factor = 50
 		}
@@ -1175,6 +1182,9 @@ focus_tree = {
 		y = 0
 		ai_will_do = {
 			factor = 50
+		}
+		available = {
+		has_country_leader = { ruling_only = yes name = "Douglas MacArthur" }
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus WCC_i_shall_return"

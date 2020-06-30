@@ -3731,14 +3731,18 @@ USA_MacArthur_policies = {
 		exists = yes
 			} 
 		}
-		cost = 40
+		cost = 10
 		fire_only_once = yes
 
 		ai_will_do = { factor = 40 }
 
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision USA_mac_retreats"
-			
+			WCC = {
+			country_event = {
+			id = wcc.11
+				}
+			}
 		}
 	}
 }
