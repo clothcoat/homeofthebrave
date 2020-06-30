@@ -4066,7 +4066,7 @@ focus_tree = {
 
 	focus = {#Future of the AFP
 		id = CAL_future_of_the_afp
-		icon = GFX_goal_ideology_market_liberal
+		icon = GFX_goal_TEX_reconcile_the_right_2
 		cost = 6.00
 		prerequisite = {
 			focus = CAL_classical_liberal_mandate
@@ -4085,7 +4085,7 @@ focus_tree = {
 	
 	focus = {# Court Populists
 		id = CAL_court_populists
-		icon = GFX_goal_KTG_Bookstack
+		icon = GFX_BBR_approach_afp
 		cost = 6.00
 		prerequisite = {
 			focus = CAL_future_of_the_afp
@@ -4112,7 +4112,7 @@ focus_tree = {
 	
 	focus = {# Traditional Politicians
 		id = CAL_political_traditionalism
-		icon = GFX_goal_KTG_Bookstack
+		icon = GFX_goal_continuous_def_against_influence
 		cost = 6.00
 		prerequisite = {
 			focus = CAL_future_of_the_afp
@@ -4138,7 +4138,7 @@ focus_tree = {
 	
 	focus = {# American Values
 		id = CAL_american_values1
-		icon = GFX_goal_ideology_market_liberal
+		icon = GFX_focus_usa_guarantee_the_american_dream
 		cost = 6.00
 		prerequisite = {
 			focus = CAL_political_traditionalism
@@ -4159,7 +4159,7 @@ focus_tree = {
 	
 	focus = {# Finish the SPA
 		id = CAL_finish_spa
-		icon = GFX_goal_constitutional_guarantees
+		icon = GFX_goal_CSA_organizing_the_party
 		cost = 6.00
 		prerequisite = {
 			focus = CAL_classical_liberal_mandate
@@ -4186,7 +4186,7 @@ focus_tree = {
 	}
 	focus = {# Local Controls
 		id = CAL_local_control
-		icon = GFX_goal_constitutional_guarantees
+		icon = GFX_goal_CSA_calm_moderates
 		cost = 6.00
 		prerequisite = {
 			focus = CAL_finish_spa
@@ -4213,7 +4213,7 @@ focus_tree = {
 	}
 	focus = {# Maintain Nationalizations
 		id = CAL_maintain_nationalizations
-		icon = GFX_goal_constitutional_guarantees
+		icon = GFX_goal_continuous_suppression
 		cost = 6.00
 		prerequisite = {
 			focus = CAL_finish_spa
@@ -4269,7 +4269,7 @@ focus_tree = {
 	}
 	focus = {# Freedman's Bureau
 		id = CAL_fight_the_poll_tax
-		icon = GFX_goal_ideology_social_liberal
+		icon = GFX_goal_continuous_boost_freedom
 		cost = 6.00
 		prerequisite = {
 			focus = CAL_classical_liberal_mandate
@@ -4294,7 +4294,7 @@ focus_tree = {
 	
 	focus = {# Redeemer Collaboration
 		id = CAL_redeemer_collaboration
-		icon = GFX_goal_ideology_social_liberal
+		icon = GFX_goal_TEX_shake_hands_with_dixie
 		cost = 6.00
 		prerequisite = {
 			focus = CAL_classical_liberal_mandate
@@ -4321,7 +4321,7 @@ focus_tree = {
 	
 	focus = {# Focus the Radical Redshirts
 		id = CAL_hit_radical_redshirts
-		icon = GFX_goal_liberty
+		icon = GFX_focus_generic_anti_fascist_diplomacy
 		cost = 6.00
 		prerequisite = {
 			focus = CAL_fight_the_poll_tax
@@ -4347,7 +4347,7 @@ focus_tree = {
 	
 	focus = {# Ending Jim Crow
 		id = CAL_end_jim_crow
-		icon = GFX_goal_ideology_social_liberal
+		icon = GFX_BBR_intellectual_appeal
 		cost = 6.00
 		prerequisite = {
 			focus = CAL_hit_radical_redshirts
@@ -4373,7 +4373,7 @@ focus_tree = {
 	
 	focus = {# Traditional Machines
 		id = CAL_traditional_machines
-		icon = GFX_goal_ideology_social_liberal
+		icon = GFX_focus_usa_voter_registration_act
 		cost = 6.00
 		prerequisite = {
 			focus = CAL_hit_radical_redshirts
@@ -4398,7 +4398,7 @@ focus_tree = {
 	
 	focus = {# Trial of the Federalists
 		id = CAL_trial_of_the_federalists
-		icon = GFX_goal_ideology_social_liberal
+		icon = GFX_goal_USA_mac_in_command
 		cost = 6.00
 		prerequisite = {
 			focus = CAL_american_values1
@@ -4433,7 +4433,7 @@ focus_tree = {
 	
 	focus = {# Reintegrated Army
 		id = CAL_loyal_army
-		icon = GFX_goal_ideology_social_liberal
+		icon = GFX_goal_USA_selective_service
 		cost = 6.00
 		prerequisite = {
 			focus = CAL_american_values1
@@ -4471,7 +4471,7 @@ focus_tree = {
 	
 	focus = {# Salute The Patriots
 		id = CAL_salute_the_patriots
-		icon = GFX_goal_ideology_social_liberal
+		icon = GFX_goal_USA_grand_leadership
 		cost = 6.00
 		prerequisite = {
 			focus = CAL_american_values1
@@ -4512,7 +4512,7 @@ focus_tree = {
 	
 	focus = {# GI Bill
 		id = CAL_the_gi_bill
-		icon = GFX_goal_ideology_social_conservative
+		icon = GFX_goal_generic_construct_civilian
 		cost = 5.00
 		prerequisite = {
 			focus = CAL_trial_of_the_federalists
@@ -4600,7 +4600,7 @@ focus_tree = {
 	
 	focus = {# Malice and Charity
 		id = CAL_malice_and_charity
-		icon = GFX_goal_ideology_social_conservative
+		icon = GFX_goal_generic_improve_relations
 		cost = 6.00
 		prerequisite = {
 			focus = CAL_trial_of_the_federalists
@@ -4816,7 +4816,7 @@ focus_tree = {
 
 	focus = {# Rebuild Americas Industry
 		id = CAL_rebuild_americas_industry
-		icon = GFX_goal_CAL_american_industry
+		icon = GFX_focus_generic_industry_2
 		cost = 6.00
 		prerequisite = {
 			focus = CAL_business_subsidies
@@ -5076,7 +5076,7 @@ focus_tree = {
 
 	focus = {# Aviation Industry
 		id = CAL_aviation_industry
-		icon = GFX_goal_CAL_freedom_fighters
+		icon = GFX_goal_expand_the_luftwaffe
 		cost = 6.00
 		prerequisite = {
 			focus = CAL_rebuild_the_roads
@@ -5304,7 +5304,7 @@ focus_tree = {
 	focus = {# Synthetic Oil
 		id = CAL_synthetic_oil
 		icon = GFX_goal_further_oil
-		cost = 6.00
+		cost = 5.00
 		prerequisite = {
 			focus = CAL_maritime_industry
 		}
@@ -5367,9 +5367,6 @@ focus_tree = {
 		prerequisite = {
 			focus = CAL_electrification
 		}
-		available = {
-			has_idea = CAL_civil_reconstruction_idea
-		}
 		relative_position_id = CAL_begin_reconstruction
 		x = 0
 		y = 4
@@ -5377,7 +5374,7 @@ focus_tree = {
 			factor = 50
 		}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CAL_reconstruction_finished"
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_restore_legitimacy"
 			add_political_power = 100
 			add_stability = 0.10
 			increase_ruling_party_popularity_by_5 = yes
@@ -5386,13 +5383,10 @@ focus_tree = {
 	
 	focus = {# Reconstruction Finished
 		id = CAL_reconstruction_finished
-		icon = GFX_goal_CAL_america_economic_miracle
+		icon = GFX_focus_generic_industry_3
 		cost = 6.00
 		prerequisite = {
 			focus = CAL_restore_legitimacy
-		}
-		available = {
-			has_idea = CAL_civil_reconstruction_idea
 		}
 		relative_position_id = CAL_begin_reconstruction
 		x = 0
