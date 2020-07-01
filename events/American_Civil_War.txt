@@ -524,10 +524,17 @@ country_event = { # Reach out
 	desc = amcivwar.4000.d
 	picture = ACW_soldiers_running
 
-	fire_only_once = yes
+	trigger = {
+	tag = CAL
+	has_global_flag = USA_president_reed
+	}
 	
-	is_triggered_only = yes
+	fire_only_once = yes
 
+	mean_time_to_happen = {
+	days = 2
+	}
+	
 	option = { #Try
 		name = amcivwar.4000.a
 		add_political_power = -10
@@ -562,7 +569,7 @@ country_event = { # CSA Response
 		add_political_power = 15
 		add_popularity = { ideology = syndicalist popularity = 0.05 }
 		add_popularity = { ideology = totalist popularity = 0.05 }
-		CSA = {
+		CAL = {
 		country_event = {
 		id = amcivwar.4002
 		hours = 5
@@ -577,7 +584,7 @@ country_event = { # CSA Response
 		add_war_support = -0.05
 		add_popularity = { ideology = social_democrat popularity = 0.05 }
 		add_popularity = { ideology = radical_socialist popularity = 0.05 }
-		CSA = {
+		CAL = {
 		country_event = {
 		id = amcivwar.4003
 		hours = 5
@@ -644,7 +651,6 @@ country_event = { ### HUEY LONG PEACE OUT###
 	has_war_with = TEX
 		}
 	}
-	date < 1939.1.1
 	}
 
 	fire_only_once = yes 
@@ -652,7 +658,7 @@ country_event = { ### HUEY LONG PEACE OUT###
 	option = {
 		name = amcivwar.4004.a
 		add_political_power = -10
-		add_manpower = -140
+		add_war_support = -0.04
 		TEX = {
 		country_event = {
 		id = amcivwar.4005
