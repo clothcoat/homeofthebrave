@@ -6860,7 +6860,7 @@ focus_tree = {
 	focus = {
 		id = TEX_break_war_mongerers
 		icon = GFX_goal_TEX_stop_american_warmongers
-		cost = 6.00
+		cost = 3.00
 		prerequisite = {
 			focus = TEX_oppose_american_syndicalism
 			focus = TEX_ideological_neutrality
@@ -6890,15 +6890,32 @@ focus_tree = {
 		cancel_if_invalid = yes
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TEX_break_war_mongerers"
-			add_war_support = -0.10
-			add_ideas = USA_fortress_america_idea_1
+			CAN = {
+			add_opinion_modifier = { target = TEX modifier = small_decrease }
+			add_political_power = -20
+			}
+			country_event = {
+			id = unionstate.160
+			days = 1
+			}
+			375 = {
+				if = {
+					limit = { is_owned_and_controlled_by = TEX }
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
 		}
 	}
 	
 	focus = {
 		id = TEX_contain_hostile_leftism
 		icon = GFX_goal_USA_new_interventionism
-		cost = 6.00
+		cost = 2.00
 		prerequisite = {
 			focus = TEX_break_war_mongerers
 			focus = TEX_align_nationalists
@@ -6977,12 +6994,17 @@ focus_tree = {
 	focus = {
 		id = TEX_end_carles
 		icon = GFX_goal_TEX_dismantle_arentina
-		cost = 6.00
+		cost = 1.50
 		prerequisite = {
 			focus = TEX_break_war_mongerers
 		}
 		available = {
 			is_subject = no
+		}
+		bypass = {
+		NOT = {
+		ARG = has_government
+			}
 		}
 		relative_position_id = TEX_popular_monroeism
 		x = 0
@@ -7002,15 +7024,22 @@ focus_tree = {
 		cancel_if_invalid = yes
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TEX_end_carles"
-			add_war_support = -0.10
-			add_ideas = USA_fortress_america_idea_1
+			add_war_support = 0.05
+			if = {
+			limit = { ARG = { has_government = national_populist }
+				}
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = ARG
+				}
+			}
 		}
 	}
 	
 	focus = {
 		id = TEX_break_militarists
 		icon = GFX_goal_USA_anti_imperialist_league
-		cost = 6.00
+		cost = 2.00
 		prerequisite = {
 			focus = TEX_break_war_mongerers
 		}
@@ -7035,19 +7064,34 @@ focus_tree = {
 		cancel_if_invalid = yes
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TEX_break_militarists"
-			add_war_support = -0.10
-			add_ideas = USA_fortress_america_idea_1
+			if = {
+			limit = { 
+			FROM = {
+			is_in_faction_with = TEX }
+				}
+			FROM = { national_populist popularity = -0.02 }
+			}
+			add_popularity = { ideology = national_populist popularity = -0.03 }
+			unlock_decision_category_tooltip = TEX_break_militarists_desc
+			set_rule = {
+				can_guarantee_other_ideologies = yes
+			}
 		}
 	}
 	focus = {
 		id = TEX_aid_paraguay
 		icon = GFX_goal_paraguay
-		cost = 6.00
+		cost = 1.50
 		prerequisite = {
 			focus = TEX_break_militarists
 		}
 		available = {
 			is_subject = no
+		}
+		bypass = {
+		PAR = {
+			exists = no
+			}
 		}
 		relative_position_id = TEX_popular_monroeism
 		x = -2
@@ -7067,15 +7111,31 @@ focus_tree = {
 		cancel_if_invalid = yes
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TEX_aid_paraguay"
-			add_war_support = -0.10
-			add_ideas = USA_fortress_america_idea_1
+			PAR = {
+			add_equipment_to_stockpile = {
+			type = light_tank_equipment
+			amount = 30
+			producer = TEX
+				}
+			add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 300
+			producer = TEX
+				}
+			add_political_power = 30
+			add_opinion_modifier = { target = TEX modifier = large_increase }
+			country_event = {
+				id = unionstate.155
+				days = 1
+				}
+			}
 		}
 	}
 	
 	focus = {
 		id = TEX_friendship_in_the_americas
 		icon = GFX_goal_USA_anti_syndicalist_alignment
-		cost = 6.00
+		cost = 2.50
 		prerequisite = {
 			focus = TEX_break_militarists
 		}
@@ -7106,15 +7166,26 @@ focus_tree = {
 		cancel_if_invalid = yes
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TEX_friendship_in_the_americas"
-			add_war_support = -0.10
-			add_ideas = USA_fortress_america_idea_1
+			if = {
+			limit = {
+			FROM = {
+				is_in_faction_with = ROOT
+					}
+				}
+			FROM = {
+			add_opinion_modifier = { target = ROOT modifier = medium_increase }
+				}
+			add_stability = 0.05
+			}
+			add_stability = 0.05
+			add_threat = -5
 		}
 	}
 	
 	focus = {
 		id = TEX_mutual_trade
 		icon = GFX_goal_generic_positive_trade_relations
-		cost = 6.00
+		cost = 4.00
 		prerequisite = {
 			focus = TEX_friendship_in_the_americas
 		}
@@ -7139,15 +7210,25 @@ focus_tree = {
 		cancel_if_invalid = yes
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TEX_mutual_trade"
-			add_war_support = -0.10
-			add_ideas = USA_fortress_america_idea_1
+			add_political_power = 30
+			if = {
+			limit = {
+			FROM = {
+				is_in_faction_with = ROOT
+					}
+				}
+			FROM = {
+			add_ideas = TEX_trade_deals
+				}
+			}
+			add_ideas = TEX_trade_deals
 		}
 	}
 	
 	focus = {
 		id = TEX_research_agreement
 		icon = GFX_goal_double_research
-		cost = 6.00
+		cost = 4.00
 		prerequisite = {
 			focus = TEX_friendship_in_the_americas
 		}
@@ -7172,8 +7253,25 @@ focus_tree = {
 		cancel_if_invalid = yes
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TEX_research_agreement"
-			add_war_support = -0.10
-			add_ideas = USA_fortress_america_idea_1
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 1
+				uses = 1
+				category = industry
+			}
+			if = {
+			limit = {
+			FROM = {
+				is_in_faction_with = ROOT
+					}
+				}
+			FROM = {
+			add_ideas = TEX_research_deals
+			}
+			TEX = {
+			add_ideas = TEX_research_deals
+				}
+			}
 		}
 	}
 	

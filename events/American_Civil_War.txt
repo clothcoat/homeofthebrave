@@ -5110,53 +5110,19 @@ country_event = { # Pledge of Alliegence
 		hidden_effect = {
 			set_country_flag = TEX_silver_legion_supported
 			country_event = {
-				id = amcivwar.49
-				days = 30
+				id = unionstate.3005
+				days = 70
 				random = 10
 			}
 		}
 	}
 	option = { # don't agree to the deal
 		name = amcivwar.48.b
-		ai_chance = {
-			factor = 5
-			modifier = {
-		    factor = 0
-			  has_game_rule = {
-					rule = TEX_post_civil_war
-					option = TEX_POST_CIVIL_WAR_PELLEY
-				}
-		  }
-		}
-		add_timed_idea = {
-			idea = TEX_no_silver_legion
-			days = 1095
-		}
-	}
-}
-
-country_event = { # The Silver Legion
-	id = amcivwar.49
-	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.49"}
-	title = amcivwar.49.t
-	desc = amcivwar.49.d
-	picture = ACW_artillery
-
-	fire_only_once = yes
-	is_triggered_only = yes
-
-	trigger = {
-		tag = TEX
-		has_global_flag = USA_civil_war_begun_flag
-		NOT = {
-			has_global_flag = USA_civil_war_over_flag
-		}
-		has_country_flag = TEX_silver_legion_supported
-	}
-
-	option = { # Flavor
-		name = amcivwar.49.a
-		add_manpower = 5000
+		country_event = {
+				id = unionstate.3005
+				days = 100
+				random = 10
+			}
 	}
 }
 
@@ -5170,25 +5136,25 @@ country_event = { # Chief of Staff
 	fire_only_once = yes
 	is_triggered_only = yes
 
-	trigger = {
-		tag = TEX
-		NOT = {
-			has_global_flag = USA_civil_war_over_flag
-		}
-		NOT = {
-			has_idea = TEX_George_Van_Horn_Moseley_cos
-			has_idea = TEX_James_Guthrie_Harbord_cos
-			has_idea = TEX_Virgil_H_'Bert'_Effinger_cos
-		}
-	}
-
-	option = { # George_Van_Horn_Moseley
+	option = { # Jacob "Smiling Jake" Devers
 		name = amcivwar.50.b
-		add_ideas = TEX_George_Van_Horn_Moseley_cos
+		add_ideas = TEX_Jacob_Devers_cos
+		army_experience = 10
 	}
-	option = { # James_Guthrie_Harbord
+	option = { # Lightning Joe Collins
 		name = amcivwar.50.c
-		add_ideas = TEX_James_Guthrie_Harbord_cos
+		add_ideas = TEX_Joseph_'Lightning_Joe'_Lawton_Collins_cos
+		army_experience = 10
+	}
+	option = { # Terry de la Mesa Allen Sr
+		name = amcivwar.50.c
+		add_ideas = TEX_Terry_de_la_Mesa_Allen_Sr_cos
+		army_experience = 10
+	}
+	option = { # Lightning Joe Collins
+		name = amcivwar.50.e
+		add_war_support = 0.05
+		add_political_power = 25
 	}
 }
 
@@ -5222,10 +5188,6 @@ country_event = { # Chief of Army
 		name = amcivwar.51.b
 		add_ideas = TEX_Frank_Maxwell_Andrews_carm
 	}
-	option = { # George_Smith_Patton_Jr
-		name = amcivwar.51.c
-		add_ideas = TEX_George_Smith_Patton_Jr_carm
-	}
 }
 
 country_event = { # Chief of Navy
@@ -5253,6 +5215,10 @@ country_event = { # Chief of Navy
 		name = amcivwar.52.a
 		add_ideas = TEX_Arthur_Lee_Willard_cnav
 	}
+	option = { # Lynne Quiggle
+		name = amcivwar.52.a
+		add_ideas = TEX_Lynne_C_Quiggle_cnav
+	}
 	option = { # William_Frederick_Halsey_Jr
 		name = amcivwar.52.c
 		add_ideas = TEX_William_Frederick_Halsey_Jr_cnav
@@ -5269,30 +5235,17 @@ country_event = { # Chief of Air Force
 	fire_only_once = yes
 	is_triggered_only = yes
 
-	trigger = {
-		tag = TEX
-		NOT = {
-			has_global_flag = USA_civil_war_over_flag
-		}
-		NOT = {
-			has_idea = TEX_Charles_Augustus_Lindbergh_cair
-			has_idea = TEX_John_Geraerdt_Crommelin_Jr_cair
-			has_idea = TEX_Curtis_LeMay_cair
-			has_idea = TEX_Martin_James_Monti_cair
-		}
-	}
-
-	option = { # Charles_Augustus_Lindbergh
+	option = { # James Fechet
 		name = amcivwar.53.a
-		add_ideas = TEX_Charles_Augustus_Lindbergh_cair
+		add_ideas = TEX_James_Fechet_cair
 	}
-	option = { # Curtis_LeMay
+	option = { # Edwin Charles Parsons
 		name = amcivwar.53.b
-		add_ideas = TEX_Curtis_LeMay_cair
+		add_ideas = TEX_Edwin_Charles_Parsons_cair
 	}
-	option = { # John_Geraerdt_Crommelin_Jr
+	option = { # William Thomas Ponder
 		name = amcivwar.53.c
-		add_ideas = TEX_John_Geraerdt_Crommelin_Jr_cair
+		add_ideas = TEX_William_Thomas_Ponder_cair
 	}
 }
 

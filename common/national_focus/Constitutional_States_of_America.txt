@@ -4170,7 +4170,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_african_missions"
-			custom_effect_tooltip = unlock_decision_category_tooltip
+			custom_effect_tooltip = CAR_missionaries_tooltip
 			add_political_power = 30
 			add_popularity = { ideology = national_populist popularity = 0.03 }
 		}

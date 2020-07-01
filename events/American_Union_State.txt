@@ -647,6 +647,10 @@ country_event = { # Formation of the Christian Party
 			days = 14
 			}
 		}
+		set_party_name = {
+			ideology = social_conservative
+			long_name = TEX_christian_party_long
+			name = TEX_christian_party }
 	}
 	option = { #No, we would alienate the right
 		name = unionstate.22.a
@@ -1002,7 +1006,7 @@ country_event = { #The Southern Tenant Farmers Union
 		add_popularity = { ideology = radical_socialist popularity = 0.01 }
 		hidden_effect = {
 		country_event = {
-			id = unionstate.29
+			id = unionstate.30
 			days = 12
 			}
 		}
@@ -1017,7 +1021,7 @@ country_event = { #The Southern Tenant Farmers Union
 		add_popularity = { ideology = radical_socialist popularity = 0.02 }
 		hidden_effect = {
 		country_event = {
-			id = unionstate.29
+			id = unionstate.30
 			days = 12
 			}
 		}
@@ -1081,9 +1085,13 @@ country_event = { #Second Great Migration
 		add_war_support = -0.05
 		add_stability = -0.04
 		add_political_power = -20
+		modify_country_flag = {
+		flag = AFP_leftism
+		value = -1
+		}
 		hidden_effect = {
 		country_event = {
-			id = unionstate.3004
+			id = unionstate.3003
 			days = 20
 			}
 		}
@@ -1096,7 +1104,7 @@ country_event = { #Second Great Migration
 		add_political_power = -15
 		hidden_effect = {
 		country_event = {
-			id = unionstate.3004
+			id = unionstate.3003
 			days = 20
 			}
 		}
@@ -1109,9 +1117,13 @@ country_event = { #Second Great Migration
 		add_war_support = 0.05
 		hidden_effect = {
 		country_event = {
-			id = unionstate.3004
+			id = unionstate.3003
 			days = 20
 			}
+		}
+		modify_country_flag = {
+		flag = AFP_leftism
+		value = 1
 		}
 	}
 }
@@ -1156,11 +1168,19 @@ country_event = { #Black Troop Debate
 		add_stability = -0.05
 		add_political_power = -30
 		army_experience = 5
+		modify_country_flag = {
+		flag = AFP_leftism
+		value = -1
+		}
 	}
 	option = { #We can not allow it
 		name = unionstate.3003.b
 		add_political_power = 30
 		add_stability = 0.03
+		modify_country_flag = {
+		flag = AFP_leftism
+		value = -1
+		}
 	}
 }
 
@@ -1204,6 +1224,23 @@ country_event = { #Minneapolis Syndicalists Strike
 				flag = ACW_socialist_resistance
 				value = -1
 		}
+	}
+}
+
+country_event = { #Silver Legion Grows
+	id = unionstate.3005
+	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.3005"}
+	title = unionstate.3005.t
+	desc = unionstate.3005.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #Pay them off
+		name = unionstate.3005.a
+		add_political_power = -40
+		add_popularity = { ideology = totalist popularity = 0.01 }
+		add_popularity = { ideology = syndicalist popularity = 0.02 }
 	}
 }
 
@@ -2353,6 +2390,64 @@ country_event = { ###Internationale Accepts###
 		add_political_power = 10
 		add_popularity = { ideology = radical_socialist popularity = 0.02 }
 		add_popularity = { ideology = social_democrat popularity = 0.02 }
+	}
+}
+
+country_event = { ###Deal with Canada###
+	id = unionstate.160
+	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.160"}
+	title = unionstate.160.t
+	desc = unionstate.160.d
+	picture = GFX_ACW_american_brigade
+
+	is_triggered_only = yes
+
+	option = {
+		name = unionstate.160.a
+		CAN = {
+		country_event = {
+			id = unionstate.161
+			days = 1
+			}
+		}
+		add_political_power = -25
+	}
+	option = {
+		name = unionstate.160.b
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = CAN
+		}
+		add_political_power = -45
+		add_manpower = 1000
+		add_war_support = 0.03
+		add_stability = -0.05
+	}
+	option = {
+		name = unionstate.160.c
+		add_stability = 0.05
+	}
+}
+
+country_event = {###We've been Embargoed
+	id = unionstate.161
+	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.161"}
+	title = unionstate.161.t
+	desc = unionstate.161.d
+	picture = GFX_ACW_american_brigade
+
+	is_triggered_only = yes
+
+	option = {
+		name = unionstate.161.a
+		add_political_power = -50
+		add_stability = -0.05
+		add_command_power = -10
+		decrease_ruling_party_popularity_by_5 = yes
+	}
+	option = {
+		name = unionstate.161.b
+		declare_war_on = {	type = annex_everything	target = TEX }
 	}
 }
 
