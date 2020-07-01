@@ -268,7 +268,7 @@ music = {
 }
 
 music = {
-	song = "16tons"
+	song = "sixteentons"
 
 	chance = {
 		modifier = {
@@ -351,3 +351,191 @@ music = {
 		}
 	}
 }
+
+music = {
+	song = "anythinggoes"
+
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = {
+				tag = CSA
+			}
+		}
+		modifier = {
+			factor = 2
+			tag = CSA
+		}
+	}
+}
+
+music = {
+	song = "godwilldefendtheright"
+
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = {
+				tag = COR
+			}
+		}
+		modifier = {
+			factor = 2
+			tag = COR
+		}
+	}
+}
+
+music = {
+	song = "johnsawduhnumbuh"
+
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = {
+				tag = COR
+			}
+		}
+		modifier = {
+			factor = 2
+			tag = COR
+		}
+	}
+}
+
+music = {
+	song = "mygodisarock"
+
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = {
+				tag = COR
+			}
+		}
+		modifier = {
+			factor = 2
+			tag = COR
+		}
+	}
+}
+
+music = {
+	song = "presidenthoovermarch"
+
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = {
+				tag = USA
+			}
+		}
+		modifier = {
+			factor = 2
+			tag = USA
+		}
+	}
+}
+
+music = {
+	song = "thebanneroflabour"
+
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = {
+				tag = CSA
+			}
+		}
+		modifier = {
+			factor = 2
+			tag = CSA
+		}
+	}
+}
+
+music = {
+	song = "thehuntersofkentucky"
+
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = {
+				tag = COR
+			}
+		}
+		modifier = {
+			factor = 2
+			tag = COR
+		}
+	}
+}
+
+music = {
+	song = "thelandsong"
+
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = {
+				tag = CSA
+			}
+		}
+		modifier = {
+			factor = 2
+			tag = CSA
+		}
+	}
+}
+
+music = {
+	song = "thereispowerinaunion"
+
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = {
+				tag = CSA
+			}
+		}
+		modifier = {
+			factor = 2
+			tag = CSA
+		}
+	}
+}
+
+music = {
+	song = "thesouth"
+
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = {
+				tag = COR
+			}
+		}
+		modifier = {
+			factor = 2
+			tag = COR
+		}
+	}
+}
+
+music = {
+	song = "workingmanunion"
+
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = {
+				tag = CSA
+			}
+		}
+		modifier = {
+			factor = 2
+			tag = CSA
+		}
+	}
+}
+
