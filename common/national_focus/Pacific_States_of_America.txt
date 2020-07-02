@@ -11444,8 +11444,21 @@ focus_tree = {
 		y = 0
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_national_immigration_act"
-			add_ideas = CAL_NIAR
-			
+			add_ideas = CAL_NIAR_idea
+			add_manpower = 5000
+			add_opinion_modifier = {
+			target = MEX
+			modifier = small_increase
+			}
+			add_opinion_modifier = {
+			target = CHI
+			modifier = small_increase
+			}
+			add_opinion_modifier = {
+			target = JAP
+			modifier = small_increase
+			}
+			decrease_ruling_party_popularity_by_5 = yes
 		}
 	}
 	
@@ -11481,32 +11494,12 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_ban_race_mixing"
-		}
-	}
-	
-	focus = {# Hire Black Americans
-		id = CAL_hire_black_americans
-		icon = GFX_hire_black_americans
-		cost = 5.00
-		prerequisite = {
-		focus = CAL_oppose_radicals
-		focus = CAL_fund_black_education
-		}
-		available = {
-			has_government = market_liberal
-			has_government = social_liberal
-			has_government = social_democrat
-		}
-		ai_will_do = {
-			factor = 5
-		}
-		available_if_capitulated = yes
-		cancel_if_invalid = yes
-		relative_position_id = CAL_repatriation
-		x = 3
-		y = 4
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CAL_hire_black_americans"
+			add_political_power = 50
+			add_command_power = 10
+			modify_country_flag = {
+				flag = ACW_klan_resistance
+				value = -2
+			}
 		}
 	}
 	
@@ -11534,7 +11527,7 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_jazz_crackdown"
-			add_political_power = 50
+			add_political_power = 20
 			add_popularity = { ideology = social_liberal popularity = -0.03 }
 			add_popularity = { ideology = social_democrat popularity = -0.03 }
 			add_popularity = { ideology = radical_socialist popularity = -0.02 }
@@ -11562,8 +11555,14 @@ focus_tree = {
 		y = 2
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_blind_eye"
-			increase_ruling_party_popularity_by_5 = yes
-			add_stability = 0.05
+			add_popularity = { ideology = syndicalist popularity = -0.05 }
+			add_popularity = { ideology = totalist popularity = -0.05 }
+			add_political_power = 25
+			add_war_support = 0.05
+			modify_country_flag = {
+				flag = ACW_klan_resistance
+				value = -2
+			}
 		}
 	}
 	
@@ -11592,35 +11591,15 @@ focus_tree = {
 		y = 0
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_denounce_race_hatred"
+			add_political_power = -20
+			add_stability = 0.08
+			add_manpower = 1000
 			hidden_effect = {
 			country_event = {
 			id = ustates.308
 			days = 15
 				}
 			}
-		}
-	}
-	
-	focus = {# Oppose Integration
-		id = CAL_oppose_radicals
-		icon = GFX_oppose_radicals
-		cost = 5.00
-		prerequisite = {
-		focus = CAL_conditional_black_aid
-		}
-		available = {
-			has_government = authoritarian_democrat
-		}
-		ai_will_do = {
-			factor = 5
-		}
-		available_if_capitulated = yes
-		cancel_if_invalid = yes
-		relative_position_id = CAL_ban_race_mixing
-		x = 1
-		y = 2
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CAL_oppose_radicals"
 		}
 	}
 	
@@ -11651,6 +11630,39 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_conditional_black_aid"
+			add_political_power = 20
+			add_stability = 0.04
+			increase_ruling_party_popularity_by_5 = yes
+		}
+	}
+	
+	focus = {# Oppose Integration
+		id = CAL_oppose_radicals
+		icon = GFX_oppose_radicals
+		cost = 5.00
+		prerequisite = {
+		focus = CAL_conditional_black_aid
+		}
+		available = {
+			has_government = authoritarian_democrat
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		available_if_capitulated = yes
+		cancel_if_invalid = yes
+		relative_position_id = CAL_ban_race_mixing
+		x = 1
+		y = 2
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_oppose_radicals"
+			add_popularity = { ideology = syndicalist popularity = -0.02 }
+			add_popularity = { ideology = totalist popularity = -0.02 }
+			add_popularity = { ideology = paternal_autocrat popularity = -0.02 }
+			modify_country_flag = {
+				flag = ACW_klan_resistance
+				value = -1
+			}
 		}
 	}
 	
@@ -11706,6 +11718,76 @@ focus_tree = {
 		}
 	}
 	
+	focus = {# Hire Black Americans
+		id = CAL_hire_black_americans
+		icon = GFX_hire_black_americans
+		cost = 5.00
+		prerequisite = {
+		focus = CAL_oppose_radicals
+		focus = CAL_fund_black_education
+		}
+		available = {
+			has_government = social_conservative
+			has_government = market_liberal
+			has_government = social_liberal
+			has_government = social_democrat
+			has_government = radical_socialist
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		available_if_capitulated = yes
+		cancel_if_invalid = yes
+		relative_position_id = CAL_repatriation
+		x = 3
+		y = 4
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_hire_black_americans"
+			add_political_power = -45
+			add_manpower = 10000
+			increase_ruling_party_popularity_by_5 = yes
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = CAL
+					is_controlled_by = CAL
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = CAL
+					is_controlled_by = CAL
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = CAL
+					is_controlled_by = CAL
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
 	focus = {# New Lily White Movement
 		id = CAL_lily_white_movement
 		icon = GFX_new_lily_white_movement
@@ -11713,9 +11795,6 @@ focus_tree = {
 		prerequisite = {
 		focus = CAL_blind_eye
 		focus = CAL_oppose_radicals
-		}
-		available = {
-			has_government = authoritarian_democrat
 		}
 		ai_will_do = {
 			factor = 5
@@ -11726,7 +11805,10 @@ focus_tree = {
 		x = 0
 		y = 3
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CAL_AFDC"
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_lily_white_movement"
+			add_political_power = 75
+			add_command_power = 30
+			increase_ruling_party_popularity_by_5 = yes
 		}
 	}
 	
@@ -11749,7 +11831,10 @@ focus_tree = {
 		x = -1
 		y = 4
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CAL_AFDC"
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_increase_segregation"
+			add_political_power = 35
+			add_stability = 0.1
+			add_war_support = 0.05
 		}
 	}
 	
@@ -11773,7 +11858,10 @@ focus_tree = {
 		x = 1
 		y = 4
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CAL_AFDC"
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_support_seperatism"
+			add_popularity = { ideology = paternal_autocrat popularity = -0.02 }
+			add_stability = 0.05
+			add_war_support = 0.03
 		}
 	}
 	
@@ -11796,7 +11884,9 @@ focus_tree = {
 		x = 3
 		y = 4
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CAL_AFDC"
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_encourage_integration"
+			add_political_power = -50
+			add_manpower = 25000
 		}
 	}
 

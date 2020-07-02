@@ -1777,13 +1777,27 @@ ideas = {
 			allowed_civil_war = { always = yes }
 			picture = HOL_welfare_state
 			modifier = {
-				stability_weekly = 0.005
+				stability_weekly = 0.01
 				consumer_goods_factor = -0.02
 				monthly_population = -0.15
 				party_popularity_stability_factor = 0.05
 			}
 		}
-
+		
+		###Civil Rights###
+		
+		CAL_NIAR_idea = {#Immigration Act Reformed
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_NIAR_idea"}
+			allowed = {	always = no	}
+			allowed_civil_war = { always = yes }
+			picture = HOL_welfare_state
+			modifier = {
+				trade_opinion_factor = 0.05
+				monthly_population = 0.1
+				party_popularity_stability_factor = -0.05
+			}
+		}
+		
 		###Foreign Policy###
 		
 		###New Moralism###
