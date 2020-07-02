@@ -757,7 +757,7 @@ focus_tree = {
 		}
 		available = {
 			custom_trigger_tooltip = {
-				has_country_flag = USA_murray_is_president
+				has_global_flag = USA_murray_is_president
 				has_country_flag = USA_election_1936_flag
 				NOT = { has_country_flag = USA_had_1940_election }
 			}
@@ -841,7 +841,7 @@ focus_tree = {
 		cost = 6.00
 		available = {
 				has_country_flag = USA_president_inaugurated
-				has_country_flag = USA_garner_is_president
+				has_global_flag = USA_garner_is_president
 			}
 		x = 11
 		y = 1

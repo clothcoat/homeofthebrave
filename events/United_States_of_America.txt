@@ -1716,6 +1716,7 @@ country_event = { # The 1936 Election - Coalition
 				ideology = market_liberal_subtype
 				traits = {}
 			}
+			set_global_flag = USA_president_curtis
 		}
 		set_politics = {
 			ruling_party = market_liberal
@@ -1782,15 +1783,16 @@ country_event = { # The 1936 Election - Coalition
 			add_ideas = USA_Charles_Evans_Hughes_Sr_sec_sli
 			create_country_leader = {
 				name = "Alf Landon"
-				desc = "POLITICS_CHARLES_CURTIS_DESC"
+				desc = "POLITICS_ALF_LANDON_DESC"
 				picture = "gfx/leaders/USA/Portrait_USA_Alf_Landon_KR.tga"
 				expire = "1965.1.1"
-				ideology = market_liberal_subtype
+				ideology = social_liberal_subtype
 				traits = {}
 			}
+			set_global_flag = USA_president_landon
 		}
 		set_politics = {
-			ruling_party = market_liberal
+			ruling_party = social_liberal
 			election_frequency = 48
 			elections_allowed = yes
 		}
@@ -2080,7 +2082,7 @@ country_event = { # The 1936 Election - Coalition
 			elections_allowed = yes
 		}
 		hidden_effect = {
-			set_country_flag = USA_murray_is_president
+			set_global_flag = USA_murray_is_president
 		}
 		hidden_effect = {
 			add_ideas = USA_William_Murray_hog
@@ -2261,7 +2263,7 @@ country_event = { # The 1936 Election - Coalition
 			elections_allowed = yes
 		}
 		hidden_effect = {
-			set_country_flag = USA_garner_is_president
+			set_global_flag = USA_garner_is_president
 		}
 		hidden_effect = {
 			add_ideas = USA_John_Nance_Garner_hog_sco
@@ -2411,7 +2413,7 @@ country_event = { # The 1936 Election - You're Fucked (Or are you...)
 		}
 		add_political_power = -100
 		hidden_effect = {
-			set_country_flag = USA_garner_is_president
+			set_global_flag = USA_garner_is_president
 		}
 		set_politics = {
 			ruling_party = social_conservative
@@ -4597,8 +4599,13 @@ country_event = { # MacArthur and the Army Remove Republicans
 		NOT = { has_country_flag = USA_macarthur_coup }
 	}
 
-	option = {
+	option = { #Flee
 		name = ustates.78.a
+		set_global_flag = USA_Republicans_Flee
+		add_stability = -0.05
+		add_political_power = -40
+		add_war_support = -0.05
+		add_manpower = -2500
 		set_politics = {
 			ruling_party = paternal_autocrat
 			elections_allowed = no
@@ -4613,6 +4620,7 @@ country_event = { # MacArthur and the Army Remove Republicans
 	}
 	option = {
 		name = ustates.78.b
+		add_political_power = 45
 		set_politics = {
 			ruling_party = paternal_autocrat
 			elections_allowed = no
@@ -5526,6 +5534,8 @@ country_event = { # MacArthur and the Army Remove Garner
 
 	option = {
 		name = ustates.104.a
+		add_political_power = -30
+		add_stability = -0.08
 		set_politics = {
 			ruling_party = paternal_autocrat
 			elections_allowed = no
@@ -5538,6 +5548,7 @@ country_event = { # MacArthur and the Army Remove Garner
 		}
 		hidden_effect = {
 			country_event = { id = amcivwar.15 days = 1 }
+			set_global_flag = USA_Garner_Flees
 		}
 	}
 }

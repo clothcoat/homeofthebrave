@@ -24,6 +24,21 @@ CAL_paternal_autocrat_party_long:0 "Federalist Loyalists"
 CAL_national_populist_party:0 "The Spiritualist Movement"
 CAL_national_populist_party_long:0 "The Spiritualist Movement"
 
+CAL_prog_dominance_party:0 "Progressive Party"
+CAL_prog_dominance_long:0 "Progressive Party"
+CAL_liberal_dominance_long:0 "Democratic-Republican Party"
+CAL_liberal_dominance_party:0 "Democratic-Republican Party"
+CAL_classical_liberal_dominance_long:0 "Republican Party"
+CAL_classical_liberal_dominance_party:0 "Republican Party"
+CAL_conservative_dominance_long:0 "Democratic Party"
+CAL_conservative_dominance_party:0 "Democratic Party"
+CAL_radical_dominance_long:0 "Commonwealth Party"
+CAL_radical_dominance_party:0 "Commonwealth Party"
+CAL_new_paternal_autocrat_party_long:0 "National Democratic Party"
+CAL_new_paternal_autocrat_party:0 "National Democratic Party"
+CAL_new_aut_dem_party_long:0 "National Democratic Party"
+CAL_new_aut_dem_party:0 "National Democratic Party"
+
 ### Ideas ###
 
 ### William Randolph Hearst ###
@@ -241,6 +256,7 @@ CAL_Operation_Liberty_mission_desc:0 "With the Civil War raging on the other sid
 
 ### Flags ###
 PSA_reunited_america_flag:0 "America has been reunited"
+PSA_1937_election_hearst:0 "Hearst Won the Election"
 
 ### Decisions ###
 USA_civil_war_decisions:0 "Civil War Decisions"
@@ -761,6 +777,7 @@ CAL_liberals_win_twice:0 "Social Liberals Win Twice"
 CAL_liberals_win_twice_desc:0 "The Liberals have won re-election as our citizens trust in a mixed economy as our bureaucratic safety nets promote either maximum efficiency or greater well-being to the common man."
 CAL_fpc:0 "Federal Power Commission"
 CAL_glass_steagall:0 "Glass–Steagall"
+CAL_glass_steagall_desc:0 "Investment and retail banking have long been intertwined, encouraging the kind of instability we saw with runs on the banks when bank investments soured. We must formally separate the two."
 CAL_FDIC:0 "Federal Deposit Insurance Corporation"
 CAL_AFDC:0 "Aid to Families with Dependent Children"
 
@@ -790,8 +807,11 @@ CAL_blue_laws_desc:0 "It is unbelievable that on Sundays people must work when t
 
 ### Anti-Civil Rights###
 CAL_ban_race_mixing:0 "Federal Ban on Race Mixing"
+CAL_ban_race_mixing_desc:0 "Race-Mixing will cause nothing more than the downfall of the caucasian race, as documented by men such as Madison Grant. For the sake of civilization race-mixing must be banned."
 CAL_jazz_crackdown:0 "Jazz Crackdown"
+CAL_jazz_crackdown_desc:0 "Jazz is not merely a harmless hobby for the black community but an insidious means of seducing white women or a hub of drugs as is documented in the Hearst Papers. Some well-enforced raids and investigations should cut down."
 CAL_blind_eye:0 "Turn a Blind Eye"
+CAL_blind_eye_desc:0 "While the Klan is our enemy when they seek to take control of the state the point that mobs will sometimes enforce rules where the law can not still stands. It would ease our relations with them if we appointed judges who seemed more open to this view."
 CAL_lily_white_movement:0 "New Lily White Movement"
 CAL_increase_segregation:0 "Fund Local Segregation"
 
@@ -1044,9 +1064,10 @@ pacificstates.4.f:0 "Louis B. Mayer"
 
 pacificstates.5.t:0 "[GetYear] Democratic Convention"
 pacificstates.5.d:0 "The Democratic Party bosses have three proposals for the nominee in [GetYear]: Running on a more moderate platform is California business manufacturer Henry J. Kaiser while Oregon Senator and former military officer Charles H Martin us running to his right. As the party bosses are unsure about the enthusiasm either men generate, there is a proposal to draft the popular businessman and cultural figure Walt Disney, whose top men have teased the idea of running. While the last of these proposals is unorthodox the Democratic Party has suffered from several splits and may need a more unifying figure to win. Who shall be the nominee for the Democratic Party?"
-pacificstates.5.a:0 "Charles H. Martin"
-pacificstates.5.b:0 "Henry J. Kaiser"
+pacificstates.5.a:0 "Henry J. Kaiser"
+pacificstates.5.b:0 "Charles Martin"
 pacificstates.5.c:0 "Draft Disney"
+pacificstates.5.e:0 "Keep Garner"
 
 pacificstates.6.t:0 "The Election"
 pacificstates.6.d:0 "The Election is finally upon us, with each party hoping to take its place in the Presidency. Thanks to the many parties running and the First-past the post system the party with the most votes will undoubedly hold a disproportionate number of seats in Congress."
@@ -1065,25 +1086,25 @@ pacificstates.6002.t:0 "Progressives Join the Democratic-Republicans"
 pacificstates.6002.d:0 "With the growing popularity of our economic policies among reformers, the Progressives have folded into the Democratic-Republicans to improve their chances in the first-past-the-post system."
 pacificstates.6002.a:0 "Good"
 
-pacificstates.6004.t:0 "Democrats join the Republicans"
+pacificstates.6003.t:0 "Democrats join the Republicans"
+pacificstates.6003.d:0 "With the growing popularity of our economic policies among reformers, the Democrats have folded into the Republicans to improve their chances in the first-past-the-post system."
+pacificstates.6003.a:0 "Good"
+
+pacificstates.6004.t:0 "Republicans join the Democrats"
 pacificstates.6004.d:0 "With the growing popularity of our economic policies among reformers, the Democrats have folded into the Republicans to improve their chances in the first-past-the-post system."
 pacificstates.6004.a:0 "Good"
-
-pacificstates.6005.t:0 "Republicans join the Democrats"
-pacificstates.6005.d:0 "With the growing popularity of our economic policies among reformers, the Democrats have folded into the Republicans to improve their chances in the first-past-the-post system."
-pacificstates.6005.a:0 "Good"
 
 pacificstates.6005.t:0 "Progressives drift toward the Commonwealth Party"
 pacificstates.6005.d:0 "With the growing popularity of our economic policies among reformers, the Progressives support base has increasingly folded into the Commonwealth Party to improve their chances in the first-past-the-post system despite some progressives being somewhat uneasy about the idea, viewing them as too hostile to farmers."
 pacificstates.6005.a:0 "Good"
 
-pacificstates.6005.t:0 "Two Party System Formalizes"
-pacificstates.6005.d.progs:0 "In order to oppose our increasing absorption of the Democratic-Republicans, the Democrats and Republican Party have agreed to a party merge under the Constitutional Party, and are increasingly taking on former independent supporters that leaned towards the National Democrats. In response, the Commonwealth Parties supporters are backing us in increasing elections, leaving the Commonwealth Party irrelevant on a national level and returning the Two-Party system as the dominant one, for better or worse."
-pacificstates.6005.d.libs:0 "In order to oppose our increasing absorption of the Progressives, the Democrats and Republican Party have agreed to a party merge, and are increasingly taking on former independent supporters that leaned towards the National Democrats. In response, the Commonwealth Parties supporters are backing us in increasing elections, leaving the Commonwealth Party irrelevant and returning the Two-Party system as the dominant one, for better or worse."
-pacificstates.6005.d.reps:0 "In order to oppose our increasing absorption of the Democrats, the Progressives and Democratic-Republican party have agreed to a party merge, and are increasingly taking on former independent supporters that leaned towards the Commonwealth Party. In response, the National Democrats supporters are backing us in increasing elections, leaving the National Democrats irrelevant and returning the Two-Party system as the dominant one, for better or worse."
-pacificstates.6005.d.dems:0 "In order to oppose our increasing absorption of the Republicans, the Progressives and Democratic-Republican party have agreed to a party merge, and are increasingly taking on former independent supporters that leaned towards the Commonwealth Party. In response, the National Democrats supporters are backing us in increasing elections, leaving the National Democrats irrelevant and returning the Two-Party system as the dominant one, for better or worse."
-pacificstates.6005.d.commonwealth:0 "In order to oppose our increasing absorption of the Progressives, the Democrats and Republicans have agreed to a party merge, and are increasingly taking on former independent supporters that leaned towards the National Democrats. In response, the Progressive Parties supporters are backing us in increasing elections and the Democratic-Republicans are splitting between the two parties, leaving the Two-Party system as the dominant one once again."
-pacificstates.6005.a:0 "Very well"
+pacificstates.6006.t:0 "Two Party System Formalizes"
+pacificstates.6006.d.progs:0 "In order to oppose our increasing absorption of the Democratic-Republicans, the Democrats and Republican Party have agreed to a party merge under the Democratic Party, and are increasingly taking on former independent supporters that leaned towards the National Democrats. In response, the Commonwealth Parties supporters are backing us in increasing elections, leaving the Commonwealth Party irrelevant on a national level and returning the Two-Party system as the dominant one, for better or worse."
+pacificstates.6006.d.libs:0 "In order to oppose our increasing absorption of the Progressives, the Democrats and Republican Party have agreed to a party merge, and are increasingly taking on former independent supporters that leaned towards the National Democrats. In response, the Commonwealth Parties supporters are backing us in increasing elections, leaving the Commonwealth Party irrelevant and returning the Two-Party system as the dominant one, for better or worse."
+pacificstates.6006.d.reps:0 "In order to oppose our increasing absorption of the Democrats, the Progressives and Democratic-Republican party have agreed to a party merge, and are increasingly taking on former independent supporters that leaned towards the Commonwealth Party. In response, the National Democrats supporters are backing us in increasing elections, leaving the National Democrats irrelevant and returning the Two-Party system as the dominant one, for better or worse."
+pacificstates.6006.d.dems:0 "In order to oppose our increasing absorption of the Republicans, the Progressives and Democratic-Republican party have agreed to a party merge, and are increasingly taking on former independent supporters that leaned towards the Commonwealth Party. In response, the National Democrats supporters are backing us in increasing elections, leaving the National Democrats irrelevant and returning the Two-Party system as the dominant one, for better or worse."
+pacificstates.6006.d.commonwealth:0 "In order to oppose our increasing absorption of the Progressives, the Democrats and Republicans have agreed to a party merge, and are increasingly taking on former independent supporters that leaned towards the National Democrats. In response, the Progressive Parties supporters are backing us in increasing elections and the Democratic-Republicans are splitting between the two parties, leaving the Two-Party system as the dominant one once again."
+pacificstates.6006.a:0 "Very well"
 
 pacificstates.7.t:0 "[GetYear] Progressive Convention"
 pacificstates.7.d.president:0 "The Progressive Party has unanimously re-nominated the current president, [CAL.GetLeader], as their candidate in the election."

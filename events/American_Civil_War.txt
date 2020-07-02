@@ -358,7 +358,40 @@ country_event = { # WCC released
 		add_manpower = 15000
 		hidden_effect = {
 			USA_initial_events = yes
+			if = {
+			limit = { has_global_flag = USA_reed_was_president }
 			news_event = { id = amcivwar.4 hours = 8 }
+			}
+			else_if = {
+			limit = { has_global_flag = USA_long_is_president
+			news_event = { id = amcivwar.9 hours = 8 }
+				}
+			}
+			else_if = {
+			limit = { has_global_flag = USA_murray_is_president
+			news_event = { id = amcivwar.1020 hours = 8 }
+				}
+			}
+			else_if = {
+			limit = { has_global_flag = USA_garner_is_president
+			news_event = { id = amcivwar.16 hours = 8 }
+				}
+			}
+			else_if = {
+			limit = { has_country_flag = USA_president_norris
+			news_event = { id = amcivwar.19 hours = 8 }
+				}
+			}
+			else_if = {
+			limit = { 
+			OR = {
+			has_global_flag = USA_president_curtis
+			has_global_flag = USA_president_landon
+				}
+			}
+			news_event = { id = amcivwar.1300 hours = 8 }
+				}
+			}
 			country_event = { id = amcivwar.5 days = 30 }
 		}
 		WCC = {
@@ -979,11 +1012,11 @@ country_event = { #AUS-CSA Treaty Collapses
 		hidden_effect = {
 		TEX = {
 		country_event = {
-		id = csa.4015 days = 5
+		id = amcivwar.4015 days = 5
 			}
 		}
 		country_event = {
-		id = csa.4016 days = 14
+		id = amcivwar.4016 days = 14
 			}
 		}
 	}
@@ -1055,10 +1088,13 @@ country_event = { #Treaty with the US
 
 	option = { #Send Bilbo
 		name = amcivwar.4017.a
+		ai_chance = {
+			factor = 100
+		}
 		add_political_power = -20
 		USA = {
 		country_event = {
-		id = csa.4018 days = 1 
+		id = amcivwar.4018 days = 1 
 			}
 		}
 	}
@@ -1085,12 +1121,12 @@ country_event = { #CAR treaty
 		hidden_effect = {
 		COR = {
 		country_event = {
-		id = csa.4019 days = 1
+		id = amcivwar.4019 days = 1
 			}
 		}
 		COR = {
 		country_event = {
-		id = csa.4020 days = 200 
+		id = amcivwar.4021 days = 200 
 				}
 			}
 		}
@@ -1101,7 +1137,7 @@ country_event = { #CAR treaty
 		hidden_effect = {
 		COR = {
 		country_event = {
-		id = csa.4020 days = 1
+		id = amcivwar.4020 days = 1
 				}
 			}
 		}
@@ -1192,14 +1228,25 @@ country_event = { # Last Men Standing
 	has_country_flag = PSA_CSA_TREATY
 	}
 	CAL = {
-	has_war	= no
 	exists = yes
-	}
+		}
+	OR = {
+	NOT = {
 	TEX = {
-	has_war	= no
-	}
+	has_war_with = CAL
+			}
+		}
+	TEX = {
+	exists = no
+		}
+	NOT = {
 	CSA = {
-		has_war	= no
+		has_war_with = CAL
+			}
+		}
+	CSA = {
+		exists = no
+		}
 	}
 	COR = {
 		exists = no
@@ -1210,7 +1257,6 @@ country_event = { # Last Men Standing
 	USA = {
 		exists = no
 		}
-	date > 1937.7.1
 	}
 	
 	mean_time_to_happen = {
@@ -1234,7 +1280,7 @@ country_event = { # Last Men Standing
 		exists = yes
 		has_war = no
 		}
-	CSA = {
+	CAL = {
 		has_war = no
 		}
 	}
@@ -1251,8 +1297,8 @@ country_event = { # Last Men Standing
 	CSA = {
 		exists = yes
 		has_war = no
-	}
-	}
+			}
+		}
 	}
 	
 	desc = {  ###CSAPSA AT PEACE###
@@ -1277,6 +1323,21 @@ country_event = { # Last Men Standing
 
 	option = { ###Send the Offer
 	name = amcivwar.5000.a
+	ai_will_do = {
+			factor = 95
+			modifier = {
+				modifier = 0.1
+				has_government = social_conservative
+			}
+			modifier = {
+				modifier = 0.3
+				has_government = market_liberal
+			}
+			modifier = {
+				modifier = 0.5
+				has_government = social_liberal
+			}
+	}
 	if = {
 	limit = { has_country_flag = PSA_AUS_TREATY 
 	OR = {
@@ -1288,10 +1349,14 @@ country_event = { # Last Men Standing
 	}
 	TEX = {
 		exists = yes
-		has_war = no
+		NOT = {
+		has_war_with = CAL
+			}
 		}
+	NOT = {
 	CSA = {
-		has_war = no
+		has_war_with = CAL
+			}
 		}
 	}
 	TEX = {
@@ -1306,11 +1371,9 @@ country_event = { # Last Men Standing
 	has_country_flag = PSA_CSA_TREATY
 	TEX = {
 		exists = yes
-		has_war = no
 		}
 	CSA = {
 		exists = yes
-		has_war = no
 	}
 	}
 	TEX = {
@@ -1364,10 +1427,11 @@ country_event = { # Last Men Standing
 		}
 		TEX = {
 		exists = yes
-		has_war = no
 		}
+		NOT = {
 		CSA = {
-		has_war = no
+		has_war_with = CAL
+			}
 		}
 	}
 	TEX = {
@@ -1384,11 +1448,9 @@ country_event = { # Last Men Standing
 		has_country_flag = PSA_CSA_TREATY
 		TEX = {
 		exists = yes
-		has_war = no
 		}
 		CSA = {
 		exists = yes
-		has_war = no
 	}
 	}
 	hidden_effect = {
@@ -1440,9 +1502,7 @@ country_event = { # PSA Demands we stand down
 	picture = ACW_soldiers_running
 	
 	is_triggered_only = yes
-	
-	fire_only_once = yes 
-	
+		
 	desc = { ###AUS Must stand down###
 	text = amcivwar.5001.d.AUSPSA
 	trigger = {
@@ -1514,9 +1574,7 @@ country_event = { # PSA offers peace
 	picture = GFX_Long_Rally
 
 	is_triggered_only = yes
-	
-	fire_only_once = yes
-	
+		
 	desc = { ###AUS offered peace###
 	text = amcivwar.5002.d.AUSPSA
 	trigger = {
@@ -1625,6 +1683,14 @@ country_event = { ### Long Accepts ###
 	
 	option = {
 	add_stability = 0.03
+	hidden_effect = {
+	TEX = {
+	country_event = {
+	id = amcivwar.5005
+	days = 15
+				}
+			}
+		}
 	}
 }
 
@@ -1641,6 +1707,14 @@ country_event = { ### CSA Accepts ###
 	
 	option = {
 	add_stability = 0.03
+	hidden_effect = {
+	CSA = {
+	country_event = {
+	id = amcivwar.5005
+	days = 15
+				}
+			}
+		}
 	}
 }
 
@@ -1651,52 +1725,8 @@ country_event = { ### Voting Begins ###
 	desc = amcivwar.5005.d
 	picture = GFX_Long_Rally
 
-	trigger = {
-	tag = CAL
-	NOT = {
-	has_country_flag = ACW_voting_starts
-	}
-	if = {
-	limit = {
-	CSA = {
-	exists = yes
-	has_global_flag = ACW_CSA_ACCEPTS_PEACE
-		}
-	}
-	tag = CSA
-	}
-	if = {
-	limit = {
-	TEX = {
-	exists = yes
-	has_global_flag = ACW_LONG_ACCEPTS_PEACE
-		}
-	}
-	tag = TEX
-	}
-	OR = {
-	CSA = {
-	exists = yes
-	has_global_flag = ACW_CSA_ACCEPTS_PEACE
-	NOT = {
-	has_war_with = TEX
-	has_war_with = CAL
-			}
-		}
-	TEX = {
-	exists = yes
-	has_global_flag = ACW_LONG_ACCEPTS_PEACE
-	NOT = {
-	has_war_with = CSA
-	has_war_with = CAL
-			}
-		}
-	}
-	}
+	is_triggered_only = yes
 	
-	mean_time_to_happen = {
-	months = 1
-	}
 	option = {
 	add_political_power = 25
 	add_stability = 0.05
@@ -1721,50 +1751,72 @@ country_event = { # Results are in
 
 	trigger = {
 	has_country_flag = ACW_voting_starts
-	if = {
-	limit = {
-	CAL = { is_ai = no
+	CAL = {
+	exists = yes
+		}
+	OR = {
+	TEX = {
+	exists = yes
+		}
+	CSA = {
+	exists = yes
 		}
 	}
+	OR = {
+	AND = {
+	CAL = { 
+	is_ai = no
+		}
 	tag = CAL
 	}
-	if = {
-	limit = {
+	AND = {
 	CSA = { is_ai = no
 		}
-	}
 	tag = CSA
 	}
-	if = {
-	limit = {
+	AND = {
 	TEX = { is_ai = no
 		}
-	}
 	tag = TEX
 	}
-	else = {
+	AND = {
+	OR = {
+	TEX = {
+	is_ai = yes
+		}
+	TEX = {
+		exists = no
+		}
+	}
+	CSA = {
+	is_ai = yes
+		}
+	CAL = {
+	is_ai = yes
+		}
 	tag = CAL
+		}
 	}
 	NOT = {
 	OR = {
 	CSA = {
 	has_war_with = TEX
 	has_war_with = CAL
-		}
+			}
 	CAL = {
 	has_war_with = TEX
 	has_war_with = CSA
-		}
+			}
 	TEX = {
 	has_war_with = CSA
 	has_war_with = CAL
+			}
 		}
-	}
 	}
 	}
 	
 	mean_time_to_happen = {
-	days = 20
+	days = 30
 	}
 	
 	fire_only_once = yes 
@@ -1781,7 +1833,7 @@ country_event = { # Results are in
 	annex_country = {
 	target = TEX
 	transfer_troops = yes
-		}
+			}
 		}
 	}
 	if = {
@@ -1807,7 +1859,7 @@ country_event = { # Results are in
 	limit = { tag = CSA }
 	CAL = {
 		change_tag_from = CSA
-		}
+			}
 		}
 	}
 	}
@@ -1898,11 +1950,14 @@ country_event = { # Last Men Standing - CSA and AUS
 	tag = TEX
 	TEX = {
 	exists = yes
-	has_war = no
 	}
 	CSA = {
 	exists = yes
-	has_war = no
+	}
+	NOT = {
+	TEX = {
+		has_war_with = CSA
+		}
 	}
 	COR = {
 	exists = no
@@ -1917,7 +1972,6 @@ country_event = { # Last Men Standing - CSA and AUS
 	exists = no
 	}
 	has_global_flag = AUS_CSA_TREATY
-	date > 1937.7.30
 	}
 	
 	mean_time_to_happen = {
@@ -2017,9 +2071,14 @@ country_event = { # Campaign
 				}
 			}
 		TEX = {
-		country_event = { id = amcivwar.5010 hours = 8 }
-		}
-		}
+		country_event = { id = amcivwar.5010 days = 20 }
+				}
+			}
+		else = {
+		CSA = {
+		country_event = { id = amcivwar.5010 days = 20 }
+				}
+			}
 		}
 		add_political_power = -30
 		add_stability = 0.05
@@ -2382,13 +2441,17 @@ country_event = { # Reach out to the Victor
 	days = 1
 	}
 	
-	is_triggered_only = yes
+	fire_only_once = yes
 
 	option = {
 		name = amcivwar.8000.a
+		ai_chance {
+		factor = 80
+		}
 		TEX = {
 		country_event = {
 		id = amcivwar.8001
+		hours = 5
 			}
 		}
 	}
@@ -2417,6 +2480,7 @@ country_event = { # PSA Offers Peace
 		CAL = {
 		country_event = {
 		id = amcivwar.4006
+		days = 1
 			}
 		}
 	}
@@ -2429,6 +2493,7 @@ country_event = { # PSA Offers Peace
 		CAL = {
 		country_event = {
 		id = amcivwar.4013
+		days = 1
 			}
 		}
 	}
@@ -2602,7 +2667,6 @@ country_event = { # Jack Reed declares revolution against Murray and Mac
 country_event = { # Huey Long declares Rebellion against Murray
 	id = amcivwar.1013
 	title = amcivwar.1013.t
-	desc = amcivwar.1013.d
 	picture = GFX_Long_Rally
 
 	is_triggered_only = yes
@@ -2612,6 +2676,24 @@ country_event = { # Huey Long declares Rebellion against Murray
 		USA_release_TEX = yes
 	}
 
+	desc = { 
+	text = amcivwar.1013.d.Mac
+	trigger = {
+	USA = {
+	has_country_leader = { ruling_only = yes name = "Douglas MacArthur" }
+			}
+		}
+	}
+	
+	desc = { 
+	text = amcivwar.1013.d.Murray
+	trigger = {
+	USA = {
+	has_country_leader = { ruling_only = yes name = "William H. Murray" }
+			}
+		}
+	}
+	
 	option = {
 		name = amcivwar.1013.a
 		ai_chance = {
@@ -2654,6 +2736,194 @@ country_event = { # Huey Long declares Rebellion against Murray
 		}
 	}
 }
+
+country_event = { # Reach out to the Victor (Murray)
+	id = amcivwar.1015
+	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.1015"}
+	title = amcivwar.1015.t
+	desc = amcivwar.1015.d
+	picture = ACW_soldiers_running
+
+	trigger = {
+	tag = CAL
+	has_global_flag = USA_murray_is_president
+	CAL = {
+	exists = yes
+	NOT = {
+	has_war_with = COR
+		}
+	}
+	COR = {
+	exists = yes
+		}
+	}
+	
+	mean_time_to_happen = {
+	days = 1
+	}
+	
+	fire_only_once = yes
+
+	option = {
+		name = amcivwar.1015.a
+		ai_chance {
+		factor = 80
+		}
+		COR = {
+		country_event = {
+		id = amcivwar.1016
+		hours = 5
+			}
+		}
+	}
+	
+	option = {
+		name = amcivwar.1015.b
+		add_war_support = 0.05
+		add_stability = -0.05
+		add_popularity = { ideology = national_populist popularity = -0.02 }
+	}
+}
+
+country_event = { # PSA offers peace
+	id = amcivwar.1016
+	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.1016"}
+	title = amcivwar.1016.t
+	desc = amcivwar.1016.d
+	picture = ACW_soldiers_running
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = {
+		name = amcivwar.1016.a
+		ai_chance {
+		factor = 80
+		}
+		add_war_support = 0.05
+		add_political_power = -10
+		add_popularity = { ideology = market_liberal popularity = -0.03 }
+		CAL = {
+		country_event = {
+		id = amcivwar.1017
+		hours = 5
+			}
+		}
+	}
+	
+	option = {
+		name = amcivwar.1016.b
+		CAL = {
+		country_event = {
+		id = amcivwar.1017
+		hours = 5
+			}
+		}
+	}
+	
+	option = {
+		name = amcivwar.1016.c
+		add_war_support = -0.05
+		add_political_power = -20
+		add_stability = -0.05
+		hidden_effect = {
+		COR = {
+		country_event = {
+		id = amcivwar.1018
+		hours = 5
+				}
+			}
+		}
+	}
+}
+
+country_event = { # PSA offers peace
+	id = amcivwar.1017
+	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.1017"}
+	title = amcivwar.1017.t
+	desc = amcivwar.1017.d
+	picture = ACW_soldiers_running
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = {
+		name = amcivwar.1017.a
+		ai_chance {
+		factor = 80
+		}
+		add_war_support = 0.05
+		add_political_power = -10
+		add_popularity = { ideology = paternal_autocrat popularity = -0.03 }
+	}
+}
+
+country_event = { # Old Democrats Revolt
+	id = amcivwar.1018
+	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.1018"}
+	title = amcivwar.1018.t
+	desc = amcivwar.1018.d
+	picture = ACW_soldiers_running
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = {
+		name = amcivwar.1018.a
+		ai_chance {
+		factor = 80
+		}
+		add_stability = -0.08
+		add_political_power = -40
+		add_popularity = { ideology = paternal_autocrat popularity = -0.02 }
+	}
+	option = {
+		name = amcivwar.1018.a
+		add_popularity = { ideology = paternal_autocrat popularity = -0.03 }
+		CAL = {
+		country_event = {
+		id = amcivwar.1017
+		hours = 5
+			}
+		}
+	}
+}
+
+country_event = { # New Party Head
+	id = amcivwar.1019
+	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.1019"}
+	title = amcivwar.1019.t
+	desc = amcivwar.1019.d
+	picture = ACW_soldiers_running
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = {
+		name = amcivwar.1019.a
+		ai_chance {
+		factor = 80
+		}
+		add_stability = -0.08
+		add_political_power = -40
+		add_popularity = { ideology = paternal_autocrat popularity = -0.02 }
+	}
+	option = {
+		name = amcivwar.1019.b
+		add_popularity = { ideology = paternal_autocrat popularity = -0.03 }
+		CAL = {
+		country_event = {
+		id = amcivwar.1017
+		hours = 5
+			}
+		}
+	}
+}
+
 ### Curtis Was President ###
 country_event = { # Huey Long declares Rebellion against Curtis
 	id = amcivwar.11
@@ -2885,11 +3155,111 @@ country_event = { # Jack Reed declares revolution against Olson
 	}
 }
 
-news_event = {
+country_event = {
 	id = amcivwar.13
 	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.13"}
 	title = amcivwar.13.t
 	desc = amcivwar.13.d
+	picture = GFX_news_event_gathering_protest
+
+	trigger = {
+	tag = CAL
+	OR = {
+	has_global_flag = USA_Republicans_Flee
+	has_global_flag = USA_Garner_Flees
+		}
+	}
+	
+	mean_time_to_happen = {
+	days = 4
+	}
+
+	fire_only_once = yes
+
+	option = {
+		name = amcivwar.13.a
+		add_stability = 0.05
+	}
+	option = {
+		name = amcivwar.13.b
+		add_political_power = -30
+		add_stability = -0.05
+		add_war_support = 0.05
+		if = {
+		limit = {
+			has_global_flag = USA_garner_is_president
+			}
+		create_country_leader = {# John Nance Garner
+			name = "John Nance Garner"
+			desc = "POLITICS_JOHN_NANCE_GARNER_DESC"
+			picture = "Portrait_USA_John_Nance_Garner.tga"
+			expire = "1965.1.1"
+			ideology = social_conservative_subtype
+			traits = {}
+			}
+		set_politics = {
+			ruling_party = social_conservative
+			election_frequency = 48
+			elections_allowed = yes
+			}
+		}
+		if = {
+		limit = {
+			has_global_flag = USA_president_landon
+		}
+		create_country_leader = {
+				name = "Alf Landon"
+				desc = "POLITICS_CHARLES_CURTIS_DESC"
+				picture = "gfx/leaders/USA/Portrait_USA_Alf_Landon_KR.tga"
+				expire = "1965.1.1"
+				ideology = social_liberal_subtype
+				traits = {}
+			}
+			set_politics = {
+			ruling_party = social_liberal
+			election_frequency = 48
+			elections_allowed = yes
+			}
+		}
+		if = {
+		limit = {
+			has_global_flag = USA_president_landon
+		}
+		create_country_leader = {
+				name = "Alf Landon"
+				desc = "POLITICS_CHARLES_CURTIS_DESC"
+				picture = "gfx/leaders/USA/Portrait_USA_Alf_Landon_KR.tga"
+				expire = "1965.1.1"
+				ideology = social_liberal_subtype
+				traits = {}
+			}
+		}
+		if = {
+		limit = {
+			has_global_flag = USA_president_curtis
+		}
+		create_country_leader = {
+				name = "Charles Curtis"
+				desc = "POLITICS_CHARLES_CURTIS_DESC"
+				picture = "gfx/leaders/USA/Portrait_USA_Charles_Curtis.tga"
+				expire = "1965.1.1"
+				ideology = market_liberal_subtype
+				traits = {}
+			}
+		set_politics = {
+			ruling_party = market_liberal
+			election_frequency = 48
+			elections_allowed = yes
+			}
+		}
+	}
+}
+
+news_event = {
+	id = amcivwar.1300
+	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.1300"}
+	title = amcivwar.1300.t
+	desc = amcivwar.1300.d
 	picture = GFX_news_event_gathering_protest
 
 	major = yes
@@ -2902,7 +3272,7 @@ news_event = {
 	show_major = {}
 
 	option = {
-		name = amcivwar.13.a
+		name = amcivwar.1300.a
 	}
 }
 
@@ -9079,12 +9449,12 @@ country_event = {
 		modifier = {
 			factor = 0.75
 			tag = CSA
-			USA = { has_country_flag = USA_reed_was_president }
+			USA = { has_global_flag = USA_reed_was_president }
 		}
 		modifier = {
 			factor = 0.75
 			tag = TEX
-			USA = { has_country_flag = USA_long_was_president }
+			USA = { has_global_flag = USA_long_is_president }
 		}
 		modifier = {
 			factor = 0.75

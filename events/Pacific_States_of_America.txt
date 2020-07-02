@@ -132,6 +132,32 @@ country_event = { # 1937 Dem-Rep Primary
 			}
 		}
 	}
+	option = { # Charles A. Sprague
+		name = pacificstates.3.e
+		ai_chance = {
+			factor = 50
+		}
+		hidden_effect = {
+			set_country_flag = PSA_1937_liberal_primary_sprague
+			country_event = {
+				id = pacificstates.3
+				days = 5
+			}
+		}
+	}
+	option = { # Manchester Boddy
+		name = pacificstates.3.f
+		ai_chance = {
+			factor = 50
+		}
+		hidden_effect = {
+			set_country_flag = PSA_1937_liberal_primary_boddy
+			country_event = {
+				id = pacificstates.3
+				days = 5
+			}
+		}
+	}
 }
 
 country_event = { # 1937 Republican Primary
@@ -161,7 +187,7 @@ country_event = { # 1937 Republican Primary
 	option = { # Harry Chandler
 		name = pacificstates.4.b
 		ai_chance = {
-			factor = 50
+			factor = 10
 			modifier = {
 				factor = 2
 				has_government = market_liberal
@@ -178,7 +204,7 @@ country_event = { # 1937 Republican Primary
 	option = { # Howard Hughes
 		name = pacificstates.4.c
 		ai_chance = {
-			factor = 50
+			factor = 30
 		}
 		hidden_effect = {
 			set_country_flag = PSA_1937_republican_primary_hughes
@@ -188,26 +214,26 @@ country_event = { # 1937 Republican Primary
 			}
 		}
 	}
-	option = { # Charles A. Sprague
+	option = { # Frank Merriam
 		name = pacificstates.4.e
 		ai_chance = {
-			factor = 50
+			factor = 40
 		}
 		hidden_effect = {
-			set_country_flag = PSA_1937_republican_primary_sprague
+			set_country_flag = PSA_1937_republican_primary_merriam
 			country_event = {
 				id = pacificstates.3
 				days = 5
 			}
 		}
 	}
-	option = { # Manchester Boddy
-		name = pacificstates.4.f
+	option = { # Louis B. Meyer
+		name = pacificstates.4.e
 		ai_chance = {
-			factor = 50
+			factor = 40
 		}
 		hidden_effect = {
-			set_country_flag = PSA_1937_republican_primary_boddy
+			set_country_flag = PSA_1937_republican_primary_meyer
 			country_event = {
 				id = pacificstates.3
 				days = 5
@@ -227,10 +253,10 @@ country_event = { # 1937 Democrat Primary
 
 	fire_only_once = yes
 
-	option = { # Frank Merriam
+	option = { # Henry J. Kaiser
 		name = pacificstates.5.a
 		hidden_effect = {
-			set_country_flag = PSA_1937_democratic_primary_merriam
+			set_country_flag = PSA_1937_democratic_primary_kaiser
 		}
 		country_event = {
 		id = pacificstates.4
@@ -251,6 +277,7 @@ country_event = { # 1937 Democrat Primary
 	
 	option = { # Walt Disney
 		name = pacificstates.5.c
+		add_political_power = -10
 		hidden_effect = {
 			set_country_flag = PSA_1937_democratic_primary_disney
 			country_event = {
@@ -260,6 +287,20 @@ country_event = { # 1937 Democrat Primary
 			country_event = {
 				id = pacificstates.251
 				days = 2
+			}
+		}
+	}
+	option = { # Keep Garner
+		name = pacificstates.5.e
+		trigger = {
+		has_country_leader = { ruling_only = yes name = "John Nance Garner" }
+		}
+		add_political_power = -30
+		add_stability = 0.03
+		hidden_effect = {
+			country_event = {
+				id = pacificstates.4
+				days = 6
 			}
 		}
 	}
@@ -472,12 +513,25 @@ country_event = { # 1937 Election
 			
 			if = { # Frank Merriam
 				limit = {
-					has_country_flag = PSA_1937_democratic_primary_merriam
+					has_country_flag = PSA_1937_republican_primary_merriam
 				}
 				create_country_leader = {
 					name = "Frank Merriam"
 					desc = "POLITICS_FRANK_MERRIAM_DESC"
 					picture = "Portrait_CAL_Frank_Merrimam.tga"
+					expire = "1965.1.1"
+					ideology = market_liberal_subtype
+					traits = {}
+				}
+			}
+			if = { # Louis B Meyer
+				limit = {
+					has_country_flag = PSA_1937_republican_primary_meyer
+				}
+				create_country_leader = {
+					name = "Louis B. Meyer"
+					desc = "POLITICS_LOUIS_B_MEYER_DESC"
+					picture = "gfx/leaders/PSA/CAL_Louis_B._Mayer.tga"
 					expire = "1965.1.1"
 					ideology = market_liberal_subtype
 					traits = {}
@@ -789,40 +843,271 @@ country_event = { # 1937 Election
 		name = pacificstates.6.g
 		set_country_flag = PSA_had_1937_election
 		hidden_effect = {
-			set_country_flag = PSA_1937_election_commonwealth
+			set_country_flag = PSA_1937_election_hearst
 		}
 		add_popularity = {
-			ideology = paternal_autocrat
+			ideology = authoritarian_democrat
 			popularity = 0.20
 		}
 		set_politics = {
-			ruling_party = paternal_autocrat
+			ruling_party = authoritarian_democrat
 			election_frequency = 48
 			elections_allowed = yes
 		}
 		hidden_effect = {
-			add_ideas = CAL_Henry_Wallace_hog_sde
-			add_ideas = CAL_Ralph_Johnson_Bunche_for_sde
-			add_ideas = CAL_Hjalmar_Petersen_eco_sde
-			add_ideas = CAL_Konrad_Knute_Solberg_sec_sde
+			add_ideas = CAL_Bourke_B_Hickenlooper_hog_sco
+			add_ideas = CAL_William_Averell_Harriman_for_sco
+			add_ideas = CAL_William_Myron_Keck_eco_sco
+			add_ideas = CAL_Levi_Stewart_Udall_sec_sco
+		}
+	}
+}
 
-			# next primaries
+country_event = { # Democratic-Republicans Join the Progressives
+	id = pacificstates.6000
+	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.6000"}
+	title = pacificstates.6000.t
+	desc = pacificstates.6000.d
+	picture = congress
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { # Good
+		name = pacificstates.6000.a
+		add_political_power = 45
+		add_stability = 0.05
+		add_popularity = { ideology = social_liberal popularity = -0.06 }
+		add_popularity = { ideology = social_democrat popularity = 0.05 }
+		set_party_name = {
+			ideology = social_liberal
+			long_name = CAL_prog_dominance_long
+			name = CAL_prog_dominance_party }	
+		hidden_effect = {
+			set_country_flag = PSA_Progs_Win
 			country_event = {
-				id = pacificstates.7
-				days = 1276
+				id = pacificstates.6006
+				days = 35
 			}
+		}
+	}
+}
+
+country_event = { # Progressives Join the Democratic-Republicans
+	id = pacificstates.6002
+	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.6002"}
+	title = pacificstates.6002.t
+	desc = pacificstates.6002.d
+	picture = congress
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { # Good
+		name = pacificstates.6002.a
+		add_political_power = 45
+		add_stability = 0.05
+		add_popularity = { ideology = social_liberal popularity = 0.05 }
+		add_popularity = { ideology = social_democrat popularity = -0.06 }
+		set_party_name = {
+			ideology = social_democrat
+			long_name = CAL_liberal_dominance_long
+			name = CAL_liberal_dominance_party }	
+		hidden_effect = {
+			set_country_flag = PSA_Libs_Win
 			country_event = {
-				id = pacificstates.8
-				days = 1283
+				id = pacificstates.6006
+				days = 35
 			}
+		}
+	}
+}
+
+country_event = { # Democrats join the Republicans
+	id = pacificstates.6003
+	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.6003"}
+	title = pacificstates.6003.t
+	desc = pacificstates.6003.d
+	picture = congress
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { # Good
+		name = pacificstates.6003.a
+		add_political_power = 45
+		add_stability = 0.05
+		add_popularity = { ideology = market_liberal popularity = 0.05 }
+		add_popularity = { ideology = social_conservative popularity = -0.06 }
+		set_party_name = {
+			ideology = social_conservative
+			long_name = CAL_classical_liberal_dominance_long
+			name = CAL_classical_liberal_dominance_party }	
+		hidden_effect = {
+			set_country_flag = PSA_MarkLibs_Win
 			country_event = {
-				id = pacificstates.9
-				days = 1290
+				id = pacificstates.6006
+				days = 35
 			}
+		}
+	}
+}
+
+country_event = { # Republicans join the Democrats
+	id = pacificstates.6004
+	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.6004"}
+	title = pacificstates.6004.t
+	desc = pacificstates.6004.d
+	picture = congress
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { # Good
+		name = pacificstates.6004.a
+		add_political_power = 45
+		add_stability = 0.05
+		add_popularity = { ideology = social_conservative popularity = 0.05 }
+		add_popularity = { ideology = market_liberal popularity = -0.06 }
+		set_party_name = {
+			ideology = market_liberal
+			long_name = CAL_conservative_dominance_long
+			name = CAL_conservative_dominance_party }	
+		hidden_effect = {
+			set_country_flag = PSA_Conservatives_Win
 			country_event = {
-				id = pacificstates.10
-				days = 1297
+				id = pacificstates.6006
+				days = 35
 			}
+		}
+	}
+}
+
+country_event = { # Progressives drift toward the Commonwealth Party
+	id = pacificstates.6005
+	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.6005"}
+	title = pacificstates.6005.t
+	desc = pacificstates.6005.d
+	picture = congress
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { # Good
+		name = pacificstates.6005.a
+		add_political_power = 35
+		add_stability = 0.08
+		add_popularity = { ideology = social_democrat popularity = -0.05 }
+		add_popularity = { ideology = radicial_socialist popularity = 0.04 }
+		set_party_name = {
+			ideology = social_democrat
+			long_name = CAL_radical_dominance_long
+			name = CAL_radical_dominance_party }	
+		hidden_effect = {
+			set_country_flag = PSA_Radicals_Win
+			country_event = {
+				id = pacificstates.6006
+				days = 35
+			}
+		}
+	}
+}
+
+country_event = { # Two Party System Formalizes
+	id = pacificstates.6006
+	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.6006"}
+	title = pacificstates.6006.t
+	picture = congress
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	desc = {
+	text = ustates.6006.d.progs
+	trigger = {
+			has_country_flag = PSA_Progs_Win
+		}
+	}
+	desc = {
+	text = ustates.6006.d.libs
+	trigger = {
+			has_country_flag = PSA_Libs_Win
+		}
+	}
+	desc = {
+	text = ustates.6006.d.reps
+	trigger = {
+			has_country_flag = PSA_MarkLibs_Win
+		}
+	}
+	desc = {
+	text = ustates.6006.d.dems
+	trigger = {
+			has_country_flag = PSA_Conservatives_Win
+		}
+	}
+	desc = {
+	text = ustates.6006.d.commonwealth
+	trigger = {
+			has_country_flag = PSA_Radicals_Win
+		}
+	}
+	option = { # Very Well
+		name = pacificstates.6006.a
+		if = {
+		limit = {
+		has_country_flag = PSA_Progs_Win
+			}
+		add_popularity = { ideology = social_conservative popularity = 0.05 }
+		add_popularity = { ideology = market_liberal popularity = -0.06 }
+		set_party_name = {
+			ideology = social_conservative
+			long_name = CAL_conservative_dominance_long
+			name = CAL_conservative_dominance_party }	
+		}
+		if = {
+		limit = {
+		has_country_flag = PSA_Libs_Win
+			}
+		add_popularity = { ideology = social_conservative popularity = 0.05 }
+		add_popularity = { ideology = market_liberal popularity = -0.06 }
+		set_party_name = {
+			ideology = social_conservative
+			long_name = CAL_conservative_dominance_long
+			name = CAL_conservative_dominance_party }	
+		}
+		if = {
+		limit = {
+		has_country_flag = PSA_MarkLibs_Win
+			}
+		add_popularity = { ideology = social_democrat popularity = 0.05 }
+		add_popularity = { ideology = social_liberal popularity = -0.06 }
+		set_party_name = {
+			ideology = social_liberal
+			long_name = CAL_prog_dominance_long
+			name = CAL_prog_dominance_party }
+		}
+		if = {
+		limit = {
+		has_country_flag = PSA_Conservatives_Win
+			}
+		add_popularity = { ideology = social_democrat popularity = 0.05 }
+		add_popularity = { ideology = social_liberal popularity = -0.06 }
+		set_party_name = {
+			ideology = social_liberal
+			long_name = CAL_prog_dominance_long
+			name = CAL_prog_dominance_party }
+		}
+		if = {
+		limit = {
+		has_country_flag = PSA_Radicals_Win
+			}
+		add_popularity = { ideology = social_conservative popularity = 0.05 }
+		add_popularity = { ideology = market_liberal popularity = -0.06 }
+		set_party_name = {
+			ideology = social_conservative
+			long_name = CAL_conservative_dominance_long
+			name = CAL_conservative_dominance_party }	
 		}
 	}
 }
@@ -850,8 +1135,7 @@ country_event = { # 1940 Progressive Primary
 
 	trigger = {
 		tag = CAL
-		has_elected_government = yes
-		has_country_flag = PSA_had_1940_election
+		has_elected_government = yes		
 		NOT = {
 			has_country_flag = PSA_had_1940_election
 		}
@@ -1132,19 +1416,6 @@ country_event = { # 1940 election
 
 	immediate = {
 		hidden_effect = {
-			if = {
-				limit = {
-					has_country_flag = PSA_1940_progressive_primary_folette
-				}
-				create_country_leader = {
-					name = "Philip La Follette"
-					desc = "POLITICS_PHILIP_LA_FOLETTE_DESC"
-					picture = "Portrait_CAL_Philip_La_Follette.tga"
-					expire = "1965.1.1"
-					ideology = social_democrat_subtype
-					traits = {}
-				}
-			}
 			if = {
 				limit = {
 					has_country_flag = PSA_1940_progressive_primary_wallace
@@ -4655,13 +4926,17 @@ country_event = {# Hearst Runs
 		set_party_name = {
 			ideology = paternal_autocrat
 			long_name = CAL_new_paternal_autocrat_party_long
-			name = CAL_new_paternal_autocrat_party }			
+			name = CAL_new_paternal_autocrat_party }	
+		set_party_name = {
+			ideology = paternal_autocrat
+			long_name = CAL_new_aut_dem_party_long
+			name = CAL_new_aut_dem_party }	
 		create_country_leader = {
 			name = "William Randolph Hearst"
 			desc = "POLITICS_WILLIAM_RANDOLPH_HEARST_DESC"
 			picture = "Portrait_CAL_William_Randolph_Hearst.tga"
 			expire = "1965.1.1"
-			ideology = paternal_autocrat_subtype
+			ideology = authoritarian_democrat_subtype
 			traits = {}
 		}
 		if = {
