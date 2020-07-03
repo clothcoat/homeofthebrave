@@ -363,25 +363,21 @@ country_event = { # WCC released
 			news_event = { id = amcivwar.4 hours = 8 }
 			}
 			else_if = {
-			limit = { has_global_flag = USA_long_is_president
+			limit = { has_global_flag = USA_long_is_president }
 			news_event = { id = amcivwar.9 hours = 8 }
-				}
 			}
 			else_if = {
-			limit = { has_global_flag = USA_murray_is_president
+			limit = { has_global_flag = USA_murray_is_president }
 			news_event = { id = amcivwar.1020 hours = 8 }
-				}
 			}
 			else_if = {
-			limit = { has_global_flag = USA_garner_is_president
+			limit = { has_global_flag = USA_garner_is_president }
 			news_event = { id = amcivwar.16 hours = 8 }
-				}
 			}
 			else_if = {
-			limit = { has_country_flag = USA_president_norris
+			limit = { has_country_flag = USA_president_norris }
 			news_event = { id = amcivwar.19 hours = 8 }
 				}
-			}
 			else_if = {
 			limit = { 
 			OR = {
@@ -391,9 +387,8 @@ country_event = { # WCC released
 			}
 			news_event = { id = amcivwar.1300 hours = 8 }
 				}
-			}
 			country_event = { id = amcivwar.5 days = 30 }
-		}
+			}
 		WCC = {
 			change_tag_from = USA
 		}
@@ -585,7 +580,6 @@ country_event = { # Reach out
 		add_war_support = 0.05
 	}
 }
-
 
 country_event = { # CSA Response
 	id = amcivwar.4001
