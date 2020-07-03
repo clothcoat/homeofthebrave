@@ -180,7 +180,7 @@ USA_release_CSA = {
 		set_country_flag = Paul_Mattick_dead
 		set_country_flag = John_Abt_dead
 
-		remove_unit_leader = 60 #Smedley Butler
+		remove_unit_leader = 100 #Smedley Butler
 		remove_unit_leader = 61 #Herbert Holdridge
 
 		CSA = {
@@ -720,6 +720,9 @@ USA_release_WCC = {
 				}
 			}
 		}
+		
+		remove_unit_leader = 88 #Bradley
+		remove_unit_leader = 90 #Ike
 
 		every_owned_state = {
 			limit = { is_core_of = WCC }
@@ -813,9 +816,11 @@ USA_release_CAL = {
 			add_claim_by = CAL
 		}
 
-		remove_unit_leader = 58 #Henry H. Arnold
-		remove_unit_leader = 62 #Chester W. Nimitz
-		remove_unit_leader = 64 #George Marshall
+		remove_unit_leader = 84 #Walter Krueger
+		remove_unit_leader = 76 #Leslie McNair
+		remove_unit_leader = 62 #Arnold
+		remove_unit_leader = 60 #George Marshall
+		remove_unit_leader = 86 #George Marshall
 
 		set_country_flag = Glen_H_Taylor_dead
 		set_country_flag = Henry_Wallace_dead

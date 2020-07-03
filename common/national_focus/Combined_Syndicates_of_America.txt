@@ -2109,6 +2109,12 @@ focus_tree = {
 		icon = GFX_goal_syndicalist_industry
 		cost = 7.25
 		available = { has_government = syndicalist }
+		select_effect = {
+		country_event = {
+			id = csa.26
+			days = 4
+			}
+		}
 		prerequisite = {
 			focus = CSA_protect_the_revolution
 		}
@@ -2167,6 +2173,12 @@ focus_tree = {
 		icon = GFX_socialist_constitution
 		cost = 7.25
 		available = { has_government = syndicalist }
+		select_effect = {
+		country_event = {
+			id = csa.25
+			days = 4
+			}
+		}
 		prerequisite = {
 			focus = CSA_protect_the_revolution
 		}
@@ -2224,6 +2236,12 @@ focus_tree = {
 		id = CSA_syndicalist_economics
 		icon = GFX_goal_syndicalism
 		cost = 7.25
+		select_effect = {
+		country_event = {
+			id = csa.27
+			days = 4
+			}
+		}
 		prerequisite = {
 			focus = CSA_protect_the_revolution
 		}
