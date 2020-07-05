@@ -646,12 +646,18 @@ focus_tree = {
 	focus = {# Wealth Ceiling
 		id = TEX_wealth_ceiling
 		icon = GFX_goal_TEX_wealth_ceiling
-		cost = 5
+		cost = 4.5
 		prerequisite = {
 			focus = TEX_new_washington
 		}
 		available = {
 			has_government = authoritarian_democrat
+		}
+		select_effect = {
+		country_event = {
+			id = unionstate.50
+			days = 10
+			}
 		}
 		cancel_if_invalid = yes
 		available_if_capitulated = yes
@@ -719,6 +725,12 @@ focus_tree = {
 			}
 			add_popularity = { ideology = authoritarian_democrat popularity = 0.05 }
 			add_stability = 0.08
+			hidden_effect = {
+			country_event = {
+				id = unionstate.49
+				days = 10
+				}
+			}
 		}
 	}
 	
@@ -800,6 +812,12 @@ focus_tree = {
 					type = infrastructure
 					level = 1
 					instant_build = yes
+				}
+			}
+			hidden_effect = {
+			country_event = {
+				id = unionstate.49
+				days = 20
 				}
 			}
 		}

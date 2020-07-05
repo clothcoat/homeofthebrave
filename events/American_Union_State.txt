@@ -28,23 +28,8 @@ country_event = { # The American Legion Appointment
 	hidden_effect = {
 			# AuthDem Events
 			country_event = {
-				id = unionstate.15
-				days = 90
-				random = 10
-			}
-			country_event = {
-				id = unionstate.14
-				days = 120
-				random = 10
-			}
-			country_event = {
 				id = unionstate.13
 				days = 150
-				random = 20
-			}
-			country_event = {
-				id = unionstate.11
-				days = 180
 				random = 20
 			}
 			country_event = {
@@ -53,28 +38,13 @@ country_event = { # The American Legion Appointment
 				random = 30
 			}
 			country_event = {
-				id = unionstate.17
-				days = 240
-				random = 30
-			}
-			country_event = {
 				id = unionstate.18
 				days = 270
 				random = 40
 			}
 			country_event = {
-				id = unionstate.19
-				days = 300
-				random = 40
-			}
-			country_event = {
 				id = unionstate.20
 				days = 330
-				random = 50
-			}
-			country_event = {
-				id = unionstate.12
-				days = 400
 				random = 50
 			}
 		}
@@ -752,29 +722,9 @@ country_event = { # AUS Election
 				random = 20
 			}
 			country_event = {
-				id = unionstate.16
-				days = 210
-				random = 30
-			}
-			country_event = {
 				id = unionstate.17
 				days = 240
 				random = 30
-			}
-			country_event = {
-				id = unionstate.18
-				days = 270
-				random = 40
-			}
-			country_event = {
-				id = unionstate.19
-				days = 300
-				random = 40
-			}
-			country_event = {
-				id = unionstate.20
-				days = 330
-				random = 50
 			}
 			country_event = {
 				id = unionstate.12
@@ -1558,6 +1508,12 @@ country_event = { #Power of Congress
 		add_command_power = 25
 		add_stability = -0.1
 		change_to_pataut_popularity = yes
+		hidden_effect = {
+		country_event = {
+			id = unionstate.47
+			days = 8
+			}
+		}
 	}
 }
 
@@ -1571,12 +1527,81 @@ country_event = { #Protests
 	
 	is_triggered_only = yes
 	
-	option = { #Don't Pass the Act
+	option = { #Intimidate the ACLU
 		name = unionstate.47.a
 		add_political_power = -30
 	}
-	option = { #Pass the Act
+	option = { #Shut down the protests
 		name = unionstate.47.b
+		add_manpower = -2000
+		add_command_power = 25
+		hidden_effect = {
+		country_event = {
+			id = unionstate.19
+			days = 8
+			}
+		}
+	}
+}
+
+country_event = { #Share Our Wealth
+	id = unionstate.48
+	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.48"}
+	title = unionstate.48.t
+	desc = unionstate.48.d
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { #Of Course
+		name = unionstate.48.a
+		add_political_power = -30
+	}
+	option = { #It Going Well As Is
+		name = unionstate.48.b
+		add_manpower = -2000
+		add_command_power = 25
+	}
+}
+
+country_event = { #Archbishops seek support
+	id = unionstate.49
+	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.49"}
+	title = unionstate.49.t
+	desc = unionstate.49.d
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { #Agree
+		name = unionstate.49.a
+		add_political_power = -30
+	}
+	option = { #No, we are beholden to Catholic supporters not the Church
+		name = unionstate.49.b
+		add_manpower = -2000
+		add_command_power = 25
+	}
+}
+
+country_event = { #Treasury Demands Capital Controls
+	id = unionstate.50
+	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.50"}
+	title = unionstate.50.t
+	desc = unionstate.50.d
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { #Limit wealth movement for the rich
+		name = unionstate.50.a
+		add_political_power = -30
+	}
+	option = { #Harsh Taxation and Fees
+		name = unionstate.50.b
 		add_manpower = -2000
 		add_command_power = 25
 	}
