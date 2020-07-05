@@ -1705,6 +1705,12 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			hidden_effect = {
+			country_event = {
+				id = unionstate.60
+				days = 15
+				}
+			}
 		}
 	}
 	
@@ -1730,6 +1736,12 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus TEX_wisconsin_idea"
 			add_ideas = TEX_wisconsin_idea_idea
 			add_popularity = { ideology = social_liberal popularity = 0.03 }
+			hidden_effect = {
+			country_event = {
+				id = unionstate.62
+				days = 15
+				}
+			}
 		}
 	}
 	
@@ -1792,6 +1804,12 @@ focus_tree = {
 					infrastructure > 0
 				}
 				add_extra_state_shared_building_slots = 1
+			}
+			hidden_effect = {
+			country_event = {
+				id = unionstate.62
+				days = 30
+				}
 			}
 		}
 	}
@@ -1976,6 +1994,12 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			hidden_effect = {
+			country_event = {
+				id = unionstate.61
+				days = 15
+				}
+			}
 		}
 	}
 	
@@ -2042,6 +2066,12 @@ focus_tree = {
 					type = industrial_complex
 					level = 1
 					instant_build = yes
+				}
+			}
+			hidden_effect = {
+			country_event = {
+				id = unionstate.66
+				days = 18
 				}
 			}
 		}
@@ -2207,6 +2237,12 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			hidden_effect = {
+			country_event = {
+			id = unionstate.64
+			days = 6
+				}
+			}
 		}
 	}
 	
@@ -2219,6 +2255,12 @@ focus_tree = {
 		}
 		available = {
 			has_government = paternal_autocrat
+		}
+		select_effect = {
+		country_event = {
+			id = unionstate.63
+			days = 12
+			}
 		}
 		cancel_if_invalid = yes
 		available_if_capitulated = yes
