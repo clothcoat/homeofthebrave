@@ -11674,7 +11674,12 @@ focus_tree = {
 		focus = CAL_denounce_race_hatred
 		}
 		available = {
+		NOT = {
+			has_government = social_conservative
 			has_government = authoritarian_democrat
+			has_government = paternal_autocrat
+			has_government = national_populist
+			}
 		}
 		ai_will_do = {
 			factor = 5
@@ -11686,11 +11691,23 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_negro_bureau"
+			add_ideas = CAL_negro_bureau_idea
+			add_manpower = 15000
+			increase_ruling_party_popularity_by_5 = yes
+			add_stability = -0.03
 			hidden_effect = {
 			country_event = {
 			id = ustates.290
 			days = 20
 				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = CAL
+					is_controlled_by = CAL
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
 			}
 		}
 	}
@@ -11703,7 +11720,12 @@ focus_tree = {
 		focus = CAL_negro_bureau
 		}
 		available = {
+			NOT = {
+			has_government = social_conservative
 			has_government = authoritarian_democrat
+			has_government = paternal_autocrat
+			has_government = national_populist
+			}
 		}
 		ai_will_do = {
 			factor = 5
@@ -11715,6 +11737,10 @@ focus_tree = {
 		y = 2
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_fund_black_education"
+			swap_ideas = {
+			remove_idea = CAL_negro_bureau_idea
+			add_idea = CAL_negro_bureau_idea_2
+			}
 		}
 	}
 	
@@ -11785,6 +11811,30 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = CAL
+					is_controlled_by = CAL
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = CAL
+					is_controlled_by = CAL
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = CAL
+					is_controlled_by = CAL
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+			}
 		}
 	}
 	
@@ -11832,6 +11882,7 @@ focus_tree = {
 		y = 4
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_increase_segregation"
+			add_ideas = CAL_increased_segregation_idea
 			add_political_power = 35
 			add_stability = 0.1
 			add_war_support = 0.05
