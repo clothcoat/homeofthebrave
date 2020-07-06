@@ -238,7 +238,7 @@ create_field_marshal = {# George S. Patton Jr.
 create_field_marshal = {# Joseph T. McNarney
 	name = "Joseph T. McNarney"
 	desc = "TEX_JACOB_DENVERS_ARMY_DESC"
-	portrait_path = "gfx/leaders/TEX/Portrait_TEX_jacob_devers.tga"
+	portrait_path = "gfx/leaders/CUS/Joe_McNarey_HOI4.tga"
 	traits = {
 		trait_reckless
 		artillery_officer
@@ -255,15 +255,15 @@ create_field_marshal = {# Joseph T. McNarney
 create_corps_commander = {# Wickliffe Draper
 	name = "Wickliffe Draper"
 	desc = "COR_WICKLIFFE_DRAPER_DESC"
-	portrait_path = "gfx/leaders/TEX/Portrait_TEX_wickliffe_draper.tga"
+	portrait_path = "gfx/leaders/CUS/COR_Draper.tga"
 	traits = {
 		trickster
 		career_officer
 	}
-	skill = 3
+	skill = 2
 	attack_skill = 3
 	defense_skill = 2
-	planning_skill = 3
+	planning_skill = 2
 	logistics_skill = 2
 	id = 128
 }
@@ -283,41 +283,26 @@ create_corps_commander = {# Courtney Hodges
 	logistics_skill = 4
 	id = 130
 }
-create_corps_commander = {# Matthew Ridgway
-	name = "Matthew Ridgway"
-	desc = "TEX_MATTHEW_RIDGWAY_ARMY_DESC"
-	portrait_path = "gfx/leaders/TEX/Portrait_TEX_matthew_ridgway.tga"
+create_corps_commander = {# Edward Almond
+	name = "Edward Almond"
+	desc = "TEX_EDWARD_ALMOND_ARMY_DESC"
+	portrait_path = "gfx/leaders/CUS/COR_Edward_Almond.tga"
 	traits = {
-		inflexible_strategist
+		career_officer
 		trait_cautious
 		commando
 	}
 	skill = 3
 	attack_skill = 2
 	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 4
-	id = 132
-}
-create_corps_commander = {# Bruce C. Clarke
-	name = "Bruce C. Clarke"
-	desc = "TEX_BRUCE_CLARKE_ARMY_DESC"
-	portrait_path = "gfx/leaders/TEX/Portrait_TEX_bruce_clarke.tga"
-	traits = {
-		harsh_leader
-		panzer_leader
-	}
-	skill = 2
-	attack_skill = 3
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 2
+	planning_skill = 3
+	logistics_skill = 3
 	id = 134
 }
 create_corps_commander = {# Virgil Effinger
 	name = "Virgil Effinger"
 	desc = "TEX_VIRGIL_EFFFINGER_ARMY_DESC"
-	portrait_path = "gfx/leaders/TEX/Portrait_TEX_bruce_clarke.tga"
+	portrait_path = "gfx/leaders/CUS/Portrait_Virgil_Effinger.tga"
 	traits = {
 		harsh_leader
 		trait_reckless
@@ -347,16 +332,6 @@ create_corps_commander = {# Samuel Green
 
 
 ### Navy Leader
-create_navy_leader = {# John S. McCain Sr.
-	name = "John S. McCain Sr."
-	portrait_path = "gfx/leaders/TEX/Portrait_TEX_john_mccain.tga"
-	traits = {air_controller}
-	skill = 3
-	attack_skill = 3
-	defense_skill = 2
-	maneuvering_skill = 2
-	coordination_skill = 3
-}
 create_navy_leader = {# Arthur L. Bristol
 	name = "Arthur L. Bristol"
 	portrait_path = "gfx/leaders/TEX/Portrait_TEX_arthur_bristol.tga"
@@ -366,26 +341,6 @@ create_navy_leader = {# Arthur L. Bristol
 	defense_skill = 2
 	maneuvering_skill = 2
 	coordination_skill = 2
-}
-create_navy_leader = {# David W. Bagley
-	name = "David W. Bagley"
-	portrait_path = "gfx/leaders/TEX/Portrait_TEX_david_bagley.tga"
-	traits = {}
-	skill = 2
-	attack_skill = 2
-	defense_skill = 2
-	maneuvering_skill = 1
-	coordination_skill = 2
-}
-create_navy_leader = {# John G. Crommelin
-	name = "John G. Crommelin"
-	portrait_path = "gfx/leaders/TEX/Portrait_TEX_david_bagley.tga"
-	traits = {}
-	skill = 2
-	attack_skill = 2
-	defense_skill = 2
-	maneuvering_skill = 1
-	coordination_skill = 1
 }
 create_navy_leader = {# Francis L. Garrett
 	name = "Francis L. Garrett"
@@ -397,6 +352,25 @@ create_navy_leader = {# Francis L. Garrett
 	maneuvering_skill = 1
 	coordination_skill = 1
 }
-
+create_navy_leader = {# John G. Crommelin
+	name = "John G. Crommelin"
+	portrait_path = "gfx/leaders/TEX/Portrait_TEX_david_bagley.tga"
+	traits = {}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	maneuvering_skill = 2
+	coordination_skill = 1
+}
+create_navy_leader = {# Mickey Cochrane
+	name = "Mickey Cochrane"
+	portrait_path = "gfx/leaders/CUS/Mickey_Cochrane.tga"
+	traits = {}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	maneuvering_skill = 1
+	coordination_skill = 1
+}
 
 USA_start_naval_variant = yes

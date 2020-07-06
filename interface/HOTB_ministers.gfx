@@ -8538,8 +8538,16 @@ spriteTypes = {
 		name = "GFX_idea_CAL_William_Averell_Harriman_for_sco"
 		texturefile = "gfx/interface/ministers/CAL/CAL_William_Averell_Harriman.tga"
 	}
+	spriteType = {
+		name = "GFX_idea_CAL_Walter_M_Pierce_for_pau"
+		texturefile = "gfx/interface/ministers/CAL/CAL_Walter_M_Pierce.tga"
+	}
 
 	# Economy Minister
+	spriteType = {
+		name = "GFX_idea_CAL_Jerry_Voorhis_eco_rso"
+		texturefile = "gfx/interface/ministers/CAL/CAL_Jerry_Voorhis.tga"
+	}
 	spriteType = {
 		name = "GFX_idea_CAL_Ellard_A_Walsh_eco_sde"
 		texturefile = "gfx/interface/ministers/CAL/CAL_Ellard_A_Walsh.tga"
@@ -8559,6 +8567,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_CAL_Homer_Truett_Bone_eco_sde"
 		texturefile = "gfx/interface/ministers/CAL/CAL_Homer_Truett_Bone.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_CAL_charles_b_henderson_eco_sli"
+		texturefile = "gfx/interface/ministers/CAL/CAL_charles_b_henderson.tga"
 	}
 	spriteType = {
 		name = "GFX_idea_CAL_Harley_Eugene_Knox_eco_sli"
@@ -8608,6 +8620,10 @@ spriteTypes = {
 		name = "GFX_idea_CAL_William_Myron_Keck_eco_sco"
 		texturefile = "gfx/interface/ministers/CAL/CAL_William_Myron_Keck.tga"
 	}
+	spriteType = {
+		name = "GFX_idea_CAL_Walter_M_Pierce_eco_pau"
+		texturefile = "gfx/interface/ministers/CAL/CAL_Walter_M_Pierce.tga"
+	}
 
 	# Security Minister
 	spriteType = {
@@ -8637,6 +8653,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_CAL_Charles_Evans_Hughes_Sr_sec_mli"
 		texturefile = "gfx/interface/ministers/CAL/CAL_Charles_Evans_Hughes_Sr.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_CAL_eugene_meyer_sec_mli"
+		texturefile = "gfx/interface/ministers/CAL/CAL_eugene_meyer.tga"
 	}
 	spriteType = {
 		name = "GFX_idea_CAL_Frank_L_Shaw_sec_mli"
@@ -8669,6 +8689,14 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_CAL_Sheridan_Downey_sec_sco"
 		texturefile = "gfx/interface/ministers/CAL/CAL_Sheridan_Downey.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_CAL_Alfred_J_Elliott_sec_pau"
+		texturefile = "gfx/interface/ministers/CAL/CAL_Alfred_J_Elliott.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_CAL_Robert_Heinlein_int_rso"
+		texturefile = "gfx/interface/ministers/CAL/CAL_Robert_Heinlein.tga"
 	}
 
 
@@ -59747,6 +59775,10 @@ spriteTypes = {
 
 	### Head of Government
 	spriteType = {
+		name = "GFX_idea_TEX_Rush_Limbaugh_sr_hog_sde"
+		texturefile = "gfx/interface/ministers/TEX/TEX_Rush_Limbaugh_sr.tga"
+	}
+	spriteType = {
 		name = "GFX_idea_TEX_Philip_La_Follette_hog_sli"
 		texturefile = "gfx/interface/ministers/TEX/TEX_Philip_La_Follette.tga"
 	}
@@ -59880,6 +59912,10 @@ spriteTypes = {
 
 	# Economy Minister
 	spriteType = {
+		name = "GFX_idea_TEX_Alfred_Mitchell_Bingham_eco_rso"
+		texturefile = "gfx/interface/ministers/TEX/TEX_Alfred_Mitchell_Bingham.tga"
+	}
+	spriteType = {
 		name = "GFX_idea_TEX_clyde_martin_reed_eco_sde"
 		texturefile = "gfx/interface/ministers/TEX/TEX_clyde_martin_reed.tga"
 	}
@@ -59938,6 +59974,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_TEX_Ralph_Webster_Yarborough_eco_ade"
 		texturefile = "gfx/interface/ministers/TEX/TEX_Ralph_Webster_Yarborough.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_TEX_Tom_Pendergast_eco_pau"
+		texturefile = "gfx/interface/ministers/TEX/TEX_Tom_Pendergast.tga"
 	}
 
 	# Security Minister
@@ -75947,6 +75987,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/ministers/COR/COR_John_Elliott_Rankin.tga"
 	}
 	spriteType = {
+		name = "GFX_idea_COR_Alma_Bridwell_White_for_npo"
+		texturefile = "gfx/interface/ministers/COR/COR_Alma_Bridwell_White.tga"
+	}
+	spriteType = {
 		name = "GFX_idea_COR_Edward_L_Jackson_hog_npo"
 		texturefile = "gfx/interface/ministers/COR/COR_Edward_L_Jackson.tga"
 	}
@@ -76013,6 +76057,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/ministers/COR/COR_William_Henry_Davis_'Alfalfa_Bill'_Murray.tga"
 	}
 	spriteType = {
+		name = "GFX_idea_COR_Arthur_Kent_White_eco_npo"
+		texturefile = "gfx/interface/ministers/COR/COR_Arthur_Kent_White.tga"
+	}
+	spriteType = {
 		name = "GFX_idea_COR_George_W_Christians_eco_npo"
 		texturefile = "gfx/interface/ministers/COR/COR_George_W_Christians.tga"
 	}
@@ -76056,6 +76104,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_COR_Addison_Roswell_Thompson_sec_npo"
 		texturefile = "gfx/interface/ministers/COR/COR_Addison_Roswell_Thompson.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_COR_Arlene_White_Lawrence_sec_npo"
+		texturefile = "gfx/interface/ministers/COR/COR_Arlene_White_Lawrence.tga"
 	}
 	spriteType = {
 		name = "GFX_idea_COR_C_O_Dodd_sec_npo"
@@ -76128,7 +76180,15 @@ spriteTypes = {
 		name = "GFX_idea_COR_John_Geraerdt_Crommelin_Jr_cnav"
 		texturefile = "gfx/interface/ministers/COR/COR_John_Geraerdt_Crommelin_Jr.tga"
 	}
+	spriteType = {
+		name = "GFX_idea_COR_Mickey_Cochrane_cnav"
+		texturefile = "gfx/interface/ministers/COR/COR_Mickey_Cochrane.tga"
+	}
 	### Chief of Air
+	spriteType = {
+		name = "GFX_idea_COR_Bert_Hall_cair"
+		texturefile = "gfx/interface/ministers/COR/COR_Bert_Hall.tga"
+	}
 	spriteType = {
 		name = "GFX_idea_COR_Charles_Augustus_Lindbergh_cair"
 		texturefile = "gfx/interface/ministers/COR/COR_Charles_Augustus_Lindbergh.tga"
@@ -76766,7 +76826,12 @@ spriteTypes = {
 		name = "GFX_idea_WCC_George_Kenney_cair"
 		texturefile = "gfx/interface/ministers/WCC/WCC_George_Kenney.tga"
 	}
-	
-	
-	
+	spriteType = {
+		name = "GFX_idea_WCC_James_Norman_Hall_cair"
+		texturefile = "gfx/interface/ministers/WCC/WCC_James_Norman_Hall.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_WCC_Willis_Bradley_Haviland_cair"
+		texturefile = "gfx/interface/ministers/WCC/WCC_Willis_Bradley_Haviland.tga"
+	}
 }

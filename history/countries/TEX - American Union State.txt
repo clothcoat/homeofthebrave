@@ -159,7 +159,7 @@ add_ideas = {
 create_field_marshal = {# Terry de la Mesa Allen Sr.
 	name = "Terry de la Mesa Allen Sr."
 	desc = "TEX_TERRY_DE_LA_MESA_ARMY_DESC"
-	portrait_path = "gfx/leaders/TEX/Portrait_TEX_George_Van_Horn_Moseley.tga"
+	portrait_path = "gfx/leaders/TEX/Terry_de_la_Mesa_Allen_Sr.tga"
 	traits = {
 		trait_reckless
 		commando
@@ -177,8 +177,8 @@ create_field_marshal = {# Jacob L. Devers
 	desc = "TEX_JACOB_DENVERS_ARMY_DESC"
 	portrait_path = "gfx/leaders/TEX/Portrait_TEX_jacob_devers.tga"
 	traits = {
-		trait_reckless
-		artillery_officer
+		panzer_leader
+		career_officer
 		artillery_specialist
 	}
 	skill = 3
@@ -194,8 +194,8 @@ create_corps_commander = {# Joseph "Lightning Joe" Lawton Collins
 	desc = "TEX_DADDY_COLLINS_DESC"
 	portrait_path = "gfx/leaders/TEX/Portrait_TEX_Joseph_Collins.tga"
 	traits = {
-		trickster
-		career_officer
+		artillery_officer
+		artillery_specialistr
 	}
 	skill = 3
 	attack_skill = 3
