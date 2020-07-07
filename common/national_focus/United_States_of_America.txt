@@ -1666,29 +1666,6 @@ focus_tree = {
 		}
 	}
 	
-	focus = {# Review the Fed
-		id = USA_review_the_fed
-		icon = GFX_goal_constitutional_guarantees
-		cost = 6.00
-		prerequisite = {
-			focus = USA_economic_investments
-		}
-		prerequisite = {
-			focus = USA_rebuild_agriculture
-		}
-		relative_position_id = USA_begin_reconstruction
-		x = 0
-		y = 3
-		ai_will_do = {
-			factor = 50
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus USA_review_the_fed"
-			custom_effect_tooltip = USA_political_recovery_tooltip
-			USA_increase_recovery = yes
-		}
-	}
-	
 	focus = {# Unite Americans
 		id = USA_unite_federal_americans
 		icon = GFX_goal_USA_eagle
@@ -3119,6 +3096,29 @@ focus_tree = {
 		}
 	}
 
+	focus = {# Review the Fed
+		id = USA_review_the_fed
+		icon = GFX_goal_constitutional_guarantees
+		cost = 6.00
+		prerequisite = {
+			focus = USA_economic_investments
+		}
+		prerequisite = {
+			focus = USA_rebuild_agriculture
+		}
+		relative_position_id = USA_begin_reconstruction
+		x = 0
+		y = 3
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_review_the_fed"
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			USA_increase_recovery = yes
+		}
+	}
+	
 	focus = {# American Industry
 		id = USA_american_industry
 		icon = GFX_goal_production
