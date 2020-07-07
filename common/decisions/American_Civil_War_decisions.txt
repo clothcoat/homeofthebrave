@@ -9,10 +9,6 @@ ACW_deal_with_terrorists_decisions = {# dealing with terrorists
 		tag = WCC
 		tag = USA
 		tag = CAL 
-		}
-		OR = {
-				has_political_power > 100
-				has_country_flag = USA_civil_war_over_flag
 			}
 		}
 		visible = {
@@ -38,7 +34,7 @@ ACW_deal_with_terrorists_decisions = {# dealing with terrorists
 			custom_effect_tooltip = ACW_combat_socialists
 			modify_country_flag = {
 				flag = ACW_socialist_resistance
-				value = -2
+				value = -1
 			}
 			add_manpower = -400
 		}
@@ -51,10 +47,6 @@ ACW_deal_with_terrorists_decisions = {# dealing with terrorists
 		tag = WCC
 		tag = USA
 		tag = CAL
-			}
-		OR = {
-				has_political_power > 120
-				has_country_flag = USA_civil_war_over_flag
 			}
 		}
 		visible = {
@@ -80,7 +72,7 @@ ACW_deal_with_terrorists_decisions = {# dealing with terrorists
 			custom_effect_tooltip = ACW_combat_klan
 			modify_country_flag = {
 				flag = ACW_klan_resistance
-				value = -2
+				value = -1
 			}
 			add_manpower = -400
 		}
@@ -95,10 +87,6 @@ ACW_deal_with_terrorists_decisions = {# dealing with terrorists
 		tag = USA
 		tag = CAL
 		tag = NEE
-			}
-		OR = {
-			has_political_power > 70
-			has_country_flag = USA_civil_war_over_flag
 			}
 		}
 		visible = {
@@ -124,7 +112,7 @@ ACW_deal_with_terrorists_decisions = {# dealing with terrorists
 			custom_effect_tooltip = ACW_combat_legion
 			modify_country_flag = {
 				flag = ACW_black_legion_resistance
-				value = -2
+				value = -1
 			}
 			add_manpower = -400
 		}
@@ -139,10 +127,6 @@ ACW_deal_with_terrorists_decisions = {# dealing with terrorists
 		tag = USA
 		tag = CAL
 		tag = NEE
-			}
-		OR = {
-			has_political_power > 90
-			has_country_flag = USA_civil_war_over_flag
 			}
 		}
 		visible = {
@@ -168,7 +152,7 @@ ACW_deal_with_terrorists_decisions = {# dealing with terrorists
 			custom_effect_tooltip = ACW_combat_minuteman
 			modify_country_flag = {
 				flag = ACW_minutemen_resistance
-				value = -2
+				value = -1
 			}
 			add_manpower = -400
 		}
@@ -182,10 +166,6 @@ ACW_deal_with_terrorists_decisions = {# dealing with terrorists
 		tag = TEX
 		tag = COR
 		tag = PSA
-			}
-			OR = {
-				has_political_power > 90
-				has_country_flag = USA_civil_war_over_flag
 			}
 		}
 		visible = {
@@ -211,7 +191,7 @@ ACW_deal_with_terrorists_decisions = {# dealing with terrorists
 			custom_effect_tooltip = ACW_fight_fed_terrorists_tooltip
 			modify_country_flag = {
 				flag = ACW_fed_resistance
-				value = -2
+				value = -1
 			}
 			add_manpower = -400
 		}
@@ -226,10 +206,6 @@ ACW_deal_with_terrorists_decisions = {# dealing with terrorists
 		tag = WCC
 		tag = USA
 		tag = PSA 
-			}
-		OR = {
-			has_political_power > 90
-			has_country_flag = USA_civil_war_over_flag
 			}
 		}
 		visible = {
@@ -252,7 +228,7 @@ ACW_deal_with_terrorists_decisions = {# dealing with terrorists
 			custom_effect_tooltip = ACW_combat_crime
 			modify_country_flag = {
 				flag = ACW_crime_resistance
-				value = -2
+				value = -1
 			}
 			add_manpower = -400
 		}
@@ -267,10 +243,6 @@ ACW_deal_with_terrorists_decisions = {# dealing with terrorists
 		tag = WCC
 		tag = USA
 		tag = PSA 
-			}
-		OR = {
-			has_political_power > 50
-			has_country_flag = USA_civil_war_over_flag
 			}
 		}
 		visible = {
@@ -296,7 +268,7 @@ ACW_deal_with_terrorists_decisions = {# dealing with terrorists
 			custom_effect_tooltip = ACW_combat_black_resis
 			modify_country_flag = {
 				flag = ACW_black_nationalist_resistance
-				value = -2
+				value = -1
 			}
 			add_manpower = -400
 		}
@@ -310,10 +282,6 @@ ACW_deal_with_terrorists_decisions = {# dealing with terrorists
 		tag = WCC
 		tag = USA
 		tag = PSA 
-			}
-		OR = {
-			has_political_power > 50
-			has_country_flag = USA_civil_war_over_flag
 			}
 		}
 		visible = {
@@ -339,7 +307,7 @@ ACW_deal_with_terrorists_decisions = {# dealing with terrorists
 			custom_effect_tooltip = ACW_combat_liberals
 			modify_country_flag = {
 				flag = ACW_liberal_resistance
-				value = -2
+				value = -1
 			}
 			add_manpower = -400
 		}

@@ -321,7 +321,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_aggressive_conscription"
 			swap_ideas = {
-				remove_idea = CAL_deWitt_plan_idea
+				remove_idea = CAL_deWitt_plan_idea_1
 				add_idea = CAL_deWitt_plan_idea_2
 			}
 			add_tech_bonus = {
@@ -529,9 +529,19 @@ focus_tree = {
 		relative_position_id = CAL_kruger_doctrine
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_manuever_exercises"
+			if = {
+			limit = { has_idea = CAL_kruger_doctrine_idea_2 }
 			swap_ideas = {
 				remove_idea = CAL_kruger_doctrine_idea_2
-				add_idea = CAL_kruger_doctrine_idea_3
+				add_idea = CAL_kruger_doctrine_idea_right
+				}
+			}
+			else_if = {
+			limit = { has_idea = CAL_kruger_doctrine_idea_left }
+			swap_ideas = {
+				remove_idea = CAL_kruger_doctrine_idea_left
+				add_idea = CAL_kruger_doctrine_idea_3_both
+				}
 			}
 			add_tech_bonus = {
 				name = CAL_mobility_doctrine
@@ -553,17 +563,24 @@ focus_tree = {
 		relative_position_id = CAL_kruger_doctrine
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_tank_contracts"
-			add_tech_bonus = {
-				name = CAL_Extensive_Planning
-				bonus = 1.5
-				uses = 1
-				category = cat_grand_battle_plan
+			if = {
+			limit = { has_idea = CAL_kruger_doctrine_idea_2 }
+			swap_ideas = {
+				remove_idea = CAL_kruger_doctrine_idea_2
+				add_idea = CAL_kruger_doctrine_idea_left
+				}
 			}
-			add_ideas = CAL_Marshall_plan_idea_1
+			else_if = {
+			limit = { has_idea = CAL_kruger_doctrine_idea_right }
+			swap_ideas = {
+				remove_idea = CAL_kruger_doctrine_idea_right
+				add_idea = CAL_kruger_doctrine_idea_3_both
+				}
+			}
 			add_equipment_to_stockpile = {
 			type = light_tank_equipment
 			amount = 220
-			producer = COR
+			producer = CAL
 			}
 			add_tech_bonus = {
 				name = CAL_tank_doctrine
@@ -589,9 +606,9 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_officer_latitude"
 			swap_ideas = {
-				remove_idea = CAL_kruger_doctrine_idea_3
+				remove_idea = CAL_kruger_doctrine_idea_3_both
 				add_idea = CAL_kruger_doctrine_idea_4
-			}
+				}
 			add_tech_bonus = {
 				name = CAL_mobility_doctrine
 				bonus = 1.5
@@ -612,6 +629,20 @@ focus_tree = {
 		relative_position_id = CAL_kruger_doctrine
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_alamo_scouts"
+			if = {
+			limit = { has_idea = CAL_kruger_doctrine_idea_4 }
+			swap_ideas = {
+				remove_idea = CAL_kruger_doctrine_idea_4
+				add_idea = CAL_kruger_doctrine_idea_4_left
+				}
+			}
+			else_if = {
+			limit = { has_idea = CAL_kruger_doctrine_idea_4_right }
+			swap_ideas = {
+				remove_idea = CAL_kruger_doctrine_idea_4_right
+				add_idea = CAL_kruger_doctrine_idea_4_both
+				}
+			}
 			add_tech_bonus = {
 				name = CAL_mobility_doctrine
 				bonus = 1
@@ -632,9 +663,19 @@ focus_tree = {
 		relative_position_id = CAL_kruger_doctrine
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_support_training"
+			if = {
+			limit = { has_idea = CAL_kruger_doctrine_idea_4 }
 			swap_ideas = {
 				remove_idea = CAL_kruger_doctrine_idea_4
-				add_idea = CAL_kruger_doctrine_idea_5
+				add_idea = CAL_kruger_doctrine_idea_4_right
+				}
+			}
+			else_if = {
+			limit = { has_idea = CAL_kruger_doctrine_idea_4_left }
+			swap_ideas = {
+				remove_idea = CAL_kruger_doctrine_idea_4_left
+				add_idea = CAL_kruger_doctrine_idea_4_both
+				}
 			}
 			add_tech_bonus = {
 				name = CAL_mobility_doctrine
@@ -660,8 +701,8 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_kruger_doctrine"
 			swap_ideas = {
-				remove_idea = CAL_kruger_doctrine_idea_5
-				add_idea = CAL_kruger_doctrine_idea_6
+				remove_idea = CAL_kruger_doctrine_idea_4_both
+				add_idea = CAL_kruger_doctrine_idea_5
 			}
 			add_tech_bonus = {
 				name = CAL_mobility_doctrine
@@ -3589,6 +3630,31 @@ focus_tree = {
 		}
 	}
 	
+	### Post Civil War ###	
+	focus = {# Constitutional Convention
+		id = CAL_constitutional_convention
+		icon = GFX_goal_government_icon
+		cost = 6.00
+		available = {
+			has_global_flag = CAL_civil_war_over_flag
+		}
+		x = 108
+		y = 10
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_constitutional_convention"
+			if = {
+				limit = { has_government = paternal_autocrat }
+				country_event = { id = ustates.116 days = 1 }
+				else = {
+					country_event = { id = ustates.117 days = 1 }
+				}
+			}
+		}
+	}
+	
 	## President Hearst ##
 	focus = {# President Hearst
 		id = CAL_president_hearst
@@ -4004,31 +4070,6 @@ focus_tree = {
 			add_political_power = 125
 			add_stability = 0.05
 			add_popularity = { ideology = paternal_autocrat popularity = 0.05 }
-		}
-	}
-	
-	### Post Civil War ###	
-	focus = {# Constitutional Convention
-		id = CAL_constitutional_convention
-		icon = GFX_goal_government_icon
-		cost = 6.00
-		available = {
-			has_global_flag = CAL_civil_war_over_flag
-		}
-		x = 108
-		y = 10
-		ai_will_do = {
-			factor = 100
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CAL_constitutional_convention"
-			if = {
-				limit = { has_government = paternal_autocrat }
-				country_event = { id = ustates.116 days = 1 }
-				else = {
-					country_event = { id = ustates.117 days = 1 }
-				}
-			}
 		}
 	}
 
@@ -5678,7 +5719,7 @@ focus_tree = {
 
 	focus = {# Support Businesses
 		id = CAL_support_business
-		icon = GFX_goal_CAL_american_industry
+		icon = GFX_focus_generic_industry_3
 		cost = 5.00
 		prerequisite = {
 			focus = CAL_social_conservatives_in_power
@@ -7026,7 +7067,7 @@ focus_tree = {
 	
 	focus = {# Reduce Subsidies
 		id = CAL_reduce_subsidies
-		icon = GFX_goal_CAL_america_economic_miracle
+		icon = GFX_focus_empty_coffers
 		cost = 5.00
 		prerequisite = {
 			focus = CAL_infastructure_investment

@@ -2663,10 +2663,10 @@ country_event = { # Socialist terrorism - factory sabotaged
 	trigger = {
 		tag = TEX
 		OR = {
-			has_idea = USA_socialist_resistance1
-			has_idea = USA_socialist_resistance2
-			has_idea = USA_socialist_resistance3
-			has_idea = USA_socialist_resistance4
+			has_idea = ACW_socialist_resistance_1
+			has_idea = ACW_socialist_resistance_2
+			has_idea = ACW_socialist_resistance_3
+			has_idea = ACW_socialist_resistance_4
 		}
 		any_owned_state = {
 			OR = {
@@ -2684,15 +2684,15 @@ country_event = { # Socialist terrorism - factory sabotaged
 		days = 45
 		modifier = {
 			factor = 1.25
-			has_idea = USA_socialist_resistance2
+			has_idea = ACW_socialist_resistance_2
 		}
 		modifier = {
 			factor = 1.5
-			has_idea = USA_socialist_resistance3
+			has_idea = ACW_socialist_resistance_3
 		}
 		modifier = {
 			factor = 2.0
-			has_idea = USA_socialist_resistance4
+			has_idea = ACW_socialist_resistance_4
 		}
 	}
 
@@ -2793,10 +2793,10 @@ country_event = { # Federalist terrorism - factory sabotaged
 	trigger = {
 		tag = TEX
 		OR = {
-			has_idea = USA_federalist_resistance1
-			has_idea = USA_federalist_resistance2
-			has_idea = USA_federalist_resistance3
-			has_idea = USA_federalist_resistance4
+			has_idea = ACW_fed_resistance_1
+			has_idea = ACW_fed_resistance_2
+			has_idea = ACW_fed_resistance_3
+			has_idea = ACW_fed_resistance_4
 		}
 		any_owned_state = {
 			OR = {
@@ -2814,15 +2814,15 @@ country_event = { # Federalist terrorism - factory sabotaged
 		days = 70
 		modifier = {
 			factor = 1.25
-			has_idea = USA_federalist_resistance2
+			has_idea = ACW_fed_resistance_2
 		}
 		modifier = {
 			factor = 1.5
-			has_idea = USA_federalist_resistance3
+			has_idea = ACW_fed_resistance_3
 		}
 		modifier = {
 			factor = 2
-			has_idea = USA_federalist_resistance4
+			has_idea = ACW_fed_resistance_4
 		}
 	}
 

@@ -202,7 +202,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_hawking_plan
-		icon = GFX_DAH_Topke
+		icon = GFX_goal_generic_construct_civilian
 		cost = 6.00
 		prerequisite = {
 			focus = USA_gwbill_succeeds
@@ -260,7 +260,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_new_shipyards
-		icon = GFX_SIA_maritmesilkroad
+		icon = GFX_goal_generic_construct_naval_dockyard
 		cost = 6.00
 		prerequisite = {
 			focus = USA_new_industrial_act
@@ -2297,7 +2297,7 @@ focus_tree = {
 	
 	focus = {# The Greatest Evil
 		id = USA_the_greatest_evil
-		icon = GFX_USA_prohibition
+		icon = GFX_CAL_prohibition
 		cost = 8.00
 		available = {
 			has_government = social_democrat
