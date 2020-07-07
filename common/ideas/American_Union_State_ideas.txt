@@ -2388,22 +2388,6 @@ ideas = {
 				armor = 0.1
 			}
 		}
-		kr_ford_tex = { #Ford
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea kr_ford_tex"}
-			allowed = {
-				original_tag = TEX
-			}
-			available = {
-				controls_state = 365
-				owns_state = 365
-			}
-			traits = {
-				heavy_tank_producer_offense_1
-			}
-			research_bonus = {
-				armor = 0.1
-			}
-		}
 		kr_general_motors_tex = { #General Motors
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea kr_general_motors_tex"}
 			allowed = {
@@ -2429,38 +2413,6 @@ ideas = {
 	}
 	naval_manufacturer = {
 		designer = yes
-
-		kr_ingalls_shipyards_tex = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea kr_ingalls_shipyards_tex"}
-			allowed = { original_tag = TEX }
-			available = {
-				controls_state = 370
-				owns_state = 370
-			}
-			traits = { capital_ship_producer_mass_1 }
-			research_bonus = {
-				naval_equipment = 0.1
-			}
-		}
-
-		kr_newport_news_tex = { #Newport News
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea kr_newport_news_tex"}
-			allowed = {	original_tag = TEX	}
-			available = {
-				controls_state = 362
-				owns_state = 362
-			}
-			visible = {
-				controls_state = 362
-				owns_state = 362
-				NOT = { country_exists = USA }
-				has_country_flag = USA_naval_companies_allowed
-			}
-			traits = { capital_ship_producer_offense_2 }
-			research_bonus = {
-				naval_equipment = 0.1
-			}
-		}
 
 		kr_norfolk_shipyard_tex = { #Norfolk Shipyard
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea kr_norfolk_shipyard_tex"}
@@ -2721,30 +2673,6 @@ ideas = {
 			traits = {
 				fighter_producer_offense_2
 			}
-			research_bonus = {
-				air_equipment = 0.1
-			}
-		}
-
-		kr_pan_american_tex = { #Pan American Airways
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea kr_pan_american_tex"}
-			allowed = { original_tag = TEX }
-			available = {
-				controls_state = 366
-				owns_state = 366
-			}
-			traits = { fighter_producer_mass_2 }
-			research_bonus = { air_equipment = 0.05	}
-		}
-
-		kr_ryan_aircraft_tex = { #Ryan Aircraft
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea kr_ryan_aircraft_tex"}
-			allowed = { original_tag = TEX }
-			available = {
-				controls_state = 363
-				owns_state = 363
-			}
-			traits = { fighter_producer_mass_1 }
 			research_bonus = {
 				air_equipment = 0.1
 			}

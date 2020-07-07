@@ -856,7 +856,6 @@ USA_american_imperialism = {
 		}
 
 		visible = {
-			has_completed_focus = USA_rightful_domain
 			"PHI" = {
 				exists = yes
 				NOT = {
@@ -978,7 +977,6 @@ USA_american_imperialism = {
 		}
 
 		visible = {
-			has_completed_focus = USA_cooperaton_treaties
 			is_major = yes
 			is_subject = no
 			FROM = {
@@ -1104,7 +1102,7 @@ USA_american_imperialism = {
 		visible = {
 			is_major = yes
 			is_subject = no
-			has_completed_focus = USA_propping_up_allies
+			has_completed_focus = USA_new_interventionism
 			FROM = {
 				exists = yes
 				has_idea = USA_league_of_america_2
@@ -1122,7 +1120,7 @@ USA_american_imperialism = {
 		}
 
 		target_root_trigger = {
-			has_completed_focus = USA_propping_up_allies
+			has_completed_focus = USA_new_interventionism
 		}
 
 		target_trigger = {
@@ -2767,7 +2765,7 @@ USA_rainbow_war_plans_decisions = {
 	TEX_join_germany = {# Join Reichspakt
 		icon = generic_political_discourse
 		allowed = {
-			tag = TEX
+			tag = COR
 		}
 		available = {
 			is_in_faction = no
@@ -2782,7 +2780,7 @@ USA_rainbow_war_plans_decisions = {
 			}
 		}
 		visible = {
-			has_completed_focus = TEX_enter_the_fray
+			has_completed_focus = COR_look_to_the_reichsadler
 			country_exists = GER
 			not_has_socialist_government = yes
 			GER = {
@@ -2900,7 +2898,6 @@ USA_rainbow_war_plans_decisions = {
 			OR = {
 				has_completed_focus = USA_enter_the_fray
 				has_completed_focus = CAL_enter_the_fray
-				has_completed_focus = TEX_enter_the_fray
 			}
 			country_exists = JAP
 			JAP = {
@@ -2986,7 +2983,6 @@ USA_rainbow_war_plans_decisions = {
 			OR = {
 				has_completed_focus = USA_enter_the_fray
 				has_completed_focus = CAL_enter_the_fray
-				has_completed_focus = TEX_enter_the_fray
 			}
 			not_has_socialist_government = yes
 			country_exists = FRA
@@ -3068,7 +3064,6 @@ USA_rainbow_war_plans_decisions = {
 			OR = {
 				has_completed_focus = USA_enter_the_fray
 				has_completed_focus = CAL_enter_the_fray
-				has_completed_focus = TEX_enter_the_fray
 			}
 			country_exists = GER
 			GER = {
@@ -3137,7 +3132,6 @@ USA_rainbow_war_plans_decisions = {
 			OR = {
 				has_completed_focus = USA_enter_the_fray
 				has_completed_focus = CAL_enter_the_fray
-				has_completed_focus = TEX_enter_the_fray
 			}
 			country_exists = SOV
 			SOV = {
@@ -3210,7 +3204,6 @@ USA_rainbow_war_plans_decisions = {
 			OR = {
 				has_completed_focus = USA_enter_the_fray
 				has_completed_focus = CAL_enter_the_fray
-				has_completed_focus = TEX_enter_the_fray
 			}
 			country_exists = RUS
 			RUS = {
