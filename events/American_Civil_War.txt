@@ -2198,7 +2198,7 @@ country_event = { # Huey Long declares Rebellion against MacArthur
 country_event = { # Old Democrats Breakoff
 	id = amcivwar.6000
 	title = amcivwar.6000.t
-	picture = GFX_USA_reed
+	picture = GFX_USA_murray
 
 	is_triggered_only = yes
 
@@ -2538,7 +2538,7 @@ country_event = { # COR forms
 	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.1011"}
 	title = amcivwar.10.t
 	desc = amcivwar.10.d
-	picture = ACW_soldiers_running
+	picture = GFX_USA_murray
 
 	is_triggered_only = yes
 
@@ -2996,7 +2996,7 @@ country_event = { # Old Democrats Breakoff
 	id = amcivwar.1102
 	title = amcivwar.1102.t
 	desc = amcivwar.1102.d
-	picture = GFX_USA_reed
+	picture = GFX_USA_murray
 	
 	desc = { # Nothing is done
 		text = amcivwar.11.d.nothing_is_done
@@ -3445,7 +3445,7 @@ country_event = { # Old Democrats Breakoff
 	id = amcivwar.1500
 	title = amcivwar.1500.t
 	desc = amcivwar.1500.d
-	picture = GFX_USA_reed
+	picture = GFX_USA_murray
 
 	is_triggered_only = yes
 
@@ -3581,7 +3581,7 @@ country_event = { # Old Democrats Breakoff
 	id = amcivwar.18
 	title = amcivwar.18.t
 	desc = amcivwar.18.d
-	picture = GFX_USA_reed
+	picture = GFX_USA_murray
 
 	is_triggered_only = yes
 
@@ -5512,7 +5512,7 @@ country_event = { # Chief of Staff
 		army_experience = 10
 	}
 	option = { # Lightning Joe Collins
-		name = amcivwar.50.c
+		name = amcivwar.50.b
 		add_ideas = TEX_Joseph_'Lightning_Joe'_Lawton_Collins_cos
 		army_experience = 10
 	}
@@ -5521,7 +5521,7 @@ country_event = { # Chief of Staff
 		add_ideas = TEX_Terry_de_la_Mesa_Allen_Sr_cos
 		army_experience = 10
 	}
-	option = { # Lightning Joe Collins
+	option = { # Smith
 		name = amcivwar.50.e
 		add_war_support = 0.05
 		add_political_power = 25
@@ -5544,19 +5544,23 @@ country_event = { # Chief of Army
 			has_global_flag = USA_civil_war_over_flag
 		}
 		NOT = {
-			has_idea = TEX_Edwin_A_Emerson_Jr_carm
+			has_idea = TEX_Fox_Conner_carm
 			has_idea = TEX_Frank_Maxwell_Andrews_carm
-			has_idea = TEX_George_Smith_Patton_Jr_carm
+			has_idea = TEX_James_E_Fechet_carm
 		}
 	}
 
 	option = { # Edwin_A_Emerson_Jr
 		name = amcivwar.51.a
-		add_ideas = TEX_Edwin_A_Emerson_Jr_carm
+		add_ideas = TEX_James_E_Fechet_carm
 	}
 	option = { # Frank_Maxwell_Andrews
 		name = amcivwar.51.b
 		add_ideas = TEX_Frank_Maxwell_Andrews_carm
+	}
+	option = { # Frank_Maxwell_Andrews
+		name = amcivwar.51.c
+		add_ideas = TEX_Fox_Conner_carm
 	}
 }
 
@@ -12471,8 +12475,8 @@ country_event = { # crime Resistance #1
 			value < 10
 		}
 		NOT = { 
-			has_idea = ACW_crime_resistance_1
-			has_idea = ACW_crime_resistance_2 
+			has_idea = ACW_mob_activity_1_idea
+			has_idea = ACW_mob_activity_2_idea 
 		}
 	}
 	mean_time_to_happen = {
@@ -12481,7 +12485,7 @@ country_event = { # crime Resistance #1
 	
 	option = { # Level 1 resistance
 		name = amcivwar.657.a
-		add_ideas = ACW_crime_resistance_1
+		add_ideas = ACW_mob_activity_1_idea
 	}
 }
 
@@ -12505,7 +12509,7 @@ country_event = { # crime Resistance #1-2
 		}
 		}
 		NOT = {
-			has_idea = ACW_crime_resistance_2 
+			has_idea = ACW_mob_activity_2_idea 
 		}
 	}
 	
@@ -12516,14 +12520,14 @@ country_event = { # crime Resistance #1-2
 	option = { # Level 2 resistance
 		name = amcivwar.658.a
 		if = {
-		 limit = { has_idea = ACW_crime_resistance_1 }
+		 limit = { has_idea = ACW_mob_activity_1_idea }
 		swap_ideas = {
-		remove_idea = ACW_crime_resistance_1
-		add_idea = ACW_crime_resistance_2
+		remove_idea = ACW_mob_activity_1_idea
+		add_idea = ACW_mob_activity_2_idea
 			}
 		}
 		else = {
-		add_ideas = ACW_crime_resistance_2
+		add_ideas = ACW_mob_activity_2_idea
 		}
 	}
 }	
@@ -12541,8 +12545,8 @@ country_event = { # crime Crushed
 			value < 5
 			}
 			OR = {
-			has_idea = ACW_crime_resistance_1
-			has_idea = ACW_crime_resistance_2
+			has_idea = ACW_mob_activity_1_idea
+			has_idea = ACW_mob_activity_2_idea
 			}
 		}
 		
@@ -12553,11 +12557,11 @@ country_event = { # crime Crushed
 	option = { # No Resistance
 		name = amcivwar.663.a
 		if = {
-		limit = { has_idea = ACW_crime_resistance_2 }
-		remove_ideas = ACW_crime_resistance_2
+		limit = { has_idea = ACW_mob_activity_2_idea }
+		remove_ideas = ACW_mob_activity_2_idea
 		}
 		else = {
-		remove_ideas = ACW_crime_resistance_1
+		remove_ideas = ACW_mob_activity_1_idea
 		}
 	}
 }
