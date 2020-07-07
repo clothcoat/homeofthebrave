@@ -65,7 +65,6 @@ ideas = {
 			modifier = {
 				max_command_power = 50
 				defensive_war_stability_factor	= 0.5
-				mobilization_laws_cost_factor = -5
 				political_power_gain = 0.05
 				stability_weekly_factor	= 0.003
 			}
@@ -81,7 +80,6 @@ ideas = {
 			modifier = {
 				max_command_power = 75
 				defensive_war_stability_factor	= 0.5
-				mobilization_laws_cost_factor = -5
 				political_power_gain = 0.1
 				conscription_factor = 0.02
 				stability_weekly_factor	= 0.005
@@ -99,7 +97,6 @@ ideas = {
 				max_command_power = 75
 				defensive_war_stability_factor	= 0.5
 				offensive_war_stability_factor = 0.1
-				mobilization_laws_cost_factor = -50
 				political_power_gain = 0.1
 				conscription_factor = 0.03
 				war_support_weekly = 0.01
@@ -1411,8 +1408,6 @@ ideas = {
 				max_command_power = 100
 				conscription_factor = 0.01
 				party_popularity_stability_factor = 0.1
-				political_advisor_cost_factor = -50
-				mobilization_laws_cost_factor = -25
 				war_support_weekly = 0.005
 			}
 			removal_cost = -1
@@ -1648,9 +1643,9 @@ ideas = {
 			}
 			equipment_bonus = {
 				cavalry_equipment = {
-					cavalry_attack_factor = 0.03
-					cavalry_defence_factor = 0.03
-					cavalry_speed_factor = 0.1
+					attack = 0.03
+					defence = 0.03
+					maximum_speed = 0.1
 					build_cost_ic = -0.1
 					instant = yes
 				}
@@ -1711,7 +1706,7 @@ ideas = {
 				}
 				equipment_bonus = {
 				artillery = {
-					max_organization = 2
+					max_organisation = 2
 					build_cost_ic = -0.15
 					reliability = 0.15
 					soft_attack = 0.08
@@ -1737,7 +1732,7 @@ ideas = {
 				}
 				equipment_bonus = {
 				support = {
-					max_organization = 2
+					max_organisation = 2
 					build_cost_ic = -0.1
 					reliability = 0.05
 					defense = 0.05
@@ -1763,6 +1758,7 @@ ideas = {
 				supply_consumption_factor = -0.03
 				line_change_production_efficiency_factor = 0.05
 				}
+			equipment_bonus = {
 				support = {
 					max_organization = 2
 					build_cost_ic = -0.1

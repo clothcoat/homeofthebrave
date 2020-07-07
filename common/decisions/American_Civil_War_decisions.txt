@@ -293,7 +293,7 @@ ACW_deal_with_terrorists_decisions = {# dealing with terrorists
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove ACW_fight_black_nationalist"
-			custom_effect_tooltip = ACW_combat_crime
+			custom_effect_tooltip = ACW_combat_black_resis
 			modify_country_flag = {
 				flag = ACW_black_nationalist_resistance
 				value = -2
@@ -336,7 +336,7 @@ ACW_deal_with_terrorists_decisions = {# dealing with terrorists
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove ACW_fight_ACW_liberal_resistance"
-			custom_effect_tooltip = ACW_combat_crime
+			custom_effect_tooltip = ACW_combat_liberals
 			modify_country_flag = {
 				flag = ACW_liberal_resistance
 				value = -2

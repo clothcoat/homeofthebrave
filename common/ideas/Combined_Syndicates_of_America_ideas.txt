@@ -130,7 +130,6 @@ ideas = {
 			modifier = {
 				decryption_factor = 0.05
 				encryption_factor = 0.05
-				enemy_partisan_effect = -0.1
 			}
 		}
 		
@@ -329,7 +328,6 @@ ideas = {
 			modifier = {
 			army_morale_factor = 0.1
 			MONTHLY_POPULATION = 0.05
-			resistance_tick_auto = -2	
 			research_speed_factor = 0.02
 			production_factory_max_efficiency_factor = -0.05
 			production_factory_efficiency_gain_factor = -0.05
@@ -362,11 +360,9 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_napalm_idea"}
 			picture = CSA_napalm
 			modifier = {
-			enemy_partisan_effect = -0.05
 			air_strategic_bomber_bombing_factor	= 0.02
 			air_strategic_bomber_attack_factor	= 0.03
 			decryption_factor = 0.02
-			resistance_tick_auto = -0.5
 			supply_consumption_factor = 0.02
 			}
 		}
@@ -397,7 +393,6 @@ ideas = {
 			modifier = {
 				decryption_factor = 0.1
 				encryption_factor = 0.05
-				enemy_partisan_effect = -0.05
 			}
 		}
 		
@@ -416,7 +411,6 @@ ideas = {
 			modifier = {
 				decryption_factor = 0.1
 				encryption_factor = 0.15
-				enemy_partisan_effect = -0.05
 				special_forces_cap = 0.02
 			}
 		}
@@ -778,7 +772,6 @@ ideas = {
 				research_sharing_per_country_bonus = 0.15
 				supply_consumption_factor = 0.02
 				trade_opinion_factor = 0.05
-				resistance_tick_auto = -0.1
 				attrition = -0.05
 			}
 			removal_cost = -1
@@ -882,7 +875,6 @@ ideas = {
 				forced_surrender_limit = 0.02
 				party_popularity_stability_factor = 0.1
 				production_factory_efficiency_gain_factor = -0.02
-				resistance_tick_auto = -0.01
 			}
 			removal_cost = -1
 			picture = usa_desegregation_2
@@ -919,7 +911,6 @@ ideas = {
 				forced_surrender_limit = 0.05
 				non_core_manpower = 0.1
 				local_intel_to_enemies = -0.15
-				resistance_tick_auto = -0.02
 			}
 			removal_cost = -1
 			picture = usa_desegregation_2
@@ -934,7 +925,6 @@ ideas = {
 				industry_free_repair_factor = 0.05
 				war_support_weekly = 0.005
 				political_power_gain = 0.02				
-				resistance_tick_auto = -0.02
 			}
 			removal_cost = -1
 			picture = usa_desegregation_2
@@ -961,10 +951,8 @@ ideas = {
 				party_popularity_stability_factor = 0.05
 				war_support_weekly = 0.01
 				consumer_goods_factor = -0.02
-				enemy_partisan_effect = -0.1
 				local_intel_to_enemies = -0.05
 				local_supplies = 0.05
-				resistance_tick_auto = -0.03				
 			}
 			removal_cost = -1
 			picture = usa_desegregation_2
@@ -1026,7 +1014,6 @@ ideas = {
 				encryption_factor = 0.08
 				party_popularity_stability_factor = 0.15
 				war_support_weekly = 0.004
-				resistance_tick_auto = -1
 				minimum_training_level = -5
 			}
 			removal_cost = -1
@@ -1045,7 +1032,6 @@ ideas = {
 				supply_consumption_factor = 0.05
 				army_core_defence_factor = 0.05
 				war_support_weekly = 0.002
-				resistance_tick_auto = -1
 			}
 			removal_cost = -1
 			picture = usa_desegregation_2
@@ -1082,7 +1068,6 @@ ideas = {
 				pocket_penalty = -0.1
 				army_core_defence_factor = 0.1
 				army_core_attack_factor	= 0.05
-				resistance_tick_in_states_controlled_by_enemy = 1
 			}
 			removal_cost = -1
 			picture = usa_desegregation_2
@@ -1764,7 +1749,6 @@ ideas = {
 				party_popularity_stability_factor = 0.1
 				encryption_factor = 0.05
 				recruitable_population_factor = 0.02
-				resistance_tick = -0.2
 			}
 			removal_cost = -1
 			picture = usa_desegregation_2
@@ -1781,7 +1765,6 @@ ideas = {
 				party_popularity_stability_factor = 0.2
 				encryption_factor = 0.08
 				recruitable_population_factor = 0.03
-				resistance_tick = -0.3
 			}
 			removal_cost = -1
 			picture = usa_desegregation_2
@@ -1800,7 +1783,6 @@ ideas = {
 				party_popularity_stability_factor = 0.3
 				encryption_factor = 0.1
 				recruitable_population_factor = 0.05
-				resistance_tick = -0.35
 			}
 			removal_cost = -1
 			picture = usa_desegregation_2
@@ -1820,7 +1802,6 @@ ideas = {
 				encryption_factor = 0.15
 				defensive_war_stability_factor = 0.05
 				recruitable_population_factor = 0.06
-				resistance_tick = -0.4
 			}
 			removal_cost = -1
 			picture = usa_desegregation_2
@@ -2221,7 +2202,6 @@ ideas = {
 				recruitable_population_factor = 0.08
 				training_time_army = -0.5
 				minimum_training_level = -0.1
-				army_militia_attack_factor = 0.02
 				surrender_limit	= 0.1
 				non_core_manpower = 0.35
 				war_stability_factor = 0.5
@@ -2240,7 +2220,6 @@ ideas = {
 				recruitable_population_factor = 0.1
 				training_time_army = -1
 				minimum_training_level = -0.1
-				army_militia_attack_factor = 0.05
 				surrender_limit	= 0.1
 				non_core_manpower = 0.5
 				war_stability_factor = 0.5
@@ -2260,7 +2239,7 @@ ideas = {
 				planning_speed = 0.05
 				dig_in_speed = 1
 				max_dig_in = 1
-				breakthrough = 0.05
+				breakthrough_factor = 0.05
 				max_commander_army_size	= 2
 				max_command_power = 25
 			}
@@ -2276,7 +2255,7 @@ ideas = {
 				planning_speed = 0.05
 				dig_in_speed = 1
 				max_dig_in = 2
-				breakthrough = 0.08
+				breakthrough_factor = 0.08
 				max_commander_army_size	= 4
 				max_command_power = 40
 				encryption_factor = 0.03
@@ -2294,7 +2273,7 @@ ideas = {
 				planning_speed = 0.1
 				dig_in_speed = 1.5
 				max_dig_in = 2
-				breakthrough = 0.1
+				breakthrough_factor = 0.1
 				max_commander_army_size	= 4
 				max_command_power = 40
 				encryption_factor = 0.03
@@ -2313,7 +2292,7 @@ ideas = {
 				planning_speed = 0.2
 				dig_in_speed = 1.8
 				max_dig_in = 2.5
-				breakthrough = 0.1
+				breakthrough_factor = 0.1
 				max_commander_army_size	= 5
 				max_command_power = 50
 				encryption_factor = 0.05

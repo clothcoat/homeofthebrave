@@ -178,7 +178,7 @@ TEX_populist_alliance_decision = {
 
 		cost = 25
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision TEX_break_militarists target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision TEX_break_militarists_decision target: [From.GetName]"
 			declare_war_on = {	type = annex_everything	target = FROM }
 		}
 	}
