@@ -202,6 +202,7 @@ TEX_break_militarists_desc:0 "We will attack Ultra-Nationalists in the Americas"
 
 ### Flags ###
 AUS_election_occured:0 "The American Union State's Government is Settled"
+TEX_afp_progressive_alliance:0 "The AFP has allied the Independence League"
 
 ### Decisions ###
 TEX_call_up_silver_legion:0 "Call up the Silver Legion"
@@ -912,9 +913,26 @@ unionstate.50.a:0 "Limit wealth movement for the rich"
 unionstate.50.b:0 "Harsh Taxation and Fees"
 
 unionstate.51.t:0 "Minutemen Want to Cancel Speech!"
-unionstate.51.d:0 "After receiving reports of a possible plan against Huey Long, the Minutemen want to cancel a speaking tour he is set to give throughout Texas. However this would be a serious hamper on his campaign to gain public support and could make him look weak, causing some push back in the AFP, but still most members Minutemen security forces are begging Long to cancel his tour."
+unionstate.51.d.left:0 "After receiving reports of a possible plan against Huey Long, the Minutemen want to cancel a speaking tour he is set to give throughout Texas. However this would be a serious hamper on his campaign to gain public support and could make him look weak, causing some push back in the AFP, but still most members Minutemen security forces are begging Long to cancel his tour for fear of the Dallas Klan remnant using it as an opportunity to strike."
+unionstate.51.right:0 "After receiving reports of a possible plan against Huey Long, the Minutemen want to cancel a speaking tour he is set to give throughout Ohio. However this would be a serious hamper on his campaign to gain public support and could make him look weak, causing some push back in the AFP, but still most members Minutemen security forces are begging Long to cancel his tour for fear of socialist remnants using it as an opportunity to strike."
 unionstate.51.a:0 "Safety First"
 unionstate.51.b:0 "No, I shall give my tour!"
+
+unionstate.5100.t:0 "Huey Long Shot!"
+unionstate.5100.d.left:0 "Huey Long has been shot in Detroit by Philip E. Fox, a former ally of Hiram Wesley Evans who was angered by Long dismantling the Old Democrats. While his men started a fight within the crowd to cause a distraction, he shot Long five times with a pistol before being gunned down by the Minutemen. Long himself is not expected to survive, causing a nation to be in mourning and an AFP in chaos."
+unionstate.5100.d.right:0 "Huey Long has been shot during his tour by Mario Buda, a former ally of radical anarchists who was angered by Long siding with the right. While his men started a fight within the crowd to cause a distraction, he shot Long five times with a pistol before being gunned down by the Minutemen. Long himself is not expected to survive, causing a nation to be in mourning and an AFP in chaos."
+unionstate.5100.a:0 "May God Help Us"
+
+unionstate.5101.t:0 "Long Dead!"
+unionstate.5101.d:0 "Huey Long died today, unable to survive his wounds. Today is a day of national mourning and widespread violence against groups associated with the assassins is common. His funeral is expected to be the largest in US history as the masses will march alongside his casket in true Louisiana fashion. With the Vice-Presidency essentially being controlled by the AFP many want to simply select a new leader until the next election to help the nation heal from this loss, and there has been no shortage of infighting but the parties current position leaves only a handful able to take the position, with Earl Long competing with more ideological faction leaders for AFP and congressional support."
+unionstate.5101.a:0 "Gerald L.K. Smith"
+unionstate.5101.b:0 "Charles Coughlin"
+unionstate.5101.c:0 "Paul H. Maloney"
+unionstate.5101.e:0 "Big Jim Folsom"
+unionstate.5101.f:0 "Sid McMath"
+unionstate.5101.g:0 "Bronson M. Cutting"
+unionstate.5101.h:0 "Alfred Mitchell Bingham"
+unionstate.5101.i:0 "Earl Long"
 
 ### Pelley Events ###
 

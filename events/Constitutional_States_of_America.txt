@@ -870,7 +870,26 @@ country_event = { # Armstrong's Victory
 	}
 }
 
+country_event = { # Great Smallpox Outbreak
+	id = constate.51
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.51"}
+	title = constate.51.t
+	desc = constate.51.d
+	picture = AUS_christian_identity
 
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #Faith will see us through
+		name = constate.51.a
+		add_political_power = -50
+	}
+	option = { #Dispatch more doctors
+		name = constate.51.b
+		add_stability = -0.05
+	}
+}
 
 
 country_event = { # Divergent Thinking in Christian Identity

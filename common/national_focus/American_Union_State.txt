@@ -1272,6 +1272,10 @@ focus_tree = {
 		}
 		available = {
 			has_government = authoritarian_democrat
+			OR = {
+			has_completed_focus = TEX_reconcile_the_left
+			has_country_flag = TEX_afp_progressive_alliance
+			}
 		}
 		cancel_if_invalid = yes
 		available_if_capitulated = yes
@@ -1366,6 +1370,10 @@ focus_tree = {
 					industrial_complex > 0
 				}
 				add_extra_state_shared_building_slots = 1
+			}
+			modify_country_flag = {
+			flag = AFP_leftism
+			value = -1
 			}
 		}
 	}
@@ -4115,6 +4123,9 @@ focus_tree = {
 			focus = TEX_Devers_Plan
 			focus = TEX_minister_smith
 		}
+		available = {
+		has_idea = TEX_Terry_de_la_Mesa_Allen_Sr_cos
+		}
 		x = -6
 		y = 3
 		ai_will_do = {
@@ -4326,6 +4337,9 @@ focus_tree = {
 			focus = TEX_Terrible_Terry
 			focus = TEX_Lightning_Joe
 			focus = TEX_Devers_Plan
+		}
+		available = {
+		has_country_flag = TEX_AFP_smiths_army
 		}
 		x = -2
 		y = 3
@@ -4562,6 +4576,9 @@ focus_tree = {
 			focus = TEX_Terrible_Terry
 			focus = TEX_Devers_Plan
 			focus = TEX_minister_smith
+		}
+		available = {
+		has_idea = TEX_Joseph_'Lightning_Joe'_Lawton_Collins_cos
 		}
 		x = 2
 		y = 3
@@ -4841,6 +4858,9 @@ focus_tree = {
 			focus = TEX_Lightning_Joe
 			focus = TEX_Terrible_Terry
 			focus = TEX_minister_smith
+		}
+		available = {
+		has_idea = TEX_Jacob_Devers_cos
 		}
 		x = 6
 		y = 3
