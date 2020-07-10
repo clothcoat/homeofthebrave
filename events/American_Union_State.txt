@@ -747,6 +747,10 @@ country_event = { # AUS Election
 		election_frequency = 48
 		elections_allowed = yes
 		}
+		set_party_name = {
+			ideology = social_liberal
+			long_name = TEX_social_liberal_party_long
+			name = TEX_social_liberal_party }
 		hidden_effect = {
 		set_country_flag = AUS_election_occured
 		set_country_flag = NPP_Victory
@@ -762,6 +766,10 @@ country_event = { # AUS Election
 		election_frequency = 48
 		elections_allowed = yes
 		}
+		set_party_name = {
+			ideology = social_conservative
+			long_name = TEX_christian_party_long
+			name = TEX_christian_party }
 		hidden_effect = {
 		set_country_flag = AUS_election_occured
 		set_country_flag = CP_Victory
@@ -819,18 +827,39 @@ country_event = { # New Election
 	}
 
 	option = { # AFP
-		name = unionstate.2300.a
+		name = unionstate.25.a
 		add_political_power = 50
+		if = { 
+		limit = { has_country_flag = AFP_Victory }
+		increase_ruling_party_popularity_by_5 = yes
+		add_political_power = 40
+		}
+		else_if = {
+		limit = { 
+		OR = {
+		has_country_flag = NPP_Victory
+		has_country_flag = CP_Victory
+		}
+		}
 		add_popularity = { ideology = authoritarian_democrat popularity = 0.05 }
 		add_stability = 0.1
 		hidden_effect = {
 		set_country_flag = AUS_election_occured
+		set_country_flag = AFP_Victory
+		if = {
+			limit = { has_country_flag = CP_Victory }
+			clr_country_flag = CP_Victory
+		}
+		if = {
+			limit = { has_country_flag = NPP_Victory }
+			clr_country_flag = NPP_Victory
 		}
 	}
 	option = { # Christian Party
-		name = unionstate.2300.b
+		name = unionstate.25.b
 		add_political_power = 50
 		add_popularity = { ideology = social_liberal popularity = 0.1 }
+		
 		
 		set_politics = {
 		ruling_party = social_conservative
@@ -839,10 +868,19 @@ country_event = { # New Election
 		}
 		hidden_effect = {
 		set_country_flag = AUS_election_occured
+		set_country_flag = CP_Victory
+		if = {
+			limit = { has_country_flag = AFP_Victory }
+			clr_country_flag = AFP_Victory
+		}
+		if = {
+			limit = { has_country_flag = NPP_Victory }
+			clr_country_flag = NPP_Victory
+		}
 		}
 	}
 	option = { # NPP
-		name = unionstate.2300.c
+		name = unionstate.25.c
 		add_political_power = 50
 		add_popularity = { ideology = social_liberal popularity = 0.1 }
 		
@@ -853,6 +891,15 @@ country_event = { # New Election
 		}
 		hidden_effect = {
 		set_country_flag = AUS_election_occured
+		set_country_flag = NPP_Victory
+		if = {
+			limit = { has_country_flag = AFP_Victory }
+			clr_country_flag = AFP_Victory
+		}
+		if = {
+			limit = { has_country_flag = CP_Victory }
+			clr_country_flag = CP_Victory
+		}
 		}
 	}
 }
