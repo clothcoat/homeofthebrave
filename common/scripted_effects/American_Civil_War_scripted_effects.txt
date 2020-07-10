@@ -1147,9 +1147,11 @@ USA_civil_war_begins = {
 			}
 		}
 		if = {
-			limit = { NOT = {
-			has_country_flag = PSA_AUS_TREATY
-				} }
+			limit = { 
+			NOT = {
+			has_global_flag = PSA_AUS_TREATY
+				} 
+			}
 			TEX = {
 			declare_war_on = { target = CAL type = annex_everything	} 
 			}

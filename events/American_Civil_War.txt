@@ -330,9 +330,37 @@ country_event = { # WCC released
 		add_manpower = 15000
 		hidden_effect = {
 			USA_initial_events = yes
+			if = {
+			limit = { has_global_flag = USA_reed_was_president }
 			news_event = { id = amcivwar.4 hours = 8 }
+			}
+			else_if = {
+			limit = { has_global_flag = USA_long_is_president }
+			news_event = { id = amcivwar.9 hours = 8 }
+			}
+			else_if = {
+			limit = { has_global_flag = USA_murray_is_president }
+			news_event = { id = amcivwar.1020 hours = 8 }
+			}
+			else_if = {
+			limit = { has_global_flag = USA_garner_is_president }
+			news_event = { id = amcivwar.16 hours = 8 }
+			}
+			else_if = {
+			limit = { has_country_flag = USA_president_norris }
+			news_event = { id = amcivwar.19 hours = 8 }
+				}
+			else_if = {
+			limit = { 
+			OR = {
+			has_global_flag = USA_president_curtis
+			has_global_flag = USA_president_landon
+				}
+			}
+			news_event = { id = amcivwar.1300 hours = 8 }
+				}
 			country_event = { id = amcivwar.5 days = 30 }
-		}
+			}
 	}
 	option = {
 		name = amcivwar.3000.b
@@ -542,6 +570,14 @@ news_event = { #Standoff in America
 
 	option = {
 		name = amcivwar.4.a
+		hidden_effect = {
+		USA = {
+			country_event = {
+				id = hawaii.1
+				days = 3
+				}
+			}
+		}
 	}
 }
 
@@ -650,7 +686,7 @@ country_event = { # Accepted
 	option = {
 		name = amcivwar.4003.a
 		hidden_effect = {
-		set_country_flag = PSA_CSA_TREATY
+		set_global_flag = PSA_CSA_TREATY
 		}
 		add_political_power = 10
 		add_popularity = { ideology = radical_socialist popularity = 0.05 }
@@ -777,7 +813,7 @@ country_event = { #The West Accepts
 
 	option = {
 		name = amcivwar.4007.a
-		set_country_flag = PSA_AUS_TREATY
+		set_global_flag = PSA_AUS_TREATY
 		add_political_power = 20
 		add_stability = 0.03
 		add_manpower = 580
@@ -1218,8 +1254,8 @@ country_event = { # Last Men Standing
 	trigger = {
 	tag = CAL
 	OR = {
-	has_country_flag = PSA_AUS_TREATY
-	has_country_flag = PSA_CSA_TREATY
+	has_global_flag = PSA_AUS_TREATY
+	has_global_flag = PSA_CSA_TREATY
 	}
 	CAL = {
 	exists = yes
@@ -1262,10 +1298,10 @@ country_event = { # Last Men Standing
 	desc = { ###AUS AND PSA AT PEACE###
 	text = amcivwar.5000.d.AUSPSA
 	trigger = {
-	has_country_flag = PSA_AUS_TREATY
+	has_global_flag = PSA_AUS_TREATY
 	OR = {
 	NOT = {
-	has_country_flag = PSA_CSA_TREATY }
+	has_global_flag = PSA_CSA_TREATY }
 	CSA = {
 	exists = no
 	}
@@ -1282,8 +1318,8 @@ country_event = { # Last Men Standing
 	desc = { ###ALL FACTIONS AT PEACE###
 	text = amcivwar.5000.d.AUSPSACSA
 	trigger = {
-	has_country_flag = PSA_AUS_TREATY
-	has_country_flag = PSA_CSA_TREATY
+	has_global_flag = PSA_AUS_TREATY
+	has_global_flag = PSA_CSA_TREATY
 	TEX = {
 		exists = yes
 		has_war = no
@@ -1298,9 +1334,9 @@ country_event = { # Last Men Standing
 	desc = {  ###CSAPSA AT PEACE###
 	text = amcivwar.5000.d.CSAPSA
 	trigger = {
-	has_country_flag = PSA_CSA_TREATY
+	has_global_flag = PSA_CSA_TREATY
 	OR = {
-	NOT = { has_country_flag = PSA_AUS_TREATY }
+	NOT = { has_global_flag = PSA_AUS_TREATY }
 	TEX = {
 	exists = no
 	}
@@ -1333,10 +1369,10 @@ country_event = { # Last Men Standing
 			}
 	}
 	if = {
-	limit = { has_country_flag = PSA_AUS_TREATY 
+	limit = { has_global_flag = PSA_AUS_TREATY 
 	OR = {
 	NOT = {
-	has_country_flag = PSA_CSA_TREATY }
+	has_global_flag = PSA_CSA_TREATY }
 	CSA = {
 	exists = no
 	}
@@ -1361,8 +1397,8 @@ country_event = { # Last Men Standing
 		}
 	}
 	if = {
-	limit = { has_country_flag = PSA_AUS_TREATY
-	has_country_flag = PSA_CSA_TREATY
+	limit = { has_global_flag = PSA_AUS_TREATY
+	has_global_flag = PSA_CSA_TREATY
 	TEX = {
 		exists = yes
 		}
@@ -1385,9 +1421,9 @@ country_event = { # Last Men Standing
 	}
 	if = {
 	limit = {
-	has_country_flag = PSA_CSA_TREATY
+	has_global_flag = PSA_CSA_TREATY
 	OR = {
-	NOT = { has_country_flag = PSA_AUS_TREATY }
+	NOT = { has_global_flag = PSA_AUS_TREATY }
 	TEX = {
 	exists = no
 	}
@@ -1411,10 +1447,10 @@ country_event = { # Last Men Standing
 	option = { #Long's Minutemen must stand down
 	name = amcivwar.5000.b
 	trigger = {
-		has_country_flag = PSA_AUS_TREATY 
+		has_global_flag = PSA_AUS_TREATY 
 		OR = {
 		NOT = {
-		has_country_flag = PSA_CSA_TREATY }
+		has_global_flag = PSA_CSA_TREATY }
 		CSA = {
 		exists = no
 		}
@@ -1438,8 +1474,8 @@ country_event = { # Last Men Standing
 	option = { #Both Must Stand Down
 	name = amcivwar.5000.c
 	trigger = {
-		has_country_flag = PSA_AUS_TREATY
-		has_country_flag = PSA_CSA_TREATY
+		has_global_flag = PSA_AUS_TREATY
+		has_global_flag = PSA_CSA_TREATY
 		TEX = {
 		exists = yes
 		}
@@ -1465,9 +1501,9 @@ country_event = { # Last Men Standing
 	option = { #Reed Must Stand Down
 	name = amcivwar.5000.e
 	trigger = {
-		has_country_flag = PSA_CSA_TREATY
+		has_global_flag = PSA_CSA_TREATY
 		OR = {
-		NOT = { has_country_flag = PSA_AUS_TREATY }
+		NOT = { has_global_flag = PSA_AUS_TREATY }
 		TEX = {
 		exists = no
 		}
@@ -1507,8 +1543,8 @@ country_event = { # PSA Demands we stand down
 	text = amcivwar.5001.d.AUSPSACSA
 	trigger = {
 	tag = CSA
-	has_country_flag = PSA_AUS_TREATY
-	has_country_flag = PSA_CSA_TREATY
+	has_global_flag = PSA_AUS_TREATY
+	has_global_flag = PSA_CSA_TREATY
 	TEX = {
 		exists = yes
 		}
@@ -1582,8 +1618,8 @@ country_event = { # PSA offers peace
 	text = amcivwar.5002.d.AUSPSACSA
 	trigger = {
 	tag = TEX
-	has_country_flag = PSA_AUS_TREATY
-	has_country_flag = PSA_CSA_TREATY
+	has_global_flag = PSA_AUS_TREATY
+	has_global_flag = PSA_CSA_TREATY
 	TEX = {
 		exists = yes
 		}
@@ -1605,7 +1641,7 @@ country_event = { # PSA offers peace
 		CSA = {
 		exists = yes
 		has_war = no
-		has_country_flag = PSA_CSA_TREATY 
+		has_global_flag = PSA_CSA_TREATY 
 		}
 		}
 		hidden_effect = {
@@ -2110,7 +2146,7 @@ country_event = { # Results
 	}
 	}
 	option = { ##The AUS
-		name = amcivwar.5010.a
+		name = amcivwar.5010.b
 		ai_chance = {
 			factor = 90
 		}
@@ -5507,7 +5543,7 @@ country_event = { # Chief of Staff
 	is_triggered_only = yes
 
 	option = { # Jacob "Smiling Jake" Devers
-		name = amcivwar.50.b
+		name = amcivwar.50.a
 		add_ideas = TEX_Jacob_Devers_cos
 		army_experience = 10
 	}
@@ -5591,7 +5627,7 @@ country_event = { # Chief of Navy
 		add_ideas = TEX_Arthur_Lee_Willard_cnav
 	}
 	option = { # Lynne Quiggle
-		name = amcivwar.52.a
+		name = amcivwar.52.b
 		add_ideas = TEX_Lynne_C_Quiggle_cnav
 	}
 	option = { # William_Frederick_Halsey_Jr

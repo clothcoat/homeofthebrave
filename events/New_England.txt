@@ -78,6 +78,8 @@ country_event = { # ACW nation informed that Canada has seized New England
 		trigger = { NOT = { country_exists = CSA } }
 	}
 
+	fire_only_once = yes
+	
 	is_triggered_only = yes
 	
 	immediate = {
