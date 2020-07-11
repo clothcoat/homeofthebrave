@@ -3614,7 +3614,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_americanism"
 			custom_effect_tooltip = USA_political_recovery_tooltip
-			USA_increase_recovery = yes
+			USA_political_recovery = yes
 			add_stability = 0.05
 		}
 	}
@@ -3681,7 +3681,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_national_rehabilition"
 			custom_effect_tooltip = USA_political_recovery_tooltip
-			USA_increase_recovery = yes
+			USA_political_recovery = yes
 			country_event = { id = ustates.120 days = 1 }
 			random_owned_state = {
 				limit = {
@@ -3731,7 +3731,7 @@ focus_tree = {
 			add_political_power = -30
 			add_stability = 0.05
 			custom_effect_tooltip = USA_political_recovery_tooltip
-			USA_increase_recovery = yes
+			USA_political_recovery = yes
 		}
 	}
 	focus = {# The American Legion
@@ -3773,7 +3773,7 @@ focus_tree = {
 			add_ideas = USA_defenders_of_republicanism_idea
 			add_stability = 0.05
 			custom_effect_tooltip = USA_political_recovery_tooltip
-			USA_increase_recovery = yes
+			USA_political_recovery = yes
 		}
 	}
 	focus = {# Congress Freed
@@ -3797,6 +3797,10 @@ focus_tree = {
 			add_stability = 0.15
 			add_popularity = { ideology = paternal_autocrat popularity = -0.1 }
 			add_political_power = -50
+			hidden_effect = {
+			country_event = ustates.1289
+			days = 1
+			}
 		}
 	}
 	focus = {# American Caesar
@@ -3820,6 +3824,12 @@ focus_tree = {
 			add_command_power = 35
 			add_manpower = -5000
 			add_stability = -0.1
+			hidden_effect = {
+			country_event = {
+				id = ustates.1280
+				days = 5
+				}
+			}
 		}
 	}
 	
@@ -3896,6 +3906,12 @@ focus_tree = {
 			add_stability = 0.05
 			add_political_power = 50
 			add_command_power = 15
+			hidden_effect = {
+			country_event = {
+				id = ustates.1281
+				days = 5
+				}
+			}
 		}
 	}
 
@@ -4039,6 +4055,12 @@ focus_tree = {
 			army_experience = 20
 			add_command_power = 30
 			add_political_power = 30
+			hidden_effect = {
+			country_event = {
+				id = ustates.1283
+				days = 12
+				}
+			}
 		}
 	}
 
@@ -4651,7 +4673,7 @@ focus_tree = {
 			focus = USA_reform_plan
 		}
 		available = {
-			always = no
+			has_global_flag = USA_civil_war_avoided_flag
 		}
 		mutually_exclusive = {
 			focus = USA_McNair_Plan
@@ -4688,6 +4710,7 @@ focus_tree = {
 		}
 		available = {
 			always = no
+			has_global_flag = USA_civil_war_avoided_flag
 		}
 		mutually_exclusive = {
 			focus = USA_chaffee_plan

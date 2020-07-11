@@ -106,6 +106,10 @@ USA_release_CSA = {
 		}
 
 		USA = {
+			if = { 
+			limit = { has_idea = USA_syndicalist_strike_idea }
+			remove_ideas = USA_syndicalist_strike_idea
+			}
 			CSA = { transfer_technology = yes }
 			if = {
 				limit = {
@@ -452,6 +456,13 @@ USA_release_COR = {
 		}
 
 		USA = {
+			if = {
+			limit = { has_idea = USA_klan_activity_idea }
+			swap_ideas = {
+			remove_idea = USA_klan_activity_idea
+			add_idea = ACW_klan_resistance_1
+				}
+			}
 			set_country_flag = John_Elliott_Rankin_dead
 			COR = { transfer_technology = yes }
 			load_oob = "USA_civil_war_reenforcments"
@@ -522,6 +533,14 @@ USA_release_COR = {
 		remove_unit_leader = 57 #George S. Patton
 		remove_unit_leader = 59 #George Van Horn Moseley
 
+		set_country_flag = John_Sparkman_dead
+		set_country_flag = James_Eastland_dead
+		set_country_flag = Richard_Russell_Jr_dead
+		set_country_flag = Strom_Thurmond_dead
+		set_country_flag = Robert_Rice_Reynolds_dead
+		set_country_flag = Strom_Thurmond_dead
+		set_country_flag = John_Elliott_Rankin_dead
+		
 		every_navy_leader = {
 			limit = { has_id = 63 } #William Halsey Jr.
 			set_nationality = COR
@@ -685,6 +704,18 @@ USA_release_WCC = {
 		}
 
 		USA = {
+			if = {
+			limit = { has_idea = USA_great_depression }
+			swap_ideas = {
+			remove_ideas = USA_great_depression
+				}
+			}
+			if = {
+			limit = { has_idea = USA_political_crisis }
+			swap_ideas = {
+			remove_ideas = USA_political_crisis
+				}
+			}
 			WCC = { transfer_technology = yes }
 			if = {
 				set_cosmetic_tag = USA_ACW
@@ -724,6 +755,13 @@ USA_release_WCC = {
 		remove_unit_leader = 88 #Bradley
 		remove_unit_leader = 90 #Ike
 
+		set_country_flag = Martin_Dies_Jr_dead
+		set_country_flag = Walter_Bedell_'Beetle'_Smith_dead
+		set_country_flag = Joseph_Raymond_McCarthy_dead
+		set_country_flag = Omar_Nelson_Bradley_dead
+		set_country_flag = Dwight_D_Eisenhower_dead
+		set_country_flag = John_Sparkman_dead
+		
 		every_owned_state = {
 			limit = { is_core_of = WCC }
 			WCC = { transfer_state = PREV }

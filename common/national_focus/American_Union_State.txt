@@ -3558,7 +3558,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TEX_employment_expansion"
 			TEX_increase_political_recovery = yes
-			custom_effect_tooltip = USA_economic_recovery_tooltip
+			custom_effect_tooltip = USA_political_recovery_tooltip
 			increase_ruling_party_popularity_by_5 = yes
 		}
 	}
@@ -3648,12 +3648,28 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TEX_state_grants"
 			TEX_increase_political_recovery = yes
+			random_owned_state = {
+				limit = {
+					is_core_of = TEX
+					is_controlled_by = TEX
+					infrastructure > 0
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = TEX
+					is_controlled_by = TEX
+					infrastructure > 0
+				}
+				add_extra_state_shared_building_slots = 1
+			}
 		}
 	}
 	
 	focus = {# The Grand Army of the Republic
 		id = TEX_Grand_Army_of_the_Republic
-		icon = GFX_america_goal_eagle_deal
+		icon = GFX_goal_TEX_Grand_Army_of_the_Republic
 		cost = 7.25
 		prerequisite = {
 			focus = TEX_national_recovery
@@ -3667,6 +3683,10 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TEX_Grand_Army_of_the_Republic"
 			TEX_increase_political_recovery = yes
+			add_stability = 0.05
+			add_political_power = 25
+			add_war_support = 0.05
+			add_manpower = 2000
 		}
 	}
 	
@@ -6468,7 +6488,7 @@ focus_tree = {
 			is_subject = no
 			is_major = yes
 			has_army_manpower = { size > 250000 }
-			NOT = { country_exists = CAL }
+			has_completed_focus = TEX_national_recovery
 		}
 
 		ai_will_do = {

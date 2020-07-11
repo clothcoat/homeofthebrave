@@ -1236,7 +1236,7 @@ country_event = { # Civil War Begins
 	immediate = {
 		USA_civil_war_begins = yes
 		set_country_flag = {
-		has_global_flag = USA_civil_war_begun_flag
+		set_global_flag = USA_civil_war_begun_flag
 		}
 	}
 
@@ -1862,7 +1862,7 @@ country_event = { # Results are in
 	CAL = {
 	annex_country = {
 	target = TEX
-	transfer_troops = yes
+	transfer_troops = no
 			}
 		}
 	}
@@ -1876,7 +1876,7 @@ country_event = { # Results are in
 	CAL = {
 	annex_country = {
 	target = CSA
-	transfer_troops = yes
+	transfer_troops = no
 		}
 	}
 	if = {
@@ -1904,7 +1904,7 @@ country_event = { # Results are in
 	TEX = {
 	annex_country = {
 	target = CAL
-	transfer_troops = yes
+	transfer_troops = no
 		}
 	}
 	if = {
@@ -1917,7 +1917,7 @@ country_event = { # Results are in
 	TEX = {
 	annex_country = {
 	target = CSA
-	transfer_troops = yes
+	transfer_troops = no
 	}
 		}
 	}
@@ -1948,7 +1948,7 @@ country_event = { # Results are in
 	CSA = {
 	annex_country = {
 	target = CAL
-	transfer_troops = yes
+	transfer_troops = no
 	}
 		}
 	if = {
@@ -1961,7 +1961,7 @@ country_event = { # Results are in
 	CSA = {
 	annex_country = {
 	target = TEX
-	transfer_troops = yes
+	transfer_troops = no
 		}
 		}
 	}
@@ -2135,7 +2135,7 @@ country_event = { # Results
 	CSA = {
 	annex_country = {
 	target = TEX
-	transfer_troops = yes
+	transfer_troops = no
 	}
 	}
 	if = {
@@ -2153,7 +2153,7 @@ country_event = { # Results
 	TEX = {
 	annex_country = {
 	target = CSA
-	transfer_troops = yes
+	transfer_troops = no
 		}
 	}
 	if = {
