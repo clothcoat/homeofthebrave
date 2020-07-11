@@ -833,17 +833,77 @@ country_event = { # New Election
 		limit = { has_country_flag = AFP_Victory }
 		increase_ruling_party_popularity_by_5 = yes
 		add_political_power = 40
+		add_stability = 0.1
 		}
 		else_if = {
 		limit = { 
 		OR = {
 		has_country_flag = NPP_Victory
 		has_country_flag = CP_Victory
+				}
+		has_completed_focus = TEX_perfect_democracy
+			}
+			if = {
+			limit = {
+				OR = {
+				has_country_flag = {
+				flag = AFP_leftism
+				value < 3
+						}
+				has_country_flag = {
+				flag = AFP_leftism
+				value = 3
+						}
+					}
+				}
+			change_to_socdem_popularity = yes
+			}
+			if = {
+			limit = {
+				OR = {
+				has_country_flag = {
+				flag = AFP_leftism
+				value = 5
+						}
+				has_country_flag = {
+				flag = AFP_leftism
+				value = 4
+						}
+					}
+				}
+			change_to_soclib_popularity = yes
+			}
+			if = {
+			limit = {
+				has_country_flag = {
+				flag = AFP_leftism
+				value > 5
+					}
+				}
+			change_to_soccon_popularity = yes
+			}
 		}
+		else_if = {
+		limit = { 
+		OR = {
+		has_country_flag = NPP_Victory
+		has_country_flag = CP_Victory
+			}
+		NOT = { has_completed_focus = TEX_perfect_democracy }
 		}
-		add_popularity = { ideology = authoritarian_democrat popularity = 0.05 }
-		add_stability = 0.1
-		hidden_effect = {
+		set_politics = {
+		ruling_party = authoritarian_democrat
+		election_frequency = 48
+		elections_allowed = yes
+			}
+		set_party_name = {
+			ideology = social_democrat
+			long_name = TEX_authoritarian_democrat_party_long
+			name = TEX_authoritarian_democrat_party }
+		}
+		
+	}
+	hidden_effect = {
 		set_country_flag = AUS_election_occured
 		set_country_flag = AFP_Victory
 		if = {
@@ -858,9 +918,8 @@ country_event = { # New Election
 	option = { # Christian Party
 		name = unionstate.25.b
 		add_political_power = 50
-		add_popularity = { ideology = social_liberal popularity = 0.1 }
-		
-		
+		add_popularity = { ideology = social_conservative popularity = 0.05 }
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.02 }
 		set_politics = {
 		ruling_party = social_conservative
 		election_frequency = 48
@@ -877,6 +936,14 @@ country_event = { # New Election
 			limit = { has_country_flag = NPP_Victory }
 			clr_country_flag = NPP_Victory
 		}
+		set_party_name = {
+			ideology = social_conservative
+			long_name = TEX_christian_party_long
+			name = TEX_christian_party }
+		set_party_name = {
+			ideology = authoritarian_democrat
+			long_name = TEX_christian_party_auth_long
+			name = TEX_christian_party_auth }
 		}
 	}
 	option = { # NPP
@@ -900,6 +967,10 @@ country_event = { # New Election
 			limit = { has_country_flag = CP_Victory }
 			clr_country_flag = CP_Victory
 		}
+		set_party_name = {
+			ideology = social_liberal
+			long_name = TEX_social_liberal_party_long
+			name = TEX_social_liberal_party }
 		}
 	}
 }
