@@ -260,6 +260,7 @@ country_event = { # Pacific States declares revolution against MacArthur
 		}
 		add_stability = 0.15
 		add_war_support = 0.2
+		CAL_initial_events = yes
 	}
 	option = {
 		name = amcivwar.3.b
@@ -282,6 +283,7 @@ country_event = { # Pacific States declares revolution against MacArthur
 		CAL = {
 			change_tag_from = USA
 		}
+		CAL_initial_events = yes
 	}
 }
 
