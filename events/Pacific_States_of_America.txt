@@ -4743,9 +4743,6 @@ country_event = {
 
 	option = {
 		name = pacificstates.154.a
-		hidden_effect = {
-			country_event = { id = pacificstates.1 days = 5 }
-		}
 	}
 }
 ####################
@@ -4848,13 +4845,9 @@ country_event = {# Election Declared
 		name = pacificstates.205.a
 		hidden_effect = {
 		country_event = {
-		id = pacificstates.206
-		days = 14
-		}
-		country_event = {
 		id = pacificstates.2050
 		days = 30
-		}
+			}
 		}
 	}
 }
@@ -4872,7 +4865,7 @@ country_event = {# The Campaigns
 		name = pacificstates.2050.a
 		hidden_effect = {
 		country_event = {
-		id = pacificstates.2
+		id = pacificstates.5
 		days = 25
 		}
 		country_event = {
@@ -5014,7 +5007,7 @@ country_event = {# Hearst's Horror Stories
 		hidden_effect = {
 			country_event = {
 			id = pacificstates.222
-			days = 30
+			days = 20
 			}
 		}
 	}
