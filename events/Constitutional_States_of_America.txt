@@ -883,11 +883,73 @@ country_event = { # Great Smallpox Outbreak
 
 	option = { #Faith will see us through
 		name = constate.51.a
-		add_political_power = -50
+		add_stability = -0.05
+		hidden_effect = {
+		country_event = {
+			id = constate.5100
+			days = 3
+			}
+		}
 	}
 	option = { #Dispatch more doctors
 		name = constate.51.b
+		add_political_power = -50
+		add_popularity = { ideology = national_populist popularity = -0.05 }
+	}
+}
+
+country_event = { # Smallpox outbreak grows
+	id = constate.5100
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.5100"}
+	title = constate.5100.t
+	desc = constate.5100.d
+	picture = AUS_christian_identity
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #Clean house
+		name = constate.5100.a
 		add_stability = -0.05
+	}
+	option = { #No, we need their numbers for now
+		name = constate.5100.b
+		add_political_power = -50
+		add_popularity = { ideology = national_populist popularity = -0.05 }
+	}
+}
+
+country_event = { # Armstrong Dead
+	id = constate.5101
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.5101"}
+	title = constate.5101.t
+	desc = constate.5101.d
+	picture = AUS_christian_identity
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+	kill_ideology_leader = national_populist
+	set_country_flag = Herbert_W_Armstrong_dead
+	}
+	option = { #George Lincoln Rockwell
+		name = constate.5101.a
+		create_country_leader = {
+			name = "George Lincoln Rockwell"
+			desc = "POLITICS_GEORGE_LINCOLN_ROCKWELL_DESC"
+			picture = "Portrait_CAL_Upton_Sinclair.tga"
+			expire = "1965.1.1"
+			ideology = radical_socialist_subtype
+			traits = {}
+		}
+	}
+	option = { #Francis Parker Yockey
+		name = constate.5101.b
+		add_political_power = -50
+		add_popularity = { ideology = national_populist popularity = -0.05 }
 	}
 }
 
