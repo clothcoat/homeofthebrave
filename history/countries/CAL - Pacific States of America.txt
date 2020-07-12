@@ -148,12 +148,12 @@ create_country_leader = {# Earl Warren
 	ideology = social_liberal_subtype
 	traits = {}
 }
-create_country_leader = {# John Arthur Gellatly
-	name = "John Arthur Gellatly"
+create_country_leader = {# Pacific Congress
+	name = "Pacific Congress"
 	desc = "POLITICS_JOHN_GELLATLY_DESC"
-	picture = "Portrait_CAL_John_Arthur_Gellatly.tga"
+	picture = "CAL_pacific_congress.tga"
 	expire = "1965.1.1"
-	ideology = market_liberal_subtype
+	ideology = social_conservative_subtype
 	traits = {}
 }
 create_country_leader = {# Frank Merriam
@@ -161,7 +161,7 @@ create_country_leader = {# Frank Merriam
 	desc = "POLITICS_FRANK_MERRIAM_DESC"
 	picture = "Portrait_CAL_Frank_Merrimam.tga"
 	expire = "1965.1.1"
-	ideology = social_conservative_subtype
+	ideology = market_liberal_subtype
 	traits = {}
 }
 create_country_leader = {

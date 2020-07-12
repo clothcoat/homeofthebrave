@@ -5180,9 +5180,9 @@ country_event = {# The Hearst Deficit
 
 country_event = {# Mankind United Cult
 	id = pacificstates.222
-	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.205"}
-	title = pacificstates.205.t
-	desc = pacificstates.203.d
+	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.222"}
+	title = pacificstates.222.t
+	desc = pacificstates.222.d
 	picture = GFX_ACW_american_brigade
 
 	is_triggered_only = yes
@@ -6495,12 +6495,12 @@ country_event = {# Hollywood Blacklist
 		
 	}
 	option = {# Denounce the Blacklist
-		name = pacificstates.203.b
+		name = pacificstates.270.b
 		add_stability = 0.02
 		add_political_power = -30
 	}
 	option = {# Remain Silent
-		name = pacificstates.203.c
+		name = pacificstates.270.c
 		add_popularity = { ideology = totalist popularity = -0.02 }
 		add_popularity = { ideology = syndicalist popularity = -0.02 }
 		add_popularity = { ideology = radicial_socialist popularity = -0.02 }
@@ -7242,7 +7242,7 @@ country_event = {# Negotiate with CSA?
 	}
 }
 
-country_event = {# Humanist Manifesto
+country_event = {# Mexican Resistance
 	id = pacificstates.327
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.327"}
 	title = pacificstates.327.t
@@ -7253,14 +7253,11 @@ country_event = {# Humanist Manifesto
 
 	fire_only_once = yes
 
-	option = {# Let's focus on more reliable models
+	option = {# Very well
 		name = pacificstates.327.a
-	}
-	option = {# I like it how it is
-		name = pacificstates.327.b
-		ai_chance = {
-			factor = 10
-		}
+		add_manpower = -2000
+		add_stability = -0.03
+		add_political_power = 30
 	}
 }
 

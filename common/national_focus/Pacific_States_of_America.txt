@@ -9229,6 +9229,7 @@ focus_tree = {
 		cost = 5.00
 		available = {
 			has_government = social_liberal
+			has_country_flag = CAL_liberals_won_twice_flag
 		}
 		ai_will_do = {
 			factor = 5
@@ -9495,6 +9496,7 @@ focus_tree = {
 		cost = 5.00
 		available = {
 			has_government = social_democrat
+			has_country_flag = CAL_social_democrats_win_twice_flag
 		}
 		ai_will_do = {
 			factor = 5
@@ -9723,6 +9725,7 @@ focus_tree = {
 		}
 		available = {
 			has_government = radical_socialist
+			flag = 
 		}
 		ai_will_do = {
 			factor = 5
