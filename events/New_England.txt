@@ -220,6 +220,10 @@ country_event = { # Canada Releases New England
 					id = newengland.6
 					days = 2
 				}
+				country_event = {
+					id = newengland.101
+					days = 9
+				}
 				load_oob = NEE
 				set_politics = {
 					ruling_party = social_conservative            }
@@ -278,6 +282,10 @@ country_event = { # Canada Releases New England
 				country_event = {
 					id = newengland.6
 					days = 2
+				}
+				country_event = {
+					id = newengland.101
+					days = 9
 				}
 				load_oob = NEE
 				set_politics = {
