@@ -726,7 +726,7 @@ country_event = { # 1940 Liberal Primary
 	option = { # George Aiken
 		name = newengland.21.a
 		hidden_effect = {
-			set_country_flag = NEE_1940_liberal_primary_winant
+			set_country_flag = NEE_1940_liberal_primary_aiken
 		}
 		hidden_effect = {
 		country_event = {
@@ -738,7 +738,7 @@ country_event = { # 1940 Liberal Primary
 	option = { # Frances Perkins
 		name = newengland.21.b
 		hidden_effect = {
-			set_country_flag = NEE_1940_liberal_primary_lehman
+			set_country_flag = NEE_1940_liberal_primary_perkins
 			
 		}
 		hidden_effect = {
@@ -783,27 +783,88 @@ country_event = { # 1940 Republican Primary
 			}
 		}
 	}
-	option = { # Joseph Kennedy Sr.
+	option = { # Joseph William Martin Jr.
 		name = newengland.22.b
 		ai_chance = {
 			factor = 50
 			modifier = {
 				factor = 2
-				NOT = {
-					has_country_leader = {
-						ruling_only = yes
-						name = "Percival P. Baxter"
-					}
+				has_country_leader = {
+					ruling_only = yes
+					name = "Joseph William Martin Jr."
 				}
 			}
 		}
 		hidden_effect = {
-			set_country_flag = NEE_1940_republican_primary_kennedy
+			set_country_flag = NEE_1940_republican_primary_martin
 		}
 		hidden_effect = {
 		country_event = {
 			id = newengland.23
-			days = 6
+			days = 9
+			}
+		}
+	}
+	option = { # Christian Herter
+		name = newengland.22.c
+		ai_chance = {
+			factor = 50
+		}
+		hidden_effect = {
+			set_country_flag = NEE_1940_republican_primary_herter
+		}
+		hidden_effect = {
+		country_event = {
+			id = newengland.23
+			days = 9
+			}
+		}
+	}
+	
+	option = { # Herbert H. Lehman
+		name = newengland.22.e
+		ai_chance = {
+			factor = 50
+		}
+		hidden_effect = {
+			set_country_flag = NEE_1940_republican_primary_lehman
+		}
+		hidden_effect = {
+		country_event = {
+			id = newengland.23
+			days = 9
+			}
+		}
+	}
+	
+	option = { # John Gilbert Winant
+		name = newengland.22.f
+		ai_chance = {
+			factor = 50
+		}
+		hidden_effect = {
+			set_country_flag = NEE_1940_republican_primary_winant
+		}
+		hidden_effect = {
+		country_event = {
+			id = newengland.23
+			days = 9
+			}
+		}
+	}
+	
+	option = { # Thomas Dewey
+		name = newengland.22.g
+		ai_chance = {
+			factor = 50
+		}
+		hidden_effect = {
+			set_country_flag = NEE_1940_republican_primary_dewey
+		}
+		hidden_effect = {
+		country_event = {
+			id = newengland.23
+			days = 9
 			}
 		}
 	}
@@ -820,35 +881,37 @@ country_event = { # 1940 Democrat Primary
 
 	fire_only_once = yes
 
-	option = { # Christian Herter
+	option = { # Joseph Kennedy Sr.
 		name = newengland.23.a
-		ai_chance = {
-			factor = 50
-		}
-		hidden_effect = {
-			set_country_flag = NEE_1940_democratic_primary_herter
-		}
-		hidden_effect = {
-		country_event = {
-			id = newengland.24
-			days = 9
-			}
-		}
-	}
-	option = { # Joseph William Martin Jr.
-		name = newengland.23.b
 		ai_chance = {
 			factor = 50
 			modifier = {
 				factor = 2
-				has_country_leader = {
-					ruling_only = yes
-					name = "Joseph William Martin Jr."
+				NOT = {
+					has_country_leader = {
+						ruling_only = yes
+						name = "Percival P. Baxter"
+					}
 				}
 			}
 		}
 		hidden_effect = {
-			set_country_flag = NEE_1940_democratic_primary_martin
+			set_country_flag = NEE_1940_democrat_primary_kennedy
+		}
+		hidden_effect = {
+		country_event = {
+			id = newengland.24
+			days = 6
+			}
+		}
+	}
+	option = { # James Michael Curley
+		name = newengland.23.b
+		ai_chance = {
+			factor = 50
+		}
+		hidden_effect = {
+			set_country_flag = NEE_1940_democratic_primary_curley
 		}
 		hidden_effect = {
 		country_event = {
@@ -871,9 +934,9 @@ country_event = { # 1940 Election
 
 	immediate = {
 		hidden_effect = {
-			else_if = { # Joseph Kennedy Sr.
+			if = { # Joseph Kennedy Sr.
 				limit = {
-					has_country_flag = NEE_1940_republican_primary_kennedy
+					has_country_flag = NEE_1940_democrat_primary_kennedy
 				}
 				create_country_leader = {
 					name = "Joseph Kennedy Sr."
@@ -884,17 +947,140 @@ country_event = { # 1940 Election
 					traits = {}
 				}
 			}
-			else_if = { # Joseph William Martin Jr.
+			else_if = { # James Curley
 				limit = {
-					has_country_flag = NEE_1940_democratic_primary_martin
+					has_country_flag = NEE_1940_democratic_primary_curley
 				}
-				create_country_leader = {
-					name = "Joseph William Martin Jr."
-					desc = "POLITICS_JOSEPH_WILLIAM_MARTIN_DESC"
-					picture = "Portrait_NEE_joseph_martin_jr.tga"
+				create_country_leader = {# Curley
+					name = "James Michael Curley"
+					desc = "POLITICS_JAMES_MICHAEL_CURLEY_DESC"
+					picture = "gfx/leaders/NEE/Jim_Curley.tga"
 					expire = "1965.1.1"
 					ideology = social_conservative_subtype
-					traits = {}
+					traits = {
+					}
+				}
+			}
+			
+			else_if = { # Al Smith
+				limit = {
+					has_country_flag = NEE_1940_democratic_primary_smith
+				}
+				create_country_leader = {# Curley
+					name = "Al Smith"
+					desc = "POLITICS_AL_SMITH_DESC"
+					picture = "gfx/leaders/NEE/Alsmith.tga"
+					expire = "1965.1.1"
+					ideology = social_conservative_subtype
+					traits = {
+					}
+				}
+			}
+			
+			if = { # John Gilbert Winant
+				limit = {
+					has_country_flag = NEE_1940_republican_primary_winant
+				}
+				create_country_leader = {
+					name = "John Gilbert Winant"
+					desc = "POLITICS_JOHN_WINANT_DESC"
+					picture = "Portrait_NEE_john_winant.tga"
+					expire = "1965.1.1"
+					ideology = social_liberal_subtype
+					traits = {
+						tenacious_negotiator
+					}
+				}
+			}
+			
+			else_if = { # Herbert H. Lehman
+				limit = {
+					has_country_flag = NEE_1940_republican_primary_lehman
+				}
+				create_country_leader = {
+					name = " Herbert H. Lehman"
+					desc = "POLITICS_HERBERT_LEHMAN_DESC"
+					picture = "Portrait_NEE_Robert_Lehman.tga"
+					expire = "1965.1.1"
+					ideology = social_liberal_subtype
+					traits = {
+						financial_expert
+					}
+				}
+			}
+			
+			else_if = { # Hamilton Fish
+				limit = {
+					has_country_flag = NEE_1940_republican_primary_fish
+				}
+				create_country_leader = {# Fish
+					name = "Hamilton Fish III"
+					desc = "POLITICS_HAMILTON_FISH_DESC"
+					picture = "gfx/leaders/NEE/Portrait_hamilton_fish_iii.tga"
+					expire = "1965.1.1"
+					ideology = market_liberal_subtype
+					traits = {
+					}
+				}
+			}
+			
+			else_if = { # Percival P. Baxter
+				limit = {
+					has_country_flag = NEE_1940_republican_primary_baxter
+				}
+				create_country_leader = {
+					name = "Percival P. Baxter"
+					desc = "POLITICS_PERCIVAL_BAXTER_DESC"
+					picture = "Portrait_NEE_Percival_P_Baxter.tga"
+					expire = "1965.1.1"
+					ideology = market_liberal_subtype
+					traits = {
+						nationalist_symbol
+					}
+				}
+			}
+			
+			else_if = { # Thomas Dewey
+				limit = { has_country_flag = NEE_1940_republican_primary_dewey }
+				create_country_leader = {
+					name = "Thomas Dewey"
+					desc = "POLITICS_THOMAS_DEWEY_DESC"
+					picture = "Portrait_USA_Thomas_Dewey_KR.tga"
+					expire = "1965.1.1"
+					ideology = social_liberal_subtype
+					traits = {
+						great_survivor
+					}
+				}
+			}
+			
+			if = { # George Aiken
+				limit = {
+					has_country_flag = NEE_1940_liberal_primary_aiken
+				}
+				create_country_leader = {
+					name = "George Aiken"
+					desc = "POLITICS_GEORGE_AIKEN_DESC"
+					picture = "gfx/leaders/NEE/George_Aiken.tga"
+					expire = "1965.1.1"
+					ideology = social_democrat_subtype
+					traits = {
+					}
+				}
+			}
+			
+			else_if = { # Frances Perkins
+				limit = {
+					has_country_flag = NEE_1940_liberal_primary_perkins
+				}
+				create_country_leader = {
+					name = "Frances Perkins"
+					desc = "POLITICS_FRANCES_PERKINS_DESC"
+					picture = "gfx/leaders/NEE/Frances_Perkins.tga"
+					expire = "1965.1.1"
+					ideology = social_democrat_subtype
+					traits = {
+					}
 				}
 			}
 		}
@@ -916,14 +1102,14 @@ country_event = { # 1940 Election
 			elections_allowed = yes
 		}
 		hidden_effect = {
-			if = { # John Gilbert Winant
+			if = { # Aiken
 				limit = {
-					has_country_flag = NEE_1940_liberal_primary_winant
+					has_country_flag = NEE_1940_liberal_primary_aiken
 				}
-				add_ideas = NEE_John_Gilbert_Winant_hog_sli
+				add_ideas = NEE_George_Aiken_hog_mli
 				add_ideas = NEE_Frederick_Hale_for_sli
-				add_ideas = NEE_Charles_Russell_Clason_eco_sli
-				add_ideas = NEE_Wallace_Humphrey_White_Jr_sec_sli
+				add_ideas = NEE_Scott_Nearing_eco_sli
+				add_ideas = NEE_Edith_Nourse_Rogers_sec_sli
 				hidden_effect = {
 					country_event = {
 						id = newengland.60
@@ -932,14 +1118,14 @@ country_event = { # 1940 Election
 					}
 				}
 			}
-			else_if = { # Herbert H. Lehman
+			else_if = { # Frances Perkins
 				limit = {
-					has_country_flag = NEE_1940_liberal_primary_lehman
+					has_country_flag = NEE_1940_liberal_primary_perkins
 				}
-				add_ideas = NEE_Herbert_H_Lehman_hog_sli
+				add_ideas = NEE_George_Aiken_hog_mli
 				add_ideas = NEE_Frederick_Hale_for_sli
-				add_ideas = NEE_Charles_Russell_Clason_eco_sli
-				add_ideas = NEE_Wallace_Humphrey_White_Jr_sec_sli
+				add_ideas = NEE_Scott_Nearing_eco_sli
+				add_ideas = NEE_Edith_Nourse_Rogers_sec_sli
 			}
 		}
 	}
@@ -968,11 +1154,38 @@ country_event = { # 1940 Election
 				add_ideas = NEE_Harry_Gabriel_Hamlet_eco_mli
 				add_ideas = NEE_Pierrepont_Burt_Noyes_sec_mli
 			}
-			else_if = { # Joseph Kennedy Sr.
+			else_if = { # John Winant
 				limit = {
-					has_country_flag = NEE_1940_republican_primary_kennedy
+					has_country_flag = NEE_1940_republican_primary_winant
 				}
-				add_ideas = NEE_Joseph_Kennedy_Sr_hog_mli
+				add_ideas = NEE_John_Gilbert_Winant_hog_sli
+				add_ideas = NEE_George_Higgins_Moses_for_sli
+				add_ideas = NEE_Donald_L_Harlow_eco_sli
+				add_ideas = NEE_Wallace_Humphrey_White_Jr_sec_sli
+			}
+			else_if = { # Thomas Dewey
+				limit = {
+					has_country_flag = NEE_1940_republican_primary_dewey
+				}
+				add_ideas = NEE_Dennis_J_Roberts_hog_sli
+				add_ideas = NEE_Peter_Hoyt_Dominick_for_sli
+				add_ideas = NEE_Frederick_George_Payne_eco_sli
+				add_ideas = NEE_Ruth_Baker_Pratt_sec_sli
+			}
+			else_if = { # Hamilton Fish III
+				limit = {
+					has_country_flag = NEE_1940_republican_primary_fish
+				}
+				add_ideas = NEE_Henry_C_Lodge_Jr_hog_mli
+				add_ideas = NEE_John_Hay_Whitney_for_mli
+				add_ideas = NEE_Harry_Gabriel_Hamlet_eco_mli
+				add_ideas = NEE_Pierrepont_Burt_Noyes_sec_mli
+			}
+			else_if = { # Joseph William Martin Jr
+				limit = {
+					has_country_flag = NEE_1940_republican_primary_martin
+				}
+				add_ideas = NEE_Henry_C_Lodge_Jr_hog_mli
 				add_ideas = NEE_John_Hay_Whitney_for_mli
 				add_ideas = NEE_Harry_Gabriel_Hamlet_eco_mli
 				add_ideas = NEE_Pierrepont_Burt_Noyes_sec_mli
@@ -995,20 +1208,29 @@ country_event = { # 1940 Election
 			elections_allowed = yes
 		}
 		hidden_effect = {
-			if = { # Christian Herter
+			else_if = { # Joseph William Martin Jr.
 				limit = {
-					has_country_flag = NEE_1940_democratic_primary_herter
+					has_country_flag = NEE_1940_democrat_primary_kennedy
 				}
-				add_ideas = NEE_Christian_Herter_hog_sco
+				add_ideas = NEE_Joseph_Kennedy_Sr_hog_mli
 				add_ideas = NEE_Herbert_Claiborne_Pell_Jr_for_sco
 				add_ideas = NEE_William_Stuart_Symington_Jr_eco_sco
 				add_ideas = NEE_Wilbur_Lucius_Cross_sec_sco
 			}
 			else_if = { # Joseph William Martin Jr.
 				limit = {
-					has_country_flag = NEE_1940_democratic_primary_martin
+					has_country_flag = NEE_1940_democratic_primary_curley
 				}
-				add_ideas = NEE_Christian_Herter_hog_sco
+				add_ideas = NEE_Joseph_Kennedy_Sr_hog_mli
+				add_ideas = NEE_Herbert_Claiborne_Pell_Jr_for_sco
+				add_ideas = NEE_William_Stuart_Symington_Jr_eco_sco
+				add_ideas = NEE_Wilbur_Lucius_Cross_sec_sco
+			}
+			else_if = { # Al Smith
+				limit = {
+					has_country_flag = NEE_1940_democratic_primary_smith
+				}
+				add_ideas = NEE_Joseph_Kennedy_Sr_hog_mli
 				add_ideas = NEE_Herbert_Claiborne_Pell_Jr_for_sco
 				add_ideas = NEE_William_Stuart_Symington_Jr_eco_sco
 				add_ideas = NEE_Wilbur_Lucius_Cross_sec_sco

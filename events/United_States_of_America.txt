@@ -6784,7 +6784,7 @@ country_event = { # Pennsylvania is ours
 	
 	trigger = {
 	USA = {
-	owns_state = 360
+	controls_state = 360
 		}
 	has_government = paternal_autocrat
 	has_global_flag = USA_civil_war_begun_flag

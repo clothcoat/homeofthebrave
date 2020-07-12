@@ -343,9 +343,6 @@ USA_release_TEX = {
 			add_claim_by = TEX
 		}
 
-		remove_unit_leader = 57 #George S. Patton
-		remove_unit_leader = 59 #George Van Horn Moseley
-
 		every_navy_leader = {
 			limit = { has_id = 63 } #William Halsey Jr.
 			set_nationality = TEX
@@ -530,8 +527,8 @@ USA_release_COR = {
 			add_claim_by = CON
 		}
 
-		remove_unit_leader = 57 #George S. Patton
-		remove_unit_leader = 59 #George Van Horn Moseley
+		remove_unit_leader = 992 #George S. Patton
+		remove_unit_leader = 990 #George Van Horn Moseley
 
 		set_country_flag = John_Sparkman_dead
 		set_country_flag = James_Eastland_dead
