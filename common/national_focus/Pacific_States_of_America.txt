@@ -11519,12 +11519,14 @@ focus_tree = {
 		focus = CAL_denounce_race_hatred
 		}
 		available = {
+			OR = {
 			has_government = social_conservative
 			has_government = authoritarian_democrat
 			NOT = {
 			has_country_leader = {
 				ruling_only = yes
 				name = "Walt Disney"
+					}
 				}
 			}
 		}
@@ -11554,9 +11556,6 @@ focus_tree = {
 		prerequisite = {
 		focus = CAL_ban_race_mixing
 		}
-		available = {
-			has_government = authoritarian_democrat
-		}
 		mutually_exclusive = {
 		focus = CAL_conditional_black_aid
 		focus = CAL_negro_bureau
@@ -11585,9 +11584,6 @@ focus_tree = {
 		cost = 5.00
 		prerequisite = {
 		focus = CAL_jazz_crackdown
-		}
-		available = {
-			has_government = authoritarian_democrat
 		}
 		ai_will_do = {
 			factor = 5
@@ -11686,9 +11682,6 @@ focus_tree = {
 		cost = 5.00
 		prerequisite = {
 		focus = CAL_conditional_black_aid
-		}
-		available = {
-			has_government = authoritarian_democrat
 		}
 		ai_will_do = {
 			factor = 5
@@ -11797,11 +11790,13 @@ focus_tree = {
 		focus = CAL_fund_black_education
 		}
 		available = {
+			OR = {
 			has_government = social_conservative
 			has_government = market_liberal
 			has_government = social_liberal
 			has_government = social_democrat
 			has_government = radical_socialist
+			}
 		}
 		ai_will_do = {
 			factor = 5
@@ -11913,9 +11908,6 @@ focus_tree = {
 		prerequisite = {
 		focus = CAL_lily_white_movement
 		}
-		available = {
-			has_government = authoritarian_democrat
-		}
 		ai_will_do = {
 			factor = 5
 		}
@@ -11941,9 +11933,6 @@ focus_tree = {
 		focus = CAL_lily_white_movement
 		focus = CAL_hire_black_americans
 		}
-		available = {
-			has_government = authoritarian_democrat
-		}
 		ai_will_do = {
 			factor = 5
 		}
@@ -11966,9 +11955,6 @@ focus_tree = {
 		cost = 5.00
 		prerequisite = {
 		focus = CAL_hire_black_americans
-		}
-		available = {
-			has_government = authoritarian_democrat
 		}
 		ai_will_do = {
 			factor = 5
