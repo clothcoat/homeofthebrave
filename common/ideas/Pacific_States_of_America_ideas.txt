@@ -304,7 +304,11 @@ ideas = {
 		CAL_nia = {#National Recovery Administration
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_nia"}
 			allowed = { always = no }
-			available = { has_government = authoritarian_democrat }
+			available = { OR = {
+			has_government = authoritarian_democrat
+			has_government = paternal_autocrat
+			has_government = national_populist
+				} }
 			removal_cost = -1
 			picture = can_wartime_prices_and_trade_board
 			modifier = {
@@ -323,7 +327,11 @@ ideas = {
 		CAL_nia_2 = {# Paternal Economics
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_nia_2"}
 			allowed = { always = no }
-			available = { has_government = authoritarian_democrat }
+			available = { OR = {
+			has_government = authoritarian_democrat
+			has_government = paternal_autocrat
+			has_government = national_populist
+				} }
 			removal_cost = -1
 			picture = can_wartime_prices_and_trade_board
 			modifier = {
@@ -343,7 +351,11 @@ ideas = {
 		CAL_nia_3 = {# Industrial economics
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_nia_3"}
 			allowed = { always = no }
-			available = { has_government = authoritarian_democrat }
+			available = { OR = {
+			has_government = authoritarian_democrat
+			has_government = paternal_autocrat
+			has_government = national_populist
+				} }
 			removal_cost = -1
 			picture = can_wartime_prices_and_trade_board
 			modifier = {
@@ -363,7 +375,11 @@ ideas = {
 		CAL_nia_4 = {# Industrial economics
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_nia_4"}
 			allowed = { always = no }
-			available = { has_government = authoritarian_democrat }
+			available = { OR = {
+			has_government = authoritarian_democrat
+			has_government = paternal_autocrat
+			has_government = national_populist
+				} }
 			removal_cost = -1
 			picture = can_wartime_prices_and_trade_board
 			modifier = {
@@ -383,7 +399,11 @@ ideas = {
 		CAL_nationalized_liquor = {# National Liquor
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_national_liquor"}
 			allowed = { always = no }
-			available = { has_government = authoritarian_democrat }
+			available = { OR = {
+			has_government = authoritarian_democrat
+			has_government = paternal_autocrat
+			has_government = national_populist
+				} }
 			removal_cost = -1
 			picture = can_wartime_prices_and_trade_board
 			modifier = {
@@ -396,7 +416,11 @@ ideas = {
 		CAL_tenney_committee_idea = {# Tenney Committee
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_tenney_committee_idea"}
 			allowed = { always = no }
-			available = { has_government = authoritarian_democrat }
+			available = { OR = {
+			has_government = authoritarian_democrat
+			has_government = paternal_autocrat
+			has_government = national_populist
+				} }
 			removal_cost = -1
 			picture = can_wartime_prices_and_trade_board
 			modifier = {
@@ -412,7 +436,11 @@ ideas = {
 		CAL_federal_police_idea = {# Federal Police
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_federal_police_idea"}
 			allowed = { always = no }
-			available = { has_government = authoritarian_democrat }
+			available = { OR = {
+			has_government = authoritarian_democrat
+			has_government = paternal_autocrat
+			has_government = national_populist
+				} }
 			removal_cost = -1
 			picture = can_wartime_prices_and_trade_board
 			modifier = {
@@ -428,7 +456,11 @@ ideas = {
 		CAL_federal_police_idea_2 = {# Federal Police
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_federal_police_idea_2"}
 			allowed = { always = no }
-			available = { has_government = authoritarian_democrat }
+			available = { OR = {
+			has_government = authoritarian_democrat
+			has_government = paternal_autocrat
+			has_government = national_populist
+				} }
 			removal_cost = -1
 			picture = can_wartime_prices_and_trade_board
 			modifier = {
@@ -444,7 +476,11 @@ ideas = {
 		CAL_federal_police_idea_3 = {# Federal Police
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_federal_police_idea_3"}
 			allowed = { always = no }
-			available = { has_government = authoritarian_democrat }
+			available = { OR = {
+			has_government = authoritarian_democrat
+			has_government = paternal_autocrat
+			has_government = national_populist
+				} }
 			removal_cost = -1
 			picture = can_wartime_prices_and_trade_board
 			modifier = {
@@ -461,7 +497,11 @@ ideas = {
 		CAL_high_tariffs_idea = {# High Tariffs
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_high_tariffs_idea"}
 			allowed = { always = no }
-			available = { has_government = authoritarian_democrat }
+			available = { OR = {
+			has_government = authoritarian_democrat
+			has_government = paternal_autocrat
+			has_government = national_populist
+				} }
 			removal_cost = -1
 			picture = can_wartime_prices_and_trade_board
 			modifier = {
@@ -477,7 +517,11 @@ ideas = {
 		CAL_high_tariffs_idea_2 = {# High Tariffs
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_high_tariffs_idea_2"}
 			allowed = { always = no }
-			available = { has_government = authoritarian_democrat }
+			available = { OR = {
+			has_government = authoritarian_democrat
+			has_government = paternal_autocrat
+			has_government = national_populist
+				} }
 			removal_cost = -1
 			picture = can_wartime_prices_and_trade_board
 			modifier = {
@@ -495,7 +539,11 @@ ideas = {
 		CAL_high_tariffs_idea_3 = {# High Tariffs
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_high_tariffs_idea_3"}
 			allowed = { always = no }
-			available = { has_government = authoritarian_democrat }
+			available = { OR = {
+			has_government = authoritarian_democrat
+			has_government = paternal_autocrat
+			has_government = national_populist
+				} }
 			removal_cost = -1
 			picture = can_wartime_prices_and_trade_board
 			modifier = {
@@ -513,7 +561,13 @@ ideas = {
 		CAL_high_tariffs_idea_4 = {# High Tariffs
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_high_tariffs_idea_4"}
 			allowed = { always = no }
-			available = { has_government = authoritarian_democrat }
+			available = { 
+			OR = {
+			has_government = authoritarian_democrat
+			has_government = paternal_autocrat
+			has_government = national_populist
+				}
+			}
 			removal_cost = -1
 			picture = can_wartime_prices_and_trade_board
 			modifier = {
@@ -530,7 +584,13 @@ ideas = {
 		CAL_media_regulation_act_idea = {# Federal Police
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_media_regulation_act_idea"}
 			allowed = { always = no }
-			available = { has_government = authoritarian_democrat }
+			available = { 
+			OR = {
+			has_government = authoritarian_democrat
+			has_government = paternal_autocrat
+			has_government = national_populist
+				}
+			}
 			removal_cost = -1
 			picture = can_wartime_prices_and_trade_board
 			modifier = {
@@ -653,7 +713,6 @@ ideas = {
 		CAL_social_hygiene_idea = {#Social Hygiene Economics
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_laissez_faire_idea"}
 			allowed = { always = no }
-			available = { has_government = social_conservative }
 			removal_cost = -1
 			picture = can_wartime_prices_and_trade_board
 			modifier = {
@@ -667,7 +726,6 @@ ideas = {
 		CAL_immigration_act_idea = {#National Origin Act
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_immigration_act_idea"}
 			allowed = { always = no }
-			available = { has_government = social_conservative }
 			removal_cost = -1
 			picture = generic_constitutional_guarantees
 			modifier = {
@@ -679,7 +737,6 @@ ideas = {
 		CAL_conservative_business = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_conservative_business"}
 			allowed = { always = no }
-			available = { has_government = market_liberal }
 			removal_cost = -1
 			picture = generic_central_management
 			modifier = {
@@ -694,7 +751,6 @@ ideas = {
 		CAL_business_grants_idea = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_business_grants_idea"}
 			allowed = { always = no }
-			available = { has_government = market_liberal }
 			removal_cost = -1
 			picture = generic_central_management
 			modifier = {
@@ -708,7 +764,6 @@ ideas = {
 		CAL_business_grants_idea_2 = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_business_grants_idea_2"}
 			allowed = { always = no }
-			available = { has_government = market_liberal }
 			removal_cost = -1
 			picture = generic_central_management
 			modifier = {
@@ -723,7 +778,6 @@ ideas = {
 		CAL_business_grants_idea_3 = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_business_grants_idea_3"}
 			allowed = { always = no }
-			available = { has_government = market_liberal }
 			removal_cost = -1
 			picture = generic_central_management
 			modifier = {
