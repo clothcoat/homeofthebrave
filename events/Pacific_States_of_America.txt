@@ -70,7 +70,7 @@ country_event = { # Progressive Primary
 		}
 	}
 	option = { # nominate Charles L. McNary
-		name = pacificstates.3.c
+		name = pacificstates.2.c
 		hidden_effect = {
 		set_country_flag = PSA_1937_progressive_primary_mcnary
 		country_event = {
@@ -80,7 +80,7 @@ country_event = { # Progressive Primary
 		}
 	}
 	option = { # nominate CC Young
-		name = pacificstates.3.c
+		name = pacificstates.2.e
 		hidden_effect = {
 		set_country_flag = PSA_1937_progressive_primary_young
 		country_event = {
@@ -229,6 +229,9 @@ country_event = { # 1937 Republican Primary
 	}
 	option = { # Louis B. Meyer
 		name = pacificstates.4.f
+		trigger = {
+		has_country_flag = CAL_immigrant_presidents
+		}
 		ai_chance = {
 			factor = 40
 		}
@@ -807,11 +810,11 @@ country_event = { # 1937 Election
 			set_country_flag = PSA_1937_election_commonwealth
 		}
 		add_popularity = {
-			ideology = radicial_socialist
+			ideology = radical_socialist
 			popularity = 0.20
 		}
 		set_politics = {
-			ruling_party = radicial_socialist
+			ruling_party = radical_socialist
 			election_frequency = 48
 			elections_allowed = yes
 		}
@@ -999,7 +1002,7 @@ country_event = { # Progressives drift toward the Commonwealth Party
 		add_political_power = 35
 		add_stability = 0.08
 		add_popularity = { ideology = social_democrat popularity = -0.05 }
-		add_popularity = { ideology = radicial_socialist popularity = 0.04 }
+		add_popularity = { ideology = radical_socialist popularity = 0.04 }
 		set_party_name = {
 			ideology = social_democrat
 			long_name = CAL_radical_dominance_long
@@ -4035,7 +4038,7 @@ country_event = { # Lavender Scare
 		name = pacificstates.71.a
 		add_stability = -0.01
 		add_popularity = {
-			ideology = radicial_socialist
+			ideology = radical_socialist
 			popularity = -0.02
 		}
 		add_popularity = {
@@ -4052,7 +4055,7 @@ country_event = { # Lavender Scare
 		name = pacificstates.71.c
 		add_stability = -0.02
 		add_popularity = {
-			ideology = radicial_socialist
+			ideology = radical_socialist
 			popularity = -0.03
 		}
 		add_popularity = {
@@ -4922,7 +4925,7 @@ country_event = {# Hearst Runs
 			long_name = CAL_new_paternal_autocrat_party_long
 			name = CAL_new_paternal_autocrat_party }	
 		set_party_name = {
-			ideology = paternal_autocrat
+			ideology = authoritarian_democrat
 			long_name = CAL_new_aut_dem_party_long
 			name = CAL_new_aut_dem_party }	
 		create_country_leader = {
@@ -4982,7 +4985,7 @@ country_event = {# Celebrity Endorsements
 
 	option = {# Dumb
 		name = pacificstates.209.a
-		add_popularity {ideology = radicial_socialist popularity = 0.01 }
+		add_popularity {ideology = radical_socialist popularity = 0.01 }
 		add_popularity {ideology = social_democrat popularity = 0.02 }
 		add_popularity {ideology = social_liberal popularity = 0.02 }
 		add_popularity {ideology = market_liberal popularity = 0.03 }
@@ -5407,7 +5410,7 @@ country_event = {# Opposition Crushed
 		add_popularity = { ideology = market_liberal popularity = -0.03 }
 		add_popularity = { ideology = social_liberal popularity = -0.03 }
 		add_popularity = { ideology = social_democrat popularity = -0.03 }
-		add_popularity = { ideology = radicial_socialist popularity = -0.03 }
+		add_popularity = { ideology = radical_socialist popularity = -0.03 }
 		hidden_effect = {
 		country_event = {
 		id = pacificstates.219
@@ -6141,12 +6144,12 @@ country_event = {# Left Democrats Fired
 	
 	option = {# Let's backtrack a bit...
 		name = pacificstates.253.a
-		add_popularity = { ideology = radicial_socialist popularity = -0.01 }
+		add_popularity = { ideology = radical_socialist popularity = -0.01 }
 		add_stability = 0.01
 	}
 	option = {# Feel bad for Pinkos? No.
 		name = pacificstates.253.a
-		add_popularity = { ideology = radicial_socialist popularity = -0.03 }
+		add_popularity = { ideology = radical_socialist popularity = -0.03 }
 		add_political_power = 20
 		add_stability = -0.01
 	}
@@ -6342,7 +6345,7 @@ country_event = {# Universities Refuse to Support Immorality
 		add_stability = 0.02
 		add_popularity = { ideology = totalist popularity = -0.01 }
 		add_popularity = { ideology = syndicalist popularity = -0.01 }
-		add_popularity = { ideology = radicial_socialist popularity = -0.01 }
+		add_popularity = { ideology = radical_socialist popularity = -0.01 }
 	}
 }
 
@@ -6484,7 +6487,7 @@ country_event = {# Hollywood Blacklist
 		add_political_power = 40
 		add_popularity = { ideology = totalist popularity = -0.02 }
 		add_popularity = { ideology = syndicalist popularity = -0.02 }
-		add_popularity = { ideology = radicial_socialist popularity = -0.02 }
+		add_popularity = { ideology = radical_socialist popularity = -0.02 }
 		add_stability = -0.02
 		
 	}
@@ -6497,7 +6500,7 @@ country_event = {# Hollywood Blacklist
 		name = pacificstates.270.c
 		add_popularity = { ideology = totalist popularity = -0.02 }
 		add_popularity = { ideology = syndicalist popularity = -0.02 }
-		add_popularity = { ideology = radicial_socialist popularity = -0.02 }
+		add_popularity = { ideology = radical_socialist popularity = -0.02 }
 	}
 }
 
@@ -6522,7 +6525,7 @@ country_event = {# Hays Code Backlash
 		add_political_power = 15
 		add_popularity = { ideology = social_liberal popularity = 0.01 }
 		add_popularity = { ideology = social_democrat popularity = 0.01 }
-		add_popularity = { ideology = radicial_socialist popularity = 0.01 }
+		add_popularity = { ideology = radical_socialist popularity = 0.01 }
 	}
 }
 
@@ -6547,7 +6550,7 @@ country_event = {# Protests
 		name = pacificstates.271.b
 		add_stability = -0.05
 		add_political_power = 40
-		add_popularity = { ideology = radicial_socialist popularity = -0.03 }
+		add_popularity = { ideology = radical_socialist popularity = -0.03 }
 		
 	}
 }
@@ -6869,7 +6872,7 @@ country_event = {# Steinbeck
 	OR = {
 	has_government = social_liberal
 	has_government = social_democrat
-	has_government = radicial_socialist
+	has_government = radical_socialist
 		}
 	date > 1938.5.1
 	}
@@ -6975,7 +6978,7 @@ country_event = {# American Liberty League
 		name = pacificstates.305.a
 		add_popularity = { ideology = social_liberal popularity = -0.02 }
 		add_popularity = { ideology = social_democrat popularity = -0.02 }
-		add_popularity = { ideology = radicial_socialist popularity = -0.02 }
+		add_popularity = { ideology = radical_socialist popularity = -0.02 }
 	}
 }
 
@@ -7168,14 +7171,22 @@ country_event = {# Land Compensation
 	
 	option = {#Compensate them
 		name = pacificstates.317.a
+		add_political_power = -55
+		add_popularity = { ideology = radical_socialist popularity = 0.03 }
 	}
 	option = {#Only compensate the poorer farmers
 		name = pacificstates.317.b
+		add_political_power = -35
+		add_popularity = { ideology = radical_socialist popularity = 0.02 }
+		add_stability = -0.02
 	}
 	option = {#No, the land is idle anyways
 		name = pacificstates.317.b
+		add_stability = -0.04
 	}
 }
+
+##Rad Soc##
 
 country_event = {# Religious Conservatives Organize
 	id = pacificstates.319
@@ -7190,10 +7201,118 @@ country_event = {# Religious Conservatives Organize
 	
 	option = {#Oh my
 		name = pacificstates.319.a
+		add_popularity = { ideology = social_conservative popularity = 0.05 }
 	}
 }
 
-##Rad Soc##
+country_event = {# Communications Breakthrough
+	id = pacificstates.321
+	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.321"}
+	title = pacificstates.321.t
+	desc = pacificstates.321.d
+	picture = GFX_ACW_american_brigade
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = {#True Patriots
+		name = pacificstates.321.a
+		add_tech_bonus = {
+			name = electronics_bonus
+			bonus = 1.5
+			uses = 1
+			category = electronics
+		}
+		add_tech_bonus = {
+				name = navy_bonus
+				bonus = 0.5
+				uses = 1
+				category = ss_tech
+			}
+	}
+}
+
+country_event = {# CSA Policy
+	id = pacificstates.323
+	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.323"}
+	title = pacificstates.323.t
+	desc = pacificstates.323.d
+	picture = GFX_ACW_american_brigade
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = {#We can try
+		name = pacificstates.323.a
+		add_war_support = -0.05
+		CSA = {
+		country_event = {
+			id = pacificstates.324
+			days = 3
+			}
+		}
+	}
+	option = {#Decline
+		name = pacificstates.323.a
+		add_war_support = 0.05
+		add_manpower = 2000
+		add_popularity = { ideology = syndicalist popularity = -0.02 }
+	}
+}
+
+country_event = {# PSA Peace Offer
+	id = pacificstates.324
+	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.324"}
+	title = pacificstates.324.t
+	desc = pacificstates.324.d
+	picture = GFX_ACW_american_brigade
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = {#Accept
+		name = pacificstates.324.a
+		add_war_support = -0.05
+		set_global_flag = PSA_CSA_TREATY
+		white_peace = CAL
+		CAL = {
+		country_event = {
+			id = pacificstates.3240
+			days = 3
+			}
+		}
+	}
+	option = {#Decline
+		name = pacificstates.324.a
+		add_war_support = 0.05
+		add_manpower = 500
+		add_popularity = { ideology = radical_socialist popularity = -0.02 }
+	}
+}
+
+country_event = {# CSA Accepts
+	id = pacificstates.3240
+	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.3240"}
+	title = pacificstates.3240.t
+	desc = pacificstates.3240.d
+	picture = GFX_ACW_american_brigade
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = {#Accept
+		name = pacificstates.3240.a
+		add_political_power = 100
+		add_stability = 0.05
+		add_popularity = { ideology = radical_socialist popularity = 0.08 }
+		set_global_flag = PSA_CSA_TREATY
+		white_peace = CSA
+	}
+}
 
 country_event = {# Capital Flight
 	id = pacificstates.325

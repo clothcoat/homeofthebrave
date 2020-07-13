@@ -1812,3 +1812,22 @@ country_event = {
 		name = constate.153.a
 	}
 }
+
+country_event = {
+	id = constate.300
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.153"}
+	title = constate.300.t
+	desc = constate.300.d
+	picture = GFX_ACW_american_brigade
+
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = paternal_autocrat
+		has_government - national_populist
+	}
+
+	option = {
+		name = constate.300.a
+	}
+}

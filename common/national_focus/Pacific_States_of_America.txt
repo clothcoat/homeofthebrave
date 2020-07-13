@@ -8051,7 +8051,7 @@ focus_tree = {
 			focus = CAL_social_liberals_in_power
 		}
 		available = {
-			has_government = social_democrat
+			has_government = social_liberal
 		}
 		ai_will_do = {
 			factor = 5
@@ -8418,7 +8418,7 @@ focus_tree = {
 		available = {
 			OR = {
 				has_government = social_liberal
-				has_government = social_democrat
+				has_government = market_liberal
 			}
 		}
 		ai_will_do = {
@@ -8443,8 +8443,10 @@ focus_tree = {
 			focus = CAL_fair_labor_standards
 		}
 		available = {
-			has_government = social_liberal
-			has_government = social_democrat
+			OR = {
+				has_government = social_liberal
+				has_government = market_liberal
+			}
 		}
 		ai_will_do = {
 			factor = 5
@@ -8505,7 +8507,10 @@ focus_tree = {
 			focus = CAL_fair_labor_standards
 		}
 		available = {
-			has_government = social_democrat
+			OR = {
+				has_government = social_liberal
+				has_government = market_liberal
+			}
 		}
 		ai_will_do = {
 			factor = 5
@@ -8574,9 +8579,8 @@ focus_tree = {
 		available = {
 			OR = {
 				has_government = social_liberal
-				has_government = social_democrat
+				has_government = market_liberal
 			}
-			has_idea = CAL_new_nationalism_idea3
 		}
 		ai_will_do = {
 			factor = 5
@@ -8703,7 +8707,7 @@ focus_tree = {
 			focus = CAL_wealth_taxation
 		}
 		available = {
-			has_government = social_liberal
+			has_government = social_democrat
 		}
 		ai_will_do = {
 			factor = 5
@@ -8779,7 +8783,7 @@ focus_tree = {
 			focus = CAL_resettlement_adminstration
 		}
 		available = {
-			has_government = social_liberal
+			has_government = social_democrat
 		}
 		ai_will_do = {
 			factor = 10
@@ -8870,7 +8874,7 @@ focus_tree = {
 			focus = CAL_country_life_movement
 		}
 		available = {
-			has_government = social_liberal
+			has_government = social_democrat
 		}
 		ai_will_do = {
 			factor = 5
@@ -8904,7 +8908,7 @@ focus_tree = {
 			focus = CAL_encourage_temperance
 		}
 		available = {
-			has_government = social_liberal
+			has_government = social_democrat
 		}
 		ai_will_do = {
 			factor = 5
@@ -9023,7 +9027,7 @@ focus_tree = {
 			focus = CAL_farm_credit_act
 		}
 		available = {
-			has_government = social_liberal
+			has_government = social_democrat
 		}
 		ai_will_do = {
 			factor = 5
@@ -9955,7 +9959,7 @@ focus_tree = {
 	focus = {# Bread and Peace
 		id = CAL_bread_and_peace
 		icon = GFX_HON_peace_in_our_time
-		cost = 5.00
+		cost = 1.00
 		prerequisite = {
 			focus = CAL_labor_colonies
 		}
@@ -9973,6 +9977,13 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_bread_and_peace"
 			add_popularity = { ideology = radical_socialist popularity = 0.05 }
 			add_stability = 0.03
+			if = {
+			CSA = { has_country_flag = CSA_social_patriot_victory }
+			country_event = {
+				id = pacificstates.323
+				days = 3
+				}
+			}
 		}
 	}
 	
@@ -10164,6 +10175,12 @@ focus_tree = {
 			add_popularity = { ideology = social_democrat popularity = 0.03 }
 			add_popularity = { ideology = syndicalist popularity = 0.01 }
 			add_stability = 0.03
+			hidden_effect = {
+			country_event = {
+			id = pacificstates.326
+			days = 120
+				}
+			}
 		}
 	}
 	
@@ -10427,6 +10444,12 @@ focus_tree = {
 			add_political_power = 85
 			add_popularity = { ideology = social_conservative popularity = -0.05 }
 			add_stability = -0.02
+			hidden_effect = {
+			country_event = {
+			id = pacificstates.319
+			days = 120
+				}
+			}
 		}
 	}
 	
@@ -10481,7 +10504,7 @@ focus_tree = {
 			focus = CAL_social_commonwealth
 		}
 		available = {
-			has_government = social_democrat
+			has_government = radical_socialist
 		}
 		ai_will_do = {
 			factor = 5
@@ -10523,7 +10546,7 @@ focus_tree = {
 			focus = CAL_social_commonwealth
 		}
 		available = {
-			has_government = social_democrat
+			has_government = radical_socialist
 		}
 		ai_will_do = {
 			factor = 5
@@ -10537,6 +10560,12 @@ focus_tree = {
 			swap_ideas = {
 			remove_idea = CAL_national_oil_idea_2
 			add_idea = CAL_national_oil_idea_3
+			}
+			hidden_effect = {
+			country_event = {
+			id = pacificstates.321
+			days = 120
+				}
 			}
 		}
 	}
