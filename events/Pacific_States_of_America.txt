@@ -228,7 +228,7 @@ country_event = { # 1937 Republican Primary
 		}
 	}
 	option = { # Louis B. Meyer
-		name = pacificstates.4.e
+		name = pacificstates.4.f
 		ai_chance = {
 			factor = 40
 		}
@@ -326,6 +326,7 @@ country_event = { # 1937 Election
 
 	immediate = {
 		hidden_effect = {
+			set_country_flag = PSA_1937_election_occured
 			if = { # Upton Sinclair
 				limit = {
 					has_country_flag = PSA_1937_progressive_primary_mcnary

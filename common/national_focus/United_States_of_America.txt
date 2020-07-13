@@ -855,7 +855,7 @@ focus_tree = {
 	}
 
 	focus = {# Free Trade
-		id = USA_free_trade
+		id = USA_Garner_free_trade
 		icon = GFX_USA_sweep_farm_tariffs
 		cost = 6.00
 		prerequisite = {
@@ -868,7 +868,7 @@ focus_tree = {
 			factor = 50
 		}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus USA_free_trade"
+			log = "[GetDateText]: [Root.GetName]: Focus USA_Garner_free_trade"
 			swap_ideas = {
 			remove_idea = USA_great_depression
 			add_idea = USA_great_depression_garner_1
@@ -883,7 +883,7 @@ focus_tree = {
 		icon = GFX_USA_rural_investments
 		cost = 6.00
 		prerequisite = {
-			focus = USA_free_trade
+			focus = USA_Garner_free_trade
 		}
 		relative_position_id = USA_garner_wins
 		x = -2

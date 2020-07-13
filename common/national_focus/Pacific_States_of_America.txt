@@ -2647,7 +2647,7 @@ focus_tree = {
 		id = CAL_last_bastion
 		icon = GFX_goal_liberty
 		cost = 5.00
-		available = { has_global_flag = CAL_civil_war_over_flag }
+		available = { has_country_flag = PSA_1937_election_occured }
 		bypass = { has_global_flag = CAL_civil_war_over_flag }
 		x = 50
 		y = 0
@@ -11616,10 +11616,12 @@ focus_tree = {
 		focus = CAL_national_immigration_act
 		}
 		available = {
+			OR = {
 			has_government = social_conservative
 			has_government = market_liberal
 			has_government = social_liberal
 			has_government = social_democrat
+			}
 		}
 		ai_will_do = {
 			factor = 5

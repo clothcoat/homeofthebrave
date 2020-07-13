@@ -347,7 +347,7 @@ country_event = { # Fighting in Indiana
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.7"}
 	title = ustates.7.t
 	desc = ustates.7.d
-	picture = GFX_USA_floyd_olson
+	picture = GFX_USA_Riots
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -492,7 +492,7 @@ country_event = { # ODP Nominee
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.10"}
 	title = ustates.10.t
 	desc = ustates.10.d
-	picture = GFX_USA_Riots
+	picture = GFX_report_event_generic_rally
 
 	fire_only_once = yes
 
@@ -3440,11 +3440,11 @@ country_event = { # The Long Order
 		hidden_effect = {
 			add_to_variable = { var = AFP_strength value = 3 }
 			country_event = { id = ustates.63 days = 7 }
-			country_event = { id = amcivwar.6 days = 7 }
-			country_event = { id = amcivwar.6000 days = 8 }
-			country_event = { id = amcivwar.7 days = 9 }
-			country_event = { id = amcivwar.8 days = 10 }
-			country_event = { id = amcivwar.3000 days = 11 }
+			country_event = { id = amcivwar.6 days = 8 }
+			country_event = { id = amcivwar.6000 days = 9 }
+			country_event = { id = amcivwar.7 days = 10 }
+			country_event = { id = amcivwar.8 days = 11 }
+			country_event = { id = amcivwar.3000 days = 12 }
 		}
 		add_political_power = -40
 		add_stability = -0.04
@@ -3541,8 +3541,8 @@ country_event = { # The Long investigation
 		add_popularity = { ideology = authoritarian_democrat popularity = 0.05 }
 		hidden_effect = {
 			country_event = { id = ustates.63 days = 5 }
-			country_event = { id = amcivwar.6 days = 5 }
-			country_event = { id = amcivwar.6000 days = 6 }
+			country_event = { id = amcivwar.6 days = 6 }
+			country_event = { id = amcivwar.6000 days = 7 }
 			country_event = { id = amcivwar.7 days = 8 }
 			country_event = { id = amcivwar.8 days = 9 }
 			country_event = { id = amcivwar.3000 days = 10 }
@@ -3635,10 +3635,10 @@ country_event = { # The Minutemen clash with the SPA
 		hidden_effect = {
 			country_event = { id = amcivwar.7 days = 5 }
 			country_event = { id = ustates.63 days = 6 }
-			country_event = { id = amcivwar.6 days = 6 }
-			country_event = { id = amcivwar.6000 days = 7 }
-			country_event = { id = amcivwar.8 days = 8 }
-			country_event = { id = amcivwar.3000 days = 9 }
+			country_event = { id = amcivwar.6 days = 7 }
+			country_event = { id = amcivwar.6000 days = 8 }
+			country_event = { id = amcivwar.8 days = 9 }
+			country_event = { id = amcivwar.3000 days = 10 }
 		}
 	}
 }
@@ -3682,10 +3682,10 @@ country_event = { # The Minutemen battle the Old Democrats
 		hidden_effect = {
 			country_event = { id = amcivwar.6000 days = 5 }
 			country_event = { id = ustates.63 days = 6 }
-			country_event = { id = amcivwar.6 days = 6 }
-			country_event = { id = amcivwar.7 days = 7 }
-			country_event = { id = amcivwar.8 days = 8 }
-			country_event = { id = amcivwar.3000 days = 9 }
+			country_event = { id = amcivwar.6 days = 7 }
+			country_event = { id = amcivwar.7 days = 8 }
+			country_event = { id = amcivwar.8 days = 9 }
+			country_event = { id = amcivwar.3000 days = 10 }
 		}
 	}
 }
