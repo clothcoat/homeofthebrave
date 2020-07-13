@@ -169,3 +169,31 @@ change_to_pataut_popularity = {
 			elections_allowed = yes
 		}
 }
+
+change_to_hearst_pataut_popularity = {
+	set_temp_variable = {
+		var = new_paternal_popularity
+		value = party_popularity@authoritarian_democrat
+	}
+	multiply_temp_variable = {
+		var = new_paternal_popularity
+		value = 0.9
+	}
+	set_temp_variable = {
+		var = new_authoritarian_democrat_popularity
+		value = party_popularity@authoritarian_democrat
+	}
+	multiply_temp_variable = {
+		var = new_authoritarian_democrat_popularity
+		value = -0.2
+	}
+	add_popularity = { ideology = paternal_autocrat popularity = new_paternal_popularity }
+	add_popularity = { ideology = authoritarian_democrat popularity = new_authoritarian_democrat_popularity } 
+	custom_effect_tooltip = long_change_to_paternal_autocrat_popularity
+	set_politics = {
+		ruling_party = paternal_autocrat
+		election_frequency = 48
+		last_election = "1936.11.08"
+		elections_allowed = yes
+	}
+}

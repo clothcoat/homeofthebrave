@@ -329,12 +329,12 @@ country_event = { # 1937 Election
 			set_country_flag = PSA_1937_election_occured
 			if = { # Upton Sinclair
 				limit = {
-					has_country_flag = PSA_1937_progressive_primary_mcnary
+					has_country_flag = PSA_1937_commonwealth_primary_sinclair
 				}
 				create_country_leader = {
 					name = "Upton Sinclair"
 					desc = "POLITICS_UPTON_SINCLAIR_DESC"
-					picture = "Portrait_CAL_Upton_Sinclair.tga"
+					picture = "gfx/leaders/PSA/Portrait_CAL_Upton_Sinclair.tga"
 					expire = "1965.1.1"
 					ideology = radical_socialist_subtype
 					traits = {}
@@ -342,12 +342,12 @@ country_event = { # 1937 Election
 			}
 			if = { # Culbert Olson
 				limit = {
-					has_country_flag = PSA_1937_progressive_primary_mcnary
+					has_country_flag = PSA_1937_commonwealth_primary_olson
 				}
 				create_country_leader = {
 					name = "Culbert Olson"
-					desc = "POLITICS_UPTON_SINCLAIR_DESC"
-					picture = "Portrait_CAL_Culbert_Olson.tga"
+					desc = "POLITICS_CULBERT_OLSON_DESC"
+					picture = "gfx/leaders/CAL/Portrait_CAL_Culbert_Olson.tga"
 					expire = "1965.1.1"
 					ideology = radical_socialist_subtype
 					traits = {}
@@ -381,7 +381,7 @@ country_event = { # 1937 Election
 			}
 			if = { # Hiram Johnson
 				limit = {
-					has_country_flag = PSA_1937_progressive_primary_mcnary
+					has_country_flag = PSA_1937_progressive_primary_johnson
 				}
 				create_country_leader = {
 					name = "Hiram Johnson"
@@ -5457,8 +5457,8 @@ country_event = {# Leftists Rounded Up
 
 	option = {# Err good I suppose
 		name = pacificstates.234.a
-		add_popularity = { ideology = radicial_socialist popularity = -0.04 }
 		add_political_power = 10
+		add_popularity = { ideology = radical_socialist popularity = -0.04 }
 		add_popularity = { ideology = authoritarian_democrat popularity = -0.01 }
 		add_stability = -0.01
 	}
