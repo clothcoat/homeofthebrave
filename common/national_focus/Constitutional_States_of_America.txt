@@ -19,9 +19,15 @@ focus_tree = {
 		cost = 1
 		available = {
 			has_government = paternal_autocrat
+			OR = {
 			has_country_leader = {
 			ruling_only = yes
 			name = "William H. Murray"
+				}
+			has_country_leader = {
+			ruling_only = yes
+			name = "George Patton"
+				}
 			}
 		}
 		ai_will_do = { factor = 5 }
@@ -42,6 +48,12 @@ focus_tree = {
 		}
 		available = {
 			has_government = paternal_autocrat
+			NOT = {
+			has_country_leader = {
+			ruling_only = yes
+			name = "Charles Lindbergh"
+				}
+			}
 		}
 		cancel_if_invalid = yes
 		available_if_capitulated = yes
@@ -89,6 +101,12 @@ focus_tree = {
 		}
 		available = {
 			has_government = paternal_autocrat
+			NOT = {
+			has_country_leader = {
+			ruling_only = yes
+			name = "Charles Lindbergh"
+				}
+			}
 		}
 		cancel_if_invalid = yes
 		available_if_capitulated = yes
@@ -114,6 +132,12 @@ focus_tree = {
 		}
 		available = {
 			has_government = paternal_autocrat
+			NOT = {
+			has_country_leader = {
+			ruling_only = yes
+			name = "Charles Lindbergh"
+				}
+			}
 		}
 		cancel_if_invalid = yes
 		available_if_capitulated = yes
@@ -146,6 +170,12 @@ focus_tree = {
 		}
 		available = {
 			has_government = paternal_autocrat
+			NOT = {
+			has_country_leader = {
+			ruling_only = yes
+			name = "Charles Lindbergh"
+				}
+			}
 		}
 		cancel_if_invalid = yes
 		available_if_capitulated = yes
@@ -178,6 +208,12 @@ focus_tree = {
 		}
 		available = {
 			has_government = paternal_autocrat
+			NOT = {
+			has_country_leader = {
+			ruling_only = yes
+			name = "Charles Lindbergh"
+				}
+			}
 		}
 		cancel_if_invalid = yes
 		available_if_capitulated = yes
@@ -202,6 +238,12 @@ focus_tree = {
 		}
 		available = {
 			has_government = paternal_autocrat
+			NOT = {
+			has_country_leader = {
+			ruling_only = yes
+			name = "Charles Lindbergh"
+				}
+			}
 		}
 		cancel_if_invalid = yes
 		available_if_capitulated = yes
@@ -229,6 +271,12 @@ focus_tree = {
 		}
 		available = {
 			has_government = paternal_autocrat
+			NOT = {
+			has_country_leader = {
+			ruling_only = yes
+			name = "Charles Lindbergh"
+				}
+			}
 		}
 		cancel_if_invalid = yes
 		available_if_capitulated = yes
@@ -257,6 +305,12 @@ focus_tree = {
 		}
 		available = {
 			has_government = paternal_autocrat
+			NOT = {
+			has_country_leader = {
+			ruling_only = yes
+			name = "Charles Lindbergh"
+				}
+			}
 		}
 		cancel_if_invalid = yes
 		available_if_capitulated = yes
@@ -298,6 +352,12 @@ focus_tree = {
 		}
 		available = {
 			has_government = paternal_autocrat
+			NOT = {
+			has_country_leader = {
+			ruling_only = yes
+			name = "Charles Lindbergh"
+				}
+			}
 		}
 		cancel_if_invalid = yes
 		available_if_capitulated = yes
@@ -346,6 +406,12 @@ focus_tree = {
 		}
 		available = {
 			has_government = paternal_autocrat
+			NOT = {
+			has_country_leader = {
+			ruling_only = yes
+			name = "Charles Lindbergh"
+				}
+			}
 		}
 		cancel_if_invalid = yes
 		available_if_capitulated = yes
@@ -412,6 +478,12 @@ focus_tree = {
 		}
 		available = {
 			has_government = paternal_autocrat
+			NOT = {
+			has_country_leader = {
+			ruling_only = yes
+			name = "Charles Lindbergh"
+				}
+			}
 		}
 		cancel_if_invalid = yes
 		available_if_capitulated = yes
@@ -484,6 +556,12 @@ focus_tree = {
 		}
 		available = {
 			has_government = national_populist
+			NOT = {
+			has_country_leader = {
+			ruling_only = yes
+			name = "Charles Lindbergh"
+				}
+			}
 		}
 		cancel_if_invalid = yes
 		available_if_capitulated = yes
@@ -512,6 +590,12 @@ focus_tree = {
 		}
 		available = {
 			has_government = paternal_autocrat
+			NOT = {
+			has_country_leader = {
+			ruling_only = yes
+			name = "Charles Lindbergh"
+				}
+			}
 		}
 		cancel_if_invalid = yes
 		available_if_capitulated = yes
@@ -541,6 +625,12 @@ focus_tree = {
 		}
 		available = {
 			has_government = paternal_autocrat
+			NOT = {
+			has_country_leader = {
+			ruling_only = yes
+			name = "Charles Lindbergh"
+				}
+			}
 		}
 		cancel_if_invalid = yes
 		available_if_capitulated = yes
@@ -566,6 +656,12 @@ focus_tree = {
 		}
 		available = {
 			has_government = paternal_autocrat
+			NOT = {
+			has_country_leader = {
+			ruling_only = yes
+			name = "Charles Lindbergh"
+				}
+			}
 		}
 		cancel_if_invalid = yes
 		available_if_capitulated = yes
@@ -591,6 +687,12 @@ focus_tree = {
 		}
 		available = {
 			has_government = paternal_autocrat
+			NOT = {
+			has_country_leader = {
+			ruling_only = yes
+			name = "Charles Lindbergh"
+				}
+			}
 		}
 		cancel_if_invalid = yes
 		available_if_capitulated = yes
@@ -615,6 +717,12 @@ focus_tree = {
 		}
 		available = {
 			has_government = paternal_autocrat
+			NOT = {
+			has_country_leader = {
+			ruling_only = yes
+			name = "Charles Lindbergh"
+				}
+			}
 		}
 		cancel_if_invalid = yes
 		available_if_capitulated = yes
@@ -640,6 +748,12 @@ focus_tree = {
 		}
 		available = {
 			has_government = paternal_autocrat
+			NOT = {
+			has_country_leader = {
+			ruling_only = yes
+			name = "Charles Lindbergh"
+				}
+			}
 		}
 		cancel_if_invalid = yes
 		available_if_capitulated = yes
@@ -674,6 +788,12 @@ focus_tree = {
 		}
 		available = {
 			has_government = paternal_autocrat
+			NOT = {
+			has_country_leader = {
+			ruling_only = yes
+			name = "Charles Lindbergh"
+				}
+			}
 		}
 		cancel_if_invalid = yes
 		available_if_capitulated = yes

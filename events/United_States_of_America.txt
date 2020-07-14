@@ -329,15 +329,15 @@ country_event = { # Curtis' Nomination
 country_event = { # Landon's Nomination
 	id = ustates.6001
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.6001"}
-	title = ustates.6.t
-	desc = ustates.6.d
+	title = ustates.6001.t
+	desc = ustates.6001.d
 	picture = GFX_report_event_generic_rally
 
 	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = {
-		name = ustates.6.a
+		name = ustates.6001.a
 		add_popularity = { ideology = social_liberal popularity = 0.03 }
 	}
 }
@@ -2655,6 +2655,7 @@ country_event = { # Hoover denounces Reed / long
 	id = ustates.38
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.38"}
 	title = ustates.38.t
+	picture = popularity_rising
 	desc = { # Hoover denounces Reed
 		text = ustates.38.d.reed
 		trigger = {
@@ -2673,7 +2674,6 @@ country_event = { # Hoover denounces Reed / long
 			}
 		}
 	}
-	picture = popularity_rising
 
 	is_triggered_only = yes
 
@@ -3733,9 +3733,6 @@ country_event = { # MacArthur and the Army Removes Long
 			add_ideas = USA_John_William_Davis_for_pau
 			add_ideas = USA_William_Harrison_Standley_eco_pau
 			add_ideas = USA_John_Edgar_Hoover_sec_pau
-		}
-		hidden_effect = {
-			country_event = { id = amcivwar.6 days = 1 }
 		}
 	}
 }

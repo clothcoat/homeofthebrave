@@ -1130,6 +1130,7 @@ USA_civil_war_begins = {
 			limit = { country_exists = CAL 	}
 			CAL = { declare_war_on = { target = USA type = annex_everything	} }
 			CAL = { declare_war_on = { target = WCC type = annex_everything	} }
+			CAL = { declare_war_on = { target = COR type = annex_everything	} }
 		}
 		if = {
 			limit = { country_exists = COR 	

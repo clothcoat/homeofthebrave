@@ -261,6 +261,14 @@ country_event = { # Pacific States declares revolution against MacArthur
 		add_stability = 0.15
 		add_war_support = 0.2
 		CAL_initial_events = yes
+		hidden_effect = {
+		USA = {
+			country_event = {
+				id = hawaii.1
+				days = 3
+				}
+			}
+		}
 	}
 	option = {
 		name = amcivwar.3.b
@@ -284,6 +292,14 @@ country_event = { # Pacific States declares revolution against MacArthur
 			change_tag_from = USA
 		}
 		CAL_initial_events = yes
+		hidden_effect = {
+		USA = {
+			country_event = {
+				id = hawaii.1
+				days = 3
+				}
+			}
+		}
 	}
 }
 
@@ -564,14 +580,6 @@ news_event = { #Standoff in America
 
 	option = {
 		name = amcivwar.4.a
-		hidden_effect = {
-		USA = {
-			country_event = {
-				id = hawaii.1
-				days = 3
-				}
-			}
-		}
 	}
 }
 
@@ -2229,14 +2237,14 @@ country_event = { # Old Democrats Breakoff
 		USA_release_COR = yes
 	}
 
-	desc = { 
+	desc = {
 	text = amcivwar.6000.d.long
 	trigger = {
 	has_country_flag = USA_long_was_president
 		}
 	}
 	
-	desc = { 
+	desc = {
 	text = amcivwar.6000.d.macarthur
 	trigger = {
 	has_country_leader = { ruling_only = yes name = "Douglas MacArthur" }
@@ -5681,8 +5689,10 @@ country_event = { # Conscription
 
 	trigger = {
 		tag = USA
+		USA = {
+		has_war = yes
+		}
 		OR = {
-			has_global_flag = USA_civil_war_begun_flag
 			country_exists = CSA
 			country_exists = TEX
 			country_exists = CAL

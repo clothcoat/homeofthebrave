@@ -272,8 +272,11 @@ CAL_Operation_Liberty_mission_desc:0 "With the Civil War raging on the other sid
 ### Flags ###
 PSA_reunited_america_flag:0 "America has been reunited"
 PSA_1937_election_hearst:0 "Hearst Won the Election"
-CAL_liberals_won_twice_flag:0 "Liberals Won Twice Election"
-CAL_social_democrats_win_twice_flag:0 "Social Democrats Won Twice"
+CAL_national_democrats_win_twice_flag:0 "The National Democrats secured the second election"
+CAL_democrats_won_twice_flag:0 "Democrats Won Re-election"
+CAL_liberals_won_twice_flag:0 "New Liberals Won Re-Election"
+CAL_republicans_win_twice:0 "Classical Liberals Won Re-Election"
+CAL_social_democrats_win_twice_flag:0 "Social Democrats Won Re-Election"
 PSA_1937_election_occured:0 "1937 Election Occurred"
 
 ### Decisions ###
@@ -1179,12 +1182,19 @@ pacificstates.10.a:0 "Robert Taylor Jones!"
 pacificstates.10.b:0 "Joseph Bracken Lee!"
 pacificstates.10.c:0 "Congratulations, [CAL.GetLeader]!"
 
+pacificstates.1000.t:0 "[GetYear] Commonwealth Convention"
+pacificstates.1000.d:0 "The Commonwealth Party Convention is today, with the President running for re-election once again and only challenged from their contender from the last primary."
+pacificstates.1000.a:0 "[CAL.GetLeader] is re-elected"
+pacificstates.1000.b:0 "Upton Sinclair"
+pacificstates.1000.c:0 "Culbert Olson"
+
 pacificstates.11.t:0 "[GetYear] Presidential Election"
 pacificstates.11.d:0 "Polls have just closed in the [GetYear] Presidential Election. Winning both the Presidency and the largest number of congressional seats is the..."
 pacificstates.11.a:0 "Progressive Party!"
 pacificstates.11.b:0 "Democratic-Republican Party!"
 pacificstates.11.c:0 "Republican Party!"
 pacificstates.11.e:0 "Democratic Party!"
+pacificstates.11.f:0 "Commonwealth Party!"
 
 pacificstates.12.t:0 "[GetYear] Progressive Convention"
 pacificstates.12.d.president:0 "The Progressive Party has unanimously re-nominated the current president, [CAL.GetLeader], as their candidate in the election."
