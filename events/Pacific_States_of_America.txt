@@ -1962,6 +1962,7 @@ country_event = { # 1944 Progressive Primary
 
 	trigger = {
 		tag = CAL
+		has_country_flag = PSA_Progs_Win
 		has_elected_government = yes
 		has_country_flag = PSA_had_1940_election
 		has_country_flag = PSA_had_1940_election
@@ -2044,6 +2045,7 @@ country_event = { # 1944 Progressive Primary
 
 	trigger = {
 		tag = CAL
+		has_country_flag = PSA_Libs_Win
 		has_elected_government = yes
 		has_country_flag = PSA_had_1940_election
 		has_country_flag = PSA_had_1940_election
@@ -2126,6 +2128,7 @@ country_event = { # 1944 Republican Primary
 
 	trigger = {
 		tag = CAL
+		has_country_flag = PSA_MarkLibs_Win
 		has_elected_government = yes
 		has_country_flag = PSA_had_1940_election
 		has_country_flag = PSA_had_1940_election
@@ -2222,6 +2225,7 @@ country_event = { # 1944 Democrat Primary
 
 	trigger = {
 		tag = CAL
+		has_country_flag = PSA_Conservatives_Win
 		has_elected_government = yes
 		has_country_flag = PSA_had_1940_election
 		has_country_flag = PSA_had_1940_election
