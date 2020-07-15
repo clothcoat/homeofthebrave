@@ -2420,6 +2420,9 @@ country_event = { # 1944 election
 
 	option = { # Progressive
 		name = pacificstates.16.a
+		trigger = {
+		has_country_flag = PSA_Progs_Win
+		}
 		set_country_flag = PSA_had_1944_election
 		hidden_effect = {
 			set_country_flag = PSA_1944_election_progressive
@@ -2434,15 +2437,6 @@ country_event = { # 1944 election
 			elections_allowed = yes
 		}
 		hidden_effect = {
-			if = { # Philip La Follette
-				limit = {
-					has_country_flag = PSA_1944_progressive_primary_folette
-				}
-				add_ideas = CAL_Philip_La_Follette_hog_sde
-				add_ideas = CAL_Alger_Hiss_for_sde
-				add_ideas = CAL_Homer_Truett_Bone_eco_sde
-				add_ideas = CAL_Harold_LeClair_Ickes_sec_sde
-			}
 			if = { # Glen H. Taylor
 				limit = {
 					has_country_flag = PSA_1944_progressive_primary_taylor
@@ -2474,6 +2468,9 @@ country_event = { # 1944 election
 	}
 	option = { # Progressive
 		name = pacificstates.16.b
+		trigger = {
+		has_country_flag = PSA_Libs_Win
+		}
 		set_country_flag = PSA_had_1944_election
 		hidden_effect = {
 			set_country_flag = PSA_1944_election_liberal
@@ -2528,6 +2525,9 @@ country_event = { # 1944 election
 	}
 	option = { # Republican
 		name = pacificstates.16.c
+		trigger = {
+		has_country_flag = PSA_MarkLibs_Win
+		}
 		set_country_flag = PSA_had_1944_election
 		hidden_effect = {
 			set_country_flag = PSA_1944_election_republican
@@ -2590,6 +2590,9 @@ country_event = { # 1944 election
 	}
 	option = { # Democrat
 		name = pacificstates.16.e
+		trigger = {
+		has_country_flag = PSA_Conservatives_Win
+		}
 		set_country_flag = PSA_had_1944_election
 		hidden_effect = {
 			set_country_flag = PSA_1944_election_democrat

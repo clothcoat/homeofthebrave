@@ -4601,7 +4601,7 @@ focus_tree = {
 	focus = {
 		id = USA_reform_plan
 		icon = GFX_goal_American_Service
-		cost = 5.00
+		cost = 3.00
 		prerequisite = {
 			focus = USA_war_department
 		}
@@ -4622,7 +4622,7 @@ focus_tree = {
 		relative_position_id = USA_war_department
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_reform_plan"
-			country_event = ustates.602
+			army_experience = 15
 			hidden_effect = {
 				country_event = { id = ustates.619 days = 670 }
 				country_event = { id = ustates.621 days = 15 }
@@ -4712,7 +4712,6 @@ focus_tree = {
 			focus = USA_reform_plan
 		}
 		available = {
-			always = no
 			has_global_flag = USA_civil_war_avoided_flag
 		}
 		mutually_exclusive = {
@@ -6332,7 +6331,12 @@ focus_tree = {
 			focus = USA_reform_plan
 		}
 		available = {
-			always = no
+		NOT = {
+		has_ideas = USA_Omar_Nelson_Bradley_cos
+			}
+		NOT = {
+		has_ideas = USA_George_Catlett_Marshall_Jr_cos
+			}
 		}
 		mutually_exclusive = {
 			focus = USA_McNair_Plan
@@ -6398,9 +6402,6 @@ focus_tree = {
 		prerequisite = {
 			focus = USA_the_general_staff
 		}
-		available = {
-			always = no
-		}
 		x = -2
 		y = 2
 		ai_will_do = {
@@ -6434,9 +6435,6 @@ focus_tree = {
 		prerequisite = {
 			focus = USA_grand_leadership
 		}
-		available = {
-			always = no
-		}
 		x = -3
 		y = 3
 		ai_will_do = {
@@ -6466,9 +6464,6 @@ focus_tree = {
 		cost = 5.00
 		prerequisite = {
 			focus = USA_integrated_mechanization
-		}
-		available = {
-			always = no
 		}
 		x = -4
 		y = 4
@@ -6514,9 +6509,6 @@ focus_tree = {
 		prerequisite = {
 			focus = USA_grand_leadership
 		}
-		available = {
-			always = no
-		}
 		x = -1
 		y = 3
 		ai_will_do = {
@@ -6551,9 +6543,6 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = USA_delegated_functions
-		}
-		available = {
-			always = no
 		}
 		x = -2
 		y = 4
@@ -6593,9 +6582,6 @@ focus_tree = {
 		prerequisite = {
 			focus = USA_modern_recon
 		}
-		available = {
-			always = no
-		}
 		x = -1
 		y = 5
 		ai_will_do = {
@@ -6628,9 +6614,6 @@ focus_tree = {
 		cost = 5.00
 		prerequisite = {
 			focus = USA_modern_recon
-		}
-		available = {
-			always = no
 		}
 		x = -3
 		y = 5
@@ -6667,9 +6650,6 @@ focus_tree = {
 		prerequisite = {
 			focus = USA_military_feignts
 		}
-		available = {
-			always = no
-		}
 		x = -2
 		y = 6
 		ai_will_do = {
@@ -6705,9 +6685,6 @@ focus_tree = {
 		prerequisite = {
 			focus = USA_the_general_staff
 		}
-		available = {
-			always = no
-		}
 		x = 2
 		y = 2
 		ai_will_do = {
@@ -6733,9 +6710,6 @@ focus_tree = {
 		cost = 5.00
 		prerequisite = {
 			focus = USA_mobilization_plan
-		}
-		available = {
-			always = no
 		}
 		x = 1
 		y = 3
@@ -6766,9 +6740,6 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = USA_delegated_functions
-		}
-		available = {
-			always = no
 		}
 		x = 0
 		y = 4
@@ -6801,9 +6772,6 @@ focus_tree = {
 		cost = 5.00
 		prerequisite = {
 			focus = USA_mobilization_plan
-		}
-		available = {
-			always = no
 		}
 		x = 3
 		y = 3
@@ -6856,9 +6824,6 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = USA_munitions_procurement
-		}
-		available = {
-			always = no
 		}
 		x = 2
 		y = 4
@@ -6917,9 +6882,6 @@ focus_tree = {
 		prerequisite = {
 			focus = USA_industrial_base_planning
 		}
-		available = {
-			always = no
-		}
 		x = 2
 		y = 5
 		ai_will_do = {
@@ -6953,9 +6915,6 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = USA_marine_support
-		}
-		available = {
-			always = no
 		}
 		x = 2
 		y = 6
@@ -7024,9 +6983,6 @@ focus_tree = {
 		prerequisite = {
 			focus = USA_price_controls
 		}
-		available = {
-			always = no
-		}
 		x = 0
 		y = 6
 		ai_will_do = {
@@ -7081,9 +7037,6 @@ focus_tree = {
 		cost = 5.00
 		prerequisite = {
 			focus = USA_price_controls
-		}
-		available = {
-			always = no
 		}
 		x = 4
 		y = 6
