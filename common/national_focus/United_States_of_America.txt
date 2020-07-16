@@ -706,9 +706,13 @@ focus_tree = {
 		focus = USA_fight_anarchists
 		}
 		select_effect = {
-		if = { 
+		if = {
 		limit = { has_country_leader = { ruling_only = yes name = "William H. Murray" } }
-		country_event = { id = amcivwar.6302 days = 6 }
+		country_event = { id = ustates.6302 days = 6 }
+		}
+		if = {
+		limit = { has_country_leader = { ruling_only = yes name = "Huey Long" } }
+		country_event = { id = ustates.6302 days = 6 }
 		}
 		}
 		prerequisite = {
@@ -786,7 +790,7 @@ focus_tree = {
 			focus = USA_president_murray
 		}
 		select_effect = {
-			country_event = { id = amcivwar.6306 days = 8 }
+			country_event = { id = ustates.6306 days = 8 }
 		}
 		available = {
 			has_country_leader = {
@@ -816,7 +820,7 @@ focus_tree = {
 			focus = USA_president_murray
 		}
 		select_effect = {
-			country_event = { id = amcivwar.6309 days = 10 }
+			country_event = { id = ustates.6309 days = 10 }
 		}
 		available = {
 			has_country_leader = {
@@ -827,9 +831,9 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		completion_reward = {
-			custom_effect_tooltip = USA_SPA_gains_strength
+			custom_effect_tooltip = USA_AFP_loses_strength
 			hidden_effect = {
-			add_to_variable = { var = SPA_strength value = -1 }
+			add_to_variable = { var = AFP_strength value = -1 }
 			}
 		}
 	}

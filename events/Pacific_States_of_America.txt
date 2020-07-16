@@ -115,7 +115,7 @@ country_event = { # 1937 Dem-Rep Primary
 	option = { # William Gibbs McAdoo
 		name = pacificstates.3.b
 		hidden_effect = {
-			set_country_flag = PSA_1937_liberal_primary_mcadoo
+			set_country_flag = PSA_1937_liberal_primary_mccadoo
 			country_event = {
 				id = pacificstates.2
 				days = 6
@@ -508,7 +508,7 @@ country_event = { # 1937 Election
 				create_country_leader = {
 					name = "Howard Hughes"
 					desc = "POLITICS_HOWARD_HUGES_DESC"
-					picture = "gfx/leaders/PSA/Portrait_CAL_howard_hughes.tga"
+					picture = "gfx/leaders/PSA/CAL_Howard Hughes.tga"
 					expire = "1965.1.1"
 					ideology = market_liberal_subtype
 					traits = {}
@@ -1015,31 +1015,31 @@ country_event = { # Two Party System Formalizes
 	is_triggered_only = yes
 
 	desc = {
-	text = ustates.6006.d.progs
+	text = pacificstates.6006.d.progs
 	trigger = {
 			has_country_flag = PSA_Progs_Win
 		}
 	}
 	desc = {
-	text = ustates.6006.d.libs
+	text = pacificstates.6006.d.libs
 	trigger = {
 			has_country_flag = PSA_Libs_Win
 		}
 	}
 	desc = {
-	text = ustates.6006.d.reps
+	text = pacificstates.6006.d.reps
 	trigger = {
 			has_country_flag = PSA_MarkLibs_Win
 		}
 	}
 	desc = {
-	text = ustates.6006.d.dems
+	text = pacificstates.6006.d.dems
 	trigger = {
 			has_country_flag = PSA_Conservatives_Win
 		}
 	}
 	desc = {
-	text = ustates.6006.d.commonwealth
+	text = pacificstates.6006.d.commonwealth
 	trigger = {
 			has_country_flag = PSA_Radicals_Win
 		}
@@ -1053,7 +1053,7 @@ country_event = { # Two Party System Formalizes
 		add_popularity = { ideology = social_conservative popularity = 0.05 }
 		add_popularity = { ideology = market_liberal popularity = -0.06 }
 		set_party_name = {
-			ideology = social_conservative
+			ideology = market_liberal
 			long_name = CAL_conservative_dominance_long
 			name = CAL_conservative_dominance_party }
 		set_country_flag = PSA_Conservatives_Win
@@ -1065,7 +1065,7 @@ country_event = { # Two Party System Formalizes
 		add_popularity = { ideology = social_conservative popularity = 0.05 }
 		add_popularity = { ideology = market_liberal popularity = -0.06 }
 		set_party_name = {
-			ideology = social_conservative
+			ideology = market_liberal
 			long_name = CAL_conservative_dominance_long
 			name = CAL_conservative_dominance_party }
 		set_country_flag = PSA_Conservatives_Win
@@ -1101,7 +1101,7 @@ country_event = { # Two Party System Formalizes
 		add_popularity = { ideology = social_conservative popularity = 0.05 }
 		add_popularity = { ideology = market_liberal popularity = -0.06 }
 		set_party_name = {
-			ideology = social_conservative
+			ideology = market_liberal
 			long_name = CAL_conservative_dominance_long
 			name = CAL_conservative_dominance_party }
 			set_country_flag = PSA_Conservatives_Win
@@ -5114,9 +5114,17 @@ country_event = {# Hearst Runs
 		create_country_leader = {
 			name = "William Randolph Hearst"
 			desc = "POLITICS_WILLIAM_RANDOLPH_HEARST_DESC"
-			picture = "Portrait_CAL_William_Randolph_Hearst.tga"
+			picture = "gfx/leaders/PSA/CAL_Hearst.tga"
 			expire = "1965.1.1"
 			ideology = authoritarian_democrat_subtype
+			traits = {}
+		}
+		create_country_leader = {
+			name = "William Randolph Hearst"
+			desc = "POLITICS_WILLIAM_RANDOLPH_HEARST_DESC"
+			picture = "gfx/leaders/PSA/CAL_Hearst.tga"
+			expire = "1965.1.1"
+			ideology = paternal_autocrat_subtype
 			traits = {}
 		}
 		if = {
@@ -6134,9 +6142,9 @@ country_event = {# MacArthur's Demands
 
 country_event = {# Speech to California
 	id = pacificstates.248
-	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.249"}
-	title = pacificstates.249.t
-	desc = pacificstates.249.d
+	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.248"}
+	title = pacificstates.248.t
+	desc = pacificstates.248.d
 	picture = GFX_ACW_american_brigade
 
 	is_triggered_only = yes
@@ -6144,7 +6152,7 @@ country_event = {# Speech to California
 	fire_only_once = yes
 
 	option = {# Announce our intent to retake the West
-		name = pacificstates.249.a
+		name = pacificstates.248.a
 		add_war_support = 0.05
 		WCC = add_opinion_modifier = { target = CAL modifier = large_decrease }
 		USA = add_opinion_modifier = { target = CAL modifier = large_decrease }
@@ -6156,7 +6164,7 @@ country_event = {# Speech to California
 		}
 	}
 	option = {# We are Pacificans Now
-		name = pacificstates.249.b
+		name = pacificstates.248.b
 		add_stability = 0.05
 		hidden_effect = {
 		country_event = {
@@ -6181,6 +6189,7 @@ country_event = {# Re-Open Congress
 	option = {# Very well, I will run
 		name = pacificstates.249.a
 		hidden_effect = {
+		set_country_flag = PSA_Candidate_Marshall
 		country_event = {
 			id = pacificstates.2500
 			days = 6
@@ -6211,23 +6220,85 @@ country_event = {# Snap Election Results
 	
 	option = {# George Marshall
 		name = pacificstates.2490.a
-		
+		trigger = { has_country_flag = PSA_Candidate_Marshall }
+		hidden_effect = {
+		create_country_leader = {
+			name = "George Marshall"
+			desc = "POLITICS_GEORGE_MARSHALL_DESC"
+			picture = "gfx/leaders/USA/Portrait_USA_george_marshall.tga"
+			expire = "1965.1.1"
+			ideology = social_liberal_subtype
+			traits = {}
+			}
+		}
+		set_politics = {
+			ruling_party = social_liberal
+			elections_allowed = yes
+		}	
 	}
 	option = {# Hiram Johnson
 		name = pacificstates.2490.b
+		create_country_leader = {
+			name = "Hiram Johnson"
+			desc = "POLITICS_HIRAM_JOHNSON_DESC"
+			picture = "Portrait_CAL_Hiram_Johnson.tga"
+			expire = "1965.1.1"
+			ideology = social_democrat_subtype
+			traits = {}
+		}
+		set_politics = {
+			ruling_party = social_democrat
+			elections_allowed = yes
+		}	
 		
 	}
 	option = {# Howard Hughes
 		name = pacificstates.2490.c
-		
+		create_country_leader = {
+					name = "Howard Hughes"
+					desc = "POLITICS_HOWARD_HUGES_DESC"
+					picture = "gfx/leaders/PSA/CAL_Howard Hughes.tga"
+					expire = "1965.1.1"
+					ideology = market_liberal_subtype
+					traits = {}
+				}
+		set_politics = {
+			ruling_party = market_liberal
+			elections_allowed = yes
+		}	
 	}
 	option = {# Charles Sprague
 		name = pacificstates.2490.e
-		
+			trigger = { 
+			NOT = {
+			has_country_flag = PSA_Candidate_Marshall } }
+			create_country_leader = {
+			name = "Charles A. Sprague"
+			desc = "POLITICS_CHARLES_SPRAGUE_DESC"
+			picture = "Portrait_CAL_Charles_A_Sprague.tga"
+			expire = "1965.1.1"
+			ideology = market_liberal_subtype
+			traits = {}
+		}
+		set_politics = {
+			ruling_party = social_liberal
+			elections_allowed = yes
+		}
 	}
 	option = {# Henry J. Kaiser
 		name = pacificstates.2490.f
-		
+		create_country_leader = {
+			name = "Henry J. Kaiser"
+			desc = "POLITICS_HENRY_J_KAISER_DESC"
+			picture = "gfx/leaders/PSA/CAL_Henry_J_kaiser.tga"
+			expire = "1965.1.1"
+			ideology = social_conservative_subtype
+			traits = {}
+		}
+		set_politics = {
+			ruling_party = social_conservative
+			elections_allowed = yes
+		}
 	}
 }
 
@@ -7438,7 +7509,7 @@ country_event = {# CSA Policy
 		}
 	}
 	option = {#Decline
-		name = pacificstates.323.a
+		name = pacificstates.323.b
 		add_war_support = 0.05
 		add_manpower = 2000
 		add_popularity = { ideology = syndicalist popularity = -0.02 }

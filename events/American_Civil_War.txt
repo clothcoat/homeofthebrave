@@ -1271,6 +1271,8 @@ country_event = { # Last Men Standing
 	TEX = {
 	exists = no
 		}
+	}
+	OR = {
 	NOT = {
 	CSA = {
 		has_war_with = CAL

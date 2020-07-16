@@ -2648,7 +2648,7 @@ focus_tree = {
 		icon = GFX_goal_liberty
 		cost = 5.00
 		available = { has_country_flag = PSA_1937_election_occured }
-		bypass = { has_global_flag = CAL_civil_war_over_flag }
+		bypass = { has_country_flag = PSA_1937_election_occured }
 		x = 50
 		y = 0
 		ai_will_do = {
@@ -9225,9 +9225,7 @@ focus_tree = {
 			focus = CAL_new_nationalism
 		}
 		available = {
-			OR = {
 				has_government = social_democrat
-			}
 		}
 		ai_will_do = {
 			factor = 10
@@ -11463,6 +11461,9 @@ focus_tree = {
 		id = CAL_repatriation
 		icon = GFX_mexican_repatriation
 		cost = 5.00
+		available = {
+		has_country_flag = PSA_1937_election_occured
+		}
 		mutually_exclusive = {
 		focus = CAL_quota_adjustments
 		focus = CAL_national_immigration_act
@@ -11495,6 +11496,7 @@ focus_tree = {
 		focus = CAL_national_immigration_act
 		}
 		available = {
+			has_country_flag = PSA_1937_election_occured
 			NOT = {
 			has_government = paternal_autocrat
 			has_government = national_populist
@@ -11521,13 +11523,16 @@ focus_tree = {
 		cost = 5.00
 		mutually_exclusive = {
 		focus = CAL_quota_adjustments
-		focus = CAL_national_immigration_act
+		focus = CAL_repatriation
 		}
 		available = {
+			has_country_flag = PSA_1937_election_occured
 			NOT = {
-			has_government = social_conservative
+			OR = {
+			has_government = authoritarian_democrat
 			has_government = paternal_autocrat
 			has_government = national_populist
+				}
 			}
 		}
 		ai_will_do = {
@@ -11666,6 +11671,9 @@ focus_tree = {
 		focus = CAL_repatriation
 		focus = CAL_quota_adjustments
 		focus = CAL_national_immigration_act
+		}
+		mutually_exclusive = {
+		focus = CAL_ban_race_mixing
 		}
 		available = {
 			OR = {

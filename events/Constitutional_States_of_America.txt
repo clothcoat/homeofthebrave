@@ -940,16 +940,22 @@ country_event = { # Armstrong Dead
 		create_country_leader = {
 			name = "George Lincoln Rockwell"
 			desc = "POLITICS_GEORGE_LINCOLN_ROCKWELL_DESC"
-			picture = "Portrait_CAL_Upton_Sinclair.tga"
+			picture = "gfx/leaders/CUS/COR_bump.tga"
 			expire = "1965.1.1"
-			ideology = radical_socialist_subtype
+			ideology = national_populist_subtype
 			traits = {}
 		}
 	}
 	option = { #Francis Parker Yockey
 		name = constate.5101.b
-		add_political_power = -50
-		add_popularity = { ideology = national_populist popularity = -0.05 }
+		create_country_leader = {
+			name = "Francis Parker Yockey"
+			desc = "POLITICS_FRANCIS_PARKER_YOCKEY_DESC"
+			picture = "gfx/leaders/CUS/COR_Yockey.tga"
+			expire = "1965.1.1"
+			ideology = national_populist_subtype
+			traits = {}
+		}
 	}
 }
 
