@@ -1002,7 +1002,7 @@ COR_release_BBR = {
 
 		every_state = {
 			limit = {
-				is_core_of = CON
+				is_core_of = COR
 				NOT = { is_core_of = BBR }
 				NOT = { is_claimed_by = BBR }
 			}
