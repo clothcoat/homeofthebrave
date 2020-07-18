@@ -5252,10 +5252,6 @@ country_event = {# Ceasefire with MacArthur
 	is_triggered_only = yes
 
 	fire_only_once = yes
-	
-	mean_time_to_happen = {
-	days = 1
-	}
 
 	option = {# 
 		name = pacificstates.214.a
@@ -5284,6 +5280,131 @@ country_event = {# Ceasefire with MacArthur
 		}
 		USA = {
 		add_opinion_modifier = { target = CAL modifier = medium_increase }
+		}
+	}
+}
+
+country_event = {# Push For America
+	id = pacificstates.215
+	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.215"}
+	title = pacificstates.215.t
+	desc = pacificstates.215.d
+	picture = GFX_ACW_american_brigade
+
+	trigger = {
+	has_country_leader = { ruling_only = yes name = "William Randolph Hearst"}
+	USA = {
+		exists = yes
+		has_government = paternal_autocrat
+		}
+	WCC = {
+		exists = no
+		}
+	CSA = {
+		exists = no
+		}
+	COR = {
+		exists = no
+		}
+	TEX = {
+		exists = no
+		}
+	}
+
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+	days = 1
+	}
+
+	option = {# 
+		name = pacificstates.215.a
+		add_political_power = -30
+		add_popularity = { ideology = paternal_autocrat popularity = 0.02 }
+		USA = {
+		country_event = {
+			id = pacificstates.216
+			days = 1
+			}
+		}
+	}
+	option = {# 
+		name = pacificstates.215.b
+		white_peace = USA
+		add_political_power = 50
+		add_stability = 0.05
+		add_war_support = 0.1
+		USA = {
+		all_owned_state = {
+		limit = { is_claimed_by = CAL }
+		remove_claim_by = CAL
+			}
+		}
+	}
+}
+
+country_event = {# Hearst Requests our Annexation
+	id = pacificstates.216
+	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.216"}
+	title = pacificstates.216.t
+	desc = pacificstates.216.d
+	picture = GFX_ACW_american_brigade
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+	days = 14
+	}
+
+	option = {# Accept
+		name = pacificstates.216.a
+		ai_will_do = {
+			factor = 100
+		}
+		CAL = {
+		country_event = {
+			id = pacificstates.216
+			days = 1
+			}
+		}
+	}
+	option = {# Nope
+		name = pacificstates.216.a
+		add_stability = -0.1
+		add_popularity = { ideology = paternal_autocrat popularity = -0.05 }
+		add_manpower = -5000
+		add_war_support = -0.1
+		
+	}
+}
+
+country_event = {# Mac Accepts
+	id = pacificstates.2160
+	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.2160"}
+	title = pacificstates.2160.t
+	desc = pacificstates.2160.d
+	picture = GFX_ACW_american_brigade
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+	days = 14
+	}
+
+	option = {# Accept
+		name = pacificstates.2160.a
+		add_political_power = 100
+		add_stability = -0.1
+		add_popularity = { ideology = paternal_autocrat popularity = 0.05 }
+		CAL = {
+			annex_country = {
+			target = USA
+			transfer_troops = yes
+			}
 		}
 	}
 }
