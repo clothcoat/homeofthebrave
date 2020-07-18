@@ -165,6 +165,14 @@ country_event = { # Old Democrats Breakoff
 		COR = {
 			change_tag_from = USA
 		}
+		add_popularity = {
+			ideology = paternal_autocrat
+			popularity = -0.1
+		}
+		add_popularity = {
+			ideology = national_populist
+			popularity = -0.3
+		}
 		hidden_effect = {
 		WCC = {
 		set_politics = {
@@ -2568,8 +2576,8 @@ country_event = { # Civil War Begins
 country_event = { # COR forms
 	id = amcivwar.1011
 	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.1011"}
-	title = amcivwar.10.t
-	desc = amcivwar.10.d
+	title = amcivwar.1011.t
+	desc = amcivwar.1011.d
 	picture = GFX_USA_murray
 
 	is_triggered_only = yes
@@ -2732,10 +2740,6 @@ country_event = { # Huey Long declares Rebellion against Murray
 			ideology = authoritarian_democrat
 			popularity = -0.3
 		}
-		add_popularity = {
-			ideology = national_populist
-			popularity = -0.3
-		}
 		add_stability = 0.15
 		add_war_support = 0.2
 	}
@@ -2749,10 +2753,6 @@ country_event = { # Huey Long declares Rebellion against Murray
 		}
 		add_popularity = {
 			ideology = authoritarian_democrat
-			popularity = -0.3
-		}
-		add_popularity = {
-			ideology = national_populist
 			popularity = -0.3
 		}
 		add_stability = 0.15
@@ -4179,6 +4179,7 @@ country_event = { # PSA wins the civil war
 			has_global_flag = PSA_rockies_ceasefire
 			NOT = {
 				country_exists = USA
+				country_exists = WCC
 				country_exists = COR
 				country_exists = TEX
 				country_exists = CSA
@@ -4204,10 +4205,20 @@ country_event = { # PSA wins the civil war
 				days = 50
 				random = 10
 			}
+			if = { limit = {
+				NOT = {
+				OR = {
+				has_government = national_populist
+				has_government = paternal_autocrat
+				has_government = authoritarian_democrat
+					}
+				}
+			}
 			country_event = {
 				id = pacificstates.54
-				days = 90
+				days = 200
 				random = 10
+				}
 			}
 			country_event = {
 				id = pacificstates.53

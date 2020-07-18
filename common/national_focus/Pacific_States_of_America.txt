@@ -3651,9 +3651,12 @@ focus_tree = {
 	focus = {# Constitutional Convention
 		id = CAL_constitutional_convention
 		icon = GFX_goal_government_icon
-		cost = 6.00
+		cost = 2.00
 		available = {
-			has_global_flag = CAL_civil_war_over_flag
+			has_global_flag = USA_civil_war_over_flag
+			CAL = {
+			owns_state = 361
+			}
 		}
 		x = 108
 		y = 10
@@ -3662,13 +3665,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_constitutional_convention"
-			if = {
-				limit = { has_government = paternal_autocrat }
-				country_event = { id = ustates.116 days = 1 }
-				else = {
-					country_event = { id = ustates.117 days = 1 }
-				}
-			}
+			add_political_power = 30
+			add_stability = 0.03
 		}
 	}
 	
@@ -3676,12 +3674,15 @@ focus_tree = {
 	focus = {# President Hearst
 		id = CAL_president_hearst
 		icon = GFX_CAL_hearst
-		cost = 5.00
+		cost = 1.50
 		prerequisite = {
 			focus = CAL_constitutional_convention
 		}
 		available = {
+			OR = {
 			has_government = authoritarian_democrat
+			has_government = paternal_autocrat
+			}
 		}
 		ai_will_do = {
 			factor = 5
@@ -3703,12 +3704,15 @@ focus_tree = {
 	focus = {# Military Lobby
 		id = CAL_military_lobby
 		icon = GFX_goal_ideology_social_conservative
-		cost = 5.00
+		cost = 4.00
 		prerequisite = {
 			focus = CAL_president_hearst
 		}
 		available = {
+			OR = {
 			has_government = authoritarian_democrat
+			has_government = paternal_autocrat
+			}
 		}
 		ai_will_do = {
 			factor = 5
@@ -3769,12 +3773,15 @@ focus_tree = {
 	focus = { # Increase Military Spending
 		id = CAL_increase_military_spending
 		icon = GFX_goal_generic_foreign_investments
-		cost = 5
+		cost = 4
 		prerequisite = {
 			focus = CAL_military_lobby
 		}
 		available = {
+			OR = {
 			has_government = authoritarian_democrat
+			has_government = paternal_autocrat
+			}
 		}
 		available_if_capitulated = yes
 		cancel_if_invalid = yes
@@ -3834,12 +3841,15 @@ focus_tree = {
 	focus = {# Bonus Bill
 		id = CAL_bonus_bill
 		icon = GFX_CAL_bonus_bill
-		cost = 5.00
+		cost = 4.00
 		prerequisite = {
 			focus = CAL_increase_military_spending
 		}
 		available = {
+			OR = {
 			has_government = authoritarian_democrat
+			has_government = paternal_autocrat
+			}
 		}
 		ai_will_do = {
 			factor = 5
@@ -3870,7 +3880,10 @@ focus_tree = {
 			focus = CAL_president_hearst
 		}
 		available = {
+			OR = {
 			has_government = authoritarian_democrat
+			has_government = paternal_autocrat
+			}
 		}
 		ai_will_do = {
 			factor = 5
@@ -3896,7 +3909,10 @@ focus_tree = {
 			focus = CAL_eastern_patronage
 		}
 		available = {
+			OR = {
 			has_government = authoritarian_democrat
+			has_government = paternal_autocrat
+			}
 		}
 		ai_will_do = {
 			factor = 5
@@ -3923,7 +3939,10 @@ focus_tree = {
 			focus = CAL_dewitt_raids
 		}
 		available = {
+			OR = {
 			has_government = authoritarian_democrat
+			has_government = paternal_autocrat
+			}
 		}
 		ai_will_do = {
 			factor = 5
@@ -3951,12 +3970,15 @@ focus_tree = {
 	focus = {# Empower Old Money
 		id = CAL_southern_old_money
 		icon = GFX_goal_collaborate_local_elites
-		cost = 5.00
+		cost = 4.00
 		prerequisite = {
 			focus = CAL_president_hearst
 		}
 		available = {
+			OR = {
 			has_government = authoritarian_democrat
+			has_government = paternal_autocrat
+			}
 		}
 		ai_will_do = {
 			factor = 5
@@ -3977,12 +3999,15 @@ focus_tree = {
 	focus = {# Oaths of Loyalty
 		id = CAL_oaths_of_loyalty
 		icon = GFX_goal_military_academy
-		cost = 5.00
+		cost = 4.00
 		prerequisite = {
 			focus = CAL_southern_old_money
 		}
 		available = {
+			OR = {
 			has_government = authoritarian_democrat
+			has_government = paternal_autocrat
+			}
 		}
 		ai_will_do = {
 			factor = 5
@@ -4003,12 +4028,15 @@ focus_tree = {
 	focus = {# Reconciliation
 		id = CAL_reconcilation
 		icon = GFX_goal_new_treaty
-		cost = 5.00
+		cost = 4.50
 		prerequisite = {
 			focus = CAL_oaths_of_loyalty
 		}
 		available = {
+			OR = {
 			has_government = authoritarian_democrat
+			has_government = paternal_autocrat
+			}
 		}
 		ai_will_do = {
 			factor = 5
@@ -4038,7 +4066,10 @@ focus_tree = {
 			focus = CAL_reconcilation
 		}
 		available = {
+			OR = {
 			has_government = authoritarian_democrat
+			has_government = paternal_autocrat
+			}
 		}
 		ai_will_do = {
 			factor = 5
@@ -4068,7 +4099,6 @@ focus_tree = {
 		}
 		available = {
 			has_government = paternal_autocrat
-			has_idea = CAL_high_tariffs_idea_3
 		}
 		ai_will_do = {
 			factor = 5

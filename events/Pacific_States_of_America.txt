@@ -836,6 +836,10 @@ country_event = { # 1937 Election
 		set_country_flag = PSA_had_1937_election
 		hidden_effect = {
 			set_country_flag = PSA_1937_election_hearst
+			country_event = {
+			id = pacificstates.214
+			days = 2
+			}
 		}
 		add_popularity = {
 			ideology = authoritarian_democrat
@@ -3823,6 +3827,17 @@ country_event = { # Anti-Klan Laws
 	option = { # Flavor
 		name = pacificstates.56.a
 		add_stability = 0.03
+		add_popularity = { ideology = national_populist popularity = -0.02 }
+	}
+	option = { # Flavor
+		name = pacificstates.56.b
+		trigger = { 
+		OR = {
+		has_government = paternal_autocrat 
+		has_government = national_populist
+		}
+		add_stability = 0.02
+		add_political_power = 20
 	}
 }
 
@@ -3997,6 +4012,7 @@ country_event = { # Mormon Church and Politics
 
 	option = { # Support Communalism as bastion of Anti-syndicalist
 		name = pacificstates.65.a
+		add_political_power = -15
 		add_popularity = {
 			ideology = social_democrat
 			popularity = -0.01
@@ -5294,7 +5310,7 @@ country_event = {# Papers Report Our Parties
 	option = {# TRAITORS
 		name = pacificstates.217.a
 		add_stability = -0.02
-		add_popularity = { ideology = paternal_autocrat ideology = -0.01 }
+		add_popularity = { ideology = paternal_autocrat popularity = -0.01 }
 	}
 }
 
@@ -5529,7 +5545,7 @@ country_event = {# Hearst couped by Arnold and Marshall
 		}
 	}
 	option = {# Hold Them Off!
-	name = pacificstates.229.a
+	name = pacificstates.229.b
 		hidden_effect = {
 		country_event = {
 		id = pacificstates.2301

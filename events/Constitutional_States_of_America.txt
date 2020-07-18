@@ -608,6 +608,146 @@ country_event = { # Hiram Wesley Evans killed!
 	}
 }
 
+country_event = { # Hiram Wesley Evans killed!
+	id = constate.16
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.16"}
+	title = constate.16.t
+	desc = constate.16.d
+	picture = AUS_christian_identity
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = { # Very Well
+		name = constate.16.a
+		add_political_power = 80
+		add_stability = 0.02
+		add_popularity = { ideology = national_populist popularity = -0.02 }
+		add_war_support = -0.05
+	}
+	option = { # No
+		name = constate.16.b
+		add_stability = -0.02
+		add_popularity = { ideology = national_populist popularity = 0.02 }
+		add_war_support = 0.05
+		army_experience = 5
+		add_manpower = -2000
+		add_opinion_modifier = {
+			target = PAP
+			modifier = large_decrease
+		}
+	}
+}
+
+country_event = { # Fate of the Georgia Klan
+	id = constate.17
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.17"}
+	title = constate.17.t
+	desc = constate.17.d
+	picture = AUS_christian_identity
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = { # Use Green
+		name = constate.17.a
+		add_political_power = -30
+		add_stability = 0.05
+		add_manpower = 3500
+	}
+	option = { # Finish the Job
+		name = constate.17.b
+		add_stability = -0.05
+		add_political_power = 55
+		add_command_power = 10
+		add_manpower = -10000
+		add_popularity = { ideology = national_populist popularity = 0.04 }
+	}
+}
+
+country_event = { # California Dispute
+	id = constate.1700
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.1700"}
+	title = constate.1700.t
+	desc = constate.1700.d
+	picture = AUS_christian_identity
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = { # Use Green
+		name = constate.1700.a
+		add_political_power = -30
+		add_stability = 0.05
+		add_manpower = 3500
+	}
+	option = { # Finish the Job
+		name = constate.1700.b
+		add_stability = -0.05
+		add_political_power = 55
+		add_command_power = 10
+		add_manpower = -10000
+		add_popularity = { ideology = national_populist popularity = 0.04 }
+	}
+}
+
+country_event = { # Legion Infighting
+	id = constate.1701
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.1701"}
+	title = constate.1701.t
+	desc = constate.1701.d
+	picture = AUS_christian_identity
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = { # Use Green
+		name = constate.1701.a
+		add_political_power = -30
+		add_stability = 0.05
+		add_manpower = 3500
+	}
+	option = { # Finish the Job
+		name = constate.1701.b
+		add_stability = -0.05
+		add_political_power = 55
+		add_command_power = 10
+		add_manpower = -10000
+		add_popularity = { ideology = national_populist popularity = 0.04 }
+	}
+}
+
+country_event = { # 
+	id = constate.1701
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.1701"}
+	title = constate.1701.t
+	desc = constate.1701.d
+	picture = AUS_christian_identity
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = { # Use Green
+		name = constate.1701.a
+		add_political_power = -30
+		add_stability = 0.05
+		add_manpower = 3500
+	}
+	option = { # Finish the Job
+		name = constate.1701.b
+		add_stability = -0.05
+		add_political_power = 55
+		add_command_power = 10
+		add_manpower = -10000
+		add_popularity = { ideology = national_populist popularity = 0.04 }
+	}
+}
+
 country_event = { # Letter to Patton
 	id = constate.18
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.18"}

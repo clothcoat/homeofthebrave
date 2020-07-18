@@ -760,11 +760,10 @@ focus_tree = {
 			factor = 100
 		}
 		available = {
-			custom_trigger_tooltip = {
-				has_global_flag = USA_murray_is_president
-				has_country_flag = USA_election_1936_flag
-				NOT = { has_country_flag = USA_had_1940_election }
-			}
+			has_global_flag = USA_murray_is_president
+			has_country_flag = USA_president_inaugurated
+			has_country_flag = USA_election_1936_flag
+			NOT = { has_country_flag = USA_had_1940_election }
 		}
 		available_if_capitulated = yes
 		cancel_if_invalid = yes
@@ -4667,9 +4666,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_air_force_debate"
 			country_event = ustates.603
-			hidden_effect = {
-				country_event = { id = ustates.623 days = 75 }
-			}
+			air_experience = 20
 		}
 	}
 	focus = {
@@ -5673,9 +5670,6 @@ focus_tree = {
 				bonus = 1
 				uses = 2
 				category = air_doctrine
-			}
-			hidden_effect = {
-				country_event = { id = ustates.624 days = 70 }
 			}
 		}
 	}

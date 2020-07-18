@@ -3753,6 +3753,7 @@ country_event = { # Murray's Inaugural Address
 		hidden_effect = {
 			country_event = { id = ustates.6301 days = 4 }
 		}
+		set_country_flag = USA_president_inaugurated
 	}
 }
 
@@ -3884,12 +3885,12 @@ country_event = { # Congress Protests
 		add_stability = -0.1
 		hidden_effect = {
 			country_event = { id = ustates.6308 days = 5 }
-			country_event = { id = amcivwar.1011 days = 5 }
-			country_event = { id = amcivwar.1012 days = 6 }
-			country_event = { id = amcivwar.1013 days = 7 }
-			country_event = { id = ustates.6308 days = 8 }
-			country_event = { id = amcivwar.3 days = 9 }
-			country_event = { id = amcivwar.3000 days = 10 }
+			country_event = { id = amcivwar.1011 days = 6 }
+			country_event = { id = amcivwar.1012 days = 7 }
+			country_event = { id = amcivwar.1013 days = 8 }
+			country_event = { id = ustates.6308 days = 9 }
+			country_event = { id = amcivwar.3 days = 10 }
+			country_event = { id = amcivwar.3000 days = 11 }
 		}
 	}
 }
@@ -3922,10 +3923,6 @@ country_event = { # MacArthur forces out Murray
 				traits = {}
 			}
 		}
-		add_popularity = {
-		ideology = paternal_autocrat
-		popularity = 0.2
-		}
 	}
 
 	trigger = {
@@ -3943,6 +3940,10 @@ country_event = { # MacArthur forces out Murray
 			add_ideas = USA_John_William_Davis_for_pau
 			add_ideas = USA_William_Harrison_Standley_eco_pau
 			add_ideas = USA_John_Edgar_Hoover_sec_pau
+		}
+		add_popularity = {
+		ideology = paternal_autocrat
+		popularity = 0.2
 		}
 	}
 }
@@ -14489,8 +14490,18 @@ country_event = {# Change of the USAAC air patch
 	desc = ustates.623.d
 	picture = GFX_USA_plane_formation
 	fire_only_once = yes
-	is_triggered_only = yes
+	
+	trigger = {
+	has_completed_focus = USA_air_force_debate
+	USA = {
+	has_war = yes
+		}
+	}
 
+	mean_time_to_happen = {
+	days = 60
+	}
+	
 	option = {# Keep it as it is
 		name = ustates.623.a
 		ai_chance = {
@@ -14514,9 +14525,9 @@ country_event = {# Authorize Fire Bombings?
 	desc = ustates.624.d
 	picture = GFX_USA_bombing_run
 	fire_only_once = yes
-	is_triggered_only = yes
 	
 	trigger = {
+		has_completed_focus = USA_strategic_bombing_doctrine
 		USA = {
 		has_war = yes
 		}
@@ -14541,6 +14552,8 @@ country_event = {# Authorize Fire Bombings?
 			}
 		}
 	}
+	
+	mean_time_to_happen = 
 	option = {# Yes
 		name = ustates.624.a
 		ai_chance = {
