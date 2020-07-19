@@ -1868,7 +1868,7 @@ country_event = { # Results are in
 	limit = {
 	TEX = {
 	exists = yes
-	has_country_flag = ACW_LONG_ACCEPTS_PEACE
+	has_global_flag = ACW_LONG_ACCEPTS_PEACE
 		}
 	}
 	CAL = {
@@ -1882,7 +1882,7 @@ country_event = { # Results are in
 	limit = {
 	CSA = {
 	exists = yes
-	has_country_flag = ACW_CSA_ACCEPTS_PEACE
+	has_global_flag = ACW_CSA_ACCEPTS_PEACE
 		}
 	}
 	CAL = {
@@ -1910,7 +1910,7 @@ country_event = { # Results are in
 	trigger = {
 	TEX = {
 	exists = yes
-	has_country_flag = ACW_LONG_ACCEPTS_PEACE
+	has_global_flag = ACW_LONG_ACCEPTS_PEACE
 		}
 	}
 	TEX = {
@@ -1923,7 +1923,7 @@ country_event = { # Results are in
 	limit = {
 	CSA = {
 	exists = yes
-	has_country_flag = ACW_CSA_ACCEPTS_PEACE
+	has_global_flag = ACW_CSA_ACCEPTS_PEACE
 		}
 	}
 	TEX = {
@@ -1954,7 +1954,7 @@ country_event = { # Results are in
 	trigger = {
 	CSA = {
 	exists = yes
-	has_country_flag = ACW_CSA_ACCEPTS_PEACE
+	has_global_flag = ACW_CSA_ACCEPTS_PEACE
 		}
 	}
 	CSA = {
@@ -1967,7 +1967,7 @@ country_event = { # Results are in
 	limit = {
 	TEX = {
 	exists = yes
-	has_country_flag = ACW_LONG_ACCEPTS_PEACE
+	has_global_flag = ACW_LONG_ACCEPTS_PEACE
 		}
 	}
 	CSA = {
@@ -8744,11 +8744,13 @@ country_event = { # New England Riots
 
 	is_triggered_only = yes
 	major = yes
+	fire_only_once = yes
 	
 	show_major = {
 		OR = {
 			tag = USA
 			tag = CSA
+			tag = COR
 			tag = TEX
 			tag = CAL
 		}
