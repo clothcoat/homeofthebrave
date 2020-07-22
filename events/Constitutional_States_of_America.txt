@@ -705,46 +705,192 @@ country_event = { # Legion Infighting
 	
 	fire_only_once = yes
 
-	option = { # Use Green
-		name = constate.1701.a
-		add_political_power = -30
-		add_stability = 0.05
+	option = { # Effinger
+		name = constate.1702.a
+		add_political_power = 30
+		add_stability = -0.02
 		add_manpower = 3500
-	}
-	option = { # Finish the Job
-		name = constate.1701.b
-		add_stability = -0.05
-		add_political_power = 55
 		add_command_power = 10
-		add_manpower = -10000
+	}
+	option = { # Shepherd
+		name = constate.1702.b
+		add_stability = 0.03
 		add_popularity = { ideology = national_populist popularity = 0.04 }
+		add_political_power = -15
+	}
+	option = { # split Illinois
+		name = constate.1702.c
+		add_stability = 0.05
+		add_command_power = -15
+		add_political_power = -20
+	}
+	option = { # Let them settle it
+		name = constate.1702.e
+		add_stability = -0.04
+		add_political_power = 55
+		add_manpower = -1000
+		army_experience = -10
 	}
 }
 
-country_event = { # 
-	id = constate.1701
-	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.1701"}
-	title = constate.1701.t
-	desc = constate.1701.d
+country_event = { # Old Democrat leadership
+	id = constate.1702
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.1702"}
+	title = constate.1702.t
+	desc = constate.1702.d
 	picture = AUS_christian_identity
 
 	is_triggered_only = yes
 	
 	fire_only_once = yes
 
-	option = { # Use Green
-		name = constate.1701.a
-		add_political_power = -30
-		add_stability = 0.05
-		add_manpower = 3500
+	option = { # Edward L. Jackson
+		name = constate.1702.a
+		add_stability = 0.03
+		add_political_power = 40
+		add_popularity = { ideology = national_populist popularity = -0.02 }
 	}
-	option = { # Finish the Job
-		name = constate.1701.b
+	option = { # Coleman Blease
+		name = constate.1702.b
+		add_stability = -0.02
+		add_political_power = 30
+		add_popularity = { ideology = national_populist popularity = 0.02 }
+		add_war_support = 0.03
+	}
+	option = { # Robert Rice Reynolds
+		name = constate.1702.c
+		add_stability = 0.05
+		add_political_power = 15
+		add_popularity = { ideology = national_populist popularity = 0.03 }
+	}
+	option = { # None, Stephenson
+		name = constate.1702.e
+		add_stability = -0.08
+		add_political_power = 65
+		add_command_power = 15
+		add_popularity = { ideology = national_populist popularity = -0.03 }
+		add_war_support = 0.05
+	}
+}
+
+country_event = { # Purge of the Elders of Zion
+	id = constate.1703
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.1703"}
+	title = constate.1703.t
+	desc = constate.1703.d
+	picture = AUS_christian_identity
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = { # It was needed
+		name = constate.1703.a
+		add_stability = 0.03
+		add_political_power = 40
+		add_popularity = { ideology = national_populist popularity = -0.02 }
+		add_manpower = -8500
+	}
+}
+
+country_event = { # Settlement of the Old Klan
+	id = constate.1704
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.1704"}
+	title = constate.1704.t
+	desc = constate.1704.d
+	picture = AUS_christian_identity
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = { # Signed
+		name = constate.1704.a
+		add_stability = 0.08
+		add_political_power = 50
+		add_popularity = { ideology = national_populist popularity = 0.05 }
+	}
+}
+
+country_event = { # Chicago Terror
+	id = constate.1705
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.1705"}
+	title = constate.1705.t
+	desc = constate.1705.d
+	picture = AUS_christian_identity
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = { # Have them tone it down
+		name = constate.1705.a
+		add_stability = -0.03
+		add_political_power = 30
+		add_manpower = -14000
+		add_popularity = { ideology = totalist popularity = -0.01 }
+		add_popularity = { ideology = syndicalist popularity = -0.01 }
+		add_popularity = { ideology = radical_socialist popularity = -0.01 }
+		add_popularity = { ideology = social_democrat popularity = -0.01 }
+		add_popularity = { ideology = social_liberal popularity = -0.01 }
+	}
+	option = { # It's fine as is
+		name = constate.1705.b
+		add_stability = -0.06
+		add_political_power = 40
+		add_manpower = -16500
+		add_popularity = { ideology = totalist popularity = -0.02 }
+		add_popularity = { ideology = syndicalist popularity = -0.02 }
+		add_popularity = { ideology = radical_socialist popularity = -0.01 }
+		add_popularity = { ideology = social_democrat popularity = -0.01 }
+		add_popularity = { ideology = social_liberal popularity = -0.01 }
+	}
+}
+
+country_event = { # Chicago Terror
+	id = constate.1706
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.1706"}
+	title = constate.1706.t
+	desc = constate.1706.d
+	picture = AUS_christian_identity
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = { # We must forge a new order
+		name = constate.1706.a
+		add_political_power = 30
+		add_popularity = { ideology = national_populist popularity = 0.05 }
+	}
+	option = { # We'll stay traditional
+		name = constate.1706.b
+		add_stability = 0.05
+		add_popularity = { ideology = national_populist popularity = 0.02 }
+	}
+}
+
+country_event = { # Catholic Churches Attacked
+	id = constate.1707
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.1707"}
+	title = constate.1707.t
+	desc = constate.1707.d
+	picture = AUS_christian_identity
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = { # Reign in outright destruction
+		name = constate.1707.a
+		add_stability = 0.03
+	}
+	option = { # No, this is fine
+		name = constate.1707.b
 		add_stability = -0.05
-		add_political_power = 55
-		add_command_power = 10
-		add_manpower = -10000
-		add_popularity = { ideology = national_populist popularity = 0.04 }
+		add_political_power = 10
+		add_popularity = { ideology = national_populist popularity = 0.03 }
+		add_manpower = -2000
 	}
 }
 
@@ -932,7 +1078,7 @@ country_event = { # Stephenson Killed
 		add_popularity = { ideology = national_populist popularity = -0.05 }
 		add_manpower = -5000
 		hidden_effect = {
-			country_event = { id = constate.20 days = 9 }
+			country_event = { id = constate.21 days = 9 }
 			add_war_support = 0.05
 			add_stability = -0.05
 		}
@@ -964,7 +1110,7 @@ country_event = { # Armstrong's Bid
 		add_stability = -0.03
 		add_political_power = -30
 		hidden_effect = {
-			country_event = { id = constate.21 days = 9 }
+			country_event = { id = constate.2100 days = 9 }
 		}
 	}
 	
@@ -975,6 +1121,692 @@ country_event = { # Armstrong's Bid
 		}
 		add_political_power = 30
 		add_stability = 0.03
+	}
+}
+
+country_event = { # Armstrong bends the knee
+	id = constate.21
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.21"}
+	title = constate.21.t
+	desc = constate.21.d
+	picture = AUS_christian_identity
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = { # No
+		name = constate.21.a
+		add_stability = 0.03
+		add_political_power = 30
+		hidden_effect = {
+			country_event = { id = constate.21 days = 9 }
+		}
+	}
+}
+
+country_event = { # The Martydom of an Apostle
+	id = constate.2100
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.2100"}
+	title = constate.2100.t
+	desc = constate.2100.d
+	picture = AUS_christian_identity
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = { # No doubt he's with Christ now
+		name = constate.2100.a
+		hidden_effect = {
+			country_event = { id = constate.22 days = 3 }
+		}
+	}
+}
+
+country_event = { # Winrod endorses Evans
+	id = constate.22
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.22"}
+	title = constate.22.t
+	desc = constate.22.d
+	picture = AUS_christian_identity
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = { # Call the leadership election
+		name = constate.22.a
+		add_popularity = { ideology = national_populist popularity = 0.03 }
+		add_political_power = 20
+		add_stability = 0.03
+		hidden_effect = {
+			country_event = { id = constate.23 days = 3 }
+		}
+	}
+}
+
+country_event = { # Evans Elected
+	id = constate.23
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.23"}
+	title = constate.23.t
+	desc = constate.23.d
+	picture = AUS_christian_identity
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = { # I still liked it
+		name = constate.23.a
+		add_stability = 0.05
+		add_political_power = 25
+	}
+}
+
+###Evans Won###
+country_event = { # Deportation Policy
+	id = constate.25
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.25"}
+	title = constate.25.t
+	desc = constate.25.d
+	picture = AUS_christian_identity
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = { # Agree with the Nationalists
+		name = constate.25.a
+		add_stability = 0.1
+		add_manpower = -2200
+		add_political_power = -50
+		add_popularity = { ideology = national_populist popularity = 0.05 }
+		add_war_support = 0.08
+	}
+	option = { # Agree with the moderates
+		name = constate.25.b
+		add_stability = 0.05
+		add_manpower = -10000
+		add_political_power = -15
+		add_popularity = { ideology = national_populist popularity = 0.05 }
+		add_war_support = 0.05
+	}
+	option = { # Ignore both, go with white hardliners
+		name = constate.25.c
+		add_stability = 0.03
+		add_political_power = 10
+		add_popularity = { ideology = national_populist popularity = 0.03 }
+	}
+}
+
+country_event = { # Arthur F. Lupp Sr. arrested
+	id = constate.2500
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.2500"}
+	title = constate.2500.t
+	desc = constate.2500.d
+	picture = AUS_christian_identity
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = { # Very good
+		name = constate.2500.a
+		add_stability = 0.03
+		add_manpower = -1500
+		add_political_power = 20
+	}
+}
+
+country_event = { # Starnes' past
+	id = constate.2501
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.2501"}
+	title = constate.2501.t
+	desc = constate.2501.d
+	picture = AUS_christian_identity
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = { # Have him step down
+		name = constate.2501.a
+		add_stability = -0.03
+		add_command_power = 5
+		add_war_support = 0.03
+		add_popularity = { ideology = national_populist popularity = 0.02 }
+	}
+	option = { # Let it go
+		name = constate.2501.b
+		add_stability = 0.03
+		add_political_power = -20
+		add_popularity = { ideology = paternal_autocrat popularity = 0.02 }
+	}
+}
+
+country_event = { # Head of the ODP
+	id = constate.2502
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.2502"}
+	title = constate.2502.t
+	desc = constate.2502.d
+	picture = AUS_christian_identity
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = { # Appoint Talmadge
+		name = constate.2502.a
+		add_stability = 0.02
+		add_political_power = -15
+		add_manpower = 2500
+		add_popularity = { ideology = paternal_autocrat popularity = 0.02 }
+		add_popularity = { ideology = national_populist popularity = 0.01 }
+	}
+	option = { # Walter F. Bossert
+		name = constate.2502.b
+		add_war_support = 0.05
+		add_political_power = 30
+		add_popularity = { ideology = national_populist popularity = 0.02 }
+	}
+}
+
+country_event = { # Marshal Policy
+	id = constate.26
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.26"}
+	title = constate.26.t
+	desc = constate.26.d
+	picture = AUS_christian_identity
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = { # Write a charter
+		name = constate.26.a
+		add_stability = 0.05
+		add_political_power = 50
+		add_command_power = 20
+		}
+	option = { # Let them have autonomy
+		name = constate.26.b
+		add_manpower = 10000
+		add_war_support = 0.05
+		add_popularity = { ideology = national_populist popularity = 0.03 }
+	}
+}
+
+country_event = { # Teacher Policy
+	id = constate.2600
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.2600"}
+	title = constate.2600.t
+	desc = constate.2600.d
+	picture = AUS_christian_identity
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = { # Just set up Rankin's committee
+		name = constate.2600.a
+		add_stability = 0.05
+		add_political_power = 20
+		}
+	option = { # The committee and immediate arrests
+		name = constate.2600.b
+		add_tech_bonus = {
+				name = industrial_bonus
+				bonus = -0.2
+				uses = 1
+				category = industry
+			}
+		add_political_power = 40
+		add_manpower = -200
+		add_command_power = 15
+		add_popularity = { ideology = national_populist popularity = 0.03 }
+	}
+}
+
+country_event = { # Papal deal
+	id = constate.27
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.27"}
+	title = constate.27.t
+	desc = constate.27.d
+	picture = AUS_christian_identity
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = { # Let them pay for the privilege
+		name = constate.27.a
+		random_owned_state = {
+				limit = {
+					is_core_of = COR
+					is_controlled_by = COR
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+		}
+		}
+	option = { # No
+		name = constate.27.b
+		add_war_support = 0.05
+		add_popularity = { ideology = national_populist popularity = 0.03 }
+	}
+}
+
+country_event = { # Papal deal
+	id = constate.28
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.28"}
+	title = constate.28.t
+	desc = constate.28.d
+	picture = AUS_christian_identity
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = { # The South was in the Right
+		name = constate.28.a
+		add_popularity = { ideology = national_populist = 0.03 }
+		add_stability = -0.04
+		add_political_power = -20
+		add_command_power = -5
+		add_war_support = 0.05
+		}
+	option = { # Keep quiet
+		name = constate.28.b
+		add_popularity = { ideology = paternal_autocrat popularity = 0.02 }
+	}
+}
+
+country_event = { # Immigrant Repatriation
+	id = constate.30
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.30"}
+	title = constate.30.t
+	desc = constate.30.d
+	picture = AUS_christian_identity
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = { # Do the additional Repatriations
+		name = constate.30.a
+		add_popularity = { ideology = national_populist = 0.03 }
+		add_stability = -0.02
+		add_political_power = 30
+		add_manpower = -5600
+		}
+	option = { # Stop now
+		name = constate.30.b
+		add_popularity = { ideology = paternal_autocrat popularity = 0.02 }
+	}
+}
+
+country_event = { # National Showing: Birth of a Nation
+	id = constate.31
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.31"}
+	title = constate.31.t
+	desc = constate.31.d
+	picture = AUS_christian_identity
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = { # National Showing: Birth of a Nation
+		name = constate.31.a
+		add_popularity = { ideology = national_populist popularity = 0.02 }
+		add_political_power = 35
+		add_war_support = 0.08
+	}
+}
+
+country_event = { # National Ceremonies
+	id = constate.32
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.32"}
+	title = constate.32.t
+	desc = constate.32.d
+	picture = AUS_christian_identity
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = { # Victory
+		name = constate.32.a
+		add_popularity = { ideology = national_populist popularity = 0.05 }
+		add_political_power = 50
+		add_command_power = 15
+	}
+}
+
+country_event = { # Stoddardism
+	id = constate.33
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.33"}
+	title = constate.33.t
+	desc = constate.33.d
+	picture = AUS_christian_identity
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = { # Victory
+		name = constate.33.a
+		add_popularity = { ideology = national_populist popularity = 0.05 }
+		add_political_power = 50
+		add_command_power = 15
+	}
+	option = { # Teach it, it's a step forward
+		name = constate.33.b
+		add_popularity = { ideology = national_populist popularity = 0.05 }
+		add_political_power = 50
+		add_command_power = 15
+	}
+}
+
+country_event = { # Eugenics push
+	id = constate.34
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.34"}
+	title = constate.34.t
+	desc = constate.34.d
+	picture = AUS_christian_identity
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = { # Full Eugenics
+		name = constate.34.a
+		add_popularity = { ideology = national_populist popularity = 0.05 }
+		add_political_power = 50
+		add_command_power = 15
+	}
+	option = { # Show some restraint
+		name = constate.34.b
+		add_popularity = { ideology = national_populist popularity = 0.05 }
+		add_political_power = 50
+		add_command_power = 15
+	}
+}
+
+country_event = { # The Hollywood List
+	id = constate.35
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.35"}
+	title = constate.35.t
+	desc = constate.35.d
+	picture = AUS_christian_identity
+
+	trigger = {
+	owns_state = 378
+	has_global_flag = USA_civil_war_over_flag
+	}
+	
+	mean_time_to_happen = {
+	days = 180
+	}
+	
+	fire_only_once = yes
+
+	option = { #
+		name = constate.35.a
+		add_popularity = { ideology = social_democrat popularity = -0.01 }
+		add_popularity = { ideology = social_liberal popularity = -0.02 }
+		add_popularity = { ideology = market_liberal popularity = -0.02 }
+		add_political_power = 20
+	}
+}
+
+country_event = { # Persistence of Antisemitism
+	id = constate.36
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.36"}
+	title = constate.36.t
+	desc = constate.36.d
+	picture = AUS_christian_identity
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = { # Ford
+		name = constate.36.a
+		add_popularity = { ideology = paternal_autocrat popularity = 0.02 }
+		add_popularity = { ideology = national_populist popularity = 0.02 }
+		add_political_power = 20
+		add_war_support = 0.03
+		add_stability = -0.01
+	}
+	option = { # Cabinet
+		name = constate.36.b
+		add_stability = 0.03
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.01 }
+		add_popularity = { ideology = social_conservative popularity = 0.01 }
+	}
+}
+
+country_event = { # The State Social Department
+	id = constate.37
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.37"}
+	title = constate.37.t
+	desc = constate.37.d
+	picture = AUS_christian_identity
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = { # Middle-Class Only
+		name = constate.37.a
+		add_political_power = 20
+		add_popularity = { ideology = paternal_autocrat popularity = 0.02 }
+	}
+	option = { # Apply it to both Classes
+		name = constate.37.b
+		add_political_power = 30
+		add_popularity = { ideology = paternal_autocrat popularity = 0.04 }
+		add_command_power = 10
+		add_stability = -0.05
+		add_war_support = -0.03
+		random_owned_state = {
+				limit = {
+					is_core_of = COR
+					is_controlled_by = COR
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+		}
+	}
+}
+
+country_event = { # NDWL Demands Compensation
+	id = constate.38
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.38"}
+	title = constate.38.t
+	desc = constate.38.d
+	picture = AUS_christian_identity
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = { # Pay out
+		name = constate.38.a
+		add_popularity = { ideology = national_populist popularity = 0.05 }
+		add_political_power = -40
+	}
+	option = { # No need to bribe them
+		name = constate.38.b
+		add_popularity = { ideology = paternal_autocrat popularity = 0.02 }
+		add_political_power = 20
+		add_stability = -0.05
+		add_war_support = -0.05
+		hidden_effect = {
+		country_event = {
+			id = constate.40
+			days = 10
+			}
+		}
+	}
+}
+
+country_event = { # Black Legion Protests
+	id = constate.39
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.39"}
+	title = constate.39.t
+	desc = constate.39.d
+	picture = AUS_christian_identity
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = { # Give them the jobs
+		name = constate.39.a
+		add_popularity = { ideology = national_populist popularity = 0.05 }
+		add_political_power = -40
+		add_stability = 0.04
+	}
+	option = { # No, we can't cave
+		name = constate.39.b
+		add_popularity = { ideology = national_populist popularity = 0.05 }
+		add_political_power = 50
+		add_command_power = 15
+	}
+}
+
+country_event = { # Black Legion Protests
+	id = constate.39
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.39"}
+	title = constate.39.t
+	desc = constate.39.d
+	picture = AUS_christian_identity
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = { # Give them the jobs
+		name = constate.39.a
+		add_popularity = { ideology = national_populist popularity = 0.05 }
+		add_political_power = -30
+	}
+	option = { # No, we can't cave
+		name = constate.39.b
+		add_popularity = { ideology = national_populist popularity = -0.03 }
+		add_stability = -0.05
+		add_manpower = -2000
+		add_war_support = -0.05
+	}
+}
+
+country_event = { # White League Attacks
+	id = constate.40
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.40"}
+	title = constate.40.t
+	desc = constate.40.d
+	picture = AUS_christian_identity
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = { # Pinkertons
+		name = constate.40.a
+		add_political_power = -45
+		393 = {
+		damage_building = {
+		type = arms_factory
+		damage = 1
+			}
+		}
+	}
+	option = { # National Guard
+		name = constate.40.b
+		add_manpower = -1500
+		393 = {
+		damage_building = {
+		type = arms_factory
+		damage = 1
+			}
+		}
+	}
+}
+
+country_event = { # New ODP Secretary
+	id = constate.41
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.41"}
+	title = constate.41.t
+	desc = constate.41.d
+	picture = AUS_christian_identity
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = { # Excellent
+		name = constate.41.a
+		add_political_power = 30
+		add_command_power = 10
+		add_stability = 0.05
+		add_popularity = { ideology = paternal_autocrat popularity = 0.03 }
+	}
+}
+
+country_event = { # Spirit of St. Louis Moved to Smithsonian
+	id = constate.42
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.42"}
+	title = constate.42.t
+	desc = constate.42.d
+	picture = AUS_christian_identity
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = { # Excellent
+		name = constate.42.a
+		add_popularity = { ideology = paternal_autocrat popularity = 0.01 }
+		add_political_power = 10
+	}
+}
+
+country_event = { # Fred Trump's Request
+	id = constate.43
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.43"}
+	title = constate.43.t
+	desc = constate.43.d
+	picture = AUS_christian_identity
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = { # Very Well
+		name = constate.43.a
+		add_popularity = { ideology = social_conservative popularity = 0.02 }
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.02 }
+		add_political_power = -30
+		add_stability = 0.02
+		random_owned_state = {
+				limit = {
+					is_core_of = COR
+					is_controlled_by = COR
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+		}
+		add_manpower = 150
+	}
+	option = { # No
+		name = constate.43.b
+		add_popularity = { ideology = paternal_autocrat popularity = 0.02 }
+		add_popularity = { ideology = national_populist popularity = 0.02 }
+		add_political_power = 15
+		add_command_power = 10
 	}
 }
 

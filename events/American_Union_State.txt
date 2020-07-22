@@ -2398,11 +2398,11 @@ country_event = { #Endorse Deweyism
 	is_triggered_only = yes
 	
 	option = { #Stick to old methods
-		name = unionstate.60.a
+		name = unionstate.62.a
 		add_political_power = 30
 	}
 	option = { #Embrace Deweyism
-		name = unionstate.60.b
+		name = unionstate.62.b
 		add_popularity = { ideology = social_liberal popularity = 0.03 }
 		add_stability = 0.02
 		add_political_power = -30

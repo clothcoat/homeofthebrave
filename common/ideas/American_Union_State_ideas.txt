@@ -910,7 +910,6 @@ ideas = {
 		TEX_wisconsin_idea_idea = { #Wisconsin Idea
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_wisconsin_idea_idea"}
 			allowed = { always = no }
-			available = { has_government = authoritarian_democrat }
 			removal_cost = -1
 			picture = generic_army_war_college
 			modifier = { 
@@ -922,7 +921,6 @@ ideas = {
 		TEX_farmer_labor_alliance_idea = { #Farmer-Labor Idea
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_farmer_labor_alliance_idea"}
 			allowed = { always = no }
-			available = { has_government = authoritarian_democrat }
 			removal_cost = -1
 			picture = generic_army_war_college
 			modifier = { 
@@ -940,7 +938,6 @@ ideas = {
 		TEX_modern_farms_idea = { #Modern Farms Idea
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_modern_farms_idea"}
 			allowed = { always = no }
-			available = { has_government = authoritarian_democrat }
 			removal_cost = -1
 			picture = generic_army_war_college
 			modifier = { 
@@ -959,7 +956,6 @@ ideas = {
 		TEX_empowered_executive_idea = { #Empowered Executive
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_empowered_executive_idea"}
 			allowed = { always = no }
-			available = { has_government = authoritarian_democrat }
 			removal_cost = -1
 			picture = generic_army_war_college
 			modifier = { 
@@ -971,7 +967,6 @@ ideas = {
 		TEX_empowered_executive_idea_2 = { #Modern Farms Idea
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_empowered_executive_idea_2"}
 			allowed = { always = no }
-			available = { has_government = authoritarian_democrat }
 			removal_cost = -1
 			picture = generic_army_war_college
 			modifier = { 
@@ -984,7 +979,6 @@ ideas = {
 		TEX_empowered_executive_idea_3 = { #Modern Farms Idea
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_empowered_executive_idea_3"}
 			allowed = { always = no }
-			available = { has_government = authoritarian_democrat }
 			removal_cost = -1
 			picture = generic_army_war_college
 			modifier = { 
@@ -1019,7 +1013,6 @@ ideas = {
 		TEX_counter_terrorism_idea = { #The Silver Legion
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_counter_terrorism_idea"}
 			allowed = { always = no }
-			available = { has_government = national_populist }
 			removal_cost = -1
 			picture = generic_victors_of_ww1
 			modifier = {
@@ -1032,7 +1025,6 @@ ideas = {
 		TEX_counter_terrorism_idea_2 = { #The Silver Legion
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_counter_terrorism_idea_2"}
 			allowed = { always = no }
-			available = { has_government = national_populist }
 			removal_cost = -1
 			picture = generic_victors_of_ww1
 			modifier = {
@@ -1048,7 +1040,6 @@ ideas = {
 		TEX_centralized_command_structure = { #The Silver Legion
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_centralized_command_structure"}
 			allowed = { always = no }
-			available = { has_government = national_populist }
 			removal_cost = -1
 			picture = generic_victors_of_ww1
 			modifier = {
@@ -1066,7 +1057,6 @@ ideas = {
 		TEX_centralized_command_structure_2 = { #The Silver Legion
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_centralized_command_structure_2"}
 			allowed = { always = no }
-			available = { has_government = national_populist }
 			removal_cost = -1
 			picture = generic_victors_of_ww1
 			modifier = {
@@ -1087,7 +1077,6 @@ ideas = {
 		TEX_decentralized_command_structure = { #Decentralized Command Structure
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_decentralized_command_structure"}
 			allowed = { always = no }
-			available = { has_government = national_populist }
 			removal_cost = -1
 			picture = generic_victors_of_ww1
 			modifier = {
@@ -1109,7 +1098,6 @@ ideas = {
 		TEX_decentralized_command_structure_2 = { #Decentralized Command Structure
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_decentralized_command_structure_2"}
 			allowed = { always = no }
-			available = { has_government = national_populist }
 			removal_cost = -1
 			picture = generic_victors_of_ww1
 			modifier = {
@@ -1132,7 +1120,6 @@ ideas = {
 		TEX_christian_commonwealth_idea = { #Decentralized Command Structure
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_christian_commonwealth_idea"}
 			allowed = { always = no }
-			available = { has_government = national_populist }
 			removal_cost = -1
 			picture = generic_victors_of_ww1
 			modifier = {
@@ -1150,7 +1137,6 @@ ideas = {
 		TEX_christian_commonwealth_idea_2 = { #Decentralized Command Structure
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_christian_commonwealth_idea_2"}
 			allowed = { always = no }
-			available = { has_government = national_populist }
 			removal_cost = -1
 			picture = generic_victors_of_ww1
 			modifier = {
@@ -1170,7 +1156,6 @@ ideas = {
 		TEX_christian_commonwealth_idea_3 = { #Christian Commonwealth #3
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_christian_commonwealth_idea_3"}
 			allowed = { always = no }
-			available = { has_government = national_populist }
 			removal_cost = -1
 			picture = generic_victors_of_ww1
 			modifier = {
@@ -1190,7 +1175,6 @@ ideas = {
 		TEX_gallahad_fellowship_idea = { #Decentralized Command Structure
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_gallahad_fellowship_idea"}
 			allowed = { always = no }
-			available = { has_government = national_populist }
 			removal_cost = -1
 			picture = generic_victors_of_ww1
 			modifier = {
@@ -1217,7 +1201,6 @@ ideas = {
 		TEX_referendum_voting_idea = { #Christian Education
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_referendum_voting_idea"}
 			allowed = { always = no }
-			available = { has_government = social_conservative }
 			removal_cost = -1
 			picture = neutrality_idea
 			modifier = {

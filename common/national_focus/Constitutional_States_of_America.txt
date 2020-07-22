@@ -835,13 +835,19 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_american_nationalism"
 			add_manpower = 12500
 			add_war_support = 0.05
+			hidden_effect = {
+			country_event = {
+			id = constate.36
+			days = 30
+				}
+			}
 		}
 	}
 	
 	focus = {# Traditional Values
 		id = COR_traditional_values
 		icon = GFX_goal_support_democracy
-		cost = 7.25
+		cost = 5.25
 		prerequisite = {
 			focus = COR_american_nationalism
 		}
@@ -859,13 +865,14 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_traditional_values"
 			add_stability = 0.05
+			add_popularity = { ideology = paternal_autocrat popularity = 0.03 }
 		}
 	}
 	
 	focus = {# Red Scare
 		id = COR_red_scare
 		icon = GFX_HOL_red_scare
-		cost = 7.25
+		cost = 5.25
 		prerequisite = {
 			focus = COR_american_nationalism
 		}
@@ -895,7 +902,7 @@ focus_tree = {
 	focus = {# Purge dissidents
 		id = COR_purge_dissidents
 		icon = GFX_goal_purge_opposition
-		cost = 7.25
+		cost = 6.00
 		prerequisite = {
 			focus = COR_red_scare
 		}
@@ -915,6 +922,14 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_purge_dissidents"
+			add_popularity = { ideology = social_democrat popularity = -0.02 }
+			add_popularity = { ideology = social_liberal popularity = -0.02 }
+			add_popularity = { ideology = market_liberal popularity = -0.02 }
+			add_popularity = { ideology = social_conservative popularity = -0.01 }
+			add_manpower = -2000
+			add_stability = 0.03
+			add_political_power = 30
+			add_command_power = 20
 			unlock_decision_tooltip = USA_fight_socialist_terrorists
 			unlock_decision_tooltip = USA_fight_longist_terrorists
 		}
@@ -923,7 +938,7 @@ focus_tree = {
 	focus = {# Jewish Segregation
 		id = COR_jewish_segregation
 		icon = GFX_goal_COR_jewish_segregation
-		cost = 4
+		cost = 4.50
 		prerequisite = {
 			focus = COR_purge_dissidents
 		}
@@ -941,8 +956,14 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_jewish_segregation"
 			add_ideas = COR_jewish_segregation
-			add_political_power = 30
-			add_stability = -0.05
+			add_political_power = 20
+			add_stability = -0.03
+			hidden_effect = {
+			country_event = {
+			id = constate.43
+			days = 120
+			}
+			}
 		}
 	}
 	
@@ -967,6 +988,11 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_nationalize_boy_scouts"
 			add_ideas = USA_boy_scouts_idea
+			add_popularity = { ideology = paternal_autocrat popularity = 0.03 }
+			add_war_support = 0.05
+			army_experience = 10
+			add_political_power = 20
+			add_command_power = 10
 		}
 	}
 	
@@ -974,7 +1000,7 @@ focus_tree = {
 	focus = {# Charles Lindbergh
 		id = COR_the_lone_eagle
 		icon = GFX_goal_COR_the_lone_eagle
-		cost = 7.25
+		cost = 1
 		available = {
 			has_country_flag = COR_fordist_victory
 			has_government = paternal_autocrat
@@ -999,7 +1025,7 @@ focus_tree = {
 	focus = {# The Order of 76
 		id = COR_the_order_of_76
 		icon = GFX_goal_COR_order_of_76
-		cost = 7.25
+		cost = 3.00
 		prerequisite = {
 			focus = COR_the_lone_eagle
 		}
@@ -1023,7 +1049,7 @@ focus_tree = {
 	focus = {# Office of Policy Coordination
 		id = COR_office_of_policy_coordination
 		icon = GFX_goal_new_treaty
-		cost = 7.25
+		cost = 3.5
 		prerequisite = {
 			focus = COR_the_lone_eagle
 		}
@@ -1048,7 +1074,7 @@ focus_tree = {
 	focus = {# Alien and Sedition act
 		id = COR_alien_and_sedition_act
 		icon = GFX_goal_COR_New_alien_and_sedition_acts
-		cost = 5.00
+		cost = 3.00
 		prerequisite = {
 			focus = COR_the_lone_eagle
 		}
@@ -1066,6 +1092,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_alien_and_sedition_act"
 			add_political_power = 50
+			add_command_power = 20
 			add_stability = 0.05
 		}
 	}
@@ -1073,7 +1100,7 @@ focus_tree = {
 	focus = {# National Corporatism
 		id = COR_national_corporatism
 		icon = GFX_goal_COR_protestant_corporatism
-		cost = 7.25
+		cost = 6.00
 		prerequisite = {
 			focus = COR_office_of_policy_coordination
 		}
@@ -1090,6 +1117,12 @@ focus_tree = {
 		}
 		ai_will_do = {
 			factor = 5
+		}
+		select_effect = {
+		hidden_effect = {
+			country_event = constate.37
+			days = 10
+			}
 		}
 		cancel_if_invalid = yes
 		available_if_capitulated = yes
