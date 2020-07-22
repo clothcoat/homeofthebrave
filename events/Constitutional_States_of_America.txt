@@ -87,7 +87,7 @@ country_event = { # White Defense League requests army promotions
 		add_popularity = { ideology = national_populist popularity = 0.03 }
 		add_manpower = 4400
 		add_war_support = 0.03
-		add_country_flag = draper_plan_unlocked
+		set_country_flag = draper_plan_unlocked
 		hidden_effect = {
 			country_event = { id = constate.64 days = 15 }
 		}
@@ -1410,7 +1410,7 @@ country_event = { # Papal deal
 
 	option = { # The South was in the Right
 		name = constate.28.a
-		add_popularity = { ideology = national_populist = 0.03 }
+		add_popularity = { ideology = national_populist popularity = 0.03 }
 		add_stability = -0.04
 		add_political_power = -20
 		add_command_power = -5
@@ -1435,7 +1435,7 @@ country_event = { # Immigrant Repatriation
 
 	option = { # Do the additional Repatriations
 		name = constate.30.a
-		add_popularity = { ideology = national_populist = 0.03 }
+		add_popularity = { ideology = national_populist popularity = 0.03 }
 		add_stability = -0.02
 		add_political_power = 30
 		add_manpower = -5600
@@ -2163,124 +2163,6 @@ country_event = { # The third Great Migration
 					id = constate.64
 					days = 2
 				}
-			}
-		}
-	}
-}
-
-country_event = { # The third Great Migration(the other countries)
-	id = constate.64
-	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.64"}
-	title = constate.64.t
-
-	desc = { # Pacific States
-		text = constate.64.d.psa
-		trigger = {
-			tag = CAL
-		}
-	}
-	desc = { # New England
-		text = constate.64.d.new_england
-		trigger = {
-			tag = NEE
-		}
-	}
-	desc = { # Liberia
-		text = constate.64.d.liberia
-		trigger = {
-			tag = LIB
-		}
-	}
-	desc = { # Mexico
-		text = constate.64.d.mexico
-		trigger = {
-			tag = MEX
-		}
-	}
-	desc = { # Haiti
-		text = constate.64.d.haiti
-		trigger = {
-			tag = HAI
-		}
-	}
-	desc = { # Cuba
-		text = constate.64.d.cuba
-		trigger = {
-			tag = CUB
-		}
-	}
-	desc = { # Hawaii
-		text = constate.64.d.hawaii
-		trigger = {
-			tag = HAW
-		}
-	}
-
-	is_triggered_only = yes
-
-	option = { # You are welcome to stay
-		name = constate.64.a
-		ai_chance = {
-			factor = 50
-		}
-		if = {
-			limit = {
-				CON = {
-					has_idea = USA_great_migration1
-				}
-			}
-			add_timed_idea = {
-				idea = USA_great_migration3
-				days = 90
-			}
-			add_stability = -0.05
-			add_manpower = 3000
-		}
-		if = {
-			limit = {
-				CON = {
-					has_idea = USA_great_migration2
-				}
-			}
-			add_timed_idea = {
-				idea = USA_great_migration4
-				days = 50
-			}
-			add_stability = -0.05
-			add_manpower = 5000
-		}
-	}
-	option = { # We do not want you
-		name = constate.64.b
-		ai_chance = {
-			factor = 30
-		}
-		trigger = {
-			NOT = {
-				tag = CAL
-				tag = NEE
-			}
-		}
-		if = { #
-			limit = {
-				CON = {
-					has_idea = USA_great_migration1
-				}
-			}
-			add_timed_idea = {
-				idea = USA_great_migration4
-				days = 90
-			}
-		}
-		if = {
-			limit = {
-				CON = {
-					has_idea = USA_great_migration2
-				}
-			}
-			add_timed_idea = {
-				idea = USA_great_migration5
-				days = 50
 			}
 		}
 	}
