@@ -2321,6 +2321,306 @@ country_event = { #Black Conscription
 	}
 }
 
+country_event = { #Democratic Party Absorbed
+	id = constate.70
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.70"}
+	title = constate.70.t
+	desc = constate.70.d
+	picture = GFX_report_event_usa_funeral
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = constate.70.a
+		add_popularity = { ideology = paternal_autocrat popularity = 0.03 }
+		add_political_power = -20
+	}
+	option = {
+		name = constate.70.b
+		add_popularity = { ideology = social_conservative popularity = 0.02 }
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.02 }
+		add_stability = 0.03
+	}
+	option = {
+		name = constate.70.c
+		add_popularity = { ideology = social_conservative popularity = -0.02 }
+		add_popularity = { ideology = authoritarian_democrat popularity = -0.02 }
+		add_popularity = { ideology = paternal_autocrat popularity = 0.05 }
+		add_stability = -0.03
+		add_political_power = -35
+	}
+}
+
+country_event = { #Legality of the Republican Party
+	id = constate.71
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.71"}
+	title = constate.71.t
+	desc = constate.71.d
+	picture = GFX_report_event_usa_funeral
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #Allow it to exist
+		name = constate.71.a
+		add_popularity = { ideology = social_liberal popularity = 0.01 }
+		add_popularity = { ideology = market_liberal popularity = 0.01 }
+		add_stability = 0.02
+		add_manpower = 500
+	}
+	option = { #Ban it
+		name = constate.71.b
+		add_political_power = -20
+		add_popularity = { ideology = social_liberal popularity = -0.01 }
+		add_popularity = { ideology = market_liberal popularity = -0.01 }
+		add_stability = -0.01
+		add_command_power = 5
+	}
+}
+
+country_event = { #State of Sequoyah
+	id = constate.72
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.72"}
+	title = constate.72.t
+	desc = constate.72.d
+	picture = GFX_report_event_usa_funeral
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #Create the State of Sequoyah
+		name = constate.72.a
+		add_popularity = { ideology = paternal_autocrat popularity = 0.01 }
+		add_stability = 0.03
+		add_manpower = 2500
+		army_experience = 5
+		add_war_support = 0.02
+		add_political_power = -30
+	}
+	option = { #Just grant more autonomy
+		name = constate.72.b
+		add_political_power = -10
+		add_manpower = 500
+		add_war_support = 0.01
+	}
+}
+
+country_event = { #Reorganizing Farm interests
+	id = constate.73
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.73"}
+	title = constate.73.t
+	desc = constate.73.d
+	picture = GFX_report_event_usa_funeral
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #Organize the NDFB
+		name = constate.73.a
+		random_owned_state = {
+				limit = {
+					is_core_of = COR
+					is_controlled_by = COR
+					industrial_complex > 0
+				}
+			add_extra_state_shared_building_slots = 1
+		}
+		add_manpower = 1000
+		add_stability = 0.05
+		add_political_power = -20
+	}
+	option = { #Use the ODP
+		name = constate.73.b
+		add_popularity = { ideology = paternal_autocrat popularity = 0.02 }
+		add_political_power = 30
+		add_stability = -0.02
+	}
+}
+
+country_event = { #The Jacksonian Democratic Party
+	id = constate.74
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.74"}
+	title = constate.74.t
+	desc = constate.74.d
+	picture = GFX_report_event_usa_funeral
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #The Talmadge-NDWL Plan
+		name = constate.74.a
+		add_popularity = { ideology = paternal_autocrat popularity = 0.03 }
+		add_popularity = { ideology = national_populist popularity = 0.01 }
+		add_political_power = 40
+	}
+	option = { #Vinson-Bankhead Plan
+		name = constate.74.b
+		add_popularity = { ideology = social_conservative popularity = 0.01 }
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.01 }
+		add_popularity = { ideology = paternal_autocrat popularity = 0.01 }
+		add_political_power = 10
+		add_stability = 0.03
+		add_war_support = 0.03
+		add_manpower = 2000
+	}
+}
+
+country_event = { #National Klan Regulations
+	id = constate.75
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.75"}
+	title = constate.75.t
+	desc = constate.75.d
+	picture = GFX_report_event_usa_funeral
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #Regulate a National Klan
+		name = constate.75.a
+		add_popularity = { ideology = national_populist popularity = 0.03 }
+		add_political_power = -20
+		add_stability = 0.05
+		add_war_support = 0.03
+		add_manpower = 2300
+	}
+	option = { #Regulate State Klans
+		name = constate.75.b
+		add_popularity = { ideology = national_populist popularity = -0.02 }
+		add_political_power = 30
+		add_stability = 0.02
+		add_war_support = -0.05
+		add_manpower = -500
+	}
+}
+
+country_event = { #The Potential Scandal
+	id = constate.76
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.76"}
+	title = constate.76.t
+	desc = constate.76.d
+	picture = GFX_report_event_usa_funeral
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #Arrest him and his men
+		name = constate.76.a
+		add_political_power = -10
+		hidden_effect = {
+		country_event = {
+			id = constate.78
+			days = 2
+			}
+		}
+	}
+	option = { #Make it look like an accident
+		name = constate.76.b
+		hidden_effect = {
+		country_event = {
+			id = constate.77
+			days = 2
+			}
+		}
+	}
+}
+
+country_event = { #D.C. Stephenson dies
+	id = constate.77
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.77"}
+	title = constate.77.t
+	desc = constate.77.d
+	picture = GFX_report_event_usa_funeral
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #It will have to do
+		name = constate.77.a
+		add_political_power = 15
+		add_popularity = { ideology = national_populist popularity = -0.01 }
+	}
+}
+
+country_event = { #The Potential Scandal
+	id = constate.78
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.78"}
+	title = constate.78.t
+	desc = constate.78.d
+	picture = GFX_report_event_usa_funeral
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #Remove Jackson
+		name = constate.78.a
+		add_political_power = 15
+		add_popularity = { ideology = paternal_autocrat popularity = 0.01 }
+		add_stability = -0.02
+	}
+	option = { #Make sure he's loyal
+		name = constate.78.b
+	}
+}
+
+country_event = { #UNIA Offer
+	id = constate.79
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.79"}
+	title = constate.79.t
+	desc = constate.79.d
+	picture = GFX_report_event_usa_funeral
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #Allow it
+		name = constate.79.a
+		add_political_power = -15
+		add_manpower = -3000
+		add_stability = 0.05
+	}
+	option = { #No
+		name = constate.79.b
+		add_stability = -0.02
+	}
+}
+
+country_event = { #Black Intellectuals Denounce Us
+	id = constate.80
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.80"}
+	title = constate.80.t
+	desc = constate.80.d
+	picture = diplomacy2
+
+	fire_only_once = yes
+
+	trigger = {
+	BBR = {
+		exists = no
+		}
+	has_global_flag = USA_civil_war_over_flag
+	}
+	
+	mean_time_to_happen = {
+	days = 500
+	}
+
+	option = { #Allow it
+		name = constate.80.a
+		add_political_power = -10
+	}
+}
+
 ### Foreign Events 100-105 ###
 country_event = { # the AUS wishes to join the Entente
 	id = constate.100

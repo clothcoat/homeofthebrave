@@ -301,6 +301,20 @@ units = {# Army
 		start_equipment_factor = 1.0
 	}
 	division = {
+		name = "17th 'Liberty Defenders' Militia"
+		location = 9931 #Alabama
+		division_template = "CAR Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "18th 'Order of 76' Militia"
+		location = 6696 #Alabama
+		division_template = "CAR Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1.0
+	}
+	division = {
 		name = "1st Motorized 'Honorables' Division"
 		location = 12384 #Atlanta
 		division_template = "CAR Motorized Division"

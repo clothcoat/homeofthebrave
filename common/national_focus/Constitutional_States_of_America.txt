@@ -259,13 +259,19 @@ focus_tree = {
 			remove_idea = COR_jim_crow_idea
 			add_idea = COR_jim_crow_idea_2
 			}
+			hidden_effect = {
+			country_event = {
+			id = constate.79
+			days = 10
+				}
+			}
 		}
 	}
 
 	focus = {# Work With Natives
 		id = COR_work_with_natives
 		icon = GFX_goal_COR_cherokeebraves
-		cost = 7.25
+		cost = 5.00
 		prerequisite = {
 			focus = COR_jim_crows_america
 		}
@@ -290,6 +296,12 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_work_with_natives"
 			add_ideas = COR_native_collaboration
 			add_stability = 0.05
+			hidden_effect = {
+			country_event = {
+			id = constate.72
+			days = 5
+				}
+			}
 		}
 	}
 	
@@ -346,7 +358,7 @@ focus_tree = {
 	focus = {# Agrarianism
 		id = COR_land_of_our_fathers
 		icon = GFX_goal_agrarian_reform
-		cost = 7.25
+		cost = 6.25
 		prerequisite = {
 			focus = COR_break_banksterism
 		}
@@ -356,6 +368,14 @@ focus_tree = {
 			has_country_leader = {
 			ruling_only = yes
 			name = "Charles Lindbergh"
+				}
+			}
+		}
+		select_effect = {
+		hidden_effect = {
+			country_event = {
+			id = constate.73
+			days = 10
 				}
 			}
 		}
@@ -400,7 +420,7 @@ focus_tree = {
 	focus = {# Oil Oligarchy
 		id = COR_oil_oligarchy
 		icon = GFX_goal_oil
-		cost = 7.25
+		cost = 5.00
 		prerequisite = {
 			focus = COR_martial_law
 		}
@@ -703,7 +723,7 @@ focus_tree = {
 			factor = 5
 		}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus COR_share_the_wealth"
+			log = "[GetDateText]: [Root.GetName]: Focus COR_democrats_education"
 			add_research_slot = 1
 		}
 	}
@@ -733,9 +753,15 @@ focus_tree = {
 			factor = 5
 		}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus COR_share_the_wealth"
+			log = "[GetDateText]: [Root.GetName]: Focus COR_controlled_klan"
 			add_ideas = COR_controlled_klan
 			add_political_power = 20
+			hidden_effect = {
+			country_event = {
+			id = constate.75
+			days = 10
+				}
+			}
 		}
 	}
 	
@@ -764,7 +790,7 @@ focus_tree = {
 			factor = 5
 		}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus COR_share_the_wealth"
+			log = "[GetDateText]: [Root.GetName]: Focus COR_deport_syndicalist_hordes"
 			add_manpower = -10000
 			add_war_support = 0.05
 			add_political_power = 40
@@ -804,10 +830,16 @@ focus_tree = {
 			factor = 5
 		}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus COR_imperial_presidency"
+			log = "[GetDateText]: [Root.GetName]: Focus COR_legacy_of_jackson"
 			add_ideas = COR_old_dem_dominance
 			add_stability = 0.1
 			add_popularity = { ideology = paternal_autocrat popularity = 0.08 }
+			hidden_effect = {
+			country_event = {
+			id = constate.74
+			days = 10
+				}
+			}
 		}
 	}
 
@@ -930,8 +962,33 @@ focus_tree = {
 			add_stability = 0.03
 			add_political_power = 30
 			add_command_power = 20
-			unlock_decision_tooltip = USA_fight_socialist_terrorists
-			unlock_decision_tooltip = USA_fight_longist_terrorists
+			custom_effect_tooltip = ACW_combat_socialists
+			modify_country_flag = {
+				flag = ACW_socialist_resistance
+				value = -1
+			}
+			custom_effect_tooltip = ACW_combat_minuteman
+			modify_country_flag = {
+				flag = ACW_minutemen_resistance
+				value = -1
+			}
+			custom_effect_tooltip = ACW_fight_fed_terrorists_tooltip
+			modify_country_flag = {
+				flag = ACW_fed_resistance
+				value = -1
+			}
+			hidden_effect = {
+			country_event = {
+			id = constate.71
+			days = 120
+				}
+			}
+			hidden_effect = {
+			country_event = {
+			id = constate.76
+			days = 10
+				}
+			}
 		}
 	}
 	
@@ -962,7 +1019,7 @@ focus_tree = {
 			country_event = {
 			id = constate.43
 			days = 120
-			}
+				}
 			}
 		}
 	}
@@ -993,6 +1050,12 @@ focus_tree = {
 			army_experience = 10
 			add_political_power = 20
 			add_command_power = 10
+			hidden_effect = {
+			country_event = {
+			id = constate.70
+			days = 60
+			}
+			}
 		}
 	}
 	
