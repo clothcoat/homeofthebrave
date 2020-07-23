@@ -11973,7 +11973,7 @@ country_event = { # Canada refuses to return New England
 		name = ustates.272.a
 		trigger = {
 			CAN = {
-				is_valid_war_target = yes
+				is_major = yes
 			}
 		}
 		ai_chance = {
@@ -12140,7 +12140,7 @@ country_event = { # Canada refuses to return Alaska
 		name = ustates.275.b
 		trigger = {
 			CAN = {
-				is_valid_war_target = yes
+				is_major = yes
 			}
 		}
 		ai_chance = {
@@ -12222,7 +12222,7 @@ country_event = { # Hawaii refuses to rejoin america
 		name = ustates.278.a
 		trigger = {
 			HAW = {
-				is_valid_war_target = yes
+				is_major = yes
 			}
 		}
 		ai_chance = {

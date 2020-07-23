@@ -1678,31 +1678,6 @@ country_event = { # Black Legion Protests
 	}
 }
 
-country_event = { # Black Legion Protests
-	id = constate.39
-	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.39"}
-	title = constate.39.t
-	desc = constate.39.d
-	picture = AUS_christian_identity
-
-	is_triggered_only = yes
-	
-	fire_only_once = yes
-
-	option = { # Give them the jobs
-		name = constate.39.a
-		add_popularity = { ideology = national_populist popularity = 0.05 }
-		add_political_power = -30
-	}
-	option = { # No, we can't cave
-		name = constate.39.b
-		add_popularity = { ideology = national_populist popularity = -0.03 }
-		add_stability = -0.05
-		add_manpower = -2000
-		add_war_support = -0.05
-	}
-}
-
 country_event = { # White League Attacks
 	id = constate.40
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.40"}
