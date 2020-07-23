@@ -3000,7 +3000,9 @@ country_event = { # Refugees flood in from the Great Lakes (Underground Railroad
 		NOT = {
 			has_war_with = CSA
 		}
-		not_has_socialist_government = yes
+		NOT = {
+		has_socialist_government = yes
+		}
 	}
 
 	option = { # Send covert agents to assist the process
@@ -3046,7 +3048,9 @@ country_event = { # Successful Smuggling action in the Great Lakes Region (Under
 		NOT = {
 			has_war_with = CSA
 		}
-		not_has_socialist_government = yes
+		NOT = {
+		has_socialist_government = yes
+		}
 	}
 
 	immediate = {
@@ -3110,7 +3114,9 @@ country_event = { # Smuggling operation caught in the Great Lakes Region (Underg
 		NOT = {
 			has_war_with = CSA
 		}
-		not_has_socialist_government = yes
+		NOT = {
+		has_socialist_government = yes
+		}
 	}
 
 	immediate = {
@@ -3168,7 +3174,9 @@ country_event = { # "Jack" the Bulldog
 
 	trigger = {
 		country_exists = CSA
-		not_has_socialist_government = yes
+		NOT = {
+		has_socialist_government = yes
+		}
 	}
 
 	option = { # We express our thanks to this good boy!
@@ -3190,7 +3198,9 @@ country_event = { # Migration Report CSA
 		NOT = {
 			has_war_with = CSA
 		}
-		not_has_socialist_government = yes
+		NOT = {
+		has_socialist_government = yes
+		}
 		check_variable = {
 			NEE_ugr_csa_times < 12
 		}
@@ -3602,7 +3612,9 @@ country_event = { # Tale of Bob Rogers
 		NOT = {
 			has_war_with = CSA
 		}
-		not_has_socialist_government = yes
+		NOT = {
+		has_socialist_government = yes
+		}
 	}
 
 	option = { # A true hero of the Republic
@@ -5109,7 +5121,7 @@ country_event = { # New England refused to join
 		name = newengland.99.a #Then it's war!
 		trigger = {
 			event_target:war_country = {
-				is_valid_war_target = yes
+				is_major = yes
 			}
 		}
 		ai_chance = {

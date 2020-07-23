@@ -420,9 +420,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 50
 		}
-		bypass = {
-			NOT = { has_idea = USA_civil_war_depression_idea }
-		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_federalist_economics"
 			swap_ideas = {
@@ -489,9 +486,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 50
 		}
-		bypass = {
-			NOT = { has_idea = USA_civil_war_depression_idea }
-		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_high_wages"
 			swap_ideas = {
@@ -516,9 +510,6 @@ focus_tree = {
 		y = 7
 		ai_will_do = {
 			factor = 50
-		}
-		bypass = {
-			NOT = { has_idea = USA_civil_war_depression_idea }
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_federalist_economics"
@@ -546,9 +537,6 @@ focus_tree = {
 		y = 6
 		ai_will_do = {
 			factor = 50
-		}
-		bypass = {
-			NOT = { has_idea = USA_civil_war_depression_idea }
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_civilian_goods"
@@ -625,9 +613,6 @@ focus_tree = {
 		y = 7
 		ai_will_do = {
 			factor = 50
-		}
-		bypass = {
-			NOT = { has_idea = USA_civil_war_depression_idea }
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_federalist_economics"
@@ -1746,9 +1731,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 50
 		}
-		bypass = {
-			NOT = { has_idea = USA_civil_war_depression_idea }
-		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_american_syndicalist_union"
 			add_popularity = { ideology = syndicalist popularity = 0.03 }
@@ -2137,9 +2119,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 50
 		}
-		bypass = {
-			NOT = { has_idea = USA_civil_war_depression_idea }
-		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_unionist_economics"
 			if = {
@@ -2200,9 +2179,6 @@ focus_tree = {
 		y = 3
 		ai_will_do = {
 			factor = 50
-		}
-		bypass = {
-			NOT = { has_idea = USA_civil_war_depression_idea }
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_centrist_economics"
@@ -2466,9 +2442,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 50
 		}
-		bypass = {
-			NOT = { has_idea = USA_civil_war_depression_idea }
-		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_empower_militias"
 			add_ideas = CSA_red_militias_idea
@@ -2523,9 +2496,6 @@ focus_tree = {
 		y = 4
 		ai_will_do = {
 			factor = 50
-		}
-		bypass = {
-			NOT = { has_idea = USA_civil_war_depression_idea }
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_free_communes"
@@ -2626,9 +2596,6 @@ focus_tree = {
 		y = 6
 		ai_will_do = {
 			factor = 50
-		}
-		bypass = {
-			NOT = { has_idea = USA_civil_war_depression_idea }
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_unionist_economics"
@@ -3968,9 +3935,6 @@ focus_tree = {
 		y = 3
 		ai_will_do = {
 			factor = 50
-		}
-		bypass = {
-			NOT = { has_idea = USA_civil_war_depression_idea }
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_fosters_economics"
@@ -9012,7 +8976,7 @@ focus_tree = {
 		relative_position_id = CSA_managerialism
 			completion_reward = {
 		swap_ideas = {
-				remove_idea = USA_civil_war_depression_idea
+				remove_idea = USA_civil_war_war_aftermath_idea
 				add_idea = CSA_burnhams_economic_policy_idea1 }
 	}
 }

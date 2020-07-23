@@ -10790,8 +10790,8 @@ focus_tree = {
 		y = 0
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_spiritualist_takeover"
+			add_popularity = { ideology = national_populist popularity = 0.03 }
 		}
-		add_popularity = { ideology = national_populist popularity = 0.03 }
 	}
 	
 	focus = {# Information is Power
