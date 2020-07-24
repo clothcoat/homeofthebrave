@@ -1542,6 +1542,7 @@ country_event = { # The Hollywood List
 	picture = AUS_christian_identity
 
 	trigger = {
+	tag = COR
 	owns_state = 378
 	has_global_flag = USA_civil_war_over_flag
 	}

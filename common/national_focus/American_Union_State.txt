@@ -1160,6 +1160,9 @@ focus_tree = {
 		available = {
 			has_government = authoritarian_democrat
 		}
+		mutually_exclusive = {
+		focus = TEX_utility_regulation
+		}
 		cancel_if_invalid = yes
 		available_if_capitulated = yes
 		relative_position_id = TEX_new_washington
