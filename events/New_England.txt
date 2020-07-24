@@ -5925,3 +5925,245 @@ country_event = { # Radical Split
 		}
 	}
 }
+
+country_event = { # New English-Canadian Defense Pact?
+	id = newengland.123
+	title = newengland.123.t
+	desc = newengland.123.d
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = { # Yes we shall agree to a pact
+		name = newengland.123.a
+		ai_chance = {
+			factor = 100
+		}
+		give_guarantee = NEE
+		NEE = {
+			give_guarrantee = CAN
+		}
+	}
+	option = { # No, being in the same alliance is good enough
+		name = newengland.123.b
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = { # New England's Foreign Policy?
+	id = newengland.124
+	title = newengland.124.t
+	desc = newengland.124.d
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = { # Alone we must go
+		name = newengland.124.a
+		ai_chance = {
+			factor = 100
+		}
+		set_country_flag = armed_free_neutrality
+		hidden_effect = {
+			complete_national_focus = NEE_armed_free_neutrality
+		}
+	}
+	option = { # To the House of Windsor!
+		name = newengland.124.b
+		ai_chance = {
+			factor = 100
+		}
+		set_country_flag = windsor_first
+		hidden_effect = {
+			complete_national_focus = NEE_friend_north
+		}
+	}
+}
+
+country_event = { # Joint Coastal Forts, but to inform Canada
+	id = newengland.125
+	title = newengland.125.t
+	desc = newengland.125.d
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = { # Greater partnership
+		name = newengland.125.a
+		ai_chance = {
+			factor = 100
+		}
+		custom_effect_tooltip = canada_forts_built
+		hidden_effect = {
+			456 = {
+				set_building_level = {
+					type = coastal_bunker
+					level = 3
+					province = 4342
+					instant_build = yes
+				}
+				set_building_level = {
+					type = coastal_bunker
+					level = 3
+					province = 4285
+					instant_build = yes
+				}
+				set_building_level = {
+					type = coastal_bunker
+					level = 3
+					province = 1424
+					instant_build = yes
+				}
+				set_building_level = {
+					type = coastal_bunker
+					level = 3
+					province = 4432
+					instant_build = yes
+				}
+				set_building_level = {
+					type = coastal_bunker
+					level = 3
+					province = 7379
+					instant_build = yes
+				}
+			}
+			464 = {
+				set_building_level = {
+					type = coastal_bunker
+					level = 3
+					province = 7304
+					instant_build = yes
+				}
+				set_building_level = {
+					type = coastal_bunker
+					level = 3
+					province = 7361
+					instant_build = yes
+				}
+				set_building_level = {
+					type = coastal_bunker
+					level = 3
+					province = 1354
+					instant_build = yes
+				}
+				set_building_level = {
+					type = coastal_bunker
+					level = 3
+					province = 4623
+					instant_build = yes
+				}
+				set_building_level = {
+					type = coastal_bunker
+					level = 3
+					province = 7644
+					instant_build = yes
+				}
+				set_building_level = {
+					type = coastal_bunker
+					level = 3
+					province = 10244
+					instant_build = yes
+				}
+				set_building_level = {
+					type = coastal_bunker
+					level = 3
+					province = 4430
+					instant_build = yes
+				}
+				set_building_level = {
+					type = coastal_bunker
+					level = 3
+					province = 4360
+					instant_build = yes
+				}
+			}
+			468 = {
+				set_building_level = {
+					type = coastal_bunker
+					level = 3
+					province = 4422
+					instant_build = yes
+				}
+				set_building_level = {
+					type = coastal_bunker
+					level = 3
+					province = 4305
+					instant_build = yes
+				}
+				set_building_level = {
+					type = coastal_bunker
+					level = 3
+					province = 12291
+					instant_build = yes
+				}
+				set_building_level = {
+					type = coastal_bunker
+					level = 3
+					province = 1284
+					instant_build = yes
+				}
+				set_building_level = {
+					type = coastal_bunker
+					level = 3
+					province = 7433
+					instant_build = yes
+				}
+			}
+			466 = {
+				set_building_level = {
+					type = coastal_bunker
+					level = 3
+					province = 12149
+					instant_build = yes
+				}
+				set_building_level = {
+					type = coastal_bunker
+					level = 3
+					province = 1356
+					instant_build = yes
+				}
+				set_building_level = {
+					type = coastal_bunker
+					level = 3
+					province = 4769
+					instant_build = yes
+				}
+				set_building_level = {
+					type = coastal_bunker
+					level = 3
+					province = 7807
+					instant_build = yes
+				}
+				set_building_level = {
+					type = coastal_bunker
+					level = 3
+					province = 10715
+					instant_build = yes
+				}
+				set_building_level = {
+					type = coastal_bunker
+					level = 3
+					province = 7683
+					instant_build = yes
+				}
+				set_building_level = {
+					type = coastal_bunker
+					level = 3
+					province = 10534
+					instant_build = yes
+				}
+				set_building_level = {
+					type = coastal_bunker
+					level = 3
+					province = 7810
+					instant_build = yes
+				}
+			}
+		}
+	}
+}
