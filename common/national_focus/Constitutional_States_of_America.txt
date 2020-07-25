@@ -4068,7 +4068,8 @@ focus_tree = {
 			add_popularity = { ideology = national_populist popularity = 0.03 }
 			hidden_effect = {
 			country_event = {
-				id = 
+				id = constate.51
+				days = 10
 				}
 			}
 		}
