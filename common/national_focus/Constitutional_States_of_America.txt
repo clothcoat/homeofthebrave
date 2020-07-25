@@ -3649,7 +3649,7 @@ focus_tree = {
 	focus = {# Wickedness of Eve
 		id = COR_the_wickedness_of_eve
 		icon = GFX_goal_COR_The_Wickedness_of_Eve
-		cost = 5.00
+		cost = 4.00
 		prerequisite = {
 			focus = COR_the_lord
 			focus = COR_the_sword
@@ -3675,7 +3675,7 @@ focus_tree = {
 	focus = {# Christian Identity
 		id = COR_christian_identity
 		icon = GFX_goal_COR_christian_identity
-		cost = 5.00
+		cost = 4.00
 		prerequisite = {
 			focus = COR_the_wickedness_of_eve
 		}
@@ -3695,6 +3695,18 @@ focus_tree = {
 			add_war_support = 0.05
 			add_stability = -0.03
 			add_popularity = { ideology = national_populist popularity = 0.02 }
+			hidden_effect = {
+			country_event = {
+			id = constate.52
+			days = 2
+			}
+			}
+			hidden_effect = {
+			country_event = {
+			id = constate.54
+			days = 2
+			}
+			}
 		}
 	}
 	
@@ -4169,6 +4181,14 @@ focus_tree = {
 		}
 		available = {
 			has_government = national_populist
+		}
+		select_effect = {
+		hidden_effect = {
+			country_event = {
+			id = constate.56
+			days = 20
+			}
+			}
 		}
 		cancel_if_invalid = yes
 		available_if_capitulated = yes

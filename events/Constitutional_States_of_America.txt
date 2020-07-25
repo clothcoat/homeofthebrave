@@ -1865,6 +1865,12 @@ country_event = { # Smallpox outbreak grows
 		name = constate.5100.b
 		add_political_power = -50
 		add_popularity = { ideology = national_populist popularity = -0.05 }
+		hidden_effect = {
+		country_event = {
+			id = constate.5101
+			days = 3
+			}
+		}
 	}
 }
 
@@ -1907,6 +1913,63 @@ country_event = { # Armstrong Dead
 	}
 }
 
+country_event = { # Christian Critics
+	id = constate.52
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.52"}
+	title = constate.52.t
+	desc = constate.52.d
+	picture = AUS_christian_identity
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #Let the innocent lies rest
+		name = constate.52.a
+		add_political_power = -25
+		add_popularity = { ideology = national_populist popularity = 0.01 }
+		add_stability = 0.01
+	}
+	option = { #Order them not to publish critical papers
+		name = constate.52.b
+		add_political_power = -25
+		add_popularity = { ideology = national_populist popularity = 0.01 }
+		add_stability = 0.01
+	}
+	option = { #combination of payoffs and bans
+		name = constate.52.c
+		add_stability = -0.05
+	}
+}
+
+country_event = { # Feast of Tabernacle
+	id = constate.53
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.53"}
+	title = constate.53.t
+	desc = constate.53.d
+	picture = AUS_christian_identity
+
+	fire_only_once = yes
+	trigger = {
+	date > 1942.9.20
+	has_country_leader = { ruling_only = yes name = "Herbert W. Armstrong"} 
+	}
+	
+	mean_time_to_happen = {
+	days = 1
+	}
+	
+	option = { #Work Holiday during the first two days
+		name = constate.53.a
+		add_political_power = 15
+		add_popularity = { ideology = national_populist popularity = 0.01 }
+	}
+	option = { #Every day of the week 
+		name = constate.53.b
+		add_political_power = -20
+		add_popularity = { ideology = national_populist popularity = 0.02 }
+		add_stability = 0.02
+	}
+}
 
 country_event = { # Divergent Thinking in Christian Identity
 	id = constate.54
@@ -1917,12 +1980,6 @@ country_event = { # Divergent Thinking in Christian Identity
 
 	fire_only_once = yes
 	is_triggered_only = yes
-
-	trigger = {
-		tag = CON
-		has_global_flag = USA_civil_war_over_flag
-		has_government = national_populist
-	}
 
 	option = { # Let the innocent lies rest
 		name = constate.54.a
@@ -1942,20 +1999,266 @@ country_event = { # Rise of Speakeasies
 	picture = AUS_prohibition
 
 	fire_only_once = yes
-	is_triggered_only = yes
 
 	trigger = {
-		tag = CON
+		tag = COR
 		has_global_flag = USA_civil_war_over_flag
 		has_government = national_populist
 	}
+	
+	mean_time_to_happen = {
+	days = 150
+	} 
 
 	option = { # Alcoholism must be stamped out
 		name = constate.55.a
-		add_political_power = -100
+		add_political_power = -50
 		add_stability = -0.04
 	}
 }
+
+country_event = { # Breaking Catholicism
+	id = constate.56
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.56"}
+	title = constate.56.t
+	desc = constate.56.d
+	picture = AUS_prohibition
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { # Good
+		name = constate.56.a
+		add_political_power = 40
+		add_popularity = { ideology = social_conservative popularity = -0.05 }
+		add_popularity = { ideology = national_populist popularity = 0.02 }
+		add_stability = -0.03
+		add_manpower = -8000
+		hidden_effect = {
+			country_event = {
+			id = constate.57
+			days = 6
+			}
+		}
+	}
+}
+
+country_event = { # The Liberal Retreat
+	id = constate.57
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.57"}
+	title = constate.57.t
+	desc = constate.57.d
+	picture = AUS_prohibition
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { # A bullet dodged
+		name = constate.57.a
+		add_political_power = 40
+		add_popularity = { ideology = social_democrat popularity = -0.05 }
+		add_popularity = { ideology = social_liberal popularity = -0.05 }
+		add_popularity = { ideology = market_liberal popularity = -0.05 }
+		add_popularity = { ideology = national_populist popularity = 0.02 }
+		add_stability = -0.02
+		add_manpower = -12000
+		hidden_effect = {
+			country_event = {
+			id = constate.58
+			days = 11
+			}
+		}
+	}
+}
+
+country_event = { # ODP and Churches Crack
+	id = constate.58
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.58"}
+	title = constate.58.t
+	desc = constate.58.d
+	picture = AUS_prohibition
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { # Victory after Victory
+		name = constate.58.a
+		add_political_power = 40
+		add_popularity = { ideology = paternal_autocrat popularity = -0.03 }
+		add_popularity = { ideology = authoritarian_democrat popularity = -0.03 }
+		add_popularity = { ideology = national_populist popularity = 0.05 }
+		add_stability = 0.02
+		add_manpower = -17200
+		hidden_effect = {
+			country_event = {
+			id = constate.5800
+			days = 11
+			}
+		}
+	}
+}
+
+country_event = { # Chicago Massacre
+	id = constate.5800
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.5800"}
+	title = constate.5800.t
+	desc = constate.5800.d
+	picture = AUS_prohibition
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { # Favor the Warriors
+		name = constate.5800.a
+		add_political_power = 80
+		add_popularity = { ideology = market_liberal popularity = -0.01 }
+		add_popularity = { ideology = social_liberal popularity = -0.01 }
+		add_popularity = { ideology = social_democrat popularity = -0.01 }
+		add_popularity = { ideology = radical_socialist popularity = -0.01 }
+		add_popularity = { ideology = totalist popularity = -0.02 }
+		add_popularity = { ideology = syndicalist popularity = -0.02 }
+		add_popularity = { ideology = national_populist popularity = 0.05 }
+		add_war_support = 0.05
+		add_stability = -0.05
+		add_manpower = -15000
+		hidden_effect = {
+			country_event = {
+			id = constate.5801
+			days = 15
+			}
+		}
+	}
+	option = { # Favor the Agents
+		name = constate.5800.b
+		add_political_power = 40
+		add_popularity = { ideology = social_liberal popularity = -0.01 }
+		add_popularity = { ideology = totalist popularity = -0.01 }
+		add_popularity = { ideology = syndicalist popularity = -0.01 }
+		add_popularity = { ideology = national_populist popularity = 0.02 }
+		add_stability = 0.02
+		add_manpower = -10000
+		hidden_effect = {
+			country_event = {
+			id = constate.5801
+			days = 15
+			}
+		}
+	}
+}
+
+country_event = { # Town Separatists
+	id = constate.5801
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.5801"}
+	title = constate.5801.t
+	desc = constate.5801.d
+	picture = AUS_prohibition
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { # Break them
+		name = constate.5801.a
+		add_political_power = 35
+		add_popularity = { ideology = authoritarian_democrat popularity = -0.01 }
+		add_popularity = { ideology = social_conservative popularity = -0.01 }
+		add_popularity = { ideology = market_liberal popularity = -0.01 }
+		add_popularity = { ideology = social_liberal popularity = -0.01 }
+		add_popularity = { ideology = social_democrat popularity = -0.01 }
+		add_popularity = { ideology = radical_socialist popularity = -0.01 }
+		add_popularity = { ideology = national_populist popularity = 0.03 }
+		add_war_support = 0.03
+		add_manpower = -12000
+		hidden_effect = {
+			country_event = {
+			id = constate.5802
+			days = 20
+			}
+		}
+	}
+	option = { # Break them
+		name = constate.5801.a
+		add_political_power = 35
+		add_popularity = { ideology = paternal_autocrat popularity = -0.01 }
+		add_popularity = { ideology = authoritarian_democrat popularity = -0.02 }
+		add_popularity = { ideology = social_conservative popularity = -0.02 }
+		add_popularity = { ideology = market_liberal popularity = -0.02 }
+		add_popularity = { ideology = social_liberal popularity = -0.01 }
+		add_popularity = { ideology = social_democrat popularity = -0.02 }
+		add_popularity = { ideology = radical_socialist popularity = -0.02 }
+		add_popularity = { ideology = national_populist popularity = 0.05 }
+		add_war_support = 0.05
+		add_command_power = 10
+		army_experience = 5
+		add_stability = -0.03
+		add_manpower = -23000
+		hidden_effect = {
+			country_event = {
+			id = constate.5802
+			days = 20
+			}
+		}
+	}
+}
+
+country_event = { # America is ours
+	id = constate.5802
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.5802"}
+	title = constate.5802.t
+	desc = constate.5802.d
+	picture = AUS_prohibition
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { # Semi-Autonomy
+		name = constate.5802.a
+		add_political_power = 35
+		add_popularity = { ideology = national_populist popularity = 0.02 }
+		add_stability = 0.05
+		add_war_support = 0.08
+	}
+	option = { # Gradual Annexation
+		name = constate.5802.a
+		add_political_power = 50
+		add_popularity = { ideology = national_populist popularity = 0.04 }
+		add_command_power = 10
+		add_stability = 0.03
+	}
+}
+
+country_event = { # America is ours
+	id = constate.5803
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.5803"}
+	title = constate.5803.t
+	desc = constate.5803.d
+	picture = AUS_prohibition
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { # Semi-Autonomy
+		name = constate.5803.a
+		add_political_power = 35
+		add_popularity = { ideology = national_populist popularity = 0.02 }
+		add_stability = 0.05
+		add_war_support = 0.08
+	}
+	option = { # Gradual Annexation
+		name = constate.5803.a
+		add_political_power = 50
+		add_popularity = { ideology = national_populist popularity = 0.04 }
+		add_command_power = 10
+		add_stability = 0.03
+	}
+}
+
 country_event = { # Black Education Act
 	id = constate.59
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.59"}
@@ -1967,7 +2270,7 @@ country_event = { # Black Education Act
 	is_triggered_only = yes
 
 	trigger = {
-		tag = CON
+		tag = COR
 		has_global_flag = USA_civil_war_over_flag
 		has_government = national_populist
 	}
@@ -1990,7 +2293,7 @@ country_event = { # Black Belt Autonomy
 	is_triggered_only = yes
 
 	trigger = {
-		tag = CON
+		tag = COR
 		has_global_flag = USA_civil_war_over_flag
 		has_government = national_populist
 	}
@@ -2017,7 +2320,7 @@ country_event = { # Pass Laws
 	is_triggered_only = yes
 
 	trigger = {
-		tag = CON
+		tag = COR
 		has_global_flag = USA_civil_war_over_flag
 		has_government = national_populist
 	}
@@ -2040,7 +2343,7 @@ country_event = { # Penal Labor
 	is_triggered_only = yes
 
 	trigger = {
-		tag = CON
+		tag = COR
 		has_global_flag = USA_civil_war_over_flag
 		has_government = national_populist
 	}
@@ -2064,7 +2367,7 @@ country_event = { # The third Great Migration
 	is_triggered_only = yes
 
 	trigger = {
-		tag = CON
+		tag = COR
 		has_global_flag = USA_civil_war_over_flag
 		has_government = national_populist
 	}
