@@ -4067,7 +4067,9 @@ focus_tree = {
 			add_command_power = 30
 			add_popularity = { ideology = national_populist popularity = 0.03 }
 			hidden_effect = {
-			
+			country_event = {
+				id = 
+				}
 			}
 		}
 	}

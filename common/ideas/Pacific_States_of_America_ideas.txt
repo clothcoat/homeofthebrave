@@ -16,7 +16,7 @@ ideas = {
 				}
 			}
 			removal_cost = -1
-			picture = can_wartime_prices_and_trade_board
+			picture = Idea_generic_political_support
 			modifier = {
 				political_power_gain = 0.02
 				stability_weekly = 0.002
@@ -37,7 +37,7 @@ ideas = {
 				}
 			}
 			removal_cost = -1
-			picture = can_wartime_prices_and_trade_board
+			picture = GFX_idea_socialist_purge
 			modifier = {
 				stability_weekly = -0.03
 				stability_factor = -0.1
@@ -54,7 +54,7 @@ ideas = {
 			allowed = { always = no }
 			available = { has_government = paternal_autocrat }
 			removal_cost = -1
-			picture = can_wartime_prices_and_trade_board
+			picture = japanese_pacific_trade
 			modifier = {
 				consumer_goods_factor = -0.02
 				production_factory_max_efficiency_factor = 0.05
@@ -70,7 +70,7 @@ ideas = {
 			allowed = { always = no }
 			available = { has_government = paternal_autocrat }
 			removal_cost = -1
-			picture = can_wartime_prices_and_trade_board
+			picture = eastern_exchange
 			modifier = {
 				research_speed_factor = 0.03
 				monthly_population = 0.02
@@ -82,9 +82,9 @@ ideas = {
 		CAL_cultural_exchange_idea_2 = {#Close relations
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_cultural_exchange_idea_2"}
 			allowed = { always = no }
-			available = { has_government = national_populist }
+			available = { has_government = paternal_autocrat }
 			removal_cost = -1
-			picture = can_wartime_prices_and_trade_board
+			picture = japanese_loyalism
 			modifier = {
 				research_speed_factor = 0.05
 				monthly_population = 0.03
@@ -102,7 +102,7 @@ ideas = {
 			allowed = { always = no }
 			available = { has_government = national_populist }
 			removal_cost = -1
-			picture = can_wartime_prices_and_trade_board
+			picture = mass_dissapearances
 			modifier = {
 				stability_weekly = -0.03
 				stability_factor = -0.06
@@ -118,7 +118,7 @@ ideas = {
 			allowed = { always = no }
 			available = { has_government = national_populist }
 			removal_cost = -1
-			picture = can_wartime_prices_and_trade_board
+			picture = limited_media
 			modifier = {
 				stability_factor = 0.1
 				political_power_gain = 0.05
@@ -136,7 +136,7 @@ ideas = {
 			allowed = { always = no }
 			available = { has_government = national_populist }
 			removal_cost = -1
-			picture = can_wartime_prices_and_trade_board
+			picture = state_media
 			modifier = {
 				stability_weekly = 0.002
 				political_power_gain = 0.1
@@ -154,7 +154,7 @@ ideas = {
 			allowed = { always = no }
 			available = { has_government = national_populist }
 			removal_cost = -1
-			picture = can_wartime_prices_and_trade_board
+			picture = state_media
 			modifier = {
 				stability_weekly = 0.002
 				political_power_gain = 0.12
@@ -173,7 +173,7 @@ ideas = {
 			allowed = { always = no }
 			available = { has_government = national_populist }
 			removal_cost = -1
-			picture = can_wartime_prices_and_trade_board
+			picture = mysticism
 			modifier = {
 				stability_weekly = 0.001
 				political_power_gain = 0.02
@@ -188,7 +188,7 @@ ideas = {
 			allowed = { always = no }
 			available = { has_government = national_populist }
 			removal_cost = -1
-			picture = can_wartime_prices_and_trade_board
+			picture = mysticism
 			modifier = {
 				stability_weekly = 0.002
 				political_power_gain = 0.05
@@ -203,7 +203,7 @@ ideas = {
 			allowed = { always = no }
 			available = { has_government = national_populist }
 			removal_cost = -1
-			picture = can_wartime_prices_and_trade_board
+			picture = shadow_recruitment
 			modifier = {
 				recruitable_population_factor = 0.02
 				political_power_gain = 0.05
@@ -220,7 +220,7 @@ ideas = {
 			allowed = { always = no }
 			available = { has_government = national_populist }
 			removal_cost = -1
-			picture = can_wartime_prices_and_trade_board
+			picture = new_thought
 			modifier = {
 				political_power_gain = 0.1
 				party_popularity_stability_factor = 0.1
@@ -235,7 +235,7 @@ ideas = {
 			allowed = { always = no }
 			available = { has_government = national_populist }
 			removal_cost = -1
-			picture = can_wartime_prices_and_trade_board
+			picture = faith_of_the_party
 			modifier = {
 				stability_weekly = 0.001
 				political_power_gain = 0.12
@@ -251,7 +251,7 @@ ideas = {
 			allowed = { always = no }
 			available = { has_government = national_populist }
 			removal_cost = -1
-			picture = can_wartime_prices_and_trade_board
+			picture = messengers
 			modifier = {
 				stability_factor = 0.05
 				political_power_gain = 0.1
@@ -268,7 +268,7 @@ ideas = {
 			allowed = { always = no }
 			available = { has_government = national_populist }
 			removal_cost = -1
-			picture = can_wartime_prices_and_trade_board
+			picture = new_sciences
 			modifier = {
 				stability_weekly = 0.002
 				research_speed_factor = 0.05
@@ -286,7 +286,7 @@ ideas = {
 			allowed = { always = no }
 			available = { has_government = national_populist }
 			removal_cost = -1
-			picture = can_wartime_prices_and_trade_board
+			picture = new_donations
 			modifier = {
 				political_power_gain = 0.15
 				party_popularity_stability_factor = 0.05
@@ -310,7 +310,7 @@ ideas = {
 			has_government = national_populist
 				} }
 			removal_cost = -1
-			picture = can_wartime_prices_and_trade_board
+			picture = NIA
 			modifier = {
 				political_power_gain = 0.03
 				consumer_goods_factor = -0.02
@@ -333,7 +333,7 @@ ideas = {
 			has_government = national_populist
 				} }
 			removal_cost = -1
-			picture = can_wartime_prices_and_trade_board
+			picture = American_corporatism
 			modifier = {
 				political_power_gain = 0.04
 				consumer_goods_factor = -0.03
@@ -357,7 +357,7 @@ ideas = {
 			has_government = national_populist
 				} }
 			removal_cost = -1
-			picture = can_wartime_prices_and_trade_board
+			picture = American_corporatism
 			modifier = {
 				political_power_gain = 0.05
 				consumer_goods_factor = -0.05
@@ -381,7 +381,7 @@ ideas = {
 			has_government = national_populist
 				} }
 			removal_cost = -1
-			picture = can_wartime_prices_and_trade_board
+			picture = American_corporatism
 			modifier = {
 				political_power_gain = 0.1
 				consumer_goods_factor = -0.06
@@ -405,7 +405,7 @@ ideas = {
 			has_government = national_populist
 				} }
 			removal_cost = -1
-			picture = can_wartime_prices_and_trade_board
+			picture = nationalized_liquor
 			modifier = {
 				political_power_gain = 0.03
 				consumer_goods_factor = -0.02
@@ -422,7 +422,7 @@ ideas = {
 			has_government = national_populist
 				} }
 			removal_cost = -1
-			picture = can_wartime_prices_and_trade_board
+			picture = tenney_committee
 			modifier = {
 				political_power_gain = 0.03
 				war_support_weekly = 0.005
@@ -442,7 +442,7 @@ ideas = {
 			has_government = national_populist
 				} }
 			removal_cost = -1
-			picture = can_wartime_prices_and_trade_board
+			picture = fed_police
 			modifier = {
 				political_power_gain = 0.03
 				recruitable_population_factor = 0.02
@@ -462,7 +462,7 @@ ideas = {
 			has_government = national_populist
 				} }
 			removal_cost = -1
-			picture = can_wartime_prices_and_trade_board
+			picture = fed_police
 			modifier = {
 				political_power_gain = 0.05
 				recruitable_population_factor = 0.02
@@ -482,7 +482,7 @@ ideas = {
 			has_government = national_populist
 				} }
 			removal_cost = -1
-			picture = can_wartime_prices_and_trade_board
+			picture = fed_police
 			modifier = {
 				political_power_gain = 0.08
 				recruitable_population_factor = 0.03
@@ -503,7 +503,7 @@ ideas = {
 			has_government = national_populist
 				} }
 			removal_cost = -1
-			picture = can_wartime_prices_and_trade_board
+			picture = pacific_protectionism
 			modifier = {
 				political_power_gain = 0.02
 				production_speed_buildings_factor = 0.05
@@ -523,7 +523,7 @@ ideas = {
 			has_government = national_populist
 				} }
 			removal_cost = -1
-			picture = can_wartime_prices_and_trade_board
+			picture = pacific_dream
 			modifier = {
 				political_power_gain = 0.02
 				production_speed_buildings_factor = 0.08
@@ -545,7 +545,7 @@ ideas = {
 			has_government = national_populist
 				} }
 			removal_cost = -1
-			picture = can_wartime_prices_and_trade_board
+			picture = pacific_dream
 			modifier = {
 				political_power_gain = 0.08
 				production_speed_buildings_factor = 0.08
@@ -569,7 +569,7 @@ ideas = {
 				}
 			}
 			removal_cost = -1
-			picture = can_wartime_prices_and_trade_board
+			picture = pacific_dream
 			modifier = {
 				political_power_gain = 0.12
 				production_speed_buildings_factor = 0.08
@@ -592,7 +592,7 @@ ideas = {
 				}
 			}
 			removal_cost = -1
-			picture = can_wartime_prices_and_trade_board
+			picture = media_regulation
 			modifier = {
 				political_power_gain = 0.08
 				war_support_weekly = 0.005
@@ -605,9 +605,12 @@ ideas = {
 		CAL_war_powers_act = {# War Powers Act
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_war_powers_act"}
 			allowed = { always = no }
-			available = { has_government = authoritarian_democrat }
+			available = { has_government = authoritarian_democrat 
+			has_government = paternal_autocrat
+			has_government = national_populist
+			}
 			removal_cost = -1
-			picture = can_wartime_prices_and_trade_board
+			picture = presidential_war_powers
 			modifier = {
 				political_power_gain = 0.12
 				recruitable_population_factor = 0.03
@@ -624,9 +627,12 @@ ideas = {
 		CAL_war_powers_act_2 = {# War Powers Act
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_war_powers_act_2"}
 			allowed = { always = no }
-			available = { has_government = authoritarian_democrat }
+			available = { has_government = authoritarian_democrat 
+			has_government = paternal_autocrat
+			has_government = national_populist
+			}
 			removal_cost = -1
-			picture = can_wartime_prices_and_trade_board
+			picture = presidential_war_powers
 			modifier = {
 				political_power_gain = 0.15
 				recruitable_population_factor = 0.05
@@ -643,9 +649,12 @@ ideas = {
 		CAL_military_lobby_idea = {#Military Lobby 
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_military_lobby_idea"}
 			allowed = { always = no }
-			available = { has_government = authoritarian_democrat }
+			available = { has_government = authoritarian_democrat 
+			has_government = paternal_autocrat
+			has_government = national_populist
+			}
 			removal_cost = -1
-			picture = can_wartime_prices_and_trade_board
+			picture = generic_army
 			modifier = {
 				production_factory_efficiency_gain_factor = -0.03
 				recruitable_population_factor = 0.03
@@ -660,9 +669,12 @@ ideas = {
 		CAL_military_lobby_idea_2 = {#Military Lobby 
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_military_lobby_idea_2"}
 			allowed = { always = no }
-			available = { has_government = authoritarian_democrat }
+			available = { has_government = authoritarian_democrat 
+			has_government = paternal_autocrat
+			has_government = national_populist
+			}
 			removal_cost = -1
-			picture = can_wartime_prices_and_trade_board
+			picture = generic_army
 			modifier = {
 				production_factory_efficiency_gain_factor = -0.03
 				recruitable_population_factor = 0.05
@@ -677,26 +689,12 @@ ideas = {
 		CAL_military_lobby_idea_3 = {#Military Lobby 
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_military_lobby_idea_3"}
 			allowed = { always = no }
-			available = { has_government = authoritarian_democrat }
-			removal_cost = -1
-			picture = can_wartime_prices_and_trade_board
-			modifier = {
-				production_factory_efficiency_gain_factor = -0.03
-				recruitable_population_factor = 0.05
-				command_power_gain_mult = 0.002
-				weekly_manpower = 100
-				production_speed_arms_factory_factor = -0.08
-				production_speed_dockyard_factor = -0.08
-				consumer_goods_factor = 0.02
+			available = { has_government = authoritarian_democrat 
+			has_government = paternal_autocrat
+			has_government = national_populist
 			}
-		}
-		
-		CAL_military_lobby_idea_3 = {#Military Lobby 
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_military_lobby_idea_3"}
-			allowed = { always = no }
-			available = { has_government = authoritarian_democrat }
 			removal_cost = -1
-			picture = can_wartime_prices_and_trade_board
+			picture = generic_army
 			modifier = {
 				production_factory_efficiency_gain_factor = -0.03
 				recruitable_population_factor = 0.05
@@ -714,7 +712,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_laissez_faire_idea"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = can_wartime_prices_and_trade_board
+			picture = generic_constitutional_guarantees
 			modifier = {
 				political_power_gain = 0.005
 				production_factory_efficiency_gain_factor = 0.05
@@ -738,7 +736,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_conservative_business"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = generic_central_management
+			picture = business_support
 			modifier = {
 				production_factory_max_efficiency_factor = 0.05
 				industrial_capacity_factory = 0.03
@@ -752,7 +750,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_business_grants_idea"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = generic_central_management
+			picture = business_grants
 			modifier = {
 				production_factory_max_efficiency_factor = 0.08
 				industrial_capacity_factory = 0.05
@@ -765,7 +763,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_business_grants_idea_2"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = generic_central_management
+			picture = social_business
 			modifier = {
 				production_factory_max_efficiency_factor = 0.1
 				production_factory_start_efficiency_factor = 0.05
@@ -779,7 +777,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_business_grants_idea_3"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = generic_central_management
+			picture = patriotic_industry
 			modifier = {
 				production_factory_max_efficiency_factor = 0.1
 				production_factory_start_efficiency_factor = 0.1
@@ -795,9 +793,8 @@ ideas = {
 		CAL_moral_education_idea = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_moral_education_idea"}
 			allowed = { always = no }
-			available = { has_government = market_liberal }
 			removal_cost = -1
-			picture = generic_central_management
+			picture = public_education
 			modifier = {
 				research_speed_factor = 0.05
 				production_factory_start_efficiency_factor = 0.03
@@ -806,9 +803,8 @@ ideas = {
 		CAL_moral_education_idea_2 = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_moral_education_idea_2"}
 			allowed = { always = no }
-			available = { has_government = market_liberal }
 			removal_cost = -1
-			picture = generic_central_management
+			picture = moral_education
 			modifier = {
 				research_speed_factor = 0.07
 				stability_weekly = 0.002
@@ -820,9 +816,8 @@ ideas = {
 		CAL_moral_education_idea_3 = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_moral_education_idea_3"}
 			allowed = { always = no }
-			available = { has_government = market_liberal }
 			removal_cost = -1
-			picture = generic_central_management
+			picture = moral_society
 			modifier = {
 				research_speed_factor = 0.07
 				stability_weekly = 0.005
@@ -834,7 +829,6 @@ ideas = {
 		CAL_moral_education_idea_4 = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_moral_education_idea_4"}
 			allowed = { always = no }
-			available = { has_government = market_liberal }
 			removal_cost = -1
 			picture = generic_central_management
 			modifier = {
@@ -848,9 +842,8 @@ ideas = {
 		CAL_family_law_idea = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_family_law_idea"}
 			allowed = { always = no }
-			available = { has_government = market_liberal }
 			removal_cost = -1
-			picture = generic_central_management
+			picture = family_law
 			modifier = {
 				stability_weekly = 0.002
 				political_power_gain = 0.003
@@ -862,9 +855,8 @@ ideas = {
 		CAL_family_law_idea_2 = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_family_law_idea_2"}
 			allowed = { always = no }
-			available = { has_government = market_liberal }
 			removal_cost = -1
-			picture = generic_central_management
+			picture = family_law
 			modifier = {
 				stability_weekly = 0.003
 				political_power_gain = 0.005
@@ -876,9 +868,8 @@ ideas = {
 		CAL_family_law_idea_3 = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_family_law_idea_3"}
 			allowed = { always = no }
-			available = { has_government = market_liberal }
 			removal_cost = -1
-			picture = generic_central_management
+			picture = family_law
 			modifier = {
 				stability_weekly = 0.005
 				political_power_gain = 0.008
@@ -891,7 +882,6 @@ ideas = {
 		CAL_orphan_support_idea = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_orphan_support_idea"}
 			allowed = { always = no }
-			available = { has_government = market_liberal }
 			removal_cost = -1
 			picture = generic_central_management
 			modifier = {

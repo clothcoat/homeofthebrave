@@ -3117,7 +3117,7 @@ focus_tree = {
 			add_political_power = 40
 			hidden_effect = {
 			country_event = {
-			id = pacificstates.224
+			id = pacificstates.350
 			days = 12
 				}
 			}
@@ -3164,7 +3164,10 @@ focus_tree = {
 			focus = CAL_yellow_peril
 		}
 		available = {
+			OR = {
 			has_government = authoritarian_democrat
+			has_government = paternal_autocrat
+			}
 		}
 		ai_will_do = {
 			factor = 5
@@ -3190,7 +3193,10 @@ focus_tree = {
 			focus = CAL_federal_police
 		}
 		available = {
+			OR = {
 			has_government = authoritarian_democrat
+			has_government = paternal_autocrat
+			}
 		}
 		ai_will_do = {
 			factor = 5
@@ -3231,7 +3237,10 @@ focus_tree = {
 			focus = CAL_anti_unionism
 		}
 		available = {
+			OR = {
 			has_government = authoritarian_democrat
+			has_government = paternal_autocrat
+			}
 		}
 		ai_will_do = {
 			factor = 5
