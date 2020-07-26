@@ -8,7 +8,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea COR_Moseley_plan1"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = big_entente_idea
+			picture = moseley_plan
 			modifier = {
 				max_planning = 0.10
 				army_core_defence_factor = 0.05
@@ -22,7 +22,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea COR_Moseley_plan2"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = big_entente_idea
+			picture = moseley_plan
 			modifier = {
 				max_planning = 0.10
 				army_core_defence_factor = 0.1
@@ -38,7 +38,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea COR_Moseley_plan3"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = big_entente_idea
+			picture = moseley_plan
 			modifier = {
 				max_planning = 0.15
 				max_command_power = 30
@@ -55,7 +55,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea COR_Moseley_plan4"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = big_entente_idea
+			picture = moseley_plan
 			modifier = {
 				max_planning = 0.15
 				max_command_power = 30
@@ -73,7 +73,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea COR_Moseley_plan5"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = big_entente_idea
+			picture = moseley_plan
 			modifier = {
 				max_planning = 0.2
 				max_command_power = 50
@@ -93,7 +93,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea COR_mcnarney_advisory_idea"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = generic_artillery_regiments
+			picture = Mcnarney_plan
 			modifier = {
 				experience_gain_artillery_training_factor = 0.1
 				experience_gain_artillery_combat_factor = 0.1
@@ -105,7 +105,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea COR_mcnarney_advisory_idea2"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = generic_artillery_regiments
+			picture = Mcnarney_plan
 			modifier = {
 				experience_gain_artillery_training_factor = 0.1
 				experience_gain_artillery_combat_factor = 0.1
@@ -126,7 +126,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea COR_mcnarney_advisory_idea3"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = generic_artillery_regiments
+			picture = Mcnarney_plan
 			modifier = {
 				experience_gain_artillery_training_factor = 0.1
 				experience_gain_artillery_combat_factor = 0.1
@@ -148,7 +148,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea COR_mcnarney_advisory_idea4"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = generic_artillery_regiments
+			picture = Mcnarney_plan
 			modifier = {
 				experience_gain_artillery_training_factor = 0.15
 				experience_gain_artillery_combat_factor = 0.1
@@ -173,7 +173,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea COR_mcnarney_advisory_idea5"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = generic_artillery_regiments
+			picture = Mcnarney_plan
 			modifier = {
 				experience_gain_artillery_training_factor = 0.15
 				experience_gain_artillery_combat_factor = 0.1
@@ -200,7 +200,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea COR_mcnarney_advisory_idea"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = generic_artillery_regiments
+			picture = draper_plan
 			modifier = {
 				conscription_factor = 0.02
 				training_time_army_factor = -0.1
@@ -212,7 +212,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea COR_wickliffe_plan2"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = generic_artillery_regiments
+			picture = draper_plan
 			modifier = {
 				conscription_factor = 0.05
 				land_reinforce_rate	= 0.02
@@ -225,7 +225,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea COR_wickliffe_plan3"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = generic_artillery_regiments
+			picture = draper_plan
 			modifier = {
 				conscription_factor = 0.06
 				org_loss_when_moving = -0.05
@@ -238,7 +238,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea COR_wickliffe_plan4"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = generic_artillery_regiments
+			picture = draper_plan
 			modifier = {
 				conscription_factor = 0.08
 				org_loss_when_moving = -0.1
@@ -251,7 +251,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea COR_wickliffe_plan5"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = generic_artillery_regiments
+			picture = draper_plan
 			modifier = {
 				conscription_factor = 0.08
 				org_loss_when_moving = -0.1
@@ -266,7 +266,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea COR_Cavalry_leaders_idea"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = generic_artillery_regiments
+			picture = cavalier_ideal
 			modifier = {
 				cavalry_attack_factor = 0.05
 				cavalry_defence_factor = 0.03
@@ -281,7 +281,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea COR_Patton_plan1"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = generic_acquire_tanks
+			picture = patton_plan
 			modifier = {
 				army_core_attack_factor = 0.1
 				army_morale_factor = 0.05
@@ -301,7 +301,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea COR_Patton_plan2"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = generic_acquire_tanks
+			picture = patton_plan
 			modifier = {
 				army_core_attack_factor = 0.1
 				army_morale_factor = -0.05
@@ -323,7 +323,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea COR_Patton_plan3"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = generic_acquire_tanks
+			picture = patton_plan
 			modifier = {
 				army_core_attack_factor = 0.1
 				army_morale_factor = -0.10
@@ -347,7 +347,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea COR_Patton_plan4"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = generic_acquire_tanks
+			picture = patton_plan
 			modifier = {
 				army_core_attack_factor = 0.1
 				army_morale_factor = -0.10
@@ -371,7 +371,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea COR_righteous_nation"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = generic_acquire_tanks
+			picture = patton_plan
 			modifier = {
 				army_attack_factor = 0.1
 				#army_morale_factor = -0.10
@@ -571,54 +571,9 @@ ideas = {
 			picture = FRA_national_mobilization_focus
 			modifier = {
 				army_morale_factor = 0.20
+				local_manpower = 0.3
 				land_reinforce_rate = 0.10
 				army_speed_factor = 0.20
-			}
-		}
-		COR_industries_support = {
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea COR_industries_support"}
-			allowed = { always = no }
-			available = {
-				has_global_flag = USA_civil_war_begun_flag
-				NOT = { has_global_flag = USA_civil_war_over_flag }
-			}
-			removal_cost = -1
-			picture = capital_outflow
-			modifier = {
-				political_power_factor = 0.20
-				industrial_capacity_factory = 0.20
-				supply_consumption_factor = -0.10
-			}
-		}
-		COR_industries_no_support = {#no war industries support
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea COR_industries_no_support"}
-			allowed = { always = no }
-			removal_cost = -1
-			picture = capital_outflow
-			modifier = {
-				production_speed_buildings_factor = -0.1
-				production_factory_efficiency_gain_factor = -0.05
-			}
-		}
-		COR_no_silver_legion = {#no silver legion support
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea COR_no_silver_legion"}
-			allowed = { always = no }
-			removal_cost = -1
-			picture = tfv_can_conscription_crisis
-			modifier = {
-				conscription = -0.01
-				experience_gain_army_factor = 0.05
-			}
-		}
-		COR_prohibition_bill = {#Veteran and Prohibition bill
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea COR_prohibition_bill"}
-			allowed = { always = no }
-			removal_cost = -1
-			picture = generic_constitutional_guarantees
-			modifier = {
-				political_power_cost = 0.10
-				training_time_army_factor = 0.05
-				army_morale_factor = 0.03
 			}
 		}
 		### Business Plot Ideas ###
@@ -781,7 +736,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea COR_native_collaboration"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = jim_crow
+			picture = native_collaboration
 			modifier = {
 				political_power_gain = -0.01
 				conscription_factor = 0.01
@@ -792,7 +747,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea COR_cavalier_ideal_idea"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = jim_crow
+			picture = cavalier_ideal
 			modifier = {
 				army_morale = 0.5
 				experience_gain_army = 0.03
@@ -805,7 +760,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea COR_state_militants"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = jim_crow
+			picture = old_dem_militias
 			modifier = {
 				conscription_factor = 0.05
 				local_supplies = 0.05
@@ -820,7 +775,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea COR_afforable_goods"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = jim_crow
+			picture = affordable_goods
 			modifier = {
 				consumer_goods_factor = -0.05
 				monthly_population	= 0.02
@@ -831,7 +786,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea COR_controlled_klan"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = jim_crow
+			picture = controlled_klan
 			modifier = {
 				stability_factor = 0.05
 				max_command_power = 50
@@ -842,7 +797,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea COR_old_dem_dominance"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = jim_crow
+			picture = jacksonian_dominance
 			modifier = {
 				political_power_gain = 0.1
 				local_manpower = 0.05
@@ -869,7 +824,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea COR_the_order_of_76"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = jim_crow
+			picture = order_of_76
 			modifier = {
 				party_popularity_stability_factor = 0.02
 				weekly_manpower	= 80
@@ -881,7 +836,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea COR_national_corporatism_idea_1"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = jim_crow
+			picture = corporatist_economy
 			modifier = {
 				stability_factor = 0.05
 				consumer_goods_factor = 0.03
@@ -896,7 +851,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea COR_national_corporatism_idea_2"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = jim_crow
+			picture = corporatist_economy
 			modifier = {
 				stability_factor = 0.1
 				consumer_goods_factor = 0.02
@@ -912,7 +867,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea COR_pinkerton"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = jim_crow
+			picture = pinkertons
 			modifier = {
 				special_forces_min = 2
 				local_intel_to_enemies = -0.1
@@ -926,7 +881,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea COR_chemical_economy_idea"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = jim_crow
+			picture = chamical_economy
 			modifier = {
 				research_speed_factor = 0.03
 				local_resources_factor = 0.05
@@ -937,7 +892,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea COR_corporate_militarism_idea"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = jim_crow
+			picture = generic_war_preparation
 			modifier = {
 			conversion_cost_civ_to_mil_factor = -0.1
 			production_factory_max_efficiency_factor = 0.03
@@ -951,7 +906,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea COR_military_industrial_complex"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = jim_crow
+			picture = generic_war_preparation
 			modifier = {
 			conversion_cost_civ_to_mil_factor = -0.15
 			production_factory_max_efficiency_factor = 0.05
@@ -976,7 +931,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea COR_citizen_monitors_idea"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = jim_crow
+			picture = monitors
 			modifier = {
 			encryption_factor = 0.03
 			war_stability_factor = 0.05
@@ -1016,7 +971,7 @@ ideas = {
 			allowed = { always = no }
 			available = { has_government = national_populist }
 			removal_cost = -1
-			picture = generic_production_bonus
+			picture = work_camps
 			modifier = {
 				local_resources_factor = 0.03
 				production_speed_buildings_factor = 0.05
@@ -1031,7 +986,7 @@ ideas = {
 			allowed = { always = no }
 			available = { has_government = national_populist }
 			removal_cost = -1
-			picture = generic_production_bonus
+			picture = work_camps
 			modifier = {
 				local_resources_factor = 0.06
 				production_speed_buildings_factor = 0.1
@@ -1048,7 +1003,7 @@ ideas = {
 			allowed = { always = no }
 			available = { has_government = national_populist }
 			removal_cost = -1
-			picture = generic_production_bonus
+			picture = forced_labor_economy
 			modifier = {
 				local_resources_factor = 0.1
 				production_speed_buildings_factor = 0.15
@@ -1065,7 +1020,7 @@ ideas = {
 			allowed = { always = no }
 			available = { has_government = national_populist }
 			removal_cost = -1
-			picture = generic_production_bonus
+			picture = nonconformists_regulations
 			modifier = {
 				political_power_gain = 0.02
 				party_popularity_stability_factor = 0.05
@@ -1081,7 +1036,7 @@ ideas = {
 			allowed = { always = no }
 			available = { has_government = national_populist }
 			removal_cost = -1
-			picture = generic_production_bonus
+			picture = nonconformists_extortion
 			modifier = {
 				political_power_gain = 0.05
 				monthly_population = -0.15
@@ -1097,7 +1052,7 @@ ideas = {
 			allowed = { always = no }
 			available = { has_government = national_populist }
 			removal_cost = -1
-			picture = generic_production_bonus
+			picture = nonconformists_regulations
 			modifier = {
 				political_power_gain = 0.02
 				party_popularity_stability_factor = 0.05
@@ -1112,7 +1067,7 @@ ideas = {
 			allowed = { always = no }
 			available = { has_government = national_populist }
 			removal_cost = -1
-			picture = generic_production_bonus
+			picture = nonconformists_regulations
 			modifier = {
 				political_power_gain = 0.05
 				command_power_gain = 0.02
@@ -1128,7 +1083,7 @@ ideas = {
 			allowed = { always = no }
 			available = { has_government = national_populist }
 			removal_cost = -1
-			picture = generic_goods_red_bonus
+			picture = kinship_economy
 			modifier = {
 				consumer_goods_factor = -0.02
 				civilian_factory_use = -0.03
@@ -1154,7 +1109,7 @@ ideas = {
 			allowed = { always = no }
 			available = { has_government = national_populist }
 			removal_cost = -1
-			picture = generic_goods_red_bonus
+			picture = white_corporatism
 			modifier = {
 				consumer_goods_factor = -0.05
 				civilian_factory_use = -0.05
@@ -1173,7 +1128,7 @@ ideas = {
 			allowed = { always = no }
 			available = { has_government = national_populist }
 			removal_cost = -1
-			picture = generic_goods_red_bonus
+			picture = know_nothing_act
 			modifier = {
 				monthly_population = -0.15
 				research_speed_factor = -0.05
@@ -1189,7 +1144,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea COR_black_laws_idea"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = jim_crow
+			picture = black_laws
 			modifier = {
 				political_power_gain = 0.1
 				party_popularity_stability_factor = 0.1
@@ -1209,7 +1164,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea COR_black_laws_idea_2"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = jim_crow
+			picture = black_laws
 			modifier = {
 				political_power_gain = 0.08
 				party_popularity_stability_factor = 0.1
@@ -1228,7 +1183,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea COR_black_laws_idea_2"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = jim_crow
+			picture = descendants_of_kham
 			modifier = {
 				political_power_gain = 0.1
 				party_popularity_stability_factor = 0.15
@@ -1247,7 +1202,7 @@ ideas = {
 			allowed = { always = no }
 			available = { has_government = national_populist }
 			removal_cost = -1
-			picture = generic_goods_red_bonus
+			picture = liberia_plan
 			modifier = {
 				monthly_population = -150.50
 				production_factory_efficiency_gain_factor = -0.06
@@ -1273,7 +1228,7 @@ ideas = {
 			}
 			}
 			removal_cost = -1
-			picture = generic_goods_red_bonus
+			picture = young_klan_resistance
 			modifier = {
 				consumer_goods_factor = -0.01
 				production_factory_start_efficiency_factor	= 0.02
@@ -1288,7 +1243,7 @@ ideas = {
 			allowed = { always = no }
 			available = { has_government = national_populist }
 			removal_cost = -1
-			picture = generic_goods_red_bonus
+			picture = klan_education
 			modifier = {
 				research_speed_factor = 0.05
 				political_power_gain = 0.03
@@ -1302,7 +1257,7 @@ ideas = {
 			allowed = { always = no }
 			available = { has_government = national_populist }
 			removal_cost = -1
-			picture = generic_goods_red_bonus
+			picture = klan_education
 			modifier = {
 				research_speed_factor = 0.05
 				political_power_gain = 0.05
@@ -1316,7 +1271,7 @@ ideas = {
 			allowed = { always = no }
 			available = { has_government = national_populist }
 			removal_cost = -1
-			picture = generic_goods_red_bonus
+			picture = american_exodus
 			modifier = {
 				monthly_population = -420.00
 				production_factory_efficiency_gain_factor = -0.02
@@ -1330,7 +1285,7 @@ ideas = {
 			allowed = { always = no }
 			available = { has_government = national_populist }
 			removal_cost = -1
-			picture = generic_goods_red_bonus
+			picture = young_klan_resistance
 			modifier = {
 				monthly_population = -0.05
 				political_power_gain = -0.05
@@ -1347,7 +1302,7 @@ ideas = {
 			allowed = { always = no }
 			available = { has_government = national_populist }
 			removal_cost = -1
-			picture = generic_goods_red_bonus
+			picture = purging_young_klan
 			modifier = {
 				monthly_population = -20.00
 				political_power_gain = -0.15
@@ -1360,7 +1315,7 @@ ideas = {
 			allowed = { always = no }
 			available = { has_government = national_populist }
 			removal_cost = -1
-			picture = generic_goods_red_bonus
+			picture = purging_black_legion
 			modifier = {
 				monthly_population = -0.02
 				political_power_gain = -0.02
@@ -1376,7 +1331,7 @@ ideas = {
 			allowed = { always = no }
 			available = { has_government = national_populist }
 			removal_cost = -1
-			picture = generic_goods_red_bonus
+			picture = terror_in_the_knight
 			modifier = {
 				monthly_population = -120.00
 				political_power_gain = -0.05
@@ -1392,7 +1347,7 @@ ideas = {
 			allowed = { always = no }
 			available = { has_government = national_populist }
 			removal_cost = -1
-			picture = generic_goods_red_bonus
+			picture = knights_of_white_empire
 			modifier = {
 				encryption_factor = 0.05
 				decryption_factor = 0.05
@@ -1404,7 +1359,7 @@ ideas = {
 			allowed = { always = no }
 			available = { has_government = national_populist }
 			removal_cost = -1
-			picture = generic_goods_red_bonus
+			picture = black_legion
 			modifier = {
 				max_command_power = 50
 				political_power_gain = 0.03
@@ -1418,7 +1373,7 @@ ideas = {
 			allowed = { always = no }
 			available = { has_government = national_populist }
 			removal_cost = -1
-			picture = generic_goods_red_bonus
+			picture = legion_chiefs
 			modifier = {
 				max_command_power = 75
 				political_power_gain = 0.05
@@ -1436,7 +1391,7 @@ ideas = {
 			allowed = { always = no }
 			available = { has_government = national_populist }
 			removal_cost = -1
-			picture = generic_goods_red_bonus
+			picture = kommon_law
 			modifier = {
 				max_command_power = 25
 				political_power_gain = 0.1
@@ -1449,7 +1404,7 @@ ideas = {
 			allowed = { always = no }
 			available = { has_government = national_populist }
 			removal_cost = -1
-			picture = generic_goods_red_bonus
+			picture = warriors_of_elijah
 			modifier = {
 				conscription_factor = 0.01
 				political_power_gain = 0.01
@@ -1464,7 +1419,7 @@ ideas = {
 			allowed = { always = no }
 			available = { has_government = national_populist }
 			removal_cost = -1
-			picture = generic_goods_red_bonus
+			picture = warriors_of_elijah
 			modifier = {
 				conscription_factor = 0.02
 				political_power_gain = 0.02
@@ -1480,7 +1435,7 @@ ideas = {
 			allowed = { always = no }
 			available = { has_government = national_populist }
 			removal_cost = -1
-			picture = generic_goods_red_bonus
+			picture = national_tithe
 			modifier = {
 				political_power_gain = 0.02
 				weekly_manpower = 45
@@ -1497,7 +1452,7 @@ ideas = {
 			allowed = { always = no }
 			available = { has_government = national_populist }
 			removal_cost = -1
-			picture = generic_goods_red_bonus
+			picture = agents_of_jacob
 			modifier = {
 				political_power_gain = 0.03
 				encryption = 0.05
@@ -1511,7 +1466,7 @@ ideas = {
 			allowed = { always = no }
 			available = { has_government = national_populist }
 			removal_cost = -1
-			picture = generic_goods_red_bonus
+			picture = prophet_of_christ
 			modifier = {
 				political_power_gain = 0.1
 				party_popularity_stability_factor = 0.1
@@ -1525,7 +1480,7 @@ ideas = {
 			allowed = { always = no }
 			available = { has_government = national_populist }
 			removal_cost = -1
-			picture = generic_goods_red_bonus
+			picture = preparing_for_armageddon
 			modifier = {
 				party_popularity_stability_factor = 0.1
 				stability_weekly = 0.01
@@ -1542,7 +1497,7 @@ ideas = {
 			allowed = { always = no }
 			available = { has_government = national_populist }
 			removal_cost = -1
-			picture = generic_goods_red_bonus
+			picture = great_cleansing
 			modifier = {
 				monthly_population = -150.00
 				political_power_gain = 0.03
