@@ -953,7 +953,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_deregulated_economy"}
 			allowed = {	always = no	}
 			allowed_civil_war = { always = yes }
-			picture = HOL_welfare_state
+			picture = deregulated_economy
 			modifier = { 
 				consumer_goods_factor = -0.03
 				research_speed_factor = 0.02
@@ -968,7 +968,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_deregulated_economy_2"}
 			allowed = {	always = no	}
 			allowed_civil_war = { always = yes }
-			picture = HOL_welfare_state
+			picture = liberal_economy
 			modifier = { 
 				consumer_goods_factor = -0.05
 				research_speed_factor = 0.03
@@ -983,7 +983,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_deregulated_economy_3"}
 			allowed = {	always = no	}
 			allowed_civil_war = { always = yes }
-			picture = HOL_welfare_state
+			picture = laissez_faires_economy
 			modifier = { 
 				consumer_goods_factor = -0.08
 				research_speed_factor = 0.05
@@ -998,7 +998,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_deregulated_economy_4"}
 			allowed = {	always = no	}
 			allowed_civil_war = { always = yes }
-			picture = HOL_welfare_state
+			picture = american_laissez_faire
 			modifier = { 
 				consumer_goods_factor = -0.1
 				research_speed_factor = 0.05
@@ -1013,7 +1013,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_deregulated_economy_5"}
 			allowed = {	always = no	}
 			allowed_civil_war = { always = yes }
-			picture = HOL_welfare_state
+			picture = american_laissez_faire
 			modifier = { 
 				consumer_goods_factor = -0.12
 				research_speed_factor = 0.08
@@ -1028,7 +1028,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_gospel_of_wealth"}
 			allowed = {	always = no	}
 			allowed_civil_war = { always = yes }
-			picture = HOL_welfare_state
+			picture = gospel_of_wealth_1
 			modifier = { 
 				consumer_goods_factor = -0.02
 				local_manpower = 0.02
@@ -1040,7 +1040,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_gospel_of_wealth_2"}
 			allowed = {	always = no	}
 			allowed_civil_war = { always = yes }
-			picture = HOL_welfare_state
+			picture = gospel_of_wealth_2
 			modifier = { 
 				consumer_goods_factor = -0.02
 				research_speed_factor = 0.03
@@ -1055,7 +1055,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_farm_education_idea"}
 			allowed = {	always = no	}
 			allowed_civil_war = { always = yes }
-			picture = HOL_welfare_state
+			picture = farm_education_campaign
 			modifier = { 
 				consumer_goods_factor = -0.03
 				local_resources = 0.03
@@ -1070,7 +1070,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_republican_hollywood_idea"}
 			allowed = {	always = no	}
 			allowed_civil_war = { always = yes }
-			picture = HOL_welfare_state
+			picture = hollywood_republicanism
 			modifier = { 
 				stability_weekly = 0.001
 				recruitable_population_factor = 0.005
@@ -1079,11 +1079,11 @@ ideas = {
 				party_popularity_stability_factor = 0.15
 			}
 		}
-		CAL_give_me_your_poor = {#Loosen Immigration
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_give_me_your_poor"}
+		CAL_give_me_your_poor_idea = {#Loosen Immigration
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_give_me_your_poor_idea"}
 			allowed = {	always = no	}
 			allowed_civil_war = { always = yes }
-			picture = HOL_welfare_state
+			picture = immigration_influx
 			modifier = { 
 				recruitable_population_factor = 0.01
 				monthly_population = 0.2
@@ -1102,7 +1102,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_american_trade"}
 			allowed = {	always = no	}
 			allowed_civil_war = { always = yes }
-			picture = HOL_welfare_state
+			picture = good_neighbor_policy
 			modifier = { 
 				stability_weekly = 0.002
 				local_resources = 0.1
@@ -1116,7 +1116,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_local_budgeting"}
 			allowed = {	always = no	}
 			allowed_civil_war = { always = yes }
-			picture = HOL_welfare_state
+			picture = local_budgeting_1
 			modifier = { 
 				stability_weekly = 0.001
 				political_power_gain = -0.01
@@ -1130,7 +1130,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_local_budgeting_2"}
 			allowed = {	always = no	}
 			allowed_civil_war = { always = yes }
-			picture = HOL_welfare_state
+			picture = local_budgeting_2
 			modifier = { 
 				stability_weekly = 0.003
 				production_factory_max_efficiency_factor = 0.05
@@ -1143,7 +1143,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_market_efficiency_idea_1"}
 			allowed = {	always = no	}
 			allowed_civil_war = { always = yes }
-			picture = HOL_welfare_state
+			picture = market_efficiency_1
 			modifier = { 
 				consumer_goods_factor = -0.01
 				line_change_production_efficiency_factor = 0.05
@@ -1156,7 +1156,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_market_efficiency_idea_2"}
 			allowed = {	always = no	}
 			allowed_civil_war = { always = yes }
-			picture = HOL_welfare_state
+			picture = market_efficiency_2
 			modifier = { 
 				consumer_goods_factor = -0.03
 				line_change_production_efficiency_factor = 0.1
@@ -1171,7 +1171,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_new_freedom_1"}
 			allowed = {	always = no	}
 			allowed_civil_war = { always = yes }
-			picture = HOL_welfare_state
+			picture = new_liberalism
 			modifier = { 
 				consumer_goods_factor = 0.02
 				political_power_gain = 0.005
@@ -1183,7 +1183,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_new_freedom_2"}
 			allowed = {	always = no	}
 			allowed_civil_war = { always = yes }
-			picture = HOL_welfare_state
+			picture = new_liberalism
 			modifier = { 
 				political_power_gain = 0.008
 				production_factory_max_efficiency_factor = -0.03
@@ -1197,7 +1197,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_new_freedom_3"}
 			allowed = {	always = no	}
 			allowed_civil_war = { always = yes }
-			picture = HOL_welfare_state
+			picture = new_liberalism
 			modifier = { 
 				consumer_goods_factor = -0.02
 				political_power_gain = 0.008
@@ -1212,7 +1212,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_new_freedom_4"}
 			allowed = {	always = no	}
 			allowed_civil_war = { always = yes }
-			picture = HOL_welfare_state
+			picture = new_liberalism
 			modifier = { 
 				consumer_goods_factor = -0.03
 				political_power_gain = 0.012
@@ -1227,7 +1227,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_new_freedom_5"}
 			allowed = {	always = no	}
 			allowed_civil_war = { always = yes }
-			picture = HOL_welfare_state
+			picture = new_liberalism
 			modifier = { 
 				consumer_goods_factor = -0.05
 				political_power_gain = 0.015
@@ -1244,7 +1244,7 @@ ideas = {
 			allowed = { always = no }
 			available = { has_government = social_liberal }
 			removal_cost = -1
-			picture = jap_supremacy_of_technology
+			picture = chautauqua
 			modifier = {
 				research_speed_factor = 0.03
 				local_manpower = 0.03
@@ -1256,9 +1256,8 @@ ideas = {
 		CAL_brain_trust_idea = {#Brain Trust
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_brain_trust_idea"}
 			allowed = { always = no }
-			available = { has_government = social_democrat }
 			removal_cost = -1
-			picture = jap_supremacy_of_will
+			picture = brain_trust_1
 			modifier = {
 				research_speed_factor = 0.05
 				production_factory_max_efficiency_factor = 0.05
@@ -1272,9 +1271,8 @@ ideas = {
 		CAL_brain_trust_idea_2 = {#Brain Trust
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_brain_trust_idea_2"}
 			allowed = { always = no }
-			available = { has_government = social_democrat }
 			removal_cost = -1
-			picture = jap_supremacy_of_will
+			picture = brain_trust_2
 			modifier = {
 				research_speed_factor = 0.1
 				production_factory_max_efficiency_factor = 0.08
@@ -1291,7 +1289,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea free_trade"}
 			allowed = {	always = no	}
 			allowed_civil_war = { always = yes }
-			picture = HOL_welfare_state
+			picture = free_trade
 			modifier = { consumer_goods_factor = 0.02 
 			stability_factor = 0.05
 			monthly_population	= 0.01
@@ -1304,7 +1302,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_new_liberal_securities"}
 			allowed = {	always = no	}
 			allowed_civil_war = { always = yes }
-			picture = HOL_welfare_state
+			picture = new_securities_1
 			modifier = { 
 				consumer_goods_factor = -0.02
 				stability_weekly = 0.002
@@ -1315,7 +1313,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_new_liberal_securities_2"}
 			allowed = {	always = no	}
 			allowed_civil_war = { always = yes }
-			picture = HOL_welfare_state
+			picture = new_securities_2
 			modifier = { 
 				consumer_goods_factor = -0.03
 				stability_weekly = 0.003
@@ -1327,7 +1325,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_new_liberal_securities_3"}
 			allowed = {	always = no	}
 			allowed_civil_war = { always = yes }
-			picture = HOL_welfare_state
+			picture = new_securities_2
 			modifier = { 
 				consumer_goods_factor = -0.05
 				stability_weekly = 0.005
@@ -1341,7 +1339,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_new_liberal_securities_4"}
 			allowed = {	always = no	}
 			allowed_civil_war = { always = yes }
-			picture = HOL_welfare_state
+			picture = new_securities_2
 			modifier = { 
 				consumer_goods_factor = -0.05
 				stability_weekly = 0.005
@@ -1396,7 +1394,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_progressive_taxation_idea"}
 			allowed = {	always = no	}
 			allowed_civil_war = { always = yes }
-			picture = HOL_welfare_state
+			picture = new_taxes
 			modifier = { 
 				production_factory_efficiency_gain_factor = -0.02
 				production_factory_max_efficiency_factor = -0.03
@@ -1408,7 +1406,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_progressive_taxation_2"}
 			allowed = {	always = no	}
 			allowed_civil_war = { always = yes }
-			picture = HOL_welfare_state
+			picture = new_taxes
 			modifier = { 
 				production_factory_max_efficiency_factor = -0.03
 				production_factory_efficiency_gain_factor = -0.02
@@ -1423,7 +1421,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_progressive_taxation_3"}
 			allowed = {	always = no	}
 			allowed_civil_war = { always = yes }
-			picture = HOL_welfare_state
+			picture = mixed_economy_1
 			modifier = { 
 				production_factory_efficiency_gain_factor = -0.02
 				production_factory_start_efficiency_factor = 0.08
@@ -1438,7 +1436,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_progressive_taxation_4"}
 			allowed = {	always = no	}
 			allowed_civil_war = { always = yes }
-			picture = HOL_welfare_state
+			picture = mixed_economy_2
 			modifier = { 
 				production_factory_efficiency_gain_factor = -0.02
 				production_factory_start_efficiency_factor = 0.08
@@ -1453,10 +1451,10 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_progressive_agenda"}
 			allowed = {	always = no	}
 			allowed_civil_war = { always = yes }
-			picture = HOL_welfare_state
+			picture = progressive_agenda
 			modifier = { 
 			local_resources_factor = 0.03 
-			stability_weekly = 0.002
+			stability_weekly = 0.01
 			monthly_population = 0.05
 			political_power_gain = 0.02
 			party_popularity_stability_factor = 0.03
@@ -1466,10 +1464,10 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_progressive_agenda_2"}
 			allowed = {	always = no	}
 			allowed_civil_war = { always = yes }
-			picture = HOL_welfare_state
+			picture = progressive_agenda
 			modifier = { 
 			local_resources_factor = 0.03
-			stability_weekly = 0.003
+			stability_weekly = 0.01
 			consumer_goods_factor = -0.01
 			production_factory_efficiency_gain_factor = 0.02
 			monthly_population = 0.05
@@ -1481,11 +1479,11 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_progressive_agenda_3"}
 			allowed = {	always = no	}
 			allowed_civil_war = { always = yes }
-			picture = HOL_welfare_state
+			picture = progressive_society
 			modifier = { 
 			local_resources_factor = 0.03
 			research_speed_factor = 0.05
-			stability_weekly = 0.003
+			stability_weekly = 0.02
 			consumer_goods_factor = -0.01
 			production_factory_efficiency_gain_factor = 0.03
 			production_factory_max_efficiency_factor = 0.05
@@ -1498,11 +1496,11 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_progressive_agenda_4"}
 			allowed = {	always = no	}
 			allowed_civil_war = { always = yes }
-			picture = HOL_welfare_state
+			picture = progressive_society
 			modifier = { 
 			local_resources_factor = 0.03
 			research_speed_factor = 0.05
-			stability_weekly = 0.005
+			stability_weekly = 0.02
 			consumer_goods_factor = -0.03
 			production_factory_efficiency_gain_factor = 0.03
 			production_factory_max_efficiency_factor = 0.05
@@ -1512,11 +1510,28 @@ ideas = {
 			party_popularity_stability_factor = 0.15
 			}
 		}
+		CAL_progressive_agenda_5 = {#Progressive Agenda
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_progressive_agenda_5"}
+			allowed = {	always = no	}
+			allowed_civil_war = { always = yes }
+			picture = progressive_society
+			modifier = { 
+			local_resources_factor = 0.03
+			research_speed_factor = 0.05
+			stability_weekly = 0.02
+			consumer_goods_factor = -0.04
+			production_factory_efficiency_gain_factor = 0.05
+			production_factory_max_efficiency_factor = 0.08
+			monthly_population = 0.05
+			political_power_gain = 0.05
+			party_popularity_stability_factor = 0.2
+			}
+		}
 		CAL_new_nationalism_idea1 = {#New Nationalism
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_new_nationalism_idea1"}
 			allowed = {	always = no	}
 			allowed_civil_war = { always = yes }
-			picture = HOL_welfare_state
+			picture = reform_republicanism
 			modifier = { 
 			forced_surrender_limit = 0.03
 			political_power_gain = 0.02
@@ -1527,12 +1542,12 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_new_nationalism_idea2"}
 			allowed = {	always = no	}
 			allowed_civil_war = { always = yes }
-			picture = HOL_welfare_state
+			picture = reform_republicanism
 			modifier = { 
 				forced_surrender_limit = 0.05
 				production_factory_efficiency_gain_factor = -0.03
 				consumer_goods_factor = -0.02
-				stability_weekly = 0.0015
+				stability_weekly = 0.01
 				political_power_gain = 0.03
 				party_popularity_stability_factor = 0.1
 			}
@@ -1541,13 +1556,13 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_new_nationalism_idea3"}
 			allowed = {	always = no	}
 			allowed_civil_war = { always = yes }
-			picture = HOL_welfare_state
+			picture = republican_justice_1
 			modifier = { 
 				forced_surrender_limit = 0.05
 				production_factory_efficiency_gain_factor = -0.02
 				production_factory_max_efficiency_factor = 0.05
 				consumer_goods_factor = -0.04
-				stability_weekly = 0.002
+				stability_weekly = 0.01
 				political_power_gain = 0.04
 				party_popularity_stability_factor = 0.1
 			}
@@ -1556,12 +1571,12 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_new_nationalism_idea4"}
 			allowed = {	always = no	}
 			allowed_civil_war = { always = yes }
-			picture = HOL_welfare_state
+			picture = republican_justice_2
 			modifier = { 
 				forced_surrender_limit = 0.05
 				production_factory_max_efficiency_factor = 0.05
 				consumer_goods_factor = -0.06
-				stability_weekly = 0.005
+				stability_weekly = 0.01
 				production_speed_infrastructure_factor = 0.1
 				political_power_gain = 0.05
 				party_popularity_stability_factor = 0.12
@@ -1572,12 +1587,12 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_new_nationalism_idea5"}
 			allowed = {	always = no	}
 			allowed_civil_war = { always = yes }
-			picture = HOL_welfare_state
+			picture = new_nationalism
 			modifier = { 
 				forced_surrender_limit = 0.05
 				production_factory_max_efficiency_factor = 0.08
 				consumer_goods_factor = -0.08
-				stability_weekly = 0.008
+				stability_weekly = 0.01
 				production_speed_infrastructure_factor = 0.1
 				production_speed_buildings_factor = 0.1
 				political_power_gain = 0.06
@@ -1589,7 +1604,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_new_nationalism_idea6"}
 			allowed = {	always = no	}
 			allowed_civil_war = { always = yes }
-			picture = HOL_welfare_state
+			picture = new_nationalism
 			modifier = { 
 				forced_surrender_limit = 0.1
 				production_factory_max_efficiency_factor = 0.08
@@ -1606,17 +1621,34 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_new_nationalism_idea7"}
 			allowed = {	always = no	}
 			allowed_civil_war = { always = yes }
-			picture = HOL_welfare_state
+			picture = new_nationalism
 			modifier = { 
 				forced_surrender_limit = 0.15
 				production_factory_max_efficiency_factor = 0.08
 				consumer_goods_factor = -0.1
-				stability_weekly = 0.015
+				stability_weekly = 0.01
 				production_speed_infrastructure_factor = 0.1
 				production_speed_buildings_factor = 0.1
 				political_power_gain = 0.07
 				party_popularity_stability_factor = 0.2
 				mobilization_speed = 0.15
+			}
+		}
+		CAL_new_nationalism_idea8 = {#New Nationalism
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_new_nationalism_idea8"}
+			allowed = {	always = no	}
+			allowed_civil_war = { always = yes }
+			picture = new_nationalism
+			modifier = { 
+				forced_surrender_limit = 0.15
+				production_factory_max_efficiency_factor = 0.1
+				consumer_goods_factor = -0.1
+				stability_weekly = 0.01
+				production_speed_infrastructure_factor = 0.1
+				production_speed_buildings_factor = 0.1
+				political_power_gain = 0.07
+				party_popularity_stability_factor = 0.2
+				mobilization_speed = 0.2
 			}
 		}
 		CAL_worker_capitalism_idea = {#Workers Compensation
@@ -1649,7 +1681,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_public_goods"}
 			allowed = {	always = no	}
 			allowed_civil_war = { always = yes }
-			picture = HOL_welfare_state
+			picture = American_corporatism
 			modifier = { 
 			local_resources = 0.1
 			research_speed_factor = 0.02
@@ -1667,7 +1699,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_public_goods_2"}
 			allowed = {	always = no	}
 			allowed_civil_war = { always = yes }
-			picture = HOL_welfare_state
+			picture = American_corporatism
 			modifier = { 
 			local_resources = 0.1
 			local_manpower = 0.1
@@ -1689,7 +1721,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_radicalism_1"}
 			allowed = {	always = no	}
 			allowed_civil_war = { always = yes }
-			picture = HOL_welfare_state
+			picture = radical_taxation
 			modifier = {
 			consumer_goods_factor = -0.02
 			production_factory_max_efficiency_factor = -0.1
@@ -1702,8 +1734,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_radicalism_2"}
 			allowed = {	always = no	}
 			allowed_civil_war = { always = yes }
-			picture = HOL_welfare_state
-			picture = HOL_welfare_state
+			picture = social_planning_1
 			modifier = {
 			consumer_goods_factor = -0.03
 			production_factory_max_efficiency_factor = -0.08
@@ -1717,7 +1748,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_radicalism_idea3"}
 			allowed = {	always = no	}
 			allowed_civil_war = { always = yes }
-			picture = HOL_welfare_state
+			picture = social_planning_2
 			modifier = {
 				consumer_goods_factor = -0.05
 				production_factory_max_efficiency_factor = -0.06
@@ -1732,7 +1763,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_radicalism_idea4"}
 			allowed = {	always = no	}
 			allowed_civil_war = { always = yes }
-			picture = HOL_welfare_state
+			picture = social_planning_3
 			modifier = {
 				consumer_goods_factor = -0.08
 				production_factory_max_efficiency_factor = -0.04
@@ -1747,7 +1778,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_radicalism_idea5"}
 			allowed = {	always = no	}
 			allowed_civil_war = { always = yes }
-			picture = HOL_welfare_state
+			picture = american_commonwealth_1
 			modifier = {
 				consumer_goods_factor = -0.1
 				production_factory_max_efficiency_factor = -0.02
@@ -1761,12 +1792,30 @@ ideas = {
 				industry = 0.05
 			}
 		}
+		CAL_radicalism_idea6 = {#Radicalism
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_radicalism_idea6"}
+			allowed = {	always = no	}
+			allowed_civil_war = { always = yes }
+			picture = american_commonwealth_2
+			modifier = {
+				consumer_goods_factor = -0.12
+				production_factory_max_efficiency_factor = -0.01
+				production_factory_start_efficiency_factor = 0.15
+				production_factory_efficiency_gain_factor = -0.03
+				monthly_population = 0.12
+				party_popularity_stability_factor = 0.25
+				local_building_slots = 2
+			}
+			research_bonus = {
+				industry = 0.05
+			}
+		}
 		
 		CAL_national_oil_idea = {#National Oil
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_national_oil_idea"}
 			allowed = {	always = no	}
 			allowed_civil_war = { always = yes }
-			picture = HOL_welfare_state
+			picture = national_oil
 			modifier = {
 				consumer_goods_factor = -0.02
 				production_oil_factor = 0.05
@@ -1781,7 +1830,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_national_oil_idea_2"}
 			allowed = {	always = no	}
 			allowed_civil_war = { always = yes }
-			picture = HOL_welfare_state
+			picture = national_ownership_1
 			modifier = {
 				consumer_goods_factor = -0.03
 				production_oil_factor = 0.08
@@ -1798,7 +1847,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_national_oil_idea_3"}
 			allowed = {	always = no	}
 			allowed_civil_war = { always = yes }
-			picture = HOL_welfare_state
+			picture = national_ownership_2
 			modifier = {
 				consumer_goods_factor = -0.03
 				production_oil_factor = 0.1
@@ -1819,7 +1868,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_birth_control"}
 			allowed = {	always = no	}
 			allowed_civil_war = { always = yes }
-			picture = HOL_welfare_state
+			picture = social_engineering
 			modifier = {
 				stability_weekly = 0.01
 				consumer_goods_factor = -0.02
@@ -1846,7 +1895,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_NIAR_idea"}
 			allowed = {	always = no	}
 			allowed_civil_war = { always = yes }
-			picture = HOL_welfare_state
+			picture = local_segregation
 			modifier = {
 				political_power_gain = 0.02
 				command_power_gain = 0.05
@@ -1859,7 +1908,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_negro_bureau_idea"}
 			allowed = {	always = no	}
 			allowed_civil_war = { always = yes }
-			picture = HOL_welfare_state
+			picture = black_education
 			modifier = {
 				local_manpower = 0.08
 				production_factory_efficiency_gain_factor = 0.02
@@ -1874,7 +1923,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_negro_bureau_idea_2"}
 			allowed = {	always = no	}
 			allowed_civil_war = { always = yes }
-			picture = HOL_welfare_state
+			picture = black_education
 			modifier = {
 				local_manpower = 0.1
 				production_factory_efficiency_gain_factor = 0.03
@@ -1920,7 +1969,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_fortress_america_idea_1"}
 			allowed = {	always = no	}
 			allowed_civil_war = { always = yes }
-			picture = HOL_welfare_state
+			picture = generic_isolation
 			modifier = {
 				enemy_justify_war_goal_time = 0.2
 				justify_war_goal_time = 0.1
@@ -1932,7 +1981,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_fortress_america_idea_2"}
 			allowed = {	always = no	}
 			allowed_civil_war = { always = yes }
-			picture = HOL_welfare_state
+			picture = generic_isolation
 			modifier = {
 				enemy_justify_war_goal_time = 0.2
 				justify_war_goal_time = 0.1
@@ -1946,7 +1995,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_spirit_of_monroe_idea"}
 			allowed = {	always = no	}
 			allowed_civil_war = { always = yes }
-			picture = HOL_welfare_state
+			picture = generic_navy
 			modifier = {
 				justify_war_goal_time = -0.05
 				invasion_preparation = -0.05
@@ -1959,7 +2008,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_look_inward_idea"}
 			allowed = {	always = no	}
 			allowed_civil_war = { always = yes }
-			picture = HOL_welfare_state
+			picture = generic_isolation
 			modifier = {
 				justify_war_goal_time = 0.25
 				defensive_war_stability_factor = 0.2
@@ -1975,7 +2024,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_look_inward_idea_2"}
 			allowed = {	always = no	}
 			allowed_civil_war = { always = yes }
-			picture = HOL_welfare_state
+			picture = generic_isolation
 			modifier = {
 				justify_war_goal_time = 0.3
 				defensive_war_stability_factor = 0.2
@@ -1994,7 +2043,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_look_inward_idea_3"}
 			allowed = {	always = no	}
 			allowed_civil_war = { always = yes }
-			picture = HOL_welfare_state
+			picture = generic_isolation
 			modifier = {
 				justify_war_goal_time = 0.3
 				defensive_war_stability_factor = 0.2
@@ -2013,7 +2062,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_look_inward_idea_3"}
 			allowed = {	always = no	}
 			allowed_civil_war = { always = yes }
-			picture = HOL_welfare_state
+			picture = generic_isolation
 			modifier = {
 				justify_war_goal_time = 0.3
 				stability_weekly = 0.002
@@ -2033,7 +2082,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_anti_imperialism_idea"}
 			allowed = {	always = no	}
 			allowed_civil_war = { always = yes }
-			picture = HOL_welfare_state
+			picture = army_cooperation
 			modifier = {
 				guarantee_cost = -0.25
 				opinion_gain_monthly_factor = 0.05

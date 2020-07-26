@@ -361,6 +361,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/ideas/CAL/anti-japanese_sentiment.dds"
 	}
 	spriteType = {
+		name = "GFX_idea_black_education"
+		texturefile = "gfx/interface/ideas/ideas/CAL/black_education.dds"
+	}
+	spriteType = {
 		name = "GFX_idea_brain_trust_1"
 		texturefile = "gfx/interface/ideas/ideas/CAL/brain_trust_1.dds"
 	}
@@ -489,12 +493,16 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/ideas/CAL/local_budgeting_2.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_market_efficiency_1"
-		texturefile = "gfx/interface/ideas/ideas/CAL/market efficiency_1.dds"
+		name = "GFX_idea_local_segregation"
+		texturefile = "gfx/interface/ideas/ideas/CAL/local_segregation.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_market efficiency 2"
-		texturefile = "gfx/interface/ideas/ideas/CAL/market efficiency 2.dds"
+		name = "GFX_idea_market_efficiency_1"
+		texturefile = "gfx/interface/ideas/ideas/CAL/market_efficiency_1.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_market_efficiency 2"
+		texturefile = "gfx/interface/ideas/ideas/CAL/market_efficiency_2.dds"
 	}
 	spriteType = {
 		name = "GFX_idea_mass_dissapearances"
@@ -545,12 +553,44 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/ideas/CAL/nationalized_liquor.dds"
 	}
 	spriteType = {
+		name = "GFX_idea_national_oil"
+		texturefile = "gfx/interface/ideas/ideas/CAL/national_oil.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_national_ownership_1"
+		texturefile = "gfx/interface/ideas/ideas/CAL/national_ownership_1.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_national_ownership_2"
+		texturefile = "gfx/interface/ideas/ideas/CAL/national_ownership_2.dds"
+	}
+	spriteType = {
 		name = "GFX_idea_new_donations"
 		texturefile = "gfx/interface/ideas/ideas/CAL/new_donations.dds"
 	}
 	spriteType = {
+		name = "GFX_idea_new_liberalism"
+		texturefile = "gfx/interface/ideas/ideas/CAL/new_liberalism.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_new_nationalism"
+		texturefile = "gfx/interface/ideas/ideas/CAL/new_nationalism.dds"
+	}
+	spriteType = {
 		name = "GFX_idea_new_sciences"
 		texturefile = "gfx/interface/ideas/ideas/CAL/new_sciences.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_new_securities_1"
+		texturefile = "gfx/interface/ideas/ideas/CAL/new_securities_1.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_new_securities_2"
+		texturefile = "gfx/interface/ideas/ideas/CAL/new_securities_2.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_new_taxes"
+		texturefile = "gfx/interface/ideas/ideas/CAL/new_taxes.dds"
 	}
 	spriteType = {
 		name = "GFX_idea_new_thought"
@@ -577,12 +617,44 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/ideas/CAL/paul_masson.dds"
 	}
 	spriteType = {
+		name = "GFX_idea_public_education"
+		texturefile = "gfx/interface/ideas/ideas/CAL/public_education.dds"
+	}
+	spriteType = {
 		name = "GFX_idea_presidential_war_powers"
 		texturefile = "gfx/interface/ideas/ideas/CAL/presidential_war_powers.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_public_education"
-		texturefile = "gfx/interface/ideas/ideas/CAL/public_education.dds"
+		name = "GFX_idea_progressive_agenda"
+		texturefile = "gfx/interface/ideas/ideas/CAL/progressive_agenda.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_progressive_society"
+		texturefile = "gfx/interface/ideas/ideas/CAL/progressive_society.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_radical_education"
+		texturefile = "gfx/interface/ideas/ideas/CAL/radical_education.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_radical_taxation"
+		texturefile = "gfx/interface/ideas/ideas/CAL/radical_taxation.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_reform_republicanism"
+		texturefile = "gfx/interface/ideas/ideas/CAL/reform_republicanism.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_republican_justice_1"
+		texturefile = "gfx/interface/ideas/ideas/CAL/republican_justice_1.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_republican_justice_2"
+		texturefile = "gfx/interface/ideas/ideas/CAL/republican_justice_2.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_revanchist_propaganda"
+		texturefile = "gfx/interface/ideas/ideas/CAL/revanchist_propaganda.dds"
 	}
 	spriteType = {
 		name = "GFX_idea_shadow_recruitment"
@@ -597,8 +669,20 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/ideas/CAL/socialist_purge.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_socialist_purge"
-		texturefile = "gfx/interface/ideas/ideas/CAL/socialist_purge.dds"
+		name = "GFX_idea_social_engineering"
+		texturefile = "gfx/interface/ideas/ideas/CAL/social_engineering.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_social_planning_1"
+		texturefile = "gfx/interface/ideas/ideas/CAL/social_planning_1.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_social_planning_2"
+		texturefile = "gfx/interface/ideas/ideas/CAL/social_planning_2.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_social_planning_3"
+		texturefile = "gfx/interface/ideas/ideas/CAL/social_planning_3.dds"
 	}
 	spriteType = {
 		name = "GFX_idea_supernaturalism"
