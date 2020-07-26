@@ -635,9 +635,8 @@ ideas = {
 		TEX_minutemen_idea = { #Minutemen
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_minutemen_idea"}
 			allowed = { always = no }
-			available = { has_government = authoritarian_democrat }
 			removal_cost = -1
-			picture = generic_secret_police
+			picture = minutemen
 			modifier = {
 				decryption_factor = 0.05
 				encryption_factor = 0.05
@@ -649,9 +648,8 @@ ideas = {
 		TEX_populist_education_idea = { #Populist Education
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_populist_education_idea"}
 			allowed = { always = no }
-			available = { has_government = authoritarian_democrat }
 			removal_cost = -1
-			picture = generic_secret_police
+			picture = generic_research_increase
 			modifier = {
 				research_speed_factor = 0.05
 			}
@@ -661,7 +659,7 @@ ideas = {
 			allowed = { always = no }
 			available = { has_government = authoritarian_democrat }
 			removal_cost = -1
-			picture = generic_pp_unity_bonus
+			picture = afp_machine
 			modifier = {
 				political_power_gain = 0.02
 				consumer_goods_factor = 0.01
@@ -671,9 +669,8 @@ ideas = {
 		TEX_patronage_machine_idea_2 = { # Longist Machine
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_patronage_machine_idea_2"}
 			allowed = { always = no }
-			available = { has_government = authoritarian_democrat }
 			removal_cost = -1
-			picture = generic_pp_unity_bonus
+			picture = afp_machine
 			modifier = {
 				political_power_gain = 0.05
 				conscription = 0.01
@@ -686,9 +683,8 @@ ideas = {
 		TEX_national_political_machine_idea = { #National Political machine
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_national_political_machine_idea"}
 			allowed = { always = no }
-			available = { has_government = authoritarian_democrat }
 			removal_cost = -1
-			picture = generic_pp_unity_bonus
+			picture = national_political_machine
 			modifier = {
 				political_power_gain = 0.1
 				conscription = 0.02
@@ -704,7 +700,7 @@ ideas = {
 			allowed = { always = no }
 			available = { has_government = authoritarian_democrat }
 			removal_cost = -1
-			picture = generic_pp_unity_bonus
+			picture = wealth_cap
 			modifier = {
 				consumer_goods_factor = -0.02
 				political_power_gain = 0.05
@@ -718,9 +714,8 @@ ideas = {
 		TEX_townsend_plan_idea = { # Townsend Plan
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_townsend_plan_idea"}
 			allowed = { always = no }
-			available = { has_government = authoritarian_democrat }
 			removal_cost = -1
-			picture = generic_pp_unity_bonus
+			picture = townsend_plan
 			modifier = {
 				consumer_goods_factor = -0.05
 				party_popularity_stability_factor = 0.1
@@ -736,9 +731,8 @@ ideas = {
 		TEX_founders_idea = { # Founders Idea
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_founders_idea"}
 			allowed = { always = no }
-			available = { has_government = authoritarian_democrat }
 			removal_cost = -1
-			picture = generic_pp_unity_bonus
+			picture = citizen_dignities
 			modifier = {
 				consumer_goods_factor = -0.1
 				party_popularity_stability_factor = 0.15
@@ -756,9 +750,8 @@ ideas = {
 		TEX_every_man_a_king_idea = { # Every Man A King
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_every_man_a_king_idea"}
 			allowed = { always = no }
-			available = { has_government = authoritarian_democrat }
 			removal_cost = -1
-			picture = generic_pp_unity_bonus
+			picture = every_man_a_king
 			modifier = {
 				consumer_goods_factor = -0.15
 				party_popularity_stability_factor = 0.25
@@ -777,9 +770,8 @@ ideas = {
 		TEX_mixed_economy_idea = { #Mixed Economy
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea COR_townsend_plan_ideas"}
 			allowed = { always = no }
-			available = { has_government = authoritarian_democrat }
 			removal_cost = -1
-			picture = generic_pp_unity_bonus
+			picture = mixed_econ
 			modifier = {
 				consumer_goods_factor = -0.02
 				production_factory_efficiency_gain_factor = 0.02
@@ -789,9 +781,8 @@ ideas = {
 		TEX_mixed_economy_idea_2 = { #Mixed Economy 2
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea COR_townsend_plan_ideas"}
 			allowed = { always = no }
-			available = { has_government = authoritarian_democrat }
 			removal_cost = -1
-			picture = generic_pp_unity_bonus
+			picture = mixed_econ
 			modifier = {
 				consumer_goods_factor = -0.04
 				monthly_population = 0.01
@@ -803,9 +794,8 @@ ideas = {
 		TEX_keynesian_idea = { # Keynesian Economy
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea COR_townsend_plan_ideas"}
 			allowed = { always = no }
-			available = { has_government = authoritarian_democrat }
 			removal_cost = -1
-			picture = generic_pp_unity_bonus
+			picture = keynesian_econ
 			modifier = {
 				consumer_goods_factor = -0.08
 				monthly_population = 0.02
@@ -819,9 +809,8 @@ ideas = {
 		TEX_partially_planned_idea = { #Partially Planned
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea COR_townsend_plan_ideas"}
 			allowed = { always = no }
-			available = { has_government = authoritarian_democrat }
 			removal_cost = -1
-			picture = generic_pp_unity_bonus
+			picture = partially_planned
 			modifier = {
 				local_resources = 0.03
 				production_factory_max_efficiency_factor = 0.03
@@ -834,9 +823,8 @@ ideas = {
 		TEX_partially_planned_idea_2 = { #Partially Planned
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_partially_planned_idea_2"}
 			allowed = { always = no }
-			available = { has_government = authoritarian_democrat }
 			removal_cost = -1
-			picture = generic_pp_unity_bonus
+			picture = partially_planned
 			modifier = {
 				consumer_goods_factor = -0.03
 				local_resources = 0.05
@@ -851,9 +839,8 @@ ideas = {
 		TEX_labor_economy_idea = { #Labor Economy
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea COR_townsend_plan_ideas"}
 			allowed = { always = no }
-			available = { has_government = authoritarian_democrat }
 			removal_cost = -1
-			picture = generic_pp_unity_bonus
+			picture = labor_econ
 			modifier = {
 				consumer_goods_factor = -0.06
 				local_resources = 0.08
@@ -870,9 +857,8 @@ ideas = {
 		TEX_share_the_wealth_idea = { #Share the Wealth
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_share_the_wealth_idea"}
 			allowed = { always = no }
-			available = { has_government = authoritarian_democrat }
 			removal_cost = -1
-			picture = generic_pp_unity_bonus
+			picture = share_the_wealt
 			modifier = {
 				consumer_goods_factor = -0.02
 				political_power_gain = 0.03
@@ -883,7 +869,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_workers_bill"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = generic_army_war_college
+			picture = f_l_bill
 			modifier = { 
 			consumer_goods_factor = -0.03
 			stability_weekly = 0.001
@@ -895,7 +881,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_pacifism"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = generic_army_war_college
+			picture = f_l_pacifism
 			modifier = { 
 			consumer_goods_factor = -0.05
 			stability_weekly = 0.002
@@ -911,7 +897,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_wisconsin_idea_idea"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = generic_army_war_college
+			picture = wisconsin_idea
 			modifier = { 
 			research_speed_factor = 0.1
 			party_popularity_stability_factor = 0.15
@@ -922,7 +908,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_farmer_labor_alliance_idea"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = generic_army_war_college
+			picture = farmer_labor_alliance
 			modifier = { 
 			consumer_goods_factor = -0.08
 			stability_weekly = 0.005
@@ -939,7 +925,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_modern_farms_idea"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = generic_army_war_college
+			picture = modern_farms
 			modifier = { 
 			consumer_goods_factor = -0.12
 			stability_weekly = 0.008
@@ -957,7 +943,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_empowered_executive_idea"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = generic_army_war_college
+			picture = empowered_president
 			modifier = { 
 			stability_weekly = 0.002
 			political_power_gain = 0.06
@@ -968,7 +954,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_empowered_executive_idea_2"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = generic_army_war_college
+			picture = presidential_powers
 			modifier = { 
 			stability_weekly = 0.005
 			political_power_gain = 0.05
@@ -980,7 +966,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_empowered_executive_idea_3"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = generic_army_war_college
+			picture = american_democracy
 			modifier = { 
 			stability_weekly = 0.01
 			consumer_goods_factor = -0.02
@@ -995,9 +981,8 @@ ideas = {
 		TEX_greenback_currency_idea = { #Greenback Currency
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_greenback_currency_idea"}
 			allowed = { always = no }
-			available = { has_government = authoritarian_democrat }
 			removal_cost = -1
-			picture = generic_army_war_college
+			picture = greenbacks
 			modifier = { 
 			political_power_gain = 0.03
 			stability_weekly = 0.001
@@ -1014,7 +999,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_counter_terrorism_idea"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = generic_victors_of_ww1
+			picture = counter_terrorism
 			modifier = {
 				war_support_weekly = 0.01 
 				encryption_factor = 0.03
@@ -1026,7 +1011,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_counter_terrorism_idea_2"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = generic_victors_of_ww1
+			picture = reformed_fbi
 			modifier = {
 				war_support_weekly = 0.01
 				political_power_gain = 0.05
@@ -1041,7 +1026,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_centralized_command_structure"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = generic_victors_of_ww1
+			picture = vertical_command_structure
 			modifier = {
 				political_power_gain = 0.03
 				stability_weekly = 0.001
@@ -1058,7 +1043,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_centralized_command_structure_2"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = generic_victors_of_ww1
+			picture = national_silver_legion
 			modifier = {
 				experience_gain_army = 0.01
 				political_power_gain = 0.05
@@ -1078,7 +1063,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_decentralized_command_structure"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = generic_victors_of_ww1
+			picture = new_command_structure
 			modifier = {
 				political_power_gain = 0.01
 				stability_weekly = 0.001
@@ -1099,7 +1084,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_decentralized_command_structure_2"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = generic_victors_of_ww1
+			picture = localist_legion
 			modifier = {
 				political_power_gain = 0.02
 				stability_weekly = 0.002
@@ -1121,7 +1106,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_christian_commonwealth_idea"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = generic_victors_of_ww1
+			picture = christian_commonwealth
 			modifier = {
 				political_power_gain = 0.02
 				stability_weekly = 0.003
@@ -1138,7 +1123,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_christian_commonwealth_idea_2"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = generic_victors_of_ww1
+			picture = christian_commonwealth
 			modifier = {
 				political_power_gain = 0.02
 				stability_weekly = 0.008
@@ -1157,7 +1142,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_christian_commonwealth_idea_3"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = generic_victors_of_ww1
+			picture = new_america
 			modifier = {
 				political_power_gain = 0.04
 				stability_weekly = 0.01
@@ -1176,7 +1161,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_gallahad_fellowship_idea"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = generic_victors_of_ww1
+			picture = gallahad_fellowship
 			modifier = {
 				political_power_gain = 0.04
 				recruitable_population = 0.01
@@ -1188,9 +1173,8 @@ ideas = {
 		TEX_universal_education_idea = { #Christian Education
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_universal_education_idea"}
 			allowed = { always = no }
-			available = { has_government = social_conservative }
 			removal_cost = -1
-			picture = neutrality_idea
+			picture = wisconsin_idea
 			modifier = {
 				research_speed_factor = 0.08
 				stability_weekly = 0.001
@@ -1202,7 +1186,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_referendum_voting_idea"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = neutrality_idea
+			picture = referendum_voting
 			modifier = {
 				stability_weekly = 0.001
 				party_popularity_stability_factor = 0.05
@@ -1216,7 +1200,7 @@ ideas = {
 			allowed = { always = no }
 			available = { has_government = social_conservative }
 			removal_cost = -1
-			picture = neutrality_idea
+			picture = silver_rangers
 			modifier = {
 				stability_weekly = 0.002
 				political_power_gain = 0.05
