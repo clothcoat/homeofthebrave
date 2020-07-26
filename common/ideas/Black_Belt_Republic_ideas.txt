@@ -38,7 +38,7 @@ ideas = {
 				war_support_weekly = 0.001
 			}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = crusaders
 		}
 		BBR_children_of_the_sun_idea = { #Children of the Sun
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_children_of_the_sun_idea"}
@@ -54,7 +54,7 @@ ideas = {
 				war_support_factor	= 0.1
 			}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = children_of_sun
 		}
 		BBR_the_black_pharoah_idea = { #The Black Pharoah
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_the_black_pharoah_idea"}
@@ -69,7 +69,7 @@ ideas = {
 				stability_weekly_factor	= 0.003
 			}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = black_pharaoh
 		}
 		BBR_the_black_pharoah_idea_2 = { #The Black Pharoah
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_the_black_pharoah_idea_2"}
@@ -85,7 +85,7 @@ ideas = {
 				stability_weekly_factor	= 0.005
 			}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = black_pharaoh
 		}
 		BBR_the_black_pharoah_idea_3 = { #The Black Pharoah
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_the_black_pharoah_idea_3"}
@@ -103,7 +103,7 @@ ideas = {
 				justify_war_goal_time = -0.5
 			}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = black_pharaoh
 		}
 	
 		### Red Totalist Path ###
@@ -123,7 +123,7 @@ ideas = {
 				out_of_supply_factor = 0.01
 			}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = top_down_autonomy
 		}
 		BBR_league_of_revolutionary_struggle_idea = { #League of Revolutionary Struggle
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_league_of_revolutionary_struggle_idea"}
@@ -142,7 +142,7 @@ ideas = {
 				send_volunteers_tension	= -0.5
 			}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = league_of_rev_struggle
 		}
 		BBR_a_party_with_a_state_idea = { #A Party with a State
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_a_party_with_a_state_idea"}
@@ -158,7 +158,7 @@ ideas = {
 				production_speed_buildings_factor = 0.05
 			}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = vanguard_party
 		}
 		BBR_a_party_with_a_state_idea_2 = { #All to the Party
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_a_party_with_a_state_idea_2"}
@@ -175,7 +175,7 @@ ideas = {
 				command_power_gain_mult	= 0.05
 			}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = all_for_the_party
 		}
 		BBR_haywood_economics = { #All to the Party
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_haywood_economics"}
@@ -196,7 +196,7 @@ ideas = {
 				monthly_population	= -0.1
 			}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = revolutionary_economy
 		}
 		BBR_haywood_economics_2 = { #All to the Party
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_haywood_economics_2"}
@@ -217,7 +217,7 @@ ideas = {
 				monthly_population	= 0.05
 			}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = revolutionary_economy
 		}
 		BBR_total_radicalism = { #All to the Party
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_total_radicalism"}
@@ -235,7 +235,7 @@ ideas = {
 				party_popularity_stability_factor = 0.15
 			}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = total_radicalism
 		}
 		BBR_workers_market_idea = { #Workers Market
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_workers_market_idea"}
@@ -252,7 +252,7 @@ ideas = {
 			monthly_population = 0.05
 			}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = workers_market
 		}
 		BBR_socialist_civic_identity_idea = { #Social Civic identity
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_socialist_civic_identity_idea"}
@@ -269,7 +269,7 @@ ideas = {
 			
 			}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = socialist_civic_identity
 		}
 		
 	### Syndie Path ###
@@ -289,7 +289,7 @@ ideas = {
 			party_popularity_stability_factor = 0.05
 			}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = equal_distribution
 		}
 		BBR_workers_coupons_idea = { #Equality of Wealth
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_workers_coupons_idea"}
@@ -306,7 +306,7 @@ ideas = {
 			party_popularity_stability_factor = 0.05
 			}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = workers_coupon
 		}
 		BBR_red_militias_idea = { #Equality of Wealth
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_red_militias_idea"}
@@ -326,7 +326,7 @@ ideas = {
 			army_core_attack_factor	= 0.05
 			}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = syndie_militias
 		}
 		BBR_accelerate_integration_idea = { #Equality of Wealth
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_accelerate_integration_idea"}
@@ -335,7 +335,6 @@ ideas = {
 				has_government = syndicalist
 			}
 			modifier = {
-			party_popularity_stability_factor = 0.1
 			stability_factor = 0.02
 			conscription_factor = 0.02
 			research_speed_factor = 0.05
@@ -356,7 +355,7 @@ ideas = {
 			decryption = 0.03			
 			}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = internationale_help
 		}
 	### Rad-Soc Path ###
 		BBR_solidarity_economics_idea = { #Solidarity Economics
@@ -375,7 +374,7 @@ ideas = {
 			party_popularity_stability_factor = 0.05
 			}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = solidarism
 		}
 		BBR_solidarity_economics_idea_2 = { #Solidarity Economics
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_solidarity_economics_idea_2"}
@@ -393,7 +392,7 @@ ideas = {
 			party_popularity_stability_factor = 0.1
 			}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = solidarism_2
 		}
 		BBR_solidarity_economics_idea_3 = { #Solidarity Economics
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_solidarity_economics_idea_3"}
@@ -413,7 +412,7 @@ ideas = {
 			party_popularity_stability_factor = 0.15
 			}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = solidarism_3
 		}
 		BBR_solidarity_economics_idea_4 = { #Solidarity Economics
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_solidarity_economics_idea_4"}
@@ -435,7 +434,7 @@ ideas = {
 			party_popularity_stability_factor = 0.20
 			}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = solidarism_4
 		}
 		BBR_talented_tenth_idea = { #Talented Tenth
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_talented_tenth_idea"}
@@ -450,7 +449,7 @@ ideas = {
 			global_building_slots = 1
 			}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = talented_10th
 		}
 		BBR_freethought_societies_idea = { #Freethought Societies
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_freethought_societies_idea"}
@@ -467,7 +466,7 @@ ideas = {
 			party_popularity_stability_factor = 0.05
 			}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = free_thought_societies
 		}
 		BBR_freethought_societies_idea_2 = { #Freethought Societies
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_freethought_societies_idea_2"}
@@ -485,7 +484,7 @@ ideas = {
 			party_popularity_stability_factor = 0.1
 			}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = free_thought_societies
 		}
 		BBR_birth_control_idea = { #Birth Control
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_birth_control_idea"}
@@ -502,7 +501,7 @@ ideas = {
 			war_stability_factor = 0.05
 			}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = birth_control
 		}
 	### Soc-Dem Path ###
 		BBR_freedom_budget_idea = { #Worker Aid
@@ -520,7 +519,7 @@ ideas = {
 			party_popularity_stability_factor = -0.05
 			}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = freedom_budget
 		}
 		BBR_freedom_budget_2 = { #Worker Aid
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_freedom_budget_2"}
@@ -540,7 +539,7 @@ ideas = {
 			party_popularity_stability_factor = 0.05
 			}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = freedom_budget
 		}
 		BBR_freedom_budget_3 = { #Freedom Budget
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_freedom_budget_3"}
@@ -561,7 +560,7 @@ ideas = {
 			party_popularity_stability_factor = 0.1
 			}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = freedom_budget
 		}
 		BBR_freedom_budget_4 = { #Freedom Budget
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_freedom_budget_4"}
@@ -581,7 +580,7 @@ ideas = {
 			party_popularity_stability_factor = 0.15
 			}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = freedom_budget
 		}
 		BBR_freedom_budget_5 = { #Freedom Budget
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_freedom_budget_5"}
@@ -601,7 +600,7 @@ ideas = {
 			party_popularity_stability_factor = 0.2
 			}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = freedom_budget
 		}
 		BBR_living_wage_idea = { #Living Wage
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_living_wage_idea"}
@@ -619,7 +618,7 @@ ideas = {
 			surrender_limit	= 0.05
 			}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = wage_floors
 		}
 		BBR_living_wage_idea_2 = { #Fair Employment
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_living_wage_idea_2"}
@@ -638,7 +637,7 @@ ideas = {
 			surrender_limit	= 0.1
 			}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = wage_floors
 		}
 		BBR_civil_rights_act_idea = { #Civil Rights
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_civil_rights_act_idea"}
@@ -656,7 +655,7 @@ ideas = {
 			surrender_limit	= 0.1
 			}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = civil_rights_act
 		}
 	### Market Liberal Path ###
 		BBR_expand_tuskeegee_idea = { #Expand Tuskeegee
@@ -677,7 +676,7 @@ ideas = {
 			production_factory_max_efficiency_factor = 0.02
 			}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = expand_tuskegee
 		}
 		BBR_bookerite_education = { #Expand Tuskeegee
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_bookerite_education"}
@@ -697,7 +696,7 @@ ideas = {
 			production_factory_max_efficiency_factor = 0.05
 			}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = bookerite_education
 		}
 		BBR_bookerite_machine_idea = { #GOP Machine
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_bookerite_machine_idea"}
@@ -719,7 +718,7 @@ ideas = {
 			consumer_goods_factor = 0.01
 			}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = new_republican_machine
 		}
 		BBR_nnbl_idea = { #Expand Tuskeegee
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_nnbl_idea"}
@@ -740,7 +739,7 @@ ideas = {
 			production_factory_max_efficiency_factor = 0.05
 			}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = nnbl_1
 		}
 		BBR_nnbl_idea_2 = { #Expand Tuskeegee
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_nnbl_idea_2"}
@@ -764,7 +763,7 @@ ideas = {
 			party_popularity_stability_factor = 0.05
 			}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = nnbl_2
 		}
 		BBR_nnbl_idea_3 = { #NNBL Idea
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_nnbl_idea_3"}
@@ -788,7 +787,7 @@ ideas = {
 			party_popularity_stability_factor = 0.1
 			}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = nnbl_3
 		}
 		BBR_entente_trade_idea = { #NNBL Idea
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_entente_trade_idea"}
@@ -811,7 +810,7 @@ ideas = {
 			
 			}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = generic_trade
 		}
 
 	### Soc-Lib Path ###
@@ -828,7 +827,7 @@ ideas = {
 			party_popularity_stability_factor = 0.05
 			}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = fairer_taxes
 		}
 		BBR_wage_floors_idea = { #Wage Floors
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_wage_floors_idea"}
@@ -843,7 +842,7 @@ ideas = {
 			party_popularity_stability_factor = 0.1
 			}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = wage_floors
 		}
 		BBR_minor_farm_aid = { #Wage Floors
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_minor_farm_aid"}
@@ -858,7 +857,7 @@ ideas = {
 			party_popularity_stability_factor = 0.05
 			}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = rural_aid
 		}
 		BBR_elderly_support_idea = { #Wage Floors
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_elderly_support_idea"}
@@ -871,7 +870,7 @@ ideas = {
 			party_popularity_stability_factor = 0.05
 			}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = pensions
 		}
 		BBR_vet_support_idea = { #Wage Floors
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_vet_support_idea"}
@@ -888,7 +887,7 @@ ideas = {
 			party_popularity_stability_factor = 0.05
 			}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = veteran_support
 		}
 		
 	### Soc Con Path ###
@@ -910,7 +909,7 @@ ideas = {
 			party_popularity_stability_factor = 0.05
 			}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = cash_only_exchange
 		}
 		BBR_economic_independence_idea = { #Economic Independence
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_economic_independence_idea"}
@@ -930,7 +929,7 @@ ideas = {
 			party_popularity_stability_factor = 0.1
 			}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = economic_independence
 		}
 		BBR_economic_independence_idea_2 = { #Economic Independence 2
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_economic_independence_idea_2"}
@@ -950,7 +949,7 @@ ideas = {
 			party_popularity_stability_factor = 0.2
 			}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = economic_independence_2
 		}
 		BBR_modesty_codes_idea = { #Modesty Codes
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_modesty_codes_idea"}
@@ -966,7 +965,7 @@ ideas = {
 			party_popularity_stability_factor = 0.2
 			}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = modesty_codes
 		}
 		BBR_modesty_codes_idea_2 = { #Modesty Codes
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_modesty_codes_idea_2"}
@@ -984,7 +983,7 @@ ideas = {
 			party_popularity_stability_factor = 0.2
 			}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = modesty_codes
 		}
 		BBR_ipm_idea = { #International Peace Movement
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_ipm_idea"}
@@ -1003,7 +1002,7 @@ ideas = {
 			offensive_war_stability_factor = -0.05
 			}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = international_peace_movement
 		}
 		BBR_interracial_faith = { #Interracial Faith
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_interracial_faith"}
@@ -1018,7 +1017,7 @@ ideas = {
 			party_popularity_stability_factor = 0.05
 			}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = interracial_faith
 		}
 		BBR_interracial_faith_2 = { #Interracial Faith
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_interracial_faith_2"}
@@ -1037,7 +1036,7 @@ ideas = {
 			weekly_manpower	= 20
 			}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = interracial_faith
 		}
 
 	### Auth-Dem Path ###
@@ -1056,7 +1055,7 @@ ideas = {
 			party_popularity_stability_factor = 0.05
 			}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = workers_market
 		}
 		afp_aid_idea = { #Rural Aid
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea afp_aid_idea"}
@@ -1074,7 +1073,7 @@ ideas = {
 			party_popularity_stability_factor = 0.05
 			}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = rural_aid
 		}
 		BBR_citizen_recruitment = { #Mass Recruitment
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_citizen_recruitment"}
@@ -1089,7 +1088,7 @@ ideas = {
 				war_support_weekly = 0.005
 			}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = citizen_conscription
 		}
 		BBR_citizen_army = { #Mass Recruitment
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_citizen_army"}
@@ -1107,7 +1106,7 @@ ideas = {
 				war_support_weekly = 0.01
 			}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = citizen_army
 		}
 		BBR_citizen_army_2 = { #Mass Recruitment
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_citizen_army_2"}
@@ -1128,7 +1127,7 @@ ideas = {
 				party_popularity_stability_factor = 0.1
 			}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = citizen_republic
 		}
 		BBR_fair_play_idea = { #Fair Play
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_fair_play_idea"}
@@ -1145,7 +1144,7 @@ ideas = {
 			production_factory_efficiency_gain_factor = 0.03
 			}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = equal_opportunity_economy
 		}
 		BBR_fair_play_idea_2 = { #Fair Play
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_fair_play_idea_2"}
@@ -1166,7 +1165,7 @@ ideas = {
 			party_popularity_stability_factor = 0.05
 			}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = paternalistic_economy
 		}
 		BBR_fair_play_idea_3 = { #Fair Play
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_fair_play_idea_3"}
@@ -1187,14 +1186,14 @@ ideas = {
 			party_popularity_stability_factor = 0.1
 			}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = rooseveltian_economy
 		}
 	### Pat Aut Path ###
 		BBR_african_legion_idea = { #Mass Recruitment
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_african_legion_idea"}
 			available = {
 				tag = BBR
-				has_government = authoritarian_democrat
+				has_government = paternal_autocrat
 			}
 			modifier = {
 				training_time_army_factor = -0.1
@@ -1210,13 +1209,13 @@ ideas = {
 				military_leader_cost_factor = -0.1
 			}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = afrikan_legion
 		}
 		BBR_african_legion_idea_2 = { #Mass Recruitment
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_african_legion_idea_2"}
 			available = {
 				tag = BBR
-				has_government = authoritarian_democrat
+				has_government = paternal_autocrat
 			}
 			modifier = {
 				training_time_army_factor = -0.10
@@ -1234,13 +1233,13 @@ ideas = {
 				military_leader_cost_factor = -0.1
 			}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = afrikan_legion
 		}
 		BBR_black_separatism_idea = { #Mass Recruitment
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_black_separatism_idea"}
 			available = {
 				tag = BBR
-				has_government = authoritarian_democrat
+				has_government = paternal_autocrat
 			}
 			modifier = {
 				consumer_goods_factor = -0.05
@@ -1256,13 +1255,13 @@ ideas = {
 				conversion_cost_civ_to_mil_factor = -0.1
 			}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = separation
 		}
 		BBR_black_separatism_idea_2 = { #Mass Recruitment
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_black_separatism_idea_2"}
 			available = {
 				tag = BBR
-				has_government = authoritarian_democrat
+				has_government = paternal_autocrat
 			}
 			modifier = {
 				consumer_goods_factor = -0.05
@@ -1279,13 +1278,13 @@ ideas = {
 				conversion_cost_civ_to_mil_factor = -0.15
 			}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = separation
 		}
 		BBR_black_star_line_idea = { #Mass Recruitment
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_black_star_line_idea"}
 			available = {
 				tag = BBR
-				has_government = authoritarian_democrat
+				has_government = paternal_autocrat
 			}
 			modifier = {
 				consumer_goods_factor = -0.01
@@ -1295,13 +1294,14 @@ ideas = {
 				naval_attrition	= -0.05
 			}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = black_star_line_spirit
 		}
 	### Nat Pop Path ###
 		BBR_fruit_of_islam_idea = { #Fruit of Islam
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_fruit_of_islam_idea"}
 			available = {
 				tag = BBR
+				has_government = national_populist
 			}
 			modifier = {
 				training_time_army_factor = -0.05
@@ -1316,13 +1316,13 @@ ideas = {
 				army_core_attack_factor	= 0.03
 			}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = fruit_of_islam
 		}
 		BBR_black_society = { #Blacks Only
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_black_society"}
 			available = {
 				tag = BBR
-				has_government = authoritarian_democrat
+				has_government = national_populist
 			}
 			modifier = {
 				consumer_goods_factor = -0.05
@@ -1336,13 +1336,13 @@ ideas = {
 				defensive_war_stability_factor = 0.05
 			}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = racial_purity
 		}
 		BBR_islamic_schools_idea = { #Islamic Schools
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_islamic_schools_idea"}
 			available = {
 				tag = BBR
-				has_government = authoritarian_democrat
+				has_government = national_populist
 			}
 			modifier = {
 				research_speed_factor = 0.02
@@ -1356,13 +1356,13 @@ ideas = {
 				breakthrough_factor	= 0.01
 			}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = islamic_schools
 		}
 		BBR_islamic_schools_idea_2 = { #Islamic Schools
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_islamic_schools_idea_2"}
 			available = {
 				tag = BBR
-				has_government = authoritarian_democrat
+				has_government = national_populist
 			}
 			modifier = {
 				research_speed_factor = 0.02
@@ -1376,13 +1376,13 @@ ideas = {
 				breakthrough_factor	= 0.01
 			}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = noi_education
 		}
 		BBR_black_economics_idea = { #Islamic Schools
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_black_economics_idea"}
 			available = {
 				tag = BBR
-				has_government = authoritarian_democrat
+				has_government = national_populist
 			}
 			modifier = {
 				political_power_gain = 0.03
@@ -1394,13 +1394,13 @@ ideas = {
 				party_popularity_stability_factor = 0.1
 			}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = communal_econ
 		}
 		BBR_the_prophet_idea = { #Islamic Schools
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_the_prophet_idea"}
 			available = {
 				tag = BBR
-				has_government = authoritarian_democrat
+				has_government = national_populist
 			}
 			modifier = {
 				political_power_gain = 0.15
@@ -1411,7 +1411,7 @@ ideas = {
 				war_support_weekly = 0.005
 			}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = prophet
 		}
 		### Military Paths ###
 		BBR_davis_plan_idea = { #Davis Plan
@@ -1425,7 +1425,7 @@ ideas = {
 				breakthrough_factor	= 0.03
 				}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = davis_plan_spirit
 		}
 		BBR_davis_plan_idea_2 = { #Davis Plan
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_davis_plan_idea_2"}
@@ -1456,7 +1456,7 @@ ideas = {
 				}
 			}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = davis_plan_spirit
 		}
 		BBR_davis_plan_idea_3 = { #Davis Plan
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_davis_plan_idea_3"}
@@ -1479,7 +1479,7 @@ ideas = {
 				}
 			}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = davis_plan_spirit
 		}
 		BBR_young_plan_idea = { #Officer Training
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_young_plan_idea"}
@@ -1496,7 +1496,7 @@ ideas = {
 				army_org = 0.02
 			}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = young_plan_spirit
 		}
 		BBR_young_plan_idea_2 = { #Officer Training
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_young_plan_idea_2"}
@@ -1515,7 +1515,7 @@ ideas = {
 				army_org = 0.02
 			}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = young_plan_spirit
 		}
 		BBR_young_plan_idea_3 = { #Officer Training
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_young_plan_idea_3"}
@@ -1536,7 +1536,7 @@ ideas = {
 				army_org = 0.1
 			}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = young_plan_spirit
 		}
 		BBR_page_doctrine_idea = { #Page Doctrine
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_page_doctrine_idea"}
@@ -1549,7 +1549,7 @@ ideas = {
 				training_time_army_factor = -0.05
 			}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = page_plan_spirit
 		}
 		BBR_page_doctrine_idea_2 = { #Page Doctrine
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_page_doctrine_idea_2"}
@@ -1563,7 +1563,7 @@ ideas = {
 				training_time_army_factor = -0.05
 			}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = page_plan_spirit
 		}
 		BBR_page_doctrine_idea_3 = { #Page Doctrine
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_page_doctrine_idea_3"}
@@ -1580,7 +1580,7 @@ ideas = {
 				pocket_penalty = -0.1
 			}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = page_plan_spirit
 		}
 		BBR_militia_support = { #Page Doctrine
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_militia_support"}
@@ -1596,7 +1596,7 @@ ideas = {
 				resistance_activity = -0.1
 			}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = militia_support
 		}
 		BBR_militia_support_2 = { #Page Doctrine
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_militia_support_2"}
@@ -1613,7 +1613,7 @@ ideas = {
 				resistance_activity = -0.1
 			}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = militia_support
 		}
 		BBR_officer_training_idea = { #Officer Training
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_officer_training_idea"}
@@ -1629,7 +1629,7 @@ ideas = {
 				army_morale	= 0.02
 			}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = officer_training
 		}
 		BBR_cavalry_bonus = { #Officer Training
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_cavalry_bonus"}
@@ -1644,14 +1644,14 @@ ideas = {
 			equipment_bonus = {
 				cavalry_equipment = {
 					attack = 0.03
-					defence = 0.03
+					defense = 0.03
 					maximum_speed = 0.1
 					build_cost_ic = -0.1
 					instant = yes
 				}
 			}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = cavalry_focus
 		}
 		BBR_flipper_doctrine_idea = { #Flipper Doctrine
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_flipper_doctrine_idea"}
@@ -1666,7 +1666,7 @@ ideas = {
 				production_lack_of_resource_penalty_factor = 0.05
 				}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = flipper_plan_spirit
 		}
 		BBR_flipper_doctrine_idea_2 = { #Flipper Doctrine
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_flipper_doctrine_idea_2"}
@@ -1690,7 +1690,7 @@ ideas = {
 				}
 			}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = flipper_plan_spirit
 		}
 		BBR_flipper_doctrine_idea_3 = { #Flipper Doctrine
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_flipper_doctrine_idea_3"}
@@ -1716,7 +1716,7 @@ ideas = {
 					}
 				}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = flipper_plan_spirit
 		}
 		BBR_military_engineers_idea = { #Flipper Doctrine
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_military_engineers_idea"}
@@ -1741,7 +1741,7 @@ ideas = {
 					}
 				}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = military_engineering
 		}
 		BBR_military_engineers_idea_2 = { #Flipper Doctrine
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_military_engineers_idea_2"}
@@ -1769,7 +1769,7 @@ ideas = {
 					}
 				}
 			removal_cost = -1
-			picture = USA_fighting_for_america
+			picture = military_engineering
 		}
 	### Companies ###
 
