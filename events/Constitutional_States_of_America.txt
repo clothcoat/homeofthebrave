@@ -590,7 +590,7 @@ country_event = { # Hiram Wesley Evans killed!
 		hidden_effect = {
 			create_country_leader = {
 				name = "D.C. Stephenson"
-				desc = "POLITICSDC_STEPHENSON_DESC"
+				desc = "POLITICS_DC_STEPHENSON_DESC"
 				picture = "gfx/leaders/CUS/d_c_stephenson.tga"
 				expire = "1965.1.1"
 				ideology = national_populist_subtype
@@ -1201,6 +1201,20 @@ country_event = { # Evans Elected
 		name = constate.23.a
 		add_stability = 0.05
 		add_political_power = 25
+		hidden_effect = {
+			create_country_leader = {
+				name = "Hiram Wesley Evans"
+				desc = "POLITICS_HIRAM_WESLEY_EVANS_DESC"
+				picture = "gfx/leaders/CUS/Hiram_Evans_suit.tga"
+				expire = "1965.1.1"
+				ideology = national_populist_subtype
+				traits = { popular_figurehead }
+			}
+		}
+		set_politics = {
+			ruling_party = national_populist
+			elections_allowed = no
+		}
 	}
 }
 
