@@ -3762,8 +3762,8 @@ country_event = { # Reed and Long reinforce militias
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.6301"}
 	title = ustates.6301.t
 	desc = ustates.6301.d
-	picture = GFX_report_event_usa_macarthur_speech
-
+	picture = GFX_report_event_generic_rally2
+	
 	is_triggered_only = yes
 
 	fire_only_once = yes
@@ -3787,7 +3787,6 @@ country_event = { # Bankers Resist!
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.6302"}
 	title = ustates.6302.t
 	desc = ustates.6302.d
-	picture = GFX_report_event_usa_macarthur_speech
 
 	is_triggered_only = yes
 
@@ -3809,7 +3808,6 @@ country_event = { # Penalizing the corrupt
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.6303"}
 	title = ustates.6303.t
 	desc = ustates.6303.d
-	picture = GFX_report_event_usa_macarthur_speech
 
 	is_triggered_only = yes
 
@@ -3831,7 +3829,6 @@ country_event = { # Rockefeller Investigated
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.6304"}
 	title = ustates.6304.t
 	desc = ustates.6304.d
-	picture = GFX_report_event_usa_macarthur_speech
 
 	is_triggered_only = yes
 
@@ -3850,7 +3847,6 @@ country_event = { # Smith Act Blocked
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.6306"}
 	title = ustates.6306.t
 	desc = ustates.6306.d
-	picture = GFX_report_event_usa_macarthur_speech
 
 	is_triggered_only = yes
 
@@ -3873,7 +3869,6 @@ country_event = { # Congress Protests
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.6307"}
 	title = ustates.6307.t
 	desc = ustates.6307.d
-	picture = GFX_report_event_usa_macarthur_speech
 
 	is_triggered_only = yes
 

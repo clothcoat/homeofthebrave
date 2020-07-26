@@ -1811,13 +1811,8 @@ focus_tree = {
 	focus = {# Mine Eyes have seen the Glory
 		id = COR_mine_have_seen_the_glory
 		icon = GFX_goal_ideology_national_populist
-		cost = 7.25
+		cost = 1.25
 		available = {
-			has_global_flag = USA_civil_war_over_flag
-			has_government = national_populist
-		}
-		bypass = {
-			has_global_flag = USA_civil_war_over_flag
 			has_government = national_populist
 		}
 		cancel_if_invalid = yes
@@ -1833,7 +1828,7 @@ focus_tree = {
 	focus = {# Absorb Militants
 		id = COR_organize_militants
 		icon = GFX_goal_military_academy
-		cost = 7.25
+		cost = 5.25
 		prerequisite = {
 			focus = COR_mine_have_seen_the_glory
 		}
@@ -1863,7 +1858,7 @@ focus_tree = {
 	focus = {# Kinship Economics
 		id = COR_kinship_economics
 		icon = GFX_focus_generic_strike_at_democracy1
-		cost = 7.25
+		cost = 5.25
 		prerequisite = {
 			focus = COR_organize_militants
 		}
@@ -1903,7 +1898,7 @@ focus_tree = {
 	focus = {# Christian Work Ethic
 		id = COR_christian_work_ethic
 		icon = GFX_goal_dcgb
-		cost = 7.25
+		cost = 5.25
 		prerequisite = {
 			focus = COR_kinship_economics
 		}
@@ -1931,7 +1926,7 @@ focus_tree = {
 	focus = {# White Welfare
 		id = COR_white_welfare
 		icon = GFX_goal_gold_reserve
-		cost = 7.25
+		cost = 6.25
 		prerequisite = {
 			focus = COR_christian_work_ethic
 		}
@@ -1972,7 +1967,7 @@ focus_tree = {
 	focus = {# Protecting Our Race
 		id = COR_protecting_our_race
 		icon = GFX_goal_COR_american_fight
-		cost = 7.25
+		cost = 5.25
 		prerequisite = {
 			focus = COR_mine_have_seen_the_glory
 		}
@@ -1996,7 +1991,7 @@ focus_tree = {
 	focus = {# Legacy of the Know-Nothings
 		id = COR_legacy_of_the_know_nothings
 		icon = GFX_goal_COR_legacy_of_the_know_nothings
-		cost = 7.25
+		cost = 5.25
 		prerequisite = {
 			focus = COR_protecting_our_race
 		}
@@ -2021,7 +2016,7 @@ focus_tree = {
 	focus = {# Camps for Syndies
 		id = COR_camps_for_syndies
 		icon = GFX_goal_skull_treaty
-		cost = 7.25
+		cost = 5.25
 		prerequisite = {
 			focus = COR_legacy_of_the_know_nothings
 		}
@@ -2061,7 +2056,7 @@ focus_tree = {
 	focus = {# Non-Conformist Fines
 		id = COR_fine_non_conformists
 		icon = GFX_goal_SHX_Christian_Influence
-		cost = 7.25
+		cost = 5.25
 		prerequisite = {
 			focus = COR_camps_for_syndies
 		}
@@ -3004,6 +2999,10 @@ focus_tree = {
 		cost = 7.25
 		available = {
 			has_government = national_populist
+			has_country_leader = {
+			ruling_only = yes 
+			name = "D.C. Stephenson"
+			}
 		}
 		cancel_if_invalid = yes
 		available_if_capitulated = yes
