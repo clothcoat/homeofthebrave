@@ -560,7 +560,7 @@ country_event = { # Stephenson's offer
 	}
 	
 	option = { # Accept
-		name = constate.14.a
+		name = constate.14.b
 		add_stability = -0.03
 		add_political_power = -20
 		hidden_effect = {
@@ -915,7 +915,7 @@ country_event = { # Letter to Patton
 	}
 	
 	option = { # Stay out of it
-		name = constate.18.a
+		name = constate.18.b
 		add_stability = -0.05
 		add_political_power = -20
 		add_manpower = -300

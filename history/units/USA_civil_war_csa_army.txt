@@ -347,6 +347,16 @@ units = {# Militia
 	}
 }
 
+units = {# Militia
+	division = {
+		name = "19th 'People's Party' Red Guard"
+		location = 10233
+		division_template = "Red Guard"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+	}
+}
+
 units = {# Motorized
 	division = {
 		name = "1st 'Teamsters' Mobile Division"
