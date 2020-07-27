@@ -496,7 +496,7 @@ ideas = {
 				production_factory_max_efficiency_factor = -0.02
 			}
 			removal_cost = -1
-			picture = usa_desegregation_2
+			picture = worker_coops
 		}
 		CSA_workers_cooperatives_idea_2 = {#Workers Coops
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_workers_cooperatives_idea_2"}
@@ -511,7 +511,7 @@ ideas = {
 				production_factory_max_efficiency_factor = -0.02
 			}
 			removal_cost = -1
-			picture = usa_desegregation_2
+			picture = worker_guarantees
 		}
 		CSA_workers_cooperatives_idea_3 = {#Workers Coops
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_workers_cooperatives_idea_3"}
@@ -529,7 +529,7 @@ ideas = {
 				research_speed_factor = 0.03
 			}
 			removal_cost = -1
-			picture = usa_desegregation_2
+			picture = social_capitalism_1
 		}
 		CSA_workers_cooperatives_idea_4 = {#Workers Coops
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_workers_cooperatives_idea_4"}
@@ -548,7 +548,7 @@ ideas = {
 				research_speed_factor = 0.03
 			}
 			removal_cost = -1
-			picture = usa_desegregation_2
+			picture = social_capitalism_2
 		}
 		CSA_workers_cooperatives_idea_5 = {#Workers Coops
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_workers_cooperatives_idea_5"}
@@ -568,7 +568,7 @@ ideas = {
 				research_speed_factor = 0.03
 			}
 			removal_cost = -1
-			picture = usa_desegregation_2
+			picture = social_capitalism_3
 		}
 		CSA_protectionism_idea = {#Workers Coops
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_protectionism_idea"}
@@ -583,7 +583,7 @@ ideas = {
 				trade_opinion_factor = -0.1
 			}
 			removal_cost = -1
-			picture = usa_desegregation_2
+			picture = social_protectionsim
 		}
 		CSA_public_owned_enterprise_idea = {#Workers Coops
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_public_owned_enterprise_idea"}
@@ -598,7 +598,7 @@ ideas = {
 				trade_opinion_factor = -0.1
 			}
 			removal_cost = -1
-			picture = usa_desegregation_2
+			picture = social_enterprises
 		}
 		CSA_public_owned_enterprise_idea_2 = {#Workers Coops
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_public_owned_enterprise_idea_2"}
@@ -616,7 +616,7 @@ ideas = {
 				trade_opinion_factor = -0.1
 			}
 			removal_cost = -1
-			picture = usa_desegregation_2
+			picture = social_dividends
 		}
 		CSA_recruitment_campaign_idea = {#Workers Coops
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_recruitment_campaign_idea"}
@@ -631,7 +631,7 @@ ideas = {
 				encryption_factor = 0.03
 			}
 			removal_cost = -1
-			picture = usa_desegregation_2
+			picture = recruitment_campaign
 		}
 		CSA_social_patriotism_idea = {#Social Patriotism
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_social_patriotism_idea"}
@@ -643,7 +643,7 @@ ideas = {
 				army_core_defence_factor = 0.03
 			}
 			removal_cost = -1
-			picture = usa_desegregation_2
+			picture = soc_pat_1
 		}
 		CSA_social_patriotism_idea_2 = {#Social Patriotism
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_social_patriotism_idea_2"}
@@ -658,7 +658,7 @@ ideas = {
 				research_speed_factor = 0.02
 			}
 			removal_cost = -1
-			picture = usa_desegregation_2
+			picture = soc_pat_2
 		}
 		CSA_social_patriotism_idea_3 = {#Social Patriotism
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_social_patriotism_idea_3"}
@@ -674,7 +674,7 @@ ideas = {
 				research_speed_factor = 0.02
 			}
 			removal_cost = -1
-			picture = usa_desegregation_2
+			picture = soc_pat_3
 		}
 		CSA_social_patriotism_idea_4 = {#Social Patriotism
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_social_patriotism_idea_4"}
@@ -690,7 +690,7 @@ ideas = {
 				research_speed_factor = 0.05
 			}
 			removal_cost = -1
-			picture = usa_desegregation_2
+			picture = soc_pat_4
 		}
 
 		### Radical Socialist ###
@@ -708,7 +708,7 @@ ideas = {
 				research_speed_factor = 0.02
 			}
 			removal_cost = -1
-			picture = usa_desegregation_2
+			picture = economics_of_scale
 		}
 		CSA_economies_of_scale_idea_2 = {#Economies of Scale
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_economies_of_scale_idea_2"}
@@ -727,7 +727,7 @@ ideas = {
 				research_speed_factor = 0.05
 			}
 			removal_cost = -1
-			picture = usa_desegregation_2
+			picture = department_of_production
 		}
 		CSA_economies_of_scale_idea_3 = {#Economies of Scale
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_economies_of_scale_idea_3"}
@@ -746,7 +746,7 @@ ideas = {
 				research_speed_factor = 0.05
 			}
 			removal_cost = -1
-			picture = usa_desegregation_2
+			picture = coop_clubs
 		}
 		CSA_humanist_manifesto_idea = {#Economies of Scale
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_humanist_manifesto_idea"}
@@ -758,7 +758,7 @@ ideas = {
 				trade_opinion_factor = 0.05
 			}
 			removal_cost = -1
-			picture = usa_desegregation_2
+			picture = humanist_manifesto
 		}
 		CSA_humanist_manifesto_idea_2 = {#Economies of Scale
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_humanist_manifesto_idea_2"}
@@ -775,7 +775,7 @@ ideas = {
 				attrition = -0.05
 			}
 			removal_cost = -1
-			picture = usa_desegregation_2
+			picture = egalitarian_manifesto
 		}
 		CSA_guildism_idea = {#Guildism
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_economies_of_scale_idea_3"}
@@ -791,7 +791,7 @@ ideas = {
 				industry_repair_factor = 0.05
 			}
 			removal_cost = -1
-			picture = usa_desegregation_2
+			picture = american_guildism
 		}
 		CSA_industrial_army_idea = {#Industrial Army
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_industrial_army_idea"}
@@ -808,7 +808,7 @@ ideas = {
 				industry_repair_factor = 0.1
 			}
 			removal_cost = -1
-			picture = usa_desegregation_2
+			picture = industrial_army
 		}
 		CSA_industrial_army_idea_2 = {#Industrial Army
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_industrial_army_idea_2"}
@@ -826,7 +826,7 @@ ideas = {
 				industry_repair_factor = 0.1
 			}
 			removal_cost = -1
-			picture = usa_desegregation_2
+			picture = agro_industrial_army
 		}
 		CSA_industrial_army_idea_3 = {#Industrial Army
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_industrial_army_idea_3"}
@@ -846,7 +846,7 @@ ideas = {
 				industry_repair_factor = 0.1
 			}
 			removal_cost = -1
-			picture = usa_desegregation_2
+			picture = looking_backwards
 		}
 		CSA_social_ills_idea = {#Social Ills
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_social_ills_idea"}
@@ -859,7 +859,7 @@ ideas = {
 				party_popularity_stability_factor = -0.02
 			}
 			removal_cost = -1
-			picture = usa_desegregation_2
+			picture = social_cleanliness
 		}
 		### Syndicalism ###
 		CSA_iww_congress_idea = {#Economies of Scale
