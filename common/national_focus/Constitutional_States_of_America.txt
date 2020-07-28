@@ -1897,7 +1897,7 @@ focus_tree = {
 	
 	focus = {# Christian Work Ethic
 		id = COR_christian_work_ethic
-		icon = GFX_goal_dcgb
+		icon = GFX_goal_workers_for_business
 		cost = 5.25
 		prerequisite = {
 			focus = COR_kinship_economics
@@ -4504,10 +4504,33 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_national_recovery"
-			swap_ideas = {
-				remove_idea = USA_civil_war_depression_idea
-				add_idea = COR_national_recovery_idea1
+			random_owned_state = {
+				limit = {
+					is_core_of = COR
+					is_controlled_by = COR
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
 			}
+			random_owned_state = {
+				limit = {
+					is_core_of = COR
+					is_controlled_by = COR
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_stability = 0.05
 		}
 	}
 
@@ -4642,7 +4665,7 @@ focus_tree = {
 
 	focus = {# National Farm Bureau
 		id = COR_national_farm_bureau
-		icon = GFX_IRE_farms
+		icon = GFX_goal_SZC_improvised_farming_machinery
 		cost = 7.25
 		prerequisite = {
 			focus = COR_reconciliation
@@ -4910,30 +4933,6 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			random_owned_controlled_state = {
-				limit = {
-					is_mainland_america = yes
-					free_building_slots = { building = arms_factory size > 0 include_locked = yes }
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				limit = {
-					is_mainland_america = yes
-					free_building_slots = { building = arms_factory size > 0 include_locked = yes }
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
 		}
 	}
 
@@ -5037,9 +5036,6 @@ focus_tree = {
 		cost = 7.25
 		prerequisite = {
 			focus = COR_reconstruction_is_over
-		}
-		available = {
-			has_government = paternal_autocrat
 		}
 		cancel_if_invalid = yes
 		available_if_capitulated = yes
@@ -7824,7 +7820,7 @@ focus_tree = {
 				add_stability = -0.05
 			}
 			add_threat = 10
-			add_popularity = { ideology = national_populist popularity = 0.04 }
+			add_popularity = { ideology = national_populist popularity = 0.05 }
 			add_war_support = 0.15
 			add_manpower = 15000
 		}
@@ -7854,8 +7850,15 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_pacific_pact"
+			diplomatic_relation = {
+				country = JAP
+				relation = non_aggression_pact
+				}
 			JAP = {
-			country_event = { id = csa.53 days = 90 }
+			diplomatic_relation = {
+				country = COR
+				relation = non_aggression_pact
+				}
 			}
 		}
 	}
@@ -7864,7 +7867,7 @@ focus_tree = {
 	 focus = {
 		id = COR_manifest_destiny
 		icon = GFX_goal_aus_destiny
-		cost = 6.00
+		cost = 1.00
 		prerequisite = {
 			focus = COR_american_empire
 		}
@@ -7900,13 +7903,29 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_manifest_destiny"
 			add_war_support = 0.20
 			add_stability = -0.05
+			create_wargoal = {
+			type = annex_everything
+			target = CAN
+			}
+			create_wargoal = {
+			type = annex_everything
+			target = MEX
+			}
+			create_wargoal = {
+			type = annex_everything
+			target = GUA
+			}
+			create_wargoal = {
+			type = annex_everything
+			target = PAN
+			}
 		}
 	}
 	
 	 focus = {
 		id = COR_lead_south_africa
 		icon = GFX_goal_SAF_national
-		cost = 6.00
+		cost = 1.00
 		prerequisite = {
 			focus = COR_american_empire
 		}
@@ -7921,7 +7940,6 @@ focus_tree = {
 		relative_position_id = COR_american_empire
 		x = 2
 		y = 1
-
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -7943,14 +7961,19 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_lead_south_africa"
-			
+			SAF = {
+			country_event = {
+			id = constate.207
+			days = 1
+				}
+			}
 		}
 	}
 
 	focus = {
 		id = COR_consolidate_the_south
 		icon = GFX_goal_authoritarian
-		cost = 6.00
+		cost = 1.00
 		prerequisite = {
 			focus = COR_manifest_destiny
 		}
@@ -7990,7 +8013,7 @@ focus_tree = {
 	focus = {
 		id = COR_quebec_issue
 		icon = GFX_goal_CAN_quebec_flames
-		cost = 6.00
+		cost = 1.00
 		prerequisite = {
 			focus = COR_manifest_destiny
 		}
@@ -8022,7 +8045,7 @@ focus_tree = {
 	focus = {
 		id = COR_destiny_of_the_anglo_world
 		icon = GFX_GBR_britannia
-		cost = 6.00
+		cost = 1.00
 		prerequisite = {
 			focus = COR_the_eagle_spreads_its_wings
 		}
@@ -8042,15 +8065,19 @@ focus_tree = {
 		cancel_if_invalid = yes
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus COR_claim_mexico"
-			unlock_decision_tooltip = COR_claim_mexico_dec
+			log = "[GetDateText]: [Root.GetName]: Focus COR_destiny_of_the_anglo_world"
+			add_stability = 0.03
+			create_wargoal = {
+			type = puppet_wargoal_focus
+			target = ENG
+			}
 		}
 	}
 
 	focus = {
 		id = COR_the_eagle_spreads_its_wings
 		icon = GFX_goal_COR_eagle_spread_wings
-		cost = 6.00
+		cost = 1.00
 		prerequisite = {
 			focus = COR_quebec_issue
 			focus = COR_consolidate_the_south
@@ -8594,10 +8621,15 @@ focus_tree = {
 		cancel_if_invalid = yes
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus COR_man_the_walls"
-			swap_ideas = {
-				remove_idea = USA_fortress_america_idea_1
-				add_idea = USA_fortress_america_idea_2
+			log = "[GetDateText]: [Root.GetName]: Focus COR_industrial_cooperation"
+			add_ideas = COR_industrial_cooperation_idea
+			random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+				}
+			MAF = {
+			random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 2
+				}
 			}
 		}
 	}
@@ -8631,6 +8663,32 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_business_of_neutrality"
 			add_ideas = USA_neutrality_idea
+			random_owned_state = {
+				limit = {
+					is_core_of = COR
+					is_controlled_by = COR
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = COR
+					is_controlled_by = COR
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 
@@ -8756,9 +8814,10 @@ focus_tree = {
 		cancel_if_invalid = yes
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus COR_fortress_america"
-			add_war_support = -0.10
-			add_ideas = USA_fortress_america_idea_1
+			log = "[GetDateText]: [Root.GetName]: Focus COR_look_to_the_reichsadler"
+			GER = {
+			add_to_faction = COR
+			}
 		}
 	}
 
@@ -8785,9 +8844,10 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_german_american_trade"
-			swap_ideas = {
-				remove_idea = USA_fortress_america_idea_1
-				add_idea = USA_fortress_america_idea_2
+			add_ideas = german_american_trade_idea
+			GER = {
+			add_opinion_modifier = { target = COR modifier = small_increase }
+			add_ideas = german_american_trade_idea
 			}
 		}
 	}
@@ -8814,16 +8874,28 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_send_support"
-			swap_ideas = {
-				remove_idea = USA_fortress_america_idea_1
-				add_idea = USA_fortress_america_idea_2
+			GER = {
+			add_equipment_to_stockpile = { 
+			type = fighter_equipment
+			amount = 800 
+			producer = COR
+				}
+			air_experience = 5
+			add_manpower = 500
+			add_opinion_modifier = { target = COR modifier = medium_increase }
 			}
+			add_equipment_to_stockpile = { 
+			type = fighter_equipment
+			amount = -800
+			producer = COR
+			}
+			add_manpower = -500
 		}
 	}
 	
 	focus = {
 		id = COR_aid_maf
-		icon = GFX_goal_MAF_Army_Reforms
+		icon = GFX_goal_mittelafrika
 		cost = 6.00
 		prerequisite = {
 			focus = COR_send_support
@@ -8843,10 +8915,13 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_aid_maf"
-			swap_ideas = {
-				remove_idea = USA_fortress_america_idea_1
-				add_idea = USA_fortress_america_idea_2
+			MAF = {
+			add_opinion_modifier = { target = COR modifier = medium_increase }
+			add_manpower = 5000
+			army_experience = 10
 			}
+			add_manpower = -5000
+			army_experience = 10
 		}
 	}
 	focus = {
@@ -8872,23 +8947,45 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_war_guarantees"
-			swap_ideas = {
-				remove_idea = USA_fortress_america_idea_1
-				add_idea = USA_fortress_america_idea_2
+			FRA = {
+			add_opinion_modifier = { target = COR modifier = medium_decrease }
 			}
+			GER = {
+			army_experience = 10
+			}
+			army_experience = 10
+			add_command_power = 10
+			add_war_support = 0.05
+			GER = {
+			add_opinion_modifier = { target = COR modifier = small_increase }
+			}
+			random_owned_controlled_state = {
+			limit = { dockyard > 0 }
+			add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			give_guarantee = GER
 		}
 	}
 	
 	focus = {
 		id = COR_press_for_greenland
 		icon = GFX_goal_NOR_greenland
-		cost = 6.00
+		cost = 2.00
 		prerequisite = {
 			focus = COR_war_guarantees
 			focus = COR_quebec_issue
 		}
 		available = {
 			is_subject = no
+			DEN = {
+			owns_state = 101
+			controls_state = 101
+			}
 		}
 		relative_position_id = COR_look_to_the_reichsadler
 		x = 2
@@ -8903,9 +9000,15 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_press_for_greenland"
-			swap_ideas = {
-				remove_idea = USA_fortress_america_idea_1
-				add_idea = USA_fortress_america_idea_2
+			add_political_power = -30
+			DEN = {
+			country_event = {
+			id = constate.205
+			days = 2
+				}
+			}
+			NOT = {
+			is_in_faction_with = DEN
 			}
 		}
 	}
@@ -8935,10 +9038,18 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_stand_together"
+			GER = {
 			swap_ideas = {
-				remove_idea = USA_fortress_america_idea_1
-				add_idea = USA_fortress_america_idea_2
+				remove_idea = german_american_trade_idea
+				add_idea = german_american_trade_idea_2
+				}
+			add_opinion_modifier = { target = COR modifier = medium_increase }
 			}
+			swap_ideas = {
+				remove_idea = german_american_trade_idea
+				add_idea = german_american_trade_idea_2
+			}
+			add_opinion_modifier = { target = GER modifier = medium_increase }
 		}
 	}
 }

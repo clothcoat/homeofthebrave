@@ -2195,8 +2195,8 @@ country_event = { # Town Separatists
 		}
 	}
 	option = { # Break them
-		name = constate.5801.a
-		add_political_power = 35
+		name = constate.5801.b
+		add_political_power = 45
 		add_popularity = { ideology = paternal_autocrat popularity = -0.01 }
 		add_popularity = { ideology = authoritarian_democrat popularity = -0.02 }
 		add_popularity = { ideology = social_conservative popularity = -0.02 }
@@ -2238,7 +2238,7 @@ country_event = { # America is ours
 		add_war_support = 0.08
 	}
 	option = { # Gradual Annexation
-		name = constate.5802.a
+		name = constate.5802.b
 		add_political_power = 50
 		add_popularity = { ideology = national_populist popularity = 0.04 }
 		add_command_power = 10
@@ -3263,6 +3263,134 @@ country_event = {
 
 	option = {
 		name = constate.153.a
+	}
+}
+
+country_event = { #Greenland Demanded
+	id = constate.205
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.205"}
+	title = constate.205.t
+	desc = constate.205.d
+	picture = GFX_ACW_american_brigade
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = constate.205.a
+		add_political_power = -10
+		decrease_ruling_party_popularity_by_5 = yes
+		COR = {
+		country_event = {
+		id = constate.206
+		days = 1
+			}
+		}
+	}
+	option = {
+		name = constate.205.b
+		add_war_support = 0.1
+		add_stability = -0.1
+		declare_war_on = {
+		target = COR
+		type = annex_everything
+		}
+	}
+}
+
+country_event = { #Greenland Taken
+	id = constate.206
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.206"}
+	title = constate.206.t
+	desc = constate.206.d
+	picture = GFX_ACW_american_brigade
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = constate.206.a
+		add_political_power = 20
+		add_war_support = 0.05
+		COR = {
+		transfer_state = 101
+		}
+	}
+}
+
+country_event = { #Join the CAR?
+	id = constate.207
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.207"}
+	title = constate.207.t
+	desc = constate.207.d
+	picture = GFX_ACW_american_brigade
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = constate.207.a
+		add_political_power = 10
+		add_stability = 0.03
+		COR = {
+		country_event = {
+		id = constate.208
+		days = 1
+			}
+		}
+	}
+	option = {
+		name = constate.207.a
+		COR = {
+		country_event = {
+		id = constate.209
+		days = 1
+			}
+		}
+	}
+}
+
+country_event = { #Accepted
+	id = constate.208
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.208"}
+	title = constate.208.t
+	desc = constate.208.d
+	picture = GFX_ACW_american_brigade
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = constate.208.a
+		add_political_power = 15
+	}
+}
+
+country_event = { #Rejected
+	id = constate.209
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.209"}
+	title = constate.209.t
+	desc = constate.209.d
+	picture = GFX_ACW_american_brigade
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = constate.209.a
+	}
+	option = {
+		name = constate.209.b
+		add_political_power = -10
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = SAF
+		}
 	}
 }
 

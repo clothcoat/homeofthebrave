@@ -1804,10 +1804,65 @@ ideas = {
 			removal_cost = -1
 			picture = GFX_idea_generic_goods_red_bonus
 			modifier = {
-				consumer_goods_factor = -0.05
+				consumer_goods_factor = -0.03
 				production_factory_max_efficiency_factor = 0.05
-				production_factory_efficiency_gain_factor = 0.03
+				production_factory_efficiency_gain_factor = 0.02
 				license_purchase_cost = -30
+			}
+		}
+		german_american_trade_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea german_american_trade_idea"}
+			allowed = { always = no }
+			available = {
+			COR = {
+			is_in_faction_with = GER
+			}
+			GER = {
+			exists = yes
+			}
+			}
+			removal_cost = -1
+			picture = GFX_idea_generic_goods_red_bonus
+			modifier = {
+				consumer_goods_factor = -0.02
+				production_factory_start_efficiency_factor = 0.02
+				production_speed_buildings_factor = 0.03
+			}
+		}
+		german_american_trade_idea_2 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea german_american_trade_idea_2"}
+			allowed = { always = no }
+			available = {
+			COR = {
+			is_in_faction_with = GER
+				}
+			GER = {
+			exists = yes
+				}
+			}
+			removal_cost = -1
+			picture = GFX_idea_generic_goods_red_bonus
+			modifier = {
+				consumer_goods_factor = -0.03
+				production_factory_start_efficiency_factor = 0.03
+				production_speed_buildings_factor = 0.04
+				research_speed_factor = 0.03
+			}
+		}
+		COR_industrial_cooperation_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea COR_industrial_cooperation_idea"}
+			allowed = { always = no }
+			available = {
+			MAF = {
+			exists = yes
+				}
+			}
+			removal_cost = -1
+			picture = GFX_idea_generic_goods_red_bonus
+			modifier = {
+				local_resources = 0.03
+				production_oil_factor = 0.03
+				production_lack_of_resource_penalty_factor = 0.05
 			}
 		}
 		COR_counter_syndicalist_idea = {
