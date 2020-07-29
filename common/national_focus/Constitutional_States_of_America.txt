@@ -2180,6 +2180,14 @@ focus_tree = {
 		available = {
 			has_government = national_populist
 		}
+		select_effect = {
+		hidden_effect = {
+			country_event = {
+			id = constate.62
+			days = 15
+				}
+			}
+		}
 		cancel_if_invalid = yes
 		available_if_capitulated = yes
 		relative_position_id = COR_mine_have_seen_the_glory
@@ -2195,6 +2203,12 @@ focus_tree = {
 			add_idea = COR_black_laws_idea
 			}
 			add_political_power = 65
+			hidden_effect = {
+			country_event = {
+			id = constate.59
+			days = 5
+				}
+			}
 		}
 	}
 
@@ -2392,7 +2406,6 @@ focus_tree = {
 		cost = 7.25
 		available = {
 			has_government = national_populist
-			has_country_flag = young_klan_victory
 		}
 		prerequisite = {
 			focus = COR_the_convenent
@@ -2413,14 +2426,12 @@ focus_tree = {
 		}
 	}
 	
-	focus = {# The Protocals of Zion
+	focus = {# The Protocols of Zion
 		id = COR_the_protocals_of_zion
 		icon = GFX_goal_COR_protocols_of_zion
 		cost = 7.25
 		available = {
 			has_government = national_populist
-			has_country_flag = young_klan_victory
-			has_country_flag = old_klan_victory
 		}
 		prerequisite = {
 			focus = COR_alma_white
@@ -4139,6 +4150,20 @@ focus_tree = {
 		relative_position_id = COR_the_lord
 		x = 3
 		y = 5
+		select_effect = {
+		hidden_effect = {
+			country_event = {
+			id = constate.60
+			days = 20
+				}
+			}
+		hidden_effect = {
+			country_event = {
+			id = constate.61
+			days = 30
+				}
+			}
+		}
 		ai_will_do = {
 			factor = 5
 		}
@@ -4230,13 +4255,19 @@ focus_tree = {
 	focus = {# The Prophet
 		id = COR_the_prophet
 		icon = GFX_goal_COR_the_apostle
-		cost = 6.00
+		cost = 3.00
 		prerequisite = {
 			focus = COR_the_great_cleansing
 		}
 		available = {
 			has_government = national_populist
 		has_country_leader = { ruling_only = yes name = "Herbert W. Armstrong" }
+		}
+		select_effect = {
+		country_event = {
+			id = constate.5803
+			days = 10
+			}
 		}
 		cancel_if_invalid = yes
 		available_if_capitulated = yes

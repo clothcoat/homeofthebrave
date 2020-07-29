@@ -5756,12 +5756,19 @@ focus_tree = {
 		cost = 6.00
 		x = 96
 		y = 0
+		available = {
+		OR = {
+		has_government = totalist
+		has_government = national_populist
+		has_government = paternal_autocrat
+			}
+		}
 		ai_will_do = {
-			factor = 50
+			factor = 20
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BBR_pan_afrikan_identity"
-			add_threat = 8
+			add_threat = 5
 			add_war_support = 0.1
 		}
 	}
