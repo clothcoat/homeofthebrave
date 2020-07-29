@@ -1351,7 +1351,7 @@ USA_civil_war_ends = {
 					add_ideas = {
 						civilian_economy
 						volunteer_only
-						USA_civil_war_aftermath_idea
+						USA_civil_war_political_aftermath_idea
 						USA_civil_war_depression_idea
 					}
 				}
@@ -1362,7 +1362,18 @@ USA_civil_war_ends = {
 					add_ideas = {
 						civilian_economy
 						volunteer_only
-						USA_civil_war_aftermath_idea
+						USA_civil_war_political_aftermath_idea
+						USA_civil_war_depression_idea
+					}
+				}
+			}
+			COR = {
+				if = {
+					limit = { exists = no }
+					add_ideas = {
+						civilian_economy
+						volunteer_only
+						USA_civil_war_political_aftermath_idea
 						USA_civil_war_depression_idea
 					}
 				}
@@ -1373,7 +1384,7 @@ USA_civil_war_ends = {
 					add_ideas = {
 						civilian_economy
 						volunteer_only
-						USA_civil_war_aftermath_idea
+						USA_civil_war_political_aftermath_idea
 						USA_civil_war_depression_idea
 					}
 				}
@@ -1384,7 +1395,7 @@ USA_civil_war_ends = {
 					add_ideas = {
 						civilian_economy
 						volunteer_only
-						USA_civil_war_aftermath_idea
+						USA_civil_war_political_aftermath_idea
 						USA_civil_war_depression_idea
 					}
 				}
