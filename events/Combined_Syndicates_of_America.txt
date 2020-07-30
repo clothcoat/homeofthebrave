@@ -7900,15 +7900,21 @@ country_event = { # Fate of the Party
 
 	option = { # IWW Option
 	name = csa.302.a
-	add_ideas = CSA_iww_power_idea
+	add_political_power = 30
+	add_popularity = { ideology = syndicalist popularity = 0.03 }
 	modify_country_flag = {
 	flag = CSA_iww_power
 	value = 2
 		}
+	set_party_name = {
+		ideology = syndicalist
+		long_name = CSA_iww_plan_syndicalist_long
+		name = CSA_iww_plan_syndicalist }
 	}
 	option = { # De Leonist Option
 	name = csa.302.b
-	add_ideas = CSA_spa_power_idea
+	add_popularity = { ideology = syndicalist popularity = 0.01 }
+	add_stability = 0.02
 	modify_country_flag = {
 	flag = CSA_cio_power
 	value = 2
@@ -7917,10 +7923,15 @@ country_event = { # Fate of the Party
 	flag = CSA_radical_power
 	value = -2
 		}
+	set_party_name = {
+		ideology = syndicalist
+		long_name = CSA_cio_plan_syndicalist_long
+		name = CSA_cio_plan_syndicalist }
 	}
 	option = { # Anarchist Option
 	name = csa.302.c
-	add_ideas = CSA_radical_localism_idea
+	add_popularity = { ideology = syndicalist popularity = 0.05 }
+	add_political_power = -20
 	modify_country_flag = {
 	flag = CSA_radical_power
 	value = 2
@@ -7929,6 +7940,10 @@ country_event = { # Fate of the Party
 	flag = CSA_cio_power
 	value = 2
 		}
+	set_party_name = {
+		ideology = syndicalist
+		long_name = CSA_an_plan_syndicalist_long
+		name = CSA_an_plan_syndicalist }
 	}
 }	
 country_event = { # Worker Takeover

@@ -866,7 +866,6 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_iww_congress_idea"}
 			allowed = { always = no }
 			modifier = {
-				stability_weekly = 0.001
 				political_power_gain = 0.02
 				war_support_weekly = 0.02
 				industry_free_repair_factor = 0.05
@@ -877,13 +876,13 @@ ideas = {
 				production_factory_efficiency_gain_factor = -0.02
 			}
 			removal_cost = -1
-			picture = usa_desegregation_2
+			picture = union_congress
 		}
 		CSA_de_leonist_congress_idea = {#Economies of Scale
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_de_leonist_congress_idea"}
 			allowed = { always = no }
 			modifier = {
-				stability_weekly = 0.002
+				stability_weekly = 0.001
 				political_power_gain = 0.05
 				party_popularity_stability_factor = 0.05
 				production_factory_max_efficiency_factor = 0.05
@@ -894,7 +893,7 @@ ideas = {
 				production_lack_of_resource_penalty_factor = 0.03
 			}
 			removal_cost = -1
-			picture = usa_desegregation_2
+			picture = all_industrial_congress
 		}
 		CSA_ultra_left_congress = {#Economies of Scale
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_ultra_left_congress"}
@@ -913,7 +912,7 @@ ideas = {
 				local_intel_to_enemies = -0.15
 			}
 			removal_cost = -1
-			picture = usa_desegregation_2
+			picture = voluntaryist_transition
 		}
 		CSA_iww_power_idea = {#IWW Leadership
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_iww_power_idea"}
