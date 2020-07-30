@@ -678,19 +678,29 @@ country_event = { # California Dispute
 	
 	fire_only_once = yes
 
-	option = { # Use Green
+	option = { # Favor the Legion
 		name = constate.1700.a
 		add_political_power = -30
-		add_stability = 0.05
+		add_stability = 0.03
 		add_manpower = 3500
+		hidden_effect = {
+			country_event = {
+				id = constate.1701
+				days = 6
+			}
+		}
 	}
-	option = { # Finish the Job
+	option = { # Favor the Order
 		name = constate.1700.b
-		add_stability = -0.05
-		add_political_power = 55
-		add_command_power = 10
-		add_manpower = -10000
-		add_popularity = { ideology = national_populist popularity = 0.04 }
+		add_political_power = 20
+		add_command_power = 5
+		add_stability = -0.02
+		hidden_effect = {
+			country_event = {
+				id = constate.1701
+				days = 6
+			}
+		}
 	}
 }
 
@@ -711,18 +721,36 @@ country_event = { # Legion Infighting
 		add_stability = -0.02
 		add_manpower = 3500
 		add_command_power = 10
+		hidden_effect = {
+			country_event = {
+				id = constate.1704
+				days = 6
+			}
+		}
 	}
 	option = { # Shepherd
 		name = constate.1702.b
 		add_stability = 0.03
 		add_popularity = { ideology = national_populist popularity = 0.04 }
 		add_political_power = -15
+		hidden_effect = {
+			country_event = {
+				id = constate.1704
+				days = 6
+			}
+		}
 	}
 	option = { # split Illinois
 		name = constate.1702.c
 		add_stability = 0.05
 		add_command_power = -15
 		add_political_power = -20
+		hidden_effect = {
+			country_event = {
+				id = constate.1704
+				days = 6
+			}
+		}
 	}
 	option = { # Let them settle it
 		name = constate.1702.e
@@ -730,6 +758,12 @@ country_event = { # Legion Infighting
 		add_political_power = 55
 		add_manpower = -1000
 		army_experience = -10
+		hidden_effect = {
+			country_event = {
+				id = constate.1704
+				days = 6
+			}
+		}
 	}
 }
 
@@ -847,7 +881,7 @@ country_event = { # Chicago Terror
 	}
 }
 
-country_event = { # Chicago Terror
+country_event = { # A New Nation
 	id = constate.1706
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.1706"}
 	title = constate.1706.t
@@ -867,7 +901,6 @@ country_event = { # Chicago Terror
 		name = constate.1706.b
 		add_stability = 0.05
 		add_popularity = { ideology = national_populist popularity = 0.02 }
-	}
 }
 
 country_event = { # Catholic Churches Attacked
@@ -884,6 +917,13 @@ country_event = { # Catholic Churches Attacked
 	option = { # Reign in outright destruction
 		name = constate.1707.a
 		add_stability = 0.03
+		add_manpower = -1500
+		hidden_effect = {
+			country_event = {
+				id = constate.1706
+				days = 22
+			}
+		}
 	}
 	option = { # No, this is fine
 		name = constate.1707.b
@@ -891,6 +931,12 @@ country_event = { # Catholic Churches Attacked
 		add_political_power = 10
 		add_popularity = { ideology = national_populist popularity = 0.03 }
 		add_manpower = -2000
+		hidden_effect = {
+			country_event = {
+				id = constate.1706
+				days = 22
+			}
+		}
 	}
 }
 
@@ -1000,7 +1046,7 @@ country_event = { # Meeting Place bombed
 			create_country_leader = {
 				name = "D.C. Stephenson"
 				desc = "POLITICSDC_STEPHENSON_DESC"
-				picture = "gfx/leaders/CUS/DC_Stephenson.tga"
+				picture = "gfx/leaders/CUS/d_c_stephenson.tga"
 				expire = "1965.1.1"
 				ideology = national_populist_subtype
 				traits = { }

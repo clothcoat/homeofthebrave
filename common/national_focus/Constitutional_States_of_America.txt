@@ -3058,6 +3058,12 @@ focus_tree = {
 			add_political_power = 50
 			add_manpower = -3500
 			remove_ideas = COR_young_klan_resistance
+			hidden_effect = {
+			country_event = {
+				id = constate.17
+				days = 5
+				}
+			}
 		}
 	}
 	
@@ -3117,7 +3123,7 @@ focus_tree = {
 	focus = {# Cult of the Chief
 		id = COR_cult_of_the_chief
 		icon = GFX_goal_COR_cult_to_the_chief
-		cost = 7.25
+		cost = 5.00
 		prerequisite = {
 			focus = COR_the_third_klan
 		}
@@ -3129,6 +3135,14 @@ focus_tree = {
 		}
 		available = {
 			has_government = national_populist
+		}
+		select_effect = {
+		hidden_effect = {
+			country_event = {
+				id = constate.1702
+				days = 20
+				}
+			}
 		}
 		cancel_if_invalid = yes
 		available_if_capitulated = yes
@@ -3156,6 +3170,14 @@ focus_tree = {
 		}
 		available = {
 			has_government = national_populist
+		}
+		select_effect = {
+		hidden_effect = {
+			country_event = {
+				id = constate.17
+				days = 18
+				}
+			}
 		}
 		cancel_if_invalid = yes
 		available_if_capitulated = yes
@@ -3398,6 +3420,12 @@ focus_tree = {
 			add_political_power = 50
 			add_stability = -0.05
 			add_war_support = 0.1
+			hidden_effect = {
+			country_event = {
+			id = constate.16
+			days = 15
+				}
+			}
 		}
 	}
 	
@@ -3449,6 +3477,22 @@ focus_tree = {
 		available = {
 			has_government = national_populist
 		}
+		select_effect = {
+		hidden_effect = {
+			country_event = {
+				id = constate.1703
+				days = 20
+				}
+			country_event = {
+				id = constate.1705
+				days = 30
+				}
+			country_event = {
+				id = constate.1707
+				days = 45
+				}
+			}
+		}
 		cancel_if_invalid = yes
 		available_if_capitulated = yes
 		relative_position_id = COR_the_sword
@@ -3476,6 +3520,7 @@ focus_tree = {
 			add_popularity = { ideology = national_populist popularity = 0.1 }
 			add_stability = 0.1
 			add_political_power = 200
+			add_manpower = -15000
 		}
 	}
 	
