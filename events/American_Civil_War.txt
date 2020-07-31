@@ -5072,7 +5072,7 @@ country_event = { # Military Demands IWW Support
 		}
 	}
 	option = { #Unacceptable
-		name = amcivwar.3608.a
+		name = amcivwar.3608.b
 		add_stability = 0.02
 		hidden_effect = {
 		CSA = {
@@ -5112,7 +5112,7 @@ country_event = { # Syndicalist Coup
 		}
 	}
 	option = { #Purge them
-		name = amcivwar.3609.a
+		name = amcivwar.3609.b
 		add_political_power = -20
 		add_stability = 0.05
 		add_popularity = { ideology = syndicalist popularity = 0.05 }

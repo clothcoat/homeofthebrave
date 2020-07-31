@@ -2665,7 +2665,7 @@ focus_tree = {
 	### United Socialist American States	
 	focus = {# United Socialist American States
 		id = CSA_usas
-		icon = GFX_goal_red_star_gold_wreath
+		icon = GFX_goal_CSA_ussa
 		cost = 7.25
 		available = {
 			has_country_flag = CSA_constitutional_convention_done
@@ -2716,8 +2716,6 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_presidential_socialism"
-			set_cosmetic_tag = CSA_socialist_union_of_america
-			set_country_flag = CSA_socialist_union_of_america_flag
 			add_political_power = 25
 			add_stability = 0.02
 		}
@@ -6440,7 +6438,7 @@ focus_tree = {
 
 	focus = {
 		id = CSA_free_mexico
-		icon = GFX_MEX_New
+		icon = GFX_goal_FRA_develop_MEX
 		cost = 7.25
 		prerequisite = {
 			focus = CSA_back_in_business
@@ -6509,6 +6507,9 @@ focus_tree = {
 		prerequisite = {
 			focus = CSA_back_in_business
 		}
+		available = { has_country_leader = 
+		ruling_only = { name = "James Burnham" ruling_only = yes }
+		}
 		mutually_exclusive = {
 			focus = CSA_mexico_friendship
 			focus = CSA_free_mexico
@@ -6536,7 +6537,7 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_mexican_standoff"
-			CSA = {
+			MEX = {
 				country_event = {
 				id = csa.268
 				days = 1
@@ -6661,7 +6662,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_address_the_internationale"
-			country_event = { id = CSA.220 days = 2 }
+			country_event = { id = csa.500 days = 2 }
 		}
 	}
 	
@@ -7717,7 +7718,7 @@ focus_tree = {
 			}
 			create_wargoal = {
 			type = puppet_wargoal_focus
-			target = VIE
+			target = VIN
 			}
 		}
 	}
@@ -8056,8 +8057,21 @@ focus_tree = {
 		cancel_if_invalid = yes
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CSA_on_the_beach"
-			add_ideas = USA_on_the_beach_idea
+			log = "[GetDateText]: [Root.GetName]: Focus CSA_african_revolution"
+			add_war_support = 0.05
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = LIB
+				}
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = MAF
+			}
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = SAF
+			}
+
 		}
 	}
 	
@@ -8087,8 +8101,19 @@ focus_tree = {
 		cancel_if_invalid = yes
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CSA_on_the_beach"
-			add_ideas = USA_on_the_beach_idea
+			log = "[GetDateText]: [Root.GetName]: Focus CSA_break_arab_monarchism"
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = EGY
+			}
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = OTT
+			}
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = SAU
+			}
 		}
 	}
 	
@@ -8220,6 +8245,9 @@ focus_tree = {
 		}
 		available = {
 			is_subject = no
+			CHL = {
+			has_socialist_government = yes
+			}
 		}
 		relative_position_id = CSA_socialist_liberation
 		x = 2
@@ -8281,7 +8309,7 @@ focus_tree = {
 			add_war_support = 0.03
 			create_wargoal = {
 			type = puppet_wargoal_focus
-			target = PER
+			target = PRU
 			}
 		}
 	}
@@ -9538,7 +9566,7 @@ focus_tree = {
 		}
 		relative_position_id = CSA_managerialism
 		completion_reward = {
-		country_event = { id = csa.154 days = 1 }
+		country_event = { id = csa.1540 days = 1 }
 		}
 	}
 	focus = {# Power Projection

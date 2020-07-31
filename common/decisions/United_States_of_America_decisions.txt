@@ -2241,12 +2241,17 @@ USA_reconstruction_decisions = {# Reconstruction Stuff
 				tag = USA
 				tag = CAL
 				tag = COR
+				tag = CSA
 				tag = TEX
 			}
 		}
 		available = {
 			is_subject = no
 			controls_all_owned_states = yes
+			if = {
+				limit = { tag = CSA }
+				has_completed_focus = CSA_demand_new_england
+			}
 			if = {
 				limit = { country_exists = NEE }
 				NEE = {
