@@ -37,7 +37,7 @@ country_event = { # Socialist Constitution - Property Debate
 		}
 	}
 	option = { # The Nationalists win out
-		name = csa.1000.a	
+		name = csa.1000.b
 		country_event = {
 			id = csa.1001
 			days = 7
@@ -84,7 +84,7 @@ country_event = { # Socialist Constitution - Social Radicalism
 		}
 	}
 	option = { # The Nationalists win out
-		name = csa.1001.a	
+		name = csa.1001.b
 		country_event = {
 			id = csa.1002
 			days = 7
@@ -124,7 +124,7 @@ country_event = { # Socialist Constitution - Voting Rights
 		}
 	}
 	option = { # The Nationalist Plan
-		name = csa.1002.a	
+		name = csa.1002.b
 		country_event = {
 			id = csa.1003
 			days = 6
@@ -134,7 +134,7 @@ country_event = { # Socialist Constitution - Voting Rights
 		}
 	}
 	option = { # The Centralist Plan
-		name = csa.1002.a	
+		name = csa.1002.c
 		country_event = {
 			id = csa.1003
 			days = 6

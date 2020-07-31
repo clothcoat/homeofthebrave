@@ -3149,25 +3149,6 @@ ideas = {
 				synth_resources = 0.05
 			}
 		}
-		kr_standard_oil_psa = {#Standard Oil
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea kr_standard_oil_psa"}
-			allowed = {
-				original_tag = CAL
-			}
-			available = {
-				controls_state = 797
-				owns_state = 797
-			}
-			traits = {
-				chemical_producer expert
-			}
-			modifier = {
-				production_speed_synthetic_refinery_factor = 0.3
-			}
-			research_bonus = {
-				synth_resources = 0.05
-			}
-		}
 		kr_koch_psa = {#Koch Industires
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea kr_koch_psa"}
 			allowed = {original_tag = CAL }
@@ -3352,6 +3333,7 @@ ideas = {
 				controls_state = 378
 				owns_state = 378
 			}
+			picture = military_engineering
 			traits = { infantry_equipment_producer_mass_0 }
 			research_bonus = {
 				infantry_weapons = 0.1
@@ -3600,6 +3582,7 @@ ideas = {
 				controls_state = 386
 				owns_state = 386
 			}
+			picture = military_engineering
 			traits = { motorised_equipment_producer_mass_1 }
 			research_bonus = {
 				motorized_equipment = 0.05
