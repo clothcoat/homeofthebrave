@@ -3106,6 +3106,12 @@ focus_tree = {
 		available = {
 			has_government = national_populist
 		}
+		select_effect = {
+		country_event = {
+			id = constate.1700
+			days = 20
+			}
+		}
 		cancel_if_invalid = yes
 		available_if_capitulated = yes
 		relative_position_id = COR_the_sword

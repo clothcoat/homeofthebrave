@@ -407,7 +407,7 @@ focus_tree = {
 		id = CSA_federalist_economics
 		icon = GFX_goal_CSA_business_unionism
 		cost = 7.25
-		available = { has_government = radical_socialist }
+		available = { has_government = social_democrat }
 		prerequisite = {
 			focus = CSA_closed_shops
 		}
@@ -476,7 +476,7 @@ focus_tree = {
 		id = CSA_high_wages
 		icon = GFX_goal_CSA_fair_days_pay
 		cost = 6.5
-		available = { has_government = radical_socialist }
+		available = { has_government = social_democrat }
 		prerequisite = {
 			focus = CSA_federalist_economics
 		}
@@ -501,7 +501,7 @@ focus_tree = {
 		id = CSA_paid_vacations
 		icon = GFX_goal_CSA_for_fair_days_work
 		cost = 6.5
-		available = { has_government = radical_socialist }
+		available = { has_government = social_democrat }
 		prerequisite = {
 			focus = CSA_high_wages
 		}
@@ -528,7 +528,7 @@ focus_tree = {
 		id = CSA_civilian_goods
 		icon = GFX_goal_CSA_capital_investments
 		cost = 6.00
-		available = { has_government = radical_socialist }
+		available = { has_government = social_democrat }
 		prerequisite = {
 			focus = CSA_federalist_economics
 		}
@@ -604,7 +604,7 @@ focus_tree = {
 		id = CSA_recruitment_campaign
 		icon = GFX_goal_CSA_recruitment_campaign
 		cost = 6
-		available = { has_government = radical_socialist }
+		available = { has_government = social_democrat }
 		prerequisite = {
 			focus = CSA_civilian_goods
 		}
@@ -854,10 +854,7 @@ focus_tree = {
 		icon = GFX_goal_CSA_economy_of_scale
 		cost = 7.25
 		available = {
-			OR = {
-				has_government = syndicalist
 				has_government = radical_socialist
-			}
 		}
 		cancel_if_invalid = yes
 		prerequisite = {
@@ -919,10 +916,7 @@ focus_tree = {
 		icon = GFX_goal_CSA_department_of_production
 		cost = 7.25
 		available = {
-			OR = {
-				has_government = syndicalist
 				has_government = radical_socialist
-			}
 		}
 		cancel_if_invalid = yes
 		prerequisite = {
@@ -999,10 +993,7 @@ focus_tree = {
 		icon = GFX_goal_CSA_coop_clubs
 		cost = 7.25
 		available = {
-			OR = {
-				has_government = syndicalist
 				has_government = radical_socialist
-			}
 		}
 		cancel_if_invalid = yes
 		prerequisite = {
@@ -1081,10 +1072,7 @@ focus_tree = {
 		icon = GFX_goal_CSA_townhall_democarcy
 		cost = 7.25
 		available = {
-			OR = {
-				has_government = syndicalist
 				has_government = radical_socialist
-			}
 		}
 		cancel_if_invalid = yes
 		prerequisite = {
@@ -1110,10 +1098,7 @@ focus_tree = {
 		icon = GFX_goal_CSA_heresy
 		cost = 7.25
 		available = {
-			OR = {
-				has_government = syndicalist
 				has_government = radical_socialist
-			}
 		}
 		cancel_if_invalid = yes
 		prerequisite = {
@@ -1140,10 +1125,7 @@ focus_tree = {
 		icon = GFX_goal_CSA_peaceful_revolution
 		cost = 7.25
 		available = {
-			OR = {
-				has_government = syndicalist
 				has_government = radical_socialist
-			}
 		}
 		cancel_if_invalid = yes
 		prerequisite = {
@@ -1246,10 +1228,7 @@ focus_tree = {
 		icon = GFX_goal_CSA_american_guildism
 		cost = 7.25
 		available = {
-			OR = {
-				has_government = syndicalist
 				has_government = radical_socialist
-			}
 		}
 		cancel_if_invalid = yes
 		prerequisite = {
@@ -1274,10 +1253,7 @@ focus_tree = {
 		icon = GFX_goal_CSA_industrial_army
 		cost = 7.25
 		available = {
-			OR = {
-				has_government = syndicalist
 				has_government = radical_socialist
-			}
 		}
 		cancel_if_invalid = yes
 		prerequisite = {
@@ -1331,10 +1307,7 @@ focus_tree = {
 		icon = GFX_goal_CSA_agricultural_revolution
 		cost = 7.25
 		available = {
-			OR = {
-				has_government = syndicalist
 				has_government = radical_socialist
-			}
 		}
 		cancel_if_invalid = yes
 		prerequisite = {
@@ -1385,10 +1358,7 @@ focus_tree = {
 		icon = GFX_goal_CSA_equality
 		cost = 7.25
 		available = {
-			OR = {
-				has_government = syndicalist
 				has_government = radical_socialist
-			}
 		}
 		cancel_if_invalid = yes
 		prerequisite = {
@@ -1418,10 +1388,7 @@ focus_tree = {
 		icon = GFX_goal_CSA_curing_social_ills
 		cost = 7.25
 		available = {
-			OR = {
-				has_government = syndicalist
 				has_government = radical_socialist
-			}
 		}
 		cancel_if_invalid = yes
 		prerequisite = {
@@ -1448,10 +1415,7 @@ focus_tree = {
 		icon = GFX_goal_CSA_communications_infrastructure
 		cost = 7.25
 		available = {
-			OR = {
-				has_government = syndicalist
 				has_government = radical_socialist
-			}
 		}
 		cancel_if_invalid = yes
 		prerequisite = {
@@ -1560,10 +1524,7 @@ focus_tree = {
 		icon = GFX_goal_CSA_democratic_press
 		cost = 7.25
 		available = {
-			OR = {
-				has_government = syndicalist
 				has_government = radical_socialist
-			}
 		}
 		cancel_if_invalid = yes
 		prerequisite = {
@@ -1590,10 +1551,7 @@ focus_tree = {
 		icon = GFX_goal_CSA_public_kitchens
 		cost = 7.25
 		available = {
-			OR = {
-				has_government = syndicalist
 				has_government = radical_socialist
-			}
 		}
 		cancel_if_invalid = yes
 		prerequisite = {
@@ -1619,10 +1577,7 @@ focus_tree = {
 		icon = GFX_goal_CSA_looking_backwards
 		cost = 7.25
 		available = {
-			OR = {
-				has_government = syndicalist
 				has_government = radical_socialist
-			}
 		}
 		cancel_if_invalid = yes
 		prerequisite = {
