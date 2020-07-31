@@ -5770,6 +5770,10 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus BBR_pan_afrikan_identity"
 			add_threat = 5
 			add_war_support = 0.1
+			create_wargoal = {
+				type = annex_everything
+				target = LIB
+			}
 		}
 	}
 	focus = {# Japanese Aid
@@ -5800,7 +5804,7 @@ focus_tree = {
 			focus = BBR_liberate_the_carribeans
 		}
 		relative_position_id = BBR_pan_afrikan_identity
-		cost = 6.00
+		cost = 1.00
 		x = 0
 		y = 1
 		ai_will_do = {
@@ -5825,6 +5829,7 @@ focus_tree = {
 				target = CAF
 			}
 			add_state_claim = 686
+			add_state_claim = 318
 		}
 	}
 	focus = {# Take Haiti
@@ -5833,6 +5838,9 @@ focus_tree = {
 		cost = 9.00
 		prerequisite = {
 			focus = BBR_dominate_carribeans
+		}
+		available = {
+		controls_state = 318
 		}
 		relative_position_id = BBR_pan_afrikan_identity
 		x = 0
@@ -5857,6 +5865,9 @@ focus_tree = {
 		cost = 6.00
 		prerequisite = {
 			focus = BBR_pan_afrikan_identity
+		}
+		available = {
+		controls_state = 298
 		}
 		relative_position_id = BBR_pan_afrikan_identity
 		x = -2
@@ -5928,7 +5939,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BBR_conquer_afrika"
 			add_state_claim = 273
-			add_state_claim = 446
+			add_war_support = 0.05
 			create_wargoal = {
 				type = annex_everything
 				target = SAF
@@ -5962,6 +5973,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BBR_take_south_afrika"
+			add_war_support = 0.05
 			create_wargoal = {
 				type = annex_everything
 				target = MAF
@@ -5989,8 +6001,25 @@ focus_tree = {
 		prerequisite = {
 			focus = BBR_conquer_afrika
 		}
+		available = {
+		controls_state = 916
+		controls_state = 540
+		controls_state = 917
+		controls_state = 544
+		controls_state = 954
+		controls_state = 914
+		controls_state = 950
+		controls_state = 945
+		controls_state = 946
+		}
+		select_effect = {
+		add_timed_idea = {
+		idea = my_idea
+		days = 80
+			}
+		}
 		relative_position_id = BBR_pan_afrikan_identity
-		cost = 6.00
+		cost = 12.00
 		x = -2
 		y = 4
 		ai_will_do = {
@@ -5998,6 +6027,17 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BBR_restore_afrikan_greatness"
+			custom_effect_tooltip = BBR_purging_arica
+			add_stability = 0.1
+			add_political_power = 100
+			add_manpower = -10000
+			add_state_core = 916
+			add_state_core = 544
+			add_state_core = 945
+			add_state_core = 946
+			add_state_core = 954
+			add_state_core = 914
+			add_state_core = 917
 		}
 	}
 	focus = {# The Revolution Spreads
@@ -6026,6 +6066,11 @@ focus_tree = {
 		y = 1
 		ai_will_do = {
 			factor = 50
+		}
+		bypass = {
+		CSA = {
+		exists = no
+			}
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BBR_support_csa"
@@ -6068,6 +6113,19 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BBR_into_the_pan"
+			add_war_support = 0.05
+			declare_war_on = {
+			target = USA
+			type = annex_everything
+			}
+			declare_war_on = {
+			target = PSA
+			type = annex_everything
+			}
+			declare_war_on = {
+			target = TEX
+			type = annex_everything
+			}
 		}
 	}
 	focus = {# Liberate the Carribeans
