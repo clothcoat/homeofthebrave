@@ -8183,6 +8183,12 @@ country_event = {# Party Beliefs
 		name = pacificstates.356.b
 		add_popularity = { ideology = national_populist popularity = 0.05 }
 		add_stability = -0.1
+		hidden_effect = {
+		country_event = {
+			id = pacificstates.354
+			days = 4
+			}
+		}
 	}
 }
 
@@ -8219,5 +8225,36 @@ country_event = {# International Outcry
 		add_opinion_modifier = { target = TEX modifier = small_decrease }
 		add_opinion_modifier = { target = WCC modifier = small_decrease }
 		add_opinion_modifier = { target = USA modifier = small_decrease }
+	}
+}
+
+country_event = {# Boden Removed
+	id = pacificstates.358
+	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.358"}
+	title = pacificstates.358.t
+	desc = pacificstates.358.d
+	picture = GFX_ACW_american_brigade
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = {# Max Thornburg
+		name = pacificstates.358.a
+		add_political_power = -40
+		add_popularity = { ideology = paternal_autocrat popularity = 0.08 }
+		add_popularity = { ideology = national_populist popularity = -0.02 }
+		add_stability = 0.05
+	}
+	option = {# No, this is enough
+		name = pacificstates.358.b
+		add_popularity = { ideology = national_populist popularity = 0.05 }
+		add_stability = -0.1
+		hidden_effect = {
+		country_event = {
+			id = pacificstates.354
+			days = 4
+			}
+		}
 	}
 }
