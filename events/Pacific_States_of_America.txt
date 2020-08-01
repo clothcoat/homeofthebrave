@@ -8116,7 +8116,7 @@ country_event = {# Spiritualist Counter-Coup
 	}
 }
 
-country_event = {# Spiritualist Counter-Coup
+country_event = {# Japanese Aid
 	id = pacificstates.355
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.355"}
 	title = pacificstates.355.t
@@ -8130,16 +8130,94 @@ country_event = {# Spiritualist Counter-Coup
 	option = {# Agreed
 		name = pacificstates.355.a
 		add_manpower = 100
-		add_political_power = -10
+		add_political_power = 80
+		add_manpower = 2000
+		JAP = {
+			random_owned_controlled_state = {
+			add_resource = {
+			type = oil
+			amount = 5
+				}
+			}
+		}
+		random_owned_controlled_state = {
+		limit = {
+		has_resources_amount = {
+			resource = oil
+			amount > 10
+			}
+		}
+		destroy_resource = {
+			type = oil
+			amount = 5
+			}
+		}
+		add_opinion_modifier = { target = JAP modifier = small_increase }
 		add_war_support = 0.02
 		add_popularity = { ideology = national_populist popularity = 0.03 }
 	}
-	option = {# Stop Supporting Them
-		name = pacificstates.354.b
+	option = {# No, this is enough
+		name = pacificstates.355.b
 		add_political_power = -10
 	}
 }
 
+country_event = {# Party Beliefs
+	id = pacificstates.356
+	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.356"}
+	title = pacificstates.356.t
+	desc = pacificstates.356.d
+	picture = GFX_ACW_american_brigade
 
+	is_triggered_only = yes
 
+	fire_only_once = yes
+	
+	option = {# Hubbard's Advice
+		name = pacificstates.356.a
+		add_political_power = -40
+		add_popularity = { ideology = national_populist popularity = -0.01 }
+		add_stability = 0.05
+	}
+	option = {# No, this is enough
+		name = pacificstates.356.b
+		add_popularity = { ideology = national_populist popularity = 0.05 }
+		add_stability = -0.1
+	}
+}
 
+country_event = {# International Outcry
+	id = pacificstates.357
+	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.357"}
+	title = pacificstates.357.t
+	desc = pacificstates.357.d
+	picture = GFX_ACW_american_brigade
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = {# Double Down
+		name = pacificstates.357.a
+		add_manpower = -6000
+		add_political_power = 40
+		add_stability = 0.05
+		add_popularity = { ideology = national_populist popularity = 0.03 }
+		add_opinion_modifier = { target = CAN modifier = medium_decrease }
+		add_opinion_modifier = { target = CSA modifier = medium_decrease }
+		add_opinion_modifier = { target = TEX modifier = medium_decrease }
+		add_opinion_modifier = { target = WCC modifier = medium_decrease }
+		add_opinion_modifier = { target = USA modifier = medium_decrease }
+	}
+	option = {# No, this is enough
+		name = pacificstates.357.b
+		add_manpower = -3000
+		add_political_power = 10
+		add_stability = 0.03
+		add_opinion_modifier = { target = CAN modifier = small_decrease }
+		add_opinion_modifier = { target = CSA modifier = small_decrease }
+		add_opinion_modifier = { target = TEX modifier = small_decrease }
+		add_opinion_modifier = { target = WCC modifier = small_decrease }
+		add_opinion_modifier = { target = USA modifier = small_decrease }
+	}
+}

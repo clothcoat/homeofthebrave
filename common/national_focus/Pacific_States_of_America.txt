@@ -10832,7 +10832,7 @@ focus_tree = {
 	focus = {# Japanese Support
 		id = CAL_japanese_support
 		icon = GFX_goal_japanese_instructors
-		cost = 5.00
+		cost = 4.00
 		prerequisite = {
 		focus = CAL_spiritualist_takeover
 		}
@@ -10841,6 +10841,14 @@ focus_tree = {
 		}
 		ai_will_do = {
 			factor = 5
+		}
+		select_effect = {
+		hidden_effect = {
+		country_event = {
+			id = pacificstates.355
+			days = 26
+				}
+			}
 		}
 		available_if_capitulated = yes
 		cancel_if_invalid = yes
@@ -10852,7 +10860,7 @@ focus_tree = {
 			add_manpower = 1500
 			army_experience = 20
 			add_political_power = 15
-			}	
+			}
 		}
 	
 	focus = {# Finish the Socialists
@@ -11080,7 +11088,7 @@ focus_tree = {
 	focus = {# Media Blackout
 		id = CAL_media_blackout
 		icon = GFX_CAL_media_blackout
-		cost = 5.00
+		cost = 7.00
 		prerequisite = {
 		focus = CAL_finish_socialism
 		}
@@ -11098,8 +11106,14 @@ focus_tree = {
 		select_effect = {
 			add_timed_idea = {
 			idea = CAL_sudden_dissapearances
+			days = 47
+			}
+		hidden_effect = {
+		country_event = {
+			id = pacificstates.357
 			days = 45
 			}
+		}
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_media_blackout"
