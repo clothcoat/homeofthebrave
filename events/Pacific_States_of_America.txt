@@ -6187,7 +6187,7 @@ country_event = {# Military Coups Hearst
 		create_country_leader = {
 			name = "Henry H. Arnold"
 			desc = "POLITICS_HENRY_H_ARNOLD_DESC"
-			picture = "Portrait_CAL_Henry_H_arnold.tga"
+			picture = "gfx/leaders/CAL/Portrait_CAL_Henry_Arnold.tga"
 			expire = "1965.1.1"
 			ideology = authoritarian_democrat_subtype
 			traits = {}
@@ -7993,20 +7993,32 @@ country_event = {# Spiritualist Counter-Coup
 
 	fire_only_once = yes
 	
-	option = {# Support them
+	option = {# We must fallback
 		name = pacificstates.351.a
-		add_manpower = 100
-		add_political_power = -10
-		add_war_support = 0.02
-		add_popularity = { ideology = national_populist popularity = 0.03 }
+		add_manpower = -12000
+		army_experience = -20
+		add_popularity = { ideology = national_populist popularity = 0.05 }
+		hidden_effect = {
+		country_event = {
+			id = pacificstates.353
+			days = 8
+			}
+		}
 	}
-	option = {# Stop Supporting Them
+	option = {# We must fight this madman
 		name = pacificstates.351.b
-		add_political_power = -10
+		add_political_power = -30
+		add_stability = -0.05
+		hidden_effect = {
+		country_event = {
+			id = pacificstates.352
+			days = 8
+			}
+		}
 	}
 }
 
-country_event = {# Spiritualist Counter-Coup
+country_event = {# Battle of Bakersfield
 	id = pacificstates.352
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.352"}
 	title = pacificstates.352.t
@@ -8017,20 +8029,30 @@ country_event = {# Spiritualist Counter-Coup
 
 	fire_only_once = yes
 	
-	option = {# Support them
+	option = {# Attack
 		name = pacificstates.352.a
-		add_manpower = 100
-		add_political_power = -10
-		add_war_support = 0.02
-		add_popularity = { ideology = national_populist popularity = 0.03 }
+		add_manpower = -2500
+		add_political_power = -50
+		hidden_effect = {
+		country_event = {
+			id = pacificstates.246
+			days = 8
+			}
+		}
 	}
-	option = {# Stop Supporting Them
+	option = {# Retreat
 		name = pacificstates.352.b
-		add_political_power = -10
+		add_manpower = -12000
+		hidden_effect = {
+		country_event = {
+			id = pacificstates.353
+			days = 8
+			}
+		}
 	}
 }
 
-country_event = {# Spiritualist Counter-Coup
+country_event = {# Bodin Addresses Congress
 	id = pacificstates.353
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.353"}
 	title = pacificstates.353.t
@@ -8041,16 +8063,29 @@ country_event = {# Spiritualist Counter-Coup
 
 	fire_only_once = yes
 	
-	option = {# Support them
+	option = {# Let them laugh
 		name = pacificstates.353.a
-		add_manpower = 100
-		add_political_power = -10
-		add_war_support = 0.02
-		add_popularity = { ideology = national_populist popularity = 0.03 }
-	}
-	option = {# Stop Supporting Them
-		name = pacificstates.353.b
-		add_political_power = -10
+		add_political_power = 10
+		add_stability = -0.05
+		add_popularity = { ideology = national_populist popularity = 0.05 }
+		create_country_leader = {#
+			name = "Edward Longstreet Bodin"
+			desc = "POLITICS_EDWARD_LONGSTREET_BODIN_DESC"
+			picture = "gfx/leaders/PSA/CAL_edward_longstreet_bodin.tga"
+			expire = "1965.1.1"
+			ideology = national_populist_subtype
+			traits = {}
+		}
+		set_politics = {
+			ruling_party = national_populist
+			elections_allowed = no
+		}
+		hidden_effect = {
+		country_event = {
+			id = pacificstates.354
+			days = 4
+			}
+		}
 	}
 }
 
@@ -8067,14 +8102,17 @@ country_event = {# Spiritualist Counter-Coup
 	
 	option = {# Very well, warn them they must flee
 		name = pacificstates.354.a
-		add_manpower = 100
-		add_political_power = -10
-		add_war_support = 0.02
+		add_political_power = 25
+		add_manpower = -550
+		add_stability = -0.02
 		add_popularity = { ideology = national_populist popularity = 0.03 }
 	}
 	option = {# And let them strike later? I think not
 		name = pacificstates.354.b
-		add_political_power = -10
+		add_political_power = 40
+		add_manpower = -1200
+		add_stability = -0.03
+		add_popularity = { ideology = national_populist popularity = 0.05 }
 	}
 }
 

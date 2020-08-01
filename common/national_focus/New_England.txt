@@ -5524,7 +5524,23 @@ focus_tree = {
 		complete_tooltip = {}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NEE_old_gravel_voice"
-			
+			army_experience = 15
+			add_tech_bonus = {
+				name = NEE_firepwer_docrine
+				bonus = 1
+				uses = 1
+				category = cat_superior_firepower
+			}
+			add_equipment_to_stockpile = {
+			type = light_tank_equipment
+			amount = 5
+			producer = NEE
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 15
+				producer = NEE
+			}
 		}
 	}
 	focus = {
@@ -5549,14 +5565,36 @@ focus_tree = {
 		available_if_capitulated = yes
 		complete_tooltip = {}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus NEE_assault_the_line"
-			army_experience = 50
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_integrated_armor"
+			army_experience = 10
+			add_tech_bonus = {
+				name = NEE_Bonus
+				bonus = 0.5
+				uses = 1
+				category = motorized_equipment
+			}
+			add_tech_bonus = {
+				name = NEE_firepwer_docrine
+				bonus = 1
+				uses = 1
+				category = cat_superior_firepower
+			}
+			add_equipment_to_stockpile = {
+			type = light_tank_equipment
+			amount = 10
+			producer = NEE
+			}
+			add_equipment_to_stockpile = {
+				type = motorized_equipment
+				amount = 30
+				producer = NEE
+			}
 		}
 	}
 	focus = {
 		id = NEE_decisive_tactics
 		icon = GFX_goal_generic_more_territorial_claims
-		cost = 5
+		cost = 4
 		x = -1
 		y = 2
 		relative_position_id = NEE_old_gravel_voice
@@ -5575,8 +5613,16 @@ focus_tree = {
 		available_if_capitulated = yes
 		complete_tooltip = {}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus NEE_assault_the_line"
-			army_experience = 50
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_decisive_tactics"
+			army_experience = 10
+			add_command_power = 20
+			add_war_support = 0.03
+			add_tech_bonus = {
+				name = NEE_firepwer_docrine
+				bonus = 2
+				uses = 1
+				category = cat_superior_firepower
+			}
 		}
 	}
 	focus = {
@@ -5601,8 +5647,24 @@ focus_tree = {
 		available_if_capitulated = yes
 		complete_tooltip = {}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus NEE_assault_the_line"
-			army_experience = 50
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_artillery_line"
+			add_tech_bonus = {
+				name = NEE_firepwer_docrine
+				bonus = 1
+				uses = 1
+				category = cat_superior_firepower
+			}
+			add_tech_bonus = {
+				name = artillery_bonus
+				bonus = 2
+				uses = 2
+				category = artillery
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 110
+				producer = NEE
+			}
 			
 		}
 	}
@@ -5628,8 +5690,27 @@ focus_tree = {
 		available_if_capitulated = yes
 		complete_tooltip = {}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus NEE_assault_the_line"
-			army_experience = 50
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_bombing_support"
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = cat_strategic_bomber
+			}
+			add_tech_bonus = {
+				bonus = 0.6
+				uses = 2
+				category = radar_tech
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 40
+				producer = NEE
+			}
+			add_equipment_to_stockpile = {
+				type = strategic_bomber_equipment
+				amount = 50
+				producer = NEE
+			}
 			
 		}
 	}
@@ -5656,8 +5737,19 @@ focus_tree = {
 		complete_tooltip = {}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NEE_assault_the_line"
-			army_experience = 50
-			
+			navy_experience = 10
+			add_equipment_to_stockpile = { type = naval_bomber_equipment amount = 30 }
+			add_tech_bonus = {
+				name = marines_bonus
+				bonus = 1
+				uses = 1
+				category = marine_tech
+			}
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = cat_naval_bomber
+			}
 		}
 	}
 	focus = {
@@ -5686,8 +5778,34 @@ focus_tree = {
 		complete_tooltip = {}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NEE_assault_the_line"
-			army_experience = 50
-			
+			add_equipment_to_stockpile = {
+				type = anti_tank_equipment
+				amount = 180
+				producer = CAL
+			}
+			add_tech_bonus = {
+				name = artillery_bonus
+				bonus = 1.5
+				uses = 1
+				category = antitank
+			}
+			add_equipment_to_stockpile = {
+				type = anti_air_equipment
+				amount = 50
+				producer = CAL
+			}
+			add_tech_bonus = {
+				name = artillery_bonus
+				bonus = 1.5
+				uses = 1
+				category = antiair
+			}
+			add_tech_bonus = {
+				name = NEE_firepwer_docrine
+				bonus = 1
+				uses = 1
+				category = cat_superior_firepower
+			}
 		}
 	}
 	focus = {
@@ -5714,6 +5832,12 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NEE_assault_the_line"
 			army_experience = 50
+			add_tech_bonus = {
+				name = NEE_firepwer_docrine
+				bonus = 1.5
+				uses = 1
+				category = cat_superior_firepower
+			}
 			
 		}
 	}

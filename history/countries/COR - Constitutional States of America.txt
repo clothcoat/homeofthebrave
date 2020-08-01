@@ -330,7 +330,21 @@ create_corps_commander = {# Samuel Green
 	id = 138
 }
 
-
+create_corps_commander = {# William Shepherd
+	name = "William Shepherd"
+	desc = "TEX_SAMUEL_GREEN_ARMY_DESC"
+	portrait_path = "gfx/leaders/TEX/William_Jpshepard.tga"
+	traits = {
+		inflexible_strategist
+		harsh_leader
+	}
+	skill = 1
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 1
+	id = 140
+}
 
 ### Navy Leader
 create_navy_leader = {# Arthur L. Bristol
