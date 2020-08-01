@@ -907,7 +907,9 @@ country_event = { # A New Nation
 	option = { # We must forge a new order
 		name = constate.1706.a
 		add_political_power = 30
+		add_stability = -0.03
 		add_popularity = { ideology = national_populist popularity = 0.05 }
+		set_cosmetic_tag = COR_black_legion_america
 	}
 	option = { # We'll stay traditional
 		name = constate.1706.b

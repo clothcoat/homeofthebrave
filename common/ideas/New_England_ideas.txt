@@ -181,7 +181,7 @@ ideas = {
 		}
 		
 		NEE_state_militias = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NEE_Minutemen"}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NEE_state_militias"}
 			allowed = { always = no }
 			removal_cost = -1
 			picture = generic_reserve_divisions
@@ -196,7 +196,7 @@ ideas = {
 		}
 		
 		NEE_private_defense_forces = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NEE_Minutemen"}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NEE_private_defense_forces"}
 			allowed = { always = no }
 			removal_cost = -1
 			picture = generic_reserve_divisions
@@ -505,6 +505,19 @@ ideas = {
 			}
 		}
 		
+		NEE_cultural_liberalism_idea_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NEE_cultural_liberalism_idea_2"}
+			allowed = { always = no }
+			removal_cost = -1
+			picture = generic_reserve_divisions
+			modifier = {
+				recruitable_population_factor = 0.02
+				consumer_goods_factor = -0.02
+				political_power_gain = 0.03
+				party_popularity_stability_factor = 0.1
+			}
+		}
+		
 		NEE_american_constitutionalism = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NEE_american_constitutionalism"}
 			allowed = { always = no }
@@ -651,6 +664,18 @@ ideas = {
 		
 		#### Military ####
 
+		NEE_Minutemen = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NEE_Minutemen"}
+			allowed = { always = no }
+			removal_cost = -1
+			picture = generic_reserve_divisions
+			modifier = {
+				conscription = 0.03
+				army_core_attack_factor = 0.03
+				army_core_defence_factor = 0.05
+			}
+		}
+		
 		NEE_Defensive_Nature = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NEE_Defensive_Nature"}
 			allowed = { always = no }
@@ -658,8 +683,8 @@ ideas = {
 			picture = generic_reserve_divisions
 			modifier = {
 				conscription = 0.03
-				army_core_attack_factor = 0.15
-				army_core_defence_factor = 0.15
+				army_core_attack_factor = 0.03
+				army_core_defence_factor = 0.1
 			}
 		}
 
@@ -1086,6 +1111,48 @@ ideas = {
 			fortification_collateral_chance = 0.1
 			pocket_penalty = -0.1
 			terrain_penalty_reduction = 0.1
+			}
+		}
+		
+		NEE_green_policy_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NEE_green_policy_idea"}
+			allowed = { always = no }
+			removal_cost = -1
+			picture = FRA_scw_intervention_republicans_focus
+			modifier = {
+			weekly_manpower = 50
+			conscription = 0.03
+			local_manpower = 0.05
+			non_core_manpower = 0.05
+			mobilization_speed = 0.05
+			}
+		}
+		NEE_green_policy_idea_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NEE_green_policy_idea_2"}
+			allowed = { always = no }
+			removal_cost = -1
+			picture = FRA_scw_intervention_republicans_focus
+			modifier = {
+			weekly_manpower = 60
+			monthly_population = -0.05
+			conscription = 0.05
+			local_manpower = 0.1
+			non_core_manpower = 0.05
+			mobilization_speed = 0.08
+			}
+		}
+		NEE_green_policy_idea_3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NEE_green_policy_idea_3"}
+			allowed = { always = no }
+			removal_cost = -1
+			picture = FRA_scw_intervention_republicans_focus
+			modifier = {
+			weekly_manpower = 75
+			monthly_population = -0.03
+			conscription = 0.06
+			local_manpower = 0.12
+			non_core_manpower = 0.1
+			mobilization_speed = 0.15
 			}
 		}
 	}

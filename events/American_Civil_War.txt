@@ -1078,7 +1078,7 @@ country_event = { #AUS-CSA Treaty Collapses
 	}
 	}
 	CSA = {
-	surrender_progress < 0.15
+	surrender_progress < 0.25
 	}
 	has_global_flag = AUS_CSA_TREATY
 	TEX = {
@@ -4734,7 +4734,7 @@ country_event = { # Syndicalist Victory
 	is_triggered_only = yes
 
 	option = { #Agree
-		name = amcivwar.360002.a
+		name = amcivwar.36003.a
 		set_country_flag = CSA_syndicalist_victory
 		add_war_support = 0.05
 		add_popularity = {

@@ -4111,7 +4111,11 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			add_ideas = kr_smith_wesson_nee
+			add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 500
+			producer = NEE
+			}
 		}
 	}
 
@@ -5762,7 +5766,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		complete_tooltip = {}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus NEE_assault_the_line"
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_firepower_purchase"
 			army_experience = 50
 			
 		}
@@ -5789,9 +5793,16 @@ focus_tree = {
 		available_if_capitulated = yes
 		complete_tooltip = {}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus NEE_assault_the_line"
-			army_experience = 50
-			
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_green_policy"
+			add_manpower = 2000
+			add_war_support = 0.03
+			add_political_power = -30
+			add_tech_bonus = {
+				name = Green_Plan
+				bonus = 0.75
+				uses = 1
+				category = cat_mass_assault
+			}
 		}
 	}
 	focus = {
@@ -5816,9 +5827,15 @@ focus_tree = {
 		available_if_capitulated = yes
 		complete_tooltip = {}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus NEE_assault_the_line"
-			army_experience = 50
-			
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_consistant_conscription"
+			add_ideas = NEE_green_policy_idea
+			add_manpower = 9500
+			add_tech_bonus = {
+				name = Green_Plan
+				bonus = 1
+				uses = 1
+				category = cat_mass_assault
+			}
 		}
 	}
 	focus = {
@@ -5843,9 +5860,12 @@ focus_tree = {
 		available_if_capitulated = yes
 		complete_tooltip = {}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus NEE_assault_the_line"
-			army_experience = 50
-			
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_moral_idealism"
+			add_war_support = 0.05
+			add_manpower = 250
+			add_political_power = 30
+			add_command_power = 5
+			add_opinion_modifier = { target = CAN modifier = small_increase }
 		}
 	}
 	focus = {
@@ -5870,9 +5890,20 @@ focus_tree = {
 		available_if_capitulated = yes
 		complete_tooltip = {}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus NEE_assault_the_line"
-			army_experience = 50
-			
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_yankee_nationalism"
+			add_manpower = 3500
+			add_war_support = 0.1
+			add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 150
+			producer = NEE
+			}
+			add_tech_bonus = {
+				name = Green_Plan
+				bonus = 1
+				uses = 1
+				category = cat_mass_assault
+			}
 		}
 	}
 	focus = {
@@ -5897,9 +5928,19 @@ focus_tree = {
 		available_if_capitulated = yes
 		complete_tooltip = {}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus NEE_assault_the_line"
-			army_experience = 50
-			
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_farmer_soldiers"
+			swap_ideas = {
+			remove_idea = NEE_green_policy_idea
+			add_idea = NEE_green_policy_idea_2
+			}
+			add_stability = -0.03
+			add_manpower = 15000
+			add_tech_bonus = {
+				name = Green_Plan
+				bonus = 0.5
+				uses = 1
+				category = cat_mass_assault
+			}
 		}
 	}
 	focus = {
@@ -5924,9 +5965,39 @@ focus_tree = {
 		available_if_capitulated = yes
 		complete_tooltip = {}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus NEE_assault_the_line"
-			army_experience = 50
-			
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_silver_military_lease"
+			add_political_power = 30
+			random_owned_controlled_state = {
+				limit = {
+					is_mainland_america = yes
+					free_building_slots = { building = arms_factory size > 0 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_mainland_america = yes
+					free_building_slots = { building = arms_factory size > 0 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_mainland_america = yes
+					free_building_slots = { building = arms_factory size > 0 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 1
+			}
 		}
 	}
 	focus = {
@@ -5951,8 +6022,28 @@ focus_tree = {
 		available_if_capitulated = yes
 		complete_tooltip = {}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus NEE_assault_the_line"
-			army_experience = 50
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_mass_spending"
+			swap_ideas = {
+			remove_idea = NEE_green_policy_idea_2
+			add_idea = NEE_green_policy_idea_3
+			}
+			add_manpower = 20000
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 2200
+				producer = NEE
+			}
+			add_equipment_to_stockpile = {
+				type = motorized_equipment
+				amount = 250
+				producer = NEE
+			}
+			add_tech_bonus = {
+				name = Green_Plan
+				bonus = 1.5
+				uses = 2
+				category = cat_mass_assault
+			}
 		}
 	}
 		focus = {

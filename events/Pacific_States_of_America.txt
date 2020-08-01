@@ -5561,7 +5561,7 @@ country_event = {# Cease Japanese Immigration
 	
 	option = {# Yes
 		name = pacificstates.225.a
-		add_ideas = CAL_no_japanese_immigration
+		add_manpower = -200
 		add_popularity = { ideology = paternal_autocrat popularity = 0.02 }
 		add_political_power = 30
 	}
