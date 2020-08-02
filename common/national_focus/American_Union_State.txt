@@ -3429,7 +3429,7 @@ focus_tree = {
 
 	focus = {# Agricultural Adjustment Act
 		id = TEX_the_aaa
-		icon = GFX_focus_AUS_agriculture
+		icon = GFX_goal_AUS_agrarian_focus
 		cost = 7.25
 		prerequisite = {
 			focus = TEX_civil_works_adminstration
@@ -4072,7 +4072,7 @@ focus_tree = {
 	}
 	focus = {
 		id = TEX_minutemen_professionalism
-		icon = GFX_goal_national_arsenal
+		icon = GFX_goal_AUS_agrarian_soldiers_focus
 		cost = 5.00
 		x = 1
 		y = 1

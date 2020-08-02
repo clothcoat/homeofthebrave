@@ -231,7 +231,7 @@ focus_tree = {
 	}
 	focus = {# Jim Crow's America
 		id = COR_jim_crows_america
-		icon = GFX_goal_support_fascism
+		icon = GFX_goal_COR_Jim_Crow_focus
 		cost = 5.00
 		prerequisite = {
 			focus = COR_political_machine
@@ -600,7 +600,7 @@ focus_tree = {
 
 	focus = {# Loyal Governors
 		id = COR_loyal_governors
-		icon = GFX_focus_generic_military_mission
+		icon = GFX_goal_COR_Loyal_Governors_icon
 		cost = 7.25
 		prerequisite = {
 			focus = COR_land_of_our_fathers
@@ -700,7 +700,7 @@ focus_tree = {
 
 	focus = {# Southern Education
 		id = COR_democrats_education
-		icon = GFX_goal_KTG_Bookstack
+		icon = GFX_goal_COR_education_icon
 		cost = 7.25
 		prerequisite = {
 			focus = COR_patriotic_states
@@ -1925,7 +1925,7 @@ focus_tree = {
 	
 	focus = {# White Welfare
 		id = COR_white_welfare
-		icon = GFX_goal_gold_reserve
+		icon = GFX_goal_COR_White_Welfare_icon
 		cost = 6.25
 		prerequisite = {
 			focus = COR_christian_work_ethic
