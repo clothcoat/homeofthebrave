@@ -614,6 +614,10 @@ country_event = { # Formation of the Christian Party
 			id = unionstate.23
 			days = 14
 			}
+		country_event = {
+			id = unionstate.54
+			days = 7
+			}
 		}
 		set_party_name = {
 			ideology = social_conservative
@@ -627,6 +631,10 @@ country_event = { # Formation of the Christian Party
 		country_event = {
 			id = unionstate.23
 			days = 14
+			}
+		country_event = {
+			id = unionstate.54
+			days = 7
 			}
 		}
 	}
@@ -2323,8 +2331,232 @@ country_event = { #Long Dead
 	}
 }
 
+country_event = { #Pelley Speech Attracts Controversy
+	id = unionstate.54
+	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.54"}
+	title = unionstate.54.t
+	desc = unionstate.54.d
 
-country_event = { #Treasury Demands Capital Controls
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { #Denounce the Speech
+		name = unionstate.54.a
+		add_political_power = -15
+		add_stability = 0.02
+		add_popularity = { ideology = social_conservative popularity = -0.01 }
+	}
+	option = { #Do nothing
+		name = unionstate.54.b
+		add_popularity = { ideology = social_conservative popularity = 0.01 }
+	}
+}
+
+country_event = { #The Silver Cavalcade
+	id = unionstate.55
+	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.55"}
+	title = unionstate.55.t
+	desc = unionstate.55.d
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { #Fund it
+		name = unionstate.55.a
+		add_political_power = -20
+		add_command_power = 10
+		add_war_support = 0.05
+		add_popularity = { ideology = social_conservative popularity = 0.03 }
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.02 }
+	}
+	option = { #Actually, let's wait on this
+		name = unionstate.55.b
+	}
+}
+
+country_event = { #Jewish Segregation
+	id = unionstate.56
+	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.56"}
+	title = unionstate.56.t
+	desc = unionstate.56.d
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { #Implement it
+		name = unionstate.56.a
+		add_political_power = 20
+		add_popularity = { ideology = paternal_autocrat popularity = 0.03 }
+		add_popularity = { ideology = social_conservative popularity = -0.01 }
+		add_stability = -0.05
+	}
+	option = { #It's too controversial
+		name = unionstate.56.b
+		add_political_power = -35
+		add_stability = 0.03
+		add_popularity = { ideology = social_conservative popularity = 0.01 }
+	}
+}
+
+country_event = { #Our Problem Children
+	id = unionstate.57
+	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.57"}
+	title = unionstate.57.t
+	desc = unionstate.57.d
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { #Do nothing
+		name = unionstate.57.a
+		add_political_power = 20
+		add_war_support = 0.05
+		add_popularity = { ideology = paternal_autocrat popularity = 0.03 }
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.02 }
+		add_stability = -0.02
+	}
+	option = { #Reign them in
+		name = unionstate.57.b
+		add_political_power = -50
+		add_command_power = 10
+		add_popularity = { ideology = paternal_autocrat popularity = -0.03 }
+	}
+}
+
+country_event = { #Slow growth of Soulcraft
+	id = unionstate.58
+	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.58"}
+	title = unionstate.58.t
+	desc = unionstate.58.d
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { #Publish more Soulcraft
+		name = unionstate.58.a
+		add_political_power = 30
+		add_popularity = { ideology = social_conservative popularity = 0.03 }
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.01 }
+		add_popularity = { ideology = paternal_autocrat popularity = 0.01 }
+		add_stability = -0.01
+	}
+	option = { #Actually, let's wait on this
+		name = unionstate.58.b
+		add_political_power = 15
+		add_popularity = { ideology = social_conservative popularity = 0.02 }
+	}
+}
+
+country_event = { #Calling in Favors
+	id = unionstate.59
+	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.59"}
+	title = unionstate.59.t
+	desc = unionstate.59.d
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { #Of course
+		name = unionstate.59.a
+		add_political_power = -20
+		add_command_power = 10
+		add_war_support = 0.05
+		add_popularity = { ideology = social_conservative popularity = 0.03 }
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.02 }
+	}
+	option = { #Actually, let's wait on this
+		name = unionstate.59.b
+	}
+}
+
+country_event = { #The Ward System
+	id = unionstate.5900
+	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.5900"}
+	title = unionstate.5900.t
+	desc = unionstate.5900.d
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { #Implement the Wards
+		name = unionstate.5900.a
+		add_political_power = 20
+		add_command_power = 10
+		add_stability = -0.05
+		add_popularity = { ideology = social_conservative popularity = 0.02 }
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.01 }
+		add_popularity = { ideology = paternal_autocrat popularity = 0.01 }
+		random_owned_controlled_state = {
+				limit = {
+					is_core_of = TEX
+					is_controlled_by = TEX
+					industrial_complex > 0
+				}
+			add_extra_state_shared_building_slots = 1
+		}
+	}
+	option = { #No, we should step back
+		name = unionstate.5900.b
+		add_stability = 0.02
+		add_political_power = -75
+		add_popularity = { ideology = social_conservative popularity = -0.05 }
+	}
+}
+
+country_event = { #Cleansing Hollywood
+	id = unionstate.5901
+	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.5901"}
+	title = unionstate.5901.t
+	desc = unionstate.5901.d
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { #Clean up Hollywood
+		name = unionstate.5901.a
+		add_stability = -0.05
+		add_political_power = 30
+		add_command_power = 5
+		add_popularity = { ideology = social_conservative popularity = 0.03 }
+		add_popularity = { ideology = paternal_autocrat popularity = 0.01 }
+		add_popularity = { ideology = radical_socialist popularity = -0.01 }
+		add_popularity = { ideology = syndicalist popularity = -0.01 }
+		add_popularity = { ideology = totalist popularity = -0.01 }
+	}
+	option = { #We'll give them a chance
+		name = unionstate.5901.b
+		add_political_power = 20
+		add_popularity = { ideology = social_conservative popularity = 0.01 }
+		add_popularity = { ideology = syndicalist popularity = -0.01 }
+	}
+}
+
+country_event = { #The First Americans
+	id = unionstate.5902
+	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.5902"}
+	title = unionstate.5902.t
+	desc = unionstate.5902.d
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { #It was needed
+		name = unionstate.5902.a
+		add_political_power = 10
+		add_popularity = { ideology = social_conservative popularity = 0.01 }
+	}
+}
+
+country_event = { #Effinger Captured
 	id = unionstate.60
 	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.60"}
 	title = unionstate.60.t
@@ -2334,14 +2566,14 @@ country_event = { #Treasury Demands Capital Controls
 	
 	is_triggered_only = yes
 	
-	option = { #Limit wealth movement for the rich
+	option = { #Pursue the Death Penalty
 		name = unionstate.60.a
-		add_political_power = -30
+		add_political_power = 30
 	}
-	option = { #Harsh Taxation and Fees
+	option = { #A Life Sentence is better
 		name = unionstate.60.b
-		add_manpower = -2000
-		add_command_power = 25
+		add_war_support = -0.03
+		add_popularity = { ideology = social_liberal popularity = 0.03 }
 	}
 }
 

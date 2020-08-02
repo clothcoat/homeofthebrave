@@ -2438,11 +2438,17 @@ focus_tree = {
 	focus = {# Christian Party Victory
 		id = TEX_christian_party_victory
 		icon = GFX_goal_TEX_Christian_Party
-		cost = 1.25
+		cost = 1.5
 		available = {
 			has_global_flag = USA_civil_war_over_flag
 			has_government = social_conservative
 			has_country_flag = AUS_election_occured
+		}
+		select_effect = {
+		country_event = {
+			id = 55
+			days = 1
+			}
 		}
 		cancel_if_invalid = yes
 		available_if_capitulated = yes
@@ -2479,6 +2485,12 @@ focus_tree = {
 			add_popularity = { ideology = social_conservative popularity = 0.05 }
 			add_political_power = 30
 			add_war_support = 0.03
+			hidden_effect = {
+			country_event = {
+			id = unionstate.5901
+			days = 20
+				}
+			}
 		}
 	}
 
@@ -2684,6 +2696,12 @@ focus_tree = {
 			army_experience = 15
 			add_war_support = 0.05
 			add_popularity  { ideology = social_conservative popularity = 0.03 }
+			hidden_effect = {
+			country_event = {
+			id = unionstate.57
+			days = 45
+				}
+			}
 		}
 	}
 
@@ -2788,6 +2806,12 @@ focus_tree = {
 		available = {
 			has_government = social_conservative
 		}
+		select_effect = {
+		country_event = {
+			id = unionstate.5900
+			days = 15
+			}
+		}
 		cancel_if_invalid = yes
 		available_if_capitulated = yes
 		relative_position_id = TEX_christian_party_victory
@@ -2855,6 +2879,12 @@ focus_tree = {
 					industrial_complex > 0
 				}
 				add_extra_state_shared_building_slots = 1
+			}
+			hidden_effect = {
+			country_event = {
+			id = unionstate.56
+			days = 20
+				}
 			}
 		}
 	}
@@ -3009,6 +3039,14 @@ focus_tree = {
 		available = {
 			has_government = social_conservative
 		}
+		select_effect = {
+		hidden_effect = {
+			country_event = {
+			id = unionstate.59
+			days = 20
+				}
+			}
+		}
 		cancel_if_invalid = yes
 		available_if_capitulated = yes
 		relative_position_id = TEX_christian_party_victory
@@ -3023,6 +3061,12 @@ focus_tree = {
 			add_popularity = { ideology = social_conservative popularity = 0.05 }
 			add_political_power = 40
 			add_stability = 0.05
+			hidden_effect = {
+			country_event = {
+			id = unionstate.5902
+			days = 20
+				}
+			}
 		}
 	}
 
@@ -3078,6 +3122,12 @@ focus_tree = {
 			add_popularity = { ideology = authoritarian_democrat popularity = 0.02 }
 			add_war_support = 0.05
 			add_manpower = 1200
+			hidden_effect = {
+			country_event = {
+			id = unionstate.58
+			days = 35
+				}
+			}
 		}
 	}
 
