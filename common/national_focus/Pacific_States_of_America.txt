@@ -3278,6 +3278,7 @@ focus_tree = {
 			has_government = authoritarian_democrat
 			has_government = paternal_autocrat
 			}
+			has_country_leader = { ruling_only = yes name = "William Randolph Hearst" }
 		}
 		ai_will_do = {
 			factor = 5
@@ -10909,7 +10910,7 @@ focus_tree = {
 		focus = CAL_finish_socialism
 		}
 		available = {
-			has_government = national_populist
+			has_government = paternal_autocrat
 		}
 		ai_will_do = {
 			factor = 5
@@ -10934,7 +10935,7 @@ focus_tree = {
 		focus = CAL_japan_in_command
 		}
 		available = {
-			has_government = national_populist
+			has_government = paternal_autocrat
 		}
 		ai_will_do = {
 			factor = 5
@@ -10967,7 +10968,7 @@ focus_tree = {
 		focus = CAL_japan_in_command
 		}
 		available = {
-			has_government = national_populist
+			has_government = paternal_autocrat
 		}
 		ai_will_do = {
 			factor = 5
@@ -11018,7 +11019,7 @@ focus_tree = {
 		focus = CAL_japan_in_command
 		}
 		available = {
-			has_government = national_populist
+			has_government = paternal_autocrat
 		}
 		ai_will_do = {
 			factor = 5
@@ -11063,7 +11064,7 @@ focus_tree = {
 		focus = CAL_government_reconstruction
 		}
 		available = {
-			has_government = national_populist
+			has_government = paternal_autocrat
 		}
 		ai_will_do = {
 			factor = 5
