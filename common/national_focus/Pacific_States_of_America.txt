@@ -11047,6 +11047,12 @@ focus_tree = {
 			}
 			}
 			add_popularity = { ideology = paternal_autocrat popularity = 0.08 }
+			hidden_effect = {
+			country_event = {
+			id = pacificstates.3580
+			days = 18
+			}
+			}
 		}
 	}
 	
@@ -11212,6 +11218,12 @@ focus_tree = {
 			}
 			add_political_power = 45
 			add_popularity = { ideology = national_populist popularity = 0.05 }
+			hidden_effect = {
+			country_event = {
+			id = pacificstates.362
+			days = 45
+				}
+			}
 		}
 	}
 	
@@ -11268,6 +11280,12 @@ focus_tree = {
 			}
 			add_popularity = { ideology = national_populist popularity = 0.05 }
 			add_stability = 0.03
+			hidden_effect = {
+		country_event = {
+			id = pacificstates.362
+			days = 45
+				}
+			}
 		}
 	}
 	
@@ -11320,6 +11338,12 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_new_science"
 			add_ideas = CAL_new_science_idea
 			add_popularity = { ideology = national_populist popularity = 0.03 }
+			hidden_effect = {
+			country_event = {
+			id = pacificstates.361
+			days = 15
+				}
+			}
 			add_war_support = 0.1
 			add_tech_bonus = {
 				name = NS_sciences
@@ -11353,6 +11377,12 @@ focus_tree = {
 			add_popularity = { ideology = national_populist popularity = 0.05 }
 			add_political_power = 50
 			add_stability = 0.05
+			hidden_effect = {
+			country_event = {
+			id = pacificstates.360
+			days = 45
+				}
+			}
 		}
 	}
 	

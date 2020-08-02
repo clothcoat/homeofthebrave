@@ -8333,3 +8333,121 @@ country_event = {# Boden Removed
 		}
 	}
 }
+
+country_event = {# Sessue Hayakawa
+	id = pacificstates.3580
+	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.3580"}
+	title = pacificstates.3580.t
+	desc = pacificstates.3580.d
+	picture = GFX_ACW_american_brigade
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = {# Good
+		name = pacificstates.3580.a
+		add_manpower = 800
+		add_political_power = 15
+		add_stability = 0.02
+		add_popularity = { ideology = paternal_autocrat popularity = 0.02 }
+	}
+}
+country_event = {# Boden Dead
+	id = pacificstates.359
+	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.359"}
+	title = pacificstates.359.t
+	desc = pacificstates.359.d
+	picture = GFX_ACW_american_brigade
+
+	trigger = {
+	tag = CAL
+	has_completed_focus = CAL_the_redshirt_plot
+	date > 1943.5.5
+	}
+
+	fire_only_once = yes
+	
+	option = {# Pressure
+		name = pacificstates.359.a
+		add_political_power = 15
+		add_stability = 0.02
+		add_popularity = { ideology = paternal_autocrat popularity = 0.03 }
+		create_country_leader = {
+			name = "L. Ron Hubbard"
+			desc = "POLITICS_L_RON_HUBBARD_DESC"
+			picture = "gfx/leaders/PSA/CAL_L_Ron_Hubbard.tga"
+			expire = "1965.1.1"
+			ideology = national_populist_subtype
+			traits = {}
+			}
+		set_politics = {
+			ruling_party = national_populist
+			election_frequency = 48
+			elections_allowed = yes
+		}
+	}
+}
+country_event = {# Film Controlled
+	id = pacificstates.360
+	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.360"}
+	title = pacificstates.360.t
+	desc = pacificstates.360.d
+	picture = GFX_ACW_american_brigade
+
+	trigger = {
+	tag = CAL
+	has_completed_focus = CAL_the_redshirt_plot
+	date > 1943.5.5
+	}
+
+	fire_only_once = yes
+	
+	option = {# Pressure
+		name = pacificstates.360.a
+		add_political_power = 15
+		add_stability = 0.02
+		add_popularity = { ideology = paternal_autocrat popularity = 0.03 }
+	}
+	option = {# Control
+		name = pacificstates.360.a
+		add_political_power = 30
+		add_stability = -0.03
+		add_popularity = { ideology = national_populist popularity = 0.05 }
+	}
+}
+country_event = {# Funds for Psychics
+	id = pacificstates.361
+	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.361"}
+	title = pacificstates.361.t
+	desc = pacificstates.361.d
+	picture = GFX_ACW_american_brigade
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = {# Of course
+		name = pacificstates.361.a
+		add_political_power = -20
+		add_popularity = { ideology = national_populist popularity = 0.01 }
+	}
+}
+
+country_event = {# Our Publishing Houses
+	id = pacificstates.362
+	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.362"}
+	title = pacificstates.362.t
+	desc = pacificstates.362.d
+	picture = GFX_ACW_american_brigade
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = {# New Days Publishing it is
+		name = pacificstates.362.a
+		add_political_power = 20
+		add_popularity = { ideology = national_populist popularity = 0.02 }
+	}
+}

@@ -141,6 +141,16 @@ add_ai_strategy = {
 	value = 1
 }
 
+create_country_leader = {# Du Pont
+	name = "Irenee du Pont"
+	desc = "POLITICS_IRENEE_DU_PONT"
+	picture = "gfx/leaders/NEE/Irenee_du_Pont.tga"
+	expire = "1965.1.1"
+	ideology = national_populist_subtype
+	traits = {
+		financial_expert
+	}
+}
 create_country_leader = {# William Averell Harriman
 	name = "William Averell Harriman"
 	desc = "POLITICS_WILLIAM_HARRIMAN_DESC"
