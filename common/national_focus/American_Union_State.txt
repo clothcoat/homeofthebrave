@@ -3981,7 +3981,7 @@ focus_tree = {
 	}
 	focus = {
 		id = TEX_makeshift_forts
-		icon = GFX_goal_fortify_the_westwall
+		icon = GFX_goal_generic_fortify_city
 		cost = 5.00
 		x = -1
 		y = 1
@@ -5558,20 +5558,11 @@ focus_tree = {
 		}
 		relative_position_id = TEX_Weyland_plan
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TEX_CAS_focus"
-			if = {
-				limit = { NOT = { has_tech = CAS2 } }
-				hidden_effect = {
-					set_technology = { CAS2 = 1 }
-				}
-				custom_effect_tooltip = TEX_unlock_CAS
-				else = {
-					add_tech_bonus = {
-						bonus = 1
-						uses = 1
-						category = cas_bomber
-					}
-				}
+		log = "[GetDateText]: [Root.GetName]: Focus TEX_CAS_focus"
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = cas_bomber
 			}
 		}
 	}
