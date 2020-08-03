@@ -2842,6 +2842,20 @@ focus_tree = {
 		prerequisite = {
 			focus = NEE_private_defense_forces
 		}
+		select_effect = {
+		hidden_effect = {
+		country_event = {
+		id = newengland.134
+		days = 20
+				}
+			}
+		hidden_effect = {
+		country_event = {
+		id = newengland.133
+		days = 15
+				}
+			}
+		}
 		x = 3
 		y = 3
 		relative_position_id = NEE_radical_victory
@@ -2861,6 +2875,12 @@ focus_tree = {
 			add_popularity = { ideology = national_populist popularity = 0.1 }
 			add_political_power = -50
 			add_stability = -0.15
+			hidden_effect = {
+			country_event = {
+			id = newengland.135
+			days = 20
+				}
+			}
 		}
 	}
 	
@@ -2876,6 +2896,14 @@ focus_tree = {
 		relative_position_id = NEE_radical_victory
 		ai_will_do = {
 			factor = 10
+		}
+		select_effect = {
+		hidden_effect = {
+		country_event = {
+		id = newengland.130
+		days = 30
+				}
+			}
 		}
 		available = {
 			has_country_flag = NEE_sentinels
@@ -2906,6 +2934,12 @@ focus_tree = {
 		}
 		available = {
 			has_country_flag = NEE_sentinels
+		}
+		select_effect = {
+		country_event = {
+		id = newengland.132
+		days = 15
+		}
 		}
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -2961,6 +2995,12 @@ focus_tree = {
 					type = arms_factory
 					level = 1
 					instant_build = yes
+				}
+			}
+		hidden_effect = {
+		country_event = {
+		id = newengland.131
+		days = 50
 				}
 			}
 		}
