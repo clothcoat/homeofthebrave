@@ -115,7 +115,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NEE_Georgist_Taxation"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = LIB_bailout_usa
+			picture = GFX_idea_georgist_taxation
 			modifier = {
 				industrial_capacity_factory = 0.05
 				consumer_goods_factor = -0.02
@@ -123,21 +123,11 @@ ideas = {
 				local_resources	= 0.05
 			}
 		}
-		NEE_Georgist_Taxation = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NEE_Georgist_Taxation"}
-			allowed = { always = no }
-			removal_cost = -1
-			picture = LIB_bailout_usa
-			modifier = {
-				industrial_capacity_factory = 0.05
-				consumer_goods_factor = -0.02
-			}
-		}
 		NEE_free_market = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NEE_free_market"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = LIB_bailout_usa
+			picture = GFX_idea_laissez_faire
 			modifier = {
 				industrial_capacity_factory = 0.05
 				line_change_production_efficiency_factor = 0.05
@@ -149,7 +139,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NEE_tougher_immigration"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = LIB_bailout_usa
+			picture = GFX_idea_preferred_immigration
 			modifier = {
 				monthly_population = -0.05
 				consumer_goods_factor = 0.01
@@ -160,7 +150,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NEE_hamiltonian_constitution"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = LIB_bailout_usa
+			picture = GFX_idea_hamiltonian_constitution
 			modifier = {
 				political_power_gain = 0.03
 				stability_factor = 0.05
@@ -172,7 +162,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NEE_ivy_league"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = LIB_bailout_usa
+			picture = GFX_idea_ivy_league
 			modifier = {
 				research_speed_factor = -0.01
 				encryption	= 0.05
@@ -184,7 +174,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NEE_state_militias"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = generic_reserve_divisions
+			picture = GFX_idea_state_militias
 			modifier = {
 				planning_speed = 0.05
 				invasion_preparation = 0.05
@@ -199,7 +189,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NEE_private_defense_forces"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = generic_reserve_divisions
+			picture = GFX_idea_private_defence_forces
 			modifier = {
 				local_manpower = -0.1
 				conscription = -0.05
@@ -223,7 +213,7 @@ ideas = {
 				has_government = national_populist
 			}
 			removal_cost = -1
-			picture = generic_reserve_divisions
+			picture = GFX_idea_stateless_capitalism
 			modifier = {
 				consumer_goods_factor = -0.15
 				monthly_population = 0.05
@@ -245,7 +235,7 @@ ideas = {
 				has_government = national_populist
 			}
 			removal_cost = -1
-			picture = generic_reserve_divisions
+			picture = GFX_idea_sentinels
 			modifier = {
 				justify_war_goal_time = -0.5
 				consumer_goods_factor = -0.05
@@ -264,7 +254,7 @@ ideas = {
 				has_government = national_populist
 			}
 			removal_cost = -1
-			picture = generic_reserve_divisions
+			picture = GFX_idea_sentinels_high_influence
 			modifier = {
 				justify_war_goal_time = -0.5
 				consumer_goods_factor = -0.08
@@ -281,7 +271,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NEE_national_freedom"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = generic_reserve_divisions
+			picture = GFX_idea_economic_freedom_bill
 			modifier = {
 				consumer_goods_factor = -0.02
 				political_advisor_cost_factor = 5
@@ -295,7 +285,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NEE_national_freedom_2"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = generic_reserve_divisions
+			picture = GFX_idea_economic_security_bill
 			modifier = {
 				consumer_goods_factor = -0.03
 				production_factory_efficiency_gain_factor = 0.03
@@ -309,7 +299,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NEE_national_freedom_2"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = generic_reserve_divisions
+			picture = GFX_idea_freedom_from_want
 			modifier = {
 				consumer_goods_factor = -0.06
 				stability_weekly = 0.003
@@ -324,7 +314,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NEE_national_freedom_2"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = generic_reserve_divisions
+			picture = GFX_idea_freedom_from_want_2
 			modifier = {
 				consumer_goods_factor = -0.06
 				stability_weekly = 0.005
@@ -340,7 +330,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NEE_fair_share"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = generic_reserve_divisions
+			picture = GFX_idea_fair_share_taxation
 			modifier = {
 				political_power_gain = 0.05
 				production_factory_efficiency_gain_factor = -0.03
@@ -354,7 +344,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NEE_fair_share_2"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = generic_reserve_divisions
+			picture = GFX_idea_fair_share_economy
 			modifier = {
 				political_power_gain = 0.05
 				stability_weekly = 0.002
@@ -369,7 +359,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NEE_committee_on_agriculture_idea"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = generic_reserve_divisions
+			picture = GFX_idea_agricultural_committee
 			modifier = {
 				consumer_goods_factor = -0.02
 				monthly_population = 0.03
@@ -381,7 +371,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NEE_committee_on_agriculture_idea_2"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = generic_reserve_divisions
+			picture = GFX_idea_agricultural_securities
 			modifier = {
 				consumer_goods_factor = -0.02
 				monthly_population = 0.05
@@ -394,7 +384,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NEE_committee_on_agriculture_idea_3"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = generic_reserve_divisions
+			picture = GFX_idea_national_produce
 			modifier = {
 				consumer_goods_factor = -0.03
 				weekly_manpower = 20
@@ -408,7 +398,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NEE_committee_on_agriculture_idea_4"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = generic_reserve_divisions
+			picture = GFX_idea_national_produce_2
 			modifier = {
 				consumer_goods_factor = -0.05
 				weekly_manpower = 25
@@ -424,7 +414,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NEE_lincolnian_republic_idea"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = generic_reserve_divisions
+			picture = GFX_idea_lincolnian_republic
 			modifier = {
 				recruitable_population_factor = 0.05
 				non_core_manpower = 0.2
@@ -438,7 +428,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NEE_fea_idea"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = generic_reserve_divisions
+			picture = GFX_idea_federal_education_administration
 			modifier = {
 				research_speed_factor = 0.08
 				stability_weekly = 0.002
@@ -455,7 +445,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NEE_education_spending_Idea"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = generic_reserve_divisions
+			picture = GFX_idea_educational_spending
 			modifier = {
 				research_speed_factor = 0.05
 				stability_weekly = 0.001
@@ -467,7 +457,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NEE_localism_idea"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = generic_reserve_divisions
+			picture = GFX_idea_local_empowerement
 			modifier = {
 				local_manpower = 0.05
 				stability_weekly = 0.002
@@ -481,7 +471,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NEE_localism_idea_2"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = generic_reserve_divisions
+			picture = GFX_idea_local_support
 			modifier = {
 				local_manpower = 0.08
 				production_factory_efficiency_gain_factor = 0.03
@@ -496,7 +486,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NEE_cultural_liberalism_idea"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = generic_reserve_divisions
+			picture = GFX_idea_cultural_liberalism
 			modifier = {
 				recruitable_population_factor = 0.02
 				consumer_goods_factor = -0.02
@@ -509,7 +499,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NEE_cultural_liberalism_idea_2"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = generic_reserve_divisions
+			picture = GFX_idea_political_liberalism
 			modifier = {
 				recruitable_population_factor = 0.02
 				consumer_goods_factor = -0.02
@@ -522,7 +512,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NEE_american_constitutionalism"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = generic_reserve_divisions
+			picture = GFX_idea_american_constitutionalism
 			modifier = {
 				local_manpower = 0.05
 				stability_weekly = 0.005
@@ -535,7 +525,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NEE_american_constitutionalism_2"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = generic_reserve_divisions
+			picture = GFX_idea_american_patriotism
 			modifier = {
 				military_leader_cost_factor	= -30
 				local_manpower = 0.1
@@ -549,7 +539,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_combatting_the_mob_idea"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = generic_reserve_divisions
+			picture = GFX_idea_anti_mafia_campaign
 			modifier = {
 				local_manpower = -0.1
 				recruitable_population_factor = -0.01
@@ -562,7 +552,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NEE_home_of_the_brave_idea"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = generic_reserve_divisions
+			picture = GFX_idea_home_of_the_brave
 			modifier = {
 				recruitable_population_factor = 0.02
 				army_core_defence_factor = 0.05
@@ -575,7 +565,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NEE_irish_ties_idea"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = generic_reserve_divisions
+			picture = GFX_idea_irish_trade
 			modifier = {
 				recruitable_population_factor = 0.02
 				monthly_population = 0.05
@@ -589,7 +579,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NEE_irish_ties_idea_2"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = generic_reserve_divisions
+			picture = GFX_idea_irish_ties
 			modifier = {
 				recruitable_population_factor = 0.03
 				monthly_population = 0.06
@@ -602,7 +592,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NEE_irish_ties_idea_2"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = generic_reserve_divisions
+			picture = GFX_idea_irish_trade
 			modifier = {
 				recruitable_population_factor = 0.03
 				monthly_population = 0.06
@@ -617,7 +607,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NEE_union_ties_idea"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = generic_reserve_divisions
+			picture = GFX_idea_union_ties
 			modifier = {
 				consumer_goods_factor = 0.02
 				production_factory_start_efficiency_factor = 0.03
@@ -634,7 +624,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NEE_union_ties_idea_2"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = generic_reserve_divisions
+			picture = GFX_idea_democratic_machine
 			modifier = {
 				consumer_goods_factor = 0.03
 				production_factory_start_efficiency_factor = 0.08
