@@ -214,6 +214,24 @@ create_field_marshal = {# George Marshall
 	logistics_skill = 3
 	id = 937
 }
+create_corps_commander = {# Leslie McNair
+	name = "Leslie McNair"
+	desc = "USA_LESLIE_MCNAIR_ARMY_DESC"
+	portrait_path = "gfx/leaders/USA/Portrait_USA_gen_Leslie_Mcnair.tga"
+	traits = {
+		old_guard
+		career_officer
+		artillery_officer
+	}
+	skill = 3
+
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 4
+	logistics_skill = 2
+	id = 941
+}
+
 ### Corps Commander
 create_corps_commander = {# Alexander Patch
 	name = "Alexander Patch"
