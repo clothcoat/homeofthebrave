@@ -590,6 +590,9 @@ focus_tree = {
 		prerequisite = {
 			focus = NEE_Legitimate_America
 		}
+		available = {
+		has_government = social_democrat
+		}
 		x = 6
 		y = 1
 		relative_position_id = NEE_Legitimate_America

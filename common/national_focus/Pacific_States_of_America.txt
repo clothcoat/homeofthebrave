@@ -6345,7 +6345,7 @@ focus_tree = {
 	
 	focus = {# Sex Laws
 		id = CAL_sex_laws
-		icon = GFX_IRE_women_pilots
+		icon = GFX_goal_CAL_Decency_Laws_icon
 		cost = 5.00
 		available = {
 			has_government = authoritarian_democrat
@@ -9757,7 +9757,7 @@ focus_tree = {
 	
 	focus = {# American Women's Bill
 		id = CAL_womens_bill
-		icon = GFX_goal_women_industry
+		icon = GFX_goal_CAL_American_Womens_Bill_icon
 		cost = 5.00
 		prerequisite = {
 			focus = CAL_tariff_reduction_act

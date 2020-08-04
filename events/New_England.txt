@@ -5383,6 +5383,9 @@ country_event = { # Canada's Decision
 	}
 	option = {
 		name = newengland.105.b
+		ai_will_do = {
+			factor = 0
+		}
 		add_stability = 0.05
 		NEE = {
 		add_political_power = 20
@@ -5430,6 +5433,12 @@ country_event = { # Feds appointed
 		add_political_power = 20
 		add_stability = 0.05
 		add_opinion_modifier = { target = NEE modifier = medium_decrease }
+		}
+		hidden_effect = {
+		country_event = {
+			id = newengland.117
+			days = 4
+			}	
 		}
 	}
 	
@@ -5847,6 +5856,7 @@ country_event = { # Radical Split
 			election_frequency = 48
 			elections_allowed = yes
 		}
+		set_country_flag = NEE_sentinels
 	}
 	option = { # Great
 		name = newengland.120.b
@@ -5855,6 +5865,7 @@ country_event = { # Radical Split
 			id = newengland.121
 			days = 4
 		}
+		set_country_flag = NEE_remnant_victory
 	}
 }
 
@@ -5886,7 +5897,7 @@ country_event = { # Remnant Leader Election
 		}
 	}
 	option = { # Robert McCormick
-		name = newengland.121.a
+		name = newengland.121.b
 		add_political_power = 20
 		create_country_leader = {
 			name = "Robert McCormick"
