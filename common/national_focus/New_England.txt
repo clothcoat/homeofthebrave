@@ -2342,7 +2342,7 @@ focus_tree = {
 	focus = {
 		id = NEE_radical_victory
 		icon = GFX_NEE_radical_victory
-		cost = 5
+		cost = 1
 		prerequisite = {
 			focus = NEE_Legitimate_America
 		}
@@ -2353,8 +2353,10 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
+			OR = {
 			has_country_flag = radical_victory
-			has_government = paternal_autocrat
+			has_government = NEE_sentinels
+			}
 		}
 		cancel_if_invalid = yes
 		continue_if_invalid = no
