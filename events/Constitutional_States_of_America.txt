@@ -1026,20 +1026,13 @@ country_event = { # Death of Stephenson
 	
 	fire_only_once = yes
 
-	option = { # Reveal the plot
+	option = { # A Poor way to go
 		name = constate.1801.a
 		add_political_power = 30
 		add_stability = 0.03
 		add_popularity = { ideology = national_populist popularity = -0.02 }
 		hidden_effect = {
-			country_event = { id = constate.1801 days = 1 }
-		}
-	}
-	
-	option = { # Stay out of it
-		name = constate.1801.a
-		hidden_effect = {
-			country_event = { id = constate.20 days = 5 }
+			country_event = { id = constate.20 days = 1 }
 		}
 	}
 }

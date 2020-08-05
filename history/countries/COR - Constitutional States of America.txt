@@ -268,22 +268,6 @@ create_corps_commander = {# Wickliffe Draper
 	logistics_skill = 2
 	id = 128
 }
-create_corps_commander = {# Courtney Hodges
-	name = "Courtney Hicks Hodges"
-	desc = "TEX_COURTNEY_HODGES_ARMY_DESC"
-	portrait_path = "gfx/leaders/USA/Portrait_USA_Cortney_Hodges.dds"
-	traits = {
-		panzer_leader
-		career_officer
-		infantry_officer
-	}
-	skill = 4
-	attack_skill = 4
-	defense_skill = 3
-	planning_skill = 2
-	logistics_skill = 4
-	id = 130
-}
 create_corps_commander = {# Edward Almond
 	name = "Edward Almond"
 	desc = "TEX_EDWARD_ALMOND_ARMY_DESC"
@@ -332,8 +316,8 @@ create_corps_commander = {# Samuel Green
 
 create_corps_commander = {# William Shepherd
 	name = "William Shepherd"
-	desc = "TEX_SAMUEL_GREEN_ARMY_DESC"
-	portrait_path = "gfx/leaders/TEX/William_Jpshepard.tga"
+	desc = "TEX_WILLIAM_SHEPHERD_ARMY_DESC"
+	portrait_path = "gfx/leaders/CUS/William_Jpshepard.tga"
 	traits = {
 		inflexible_strategist
 		harsh_leader
