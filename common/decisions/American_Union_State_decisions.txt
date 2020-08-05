@@ -37,6 +37,12 @@ TEX_populist_alliance_decision = {
 					is_in_north_america = yes
 					is_in_south_america = yes
 				}
+				NOT = {
+				tag = CAL
+				tag = CSA
+				tag = COR
+				tag = NEE
+				}
 				OR = {
 				has_government = social_democrat
 				has_government = social_liberal
@@ -103,6 +109,12 @@ TEX_populist_alliance_decision = {
 				OR = {
 				has_government = radical_socialist
 				has_government = syndicalist
+				}
+			NOT = {
+				tag = CAL
+				tag = CSA
+				tag = COR
+				tag = NEE
 				}
 			}
 		}

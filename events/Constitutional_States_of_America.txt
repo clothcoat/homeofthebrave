@@ -1039,7 +1039,7 @@ country_event = { # Death of Stephenson
 	option = { # Stay out of it
 		name = constate.1801.a
 		hidden_effect = {
-			country_event = { id = constate.1802 days = 3 }
+			country_event = { id = constate.20 days = 5 }
 		}
 	}
 }
@@ -1106,7 +1106,7 @@ country_event = { # Patton
 			create_country_leader = {
 				name = "George Patton"
 				desc = "POLITICS_GEORGE_PATTON_DESC"
-				picture = "gfx/leaders/CUS/George_Patton.tga"
+				picture = "gfx/leaders/TEX/Portrait_TEX_george_patton.tga"
 				expire = "1965.1.1"
 				ideology = paternal_autocrat_subtype
 				traits = { }
