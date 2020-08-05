@@ -915,6 +915,7 @@ country_event = { # A New Nation
 		name = constate.1706.b
 		add_stability = 0.05
 		add_popularity = { ideology = national_populist popularity = 0.02 }
+	}
 }
 
 country_event = { # Catholic Churches Attacked
@@ -2062,7 +2063,7 @@ country_event = { # Feast of Tabernacle
 		add_stability = 0.02
 	}
 }
-
+	
 country_event = { # Divergent Thinking in Christian Identity
 	id = constate.54
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.54"}
