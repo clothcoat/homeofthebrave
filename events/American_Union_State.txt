@@ -677,7 +677,7 @@ country_event = { # AUS Election
 	is_triggered_only = yes
 
 	desc = { ###Marland in the election###
-	text = amcivwar.2300.d.marland
+	text = unionstate.2300.d.marland
 	trigger = {
 	CAL = {
 	exists = yes
@@ -686,7 +686,7 @@ country_event = { # AUS Election
 	}
 	
 	desc = { ###Marland in the election###
-	text = amcivwar.2300.d.generic
+	text = unionstate.2300.d.generic
 	trigger = {
 	CAL = {
 	exists = no

@@ -3798,7 +3798,8 @@ country_event = { # Bankers Resist!
 		add_political_power = -20
 		hidden_effect = {
 			add_to_variable = { var = ODP_strength value = 1 }
-			country_event = { id = ustates.6303 days = 6 }
+			country_event = { id = ustates.6304 days = 10 }
+			country_event = { id = ustates.6303 days = 14 }
 		}
 	}
 }
@@ -3838,7 +3839,6 @@ country_event = { # Rockefeller Investigated
 		name = ustates.6304.a
 		add_stability = -0.05
 		increase_ruling_party_popularity_by_5 = yes
-		
 	}
 }
 
@@ -3857,7 +3857,7 @@ country_event = { # Smith Act Blocked
 		custom_effect_tooltip = USA_ODP_gains_strength
 		hidden_effect = {
 			add_to_variable = { var = ODP_strength value = 2 }
-			country_event = { id = amcivwar.6307 days = 6 }
+			country_event = { id = ustates.6307 days = 6 }
 			add_stability = -0.05
 			add_political_power = -15
 		}
@@ -3883,9 +3883,8 @@ country_event = { # Congress Protests
 			country_event = { id = amcivwar.1011 days = 6 }
 			country_event = { id = amcivwar.1012 days = 7 }
 			country_event = { id = amcivwar.1013 days = 8 }
-			country_event = { id = ustates.6308 days = 9 }
-			country_event = { id = amcivwar.3 days = 10 }
-			country_event = { id = amcivwar.3000 days = 11 }
+			country_event = { id = amcivwar.3 days = 9 }
+			country_event = { id = amcivwar.3000 days = 10 }
 		}
 	}
 }
@@ -3959,7 +3958,7 @@ country_event = { # Hitting Long
 		custom_effect_tooltip = USA_AFP_loses_strength2
 		hidden_effect = {
 			add_to_variable = { var = SPA_strength value = -3 }
-			country_event = { id = amcivwar.6307 days = 6 }
+			country_event = { id = ustates.6307 days = 6 }
 		}
 	}
 }
