@@ -32,7 +32,7 @@ CSA_initial_events = {
 			}
 			add_timed_idea = {
 				idea = CSA_righteous_nation
-				days = 90
+				days = 360
 			}
 		}
 		hidden_effect = {
@@ -58,7 +58,7 @@ TEX_initial_events = {
 			}
 			add_timed_idea = {
 				idea = TEX_righteous_nation
-				days = 90
+				days = 360
 			}
 		}
 		hidden_effect = {
@@ -193,7 +193,113 @@ USA_release_CSA = {
 				CSA_militia_idea
 				extensive_conscription
 			}
+			if = { ##BONUSES
+			limit = {
+			USA = {
+			has_country_flag = {
+				flag = SPA_strength
+				value < 1
+				}
+			}
+			}
+			add_war_support = -0.03
+			add_stability = -0.4
+			}
+			if = { ##BONUSES
+			limit = {
+			USA = {
+			has_country_flag = {
+				flag = SPA_strength
+				value = 1
+				}
+			}
+			}
+			add_manpower = 5000
+			add_war_support = 0.05
 			add_stability = -0.25
+			}
+			if = {
+			limit = {
+			USA = {
+			has_country_flag = {
+				flag = SPA_strength
+				value = 2
+				}
+			}
+			}
+			add_manpower = 7500
+			add_command_power = 5
+			add_stability = -0.2
+			add_war_support = 0.08
+			}
+			if = {
+			limit = {
+			USA = {
+			has_country_flag = {
+				flag = SPA_strength
+				value = 3
+				}
+				}
+			}
+			add_manpower = 10000
+			add_war_support = 0.1
+			add_stability = -0.15
+			add_command_power = 10
+			}
+			if = {
+			limit = {
+			USA = {
+			has_country_flag = {
+				flag = SPA_strength
+				value = 4
+				}
+				}
+			}
+			add_manpower = 12500
+			add_war_support = 0.12
+			add_stability = -0.1
+			add_command_power = 15
+			}
+			if = {
+			limit = {
+			USA = {
+			has_country_flag = {
+				flag = SPA_strength
+				value = 5
+				}
+				}
+			}
+			add_manpower = 15000
+			add_stability = -0.05
+			add_war_support = 0.15
+			add_command_power = 20
+			}
+			if = {
+			limit = {
+			USA = {
+			has_country_flag = {
+				flag = SPA_strength
+				value = 6
+				}
+				}
+			}
+			add_manpower = 17500
+			add_war_support = 0.18
+			add_command_power = 20
+			}
+			if = {
+			limit = {
+			USA = {
+			has_country_flag = {
+				flag = SPA_strength
+				value > 6
+				}
+				}
+			}
+			add_manpower = 20000
+			add_war_support = 0.2
+			add_command_power = 25
+			}
 			if = {
 				limit = { has_template = "National Guard Division" }
 				delete_unit_template_and_units = { division_template = "National Guard Division" }
@@ -256,6 +362,20 @@ USA_release_CSA = {
 
 USA_release_TEX = {
 	hidden_effect = {
+	transfer_ship = { prefer_name = "USS Iowa" type = SH_battleship target = TEX }
+		transfer_ship = { prefer_name = "USS Texas" type = SH_battleship target = TEX }
+		transfer_ship = { prefer_name = "USS Massachusetts" type = SH_battleship target = TEX }
+		transfer_ship = { prefer_name = "USS Ohio" type = SH_battleship target = TEX }
+		transfer_ship = { prefer_name = "USS Nebraska" type = SH_battleship target = TEX }
+		transfer_ship = { prefer_name = "USS Yorktown" type = heavy_carrier target = TEX }
+		transfer_ship = { prefer_name = "USS Constitution" type = battleship target = TEX }
+		transfer_ship = { prefer_name = "USS Ranger" type = battleship target = TEX }
+		transfer_ship = { prefer_name = "USS United States" type = battleship target = TEX }
+		transfer_ship = { prefer_name = "USS Huntington" type = heavy_cruiser target = TEX }
+		transfer_ship = { prefer_name = "USS San Diego" type = heavy_cruiser target = TEX }
+		transfer_ship = { prefer_name = "USS Pueblo" type = heavy_cruiser target = TEX }
+		transfer_ship = { prefer_name = "USS Frederick" type = heavy_cruiser target = TEX }
+		transfer_ship = { prefer_name = "USS Huron" type = heavy_cruiser target = TEX }
 		TEX = {
 			add_state_core = 371
 			add_state_core = 372
@@ -360,8 +480,111 @@ USA_release_TEX = {
 			amount = 5500
 			producer = USA
 			}
+			add_equipment_to_stockpile = { 
+			type = fighter_equipment
+			amount = 260
+			producer = TEX
+			}
+			add_equipment_to_stockpile = { 
+			type = bomber_equipment
+			amount = 120
+			producer = TEX
+			}
 			add_ideas = {
 				extensive_conscription
+			}
+			if = { ##BONUSES
+			limit = {
+			USA = {
+			has_country_flag = {
+				flag = AFP_strength
+				value = 1
+				}
+			}
+			}
+			add_manpower = 5000
+			add_war_support = 0.05
+			}
+			if = {
+			limit = {
+			USA = {
+			has_country_flag = {
+				flag = AFP_strength
+				value = 2
+				}
+			}
+			}
+			add_manpower = 7500
+			add_command_power = 5
+			add_war_support = 0.08
+			}
+			if = {
+			limit = {
+			USA = {
+			has_country_flag = {
+				flag = AFP_strength
+				value = 3
+				}
+				}
+			}
+			add_manpower = 10000
+			add_war_support = 0.1
+			add_command_power = 10
+			}
+			if = {
+			limit = {
+			USA = {
+			has_country_flag = {
+				flag = AFP_strength
+				value = 4
+				}
+				}
+			}
+			add_manpower = 12500
+			add_war_support = 0.12
+			add_command_power = 15
+			}
+			if = {
+			limit = {
+			USA = {
+			has_country_flag = {
+				flag = AFP_strength
+				value = 5
+				}
+				}
+			}
+			add_manpower = 15000
+			add_war_support = 0.15
+			add_stability = 0.05
+			add_command_power = 20
+			}
+			if = {
+			limit = {
+			USA = {
+			has_country_flag = {
+				flag = AFP_strength
+				value = 6
+				}
+				}
+			}
+			add_manpower = 17500
+			add_war_support = 0.18
+			add_stability = 0.1
+			add_command_power = 20
+			}
+			if = {
+			limit = {
+			USA = {
+			has_country_flag = {
+				flag = AFP_strength
+				value > 6
+				}
+				}
+			}
+			add_manpower = 20000
+			add_war_support = 0.2
+			add_command_power = 25
+			add_stability = 0.15
 			}
 			if = {
 				limit = { has_template = "National Guard Division" }
@@ -425,6 +648,20 @@ USA_release_TEX = {
 
 USA_release_COR = {
 	hidden_effect = {
+		transfer_ship = { prefer_name = "USS Idaho" type = SH_battleship target = COR }
+		transfer_ship = { prefer_name = "USS Mississippi" type = SH_battleship target = COR }
+		transfer_ship = { prefer_name = "USS Tennessee" type = SH_battleship target = COR }
+		transfer_ship = { prefer_name = "USS California" type = SH_battleship target = COR }
+		transfer_ship = { prefer_name = "USS Washington" type = SH_battleship target = COR }
+		transfer_ship = { prefer_name = "USS West Virginia" type = SH_battleship target = COR }
+		transfer_ship = { prefer_name = "USS North Carolina" type = SH_battleship target = COR }
+		transfer_ship = { prefer_name = "USS Moffett" type = destroyer target = COR }
+		transfer_ship = { prefer_name = "USS Balch" type = destroyer target = COR }
+		transfer_ship = { prefer_name = "USS Sigourney" type = destroyer target = COR }
+		transfer_ship = { prefer_name = "USS Gregory" type = destroyer target = COR }
+		transfer_ship = { prefer_name = "USS Stringham" type = destroyer target = COR }
+		transfer_ship = { prefer_name = "USS Dyer" type = destroyer target = COR }
+
 		COR = {
 			add_state_core = 363
 			add_state_core = 364
@@ -452,6 +689,16 @@ USA_release_COR = {
 			set_cosmetic_tag = COR_ACW
 		}
 
+		if = {
+			limit = {
+				USA = { has_country_flag = USA_murray_is_president }
+			}
+			add_timed_idea = {
+				idea = COR_righteous_nation
+				days = 360
+			}
+		}
+			
 		USA = {
 			if = {
 			limit = { has_idea = USA_klan_activity_idea }
@@ -524,7 +771,7 @@ USA_release_COR = {
 				NOT = { is_core_of = COR }
 				NOT = { is_claimed_by = COR }
 			}
-			add_claim_by = CON
+			add_claim_by = COR
 		}
 
 		remove_unit_leader = 992 #George S. Patton
@@ -550,6 +797,16 @@ USA_release_COR = {
 			amount = 3500
 			producer = USA
 			}
+			add_equipment_to_stockpile = { 
+			type = fighter_equipment
+			amount = 250
+			producer = COR
+			}
+			add_equipment_to_stockpile = { 
+			type = bomber_equipment
+			amount = 100
+			producer = COR
+			}
 			add_ideas = {
 				extensive_conscription
 			}
@@ -571,6 +828,7 @@ USA_release_COR = {
 				}
 			}
 			add_manpower = 7500
+			add_command_power = 5
 			add_war_support = 0.08
 			}
 			if = {
@@ -582,6 +840,7 @@ USA_release_COR = {
 			}
 			add_manpower = 10000
 			add_war_support = 0.1
+			add_command_power = 10
 			}
 			if = {
 			limit = {
@@ -592,6 +851,7 @@ USA_release_COR = {
 			}
 			add_manpower = 12500
 			add_war_support = 0.12
+			add_command_power = 15
 			}
 			if = {
 			limit = {
@@ -602,6 +862,7 @@ USA_release_COR = {
 			}
 			add_manpower = 15000
 			add_war_support = 0.15
+			add_command_power = 20
 			}
 			if = {
 			limit = {
@@ -612,6 +873,7 @@ USA_release_COR = {
 			}
 			add_manpower = 17500
 			add_war_support = 0.18
+			add_command_power = 20
 			}
 			if = {
 			limit = {
@@ -622,6 +884,7 @@ USA_release_COR = {
 			}
 			add_manpower = 20000
 			add_war_support = 0.2
+			add_command_power = 25
 			}
 			if = {
 				limit = { has_template = "National Guard Division" }
@@ -804,6 +1067,16 @@ USA_release_WCC = {
 		puppet = WCC
 		}
 		WCC = {
+			add_equipment_to_stockpile = { 
+			type = fighter_equipment
+			amount = 250
+			producer = TEX
+			}
+			add_equipment_to_stockpile = { 
+			type = bomber_equipment
+			amount = 120
+			producer = TEX
+			}
 			load_oob = "WCC"
 			add_ideas = {
 				extensive_conscription
@@ -892,27 +1165,6 @@ USA_release_CAL = {
 			}
 		}
 
-		transfer_ship = { prefer_name = "USS Texas" type = SH_battleship target = CAL }
-		transfer_ship = { prefer_name = "USS Idaho" type = SH_battleship target = CAL }
-		transfer_ship = { prefer_name = "USS Mississippi" type = SH_battleship target = CAL }
-		transfer_ship = { prefer_name = "USS Tennessee" type = SH_battleship target = CAL }
-		transfer_ship = { prefer_name = "USS California" type = SH_battleship target = CAL }
-		transfer_ship = { prefer_name = "USS Washington" type = SH_battleship target = CAL }
-		transfer_ship = { prefer_name = "USS West Virginia" type = SH_battleship target = CAL }
-		transfer_ship = { prefer_name = "USS North Carolina" type = SH_battleship target = CAL }
-		transfer_ship = { prefer_name = "USS Iowa" type = SH_battleship target = CAL }
-		transfer_ship = { prefer_name = "USS Massachusetts" type = SH_battleship target = CAL }
-		transfer_ship = { prefer_name = "USS Ohio" type = SH_battleship target = CAL }
-		transfer_ship = { prefer_name = "USS Nebraska" type = SH_battleship target = CAL }
-		transfer_ship = { prefer_name = "USS Yorktown" type = heavy_carrier target = CAL }
-		transfer_ship = { prefer_name = "USS Constitution" type = battleship target = CAL }
-		transfer_ship = { prefer_name = "USS Ranger" type = battleship target = CAL }
-		transfer_ship = { prefer_name = "USS United States" type = battleship target = CAL }
-		transfer_ship = { prefer_name = "USS Huntington" type = heavy_cruiser target = CAL }
-		transfer_ship = { prefer_name = "USS San Diego" type = heavy_cruiser target = CAL }
-		transfer_ship = { prefer_name = "USS Pueblo" type = heavy_cruiser target = CAL }
-		transfer_ship = { prefer_name = "USS Frederick" type = heavy_cruiser target = CAL }
-		transfer_ship = { prefer_name = "USS Huron" type = heavy_cruiser target = CAL }
 		transfer_ship = { prefer_name = "USS Omaha" type = light_cruiser target = CAL }
 		transfer_ship = { prefer_name = "USS Richmond" type = light_cruiser target = CAL }
 		transfer_ship = { prefer_name = "USS Concord" type = light_cruiser target = CAL }
@@ -936,12 +1188,6 @@ USA_release_CAL = {
 		transfer_ship = { prefer_name = "USS Winslow" type = destroyer target = CAL }
 		transfer_ship = { prefer_name = "USS Phelps" type = destroyer target = CAL }
 		transfer_ship = { prefer_name = "USS Clark" type = destroyer target = CAL }
-		transfer_ship = { prefer_name = "USS Moffett" type = destroyer target = CAL }
-		transfer_ship = { prefer_name = "USS Balch" type = destroyer target = CAL }
-		transfer_ship = { prefer_name = "USS Sigourney" type = destroyer target = CAL }
-		transfer_ship = { prefer_name = "USS Gregory" type = destroyer target = CAL }
-		transfer_ship = { prefer_name = "USS Stringham" type = destroyer target = CAL }
-		transfer_ship = { prefer_name = "USS Dyer" type = destroyer target = CAL }
 		transfer_ship = { prefer_name = "USS Colhoun" type = destroyer target = CAL }
 		transfer_ship = { prefer_name = "USS Stevens" type = destroyer target = CAL }
 		transfer_ship = { prefer_name = "USS McKee" type = destroyer target = CAL }
@@ -1216,6 +1462,32 @@ USA_civil_war_begins = {
 			limit = { country_exists = TEX }
 			TEX = {
 				country_event = { id = amcivwar.92 days = 90 }
+				add_ideas = {
+					war_economy
+					amcivwar_idea
+				}
+				if = {
+					limit = { USA = { has_country_flag = USA_ACW_compromise_rejected } }
+					add_timed_idea = { idea = ACW_fired_up days = 180 }
+				}
+			}
+		}
+		if = {
+			limit = { country_exists = WCC }
+			WCC = {
+				add_ideas = {
+					war_economy
+					amcivwar_idea
+				}
+				if = {
+					limit = { USA = { has_country_flag = USA_ACW_compromise_rejected } }
+					add_timed_idea = { idea = ACW_fired_up days = 180 }
+				}
+			}
+		}
+		if = {
+			limit = { country_exists = COR }
+			COR = {
 				add_ideas = {
 					war_economy
 					amcivwar_idea
