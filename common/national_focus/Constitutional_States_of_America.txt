@@ -2456,7 +2456,7 @@ focus_tree = {
 	focus = {# Deal with the Dixiecrats
 		id = COR_deal_with_the_dixiecrats
 		icon = GFX_goal_COR_deal_with_dixiecrats
-		cost = 7.25
+		cost = 6.00
 		prerequisite = {
 			focus = COR_the_convenent
 		}
@@ -2488,7 +2488,7 @@ focus_tree = {
 	focus = {# Deal with Catholics
 		id = COR_deal_with_catholics
 		icon = GFX_goal_COR_christian_dominance
-		cost = 7.25
+		cost = 5.00
 		prerequisite = {
 			focus = COR_the_convenent
 		}
@@ -2562,7 +2562,7 @@ focus_tree = {
 	focus = {# White Citizens Council
 		id = COR_citzens_council
 		icon = GFX_goal_COR_sundowntown
-		cost = 6
+		cost = 5.75
 		prerequisite = {
 			focus = COR_destroy_the_legion
 		}
@@ -2678,7 +2678,7 @@ focus_tree = {
 	focus = {# True Corporatism
 		id = COR_true_corporatism
 		icon = GFX_goal_gold_reserve
-		cost = 6
+		cost = 5
 		prerequisite = {
 			focus = COR_amnesty_for_patriotic_corps
 		}
@@ -2822,7 +2822,7 @@ focus_tree = {
 	focus = {# Klan education
 		id = COR_klan_education
 		icon = GFX_goal_COR_klan_education
-		cost = 6
+		cost = 5
 		prerequisite = {
 			focus = COR_citzens_council
 		}
@@ -2954,7 +2954,7 @@ focus_tree = {
 	focus = {# Support Racialism
 		id = COR_fund_racial_sciences
 		icon = GFX_goal_COR_phernology
-		cost = 7.25
+		cost = 5
 		prerequisite = {
 			focus = COR_birth_of_a_nation
 		}
@@ -3059,7 +3059,7 @@ focus_tree = {
 	focus = {# United Against Syndicalism
 		id = COR_united_against_syndicalism
 		icon = GFX_HOL_crackdown_syndie
-		cost = 7.25
+		cost = 6.5
 		prerequisite = {
 			focus = COR_birth_of_a_nation
 		}
