@@ -5470,6 +5470,12 @@ country_event = { # Feds appointed
 				traits = {}
 			}
 		}
+		hidden_effect = {
+		country_event = {
+			id = newengland.1160
+			days = 2800
+			}	
+		}
 	}
 	option = { # Vincent Astor
 		name = newengland.107.b
@@ -5751,6 +5757,45 @@ country_event = { # Hamiltonian Constitution
 		add_popularity = { ideology = social_democrat popularity = -0.02 }
 		add_popularity = { ideology = social_liberal popularity = -0.01 }
 		add_popularity = { ideology = market_liberal popularity = -0.01 }
+	}
+}
+
+country_event = { # John Jacob Astor
+	id = newengland.1160
+	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.1160"}
+	title = newengland.1160.t
+	desc = newengland.1160.d
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = { #I will not step down
+		name = newengland.1160.a
+		add_political_power = 40
+		add_manpower = -200
+		add_stability = -0.04
+	}
+	option = { #Usher in John Jacob Astor
+		name = newengland.1160.b
+		add_political_power = -20
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.01 }
+		hidden_effect = {
+			create_country_leader = {
+				name = "John Jacob Astor"
+				desc = "NEE_JOHN_JACOB_ASTOR_DESC"
+				picture = "gfx/leaders/NEE/astor.tga"
+				expire = "1965.1.1"
+				ideology = authoritarian_democrat_subtype
+				traits = {}
+			}
+		}
+		set_politics = {
+			ruling_party = authoritarian_democrat
+			election_frequency = 48
+			last_election = "1936.11.08"
+			elections_allowed = yes
+		}
 	}
 }
 
