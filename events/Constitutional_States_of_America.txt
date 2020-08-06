@@ -605,6 +605,8 @@ country_event = { # Hiram Wesley Evans killed!
 			ideology = national_populist
 			long_name = COR_old_klan_national_populist_long
 			name = COR_old_klan_national_populist }
+			
+		add_ideas = COR_young_klan_resistance
 	}
 }
 
@@ -1068,6 +1070,7 @@ country_event = { # Meeting Place bombed
 			ideology = national_populist
 			long_name = COR_old_klan_national_populist_long
 			name = COR_old_klan_national_populist }
+			add_ideas = COR_young_klan_resistance
 	}
 	
 	option = { # Bag Stephenson
@@ -1269,6 +1272,7 @@ country_event = { # Evans Elected
 			ruling_party = national_populist
 			elections_allowed = no
 		}
+		add_ideas = COR_black_legion_resistance
 	}
 }
 
@@ -1483,14 +1487,27 @@ country_event = { # Papal deal
 	}
 }
 
-country_event = { # Papal deal
+country_event = { # Confederate Revival
 	id = constate.28
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.28"}
 	title = constate.28.t
 	desc = constate.28.d
 	picture = AUS_christian_identity
 
-	is_triggered_only = yes
+	trigger = {
+	has_global_flag = USA_civil_war_over_flag
+	NOT = {
+	has_country_leader = {
+			ruling_only = yes
+			name = "Charles Lindbergh"
+			}
+		}
+	date > 1941.5.5
+	}
+	
+	mean_time_to_happen = {
+	days = 400
+	}
 	
 	fire_only_once = yes
 
@@ -1974,6 +1991,7 @@ country_event = { # Armstrong Dead
 	immediate = {
 	kill_ideology_leader = national_populist
 	set_country_flag = Herbert_W_Armstrong_dead
+	set_country_flag = young_klan_victory
 	}
 	option = { #George Lincoln Rockwell
 		name = constate.5101.a

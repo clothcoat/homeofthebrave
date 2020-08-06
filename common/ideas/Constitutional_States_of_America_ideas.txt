@@ -1316,20 +1316,35 @@ ideas = {
 			removal_cost = -1
 			picture = purging_young_klan
 			modifier = {
-				monthly_population = -20.00
+				monthly_population = -15.00
 				political_power_gain = -0.15
 				stability_factor = -0.05
 				conscription_factor = -0.05
 			}
 		}
+		COR_black_legion_resistance = {# Legion Resistance
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea COR_purge_black_legion_resistance"}
+			allowed = { always = no }
+			available = { has_government = national_populist }
+			removal_cost = -1
+			picture = black_legion
+			modifier = {
+				monthly_population = -0.05
+				political_power_gain = -0.01
+				stability_factor = -0.15
+				local_factory_sabotage = 0.11
+				conscription_factor = -0.01
+				party_popularity_stability_factor = -0.03
+			}
+		}
 		COR_purge_black_legion_resistance = {# Legion Resistance
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea COR_young_klan_resistance"}
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea COR_purge_black_legion_resistance"}
 			allowed = { always = no }
 			available = { has_government = national_populist }
 			removal_cost = -1
 			picture = purging_black_legion
 			modifier = {
-				monthly_population = -0.02
+				monthly_population = -5.00
 				political_power_gain = -0.02
 				stability_factor = -0.1
 				production_factory_efficiency_gain_factor = -0.01

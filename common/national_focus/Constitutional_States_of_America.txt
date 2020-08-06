@@ -2384,7 +2384,10 @@ focus_tree = {
 		cost = 7.25
 		available = {
 			has_government = national_populist
+			OR = {
 			has_country_flag = young_klan_victory
+			has_country_leader = { ruling_only = yes name = "Hiram Wesley Evans" }
+			}
 		}
 		cancel_if_invalid = yes
 		available_if_capitulated = yes
@@ -2473,6 +2476,12 @@ focus_tree = {
 			add_popularity = { ideology = paternal_autocrat popularity = 0.03 }
 			add_popularity = { ideology = national_populist popularity = 0.03 }
 			add_stability = 0.06
+			hidden_effect = {
+			country_event = {
+			id = constate.2502
+			days = 5
+			}
+			}
 		}
 	}
 	
@@ -2502,6 +2511,12 @@ focus_tree = {
 			remove_idea = COR_non_conformist_regulations
 			add_idea = COR_non_conformist_regulations_2
 			}
+			hidden_effect = {
+			country_event = {
+			id = constate.27
+			days = 20
+			}
+			}
 		}
 	}
 	
@@ -2515,6 +2530,16 @@ focus_tree = {
 		available = {
 			has_government = national_populist
 		}
+		select_effect = {
+		add_timed_idea = {
+			idea = COR_purge_black_legion_resistance
+			days = 45
+		}
+		country_event = {
+		id = constate.2500
+		days = 30
+		}
+		}
 		cancel_if_invalid = yes
 		available_if_capitulated = yes
 		relative_position_id = COR_the_convenent
@@ -2525,7 +2550,12 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_destroy_the_legion"
-			remove_ideas = COR_Black_legion_resistance
+			add_manpower = -1200
+			add_political_power = 30
+			if = {
+			limit = { has_idea = COR_black_legion_resistance }
+			remove_ideas = COR_black_legion_resistance
+			}
 		}
 	}
 	
@@ -2558,14 +2588,19 @@ focus_tree = {
 			add_political_power = 50
 			add_stability = 0.05
 			add_popularity = { ideology = national_populist popularity = 0.08 }
-			
+			hidden_effect = {
+			country_event = {
+			id = constate.2501
+			days = 20
+			}
+			}
 		}
 	}
 	
 	focus = {# Amnesty for Patriotic Corporations
 		id = COR_amnesty_for_patriotic_corps
 		icon = GFX_goal_USA_american_industry
-		cost = 7.25
+		cost = 6
 		prerequisite = {
 			focus = COR_citzens_council
 		}
@@ -2643,7 +2678,7 @@ focus_tree = {
 	focus = {# True Corporatism
 		id = COR_true_corporatism
 		icon = GFX_goal_gold_reserve
-		cost = 7.25
+		cost = 6
 		prerequisite = {
 			focus = COR_amnesty_for_patriotic_corps
 		}
@@ -2679,7 +2714,7 @@ focus_tree = {
 	focus = {# Ceasefire with Black Populace
 		id = COR_ceasefire_with_black_pop
 		icon = GFX_goal_COR_ceasefire
-		cost = 7.25
+		cost = 6
 		prerequisite = {
 			focus = COR_citzens_council
 		}
@@ -2748,7 +2783,7 @@ focus_tree = {
 	focus = {# Cooperation from Afar
 		id = COR_cooperation_from_afar
 		icon = GFX_goal_LIB_africa_star
-		cost = 7.25
+		cost = 5
 		prerequisite = {
 			focus = COR_liberia_plan
 		}
@@ -2787,7 +2822,7 @@ focus_tree = {
 	focus = {# Klan education
 		id = COR_klan_education
 		icon = GFX_goal_COR_klan_education
-		cost = 7.25
+		cost = 6
 		prerequisite = {
 			focus = COR_citzens_council
 		}
@@ -2806,13 +2841,19 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_klan_education"
 			add_popularity = { ideology = national_populist popularity = 0.03 }
 			add_ideas = COR_klan_education_idea
+			hidden_effect = {
+			country_event = {
+			id = constate.2600
+			days = 3
+			}
+			}
 		}
 	}
 	
 	focus = {# Family Programs
 		id = COR_family_programs
 		icon = GFX_goal_COR_family_programs
-		cost = 7.25
+		cost = 5
 		prerequisite = {
 			focus = COR_klan_education
 		}
@@ -2837,7 +2878,7 @@ focus_tree = {
 	focus = {# Klan Marshals
 		id = COR_Klan_Marshals
 		icon = GFX_goal_COR_big_tex
-		cost = 7.25
+		cost = 6
 		prerequisite = {
 			focus = COR_family_programs
 		}
@@ -2849,6 +2890,14 @@ focus_tree = {
 		}
 		available = {
 			has_government = national_populist
+		}
+		select_effect = {
+		hidden_effect = {
+			country_event = {
+			id = constate.26
+			days = 20
+			}
+			}
 		}
 		cancel_if_invalid = yes
 		available_if_capitulated = yes
@@ -2869,12 +2918,22 @@ focus_tree = {
 	focus = {# Birth of a Nation
 		id = COR_birth_of_a_nation
 		icon = GFX_goal_COR_birth_of_a_nation
-		cost = 7.25
+		cost = 5.5
 		prerequisite = {
 			focus = COR_Klan_Marshals
 		}
 		available = {
 			has_government = national_populist
+		}
+		select_effect = {
+		country_event = {
+		id = constate.31
+		days = 25
+		}
+		country_event = {
+		id = constate.32
+		days = 30
+		}
 		}
 		cancel_if_invalid = yes
 		available_if_capitulated = yes
@@ -2917,6 +2976,16 @@ focus_tree = {
 			add_idea = COR_klan_education_idea_2
 			}
 			add_popularity = { ideology = national_populist popularity = 0.03 }
+			hidden_effect = {
+			country_event = {
+			id = constate.33
+			days = 45
+			}
+			country_event = {
+			id = constate.34
+			days = 130
+			}
+			}
 		}
 	}
 	
@@ -2943,6 +3012,12 @@ focus_tree = {
 			idea = COR_american_exodus_idea
 			days = 45
 			}
+			hidden_effect = {
+			country_event = {
+			id = constate.30
+			days = 36
+			}
+			}
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_american_exodus"
@@ -2958,7 +3033,7 @@ focus_tree = {
 	focus = {# Klan Cinema
 		id = COR_klan_cinema
 		icon = GFX_goal_COR_Klan_cinema
-		cost = 7.25
+		cost = 5.00
 		prerequisite = {
 			focus = COR_birth_of_a_nation
 		}
@@ -3054,7 +3129,7 @@ focus_tree = {
 		select_effect = {
 			add_timed_idea = {
 			idea = COR_purging_the_young_klan
-			days = 45
+			days = 46
 			}
 		}
 		completion_reward = {
