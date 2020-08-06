@@ -5464,7 +5464,7 @@ country_event = { # Feds appointed
 			create_country_leader = {
 				name = "John Jacob Astor"
 				desc = "NEE_JOHN_JACOB_ASTOR_DESC"
-				picture = "Portrait_john_jacob_astor.dds"
+				picture = "gfx/leaders/NEE/john_jacob_astor.tga"
 				expire = "1965.1.1"
 				ideology = authoritarian_democrat_subtype
 				traits = {}
@@ -5485,7 +5485,7 @@ country_event = { # Feds appointed
 			create_country_leader = {
 				name = "Vincent Astor"
 				desc = "NEE_VINCENT_ASTOR_DESC"
-				picture = "Portrait_vincent_astor.dds"
+				picture = "gfx/leaders/NEE/Vincent_Astor.tga"
 				expire = "1965.1.1"
 				ideology = authoritarian_democrat_subtype
 				traits = {}
@@ -5507,7 +5507,7 @@ country_event = { # Feds appointed
 			create_country_leader = {
 				name = "Harold Stirling Vanderbilt"
 				desc = "NEE_HAROLD_STIRLING_VANDERBILT_DESC"
-				picture = "Portrait_harold_stirling_vanderbilt.dds"
+				picture = "gfx/leaders/NEE/Harold_Stirling_Vanderbilt.tga"
 				expire = "1965.1.1"
 				ideology = authoritarian_democrat_subtype
 				traits = {}
@@ -5528,7 +5528,7 @@ country_event = { # Feds appointed
 			create_country_leader = {
 				name = "William Kissam Vanderbilt"
 				desc = "NEE_WILLIAM_KISSAM_VANDERBILT_DESC"
-				picture = "Portrait_william_kissam_vanderbilt.dds"
+				picture = "gfx/leaders/NEE/William_Kissam_Vanderbilt_II.tga"
 				expire = "1965.1.1"
 				ideology = authoritarian_democrat_subtype
 				traits = {}
@@ -5537,7 +5537,7 @@ country_event = { # Feds appointed
 	}
 }
 	
-	country_event = { # Federalist Party Sworn in
+country_event = { # Federalist Party Sworn in
 	id = newengland.1070
 	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.1070"}
 	title = newengland.1070.t
