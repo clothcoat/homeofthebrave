@@ -6400,7 +6400,10 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_mexico_friendship"
-			MEX = { country_event = csa.130 }
+			MEX = { country_event = {
+			id = csa.130 
+			days = 1
+			} }
 		}
 	}
 
@@ -6475,9 +6478,6 @@ focus_tree = {
 		prerequisite = {
 			focus = CSA_back_in_business
 		}
-		available = { has_country_leader = 
-		ruling_only = { name = "James Burnham" ruling_only = yes }
-		}
 		mutually_exclusive = {
 			focus = CSA_mexico_friendship
 			focus = CSA_free_mexico
@@ -6495,7 +6495,8 @@ focus_tree = {
 				has_socialist_government = yes
 				has_government = social_democrat
 				}
-			}
+		has_country_leader = { name = "James Burnham" ruling_only = yes }
+		}
 		relative_position_id = CSA_back_in_business
 		x = 2
 		y = 1
