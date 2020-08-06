@@ -4131,15 +4131,18 @@ country_event = { # COR wins the civil war
 	option = {
 		name = amcivwar.26.a
 		USA_civil_war_ends = yes
-		add_ideas = USA_civil_war_aftermath_idea
-		add_ideas = USA_civil_war_depression_idea
+		add_ideas = USA_civil_war_political_aftermath_idea
+		add_ideas = USA_civil_war_war_aftermath_idea
 		if = {
 			limit = {
 				NOT = {
 					has_country_flag = USA_ACW_compromise_rejected
 				}
 			}
-			add_ideas = ACW_socialist_resistance_1
+			modify_country_flag = {
+				flag = ACW_socialist_resistance
+				value = 2
+			}
 		}
 		if = {
 			limit = {
@@ -4161,20 +4164,9 @@ country_event = { # COR wins the civil war
 						has_global_flag = PSA_rockies_ceasefire
 					}
 				}
-				if = {
-					limit = {
-						has_government = paternal_autocrat
-					}
-					news_event = {
-						id = worldnews.39
-						days = 1
-					}
-					else = {
-						news_event = {
-							id = worldnews.38
-							days = 1
-						}
-					}
+				news_event = {
+					id = worldnews.41
+					days = 1
 				}
 			}
 		}
@@ -11175,14 +11167,11 @@ country_event = { # Socialist Resistance #1
 			flag = ACW_socialist_resistance
 			value > 5
 		}
-		has_country_flag = {
-			flag = ACW_socialist_resistance
-			value < 10
-		}
 		NOT = { 
 			has_idea = ACW_socialist_resistance_1
 			has_idea = ACW_socialist_resistance_2 
 			has_idea = ACW_socialist_resistance_3 
+			has_idea = ACW_socialist_resistance_4
 		}
 	}
 	mean_time_to_happen = {
@@ -11217,6 +11206,7 @@ country_event = { # Socialist Resistance #1-2
 		NOT = {
 			has_idea = ACW_socialist_resistance_2 
 			has_idea = ACW_socialist_resistance_3 
+			has_idea = ACW_socialist_resistance_4
 		}
 	}
 	
@@ -11237,7 +11227,7 @@ country_event = { # Socialist Resistance #1-2
 		add_ideas = ACW_socialist_resistance_2
 		}
 	}
-}	
+}
 
 
 country_event = { # Socialist Resistance #3
@@ -11260,6 +11250,7 @@ country_event = { # Socialist Resistance #3
 		}
 		NOT = {
 			has_idea = ACW_socialist_resistance_3
+			has_idea = ACW_socialist_resistance_4
 		}
 	}
 	
@@ -11360,12 +11351,6 @@ country_event = { # Socialist Resistance #4-3
 	
 	option = { # Level Three Resistance
 		name = amcivwar.630.a
-		trigger = {
-		has_country_flag = {
-			flag = ACW_socialist_resistance
-			value < 20
-				}
-			}
 		if = {
 		limit = { has_idea = ACW_socialist_resistance_4 }
 		}
@@ -11375,7 +11360,6 @@ country_event = { # Socialist Resistance #4-3
 		}	
 	}
 }
-
 
 country_event = { # Socialist Resistance #3-2
 	id = amcivwar.631
@@ -11398,12 +11382,6 @@ country_event = { # Socialist Resistance #3-2
 	
 	option = { # Level One Resistance
 		name = amcivwar.631.a
-		trigger = {
-		has_country_flag = {
-			flag = ACW_socialist_resistance
-			value < 10
-				}
-			}
 		if = {
 		limit = { has_idea = ACW_socialist_resistance_3 }
 		swap_ideas = {
@@ -11414,12 +11392,6 @@ country_event = { # Socialist Resistance #3-2
 	}
 	option = { # Level Two Resistance
 		name = amcivwar.631.b
-		trigger = {
-		has_country_flag = {
-			flag = ACW_socialist_resistance
-			value > 10
-				}
-			}
 		if = {
 		limit = { has_idea = ACW_socialist_resistance_3 }
 		}
@@ -11851,14 +11823,11 @@ country_event = { # Klan Resistance #1
 			flag = ACW_klan_resistance
 			value > 5
 		}
-		has_country_flag = {
-			flag = ACW_klan_resistance
-			value < 10
-		}
 		NOT = { 
 			has_idea = ACW_klan_resistance_1
 			has_idea = ACW_klan_resistance_2 
-			has_idea = ACW_klan_resistance_3 
+			has_idea = ACW_klan_resistance_3
+			has_idea = ACW_klan_resistance_4
 		}
 	}
 	mean_time_to_happen = {

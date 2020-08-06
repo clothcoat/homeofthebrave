@@ -103,6 +103,23 @@ USA_release_CSA = {
 			add_state_core = 1098
 			add_state_core = 1119
 			set_cosmetic_tag = CSA_ACW
+			
+			set_country_flag = {
+			flag = ACW_klan_resistance
+			value = 11
+			}
+			set_country_flag = {
+			flag = ACW_black_legion_resistance
+			value = 17
+			}
+			set_country_flag = {
+			flag = ACW_fed_resistance
+			value = 9
+			}
+			set_country_flag = {
+			flag = ACW_minutemen_resistance
+			value = 6
+			}
 		}
 
 		USA = {
@@ -395,6 +412,23 @@ USA_release_TEX = {
 			add_state_core = 1107
 			add_state_core = 1109
 			set_cosmetic_tag = TEX_ACW
+			
+			set_country_flag = {
+			flag = ACW_socialist_resistance
+			value = 9
+			}
+			set_country_flag = {
+			flag = ACW_klan_resistance
+			value = 12
+			}
+			set_country_flag = {
+			flag = ACW_black_legion_resistance
+			value = 11
+			}
+			set_country_flag = {
+			flag = ACW_fed_resistance
+			value = 8
+			}
 		}
 
 		USA = {
@@ -687,6 +721,27 @@ USA_release_COR = {
 			add_state_core = 1118
 
 			set_cosmetic_tag = COR_ACW
+			
+			set_country_flag = {
+			flag = ACW_socialist_resistance
+			value = 18
+			}
+			set_country_flag = {
+			flag = ACW_minutemen_resistance
+			value = 14
+			}
+			set_country_flag = {
+			flag = ACW_fed_resistance
+			value = 11
+			}
+			set_country_flag = {
+			flag = ACW_crime_resistance
+			value = 6
+			}
+			set_country_flag = {
+			flag = ACW_black_nationalist_resistance
+			value = 5
+			}
 		}
 
 		if = {
@@ -961,6 +1016,15 @@ USA_release_WCC = {
 			add_state_core = 1110
 			add_state_core = 1112
 			set_cosmetic_tag = WCC_ACW
+			
+			set_country_flag = {
+			flag = ACW_klan_resistance
+			value = 8
+			}
+			set_country_flag = {
+			flag = ACW_minutemen_resistance
+			value = 6
+			}
 		}
 
 		USA = {
@@ -1104,6 +1168,15 @@ USA_release_CAL = {
 			add_state_core = 386
 			add_state_core = 1111
 			set_cosmetic_tag = CAL_ACW
+			
+			set_country_flag = {
+			flag = ACW_klan_resistance
+			value = 11
+			}
+			set_country_flag = {
+			flag = ACW_socialist_resistance
+			value = 9
+			}
 		}
 
 		USA = {
@@ -1235,6 +1308,15 @@ COR_release_BBR = {
 			add_state_core = 1116
 			add_state_core = 1117
 			set_cosmetic_tag = BBR_ACW
+			
+			set_country_flag = {
+			flag = ACW_klan_resistance
+			value = 12
+			}
+			set_country_flag = {
+			flag = ACW_black_legion_resistance
+			value = 8
+			}
 		}
 
 		COR = {
