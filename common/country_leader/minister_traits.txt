@@ -713,7 +713,7 @@ leader_traits = {
 
 	sec_man_of_the_people = {
 		stability_factor = 0.05
-		resistance_tick = -0.1
+		resistance_target = -0.1
 
 		random = no
 	}
@@ -1362,7 +1362,7 @@ leader_traits = {
 	hog_gentleman_politician = { #Muhammad Ali Jinnah
 
 		political_power_gain = 0.1
-		research_time_factor = -0.03
+		research_speed_factor = -0.03
 		consumer_goods_factor = -0.05
 
 		random = no
@@ -1383,7 +1383,7 @@ leader_traits = {
 
 	eco_administrative_genius = {
 		production_speed_buildings_factor = 0.07
-		research_time_factor = -0.02
+		research_speed_factor = -0.02
 		industrial_capacity_factory = 0.06
 
 		random = no
@@ -1526,7 +1526,7 @@ leader_traits = {
 		ai_focus_military_advancements_factor = 0.5
 		production_speed_rocket_site_factor = 0.2
 		production_speed_nuclear_reactor_factor = 0.25
-		research_time_factor = -0.04
+		research_speed_factor = -0.04
 
 		random = no
 	}
@@ -1804,7 +1804,7 @@ leader_traits = {
 
 	sec_man_of_the_people = {
 		stability_factor = 0.1
-		resistance_tick = -0.2
+		resistance_target = -0.2
 
 		random = no
 	}
@@ -1863,7 +1863,7 @@ leader_traits = {
 
 	int_technical_specialist = {
 		decryption = 0.5
-		research_time_factor = -0.025
+		research_speed_factor = -0.025
 
 		random = no
 	}
@@ -1889,7 +1889,7 @@ leader_traits = {
 
 	int_industrial_specialist = {
 		decryption = 0.5
-		research_time_factor = -0.02
+		research_speed_factor = -0.02
 
 		random = no
 	}
