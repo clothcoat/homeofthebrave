@@ -2819,6 +2819,12 @@ focus_tree = {
 			days = 15
 				}
 			}
+			hidden_effect = {
+			country_event = {
+			id = csa.53
+			days = 20
+				}
+			}
 			random_owned_state = {
 				limit = {
 					is_core_of = CSA
@@ -3521,8 +3527,26 @@ focus_tree = {
 			}
 		hidden_effect = {
 			country_event = {
+			id = csa.66
+			days = 25
+				}
+			}
+		hidden_effect = {
+			country_event = {
+			id = csa.74
+			days = 30
+				}
+			}
+		hidden_effect = {
+			country_event = {
 			id = csa.431
-			days = 32
+			days = 37
+				}
+			}
+		hidden_effect = {
+			country_event = {
+			id = csa.55
+			days = 44
 				}
 			}
 		hidden_effect = {
