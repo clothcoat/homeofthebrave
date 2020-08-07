@@ -8333,10 +8333,6 @@ country_event = { #Production Debate
 	is_triggered_only = yes
 	
 	fire_only_once = yes
-	
-	immediate = {
-	set_country_flag = CAL_fosters_farms
-	}
 
 	option = { #Appoint technical experts
 	name = csa.401.a
@@ -8367,26 +8363,26 @@ country_event = { #Export Debate
 	is_triggered_only = yes
 	
 	fire_only_once = yes
-	
-	immediate = {
-	set_country_flag = CAL_fosters_farms
-	}
 
 	option = { #Export it
 	name = csa.402.a
-	add_political_power = -25
-	add_popularity = { ideology = radical_socialist popularity = 0.02 }
-	}
-	
-	option = { #We can't afford it
-	name = csa.402.a
-	add_political_power = 50
-	add_command_power = 20
-	add_stability = 0.03
+	add_command_power = 5
 	modify_country_flag = {
 	flag = CAL_fosters_farms
 	value = 1
 		}
+	add_war_support = 0.03
+	add_popularity = { ideology = totalist popularity = 0.01 }
+	FRA = {
+		add_manpower = 5000
+		add_opinion_modifier = { target = CSA modifier = medium_increase }
+		}
+	}
+	
+	option = { #We can't afford it
+	name = csa.402.a
+	add_political_power = -15
+	add_stability = 0.03
 	add_popularity = { ideology = totalist popularity = 0.02 }
 	}
 }
@@ -8445,10 +8441,6 @@ country_event = { #Minor Food Shortage
 	}
 	
 	fire_only_once = yes
-	
-	immediate = {
-	set_country_flag = CAL_fosters_farms
-	}
 
 	option = { #Export it
 	name = csa.404.a
@@ -8482,14 +8474,10 @@ country_event = { #Food Shortage
 	}
 	
 	fire_only_once = yes
-	
-	immediate = {
-	set_country_flag = CAL_fosters_farms
-	}
 
 	option = { #Export it
 	name = csa.405.a
-	add_political_power = -50
+	add_political_power = -40
 	add_stability = -0.08
 	add_manpower = -800
 	add_popularity = { ideology = totalist popularity = -0.06 }
@@ -8520,14 +8508,10 @@ country_event = { #American Famine
 	}
 	
 	fire_only_once = yes
-	
-	immediate = {
-	set_country_flag = CAL_fosters_farms
-	}
 
 	option = { #Export it
 	name = csa.406.a
-	add_political_power = -100
+	add_political_power = -70
 	add_stability = -0.15
 	add_manpower = -5560
 	add_popularity = { ideology = totalist popularity = -0.12 }
@@ -8537,6 +8521,407 @@ country_event = { #American Famine
 		}
 	}
 }
+
+country_event = { #Browderist-Fordist Line Destroyed
+	id = csa.407
+	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.407"}
+	title = csa.407.t
+	desc = csa.407.d
+	picture = congress
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = { #Good
+	name = csa.407.a
+	add_political_power = 30
+	add_popularity = { ideology = totalist popularity = 0.01 }
+	add_manpower = -3500
+	}
+}
+
+country_event = { #Under the Table deals
+	id = csa.408
+	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.408"}
+	title = csa.408.t
+	desc = csa.408.d
+	picture = congress
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = { #Death
+	name = csa.408.a
+	add_political_power = 35
+	add_stability = 0.03
+	add_manpower = -2500
+	}
+	option = { #Political Rehabilitation
+	name = csa.408.b
+	add_political_power = 25
+	add_manpower = -1200
+	add_stability = 0.02
+	}
+	option = { #Rehab and warnings for the smallest infractures
+	name = csa.408.c
+	add_political_power = -15
+	add_manpower = -550
+	add_stability = 0.01
+	}
+}
+
+country_event = { #Teachers Attacked
+	id = csa.409
+	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.409"}
+	title = csa.409.t
+	desc = csa.409.d
+	picture = congress
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = { #Reign them in
+	name = csa.409.a
+	add_political_power = -30
+	add_stability = 0.02
+	}
+	option = { #Let it go
+	name = csa.409.b
+	add_political_power = 15
+	add_stability = -0.03
+	add_war_support = 0.05
+	add_popularity = { ideology = totalist popularity = 0.01 }
+	}
+}
+
+country_event = { #IWW Liquidations
+	id = csa.410
+	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.410"}
+	title = csa.410.t
+	desc = csa.410.d
+	picture = congress
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = { #A Restrained Purge
+	name = csa.410.a
+	add_political_power = -10
+	add_popularity = { ideology = syndicalist popularity = -0.03 }
+	add_manpower = -7000
+	}
+	option = { #A Full Purge
+	name = csa.410.b
+	add_political_power = 45
+	add_war_support = 0.03
+	add_popularity = { ideology = syndicalist popularity = -0.08 }
+	add_manpower = -15000
+	add_stability = -0.03
+	}
+}
+
+country_event = { #A Socialist Culture
+	id = csa.411
+	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.411"}
+	title = csa.411.t
+	desc = csa.411.d
+	picture = congress
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = { #Excellent
+	name = csa.411.a
+	add_political_power = 20
+	add_popularity = { ideology = totalist popularity = 0.02 }
+	add_war_support = 0.02
+	add_manpower = 1200
+	}
+}
+
+country_event = { #Worker uniformity
+	id = csa.412
+	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.412"}
+	title = csa.412.t
+	desc = csa.412.d
+	picture = congress
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = { #Regional TUUL
+	name = csa.412.a
+	add_political_power = 10
+	add_war_support = 0.06
+	add_popularity = { ideology = totalist popularity = 0.02 }
+	}
+	option = { #Central TUUL
+	name = csa.412.b
+	add_political_power = 25
+	add_stability = 0.03
+	add_command_power = 5
+	add_popularity = { ideology = totalist popularity = 0.02 }
+	}
+}
+
+country_event = { #Prisoner Complaints
+	id = csa.413
+	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.413"}
+	title = csa.413.t
+	desc = csa.413.d
+	picture = congress
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = { #No
+	name = csa.413.a
+	add_political_power = 30
+	add_command_power = 5
+	add_stability = -0.02
+	add_manpower = -11000
+	random_owned_state = {
+		limit = {
+			is_core_of = CSA
+			is_controlled_by = CSA
+			industrial_complex > 0
+		}
+		add_extra_state_shared_building_slots = 1
+		}
+	}
+	option = { #Very well
+	name = csa.413.b
+	add_political_power = -15
+	add_manpower = -4000
+	add_stability = 0.05
+	add_popularity = { ideology = totalist popularity = -0.01 }
+	}
+}
+
+country_event = { #AFL Purged
+	id = csa.414
+	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.414"}
+	title = csa.414.t
+	desc = csa.414.d
+	picture = congress
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	immediate = {
+	set_country_flag = John_Dewey_dead
+	set_country_flag = James_Peter_Warbasse_dead
+	set_country_flag = Algernon_Lee_dead
+	set_country_flag = Walter_Reuther_dead
+	}
+	
+	option = { #Let them join
+	name = csa.414.a
+	add_political_power = 30
+	add_manpower = 2000
+	}
+	option = { #No
+	name = csa.414.b
+	add_political_power = 15
+	add_stability = 0.02
+	add_war_support = 0.05
+	add_popularity = { ideology = social_democrat popularity = -0.02 }
+	add_popularity = { ideology = radical_socialist popularity = -0.02 }
+	}
+}
+
+country_event = { #Southern Purges
+	id = csa.415
+	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.415"}
+	title = csa.415.t
+	desc = csa.415.d
+	picture = congress
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = { #Keep up the pressure
+	name = csa.415.a
+	add_political_power = 30
+	add_manpower = -20000
+	add_stability = -0.06
+	add_war_support = 0.05
+	add_popularity = { ideology = totalist popularity = 0.02 }
+	}
+	option = { #Slow it down
+	name = csa.415.b
+	add_political_power = -15
+	add_war_support = 0.02
+	add_manpower = -5000
+	add_popularity = { ideology = totalist popularity = 0.01 }
+	}
+	option = { #The Middle ground option
+	name = csa.415.c
+	add_political_power = -10
+	add_war_support = 0.03
+	add_stability = -0.03
+	add_manpower = -6000
+	add_popularity = { ideology = totalist popularity = 0.02 }
+	}
+}
+
+country_event = { #SPA dissolved
+	id = csa.416
+	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.416"}
+	title = csa.416.t
+	desc = csa.416.d
+	picture = congress
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = { #Reign them in
+	name = csa.416.a
+	add_political_power = 10
+	add_stability = -0.03
+	add_popularity = { ideology = totalist popularity = 0.02 }
+	}
+}
+
+country_event = { #Class Traitors arrested
+	id = csa.417
+	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.417"}
+	title = csa.417.t
+	desc = csa.417.d
+	picture = congress
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = { #No, liquidate them
+	name = csa.417.a
+	add_political_power = 50
+	add_command_power = 10
+	add_stability = -0.03
+	add_manpower = -25000
+	add_war_support = 0.05
+	add_popularity = { ideology = social_democrat popularity = -0.1 }
+	add_popularity = { ideology = radical_socialist popularity = -0.1 }
+	add_popularity = { ideology = totalist popularity = 0.05 }
+	}
+	option = { #Commute their sentences
+	name = csa.417.b
+	add_political_power = 20
+	add_manpower = -15000
+	add_stability = 0.02
+	add_popularity = { ideology = social_democrat popularity = -0.05 }
+	add_popularity = { ideology = radical_socialist popularity = -0.05 }
+	add_popularity = { ideology = totalist popularity = 0.02 }
+	}
+}
+
+country_event = { #Removing Distinctions
+	id = csa.418
+	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.418"}
+	title = csa.418.t
+	desc = csa.418.d
+	picture = congress
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = { #It is the way forward
+	name = csa.418.a
+	add_political_power = -30
+	add_manpower = -4000
+	add_stability = -0.1
+	add_war_support = 0.03
+	random_owned_state = {
+				limit = {
+					is_core_of = CSA
+					is_controlled_by = CSA
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 2
+		}
+	random_owned_state = {
+				limit = {
+					is_core_of = CSA
+					is_controlled_by = CSA
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 2
+		}
+	add_popularity = { ideology = totalist popularity = 0.05 }
+	}
+	option = { #We will show restraint
+	name = csa.418.b
+	random_owned_state = {
+				limit = {
+					is_core_of = CSA
+					is_controlled_by = CSA
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+		}
+	add_popularity = { ideology = totalist popularity = 0.02 }
+	}
+}
+
+country_event = { #Foster's call to foreign workers
+	id = csa.419
+	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.419"}
+	title = csa.419.t
+	desc = csa.419.d
+	picture = congress
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = { #Alright
+	name = csa.419.a
+	add_political_power = -15
+	add_war_support = 0.03
+	add_popularity = { ideology = totalist popularity = 0.01 }
+	}
+}
+
+country_event = { #A Fit Nation
+	id = csa.420
+	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.420"}
+	title = csa.420.t
+	desc = csa.420.d
+	picture = congress
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = { #Retrain them
+	name = csa.420.a
+	add_political_power = -40
+	add_manpower = 2000
+	add_war_support = 0.03
+	add_popularity = { ideology = totalist popularity = 0.01 }
+	add_command_power = 5
+	army_experience = 5
+	}
+	option = { #Tobacco will be tolerated
+	name = csa.420.b
+	add_political_power = 15
+	add_stability = 0.02
+	add_war_support = -0.03
+	}
+}
+
 
 ###Browder Events###
 country_event = { #Radio Chats
