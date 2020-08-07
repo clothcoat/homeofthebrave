@@ -2763,9 +2763,15 @@ focus_tree = {
 	focus = {# Vanguard Party
 		id = CSA_communist_party
 		icon = GFX_goal_CSA_empower_chairman
-		cost = 7.25
+		cost = 5.00
 		available = {
 			has_government = totalist
+		}
+		select_effect = {
+		country_event = {
+		id = csa.437
+		days = 30
+		}
 		}
 		cancel_if_invalid = yes
 		prerequisite = {
@@ -2793,12 +2799,26 @@ focus_tree = {
 		prerequisite = {
 			focus = CSA_communist_party
 		}
+		select_effect = {
+		hidden_effect = {
+			country_event = {
+			id = csa.432
+			days = 32
+				}
+			}
+		}
 		relative_position_id = CSA_presidential_socialism
 		x = 1
 		y = 2
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_subdue_bourgeousie"
 			add_ideas = CSA_red_class_collaboratism_idea
+			hidden_effect = {
+			country_event = {
+			id = csa.438
+			days = 15
+				}
+			}
 			random_owned_state = {
 				limit = {
 					is_core_of = CSA
@@ -2961,13 +2981,21 @@ focus_tree = {
 	focus = {# Collective Farming
 		id = CSA_collective_farming
 		icon = GFX_goal_CSA_green_fields_program
-		cost = 7.25
+		cost = 5.5
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = CSA_browder_is_leader
 				has_country_leader = { ruling_only = yes name = "Earl Browder" }
 			}
 			has_government = totalist
+		}
+		select_effect = {
+		hidden_effect = {
+			country_event = {
+			id = csa.442
+			days = 20
+				}
+			}
 		}
 		cancel_if_invalid = yes
 		prerequisite = {
@@ -2997,13 +3025,21 @@ focus_tree = {
 	focus = {# Industrial Build up
 		id = CSA_industrial_build_up
 		icon = GFX_goal_CSA_strenght_through_industry
-		cost = 7.25
+		cost = 6.75
 		available = {
 			has_government = totalist
 		}
 		cancel_if_invalid = yes
 		prerequisite = {
 			focus = CSA_collective_farming
+		}
+		select_effect = {
+		hidden_effect = {
+			country_event = {
+			id = csa.443
+			days = 30
+				}
+			}
 		}
 		relative_position_id = CSA_presidential_socialism
 		x = -1
@@ -3137,6 +3173,15 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_practical_trade"
 			add_ideas = CSA_practical_trade_idea
+			if = {
+			limit = { NOT = { has_completed_focus = CSA_purge_the_stubborn } }
+			hidden_effect = {
+			country_event = {
+			id = csa.441
+			days = 8
+				}
+			}
+			}
 			add_stability = 0.05
 			random_owned_state = {
 				limit = {
@@ -3209,7 +3254,7 @@ focus_tree = {
 	focus = {# Price Controls
 		id = CSA_price_controls
 		icon = GFX_goal_CSA_price_controls
-		cost = 7.25
+		cost = 5.5
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = CSA_browder_is_leader
@@ -3220,6 +3265,14 @@ focus_tree = {
 		cancel_if_invalid = yes
 		prerequisite = {
 			focus = CSA_practical_trade
+		}
+		select_effect = {
+		hidden_effect = {
+			country_event = {
+			id = csa.435
+			days = 25
+				}
+			}
 		}
 		relative_position_id = CSA_presidential_socialism
 		x = -1
@@ -3241,7 +3294,7 @@ focus_tree = {
 	focus = {# Socialist Self-Management
 		id = CSA_decentralized_planning
 		icon = GFX_goal_production
-		cost = 7.25
+		cost = 6
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = CSA_browder_is_leader
@@ -3266,6 +3319,12 @@ focus_tree = {
 			add_idea = CSA_browderism_syndicalism_self_management_idea_3
 			}
 			add_stability = 0.05
+			hidden_effect = {
+			country_event = {
+			id = csa.444
+			days = 50
+				}
+			}
 			random_owned_state = {
 				limit = {
 					is_core_of = CSA
@@ -3319,13 +3378,19 @@ focus_tree = {
 			add_stability = 0.05
 			add_popularity = { ideology = totalist popularity = 0.08 }
 			add_popularity = { ideology = syndicalist popularity = -0.05 }
+			hidden_effect = {
+			country_event = {
+			id = csa.434
+			days = 1
+				}
+			}
 		}
 	}
 	
 	focus = {# Friendly Media
 		id = CSA_friendly_media
 		icon = GFX_goal_CSA_socialist_friendly_media
-		cost = 7.25
+		cost = 6.25
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = CSA_browder_is_leader
@@ -3352,6 +3417,12 @@ focus_tree = {
 			add_popularity = { ideology = totalist popularity = 0.08 }
 			add_political_power = 15
 			add_stability = 0.03
+			hidden_effect = {
+			country_event = {
+			id = csa.430
+			days = 10
+				}
+			}
 		}
 	}
 	
@@ -3414,6 +3485,12 @@ focus_tree = {
 			add_popularity = { ideology = totalist popularity = 0.03 }
 			add_stability = 0.05
 			add_political_power = 45
+			hidden_effect = {
+			country_event = {
+			id = csa.447
+			days = 1
+				}
+			}
 		}
 	}
 	
@@ -3435,6 +3512,26 @@ focus_tree = {
 		prerequisite = {
 			focus = CSA_reform_the_iww
 		}
+		select_effect = {
+		hidden_effect = {
+			country_event = {
+			id = csa.433
+			days = 18
+				}
+			}
+		hidden_effect = {
+			country_event = {
+			id = csa.431
+			days = 32
+				}
+			}
+		hidden_effect = {
+			country_event = {
+			id = csa.445
+			days = 65
+				}
+			}
+		}
 		relative_position_id = CSA_presidential_socialism
 		x = 2
 		y = 7
@@ -3451,6 +3548,12 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_purge_the_stubborn"
 			add_political_power = 80
 			add_popularity = { ideology = totalist popularity = 0.1 }
+			hidden_effect = {
+			country_event = {
+			id = csa.440
+			days = 5
+				}
+			}
 		}
 	}
 
@@ -3480,6 +3583,14 @@ focus_tree = {
 			swap_ideas = {
 			remove_idea = CSA_practical_trade_idea_2
 			add_idea = CSA_practical_trade_idea_3
+			}
+			select_effect = {
+			hidden_effect = {
+			country_event = {
+			id = csa.436
+			days = 25
+				}
+			}
 			}
 			add_political_power = 50
 			add_stability = 0.05
@@ -3611,6 +3722,12 @@ focus_tree = {
 			add_political_power = 150
 			add_stability = 0.12
 			add_popularity = { ideology = totalist popularity = 0.1 }
+			hidden_effect = {
+			country_event = {
+			id = csa.446
+			days = 32
+				}
+			}
 		}
 	}
 	
