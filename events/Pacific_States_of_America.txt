@@ -6307,8 +6307,8 @@ country_event = {# Speech to California
 	option = {# Announce our intent to retake the West
 		name = pacificstates.248.a
 		add_war_support = 0.05
-		WCC = add_opinion_modifier = { target = CAL modifier = large_decrease }
-		USA = add_opinion_modifier = { target = CAL modifier = large_decrease }
+		WCC = { add_opinion_modifier = { target = CAL modifier = large_decrease } }
+		USA = { add_opinion_modifier = { target = CAL modifier = large_decrease } }
 		hidden_effect = {
 		country_event = {
 			id = pacificstates.249
