@@ -7125,7 +7125,9 @@ focus_tree = {
 		}
 		bypass = {
 		NOT = {
-		ARG = has_government
+		ARG = {
+		has_government = national_populist
+				}
 			}
 		}
 		relative_position_id = TEX_popular_monroeism

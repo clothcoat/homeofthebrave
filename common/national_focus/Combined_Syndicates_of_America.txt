@@ -8180,7 +8180,7 @@ focus_tree = {
 			CAN = {
 				exists = yes
 				is_valid_war_target = yes
-				not_has_socialist_government = yes
+				has_socialist_government = no
 			}
 		}
 		relative_position_id = CSA_free_the_west
@@ -8875,7 +8875,7 @@ focus_tree = {
 			CAN = {
 				exists = yes
 				is_subject_of  = CSA
-				not_has_socialist_government = no
+				has_socialist_government = yes
 				}
 			AND = {
 				controls_state = 471
@@ -8921,7 +8921,7 @@ focus_tree = {
 			CAN = {
 				exists = yes
 				is_subject_of  = CSA
-				not_has_socialist_government = no
+				has_socialist_government = yes
 				}
 			AND = {
 				controls_state = 471
@@ -8964,8 +8964,8 @@ focus_tree = {
 			CAN = {
 				exists = yes
 				is_subject_of  = CSA
-				not_has_socialist_government = no
-				}
+				has_socialist_government = yes
+			}
 			AND = {
 				controls_state = 471
 				controls_state = 472
@@ -9004,7 +9004,7 @@ focus_tree = {
 			CAN = {
 				exists = yes
 				is_subject_of  = CSA
-				not_has_socialist_government = no
+				has_socialist_government = yes
 				}
 			AND = {
 				controls_state = 471

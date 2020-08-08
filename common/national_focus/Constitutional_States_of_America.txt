@@ -1183,9 +1183,11 @@ focus_tree = {
 		}
 		select_effect = {
 		hidden_effect = {
-			country_event = constate.37
+			country_event = {
+			id = constate.37
 			days = 10
 			}
+		}
 		}
 		cancel_if_invalid = yes
 		available_if_capitulated = yes
@@ -8035,7 +8037,7 @@ focus_tree = {
 		available = {
 			is_subject = no
 			is_in_faction = no
-			not_has_democratic_government = yes
+			has_democratic_government = no
 		}
 		relative_position_id = COR_american_empire
 		x = 0
