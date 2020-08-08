@@ -757,10 +757,7 @@ USA_release_COR = {
 		USA = {
 			if = {
 			limit = { has_idea = USA_klan_activity_idea }
-			swap_ideas = {
-			remove_idea = USA_klan_activity_idea
-			add_idea = ACW_klan_resistance_1
-				}
+			remove_ideas = USA_klan_activity_idea
 			}
 			set_country_flag = John_Elliott_Rankin_dead
 			COR = { transfer_technology = yes }
