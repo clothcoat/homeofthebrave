@@ -1676,7 +1676,9 @@ focus_tree = {
 		id = CSA_american_syndicalist_union
 		icon = GFX_goal_ideology_syndicalist
 		cost = 7.25
-		available = { has_government = syndicalist }
+		available = { has_government = syndicalist 
+		has_country_flag = CSA_constitutional_convention_done
+		}
 		prerequisite = {
 			focus = CSA_second_convention
 		}

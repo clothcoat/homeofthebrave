@@ -11821,6 +11821,10 @@ country_event = { # Klan Resistance #1
 			flag = ACW_klan_resistance
 			value > 5
 		}
+		has_country_flag = {
+			flag = ACW_klan_resistance
+			value < 10
+		}
 		NOT = { 
 			has_idea = ACW_klan_resistance_1
 			has_idea = ACW_klan_resistance_2 
@@ -11846,7 +11850,10 @@ country_event = { # klan Resistance #1-2
 	picture = GFX_report_event_GRE_riot
 	
 	trigger = {
-
+		has_country_flag = {
+			flag = ACW_klan_resistance
+			  value < 15
+			}
 		OR = {
 		has_country_flag = {
 			flag = ACW_klan_resistance
@@ -11892,6 +11899,10 @@ country_event = { # klan Resistance #3
 	picture = GFX_report_event_SPR_civwar
 	
 	trigger = {
+		has_country_flag = {
+			flag = ACW_klan_resistance
+			  value < 20
+			}
 		OR = {
 		has_country_flag = {
 			flag = ACW_klan_resistance
