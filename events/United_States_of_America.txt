@@ -2921,12 +2921,63 @@ country_event = { # Red Executive Agreement
 		hidden_effect = {
 			country_event = { id = ustates.49 days = 5 }
 		}
+		add_political_power = -20
+		add_manpower = -3000
+		add_equipment_to_stockpile = {
+			type = fighter_equipment
+			amount = -200
+			producer = USA
+			}
+			add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = -500
+			producer = USA
+			}
+			FRA = {
+			add_manpower = 3000
+			add_equipment_to_stockpile = {
+			type = fighter_equipment
+			amount = 200
+			producer = USA
+			}
+			add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 500
+			producer = USA
+			}
+			}
 	}
 	option = {
 		name = ustates.48.b
 		hidden_effect = {
 			country_event = { id = ustates.49 days = 5 }
 		}
+		add_political_power = -35
+		add_stability = -0.03
+		add_manpower = -4000
+		add_equipment_to_stockpile = {
+			type = fighter_equipment
+			amount = -250
+			producer = USA
+			}
+			add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = -600
+			producer = USA
+			}
+			FRA = {
+			add_manpower = 4000
+			add_equipment_to_stockpile = {
+			type = fighter_equipment
+			amount = 250
+			producer = USA
+				}
+			add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = -600
+			producer = USA
+				}
+			}
 	}
 }
 
