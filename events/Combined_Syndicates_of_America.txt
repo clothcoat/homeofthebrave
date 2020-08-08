@@ -8315,7 +8315,7 @@ country_event = { # Gathering the Land
 	}
 	
 	option = { #Raise the purchasing price
-	name = csa.400.a
+	name = csa.400.b
 	add_political_power = -50
 	add_war_support = -0.02
 	add_popularity = { ideology = totalist popularity = -0.02 }
@@ -8341,7 +8341,7 @@ country_event = { #Production Debate
 	}
 	
 	option = { #Appoint TUUL hardliners
-	name = csa.401.a
+	name = csa.401.b
 	add_political_power = 50
 	add_command_power = 20
 	add_stability = 0.03
@@ -8380,7 +8380,7 @@ country_event = { #Export Debate
 	}
 	
 	option = { #We can't afford it
-	name = csa.402.a
+	name = csa.402.b
 	add_political_power = -15
 	add_stability = 0.03
 	add_popularity = { ideology = totalist popularity = 0.02 }
