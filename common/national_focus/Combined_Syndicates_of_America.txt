@@ -856,6 +856,12 @@ focus_tree = {
 		available = {
 				has_government = radical_socialist
 		}
+		select_effect = {
+		country_event = {
+		id = csa.331
+		days = 15
+		}
+		}
 		cancel_if_invalid = yes
 		prerequisite = {
 			focus = CSA_nationalism
@@ -928,11 +934,25 @@ focus_tree = {
 		ai_will_do = {
 			factor = 50
 		}
+		select_effect = {
+		hidden_effect = {
+			country_event = {
+			id = csa.340
+			days = 10
+				}
+			}
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_power_to_the_people"
 			swap_ideas = {
 			remove_idea = CSA_economies_of_scale_idea
 			add_idea = CSA_economies_of_scale_idea_2
+			}
+			hidden_effect = {
+			country_event = {
+			id = csa.333
+			days = 25
+				}
 			}
 			add_political_power = 50
 			add_tech_bonus = {
@@ -1096,13 +1116,19 @@ focus_tree = {
 	focus = {# Humanist Manifesto
 		id = CSA_humanist_manifesto
 		icon = GFX_goal_CSA_heresy
-		cost = 7.25
+		cost = 5
 		available = {
 				has_government = radical_socialist
 		}
 		cancel_if_invalid = yes
 		prerequisite = {
 			focus = CSA_empower_councils
+		}
+		select_effect = {
+		country_event = {
+		id = csa.332
+		days = 25
+		}
 		}
 		relative_position_id = CSA_american_commonwealth
 		x = 5
@@ -1234,6 +1260,14 @@ focus_tree = {
 		prerequisite = {
 			focus = CSA_nationalism
 		}
+		select_effect = {
+		hidden_effect = {
+			country_event = {
+			id = csa.337
+			days = 30
+				}
+			}
+		}
 		relative_position_id = CSA_american_commonwealth
 		x = 7
 		y = 2
@@ -1259,6 +1293,12 @@ focus_tree = {
 		prerequisite = {
 			focus = CSA_guildism
 		}
+		hidden_effect = {
+			country_event = {
+			id = csa.335
+			days = 30
+				}
+			}
 		relative_position_id = CSA_american_commonwealth
 		x = 7
 		y = 3
@@ -1299,6 +1339,12 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			hidden_effect = {
+			country_event = {
+			id = csa.338
+			days = 40
+				}
+			}
 		}
 	}
 	
@@ -1312,6 +1358,14 @@ focus_tree = {
 		cancel_if_invalid = yes
 		prerequisite = {
 			focus = CSA_industrial_army
+		}
+		select_effect = {
+		hidden_effect = {
+			country_event = {
+			id = csa.341
+			days = 40
+				}
+			}
 		}
 		relative_position_id = CSA_american_commonwealth
 		x = 7
@@ -1356,7 +1410,7 @@ focus_tree = {
 	focus = {# Equality
 		id = CSA_equality
 		icon = GFX_goal_CSA_equality
-		cost = 7.25
+		cost = 6
 		available = {
 				has_government = radical_socialist
 		}
@@ -1386,7 +1440,7 @@ focus_tree = {
 	focus = {# Social Ills
 		id = CSA_social_ills
 		icon = GFX_goal_CSA_curing_social_ills
-		cost = 7.25
+		cost = 6
 		available = {
 				has_government = radical_socialist
 		}
@@ -1580,6 +1634,20 @@ focus_tree = {
 				has_government = radical_socialist
 		}
 		cancel_if_invalid = yes
+		select_effect = {
+		hidden_effect = {
+			country_event = {
+			id = csa.334
+			days = 40
+				}
+			}
+		hidden_effect = {
+			country_event = {
+			id = csa.336
+			days = 50
+				}
+			}
+		}
 		prerequisite = {
 			focus = CSA_democratic_press
 		}
