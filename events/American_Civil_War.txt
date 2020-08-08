@@ -11829,7 +11829,7 @@ country_event = { # Klan Resistance #1
 		}
 	}
 	mean_time_to_happen = {
-	days = 2
+	days = 16
 	}
 	
 	option = { # Level 1 resistance
@@ -11859,12 +11859,13 @@ country_event = { # klan Resistance #1-2
 		}
 		NOT = {
 			has_idea = ACW_klan_resistance_2 
-			has_idea = ACW_klan_resistance_3 
+			has_idea = ACW_klan_resistance_3
+			has_idea = ACW_klan_resistance_4
 		}
 	}
 	
 	mean_time_to_happen = {
-	days = 5
+	days = 16
 	}
 	
 	option = { # Level 2 resistance
@@ -11903,11 +11904,12 @@ country_event = { # klan Resistance #3
 		}
 		NOT = {
 			has_idea = ACW_klan_resistance_3
+			has_idea = ACW_klan_resistance_4
 		}
 	}
 	
 	mean_time_to_happen = {
-	days = 7
+	days = 16
 	}
 	
 	option = { # Level 3 resistance
@@ -11950,7 +11952,7 @@ country_event = { # klan Resistance #4
 	}
 	
 	mean_time_to_happen = {
-	days = 7
+	days = 16
 	}
 	
 	option = { # Level 3 resistance
@@ -11998,7 +12000,7 @@ country_event = { # klan Resistance #4-3
 	}
 	
 	mean_time_to_happen = {
-	days = 7
+	days = 14
 	}
 	
 	option = { # Level Three Resistance
@@ -12036,7 +12038,7 @@ country_event = { # klan Resistance #3-2
 	}
 	
 	mean_time_to_happen = {
-	days = 7
+	days = 14
 	}
 	
 	option = { # Level One Resistance
@@ -12092,7 +12094,7 @@ country_event = { # klan Falls to 1
 			has_idea = ACW_klan_resistance_2 
 		}
 	mean_time_to_happen = {
-	days = 8
+	days = 14
 	}
 	
 	option = { # Level 1 resistance

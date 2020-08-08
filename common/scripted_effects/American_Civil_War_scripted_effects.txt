@@ -793,13 +793,6 @@ USA_release_COR = {
 					limit = { has_idea = isolation }
 					add_ideas = civilian_economy
 				}
-				if = {
-					limit = { has_idea = USA_klan_activity_idea }
-					swap_ideas = {
-					remove_idea = USA_klan_activity_idea
-					add_idea = ACW_klan_resistance_1
-					}
-				}
 			}
 			if = {
 				limit = { has_country_flag = USA_ACW_compromise_rejected }
