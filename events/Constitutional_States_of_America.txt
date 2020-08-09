@@ -83,6 +83,38 @@ country_event = { # White Defense League requests army promotions
 	is_triggered_only = yes
 
 	option = { # Or course
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = COR_post_civil_war
+						option = COR_POST_CIVIL_WAR_LINDY
+					}
+					has_game_rule = {
+						rule = COR_post_civil_war
+						option = COR_POST_CIVIL_WAR_PATTON
+					}
+					has_game_rule = {
+						rule = COR_post_civil_war
+						option = COR_POST_CIVIL_WAR_EVANS
+					}
+					has_game_rule = {
+						rule = COR_post_civil_war
+						option = COR_POST_CIVIL_WAR_STEPHENSON
+					}
+					has_game_rule = {
+						rule = COR_post_civil_war
+						option = COR_POST_CIVIL_WAR_ARMSTRONG
+					}
+					has_game_rule = {
+						rule = COR_post_civil_war
+						option = COR_POST_CIVIL_WAR_ROCKWELL
+					}
+				}
+			}
+		}
 		name = constate.2.a
 		add_popularity = { ideology = national_populist popularity = 0.03 }
 		add_manpower = 4400
@@ -98,6 +130,16 @@ country_event = { # White Defense League requests army promotions
 			}
 	}
 	option = { # No
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = COR_post_civil_war
+					option = COR_POST_CIVIL_WAR_MURRAY
+				}
+			}
+		}
 		name = constate.2.b
 		add_popularity = { ideology = paternal_autocrat popularity = 0.03 }
 		add_political_power = -20
@@ -119,6 +161,9 @@ country_event = { # Fordists
 	is_triggered_only = yes
 
 	option = { # Or course
+		ai_chance = {
+			factor = 1
+		}
 		name = constate.3.a
 		add_equipment_to_stockpile = {
 			type = light_tank_equipment
@@ -148,6 +193,38 @@ country_event = { # Fordists
 		}
 	}
 	option = { # No
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = COR_post_civil_war
+						option = COR_POST_CIVIL_WAR_LINDY
+					}
+					has_game_rule = {
+						rule = COR_post_civil_war
+						option = COR_POST_CIVIL_WAR_PATTON
+					}
+					has_game_rule = {
+						rule = COR_post_civil_war
+						option = COR_POST_CIVIL_WAR_EVANS
+					}
+					has_game_rule = {
+						rule = COR_post_civil_war
+						option = COR_POST_CIVIL_WAR_STEPHENSON
+					}
+					has_game_rule = {
+						rule = COR_post_civil_war
+						option = COR_POST_CIVIL_WAR_ARMSTRONG
+					}
+					has_game_rule = {
+						rule = COR_post_civil_war
+						option = COR_POST_CIVIL_WAR_ROCKWELL
+					}
+				}
+			}
+		}
 		name = constate.3.b
 		add_popularity = { ideology = paternal_autocrat popularity = 0.03 }
 		add_political_power = -15
@@ -166,6 +243,38 @@ country_event = { # White Leagues ask us to stop Ford
 	is_triggered_only = yes
 
 	option = { # Tell that sommabitch to quit it
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = COR_post_civil_war
+						option = COR_POST_CIVIL_WAR_LINDY
+					}
+					has_game_rule = {
+						rule = COR_post_civil_war
+						option = COR_POST_CIVIL_WAR_PATTON
+					}
+					has_game_rule = {
+						rule = COR_post_civil_war
+						option = COR_POST_CIVIL_WAR_EVANS
+					}
+					has_game_rule = {
+						rule = COR_post_civil_war
+						option = COR_POST_CIVIL_WAR_STEPHENSON
+					}
+					has_game_rule = {
+						rule = COR_post_civil_war
+						option = COR_POST_CIVIL_WAR_ARMSTRONG
+					}
+					has_game_rule = {
+						rule = COR_post_civil_war
+						option = COR_POST_CIVIL_WAR_ROCKWELL
+					}
+				}
+			}
+		}
 		name = constate.4.a
 		add_stability = -0.08
 		add_manpower = -500
@@ -182,6 +291,9 @@ country_event = { # White Leagues ask us to stop Ford
 			}
 	}
 	option = { # No
+		ai_chance = {
+			factor = 1
+		}
 		name = constate.4.b
 		add_popularity = { ideology = paternal_autocrat popularity = 0.03 }
 		add_political_power = -15
@@ -202,6 +314,9 @@ country_event = { # Dinner with Alfalfa Bill
 	is_triggered_only = yes
 
 	option = { # For the Nation, I accept
+		ai_chance = {
+			factor = 1
+		}
 		name = constate.5.a
 		add_political_power = -10
 		hidden_effect = {
@@ -209,6 +324,38 @@ country_event = { # Dinner with Alfalfa Bill
 		}
 	}
 	option = { # Get Out
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = COR_post_civil_war
+						option = COR_POST_CIVIL_WAR_LINDY
+					}
+					has_game_rule = {
+						rule = COR_post_civil_war
+						option = COR_POST_CIVIL_WAR_PATTON
+					}
+					has_game_rule = {
+						rule = COR_post_civil_war
+						option = COR_POST_CIVIL_WAR_EVANS
+					}
+					has_game_rule = {
+						rule = COR_post_civil_war
+						option = COR_POST_CIVIL_WAR_STEPHENSON
+					}
+					has_game_rule = {
+						rule = COR_post_civil_war
+						option = COR_POST_CIVIL_WAR_ARMSTRONG
+					}
+					has_game_rule = {
+						rule = COR_post_civil_war
+						option = COR_POST_CIVIL_WAR_ROCKWELL
+					}
+				}
+			}
+		}
 		name = constate.5.b
 		add_political_power = 15
 		add_war_support = -0.1
@@ -271,6 +418,16 @@ country_event = { # Order of 76 threatened
 	is_triggered_only = yes
 
 	option = { # Investigate them
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = COR_post_civil_war
+					option = COR_POST_CIVIL_WAR_LINDY
+				}
+			}
+		}
 		name = constate.7.a
 		add_political_power = -20
 		add_popularity = { ideology = national_populist popularity = -0.01 }
@@ -280,6 +437,34 @@ country_event = { # Order of 76 threatened
 		}
 	}
 	option = { # Ignore them
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = COR_post_civil_war
+						option = COR_POST_CIVIL_WAR_PATTON
+					}
+					has_game_rule = {
+						rule = COR_post_civil_war
+						option = COR_POST_CIVIL_WAR_EVANS
+					}
+					has_game_rule = {
+						rule = COR_post_civil_war
+						option = COR_POST_CIVIL_WAR_STEPHENSON
+					}
+					has_game_rule = {
+						rule = COR_post_civil_war
+						option = COR_POST_CIVIL_WAR_ARMSTRONG
+					}
+					has_game_rule = {
+						rule = COR_post_civil_war
+						option = COR_POST_CIVIL_WAR_ROCKWELL
+					}
+				}
+			}
+		}
 		name = constate.7.b
 		add_stability = -0.05
 	}
@@ -296,12 +481,50 @@ country_event = { # Order of 76 Recruiter Killed
 	is_triggered_only = yes
 
 	option = { # Stop recruiting for now
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = COR_post_civil_war
+						option = COR_POST_CIVIL_WAR_PATTON
+					}
+					has_game_rule = {
+						rule = COR_post_civil_war
+						option = COR_POST_CIVIL_WAR_EVANS
+					}
+					has_game_rule = {
+						rule = COR_post_civil_war
+						option = COR_POST_CIVIL_WAR_STEPHENSON
+					}
+					has_game_rule = {
+						rule = COR_post_civil_war
+						option = COR_POST_CIVIL_WAR_ARMSTRONG
+					}
+					has_game_rule = {
+						rule = COR_post_civil_war
+						option = COR_POST_CIVIL_WAR_ROCKWELL
+					}
+				}
+			}
+		}
 		name = constate.8.a
 		add_political_power = -30
 		add_popularity = { ideology = paternal_autocrat popularity = -0.02 }
 		add_war_support = -0.05
 	}
 	option = { # Arrest the heads of the White League
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = COR_post_civil_war
+					option = COR_POST_CIVIL_WAR_LINDY
+				}
+			}
+		}
 		name = constate.8.b
 		add_stability = -0.05
 		add_popularity = { ideology = paternal_autocrat popularity = -0.03 }
@@ -551,6 +774,16 @@ country_event = { # Stephenson's offer
 	fire_only_once = yes
 
 	option = { # No
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = COR_post_civil_war
+					option = COR_POST_CIVIL_WAR_STEPHENSON
+				}
+			}
+		}
 		name = constate.14.a
 		add_stability = -0.03
 		add_political_power = -20
@@ -560,6 +793,30 @@ country_event = { # Stephenson's offer
 	}
 	
 	option = { # Accept
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = COR_post_civil_war
+						option = COR_POST_CIVIL_WAR_PATTON
+					}
+					has_game_rule = {
+						rule = COR_post_civil_war
+						option = COR_POST_CIVIL_WAR_EVANS
+					}
+					has_game_rule = {
+						rule = COR_post_civil_war
+						option = COR_POST_CIVIL_WAR_ARMSTRONG
+					}
+					has_game_rule = {
+						rule = COR_post_civil_war
+						option = COR_POST_CIVIL_WAR_ROCKWELL
+					}
+				}
+			}
+		}
 		name = constate.14.b
 		add_stability = -0.03
 		add_political_power = -20
@@ -969,6 +1226,16 @@ country_event = { # Letter to Patton
 	fire_only_once = yes
 
 	option = { # Arrest Him
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = COR_post_civil_war
+					option = COR_POST_CIVIL_WAR_PATTON
+				}
+			}
+		}
 		name = constate.18.a
 		add_stability = -0.03
 		add_political_power = -20
@@ -978,6 +1245,26 @@ country_event = { # Letter to Patton
 	}
 	
 	option = { # Stay out of it
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = COR_post_civil_war
+						option = COR_POST_CIVIL_WAR_ARMSTRONG
+					}
+					has_game_rule = {
+						rule = COR_post_civil_war
+						option = COR_POST_CIVIL_WAR_ROCKWELL
+					}
+					has_game_rule = {
+						rule = COR_post_civil_war
+						option = COR_POST_CIVIL_WAR_EVANS
+					}
+				}
+			}
+		}
 		name = constate.18.b
 		add_stability = -0.05
 		add_political_power = -20
@@ -1000,6 +1287,16 @@ country_event = { # White League intra-raids
 	fire_only_once = yes
 
 	option = { # Reveal the plot
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = COR_post_civil_war
+					option = COR_POST_CIVIL_WAR_PATTON
+				}
+			}
+		}
 		name = constate.1800.a
 		add_political_power = 30
 		add_stability = -0.03
@@ -1010,6 +1307,9 @@ country_event = { # White League intra-raids
 	}
 	
 	option = { # Stay out of it
+		ai_chance = {
+			factor = 1
+		}
 		name = constate.1800.b
 		hidden_effect = {
 			country_event = { id = constate.1802 days = 3 }
@@ -1051,6 +1351,16 @@ country_event = { # Meeting Place bombed
 	fire_only_once = yes
 
 	option = { # Well that's that
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = COR_post_civil_war
+					option = COR_POST_CIVIL_WAR_PATTON
+				}
+			}
+		}
 		name = constate.1802.a
 		hidden_effect = {
 			create_country_leader = {
@@ -1074,6 +1384,9 @@ country_event = { # Meeting Place bombed
 	}
 	
 	option = { # Bag Stephenson
+		ai_chance = {
+			factor = 1
+		}
 		name = constate.1802.b
 		hidden_effect = {
 			country_event = { id = constate.1803 days = 2 }
@@ -1129,6 +1442,22 @@ country_event = { # Stephenson Killed
 	fire_only_once = yes
 
 	option = { # Effinger is too dangerous, execute him
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = COR_post_civil_war
+						option = COR_POST_CIVIL_WAR_ARMSTRONG
+					}
+					has_game_rule = {
+						rule = COR_post_civil_war
+						option = COR_POST_CIVIL_WAR_ROCKWELL
+					}
+				}
+			}
+		}
 		name = constate.19.a
 		add_stability = 0.05
 		add_political_power = 50
@@ -1142,6 +1471,16 @@ country_event = { # Stephenson Killed
 	}
 	
 	option = { # Let Him Go
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = COR_post_civil_war
+					option = COR_POST_CIVIL_WAR_EVANS
+				}
+			}
+		}
 		name = constate.19.b
 		hidden_effect = {
 			country_event = { id = constate.20 days = 9 }
@@ -1163,6 +1502,22 @@ country_event = { # Armstrong's Bid
 	fire_only_once = yes
 
 	option = { # No
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = COR_post_civil_war
+						option = COR_POST_CIVIL_WAR_ARMSTRONG
+					}
+					has_game_rule = {
+						rule = COR_post_civil_war
+						option = COR_POST_CIVIL_WAR_ROCKWELL
+					}
+				}
+			}
+		}
 		name = constate.20.a
 		add_stability = -0.03
 		add_political_power = -30
@@ -1172,6 +1527,16 @@ country_event = { # Armstrong's Bid
 	}
 	
 	option = { # Go with it
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = COR_post_civil_war
+					option = COR_POST_CIVIL_WAR_EVANS
+				}
+			}
+		}
 		name = constate.20.b
 		hidden_effect = {
 			country_event = { id = constate.50 days = 5 }
@@ -1933,6 +2298,16 @@ country_event = { # Great Smallpox Outbreak
 	is_triggered_only = yes
 
 	option = { #Faith will see us through
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = COR_post_civil_war
+					option = COR_POST_CIVIL_WAR_ARMSTRONG
+				}
+			}
+		}
 		name = constate.51.a
 		add_stability = -0.05
 		hidden_effect = {
@@ -1943,6 +2318,16 @@ country_event = { # Great Smallpox Outbreak
 		}
 	}
 	option = { #Dispatch more doctors
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = COR_post_civil_war
+					option = COR_POST_CIVIL_WAR_ROCKWELL
+				}
+			}
+		}
 		name = constate.51.b
 		add_political_power = -50
 		add_popularity = { ideology = national_populist popularity = -0.05 }
@@ -1961,10 +2346,23 @@ country_event = { # Smallpox outbreak grows
 	is_triggered_only = yes
 
 	option = { #Clean house
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = COR_post_civil_war
+					option = COR_POST_CIVIL_WAR_ROCKWELL
+				}
+			}
+		}
 		name = constate.5100.a
 		add_stability = -0.05
 	}
 	option = { #No, we need their numbers for now
+		ai_chance = {
+			factor = 1
+		}
 		name = constate.5100.b
 		add_political_power = -50
 		add_popularity = { ideology = national_populist popularity = -0.05 }
@@ -2566,6 +2964,16 @@ country_event = { # NDWL Expansion
 	is_triggered_only = yes
 
 	option = {
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = BBR_spawn
+					option = BBR_SPAWN_NO
+				}
+			}
+		}
 		name = constate.65.a
 		add_popularity = { ideology = national_populist popularity = 0.03 }
 		add_manpower = 3400
@@ -2578,6 +2986,16 @@ country_event = { # NDWL Expansion
 		}
 	}
 	option = {
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = BBR_spawn
+					option = BBR_SPAWN_YES
+				}
+			}
+		}
 		name = constate.65.b
 		add_political_power = -25
 		add_manpower = -3400
@@ -2635,11 +3053,31 @@ country_event = { #Black Taxation
 	is_triggered_only = yes
 
 	option = {
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = BBR_spawn
+					option = BBR_SPAWN_YES
+				}
+			}
+		}
 		name = constate.68.a
 		add_popularity = { ideology = paternal_autocrat popularity = 0.05 }
 		add_stability = 0.05
 	}
 	option = {
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = BBR_spawn
+					option = BBR_SPAWN_NO
+				}
+			}
+		}
 		name = constate.68.b
 		add_popularity = { ideology = national_populist popularity = 0.05 }
 		add_political_power = 100
@@ -2676,6 +3114,16 @@ country_event = { #Black Conscription
 	is_triggered_only = yes
 
 	option = {
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = BBR_spawn
+					option = BBR_SPAWN_YES
+				}
+			}
+		}
 		name = constate.69.a
 		add_popularity = { ideology = national_populist popularity = 0.02 }
 		add_war_support = 0.05
@@ -2683,6 +3131,16 @@ country_event = { #Black Conscription
 		set_country_flag = BBR_black_uprising
 	}
 	option = {
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = BBR_spawn
+					option = BBR_SPAWN_NO
+				}
+			}
+		}
 		name = constate.69.b
 		add_popularity = { ideology = national_populist popularity = 0.05 }
 		add_political_power = 100

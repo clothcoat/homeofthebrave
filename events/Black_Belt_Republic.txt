@@ -98,6 +98,22 @@ country_event = { # Nationalist Campaign
 	is_triggered_only = yes
 	
 	option = { # Tolerate them
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = BBR_political
+						option = BBR_POLITICAL_PATH_ABB
+					}				
+					has_game_rule = {
+						rule = BBR_political
+						option = BBR_POLITICAL_PATH_AMERCANIST
+					}
+				}				
+			}
+		}
 		name = bbr.4.a
 		add_manpower = 1500
 		add_war_support = 0.05
@@ -107,6 +123,58 @@ country_event = { # Nationalist Campaign
 		}
 	}
 	option = { # Arrest them
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = BBR_political
+						option = BBR_POLITICAL_PATH_VANGUARDIST
+					}
+					has_game_rule = {
+						rule = BBR_political
+						option = BBR_POLITICAL_PATH_JACOBIN
+					}
+					has_game_rule = {
+						rule = BBR_political
+						option = BBR_POLITICAL_PATH_CENTRALIST
+					}							
+					has_game_rule = {
+						rule = BBR_political
+						option = BBR_POLITICAL_PATH_SYNDICALIST
+					}		
+					has_game_rule = {
+						rule = BBR_political
+						option = BBR_POLITICAL_PATH_SOCIALIST
+					}						
+					has_game_rule = {
+						rule = BBR_political
+						option = BBR_POLITICAL_PATH_NOI
+					}	
+					has_game_rule = {
+						rule = BBR_political
+						option = BBR_POLITICAL_PATH_UNIA
+					}	
+					has_game_rule = {
+						rule = BBR_political
+						option = BBR_POLITICAL_PATH_LIBERTY
+					}	
+					has_game_rule = {
+						rule = BBR_political
+						option = BBR_POLITICAL_PATH_PEACE
+					}	
+					has_game_rule = {
+						rule = BBR_political
+						option = BBR_POLITICAL_PATH_REPUBLICAN
+					}		
+					has_game_rule = {
+						rule = BBR_political
+						option = BBR_POLITICAL_PATH_SOCREF
+					}					
+				}
+			}
+		}
 		name = bbr.4.a
 		add_manpower = -1500
 		add_war_support = -0.05
@@ -130,6 +198,22 @@ country_event = { # Garvey Denounces Us
 	is_triggered_only = yes
 	
 	option = { # No, we stay the course
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = BBR_political
+						option = BBR_POLITICAL_PATH_ABB
+					}				
+					has_game_rule = {
+						rule = BBR_political
+						option = BBR_POLITICAL_PATH_AMERCANIST
+					}
+				}
+			}
+		}
 		name = bbr.5.a
 		add_political_power = 40
 		add_stability = -0.03
@@ -139,6 +223,9 @@ country_event = { # Garvey Denounces Us
 		add_popularity = { ideology = national_populist popularity = -0.02 }
 	}
 	option = { # Appoint the ABB
+		ai_chance = {
+			factor = 25
+		}
 		name = bbr.5.a
 		add_war_support = 0.05
 		add_popularity = { ideology = totalist popularity = 0.03 }
@@ -182,12 +269,32 @@ country_event = { # Duse Muhammad Elected
 	is_triggered_only = yes
 	
 	option = { # Appoint Young
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = BBR_political
+					option = BBR_POLITICAL_PATH_ABB				
+				}
+			}
+		}
 		name = bbr.7.a
 		add_manpower = 1500
 		add_war_support = 0.05
 		add_popularity = { ideology = national_populist popularity = 0.05 }
 	}
 	option = { # Appoint the ABB
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = BBR_political
+					option = BBR_POLITICAL_PATH_AMERCANIST				
+				}
+			}
+		}
 		name = bbr.7.a
 		add_manpower = -1500
 		add_war_support = -0.05
@@ -283,6 +390,50 @@ country_event = { # March
 	is_triggered_only = yes
 	
 	option = { #We can't afford to stop them
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = BBR_political
+						option = BBR_POLITICAL_PATH_VANGUARDIST
+					}
+					has_game_rule = {
+						rule = BBR_political
+						option = BBR_POLITICAL_PATH_JACOBIN
+					}
+					has_game_rule = {
+						rule = BBR_political
+						option = BBR_POLITICAL_PATH_CENTRALIST
+					}					
+					has_game_rule = {
+						rule = BBR_political
+						option = BBR_POLITICAL_PATH_SYNDICALIST
+					}		
+					has_game_rule = {
+						rule = BBR_political
+						option = BBR_POLITICAL_PATH_SOCIALIST
+					}			
+					has_game_rule = {
+						rule = BBR_political
+						option = BBR_POLITICAL_PATH_LIBERTY
+					}	
+					has_game_rule = {
+						rule = BBR_political
+						option = BBR_POLITICAL_PATH_PEACE
+					}	
+					has_game_rule = {
+						rule = BBR_political
+						option = BBR_POLITICAL_PATH_REPUBLICAN
+					}		
+					has_game_rule = {
+						rule = BBR_political
+						option = BBR_POLITICAL_PATH_SOCREF
+					}					
+				}
+			}
+		}
 		name = bbr.10.a
 		hidden_effect = {
 			country_event = { id = bbr.11 days = 4 }
@@ -290,6 +441,22 @@ country_event = { # March
 		add_stability = -0.05
 	}
 	option = { #Route them
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = BBR_political
+						option = BBR_POLITICAL_PATH_NOI
+					}	
+					has_game_rule = {
+						rule = BBR_political
+						option = BBR_POLITICAL_PATH_UNIA
+					}							
+				}
+			}
+		}
 		name = bbr.10.b		
 		add_manpower = -3500
 		add_stability = -0.03
@@ -299,6 +466,22 @@ country_event = { # March
 		}
 	}
 	option = { #Empower Young
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = BBR_political
+						option = BBR_POLITICAL_PATH_NOI
+					}	
+					has_game_rule = {
+						rule = BBR_political
+						option = BBR_POLITICAL_PATH_UNIA
+					}							
+				}
+			}
+		}
 		name = bbr.10.c
 		add_manpower = -3000
 		add_war_support = 0.05
@@ -351,6 +534,18 @@ country_event = { # Leadership Election
 	is_triggered_only = yes
 	
 	option = { #NOI
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = BBR_political
+						option = BBR_POLITICAL_PATH_UNIA
+					}				
+				}
+			}
+		}
 		name = bbr.12.a
 		hidden_effect = {
 			country_event = { id = bbr.11 days = 4 }
@@ -362,6 +557,18 @@ country_event = { # Leadership Election
 		add_war_support = 0.08
 	}
 	option = { #UNIA
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = BBR_political
+						option = BBR_POLITICAL_PATH_NOI
+					}				
+				}
+			}
+		}
 		name = bbr.12.b		
 		add_popularity = { ideology = paternal_autocrat popularity = 0.1 }
 		add_stability = 0.08
@@ -406,6 +613,30 @@ country_event = { # Future of the Nation
 	is_triggered_only = yes
 	
 	option = { #People's Amendment's
+	ai_chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				has_game_rule = {
+					rule = BBR_political
+					option = BBR_POLITICAL_PATH_LIBERTY
+				}	
+				has_game_rule = {
+					rule = BBR_political
+					option = BBR_POLITICAL_PATH_PEACE
+				}	
+				has_game_rule = {
+					rule = BBR_political
+					option = BBR_POLITICAL_PATH_REPUBLICAN
+				}		
+				has_game_rule = {
+					rule = BBR_political
+					option = BBR_POLITICAL_PATH_SOCREF
+				}					
+			}
+		}
+	}
 	name = bbr.14.a
 	add_stability = 0.08
 	add_war_support = 0.1
@@ -420,6 +651,34 @@ country_event = { # Future of the Nation
 	}
 	
 	option = { #Liberal Constitution
+	ai_chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				has_game_rule = {
+					rule = BBR_political
+					option = BBR_POLITICAL_PATH_VANGUARDIST
+				}	
+				has_game_rule = {
+					rule = BBR_political
+					option = BBR_POLITICAL_PATH_JACOBIN
+				}
+				has_game_rule = {
+					rule = BBR_political
+					option = BBR_POLITICAL_PATH_CENTRALIST
+				}
+				has_game_rule = {
+					rule = BBR_political
+					option = BBR_POLITICAL_PATH_SYNDICALIST
+				}		
+				has_game_rule = {
+					rule = BBR_political
+					option = BBR_POLITICAL_PATH_SOCIALIST
+				}						
+			}
+		}
+	}
 	name = bbr.14.b
 	add_stability = 0.15
 	add_war_support = 0.08
@@ -489,12 +748,60 @@ country_event = { # Union Elections
 	is_triggered_only = yes
 	
 	option = { #Du Bois
+	ai_chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				has_game_rule = {
+					rule = BBR_political
+					option = BBR_POLITICAL_PATH_VANGUARDIST
+				}	
+				has_game_rule = {
+					rule = BBR_political
+					option = BBR_POLITICAL_PATH_JACOBIN
+				}
+				has_game_rule = {
+					rule = BBR_political
+					option = BBR_POLITICAL_PATH_CENTRALIST
+				}
+				has_game_rule = {
+					rule = BBR_political
+					option = BBR_POLITICAL_PATH_SYNDICALIST
+				}					
+			}
+		}
+	}
 	name = bbr.17.a
 	add_popularity = { ideology = radical_socialist popularity = 0.12 }
 	add_stability = 0.12
 	add_political_power = 75
 	}
 	option = { #Paul Robeson
+	ai_chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				has_game_rule = {
+					rule = BBR_political
+					option = BBR_POLITICAL_PATH_VANGUARDIST
+				}	
+				has_game_rule = {
+					rule = BBR_political
+					option = BBR_POLITICAL_PATH_JACOBIN
+				}
+				has_game_rule = {
+					rule = BBR_political
+					option = BBR_POLITICAL_PATH_CENTRALIST
+				}
+				has_game_rule = {
+					rule = BBR_political
+					option = BBR_POLITICAL_PATH_SOCIALIST
+				}					
+			}
+		}
+	}
 	name = bbr.17.b
 	add_popularity = { ideology = syndicalist popularity = 0.15 }
 	add_stability = 0.1
@@ -505,6 +812,30 @@ country_event = { # Union Elections
 		}
 	}
 	option = { #James Ford
+	ai_chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				has_game_rule = {
+					rule = BBR_political
+					option = BBR_POLITICAL_PATH_SYNDICALIST
+				}	
+				has_game_rule = {
+					rule = BBR_political
+					option = BBR_POLITICAL_PATH_SOCIALIST
+				}		
+				has_game_rule = {
+					rule = BBR_political
+					option = BBR_POLITICAL_PATH_JACOBIN
+				}
+				has_game_rule = {
+					rule = BBR_political
+					option = BBR_POLITICAL_PATH_VANGUARDIST
+				}				
+			}
+		}
+	}
 	name = bbr.17.c
 	add_popularity = { ideology = radical_socialist popularity = 0.02 }
 	add_popularity = { ideology = totalist popularity = 0.1 }
@@ -530,6 +861,30 @@ country_event = { # Union Elections
 			name = BBR_SPA_totalist_party }
 	}
 	option = { #Ben Davis
+	ai_chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				has_game_rule = {
+					rule = BBR_political
+					option = BBR_POLITICAL_PATH_SYNDICALIST
+				}	
+				has_game_rule = {
+					rule = BBR_political
+					option = BBR_POLITICAL_PATH_SOCIALIST
+				}		
+				has_game_rule = {
+					rule = BBR_political
+					option = BBR_POLITICAL_PATH_CENTRALIST
+				}	
+				has_game_rule = {
+					rule = BBR_political
+					option = BBR_POLITICAL_PATH_VANGUARDIST
+				}				
+			}
+		}
+	}
 	name = bbr.17.e
 	add_popularity = { ideology = totalist popularity = 0.1 }
 	add_stability = 0.08
@@ -554,6 +909,30 @@ country_event = { # Union Elections
 			name = BBR_COM_totalist_party }
 	} 
 	option = { #Harry Haywood
+	ai_chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				has_game_rule = {
+					rule = BBR_political
+					option = BBR_POLITICAL_PATH_SYNDICALIST
+				}	
+				has_game_rule = {
+					rule = BBR_political
+					option = BBR_POLITICAL_PATH_SOCIALIST
+				}
+				has_game_rule = {
+					rule = BBR_political
+					option = BBR_POLITICAL_PATH_JACOBIN
+				}
+				has_game_rule = {
+					rule = BBR_political
+					option = BBR_POLITICAL_PATH_CENTRALIST
+				}				
+			}
+		}
+	}
 	name = bbr.17.f
 	add_popularity = { ideology = totalist popularity = 0.1 }
 	add_manpower = 500
@@ -611,6 +990,9 @@ country_event = { # Socialist Party Candidates
 	is_triggered_only = yes
 	
 	option = { #Randolph
+	ai_chance = {
+		factor = 1
+	}
 	name = bbr.19.a
 	add_popularity = { ideology = social_democrat popularity = 0.05 }
 	hidden_effect = {
@@ -620,6 +1002,16 @@ country_event = { # Socialist Party Candidates
 	}
 	
 	option = { #
+	ai_chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			has_game_rule = {
+				rule = BBR_political
+				option = BBR_POLITICAL_PATH_SOCREF
+			}					
+		}
+	}
 	name = bbr.19.b
 	add_popularity = { ideology = radical_socialist popularity = 0.05 }
 	hidden_effect = {
@@ -629,6 +1021,9 @@ country_event = { # Socialist Party Candidates
 	}
 	
 	option = { #
+	ai_chance = {
+		factor = 1
+	}
 	name = bbr.19.c
 	add_popularity = { ideology = social_democrat popularity = 0.05 }
 	hidden_effect = {
@@ -736,6 +1131,26 @@ country_event = { # The Liberal Election
 	is_triggered_only = yes
 	
 	option = { #SPA
+	ai_chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				has_game_rule = {
+					rule = BBR_political
+					option = BBR_POLITICAL_PATH_LIBERTY
+				}	
+				has_game_rule = {
+					rule = BBR_political
+					option = BBR_POLITICAL_PATH_PEACE
+				}	
+				has_game_rule = {
+					rule = BBR_political
+					option = BBR_POLITICAL_PATH_REPUBLICAN
+				}					
+			}
+		}
+	}
 	name = bbr.23.a
 	if = { limit = { has_country_flag = SPA_Randolph }
 	add_popularity = { ideology = social_democrat popularity = 0.1 }
@@ -768,6 +1183,26 @@ country_event = { # The Liberal Election
 	}
 	}
 	option = { # Soc Lib
+	ai_chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				has_game_rule = {
+					rule = BBR_political
+					option = BBR_POLITICAL_PATH_SOCREF
+				}	
+				has_game_rule = {
+					rule = BBR_political
+					option = BBR_POLITICAL_PATH_PEACE
+				}	
+				has_game_rule = {
+					rule = BBR_political
+					option = BBR_POLITICAL_PATH_REPUBLICAN
+				}					
+			}
+		}
+	}
 	name = bbr.23.b
 	add_popularity = { ideology = social_liberal popularity = 0.1 }
 	if = { limit = { has_country_flag = LP_Sampson }
@@ -806,6 +1241,26 @@ country_event = { # The Liberal Election
 	}
 	}
 	option = { # Market Liberal
+	ai_chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				has_game_rule = {
+					rule = BBR_political
+					option = BBR_POLITICAL_PATH_LIBERTY
+				}	
+				has_game_rule = {
+					rule = BBR_political
+					option = BBR_POLITICAL_PATH_PEACE
+				}	
+				has_game_rule = {
+					rule = BBR_political
+					option = BBR_POLITICAL_PATH_SOCREF
+				}					
+			}
+		}
+	}
 	name = bbr.23.c
 	add_popularity = { ideology = market_liberal popularity = 0.1 }
 	if = { limit = { has_country_flag = RP_Hurston }
@@ -830,6 +1285,26 @@ country_event = { # The Liberal Election
 	}
 	}
 	option = { #Social Conservative
+	ai_chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				has_game_rule = {
+					rule = BBR_political
+					option = BBR_POLITICAL_PATH_LIBERTY
+				}	
+				has_game_rule = {
+					rule = BBR_political
+					option = BBR_POLITICAL_PATH_SOCREF
+				}	
+				has_game_rule = {
+					rule = BBR_political
+					option = BBR_POLITICAL_PATH_REPUBLICAN
+				}					
+			}
+		}
+	}
 	name = bbr.23.e
 	add_popularity = { ideology = social_conservative popularity = 0.1 }
 	set_politics = {
