@@ -14377,9 +14377,13 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_claim_the_east_indies"
-			add_war_support = 0.10
-			add_stability = 0.05
-			custom_effect_tooltip = TEX_can_attack_syndicalist
+			add_war_support = 0.03
+			add_state_claim	= 334
+			add_state_claim	= 335
+			add_state_claim	= 667
+			add_state_claim	= 668
+			add_state_claim	= 672
+			add_state_claim	= 673
 		}
 	}
 	
@@ -14412,10 +14416,11 @@ focus_tree = {
 		cancel_if_invalid = yes
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CAL_demand_the_philippines"
-			add_war_support = 0.10
-			add_stability = 0.05
-			custom_effect_tooltip = TEX_can_attack_syndicalist
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_giant_of_the_east"
+			add_stability = 0.1
+			increase_ruling_party_popularity_by_5 = yes
+			add_manpower = 20000
+			add_state_core = 335
 		}
 	}
 
@@ -14442,7 +14447,22 @@ focus_tree = {
 		cancel_if_invalid = yes
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_vietnam_yesterday"
-			add_political_power = 200
+			create_wargoal = {
+			type = annex_everything
+			target = VIE
+			}
+			if = {
+			limit = { GEA = {
+				exists = yes
+				}
+			}
+			GER = {
+			country_event = {
+				id = ustates.673
+				days = 1
+				}
+			}
+			}
 		}
 	}
 	focus = {
