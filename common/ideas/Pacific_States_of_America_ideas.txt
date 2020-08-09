@@ -2092,7 +2092,7 @@ ideas = {
 		}
 		
 		###New Imperialism###
-		CAL_american_imperialism_idea = {#
+		USA_american_imperialism_idea = {#
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea USA_american_imperialism_idea"}
 			allowed = {	always = no	}
 			allowed_civil_war = { always = yes }
@@ -2107,7 +2107,7 @@ ideas = {
 			}
 		}
 		
-		CAL_american_imperialism_idea_2 = {#
+		USA_american_imperialism_idea_2 = {#
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea USA_american_imperialism_idea_2"}
 			allowed = {	always = no	}
 			allowed_civil_war = { always = yes }
@@ -2122,7 +2122,7 @@ ideas = {
 			}
 		}
 		
-		CAL_american_imperialism_idea_3 = {#
+		USA_american_imperialism_idea_3 = {#
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea USA_american_imperialism_idea_3"}
 			allowed = {	always = no	}
 			allowed_civil_war = { always = yes }

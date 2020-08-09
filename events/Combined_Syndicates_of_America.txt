@@ -21,28 +21,28 @@ country_event = { # Socialist Constitution - Property Debate
 	
 	option = { #The Laborists win out
 		name = csa.1000.a	
+		hidden_effect = {
 		country_event = {
 			id = csa.1001
 			days = 7
-			hidden_effect = {
+			}
 			modify_country_flag = {
 			flag = CSA_afl
 			value = 1
-				}
+			}
 			modify_country_flag = {
 			flag = CSA_browder
 			value = 1
-				}
 			}
 		}
 	}
 	option = { # The Nationalists win out
 		name = csa.1000.b
+		hidden_effect = {
 		country_event = {
 			id = csa.1001
 			days = 7
 			}
-		hidden_effect = {
 			modify_country_flag = {
 			flag = CSA_nationalists
 			value = 1
@@ -189,10 +189,6 @@ country_event = { # Socialist Congressional Election Arrives
 		name = csa.1003.c
 		set_country_flag = CSA_constitutional_convention_done
 		hidden_effect = {
-			add_ideas = USA_Alf_Landon_hog_sli
-			add_ideas = USA_Cordell_Hull_for_mli
-			add_ideas = USA_Ray_Lyman_Wilbur_Sr_eco_mli
-			add_ideas = USA_Charles_Douglas_Jackson_sec_mli
 			create_country_leader = {
 				name = "Earl Browder"
 				desc = "POLITICS_EARL_BROWDER_DESC"
@@ -1443,7 +1439,6 @@ country_event = { # Centralist IWW Faction
 				expire = "1965.1.1"
 				ideology = syndicalist_subtype
 				traits = {
-					smooth_talking_charmer
 				}
 			}
 		set_politics = {
@@ -1461,7 +1456,6 @@ country_event = { # Centralist IWW Faction
 			expire = "1965.1.1"
 			ideology = syndicalist_subtype
 			traits = {
-				great_survivor
 			}
 		}
 		set_politics = {
@@ -1479,7 +1473,6 @@ country_event = { # Centralist IWW Faction
 					expire = "1965.1.1"
 					ideology = syndicalist_subtype
 					traits = {
-						anarchist_zeal
 					}
 				}
 		set_politics = {
@@ -1497,7 +1490,6 @@ country_event = { # Centralist IWW Faction
 				expire = "1965.1.1"
 				ideology = syndicalist_subtype
 				traits = {
-					editor
 				}
 			}
 		set_politics = {
@@ -1515,7 +1507,6 @@ country_event = { # Centralist IWW Faction
 				expire = "1965.1.1"
 				ideology = radical_socialist_subtype
 				traits = {
-					editor
 					}
 				}
 			set_politics = {
@@ -1530,6 +1521,7 @@ country_event = { # Orthodox Syndicalist Election
 	id = csa.26
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.26"}
 	title = csa.26.t
+	desc = csa.26.d
 	picture = GFX_report_event_election_vote
 
 	fire_only_once = yes
@@ -1560,7 +1552,6 @@ country_event = { # Orthodox Syndicalist Election
 			expire = "1965.1.1"
 			ideology = syndicalist_subtype
 			traits = {
-				great_survivor
 			}
 		}
 		set_politics = {
@@ -1579,7 +1570,6 @@ country_event = { # Orthodox Syndicalist Election
 				ideology = syndicalist_subtype
 				female = yes
 				traits = {
-					appeaser
 			}
 		}
 		set_politics = {
@@ -1598,7 +1588,6 @@ country_event = { # Orthodox Syndicalist Election
 				ideology = syndicalist_subtype
 				female = yes
 				traits = {
-					appeaser
 			}
 		}
 		set_politics = {
@@ -7348,7 +7337,6 @@ country_event = { # Quebec reorganized
 	332 = {
 		add_state_modifier = {
 			modifier = {
-			resistance_tick_auto = -2	
 			local_resources_factor	= 0.1
 			local_non_core_manpower	= 0.05
 			}
@@ -7383,7 +7371,6 @@ country_event = { # Ontario reorganized
 		682 = {
 		add_state_modifier = {
 			modifier = {
-			resistance_tick_auto = -2	
 			local_resources_factor	= 0.1
 			local_non_core_manpower	= 0.05
 			}

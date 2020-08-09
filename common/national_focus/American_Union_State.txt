@@ -4011,9 +4011,6 @@ focus_tree = {
 				category = land_doctrine
 			}
 			371 = {
-				limit = {
-					is_controlled_by = TEX
-				}
 				add_building_construction = {
 					type = bunker
 					province = {
@@ -4039,10 +4036,6 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TEX_coastal_forts"
 			375 = {
-				limit = {
-					is_controlled_by = TEX
-					is_coastal = yes
-				}
 				add_building_construction = {
 					type = coastal_bunker
 					province = 6785
@@ -4710,7 +4703,7 @@ focus_tree = {
 				category = artillery
 			}
 			add_equipment_to_stockpile = {
-			type = artillery
+			type = artillery_equipment
 			amount = 15
 			producer = TEX
 			}
@@ -4752,7 +4745,7 @@ focus_tree = {
 				}
 			}
 			add_equipment_to_stockpile = {
-			type = artillery
+			type = artillery_equipment
 			amount = 30
 			producer = TEX
 			}
@@ -7193,7 +7186,7 @@ focus_tree = {
 			FROM = {
 			is_in_faction_with = TEX }
 				}
-			FROM = { national_populist popularity = -0.02 }
+			FROM = { add_popularity = { ideology = national_populist popularity = -0.02 }
 			}
 			add_popularity = { ideology = national_populist popularity = -0.03 }
 			unlock_decision_category_tooltip = TEX_break_militarists_desc
@@ -7291,11 +7284,9 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TEX_friendship_in_the_americas"
 			if = {
-			limit = {
 			FROM = {
 				is_in_faction_with = ROOT
 					}
-				}
 			FROM = {
 			add_opinion_modifier = { target = ROOT modifier = medium_increase }
 				}

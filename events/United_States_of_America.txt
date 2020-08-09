@@ -15362,3 +15362,85 @@ country_event = {# Event for New England to Pick up PSA exiles in case they deci
 		}
 	}
 }
+
+country_event = {#Greenland
+	id = ustates.670
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.670"}
+	title = ustates.670.t
+	desc = ustates.670.d
+	picture = GFX_USA_military_trial
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {# Very well, take the money
+		name = ustates.670.a
+		ai_chance = {
+			factor = 100
+		}
+		FROM = {
+		country_event = {
+			id = ustates.672
+			days = 1
+			}
+		}
+	}
+	option = {# Decline
+		name = ustates.670.a
+		FROM = {
+		country_event = {
+			id = ustates.671
+			days = 1
+			}
+		}
+	}
+}
+
+country_event = {#[Root.GetAdjective] declines
+	id = ustates.671
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.671"}
+	title = ustates.671.t
+	desc = ustates.671.d
+	picture = GFX_USA_military_trial
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {#Declare War Now
+		name = ustates.671.a
+		ai_chance = {
+			factor = 100
+		}
+		declare_war_on = {
+		target = DEN
+		type = annex_everything
+		}
+
+	}
+	option = {#We Wait
+		name = ustates.671.b
+		ai_chance = {
+			factor = 100
+		}
+		add_state_claim = 101
+		add_war_support = -0.03
+	}
+}
+
+country_event = {#[Root.GetAdjective] accepts
+	id = ustates.672
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.672"}
+	title = ustates.672.t
+	desc = ustates.672.d
+	picture = GFX_USA_military_trial
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {# Very well, take the money
+		name = ustates.672.a
+		ai_chance = {
+			factor = 100
+		}
+		CAL = {
+		transfer_state = 101
+		}
+	}
+}

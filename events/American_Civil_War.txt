@@ -522,7 +522,7 @@ country_event = { # BBR released
 			value = -6
 			}
 		}
-		hidden = {
+		hidden_effect = {
 		COR = {
 		country_event = {
 		id = amcivwar.3002
@@ -578,7 +578,7 @@ country_event = { # BBR released
 		BBR = {
 			change_tag_from = COR
 		}
-		hidden = {
+		hidden_effect = {
 		COR = {
 		country_event = {
 		id = amcivwar.3002
@@ -9740,10 +9740,7 @@ country_event = { # USA Surrenders
 			}
 			remove_ideas = amcivwar_idea
 		}
-		if = {
-			limit = {
-				ACW_has_more_than_two_wars = yes
-			}
+		else = {
 			ACW_surrender_effect = yes
 		}
 		else = {
@@ -9924,12 +9921,6 @@ country_event = { # CSA Surrenders
 			}
 			remove_ideas = amcivwar_idea
 		}
-		if = {
-			limit = {
-				ACW_has_more_than_two_wars = yes
-			}
-			ACW_surrender_effect = yes
-		}
 		else = {
 			custom_effect_tooltip = amcivwar_surrender_tooltip
 			hidden_effect = {
@@ -10097,12 +10088,6 @@ country_event = { # AUS Surrenders
 				has_idea = amcivwar_idea
 			}
 			remove_ideas = amcivwar_idea
-		}
-		if = {
-			limit = {
-				ACW_has_more_than_two_wars = yes
-			}
-			ACW_surrender_effect = yes
 		}
 		else = {
 			custom_effect_tooltip = amcivwar_surrender_tooltip
@@ -10290,12 +10275,6 @@ country_event = { # PSA Surrenders
 				has_idea = amcivwar_idea
 			}
 			remove_ideas = amcivwar_idea
-		}
-		if = {
-			limit = {
-				ACW_has_more_than_two_wars = yes
-			}
-			ACW_surrender_effect = yes
 		}
 		else = {
 			custom_effect_tooltip = amcivwar_surrender_tooltip

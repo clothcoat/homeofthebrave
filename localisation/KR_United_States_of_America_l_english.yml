@@ -197,6 +197,7 @@ USA_paratroopers_spawn:0 "Five Paratrooper Divisions will spawn in Eastern Virgi
 USA_trials_will_begin:0 "We shall begin §YTrials§! against the traitorous generals who joined the other factions in the civil war."
 USA_norris_appeasement:0 "Norris Has SPA and AFP Support"
 USA_angered_long_reed:0 "Angered Long or Reed"
+USA_attack_australasia:0 "Attack Australasia"
 
 ### Ideas ###
 USA_great_depression:0 "The Great Depression"
@@ -2907,15 +2908,14 @@ ustates.670.d:0 "The United States has sent a letter and diplomat offering to 'p
 ustates.670.a:0 "Very well, take the money"
 ustates.670.b:0 "Never!"
 
-ustates.671.t:0 "United States demands Greenland!"
-ustates.671.d:0 "The United States has sent a letter and diplomat offering to 'purchase' Greenland from us at an absurdly measely price while claiming war is on the table for the territory due to its 'importance to national security'. Thet are clearly strong arming us but given their resources and location we likely have no choice but to accept."
-ustates.671.a:0 "Very well, take the money"
-ustates.671.b:0 "Never!"
+ustates.671.t:0 "Denmark Declines!"
+ustates.671.d:0 "Denmark has declined our offer, and as such we will simply make claims on the territory."
+ustates.671.a:0 "Declare War Now"
+ustates.671.b:0 "We will wait"
 
-ustates.670.t:0 "[Root.GetAdjective] accepts!"
-ustates.670.d:0 "As to be expected "
-ustates.670.a:0 "Very well, take the money"
-ustates.670.b:0 "Never!"
+ustates.672.t:0 "Denmark accepts!"
+ustates.672.d:0 "As to be expected Denmark has accepted our offer, granting us control of Greenland."
+ustates.672.a:0 "Great"
 
 #### NEWS EVENTS ####
 ustates.1000.t:0 "The Second American Civil War"
