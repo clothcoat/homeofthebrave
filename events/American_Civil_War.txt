@@ -7324,7 +7324,7 @@ country_event = { # Canadian Intervention
 	option = { # We will support a faction
 		name = amcivwar.150.a
 		ai_chance = {
-			factor = 40
+			factor = 0
 			modifier = {
 				factor = 0.5
 				USA = { has_completed_focus = USA_pass_tariff_act }
@@ -7351,7 +7351,7 @@ country_event = { # Canadian Intervention
 	option = { # Activate Defence Plan Two
 		name = amcivwar.150.b
 		ai_chance = {
-			factor = 60
+			factor = 4000
 			modifier = {
 				factor = 0.5
 				has_country_flag = USA_compromise_reached
