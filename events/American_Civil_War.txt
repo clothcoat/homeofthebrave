@@ -10998,7 +10998,10 @@ country_event = { # Black Legion Resistance #1-2
 	picture = GFX_report_event_GRE_riot
 	
 	trigger = {
-
+		has_country_flag = {
+			flag = ACW_black_legion_resistance
+			  value < 15
+			}
 		OR = {
 		has_country_flag = {
 			flag = ACW_black_legion_resistance
@@ -11043,6 +11046,10 @@ country_event = { # Black Resistance #3
 	picture = GFX_report_event_SPR_civwar
 	
 	trigger = {
+		has_country_flag = {
+			flag = ACW_black_legion_resistance
+			  value < 20
+			}
 		OR = {
 		has_country_flag = {
 			flag = ACW_black_legion_resistance
@@ -11198,6 +11205,10 @@ country_event = { # Black Resistance #3-2
 	trigger = {
 		has_country_flag = {
 			flag = ACW_black_legion_resistance
+			  value > 10
+			}
+		has_country_flag = {
+			flag = ACW_black_legion_resistance
 			value < 15
 			}
 			has_idea = ACW_black_legion_resistance_3
@@ -11322,6 +11333,10 @@ country_event = { # Socialist Resistance #1
 	trigger = {
 		has_country_flag = {
 			flag = ACW_socialist_resistance
+			  value < 10
+			}
+		has_country_flag = {
+			flag = ACW_socialist_resistance
 			value > 5
 		}
 		NOT = { 
@@ -11349,7 +11364,10 @@ country_event = { # Socialist Resistance #1-2
 	picture = GFX_report_event_GRE_riot
 	
 	trigger = {
-
+		has_country_flag = {
+			flag = ACW_socialist_resistance
+			  value < 15
+			}
 		OR = {
 		has_country_flag = {
 			flag = ACW_socialist_resistance
@@ -11395,6 +11413,10 @@ country_event = { # Socialist Resistance #3
 	picture = GFX_report_event_SPR_civwar
 	
 	trigger = {
+		has_country_flag = {
+			flag = ACW_socialist_resistance
+			  value < 20
+			}
 		OR = {
 		has_country_flag = {
 			flag = ACW_socialist_resistance
@@ -11670,7 +11692,10 @@ country_event = { # Minutemen Resistance #1-2
 	picture = GFX_report_event_GRE_riot
 	
 	trigger = {
-
+		has_country_flag = {
+			flag = ACW_minutemen_resistance
+			  value < 15
+			}
 		OR = {
 		has_country_flag = {
 			flag = ACW_minutemen_resistance
@@ -11715,6 +11740,10 @@ country_event = { # Minutemen Resistance #3
 	picture = GFX_report_event_SPR_civwar
 	
 	trigger = {
+		has_country_flag = {
+			flag = ACW_minutemen_resistance
+			  value < 20
+			}
 		OR = {
 		has_country_flag = {
 			flag = ACW_minutemen_resistance
@@ -12356,7 +12385,10 @@ country_event = { # fed Resistance #1-2
 	picture = GFX_report_event_GRE_riot
 	
 	trigger = {
-
+		has_country_flag = {
+			flag = ACW_fed_resistance
+			value < 15
+		}
 		OR = {
 		has_country_flag = {
 			flag = ACW_fed_resistance
@@ -12401,6 +12433,10 @@ country_event = { # fed Resistance #3
 	picture = GFX_report_event_SPR_civwar
 	
 	trigger = {
+		has_country_flag = {
+			flag = ACW_fed_resistance
+			value < 20
+		}
 		OR = {
 		has_country_flag = {
 			flag = ACW_fed_resistance
@@ -13112,7 +13148,10 @@ country_event = { # Black Nationalist Resistance #1-2
 	picture = GFX_report_event_GRE_riot
 	
 	trigger = {
-
+		has_country_flag = {
+			flag = ACW_black_nationalist_resistance
+			value < 15
+		}
 		OR = {
 		has_country_flag = {
 			flag = ACW_black_nationalist_resistance
@@ -13157,6 +13196,10 @@ country_event = { # Black Nationalist Resistance #3
 	picture = GFX_report_event_SPR_civwar
 	
 	trigger = {
+	has_country_flag = {
+			flag = ACW_black_nationalist_resistance
+			value < 20
+		}
 		OR = {
 		has_country_flag = {
 			flag = ACW_black_nationalist_resistance
@@ -13260,6 +13303,10 @@ country_event = { # Black Nationalist Resistance #4-3
 			flag = ACW_black_nationalist_resistance
 			value < 20
 			}
+		has_country_flag = {
+			flag = ACW_black_nationalist_resistance
+			value > 15
+			}
 			has_idea = ACW_black_nationalist_resistance_4
 	}
 	
@@ -13297,6 +13344,10 @@ country_event = { # Black Nationalist Resistance #3-2
 		has_country_flag = {
 			flag = ACW_black_nationalist_resistance
 			value < 15
+			}
+		has_country_flag = {
+			flag = ACW_black_nationalist_resistance
+			value > 10
 			}
 			has_idea = ACW_black_nationalist_resistance_3
 	}
