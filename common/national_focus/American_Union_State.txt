@@ -565,7 +565,7 @@ focus_tree = {
 	}
 	
 	focus = {# Election Monitoring
-		id = TEX_election_monitoring
+		id = TEX_post_civil_war_monitoring
 		icon = GFX_goal_TEX_monitor_elections
 		cost = 6.5
 		prerequisite = {
@@ -583,7 +583,7 @@ focus_tree = {
 		x = 0
 		y = 5
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TEX_election_monitoring"
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_post_civil_war_monitoring"
 			add_popularity = { ideology = totalist popularity = -0.02 }
 			add_popularity = { ideology = syndicalist popularity = -0.02 }
 			add_popularity = { ideology = paternal_autocrat popularity = -0.02 }
@@ -597,7 +597,7 @@ focus_tree = {
 		icon = GFX_goal_government_icon
 		cost = 6
 		prerequisite = {
-			focus = TEX_election_monitoring
+			focus = TEX_post_civil_war_monitoring
 		}
 		available = {
 			has_government = authoritarian_democrat
@@ -1523,15 +1523,15 @@ focus_tree = {
 				factor = 0
 				OR = {
 					has_game_rule = {
-						rule = TEX_election
+						rule = TEX_post_civil_war
 						option = TEX_ELECTION_PERFECT_AFP
 					}
 					has_game_rule = {
-						rule = TEX_election
+						rule = TEX_post_civil_war
 						option = TEX_ELECTION_CHRISTIAN
 					}		
 					has_game_rule = {
-						rule = TEX_election
+						rule = TEX_post_civil_war
 						option = TEX_ELECTION_NPP
 					}						
 				}
@@ -1579,7 +1579,7 @@ focus_tree = {
 			modifier = {
 				factor = 0
 				has_game_rule = {
-					rule = TEX_election
+					rule = TEX_post_civil_war
 					option = TEX_ELECTION_PATAUT_AFP
 				}
 			}
@@ -7216,7 +7216,6 @@ focus_tree = {
 			unlock_decision_category_tooltip = TEX_break_militarists_desc
 			set_rule = {
 				can_guarantee_other_ideologies = yes
-				}
 			}
 		}
 	}

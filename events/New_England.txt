@@ -663,7 +663,10 @@ country_event = { # The Provisional Government
 			factor = 25
 			modifier = {
 				factor = 0
-				has_game_rule = { rule = NEE_start_path = NEE_START_PATH_DEMOCRAT }
+				has_game_rule = {
+					rule = NEE_start_path
+					option = NEE_START_PATH_DEMOCRAT
+				}
 			}
 		}
 		name = newengland.20.a
@@ -685,7 +688,10 @@ country_event = { # The Provisional Government
 			factor = 25
 			modifier = {
 				factor = 0
-				has_game_rule = { rule = NEE_start_path = NEE_START_PATH_DEMOCRAT }
+				has_game_rule = {
+					rule = NEE_start_path
+					option = NEE_START_PATH_DEMOCRAT
+				}
 			}
 		}
 		name = newengland.20.b
@@ -707,7 +713,10 @@ country_event = { # The Provisional Government
 			factor = 25
 			modifier = {
 				factor = 0
-				has_game_rule = { rule = NEE_start_path = NEE_START_PATH_REPUBLICAN }
+				has_game_rule = {
+					rule = NEE_start_path
+					option = NEE_START_PATH_REPUBLICAN
+				}
 			}
 		}
 		name = newengland.20.c
@@ -5333,9 +5342,18 @@ country_event = { # The Great Strike
 			modifier = {
 				factor = 0
 				OR = {
-					has_game_rule = { rule = NEE_start_path = NEE_START_PATH_FEDERALIST }
-					has_game_rule = { rule = NEE_start_path = NEE_START_PATH_SENTINEL }
-					has_game_rule = { rule = NEE_start_path = NEE_START_PATH_SENTINEL }
+					has_game_rule = {
+						rule = NEE_start_path
+						option = NEE_START_PATH_FEDERALIST
+					}	
+					has_game_rule = {
+						rule = NEE_start_path
+						option = NEE_START_PATH_SENTINEL
+					}	
+					has_game_rule = {
+						rule = NEE_start_path
+						option = NEE_START_PATH_REMNANT
+					}	
 				}
 			}
 		}
@@ -5350,8 +5368,14 @@ country_event = { # The Great Strike
 			modifier = {
 				factor = 0
 				OR = {
-					has_game_rule = { rule = NEE_start_path = NEE_START_PATH_DEMOCRAT }
-					has_game_rule = { rule = NEE_start_path = NEE_START_PATH_REPUBLICAN }
+					has_game_rule = {
+						rule = NEE_start_path
+						option = NEE_START_PATH_REPUBLICAN
+					}	
+					has_game_rule = {
+						rule = NEE_start_path
+						option = NEE_START_PATH_DEMOCRAT
+					}	
 				}
 			}
 		}
@@ -5409,13 +5433,6 @@ country_event = { # Canada's Decision
 	option = { # Feds appointed
 		ai_chance = {
 			factor = 25
-			modifier = {
-				factor = 0
-				OR = {
-					has_game_rule = { rule = NEE_start_path = NEE_START_PATH_REPUBLICAN }
-					has_game_rule = { rule = NEE_start_path = NEE_START_PATH_DEMOCRAT }
-				}
-			}
 		}
 		name = newengland.105.a
 		add_political_power = 50
@@ -5433,9 +5450,18 @@ country_event = { # Canada's Decision
 			modifier = {
 				factor = 0
 				OR = {
-					has_game_rule = { rule = NEE_start_path = NEE_START_PATH_FEDERALIST }
-					has_game_rule = { rule = NEE_start_path = NEE_START_PATH_REMNANT }
-					has_game_rule = { rule = NEE_start_path = NEE_START_PATH_SENTINEL }
+					has_game_rule = {
+						rule = NEE_start_path
+						option = NEE_START_PATH_FEDERALIST
+					}	
+					has_game_rule = {
+						rule = NEE_start_path
+						option = NEE_START_PATH_SENTINEL
+					}	
+					has_game_rule = {
+						rule = NEE_start_path
+						option = NEE_START_PATH_REMNANT
+					}
 				}
 			}
 		}
@@ -5468,8 +5494,14 @@ country_event = { # Feds appointed
 			modifier = {
 				factor = 0
 				OR = {
-					has_game_rule = { rule = NEE_start_path = NEE_START_PATH_REMNANT }
-					has_game_rule = { rule = NEE_start_path = NEE_START_PATH_SENTINEL }
+					has_game_rule = {
+						rule = NEE_start_path
+						option = NEE_START_PATH_SENTINEL
+					}	
+					has_game_rule = {
+						rule = NEE_start_path
+						option = NEE_START_PATH_REMNANT
+					}
 				}
 			}
 		}
@@ -5496,7 +5528,10 @@ country_event = { # Feds appointed
 			factor = 25
 			modifier = {
 				factor = 0
-				has_game_rule = { rule = NEE_start_path = NEE_START_PATH_FEDERALIST }
+				has_game_rule = {
+					rule = NEE_start_path
+					option = NEE_START_PATH_FEDERALIST
+				}	
 			}
 		}
 		name = newengland.106.b
@@ -5972,7 +6007,10 @@ country_event = { # Radical Split
 			factor = 25
 			modifier = {
 				factor = 0
-				has_game_rule = { rule = NEE_start_path = NEE_START_PATH_REMNANT }
+				has_game_rule = {
+					rule = NEE_start_path
+					option = NEE_START_PATH_REMNANT
+				}	
 			}
 		}
 		name = newengland.120.a
@@ -5989,7 +6027,10 @@ country_event = { # Radical Split
 			factor = 25
 			modifier = {
 				factor = 0
-				has_game_rule = { rule = NEE_start_path = NEE_START_PATH_SENTINEL }
+				has_game_rule = {
+					rule = NEE_start_path
+					option = NEE_START_PATH_SENTINEL
+				}	
 			}
 		}
 		name = newengland.120.b

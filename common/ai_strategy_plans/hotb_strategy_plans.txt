@@ -5,8 +5,14 @@ USA_garner_strategy_plan = {
 	enable = {
 		original_tag = USA
 		AND = {
-			has_game_rule = { rule = USA_civil_war = USA_CIVIL_WAR_AVOIDED_CACTUS_SMACK }
-			has_country_leader = { ruling_only = yes name = "John Nance Garner" }
+			has_game_rule = {
+				rule = USA_civil_war
+				option = USA_CIVIL_WAR_AVOIDED_CACTUS_SMACK
+			}
+			has_country_leader = {
+				name = "John Nance Garner"
+				ruling_only = yes
+			}
 		}
 	}
 	
@@ -14,8 +20,14 @@ USA_garner_strategy_plan = {
 		NOT = {
 		original_tag = USA
 		AND = {
-			has_game_rule = { rule = USA_civil_war = USA_CIVIL_WAR_AVOIDED_CACTUS_SMACK }
-			has_country_leader = { ruling_only = yes name = "John Nance Garner" }
+			has_game_rule = {
+				rule = USA_civil_war
+				option = USA_CIVIL_WAR_AVOIDED_CACTUS_SMACK
+			}
+			has_country_leader = {
+				name = "John Nance Garner"
+				ruling_only = yes
+			}
 		}
 		}
 	}
@@ -40,8 +52,14 @@ USA_norris_strategy_plan = {
 	enable = {
 		original_tag = USA
 		AND = {
-			has_game_rule = { rule = USA_civil_war = USA_CIVIL_WAR_AVOIDED_NORRIS }
-			has_country_leader = { ruling_only = yes name = "George Norris" }
+			has_game_rule = {
+				rule = USA_civil_war
+				option = USA_CIVIL_WAR_AVOIDED_NORRIS
+			}
+			has_country_leader = {
+				name = "George Norris"
+				ruling_only = yes
+			}
 		}
 	}
 	
@@ -49,8 +67,14 @@ USA_norris_strategy_plan = {
 		NOT = {
 			original_tag = USA
 			AND = {
-				has_game_rule = { rule = USA_civil_war = USA_CIVIL_WAR_AVOIDED_NORRIS }
-				has_country_leader = { ruling_only = yes name = "George Norris" }
+				has_game_rule = {
+					rule = USA_civil_war
+					option = USA_CIVIL_WAR_AVOIDED_NORRIS
+				}
+				has_country_leader = {
+					name = "George Norris"
+					ruling_only = yes
+				}
 			}
 		}
 	}
@@ -83,8 +107,14 @@ CAL_bodin = {
 	enable = {
 		original_tag = CAL
 		OR = {
-			has_game_rule = { rule = CAL_political = CAL_POLITICAL_PATH_BODIN }
-			has_game_rule = { rule = CAL_political = CAL_POLITICAL_PATH_JAPAN }
+			has_game_rule = {
+				rule = CAL_political
+				option = CAL_POLITICAL_PATH_BODIN
+			}
+			has_game_rule = {
+				rule = CAL_political
+				option = CAL_POLITICAL_PATH_JAPAN
+			}
 		}
 	}
 
@@ -119,11 +149,27 @@ COR_simmons_1 = {
 		original_tag = COR
 		AND = {
 			OR = {
-				has_game_rule = { rule = COR_post_civil_war = COR_POST_CIVIL_WAR_EVANS }
-				has_game_rule = { rule = COR_post_civil_war = COR_POST_CIVIL_WAR_STEPHENSON }
-				has_game_rule = { rule = COR_post_civil_war = COR_POST_CIVIL_WAR_ARMSTRONG }
+				has_game_rule = {
+					rule = COR_post_civil_war
+					option = COR_POST_CIVIL_WAR_EVANS
+				}
+				has_game_rule = {
+					rule = COR_post_civil_war
+					option = COR_POST_CIVIL_WAR_STEPHENSON
+				}
+				has_game_rule = {
+					rule = COR_post_civil_war
+					option = COR_POST_CIVIL_WAR_ARMSTRONG
+				}
+				has_game_rule = {
+					rule = COR_post_civil_war
+					option = COR_POST_CIVIL_WAR_ROCKWELL
+				}
 			}
-			has_country_leader = { ruling_only = yes name = "William Joseph Simmons" }
+			has_country_leader = {
+				name = "William Joseph Simmons"
+				ruling_only = yes
+			}
 		}
 	}
 
@@ -155,10 +201,14 @@ COR_simmons_2 = {
 	enable = {
 		original_tag = COR
 		AND = {
-			OR = {
-				has_game_rule = { rule = COR_post_civil_war = COR_POST_CIVIL_WAR_PATTON }
+			has_game_rule = {
+				rule = COR_post_civil_war
+				option = COR_POST_CIVIL_PATTON
 			}
-			has_country_leader = { ruling_only = yes name = "William Joseph Simmons" }
+			has_country_leader = {
+				name = "William Joseph Simmons"
+				ruling_only = yes
+			}
 		}
 	}
 
