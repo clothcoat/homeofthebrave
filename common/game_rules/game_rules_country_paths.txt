@@ -1809,8 +1809,8 @@ BBR_spawn = {
 
 	option = {
 		name = BBR_SPAWN_NO
-		text = "RULE_OPTION_BBR_POLITICAL_PATH_NO"
-		desc = "RULE_OPTION_BBR_POLITICAL_PATH_NO_DESC"
+		text = "RULE_OPTION_BBR_SPAWN_NO_NO"
+		desc = "RULE_OPTION_BBR_SPAWN_NO_DESC"
 		allow_achievements = yes
 	}
 
@@ -1908,12 +1908,14 @@ BBR_political = {
 		desc = "RULE_OPTION_BBR_POLITICAL_PATH_VANGUARDIST_DESC"
 		allow_achievements = yes
 	}
+	
 	option = {
 		name = BBR_POLITICAL_PATH_CENTRALIST
 		text = "RULE_OPTION_BBR_POLITICAL_PATH_CENTRALIST"
 		desc = "RULE_OPTION_BBR_POLITICAL_PATH_CENTRALIST_DESC"
 		allow_achievements = yes
 	}
+	
 	option = {
 		name = BBR_POLITICAL_PATH_JACOBIN
 		text = "RULE_OPTION_BBR_POLITICAL_PATH_JACOBIN"
@@ -1975,18 +1977,19 @@ CAL_political = {
 	}
 
 	option = {
+		name = CAL_POLITICAL_PATH_BODIN
+		text = "RULE_OPTION_CAL_POLITICAL_PATH_BODIN"
+		desc = "RULE_OPTION_CAL_POLITICAL_PATH_BODIN_DESC"
+		allow_achievements = yes
+	}
+	
+	option = {
 		name = CAL_POLITICAL_PATH_JAPAN
 		text = "RULE_OPTION_CAL_POLITICAL_PATH_JAPAN"
 		desc = "RULE_OPTION_CAL_POLITICAL_PATH_JAPAN_DESC"
 		allow_achievements = yes
 	}
 
-	option = {
-		name = CAL_POLITICAL_PATH_BODIN
-		text = "RULE_OPTION_CAL_POLITICAL_PATH_BODIN"
-		desc = "RULE_OPTION_CAL_POLITICAL_PATH_BODIN_DESC"
-		allow_achievements = yes
-	}
 }
 
 WCC_american_standoff = {
@@ -2024,6 +2027,13 @@ WCC_american_standoff = {
 USA_rep_nomination = {
 	name = "USA_REP_NOM"
 	group = "RULE_GROUP_KAISERREICH_RULES_NORTH_AMERICA"
+	
+	option = {
+		name = USA_REP_NOM_RANDOM
+		text = "RULE_OPTION_USA_REP_NOM_CURTIS"
+		desc = "RULE_OPTION_USA_REP_NOM_CURTIS_DESC"
+		allow_achievements = yes
+	}
 
 	option = {
 		name = USA_REP_NOM_CURTIS
