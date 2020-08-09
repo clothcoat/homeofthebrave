@@ -584,6 +584,42 @@ country_event = { # 1937 Election
 	}
 
 	option = { # Progressive
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = CAL_political
+						option = CAL_POLITICAL_PATH_COMMONWEALTH
+					}
+					has_game_rule = {
+						rule = CAL_political
+						option = CAL_POLITICAL_PATH_DEMREP
+					}					
+					has_game_rule = {
+						rule = CAL_political
+						option = CAL_POLITICAL_PATH_REPUBLICAN
+					}
+					has_game_rule = {
+						rule = CAL_political
+						option = CAL_POLITICAL_PATH_DEMOCRAT
+					}
+					has_game_rule = {
+						rule = CAL_political
+						option = CAL_POLITICAL_PATH_HEARST
+					}
+					has_game_rule = {
+						rule = CAL_political
+						option = CAL_POLITICAL_PATH_BODIN
+					}
+					has_game_rule = {
+						rule = CAL_political
+						option = CAL_POLITICAL_PATH_JAPAN
+					}
+				}
+			}
+		}
 		name = pacificstates.6.a
 		set_country_flag = PSA_had_1937_election
 		hidden_effect = {
@@ -620,6 +656,42 @@ country_event = { # 1937 Election
 		}
 	}
 	option = { # Dem-rep
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = CAL_political
+						option = CAL_POLITICAL_PATH_COMMONWEALTH
+					}
+					has_game_rule = {
+						rule = CAL_political
+						option = CAL_POLITICAL_PATH_PROGRESSIVE
+					}					
+					has_game_rule = {
+						rule = CAL_political
+						option = CAL_POLITICAL_PATH_REPUBLICAN
+					}
+					has_game_rule = {
+						rule = CAL_political
+						option = CAL_POLITICAL_PATH_DEMOCRAT
+					}
+					has_game_rule = {
+						rule = CAL_political
+						option = CAL_POLITICAL_PATH_HEARST
+					}
+					has_game_rule = {
+						rule = CAL_political
+						option = CAL_POLITICAL_PATH_BODIN
+					}
+					has_game_rule = {
+						rule = CAL_political
+						option = CAL_POLITICAL_PATH_JAPAN
+					}
+				}
+			}
+		}
 		name = pacificstates.6.b
 		set_country_flag = PSA_had_1937_election
 		hidden_effect = {
@@ -679,6 +751,42 @@ country_event = { # 1937 Election
 		}
 	}
 	option = { # Republican
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = CAL_political
+						option = CAL_POLITICAL_PATH_COMMONWEALTH
+					}
+					has_game_rule = {
+						rule = CAL_political
+						option = CAL_POLITICAL_PATH_PROGRESSIVE
+					}					
+					has_game_rule = {
+						rule = CAL_political
+						option = CAL_POLITICAL_PATH_DEMREP
+					}
+					has_game_rule = {
+						rule = CAL_political
+						option = CAL_POLITICAL_PATH_DEMOCRAT
+					}
+					has_game_rule = {
+						rule = CAL_political
+						option = CAL_POLITICAL_PATH_HEARST
+					}
+					has_game_rule = {
+						rule = CAL_political
+						option = CAL_POLITICAL_PATH_BODIN
+					}
+					has_game_rule = {
+						rule = CAL_political
+						option = CAL_POLITICAL_PATH_JAPAN
+					}
+				}
+			}
+		}
 		name = pacificstates.6.c
 		set_country_flag = PSA_had_1937_election
 		hidden_effect = {
@@ -738,6 +846,42 @@ country_event = { # 1937 Election
 		}
 	}
 	option = { # Democrat
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = CAL_political
+						option = CAL_POLITICAL_PATH_COMMONWEALTH
+					}
+					has_game_rule = {
+						rule = CAL_political
+						option = CAL_POLITICAL_PATH_PROGRESSIVE
+					}					
+					has_game_rule = {
+						rule = CAL_political
+						option = CAL_POLITICAL_PATH_DEMREP
+					}
+					has_game_rule = {
+						rule = CAL_political
+						option = CAL_POLITICAL_PATH_REPUBLICAN
+					}
+					has_game_rule = {
+						rule = CAL_political
+						option = CAL_POLITICAL_PATH_HEARST
+					}
+					has_game_rule = {
+						rule = CAL_political
+						option = CAL_POLITICAL_PATH_BODIN
+					}
+					has_game_rule = {
+						rule = CAL_political
+						option = CAL_POLITICAL_PATH_JAPAN
+					}
+				}
+			}
+		}
 		name = pacificstates.6.e
 		set_country_flag = PSA_had_1937_election
 		hidden_effect = {
@@ -788,6 +932,42 @@ country_event = { # 1937 Election
 		}
 	}
 	option = { # Commonwealth Party
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = CAL_political
+						option = CAL_POLITICAL_PATH_REPUBLICAN
+					}
+					has_game_rule = {
+						rule = CAL_political
+						option = CAL_POLITICAL_PATH_PROGRESSIVE
+					}					
+					has_game_rule = {
+						rule = CAL_political
+						option = CAL_POLITICAL_PATH_DEMREP
+					}
+					has_game_rule = {
+						rule = CAL_political
+						option = CAL_POLITICAL_PATH_DEMOCRAT
+					}
+					has_game_rule = {
+						rule = CAL_political
+						option = CAL_POLITICAL_PATH_HEARST
+					}
+					has_game_rule = {
+						rule = CAL_political
+						option = CAL_POLITICAL_PATH_BODIN
+					}
+					has_game_rule = {
+						rule = CAL_political
+						option = CAL_POLITICAL_PATH_JAPAN
+					}
+				}
+			}
+		}
 		name = pacificstates.6.f
 		set_country_flag = PSA_had_1937_election
 		hidden_effect = {
@@ -832,6 +1012,34 @@ country_event = { # 1937 Election
 		}
 	}
 	option = { #  Hearst WON
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = CAL_political
+						option = CAL_POLITICAL_PATH_COMMONWEALTH
+					}
+					has_game_rule = {
+						rule = CAL_political
+						option = CAL_POLITICAL_PATH_PROGRESSIVE
+					}					
+					has_game_rule = {
+						rule = CAL_political
+						option = CAL_POLITICAL_PATH_DEMREP
+					}
+					has_game_rule = {
+						rule = CAL_political
+						option = CAL_POLITICAL_PATH_DEMOCRAT
+					}
+					has_game_rule = {
+						rule = CAL_political
+						option = CAL_POLITICAL_PATH_REPUBLICAN
+					}
+				}
+			}
+		}
 		name = pacificstates.6.g
 		set_country_flag = PSA_had_1937_election
 		hidden_effect = {
@@ -5643,6 +5851,22 @@ country_event = {# Protests Increase
 	fire_only_once = yes
 	
 	option = {#  Send them both
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = CAL_political
+						option = CAL_POLITICAL_PATH_BODIN
+					}
+					has_game_rule = {
+						rule = CAL_political
+						option = CAL_POLITICAL_PATH_JAPAN
+					}
+				}
+			}
+		}
 		name = pacificstates.228.a
 		hidden_effect = {
 		country_event = {
@@ -5652,6 +5876,16 @@ country_event = {# Protests Increase
 		}
 	}
 	option = {# Keep Arnold
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = CAL_political
+					option = CAL_POLITICAL_PATH_HEARST
+				}
+			}
+		}
 		name = pacificstates.228.b
 		hidden_effect = {
 		country_event = {
@@ -5673,6 +5907,15 @@ country_event = {# Hearst couped by Arnold and Marshall
 	fire_only_once = yes
 
 	option = {# I surrender
+	ai_will_do = {
+		factor = 1
+		modifier = {
+				has_game_rule = {
+					rule = CAL_political
+					option = CAL_POLITICAL_PATH_HEARST
+				}
+		}
+	}
 	name = pacificstates.229.a
 	hidden_effect = {
 		country_event = {
@@ -5682,6 +5925,9 @@ country_event = {# Hearst couped by Arnold and Marshall
 		}
 	}
 	option = {# Hold Them Off!
+	ai_will_do = {
+		factor = 1
+	}
 	name = pacificstates.229.b
 		hidden_effect = {
 		country_event = {
@@ -6307,8 +6553,8 @@ country_event = {# Speech to California
 	option = {# Announce our intent to retake the West
 		name = pacificstates.248.a
 		add_war_support = 0.05
-		WCC = { add_opinion_modifier = { target = CAL modifier = large_decrease } }
-		USA = { add_opinion_modifier = { target = CAL modifier = large_decrease } }
+		WCC = add_opinion_modifier = { target = CAL modifier = large_decrease }
+		USA = add_opinion_modifier = { target = CAL modifier = large_decrease }
 		hidden_effect = {
 		country_event = {
 			id = pacificstates.249
@@ -7950,6 +8196,16 @@ country_event = {# Anti-Syndicalist Organizations
 	fire_only_once = yes
 	
 	option = {# Support them
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = CAL_political
+					option = CAL_POLITICAL_PATH_HEARST
+				}
+			}
+		}
 		name = pacificstates.350.a
 		add_manpower = 150
 		add_political_power = -10
@@ -7963,6 +8219,22 @@ country_event = {# Anti-Syndicalist Organizations
 		}
 	}
 	option = {# Don't
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = CAL_political
+						option = CAL_POLITICAL_PATH_BODIN
+					}
+					has_game_rule = {
+						rule = CAL_political
+						option = CAL_POLITICAL_PATH_JAPAN
+					}
+				}
+			}
+		}
 		name = pacificstates.350.b
 	}
 }
@@ -7979,6 +8251,22 @@ country_event = {# Bodin Working With Japan
 	fire_only_once = yes
 	
 	option = {# Stop
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = CAL_political
+						option = CAL_POLITICAL_PATH_BODIN
+					}
+					has_game_rule = {
+						rule = CAL_political
+						option = CAL_POLITICAL_PATH_JAPAN
+					}
+				}
+			}
+		}
 		name = pacificstates.3500.a
 		add_manpower = 100
 		add_political_power = -10
@@ -7986,6 +8274,9 @@ country_event = {# Bodin Working With Japan
 		add_popularity = { ideology = national_populist popularity = -0.03 }
 	}
 	option = {# It's likely nothing
+		ai_chance = {
+			factor = 1
+		}
 		name = pacificstates.3500.b
 		hidden_effect = {
 		set_country_flag = CAL_Spiritualist_Aid
@@ -8006,6 +8297,9 @@ country_event = {# Spiritualist Counter-Coup
 	fire_only_once = yes
 	
 	option = {# We must fallback
+		ai_chance = {
+			factor = 1
+		}
 		name = pacificstates.351.a
 		add_manpower = -12000
 		army_experience = -20
@@ -8018,6 +8312,22 @@ country_event = {# Spiritualist Counter-Coup
 		}
 	}
 	option = {# We must fight this madman
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = CAL_political
+						option = CAL_POLITICAL_PATH_BODIN
+					}
+					has_game_rule = {
+						rule = CAL_political
+						option = CAL_POLITICAL_PATH_JAPAN
+					}
+				}
+			}
+		}
 		name = pacificstates.351.b
 		add_political_power = -30
 		add_stability = -0.05
@@ -8042,6 +8352,22 @@ country_event = {# Battle of Bakersfield
 	fire_only_once = yes
 	
 	option = {# Attack
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = CAL_political
+						option = CAL_POLITICAL_PATH_BODIN
+					}
+					has_game_rule = {
+						rule = CAL_political
+						option = CAL_POLITICAL_PATH_JAPAN
+					}
+				}
+			}
+		}
 		name = pacificstates.352.a
 		add_manpower = -2500
 		add_political_power = -50
@@ -8053,6 +8379,9 @@ country_event = {# Battle of Bakersfield
 		}
 	}
 	option = {# Retreat
+		ai_chance = {
+			factor = 1
+		}
 		name = pacificstates.352.b
 		add_manpower = -12000
 		hidden_effect = {

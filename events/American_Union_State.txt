@@ -832,6 +832,22 @@ country_event = { # New Election
 	}
 
 	option = { # AFP
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = TEX_election
+						option = TEX_ELECTION_CHRISTIAN
+					}		
+					has_game_rule = {
+						rule = TEX_election
+						option = TEX_ELECTION_NPP
+					}						
+				}
+			}
+		}
 		name = unionstate.25.a
 		add_political_power = 50
 		if = { 
@@ -921,6 +937,26 @@ country_event = { # New Election
 		}
 	}
 	option = { # Christian Party
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = TEX_election
+						option = TEX_ELECTION_PERFECT_AFP
+					}		
+					has_game_rule = {
+						rule = TEX_election
+						option = TEX_ELECTION_PATAUT_AFP
+					}	
+					has_game_rule = {
+						rule = TEX_election
+						option = TEX_ELECTION_NPP
+					}						
+				}
+			}
+		}
 		name = unionstate.25.b
 		add_political_power = 50
 		add_popularity = { ideology = social_conservative popularity = 0.05 }
@@ -952,6 +988,26 @@ country_event = { # New Election
 		}
 	}
 	option = { # NPP
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = TEX_election
+						option = TEX_ELECTION_CHRISTIAN
+					}		
+					has_game_rule = {
+						rule = TEX_election
+						option = TEX_ELECTION_PERFECT_AFP
+					}	
+					has_game_rule = {
+						rule = TEX_election
+						option = TEX_ELECTION_PATAUT_AFP
+					}					
+				}
+			}
+		}
 		name = unionstate.25.c
 		add_political_power = 50
 		add_popularity = { ideology = social_liberal popularity = 0.1 }

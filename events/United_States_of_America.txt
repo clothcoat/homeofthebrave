@@ -192,6 +192,13 @@ country_event = { # Republican Nomination
 		name = ustates.3001.a
 		ai_chance = {
 			factor = 70
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = USA_REP_NOM
+					option = USA_REP_NOM_LANDON
+				}
+			}
 		}
 		add_political_power = 20
 		add_popularity = { ideology = market_liberal popularity = 0.01 }
@@ -211,6 +218,13 @@ country_event = { # Republican Nomination
 		name = ustates.3001.b
 		ai_chance = {
 			factor = 30
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = USA_REP_NOM
+					option = USA_REP_NOM_CURTIS
+				}
+			}
 		}
 		add_popularity = { ideology = social_liberal popularity = 0.02 }
 		hidden_effect = {
@@ -1724,6 +1738,27 @@ country_event = { # The 1936 Election - Coalition
 		trigger = { has_country_flag = USA_curtis_nominated }
 		ai_chance = {
 			factor = 80
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = USA_civil_war
+						option = USA_CIVIL_WAR_1936
+					}		
+					has_game_rule = {
+						rule = USA_civil_war
+						option = USA_CIVIL_WAR_1937
+					}	
+					has_game_rule = {
+						rule = USA_civil_war
+						option = USA_CIVIL_WAR_AVOIDED_CACTUS_SMACK
+					}		
+					has_game_rule = {
+						rule = USA_civil_war
+						option = USA_CIVIL_WAR_AVOIDED_NORRIS
+					}					
+				}
+			}
 		}
 		set_country_flag = USA_had_1936_election
 		set_country_flag = USA_progressives_exist
@@ -1797,6 +1832,27 @@ country_event = { # The 1936 Election - Coalition
 		trigger = { has_country_flag = USA_landon_nominated }
 		ai_chance = {
 			factor = 80
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = USA_civil_war
+						option = USA_CIVIL_WAR_1936
+					}		
+					has_game_rule = {
+						rule = USA_civil_war
+						option = USA_CIVIL_WAR_1937
+					}	
+					has_game_rule = {
+						rule = USA_civil_war
+						option = USA_CIVIL_WAR_AVOIDED_CACTUS_SMACK
+					}		
+					has_game_rule = {
+						rule = USA_civil_war
+						option = USA_CIVIL_WAR_AVOIDED_NORRIS
+					}					
+				}
+			}
 		}
 		set_country_flag = USA_had_1936_election
 		set_country_flag = USA_progressives_exist
@@ -1880,6 +1936,27 @@ country_event = { # The 1936 Election - Coalition
 			modifier = {
 				factor = 3
 				check_variable = { SPA_strength > 4 }
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = USA_civil_war
+						option = USA_CIVIL_WAR_1936
+					}		
+					has_game_rule = {
+						rule = USA_civil_war
+						option = USA_CIVIL_WAR_AVOIDED_CURDON
+					}
+					has_game_rule = {
+						rule = USA_civil_war
+						option = USA_CIVIL_WAR_AVOIDED_CACTUS_SMACK
+					}		
+					has_game_rule = {
+						rule = USA_civil_war
+						option = USA_CIVIL_WAR_AVOIDED_NORRIS
+					}					
+				}
 			}
 		}
 		set_country_flag = USA_had_1936_election
@@ -1978,6 +2055,27 @@ country_event = { # The 1936 Election - Coalition
 			modifier = {
 				factor = 2
 				check_variable = { AFP_strength > 4 }
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = USA_civil_war
+						option = USA_CIVIL_WAR_1936
+					}		
+					has_game_rule = {
+						rule = USA_civil_war
+						option = USA_CIVIL_WAR_AVOIDED_CURDON
+					}		
+					has_game_rule = {
+						rule = USA_civil_war
+						option = USA_CIVIL_WAR_AVOIDED_CACTUS_SMACK
+					}		
+					has_game_rule = {
+						rule = USA_civil_war
+						option = USA_CIVIL_WAR_AVOIDED_NORRIS
+					}					
+				}
 			}
 		}
 		set_country_flag = USA_had_1936_election
@@ -2088,6 +2186,27 @@ country_event = { # The 1936 Election - Coalition
 				factor = 2
 				check_variable = { ODP_strength > 4 }
 			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = USA_civil_war
+						option = USA_CIVIL_WAR_1936
+					}		
+					has_game_rule = {
+						rule = USA_civil_war
+						option = USA_CIVIL_WAR_AVOIDED_CURDON
+					}		
+					has_game_rule = {
+						rule = USA_civil_war
+						option = USA_CIVIL_WAR_AVOIDED_CACTUS_SMACK
+					}		
+					has_game_rule = {
+						rule = USA_civil_war
+						option = USA_CIVIL_WAR_AVOIDED_NORRIS
+					}					
+				}
+			}
 		}
 		set_country_flag = USA_had_1936_election
 		hidden_effect = {
@@ -2184,6 +2303,27 @@ country_event = { # The 1936 Election - Coalition
 		name = ustates.34.f
 		ai_chance = {
 			factor = 10
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = USA_civil_war
+						option = USA_CIVIL_WAR_1936
+					}		
+					has_game_rule = {
+						rule = USA_civil_war
+						option = USA_CIVIL_WAR_1937
+					}	
+					has_game_rule = {
+						rule = USA_civil_war
+						option = USA_CIVIL_WAR_AVOIDED_CURDON
+					}		
+					has_game_rule = {
+						rule = USA_civil_war
+						option = USA_CIVIL_WAR_AVOIDED_CACTUS_SMACK
+					}					
+				}
+			}
 		}
 		set_country_flag = USA_had_1936_election
 		hidden_effect = {
@@ -2279,6 +2419,27 @@ country_event = { # The 1936 Election - Coalition
 		name = ustates.34.g
 		ai_chance = {
 			factor = 10
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = USA_civil_war
+						option = USA_CIVIL_WAR_1936
+					}		
+					has_game_rule = {
+						rule = USA_civil_war
+						option = USA_CIVIL_WAR_AVOIDED_CURDON
+					}						
+					has_game_rule = {
+						rule = USA_civil_war
+						option = USA_CIVIL_WAR_1937
+					}		
+					has_game_rule = {
+						rule = USA_civil_war
+						option = USA_CIVIL_WAR_AVOIDED_NORRIS
+					}	
+				}
+			}
 		}
 		set_country_flag = USA_had_1936_election
 		set_politics = {
@@ -2373,6 +2534,30 @@ country_event = { # The 1936 Election - Coalition
 		}
 	}
 	option = { # Deadlock
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = USA_civil_war
+						option = USA_CIVIL_WAR_AVOIDED_NORRIS
+					}		
+					has_game_rule = {
+						rule = USA_civil_war
+						option = USA_CIVIL_WAR_1937
+					}	
+					has_game_rule = {
+						rule = USA_civil_war
+						option = USA_CIVIL_WAR_AVOIDED_CURDON
+					}		
+					has_game_rule = {
+						rule = USA_civil_war
+						option = USA_CIVIL_WAR_AVOIDED_CACTUS_SMACK
+					}					
+				}
+			}
+		}
 		name = ustates.34.h
 		country_event = { id = ustates.35 hours = 6 }
 	}
@@ -2435,6 +2620,10 @@ country_event = { # The 1936 Election - You're Fucked (Or are you...)
 		name = ustates.35.b
 		ai_chance = {
 			factor = 20
+			has_game_rule = {
+				rule = USA_civil_war
+				option = USA_CIVIL_WAR_1936
+			}
 		}
 		add_political_power = -100
 		hidden_effect = {
@@ -2480,6 +2669,10 @@ country_event = { # The 1936 Election - You're Fucked (Or are you...)
 		name = ustates.35.c
 		ai_chance = {
 			factor = 10
+			has_game_rule = {
+				rule = USA_civil_war
+				option = USA_CIVIL_WAR_1936
+			}
 		}
 		set_country_flag = USA_had_1936_election
 		hidden_effect = {
@@ -4171,6 +4364,13 @@ country_event = { #Meeting begins in Chicago
 		name = ustates.67.a #Allow them to participate
 		ai_chance = {
 			factor = 50
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = USA_civil_war
+					option = USA_CIVIL_WAR_AVOIDED_CURDON
+				}
+			}
 		}
 		hidden_effect = {
 			country_event = { id = ustates.68 days = 1 }
@@ -4205,6 +4405,9 @@ country_event = { # Reed puts forward his demands
 	}
 
 	option = {
+		ai_chance = {
+			factor = 1
+		}
 		name = ustates.68.a #Very Well
 		add_political_power = -25
 		custom_effect_tooltip = USA_SPA_gains_strength
@@ -4215,6 +4418,16 @@ country_event = { # Reed puts forward his demands
 		}
 	}
 	option = {
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = USA_civil_war
+					option = USA_CIVIL_WAR_AVOIDED_CURDON
+				}
+			}
+		}
 		name = ustates.68.b #Nope
 		hidden_effect = {
 			country_event = { id = ustates.75 hours = 8 }
@@ -4385,6 +4598,16 @@ country_event = { # Funding Demanded
 	}
 
 	option = {
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = USA_civil_war
+					option = USA_CIVIL_WAR_AVOIDED_CURDON
+				}
+			}
+		}
 		name = ustates.70.a #Agree
 		custom_effect_tooltip = USA_SPA_gains_strength
 		custom_effect_tooltip = USA_AFP_gains_strength
@@ -4398,6 +4621,9 @@ country_event = { # Funding Demanded
 		}
 	}
 	option = {
+		ai_chance = {
+			factor = 1
+		}
 		name = ustates.70.b #No more funding
 		add_stability = -0.05
 		hidden_effect = {
@@ -4478,12 +4704,25 @@ country_event = { # Issue of the Militias
 	fire_only_once = yes
 
 	option = { # Compromise Achieved
+		ai_chance = {
+			factor = 1
+		}
 		name = ustates.72.a
 		hidden_effect = {
 			country_event = { id = ustates.73 hours = 12 }
 		}
 	}
 	option = { # 
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = USA_civil_war
+					option = USA_CIVIL_WAR_AVOIDED_CURDON
+				}
+			}
+		}
 		name = ustates.72.b
 		hidden_effect = {
 			country_event = { id = ustates.88 days = 1 }
@@ -4582,12 +4821,25 @@ country_event = { # Mac Demands
 	}
 
 	option = {
+		ai_chance = {
+			factor = 1
+		}
 		name = ustates.76.a
 		hidden_effect = {
 			country_event = { id = ustates.72 hours = 8 }
 		}
 	}
 	option = {
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = USA_civil_war
+					option = USA_CIVIL_WAR_AVOIDED_CURDON
+				}
+			}
+		}
 		name = ustates.76.b
 		hidden_effect = {
 			country_event = { id = ustates.78 hours = 8 }
@@ -4999,6 +5251,16 @@ country_event = { # J. Edgar Hoover's Proposal
 	is_triggered_only = yes
 
 	option = { #Huey Long
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = USA_civil_war
+					option = USA_CIVIL_WAR_AVOIDED_CACTUS_SMACK
+				}
+			}
+		}
 		name = ustates.9101.a
 		add_political_power = -20
 		hidden_effect = {
@@ -5006,6 +5268,16 @@ country_event = { # J. Edgar Hoover's Proposal
 		}
 	}
 	option = { #Reed
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = USA_civil_war
+					option = USA_CIVIL_WAR_AVOIDED_CACTUS_SMACK
+				}
+			}
+		}
 		name = ustates.9101.b
 		add_political_power = -20
 		hidden_effect = {
@@ -5013,6 +5285,16 @@ country_event = { # J. Edgar Hoover's Proposal
 		}
 	}
 	option = { #William H. Murray
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = USA_civil_war
+					option = USA_CIVIL_WAR_AVOIDED_CACTUS_SMACK
+				}
+			}
+		}
 		name = ustates.9101.c
 		add_political_power = -20
 		hidden_effect = {
@@ -5020,6 +5302,9 @@ country_event = { # J. Edgar Hoover's Proposal
 		}
 	}
 	option = { #D.C. Stephenson
+		ai_chance = {
+			factor = 1
+		}
 		name = ustates.9101.e
 		add_political_power = -20
 		hidden_effect = {
@@ -5027,6 +5312,16 @@ country_event = { # J. Edgar Hoover's Proposal
 		}
 	}
 	option = { #Earl Browder
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = USA_civil_war
+					option = USA_CIVIL_WAR_AVOIDED_CACTUS_SMACK
+				}
+			}
+		}
 		name = ustates.9101.f
 		add_political_power = -20
 		hidden_effect = {
@@ -5117,11 +5412,24 @@ country_event = { # Rising Resistance
 	is_triggered_only = yes
 
 	option = { #Send More
+		ai_chance = {
+			factor = 1
+		}
 		name = ustates.9104.a
 		add_manpower = -1200
 		add_political_power = -25
 	}
 	option = { #Fall Back
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = USA_civil_war
+					option = USA_CIVIL_WAR_AVOIDED_CACTUS_SMACK
+				}
+			}
+		}
 		name = ustates.9104.a
 		add_manpower = 4954
 		hidden_effect = { #Reed Rises
@@ -5140,6 +5448,9 @@ country_event = { # Dealing with the Rust Belt
 	is_triggered_only = yes
 
 	option = { #Negotiate
+		ai_chance = {
+			factor = 1
+		}
 		name = ustates.9105.a
 		add_political_power = -20
 		add_stability = 0.05
@@ -5148,6 +5459,16 @@ country_event = { # Dealing with the Rust Belt
 		}
 	}
 	option = { #Intensify the Occupation
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = USA_civil_war
+					option = USA_CIVIL_WAR_AVOIDED_CACTUS_SMACK
+				}
+			}
+		}
 		name = ustates.9105.a
 		add_manpower = -1000
 		add_political_power = 20
@@ -5674,6 +5995,9 @@ country_event = { # Norris' intervention
 	fire_only_once = yes
 	
 	option = {
+		ai_chance = {
+			factor = 40
+		}
 		name = ustates.107.a
 		add_political_power = -35
 		add_stability = -0.02
@@ -5683,6 +6007,16 @@ country_event = { # Norris' intervention
 		}
 	}
 	option = {
+		ai_chance = {
+			factor = 40
+			modifier = {
+		    factor = 0
+				has_game_rule = {
+					rule = USA_civil_war
+					option = USA_CIVIL_WAR_AVOIDED_NORRIS
+				}
+			}
+		}
 		name = ustates.107.b
 		add_political_power = 25
 		add_stability = 0.02
@@ -5899,6 +6233,9 @@ country_event = { #Occupying the south
 	}
 
 	option = { # Follow Mac's Suggestion
+		ai_chance = {
+			factor = 1
+		}
 		name = ustates.113.a
 		add_manpower = -2000
 		hidden_effect = {
@@ -5906,6 +6243,16 @@ country_event = { #Occupying the south
 		}
 	}
 	option = { # Pull Out
+		ai_chance = {
+			factor = 1
+			modifier = {
+		    factor = 0
+				has_game_rule = {
+					rule = USA_civil_war
+					option = USA_CIVIL_WAR_AVOIDED_NORRIS
+				}
+			}
+		}
 		name = ustates.113.b
 		add_manpower = 1500
 		hidden_effect = {
@@ -5928,6 +6275,9 @@ country_event = { #White Leaguers Attack
 	}
 
 	option = { # White Leagues Focus
+		ai_chance = {
+			factor = 1
+		}
 		name = ustates.1131.a
 		add_manpower = -1000
 		add_political_power = -30
@@ -5937,6 +6287,16 @@ country_event = { #White Leaguers Attack
 		}
 	}
 	option = { # Arrest Beale
+		ai_chance = {
+			factor = 1
+			modifier = {
+		    factor = 0
+				has_game_rule = {
+					rule = USA_civil_war
+					option = USA_CIVIL_WAR_AVOIDED_NORRIS
+				}
+			}
+		}
 		name = ustates.1131.b
 		add_manpower = -1500
 		hidden_effect = {
@@ -5959,12 +6319,25 @@ country_event = { #More Men
 	}
 
 	option = { # Increase Manpower
+		ai_chance = {
+			factor = 1
+		}
 		name = ustates.1132.a
 		add_manpower = -2500
 		add_political_power = -40
 		add_stability = 0.02
 	}
 	option = { # Denied
+		ai_chance = {
+			factor = 1
+			modifier = {
+		    factor = 0
+				has_game_rule = {
+					rule = USA_civil_war
+					option = USA_CIVIL_WAR_AVOIDED_NORRIS
+				}
+			}
+		}
 		name = ustates.1132.b
 		add_stability = -0.03
 		hidden_effect = {

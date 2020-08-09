@@ -67,6 +67,22 @@ country_event = { # Socialist Constitution - Social Radicalism
 	fire_only_once = yes
 	
 	option = { #The Laborists win out
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = CSA_post_civil_war
+						option = CSA_POST_CIVIL_WAR_BURNHAM
+					}
+					has_game_rule = {
+						rule = CSA_post_civil_war
+						option = CSA_POST_CIVIL_WAR_NATIONALIST
+					}
+				}
+			}
+		}
 		name = csa.1001.a	
 		country_event = {
 			id = csa.1002
@@ -84,6 +100,22 @@ country_event = { # Socialist Constitution - Social Radicalism
 		}
 	}
 	option = { # The Nationalists win out
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = CSA_post_civil_war
+						option = CSA_POST_CIVIL_WAR_BROWDER
+					}
+					has_game_rule = {
+						rule = CSA_post_civil_war
+						option = CSA_POST_CIVIL_WAR_FEDERALIST
+					}
+				}
+			}
+		}
 		name = csa.1001.b
 		country_event = {
 			id = csa.1002
@@ -114,6 +146,26 @@ country_event = { # Socialist Constitution - Voting Rights
 	fire_only_once = yes
 	
 	option = { #The Laborite Plan
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = CSA_post_civil_war
+						option = CSA_POST_CIVIL_WAR_BURNHAM
+					}
+					has_game_rule = {
+						rule = CSA_post_civil_war
+						option = CSA_POST_CIVIL_WAR_NATIONALIST
+					}
+					has_game_rule = {
+						rule = CSA_post_civil_war
+						option = CSA_POST_CIVIL_WAR_BROWDER
+					}
+				}
+			}
+		}
 		name = csa.1002.a	
 		country_event = {
 			id = csa.1003
@@ -124,6 +176,22 @@ country_event = { # Socialist Constitution - Voting Rights
 		}
 	}
 	option = { # The Nationalist Plan
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = CSA_post_civil_war
+						option = CSA_POST_CIVIL_WAR_FEDERALIST
+					}
+					has_game_rule = {
+						rule = CSA_post_civil_war
+						option = CSA_POST_CIVIL_WAR_BROWDER
+					}
+				}
+			}
+		}
 		name = csa.1002.b
 		country_event = {
 			id = csa.1003
@@ -134,6 +202,26 @@ country_event = { # Socialist Constitution - Voting Rights
 		}
 	}
 	option = { # The Centralist Plan
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = CSA_post_civil_war
+						option = CSA_POST_CIVIL_WAR_BURNHAM
+					}
+					has_game_rule = {
+						rule = CSA_post_civil_war
+						option = CSA_POST_CIVIL_WAR_NATIONALIST
+					}
+					has_game_rule = {
+						rule = CSA_post_civil_war
+						option = CSA_POST_CIVIL_WAR_FEDERALIST
+					}
+				}
+			}
+		}
 		name = csa.1002.c
 		country_event = {
 			id = csa.1003
@@ -157,6 +245,26 @@ country_event = { # Socialist Congressional Election Arrives
 	fire_only_once = yes
 	
 	option = { #The Independence League
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = CSA_post_civil_war
+						option = CSA_POST_CIVIL_WAR_BURNHAM
+					}
+					has_game_rule = {
+						rule = CSA_post_civil_war
+						option = CSA_POST_CIVIL_WAR_BROWDER
+					}
+					has_game_rule = {
+						rule = CSA_post_civil_war
+						option = CSA_POST_CIVIL_WAR_FEDERALIST
+					}
+				}
+			}
+		}
 		name = csa.1003.a
 		trigger = {
 		NOT = {
@@ -174,6 +282,26 @@ country_event = { # Socialist Congressional Election Arrives
 		}
 	}
 	option = { # The AFL
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = CSA_post_civil_war
+						option = CSA_POST_CIVIL_WAR_BURNHAM
+					}
+					has_game_rule = {
+						rule = CSA_post_civil_war
+						option = CSA_POST_CIVIL_WAR_NATIONALIST
+					}
+					has_game_rule = {
+						rule = CSA_post_civil_war
+						option = CSA_POST_CIVIL_WAR_BROWDER
+					}
+				}
+			}
+		}
 		name = csa.1003.b
 		set_country_flag = CSA_constitutional_convention_done
 		hidden_effect = {
@@ -186,6 +314,26 @@ country_event = { # Socialist Congressional Election Arrives
 		}
 	}
 	option = { # Browder's SPA Centralist Ticket
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = CSA_post_civil_war
+						option = CSA_POST_CIVIL_WAR_BURNHAM
+					}
+					has_game_rule = {
+						rule = CSA_post_civil_war
+						option = CSA_POST_CIVIL_WAR_NATIONALIST
+					}
+					has_game_rule = {
+						rule = CSA_post_civil_war
+						option = CSA_POST_CIVIL_WAR_FEDERALIST
+					}
+				}
+			}
+		}
 		name = csa.1003.c
 		set_country_flag = CSA_constitutional_convention_done
 		hidden_effect = {
@@ -213,6 +361,26 @@ country_event = { # Socialist Congressional Election Arrives
 		}
 	}
 	option = { # The American Worker's Party
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = CSA_post_civil_war
+						option = CSA_POST_CIVIL_WAR_BROWDER
+					}
+					has_game_rule = {
+						rule = CSA_post_civil_war
+						option = CSA_POST_CIVIL_WAR_NATIONALIST
+					}
+					has_game_rule = {
+						rule = CSA_post_civil_war
+						option = CSA_POST_CIVIL_WAR_FEDERALIST
+					}
+				}
+			}
+		}
 		name = csa.1003.e
 		hidden_effect = {
 		set_country_flag = CSA_burnham_is_leader
@@ -293,6 +461,9 @@ country_event = { # Socialist Constitution - System of Government
 	is_triggered_only = yes
 
 	option = {
+		ai_chance = {
+			factor = 1
+		}
 		name = csa.2.a
 		custom_effect_tooltip = CSA_radicals_gain_power
 		add_popularity = {
@@ -316,6 +487,22 @@ country_event = { # Socialist Constitution - System of Government
 		}
 	}
 	option = {
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = CSA_post_civil_war
+						option = CSA_POST_CIVIL_WAR_FOSTER
+					}
+					has_game_rule = {
+						rule = CSA_post_civil_war
+						option = CSA_POST_CIVIL_WAR_SYNDICALIST
+					}
+				}
+			}
+		}
 		name = csa.2.b
 		custom_effect_tooltip = CSA_centralists_gain_power
 		add_popularity = {
@@ -378,6 +565,22 @@ country_event = { # Socialist Constitution - Judiciary
 	is_triggered_only = yes
 
 	option = { #Enshrine Judicial Review of the Court
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = CSA_post_civil_war
+						option = CSA_POST_CIVIL_WAR_FOSTER
+					}
+					has_game_rule = {
+						rule = CSA_post_civil_war
+						option = CSA_POST_CIVIL_WAR_SYNDICALIST
+					}
+				}
+			}
+		}
 		name = csa.5.a
 		custom_effect_tooltip = CSA_centralists_gain_power
 		add_popularity = {
@@ -398,6 +601,9 @@ country_event = { # Socialist Constitution - Judiciary
 		}
 	}
 	option = {
+		ai_chance = {
+			factor = 1
+		}
 		name = csa.5.b
 		custom_effect_tooltip = CSA_radicals_gain_power
 		add_popularity = {
@@ -433,6 +639,9 @@ country_event = { # Socialist Constitution - Congress and the President
 	is_triggered_only = yes
 
 	option = { #A Controlled President
+		ai_chance = {
+			factor = 1
+		}
 		name = csa.7.a
 		custom_effect_tooltip = CSA_radicals_gain_power
 		add_popularity = {
@@ -457,6 +666,22 @@ country_event = { # Socialist Constitution - Congress and the President
 		}
 	}
 	option = {  #An Independent President
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = CSA_post_civil_war
+						option = CSA_POST_CIVIL_WAR_FOSTER
+					}
+					has_game_rule = {
+						rule = CSA_post_civil_war
+						option = CSA_POST_CIVIL_WAR_SYNDICALIST
+					}
+				}
+			}
+		}
 		name = csa.7.b
 		custom_effect_tooltip = CSA_centralists_gain_power
 		add_popularity = {
@@ -477,6 +702,22 @@ country_event = { # Socialist Constitution - Congress and the President
 		}
 	}
 	option = {  #A Symbolic Head of State
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = CSA_post_civil_war
+						option = CSA_POST_CIVIL_WAR_FOSTER
+					}
+					has_game_rule = {
+						rule = CSA_post_civil_war
+						option = CSA_POST_CIVIL_WAR_SYNDICALIST
+					}
+				}
+			}
+		}
 		name = csa.7.c
 		trigger = {
 			has_country_flag = {
@@ -515,6 +756,9 @@ country_event = { # Socialist Constitution - Centralization or decentralization
 	is_triggered_only = yes
 
 	option = {
+		ai_chance = {
+			factor = 1
+		}
 		name = csa.8.a
 		custom_effect_tooltip = CSA_radicals_gain_power
 		add_popularity = {
@@ -555,6 +799,22 @@ country_event = { # Socialist Constitution - Centralization or decentralization
 		}
 	}
 	option = { #Wage Labor
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = CSA_post_civil_war
+						option = CSA_POST_CIVIL_WAR_FOSTER
+					}
+					has_game_rule = {
+						rule = CSA_post_civil_war
+						option = CSA_POST_CIVIL_WAR_SYNDICALIST
+					}
+				}
+			}
+		}
 		name = csa.8.b
 		custom_effect_tooltip = CSA_centralists_gain_power
 		add_popularity = {
@@ -787,6 +1047,16 @@ country_event = { # Socialist Constitution - Election
 	is_triggered_only = yes
 
 	option = { # Syndicalist - IWW
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = CSA_post_civil_war
+					option = CSA_POST_CIVIL_WAR_FOSTER
+				}
+			}
+		}
 		name = csa.11.a
 		trigger = {
 			OR = {
@@ -806,6 +1076,22 @@ country_event = { # Socialist Constitution - Election
 		}
 	}
 	option = { # Bruhder
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = CSA_post_civil_war
+						option = CSA_POST_CIVIL_WAR_FOSTER
+					}
+					has_game_rule = {
+						rule = CSA_post_civil_war
+						option = CSA_POST_CIVIL_WAR_SYNDICALIST
+					}
+				}
+			}
+		}
 		name = csa.11.b
 		trigger = {
 			NOT = {
@@ -844,6 +1130,16 @@ country_event = { # Socialist Constitution - Election
 		}
 	}
 	option = { # Totalist - Foster
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = CSA_post_civil_war
+					option = CSA_POST_CIVIL_WAR_SYNDICALIST
+				}
+			}
+		}
 		name = csa.11.c
 		trigger = {
 			has_country_flag = {
@@ -881,6 +1177,22 @@ country_event = { # Socialist Constitution - Election
 		}
 	}
 	option = { # Totalist - James Burnham
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = CSA_post_civil_war
+						option = CSA_POST_CIVIL_WAR_FOSTER
+					}
+					has_game_rule = {
+						rule = CSA_post_civil_war
+						option = CSA_POST_CIVIL_WAR_SYNDICALIST
+					}
+				}
+			}
+		}
 		name = csa.11.e
 		trigger = {
 			has_country_flag = {

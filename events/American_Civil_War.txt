@@ -4595,6 +4595,30 @@ country_event = { # Internal Conflicts
 	is_triggered_only = yes
 
 	option = {
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = CSA_post_civil_war
+						option = CSA_POST_CIVIL_WAR_FEDERALIST
+					}
+					has_game_rule = {
+						rule = CSA_post_civil_war
+						option = CSA_POST_CIVIL_WAR_NATIONALIST
+					}					
+					has_game_rule = {
+						rule = CSA_post_civil_war
+						option = CSA_POST_CIVIL_WAR_BROWDER
+					}
+					has_game_rule = {
+						rule = CSA_post_civil_war
+						option = CSA_POST_CIVIL_WAR_BURNHAM
+					}
+				}
+			}
+		}
 		name = amcivwar.36.a
 		add_popularity = {
 			ideology = syndicalist
@@ -4625,6 +4649,22 @@ country_event = { # Internal Conflicts
 		}
 	}
 	option = {
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = CSA_post_civil_war
+						option = CSA_POST_CIVIL_WAR_SYNDICALIST
+					}
+					has_game_rule = {
+						rule = CSA_post_civil_war
+						option = CSA_POST_CIVIL_WAR_FOSTER
+					}					
+				}
+			}
+		}
 		name = amcivwar.36.b
 		add_war_support = 0.05
 		add_popularity = {
@@ -4654,6 +4694,22 @@ country_event = { # Social Patriot Demands
 	is_triggered_only = yes
 
 	option = { #No
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = CSA_post_civil_war
+						option = CSA_POST_CIVIL_WAR_SYNDICALIST
+					}
+					has_game_rule = {
+						rule = CSA_post_civil_war
+						option = CSA_POST_CIVIL_WAR_FOSTER
+					}					
+				}
+			}
+		}
 		name = amcivwar.36001.a
 		add_political_power = -20
 		hidden_effect = {
@@ -4661,6 +4717,9 @@ country_event = { # Social Patriot Demands
 		}
 	}
 	option = { #Agree
+		ai_chance = {
+			factor = 25
+		}
 		name = amcivwar.36001.b
 		add_war_support = 0.05
 		add_popularity = {
@@ -4752,6 +4811,22 @@ country_event = { # Social Patriots Unity Legislation
 	is_triggered_only = yes
 
 	option = {
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = CSA_post_civil_war
+						option = CSA_POST_CIVIL_WAR_SYNDICALIST
+					}
+					has_game_rule = {
+						rule = CSA_post_civil_war
+						option = CSA_POST_CIVIL_WAR_FOSTER
+					}					
+				}
+			}
+		}
 		name = amcivwar.3600.a
 		add_popularity = {
 			ideology = social_democrat
@@ -4770,6 +4845,30 @@ country_event = { # Social Patriots Unity Legislation
 		}
 	}
 	option = {
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = CSA_post_civil_war
+						option = CSA_POST_CIVIL_WAR_FEDERALIST
+					}
+					has_game_rule = {
+						rule = CSA_post_civil_war
+						option = CSA_POST_CIVIL_WAR_NATIONALIST
+					}
+					has_game_rule = {
+						rule = CSA_post_civil_war
+						option = CSA_POST_CIVIL_WAR_BROWDER
+					}
+					has_game_rule = {
+						rule = CSA_post_civil_war
+						option = CSA_POST_CIVIL_WAR_BURNHAM
+					}
+				}
+			}
+		}
 		name = amcivwar.3600.b
 		add_war_support = 0.05
 		add_popularity = {
@@ -4801,6 +4900,30 @@ country_event = { # TUUL Ultimatum
 	is_triggered_only = yes
 	
 	option = {
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = CSA_post_civil_war
+						option = CSA_POST_CIVIL_WAR_FEDERALIST
+					}
+					has_game_rule = {
+						rule = CSA_post_civil_war
+						option = CSA_POST_CIVIL_WAR_NATIONALIST
+					}
+					has_game_rule = {
+						rule = CSA_post_civil_war
+						option = CSA_POST_CIVIL_WAR_BROWDER
+					}
+					has_game_rule = {
+						rule = CSA_post_civil_war
+						option = CSA_POST_CIVIL_WAR_BURNHAM
+					}
+				}
+			}
+		}
 		name = amcivwar.3601.a
 		add_popularity = {
 			ideology = syndicalist
@@ -4821,6 +4944,9 @@ country_event = { # TUUL Ultimatum
 		}
 	}
 	option = {
+		ai_chance = {
+			factor = 25
+		}
 		name = amcivwar.3601.b
 		add_war_support = 0.05
 		add_popularity = {
@@ -4971,6 +5097,30 @@ country_event = { # Military Demands Amnesty
 	is_triggered_only = yes
 	
 	option = { #Fine, give amnesty
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = CSA_post_civil_war
+						option = CSA_POST_CIVIL_WAR_FEDERALIST
+					}
+					has_game_rule = {
+						rule = CSA_post_civil_war
+						option = CSA_POST_CIVIL_WAR_NATIONALIST
+					}
+					has_game_rule = {
+						rule = CSA_post_civil_war
+						option = CSA_POST_CIVIL_WAR_BROWDER
+					}
+					has_game_rule = {
+						rule = CSA_post_civil_war
+						option = CSA_POST_CIVIL_WAR_BURNHAM
+					}
+				}
+			}
+		}
 		name = amcivwar.3606.a
 		add_popularity = {
 			ideology = syndicalist
@@ -4990,6 +5140,9 @@ country_event = { # Military Demands Amnesty
 		}
 	}
 	option = {
+		ai_chance = {
+			factor = 25
+		}
 		name = amcivwar.3606.b
 		hidden_effect = {
 		CSA = {
@@ -5050,6 +5203,9 @@ country_event = { # Military Demands IWW Support
 	is_triggered_only = yes
 	
 	option = { #Agree
+		ai_chance = {
+			factor = 25
+		}
 		name = amcivwar.3608.a
 		add_stability = 0.02
 		hidden_effect = {
@@ -5062,6 +5218,30 @@ country_event = { # Military Demands IWW Support
 		}
 	}
 	option = { #Unacceptable
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = CSA_post_civil_war
+						option = CSA_POST_CIVIL_WAR_FEDERALIST
+					}
+					has_game_rule = {
+						rule = CSA_post_civil_war
+						option = CSA_POST_CIVIL_WAR_NATIONALIST
+					}
+					has_game_rule = {
+						rule = CSA_post_civil_war
+						option = CSA_POST_CIVIL_WAR_BROWDER
+					}
+					has_game_rule = {
+						rule = CSA_post_civil_war
+						option = CSA_POST_CIVIL_WAR_BURNHAM
+					}
+				}
+			}
+		}
 		name = amcivwar.3608.b
 		add_stability = 0.02
 		hidden_effect = {
