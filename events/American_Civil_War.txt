@@ -3888,8 +3888,8 @@ country_event = { # CSA wins the civil war
 	option = {
 		name = amcivwar.24.a
 		USA_civil_war_ends = yes
-		add_ideas = USA_civil_war_aftermath_idea
-		add_ideas = USA_civil_war_depression_idea
+		add_ideas = USA_civil_war_war_aftermath_idea
+		add_ideas = USA_civil_war_political_aftermath_idea
 		hidden_effect = {
 			add_ideas = {
 				civilian_economy

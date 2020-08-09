@@ -5033,6 +5033,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_rebuilding_the_country"
 			CSA_increase_recovery = yes
+			CSA_increase_political_recovery = yes
 		}
 	}
 
@@ -5051,6 +5052,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_redistribute_wealth"
+			increase_ruling_party_popularity_by_5 = yes
+			add_political_power = -40
 			CSA_increase_recovery = yes
 		}
 	}
@@ -5074,13 +5077,15 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_womens_liberation"
 			CSA_increase_recovery = yes
+			CSA_increase_political_recovery = yes
 			hidden_effect = {
 				country_event = { id = csa.24 days = 240 random = 10 }
 				if = {
 				limit = { has_country_leader = { ruling_only = yes name = "William Z. Foster" } }
 				country_event = { id = csa.176 days = 280 random = 10 }
 			}
-
+			add_stability = 0.04
+			add_political_power = 30
 			}
 		}
 	}
@@ -5103,13 +5108,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_social_revolution"
-			CSA_increase_recovery = yes
-			hidden_effect = {
-				country_event = { id = csa.22 days = 335 random = 10 }
-				country_event = { id = csa.14 days = 365 random = 10 }
-				country_event = { id = csa.15 days = 395 random = 10 }
-				country_event = { id = csa.20 days = 425 random = 10 }
-			}
+			CSA_increase_political_recovery = yes
+			add_manpower = 10000
 		}
 	}
 	
@@ -5132,7 +5132,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_emancipation_for_all"
-			CSA_increase_recovery = yes
+			CSA_increase_political_recovery = yes
+			add_stability = 0.04
+			add_political_power = 30
 		}
 	}
 
@@ -5155,7 +5157,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_emancipation_for_all"
-			CSA_increase_recovery = yes
+			CSA_increase_political_recovery = yes
+			add_manpower = 8000
 		}
 	}
 	
@@ -5176,7 +5179,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_revolutionary_education"
 			add_research_slot = 1
-			CSA_increase_recovery = yes
+			CSA_increase_political_recovery = yes
 		}
 	}
 
@@ -5197,6 +5200,12 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_reconstruction"
 			add_ideas = USA_civil_reconstruction_idea
 			CSA_increase_recovery = yes
+			hidden_effect = {
+				country_event = { id = csa.22 days = 335 random = 10 }
+				country_event = { id = csa.14 days = 365 random = 10 }
+				country_event = { id = csa.15 days = 395 random = 10 }
+				country_event = { id = csa.20 days = 425 random = 10 }
+			}
 		}
 	}
 
@@ -6522,6 +6531,7 @@ focus_tree = {
 		relative_position_id = CSA_red_air_force
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_the_second_draft"
+			add_stability = -0.05
 			add_manpower = 100000
 			add_ideas = CSA_rebel_girl_idea
 			set_rule = { can_generate_female_aces = yes }
@@ -6550,10 +6560,13 @@ focus_tree = {
 		}
 		relative_position_id = CSA_red_air_force
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CSA_the_second_draft"
-			add_manpower = 15000
-			add_ideas = CSA_rebel_girl_idea
-			set_rule = { can_generate_female_aces = yes }
+			log = "[GetDateText]: [Root.GetName]: Focus CSA_the_traditional_army"
+			add_stability = 0.02
+			army_experience = 10
+			air_experience = 30
+			add_political_power = 20
+			add_popularity = { ideology = syndicalist popularity = -0.02 }
+			add_popularity = { ideology = totalist popularity = -0.02 }
 		}
 	}
 	focus = {#

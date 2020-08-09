@@ -2139,74 +2139,76 @@ TEX_increase_political_recovery = {
 
 CSA_increase_recovery = {
 	if = {
-		limit = { has_idea = USA_civil_war_aftermath_idea }
+		limit = { has_idea = USA_civil_war_war_aftermath_idea }
 		swap_ideas = {
-			remove_idea = USA_civil_war_aftermath_idea
-			add_idea = USA_civil_war_aftermath_idea2
+			remove_idea = USA_civil_war_war_aftermath_idea
+			add_idea = USA_civil_war_war_aftermath_idea2
 		}
 	}
 	else_if = {
-		limit = { has_idea = USA_civil_war_aftermath_idea2 }
+		limit = { has_idea = USA_civil_war_war_aftermath_idea2 }
 		swap_ideas = {
-			remove_idea = USA_civil_war_aftermath_idea2
-			add_idea = USA_civil_war_aftermath_idea3
+			remove_idea = USA_civil_war_war_aftermath_idea2
+			add_idea = USA_civil_war_war_aftermath_idea3
 		}
 	}
 	else_if = {
-		limit = { has_idea = USA_civil_war_aftermath_idea3 }
+		limit = { has_idea = USA_civil_war_war_aftermath_idea3 }
 		swap_ideas = {
-			remove_idea = USA_civil_war_aftermath_idea3
-			add_idea = USA_civil_war_aftermath_idea4
+			remove_idea = USA_civil_war_war_aftermath_idea3
+			add_idea = USA_civil_war_war_aftermath_idea4
 		}
 	}
 	else_if = {
-		limit = { has_idea = USA_civil_war_aftermath_idea4 }
+		limit = { has_idea = USA_civil_war_war_aftermath_idea4 }
 		swap_ideas = {
-			remove_idea = USA_civil_war_aftermath_idea4
-			add_idea = USA_civil_war_aftermath_idea5
+			remove_idea = USA_civil_war_war_aftermath_idea4
+			add_idea = USA_civil_war_war_aftermath_idea5
 		}
 	}
 	else_if = {
-		limit = { has_idea = USA_civil_war_aftermath_idea5 }
+		limit = { has_idea = USA_civil_war_war_aftermath_idea5 }
+			remove_ideas = USA_civil_war_war_aftermath_idea5
+	}
+CSA_increase_political_recovery = {
+	if = {
+		limit = { has_idea = USA_civil_war_political_aftermath_idea }
 		swap_ideas = {
-			remove_idea = USA_civil_war_aftermath_idea5
-			add_idea = CSA_social_revolution1
+			remove_idea = USA_civil_war_political_aftermath_idea
+			add_idea = USA_civil_war_political_aftermath_idea2
 		}
 	}
 	else_if = {
-		limit = { has_idea = CSA_social_revolution1 }
+		limit = { has_idea = USA_civil_war_political_aftermath_idea2 }
 		swap_ideas = {
-			remove_idea = CSA_social_revolution1
-			add_idea = CSA_social_revolution2
+			remove_idea = USA_civil_war_political_aftermath_idea2
+			add_idea = USA_civil_war_political_aftermath_idea3
 		}
 	}
 	else_if = {
-		limit = { has_idea = CSA_social_revolution2 }
+		limit = { has_idea = USA_civil_war_political_aftermath_idea3 }
 		swap_ideas = {
-			remove_idea = CSA_social_revolution2
-			add_idea = CSA_social_revolution3
+			remove_idea = USA_civil_war_political_aftermath_idea3
+			add_idea = USA_civil_war_political_aftermath_idea4
 		}
 	}
 	else_if = {
-		limit = { has_idea = CSA_social_revolution3 }
+		limit = { has_idea = USA_civil_war_political_aftermath_idea4 }
 		swap_ideas = {
-			remove_idea = CSA_social_revolution3
-			add_idea = CSA_social_revolution4
+			remove_idea = USA_civil_war_political_aftermath_idea4
+			add_idea = USA_civil_war_political_aftermath_idea5
 		}
 	}
 	else_if = {
-		limit = { has_idea = CSA_social_revolution4 }
+		limit = { has_idea = USA_civil_war_political_aftermath_idea5 }
 		swap_ideas = {
-			remove_idea = CSA_social_revolution4
-			add_idea = CSA_social_revolution5
+			remove_idea = USA_civil_war_political_aftermath_idea5
+			add_idea = USA_civil_war_political_aftermath_idea6
 		}
 	}
 	else_if = {
-		limit = { has_idea = CSA_social_revolution5 }
-		swap_ideas = {
-			remove_idea = CSA_social_revolution5
-			add_idea = CSA_social_revolution6
-		}
+		limit = { has_idea = USA_civil_war_political_aftermath_idea6 }
+			remove_ideas = USA_civil_war_political_aftermath_idea6
 	}
 }
 
