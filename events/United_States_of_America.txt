@@ -112,13 +112,6 @@ country_event = { # The Coalition Ticket?
 		name = ustates.3.a
 		ai_chance = {
 			factor = 30
-			modifier = {
-		    factor = 0
-			  has_game_rule = {
-					rule = USA_civil_war
-					option = USA_CIVIL_WAR_COMPROMISE_WITH_LONG_USA_VS_CSA
-				}
-			}
 		}
 		add_stability = 0.05
 		add_political_power = -50
@@ -156,13 +149,6 @@ country_event = { # The Coalition Ticket?
 		name = ustates.3.b
 		ai_chance = {
 			factor = 70
-			modifier = {
-		    factor = 0
-			  has_game_rule = {
-					rule = USA_civil_war
-					option = USA_CIVIL_WAR_COMPROMISE_WITH_REED_USA_VS_TEX
-				}
-			}
 		}
 		hidden_effect = {
 			set_country_flag = USA_no_coalition_party
@@ -195,7 +181,7 @@ country_event = { # Republican Nomination
 			modifier = {
 				factor = 0
 				has_game_rule = {
-					rule = USA_REP_NOM
+					rule = USA_rep_nomination
 					option = USA_REP_NOM_LANDON
 				}
 			}
@@ -221,7 +207,7 @@ country_event = { # Republican Nomination
 			modifier = {
 				factor = 0
 				has_game_rule = {
-					rule = USA_REP_NOM
+					rule = USA_rep_nomination
 					option = USA_REP_NOM_CURTIS
 				}
 			}
@@ -5730,19 +5716,6 @@ country_event = { # Austerity Bill Voting Commences
 		name = ustates.96.b #Let's campaign for the Republican vote
 		ai_chance = {
 			factor = 50
-			modifier = {
-		    factor = 0
-		    OR = {
-					has_game_rule = {
-						rule = USA_civil_war
-						option = USA_CIVIL_WAR_THREE_SIDES
-					}
-					has_game_rule = {
-						rule = USA_civil_war
-						option = USA_CIVIL_WAR_COMPROMISE_WITH_LONG_USA_VS_CSA
-					}
-				}
-			}
 		}
 		hidden_effect = {
 			country_event = { id = ustates.103 days = 3 }
@@ -6209,13 +6182,6 @@ country_event = { # Relief Bill Passes
 		name = ustates.112.a
 		ai_chance = {
 			factor = 50
-			modifier = {
-		    factor = 0
-				has_game_rule = {
-					rule = USA_civil_war
-					option = USA_CIVIL_WAR_FOUR_SIDES
-				}
-			}
 		}
 		add_political_power = 30
 		add_stability = 0.01
