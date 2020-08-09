@@ -838,11 +838,11 @@ country_event = { # New Election
 				factor = 0
 				OR = {
 					has_game_rule = {
-						rule = TEX_election
+						rule = TEX_post_civil_war
 						option = TEX_ELECTION_CHRISTIAN
 					}		
 					has_game_rule = {
-						rule = TEX_election
+						rule = TEX_post_civil_war
 						option = TEX_ELECTION_NPP
 					}						
 				}
@@ -943,15 +943,15 @@ country_event = { # New Election
 				factor = 0
 				OR = {
 					has_game_rule = {
-						rule = TEX_election
+						rule = TEX_post_civil_war
 						option = TEX_ELECTION_PERFECT_AFP
 					}		
 					has_game_rule = {
-						rule = TEX_election
+						rule = TEX_post_civil_war
 						option = TEX_ELECTION_PATAUT_AFP
 					}	
 					has_game_rule = {
-						rule = TEX_election
+						rule = TEX_post_civil_war
 						option = TEX_ELECTION_NPP
 					}						
 				}
@@ -994,15 +994,15 @@ country_event = { # New Election
 				factor = 0
 				OR = {
 					has_game_rule = {
-						rule = TEX_election
+						rule = TEX_post_civil_war
 						option = TEX_ELECTION_CHRISTIAN
 					}		
 					has_game_rule = {
-						rule = TEX_election
+						rule = TEX_post_civil_war
 						option = TEX_ELECTION_PERFECT_AFP
 					}	
 					has_game_rule = {
-						rule = TEX_election
+						rule = TEX_post_civil_war
 						option = TEX_ELECTION_PATAUT_AFP
 					}					
 				}
