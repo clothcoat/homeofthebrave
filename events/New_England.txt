@@ -659,6 +659,13 @@ country_event = { # The Provisional Government
 	is_triggered_only = yes
 
 	option = { # William Averell Harriman
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				has_game_rule = { rule = NEE_start_path = NEE_START_PATH_DEMOCRAT }
+			}
+		}
 		name = newengland.20.a
 		hidden_effect = {
 			add_ideas = NEE_John_Gilbert_Winant_hog_sli
@@ -674,6 +681,13 @@ country_event = { # The Provisional Government
 		}
 	}
 	option = { # Percival P. Baxter
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				has_game_rule = { rule = NEE_start_path = NEE_START_PATH_DEMOCRAT }
+			}
+		}
 		name = newengland.20.b
 		hidden_effect = {
 			add_ideas = NEE_Percival_P_Baxter_hog_mli
@@ -689,6 +703,13 @@ country_event = { # The Provisional Government
 		}
 	}
 	option = { # Joseph William Martin Jr.
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				has_game_rule = { rule = NEE_start_path = NEE_START_PATH_REPUBLICAN }
+			}
+		}
 		name = newengland.20.c
 		hidden_effect = {
 			add_ideas = NEE_Christian_Herter_hog_sco
@@ -5307,12 +5328,33 @@ country_event = { # The Great Strike
 	fire_only_once = yes
 
 	option = {
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = { rule = NEE_start_path = NEE_START_PATH_FEDERALIST }
+					has_game_rule = { rule = NEE_start_path = NEE_START_PATH_SENTINEL }
+					has_game_rule = { rule = NEE_start_path = NEE_START_PATH_SENTINEL }
+				}
+			}
+		}
 		name = newengland.103.a
 		add_manpower = -1500
 		add_political_power = -50
 		add_stability = -0.1	
 	}
 	option = { #Canada Intervnes
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = { rule = NEE_start_path = NEE_START_PATH_DEMOCRAT }
+					has_game_rule = { rule = NEE_start_path = NEE_START_PATH_REPUBLICAN }
+				}
+			}
+		}
 		name = newengland.103.b
 		add_political_power = -20
 		add_stability = -0.06
@@ -5365,6 +5407,16 @@ country_event = { # Canada's Decision
 	fire_only_once = yes
 
 	option = { # Feds appointed
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = { rule = NEE_start_path = NEE_START_PATH_REPUBLICAN }
+					has_game_rule = { rule = NEE_start_path = NEE_START_PATH_DEMOCRAT }
+				}
+			}
+		}
 		name = newengland.105.a
 		add_political_power = 50
 		NEE = {
@@ -5376,6 +5428,17 @@ country_event = { # Canada's Decision
 		}
 	}
 	option = {
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = { rule = NEE_start_path = NEE_START_PATH_FEDERALIST }
+					has_game_rule = { rule = NEE_start_path = NEE_START_PATH_REMNANT }
+					has_game_rule = { rule = NEE_start_path = NEE_START_PATH_SENTINEL }
+				}
+			}
+		}
 		name = newengland.105.b
 		ai_will_do = {
 			factor = 0
@@ -5400,6 +5463,16 @@ country_event = { # Feds appointed
 	fire_only_once = yes
 
 	option = { # Allow Feds
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = { rule = NEE_start_path = NEE_START_PATH_REMNANT }
+					has_game_rule = { rule = NEE_start_path = NEE_START_PATH_SENTINEL }
+				}
+			}
+		}
 		name = newengland.106.a
 		add_popularity = { ideology = authoritarian_democrat popularity = 0.15 }
 		add_political_power = 25
@@ -5419,6 +5492,13 @@ country_event = { # Feds appointed
 	}
 	
 	option = { # Work With Radicals
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				has_game_rule = { rule = NEE_start_path = NEE_START_PATH_FEDERALIST }
+			}
+		}
 		name = newengland.106.b
 		add_popularity = { ideology = market_liberal popularity = 0.05 }
 		add_popularity = { ideology = paternal_autocrat popularity = 0.05 }
@@ -5888,6 +5968,13 @@ country_event = { # Radical Split
 	fire_only_once = yes
 
 	option = { # Great
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				has_game_rule = { rule = NEE_start_path = NEE_START_PATH_REMNANT }
+			}
+		}
 		name = newengland.120.a
 		add_political_power = 20
 		set_politics = {
@@ -5898,6 +5985,13 @@ country_event = { # Radical Split
 		set_country_flag = NEE_sentinels
 	}
 	option = { # Great
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				has_game_rule = { rule = NEE_start_path = NEE_START_PATH_SENTINEL }
+			}
+		}
 		name = newengland.120.b
 		add_political_power = 20
 		country_event = {
