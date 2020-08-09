@@ -7800,7 +7800,7 @@ focus_tree = {
 	}
 
 
-	#Foreign Policy
+		#Foreign Policy
 	focus = {
 		id = USA_back_in_business
 		icon = GFX_goal_usa
@@ -7828,7 +7828,7 @@ focus_tree = {
 		}
 		available_if_capitulated = no
 		cancel_if_invalid = yes
-		x = 80
+		x = 121
 		y = 0
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_back_in_business"
@@ -7876,9 +7876,11 @@ focus_tree = {
 		cancel_if_invalid = yes
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus USA_fortress_america"
+			log = "[GetDateText]: [Root.GetName]: Focus USA_new_moralism"
+			add_ideas = CAL_new_moralism_idea
 			add_war_support = -0.10
-			add_ideas = USA_fortress_america_idea_1
+			add_stability = 0.05
+			
 		}
 	}
 	
@@ -7916,9 +7918,12 @@ focus_tree = {
 		cancel_if_invalid = yes
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus USA_fortress_america"
-			add_war_support = -0.10
-			add_ideas = USA_fortress_america_idea_1
+			log = "[GetDateText]: [Root.GetName]: Focus USA_patriotic_broadsides"
+			increase_ruling_party_popularity_by_5 = yes
+			add_political_power = 50
+			add_war_support = 0.05
+			add_popularity = { ideology = paternal_autocrat popularity = -0.05 }
+			add_popularity = { ideology = authoritarian_democrat popularity = -0.03 }
 		}
 	}
 	
@@ -7959,8 +7964,8 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_fortress_america"
-			add_war_support = -0.10
-			add_ideas = USA_fortress_america_idea_1
+			add_ideas = CAL_fortress_america_idea_1
+			add_political_power = 30
 		}
 	}
 
@@ -7988,8 +7993,36 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_man_the_walls"
 			swap_ideas = {
-				remove_idea = USA_fortress_america_idea_1
-				add_idea = USA_fortress_america_idea_2
+				remove_idea = CAL_fortress_america_idea_1
+				add_idea = CAL_fortress_america_idea_2
+			}
+			add_tech_bonus = {
+				name = navy_bonus
+				bonus = 1
+				uses = 2
+				category = naval_doctrine
+			}
+			random_owned_controlled_state = {
+				if = {
+					limit = { is_owned_and_controlled_by =  USA }
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = dockyard
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			random_owned_controlled_state = {
+				if = {
+					limit = { is_owned_and_controlled_by =  USA }
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = dockyard
+						level = 1
+						instant_build = yes
+					}
+				}
 			}
 		}
 	}
@@ -8020,8 +8053,31 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_look_inward"
+			add_ideas = CAL_look_inward
 			add_stability = 0.10
 			add_political_power = 100
+			random_owned_controlled_state = {
+				if = {
+					limit = { is_owned_and_controlled_by =  USA }
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			random_owned_controlled_state = {
+				if = {
+					limit = { is_owned_and_controlled_by =  USA }
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
 		}
 	}
 	
@@ -8052,8 +8108,19 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_sprit_of_monroe"
-			add_stability = 0.10
-			add_political_power = 100
+			if = {
+			limit = { has_idea = CAL_new_moralism_idea }
+			swap_ideas = {
+			remove_idea = CAL_new_moralism_idea
+			add_idea = CAL_spirit_of_monroe_idea
+				}
+			else = {
+			add_ideas = CAL_spirit_of_monroe_idea
+				}
+			}
+			add_war_support = 0.05
+			add_manpower = 2000
+			unlock_decision_category_tooltip = yes
 		}
 	}
 	
@@ -8081,8 +8148,34 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_look_inward"
-			add_stability = 0.10
-			add_political_power = 100
+			add_stability = 0.05
+			add_manpower = 2000
+			random_owned_state = {
+				limit = {
+					is_core_of = USA
+					is_controlled_by = USA
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = USA
+					is_controlled_by = USA
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 	
@@ -8114,7 +8207,17 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_business_of_neutrality"
-			add_ideas = USA_neutrality_idea
+			swap_ideas = {
+			remove_idea = CAL_look_inward_idea
+			add_idea = CAL_look_inward_idea_2
+			}
+			add_stability = 0.08
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 1
+				uses = 2
+				category = industry
+			}
 		}
 	}
 
@@ -8145,8 +8248,41 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_leap_forward"
 			swap_ideas = {
-				remove_idea = USA_fortress_america_idea_2
-				add_idea = USA_fortress_america_idea_3
+			remove_idea = CAL_look_inward_idea_2
+			add_idea = CAL_look_inward_idea_3
+			}
+			random_owned_controlled_state = {
+				if = {
+					limit = { is_owned_and_controlled_by =  USA }
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			random_owned_controlled_state = {
+				if = {
+					limit = { is_owned_and_controlled_by =  USA }
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			random_owned_controlled_state = {
+				if = {
+					limit = { is_owned_and_controlled_by =  USA }
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
 			}
 		}
 	}
@@ -8154,7 +8290,7 @@ focus_tree = {
 	focus = {
 		id = USA_american_century
 		icon = GFX_goal_USA_american_festivals
-		cost = 5.00
+		cost = 2
 		prerequisite = {
 			focus = USA_leap_forward
 		}
@@ -8175,14 +8311,20 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_american_century"
-			add_political_power = 200
+			swap_ideas = {
+			remove_idea = CAL_look_inward_idea_3
+			add_idea = CAL_look_inward_idea_4
+			}
+			add_stability = 0.15
+			add_political_power = 100
+			add_war_support = 0.05
 		}
 	}
 	
 	focus = {
 		id = USA_anti_imperialism
 		icon = GFX_goal_support_democracy
-		cost = 5.00
+		cost = 3
 		prerequisite = {
 			focus = USA_new_moralism
 		}
@@ -8216,15 +8358,15 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_fortress_america"
-			add_war_support = -0.10
-			add_ideas = USA_fortress_america_idea_1
+			add_war_support = 0.05
+			add_ideas = CAL_anti_imperialism_idea
 		}
 	}
 	
 	focus = {
 		id = USA_league_of_anti_imperialism
 		icon = GFX_goal_USA_anti_imperialist_league
-		cost = 5.00
+		cost = 1.5
 		prerequisite = {
 			focus = USA_anti_imperialism
 		}
@@ -8257,16 +8399,16 @@ focus_tree = {
 		cancel_if_invalid = yes
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus USA_fortress_america"
-			add_war_support = -0.10
-			add_ideas = USA_fortress_america_idea_1
+			log = "[GetDateText]: [Root.GetName]: Focus USA_league_of_anti_imperialism"
+			unlock_decision_category_tooltip = CAL_anti_imperialism_decisions
+			add_ideas = USA_league_of_america_1
 		}
 	}
 	
 	focus = {
 		id = USA_warn_japan
 		icon = GFX_focus_AST_war_japan
-		cost = 5.00
+		cost = 1
 		prerequisite = {
 			focus = USA_league_of_anti_imperialism
 			focus = USA_support_eastern_allies
@@ -8300,16 +8442,68 @@ focus_tree = {
 		cancel_if_invalid = yes
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus USA_fortress_america"
-			add_war_support = -0.10
-			add_ideas = USA_fortress_america_idea_1
+			log = "[GetDateText]: [Root.GetName]: Focus USA_warn_japan"
+			add_war_support = 0.1
+			JAP = {
+			add_opinion_modifier = { target = USA modifier = medium_decrease }
+			}
+			PHI = {
+			add_opinion_modifier = { target = USA modifier = medium_increase }
+			}
+			QIE = {
+			add_opinion_modifier = { target = USA modifier = medium_increase }
+			}
+			VIE = {
+			add_opinion_modifier = { target = USA modifier = medium_increase }
+			}
+			CHI = {
+			add_opinion_modifier = { target = USA modifier = medium_increase }
+			}
+			if = {
+			limit = { 
+			NOT = {
+			PHI = {is_puppet_of	= JAP }
+					}
+			PHI = {
+			exists = yes
+			}
+				}
+			give_guarantee = PHI
+			}
+			if = {
+			limit = { 
+			NOT = {
+			QIE = { is_puppet_of = JAP	}
+					}
+				}
+			give_guarantee = QIE
+			}
+			if = {
+			limit = { 
+			NOT = {
+			QIE = { is_puppet_of = CHI	}
+					}
+				}
+			give_guarantee = CHI
+			}
+			if = {
+			limit = { 
+			NOT = {
+			VIE = { is_puppet_of = CHI	}
+					}
+			VIE = {
+			exists = yes
+				}
+			}
+			give_guarantee = VIE
+			}
 		}
 	}
 	
 	focus = {
 		id = USA_moral_support
 		icon = GFX_goal_volunteer_alliance
-		cost = 5.00
+		cost = 2
 		prerequisite = {
 			focus = USA_warn_japan
 		}
@@ -8343,15 +8537,18 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_moral_support"
-			add_war_support = -0.10
-			add_ideas = USA_fortress_america_idea_1
+			add_war_support = 0.03
+			swap_ideas = {
+			remove_idea = USA_league_of_america_1
+			add_idea = USA_league_of_america_2
+			}
 		}
 	}
 	
 	focus = {
 		id = USA_embargo_japan
 		icon = GFX_goal_USA_embargo_japan
-		cost = 5.00
+		cost = 1.5
 		prerequisite = {
 			focus = USA_warn_japan
 			focus = USA_tokyo_talks
@@ -8383,15 +8580,61 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_embargo_japan"
-			add_war_support = -0.10
-			add_ideas = USA_fortress_america_idea_1
+			add_war_support = 0.1
+			JAP = {
+			add_opinion_modifier = { target = USA modifier = medium_decrease }
+			}
+			PHI = {
+			add_opinion_modifier = { target = USA modifier = medium_increase }
+			}
+			QIE = {
+			add_opinion_modifier = { target = USA modifier = medium_increase }
+			}
+			VIE = {
+			add_opinion_modifier = { target = USA modifier = medium_increase }
+			}
+			CHI = {
+			add_opinion_modifier = { target = USA modifier = medium_increase }
+			}
+			if = {
+			limit = { 
+			NOT = {
+			PHI = {is_puppet_of	= JAP }
+					}
+				}
+			give_guarantee = PHI
+			}
+			if = {
+			limit = { 
+			NOT = {
+			QIE = { is_puppet_of = JAP	}
+					}
+				}
+			give_guarantee = QIE
+			}
+			if = {
+			limit = { 
+			NOT = {
+			QIE = { is_puppet_of = CHI	}
+					}
+				}
+			give_guarantee = CHI
+			}
+			if = {
+			limit = { 
+			NOT = {
+			VIE = { is_puppet_of = CHI	}
+					}
+				}
+			give_guarantee = VIE
+			}
 		}
 	}
 	
 	focus = {
 		id = USA_phillipines_guarantee
 		icon = GFX_goal_generic_fortify_city
-		cost = 5.00
+		cost = 1
 		prerequisite = {
 			focus = USA_moral_support
 		}
@@ -8422,15 +8665,27 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_fortress_america"
-			add_war_support = -0.10
-			add_ideas = USA_fortress_america_idea_1
+			if = {
+			FROM = {
+			limit = {
+			is_in_faction_with = ROOT
+			}
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+						}
+					}
+				}
+			}
 		}
 	}
 	
 	focus = {
 		id = USA_maf_investigation
 		icon = GFX_goal_MAF_African_Armies
-		cost = 5.00
+		cost = 4.5
 		prerequisite = {
 			focus = USA_moral_support
 		}
@@ -8460,9 +8715,19 @@ focus_tree = {
 		cancel_if_invalid = yes
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus USA_fortress_america"
-			add_war_support = -0.10
-			add_ideas = USA_fortress_america_idea_1
+			log = "[GetDateText]: [Root.GetName]: Focus USA_maf_investigation"
+			hidden_effect = {
+			country_event = {
+				id = ustates.676
+				days = 3
+				}
+			}
+			LIB = {
+			add_opinion_modifier = { target = USA modifier = medium_increase }
+			}
+			MAF = {
+			add_opinion_modifier = { target = USA modifier = medium_increase }
+			}
 		}
 	}
 	
@@ -8503,8 +8768,28 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_defensive_navy"
-			add_war_support = -0.10
-			add_ideas = USA_fortress_america_idea_1
+			swap_ideas = {
+			remove_idea = USA_league_of_america_2
+			add_idea = USA_league_of_america_3
+			}
+			navy_experience = 10
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = naval_doctrine
+			}
+			if = {
+			FROM = {
+			limit = {
+			is_in_faction_with = ROOT
+			}
+			}
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = naval_doctrine
+			}
+			}
 		}
 	}
 	
@@ -8522,6 +8807,12 @@ focus_tree = {
 		}
 		available = {
 			is_subject = no
+			NOT = {
+			CAN = {
+			is_puppet_of = USA
+			}
+			has_war_with = USA
+			}
 		}
 		relative_position_id = USA_back_in_business
 		x = 0
@@ -8545,6 +8836,12 @@ focus_tree = {
 				has_country_flag = CAN_returned_land
 			}
 		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_western_alliance"
+			add_war_support = 0.03
+			add_political_power = 20
+			add_ideas = CAL_new_interventionism_idea
+		}
 	}
 	focus = {
 		id = USA_western_alliance
@@ -8558,6 +8855,12 @@ focus_tree = {
 		}
 		available = {
 			is_subject = no
+			NOT = {
+			CAN = {
+			is_puppet_of = USA
+			}
+			has_war_with = USA
+			}
 		}
 		relative_position_id = USA_new_interventionism
 		x = -1
@@ -8587,14 +8890,13 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_western_alliance"
-			add_political_power = 100
-			unlock_decision_category_tooltip = USA_rainbow_war_plans_decisions
+			CAN = { add_to_faction = USA }
 		}
 	}
 	focus = {
 		id = USA_support_eastern_allies
 		icon = GFX_goal_generic_trade
-		cost = 5.00
+		cost = 2.5
 		prerequisite = {
 			focus = USA_western_alliance
 		}
@@ -8604,7 +8906,11 @@ focus_tree = {
 		relative_position_id = USA_new_interventionism
 		x = -2
 		y = 2
-
+		bypass = {
+		AST = {
+		exists = no
+			}
+		}
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -8628,15 +8934,28 @@ focus_tree = {
 		cancel_if_invalid = yes
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus USA_western_alliance"
-			add_political_power = 100
-			unlock_decision_category_tooltip = USA_rainbow_war_plans_decisions
+			log = "[GetDateText]: [Root.GetName]: Focus USA_support_eastern_allies"
+			AST = {
+			navy_experience = 10
+			random_owned_controlled_state = {
+				limit = {
+					is_coastal = yes
+					free_building_slots = { building = dockyard size > 0 }
+					}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+					}
+				}
+			}
 		}
 	}
 	focus = {
 		id = USA_tokyo_talks
 		icon = GFX_focus_chi_collaboration_with_the_japanese
-		cost = 5.00
+		cost = 1.5
 		prerequisite = {
 			focus = USA_support_eastern_allies
 		}
@@ -8670,14 +8989,25 @@ focus_tree = {
 		cancel_if_invalid = yes
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus USA_western_alliance"
-			add_political_power = 100
-			unlock_decision_category_tooltip = USA_rainbow_war_plans_decisions
+			log = "[GetDateText]: [Root.GetName]: Focus USA_tokyo_talks"
+			JAP = { add_opinion_modifier = { target = JAP modifier = small_increase } }
+			diplomatic_relation = {
+			country = JAP
+			relation = non_aggression_pact
+			active = yes
+			}
+			JAP = {
+			diplomatic_relation = {
+			country = USA
+			relation = non_aggression_pact
+			active = yes
+			}
+			}
 		}
 	}
 	focus = {
 		id = USA_longer_reach
-		icon = GFX_goal_USA_liberty_ships
+		icon = GFX_goal_generic_navy_carrier
 		cost = 5.00
 		prerequisite = {
 			focus = USA_new_interventionism
@@ -8705,6 +9035,23 @@ focus_tree = {
 			swap_ideas = {
 				remove_idea = USA_arsenal_of_democracy_idea
 				add_idea = USA_arsenal_of_democracy_idea_2
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_coastal = yes
+					free_building_slots = { building = dockyard size > 0 }
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_equipment_to_stockpile = {
+			type = convoy
+			amount = 45
+			producer = USA
 			}
 		}
 	}
@@ -8752,8 +9099,16 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_enter_the_fray"
-			add_political_power = 100
-			unlock_decision_category_tooltip = USA_rainbow_war_plans_decisions
+			add_war_support = 0.03
+			CAN = {
+			add_political_power = 20
+			army_experience = 10
+			navy_experience = 10
+			air_experience = 10
+			}
+			army_experience = 10
+			navy_experience = 10
+			air_experience = 10
 		}
 	}
 
@@ -8780,10 +9135,17 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_arsenal_of_democracy"
-			army_experience = 25
-			navy_experience = 25
-			air_experience = 25
 			add_ideas = USA_arsenal_of_democracy_idea
+			add_equipment_to_stockpile = {
+			type = support_equipment
+			amount = 2000
+			producer = USA
+			}
+			add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 3000
+			producer = USA
+			}
 		}
 	}
 
@@ -8815,6 +9177,8 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_on_the_beach"
 			add_ideas = USA_on_the_beach_idea
+			add_manpower = 1500
+			add_war_support = 0.05
 		}
 	}
 	
@@ -8845,7 +9209,37 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_lend_lease"
-			add_ideas = USA_on_the_beach_idea
+			add_equipment_to_stockpile = {
+			type = support_equipment
+			amount = -2000
+			producer = USA
+			}
+			add_equipment_to_stockpile = {
+			type = light_tank_equipment
+			amount = -200
+			producer = USA
+			}
+			add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = -3000
+			producer = USA
+			}
+			CAN = {
+			type = support_equipment
+			amount = 2000
+			producer = USA
+			add_equipment_to_stockpile = {
+			type = light_tank_equipment
+			amount = 200
+			producer = USA
+			}
+			add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 3000
+			producer = USA
+			}
+			add_opinion_modifier = { target = USA modifier = medium_increase }
+			}
 		}
 	}
 
@@ -8904,7 +9298,48 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_the_lion_and_the_eagle"
-			custom_effect_tooltip = USA_may_send_advisors
+			CAN = {
+			random_owned_state = {
+				limit = {
+					is_core_of = CAN
+					is_controlled_by = CAN
+			        is_coastal = yes
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+					}
+				}
+			random_owned_state = {
+				limit = {
+					is_core_of = CAN
+					is_controlled_by = CAN
+			        is_coastal = yes
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+					}
+				}
+				add_tech_bonus = {
+				name = navy_air_bonus
+				bonus = 1
+				uses = 1
+				category = naval_air
+				}
+				CAN = {
+				add_tech_bonus = {
+				name = navy_air_bonus
+				bonus = 1
+				uses = 1
+				category = naval_air
+				}
+				}
+			}
 		}
 	}
 	focus = {
@@ -8933,7 +9368,34 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_the_lion_and_the_eagle"
-			custom_effect_tooltip = USA_may_send_advisors
+			NFA = {
+			random_owned_state = {
+				limit = {
+					is_core_of = NFA
+					is_controlled_by = NFA
+			        is_coastal = yes
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = NFA
+					is_controlled_by = NFA
+			        is_coastal = yes
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			}
 		}
 	}
 	focus = {
@@ -8961,8 +9423,25 @@ focus_tree = {
 		cancel_if_invalid = yes
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus USA_the_lion_and_the_eagle"
-			custom_effect_tooltip = USA_may_send_advisors
+			log = "[GetDateText]: [Root.GetName]: Focus USA_bolster_dominion"
+			add_manpower = -2000
+			DEH = {
+			add_manpower = 2000
+			army_experience = 15
+			random_owned_state = {
+				limit = {
+					is_core_of = DEH
+					is_controlled_by = DEH
+					arms_factory > 0
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+					}
+				}
+			}
 		}
 	}
 	focus = {
@@ -8977,6 +9456,9 @@ focus_tree = {
 		}
 		available = {
 			is_subject = no
+			ENG = {
+			exists = no
+			}
 		}
 		relative_position_id = USA_enter_the_fray
 		x = 1
@@ -8991,7 +9473,42 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_european_recovery_program"
-			custom_effect_tooltip = USA_may_send_advisors
+			126 = {
+			add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			NFA = {
+			random_owned_state = {
+				limit = {
+					is_core_of = NFA
+					is_controlled_by = NFA
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = NFA
+					is_controlled_by = NFA
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			}
 		}
 	}
 	focus = {
@@ -9020,7 +9537,11 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_european_recovery_program"
-			custom_effect_tooltip = USA_may_send_advisors
+			create_wargoal = {
+			type = puppet_wargoal_focus
+			target = PER
+			}
+			add_war_support = 0.03
 		}
 	}
 	focus = {
@@ -9029,9 +9550,6 @@ focus_tree = {
 		cost = 5.00
 		prerequisite = {
 			focus = USA_new_interventionism
-		}
-		mutually_exclusive = {
-			focus = USA_
 		}
 		available = {
 			is_subject = no
@@ -9081,6 +9599,9 @@ focus_tree = {
 		}
 		available = {
 			is_subject = no
+			MEX = {
+			has_socialist_government = no
+			}
 		}
 		relative_position_id = USA_new_interventionism
 		x = 3
@@ -9109,9 +9630,16 @@ focus_tree = {
 		cancel_if_invalid = yes
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus USA_enter_the_fray"
-			add_political_power = 100
-			unlock_decision_category_tooltip = USA_rainbow_war_plans_decisions
+			log = "[GetDateText]: [Root.GetName]: Focus USA_ally_new_mexico"
+			MEX = {
+			add_opinion_modifier = { target = USA modifier = large_increase }
+			add_tech_bonus = {
+				name = infantry_bonus
+				bonus = 0.25
+				uses = 1
+				category = infantry_weapons
+			}
+			}
 		}
 	}
 	
@@ -9139,7 +9667,60 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_stop_south_american_syndicalism"
-			add_political_power = 200
+			if = {
+			limit = {
+			GUA = { has_socialist_government = yes }
+			}
+			create_wargoal = {
+			type = puppet_wargoal_focus
+			target = GUA
+				}
+			}
+			if = {
+			limit = {
+			HON = { has_socialist_government = yes }
+			}
+			create_wargoal = {
+			type = puppet_wargoal_focus
+			target = HON
+				}
+			}
+			if = {
+			limit = {
+			PRU = { has_socialist_government = yes }
+			}
+			create_wargoal = {
+			type = puppet_wargoal_focus
+			target = PRU
+				}
+			}
+			if = {
+			limit = {
+			ELS = { has_socialist_government = yes }
+			}
+			create_wargoal = {
+			type = puppet_wargoal_focus
+			target = ELS
+				}
+			}
+			if = {
+			limit = {
+			PAN = { has_socialist_government = yes }
+			}
+			create_wargoal = {
+			type = puppet_wargoal_focus
+			target = PAN
+				}
+			}
+			if = {
+			limit = {
+			CHL = { has_socialist_government = yes }
+			}
+			create_wargoal = {
+			type = puppet_wargoal_focus
+			target = CHL
+				}
+			}
 		}
 	}
 	
@@ -9182,8 +9763,31 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_sphere_of_influence"
-			add_political_power = 100
-			unlock_decision_category_tooltip = USA_rainbow_war_plans_decisions
+			add_political_power = 50
+			add_manpower = 2000
+			random_owned_state = {
+				limit = {
+					is_core_of = USA
+					is_controlled_by = USA
+					is_coastal = yes
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+					province = 7883
+				}
+			}
+			add_equipment_to_stockpile = { type = convoy amount = 50 }
+			if = {
+			limit = {
+			FROM = {
+			is_puppet_of = USA
+				}
+			}
+			add_opinion_modifier = { target = USA modifier = medium_increase }
+			}
 		}
 	}
 	
@@ -9206,7 +9810,7 @@ focus_tree = {
 			is_in_faction = no
 			not_has_democratic_government = yes
 		}
-		x = 87
+		x = 128
 		y = 1
 
 		ai_will_do = {
@@ -9230,7 +9834,10 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_american_imperialism"
-			add_war_support = 0.20
+			add_ideas = USA_american_imperialism_idea
+			add_war_support = 0.15
+			add_popularity = { ideology = paternal_autocrat popularity = 0.03 }
+			add_popularity = { ideology = national_populist popularity = 0.03 }
 			add_stability = -0.05
 		}
 	}
@@ -9259,8 +9866,14 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_national_rhetoric"
-			add_political_power = 100
-			add_ideas = TEX_manifest_destiny_idea
+			swap_ideas = {
+			remove_idea = USA_american_imperialism_idea
+			add_idea = USA_american_imperialism_idea_2
+			}
+			add_manpower = 12250
+			add_war_support = 0.1
+			add_popularity = { ideology = paternal_autocrat popularity = 0.03 }
+			add_popularity = { ideology = national_populist popularity = 0.03 }
 		}
 	}
 	
@@ -9288,8 +9901,11 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_new_marine_corps"
-			add_political_power = 100
-			add_ideas = TEX_manifest_destiny_idea
+			swap_ideas = {
+			remove_idea = USA_american_imperialism_idea_2
+			add_idea = USA_american_imperialism_idea_3
+			}
+			add_manpower = 5000
 		}
 	}
 	
@@ -9321,8 +9937,9 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_make_mexico_friendly"
-			add_political_power = 100
-			add_ideas = TEX_manifest_destiny_idea
+			unlock_decision_tooltip = USA_attack_mexico
+			add_war_support = 0.05
+			add_manpower = 1000
 		}
 	}
 
@@ -9353,7 +9970,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_banana_republics"
-			unlock_decision_tooltip = TEX_claim_mexico_dec
+			custom_effect_tooltip = USA_dominate_central_america
 		}
 	}
 	focus = {
@@ -9380,7 +9997,9 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_banana_republics"
-			unlock_decision_tooltip = TEX_claim_mexico_dec
+			custom_effect_tooltip = USA_claim_south_america
+			add_war_support = 0.1
+			increase_ruling_party_popularity_by_5 = yes
 		}
 	}
 	focus = {
@@ -9394,6 +10013,12 @@ focus_tree = {
 		available = {
 			is_major = yes
 			is_subject = no
+			controls_state = 685
+		}
+		bypass = {
+		NOT = {
+		controls_state = 685
+			}
 		}
 		relative_position_id = USA_american_imperialism
 		x = -3
@@ -9407,8 +10032,16 @@ focus_tree = {
 		cancel_if_invalid = yes
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus USA_banana_republics"
-			unlock_decision_tooltip = TEX_claim_mexico_dec
+			log = "[GetDateText]: [Root.GetName]: Focus USA_take_panama"
+			685 = {
+			add_core_of = USA
+			add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 	focus = {
@@ -9437,8 +10070,17 @@ focus_tree = {
 		cancel_if_invalid = yes
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus USA_banana_republics"
-			unlock_decision_tooltip = TEX_claim_mexico_dec
+			log = "[GetDateText]: [Root.GetName]: Focus USA_giant_of_the_west"
+			add_stability = 0.08
+			add_manpower = 20000
+			create_wargoal = {
+			type = puppet_wargoal_focus
+			target = LIB
+			}
+			create_wargoal = {
+			type = puppet_wargoal_focus
+			target = SAF
+			}
 		}
 	}
 	
@@ -9465,7 +10107,9 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_western_dominance"
-			add_political_power = 200
+			add_war_support = 0.1
+			add_political_power = 30
+			add_manpower = 3000
 		}
 	}
 	
@@ -9492,7 +10136,18 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_dismantle_the_empire"
-			add_political_power = 200
+			add_war_support = 0.05
+			add_tech_bonus = {
+				bonus = 0.75
+				uses = 1
+				category = land_doctrine
+			}
+			add_tech_bonus = {
+				bonus = 0.75
+				uses = 1
+				category = naval_doctrine
+			}
+			unlock_decision_tooltip = USA_attack_canada
 		}
 	}
 	
@@ -9522,7 +10177,8 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_claim_australasia"
-			add_political_power = 200
+			add_war_support = 0.03
+			unlock_decision_tooltip = USA_attack_australasia
 		}
 	}
 	focus = {
@@ -9536,6 +10192,13 @@ focus_tree = {
 			is_subject = no
 			is_major = yes
 		}
+		bypass = {
+		DEN = {
+		NOT = {
+			controls_state = 101
+				}
+			}
+		}
 		relative_position_id = USA_american_imperialism
 		x = 0
 		y = 3
@@ -9548,9 +10211,10 @@ focus_tree = {
 		cancel_if_invalid = yes
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus USA_make_mexico_friendly"
-			add_political_power = 100
-			add_ideas = TEX_manifest_destiny_idea
+			log = "[GetDateText]: [Root.GetName]: Focus USA_demand_greenland"
+			DEN = {
+			country_event = ustates.670
+			}
 		}
 	}
 	focus = {
@@ -9576,9 +10240,19 @@ focus_tree = {
 		cancel_if_invalid = yes
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus USA_make_mexico_friendly"
-			add_political_power = 100
-			add_ideas = TEX_manifest_destiny_idea
+			log = "[GetDateText]: [Root.GetName]: Focus USA_atlantic_base"
+			101 = {
+			if = {
+					limit = { is_owned_and_controlled_by = USA }
+					add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+						type = dockyard
+						level = 4
+						instant_build = yes
+					}
+				}
+			}
+			add_state_claim = 100
 		}
 	}
 	focus = {
@@ -9607,9 +10281,17 @@ focus_tree = {
 		cancel_if_invalid = yes
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus USA_make_mexico_friendly"
-			add_political_power = 100
-			add_ideas = TEX_manifest_destiny_idea
+			log = "[GetDateText]: [Root.GetName]: Focus USA_strike_britain"
+			create_wargoal = {
+			type = puppet_wargoal_focus
+			target = ENG
+			}
+			add_war_support = 0.03
+			add_equipment_to_stockpile = {
+			type = convoy
+			amount = 40
+			producer = USA
+			}
 		}
 	}
 	focus = {
@@ -9635,7 +10317,14 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_look_east"
-			add_political_power = 200
+			add_war_support = 0.03
+			add_tech_bonus = {
+				name = destroyer_focus
+				bonus = 1
+				uses = 1
+				category = dd_tech
+			}
+			create_wargoal = { type = annex_everything target = HAW }
 		}
 	}
 	focus = {
@@ -9652,13 +10341,16 @@ focus_tree = {
 				is_in_faction = no
 				is_faction_leader = yes
 			}
-			679 = { #HAWAII
+			OR = {
+			629 = { #HAWAII
 				owner = {
 					OR = {
 						tag = ROOT
 						is_subject_of = ROOT
+						}
 					}
 				}
+			controls_state = 629
 			}
 		}
 		relative_position_id = USA_look_east
@@ -9674,9 +10366,17 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_hawaiian_launchpad"
-			add_war_support = 0.10
-			add_stability = 0.05
-			custom_effect_tooltip = TEX_can_attack_syndicalist
+			629 = {
+			if = {
+					limit = { is_owned_and_controlled_by = USA }
+					add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+						type = dockyard
+						level = 4
+						instant_build = yes
+					}
+				}
+			}
 		}
 	}
 	focus = {
@@ -9706,9 +10406,9 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_demand_the_philippines"
-			add_war_support = 0.10
-			add_stability = 0.05
-			custom_effect_tooltip = TEX_can_attack_syndicalist
+			add_war_support = 0.03
+			create_wargoal = { type = annex_everything target = PHI }
+			add_state_claim = 327
 		}
 	}
 
@@ -9738,10 +10438,14 @@ focus_tree = {
 		cancel_if_invalid = yes
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus USA_demand_the_philippines"
-			add_war_support = 0.10
-			add_stability = 0.05
-			custom_effect_tooltip = TEX_can_attack_syndicalist
+			log = "[GetDateText]: [Root.GetName]: Focus USA_claim_the_east_indies"
+			add_war_support = 0.03
+			add_state_claim	= 334
+			add_state_claim	= 335
+			add_state_claim	= 667
+			add_state_claim	= 668
+			add_state_claim	= 672
+			add_state_claim	= 673
 		}
 	}
 	
@@ -9774,10 +10478,14 @@ focus_tree = {
 		cancel_if_invalid = yes
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus USA_demand_the_philippines"
-			add_war_support = 0.10
-			add_stability = 0.05
-			custom_effect_tooltip = TEX_can_attack_syndicalist
+			log = "[GetDateText]: [Root.GetName]: Focus USA_giant_of_the_east"
+			add_stability = 0.1
+			increase_ruling_party_popularity_by_5 = yes
+			add_manpower = 20000
+			create_wargoal = {
+			type = puppet_wargoal_focus
+			target = SIA
+			}
 		}
 	}
 
@@ -9804,7 +10512,22 @@ focus_tree = {
 		cancel_if_invalid = yes
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_vietnam_yesterday"
-			add_political_power = 200
+			create_wargoal = {
+			type = annex_everything
+			target = VIE
+			}
+			if = {
+			limit = { GEA = {
+				exists = yes
+				}
+			}
+			GER = {
+			country_event = {
+				id = ustates.673
+				days = 1
+				}
+			}
+			}
 		}
 	}
 	focus = {
@@ -9829,8 +10552,12 @@ focus_tree = {
 		cancel_if_invalid = yes
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus USA_vietnam_yesterday"
-			add_political_power = 200
+			log = "[GetDateText]: [Root.GetName]: Focus USA_ports_of_south_china"
+			create_wargoal = {
+			type = annex_everything
+			target = LEC
+			}
+			add_state_claim = 592
 		}
 	}
 	focus = {
@@ -9855,11 +10582,13 @@ focus_tree = {
 		cancel_if_invalid = yes
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus USA_vietnam_yesterday"
-			add_political_power = 200
+			log = "[GetDateText]: [Root.GetName]: Focus USA_strike_japan"
+			create_wargoal = {
+			type = puppet_wargoal_focus
+			target = JAP
+			}
 		}
 	}
-	
 }
 
 
