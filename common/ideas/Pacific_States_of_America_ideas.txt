@@ -2091,6 +2091,20 @@ ideas = {
 			}
 		}
 		
+		CAL_new_interventionism_idea = {#
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_new_interventionism_idea"}
+			allowed = {	always = no	}
+			allowed_civil_war = { always = yes }
+			picture = army_cooperation
+			modifier = {
+				guarantee_cost = -0.3
+				justify_war_goal_time = -0.2
+				faction_trade_opinion_factor = 0.1
+				subversive_activites_upkeep	= -0.1
+				send_volunteers_tension = -0.1
+			}
+		}
+		
 		###New Imperialism###
 		USA_american_imperialism_idea = {#
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea USA_american_imperialism_idea"}
