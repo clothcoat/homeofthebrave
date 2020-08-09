@@ -9069,8 +9069,6 @@ country_event = { # 1940 Election
 	is_triggered_only = yes
 	fire_only_once = yes
 
-	}
-
 	option = { # Progressive
 		name = ustates.203.a
 		trigger = {
@@ -9264,7 +9262,6 @@ country_event = { # 1940 Election
 			}
 		}
 	}
-}
 
 
 ### 1944 Elections and Primaries ###
@@ -15739,5 +15736,145 @@ country_event = {# Event for New England to Pick up PSA exiles in case they deci
 				set_nationality = USA
 			}
 		}
+	}
+}
+
+country_event = {# United States demands Greenland
+	id = ustates.670
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.670"}
+	title = ustates.670.t
+	desc = ustates.670.d
+	picture = GFX_USA_DOD_interior
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {# Very well, take the money
+		name = ustates.670.a
+		ROOT = {
+			country_event = { id = ustates.672 days = 1 }
+		}
+	}
+	option = {# Never
+		name = ustates.670.b
+		ROOT = {
+			country_event = { id = ustates.671 days = 320 }
+		}
+	}
+}
+
+country_event = {# Denmark Declines
+	id = ustates.671
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.671"}
+	title = ustates.671.t
+	desc = ustates.671.d
+	picture = GFX_USA_DOD_interior
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {#Declare War Now
+		name = ustates.671.a
+		declare_war_on = {
+		target = DEN
+		type = annex_everything
+		}
+	}
+	option = {#We will wait
+		name = ustates.671.b
+		add_war_support = -0.02
+		add_political_power = -10
+		add_state_claim = 101
+	}
+}
+
+country_event = {# Denmark accepts
+	id = ustates.672
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.672"}
+	title = ustates.672.t
+	desc = ustates.672.d
+	picture = GFX_USA_DOD_interior
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {#Great
+		name = ustates.672.a
+		CAL = {
+		transfer_state = 101
+		}
+	}
+}
+
+country_event = {# America Desires East Asia
+	id = ustates.673
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.673"}
+	title = ustates.673.t
+	desc = ustates.673.d
+	picture = GFX_USA_DOD_interior
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {# No
+		name = ustates.673.a
+		ROOT = {
+		hidden_effect = {
+			country_event = { id = ustates.675 days = 1 }
+		}
+		}
+	}
+	option = {# Accept
+		name = ustates.673.b
+		hidden_effect = {
+			country_event = { id = ustates.674 days = 1 }
+		}
+	}
+}
+
+country_event = {#Germany Accepts
+	id = ustates.674
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.674"}
+	title = ustates.674.t
+	desc = ustates.674.d
+	picture = GFX_USA_DOD_interior
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {# No
+		name = ustates.674.a
+		add_political_power = -80
+		annex_country = {
+		target = GEA
+		transfer_troops = no
+		}
+	}
+	option = {# Of Course
+		name = ustates.674.b
+		add_political_power = -60
+		GER = { add_to_faction = FROM }
+		annex_country = {
+		target = GEA
+		transfer_troops = no
+		}
+	}
+}
+
+country_event = {#Germany Declines
+	id = ustates.675
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.675"}
+	title = ustates.675.t
+	desc = ustates.675.d
+	picture = GFX_USA_DOD_interior
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {#To war
+		name = ustates.675.a
+		declare_war_on = {
+		target = GEA
+		type = annex_everything
+		}
+	}
+	option = {#Stand down
+		name = ustates.675.b
+		add_war_support = -0.05
+		add_political_power = -10
 	}
 }
