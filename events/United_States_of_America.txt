@@ -15879,7 +15879,7 @@ country_event = {#Germany Declines
 	}
 }
 
-country_event = {#Tokyo Talks
+country_event = {#MAF investigation
 	id = ustates.676
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.676"}
 	title = ustates.676.t
@@ -15890,14 +15890,31 @@ country_event = {#Tokyo Talks
 
 	option = {#
 		name = ustates.676.a
-		declare_war_on = {
-		target = GEA
-		type = annex_everything
+		add_political_power = 30
+		add_war_support = 0.05
+		create_wargoal = {
+		type = liberate_wargoal
+		target = MAF
 		}
-	}
-	option = {#
-		name = ustates.676.b
-		add_war_support = -0.05
-		add_political_power = -10
+		MAF = {
+		add_political_power = -30
+		add_opinion_modifier = { target = ROOT modifier = medium_decrease }
+		add_stability = -0.05
+		}
+		GER = {
+		add_opinion_modifier = { target = ROOT modifier = small_decrease }
+		}
+		ETH = {
+		add_opinion_modifier = { target = ROOT modifier = medium_increase }
+		}
+		SOM = {
+		add_opinion_modifier = { target = ROOT modifier = medium_increase }
+		}
+		EGY = {
+		add_opinion_modifier = { target = ROOT modifier = medium_increase }
+		}
+		LIB = {
+		add_opinion_modifier = { target = ROOT modifier = medium_increase }
+		}
 	}
 }

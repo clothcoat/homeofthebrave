@@ -949,7 +949,10 @@ USA_american_imperialism = {
 					has_government = paternal_autocrat
 				}
 			}
-			has_completed_focus = USA_back_in_business
+			OR = {
+			has_completed_focus = CAL_league_of_anti_imperialism
+			has_completed_focus = USA_league_of_anti_imperialism
+			}
 		}
 
 		target_root_trigger = {
