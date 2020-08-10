@@ -3135,12 +3135,6 @@ focus_tree = {
 		prerequisite = {
 			focus = USA_economic_investments
 		}
-		available = {
-			OR = {
-				has_idea = USA_civil_war_depression_idea
-				has_idea = USA_economic_recovery_idea
-			}
-		}
 		relative_position_id = USA_begin_reconstruction
 		x = -2
 		y = 3
@@ -3150,17 +3144,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_american_industry"
 			custom_effect_tooltip = USA_economic_recovery_tooltip
-			if = {
-				limit = { has_idea = USA_civil_war_depression_idea }
-				swap_ideas = {
-					remove_idea = USA_civil_war_depression_idea
-					add_idea = USA_economic_recovery_idea
-				}
-			}
-			else_if = {
-				limit = { has_idea = USA_economic_recovery_idea }
-				remove_ideas = USA_economic_recovery_idea
-			}
+			USA_depression_recovery = yes
 		}
 	}
 
@@ -3248,6 +3232,7 @@ focus_tree = {
 				}
 				add_building_construction = { type = infrastructure	level = 1 instant_build = yes }
 			}
+			USA_depression_recovery = yes
 		}
 	}
 
@@ -3271,6 +3256,7 @@ focus_tree = {
 				uses = 2
 				category = industry
 			}
+			USA_depression_recovery = yes
 		}
 	}
 
@@ -3405,17 +3391,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_farming_subsidies"
 			custom_effect_tooltip = USA_economic_recovery_tooltip
-			if = {
-				limit = { has_idea = USA_civil_war_depression_idea }
-				swap_ideas = {
-					remove_idea = USA_civil_war_depression_idea
-					add_idea = USA_economic_recovery_idea
-				}
-			}
-			else_if = {
-				limit = { has_idea = USA_economic_recovery_idea }
-				remove_ideas = USA_economic_recovery_idea
-			}
+			USA_depression_recovery = yes
 		}
 	}
 
@@ -4279,9 +4255,6 @@ focus_tree = {
 		prerequisite = {
 			focus = USA_the_junta
 		}
-		available = {
-			has_idea = USA_civil_war_aftermath_idea5
-		}
 		relative_position_id = USA_american_caeser
 		x = -1
 		y = 6
@@ -4386,9 +4359,6 @@ focus_tree = {
 		prerequisite = {
 			focus = USA_civil_autonomy
 		}
-		available = {
-			has_idea = USA_civil_war_aftermath_idea5
-		}
 		relative_position_id = USA_american_caeser
 		x = -1
 		y = 7
@@ -4459,9 +4429,6 @@ focus_tree = {
 		prerequisite = {
 			focus = USA_the_junta
 		}
-		available = {
-			has_idea = USA_civil_war_aftermath_idea5
-		}
 		relative_position_id = USA_american_caeser
 		x = -3
 		y = 6
@@ -4482,9 +4449,6 @@ focus_tree = {
 		cost = 6.00
 		prerequisite = {
 			focus = USA_limited_elections
-		}
-		available = {
-			has_idea = USA_civil_war_aftermath_idea5
 		}
 		relative_position_id = USA_american_caeser
 		x = -3
@@ -4547,9 +4511,6 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = USA_military_purchases
-		}
-		available = {
-			has_idea = USA_civil_war_aftermath_idea5
 		}
 		relative_position_id = USA_american_caeser
 		x = -2

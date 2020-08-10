@@ -2591,9 +2591,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 50
 		}
-		bypass = {
-			NOT = { has_idea = CSA_market_socialism_idea5 }
-		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_american_syndicalism"
 			swap_ideas = {
@@ -5000,9 +4997,6 @@ focus_tree = {
 		y = 8
 		ai_will_do = {
 			factor = 50
-		}
-		bypass = {
-			NOT = { has_idea = CSA_browders_economic_policy_idea5 }
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_planned_economy"
