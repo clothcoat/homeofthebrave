@@ -1051,7 +1051,7 @@ focus_tree = {
 				category = cat_grand_battle_plan
 			}
 			add_equipment_to_stockpile = {
-			type = infantry_weapons
+			type = infantry_equipment
 			amount = 450
 			producer = CAL
 			}
@@ -3739,7 +3739,7 @@ focus_tree = {
 			add_equipment_to_stockpile = {
 			type = infantry_equipment
 			amount = 1200
-			producer = PSA
+			producer = CAL
 			}
 			random_owned_state = {
 				limit = {
@@ -3819,7 +3819,7 @@ focus_tree = {
 			add_equipment_to_stockpile = {
 			type = infantry_equipment
 			amount = 1200
-			producer = PSA
+			producer = CAL
 			}
 			random_owned_state = {
 				limit = {
