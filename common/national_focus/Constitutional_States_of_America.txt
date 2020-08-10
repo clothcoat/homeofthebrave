@@ -1503,9 +1503,6 @@ focus_tree = {
 		relative_position_id = COR_the_lone_eagle
 		x = 1
 		y = 5
-		bypass = {
-			NOT = { has_idea = USA_civil_war_depression_idea }
-		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_military_industrial_complex"
 			custom_effect_tooltip = USA_economic_recovery_tooltip
@@ -4662,9 +4659,6 @@ focus_tree = {
 		relative_position_id = COR_rebuilding_the_country
 		x = -3
 		y = 1
-		bypass = {
-			NOT = { has_idea = USA_civil_war_depression_idea }
-		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_national_recovery"
 			random_owned_state = {

@@ -2441,7 +2441,6 @@ focus_tree = {
 		completion_reward = {
 			
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_agricultural_unions"
-			add_ideas = CSA_agricultural_revolution_idea
 			add_popularity = { ideology = syndicalist popularity = 0.05 }
 			add_manpower = 3000
 			375 = {	if = {	limit = { is_owned_and_controlled_by = CSA } add_extra_state_shared_building_slots = 1	} }
@@ -5026,8 +5025,8 @@ focus_tree = {
 		y = 0
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_rebuilding_the_country"
-			CSA_increase_recovery = yes
-			CSA_increase_political_recovery = yes
+			USA_depression_recovery = yes
+			USA_political_recovery = yes
 		}
 	}
 
@@ -5048,7 +5047,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_redistribute_wealth"
 			increase_ruling_party_popularity_by_5 = yes
 			add_political_power = -40
-			CSA_increase_recovery = yes
+			USA_depression_recovery = yes
 		}
 	}
 	
@@ -5070,8 +5069,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_womens_liberation"
-			CSA_increase_recovery = yes
-			CSA_increase_political_recovery = yes
+			USA_depression_recovery = yes
+			USA_political_recovery = yes
 			hidden_effect = {
 				country_event = { id = csa.24 days = 240 random = 10 }
 				if = {
@@ -5102,7 +5101,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_social_revolution"
-			CSA_increase_political_recovery = yes
+			USA_political_recovery = yes
 			add_manpower = 10000
 		}
 	}
@@ -5126,7 +5125,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_emancipation_for_all"
-			CSA_increase_political_recovery = yes
+			USA_political_recovery = yes
 			add_stability = 0.04
 			add_political_power = 30
 		}
@@ -5151,7 +5150,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_emancipation_for_all"
-			CSA_increase_political_recovery = yes
+			USA_political_recovery = yes
 			add_manpower = 8000
 		}
 	}
@@ -5173,7 +5172,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_revolutionary_education"
 			add_research_slot = 1
-			CSA_increase_political_recovery = yes
+			USA_political_recovery = yes
 		}
 	}
 
@@ -5193,7 +5192,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_reconstruction"
 			add_ideas = USA_civil_reconstruction_idea
-			CSA_increase_recovery = yes
+			USA_depression_recovery = yes
 			hidden_effect = {
 				country_event = { id = csa.22 days = 335 random = 10 }
 				country_event = { id = csa.14 days = 365 random = 10 }
@@ -5301,7 +5300,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_homes_for_the_people"
-			CSA_increase_recovery = yes
+			USA_depression_recovery = yes
 		}
 	}
 
@@ -5323,7 +5322,7 @@ focus_tree = {
 			remove_ideas = USA_civil_reconstruction_idea
 			add_stability = 0.1
 			add_political_power = 100
-			CSA_increase_recovery = yes
+			USA_depression_recovery = yes
 		}
 	}
 	
@@ -5348,7 +5347,7 @@ focus_tree = {
 			remove_ideas = USA_civil_reconstruction_idea
 			add_stability = 0.1
 			add_political_power = 100
-			CSA_increase_recovery = yes
+			USA_depression_recovery = yes
 		}
 	}
 
@@ -5369,7 +5368,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_a_new_america"
 			increase_ruling_party_popularity_by_5 = yes
 			add_political_power = 100
-			CSA_increase_recovery = yes
+			USA_depression_recovery = yes
 		}
 	}
 
@@ -5704,7 +5703,7 @@ focus_tree = {
 		relative_position_id = CSA_second_continental_army
 		completion_reward = {
 			add_equipment_to_stockpile = {
-			type = artillery
+			type = artillery_equipment
 			amount = 15
 			producer = CSA
 			}
@@ -5741,7 +5740,7 @@ focus_tree = {
 				category = artillery
 			}
 			add_equipment_to_stockpile = {
-			type = artillery
+			type = artillery_equipment
 			amount = 55
 			producer = CSA
 			}
@@ -5845,7 +5844,7 @@ focus_tree = {
 				category = cat_superior_firepower
 			}
 			add_equipment_to_stockpile = {
-				type = artillery
+				type = artillery_equipment
 				amount = 20
 				producer = BBR
 			}
@@ -6727,7 +6726,6 @@ focus_tree = {
 			}
 			MEX = {
 				exists = yes
-				is_valid_war_target = yes
 				NOT = {
 					has_socialist_government = yes
 					has_government = social_democrat
@@ -6791,7 +6789,6 @@ focus_tree = {
 			}
 			MEX = {
 				exists = yes
-				is_valid_war_target = yes
 				has_socialist_government = yes
 				has_government = social_democrat
 				}
@@ -8186,7 +8183,6 @@ focus_tree = {
 			}
 			CAN = {
 				exists = yes
-				is_valid_war_target = yes
 				has_socialist_government = no
 			}
 		}

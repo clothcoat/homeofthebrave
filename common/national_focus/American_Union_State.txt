@@ -7309,9 +7309,11 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TEX_friendship_in_the_americas"
 			if = {
+			limit = {
 			FROM = {
 				is_in_faction_with = ROOT
 					}
+			}
 			FROM = {
 			add_opinion_modifier = { target = ROOT modifier = medium_increase }
 				}
