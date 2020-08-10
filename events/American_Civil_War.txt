@@ -2946,6 +2946,14 @@ country_event = { # Old Democrats Revolt
 		add_stability = -0.08
 		add_political_power = -40
 		add_popularity = { ideology = paternal_autocrat popularity = -0.02 }
+		hidden_effect = {
+		COR = {
+		country_event = {
+		id = amcivwar.1019
+		hours = 5
+				}
+			}
+		}
 	}
 	option = {
 		name = amcivwar.1018.b
@@ -2975,18 +2983,41 @@ country_event = { # New Party Head
 		ai_chance {
 		factor = 80
 		}
-		add_stability = -0.08
-		add_political_power = -40
-		add_popularity = { ideology = paternal_autocrat popularity = -0.02 }
+		add_political_power = 40
+		add_popularity = { ideology = paternal_autocrat popularity = 0.02 }
+		hidden_effect = {
+		country_event = {
+			id = constate.6
+			days = 3
+			}
+		}
 	}
 	option = {
 		name = amcivwar.1019.b
-		add_popularity = { ideology = paternal_autocrat popularity = -0.03 }
-		CAL = {
+		add_popularity = { ideology = national_populist popularity = 0.03 }
+		hidden_effect = {
 		country_event = {
-		id = amcivwar.1017
-		hours = 5
+			id = constate.1000
+			days = 3
 			}
+		}
+	}
+	option = {
+		name = amcivwar.1019.c
+		add_popularity = { ideology = paternal_autocrat popularity = 0.03 }
+		hidden_effect = {
+			create_country_leader = {
+				name = "George Patton"
+				desc = "POLITICS_GEORGE_PATTON_DESC"
+				picture = "gfx/leaders/CUS/George Patton.tga"
+				expire = "1965.1.1"
+				ideology = paternal_autocrat_subtype
+				traits = { }
+			}
+		}
+		set_politics = {
+			ruling_party = paternal_autocrat
+			elections_allowed = no
 		}
 	}
 }

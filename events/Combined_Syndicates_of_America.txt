@@ -10109,3 +10109,26 @@ country_event = { # La Internationale
 		}
 	}
 }
+
+country_event = { #Address the Internationale
+	id = csa.501
+	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.501"}
+	title = csa.501.t
+	desc = csa.501.d
+	picture = congress
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = { #Fourth Internationale
+	name = csa.501.a
+	add_political_power = 30
+	create_faction = "fourth_internationale"
+	}
+	option = { #True Revolutionary Faction
+	name = csa.501.b
+	add_political_power = 30
+	create_faction = "true_revolutionary_faction"
+	}
+}
