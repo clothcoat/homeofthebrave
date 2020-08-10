@@ -272,6 +272,10 @@ country_event = { # Socialist Congressional Election Arrives
 		}
 		}
 		hidden_effect = {
+		country_event = {
+		id = csa.330
+		days = 5
+		}
 		set_country_flag = CSA_Nationalist_Victory
 		}
 		set_country_flag = CSA_constitutional_convention_done
@@ -8912,7 +8916,7 @@ country_event = { #The Nationalization of Land
 	add_popularity = { ideology = radical_socialist popularity = 0.02 }
 	}
 	option = { #They will join eventually
-	name = csa.341.a
+	name = csa.341.b
 	add_stability = 0.01
 	add_political_power = 5
 	}

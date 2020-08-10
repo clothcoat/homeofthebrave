@@ -5011,12 +5011,6 @@ focus_tree = {
 		prerequisite = {
 			focus = CAL_economic_investments
 		}
-		available = {
-			OR = {
-				has_idea = CAL_civil_war_depression_idea
-				has_idea = CAL_economic_recovery_idea
-			}
-		}
 		relative_position_id = CAL_begin_reconstruction
 		x = -2
 		y = 3
@@ -5026,17 +5020,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_american_industry"
 			custom_effect_tooltip = CAL_economic_recovery_tooltip
-			if = {
-				limit = { has_idea = CAL_civil_war_depression_idea }
-				swap_ideas = {
-					remove_idea = CAL_civil_war_depression_idea
-					add_idea = CAL_economic_recovery_idea
-				}
-			}
-			else_if = {
-				limit = { has_idea = CAL_economic_recovery_idea }
-				remove_ideas = CAL_economic_recovery_idea
-			}
+			USA_depression_recovery = yes
 		}
 	}
 
@@ -5289,12 +5273,6 @@ focus_tree = {
 		prerequisite = {
 			focus = CAL_aviation_industry
 		}
-		available = {
-			OR = {
-				has_idea = CAL_civil_war_depression_idea
-				has_idea = CAL_economic_recovery_idea
-			}
-		}
 		relative_position_id = CAL_begin_reconstruction
 		x = 2
 		y = 3
@@ -5304,17 +5282,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_farming_subsidies"
 			custom_effect_tooltip = CAL_economic_recovery_tooltip
-			if = {
-				limit = { has_idea = CAL_civil_war_depression_idea }
-				swap_ideas = {
-					remove_idea = CAL_civil_war_depression_idea
-					add_idea = CAL_economic_recovery_idea
-				}
-			}
-			else_if = {
-				limit = { has_idea = CAL_economic_recovery_idea }
-				remove_ideas = CAL_economic_recovery_idea
-			}
+			USA_depression_recovery = yes
 		}
 	}
 
@@ -7607,10 +7575,6 @@ focus_tree = {
 				has_government = market_liberal
 				has_government = social_liberal
 			}
-			OR = {
-				has_idea = CAL_civil_war_depression_idea
-				has_idea = CAL_economic_recovery_idea
-			}
 		}
 		ai_will_do = {
 			factor = 5
@@ -9039,10 +9003,6 @@ focus_tree = {
 		}
 		available = {
 			has_government = social_democrat
-			OR = {
-				has_idea = CAL_civil_war_depression_idea
-				has_idea = CAL_economic_recovery_idea
-			}
 		}
 		ai_will_do = {
 			factor = 5

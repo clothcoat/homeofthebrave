@@ -1324,7 +1324,10 @@ USA_Pan_American_Development_Foundation = {
 		}
 
 		visible = {
-			has_completed_focus = USA_propping_up_allies
+			OR = {
+			has_completed_focus = CAL_arsenal_of_democracy
+			has_completed_focus = USA_arsenal_of_democracy
+			}
 			FROM = {
 				NOT = { tag = CAN }
 				OR = {
@@ -1337,7 +1340,10 @@ USA_Pan_American_Development_Foundation = {
 		}
 
 		target_root_trigger = {
-			has_completed_focus = USA_propping_up_allies
+			OR = {
+			has_completed_focus = CAL_arsenal_of_democracy
+			has_completed_focus = USA_arsenal_of_democracy
+			}
 		}
 
 		target_trigger = {
@@ -3216,9 +3222,9 @@ USA_rainbow_war_plans_decisions = {
 
 		visible = {
 			OR = {
-				has_completed_focus = USA_working_with_allies
-				has_completed_focus = CAL_working_with_allies
-				has_completed_focus = TEX_working_with_allies
+				has_completed_focus = CAL_western_alliance
+				has_completed_focus = USA_western_alliance
+				has_completed_focus = TEX_friendship_in_the_americas
 			}
 			has_socialist_government = no
 			FROM = {
@@ -3246,9 +3252,9 @@ USA_rainbow_war_plans_decisions = {
 
 		target_root_trigger = {
 			OR = {
-				has_completed_focus = USA_working_with_allies
-				has_completed_focus = CAL_working_with_allies
-				has_completed_focus = TEX_working_with_allies
+				has_completed_focus = CAL_western_alliance
+				has_completed_focus = USA_western_alliance
+				has_completed_focus = TEX_friendship_in_the_americas
 			}
 		}
 

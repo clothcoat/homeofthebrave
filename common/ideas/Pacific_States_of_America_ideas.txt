@@ -1871,9 +1871,59 @@ ideas = {
 			picture = social_engineering
 			modifier = {
 				stability_weekly = 0.01
-				consumer_goods_factor = -0.02
+				consumer_goods_factor = -0.03
 				monthly_population = -0.15
 				party_popularity_stability_factor = 0.05
+			}
+		}
+		
+		CAL_socialization_1 = {#Social Engineering
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_socialization_1"}
+			allowed = {	always = no	}
+			allowed_civil_war = { always = yes }
+			picture = social_engineering
+			modifier = {
+				research_speed_factor = 0.05
+				conversion_cost_mil_to_civ_factor = -0.05
+				party_popularity_stability_factor = 0.05
+			}
+		}
+		
+		CAL_socialization_2_aclu = {#Social Engineering
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_socialization_2_aclu"}
+			allowed = {	always = no	}
+			allowed_civil_war = { always = yes }
+			picture = social_engineering
+			modifier = {
+				consumer_goods_factor = 0.01
+				monthly_population = 0.05
+				party_popularity_stability_factor = 0.15
+			}
+		}
+		
+		CAL_socialization_2_proh = {#Social Engineering
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_socialization_2_proh"}
+			allowed = {	always = no	}
+			allowed_civil_war = { always = yes }
+			picture = social_engineering
+			modifier = {
+				consumer_goods_factor = 0.02
+				monthly_population = 0.06
+				conversion_cost_mil_to_civ_factor = -0.03
+				party_popularity_stability_factor = 0.08
+			}
+		}
+		
+		CAL_socialization_3 = {#Social Engineering
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_socialization_3"}
+			allowed = {	always = no	}
+			allowed_civil_war = { always = yes }
+			picture = social_engineering
+			modifier = {
+				consumer_goods_factor = 0.02
+				monthly_population = 0.06
+				conversion_cost_mil_to_civ_factor = -0.08
+				party_popularity_stability_factor = 0.2
 			}
 		}
 		

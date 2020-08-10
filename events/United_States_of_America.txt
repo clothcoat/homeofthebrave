@@ -11706,7 +11706,7 @@ country_event = { # Change League idea
 
 	trigger = {
 		tag = USA
-		has_completed_focus = USA_cooperaton_treaties
+		has_completed_focus = USA_defensive_navy
 		OR = {
 			AND = {
 				NOT = {

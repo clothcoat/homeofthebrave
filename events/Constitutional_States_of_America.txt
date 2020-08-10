@@ -14,7 +14,7 @@ country_event = { # The American Legion Appointment
 	fire_only_once = yes
 
 	trigger = {
-		tag = CON
+		tag = COR
 		has_global_flag = USA_civil_war_over_flag
 	}
 
@@ -32,7 +32,7 @@ country_event = { # The American Legion Appointment
 		  }
 		}
 		hidden_effect = {
-			set_country_flag = CON_patton_head
+			set_country_flag = COR_patton_head
 		}
 		add_popularity = {
 			ideology = paternal_autocrat
@@ -49,7 +49,7 @@ country_event = { # The American Legion Appointment
 		  }
 		}
 		hidden_effect = {
-			set_country_flag = CON_moseley_legion_head
+			set_country_flag = COR_moseley_legion_head
 		}
 		add_popularity = {
 			ideology = paternal_autocrat
@@ -2893,10 +2893,10 @@ country_event = { # The third Great Migration
 				limit = {
 					exists = yes
 					NOT = {
-						has_war_with = CON
+						has_war_with = COR
 					}
 					NOT = {
-						is_subject_of = CON
+						is_subject_of = COR
 					}
 					OR = {
 						tag = CAL
@@ -2928,10 +2928,10 @@ country_event = { # The third Great Migration
 				limit = {
 					exists = yes
 					NOT = {
-						has_war_with = CON
+						has_war_with = COR
 					}
 					NOT = {
-						is_subject_of = CON
+						is_subject_of = COR
 					}
 					OR = {
 						tag = CAL
@@ -3089,7 +3089,7 @@ country_event = { #Black Taxation
 			producer = COR
 		}
 		add_equipment_to_stockpile = {
-			type = infantry_weapons_1
+			type = infantry_equipment
 			amount = 200
 			producer = COR
 		}
@@ -3152,7 +3152,7 @@ country_event = { #Black Conscription
 			producer = COR
 		}
 		add_equipment_to_stockpile = {
-			type = infantry_weapons_1
+			type = infantry_equipment
 			amount = 200
 			producer = COR
 		}
@@ -3481,14 +3481,14 @@ country_event = { # the AUS wishes to join the Entente
 			factor = 99
 		}
 		add_political_power = 50
-		add_to_faction = CON
+		add_to_faction = COR
 	}
 	option = { # We have no need of them
 		name = constate.100.b
 		ai_chance = {
 			factor = 1
 		}
-		CON = {
+		COR = {
 			country_event = {
 				id = constate.103
 				days = 1
@@ -3531,14 +3531,14 @@ country_event = { # the AUS wishes to join the Reichspakt
 			factor = 99
 		}
 		add_political_power = 50
-		add_to_faction = CON
+		add_to_faction = COR
 	}
 	option = { # We have no need of them
 		name = constate.102.b
 		ai_chance = {
 			factor = 1
 		}
-		CON = {
+		COR = {
 			country_event = {
 				id = constate.103
 				days = 1
@@ -3587,14 +3587,14 @@ country_event = { # the AUS wishes to ally with us(russia)
 			}
 			create_faction = "american_russian_alliance"
 		}
-		add_to_faction = CON
+		add_to_faction = COR
 	}
 	option = {
 		name = constate.104.b #We have no need of them
 		ai_chance = {
 			factor = 1
 		}
-		CON = {
+		COR = {
 			country_event = {
 				id = constate.76
 				days = 1
