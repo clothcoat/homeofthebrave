@@ -6522,3 +6522,98 @@ country_event = { # Children attempt to escape
 		add_popularity = { ideology = national_populist popularity = 0.01 }
 	}
 }
+
+country_event = { #Fate of Democracy
+	id = newengland.140
+	title = newengland.140.t
+	desc = newengland.140.d
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = { #The Nockian Policy
+		name = newengland.140.a
+		add_political_power = 45
+		add_stability = -0.05
+		add_popularity = { ideology = market_liberal popularity = 0.01 }
+		add_popularity = { ideology = paternal_autocrat popularity = 0.04 }
+	}
+	option = { #The Democratic Policy
+		name = newengland.140.b
+		add_political_power = 45
+		add_stability = -0.05
+		add_popularity = { ideology = market_liberal popularity = 0.04 }
+		add_popularity = { ideology = paternal_autocrat popularity = 0.01 }
+		set_party_name = {
+			ideology = market_liberal
+			long_name = NEE_ULTRA_MARK_LIB_long
+			name = NEE_ULTRA_MARK_LIB_party }
+		
+		set_politics = {
+			ruling_party = market_liberal
+			election_frequency = 48
+			elections_allowed = yes
+		}
+	}
+}
+
+country_event = { #Fate of Democracy
+	id = newengland.141
+	title = newengland.141.t
+	desc = newengland.141.d
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = { #The Nockian Policy
+		name = newengland.141.a
+		add_political_power = 45
+	}
+}
+
+country_event = { # Tammany Hall
+	id = newengland.150
+	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.150"}
+	title = newengland.150.t
+	desc = newengland.150.d
+	picture = GFX_new_york
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+		tag = NEE
+		has_full_control_of_state = 358
+		NOT = {
+			has_government = paternal_autocrat
+			has_government = national_populist
+			OR = {
+				has_war_with = CSA
+				has_war_with = TEX
+				has_war_with = COR
+				has_war_with = USA
+				has_war_with = WCC
+				has_war_with = CAL
+				has_war_with = BBR
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 70
+	}
+
+	option = { # Begin repairs immediately.
+		name = newengland.150.a
+		add_popularity = { ideology = social_conservative popularity = 0.03 }
+		add_stability = 0.03
+		if = {
+			limit = {
+			has_government = social_conservative
+			}
+			add_political_power = 30
+		}
+	}
+}

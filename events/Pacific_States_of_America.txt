@@ -5487,7 +5487,14 @@ country_event = {# Ceasefire with MacArthur
 	}
 	option = {# 
 		name = pacificstates.214.b
+		WCC = {
+		give_military_access = CAL
+		}
+		CAL = {
+		give_military_access = WCC
+		}
 		white_peace = USA
+		white_peace = WCC
 		add_political_power = -20
 		add_equipment_to_stockpile = {
 			type = infantry_equipment

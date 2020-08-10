@@ -1330,6 +1330,12 @@ COR_release_BBR = {
 		BBR = {
 			load_oob = "BBR"
 			set_equipment_fraction = 0.9
+			hidden_effect = {
+			country_event = {
+				id = bbr.1
+				days = 2
+				}
+			}
 			add_ideas = {
 				extensive_conscription
 			}

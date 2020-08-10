@@ -25,7 +25,7 @@ country_event = { #A State Under Siege!
 		}
 	}
 	option = { # Oppose a Draft
-		name = bbr.1.a
+		name = bbr.1.b
 		add_stability = 0.05
 		add_political_power = 55
 		hidden_effect = {
@@ -55,7 +55,7 @@ country_event = { # Reinforcements Arrive
 		}
 	}
 	option = { # We are fine as is
-		name = bbr.2.a
+		name = bbr.2.b
 		add_stability = 0.05
 		add_political_power = 55
 		hidden_effect = {
@@ -175,7 +175,7 @@ country_event = { # Nationalist Campaign
 				}
 			}
 		}
-		name = bbr.4.a
+		name = bbr.4.b
 		add_manpower = -1500
 		add_war_support = -0.05
 		add_popularity = { ideology = paternal_autocrat popularity = -0.02 }
@@ -226,7 +226,7 @@ country_event = { # Garvey Denounces Us
 		ai_chance = {
 			factor = 25
 		}
-		name = bbr.5.a
+		name = bbr.5.b
 		add_war_support = 0.05
 		add_popularity = { ideology = totalist popularity = 0.03 }
 		hidden_effect = {
@@ -295,7 +295,7 @@ country_event = { # Duse Muhammad Elected
 				}
 			}
 		}
-		name = bbr.7.a
+		name = bbr.7.b
 		add_manpower = -1500
 		add_war_support = -0.05
 		add_popularity = { ideology = paternal_autocrat popularity = -0.02 }
@@ -547,14 +547,15 @@ country_event = { # Leadership Election
 			}
 		}
 		name = bbr.12.a
-		hidden_effect = {
-			country_event = { id = bbr.11 days = 4 }
-		}
 		add_popularity = { ideology = national_populist popularity = 0.1 }
 		add_stability = 0.1
 		add_political_power = 60
 		add_manpower = 1550
 		add_war_support = 0.08
+		set_politics = {
+			ruling_party = national_populist
+			elections_allowed = no
+		}
 	}
 	option = { #UNIA
 		ai_chance = {
@@ -569,12 +570,16 @@ country_event = { # Leadership Election
 				}
 			}
 		}
-		name = bbr.12.b		
+		name = bbr.12.b
 		add_popularity = { ideology = paternal_autocrat popularity = 0.1 }
 		add_stability = 0.08
 		add_political_power = 35
 		add_manpower = 2200
 		add_war_support = 0.05
+		set_politics = {
+			ruling_party = paternal_autocrat
+			elections_allowed = no
+		}
 	}
 }
 
