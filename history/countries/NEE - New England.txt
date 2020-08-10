@@ -141,6 +141,15 @@ add_ai_strategy = {
 	value = 1
 }
 
+create_country_leader = {
+			name = "Robert McCormick"
+			desc = "POLITICS_THOMAS_HART_DESC"
+			picture = "gfx/leaders/NEE/Robert_R_McCormick.tga"
+			expire = "1965.1.1"
+			ideology = paternal_autocrat_subtype
+			traits = {}
+}
+		
 create_country_leader = {# Du Pont
 	name = "Irenee du Pont"
 	desc = "POLITICS_IRENEE_DU_PONT"

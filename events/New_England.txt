@@ -6058,10 +6058,10 @@ country_event = { # Remnant Leader Election
 		add_political_power = 20
 		create_country_leader = {
 			name = "Albert Jay Nock"
-			desc = "POLITICS_THOMAS_HART_DESC"
+			desc = "POLITICS_Albert_Jay_Nock_DESC"
 			picture = "gfx/leaders/NEE/Albert_Jay_Nock.tga"
 			expire = "1965.1.1"
-			ideology = paternal_autocrat
+			ideology = paternal_autocrat_subtype
 			traits = {}
 		}
 		set_politics = {
@@ -6078,7 +6078,7 @@ country_event = { # Remnant Leader Election
 			desc = "POLITICS_THOMAS_HART_DESC"
 			picture = "gfx/leaders/NEE/Robert_R_McCormick.tga"
 			expire = "1965.1.1"
-			ideology = paternal_autocrat
+			ideology = paternal_autocrat_subtype
 			traits = {}
 		}
 		set_politics = {
