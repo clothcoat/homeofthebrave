@@ -2045,9 +2045,9 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus BBR_national_resources"
 			add_political_power = 30
 			random_owned_controlled_state = {
-				limit = { has_resources_amount = { resource = aluminum amount > 1 } }
+				limit = { has_resources_amount = { resource = aluminium amount > 1 } }
 				add_resource = {
-				type = aluminum
+				type = aluminium
 				amount = 5
 					}
 			}
@@ -2947,9 +2947,9 @@ focus_tree = {
 				}
 			}
 			random_owned_controlled_state = {
-				limit = { has_resources_amount = { resource = aluminum amount > 1 } }
+				limit = { has_resources_amount = { resource = aluminium amount > 1 } }
 				add_resource = {
-				type = aluminum
+				type = aluminium
 				amount = 6
 					}
 			}
@@ -3233,7 +3233,6 @@ focus_tree = {
 		}
 		x = -4
 		y = 1
-		relative_position_id = BBR_socialist_party_moderate
 		ai_will_do = {
 			factor = 50
 		}
