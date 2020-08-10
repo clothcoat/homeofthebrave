@@ -4978,9 +4978,6 @@ country_event = { # America is reunited
 	option = { # at long last we are reunited
 		name = csa.129.a
 		set_country_flag = CSA_america_united
-		every_state = {
-			remove_ACW_cores = yes
-		}
 	}
 }
 

@@ -5584,7 +5584,7 @@ country_event = {# Hearst Requests our Annexation
 
 	option = {# Accept
 		name = pacificstates.216.a
-		ai_will_do = {
+		ai_chance = {
 			factor = 100
 		}
 		CAL = {
@@ -5851,7 +5851,7 @@ country_event = {# Protests Increase
 	fire_only_once = yes
 	
 	option = {#  Send them both
-		ai_will_do = {
+		ai_chance = {
 			factor = 5
 			modifier = {
 				factor = 0
@@ -5876,7 +5876,7 @@ country_event = {# Protests Increase
 		}
 	}
 	option = {# Keep Arnold
-		ai_will_do = {
+		ai_chance = {
 			factor = 5
 			modifier = {
 				factor = 0
@@ -5907,7 +5907,7 @@ country_event = {# Hearst couped by Arnold and Marshall
 	fire_only_once = yes
 
 	option = {# I surrender
-	ai_will_do = {
+	ai_chance = {
 		factor = 1
 		modifier = {
 				has_game_rule = {
@@ -5925,7 +5925,7 @@ country_event = {# Hearst couped by Arnold and Marshall
 		}
 	}
 	option = {# Hold Them Off!
-	ai_will_do = {
+	ai_chance = {
 		factor = 1
 	}
 	name = pacificstates.229.b
@@ -6553,8 +6553,8 @@ country_event = {# Speech to California
 	option = {# Announce our intent to retake the West
 		name = pacificstates.248.a
 		add_war_support = 0.05
-		WCC = add_opinion_modifier = { target = CAL modifier = large_decrease }
-		USA = add_opinion_modifier = { target = CAL modifier = large_decrease }
+		WCC = { add_opinion_modifier = { target = CAL modifier = large_decrease } }
+		USA = { add_opinion_modifier = { target = CAL modifier = large_decrease } }
 		hidden_effect = {
 		country_event = {
 			id = pacificstates.249
