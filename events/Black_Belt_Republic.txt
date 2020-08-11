@@ -283,6 +283,20 @@ country_event = { # Duse Muhammad Elected
 		add_manpower = 1500
 		add_war_support = 0.05
 		add_popularity = { ideology = national_populist popularity = 0.05 }
+		hidden_effect = {
+			create_country_leader = {
+				name = "Charles Young"
+				desc = "POLITICS_CHARLES_YOUNG_DESC"
+				picture = "gfx/leaders/BBR/general_charles_young.tga"
+				expire = "1965.1.1"
+				ideology = authoritarian_democrat_subtype
+				traits = { }
+			}
+		}
+		set_politics = {
+			ruling_party = authoritarian_democrat
+			elections_allowed = no
+		}
 	}
 	option = { # Appoint the ABB
 		ai_chance = {
@@ -309,8 +323,8 @@ country_event = { # Duse Muhammad Elected
 country_event = { # ABB in Power
 	id = bbr.8
 	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.7"}
-	title = bbr.7.t
-	desc = bbr.7.d
+	title = bbr.8.t
+	desc = bbr.8.d
 	picture = ACW_soldiers_watching
 
 	fire_only_once = yes
@@ -318,7 +332,7 @@ country_event = { # ABB in Power
 	is_triggered_only = yes
 	
 	option = { # No, we stay the course
-		name = bbr.7.a
+		name = bbr.8.a
 		hidden_effect = {
 			create_country_leader = {
 				name = "Duse Muhammad"
@@ -464,6 +478,9 @@ country_event = { # March
 		hidden_effect = {
 			country_event = { id = bbr.13 days = 4 }
 		}
+		hidden_effect = {
+			country_event = { id = bbr.14 days = 10 }
+		}
 	}
 	option = { #Empower Young
 		ai_chance = {
@@ -485,6 +502,20 @@ country_event = { # March
 		name = bbr.10.c
 		add_manpower = -3000
 		add_war_support = 0.05
+		hidden_effect = {
+			create_country_leader = {
+				name = "Charles Young"
+				desc = "POLITICS_CHARLES_YOUNG_DESC"
+				picture = "gfx/leaders/BBR/general_charles_young.tga"
+				expire = "1965.1.1"
+				ideology = authoritarian_democrat_subtype
+				traits = { }
+			}
+		}
+		set_politics = {
+			ruling_party = authoritarian_democrat
+			elections_allowed = no
+		}
 		hidden_effect = {
 			country_event = { id = bbr.13 days = 4 }
 		}
@@ -600,9 +631,6 @@ country_event = { # Nationalists Fail
 	add_popularity = { ideology = paternal_autocrat popularity = -0.05 }
 	add_popularity = { ideology = national_populist popularity = -0.08 }
 	add_political_power = 85
-	hidden_effect = {
-			country_event = { id = bbr.14 days = 18 }
-		}
 	}
 }
 
