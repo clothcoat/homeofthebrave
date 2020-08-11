@@ -7657,7 +7657,7 @@ focus_tree = {
 	focus = {
 		id = CSA_denounce_the_internationale
 		icon = GFX_goal_CSA_internationale_treachery
-		cost = 7.25
+		cost = 2.25
 		prerequisite = {
 			focus = CSA_on_the_beach
 		}
@@ -7716,7 +7716,7 @@ focus_tree = {
 			FRA = {
 			add_opinion_modifier = { target = CSA modifier = large_decrease }
 			country_event = {
-			id = csa.1560
+			id = csa.502
 			days = 1
 				}
 			}
