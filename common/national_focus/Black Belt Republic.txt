@@ -3226,12 +3226,13 @@ focus_tree = {
 	focus = {# Farm Coops
 		id = BBR_farm_coops
 		icon = GFX_goal_agricultural_aid
-		cost = 6.00
+		cost = 5.00
 		prerequisite = {
 			focus = BBR_socialist_party
 			focus = BBR_socialist_party_moderate
 		}
-		x = -4
+		relative_position_id = BBR_socialist_party
+		x = 4
 		y = 1
 		ai_will_do = {
 			factor = 50
@@ -3263,7 +3264,7 @@ focus_tree = {
 		available = {
 			has_government = social_democrat
 		}
-		cost = 6.00
+		cost = 1.00
 		x = 40
 		y = 0
 		ai_will_do = {

@@ -2394,6 +2394,16 @@ ideas = {
 			navy_anti_air_attack = 0.1
 			}
 		}
+		
+		CSA_power_of_the_revolution_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_power_of_the_revolution_idea"}
+			picture = liberty_ships_focus
+			modifier = {
+			justify_war_goal_time = -0.3
+			guarantee_cost	= -5
+			mobilization_speed	= -0.05
+			}
+		}
 	}
 ### Companies ###
 	industrial_concern = {# Industrial Manufacturer
