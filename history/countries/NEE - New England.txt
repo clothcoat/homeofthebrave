@@ -369,6 +369,21 @@ create_corps_commander = {# Pierpont M. Hamilton
 	logistics_skill = 1
 }
 
+create_corps_commander = {# Herbert Thomas Johnson
+	name = "Herbert Thomas Johnson"
+	portrait_path = "gfx/leaders/NEE/Portrait_NEE_Herbert_Thomas_Johnson.tga"
+	traits = { 
+		politically_connected
+		career_officer
+		war_hero
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+
 ### Admirals ###
 create_navy_leader = {# Allan Rockwell McCann
 	name = "Allan Rockwell McCann"
