@@ -164,7 +164,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "David Bibb Graves"
 	desc = "POLITICS_DAVID_BIBB_GRAVES_DESC"
-	picture = "Portrait_CON_Huey_Long.tga"
+	picture = "gfx/leaders/CUS/Portrait_David_Bibb_Graves.tga"
 	expire = "1965.1.1"
 	ideology = social_liberal_subtype
 	traits = {}
@@ -325,7 +325,7 @@ create_corps_commander = {# William Shepherd
 	id = 140
 }
 
-create_corps_commander = {# William Shepherd
+create_corps_commander = {# John L. Hines
 	name = "John L. Hines"
 #	desc = "TEX_JOHN_HINES_DESC"
 	portrait_path = "gfx/leaders/CUS/Portrait_COR_John_Hines.tga"
@@ -338,6 +338,122 @@ create_corps_commander = {# William Shepherd
 	planning_skill = 2
 	logistics_skill = 2
 }
+
+create_corps_commander = {# Arthur Hornbui Bell
+	name = "Arthur Hornbui Bell"
+#	desc = "TEX_JOHN_HINES_DESC"
+	portrait_path = "gfx/leaders/CUS/Portrait_COR_Arthur_Hornbui_Bell.tga"
+	traits = {
+		harsh_leader
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = { #Jeb Stuart IV
+	name = "Jeb Stuart IV"
+#	desc = "TEX_JOHN_HINES_DESC"
+	portrait_path = "gfx/leaders/CUS/Portrait_COR_JEB!.tga"
+	traits = {
+		hidden_sympathies
+		commando
+		career_officer
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = { #Nathan Bedford Forrest III
+	name = "Nathan Bedford Forrest III" 
+#	desc = "TEX_JOHN_HINES_DESC"
+	portrait_path = "gfx/leaders/CUS/Portrait_COR_Nathan_Bedford_Forrest_III.tga"
+	traits = {
+		commando
+		career_officer
+		politically_connected
+		paratrooper
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = { #Robert Lee Bullard
+	name = "Robert Lee Bullard"
+#	desc = "TEX_JOHN_HINES_DESC"
+	portrait_path = "gfx/leaders/CUS/Portrait_COR_Robert_Lee_Bullard!.tga"
+	traits = {
+		trait_cautious
+		politically_connected
+	}
+	skill = 2
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 1
+	
+
+}
+
+create_corps_commander = { #Strom
+	name = "Strom Thurmond"
+#	desc = "TEX_JOHN_HINES_DESC"
+	portrait_path = "gfx/leaders/CUS/Portrait_COR_Strom_Thurmond.tga"
+	traits = {
+		paratrooper
+		armor_officer
+		politically_connected
+	}
+	skill = 1
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 1
+}
+
+create_corps_commander = {# Buckner
+	name = "Simon Bolivar Buckner Jr."
+	portrait_path = "gfx/leaders/COR/Portrait_COR_Simon_Bolivar_Buckner_Jr.tga"
+	traits = {
+		organizer
+		trait_reckless
+		politically_connected
+		winter_expert
+		hidden_sympathies
+	}
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 3
+	id = 141
+}
+create_corps_commander = {# Schley
+	name = "Julian Larcombe Schley"
+	portrait_path = "gfx/leaders/COR/Portrait_COR_Julian_Larcombe_Schley.tga"
+	traits = {
+		war_hero
+		politically_connected
+		hidden_sympathies
+		adaptable
+		skilled_staffer
+	}
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 3
+	id = 142
+}
+
 
 ### Navy Leader
 create_navy_leader = {# Arthur L. Bristol
