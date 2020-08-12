@@ -602,6 +602,27 @@ ideas = {
 			}
 		}
 		
+		CAL_media_empire_idea = {# Media Empire
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_media_empire_idea"}
+			allowed = { always = no }
+			available = { 
+			OR = {
+			has_government = authoritarian_democrat
+			has_government = paternal_autocrat
+			has_government = national_populist
+				}
+			}
+			removal_cost = -1
+			picture = media_regulation
+			modifier = {
+				political_power_gain = 0.12
+				war_support_weekly = 0.007
+				stability_weekly = 0.006
+				encryption = 0.06
+				max_command_power = 60
+			}
+		}
+
 		CAL_war_powers_act = {# War Powers Act
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_war_powers_act"}
 			allowed = { always = no }
@@ -1997,7 +2018,19 @@ ideas = {
 				party_popularity_stability_factor = -0.05
 			}
 		}
-		
+
+		CAL_american_values_ideas = {#American Values
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_american_values_ideas"}
+			allowed = {	always = no	}
+			picture = social_engineering
+			modifier = {
+				market_liberal_drift = 0.03
+				social_liberal_drift = 0.03
+				social_conservative_drift = 0.03
+				social_democrat_drift = 0.03
+			}
+		}		
+
 		###Foreign Policy###
 		
 		###New Moralism###
@@ -2850,6 +2883,33 @@ ideas = {
 				max_commander_army_size	= 6
 				max_command_power = 75
 				command_power_gain_mult = 0.06
+			}
+		}
+			CAL_maritime_industry_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CAL_maritime_industry_idea"}
+			picture = generic_coastal_defense_ships2
+			modifier = {
+				production_speed_naval_base_factor = 0.2
+				production_speed_dockyard_factor = 0.1
+				industrial_capacity_dockyard = 0.1
+			}
+			equipment_bonus = {
+				submarine = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				destroyer = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				light_cruiser = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				heavy_cruiser = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
 			}
 		}
 		CAL_the_big_push_westwards = {# The Big Push
