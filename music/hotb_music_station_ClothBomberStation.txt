@@ -183,6 +183,23 @@ music = {
 }
 
 music = {
+	song = "theyellowroseoftexas"
+
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = {
+				tag = TEX
+			}
+		}
+		modifier = {
+			factor = 2
+			tag = TEX
+		}
+	}
+}
+
+music = {
 	song = "kingcottonmarch"
 
 	chance = {
