@@ -255,9 +255,9 @@ create_field_marshal = {# John R. Fox
 	logistics_skill = 3
 }
 create_field_marshal = {# Ben Davis
-	name = "Benjamin Davis"
+	name = "Benjamin O Davis Sr."
 	desc = "USA_BENJAMIN_DAVIS_ARMY_DESC"
-	portrait_path = "gfx/leaders/USA/Ben_Davis_SR.tga"
+	portrait_path = "gfx/leaders/BBR/Portrait_SNA_Benjamin_O_Davis_Sr.tga"
 	traits = {
 		career_officer
 		politically_connected
@@ -273,5 +273,88 @@ create_field_marshal = {# Ben Davis
 
 
 ### Generals ###
+
+create_corps_commander = {
+	name = "Benjamin O Davis Jr."
+	portrait_path = "gfx/leaders/BBR/Portrait_SNA_Benjamin_O_Davis_Jr.tga"
+	traits = {
+		politically_connected
+		career_officer
+		air_commander
+	}
+	skill = 2
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "Henry Johnson"
+	portrait_path = "gfx/leaders/BBR/Portrait_SNA_Henry_Johnson.tga"
+	traits = {
+		war_hero
+		infantry_officer
+	}
+	skill = 1
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = "Henry Ossian Flipper"
+	portrait_path = "gfx/leaders/BBR/Portrait_SNA_Henry_Ossian_Flipper.tga"
+	traits = {
+		career_officer
+		infantry_officer
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "Jackie Robinson"
+	portrait_path = "gfx/leaders/BBR/Portrait_SNA_Jackie_Robinson.tga"
+	traits = {
+		armor_officer
+		trait_reckless
+		media_personality
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "John R. Fox"
+	portrait_path = "gfx/leaders/BBR/Portrait_SNA_John_R_Fox.tga"
+	traits = {
+		war_hero
+		trait_reckless
+		bearer_of_artillery
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Milton Herndon"
+	portrait_path = "gfx/leaders/BBR/Portrait_SNA_Milton_Herndon.tga"
+	traits = {
+		politically_connected
+	}
+	skill = 2
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
 
 USA_start_naval_variant = yes

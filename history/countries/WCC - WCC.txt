@@ -396,17 +396,17 @@ create_corps_commander = {# Edwin F. Harding
 	logistics_skill = 4
 	id = 9650
 }
-create_corps_commander = {# Herbert Holdridge
-	name = "Herbert Charles Heitke"
-	desc = "USA_HERBERT_HOLDRIDGE_ARMY_DESC"
-	portrait_path = "gfx/leaders/CSA/Portrait_CSA_herbert_holdridge.tga"
-	traits = { trickster }
-	skill = 3
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 4
-	logistics_skill = 2
-	id = 610
-}
+#create_corps_commander = {# Herbert Holdridge
+	#name = "Herbert Charles Heitke"
+	#desc = "USA_HERBERT_HOLDRIDGE_ARMY_DESC"
+	#portrait_path = "gfx/leaders/CSA/Portrait_CSA_herbert_holdridge.tga"
+	#traits = { trickster }
+	#skill = 3
+	#attack_skill = 2
+	#defense_skill = 2
+	#planning_skill = 4
+	#logistics_skill = 2
+	#id = 610
+#}
 
 USA_start_naval_variant = yes
