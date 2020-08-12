@@ -18,6 +18,7 @@ focus_tree = {
 		icon = GFX_BBR_ABB
 		available = {
 			has_government = totalist
+			has_country_leader = { ruling_only = yes name = "Duse Muhammad" }
 		}
 		cost = 1.00
 		x = 2
@@ -3198,6 +3199,9 @@ focus_tree = {
 		prerequisite = {
 			focus = BBR_democratize_congress
 		}
+		mutually_exclusive = {
+		focus = BBR_captain_at_the_helm
+		}
 		relative_position_id = BBR_american_party
 		x = -1
 		y = 6
@@ -3217,6 +3221,9 @@ focus_tree = {
 		cost = 6.00
 		prerequisite = {
 			focus = BBR_democratize_congress
+		}
+		mutually_exclusive = {
+		focus = BBR_washingtonianism
 		}
 		relative_position_id = BBR_american_party
 		x = 1
@@ -3247,6 +3254,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BBR_ally_long"
+			TEX = {
+			add_opinion_modifier = { target = BBR modifier = medium_increase }
+			}
 		}
 	}
 	focus = {# Farm Coops

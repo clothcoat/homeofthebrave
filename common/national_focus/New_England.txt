@@ -1524,6 +1524,12 @@ focus_tree = {
 			idea = BBR_combatting_the_mob_idea
 			days = 50
 			}
+			hidden_effect = {
+			country_event = {
+				id = newengland.161
+				days = 20
+				}
+			}
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NEE_fight_the_mob"
@@ -1714,6 +1720,12 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus NEE_take_on_machines"
 			add_popularity = { ideology = social_conservative popularity = -0.05 }
 			add_political_power = 50
+			hidden_effect = {
+			country_event = {
+				id = newengland.160
+				days = 1
+				}
+			}
 		}
 	}
 	
