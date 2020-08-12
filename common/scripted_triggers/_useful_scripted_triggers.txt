@@ -685,6 +685,9 @@ is_american_tag = {
 		tag = TEX
 		tag = CAL
 		tag = NEE
+		tag = BBR
+		tag = COR
+		tag = WCC
 	}
 }
 is_arab_tag = {
@@ -1051,6 +1054,12 @@ has_no_african_interests = {
 			AND = {
 				tag = GBR
 				NOT = { has_country_flag = GBR_decolonize }
+			}
+			AND = {
+				tag = BBR
+				NOT = {
+					has_government = paternal_autocrat
+				}
 			}
 			AND = {
 				tag = CAN

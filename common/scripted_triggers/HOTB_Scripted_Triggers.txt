@@ -1,0 +1,15 @@
+is_acw_tag = {
+	OR = {
+		is_federal_tag = yes
+		tag = CAL
+		tag = TEX
+		tag = COR
+	}
+}
+
+is_federal_tag = {
+	OR = {
+		tag = USA
+		tag = WCC
+	}
+}

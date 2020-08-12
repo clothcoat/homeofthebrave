@@ -51,17 +51,21 @@ on_actions = {
 				limit = {
 					has_global_flag = PSA_rockies_ceasefire
 					OR = {
-						tag = CSA
 						tag = USA
 						tag = CAL
 						tag = TEX
+						tag = CSA
+						tag = COR
+						tag = WCC
 					}
 					FROM = {
 						OR = {
-							tag = CSA
 							tag = USA
 							tag = CAL
 							tag = TEX
+							tag = CSA
+							tag = COR
+							tag = WCC
 						}
 					}
 				}
@@ -127,6 +131,8 @@ on_actions = {
 							tag = CAL
 							tag = TEX
 							tag = CSA
+							tag = COR
+							tag = WCC
 						}
 					}
 					FROM = {
@@ -135,6 +141,8 @@ on_actions = {
 							tag = CAL
 							tag = TEX
 							tag = CSA
+							tag = COR
+							tag = WCC
 						}
 						OR = {
 							has_idea = USA_civil_war_war_aftermath_idea
@@ -255,6 +263,8 @@ on_actions = {
 						tag = CAL
 						tag = TEX
 						tag = CSA
+						tag = COR
+						tag = WCC
 					}
 					has_country_flag = ACW_attacked_during_recovery
 				}
