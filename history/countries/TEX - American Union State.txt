@@ -201,7 +201,7 @@ create_corps_commander = {# Joseph "Lightning Joe" Lawton Collins
 create_corps_commander = {# Courtney Hodges
 	name = "Courtney Hicks Hodges"
 	desc = "TEX_COURTNEY_HODGES_ARMY_DESC"
-	portrait_path = "gfx/leaders/USA/Portrait_USA_Cortney_Hodges.dds"
+	portrait_path = "gfx/leaders/TEX/Portrait_TEX_Courtney_Hicks_Hodges.tga"
 	traits = {
 		panzer_leader
 		career_officer
@@ -348,6 +348,31 @@ create_corps_commander = {# Pedro del Valle
 	planning_skill = 1
 	logistics_skill = 2
 	id = 939
+}
+create_corps_commander = {# Demas Thurlow Craw
+	name = "Demas T. Craw"
+	portrait_path = "gfx/leaders/TEX/Portrait_TEX_Thurlow_Craw.tga"
+	traits = { trickster }
+	skill = 2
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+create_corps_commander = {# Fox Conner
+	name = "Fox Conner"
+	desc = "USA_FOX_CONNER_ARMY_DESC"
+	portrait_path = "gfx/leaders/TEX/Portrait_TEX_Fox_Conner.tga"
+	traits = {
+		old_guard
+		politically_connected
+	}
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 2
+	id = 988
 }
 ### Navy Leader
 create_navy_leader = {# Samuel Murray Robinson

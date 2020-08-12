@@ -254,6 +254,21 @@ create_corps_commander = {# Merritt A. Edson
 	planning_skill = 1
 	logistics_skill = 2
 }
+create_corps_commander = {# Vanderbilt
+	name = "Cornelius Vanderbilt III"
+	portrait_path = "gfx/leaders/NEE/Portrait_NEE_Cornelius_Vanderbilt_III.tga"
+	traits = {
+		old_guard
+		politically_connected
+		organisational_leader
+		trait_engineer
+	}
+	skill = 2
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 3
+	logistics_skill = 2
+}
 create_corps_commander = {# Mark Clark
 	name = "Mark Clark"
 	desc = "NEE_MARK_CLARK_ARMY_DESC"
@@ -321,6 +336,35 @@ create_corps_commander = {# Lemuel C. Shepherd Jr
 	skill = 1
 	attack_skill = 1
 	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {# Robert W. Grow
+	name = "Robert W. Grow"
+	portrait_path = "gfx/leaders/NEE/Portrait_NEE_Robert_W_Grow.tga"
+	traits = { 
+		trait_reckless
+		armor_officer
+	}
+	skill = 2
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {# Pierpont M. Hamilton
+	name = "Pierpont M. Hamilton"
+	portrait_path = "gfx/leaders/NEE/Portrait_NEE_Pierpont_M_Hamilton.tga"
+	traits = { 
+		trait_reckless
+		career_officer
+		organizer
+	}
+	skill = 2
+	attack_skill = 3
+	defense_skill = 2
 	planning_skill = 1
 	logistics_skill = 1
 }
