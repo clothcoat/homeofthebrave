@@ -297,7 +297,7 @@ create_corps_commander = {# Virgil Effinger
 create_corps_commander = {# Samuel Green
 	name = "Samuel Green"
 	desc = "TEX_SAMUEL_GREEN_ARMY_DESC"
-	portrait_path = "gfx/leaders/TEX/Portrait_TEX_bruce_clarke.tga"
+	portrait_path = "gfx/leaders/CUS/COR_Sam_Green.tga"
 	traits = {
 		inflexible_strategist
 	}
@@ -323,6 +323,20 @@ create_corps_commander = {# William Shepherd
 	planning_skill = 1
 	logistics_skill = 1
 	id = 140
+}
+
+create_corps_commander = {# William Shepherd
+	name = "John L. Hines"
+#	desc = "TEX_JOHN_HINES_DESC"
+	portrait_path = "gfx/leaders/CUS/Portrait_COR_John_Hines.tga"
+	traits = {
+		armor_officer
+	}
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 2
 }
 
 ### Navy Leader
