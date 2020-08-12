@@ -8403,3 +8403,50 @@ news_event = { #Anti-Baldomero Coup
 		}
 	}
 }
+
+news_event = { #Annexations
+	id = worldnews.500
+	immediate = { log = "[GetDateText]: [Root.GetName]: event worldnews.500" }
+	title = worldnews.500.t
+	desc = worldnews.500.d
+	picture = GFX_news_event_USA_triumph
+
+	is_triggered_only = yes
+
+	trigger = {
+			is_ai = no
+	}
+
+	option = { #Annex
+		name = worldnews.500.a
+		DEN = {
+		annex_country = {
+		target = ICE
+		transfer_troops = yes
+			}
+		}
+		MON = {
+		annex_country = {
+		target = TAN
+		transfer_troops = yes
+			}
+		}
+		ARG = {
+		annex_country = {
+		target = URG
+		transfer_troops = yes
+			}
+		}
+		OTT = {
+		annex_country = {
+		target = ARM
+		transfer_troops = yes
+			}
+		}
+	}
+
+	option = { #Edgy Choice
+		name = worldnews.500.b
+	}
+}
+
