@@ -103,6 +103,7 @@ CAL_new_freedom_2:0 "New Liberalism"
 CAL_new_freedom_3:0 "New Liberalism"
 CAL_new_freedom_4:0 "New Liberalism"
 CAL_new_freedom_5:0 "New Liberalism"
+CAL_new_freedom_6:0 "New Liberalism"
 CAL_free_trade:0 "Free Trade"
 CAL_chautauqua_idea:0 "Chautauqua Assemblies"
 CAL_brain_trust_idea:0 "The Brain Trust"
@@ -276,6 +277,8 @@ CAL_naval_industry_tooltip: "We now own the states that specialized in shipbuild
 CAL_aviation_industry_tooltip: "We now own the states that specialized in airplane production before the Civil War. We will this to our advantage and dominate the skies."
 CAL_economic_recovery_tooltip: "We will reawaken America's industrial prowess"
 CAL_farming_recovery_tooltip: "We will give subsidies to farmers in the hopes of putting some of the pieces back together."
+CAL_hawaiian_launchpad_tooltip: "If we own Hawaii, we will be able to expand our capacities in the Pacific."
+CAL_trials_will_begin: "Trials will begin."
 
 ##Techs (I didn't know where to put this)###
 improved_recon_units_tech:0 "Improved Recon Units"
@@ -293,12 +296,13 @@ CAL_Operation_Liberty_mission_desc:0 "With the Civil War raging on the other sid
 PSA_reunited_america_flag:0 "America has been reunited"
 PSA_1937_election_hearst:0 "Hearst Won the Election"
 CAL_national_democrats_win_twice_flag:0 "The National Democrats secured the second election"
-CAL_democrats_won_twice_flag:0 "Democrats Won Re-election"
+CAL_democrats_won_twice_flag:0 "Democrats Won Re-Election"
 CAL_liberals_won_twice_flag:0 "New Liberals Won Re-Election"
 CAL_republicans_win_twice:0 "Classical Liberals Won Re-Election"
 CAL_social_democrats_win_twice_flag:0 "Social Democrats Won Re-Election"
 PSA_1937_election_occured:0 "1937 Election Occurred"
 CAL_classical_liberal_mandate_flag:0 "Classical Liberal Mandate"
+CAL_radicals_won_twice_flag:0 "Radicals Won Re-Election"
 
 ### Decisions ###
 USA_civil_war_decisions:0 "Civil War Decisions"
@@ -905,7 +909,7 @@ CAL_glass_steagall_desc:0 "Investment and retail banking have long been intertwi
 CAL_FDIC:0 "Federal Deposit Insurance Corporation"
 CAL_FDIC_desc:0 "We can not allow people to lose their entire deposits simply because the banks fail them! The FDIC will insure depositors up to a certain point and in the process restore confidence in the banking system."
 CAL_AFDC:0 "Aid to Families with Dependent Children"
-CAL_AFDC_desc:0 "Despite our best efforts some large families in poverty need some more aid. We should pass the AFDC to grant direct welfare for large families with children."
+CAL_AFDC_desc:0 "Despite our best efforts, some large families in poverty need some more aid. We should pass the AFDC to grant direct welfare for large families with children. This will free up time for many of our workers, allow them to be less stressed about their families, hence making them more efficient."
 
 ### Market Liberals Win Twice###
 CAL_republicans_win_twice:0 "Republicans Win Re-Election"
@@ -2310,5 +2314,10 @@ CAL_military_lobby_idea_3: "Military Lobby"
 CAL_media_empire_idea: "Media Empire"
 CAL_trial_of_american_companies_tooltip: "We will put traitorous companies on trial."`
 CAL_naval_industry: "Naval Industry"
-CAL_maritime_industry_idea: "Maritime Industry"`
+CAL_maritime_industry_idea: "Maritime Industry"
 CAL_american_values_ideas: "American Values"
+CAL_american_women_bill_idea: "American Women's Bill"
+CAL_tariff_reduction_idea: "Reduced Tariffs"
+CAL_aid_to_families_idea: "Aid to Families with Dependent Children"`
+CAL_fdic_idea: "FDIC"`
+CAL_glass_steagall_idea: "Glass-Steagall"
