@@ -202,6 +202,25 @@ set_variable = {
 set_country_flag = USA_rebuilt_new_england_flag
 
 ### Field Marshals ###
+create_field_marshal = {# 
+	name = "John J. Pershing"
+	portrait_path = "gfx/leaders/NEE/Portrait_NEE_John_Pershing.tga"
+	traits = {
+		old_guard
+		offensive_doctrine
+		aggressive_assaulter
+		war_hero
+		infantry_officer
+		infantry_leader
+		skilled_staffer
+	}
+	skill = 4
+	attack_skill = 4
+	defense_skill = 4
+	planning_skill = 4
+	logistics_skill = 3
+}
+
 create_field_marshal = {# Leslie Groves
 	name = "Leslie Groves"
 	desc = "NEE_LESLIE_GROVES_ARMY_DESC"
