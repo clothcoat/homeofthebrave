@@ -77,7 +77,7 @@ country_event = { # White Defense League requests army promotions
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.2"}
 	title = constate.2.t
 	desc = constate.2.d
-	picture = AUS_christian_identity
+	picture = GFX_CAR_I_can't_see_outta_this_thing
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -155,7 +155,7 @@ country_event = { # Fordists
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.3"}
 	title = constate.3.t
 	desc = constate.3.d
-	picture = AUS_christian_identity
+	picture = GFX_report_event_generic_diplomacy2
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -237,7 +237,7 @@ country_event = { # White Leagues ask us to stop Ford
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.4"}
 	title = constate.4.t
 	desc = constate.4.d
-	picture = AUS_christian_identity
+	picture = GFX_CAR_spook
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -308,7 +308,6 @@ country_event = { # Dinner with Alfalfa Bill
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.5"}
 	title = constate.5.t
 	desc = constate.5.d
-	picture = AUS_christian_identity
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -374,7 +373,7 @@ country_event = { # Murray steps down!
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.6"}
 	title = constate.6.t
 	desc = constate.6.d
-	picture = AUS_christian_identity
+	picture = GFX_report_event_USA_military_trial
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -412,7 +411,7 @@ country_event = { # Order of 76 threatened
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.7"}
 	title = constate.7.t
 	desc = constate.7.d
-	picture = AUS_christian_identity
+	picture = GFX_CAR_black_legion_weapons
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -475,7 +474,7 @@ country_event = { # Order of 76 Recruiter Killed
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.8"}
 	title = constate.8.t
 	desc = constate.8.d
-	picture = AUS_christian_identity
+	picture = GFX_CAR_hail_hydra
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -540,7 +539,7 @@ country_event = { # Old Democrats Denounces Us!
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.9"}
 	title = constate.9.t
 	desc = constate.9.d
-	picture = AUS_christian_identity
+	picture = GFX_CAR_this_is_vancouver
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -562,7 +561,7 @@ country_event = { # Order of 76 headquarters ambushed
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.10"}
 	title = constate.10.t
 	desc = constate.10.d
-	picture = AUS_christian_identity
+	picture = GFX_report_event_USA_civil_war
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -585,7 +584,7 @@ country_event = { # The Imperial Wizard Takes Charge
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.1000"}
 	title = constate.1000.t
 	desc = constate.1000.d
-	picture = AUS_christian_identity
+	picture = GFX_CAR_indoctrinating_normies
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -619,7 +618,6 @@ country_event = { # Simmons Heart Attack
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.11"}
 	title = constate.11.t
 	desc = constate.11.d
-	picture = AUS_christian_identity
 
 	trigger = {
 	has_country_leader = { ruling_only = yes name = "William Joseph Simmons" }
@@ -655,7 +653,6 @@ country_event = { # Patton
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.1100"}
 	title = constate.1100.t
 	desc = constate.1100.d
-	picture = AUS_christian_identity
 
 	trigger = {
 	has_country_leader = { ruling_only = yes name = "William Joseph Simmons" }
@@ -699,7 +696,7 @@ country_event = { # Simmons Death
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.12"}
 	title = constate.12.t
 	desc = constate.12.d
-	picture = AUS_christian_identity
+	picture = GFX_CAR_gamers
 
 	trigger = {
 	has_country_leader = { ruling_only = yes name = "William Joseph Simmons" }
@@ -746,7 +743,7 @@ country_event = { # Stephenson Allies Effinger
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.13"}
 	title = constate.13.t
 	desc = constate.13.d
-	picture = AUS_christian_identity
+	picture = GFX_CAR_black_legion_weapons
 
 	is_triggered_only = yes
 	
@@ -767,7 +764,7 @@ country_event = { # Stephenson's offer
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.14"}
 	title = constate.14.t
 	desc = constate.14.d
-	picture = AUS_christian_identity
+	picture = GFX_CAR_black_legion_tyranny
 
 	is_triggered_only = yes
 	
@@ -831,7 +828,7 @@ country_event = { # Hiram Wesley Evans killed!
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.15"}
 	title = constate.15.t
 	desc = constate.15.d
-	picture = AUS_christian_identity
+	picture = GFX_CAR_blacklegion
 
 	is_triggered_only = yes
 	
@@ -867,12 +864,12 @@ country_event = { # Hiram Wesley Evans killed!
 	}
 }
 
-country_event = { # Hiram Wesley Evans killed!
+country_event = { # Papacy
 	id = constate.16
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.16"}
 	title = constate.16.t
 	desc = constate.16.d
-	picture = AUS_christian_identity
+	picture = GFX_CAR_anti_catholicism_2
 
 	is_triggered_only = yes
 	
@@ -904,7 +901,7 @@ country_event = { # Fate of the Georgia Klan
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.17"}
 	title = constate.17.t
 	desc = constate.17.d
-	picture = AUS_christian_identity
+	picture = GFX_CAR_rip_young_klan
 
 	is_triggered_only = yes
 	
@@ -931,7 +928,7 @@ country_event = { # California Dispute
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.1700"}
 	title = constate.1700.t
 	desc = constate.1700.d
-	picture = AUS_christian_identity
+	picture = GFX_CAR_black_legion_recruitment
 
 	is_triggered_only = yes
 	
@@ -968,7 +965,7 @@ country_event = { # Legion Infighting
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.1701"}
 	title = constate.1701.t
 	desc = constate.1701.d
-	picture = AUS_christian_identity
+	picture = GFX_CAR_black_legion_michigan
 
 	is_triggered_only = yes
 	
@@ -1031,7 +1028,7 @@ country_event = { # Old Democrat leadership
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.1702"}
 	title = constate.1702.t
 	desc = constate.1702.d
-	picture = AUS_christian_identity
+	picture = GFX_CAR_black_legion_police
 
 	is_triggered_only = yes
 	
@@ -1091,7 +1088,7 @@ country_event = { # Settlement of the Old Klan
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.1704"}
 	title = constate.1704.t
 	desc = constate.1704.d
-	picture = AUS_christian_identity
+	picture = GFX_CAR_hail_hydra
 
 	is_triggered_only = yes
 	
@@ -1110,7 +1107,7 @@ country_event = { # Chicago Terror
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.1705"}
 	title = constate.1705.t
 	desc = constate.1705.d
-	picture = AUS_christian_identity
+	picture = GFX_CAR_black_legion_michigan
 
 	is_triggered_only = yes
 	
@@ -1157,7 +1154,7 @@ country_event = { # A New Nation
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.1706"}
 	title = constate.1706.t
 	desc = constate.1706.d
-	picture = AUS_christian_identity
+	picture = GFX_CAR_black_legion_tyranny
 
 	is_triggered_only = yes
 	
@@ -1182,7 +1179,7 @@ country_event = { # Catholic Churches Attacked
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.1707"}
 	title = constate.1707.t
 	desc = constate.1707.d
-	picture = AUS_christian_identity
+	picture = GFX_CAR_anti_catholicism
 
 	is_triggered_only = yes
 	
@@ -1219,7 +1216,6 @@ country_event = { # Letter to Patton
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.18"}
 	title = constate.18.t
 	desc = constate.18.d
-	picture = AUS_christian_identity
 
 	is_triggered_only = yes
 	
@@ -1280,7 +1276,7 @@ country_event = { # White League intra-raids
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.1800"}
 	title = constate.1800.t
 	desc = constate.1800.d
-	picture = AUS_christian_identity
+	picture = GFX_CAR_black_legion_terror_2
 
 	is_triggered_only = yes
 	
@@ -1322,7 +1318,7 @@ country_event = { # Death of Stephenson
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.1801"}
 	title = constate.1801.t
 	desc = constate.1801.d
-	picture = AUS_christian_identity
+	picture = GFX_CAR_kkk_canada
 
 	is_triggered_only = yes
 	
@@ -1344,7 +1340,6 @@ country_event = { # Meeting Place bombed
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.1802"}
 	title = constate.1802.t
 	desc = constate.1802.d
-	picture = AUS_christian_identity
 
 	is_triggered_only = yes
 	
@@ -1403,7 +1398,6 @@ country_event = { # Patton
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.1803"}
 	title = constate.1803.t
 	desc = constate.1803.d
-	picture = AUS_christian_identity
 
 	is_triggered_only = yes
 	
@@ -1435,7 +1429,6 @@ country_event = { # Stephenson Killed
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.19"}
 	title = constate.19.t
 	desc = constate.19.d
-	picture = AUS_christian_identity
 
 	is_triggered_only = yes
 	
@@ -1495,7 +1488,6 @@ country_event = { # Armstrong's Bid
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.20"}
 	title = constate.20.t
 	desc = constate.20.d
-	picture = AUS_christian_identity
 
 	is_triggered_only = yes
 	
@@ -1551,7 +1543,7 @@ country_event = { # Armstrong bends the knee
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.21"}
 	title = constate.21.t
 	desc = constate.21.d
-	picture = AUS_christian_identity
+	picture = GFX_CAR_cross_3
 
 	is_triggered_only = yes
 	
@@ -1572,7 +1564,6 @@ country_event = { # The Martydom of an Apostle
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.2100"}
 	title = constate.2100.t
 	desc = constate.2100.d
-	picture = AUS_christian_identity
 
 	is_triggered_only = yes
 	
@@ -1591,7 +1582,7 @@ country_event = { # Winrod endorses Evans
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.22"}
 	title = constate.22.t
 	desc = constate.22.d
-	picture = AUS_christian_identity
+	picture = GFX_CAR_kkk_parade
 
 	is_triggered_only = yes
 	
@@ -1613,7 +1604,6 @@ country_event = { # Evans Elected
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.23"}
 	title = constate.23.t
 	desc = constate.23.d
-	picture = AUS_christian_identity
 
 	is_triggered_only = yes
 	
@@ -1647,7 +1637,7 @@ country_event = { # Deportation Policy
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.25"}
 	title = constate.25.t
 	desc = constate.25.d
-	picture = AUS_christian_identity
+	picture = GFX_CAR_no_immigration_2
 
 	is_triggered_only = yes
 	
@@ -1700,7 +1690,7 @@ country_event = { # Arthur F. Lupp Sr. arrested
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.2500"}
 	title = constate.2500.t
 	desc = constate.2500.d
-	picture = AUS_christian_identity
+	picture = GFX_CAR_arrests
 
 	is_triggered_only = yes
 	
@@ -1719,7 +1709,6 @@ country_event = { # Starnes' past
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.2501"}
 	title = constate.2501.t
 	desc = constate.2501.d
-	picture = AUS_christian_identity
 
 	is_triggered_only = yes
 	
@@ -1745,7 +1734,7 @@ country_event = { # Head of the ODP
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.2502"}
 	title = constate.2502.t
 	desc = constate.2502.d
-	picture = AUS_christian_identity
+	picture = GFX_CAR_kkk_dc
 
 	is_triggered_only = yes
 	
@@ -1772,7 +1761,7 @@ country_event = { # Marshal Policy
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.26"}
 	title = constate.26.t
 	desc = constate.26.d
-	picture = AUS_christian_identity
+	picture = GFX_CAR_kkk_propaganda_3
 
 	is_triggered_only = yes
 	

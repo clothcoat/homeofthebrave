@@ -206,13 +206,6 @@ create_country_leader = {# Elijah Muhammad
 	traits = {}
 }
 
-add_ideas = {
-	### cabinet ###
-	# national ideas
-	isolation
-	###Resistance
-}
-
 ### Field Marshal
 create_field_marshal = {# Charles Young
 	name = "Charles Young"
@@ -247,23 +240,6 @@ create_field_marshal = {# John R. Fox
 	planning_skill = 3
 	logistics_skill = 3
 }
-create_field_marshal = {# Ben Davis
-	name = "Benjamin O Davis Sr."
-	desc = "USA_BENJAMIN_DAVIS_ARMY_DESC"
-	portrait_path = "gfx/leaders/BBR/Portrait_SNA_Benjamin_O_Davis_Sr.tga"
-	traits = {
-		career_officer
-		politically_connected
-		offensive_doctrine
-		organizer
-	}
-	skill = 4
-	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 4
-	logistics_skill = 3
-}
-
 
 ### Generals ###
 
@@ -288,7 +264,7 @@ create_corps_commander = {
 		war_hero
 		infantry_officer
 	}
-	skill = 1
+	skill = 2
 	attack_skill = 2
 	defense_skill = 2
 	planning_skill = 1
@@ -328,7 +304,7 @@ create_corps_commander = {
 	traits = {
 		politically_connected
 	}
-	skill = 2
+	skill = 1
 	attack_skill = 1
 	defense_skill = 1
 	planning_skill = 1
