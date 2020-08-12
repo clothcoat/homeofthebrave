@@ -1278,6 +1278,12 @@ focus_tree = {
 		prerequisite = {
 			focus = NEE_Legitimate_America
 		}
+		available = {
+			OR = {
+				has_government = market_liberal
+				has_government = social_liberal
+			}
+		}
 		x = 14
 		y = 1
 		relative_position_id = NEE_Legitimate_America
@@ -1886,6 +1892,9 @@ focus_tree = {
 		cost = 5
 		prerequisite = {
 			focus = NEE_Legitimate_America
+		}
+		available = {
+			has_government = social_conservative
 		}
 		x = 22
 		y = 1
