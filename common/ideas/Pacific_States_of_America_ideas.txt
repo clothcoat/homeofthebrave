@@ -914,6 +914,20 @@ ideas = {
 				party_popularity_stability_factor = 0.05
 			}
 		}
+		CAL_american_women_bill_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_orphan_support_idea"}
+			allowed = { always = no }
+			removal_cost = -1
+			picture = generic_central_management
+			modifier = {
+				stability_weekly = 0.002
+				production_factory_efficiency_gain_factor = 0.04
+				production_factory_start_efficiency_factor = 0.04
+				research_speed_factor = 0.02
+				monthly_population = 0.03
+				party_popularity_stability_factor = 0.05
+			}
+		}
 		CAL_economic_recovery_idea = {#Civil War Recovery
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_economic_recovery_idea"}
 			picture = great_depression
@@ -1258,6 +1272,69 @@ ideas = {
 				production_speed_buildings_factor = 0.15
 				party_popularity_stability_factor = 0.2
 				stability_weekly = 0.01
+			}
+		}
+		CAL_new_freedom_6 = {#New Freedom
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_new_freedom_6"}
+			allowed = {	always = no	}
+			allowed_civil_war = { always = yes }
+			picture = new_liberalism
+			modifier = { 
+				consumer_goods_factor = -0.05
+				political_power_gain = 0.015
+				production_factory_max_efficiency_factor = 0.03
+				production_factory_efficiency_gain_factor = 0.03
+				production_factory_start_efficiency_factor = 0.12
+				production_speed_buildings_factor = 0.15
+				party_popularity_stability_factor = 0.2
+				stability_weekly = 0.01
+				local_resources= 0.05
+			}
+		}
+		CAL_tariff_reduction_idea = {#Reduced Tariffs
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_tariff_reduction_idea"}
+			allowed = { always = no }
+			removal_cost = -1
+			picture = brain_trust_2
+			modifier = {
+				local_resources = 0.1
+				production_lack_of_resource_penalty_factor = -0.05
+				trade_opinion_factor = 0.05
+			}
+		}
+		CAL_aid_to_families_idea = {#Aid to Families
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_aid_to_families_idea"}
+			allowed = { always = no }
+			removal_cost = -1
+			picture = brain_trust_2
+			modifier = {
+				monthly_population = 0.03
+				industrial_capacity_factory = 0.05
+				research_speed_factor = 0.01
+				party_popularity_stability_factor = 0.05
+				
+			}
+		}
+		CAL_fdic_idea = {#FDIC
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_fdic_idea"}
+			allowed = { always = no }
+			removal_cost = -1
+			picture = brain_trust_2
+			modifier = {
+				consumer_goods_factor = 0.02 
+				stability_factor = 0.05
+				
+			}
+		}
+		CAL_glass_steagall_idea = {#Glass-Steagall
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_glass_steagall_idea"}
+			allowed = { always = no }
+			removal_cost = -1
+			picture = brain_trust_2
+			modifier = {
+				industrial_capacity_factory = 0.05
+				stability_factor = 0.05
+				
 			}
 		}
 		CAL_chautauqua_idea = {#Chautauqua Movement
