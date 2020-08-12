@@ -19,7 +19,7 @@ focus_tree = {
 		available = {
 			has_government = totalist
 		}
-		cost = 2.00
+		cost = 1.00
 		x = 2
 		y = 0
 		ai_will_do = {
@@ -486,7 +486,7 @@ focus_tree = {
 	focus = {# Vanguard
 		id = BBR_the_vanguard
 		icon = GFX_BBR_socialist_vanguard
-		cost = 6.00
+		cost = 1.00
 		available = {
 			has_government = totalist
 		}
@@ -693,6 +693,9 @@ focus_tree = {
 		id = BBR_black_communist_league
 		icon = GFX_BBR_new_communist_league
 		cost = 6.00
+		available = {
+		has_country_leader = { ruling_only = yes name = "Ben J. Davis" }
+		}
 		prerequisite = {
 			focus = BBR_rapid_nationalization
 		}
@@ -964,7 +967,10 @@ focus_tree = {
 	focus = {# Harry Haywood
 		id = BBR_black_trade_unity_league
 		icon = GFX_BBR_trade_union_unity_league
-		cost = 6.00
+		cost = 4.00
+		available = {
+		has_country_leader = { ruling_only = yes name = "Harry Haywood" }
+		}
 		prerequisite = {
 			focus = BBR_rapid_nationalization
 		}
@@ -1174,7 +1180,10 @@ focus_tree = {
 	focus = {# James W. Ford
 		id = BBR_sp_centralists
 		icon = GFX_BBR_centralists
-		cost = 6.00
+		cost = 5.00
+		available = {
+		has_country_leader = { ruling_only = yes name = "James W. Ford" }
+		}
 		prerequisite = {
 			focus = BBR_rapid_nationalization
 		}
@@ -1520,7 +1529,7 @@ focus_tree = {
 		available = {
 			has_government = syndicalist
 		}
-		cost = 6.00
+		cost = 1.00
 		x = 24
 		y = 0
 		ai_will_do = {

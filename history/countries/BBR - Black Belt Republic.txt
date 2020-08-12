@@ -210,10 +210,6 @@ add_ideas = {
 	### cabinet ###
 	# national ideas
 	isolation
-	BBR_WEB_Du_Bois_hog_rso
-	BBR_Theophilus_Lewis_for_rso
-	BBR_Howard_Thurman_eco_rso
-	BBR_Sterling_Allen_Brown_sec_rso
 	###Resistance
 }
 
@@ -221,7 +217,7 @@ add_ideas = {
 create_field_marshal = {# Charles Young
 	name = "Charles Young"
 	desc = "BBR_CHARLES_YOUNG_ARMY_DESC"
-	portrait_path = "gfx/leaders/USA/general_charles_young.dds"
+	portrait_path = "gfx/leaders/BBR/general_charles_young.dds"
 	traits = { 
 		logistics_wizard
 		organizer
@@ -236,7 +232,7 @@ create_field_marshal = {# Charles Young
 create_field_marshal = {# Ben Davis
 	name = "Benjamin Davis"
 	desc = "USA_BENJAMIN_DAVIS_ARMY_DESC"
-	portrait_path = "gfx/leaders/USA/Ben_Davis_SR.tga"
+	portrait_path = "gfx/leaders/BBR/Ben_Davis_SR.tga"
 	traits = {
 		career_officer
 		politically_connected
