@@ -5,7 +5,7 @@ ideas = {
 	### Starting Ideas ###
 	WCC_bradley_plan = { #Bradley Plan
 		on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_bradley_plan"}
-		picture = usa_great_depression_2
+		picture = WCC_Ike_Bradley_Plan
 		modifier = {
 			army_org = 2
 			max_planning = 0.1
@@ -19,7 +19,7 @@ ideas = {
 	}
 	WCC_bradley_plan_2 = { #Bradley Plan
 		on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_bradley_plan_2"}
-		picture = usa_great_depression_2
+		picture = WCC_ike_bradley_strategy
 		modifier = {
 			army_org = 2.5
 			max_planning = 0.15
@@ -34,7 +34,7 @@ ideas = {
 	}
 	WCC_bradley_plan_3 = { #Bradley Plan
 		on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_bradley_plan_3"}
-		picture = usa_great_depression_2
+		picture = WCC_ike_bradley_strategy
 		modifier = {
 			army_org = 4
 			max_planning = 0.2
@@ -51,7 +51,7 @@ ideas = {
 	}
 	WCC_bradley_plan_4 = { #Bradley Plan
 		on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_bradley_plan_4"}
-		picture = usa_great_depression_2
+		picture = WCC_ike_bradley_strategy
 		modifier = {
 			army_org = 4
 			max_planning = 0.25
@@ -68,7 +68,7 @@ ideas = {
 	}
 	WCC_mormon_autonomy = { #Mormon Autonomy
 		on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_mormon_autonomy"}
-		picture = usa_great_depression_2
+		picture = WCC_mormon_autonomy
 		modifier = {
 			recruitable_population_factor = .02
 			attack_bonus_against_cores = 0.08
@@ -78,7 +78,7 @@ ideas = {
 	}
 	WCC_conscription = { #Conscription
 		on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_conscription"}
-		picture = usa_great_depression_2
+		picture = WCC_western_recruitment_campaign
 		modifier = {
 			conscription_factor = 0.05
 			surrender_limit = 0.1
@@ -89,7 +89,7 @@ ideas = {
 	}
 	WCC_conscription_2 = { #Conscription
 		on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_conscription_2"}
-		picture = usa_great_depression_2
+		picture = WCC_american_recruitment_campaign
 		modifier = {
 			conscription_factor = 0.08
 			surrender_limit = 0.1
@@ -101,7 +101,7 @@ ideas = {
 	}
 	CAL_western_project = { #Western Project
 		on_add = { log = "[GetDateText]: [Root.GetName]: add idea CAL_western_project"}
-		picture = usa_great_depression_2
+		picture = WCC_western_information_branches
 		modifier = {
 			encryption = 0.05
 			decryption = 0.08
@@ -122,7 +122,7 @@ ideas = {
 	}
 	WCC_war_bonds_idea = { #War Bonds
 		on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_war_bonds_idea"}
-		picture = usa_great_depression_2
+		picture = WCC_War_Bonds
 		modifier = {
 			production_factory_start_efficiency_factor = 0.1
 			production_factory_max_efficiency_factor = 0.05
@@ -139,7 +139,7 @@ ideas = {
 	### American Pompei Ideas ###
 	WCC_vet_affairs_idea = { #Vet Affairs
 		on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_vet_affairs_idea"}
-		picture = usa_great_depression_2
+		picture = WCC_veteran_benefits
 		modifier = {
 			party_popularity_stability_factor = 0.05
 			political_power_gain = 0.03
@@ -151,7 +151,7 @@ ideas = {
 	}
 	WCC_vet_affairs_2 = { #Vet Affairs
 		on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_vet_affairs_2"}
-		picture = usa_great_depression_2
+		picture = WCC_veteran_benefits
 		modifier = {
 			party_popularity_stability_factor = 0.08
 			political_power_gain = 0.05
@@ -164,7 +164,7 @@ ideas = {
 	}
 	WCC_think_tanks_idea = { #Think Tanks
 		on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_think_tanks_idea"}
-		picture = usa_great_depression_2
+		picture = WCC_think_tanks
 		modifier = {
 			research_speed_factor = 0.08
 			encryption = 0.05
@@ -176,7 +176,7 @@ ideas = {
 	}
 	WCC_think_tanks_idea_2 = { #Think Tanks
 		on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_think_tanks_idea_2"}
-		picture = usa_great_depression_2
+		picture = WCC_think_tanks
 		modifier = {
 			research_speed_factor = 0.1
 			encryption = 0.08
@@ -189,7 +189,7 @@ ideas = {
 	}
 	WCC_military_industries = { #MIC
 		on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_military_industries"}
-		picture = usa_great_depression_2
+		picture = WCC_acquistions_corporations
 		modifier = {
 			party_popularity_stability_factor = 0.05
 			production_speed_buildings_factor = 0.05
@@ -202,7 +202,7 @@ ideas = {
 	}
 	WCC_military_industries_2 = { #MIC
 		on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_military_industries_2"}
-		picture = usa_great_depression_2
+		picture = WCC_acquistions_industries
 		modifier = {
 			party_popularity_stability_factor = 0.08
 			production_speed_buildings_factor = 0.08
@@ -227,7 +227,7 @@ ideas = {
 	}
 	WCC_the_wise_men_idea = { #Fourth Branch
 		on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_the_wise_men_idea"}
-		picture = usa_great_depression_2
+		picture = WCC_wise_men
 		modifier = {
 			party_popularity_stability_factor = 0.15
 			political_power_gain = 0.08
@@ -243,7 +243,7 @@ ideas = {
 	}
 	WCC_the_wise_men_idea_2 = { #Fourth Branch
 		on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_the_wise_men_idea_2"}
-		picture = usa_great_depression_2
+		picture = WCC_wise_men
 		modifier = {
 			party_popularity_stability_factor = 0.2
 			political_power_gain = 0.1
@@ -262,7 +262,7 @@ ideas = {
 	###Military With a State
 	WCC_aggressive_training = { #Aggressive Training
 		on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_aggressive_training"}
-		picture = usa_great_depression_2
+		picture = WCC_aggressive_training
 		modifier = {
 			training_time_army_factor = -0.1
 			conscription = 0.1
@@ -275,7 +275,7 @@ ideas = {
 	}
 	WCC_aggressive_training_2 = { #Aggressive Training
 		on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_aggressive_training_2"}
-		picture = usa_great_depression_2
+		picture = WCC_aggressive_recruitment
 		modifier = {
 			training_time_army_factor = -0.1
 			conscription = 0.1
@@ -290,7 +290,7 @@ ideas = {
 	}
 	WCC_aggressive_training_3 = { #Aggressive Training
 		on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_aggressive_training_3"}
-		picture = usa_great_depression_2
+		picture = WCC_all_army_policy
 		modifier = {
 			party_popularity_stability_factor = 0.15
 			training_time_army_factor = -0.1
@@ -306,7 +306,7 @@ ideas = {
 	}
 	WCC_advanced_security_forces_idea = { #Aggressive Training
 		on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_advanced_security_forces_idea"}
-		picture = usa_great_depression_2
+		picture = WCC_all_army_mandate
 		modifier = {
 			special_forces_cap = 0.3
 			special_forces_training_time_factor = -0.1
@@ -315,7 +315,7 @@ ideas = {
 	}
 	WCC_advanced_security_forces_idea_2 = { #Aggressive Training
 		on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_advanced_security_forces_idea_2"}
-		picture = usa_great_depression_2
+		picture = WCC_us_security_forces
 		modifier = {
 			special_forces_cap = 0.3
 			special_forces_training_time_factor = -0.1
@@ -326,7 +326,7 @@ ideas = {
 	}
 	WCC_advanced_security_forces_idea_3 = { #Aggressive Training
 		on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_advanced_security_forces_idea_3"}
-		picture = usa_great_depression_2
+		picture = WCC_us_security_forces
 		modifier = {
 			party_popularity_stability_factor = 0.15
 			special_forces_cap = 0.4
@@ -340,7 +340,7 @@ ideas = {
 	}
 	WCC_central_bureau_idea = { #Aggressive Training
 		on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_central_bureau_idea"}
-		picture = usa_great_depression_2
+		picture = WCC_central_bureau
 		modifier = {
 			max_command_power = 65
 			max_planning = 0.3
@@ -352,23 +352,9 @@ ideas = {
 			dig_in_speed = 1
 		}
 	}
-	WCC_central_bureau_idea = { #Aggressive Training
-		on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_central_bureau_idea"}
-		picture = usa_great_depression_2
-		modifier = {
-			max_command_power = 65
-			max_planning = 0.2
-			planning_speed = 0.2
-			experience_gain_army = 0.2
-			army_speed_factor = 0.05
-			army_core_attack_factor	= 0.05
-			breakthrough_factor	= 0.02
-			dig_in_speed = 1
-		}
-	}
 	WCC_central_bureau_idea_2 = { #Aggressive Training
 		on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_central_bureau_idea_2"}
-		picture = usa_great_depression_2
+		picture = WCC_central_bureau
 		modifier = {
 			max_command_power = 100
 			max_planning = 4
@@ -384,7 +370,7 @@ ideas = {
 	}
 	WCC_strangle_the_cobra_idea = { #Strangle the Cobra
 		on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_strangle_the_cobra_idea"}
-		picture = usa_great_depression_2
+		picture = WCC_rollback_strategy
 		modifier = {
 			justify_war_goal_time = -0.5
 			puppet_cost_factor = -0.90
