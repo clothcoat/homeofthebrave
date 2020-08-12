@@ -178,8 +178,8 @@ add_ideas = {
 	free_trade
 }
 
-### Generals ###
-create_corps_commander = {# Omar Bradley
+### Field Marshals ###
+create_field_marshal = {# Omar Bradley
 	name = "Omar Bradley"
 	desc = "USA_OMAR_BRADLEY_ARMY_DESC"
 	portrait_path = "gfx/leaders/USA/Portrait_USA_gen_omar_bradley.tga"
@@ -196,7 +196,7 @@ create_corps_commander = {# Omar Bradley
 	logistics_skill = 2
 	id = 9510
 }
-create_corps_commander = {# Dwight D. Eisenhower
+create_field_marshal = {# Dwight D. Eisenhower
 	name = "Dwight D. Eisenhower"
 	desc = "USA_DWIGHT_EISENHOWER_ARMY_DESC"
 	portrait_path = "gfx/leaders/USA/Portrait_USA_gen_Dwight_Eisenhower.tga"
@@ -213,6 +213,7 @@ create_corps_commander = {# Dwight D. Eisenhower
 	id = 9500
 }
 
+### Generals ###
 create_corps_commander = {# Clarence Huebner
 	name = "Clarence Huebner"
 	desc = "USA_CLARENCE_HUEBNER_ARMY_DESC"
@@ -395,6 +396,36 @@ create_corps_commander = {# Edwin F. Harding
 	planning_skill = 3
 	logistics_skill = 4
 	id = 9650
+}
+create_corps_commander = {# Curtis LeMay
+	name = "Curtis LeMay"
+	desc = "USA_LEMAY_ARMY_DESC"
+	portrait_path = "gfx/leaders/WCC/Portrait_WCC_Curtis_LeMay.tga"
+	traits = {
+		trait_reckless
+		air_commander
+		politically_connected
+	}
+	skill = 2
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
+	id = 9651
+}
+create_corps_commander = {# Mac Loyalist, moved to WCC
+	name = "George Kenney"
+	desc = "NEE_GEORGE_KENNEY_ARMY_DESC"
+	portrait_path = "gfx/leaders/NEE/Portrait_NEE_george_kenney.tga"
+	traits = {
+		trait_cautious
+		trickster
+	}
+	skill = 2
+	attack_skill = 4
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 1
 }
 #create_corps_commander = {# Herbert Holdridge
 	#name = "Herbert Charles Heitke"

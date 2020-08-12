@@ -389,7 +389,7 @@ create_corps_commander = { #Nathan Bedford Forrest III
 create_corps_commander = { #Robert Lee Bullard
 	name = "Robert Lee Bullard"
 #	desc = "TEX_JOHN_HINES_DESC"
-	portrait_path = "gfx/leaders/CUS/Portrait_COR_Robert_Lee_Bullard!.tga"
+	portrait_path = "gfx/leaders/CUS/Portrait_COR_Robert_Lee_Bullard.tga"
 	traits = {
 		trait_cautious
 		politically_connected
@@ -399,8 +399,6 @@ create_corps_commander = { #Robert Lee Bullard
 	defense_skill = 2
 	planning_skill = 1
 	logistics_skill = 1
-	
-
 }
 
 create_corps_commander = { #Strom
@@ -408,7 +406,7 @@ create_corps_commander = { #Strom
 #	desc = "TEX_JOHN_HINES_DESC"
 	portrait_path = "gfx/leaders/CUS/Portrait_COR_Strom_Thurmond.tga"
 	traits = {
-		paratrooper
+		air_commander
 		armor_officer
 		politically_connected
 	}
@@ -419,9 +417,26 @@ create_corps_commander = { #Strom
 	logistics_skill = 1
 }
 
+create_corps_commander = { #Lindy
+	name = "Charles Lindbergh"
+#	desc = "TEX_JOHN_HINES_DESC"
+	portrait_path = "gfx/leaders/CUS/COR_Lindy_General.tga"
+	traits = {
+		air_commander
+		war_hero
+		media_personality
+		politically_connected
+	}
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 1
+}
+
 create_corps_commander = {# Buckner
 	name = "Simon Bolivar Buckner Jr."
-	portrait_path = "gfx/leaders/COR/Portrait_COR_Simon_Bolivar_Buckner_Jr.tga"
+	portrait_path = "gfx/leaders/CUS/Portrait_COR_Simon_Bolivar_Buckner_Jr.tga"
 	traits = {
 		organizer
 		trait_reckless
@@ -438,7 +453,7 @@ create_corps_commander = {# Buckner
 }
 create_corps_commander = {# Schley
 	name = "Julian Larcombe Schley"
-	portrait_path = "gfx/leaders/COR/Portrait_COR_Julian_Larcombe_Schley.tga"
+	portrait_path = "gfx/leaders/CUS/Portrait_COR_Julian_Larcombe_Schley.tga"
 	traits = {
 		war_hero
 		politically_connected

@@ -202,6 +202,25 @@ set_variable = {
 set_country_flag = USA_rebuilt_new_england_flag
 
 ### Field Marshals ###
+create_field_marshal = {# 
+	name = "John J. Pershing"
+	portrait_path = "gfx/leaders/NEE/Portrait_NEE_John_Pershing.tga"
+	traits = {
+		old_guard
+		offensive_doctrine
+		aggressive_assaulter
+		war_hero
+		infantry_officer
+		infantry_leader
+		skilled_staffer
+	}
+	skill = 4
+	attack_skill = 4
+	defense_skill = 4
+	planning_skill = 4
+	logistics_skill = 3
+}
+
 create_field_marshal = {# Leslie Groves
 	name = "Leslie Groves"
 	desc = "NEE_LESLIE_GROVES_ARMY_DESC"
@@ -249,20 +268,36 @@ create_corps_commander = {# Mark Clark
 	planning_skill = 2
 	logistics_skill = 2
 }
-create_corps_commander = {# George Kenney
-	name = "George Kenney"
-	desc = "NEE_GEORGE_KENNEY_ARMY_DESC"
-	portrait_path = "gfx/leaders/NEE/Portrait_NEE_george_kenney.tga"
+create_corps_commander = {# Hiram Bingham III
+	name = "Hiram Bingham III"
+	portrait_path = "gfx/leaders/NEE/Portrait_NEE_Hiram_Bingham_III.tga"
 	traits = {
-		trait_cautious
-		trickster
+		politically_connected
+		war_hero
+		trait_engineer
+		adaptable
+		media_personality
 	}
 	skill = 2
-	attack_skill = 4
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 1
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 3
 }
+#create_corps_commander = {# George Kenney
+	#name = "George Kenney"
+	#desc = "NEE_GEORGE_KENNEY_ARMY_DESC"
+	#portrait_path = "gfx/leaders/NEE/Portrait_NEE_george_kenney.tga"
+	#traits = {
+		#trait_cautious
+		#trickster
+	#}
+	#skill = 2
+	#attack_skill = 4
+	#defense_skill = 2
+	#planning_skill = 3
+	#logistics_skill = 1
+#}
 create_corps_commander = {# Willard G. Wyman
 	name = "Willard G. Wyman"
 	desc = "NEE_WILLARD_G_WYMAN_ARMY_DESC"

@@ -222,31 +222,17 @@ create_field_marshal = {# Charles Young
 	planning_skill = 4
 	logistics_skill = 5
 }
-create_field_marshal = {# Ben Davis
-	name = "Benjamin Davis"
-	desc = "USA_BENJAMIN_DAVIS_ARMY_DESC"
-	portrait_path = "gfx/leaders/BBR/Ben_Davis_SR.tga"
-	traits = {
-		career_officer
-		politically_connected
-		offensive_doctrine
-		organizer
-	}
-	skill = 4
-	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 4
-	logistics_skill = 3
-}
 create_field_marshal = {# John R. Fox
 	name = "John R. Fox"
 	desc = "USA_JOHN_R_FOX_ARMY_DESC"
-	portrait_path = "gfx/leaders/USA/john_r_fox.tga"
+	portrait_path = "gfx/leaders/BBR/Portrait_SNA_John_R_Fox.tga"
 	traits = {
 		career_officer
 		politically_connected
 		offensive_doctrine
 		organizer
+		bearer_of_artillery
+		trait_reckless
 	}
 	skill = 2
 	attack_skill = 2
@@ -310,21 +296,6 @@ create_corps_commander = {
 	defense_skill = 2
 	planning_skill = 1
 	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "John R. Fox"
-	portrait_path = "gfx/leaders/BBR/Portrait_SNA_John_R_Fox.tga"
-	traits = {
-		war_hero
-		trait_reckless
-		bearer_of_artillery
-	}
-	skill = 2
-	attack_skill = 2
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 2
 }
 
 create_corps_commander = {
