@@ -3905,9 +3905,13 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_eastern_patronage"
-			custom_effect_tooltip = unlock_decision_tooltip
+			custom_effect_tooltip = ACW_combat_socialists
 			add_political_power = 50
 			add_stability = 0.05
+			modify_country_flag = {
+				flag = ACW_socialist_resistance
+				value = -2
+			}
 		}
 	}
 	
@@ -3934,6 +3938,8 @@ focus_tree = {
 		y = 2
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_dewitt_raids"
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			USA_political_recovery = yes
 			add_political_power = 50
 			add_stability = 0.05
 			add_popularity = { ideology = syndicalist popularity = -0.03 }
@@ -3964,6 +3970,8 @@ focus_tree = {
 		y = 3
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_media_empire"
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			USA_political_recovery = yes
 			swap_ideas = {
 			remove_idea = CAL_media_regulation_act_idea
 			add_idea = CAL_media_empire_idea
@@ -4000,9 +4008,12 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_southern_old_money"
-			custom_effect_tooltip = unlock_decision_tooltip
-			add_political_power = 40
-			add_stability = 0.03
+			custom_effect_tooltip = ACW_combat_klan
+			add_popularity = { ideology = national_populist popularity = -0.03 }
+			modify_country_flag = {
+				flag = ACW_klan_resistance
+				value = -2
+			}
 		}
 	}
 	
@@ -4029,9 +4040,11 @@ focus_tree = {
 		y = 2
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_oaths_of_loyalty"
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			USA_political_recovery = yes
 			add_political_power = 45
 			add_popularity = { ideology = paternal_autocrat popularity = 0.05 }
-			add_manpower = 2000
+			add_manpower = 200
 		}
 	}
 	
@@ -4058,6 +4071,8 @@ focus_tree = {
 		y = 3
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_reconcilation"
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			USA_political_recovery = yes
 			add_political_power = 55
 		}
 	}
@@ -4091,6 +4106,8 @@ focus_tree = {
 		y = 4
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_absorb_democrats"
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			USA_political_recovery = yes
 			add_political_power = 75
 			add_stability = 0.1
 			add_popularity = {
@@ -4120,6 +4137,8 @@ focus_tree = {
 		y = 5
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_white_house_socials"
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			USA_political_recovery = yes
 			swap_ideas = {
 			remove_idea = CAL_high_tariffs_idea_3
 			add_idea = CAL_high_tariffs_idea_4
@@ -4392,6 +4411,10 @@ focus_tree = {
 			add_war_support = 0.05
 			add_political_power = 45
 			increase_ruling_party_popularity_by_5 = yes
+			modify_country_flag = {
+				flag = ACW_klan_resistance
+				value = -2
+			}
 
 		}
 	}
@@ -6353,7 +6376,7 @@ focus_tree = {
 	
 	focus = {# Support Farms
 		id = CAL_support_farms
-		icon = GFX_IRE_farms
+		icon = GFX_goal_agricultural_aid
 		cost = 5.00
 		available = {
 			has_government = social_conservative
@@ -9175,7 +9198,7 @@ focus_tree = {
 			}
 			set_country_flag = CAL_court_long
 			country_event = { id = pacificstates.400 days = 3
-			
+
 			}
 		}
 	}
