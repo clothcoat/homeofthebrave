@@ -8715,3 +8715,36 @@ country_event = {# Our Publishing Houses
 		add_popularity = { ideology = national_populist popularity = 0.02 }
 	}
 }
+
+country_event = {# Long Returns
+	id = pacificstates.400
+	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.400"}
+	title = pacificstates.400.t
+	desc = pacificstates.400.d
+	picture = GFX_ACW_american_brigade
+
+	is_triggered_only = yes
+
+
+	option = {# Longism
+		name = pacificstates.400.a
+		set_politics = {
+			ruling_party = social_democrat
+			election_frequency = 48
+			elections_allowed = yes
+		}			
+		create_country_leader = {
+			name = "Huey Long"
+			desc = "POLITICS_HUEY_LONGDONG_DESC"
+			picture = "gfx/leaders/PSA/Portrait_CAL_Huey_Long.tga"
+			expire = "1965.1.1"
+			ideology = social_democrat_subtype
+			traits = {}
+		}
+		hidden_effect = {
+			add_ideas = CAL_Huey_Long_hog_sde
+			add_ideas = CAL_Ralph_Johnson_Bunche_for_sde
+			add_ideas = CAL_Hjalmar_Petersen_eco_sde
+			add_ideas = CAL_Konrad_Knute_Solberg_sec_sde
+	}
+}
