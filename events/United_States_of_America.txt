@@ -1759,7 +1759,7 @@ country_event = { # The 1936 Election - Coalition
 				picture = "gfx/leaders/USA/Portrait_USA_Charles_Curtis.tga"
 				expire = "1965.1.1"
 				ideology = market_liberal_subtype
-				traits = {}
+				traits = { the_great_compromiser }
 			}
 			set_global_flag = USA_president_curtis
 		}
@@ -1853,7 +1853,7 @@ country_event = { # The 1936 Election - Coalition
 				picture = "gfx/leaders/USA/Portrait_USA_Alf_Landon_KR.tga"
 				expire = "1965.1.1"
 				ideology = social_liberal_subtype
-				traits = {}
+				traits = { economic_reformer }
 			}
 			set_global_flag = USA_president_landon
 		}
@@ -2202,7 +2202,7 @@ country_event = { # The 1936 Election - Coalition
 				picture = "gfx/leaders/CUS/Portrait_William_H_Murray_2.tga"
 				expire = "1965.1.1"
 				ideology = paternal_autocrat_subtype
-				traits = {}
+				traits = { alfalfa_bill }
 			}
 		}
 		set_politics = {
@@ -2319,7 +2319,7 @@ country_event = { # The 1936 Election - Coalition
 				picture = "gfx/leaders/USA/Portrait_George_W_Norris.tga"
 				expire = "1965.1.1"
 				ideology = social_democrat_subtype
-				traits = {}
+				traits = { the_fighting_liberal }
 			}
 		}
 		set_politics = {
@@ -2582,7 +2582,7 @@ country_event = { # The 1936 Election - You're Fucked (Or are you...)
 				picture = "Portrait_USA_gen_douglas_macarthur.tga"
 				expire = "1965.1.1"
 				ideology = paternal_autocrat_subtype
-				traits = {}
+				traits = { american_caesar }
 			}
 			add_ideas = USA_Douglas_MacArthur_hog_pau
 			add_ideas = USA_John_William_Davis_for_pau
@@ -2674,7 +2674,7 @@ country_event = { # The 1936 Election - You're Fucked (Or are you...)
 				picture = "gfx/leaders/USA/Portrait_George_W_Norris.tga"
 				expire = "1965.1.1"
 				ideology = social_democrat_subtype
-				traits = {}
+				traits = { the_fighting_liberal }
 			}
 		}
 		set_politics = {
@@ -3489,7 +3489,7 @@ country_event = { # MacArthur Marches onto Washington
 				picture = "Portrait_USA_gen_douglas_macarthur.tga"
 				expire = "1965.1.1"
 				ideology = paternal_autocrat_subtype
-				traits = {}
+				traits = { american_caesar }
 			}
 		}
 	}
@@ -3949,7 +3949,7 @@ country_event = { # MacArthur and the Army Removes Long
 				picture = "Portrait_USA_gen_douglas_macarthur.tga"
 				expire = "1965.1.1"
 				ideology = paternal_autocrat_subtype
-				traits = {}
+				traits = { american_caesar }
 			}
 		}
 	}
@@ -4150,7 +4150,7 @@ country_event = { # MacArthur forces out Murray
 				picture = "Portrait_USA_gen_douglas_macarthur.tga"
 				expire = "1965.1.1"
 				ideology = paternal_autocrat_subtype
-				traits = {}
+				traits = { american_caesar }
 			}
 		}
 	}
@@ -4738,6 +4738,7 @@ country_event = { # The Compromise Succeeds
 		add_stability = 0.15
 		add_political_power = 100
 		set_global_flag = USA_civil_war_avoided_flag
+		add_country_leader_trait = savior_of_america
 	}
 }
 
@@ -4898,7 +4899,7 @@ country_event = { # MacArthur and the Army Remove Republicans
 				picture = "Portrait_USA_gen_douglas_macarthur.tga"
 				expire = "1965.1.1"
 				ideology = paternal_autocrat_subtype
-				traits = {}
+				traits = { american_caesar }
 			}
 		}
 		add_popularity = {
@@ -5817,6 +5818,7 @@ country_event = { # Rust Belt Pacified
 		add_popularity = { ideology = syndicalist popularity = -0.03 }
 		add_popularity = { ideology = totalist popularity = -0.03 }
 		set_global_flag = USA_civil_war_avoided_flag
+		add_country_leader_trait = savior_of_america
 	}
 }
 
@@ -5895,7 +5897,7 @@ country_event = { # MacArthur and the Army Remove Garner
 				picture = "Portrait_USA_gen_douglas_macarthur.tga"
 				expire = "1965.1.1"
 				ideology = paternal_autocrat_subtype
-				traits = {}
+				traits = { american_caesar }
 			}
 		}
 	}
@@ -7553,7 +7555,7 @@ country_event = { # Provisional President
 				picture = "Portrait_USA_quentin_roosevelt.tga"
 				expire = "1965.1.1"
 				ideology = social_liberal_subtype
-				traits = {}
+				traits = { appeaser }
 			}
 			create_country_leader = {
 				name = "Wendell Willkie"
@@ -7561,7 +7563,7 @@ country_event = { # Provisional President
 				picture = "Portrait_USA_Wendell_Willkie.tga"
 				expire = "1965.1.1"
 				ideology = market_liberal_subtype
-				traits = {}
+				traits = { smooth_talking_charmer }
 			}
 			create_country_leader = {
 				name = "John Nance Garner"
@@ -7569,7 +7571,7 @@ country_event = { # Provisional President
 				picture = "Portrait_USA_John_Nance_Garner.tga"
 				expire = "1965.1.1"
 				ideology = social_conservative_subtype
-				traits = {}
+				traits = { cactus_jack }
 			}
 
 			#next primaries
@@ -8681,7 +8683,7 @@ country_event = { # 1940 Progressive Primary
 				picture = "Portrait_USA_Henry_Wallace.tga"
 				expire = "1965.1.1"
 				ideology = social_democrat_subtype
-				traits = {}
+				traits = { tenacious_negotiator }
 			}
 		}
 	}
@@ -8700,7 +8702,7 @@ country_event = { # 1940 Progressive Primary
 					picture = "Portrait_USA_Philip_La_Follette.tga"
 					expire = "1965.1.1"
 					ideology = social_democrat_subtype
-					traits = {}
+					traits = { spirit_of_fighting_bob }
 				}
 		}
 	}
@@ -8728,7 +8730,7 @@ country_event = { # 1940 Progressive Primary
 					picture = "Portrait_USA_Charles_L_McNary.tga"
 					expire = "1965.1.1"
 					ideology = social_democrat_subtype
-					traits = {}
+					traits = { reluctant_interventionist }
 				}
 		}
 	}
@@ -8747,7 +8749,7 @@ country_event = { # 1940 Progressive Primary
 					picture = "Portrait_USA_quentin_roosevelt.tga"
 					expire = "1965.1.1"
 					ideology = social_democrat_subtype
-					traits = {}
+					traits = { tenacious_negotiator }
 				}
 		}
 	}
@@ -8812,7 +8814,7 @@ country_event = { # 1940 Republican Primary
 					picture = "gfx/leaders/PSA/CAL_R_A_Taft.tga"
 					expire = "1965.1.1"
 					ideology = market_liberal_subtype
-					traits = {}
+					traits = { staunch_constitutionalist }
 			}
 		}
 	}
@@ -8840,10 +8842,10 @@ country_event = { # 1940 Republican Primary
 			create_country_leader = {
 					name = "John Bricker"
 					desc = "POLITICS_JOHN_BRICKER_DESC"
-					picture = "gfx/leaders/PSA/CAL_R_A_Taft.tga"
+					picture = "gfx/leaders/USA/Portrait_USA_John_Bricker.tga"
 					expire = "1965.1.1"
 					ideology = market_liberal_subtype
-					traits = {}
+					traits = { staunch_constitutionalist }
 			}
 		}
 	}
@@ -8865,7 +8867,7 @@ country_event = { # 1940 Republican Primary
 				picture = "Portrait_USA_Wendell_Willkie.tga"
 				expire = "1965.1.1"
 				ideology = social_liberal_subtype
-				traits = {}
+				traits = { smooth_talking_charmer }
 			}
 		}
 	}
@@ -8887,7 +8889,7 @@ country_event = { # 1940 Republican Primary
 				picture = "Portrait_USA_Thomas_Dewey.tga"
 				expire = "1965.1.1"
 				ideology = social_liberal_subtype
-				traits = {}
+				traits = { great_survivor }
 			}
 		}
 	}
@@ -8943,7 +8945,7 @@ country_event = { # 1940 Democrat Primary
 			picture = "gfx/leaders/NEE/Alsmith.tga"
 			expire = "1965.1.1"
 			ideology = social_conservative_subtype
-			traits = {}
+			traits = { political_boss }
 			}
 		}
 	}
@@ -8977,7 +8979,7 @@ country_event = { # 1940 Democrat Primary
 			picture = "Portrait_USA_Harry_F_Byrd.tga"
 			expire = "1965.1.1"
 			ideology = social_conservative_subtype
-			traits = {}
+			traits = { backroom_backstabber }
 			}
 		}
 	}
@@ -8999,7 +9001,7 @@ country_event = { # 1940 Democrat Primary
 			picture = "Portrait_USA_civ_douglas_macarthur.tga"
 			expire = "1965.1.1"
 			ideology = social_conservative_subtype
-			traits = {}
+			traits = { war_industrialist }
 			}
 		}
 	}
@@ -9568,7 +9570,7 @@ country_event = { # 1944 Election
 					picture = "Portrait_USA_Philip_La_Follette.tga"
 					expire = "1965.1.1"
 					ideology = social_democrat_subtype
-					traits = {}
+					traits = { reluctant_interventionist }
 				}
 			}
 			if = {
@@ -9583,7 +9585,7 @@ country_event = { # 1944 Election
 					picture = "Portrait_USA_Henry_Wallace.tga"
 					expire = "1965.1.1"
 					ideology = social_democrat_subtype
-					traits = {}
+					traits = { great_survivor }
 				}
 			}
 			if = {
@@ -9596,7 +9598,7 @@ country_event = { # 1944 Election
 					picture = "Portrait_USA_Thomas_Dewey.tga"
 					expire = "1965.1.1"
 					ideology = social_liberal_subtype
-					traits = {}
+					traits = { great_survivor }
 				}
 			}
 			if = {
@@ -9625,7 +9627,7 @@ country_event = { # 1944 Election
 					picture = "Portrait_USA_James_Murray.tga"
 					expire = "1965.1.1"
 					ideology = market_liberal_subtype
-					traits = {}
+					traits = { tenacious_negotiator }
 				}
 			}
 			if = {
@@ -9638,7 +9640,7 @@ country_event = { # 1944 Election
 					picture = "Portrait_USA_Alben_Barkley.tga"
 					expire = "1965.1.1"
 					ideology = market_liberal_subtype
-					traits = {}
+					traits = { silent_workhorse }
 				}
 			}
 			if = {
@@ -9655,7 +9657,7 @@ country_event = { # 1944 Election
 					picture = "Portrait_USA_Richard_Russell_Jr.tga"
 					expire = "1965.1.1"
 					ideology = social_conservative_subtype
-					traits = {}
+					traits = { nationalist_symbol }
 				}
 			}
 		}
@@ -10322,6 +10324,7 @@ country_event = { # 1948 Conservative Democrat Primary
 					has_country_flag = USA_1944_election_democrat
 				}
 				has_country_flag = USA_1940_election_democrat
+				has_country_flag = USA_civil_war_avoided_flag
 			}
 		}
 		hidden_effect = {
@@ -10393,7 +10396,7 @@ country_event = { # 1948 election
 					picture = "Portrait_CAL_Philip_La_Follette.tga"
 					expire = "1965.1.1"
 					ideology = social_democrat_subtype
-					traits = {}
+					traits = { reluctant_interventionist }
 				}
 			}
 			if = { # Glen H. Taylor
@@ -10406,7 +10409,7 @@ country_event = { # 1948 election
 					picture = "Portrait_CAL_Glen_Taylor.tga"
 					expire = "1965.1.1"
 					ideology = social_democrat_subtype
-					traits = {}
+					traits = { figurehead_president }
 				}
 			}
 			if = { # Thomas Dewey
@@ -10419,7 +10422,7 @@ country_event = { # 1948 election
 					picture = "Portrait_USA_Thomas_Dewey.tga"
 					expire = "1965.1.1"
 					ideology = social_liberal_subtype
-					traits = {}
+					traits = { great_survivor }
 				}
 			}
 			if = {
@@ -10431,7 +10434,7 @@ country_event = { # 1948 election
 					picture = "Portrait_USA_quentin_roosevelt_II.tga"
 					expire = "1965.1.1"
 					ideology = social_liberal_subtype
-					traits = {}
+					traits = { tenacious_negotiator }
 				}
 			}
 			if = { # Earl Warren
@@ -10444,7 +10447,7 @@ country_event = { # 1948 election
 					picture = "Portrait_USA_Earl_Warren.tga"
 					expire = "1965.1.1"
 					ideology = social_liberal_subtype
-					traits = {}
+					traits = { divided_interests }
 				}
 			}
 			if = { # Charles L. McNary
@@ -10457,7 +10460,7 @@ country_event = { # 1948 election
 					picture = "Portrait_USA_Charles_L_McNary.tga"
 					expire = "1965.1.1"
 					ideology = social_liberal_subtype
-					traits = {}
+					traits = { reluctant_interventionist }
 				}
 			}
 			if = { # Harry Truman
@@ -10470,7 +10473,7 @@ country_event = { # 1948 election
 					picture = "Portrait_USA_Harry_Truman_KR.tga"
 					expire = "1965.1.1"
 					ideology = market_liberal_subtype
-					traits = {}
+					traits = { quartermaster_general }
 				}
 			}
 			if = { # William Averell Harriman
@@ -10483,12 +10486,13 @@ country_event = { # 1948 election
 					picture = "Portrait_USA_Averell_Harriman.tga"
 					expire = "1965.1.1"
 					ideology = market_liberal_subtype
-					traits = {}
+					traits = { financial_expert }
 				}
 			}
 			if = { # Strom Thurmond
 				limit = {
 					has_country_flag = USA_1948_conservative_democratic_primary_thurmond
+					has_country_flag = USA_civil_war_avoided_flag
 				}
 				create_country_leader = {
 					name = "Strom Thurmond"
@@ -10496,7 +10500,7 @@ country_event = { # 1948 election
 					picture = "Portrait_USA_Strom_Thurmond.tga"
 					expire = "1965.1.1"
 					ideology = social_conservative_subtype
-					traits = {}
+					traits = { nationalist_symbol }
 				}
 			}
 			if = { # Happy Chandler
@@ -10509,7 +10513,7 @@ country_event = { # 1948 election
 					picture = "Portrait_USA_Happy_Chandler.tga"
 					expire = "1965.1.1"
 					ideology = social_conservative_subtype
-					traits = {}
+					traits = { economic_reformer }
 				}
 			}
 		}
@@ -11161,7 +11165,7 @@ country_event = { # 1952 election
 					picture = "Portrait_CAL_Philip_La_Follette.tga"
 					expire = "1965.1.1"
 					ideology = social_democrat_subtype
-					traits = {}
+					traits = { reluctant_interventionist }
 				}
 			}
 			if = { # Glen H. Taylor
@@ -11174,7 +11178,7 @@ country_event = { # 1952 election
 					picture = "Portrait_CAL_Glen_Taylor.tga"
 					expire = "1965.1.1"
 					ideology = social_democrat_subtype
-					traits = {}
+					traits = { figurehead_president }
 				}
 			}
 			if = { # John W. Bricker
@@ -11187,7 +11191,7 @@ country_event = { # 1952 election
 					picture = "Portrait_USA_John_W_Bricker.tga"
 					expire = "1965.1.1"
 					ideology = social_liberal_subtype
-					traits = {}
+					traits = { strict_austerity_adherent }
 				}
 			}
 			if = { # Harold Stassen
@@ -11200,7 +11204,7 @@ country_event = { # 1952 election
 					picture = "Portrait_USA_Harold_Stassen.tga"
 					expire = "1965.1.1"
 					ideology = social_liberal_subtype
-					traits = {}
+					traits = { tenacious_negotiator }
 				}
 			}
 			if = { # Dwight D. Eisenhower
@@ -11213,7 +11217,7 @@ country_event = { # 1952 election
 					picture = "Portrait_USA_Dwight_Eisenhower.tga"
 					expire = "1965.1.1"
 					ideology = market_liberal_subtype
-					traits = {}
+					traits = { great_war_hero }
 				}
 			}
 			if = { # Adlai Stevenson
@@ -11226,7 +11230,7 @@ country_event = { # 1952 election
 					picture = "Portrait_USA_Adlai_Stevenson.tga"
 					expire = "1965.1.1"
 					ideology = market_liberal_subtype
-					traits = {}
+					traits = { tenacious_negotiator }
 				}
 			}
 			if = { # John Sparkman
@@ -11239,7 +11243,7 @@ country_event = { # 1952 election
 					picture = "Portrait_USA_John_Sparkman.tga"
 					expire = "1965.1.1"
 					ideology = social_conservative_subtype
-					traits = {}
+					traits = { quartermaster_general }
 				}
 			}
 			if = { # James Eastland
@@ -11252,7 +11256,7 @@ country_event = { # 1952 election
 					picture = "Portrait_USA_James_Eastland.tga"
 					expire = "1965.1.1"
 					ideology = social_conservative_subtype
-					traits = {}
+					traits = { divided_interests }
 				}
 			}
 		}
@@ -14018,7 +14022,7 @@ country_event = {
 				picture = "Portrait_USA_gen_douglas_macarthur.tga"
 				expire = "1965.1.1"
 				ideology = paternal_autocrat_subtype
-				traits = {}
+				traits = { american_caesar }
 			}
 		}
 	}
