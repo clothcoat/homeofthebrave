@@ -1955,7 +1955,7 @@ country_event = { #Long Dead
 		picture = "Portrait_TEX_gearld_k_smith.tga"
 		expire = "1965.1.1"
 		ideology = paternal_autocrat_subtype
-		traits = {}
+		traits = { propaganda_expert }
 			}
 		set_politics = {
 			ruling_party = paternal_autocrat
@@ -1974,7 +1974,7 @@ country_event = { #Long Dead
 		picture = "Portrait_TEX_gearld_k_smith.tga"
 		expire = "1965.1.1"
 		ideology = authoritarian_democrat_subtype
-		traits = {}
+		traits = { propaganda_expert }
 			}
 		set_politics = {
 			ruling_party = authoritarian_democrat
@@ -2004,7 +2004,7 @@ country_event = { #Long Dead
 		picture = "gfx/leaders/TEX/TEX_Charles_Coughlin.tga"
 		expire = "1965.1.1"
 		ideology = authoritarian_democrat_subtype
-		traits = {}
+		traits = { radio_preist }
 			}
 		set_politics = {
 			ruling_party = authoritarian_democrat
@@ -2020,7 +2020,7 @@ country_event = { #Long Dead
 		picture = "gfx/leaders/TEX/TEX_Charles_Coughlin.tga"
 		expire = "1965.1.1"
 		ideology = paternal_autocrat_subtype
-		traits = {}
+		traits = { radio_preist }
 			}
 		set_politics = {
 			ruling_party = paternal_autocrat
@@ -2036,7 +2036,7 @@ country_event = { #Long Dead
 		picture = "gfx/leaders/TEX/TEX_Charles_Coughlin.tga"
 		expire = "1965.1.1"
 		ideology = social_conservative_subtype
-		traits = {}
+		traits = { radio_preist }
 			}
 		set_politics = {
 			ruling_party = social_conservative
@@ -2063,7 +2063,7 @@ country_event = { #Long Dead
 		picture = "gfx/leaders/TEX/TEX_Paul_H_maloney.tga"
 		expire = "1965.1.1"
 		ideology = authoritarian_democrat_subtype
-		traits = {}
+		traits = { staunch_constitutionalist }
 			}
 		}
 		else_if = {
@@ -2074,7 +2074,7 @@ country_event = { #Long Dead
 		picture = "gfx/leaders/TEX/TEX_Paul_H_maloney.tga"
 		expire = "1965.1.1"
 		ideology = social_conservative_subtype
-		traits = {}
+		traits = { staunch_constitutionalist }
 			}
 		}
 		set_politics = {
@@ -2106,7 +2106,7 @@ country_event = { #Long Dead
 		picture = "gfx/leaders/TEX/TEX_Big_Jim_Folsom.tga"
 		expire = "1965.1.1"
 		ideology = authoritarian_democrat_subtype
-		traits = {}
+		traits = { big_jim }
 			}
 		}
 		else_if = {
@@ -2117,7 +2117,7 @@ country_event = { #Long Dead
 		picture = "gfx/leaders/TEX/TEX_Big_Jim_Folsom.tga"
 		expire = "1965.1.1"
 		ideology = social_liberal_subtype
-		traits = {}
+		traits = { big_jim }
 			}
 		}
 		set_politics = {
@@ -2148,7 +2148,7 @@ country_event = { #Long Dead
 		picture = "gfx/leaders/TEX/TEX_Seth_McMath.tga"
 		expire = "1965.1.1"
 		ideology = authoritarian_democrat_subtype
-		traits = {}
+		traits = { economic_reformer }
 			}
 		set_politics = {
 			ruling_party = authoritarian_democrat
@@ -2164,7 +2164,7 @@ country_event = { #Long Dead
 		picture = "gfx/leaders/TEX/TEX_Seth_McMath.tga"
 		expire = "1965.1.1"
 		ideology = social_liberal_subtype
-		traits = {}
+		traits = { economic_reformer }
 			}
 		set_politics = {
 			ruling_party = social_democrat
@@ -2196,7 +2196,7 @@ country_event = { #Long Dead
 		picture = "gfx/leaders/TEX/TEX_Bronson_M_Cutting.tga"
 		expire = "1965.1.1"
 		ideology = authoritarian_democrat_subtype
-		traits = {}
+		traits = { editor }
 			}
 		set_politics = {
 			ruling_party = authoritarian_democrat
@@ -2214,7 +2214,7 @@ country_event = { #Long Dead
 		picture = "gfx/leaders/TEX/TEX_Bronson_M_Cutting.tga"
 		expire = "1965.1.1"
 		ideology = social_liberal_subtype
-		traits = {}
+		traits = { editor }
 			}
 		set_politics = {
 			ruling_party = social_liberal
@@ -2230,7 +2230,7 @@ country_event = { #Long Dead
 		picture = "gfx/leaders/TEX/TEX_Bronson_M_Cutting.tga"
 		expire = "1965.1.1"
 		ideology = social_democrat_subtype
-		traits = {}
+		traits = { editor }
 			}
 		set_politics = {
 			ruling_party = social_democrat
@@ -2257,7 +2257,7 @@ country_event = { #Long Dead
 		picture = "gfx/leaders/TEX/TEX_Alfred_Bingham.tga"
 		expire = "1965.1.1"
 		ideology = paternal_autocrat_subtype
-		traits = {}
+		traits = { educator }
 			}
 		set_politics = {
 			ruling_party = paternal_autocrat
@@ -2273,7 +2273,7 @@ country_event = { #Long Dead
 		picture = "gfx/leaders/TEX/TEX_Alfred_Bingham.tga"
 		expire = "1965.1.1"
 		ideology = authoritarian_democrat_subtype
-		traits = {}
+		traits = { educator }
 			}
 		set_politics = {
 			ruling_party = authoritarian_democrat
@@ -2290,7 +2290,7 @@ country_event = { #Long Dead
 		picture = "gfx/leaders/TEX/TEX_Alfred_Bingham.tga"
 		expire = "1965.1.1"
 		ideology = radical_socialist_subtype
-		traits = {}
+		traits = { educator }
 			}
 		set_politics = {
 			ruling_party = radical_socialist
@@ -2309,7 +2309,7 @@ country_event = { #Long Dead
 		picture = "gfx/leaders/TEX/Portrait_TEX_Earl_Kemp_Long.tga"
 		expire = "1965.1.1"
 		ideology = authoritarian_democrat_subtype
-		traits = {}
+		traits = { hog_political_protege }
 			}
 		set_politics = {
 			ruling_party = paternal_autocrat
@@ -2325,7 +2325,7 @@ country_event = { #Long Dead
 		picture = "gfx/leaders/TEX/Portrait_TEX_Earl_Kemp_Long.tga"
 		expire = "1965.1.1"
 		ideology = authoritarian_democrat_subtype
-		traits = {}
+		traits = { hog_political_protege }
 			}
 		set_politics = {
 			ruling_party = authoritarian_democrat
@@ -2341,7 +2341,7 @@ country_event = { #Long Dead
 		picture = "gfx/leaders/TEX/Portrait_TEX_Earl_Kemp_Long.tga"
 		expire = "1965.1.1"
 		ideology = social_conservative_subtype
-		traits = {}
+		traits = { hog_political_protege }
 			}
 		set_politics = {
 			ruling_party = social_conservative
@@ -2357,7 +2357,7 @@ country_event = { #Long Dead
 		picture = "gfx/leaders/TEX/Portrait_TEX_Earl_Kemp_Long.tga"
 		expire = "1965.1.1"
 		ideology = social_liberal_subtype
-		traits = {}
+		traits = { hog_political_protege }
 			}
 		set_politics = {
 			ruling_party = social_liberal
@@ -2373,7 +2373,7 @@ country_event = { #Long Dead
 		picture = "gfx/leaders/TEX/Portrait_TEX_Earl_Kemp_Long.tga"
 		expire = "1965.1.1"
 		ideology = social_democrat_subtype
-		traits = {}
+		traits = { hog_political_protege }
 			}
 		set_politics = {
 			ruling_party = social_democrat

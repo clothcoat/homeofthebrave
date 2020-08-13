@@ -192,7 +192,7 @@ create_country_leader = {# Jack Reed
 	picture = "gfx/leaders/CSA/Portrait_CSA_Jack_Reed.tga"
 	expire = "1965.1.1"
 	ideology = totalist_subtype
-	traits = {}
+	traits = { our_right_to_survive }
 }
 create_country_leader = {# Jack Reed
 	name = "Jack Reed"
@@ -200,7 +200,7 @@ create_country_leader = {# Jack Reed
 	picture = "gfx/leaders/USA/Portrait_Jack_Reed.tga"
 	expire = "1965.1.1"
 	ideology = syndicalist_subtype
-	traits = {}
+	traits = { our_right_to_survive }
 }
 create_country_leader = {# Jack Reed
 	name = "Jack Reed"
@@ -208,7 +208,7 @@ create_country_leader = {# Jack Reed
 	picture = "gfx/leaders/USA/Portrait_Jack_Reed.tga"
 	expire = "1965.1.1"
 	ideology = radical_socialist_subtype
-	traits = {}
+	traits = { our_right_to_survive }
 }
 create_country_leader = {# George Norris
 	name = "George Norris"
@@ -216,7 +216,7 @@ create_country_leader = {# George Norris
 	picture = "gfx/leaders/USA/Portrait_George_W_Norris.tga"
 	expire = "1965.1.1"
 	ideology = social_democrat_subtype
-	traits = {}
+	traits = { the_fighting_liberal }
 }
 create_country_leader = {# Herbert Hoover
 	name = "Herbert Hoover"
@@ -224,7 +224,7 @@ create_country_leader = {# Herbert Hoover
 	picture = "gfx/leaders/USA/Portrait_Hoover.tga"
 	expire = "1965.1.1"
 	ideology = social_liberal_subtype
-	traits = {}
+	traits = { indecisive }
 }
 create_country_leader = {# Herbert Hoover
 	name = "Herbert Hoover"
@@ -232,7 +232,7 @@ create_country_leader = {# Herbert Hoover
 	picture = "gfx/leaders/USA/Portrait_Hoover.tga"
 	expire = "1965.1.1"
 	ideology = market_liberal_subtype
-	traits = {}
+	traits = { indecisive }
 }
 create_country_leader = {# John Nance Garner
 	name = "John Nance Garner"
@@ -240,7 +240,7 @@ create_country_leader = {# John Nance Garner
 	picture = "Portrait_USA_John_Nance_Garner.tga"
 	expire = "1965.1.1"
 	ideology = social_conservative_subtype
-	traits = {}
+	traits = { strict_austerity_adherent cactus_jack }
 }
 create_country_leader = {# Huey Long
 	name = "Huey Long"
@@ -248,7 +248,7 @@ create_country_leader = {# Huey Long
 	picture = "gfx/leaders/USA/Portrait_TEX_Huey_Long.tga"
 	expire = "1965.1.1"
 	ideology = authoritarian_democrat_subtype
-	traits = {}
+	traits = { the_kingfish }
 }
 create_country_leader = {# William H. Murray
 	name = "William H. Murray"
@@ -256,7 +256,7 @@ create_country_leader = {# William H. Murray
 	picture = "gfx/leaders/CUS/Portrait_William_H_Murray_2.tga"
 	expire = "1965.1.1"
 	ideology = paternal_autocrat_subtype
-	traits = {}
+	traits = { alfalfa_bill }
 }
 create_country_leader = {# William H. Murray
 	name = "William H. Murray"
@@ -264,7 +264,7 @@ create_country_leader = {# William H. Murray
 	picture = "gfx/leaders/CUS/Portrait_William_H_Murray_2.tga"
 	expire = "1965.1.1"
 	ideology = national_populist_subtype
-	traits = {}
+	traits = { alfalfa_bill }
 }
 
 add_ideas = {
