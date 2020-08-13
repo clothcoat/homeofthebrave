@@ -1118,8 +1118,30 @@ USA_release_WCC = {
 		}
 
 		USA = {
-		puppet = WCC
+			puppet = WCC
 		}
+		WCC = {
+			set_politics = {
+				ruling_party = authoritarian_democrat
+				last_election = "1936.11.08"
+				election_frequency = 48
+				elections_allowed = no
+			}
+
+			set_popularities = {
+				totalist = 0
+				syndicalist = 0
+				radical_socialist = 0
+				social_democrat = 5
+				social_liberal = 10
+				market_liberal = 20
+				social_conservative = 25
+				authoritarian_democrat = 20
+				paternal_autocrat = 15
+				national_populist = 5
+			}
+		}
+
 		WCC = {
 			add_equipment_to_stockpile = { 
 			type = fighter_equipment

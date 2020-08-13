@@ -1,0 +1,161 @@
+#####################
+# Head of State traits
+#####################
+
+leader_traits = {
+
+	#### CAR
+	the_prophet = { #Herbert W. Armstrong
+		random = no
+		political_power_gain = 0.05
+		stability_factor = 0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	young_leader = { #Yockey/Rockwell
+		random = no
+		political_power_gain = -0.05
+		stability_factor = 0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}	
+	alfalfa_bill = { #Murray
+		random = no
+		political_power_gain = 0.05
+		stability_factor = 0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}	
+	american_emperor = { #Simmons
+		random = no
+		political_power_gain = 0.05
+		stability_factor = -0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}	
+	klan_reformer = { #Evans
+		random = no
+		political_power_gain = -0.05
+		stability_factor = 0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}	
+	terror_of_the_midwest = { #Stephenson
+		random = no
+		political_power_gain = 0.05
+		stability_factor = -0.05
+		local_manpower =  0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}	
+	blood_and_guts = { #Patton
+		random = no
+		stability_factor = -0.05
+		army_armor_attack_factor = 0.1
+		army_armor_defence_factor = 0.1
+		war_support_factor = 0.04
+
+		ai_will_do = {
+			factor = 1
+		}
+	}	
+	the_lone_eagle = { #Lindbergh
+		random = no
+		equipment_bonus = {
+			fighter_equipment = {
+				build_cost_ic = -0.02
+				instant = yes
+			}
+			heavy_fighter_equipment = {
+				build_cost_ic = -0.02
+				instant = yes
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	#####Sydies######
+	big_bill = { #Haywood
+		random = no
+		stability_factor = 0.05
+		political_power_factor = 0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	fighting_bob = { #Minor
+		random = no
+		stability_factor = 0.05
+		war_support_factor = 0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	the_marxist = { #Burnham
+		random = no
+		stability_factor = 0.02
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	the_machevellian = { #Burnham
+		random = no
+		political_power_gain = 0.02
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	the_patriot = { #Burnham
+		random = no
+		war_support_factor = 0.02
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	managerialist = {
+		random = no
+		totalist_drift = 0.01
+		production_factory_efficiency_gain_factor = 0.02
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	#####AUS#####
+	radio_preist = { #Coughlin
+		random = no
+		stability_factor = 0.05
+		war_support_factor = 0.10 
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	big_jim = { #Folson
+		random = no 
+		political_power_factor = 0.02
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

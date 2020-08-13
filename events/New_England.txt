@@ -53,6 +53,11 @@ country_event = { # Occupy New England
 				days = 1
 			}
 		}
+		hidden_effect = {
+			USA = {
+				remove_unit_leader = 86
+			}
+		}
 	}
 	option = {
 		name = newengland.1.b

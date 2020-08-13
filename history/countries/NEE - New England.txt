@@ -398,6 +398,20 @@ create_corps_commander = {# Ernest N. Harmon
 	planning_skill = 3
 	logistics_skill = 3
 }
+create_corps_commander = {# Adna Chaffee
+	name = "Adna R. Chaffee"
+	desc = "USA_ADNA_CHAFFEE_ARMY_DESC"
+	portrait_path = "gfx/leaders/NEE/Portrait_NEE_Adna_Chaffee.tga"
+	traits = {
+		armor_officer
+	}
+	skill = 4
+
+	attack_skill = 4
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
+}
 
 ### Admirals ###
 create_navy_leader = {# Allan Rockwell McCann
