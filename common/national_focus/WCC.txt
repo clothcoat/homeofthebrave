@@ -332,7 +332,12 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus WCC_entente_aid"
-			
+			CAN = {
+				country_event = {
+					id = wcc.1
+					days = 2
+				}
+			}
 		}
 	}
 	focus = {# To The Last Man

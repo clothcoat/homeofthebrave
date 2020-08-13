@@ -393,4 +393,17 @@ leader_traits = {
 			factor = 1
 		}
 	}
+	#####Western Command Center######
+	desperate_defender = { #Bradley
+		random = no 
+		army_defence_factor = 0.09
+		cavalry_defence_factor = 0.09
+		motorized_defence_factor = 0.09
+		dig_in_speed_factor = 0.09
+		
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
 }

@@ -464,7 +464,7 @@ country_event = { #WCC Reintegrates
 				picture = "gfx/leaders/USA/Portrait_USA_gen_douglas_macarthur.tga"
 				expire = "1965.1.1"
 				ideology = national_populist_subtype
-				traits = {}
+				traits = { american_caesar }
 			}
 			add_popularity = { ideology = national_populist popularity = 0.32 }
 			set_party_name = {

@@ -3078,7 +3078,7 @@ country_event = { # New Party Head
 				picture = "gfx/leaders/CUS/George Patton.tga"
 				expire = "1965.1.1"
 				ideology = paternal_autocrat_subtype
-				traits = { }
+				traits = { blood_and_guts }
 			}
 		}
 		set_politics = {
@@ -3351,7 +3351,7 @@ country_event = {
 			picture = "Portrait_USA_John_Nance_Garner.tga"
 			expire = "1965.1.1"
 			ideology = social_conservative_subtype
-			traits = {}
+			traits = { cactus_jack }
 			}
 		set_politics = {
 			ruling_party = social_conservative
@@ -3369,7 +3369,7 @@ country_event = {
 				picture = "gfx/leaders/USA/Portrait_USA_Alf_Landon_KR.tga"
 				expire = "1965.1.1"
 				ideology = social_liberal_subtype
-				traits = {}
+				traits = { economic_reformer }
 			}
 			set_politics = {
 			ruling_party = social_liberal
@@ -3387,7 +3387,7 @@ country_event = {
 				picture = "gfx/leaders/USA/Portrait_USA_Alf_Landon_KR.tga"
 				expire = "1965.1.1"
 				ideology = social_liberal_subtype
-				traits = {}
+				traits = { economic_reformer }
 			}
 		}
 		if = {
@@ -3400,7 +3400,7 @@ country_event = {
 				picture = "gfx/leaders/USA/Portrait_USA_Charles_Curtis.tga"
 				expire = "1965.1.1"
 				ideology = market_liberal_subtype
-				traits = {}
+				traits = { the_great_compromiser }
 			}
 		set_politics = {
 			ruling_party = market_liberal
@@ -5271,7 +5271,7 @@ country_event = { # Fosterite Coup
 				picture = "Portrait_CSA_William_Z_Foster.tga"
 				expire = "1965.1.1"
 				ideology = totalist_subtype
-				traits = {}
+				traits = { prince_of_terror }
 			}
 		}
 		set_politics = {
@@ -5427,7 +5427,7 @@ country_event = { # Social Patriots Cement Power
 				picture = "Portrait_CSA_committee.tga"
 				expire = "1965.1.1"
 				ideology = radical_socialist_subtype
-				traits = {}
+				traits = { our_right_to_survive }
 			}
 		create_country_leader = {
 				name = "Socialist American Congress"
@@ -5435,7 +5435,7 @@ country_event = { # Social Patriots Cement Power
 				picture = "Portrait_CSA_committee.tga"
 				expire = "1965.1.1"
 				ideology = syndicalist_subtype
-				traits = {}
+				traits = { our_right_to_survive }
 			}
 		create_country_leader = {
 				name = "Socialist American Congress"
@@ -5443,7 +5443,7 @@ country_event = { # Social Patriots Cement Power
 				picture = "Portrait_CSA_committee.tga"
 				expire = "1965.1.1"
 				ideology = totalist_subtype
-				traits = {}
+				traits = { our_right_to_survive }
 			}
 		}
 		set_politics = {
