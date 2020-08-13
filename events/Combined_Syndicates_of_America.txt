@@ -347,7 +347,7 @@ country_event = { # Socialist Congressional Election Arrives
 				picture = "Portrait_CSA_Earl_Bowder.tga"
 				expire = "1965.1.1"
 				ideology = totalist_subtype
-				traits = {}
+				traits = { the_director }
 			}
 		}
 		set_politics = {
@@ -397,7 +397,7 @@ country_event = { # Socialist Congressional Election Arrives
 				picture = "gfx/leaders/CSA/Portrait_CSA_burnham.dds"
 				expire = "1965.1.1"
 				ideology = totalist_subtype
-				traits = { }
+				traits = { managerialist }
 			}
 		}
 	}
@@ -417,27 +417,33 @@ country_event = { # Constitutional Convention begins
 		hidden_effect = {
 			create_country_leader = {
 				name = "CSA Central Committee"
-				desc = "CSA_CENTRAL_COMITTEE_DESC"
+				desc = "POLITICS_CSA_CENTRAL_COMITTEE_DESC"
 				picture = "Portrait_CSA_committee.tga"
 				expire = "1965.1.1"
 				ideology = radical_socialist_subtype
-				traits = {}
+				traits = {
+					our_right_to_survive
+				}
 			}
 			create_country_leader = {
 				name = "CSA Central Committee"
-				desc = "CSA_CENTRAL_COMITTEE_DESC"
+				desc = "POLITICS_CSA_CENTRAL_COMITTEE_DESC"
 				picture = "Portrait_CSA_committee.tga"
 				expire = "1965.1.1"
 				ideology = syndicalist_subtype
-				traits = {}
+				traits = {
+					our_right_to_survive
+				}
 			}
 			create_country_leader = {
 				name = "CSA Central Committee"
-				desc = "CSA_CENTRAL_COMITTEE_DESC"
+				desc = "POLITICS_CSA_CENTRAL_COMITTEE_DESC"
 				picture = "Portrait_CSA_committee.tga"
 				expire = "1965.1.1"
 				ideology = totalist_subtype
-				traits = {}
+				traits = {
+					our_right_to_survive
+				}
 			}
 			set_country_flag = {
 				flag = CSA_centralists
@@ -1114,6 +1120,7 @@ country_event = { # Socialist Constitution - Election
 				picture = "gfx/leaders/CSA/Browder_2.tga"
 				expire = "1965.1.1"
 				ideology = totalist_subtype
+				traits = { the_director }
 			}
 		}
 		set_politics = {
@@ -1160,7 +1167,7 @@ country_event = { # Socialist Constitution - Election
 				picture = "Portrait_CSA_William_Z_Foster.tga"
 				expire = "1965.1.1"
 				ideology = totalist_subtype
-				traits = {}
+				traits = { prince_of_terror }
 			}
 		}
 		set_politics = {
@@ -1213,7 +1220,7 @@ country_event = { # Socialist Constitution - Election
 				picture = "gfx/leaders/CSA/Portrait_CSA_burnham.tga"
 				expire = "1965.1.1"
 				ideology = totalist_subtype
-				traits = { }
+				traits = { managerialist }
 			}
 		}
 		
@@ -1738,7 +1745,7 @@ country_event = { # Centralist IWW Faction
 			picture = "gfx/leaders/CSA/Bill_Haywood.tga"
 			expire = "1965.1.1"
 			ideology = syndicalist_subtype
-			traits = {}
+			traits = { big_bill }
 		}
 		set_politics = {
 			ruling_party = syndicalist
@@ -1755,6 +1762,7 @@ country_event = { # Centralist IWW Faction
 				expire = "1965.1.1"
 				ideology = syndicalist_subtype
 				traits = {
+					smooth_talking_charmer
 				}
 			}
 		set_politics = {
@@ -1772,6 +1780,7 @@ country_event = { # Centralist IWW Faction
 			expire = "1965.1.1"
 			ideology = syndicalist_subtype
 			traits = {
+				great_survivor
 			}
 		}
 		set_politics = {
@@ -1789,6 +1798,7 @@ country_event = { # Centralist IWW Faction
 					expire = "1965.1.1"
 					ideology = syndicalist_subtype
 					traits = {
+						anarchist_zeal
 					}
 				}
 		set_politics = {
@@ -1806,6 +1816,7 @@ country_event = { # Centralist IWW Faction
 				expire = "1965.1.1"
 				ideology = syndicalist_subtype
 				traits = {
+					editor
 				}
 			}
 		set_politics = {
@@ -1823,6 +1834,7 @@ country_event = { # Centralist IWW Faction
 				expire = "1965.1.1"
 				ideology = radical_socialist_subtype
 				traits = {
+					editor
 					}
 				}
 			set_politics = {
@@ -1851,7 +1863,7 @@ country_event = { # Orthodox Syndicalist Election
 			picture = "gfx/leaders/CSA/Bill_Haywood.tga"
 			expire = "1965.1.1"
 			ideology = syndicalist_subtype
-			traits = {}
+			traits = { big_bill }
 		}
 		set_politics = {
 			ruling_party = syndicalist
@@ -1868,6 +1880,7 @@ country_event = { # Orthodox Syndicalist Election
 			expire = "1965.1.1"
 			ideology = syndicalist_subtype
 			traits = {
+				great_survivor
 			}
 		}
 		set_politics = {
@@ -1886,6 +1899,7 @@ country_event = { # Orthodox Syndicalist Election
 				ideology = syndicalist_subtype
 				female = yes
 				traits = {
+					appeaser
 			}
 		}
 		set_politics = {
@@ -1899,11 +1913,12 @@ country_event = { # Orthodox Syndicalist Election
 		create_country_leader = {
 				name = "Robert Minor"
 				desc = "POLITICS_ROBERT_MINOR_DESC"
-				picture = "gfx/leaders/CSA/Bill_Haywood.tga"
+				picture = "gfx/leaders/CSA/Portrait_TXS_Fighting_Bob_Minor.tga"
 				expire = "1965.1.1"
 				ideology = syndicalist_subtype
 				female = yes
 				traits = {
+					fighting_bob
 			}
 		}
 		set_politics = {
@@ -2018,81 +2033,73 @@ country_event = { # 1944 Election
 	immediate = {
 		hidden_effect = {
 			if = { # Harry Bridges
-				limit = {
-					has_country_flag = CSA_1944_iww_primary_bridges
-				}
+				limit = { has_country_flag = CSA_1944_iww_primary_bridges }
+				kill_ideology_leader = syndicalist
 				create_country_leader = {
 					name = "Harry Bridges"
 					desc = "POLITICS_HARRY_BRIDGES_DESC"
 					picture = "Portrait_CSA_Harry_Bridges.tga"
 					expire = "1965.1.1"
 					ideology = syndicalist_subtype
-					traits = {}
+					traits = {
+						anarchist_zeal
+					}
 				}
 			}
-			if = { # Frank T. Johns
-				limit = {
-					has_country_flag = CSA_1944_iww_primary_johns
-				}
+			else_if = { # Frank T. Johns
+				limit = { has_country_flag = CSA_1944_iww_primary_johns }
+				kill_ideology_leader = syndicalist
 				create_country_leader = {
 					name = "Frank T. Johns"
 					desc = "POLITICS_FRANK_JOHNS_DESC"
 					picture = "Portrait_CSA_Frank_T_Johns.tga"
 					expire = "1965.1.1"
 					ideology = syndicalist_subtype
-					traits = {}
-				}
-			}
-			if = { # Frank Little
-				limit = {
-					has_country_flag = CSA_1944_iww_primary_little
-				}
-				create_country_leader = {
-					name = "Frank Little"
-					desc = "POLITICS_FRANK_LITTLE_DESC"
-					picture = "Portrait_CSA_Frank_Little.tga"
-					expire = "1965.1.1"
-					ideology = syndicalist_subtype
-					traits = {}
+					traits = {
+						great_survivor
+					}
 				}
 			}
 			if = { # Seymour Stedman
-				limit = {
-					has_country_flag = CSA_1944_cio_primary_stedman
-				}
+				limit = { has_country_flag = CSA_1944_cio_primary_stedman }
+				kill_ideology_leader = radical_socialist
 				create_country_leader = {
 					name = "Seymour Stedman"
 					desc = "POLITICS_SEYMOUR_STEDMAN_DESC"
 					picture = "Portrait_CSA_Seymour_Stedman.tga"
 					expire = "1965.1.1"
 					ideology = radical_socialist_subtype
-					traits = {}
+					traits = {
+						reluctant_interventionist
+					}
 				}
 			}
-			if = { # William E. Rodriguez
-				limit = {
-					has_country_flag = CSA_1944_cio_primary_rodriguez
-				}
+			else_if = { # William E. Rodriguez
+				limit = { has_country_flag = CSA_1944_cio_primary_rodriguez }
+				kill_ideology_leader = radical_socialist
 				create_country_leader = {
 					name = "William E. Rodriguez"
 					desc = "POLITICS_WILLIAM_RODRIGUEZ_DESC"
 					picture = "Portrait_CSA_William_E_Rodriguez.tga"
 					expire = "1965.1.1"
 					ideology = radical_socialist_subtype
-					traits = {}
+					traits = {
+						nationalist_symbol
+					}
 				}
 			}
-			if = { # Morris Hillquit
-				limit = {
-					has_country_flag = CSA_1940_cio_primary_hilquit
-				}
+			else_if = { # Morris Hillquit
+				limit = { has_country_flag = CSA_1944_cio_primary_hilquit }
+				kill_ideology_leader = radical_socialist
 				create_country_leader = {
 					name = "Morris Hillquit"
 					desc = "POLITICS_MORRIS_HILQUIT_DESC"
 					picture = "Portrait_CSA_Morris_Hillquit.tga"
 					expire = "1965.1.1"
 					ideology = radical_socialist_subtype
-					traits = {}
+					traits = {
+						backroom_backstabber
+					}
 				}
 			}
 		}
@@ -2398,7 +2405,7 @@ country_event = { # 1948 Election
 					picture = "Portrait_CSA_Eugene_Dennis.tga"
 					expire = "1965.1.1"
 					ideology = syndicalist_subtype
-					traits = {}
+					traits = { indecisive }
 				}
 			}
 			if = { # Elmer Allison
@@ -2411,7 +2418,9 @@ country_event = { # 1948 Election
 					picture = "Portrait_CSA_Elmer_Allison.tga"
 					expire = "1965.1.1"
 					ideology = syndicalist_subtype
-					traits = {}
+					traits = {
+						editor
+					}
 				}
 			}
 			if = { # Elizabeth Nord
@@ -2424,7 +2433,9 @@ country_event = { # 1948 Election
 					picture = "Portrait_CSA_Elizabeth_Nord.tga"
 					expire = "1965.1.1"
 					ideology = syndicalist_subtype
-					traits = {}
+					traits = {
+						indecisive
+					}
 				}
 			}
 			if = { # David Dubinsky
@@ -2437,7 +2448,9 @@ country_event = { # 1948 Election
 					picture = "Portrait_CSA_David_Dubinsky.tga"
 					expire = "1965.1.1"
 					ideology = radical_socialist_subtype
-					traits = {}
+					traits = {
+						backroom_backstabber
+					}
 				}
 			}
 			if = { # John L. Lewis
@@ -2450,7 +2463,9 @@ country_event = { # 1948 Election
 					picture = "Portrait_CSA_John_Lewis.tga"
 					expire = "1965.1.1"
 					ideology = radical_socialist_subtype
-					traits = {}
+					traits = {
+						prince_of_terror
+					}
 				}
 			}
 			if = { # L. E. Katterfeld
@@ -2463,7 +2478,9 @@ country_event = { # 1948 Election
 					picture = "Portrait_CSA_L_E_Katterfeld.tga"
 					expire = "1965.1.1"
 					ideology = radical_socialist_subtype
-					traits = {}
+					traits = {
+						editor
+					}
 				}
 			}
 		}
@@ -2763,81 +2780,87 @@ country_event = { # 1952 Election
 	immediate = {
 		hidden_effect = {
 			if = { # Eugene Dennis
-				limit = {
-					has_country_flag = CSA_1952_iww_primary_dennis
-				}
+				limit = { has_country_flag = CSA_1952_iww_primary_dennis }
+				kill_ideology_leader = syndicalist
 				create_country_leader = {
 					name = "Eugene Dennis"
 					desc = "POLITICS_EUGENE_DENNIS_DESC"
 					picture = "Portrait_CSA_Eugene_Dennis.tga"
 					expire = "1965.1.1"
 					ideology = syndicalist_subtype
-					traits = {}
+					traits = {
+						indecisive
+					}
 				}
 			}
 			if = { # Henning A. Blomen
-				limit = {
-					has_country_flag = CSA_1952_iww_primary_blomen
-				}
+				limit = { has_country_flag = CSA_1952_iww_primary_blomen }
+				kill_ideology_leader = syndicalist
 				create_country_leader = {
 					name = "Henning A. Blomen"
 					desc = "POLITICS_HENNING_BLOMEN_DESC"
 					picture = "Portrait_CSA_Henning_A_Blomen.tga"
 					expire = "1965.1.1"
 					ideology = syndicalist_subtype
-					traits = {}
+					traits = {
+						captain_of_industry
+					}
 				}
 			}
 			if = { # John Bernard
-				limit = {
-					has_country_flag = CSA_1952_iww_primary_bernard
-				}
+				limit = { has_country_flag = CSA_1952_iww_primary_bernard }
+				kill_ideology_leader = syndicalist
 				create_country_leader = {
 					name = "John Bernard"
 					desc = "POLITICS_JOHN_BERNARD_DESC"
 					picture = "Portrait_CSA_John_Bernard.tga"
 					expire = "1965.1.1"
 					ideology = syndicalist_subtype
-					traits = {}
+					traits = {
+						warmonger
+					}
 				}
 			}
 			if = { # Oakley C. Johnson
-				limit = {
-					has_country_flag = CSA_1952_cio_primary_johnson
-				}
+				limit = { has_country_flag = CSA_1952_cio_primary_johnson }
+				kill_ideology_leader = radical_socialist
 				create_country_leader = {
 					name = "Oakley C. Johnson"
 					desc = "POLITICS_OAKLEY_JOHNSON_DESC"
 					picture = "Portrait_CSA_Oakley_C_Johnson.tga"
 					expire = "1965.1.1"
 					ideology = radical_socialist_subtype
-					traits = {}
+					traits = {
+						editor
+					}
 				}
 			}
 			if = { # Bayard Rustin
-				limit = {
-					has_country_flag = CSA_1952_cio_primary_rustin
-				}
+				limit = { has_country_flag = CSA_1952_cio_primary_rustin }
+				kill_ideology_leader = radical_socialist
 				create_country_leader = {
 					name = "Bayard Rustin"
 					desc = "POLITICS_BAYARD_RUSTIN_DESC"
 					picture = "Portrait_CSA_Bayard_Rustin.tga"
 					expire = "1965.1.1"
 					ideology = radical_socialist_subtype
-					traits = {}
+					traits = {
+						great_survivor
+					}
 				}
 			}
 			if = { # Darlington Hoopes
-				limit = {
-					has_country_flag = CSA_1952_cio_primary_hoopes
-				}
+				limit = { has_country_flag = CSA_1952_cio_primary_hoopes }
+				kill_ideology_leader = radical_socialist
 				create_country_leader = {
 					name = "Darlington Hoopes"
 					desc = "POLITICS_DARLINGTON_HOOPES_DESC"
 					picture = "Portrait_CSA_Darlington_Hoopes.tga"
 					expire = "1965.1.1"
 					ideology = radical_socialist_subtype
-					traits = {}
+					traits = {
+						captain_of_industry
+					}
 				}
 			}
 		}
@@ -3818,7 +3841,7 @@ country_event = { # Butler's Coup
 			picture = "Portrait_CSA_smedly_butler_G.tga"
 			expire = "1965.1.1"
 			ideology = radical_socialist_subtype
-			traits = {}
+			traits = { cornered_fox }
 		}
 		set_politics = {
 			ruling_party = radical_socialist
@@ -8465,7 +8488,7 @@ country_event = { # AFL Leadership Contest
 			picture = "gfx/leaders/CSA/Portrait_John_Lewis.dds"
 			expire = "1965.1.1"
 			ideology = social_democrat_subtype
-			traits = { }
+			traits = { captain_of_industry }
 			}
 		}
 		set_politics = {
@@ -8479,12 +8502,12 @@ country_event = { # AFL Leadership Contest
 	name = csa.325.b
 	hidden_effect = {
 		create_country_leader = {
-			name = "Samuel Green"
+			name = "William Green"
 			desc = "POLITICS_SAMEUL_GREEN_DESC"
 			picture = "gfx/leaders/CSA/Portrait_Samuel_Green.dds"
 			expire = "1965.1.1"
 			ideology = social_democrat_subtype
-			traits = { }
+			traits = { union_man }
 			}
 		}
 		set_politics = {
@@ -8516,7 +8539,7 @@ country_event = { # Independence League Leadership Contest
 			picture = "gfx/leaders/CSA/Portrait_John_Dewey.tga"
 			expire = "1965.1.1"
 			ideology = radical_socialist_subtype
-			traits = { }
+			traits = { staunch_constitutionalist }
 			}
 		}
 		set_politics = {
@@ -8535,7 +8558,7 @@ country_event = { # Independence League Leadership Contest
 			picture = "gfx/leaders/CSA/Portrait_Roger_Nash_Baldwin.tga"
 			expire = "1965.1.1"
 			ideology = radical_socialist_subtype
-			traits = { }
+			traits = { editor }
 			}
 		}
 		set_politics = {
@@ -8554,7 +8577,7 @@ country_event = { # Independence League Leadership Contest
 			picture = "gfx/leaders/CSA/Portrait_Heywood_Broun.tga"
 			expire = "1965.1.1"
 			ideology = radical_socialist_subtype
-			traits = { }
+			traits = { editor }
 			}
 		}
 		set_politics = {
@@ -8573,7 +8596,7 @@ country_event = { # Independence League Leadership Contest
 			picture = "gfx/leaders/CSA/Portrait_Arthur_Ernest_Morgan.tga"
 			expire = "1965.1.1"
 			ideology = radical_socialist_subtype
-			traits = { }
+			traits = { educator }
 			}
 		}
 		set_politics = {
@@ -8798,7 +8821,7 @@ country_event = { # General-in-Chief Position Created
 				picture = "Portrait_CSA_smedly_butler_G.tga"
 				expire = "1965.1.1"
 				ideology = radical_socialist_subtype
-				traits = {}
+				traits = { cornered_fox }
 			}
 	}
 }
