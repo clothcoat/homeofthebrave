@@ -384,6 +384,21 @@ create_corps_commander = {# Herbert Thomas Johnson
 	logistics_skill = 2
 }
 
+create_corps_commander = {# Ernest N. Harmon
+	name = "Ernest N. Harmon"
+	portrait_path = "gfx/leaders/NEE/Portrait_NEE_Ernest_Nason_Harmon.tga"
+	traits = { 
+		desert_fox
+		cavalry_officer
+		trait_reckless
+	}
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 3
+}
+
 ### Admirals ###
 create_navy_leader = {# Allan Rockwell McCann
 	name = "Allan Rockwell McCann"
