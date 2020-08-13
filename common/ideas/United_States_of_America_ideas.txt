@@ -1109,7 +1109,7 @@ ideas = {
 		### Mac and Cheese ###
 		USA_empowered_army_idea = { #Empowered Army
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_empowered_army_idea"}
-			picture = general_staff
+			picture = USA_empowered_army
 			modifier = {
 				army_org_Factor = 0.05
 				political_power_gain = 0.02
@@ -1119,7 +1119,7 @@ ideas = {
 		}
 		USA_empowered_army_idea_2 = { #Empowered Army
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_empowered_army_idea_2"}
-			picture = general_staff
+			picture = USA_american_stratocracy
 			modifier = {
 				army_org_Factor = 0.08
 				political_power_gain = 0.05
@@ -1131,7 +1131,7 @@ ideas = {
 		}
 		USA_empowered_army_idea_3 = { #Empowered Army
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_empowered_army_idea_3"}
-			picture = general_staff
+			picture = USA_american_stratocracy
 			modifier = {
 				army_org_Factor = 0.08
 				political_power_gain = 0.05
@@ -1144,18 +1144,7 @@ ideas = {
 		}
 		USA_empowered_army_idea_2Junta = { #Empowered Army
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_empowered_army_idea_2Junta"}
-			picture = general_staff
-			modifier = {
-				army_org_Factor = 0.05
-				army_morale	= 0.1
-				political_power_gain = 0.01
-				stability_weekly = 0.003
-				conscription = 0.01
-			}
-		}
-		USA_empowered_army_idea_2Junta = { #Empowered Army
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_empowered_army_idea_2Junta"}
-			picture = general_staff
+			picture = USA_american_junta
 			modifier = {
 				army_org_Factor = 0.05
 				army_morale	= 0.1
@@ -1166,7 +1155,7 @@ ideas = {
 		}
 		USA_empowered_army_idea_3Junta = { #Empowered Army
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_empowered_army_idea_3Junta"}
-			picture = general_staff
+			picture = USA_american_junta
 			modifier = {
 				army_org_Factor = 0.05
 				army_morale	= 0.3
@@ -1216,7 +1205,7 @@ ideas = {
 		}
 		USA_barracks_capitalism_idea = { #Barracks Capitalism
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_barracks_capitalism_idea"}
-			picture = general_staff
+			picture = USA_barrack_capitalism
 			modifier = {
 				political_power_gain = 0.02
 				war_support_weekly = 0.05
@@ -1240,7 +1229,7 @@ ideas = {
 		}
 		USA_defenders_of_republicanism_idea = { #Empowered Army
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_defenders_of_republicanism_idea"}
-			picture = general_staff
+			picture = USA_republican_loyalism
 			modifier = {
 				stability_weekly = 0.005
 				conscription = 0.01
@@ -1277,7 +1266,7 @@ ideas = {
 		}
 		USA_american_caeser_idea = { #American Caeser
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_american_caeser_idea"}
-			picture = general_staff
+			picture = USA_lifetime_president_1
 			modifier = {
 				political_power_gain = 0.005
 				max_command_power = 25
@@ -1289,7 +1278,7 @@ ideas = {
 		}
 		USA_american_caeser_idea_2 = { #American Caeser
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_american_caeser_idea_2"}
-			picture = general_staff
+			picture = USA_lifetime_president_2
 			modifier = {
 				political_power_gain = 0.008
 				max_command_power = 40
@@ -1302,7 +1291,7 @@ ideas = {
 		}
 		USA_american_caeser_idea_3 = { #American Caeser
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_american_caeser_idea_3"}
-			picture = general_staff
+			picture = USA_cic_1
 			modifier = {
 				political_power_gain = 0.01
 				max_command_power = 70
@@ -1314,7 +1303,7 @@ ideas = {
 		}
 		USA_american_caeser_idea_4 = { #American Caeser
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_american_caeser_idea_4"}
-			picture = general_staff
+			picture = USA_cic_2
 			modifier = {
 				political_power_gain = 0.015
 				max_command_power = 100
@@ -1326,7 +1315,7 @@ ideas = {
 		}
 		USA_american_caeser_idea_5 = { #American Caeser
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_american_caeser_idea_5"}
-			picture = general_staff
+			picture = USA_american_chief
 			modifier = {
 				political_power_gain = 0.02
 				max_command_power = 150
@@ -1339,7 +1328,7 @@ ideas = {
 		}
 		USA_american_protective_league_idea = { #American Protective League
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_american_protective_league_idea"}
-			picture = general_staff
+			picture = USA_protective_league
 			modifier = {
 				political_power_gain = 0.02
 				stability_weekly = 0.01
@@ -1350,7 +1339,7 @@ ideas = {
 		}
 		USA_american_protective_league_idea_2 = { #American Protective League 2
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_american_protective_league_idea_2"}
-			picture = general_staff
+			picture = USA_protective_legion
 			modifier = {
 				political_power_gain = 0.04
 				stability_weekly = 0.02
@@ -1361,7 +1350,7 @@ ideas = {
 		}
 		USA_office_of_war_information_idea = { #American Caeser
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_office_of_war_information_idea"}
-			picture = general_staff
+			picture = USA_office_of_war_info
 			modifier = {
 				mobilization_speed = 0.05
 				war_support_weekly = 0.003
