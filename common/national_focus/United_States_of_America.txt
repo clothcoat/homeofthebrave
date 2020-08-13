@@ -843,6 +843,7 @@ focus_tree = {
 		icon = GFX_USA_cactusjack
 		cost = 6.00
 		available = {
+				has_country_leader = { ruling_only = yes name = "John Nance Garner" }
 				has_country_flag = USA_president_inaugurated
 				has_global_flag = USA_garner_is_president
 			}
@@ -861,6 +862,9 @@ focus_tree = {
 		id = USA_Garner_free_trade
 		icon = GFX_USA_sweep_farm_tariffs
 		cost = 6.00
+		available = {
+				has_country_leader = { ruling_only = yes name = "John Nance Garner" }
+			}
 		prerequisite = {
 			focus = USA_garner_wins
 		}
@@ -885,6 +889,9 @@ focus_tree = {
 		id = USA_rural_investments
 		icon = GFX_USA_rural_investments
 		cost = 6.00
+		available = {
+				has_country_leader = { ruling_only = yes name = "John Nance Garner" }
+			}
 		prerequisite = {
 			focus = USA_Garner_free_trade
 		}
@@ -936,6 +943,9 @@ focus_tree = {
 		id = USA_austerity
 		icon = GFX_USA_austerity_measures
 		cost = 6.00
+		available = {
+				has_country_leader = { ruling_only = yes name = "John Nance Garner" }
+			}
 		prerequisite = {
 			focus = USA_rural_investments
 		}
@@ -966,6 +976,9 @@ focus_tree = {
 		id = USA_smash_radicals
 		icon = GFX_goal_TEX_fight_the_terrorists
 		cost = 6.00
+		available = {
+				has_country_leader = { ruling_only = yes name = "John Nance Garner" }
+			}
 		prerequisite = {
 			focus = USA_garner_wins
 		}
@@ -994,6 +1007,9 @@ focus_tree = {
 		id = USA_undermine_old_democrats
 		icon = GFX_HOL_crackdown_natpop
 		cost = 3.00
+		available = {
+				has_country_leader = { ruling_only = yes name = "John Nance Garner" }
+			}
 		prerequisite = {
 			focus = USA_garner_wins
 		}
@@ -1017,6 +1033,9 @@ focus_tree = {
 		id = USA_hoovers_boys
 		icon = GFX_USA_directors_boys
 		cost = 2.00
+		available = {
+				has_country_leader = { ruling_only = yes name = "John Nance Garner" }
+			}
 		prerequisite = {
 			focus = USA_smash_radicals
 		}
@@ -1044,6 +1063,9 @@ focus_tree = {
 		id = USA_reassert_democrats
 		icon = GFX_NEE_democratic_machine
 		cost = 6.00
+		available = {
+				has_country_leader = { ruling_only = yes name = "John Nance Garner" }
+			}
 		prerequisite = {
 			focus = USA_hoovers_boys
 		}
@@ -1072,6 +1094,9 @@ focus_tree = {
 		id = USA_army_expansion
 		icon = GFX_goal_USA_general_macarthur
 		cost = 6.00
+		available = {
+				has_country_leader = { ruling_only = yes name = "John Nance Garner" }
+			}
 		prerequisite = {
 			focus = USA_hoovers_boys
 		}
@@ -1091,6 +1116,9 @@ focus_tree = {
 		id = USA_finish_anarchists
 		icon = GFX_goal_USA_antileftist_action
 		cost = 6.00
+		available = {
+				has_country_leader = { ruling_only = yes name = "John Nance Garner" }
+			}
 		prerequisite = {
 			focus = USA_reassert_democrats
 		}
@@ -1121,6 +1149,9 @@ focus_tree = {
 		id = USA_yay_liquor
 		icon = GFX_goal_liberty
 		cost = 6.00
+		available = {
+				has_country_leader = { ruling_only = yes name = "John Nance Garner" }
+			}
 		prerequisite = {
 			focus = USA_reassert_democrats
 		}
@@ -1144,6 +1175,9 @@ focus_tree = {
 		id = USA_sovereignity_of_legislature
 		icon = GFX_USA_senate
 		cost = 6.00
+		available = {
+				has_country_leader = { ruling_only = yes name = "John Nance Garner" }
+			}
 		prerequisite = {
 			focus = USA_yay_liquor
 		}
