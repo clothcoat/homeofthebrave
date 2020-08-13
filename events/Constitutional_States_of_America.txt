@@ -389,7 +389,7 @@ country_event = { # Murray steps down!
 			picture = "gfx/leaders/CUS/COR_Portrait_TEX_charles_lindbergh.tga"
 			expire = "1965.1.1"
 			ideology = paternal_autocrat_subtype
-			traits = {}
+			traits = { the_lone_eagle }
 			}
 		}
 		set_politics = {
@@ -598,7 +598,7 @@ country_event = { # The Imperial Wizard Takes Charge
 				picture = "gfx/leaders/CUS/COR_William_Joseph_Simmons.tga"
 				expire = "1965.1.1"
 				ideology = national_populist_subtype
-				traits = { }
+				traits = { american_emperor }
 			}
 		}
 		set_politics = {
@@ -678,7 +678,7 @@ country_event = { # Patton
 				picture = "gfx/leaders/CUS/Portrait_COR_George_Patton.tga"
 				expire = "1965.1.1"
 				ideology = paternal_autocrat_subtype
-				traits = { }
+				traits = { blood_and_guts }
 			}
 		}
 		set_politics = {
@@ -848,7 +848,7 @@ country_event = { # Hiram Wesley Evans killed!
 				picture = "gfx/leaders/CUS/d_c_stephenson.tga"
 				expire = "1965.1.1"
 				ideology = national_populist_subtype
-				traits = { popular_figurehead }
+				traits = { terror_of_the_midwest }
 			}
 		}
 		set_politics = {
@@ -1364,7 +1364,7 @@ country_event = { # Meeting Place bombed
 				picture = "gfx/leaders/CUS/d_c_stephenson.tga"
 				expire = "1965.1.1"
 				ideology = national_populist_subtype
-				traits = { }
+				traits = { terror_of_the_midwest }
 			}
 		}
 		set_politics = {
@@ -1412,7 +1412,7 @@ country_event = { # Patton
 				picture = "gfx/leaders/CUS/Portrait_COR_George_Patton.tga"
 				expire = "1965.1.1"
 				ideology = paternal_autocrat_subtype
-				traits = { }
+				traits = { blood_and_guts }
 			}
 		}
 		set_politics = {
@@ -1620,7 +1620,7 @@ country_event = { # Evans Elected
 				picture = "gfx/leaders/CUS/Hiram_Evans_suit.tga"
 				expire = "1965.1.1"
 				ideology = national_populist_subtype
-				traits = { }
+				traits = { klan_reformer }
 			}
 		}
 		set_politics = {
@@ -2265,7 +2265,7 @@ country_event = { # Armstrong's Victory
 				picture = "gfx/leaders/CUS/Herbert_W_Armstrong.tga"
 				expire = "1965.1.1"
 				ideology = national_populist_subtype
-				traits = { }
+				traits = { the_prophet }
 			}
 		}
 		set_politics = {
@@ -2388,7 +2388,7 @@ country_event = { # Armstrong Dead
 			picture = "gfx/leaders/CUS/COR_bump.tga"
 			expire = "1965.1.1"
 			ideology = national_populist_subtype
-			traits = {}
+			traits = { young_leader }
 		}
 	}
 	option = { #Francis Parker Yockey
@@ -2399,7 +2399,7 @@ country_event = { # Armstrong Dead
 			picture = "gfx/leaders/CUS/COR_Yockey.tga"
 			expire = "1965.1.1"
 			ideology = national_populist_subtype
-			traits = {}
+			traits = { young_leader }
 		}
 	}
 }

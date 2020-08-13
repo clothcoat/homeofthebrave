@@ -106,7 +106,7 @@ create_country_leader = {
 	picture = "Portrait_TEX_Huey_Long.tga"
 	expire = "1965.1.1"
 	ideology = authoritarian_democrat_subtype
-	traits = {}
+	traits = { the_kingfish }
 }
 create_country_leader = {
 	name = "William Dudley Pelley"
@@ -114,7 +114,7 @@ create_country_leader = {
 	picture = "Portrait_TEX_William_Dudley_Pelley.tga"
 	expire = "1965.1.1"
 	ideology = social_conservative_subtype
-	traits = {}
+	traits = { authoritarian_tendencies }
 }
 create_country_leader = {
 	name = "E. W. Marland"
@@ -122,7 +122,7 @@ create_country_leader = {
 	picture = "gfx/leaders/TEX/TEX_E_W_Marland.tga"
 	expire = "1965.1.1"
 	ideology = market_liberal_subtype
-	traits = {}
+	traits = { economic_reformer }
 }
 create_country_leader = {
 	name = "Philip La Follette"
@@ -130,7 +130,7 @@ create_country_leader = {
 	picture = "gfx/leaders/TEX/Portrait_USA_Philip_La_Follette.tga"
 	expire = "1965.1.1"
 	ideology = social_liberal_subtype
-	traits = {}
+	traits = { spirit_of_fighting_bob }
 }
 create_country_leader = {
 	name = "Tom Pendergast"
@@ -138,7 +138,7 @@ create_country_leader = {
 	picture = "Portrait_TEX_Huey_Long.tga"
 	expire = "1965.1.1"
 	ideology = paternal_autocrat_subtype
-	traits = {}
+	traits = { political_boss }
 }
 
 add_ideas = {

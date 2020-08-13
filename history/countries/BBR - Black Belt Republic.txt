@@ -131,7 +131,7 @@ create_country_leader = {# Harry Haywood
 	picture = "gfx/leaders/BBR/Harry_Haywood.tga"
 	expire = "1965.1.1"
 	ideology = totalist_subtype
-	traits = {}
+	traits = { rabble_rouser }
 }
 create_country_leader = {# Paul Robeson
 	name = "Paul Robeson"
@@ -139,7 +139,7 @@ create_country_leader = {# Paul Robeson
 	picture = "gfx/leaders/BBR/Paul_Robeson.tga"
 	expire = "1965.1.1"
 	ideology = syndicalist_subtype
-	traits = {}
+	traits = { author_actor_athlete }
 }
 create_country_leader = {# W.E.B. DuBois
 	name = "W.E.B. Dubois"
@@ -147,7 +147,7 @@ create_country_leader = {# W.E.B. DuBois
 	picture = "gfx/leaders/BBR/web_du_bois.tga"
 	expire = "1965.1.1"
 	ideology = radical_socialist_subtype
-	traits = {}
+	traits = { founder_of_the_ncaap }
 }
 create_country_leader = {# A. Philip Randolph
 	name = "A. Philip Randolph"
@@ -163,7 +163,7 @@ create_country_leader = {# Roy Wilkins
 	picture = "gfx/leaders/BBR/Roy_Wilkins.dds"
 	expire = "1965.1.1"
 	ideology = social_liberal_subtype
-	traits = {}
+	traits = { rabble_rouser }
 }
 create_country_leader = {# C. C. Spaulding
 	name = "Charles Clinton Spaulding"
@@ -171,7 +171,7 @@ create_country_leader = {# C. C. Spaulding
 	picture = "gfx/leaders/BBR/clinton_c_spaulding.tga"
 	expire = "1965.1.1"
 	ideology = market_liberal_subtype
-	traits = {}
+	traits = { eco_construction_magnate }
 }
 create_country_leader = {# Father Divine
 	name = "Father Divine"
@@ -179,7 +179,7 @@ create_country_leader = {# Father Divine
 	picture = "gfx/leaders/BBR/Father_Divine.dds"
 	expire = "1965.1.1"
 	ideology = social_conservative_subtype
-	traits = {}
+	traits = { god_himself }
 }
 create_country_leader = {# Charles Young
 	name = "Charles Young"
@@ -187,7 +187,7 @@ create_country_leader = {# Charles Young
 	picture = "gfx/leaders/BBR/general_charles_young.dds"
 	expire = "1965.1.1"
 	ideology = authoritarian_democrat_subtype
-	traits = {}
+	traits = { quartermaster_general }
 }
 create_country_leader = {# James R. Stewart
 	name = "James R. Stewart"
@@ -195,7 +195,7 @@ create_country_leader = {# James R. Stewart
 	picture = "gfx/leaders/BBR/JamesRStewart.dds"
 	expire = "1965.1.1"
 	ideology = paternal_autocrat_subtype
-	traits = {}
+	traits = { figurehead_president }
 }
 create_country_leader = {# Elijah Muhammad
 	name = "Elijah Muhammad"
@@ -203,7 +203,7 @@ create_country_leader = {# Elijah Muhammad
 	picture = "gfx/leaders/BBR/elijah_muhammad.dds"
 	expire = "1965.1.1"
 	ideology = national_populist_subtype
-	traits = {}
+	traits = { the_honourable }
 }
 
 ### Field Marshal
