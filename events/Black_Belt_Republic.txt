@@ -296,7 +296,7 @@ country_event = { # Duse Muhammad Elected
 				picture = "gfx/leaders/BBR/general_charles_young.dds"
 				expire = "1965.1.1"
 				ideology = authoritarian_democrat_subtype
-				traits = { }
+				traits = { quartermaster_general }
 			}
 		}
 		set_politics = {
@@ -346,7 +346,7 @@ country_event = { # ABB in Power
 				picture = "gfx/leaders/BBR/Duse_Mohamed_Ali.tga"
 				expire = "1965.1.1"
 				ideology = totalist_subtype
-				traits = { }
+				traits = { the_pharoah }
 			}
 			set_party_name = {
 			ideology = totalist
@@ -515,7 +515,7 @@ country_event = { # March
 				picture = "gfx/leaders/BBR/general_charles_young.dds"
 				expire = "1965.1.1"
 				ideology = authoritarian_democrat_subtype
-				traits = { }
+				traits = { quartermaster_general }
 			}
 		}
 		set_politics = {
@@ -887,7 +887,7 @@ country_event = { # Union Elections
 				picture = "gfx/leaders/BBR/James_W_Ford.dds"
 				expire = "1965.1.1"
 				ideology = totalist_subtype
-				traits = { }
+				traits = { silent_workhorse }
 			}
 		}
 		set_politics = {
@@ -935,7 +935,7 @@ country_event = { # Union Elections
 				picture = "gfx/leaders/BBR/Ben_J_Davis.dds"
 				expire = "1965.1.1"
 				ideology = totalist_subtype
-				traits = { }
+				traits = { hog_totalist_chairman }
 			}
 		}
 		set_politics = {
@@ -984,7 +984,7 @@ country_event = { # Union Elections
 				picture = "gfx/leaders/BBR/Harry_Haywood.tga"
 				expire = "1965.1.1"
 				ideology = totalist_subtype
-				traits = { }
+				traits = { rabble_rouser }
 			}
 		}
 		set_politics = {
@@ -1206,7 +1206,7 @@ country_event = { # The Liberal Election
 				picture = "gfx/leaders/BBR/robert_sengstacke_abbott.dds"
 				expire = "1965.1.1"
 				ideology = social_democrat_subtype
-				traits = { }
+				traits = { sec_silent_lawyer }
 			}
 	set_politics = {
 			ruling_party = social_democrat
@@ -1255,7 +1255,7 @@ country_event = { # The Liberal Election
 				picture = "gfx/leaders/BBR/Edith_Sampson.dds"
 				expire = "1965.1.1"
 				ideology = social_liberal_subtype
-				traits = { }
+				traits = { sec_silent_lawyer }
 			}
 	}
 	if = { limit = { has_country_flag = LP_Marshall }
@@ -1269,7 +1269,7 @@ country_event = { # The Liberal Election
 				picture = "gfx/leaders/BBR/thurgood_marshall.dds"
 				expire = "1965.1.1"
 				ideology = social_liberal_subtype
-				traits = { }
+				traits = { sec_silent_lawyer }
 			}
 	}
 	if = { limit = { has_country_flag = LP_Wilkins }
@@ -1313,7 +1313,7 @@ country_event = { # The Liberal Election
 				picture = "gfx/leaders/BBR/Portrait_SNA_Zora_Neale_Hurston.tga"
 				expire = "1965.1.1"
 				ideology = market_liberal_subtype
-				traits = { }
+				traits = { perserver_of_culture }
 			}
 	}
 	if = { limit = { has_country_flag = RP_Spaulding }

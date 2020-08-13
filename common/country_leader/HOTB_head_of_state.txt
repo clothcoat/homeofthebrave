@@ -302,4 +302,95 @@ leader_traits = {
 			factor = 1
 		}
 	}
+	###New England###
+	elite_family_ties = { #Astors
+		random = no 
+		stability_factor = 0.04
+		political_power_factor = 0.05
+		production_speed_buildings_factor = 0.5
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	anti_statist = { #Nock
+		random = no 
+		stability_factor = 0.04
+		political_power_factor = 0.05
+		production_speed_buildings_factor = 0.5
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	###Black Belt###
+	the_pharoah = { #Duse Muhammad
+		random = no 
+		war_support_factor = 0.02
+		totalist_drift = 0.02
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	rabble_rouser = { 
+		random = no 
+		war_support_factor = 0.02
+		political_power_gain = 0.02
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	perserver_of_culture = { #Hurston
+		random = no 
+		stability_factor = 0.02
+		political_power_gain = 0.02
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	author_actor_athlete = { #Robeson
+		random = no 
+		war_support_factor = 0.02
+		stability_factor = 0.02
+		political_power_gain = 0.02
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	founder_of_the_ncaap = { #DuBuois
+		random = no 
+		war_support_factor = 0.02
+		stability_factor = 0.02
+		political_power_gain = 0.02
+		radical_socialist_drift = 0.02
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	the_honourable = { #Elijah Muhammad
+		random = no 
+		war_support_factor = 0.02
+		stability_factor = 0.02
+		political_power_gain = 0.02
+		national_populist_drift = 0.02
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	god_himself = { #DuBuois
+		random = no 
+		war_support_factor = 0.02
+		stability_factor = -0.02
+		political_power_gain = 0.02
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
 }
