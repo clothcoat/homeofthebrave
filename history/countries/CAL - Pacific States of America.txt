@@ -140,7 +140,7 @@ create_country_leader = {# Hiram Johnson
 	picture = "Portrait_CAL_Hiram_Johnson.tga"
 	expire = "1965.1.1"
 	ideology = social_democrat_subtype
-	traits = {}
+	traits = { captain_of_industry }
 }
 create_country_leader = {# Earl Warren
 	name = "Earl Warren"
@@ -148,15 +148,15 @@ create_country_leader = {# Earl Warren
 	picture = "Portrait_CAL_Earl_Warren.tga"
 	expire = "1965.1.1"
 	ideology = social_liberal_subtype
-	traits = {}
+	traits = { backroom_backstabber }
 }
 create_country_leader = {# Pacific Congress
 	name = "Pacific Congress"
 	desc = "POLITICS_PACIFIC_CONGRESS_DESC"
-	picture = "gfx/leaders/PSA/CAL_pacific_congress.tga"
+	picture = "gfx/leaders/CAL/CAL_pacific_congress.tga"
 	expire = "1965.1.1"
 	ideology = social_conservative_subtype
-	traits = {}
+	traits = { provisional_congress }
 }
 create_country_leader = {# Frank Merriam
 	name = "Frank Merriam"
@@ -164,15 +164,15 @@ create_country_leader = {# Frank Merriam
 	picture = "Portrait_CAL_Frank_Merrimam.tga"
 	expire = "1965.1.1"
 	ideology = market_liberal_subtype
-	traits = {}
+	traits = { prince_of_terror }
 }
 create_country_leader = {
 	name = "Upton Sinclair"
 	desc = "POLITICS_UPTON_SINCLAIR_DESC"
-	picture = "gfx/leaders/PSA/Portrait_CAL_Upton_Sinclair.tga"
+	picture = "gfx/leaders/CAL/Portrait_CAL_Upton_Sinclair.tga"
 	expire = "1965.1.1"
 	ideology = radical_socialist_subtype
-	traits = {}
+	traits = { author }
 }
 
 
