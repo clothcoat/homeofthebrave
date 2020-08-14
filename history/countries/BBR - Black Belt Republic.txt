@@ -350,5 +350,32 @@ create_navy_leader = {# Youngblood Nance
 	maneuvering_skill = 1
 	coordination_skill = 1
 }
+### Operatives ###
+if = {
+	limit = { has_dlc = "La Resistance" }
+	create_operative_leader = {
+		name = "Angelo Herndon"
+		GFX = GFX_portrait_HOTB_Angelo_Herndon
+		traits = {
+			operative_commando
+			operative_natural_orator
+		}
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		nationalities = { CSA USA TEX CAL NEE BBR COR }
+	}
+	create_operative_leader = {
+		name = "Annie Lee Moss"
+		GFX = GFX_portrait_HOTB_Annie_Lee_Moss
+		traits = {
+			operative_natural_orator
+			operative_tough
+		}
+		bypass_recruitment = no
+		female = yes
+		available_to_spy_master = yes
+		nationalities = { CSA USA TEX CAL NEE BBR COR }
+	}
+}
 
 USA_start_naval_variant = yes

@@ -599,4 +599,78 @@ create_navy_leader = {# William R. Furlong
 	coordination_skill = 2
 }
 
+### Operatives ###
+if = {
+	limit = { has_dlc = "La Resistance" }
+	create_operative_leader = {
+		name = "Josephine Baker"
+		GFX = GFX_portrait_josephine_baker
+		traits = {
+			operative_infiltrator
+			operative_escape_artist
+		}
+		bypass_recruitment = yes
+		available_to_spy_master = yes
+		female = yes
+		nationalities = { CSA COR USA TEX CAL NEE WCC }
+	}
+	create_operative_leader = {
+		name = "Lucille Ball"
+		GFX = GFX_portrait_lucille_ball
+		traits = {
+			operative_well_groomed
+			operative_natural_orator
+		}
+		bypass_recruitment = yes
+		available_to_spy_master = yes
+		female = yes
+		nationalities = { CSA COR USA TEX CAL NEE WCC }
+	}
+	create_operative_leader = {
+		name = "Lee Pressman"
+		GFX = GFX_portrait_lee_pressman
+		traits = {
+			operative_infiltrator
+			operative_safe_cracker
+		}
+		bypass_recruitment = yes
+		available_to_spy_master = yes
+		female = yes
+		nationalities = { CSA COR USA TEX CAL NEE WCC }
+	}
+	create_operative_leader = {
+		name = "Mildred Gillars"
+		GFX = GFX_portrait_HOTB_Mildred_Gillars
+		traits = {
+			operative_natural_orator
+			operative_double_agent
+		}
+		bypass_recruitment = yes
+		available_to_spy_master = yes
+		female = yes
+		nationalities = { CSA COR USA TEX CAL NEE WCC }
+	}
+	create_operative_leader = {
+		name = "Julius Rosenberg"
+		GFX = GFX_portrait_HOTB_Julius_Rosenberg
+		traits = {
+			operative_infiltrator
+		}
+		bypass_recruitment = yes
+		available_to_spy_master = yes
+		nationalities = { CSA COR USA TEX CAL NEE WCC }
+	}
+	create_operative_leader = {
+		name = "Ethel Greenglass"
+		GFX = GFX_portrait_HOTB_Ethel_Greenglass
+		traits = {
+			operative_infiltrator
+		}
+		bypass_recruitment = yes
+		available_to_spy_master = yes
+		female = yes
+		nationalities = { CSA COR USA TEX CAL NEE WCC }
+	}
+}
+
 CSA_start_naval_variant = yes
