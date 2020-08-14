@@ -2043,8 +2043,9 @@ focus_tree = {
 		icon = GFX_BBR_socialist_party
 		available = {
 			has_government = radical_socialist
+			has_country_flag = BBR_rad_socs_win
 		}
-		cost = 6.00
+		cost = 1.00
 		x = 32
 		y = 0
 		ai_will_do = {
@@ -2061,6 +2062,9 @@ focus_tree = {
 		cost = 6.00
 		prerequisite = {
 			focus = BBR_socialist_party
+		}
+		available = {
+			has_government = radical_socialist
 		}
 		relative_position_id = BBR_socialist_party
 		x = -1
@@ -2114,6 +2118,9 @@ focus_tree = {
 		cost = 6.00
 		prerequisite = {
 			focus = BBR_socialist_party
+		}
+		available = {
+			has_government = radical_socialist
 		}
 		relative_position_id = BBR_socialist_party
 		x = 1
@@ -2182,12 +2189,15 @@ focus_tree = {
 	focus = {# Solidarity Economics
 		id = BBR_solidarity_economics
 		icon = GFX_BBR_solidarity_economics
-		cost = 6.00
+		cost = 5.50
 		prerequisite = {
 			focus = BBR_national_resources
 		}
 		prerequisite = {
 			focus = BBR_capital_buyout
+		}
+		available = {
+			has_government = radical_socialist
 		}
 		relative_position_id = BBR_socialist_party
 		x = 0
@@ -2221,6 +2231,9 @@ focus_tree = {
 		cost = 6.00
 		prerequisite = {
 			focus = BBR_solidarity_economics
+		}
+		available = {
+			has_government = radical_socialist
 		}
 		relative_position_id = BBR_socialist_party
 		x = 0
@@ -2267,6 +2280,9 @@ focus_tree = {
 		cost = 6.00
 		prerequisite = {
 			focus = BBR_coop_leagues
+		}
+		available = {
+			has_government = radical_socialist
 		}
 		relative_position_id = BBR_socialist_party
 		x = 0
@@ -2356,6 +2372,9 @@ focus_tree = {
 		prerequisite = {
 			focus = BBR_solidarity_economics
 		}
+		available = {
+			has_government = radical_socialist
+		}
 		relative_position_id = BBR_socialist_party
 		x = -2
 		y = 3
@@ -2395,9 +2414,12 @@ focus_tree = {
 	focus = {# Romanticism
 		id = BBR_preserve_the_land
 		icon = GFX_BBR_land_preservation
-		cost = 6.00
+		cost = 4.50
 		prerequisite = {
 			focus = BBR_land_redistribution
+		}
+		available = {
+			has_government = radical_socialist
 		}
 		relative_position_id = BBR_socialist_party
 		x = -2
@@ -2453,9 +2475,12 @@ focus_tree = {
 	focus = {# African American Identity
 		id = BBR_african_american_identity
 		icon = GFX_BBR_american_identity
-		cost = 6.00
+		cost = 5.00
 		prerequisite = {
 			focus = BBR_solidarity_economics
+		}
+		available = {
+			has_government = radical_socialist
 		}
 		relative_position_id = BBR_socialist_party
 		x = 2
@@ -2474,9 +2499,12 @@ focus_tree = {
 	focus = {# The Talented Tenth
 		id = BBR_the_talented_tenth
 		icon = GFX_BBR_talented_tenth
-		cost = 6.00
+		cost = 5.00
 		prerequisite = {
 			focus = BBR_african_american_identity
+		}
+		available = {
+			has_government = radical_socialist
 		}
 		relative_position_id = BBR_socialist_party
 		x = 2
@@ -2494,9 +2522,12 @@ focus_tree = {
 	focus = {# Promote Freethought
 		id = BBR_freethought_societies
 		icon = GFX_BBR_lodges
-		cost = 6.00
+		cost = 5.00
 		prerequisite = {
 			focus = BBR_the_talented_tenth
+		}
+		available = {
+			has_government = radical_socialist
 		}
 		relative_position_id = BBR_socialist_party
 		x = 3
@@ -2514,9 +2545,12 @@ focus_tree = {
 	focus = {# Center for the Arts
 		id = BBR_center_for_the_arts
 		icon = GFX_BBR_art_centers
-		cost = 6.00
+		cost = 5.00
 		prerequisite = {
 			focus = BBR_the_talented_tenth
+		}
+		available = {
+			has_government = radical_socialist
 		}
 		relative_position_id = BBR_socialist_party
 		x = 1
@@ -2534,9 +2568,12 @@ focus_tree = {
 	focus = {# Insurance Societies
 		id = BBR_insurance_societies
 		icon = GFX_BBR_insurance_societies
-		cost = 6.00
+		cost = 5.00
 		prerequisite = {
 			focus = BBR_freethought_societies
+		}
+		available = {
+			has_government = radical_socialist
 		}
 		relative_position_id = BBR_socialist_party
 		x = 3
@@ -2556,9 +2593,12 @@ focus_tree = {
 	focus = {# Old Folks Homes
 		id = BBR_old_folks_home
 		icon = GFX_BBR_young_and_old
-		cost = 6.00
+		cost = 5.50
 		prerequisite = {
 			focus = BBR_the_group_economy
+		}
+		available = {
+			has_government = radical_socialist
 		}
 		relative_position_id = BBR_socialist_party
 		x = 0
@@ -2583,6 +2623,9 @@ focus_tree = {
 		prerequisite = {
 			focus = BBR_preserve_the_land
 		}
+		available = {
+			has_government = radical_socialist
+		}
 		relative_position_id = BBR_socialist_party
 		x = -1
 		y = 5
@@ -2601,9 +2644,12 @@ focus_tree = {
 	focus = {# Birth Control
 		id = BBR_birth_control
 		icon = GFX_CAL_pivot_of_civilization
-		cost = 6.00
+		cost = 5.00
 		prerequisite = {
 			focus = BBR_preserve_the_land
+		}
+		available = {
+			has_government = radical_socialist
 		}
 		relative_position_id = BBR_socialist_party
 		x = -3
@@ -2624,6 +2670,9 @@ focus_tree = {
 		cost = 6.00
 		prerequisite = {
 			focus = BBR_birth_control
+		}
+		available = {
+			has_government = radical_socialist
 		}
 		relative_position_id = BBR_socialist_party
 		x = -3
@@ -2712,6 +2761,9 @@ focus_tree = {
 		prerequisite = {
 			focus = BBR_american_party
 		}
+		available = {
+			has_government = authoritarian_democrat
+		}
 		relative_position_id = BBR_american_party
 		x = -2
 		y = 1
@@ -2746,6 +2798,9 @@ focus_tree = {
 		cost = 6.00
 		prerequisite = {
 			focus = BBR_approach_local_socialists
+		}
+		available = {
+			has_government = authoritarian_democrat
 		}
 		relative_position_id = BBR_american_party
 		x = -2
@@ -2783,6 +2838,9 @@ focus_tree = {
 		prerequisite = {
 			focus = BBR_approach_the_afp
 		}
+		available = {
+			has_government = authoritarian_democrat
+		}
 		relative_position_id = BBR_american_party
 		x = -2
 		y = 3
@@ -2807,6 +2865,9 @@ focus_tree = {
 		prerequisite = {
 			focus = BBR_crush_race_separatists
 		}
+		available = {
+			has_government = authoritarian_democrat
+		}
 		relative_position_id = BBR_american_party
 		x = -3
 		y = 4
@@ -2830,6 +2891,9 @@ focus_tree = {
 		prerequisite = {
 			focus = BBR_american_party
 		}
+		available = {
+			has_government = authoritarian_democrat
+		}
 		relative_position_id = BBR_american_party
 		x = 0
 		y = 1
@@ -2850,6 +2914,9 @@ focus_tree = {
 		cost = 6.00
 		prerequisite = {
 			focus = BBR_american_recruitment_effort
+		}
+		available = {
+			has_government = authoritarian_democrat
 		}
 		relative_position_id = BBR_american_party
 		x = 0
@@ -2876,6 +2943,9 @@ focus_tree = {
 		prerequisite = {
 			focus = BBR_integration_through_service
 		}
+		available = {
+			has_government = authoritarian_democrat
+		}
 		relative_position_id = BBR_american_party
 		x = 0
 		y = 3
@@ -2897,6 +2967,9 @@ focus_tree = {
 		cost = 6.00
 		prerequisite = {
 			focus = BBR_american_party
+		}
+		available = {
+			has_government = authoritarian_democrat
 		}
 		relative_position_id = BBR_american_party
 		x = 2
@@ -2940,6 +3013,9 @@ focus_tree = {
 		cost = 6.00
 		prerequisite = {
 			focus = BBR_fair_play
+		}
+		available = {
+			has_government = authoritarian_democrat
 		}
 		relative_position_id = BBR_american_party
 		x = 2
@@ -2995,6 +3071,9 @@ focus_tree = {
 		cost = 6.00
 		prerequisite = {
 			focus = BBR_paternal_economics
+		}
+		available = {
+			has_government = authoritarian_democrat
 		}
 		relative_position_id = BBR_american_party
 		x = 2
@@ -3056,6 +3135,9 @@ focus_tree = {
 		prerequisite = {
 			focus = BBR_american_traditions
 		}
+		available = {
+			has_government = authoritarian_democrat
+		}
 		relative_position_id = BBR_american_party
 		x = -1
 		y = 4
@@ -3085,6 +3167,9 @@ focus_tree = {
 		prerequisite = {
 			focus = BBR_american_traditions
 		}
+		available = {
+			has_government = authoritarian_democrat
+		}
 		relative_position_id = BBR_american_party
 		x = 1
 		y = 4
@@ -3107,6 +3192,9 @@ focus_tree = {
 		cost = 6.00
 		prerequisite = {
 			focus = BBR_new_infrastructure
+		}
+		available = {
+			has_government = authoritarian_democrat
 		}
 		relative_position_id = BBR_american_party
 		x = 3
@@ -3179,6 +3267,9 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = BBR_full_honors_act
+		}
+		available = {
+			has_government = authoritarian_democrat
 		}
 		relative_position_id = BBR_american_party
 		x = 0
@@ -5076,6 +5167,20 @@ focus_tree = {
 		prerequisite = {
 			focus = BBR_rights_of_the_negro
 		}
+		select_effect = {
+		hidden_effect = {
+			country_event = {
+				id = bbr.1205
+				days = 25
+				}
+			}
+		hidden_effect = {
+			country_event = {
+				id = bbr.1206
+				days = 36
+				}
+			}
+		}
 		relative_position_id = BBR_unia
 		x = 0
 		y = 2
@@ -5109,6 +5214,12 @@ focus_tree = {
 			add_manpower = 400
 			add_popularity = { ideology = paternal_autocrat popularity = 0.05 }
 			add_political_power = 40
+			hidden_effect = {
+			country_event = {
+				id = bbr.1207
+				days = 30
+				}
+			}
 		}
 	}
 	focus = {# Black Cross Nurses
@@ -5141,7 +5252,7 @@ focus_tree = {
 	focus = {# Liberia Connections
 		id = BBR_liberian_connections
 		icon = GFX_BBR_liberian_connection
-		cost = 6.00
+		cost = 5.00
 		prerequisite = {
 			focus = BBR_black_cross_nurses
 		}
@@ -5153,8 +5264,17 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BBR_liberian_connections"
-			add_popularity = { ideology = paternal_autocrat popularity = 0.05 }
+			LIB = {
+			add_popularity = { ideology = paternal_autocrat popularity = 0.03 }
+			add_opinion_modifier = { target = BBR modifier = small_increase }
+			}
 			add_political_power = 30
+			LIB = {
+			country_event = {
+			id = bbr.1200
+			days = 1
+				}
+			}
 		}
 	}
 	focus = {# Black Star Steamship Line
@@ -5362,6 +5482,12 @@ focus_tree = {
 			add_political_power = 100
 			add_popularity = { ideology = paternal_autocrat popularity = 0.2 }
 			add_command_power = 25
+			hidden_effect = {
+			country_event = {
+				id = bbr.1204
+				days = 6
+				}
+			}
 		}
 	}
 	focus = {# Nation of Islam
@@ -6087,6 +6213,13 @@ focus_tree = {
 		focus = BBR_american_identity
 		focus = BBR_pan_afrikan_identity
 		}
+		available = {
+		OR = {
+			has_government = totalist
+			has_government = syndicalist
+			has_government = radical_socialist
+			}
+		}
 		cost = 6.00
 		x = 101
 		y = 0
@@ -6349,6 +6482,15 @@ focus_tree = {
 		mutually_exclusive = {
 		focus = BBR_spreading_the_revolution
 		focus = BBR_pan_afrikan_identity
+		}
+		available = {
+		OR = {
+			has_government = authoritarian_democrat
+			has_government = social_conservative
+			has_government = market_liberal
+			has_government = social_liberal
+			has_government = social_democrat
+			}
 		}
 		x = 107
 		y = 0
@@ -7604,7 +7746,7 @@ focus_tree = {
 				name = artillery_bonus
 				bonus = 1
 				uses = 2
-				category = antiair
+				category = anti_air
 			}
 			add_tech_bonus = {
 				name = CAR_Overwhelming_Firepower
@@ -7619,7 +7761,7 @@ focus_tree = {
 		icon = GFX_focus_generic_tank_destroyer
 		cost = 6.00
 		prerequisite = {
-			focus = BBR_long_range_ballistics_development
+			focus = BBR_advanced_fortifications
 			focus = BBR_movement_focus
 		}
 		relative_position_id = BBR_flipper_doctrine
@@ -7658,6 +7800,9 @@ focus_tree = {
 		id = BBR_submarine_contracts
 		icon = GFX_goal_generic_navy_submarine
 		cost = 6.00
+		prerequisite = {
+			focus = BBR_long_range_ballistics_development
+		}
 		prerequisite = {
 			focus = BBR_advanced_fortifications
 		}

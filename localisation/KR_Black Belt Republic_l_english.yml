@@ -197,6 +197,9 @@ BBR_political_crisis_desc:0 "The United States is in crisis. The Great Depressio
 BBR_new_year_strike_idea:0 "New Year Strike"
 BBR_native_code_talkers_idea:0 "Native Code Talkers"
 
+BBR_rad_socs_win:0 "The Socialist Party Won the Election"
+ACW_BBR_Buffalo_Soldiers:0 "We Will Raise the Young's Cavalry"
+
 amcivwar_idea:0 "Fighting for America!"
 BBR_small_arms_industry_idea:0 "Small Arms Industry"
 BBR_womens_land_army_idea:0 "Women's Land Army"
@@ -892,24 +895,39 @@ BBR_trench_training_desc:0 "As we focus on the defense over offense in foreign p
 BBR_american_confederation:0 "Assert Independence"
 BBR_american_confederation_desc:0 "While we are willing to allow the rest of America to be run by a separate power, we demand that they recognize our right to exist in some capacity. We should negotiate for this."
 BBR_reclaim_the_states:0 "Reclaim the States"
-BBR_reclaim_the_states_desc:0 "We are not separatists as so many claim, we are "
+BBR_reclaim_the_states_desc:0 "We are not separatists as so many claim, we are instead those who will finally run America as it was meant to be, with all citizens as political equals. We will claim, and reform, the United States."
 BBR_finish_car:0 "Finish the Old Democrats"
+BBR_finish_car_desc:0 "The ODP is still kicking and needs to be finished off at once. We need to boost our focus on combating their militants."
 BBR_route_the_feds:0 "Route the Federalists"
+BBR_route_the_feds_desc:0 "The Federalists would have us bend the knee for nothing in return so we shall defeat them, for their tyranny is not proper America but a farce. Their defeat will leave us far safer."
 BBR_american_federation:0 "American Federation"
+BBR_american_federation_desc:0 "There will be no compromises will false democracies. We will be America reborn."
 BBR_conditional_reintegration:0 "Conditional Reintegration"
+BBR_conditional_reintegration_desc:0 "We must accept that the victor of the Civil War has a better claim on the states than we do and that we must rejoin them. However, we will demand a great deal in return for this, including equal rights, the dismantling of white supremacist political machines and greater autonomy one way or another."
 BBR_a_new_america:0 "A New America"
+BBR_a_new_america_desc:0 "We have succeeded. The states are ours."
 
 ### Military doctrine ###
 BBR_defend_the_new_state:0 "Defend the New State"
+BBR_defend_the_new_state_desc:0 "We finally have a state devoted to Black American political sovereignty and it must be defended at once with a proper military being recruited and organized!"
 BBR_young_plan:0 "Young Plan"
+BBR_young_plan_desc:0 "Charles Young's doctrine focuses on traditional planning, scouting, superior reconnaissance and building an all-around professional, well-trained army under talented generals."
 BBR_officer_focus:0 "Officer Focus"
+BBR_officer_focus_desc:0 "Our men are only as effective as our officers tactics allow them to be and as such we need to focus on their leadership and tactical abilities, as well as their ability to communicate with higher-ranking officers."
 BBR_military_sciences:0 "Military Sciences"
+BBR_military_sciences_desc:0 "We need to modernize our military education to maximize all-around strategy and efficiency in the militaries higher ranks. Colleges will now be funded to create Military Science departments devoted to studing military tactics, strategies, behavior and institutions, with an initial draft for the education coming from Young himself."
 BBR_new_cavalry_units:0 "Call in the Cavalry"
+BBR_new_cavalry_units_desc:0 "Cavalry is not as outdated as some make it out to be, especially for the purposes of recon. With our state starting with relatively fewer resources relative to other Civil War factions it allows a cheap and reliable means of transportation."
 BBR_infantry_morale:0 "Troop Morale"
+BBR_infantry_morale_desc:0 "Troop Morale is of the utmost importance to a fighting army and will be emphasized in our training programs and increased via an investment in superior infantry equipment."
 BBR_mass_navy:0 "Mass Navy"
+BBR_mass_navy_desc:0 "While some prefer fancier technologies, at the end of a day a large and powerful ships in-and-of-itself is the backbone of the navy and will be enough to not only fend off potential invasions but will be the envy of much of the world."
 BBR_buffalo_soldiers:0 "Buffalo Soldiers"
+BBR_buffalo_soldiers_desc:0 "The Buffalo Soldiers are named for Union Troops who served in the Union Army. We should use similar means of appealing to Black men and create professional corps around the concept of modern Buffalo Soldiers to expand our numbers of trained soldiers."
 BBR_tuskeegee_airmen:0 "The Tuskeegee Airmen"
+BBR_tuskeegee_airmen_desc:0 "While we have invested in expanding ground forces, we need air forces as well. Tuskeegee will be responsible for training new recruits into the air force who will be supplied with new aircraft to defend the skies."
 BBR_purchase_convoys:0 "Purchase Convoys"
+BBR_purchase_convoys_desc:0 ""
 BBR_davis_plan:0 "Davis Plan"
 BBR_mechanized_offense:0 "Mechanized Offense"
 BBR_aireal_offense:0 "Aerial Support"
@@ -998,6 +1016,63 @@ bbr.12.d:0 "The Nationalists may have taken power but they have not settled the 
 bbr.12.a:0 "Appoint the NOI"
 bbr.12.b:0 "Appoint the UNIA"
 
+### UNIA Takes Power ###
+
+bbr.1200.t:0 "Mission from UNIA"
+bbr.1200.d:0 "UNIA has been growing its influence within our nation and is using its diplomatic connections to push for unification with the Black Belt. Marcus Garvey, head of the Liberia-UNIA is demanding that we comply, and the funding he has received has given him his own 'African Legion' militia. Naturally, UNIA promises us rewards if we comply and threatens us with force if we do not."
+bbr.1200.a:0 "Comply"
+bbr.1200.b:0 "Resist"
+
+bbr.1201.t:0 "Return of Garvey"
+bbr.1201.d:0 "Liberia has caved to our demands! With our mission to Liberia being a success thanks to the efforts of UNIA in both nations, the original founder of UNIA and greatest promoter of Black Nationalism in the world, Marcus Garvey, has returned to retake the mantel as the leader of the organization after he was deported from the country by the FBI. As James Stewart has officially been standing in for him, he will have to comply in return for being named the heir to Garvey."
+bbr.1201.a:0 "A Great Day"
+
+bbr.1202.t:0 "Return of Garvey"
+bbr.1202.d:0 "Liberia has refused our demands! Marcus Garvey and his African Legion and UNIA is in exile after being pushed out by Liberian government and has returned home to retake the mantel as the leader of the organization after he was deported from the country by the FBI. As James Stewart has officially been standing in for him, he will have to comply in return for being named the heir to Garvey, who promises that Liberia will pay for its treachery."
+bbr.1202.a:0 "At least he survived"
+
+bbr.1203.t:0 "Conquest of America"
+bbr.1203.d:0 "We have taken the United States! Naturally, we have few citizens in this region who qualify as pure Black citizens and we expect massive resistance if we attempt to hold it. As such we are being pressured by the cabinet to release the United States under a White Separatist Faction named the Young Klan, a group of White Nationalists who have worked with Black Nationalists before and promise to enforce racial laws that agree with ours as well as an alliance and payments. Of course, we could attempt to dominate the region directly and use its resources for a Black Empire of sorts."
+bbr.1203.a:0 "Release the US"
+bbr.1203.b:0 "We hold it"
+
+bbr.1204.t:0 "Status of the NOI"
+bbr.1204.d:0 "While the NOI were our allies in the early days of the coup it is clear that they are no longer needed and that they still have designs on ruling the nation. As such, with our cornering of political power, we will either have a deal with them to give them local autonomy in return for ending their national ambitions and political party or crush them."
+bbr.1204.a:0 "Crush Them"
+bbr.1204.b:0 "Cut a Deal"
+
+bbr.1205.t:0 "Young Klan Offers"
+bbr.1205.d:0 "The faction of the Young Klan that has favored working with the Black Nationalists have reacted to our recent racial policies with mixed results, disliking the treatment of local whites but acknowledging it is tolerable so long as white ethnostates exist. They have stated we should place them directly in charge of white communities with some more autonomy, in return offering greater alliances and favorable local policies."
+bbr.1205.a:0 "Agreed"
+bbr.1205.b:0 "Disagree"
+
+bbr.1206.t:0 "Status of the Mixed-Raced"
+bbr.1206.d:0 "We can not ignore racial realities established by genetics and biology, and as such we must decide what to do with those who are of mixed-race heritage living in our nation as Garvey has made their inferiority and impure bloodline a known problem with our brand of Black Nationalism. We could make it legal to only join higher UNIA offices if one is a pure-blooded Black while only working with racially approved citizens or go further, and further segregation to make them considered a new racial category to be separated from pure Blacks."
+bbr.1206.a:0 "Bar them from Politics"
+bbr.1206.b:0 "Create new categories"
+
+bbr.1207.t:0 "Liberty Halls Expand"
+bbr.1207.d:0 "Liberty Halls are the common official meeting places for our organization. As such with the rise of UNIA it has seen expansion and now we are receiving requests to endorse them as a new form of townhalls, making UNIA's civic and political meeting place one and the same while receiving further state funding."
+bbr.1207.a:0 "A fine idea"
+bbr.1207.b:0 "It's not needed"
+
+bbr.1208.t:0 "Back to Africa"
+bbr.1208.d:0 "With Liberia back in our hands it is time to start achieving Garvey's dreams to send more Black citizens there. Of course, with our new sovereignty in the West it is less needed than it once was and this makes a useful hub of operations, causing calls for us to only send a handful for now."
+bbr.1208.a:0 "Small Colonies"
+bbr.1208.b:0 "Large Colonies"
+
+### NOI Takes Power ###
+
+bbr.1210.t:0 "Arresting Gladys Bentley"
+bbr.1210.d:0 "Gladys Bentley is a cross-dressing performer known for her chorus of drag queens and her own singing career. She has since attempted to perform in our state despite its obvious immorality! We have since attempted to arrest her as we have other peddlers of immoral music but she seems to have fled the state as quickly as she entered. Perhaps we should try harder."
+bbr.1210.a:0 "Place a Bounty"
+bbr.1210.b:0 "We'll wait on it"
+
+bbr.1211.t:0 "NOI Claims Vilified!"
+bbr.1211.d:0 "Despite the NOI's rightful."
+bbr.1211.a:0 "Place a Bounty"
+bbr.1211.b:0 "We'll wait on it"
+
 ### Liberalism Prevails ###
 
 bbr.13.t:0 "Nationalists Fail!"
@@ -1005,7 +1080,7 @@ bbr.13.d:0 "The Nationalist March on our congress failed today despite their num
 bbr.13.a:0 "Very well"
 
 bbr.14.t:0 "Future of the Nation"
-bbr.14.d:0 "With the Nationalists having been felled and a lack of an internal common enemy there is now widespread disagreement between socialists and liberals on the future of the nation. The Syndicalist, Communist and other revolutionary left factions explicitly want us to include the 'People's Amendments' within our constitution which will restructure Congress partially after the Commune of France and have trade union representatives elected directly by workers become the largest force of our Congress and guarantees of 'rights to the full value of their labor'. Furthermore, it will limit the ability of pro-Capitalist parties to challenge the syndicalist system though they disagree on how far to go in this regard. However, the first draft will at least strongly limit capitalist wealth and the ability to found large businesses, disallow 'capitalist and reactionary' influence of the political system and illegalize 'collaboration with extreme, anti-Democratic and/or foreign pro-capitalist and pro-imperialist forces'. \n\nThe liberals and progressives have accused the revolutionary left of attempting to have a monopoly on political power and of de facto excluding non-Revolutionary left forces, calling it a de facto dictatorship, an accusation the syndicalists resent. They have put forward the Constitution of the Black Republic, which contains universal suffrage within a traditional political model with regional voting, seperation of powers and the limitation of government power including in allowing some level of private property, which they say is neccessary not only for liberty but for economic growth, investment and prosperity. With Du Bois having executive power and a major political wind since felling the right-nationalists, he will have to decide on one."
+bbr.14.d:0 "With the Nationalists having been felled and a lack of an internal common enemy there is now widespread disagreement between socialists and liberals on the future of the nation. The Syndicalist, Communist and other revolutionary left factions explicitly want us to include the 'People's Amendments' within our constitution which will restructure Congress partially after the Commune of France and have trade union representatives elected directly by workers become the largest force of our Congress and guarantees of 'rights to the full value of their labor'. Furthermore, it will limit the ability of pro-Capitalist parties to challenge the syndicalist system though they disagree on how far to go in this regard. However, the first draft will at least strongly limit capitalist wealth and the ability to found large businesses, disallow 'capitalist and reactionary' influence of the political system and illegalize 'collaboration with extreme, anti-Democratic and/or foreign pro-capitalist and pro-imperialist forces'. \n\nThe liberals and progressives have accused the revolutionary left of attempting to have a monopoly on political power and of de facto excluding non-Revolutionary left forces, calling it a de facto dictatorship, an accusation the syndicalists resent. They have put forward the Constitution of the Black Republic, which contains universal suffrage within a traditional political model with regional voting, seperation of powers and the limitation of government power including in allowing some level of private property, which they say is necessary not only for liberty but for economic growth, investment and prosperity. With Du Bois having executive power and a major political wind since felling the right-nationalists, he will have to decide on one."
 bbr.14.a:0 "Include the People's Amendment's"
 bbr.14.b:0 "A Liberal Constitution"
 

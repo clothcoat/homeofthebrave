@@ -620,6 +620,332 @@ country_event = { # Leadership Election
 	}
 }
 
+country_event = { # Mission from UNIA
+	id = bbr.1200
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.1200"}
+	title = bbr.1200.t
+	desc = bbr.1200.d
+	picture = ACW_soldiers_watching
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = { #Comply
+	name = bbr.1200.a
+	add_political_power = -40
+	BBR = {
+	country_event = {
+		id = bbr.1201
+		days = 1
+			}
+		}
+	}
+	option = { #Resist
+	name = bbr.1200.b
+	BBR = {
+	country_event = {
+		id = bbr.1202
+		days = 1
+			}
+		}
+	add_stability = -0.03
+	add_manpower = -3000
+	add_popularity = { ideology = paternal_autocrat popularity = -0.02 }
+	}
+}
+
+country_event = { # Return of Garvey
+	id = bbr.1201
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.1201"}
+	title = bbr.1201.t
+	desc = bbr.1201.d
+	picture = ACW_soldiers_watching
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = { #Comply
+	name = bbr.1201.a
+	add_political_power = 25
+	add_popularity = { ideology = paternal_autocrat popularity = 0.02 }
+	add_war_support = 0.03
+	annex_country = {
+    target = LIB
+    transfer_troops = yes
+		}
+	create_country_leader = {# Marcus Garvey
+	name = "Marcus Garvey"
+	desc = "BBR_MARCUS_GARVEY_POLITICS_DESC"
+	picture = "gfx/leaders/BBR/Garvey.tga"
+	expire = "1965.1.1"
+	ideology = paternal_autocrat_subtype
+	traits = { }
+		}
+	set_politics = {
+		ruling_party = paternal_autocrat
+		elections_allowed = no
+		}
+	}
+}
+
+country_event = { # Return of Garvey
+	id = bbr.1202
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.1202"}
+	title = bbr.1202.t
+	desc = bbr.1202.d
+	picture = ACW_soldiers_watching
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = { #Comply
+	name = bbr.1202.a
+	add_popularity = { ideology = paternal_autocrat popularity = 0.01 }
+	create_country_leader = {# Marcus Garvey
+	name = "Marcus Garvey"
+	desc = "BBR_MARCUS_GARVEY_POLITICS_DESC"
+	picture = "gfx/leaders/BBR/Garvey.tga"
+	expire = "1965.1.1"
+	ideology = paternal_autocrat_subtype
+	traits = { }
+		}
+	set_politics = {
+		ruling_party = paternal_autocrat
+		elections_allowed = no
+		}
+	create_wargoal = {
+    type = annex_everything
+    target = LIB
+		}
+	}
+}
+
+country_event = { # Conquest of America
+	id = bbr.1203
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.1203"}
+	title = bbr.1203.t
+	desc = bbr.1203.d
+	picture = ACW_soldiers_watching
+
+	fire_only_once = yes
+
+	trigger = {
+	tag = BBR
+	OR = {
+		has_government = national_populist
+		has_government = paternal_autocrat
+		}
+	controls_state = 361
+	COR = {
+	exists = no
+	}
+	CSA = {
+	exists = no
+	}
+	CAL = {
+	exists = no
+	}
+	USA = {
+	exists = no
+	}
+	TEX = {
+	exists = no
+	}
+	}
+	
+	mean_time_to_happen = {
+	days = 5
+	}
+	
+	option = { #Release
+	name = bbr.1203.a
+	release_puppet = COR
+	all_owned_state	 = {
+	limit = { is_core_of = USA }
+	add_core_of = COR
+	}
+	all_owned_state	 = {
+	limit = { is_core_of = CAL }
+	add_core_of = COR
+	}
+	all_owned_state	 = {
+	limit = { is_core_of = TEX }
+	add_core_of = COR
+	}
+	all_owned_state	 = {
+	limit = { is_core_of = NEE }
+	add_core_of = COR
+	}
+	all_owned_state	 = {
+	limit = { is_core_of = CSA }
+	add_core_of = COR
+	}
+	add_political_power = 50
+	add_manpower = 2000
+	}
+	option = { #Release
+	name = bbr.1203.b
+	add_stability = -0.15
+	add_political_power = -80
+	}
+}
+
+country_event = { # Status of the NOI
+	id = bbr.1204
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.1204"}
+	title = bbr.1204.t
+	desc = bbr.1204.d
+	picture = ACW_soldiers_watching
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = { #Crush Them
+	name = bbr.1204.a
+	add_stability = -0.05
+	add_manpower = -3500
+	add_popularity = { ideology = national_populist popularity = -0.08 }
+	add_political_power = 20
+	}
+	option = { #Cut a Deal
+	name = bbr.1204.b
+	add_stability = 0.03
+	add_popularity = { ideology = national_populist popularity = -0.03 }
+	add_political_power = -30
+	}
+}
+
+country_event = { # Young Klan Offers
+	id = bbr.1205
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.1205"}
+	title = bbr.1205.t
+	desc = bbr.1205.d
+	picture = ACW_soldiers_watching
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = { #Agreed
+	name = bbr.1205.a
+	add_stability = 0.03
+	add_political_power = 20
+	}
+	option = { #Disagree
+	name = bbr.1205.b
+	add_stability = 0.03
+	add_popularity = { ideology = national_populist popularity = -0.03 }
+	add_political_power = -30
+	}
+}
+
+country_event = { # Status of the Mixed-Raced
+	id = bbr.1206
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.1206"}
+	title = bbr.1206.t
+	desc = bbr.1206.d
+	picture = ACW_soldiers_watching
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = { #Bar them from Politics
+	name = bbr.1206.a
+	add_stability = -0.05
+	add_manpower = -1200
+	add_political_power = 25
+	}
+	option = { #Create new categories
+	name = bbr.1206.b
+	add_stability = -0.1
+	add_popularity = { ideology = paternal_autocrat popularity = 0.02 }
+	add_command_power = 5
+	add_manpower = -8000
+	add_political_power = 80
+	}
+}
+
+country_event = { # Liberty Halls Expand
+	id = bbr.1207
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.1207"}
+	title = bbr.1207.t
+	desc = bbr.1207.d
+	picture = ACW_soldiers_watching
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = { #A fine idea
+	name = bbr.1207.a
+	add_stability = 0.01
+	add_manpower = 500
+	add_popularity = { ideology = paternal_autocrat popularity = 0.02 }
+	add_political_power = -35
+	}
+	option = { #It's not needed
+	name = bbr.1207.b
+	add_popularity = { ideology = paternal_autocrat popularity = 0.01 }
+	add_political_power = 10
+	}
+}
+
+country_event = { # Back to Africa
+	id = bbr.1208
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.1208"}
+	title = bbr.1208.t
+	desc = bbr.1208.d
+	picture = ACW_soldiers_watching
+
+	fire_only_once = yes
+
+	trigger = {
+	owns_state = 298
+	has_government = paternal_autocrat
+	has_completed_focus = BBR_liberian_connections
+	}
+	
+	mean_time_to_happen = {
+	days = 35
+	}
+	
+	option = { #A fine idea
+	name = bbr.1208.a
+	add_manpower = -5500
+	add_political_power = -30
+	LIB = {
+	random_owned_state = {
+				limit = {
+					is_core_of = BBR
+					is_controlled_by = BBR
+					dockyard > 0
+				}
+				add_extra_state_shared_building_slots = 1
+		}
+	}
+	}
+	option = { #It's not needed
+	name = bbr.1208.b
+	add_manpower = -12000
+	add_political_power = -50
+	LIB = {
+	random_owned_state = {
+				limit = {
+					is_core_of = BBR
+					is_controlled_by = BBR
+					dockyard > 0
+				}
+				add_extra_state_shared_building_slots = 3
+		}
+	}
+	}
+}
+
 country_event = { # Nationalists Fail
 	id = bbr.13
 	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.13"}
@@ -812,6 +1138,7 @@ country_event = { # Union Elections
 		}
 	}
 	name = bbr.17.a
+	set_country_flag = BBR_rad_socs_win
 	add_popularity = { ideology = radical_socialist popularity = 0.12 }
 	add_stability = 0.12
 	add_political_power = 75
