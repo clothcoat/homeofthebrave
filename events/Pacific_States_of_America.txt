@@ -337,10 +337,10 @@ country_event = { # 1937 Election
 				create_country_leader = {
 					name = "Upton Sinclair"
 					desc = "POLITICS_UPTON_SINCLAIR_DESC"
-					picture = "gfx/leaders/PSA/Portrait_CAL_Upton_Sinclair.tga"
+					picture = "gfx/leaders/CAL/Portrait_CAL_Upton_Sinclair.tga"
 					expire = "1965.1.1"
 					ideology = radical_socialist_subtype
-					traits = {}
+					traits = { author }
 				}
 			}
 			if = { # Culbert Olson
@@ -353,7 +353,7 @@ country_event = { # 1937 Election
 					picture = "gfx/leaders/CAL/Portrait_CAL_Culbert_Olson.tga"
 					expire = "1965.1.1"
 					ideology = radical_socialist_subtype
-					traits = {}
+					traits = { silent_workhorse }
 				}
 			}
 			if = { # Henry Wallace
@@ -366,7 +366,7 @@ country_event = { # 1937 Election
 					picture = "Portrait_CAL_Henry_Wallace.tga"
 					expire = "1965.1.1"
 					ideology = social_democrat_subtype
-					traits = {}
+					traits = { great_survivor }
 				}
 			}
 			if = { # Charles McNary
@@ -379,7 +379,7 @@ country_event = { # 1937 Election
 					picture = "Portrait_USA_Charles_L_McNary.tga"
 					expire = "1965.1.1"
 					ideology = social_democrat_subtype
-					traits = {}
+					traits = { fortification_engineer }
 				}
 			}
 			if = { # Hiram Johnson
@@ -392,7 +392,7 @@ country_event = { # 1937 Election
 					picture = "Portrait_CAL_Hiram_Johnson.tga"
 					expire = "1965.1.1"
 					ideology = social_democrat_subtype
-					traits = {}
+					traits = { captain_of_industry }
 				}
 			}
 			if = { # C.C. Young
@@ -402,10 +402,10 @@ country_event = { # 1937 Election
 				create_country_leader = {
 					name = "C.C. Young"
 					desc = "POLITICS_CC_YOUNG_DESC"
-					picture = "gfx/leaders/PSA/CAL_CC_Young.tga"
+					picture = "gfx/leaders/CAL/CAL_CC_Young.tga"
 					expire = "1965.1.1"
 					ideology = social_democrat_subtype
-					traits = {}
+					traits = { diehard_progressive }
 				}
 			}
 			if = { # Earl Warren
@@ -418,7 +418,7 @@ country_event = { # 1937 Election
 					picture = "Portrait_CAL_Earl_Warren.tga"
 					expire = "1965.1.1"
 					ideology = social_liberal_subtype
-					traits = {}
+					traits = { backroom_backstabber }
 				}
 			}
 			if = { # William Gibbs McAdoo
@@ -428,10 +428,10 @@ country_event = { # 1937 Election
 				create_country_leader = {
 					name = "William Gibbs McAdoo"
 					desc = "POLITICS_WILLIAM_GIBBS_MCADOO_DESC"
-					picture = "gfx/leaders/PSA/CAL_William_Gibbs_Mcaddo.tga"
+					picture = "gfx/leaders/CAL/CAL_William_Gibbs_Mcaddo.tga"
 					expire = "1965.1.1"
 					ideology = social_liberal_subtype
-					traits = {}
+					traits = { eco_bank_president }
 				}
 			}
 			if = { # Clarence D. Martin
@@ -444,7 +444,7 @@ country_event = { # 1937 Election
 					picture = "Portrait_CAL_Clarence_Martin.tga"
 					expire = "1965.1.1"
 					ideology = social_liberal_subtype
-					traits = {}
+					traits = { fortification_engineer }
 				}
 			}
 			if = { # Charles A. Sprague
@@ -457,7 +457,7 @@ country_event = { # 1937 Election
 					picture = "Portrait_CAL_Charles_A_Sprague.tga"
 					expire = "1965.1.1"
 					ideology = social_liberal_subtype
-					traits = {}
+					traits = { economic_reformer }
 				}
 			}
 			if = { # Manchester Boddy
@@ -467,10 +467,10 @@ country_event = { # 1937 Election
 				create_country_leader = {
 					name = "Manchester Boddy"
 					desc = "POLITICS_MANCHESTOR_BODDY_DESC"
-					picture = "gfx/leaders/PSA/CAL_Manchester_Boddy.tga"
+					picture = "gfx/leaders/CAL/CAL_Manchester_Boddy.tga"
 					expire = "1965.1.1"
 					ideology = social_liberal_subtype
-					traits = {}
+					traits = { editor }
 				}
 			}
 			if = { # Robert Taft
@@ -480,10 +480,10 @@ country_event = { # 1937 Election
 				create_country_leader = {
 					name = "Robert Taft"
 					desc = "POLITICS_Robert_Taft_DESC"
-					picture = "gfx/leaders/PSA/CAL_R_A_Taft.tga"
+					picture = "gfx/leaders/CAL/CAL_R_A_Taft.tga"
 					expire = "1965.1.1"
 					ideology = market_liberal_subtype
-					traits = {}
+					traits = { staunch_constitutionalist }
 				}
 			}
 			
@@ -494,10 +494,10 @@ country_event = { # 1937 Election
 				create_country_leader = {
 					name = "Harry Chandler"
 					desc = "POLITICS_HARRY_CHANDLER_DESC"
-					picture = "gfx/leaders/PSA/CAL_HarryChandler.tga.tga"
+					picture = "gfx/leaders/CAL/CAL_HarryChandler.tga.tga"
 					expire = "1965.1.1"
 					ideology = market_liberal_subtype
-					traits = {}
+					traits = { eco_industrialiser }
 				}
 			}
 
@@ -508,10 +508,10 @@ country_event = { # 1937 Election
 				create_country_leader = {
 					name = "Howard Hughes"
 					desc = "POLITICS_HOWARD_HUGES_DESC"
-					picture = "gfx/leaders/PSA/CAL_Howard Hughes.tga"
+					picture = "gfx/leaders/CAL/CAL_Howard Hughes.tga"
 					expire = "1965.1.1"
 					ideology = market_liberal_subtype
-					traits = {}
+					traits = { captain_of_industry }
 				}
 			}
 			
@@ -525,7 +525,7 @@ country_event = { # 1937 Election
 					picture = "Portrait_CAL_Frank_Merrimam.tga"
 					expire = "1965.1.1"
 					ideology = market_liberal_subtype
-					traits = {}
+					traits = { prince_of_terror }
 				}
 			}
 			if = { # Louis B Meyer
@@ -535,10 +535,10 @@ country_event = { # 1937 Election
 				create_country_leader = {
 					name = "Louis B. Meyer"
 					desc = "POLITICS_LOUIS_B_MEYER_DESC"
-					picture = "gfx/leaders/PSA/CAL_Louis_B._Mayer.tga"
+					picture = "gfx/leaders/CAL/CAL_Louis_B._Mayer.tga"
 					expire = "1965.1.1"
 					ideology = market_liberal_subtype
-					traits = {}
+					traits = { sec_media_magnate }
 				}
 			}
 			if = { # Charles Martin
@@ -548,10 +548,10 @@ country_event = { # 1937 Election
 				create_country_leader = {
 					name = "Charles Martin"
 					desc = "POLITICS_CHARLES_MARTIN_DESC"
-					picture = "gfx/leaders/PSA/CAL_Charles_Henry_Martin.tga"
+					picture = "gfx/leaders/CAL/CAL_Charles_Henry_Martin.tga"
 					expire = "1965.1.1"
 					ideology = social_conservative_subtype
-					traits = {}
+					traits = { hog_reformist_soldier }
 				}
 			}
 			if = { # Henry J. Kaiser
@@ -561,10 +561,10 @@ country_event = { # 1937 Election
 				create_country_leader = {
 					name = "Henry J. Kaiser"
 					desc = "POLITICS_HENRY_J_KAISER_DESC"
-					picture = "gfx/leaders/PSA/CAL_Henry_J_kaiser.tga"
+					picture = "gfx/leaders/CAL/CAL_Henry_J_kaiser.tga"
 					expire = "1965.1.1"
 					ideology = social_conservative_subtype
-					traits = {}
+					traits = { eco_industrialiser }
 				}
 			}
 			if = { # Walt Disney
@@ -574,10 +574,10 @@ country_event = { # 1937 Election
 				create_country_leader = {
 					name = "Walt Disney"
 					desc = "POLITICS_WALT_DISNEY_DESC"
-					picture = "gfx/leaders/PSA/CAL_Walt_Disney.tga"
+					picture = "gfx/leaders/CAL/CAL_Walt_Disney.tga"
 					expire = "1965.1.1"
 					ideology = social_conservative_subtype
-					traits = {}
+					traits = { propaganda_expert }
 				}
 			}
 		}
@@ -1714,10 +1714,10 @@ country_event = { # 1940 election
 				create_country_leader = {
 					name = "Upton Sinclair"
 					desc = "POLITICS_UPTON_SINCLAIR_DESC"
-					picture = "gfx/leaders/PSA/Portrait_CAL_Upton_Sinclair.tga"
+					picture = "gfx/leaders/CAL/Portrait_CAL_Upton_Sinclair.tga"
 					expire = "1965.1.1"
 					ideology = radical_socialist_subtype
-					traits = {}
+					traits = { author }
 				}
 			}
 			if = {
@@ -1730,7 +1730,7 @@ country_event = { # 1940 election
 					picture = "gfx/leaders/CAL/Portrait_CAL_Culbert_Olson.tga"
 					expire = "1965.1.1"
 					ideology = radical_socialist_subtype
-					traits = {}
+					traits = { silent_workhorse }
 				}
 			}
 			if = {
@@ -1743,7 +1743,7 @@ country_event = { # 1940 election
 					picture = "Portrait_CAL_Henry_Wallace.tga"
 					expire = "1965.1.1"
 					ideology = social_democrat_subtype
-					traits = {}
+					traits = { great_survivor }
 				}
 			}
 			if = { # Earl Warren
@@ -1756,7 +1756,7 @@ country_event = { # 1940 election
 					picture = "Portrait_CAL_Earl_Warren.tga"
 					expire = "1965.1.1"
 					ideology = social_liberal_subtype
-					traits = {}
+					traits = { backroom_backstabber }
 				}
 			}
 			if = { # Clarence D. Martin
@@ -1764,12 +1764,12 @@ country_event = { # 1940 election
 					has_country_flag = PSA_1940_progressive_primary_martin
 				}
 				create_country_leader = {
-					name = " Clarence D. Martin"
+					name = "Clarence D. Martin"
 					desc = "POLITICS_CLARENCE_MARTIN_DESC"
 					picture = "Portrait_CAL_clarence_martin.tga"
 					expire = "1965.1.1"
 					ideology = social_liberal_subtype
-					traits = {}
+					traits = { fortification_engineer }
 				}
 			}
 			if = { # Oswald West
@@ -1782,7 +1782,7 @@ country_event = { # 1940 election
 					picture = "Portrait_CAL_Oswald_West.tga"
 					expire = "1965.1.1"
 					ideology = social_liberal_subtype
-					traits = {}
+					traits = { nationalist_symbol }
 				}
 			}
 			if = { # Charles A. Sprague
@@ -1795,7 +1795,7 @@ country_event = { # 1940 election
 					picture = "Portrait_CAL_Charles_A_Sprague.tga"
 					expire = "1965.1.1"
 					ideology = market_liberal_subtype
-					traits = {}
+					traits = { economic_reformer }
 				}
 			}
 			if = { # Ralph Lawrence Carr
@@ -1808,7 +1808,7 @@ country_event = { # 1940 election
 					picture = "Portrait_CAL_Ralph_Lawrence_Carr.tga"
 					expire = "1965.1.1"
 					ideology = market_liberal_subtype
-					traits = {}
+					traits = { divided_interests }
 				}
 			}
 			if = { # Joseph Bracken Lee
@@ -1821,7 +1821,7 @@ country_event = { # 1940 election
 					picture = "Portrait_CAL_Joseph_Bracken_Lee.tga"
 					expire = "1965.1.1"
 					ideology = social_conservative_subtype
-					traits = {}
+					traits = { the_director }
 				}
 			}
 			if = { # Robert Taylor Jones
@@ -1834,7 +1834,7 @@ country_event = { # 1940 election
 					picture = "Portrait_CAL_Robert_Taylor_Jones.tga"
 					expire = "1965.1.1"
 					ideology = social_conservative_subtype
-					traits = {}
+					traits = { fortification_engineer }
 				}
 			}
 		}
@@ -2517,10 +2517,10 @@ country_event = { # 1944 election
 				create_country_leader = {
 					name = "Philip La Follette"
 					desc = "POLITICS_PHILIP_LA_FOLETTE_DESC_DESC"
-					picture = "Portrait_CAL_Philip_La_Follette.tga"
+					picture = "gfx/leaders/USA/Portrait_USA_Philip_La_Follette.tga"
 					expire = "1965.1.1"
 					ideology = social_democrat_subtype
-					traits = {}
+					traits = { reluctant_interventionist }
 				}
 			}
 			if = { # Glen H. Taylor
@@ -2533,7 +2533,7 @@ country_event = { # 1944 election
 					picture = "Portrait_CAL_Glen_Taylor.tga"
 					expire = "1965.1.1"
 					ideology = social_democrat_subtype
-					traits = {}
+					traits = { figurehead_president }
 				}
 			}
 			if = { # Monrad Wallgren
@@ -2546,7 +2546,7 @@ country_event = { # 1944 election
 					picture = "Portrait_CAL_Monrad_Charles_Wallgren.tga"
 					expire = "1965.1.1"
 					ideology = social_liberal_subtype
-					traits = {}
+					traits = { silent_workhorse }
 				}
 			}
 			if = { # Clyde Tingley
@@ -2559,7 +2559,7 @@ country_event = { # 1944 election
 					picture = "Portrait_CAL_Clyde_Tingley.tga"
 					expire = "1965.1.1"
 					ideology = social_liberal_subtype
-					traits = {}
+					traits = { fortification_engineer }
 				}
 			}
 			if = { # Arthur B. Langlie
@@ -2572,7 +2572,7 @@ country_event = { # 1944 election
 					picture = "Portrait_CAL_Arthur_B_Langlie.tga"
 					expire = "1965.1.1"
 					ideology = market_liberal_subtype
-					traits = {}
+					traits = { financial_expert }
 				}
 			}
 			if = { # Douglas McKay
@@ -2585,7 +2585,7 @@ country_event = { # 1944 election
 					picture = "Portrait_CAL_Douglas_McKay.tga"
 					expire = "1965.1.1"
 					ideology = market_liberal_subtype
-					traits = {}
+					traits = { captain_of_industry }
 				}
 			}
 			if = { # Fletcher Bowron
@@ -2598,7 +2598,7 @@ country_event = { # 1944 election
 					picture = "Portrait_CAL_Fletcher_Bowron.tga"
 					expire = "1965.1.1"
 					ideology = market_liberal_subtype
-					traits = {}
+					traits = { nationalist_symbol }
 				}
 			}
 			if = { # Daniel I. J. Thornton
@@ -2611,7 +2611,7 @@ country_event = { # 1944 election
 					picture = "Portrait_CAL_Daniel_I_J_Thornton.tga"
 					expire = "1965.1.1"
 					ideology = social_conservative_subtype
-					traits = {}
+					traits = { silent_workhorse }
 				}
 			}
 			if = { # Bourke B. Hickenlooper
@@ -2624,7 +2624,7 @@ country_event = { # 1944 election
 					picture = "Portrait_CAL_Bourke_B_Hickenlooper.tga"
 					expire = "1965.1.1"
 					ideology = social_conservative_subtype
-					traits = {}
+					traits = { reluctant_interventionist }
 				}
 			}
 		}
@@ -3277,7 +3277,7 @@ country_event = { # 1948 election
 					picture = "Portrait_CAL_Philip_La_Follette.tga"
 					expire = "1965.1.1"
 					ideology = social_democrat_subtype
-					traits = {}
+					traits = { reluctant_interventionist }
 				}
 			}
 			if = { # Glen H. Taylor
@@ -3290,7 +3290,7 @@ country_event = { # 1948 election
 					picture = "Portrait_CAL_Glen_Taylor.tga"
 					expire = "1965.1.1"
 					ideology = social_democrat_subtype
-					traits = {}
+					traits = { figurehead_president }
 				}
 			}
 			if = { # Victor Aloysius Meyers
@@ -3303,7 +3303,7 @@ country_event = { # 1948 election
 					picture = "Portrait_CAL_Victor_Aloysius_Meyers.tga"
 					expire = "1965.1.1"
 					ideology = social_liberal_subtype
-					traits = {}
+					traits = { figurehead_president }
 				}
 			}
 			if = { # Andrew W. Hockenhull
@@ -3316,7 +3316,7 @@ country_event = { # 1948 election
 					picture = "Portrait_CAL_Andrew_Hockenhull.tga"
 					expire = "1965.1.1"
 					ideology = social_liberal_subtype
-					traits = {}
+					traits = { financial_expert }
 				}
 			}
 			if = { # Richard Nixon
@@ -3329,7 +3329,7 @@ country_event = { # 1948 election
 					picture = "Portrait_CAL_Richard_Nixon.tga"
 					expire = "1965.1.1"
 					ideology = market_liberal_subtype
-					traits = {}
+					traits = { emergency_powers }
 				}
 			}
 			if = { # George N. Craig
@@ -3342,7 +3342,7 @@ country_event = { # 1948 election
 					picture = "gfx/leaders/Generic/Portrait_Europe_Generic_new_6.tga"
 					expire = "1965.1.1"
 					ideology = market_liberal_subtype
-					traits = {}
+					traits = { backroom_backstabber }
 				}
 			}
 			if = { # Val Peterson
@@ -3355,7 +3355,7 @@ country_event = { # 1948 election
 					picture = "Portrait_CAL_Val_Peterson.tga"
 					expire = "1965.1.1"
 					ideology = social_conservative_subtype
-					traits = {}
+					traits = { quartermaster_general }
 				}
 			}
 			if = { # Harry P. Cain
@@ -3368,7 +3368,7 @@ country_event = { # 1948 election
 					picture = "gfx/leaders/Generic/Portrait_Europe_Generic_new_5.tga"
 					expire = "1965.1.1"
 					ideology = social_conservative_subtype
-					traits = {}
+					traits = { cornered_fox }
 				}
 			}
 		}
@@ -5354,18 +5354,18 @@ country_event = {# Hearst Runs
 		create_country_leader = {
 			name = "William Randolph Hearst"
 			desc = "POLITICS_WILLIAM_RANDOLPH_HEARST_DESC"
-			picture = "gfx/leaders/PSA/CAL_Hearst.tga"
+			picture = "gfx/leaders/CAL/CAL_Hearst.tga"
 			expire = "1965.1.1"
 			ideology = authoritarian_democrat_subtype
-			traits = {}
+			traits = { sec_media_magnate }
 		}
 		create_country_leader = {
 			name = "William Randolph Hearst"
 			desc = "POLITICS_WILLIAM_RANDOLPH_HEARST_DESC"
-			picture = "gfx/leaders/PSA/CAL_Hearst.tga"
+			picture = "gfx/leaders/CAL/CAL_Hearst.tga"
 			expire = "1965.1.1"
 			ideology = paternal_autocrat_subtype
-			traits = {}
+			traits = { sec_media_magnate }
 		}
 		if = {
 		limit = { NOT = {
@@ -6448,7 +6448,7 @@ country_event = {# Military Coups Hearst
 			picture = "gfx/leaders/CAL/Portrait_CAL_Henry_Arnold.tga"
 			expire = "1965.1.1"
 			ideology = authoritarian_democrat_subtype
-			traits = {}
+			traits = { quartermaster_general }
 		}
 		hidden_effect = {
 		if = {
@@ -6627,7 +6627,7 @@ country_event = {# Snap Election Results
 			picture = "gfx/leaders/USA/Portrait_USA_george_marshall.tga"
 			expire = "1965.1.1"
 			ideology = social_liberal_subtype
-			traits = {}
+			traits = { quartermaster_general }
 			}
 		}
 		set_politics = {
@@ -6643,7 +6643,7 @@ country_event = {# Snap Election Results
 			picture = "Portrait_CAL_Hiram_Johnson.tga"
 			expire = "1965.1.1"
 			ideology = social_democrat_subtype
-			traits = {}
+			traits = { captain_of_industry }
 		}
 		set_politics = {
 			ruling_party = social_democrat
@@ -6656,10 +6656,10 @@ country_event = {# Snap Election Results
 		create_country_leader = {
 					name = "Howard Hughes"
 					desc = "POLITICS_HOWARD_HUGES_DESC"
-					picture = "gfx/leaders/PSA/CAL_Howard Hughes.tga"
+					picture = "gfx/leaders/CAL/CAL_Howard Hughes.tga"
 					expire = "1965.1.1"
 					ideology = market_liberal_subtype
-					traits = {}
+					traits = { captain_of_industry }
 				}
 		set_politics = {
 			ruling_party = market_liberal
@@ -6677,7 +6677,7 @@ country_event = {# Snap Election Results
 			picture = "Portrait_CAL_Charles_A_Sprague.tga"
 			expire = "1965.1.1"
 			ideology = market_liberal_subtype
-			traits = {}
+			traits = { economic_reformer }
 		}
 		set_politics = {
 			ruling_party = social_liberal
@@ -6689,10 +6689,10 @@ country_event = {# Snap Election Results
 		create_country_leader = {
 			name = "Henry J. Kaiser"
 			desc = "POLITICS_HENRY_J_KAISER_DESC"
-			picture = "gfx/leaders/PSA/CAL_Henry_J_kaiser.tga"
+			picture = "gfx/leaders/CAL/CAL_Henry_J_kaiser.tga"
 			expire = "1965.1.1"
 			ideology = social_conservative_subtype
-			traits = {}
+			traits = { eco_industrialiser }
 		}
 		set_politics = {
 			ruling_party = social_conservative
@@ -8350,10 +8350,10 @@ country_event = {# Bodin Addresses Congress
 		create_country_leader = {#
 			name = "Edward Longstreet Bodin"
 			desc = "POLITICS_EDWARD_LONGSTREET_BODIN_DESC"
-			picture = "gfx/leaders/PSA/CAL_edward_longstreet_bodin.tga"
+			picture = "gfx/leaders/CAL/CAL_edward_longstreet_bodin.tga"
 			expire = "1965.1.1"
 			ideology = national_populist_subtype
-			traits = {}
+			traits = { cult_leader }
 		}
 		set_politics = {
 			ruling_party = national_populist
@@ -8520,10 +8520,10 @@ country_event = {# Boden Removed
 		create_country_leader = {
 		name = "Max Thornburg"
 		desc = "POLITICS_MAX_THORNBURG_DESC"
-		picture = "gfx/leaders/PSA/CAL_Max_Thornburg.tga"
+		picture = "gfx/leaders/CAL/CAL_Max_Thornburg.tga"
 		expire = "1965.1.1"
 		ideology = paternal_autocrat_subtype
-		traits = {}
+		traits = { hog_smiling_oilman }
 			}
 		set_politics = {
 			ruling_party = paternal_autocrat
@@ -8543,10 +8543,10 @@ country_event = {# Boden Removed
 		create_country_leader = {
 		name = "Ralph Townsend"
 		desc = "POLITICS_RALPH_TOWNSEND_DESC"
-		picture = "gfx/leaders/PSA/CAL_Ralph_Townsend.tga"
+		picture = "gfx/leaders/CAL/CAL_Ralph_Townsend.tga"
 		expire = "1965.1.1"
 		ideology = paternal_autocrat_subtype
-		traits = {}
+		traits = { freind_of_japan }
 			}
 		set_politics = {
 			ruling_party = paternal_autocrat
@@ -8577,10 +8577,10 @@ country_event = {# Boden Removed
 		create_country_leader = {
 		name = "Kichisaburo Nomura"
 		desc = "POLITICS_KICHISABURO_NOMURA_DESC"
-		picture = "gfx/leaders/PSA/CAL_Kichisaburo_Nomura.tga"
+		picture = "gfx/leaders/CAL/CAL_Kichisaburo_Nomura.tga"
 		expire = "1965.1.1"
 		ideology = paternal_autocrat_subtype
-		traits = {}
+		traits = { appointed_from_tokyo }
 			}
 		set_politics = {
 			ruling_party = paternal_autocrat
@@ -8638,10 +8638,10 @@ country_event = {# Boden Dead
 		create_country_leader = {
 			name = "L. Ron Hubbard"
 			desc = "POLITICS_L_RON_HUBBARD_DESC"
-			picture = "gfx/leaders/PSA/CAL_L_Ron_Hubbard.tga"
+			picture = "gfx/leaders/CAL/CAL_L_Ron_Hubbard.tga"
 			expire = "1965.1.1"
 			ideology = national_populist_subtype
-			traits = {}
+			traits = { l_ron_hubbard_was_a_black_man }
 			}
 		set_politics = {
 			ruling_party = national_populist
@@ -8731,7 +8731,7 @@ country_event = {# Long Returns
 		create_country_leader = {
 			name = "Huey Long"
 			desc = "POLITICS_HUEY_LONGDONG_DESC"
-			picture = "gfx/leaders/PSA/Portrait_CAL_Huey_Long.tga"
+			picture = "gfx/leaders/CAL/Portrait_CAL_Huey_Long.tga"
 			expire = "1965.1.1"
 			ideology = social_democrat_subtype
 			traits = {}
