@@ -472,11 +472,11 @@ country_event = { #WCC Reintegrates
 					long_name = WCC_MAC_PARTY
 					name = WCC_MAC_PARTY_long 
 				}
+				set_politics = {
+					ruling_party = national_populist
+					elections_allowed = no
+				}
 			}
-		set_politics = {
-			ruling_party = national_populist
-			elections_allowed = no
-		}
 		}
 	}
 }

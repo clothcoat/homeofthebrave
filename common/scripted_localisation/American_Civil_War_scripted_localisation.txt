@@ -175,11 +175,11 @@ defined_text = {
 defined_text = {
 	name = florida_num
 	text = {
-		trigger = { tag = TEX }
+		trigger = { tag = COR }
 		localization_key = ACW_3_mil
 	}
 	text = {
-		trigger = { NOT = { tag = TEX } }
+		trigger = { NOT = { tag = COR } }
 		localization_key = ACW_1_mil
 	}
 }
@@ -795,6 +795,7 @@ defined_text = {
 			OR = {
 				is_federal_tag = yes
 				tag = TEX
+				tag = COR
 			}
 		}
 		localization_key = ACW_2_mil
