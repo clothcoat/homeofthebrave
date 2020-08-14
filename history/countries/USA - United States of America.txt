@@ -636,7 +636,7 @@ create_corps_commander = {# Edwin F. Harding
 create_corps_commander = {# Smedley Butler
 	name = "Smedley Butler"
 	desc = "USA_SMEDLEY_BUTLER_ARMY_DESC"
-	portrait_path = "gfx/leaders/CSA/Portrait_USA_smedly_butler_G.tga"
+	portrait_path = "gfx/leaders/USA/Portrait_USA_smedly_butler_G.tga"
 	traits = {
 		offensive_doctrine
 		inspirational_leader
@@ -823,6 +823,34 @@ create_navy_leader = {# Willis Augustus Lee
 	defense_skill = 2
 	maneuvering_skill = 1
 	coordination_skill = 2
+}
+
+### Operatives ###
+if = {
+	limit = { has_dlc = "La Resistance" }
+	create_operative_leader = {
+		name = "William J. Donovan"
+		GFX = GFX_portrait_william_donovan
+		traits = {
+			operative_natural_orator
+			operative_tough
+		}
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		nationalities = { CSA COR USA TEX CAL NEE WCC }
+	}
+	create_operative_leader = {
+		name = "Sterling Hayden"
+		GFX = GFX_portrait_HOTB_sterling_hayden
+		traits = {
+			operative_infiltrator
+			operative_tough
+			operative_well_groomed
+		}
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		nationalities = { CSA COR USA TEX CAL NEE WCC }
+	}
 }
 
 USA_start_naval_variant = yes

@@ -8,6 +8,33 @@
 ##
 ##-------------------------------
 
+###New England###
+intelligence_agency = {
+
+	picture = GFX_intelligence_agency_logo_HOTB_new_england_can
+	names = { "Royal New England Mounted Police" }
+
+	default = {
+			tag = NEE
+	}
+	available = {
+			original_tag = NEE
+	}
+}
+
+intelligence_agency = {
+
+	picture = GFX_intelligence_agency_logo_HOTB_new_england_generic
+	names = { "Federal Police Bureau" }
+
+	default = {
+			tag = NEE
+	}
+	available = {
+			original_tag = NEE
+	}
+}
+
 ###Western Command Center###
 
 intelligence_agency = {

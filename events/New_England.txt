@@ -188,7 +188,14 @@ country_event = { # Canada Releases New England
 	option = {
 		name = newengland.5.a
 		ai_chance = {
-			factor = 100
+			factor = 75
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = CAN_acw_new_england
+					option = CAN_ACW_NEW_ENGLAND_NOT_FORM
+				}
+			}
 		}
 		add_stability = 0.01
 		every_owned_state = {
@@ -218,6 +225,20 @@ country_event = { # Canada Releases New England
 			CAN = {
 				NEE = {
 					transfer_technology = yes
+				}
+			}
+			if = {
+				limit = { has_dlc = "La Resistance"	}
+				NEE = {
+					create_operative_leader = {
+						name = "Virginia Hall"
+						GFX = GFX_portrait_kr_virginia_hall
+						traits = { operative_demolition_expert }
+						bypass_recruitment = no
+						available_to_spy_master = yes
+						female = yes
+						nationalities = { NEE USA }
+					}
 				}
 			}
 			NEE = {
@@ -283,6 +304,20 @@ country_event = { # Canada Releases New England
 					transfer_technology = yes
 				}
 			}
+			if = {
+				limit = { has_dlc = "La Resistance"	}
+				NEE = {
+					create_operative_leader = {
+						name = "Virginia Hall"
+						GFX = GFX_portrait_kr_virginia_hall
+						traits = { operative_demolition_expert }
+						bypass_recruitment = no
+						available_to_spy_master = yes
+						female = yes
+						nationalities = { NEE USA }
+					}
+				}
+			}
 			NEE = {
 				country_event = {
 					id = newengland.6
@@ -316,8 +351,37 @@ country_event = { # Canada Releases New England
 	}
 	option = {
 		name = newengland.5.c
-		trigger = {
-			is_ai = no
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				OR = {
+					has_government = market_liberal
+					has_government = social_liberal
+					has_government = social_democrat
+				}
+				NOT = {
+					has_game_rule = {
+						rule = CAN_acw_new_england
+						option = CAN_ACW_NEW_ENGLAND_NOT_FORM
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				has_government = authoritarian_democrat
+			}
+			modifier = {
+				factor = 3
+				has_government = paternal_autocrat
+			}
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = CAN_acw_new_england
+					option = CAN_ACW_NEW_ENGLAND_FORM
+				}
+			}
 		}
 		add_stability = -0.05
 		add_war_support = -0.05
@@ -325,6 +389,20 @@ country_event = { # Canada Releases New England
 		hidden_effect = {
 			set_variable = {
 				CAN_yankee_rebellion = 0
+			}
+			if = {
+				limit = { has_dlc = "La Resistance"	}
+				CAN = {
+					create_operative_leader = {
+						name = "Virginia Hall"
+						GFX = GFX_portrait_kr_virginia_hall
+						traits = { operative_demolition_expert }
+						bypass_recruitment = no
+						available_to_spy_master = yes
+						female = yes
+						nationalities = { CAN USA }
+					}
+				}
 			}
 		}
 	}
@@ -3762,6 +3840,38 @@ country_event = { # The Yankee Rebellion
 
 	option = {
 		name = newengland.80.a
+		ai_chance = {
+			factor = 75
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = CAN_acw_new_england
+					option = CAN_ACW_NEW_ENGLAND_FORM
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_government = market_liberal
+					has_government = social_liberal
+					has_government = social_democrat
+				}
+				NOT = {
+					has_game_rule = {
+						rule = CAN_acw_new_england
+						option = CAN_ACW_NEW_ENGLAND_NOT_FORM
+					}
+				}
+			}
+			modifier = {
+				factor = 1.5
+				has_government = authoritarian_democrat
+			}
+			modifier = {
+				factor = 2
+				has_government = paternal_autocrat
+			}
+		}
 		add_stability = -0.01
 		set_country_flag = CAN_yankee_rebellion
 		every_owned_state = {
@@ -3789,6 +3899,20 @@ country_event = { # The Yankee Rebellion
 	}
 	option = {
 		name = newengland.80.b
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				has_country_flag = CAN_no_puppet_new_england
+			}
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = CAN_acw_new_england
+					option = CAN_ACW_NEW_ENGLAND_NOT_FORM
+				}
+			}
+		}
 		trigger = {
 			is_ai = no
 		}
@@ -3828,6 +3952,17 @@ country_event = { # The Yankee Rebellion
 				}
 				load_oob = NEE
 			}
+			NEE = {
+					create_operative_leader = {
+						name = "Virginia Hall"
+						GFX = GFX_portrait_kr_virginia_hall
+						traits = { operative_demolition_expert }
+						bypass_recruitment = no
+						available_to_spy_master = yes
+						female = yes
+						nationalities = { NEE USA }
+					}
+				}
 		}
 	}
 }

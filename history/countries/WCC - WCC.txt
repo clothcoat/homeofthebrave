@@ -439,5 +439,21 @@ create_corps_commander = {# Mac Loyalist, moved to WCC
 	#logistics_skill = 2
 	#id = 610
 #}
+###Operatives###
+if = {
+	limit = { has_dlc = "La Resistance" }
+	create_operative_leader = {
+		name = "Claire Phillips"
+		GFX = GFX_portrait_HOTB_Claire_Phillips
+		traits = {
+			operative_commando
+			operative_tough
+		}
+		female = yes
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		nationalities = { CSA COR USA TEX CAL NEE WCC }
+	}
+}
 
 USA_start_naval_variant = yes
