@@ -4330,6 +4330,29 @@ focus_tree = {
 			add_war_support = 0.05
 		}
 	}
+
+	###Republican Home Plan###
+	focus = {# Curtis/Landon
+		id = USA_the_republicans
+		icon = GFX_goal_USA_victory
+		cost = 1.00
+		available = {
+			OR = {
+				has_country_leader = { ruling_only = yes name = "Alf Landon" }
+				has_country_leader = { ruling_only = yes name = "Charles Curtis" }
+			}
+			has_country_flag = USA_president_inaugurated
+		}
+		x = 18
+		y = 0
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_the_republicans"
+			custom_effect_tooltip = unlock_focuses
+		}
+	}
 	
 	focus = {# Home Rule Negotiations
 		id = USA_home_rule_negotiations
