@@ -140,7 +140,7 @@ set_politics = {
 create_country_leader = {
 	name = "William H. Murray"
 	desc = "POLITICS_WILLIAM_H_MURRAY_DESC"
-	picture = "gfx/leaders/CUS/Portrait_William_H_Murray.tga"
+	picture = "gfx/leaders/COR/Portrait_William_H_Murray.tga"
 	expire = "1965.1.1"
 	ideology = paternal_autocrat_subtype
 	traits = { alfalfa_bill }
@@ -148,7 +148,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "William Joseph Simmons"
 	desc = "POLITICS_WILLIAM_JOSEPH_SIMMONS"
-	picture = "gfx/leaders/CUS/COR_William_Joseph_Simmons.tga"
+	picture = "gfx/leaders/COR/COR_William_Joseph_Simmons.tga"
 	expire = "1965.1.1"
 	ideology = national_populist_subtype
 	traits = {}
@@ -164,7 +164,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "David Bibb Graves"
 	desc = "POLITICS_DAVID_BIBB_GRAVES_DESC"
-	picture = "gfx/leaders/CUS/Portrait_David_Bibb_Graves.tga"
+	picture = "gfx/leaders/COR/Portrait_David_Bibb_Graves.tga"
 	expire = "1965.1.1"
 	ideology = social_liberal_subtype
 	traits = {}
@@ -216,7 +216,7 @@ create_field_marshal = {# George Van Horn Moseley
 create_field_marshal = {# George S. Patton Jr.
 	name = "George S. Patton"
 	desc = "TEX_GEORGE_PATTON_ARMY_DESC"
-	portrait_path = "gfx/leaders/CUS/Portrait_COR_George_Patton.tga"
+	portrait_path = "gfx/leaders/COR/Portrait_COR_George_Patton.tga"
 	traits = {
 		trickster
 		armor_officer
@@ -234,7 +234,7 @@ create_field_marshal = {# George S. Patton Jr.
 create_field_marshal = {# Joseph T. McNarney
 	name = "Joseph T. McNarney"
 	desc = "TEX_JACOB_DENVERS_ARMY_DESC"
-	portrait_path = "gfx/leaders/CUS/Joe_McNarey_HOI4.tga"
+	portrait_path = "gfx/leaders/COR/Joe_McNarey_HOI4.tga"
 	traits = {
 		trait_reckless
 		artillery_officer
@@ -251,7 +251,7 @@ create_field_marshal = {# Joseph T. McNarney
 create_corps_commander = {# Wickliffe Draper
 	name = "Wickliffe Draper"
 	desc = "COR_WICKLIFFE_DRAPER_DESC"
-	portrait_path = "gfx/leaders/CUS/COR_Draper.tga"
+	portrait_path = "gfx/leaders/COR/COR_Draper.tga"
 	traits = {
 		trickster
 		career_officer
@@ -266,7 +266,7 @@ create_corps_commander = {# Wickliffe Draper
 create_corps_commander = {# Edward Almond
 	name = "Edward Almond"
 	desc = "TEX_EDWARD_ALMOND_ARMY_DESC"
-	portrait_path = "gfx/leaders/CUS/COR_Edward_Almond.tga"
+	portrait_path = "gfx/leaders/COR/COR_Edward_Almond.tga"
 	traits = {
 		career_officer
 		trait_cautious
@@ -282,7 +282,7 @@ create_corps_commander = {# Edward Almond
 create_corps_commander = {# Virgil Effinger
 	name = "Virgil Effinger"
 	desc = "TEX_VIRGIL_EFFFINGER_ARMY_DESC"
-	portrait_path = "gfx/leaders/CUS/Portrait_Virgil_Effinger.tga"
+	portrait_path = "gfx/leaders/COR/Portrait_Virgil_Effinger.tga"
 	traits = {
 		harsh_leader
 		trait_reckless
@@ -297,7 +297,7 @@ create_corps_commander = {# Virgil Effinger
 create_corps_commander = {# Samuel Green
 	name = "Samuel Green"
 	desc = "TEX_SAMUEL_GREEN_ARMY_DESC"
-	portrait_path = "gfx/leaders/CUS/COR_Sam_Green.tga"
+	portrait_path = "gfx/leaders/COR/COR_Sam_Green.tga"
 	traits = {
 		inflexible_strategist
 	}
@@ -312,7 +312,7 @@ create_corps_commander = {# Samuel Green
 create_corps_commander = {# William Shepherd
 	name = "William Shepherd"
 	desc = "TEX_WILLIAM_SHEPHERD_ARMY_DESC"
-	portrait_path = "gfx/leaders/CUS/William_Jpshepard.tga"
+	portrait_path = "gfx/leaders/COR/William_Jpshepard.tga"
 	traits = {
 		inflexible_strategist
 		harsh_leader
@@ -328,7 +328,7 @@ create_corps_commander = {# William Shepherd
 create_corps_commander = {# John L. Hines
 	name = "John L. Hines"
 #	desc = "TEX_JOHN_HINES_DESC"
-	portrait_path = "gfx/leaders/CUS/Portrait_COR_John_Hines.tga"
+	portrait_path = "gfx/leaders/COR/Portrait_COR_John_Hines.tga"
 	traits = {
 		armor_officer
 	}
@@ -342,7 +342,7 @@ create_corps_commander = {# John L. Hines
 create_corps_commander = {# Arthur Hornbui Bell
 	name = "Arthur Hornbui Bell"
 #	desc = "TEX_JOHN_HINES_DESC"
-	portrait_path = "gfx/leaders/CUS/Portrait_COR_Arthur_Hornbui_Bell.tga"
+	portrait_path = "gfx/leaders/COR/Portrait_COR_Arthur_Hornbui_Bell.tga"
 	traits = {
 		harsh_leader
 	}
@@ -356,7 +356,7 @@ create_corps_commander = {# Arthur Hornbui Bell
 create_corps_commander = { #Jeb Stuart IV
 	name = "Jeb Stuart IV"
 #	desc = "TEX_JOHN_HINES_DESC"
-	portrait_path = "gfx/leaders/CUS/Portrait_COR_JEB!.tga"
+	portrait_path = "gfx/leaders/COR/Portrait_COR_JEB!.tga"
 	traits = {
 		hidden_sympathies
 		commando
@@ -372,7 +372,7 @@ create_corps_commander = { #Jeb Stuart IV
 create_corps_commander = { #Nathan Bedford Forrest III
 	name = "Nathan Bedford Forrest III" 
 #	desc = "TEX_JOHN_HINES_DESC"
-	portrait_path = "gfx/leaders/CUS/Portrait_COR_Nathan_Bedford_Forrest_III.tga"
+	portrait_path = "gfx/leaders/COR/Portrait_COR_Nathan_Bedford_Forrest_III.tga"
 	traits = {
 		commando
 		career_officer
@@ -389,7 +389,7 @@ create_corps_commander = { #Nathan Bedford Forrest III
 create_corps_commander = { #Robert Lee Bullard
 	name = "Robert Lee Bullard"
 #	desc = "TEX_JOHN_HINES_DESC"
-	portrait_path = "gfx/leaders/CUS/Portrait_COR_Robert_Lee_Bullard.tga"
+	portrait_path = "gfx/leaders/COR/Portrait_COR_Robert_Lee_Bullard.tga"
 	traits = {
 		trait_cautious
 		politically_connected
@@ -404,7 +404,7 @@ create_corps_commander = { #Robert Lee Bullard
 create_corps_commander = { #Strom
 	name = "Strom Thurmond"
 #	desc = "TEX_JOHN_HINES_DESC"
-	portrait_path = "gfx/leaders/CUS/Portrait_COR_Strom_Thurmond.tga"
+	portrait_path = "gfx/leaders/COR/Portrait_COR_Strom_Thurmond.tga"
 	traits = {
 		air_commander
 		armor_officer
@@ -420,7 +420,7 @@ create_corps_commander = { #Strom
 create_corps_commander = { #Lindy
 	name = "Charles Lindbergh"
 #	desc = "TEX_JOHN_HINES_DESC"
-	portrait_path = "gfx/leaders/CUS/COR_Lindy_General.tga"
+	portrait_path = "gfx/leaders/COR/COR_Lindy_General.tga"
 	traits = {
 		air_commander
 		war_hero
@@ -436,7 +436,7 @@ create_corps_commander = { #Lindy
 
 create_corps_commander = {# Buckner
 	name = "Simon Bolivar Buckner Jr."
-	portrait_path = "gfx/leaders/CUS/Portrait_COR_Simon_Bolivar_Buckner_Jr.tga"
+	portrait_path = "gfx/leaders/COR/Portrait_COR_Simon_Bolivar_Buckner_Jr.tga"
 	traits = {
 		organizer
 		trait_reckless
@@ -453,7 +453,7 @@ create_corps_commander = {# Buckner
 }
 create_corps_commander = {# Schley
 	name = "Julian Larcombe Schley"
-	portrait_path = "gfx/leaders/CUS/Portrait_COR_Julian_Larcombe_Schley.tga"
+	portrait_path = "gfx/leaders/COR/Portrait_COR_Julian_Larcombe_Schley.tga"
 	traits = {
 		war_hero
 		politically_connected
@@ -503,7 +503,7 @@ create_navy_leader = {# John G. Crommelin
 }
 create_navy_leader = {# Mickey Cochrane
 	name = "Mickey Cochrane"
-	portrait_path = "gfx/leaders/CUS/Mickey_Cochrane.tga"
+	portrait_path = "gfx/leaders/COR/Mickey_Cochrane.tga"
 	traits = {}
 	skill = 1
 	attack_skill = 1
