@@ -3180,6 +3180,7 @@ focus_tree = {
 			has_government = authoritarian_democrat
 			has_government = paternal_autocrat
 			}
+			has_country_leader = { ruling_only = yes name = "William Randolph Hearst"}
 		}
 		ai_will_do = {
 			factor = 5
@@ -3209,6 +3210,7 @@ focus_tree = {
 			has_government = authoritarian_democrat
 			has_government = paternal_autocrat
 			}
+			has_country_leader = { ruling_only = yes name = "William Randolph Hearst"}
 		}
 		ai_will_do = {
 			factor = 5
@@ -3253,7 +3255,7 @@ focus_tree = {
 			has_government = authoritarian_democrat
 			has_government = paternal_autocrat
 			}
-			has_country_leader = { ruling_only = yes name = "William Randolph Hearst" }
+			has_country_leader = { ruling_only = yes name = "William Randolph Hearst"}
 		}
 		ai_will_do = {
 			factor = 5
@@ -3329,7 +3331,7 @@ focus_tree = {
 			has_government = authoritarian_democrat
 			has_government = paternal_autocrat
 			}
-			has_country_leader = { ruling_only = yes name = "William Randolph Hearst" }
+			has_country_leader = { ruling_only = yes name = "William Randolph Hearst"}
 		}
 		ai_will_do = {
 			factor = 5
@@ -3363,7 +3365,7 @@ focus_tree = {
 			has_government = authoritarian_democrat
 			has_government = paternal_autocrat
 			}
-			has_country_leader = { ruling_only = yes name = "William Randolph Hearst" }
+			has_country_leader = { ruling_only = yes name = "William Randolph Hearst"}
 		}
 		ai_will_do = {
 			factor = 5
@@ -3397,6 +3399,7 @@ focus_tree = {
 			has_government = authoritarian_democrat
 			has_government = paternal_autocrat
 			}
+			has_country_leader = { ruling_only = yes name = "William Randolph Hearst"}
 		}
 		ai_will_do = {
 			factor = 5
@@ -3434,6 +3437,7 @@ focus_tree = {
 			has_government = authoritarian_democrat
 			has_government = paternal_autocrat
 			}
+			has_country_leader = { ruling_only = yes name = "William Randolph Hearst"}
 		}
 		ai_will_do = {
 			factor = 5
@@ -3543,6 +3547,7 @@ focus_tree = {
 		}
 		available = {
 			has_government = authoritarian_democrat
+			has_country_leader = { ruling_only = yes name = "William Randolph Hearst"}
 		}
 		ai_will_do = {
 			factor = 5
@@ -3603,6 +3608,7 @@ focus_tree = {
 		}
 		available = {
 			has_government = authoritarian_democrat
+			has_country_leader = { ruling_only = yes name = "William Randolph Hearst"}
 		}
 		ai_will_do = {
 			factor = 5
@@ -3629,6 +3635,7 @@ focus_tree = {
 		}
 		available = {
 			has_government = authoritarian_democrat
+			has_country_leader = { ruling_only = yes name = "William Randolph Hearst"}
 		}
 		ai_will_do = {
 			factor = 5
@@ -3656,6 +3663,7 @@ focus_tree = {
 		}
 		available = {
 			has_government = authoritarian_democrat
+			has_country_leader = { ruling_only = yes name = "William Randolph Hearst"}
 		}
 		ai_will_do = {
 			factor = 5
@@ -5528,9 +5536,7 @@ focus_tree = {
 		available = {
 			has_government = social_conservative
 		}
-		bypass = { has_government = social_conservative 
-		has_country_flag = PSA_1937_election_democrat
-		}
+		bypass = { has_government = social_conservative }
 		ai_will_do = {
 			factor = 5
 		}
@@ -5700,10 +5706,7 @@ focus_tree = {
 			focus = CAL_social_conservatives_in_power
 		}
 		available = {
-			OR = {
 			has_government = social_conservative
-			has_government = authoritarian_democrat
-			}
 		}
 		ai_will_do = {
 			factor = 5
@@ -5730,10 +5733,7 @@ focus_tree = {
 			focus = CAL_welfare_reform
 		}
 		available = {
-			OR = {
 			has_government = social_conservative
-			has_government = authoritarian_democrat
-			}
 		}
 		ai_will_do = {
 			factor = 5
@@ -5766,10 +5766,7 @@ focus_tree = {
 			focus = CAL_levering_act
 		}
 		available = {
-			OR = {
 			has_government = social_conservative
-			has_government = authoritarian_democrat
-			}
 		}
 		ai_will_do = {
 			factor = 5
@@ -6692,14 +6689,7 @@ focus_tree = {
 			focus = CAL_market_liberals_in_power
 		}
 		available = {
-			OR = {
-				has_government = social_conservative
-				has_government = market_liberal
-			}
-			OR = {
-				has_idea = CAL_social_gospel_idea1
-				has_idea = CAL_social_gospel_idea2
-			}
+			has_government = market_liberal
 		}
 		ai_will_do = {
 			factor = 5
@@ -6825,7 +6815,7 @@ focus_tree = {
 		y = 2
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_protect_industry"
-			add_ideas = CAL_industrial_tariffs
+			add_ideas = CAL_industrial_tariffs_idea
 			add_tech_bonus = {
 				name = industrial_bonus
 				bonus = 1
@@ -7216,7 +7206,7 @@ focus_tree = {
 		y = 4
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_give_me_your_poor"
-			add_ideas = CAL_immigration_influx_idea
+			add_ideas = CAL_give_me_your_poor_idea
 			add_manpower = 9500
 			add_political_power = -20
 			add_popularity = { ideology = market_liberal popularity = 0.05 }
@@ -7688,7 +7678,7 @@ focus_tree = {
 		}
 	}
 	
-	focus = {# securities Act
+	focus = {# Securities Act
 		id = CAL_securities_act
 		icon = GFX_goal_KTG_Certificate_Focus
 		cost = 5.00
@@ -8279,10 +8269,7 @@ focus_tree = {
 			focus = CAL_national_youth_adminstration
 		}
 		available = {
-			OR = {
-				has_government = social_conservative
-				has_government = social_liberal
-			}
+			has_government = social_liberal
 		}
 		ai_will_do = {
 			factor = 5
@@ -8315,10 +8302,7 @@ focus_tree = {
 			focus = CAL_medicare
 		}
 		available = {
-			OR = {
-				has_government = social_conservative
-				has_government = social_liberal
-			}
+			has_government = social_liberal
 		}
 		ai_will_do = {
 			factor = 5
@@ -8355,10 +8339,7 @@ focus_tree = {
 			focus = CAL_mathematical_tables_project
 		}
 		available = {
-			OR = {
-				has_government = social_liberal
-				has_government = social_democrat
-			}
+			has_government = social_liberal
 		}
 		ai_will_do = {
 			factor = 5
@@ -8385,10 +8366,7 @@ focus_tree = {
 			focus = CAL_labor_relations_act
 		}
 		available = {
-			OR = {
-				has_government = social_liberal
-				has_government = social_democrat
-			}
+			has_government = social_liberal
 		}
 		ai_will_do = {
 			factor = 5
@@ -8452,10 +8430,7 @@ focus_tree = {
 			focus = CAL_labor_relations_act
 		}
 		available = {
-			OR = {
-				has_government = social_democrat
-				has_government = social_liberal
-			}
+			has_government = social_liberal
 		}
 		ai_will_do = {
 			factor = 5
@@ -8492,8 +8467,8 @@ focus_tree = {
 		}
 		available = {
 			OR = {
+				has_government = social_democrat
 				has_government = social_liberal
-				has_government = market_liberal
 			}
 		}
 		ai_will_do = {
@@ -8519,8 +8494,8 @@ focus_tree = {
 		}
 		available = {
 			OR = {
+				has_government = social_democrat
 				has_government = social_liberal
-				has_government = market_liberal
 			}
 		}
 		ai_will_do = {
@@ -8583,8 +8558,8 @@ focus_tree = {
 		}
 		available = {
 			OR = {
+				has_government = social_democrat
 				has_government = social_liberal
-				has_government = market_liberal
 			}
 		}
 		ai_will_do = {
@@ -8653,8 +8628,8 @@ focus_tree = {
 		}
 		available = {
 			OR = {
+				has_government = social_democrat
 				has_government = social_liberal
-				has_government = market_liberal
 			}
 		}
 		ai_will_do = {
