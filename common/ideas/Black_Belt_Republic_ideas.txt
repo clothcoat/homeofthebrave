@@ -54,7 +54,7 @@ ideas = {
 				war_support_factor	= 0.1
 			}
 			removal_cost = -1
-			picture = children_of_sun_idea
+			picture = children_of_sun
 		}
 		BBR_the_black_pharoah_idea = { #The Black Pharoah
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_the_black_pharoah_idea"}
@@ -69,7 +69,7 @@ ideas = {
 				stability_weekly_factor	= 0.003
 			}
 			removal_cost = -1
-			picture = black_pharaoh_idea
+			picture = black_pharaoh
 		}
 		BBR_the_black_pharoah_idea_2 = { #The Black Pharoah
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_the_black_pharoah_idea_2"}
@@ -85,7 +85,7 @@ ideas = {
 				stability_weekly_factor	= 0.005
 			}
 			removal_cost = -1
-			picture = black_pharaoh_idea
+			picture = black_pharaoh
 		}
 		BBR_the_black_pharoah_idea_3 = { #The Black Pharoah
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_the_black_pharoah_idea_3"}
@@ -103,7 +103,7 @@ ideas = {
 				justify_war_goal_time = -0.5
 			}
 			removal_cost = -1
-			picture = black_pharaoh_idea
+			picture = black_pharaoh
 		}
 	
 		### Red Totalist Path ###
@@ -175,7 +175,7 @@ ideas = {
 				command_power_gain_mult	= 0.05
 			}
 			removal_cost = -1
-			picture = all_for_the_party_idea
+			picture = all_for_the_party
 		}
 		BBR_haywood_economics = { #All to the Party
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_haywood_economics"}
@@ -501,7 +501,7 @@ ideas = {
 			war_stability_factor = 0.05
 			}
 			removal_cost = -1
-			picture = birth_control_idea
+			picture = birth_control
 		}
 	### Soc-Dem Path ###
 		BBR_freedom_budget_idea = { #Worker Aid
@@ -655,7 +655,7 @@ ideas = {
 			surrender_limit	= 0.1
 			}
 			removal_cost = -1
-			picture = civil_rights_act_idea
+			picture = civil_rights_act
 		}
 	### Market Liberal Path ###
 		BBR_expand_tuskeegee_idea = { #Expand Tuskeegee
@@ -676,7 +676,7 @@ ideas = {
 			production_factory_max_efficiency_factor = 0.02
 			}
 			removal_cost = -1
-			picture = GFX_idea_BBR_expand_tuskegee
+			picture = expand_tuskegee
 		}
 		BBR_bookerite_education = { #Expand Tuskeegee
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_bookerite_education"}
@@ -696,7 +696,7 @@ ideas = {
 			production_factory_max_efficiency_factor = 0.05
 			}
 			removal_cost = -1
-			picture = GFX_idea_BBR_bookerite_education_idea"
+			picture = bookerite_education
 		}
 		BBR_bookerite_machine_idea = { #GOP Machine
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_bookerite_machine_idea"}
@@ -739,7 +739,7 @@ ideas = {
 			production_factory_max_efficiency_factor = 0.05
 			}
 			removal_cost = -1
-			picture = GFX_idea_BBR_nnbl_1
+			picture = nnbl_1
 		}
 		BBR_nnbl_idea_2 = { #Expand Tuskeegee
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_nnbl_idea_2"}
@@ -827,7 +827,7 @@ ideas = {
 			party_popularity_stability_factor = 0.05
 			}
 			removal_cost = -1
-			picture = GFX_idea_BBR_fairer_taxes
+			picture = fairer_taxes
 		}
 		BBR_wage_floors_idea = { #Wage Floors
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_wage_floors_idea"}
@@ -870,7 +870,7 @@ ideas = {
 			party_popularity_stability_factor = 0.05
 			}
 			removal_cost = -1
-			picture = GFX_idea_BBR_pensions
+			picture = pensions
 		}
 		BBR_vet_support_idea = { #Wage Floors
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_vet_support_idea"}
@@ -909,7 +909,7 @@ ideas = {
 			party_popularity_stability_factor = 0.05
 			}
 			removal_cost = -1
-			picture = cash_only_exchange_idea
+			picture = cash_only_exchange
 		}
 		BBR_economic_independence_idea = { #Economic Independence
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_economic_independence_idea"}
@@ -1088,7 +1088,7 @@ ideas = {
 				war_support_weekly = 0.005
 			}
 			removal_cost = -1
-			picture = citizen_conscription_idea
+			picture = citizen_conscription
 		}
 		BBR_citizen_army = { #Mass Recruitment
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_citizen_army"}
@@ -1106,7 +1106,7 @@ ideas = {
 				war_support_weekly = 0.01
 			}
 			removal_cost = -1
-			picture = citizen_army_idea
+			picture = citizen_army
 		}
 		BBR_citizen_army_2 = { #Mass Recruitment
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_citizen_army_2"}
@@ -1127,7 +1127,7 @@ ideas = {
 				party_popularity_stability_factor = 0.1
 			}
 			removal_cost = -1
-			picture = citizen_republic_idea
+			picture = citizen_republic
 		}
 		BBR_fair_play_idea = { #Fair Play
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_fair_play_idea"}
@@ -1209,7 +1209,7 @@ ideas = {
 				military_leader_cost_factor = -0.1
 			}
 			removal_cost = -1
-			picture = afrikan_legion_idea
+			picture = afrikan_legion
 		}
 		BBR_african_legion_idea_2 = { #Mass Recruitment
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_african_legion_idea_2"}
@@ -1233,7 +1233,7 @@ ideas = {
 				military_leader_cost_factor = -0.1
 			}
 			removal_cost = -1
-			picture = afrikan_legion_idea
+			picture = afrikan_legion
 		}
 		BBR_black_separatism_idea = { #Mass Recruitment
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_black_separatism_idea"}
@@ -1294,7 +1294,7 @@ ideas = {
 				naval_attrition	= -0.05
 			}
 			removal_cost = -1
-			picture = black_star_line_spirit_idea
+			picture = black_star_line_spirit
 		}
 	### Nat Pop Path ###
 		BBR_fruit_of_islam_idea = { #Fruit of Islam
@@ -1414,7 +1414,7 @@ ideas = {
 		}
 		### Redeem Africa ###
 		BBR_redeem_africa_idea = { #Purge Africans
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_redeem_africa_idea"}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_the_prophet_idea"}
 			available = {
 				tag = BBR
 				OR = {
@@ -1431,19 +1431,6 @@ ideas = {
 			}
 			removal_cost = -1
 			picture = prophet
-		}
-		BBR_reach_inwards_ideas = { #Redeem Africa
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_reach_inwards_ideas"}
-			available = {
-				tag = BBR
-			}
-			modifier = {
-				local_non_core_manpower = 0.02
-				monthly_population = 0.05
-				political_power_gain = 0.01
-			}
-			removal_cost = -1
-			picture = communal_econ
 		}
 		### Military Paths ###
 		BBR_davis_plan_idea = { #Davis Plan
@@ -1683,7 +1670,7 @@ ideas = {
 				}
 			}
 			removal_cost = -1
-			picture = cavalry_focus_idea
+			picture = cavalry_focus
 		}
 		BBR_flipper_doctrine_idea = { #Flipper Doctrine
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_flipper_doctrine_idea"}
@@ -1773,7 +1760,7 @@ ideas = {
 					}
 				}
 			removal_cost = -1
-			picture = military_engineering_idea
+			picture = military_engineering
 		}
 		BBR_military_engineers_idea_2 = { #Flipper Doctrine
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_military_engineers_idea_2"}
@@ -1801,7 +1788,7 @@ ideas = {
 					}
 				}
 			removal_cost = -1
-			picture = military_engineering_idea
+			picture = military_engineering
 		}
 	### Companies ###
 
