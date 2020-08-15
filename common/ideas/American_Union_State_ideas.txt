@@ -118,7 +118,6 @@ ideas = {
 				experience_gain_light_armor_combat_factor = 0.15
 				army_armor_defence_factor = 0.1
 				army_org_factor	= 0.2
-				breakthrough = 0.1
 			}
 			equipment_bonus = {
 				armor = {
@@ -126,6 +125,7 @@ ideas = {
 					armor_value = 0.1
 					reliability = 0.08
 					maximum_speed = 0.08
+					breakthrough = 0.1
 					instant = yes
 				}
 				mechanized = {
@@ -133,6 +133,7 @@ ideas = {
 					reliability = 0.12
 					maximum_speed = 0.1
 					armor_value = 0.08
+					breakthrough = 0.1
 					instant = yes
 				}
 			}
@@ -1076,7 +1077,7 @@ ideas = {
 				encryption_factor = 0.02
 				decryption_factor = 0.02
 				out_of_supply_factor = 0.1
-				resistance_activity = -.02
+				resistance_activity = -0.02
 				max_planning = -0.03
 			}
 		}
