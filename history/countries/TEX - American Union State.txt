@@ -227,6 +227,20 @@ create_corps_commander = {# William Hood Simpson
 	logistics_skill = 2
 	id = 969
 }
+create_corps_commander = {# Earl C. Long
+	name = "Earl C. Long"
+	desc = "TEX_EARL_C_LONG_DESC"
+	portrait_path = "gfx/leaders/TEX/Portrait_Earl_C_Long.tga"
+	traits = { 
+		naval_invader
+	}
+	skill = 3
+
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 3
+}
 create_corps_commander = {# Claire Lee Chennault
 	name = "Claire Lee Chennault"
 	desc = "TEX_CLAIRE_LEE_CHENNAULT_ARMY_DESC"
@@ -414,6 +428,34 @@ create_navy_leader = {# Arthur L. Bristol
 	defense_skill = 2
 	maneuvering_skill = 2
 	coordination_skill = 2
+}
+create_navy_leader = {# Harold Stassen
+	name = "Harold Stassen"
+	portrait_path = "gfx/leaders/TEX/Portrait_TEX_Harold_Stassen.tga"
+	traits = {
+		safety_first
+		politically_connected
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	maneuvering_skill = 2
+	coordination_skill = 2
+}
+create_navy_leader = { #Auto-Generated
+	name = "Lyndon Baines Johnson"
+	portrait_path = "gfx/leaders/TEX/Portrait_TEX_LBJ_navy.tga"
+	traits = {
+		politically_connected
+		navy_media_personality
+		air_controller
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 2
+	maneuvering_skill = 1
+	coordination_skill = 1
+	id = 89998
 }
 
 USA_start_naval_variant = yes

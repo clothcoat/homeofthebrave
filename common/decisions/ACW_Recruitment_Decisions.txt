@@ -7393,7 +7393,7 @@ ACW_civil_war_decisions = {
 				limit = {
 					tag = TEX
 				}
-				custom_effect_tooltip = ACW_recruit_7_units
+				custom_effect_tooltip = ACW_recruit_8_units
 				hidden_effect = {
 					375 = {
 						create_unit = {
@@ -7428,6 +7428,11 @@ ACW_civil_war_decisions = {
 						}
 						create_unit = {
 							division = "name = \"2nd North Texas Rangers\" division_template = \"Mounted AUS Militia\"  start_experience_factor = 0.0"
+							allow_spawning_on_enemy_provs = yes
+							owner = ROOT
+						}
+						create_unit = {
+							division = "name = \"8th North Texas Rangers\" division_template = \"Mounted AUS Militia\"  start_experience_factor = 0.0"
 							allow_spawning_on_enemy_provs = yes
 							owner = ROOT
 						}
