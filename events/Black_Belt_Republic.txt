@@ -946,6 +946,232 @@ country_event = { # Back to Africa
 	}
 }
 
+#NOI
+country_event = { #Arresting Gladys Bentley
+	id = bbr.1210
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.1210"}
+	title = bbr.1210.t
+	desc = bbr.1210.d
+	picture = ACW_soldiers_watching
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = { #Place a Bounty
+	name = bbr.1210.a
+	add_political_power = -10
+	add_command_power = 3
+	add_popularity = { ideology = national_populist popularity = 0.01 }
+	}
+	option = { #We'll wait on it
+	name = bbr.1210.b
+	}
+}
+country_event = { #NOI Claims Vilified
+	id = bbr.1211
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.1211"}
+	title = bbr.1211.t
+	desc = bbr.1211.d
+	picture = ACW_soldiers_watching
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = { #Place a Bounty
+	name = bbr.1211.a
+	add_political_power = -10
+	add_war_support = 0.05
+	}
+}
+country_event = { #Arresting Gladys Bentley
+	id = bbr.1212
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.1212"}
+	title = bbr.1212.t
+	desc = bbr.1212.d
+	picture = ACW_soldiers_watching
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = { #Stop them
+	name = bbr.1212.a
+	add_political_power = -15
+	}
+	option = { #Let them go
+	name = bbr.1212.b
+	add_manpower = -200
+	add_stability = -0.02
+	}
+}
+
+country_event = { #The Black Israelites
+	id = bbr.1213
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.1213"}
+	title = bbr.1213.t
+	desc = bbr.1213.d
+	picture = ACW_soldiers_watching
+
+	fire_only_once = yes
+
+	trigger = {
+	OR = {
+	has_government = paternal_autocrat
+	has_government = national_populist
+	has_country_leader = { ruling_party = yes name = "Duse Muhammad"}
+	}
+	}
+	
+	mean_time_to_happen = {
+	days = 300
+	}
+	
+	option = { #Hit non-nationalists
+	name = bbr.1213.a
+	add_popularity = { ideology = paternal_autocrat popularity = 0.01 }
+	add_political_power = 20
+	add_manpower = -200
+	}
+	option = { #Hit all Black Israelites
+	name = bbr.1213.b
+	add_political_power = 30
+	add_popularity = { ideology = paternal_autocrat popularity = -0.01 }
+	add_stability = -0.02
+	add_manpower = -600
+	}
+	option = { #Ignore the debate
+	name = bbr.1213.b
+	add_stability = -0.01
+	add_political_power = -10
+	}
+}
+
+country_event = { #National Savings Plan
+	id = bbr.1214
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.1214"}
+	title = bbr.1214.t
+	desc = bbr.1214.d
+	picture = ACW_soldiers_watching
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = { #We can relax now
+	name = bbr.1214.a
+	add_popularity = { ideology = national_populist popularity = 0.01 }
+	add_political_power = -10
+	add_stability = 0.05
+	random_owned_state = {
+				limit = {
+					is_core_of = BBR
+					is_controlled_by = BBR
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 2
+	}
+	random_owned_state = {
+				limit = {
+					is_core_of = BBR
+					is_controlled_by = BBR
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+	}
+	random_owned_state = {
+				limit = {
+					is_core_of = BBR
+					is_controlled_by = BBR
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = BBR
+					is_controlled_by = BBR
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+	}
+	option = { #We can relax now
+	name = bbr.1214.b
+	add_popularity = { ideology = national_populist popularity = 0.03 }
+	add_political_power = 20
+	add_stability = 0.02
+	random_owned_state = {
+				limit = {
+					is_core_of = BBR
+					is_controlled_by = BBR
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 2
+	}
+	random_owned_state = {
+				limit = {
+					is_core_of = BBR
+					is_controlled_by = BBR
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = BBR
+					is_controlled_by = BBR
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+	}
+}
+
+country_event = { #Liquor Smuggled
+	id = bbr.1215
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.1215"}
+	title = bbr.1215.t
+	desc = bbr.1215.d
+	picture = ACW_soldiers_watching
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = { #Find them at all costs
+	name = bbr.1215.a
+	add_political_power = -20
+	add_manpower = -200
+	}
+	option = { #We only have so many resources to spare
+	name = bbr.1215.b
+	add_stability = -0.03
+	add_popularity = { ideology = national_populist popularity = -0.01 }
+	}
+}
+
 country_event = { # Nationalists Fail
 	id = bbr.13
 	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.13"}

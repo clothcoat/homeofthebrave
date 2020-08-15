@@ -5561,6 +5561,18 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BBR_law_of_allah"
+			hidden_effect = {
+			country_event = {
+				id = bbr.1210
+				days = 160
+				}
+			}
+			hidden_effect = {
+			country_event = {
+				id = bbr.1215
+				days = 75
+				}
+			}
 			add_popularity = { ideology = totalist popularity = -0.05 }
 			add_popularity = { ideology = syndicalist popularity = -0.05 }
 			add_popularity = { ideology = radical_socialist popularity = -0.05 }
@@ -5654,6 +5666,14 @@ focus_tree = {
 		prerequisite = {
 			focus = BBR_law_of_allah
 		}
+		select_effect = {
+		hidden_effect = {
+			country_event = {
+				id = bbr.1212
+				days = 20
+				}
+			}
+		}
 		relative_position_id = BBR_nation_of_islam
 		x = -3
 		y = 3
@@ -5699,19 +5719,12 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BBR_national_savings_plan"
-			add_stability = 0.05
-			add_political_power = 35
-			random_owned_state = {
-				limit = {
-					is_core_of = BBR
-					is_controlled_by = BBR
-					industrial_complex > 0
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
+			add_stability = -0.03
+			add_political_power = -20
+			hidden_effect = {
+			country_event = {
+				id = bbr.1214
+				days = 1095
 				}
 			}
 			random_owned_state = {
@@ -5724,19 +5737,6 @@ focus_tree = {
 				add_building_construction = {
 					type = industrial_complex
 					level = 1
-					instant_build = yes
-				}
-			}
-			random_owned_state = {
-				limit = {
-					is_core_of = BBR
-					is_controlled_by = BBR
-					industrial_complex > 0
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
 					instant_build = yes
 				}
 			}
@@ -5905,6 +5905,12 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BBR_the_prophet"
 			add_ideas = BBR_the_prophet_idea
+			hidden_effect = {
+			country_event = {
+				id = bbr.1211
+				days = 5
+				}
+			}
 			add_political_power = 125
 			add_war_support = 0.05
 			add_popularity = { ideology = national_populist popularity = 0.05 }
