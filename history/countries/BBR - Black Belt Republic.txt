@@ -222,23 +222,19 @@ create_field_marshal = {# Charles Young
 	planning_skill = 4
 	logistics_skill = 5
 }
-create_field_marshal = {# John R. Fox
-	name = "John R. Fox"
-	desc = "USA_JOHN_R_FOX_ARMY_DESC"
-	portrait_path = "gfx/leaders/BBR/Portrait_SNA_John_R_Fox.tga"
+
+create_field_marshal = {
+	name = "Henry Ossian Flipper"
+	portrait_path = "gfx/leaders/BBR/Portrait_SNA_Henry_Ossian_Flipper.tga"
 	traits = {
 		career_officer
-		politically_connected
-		offensive_doctrine
-		organizer
-		bearer_of_artillery
-		trait_reckless
+		cavalry_officer
 	}
 	skill = 2
 	attack_skill = 2
 	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 3
+	planning_skill = 1
+	logistics_skill = 2
 }
 
 create_field_marshal = {# Ben Davis
@@ -286,6 +282,24 @@ create_corps_commander = {
 	defense_skill = 2
 	planning_skill = 1
 	logistics_skill = 1
+}
+create_corps_commander = {# John R. Fox
+	name = "John R. Fox"
+	desc = "USA_JOHN_R_FOX_ARMY_DESC"
+	portrait_path = "gfx/leaders/BBR/Portrait_SNA_John_R_Fox.tga"
+	traits = {
+		career_officer
+		politically_connected
+		offensive_doctrine
+		organizer
+		bearer_of_artillery
+		trait_reckless
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 3
 }
 create_corps_commander = {
 	name = "Henry Ossian Flipper"
