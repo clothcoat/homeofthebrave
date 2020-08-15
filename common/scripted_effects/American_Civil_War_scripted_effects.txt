@@ -1015,6 +1015,14 @@ USA_release_WCC = {
 			flag = ACW_minutemen_resistance
 			value = 6
 			}
+			add_ideas = {
+				WCC_Dwight_D_Eisenhower_hog_ade
+				WCC_Patrick_J_Hurley_for_ade
+				WCC_James_Garesche_Ord_eco_ade
+				WCC_Leonard_T_Gerow_sec_ade
+				WCC_Omar_Nelson_Bradley_cos
+				WCC_Dwight_D_Eisenhower_carm
+			}
 		}
 
 		USA = {
@@ -1064,6 +1072,32 @@ USA_release_WCC = {
 					add_manpower = 75000
 				}
 			}
+			create_corps_commander = {#More Unit Leaders to deal with WCC staff
+				name = "Hugh S. Johnson"
+				portrait_path = "gfx/leaders/USA/Portrait_Hugh_S_Johnson.tga"
+				traits = { 
+					politically_connected 
+					trait_cautious 
+				}
+				skill = 2
+				attack_skill = 1
+				defense_skill = 2
+				planning_skill = 2
+				logistics_skill = 1
+			}
+			create_corps_commander = {#More Unit Leaders to deal with WCC staff
+				name = "John R. Hodge"
+				portrait_path = "gfx/leaders/USA/Portrait_john_r_hodge.tga"
+				traits = { 
+					air_commander 
+					naval_invader 
+				}
+				skill = 2
+				attack_skill = 3
+				defense_skill = 1
+				planning_skill = 2
+				logistics_skill = 1
+			}
 		}
 		
 		remove_unit_leader = 88 #Bradley
@@ -1072,6 +1106,7 @@ USA_release_WCC = {
 		remove_unit_leader = 96 #Ord
 		remove_unit_leader = 98 #Harding
 		remove_unit_leader = 82 #Griswold
+		remove_unit_leader = 74 #Gerow
 
 		set_country_flag = Martin_Dies_Jr_dead
 		set_country_flag = Walter_Bedell_'Beetle'_Smith_dead
