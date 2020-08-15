@@ -676,7 +676,7 @@ ideas = {
 			production_factory_max_efficiency_factor = 0.02
 			}
 			removal_cost = -1
-			picture = GFX_idea_BBR_expand_tuskegee
+			picture = BBR_expand_tuskegee
 		}
 		BBR_bookerite_education = { #Expand Tuskeegee
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_bookerite_education"}
@@ -696,7 +696,7 @@ ideas = {
 			production_factory_max_efficiency_factor = 0.05
 			}
 			removal_cost = -1
-			picture = GFX_idea_BBR_bookerite_education_idea"
+			picture = BBR_bookerite_education_idea
 		}
 		BBR_bookerite_machine_idea = { #GOP Machine
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_bookerite_machine_idea"}
@@ -739,7 +739,7 @@ ideas = {
 			production_factory_max_efficiency_factor = 0.05
 			}
 			removal_cost = -1
-			picture = GFX_idea_BBR_nnbl_1
+			picture = BBR_nnbl_1
 		}
 		BBR_nnbl_idea_2 = { #Expand Tuskeegee
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_nnbl_idea_2"}
@@ -827,7 +827,7 @@ ideas = {
 			party_popularity_stability_factor = 0.05
 			}
 			removal_cost = -1
-			picture = GFX_idea_BBR_fairer_taxes
+			picture = BBR_fairer_taxes
 		}
 		BBR_wage_floors_idea = { #Wage Floors
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_wage_floors_idea"}
@@ -870,7 +870,7 @@ ideas = {
 			party_popularity_stability_factor = 0.05
 			}
 			removal_cost = -1
-			picture = GFX_idea_BBR_pensions
+			picture = BBR_pensions
 		}
 		BBR_vet_support_idea = { #Wage Floors
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_vet_support_idea"}
