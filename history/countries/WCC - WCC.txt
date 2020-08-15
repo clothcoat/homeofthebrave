@@ -214,36 +214,6 @@ create_field_marshal = {# Dwight D. Eisenhower
 }
 
 ### Generals ###
-create_corps_commander = {# Clarence Huebner
-	name = "Clarence Huebner"
-	desc = "USA_CLARENCE_HUEBNER_ARMY_DESC"
-	portrait_path = "gfx/leaders/USA/Portrait_USA_gen_Clarence_Huebner.tga"
-	traits = {
-		harsh_leader
-	}
-	skill = 2
-	attack_skill = 1
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 2
-	id = 9520
-}
-create_corps_commander = {# Edward H. Brooks
-	name = "Edward H. Brooks"
-	desc = "USA_EDWARD_BROOKS_ARMY_DESC"
-	portrait_path = "gfx/leaders/USA/Portrait_USA_Edward_Brooks_KR.tga"
-	traits = {
-		trait_engineer
-		trait_reckless
-	}
-	skill = 2
-
-	attack_skill = 2
-	defense_skill = 1
-	planning_skill = 2
-	logistics_skill = 2
-	id = 9530
-}
 create_corps_commander = {# Geoffrey Keyes
 	name = "Geoffrey Keyes"
 	desc = "USA_GEOFFREY_KEYES_ARMY_DESC"
@@ -259,111 +229,6 @@ create_corps_commander = {# Geoffrey Keyes
 	planning_skill = 2
 	logistics_skill = 1
 	id = 9540
-}
-create_corps_commander = {# Jonathan M. Wainwright
-	name = "Jonathan M. Wainwright"
-	desc = "USA_JONATHAN_WAINWRIGHT_ARMY_DESC"
-	portrait_path = "gfx/leaders/USA/Portrait_USA_gen_Jonathan_Wainwright.tga"
-	traits = {
-		cavalry_officer
-		trait_reckless
-	}
-	skill = 1
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-	id = 9550
-}
-create_corps_commander = {# Leonard Gerow
-	name = "Leonard Gerow"
-	desc = "USA_LEONARD_GEROW_ARMY_DESC"
-	portrait_path = "gfx/leaders/USA/Portrait_USA_Leonard_Gerow_KR.tga"
-	traits = { armor_officer }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 3
-	id = 9570
-}
-create_corps_commander = {# Lloyd Fredendall
-	name = "Lloyd Fredendall"
-	desc = "USA_LLOYD_FREDENDALL_ARMY_DESC"
-	portrait_path = "gfx/leaders/USA/Portrait_USA_Lloyd_Fredendall_KR.tga"
-	traits = {
-		old_guard
-		infantry_officer
-		inflexible_strategist
-	}
-	skill = 2
-
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 1
-	logistics_skill = 1
-	id = 9590
-}
-create_corps_commander = {# Lucian Truscott
-	name = "Lucian Truscott"
-	desc = "USA_LUCIAN_TRUSCOTT_ARMY_DESC"
-	portrait_path = "gfx/leaders/USA/Portrait_USA_gen_Lucian_Truscott.tga"
-	traits = {
-		trait_engineer
-		commando
-		cavalry_officer
-	}
-	skill = 3
-
-	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 2
-	logistics_skill = 2
-	id = 9340
-}
-create_corps_commander = {# Daniel Van Voorhis
-	name = "Daniel Van Voorhis"
-	desc = "USA_DANIEL_VAN_VOORHIS_ARMY_DESC"
-	portrait_path = "gfx/leaders/USA/Portrait_USA_Daniel_Van_Voorhis.tga"
-	traits = {commando}
-	skill = 3
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 2
-	id = 6470
-}
-create_corps_commander = {# John C. H. Lee
-	name = "John C. H. Lee"
-	desc = "USA_JOHN_LEE_ARMY_DESC"
-	portrait_path = "gfx/leaders/USA/Portrait_USA_john_lee.tga"
-	traits = {
-		career_officer
-		politically_connected
-		trait_engineer
-	}
-	skill = 3
-	attack_skill = 2
-	defense_skill = 3
-	planning_skill = 3
-	logistics_skill = 2
-	id = 9630
-}
-create_corps_commander = {# Matthew Ridgway
-	name = "Matthew Ridgway"
-	desc = "TEX_MATTHEW_RIDGWAY_ARMY_DESC"
-	portrait_path = "gfx/leaders/TEX/Portrait_TEX_matthew_ridgway.tga"
-	traits = {
-		inflexible_strategist
-		trait_cautious
-		commando
-	}
-	skill = 3
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 4
-	id = 9440
 }
 create_corps_commander = {# James Garesche Ord
 	name = "James Garesche Ord"
@@ -427,18 +292,17 @@ create_corps_commander = {# Mac Loyalist, moved to WCC
 	planning_skill = 3
 	logistics_skill = 1
 }
-#create_corps_commander = {# Herbert Holdridge
-	#name = "Herbert Charles Heitke"
-	#desc = "USA_HERBERT_HOLDRIDGE_ARMY_DESC"
-	#portrait_path = "gfx/leaders/CSA/Portrait_CSA_herbert_holdridge.tga"
-	#traits = { trickster }
-	#skill = 3
-	#attack_skill = 2
-	#defense_skill = 2
-	#planning_skill = 4
-	#logistics_skill = 2
-	#id = 610
-#}
+create_corps_commander = {# Oscar Griswold
+	name = "Oscar Griswold"
+	desc = "USA_OSCAR_GRISWOLD_ARMY_DESC"
+	portrait_path = "gfx/leaders/USA/Portrait_USA_oscar_griswold_HOTB.tga"
+	traits = { infantry_officer  }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 2
+}
 ###Operatives###
 if = {
 	limit = { has_dlc = "La Resistance" }

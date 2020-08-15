@@ -375,12 +375,17 @@ country_event = { #WCC Reintegrates
 		add_political_power = 30
 		add_stability = 0.05
 		USA = {
-		annex_country = {
-		target = WCC
-		transfer_troops = yes
+			annex_country = {
+				target = WCC
+				transfer_troops = yes
 			}
-		set_country_flag = WCC_reintegrated
 		}
+		WCC = {
+			every_unit_leader = {
+				set_nationality = USA
+			}
+		}	
+		set_country_flag = WCC_reintegrated
 	}
 }
 
@@ -446,7 +451,6 @@ country_event = { #WCC Reintegrates
 		name = wcc.12.a
 		USA = {
 			every_unit_leader = {
-				limit = { has_id = 56 }
 				set_nationality = WCC
 			}
 		}
