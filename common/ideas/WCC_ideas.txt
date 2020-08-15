@@ -216,7 +216,7 @@ ideas = {
 	}
 	WCC_fourth_branch_idea = { #Fourth Branch
 		on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_fourth_branch_idea"}
-		picture = usa_great_depression_2
+		picture = WCC_fourth_branch
 		modifier = {
 			party_popularity_stability_factor = 0.1
 			political_power_gain = 0.05
