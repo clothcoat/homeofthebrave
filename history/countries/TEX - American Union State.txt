@@ -442,5 +442,20 @@ create_navy_leader = {# Harold Stassen
 	maneuvering_skill = 2
 	coordination_skill = 2
 }
+create_navy_leader = { #Auto-Generated
+	name = "Lyndon Baines Johnson"
+	portrait_path = "gfx/leaders/TEX/Portrait_TEX_LBJ_navy.tga"
+	traits = {
+		politically_connected
+		navy_media_personality
+		air_controller
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 2
+	maneuvering_skill = 1
+	coordination_skill = 1
+	id = 89998
+}
 
 USA_start_naval_variant = yes
