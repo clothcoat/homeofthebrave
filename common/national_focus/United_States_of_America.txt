@@ -1202,10 +1202,15 @@ focus_tree = {
 		id = USA_last_bastion
 		icon = GFX_goal_liberty
 		cost = 5.00
-		available = { has_country_flag = USA_1936_election_occured }
+		available = { has_country_flag = USA_1936_election_occured
+			OR = {
+				has_global_flag = USA_civil_war_avoided_flag
+				has_global_flag = USA_civil_war_over_flag
+			}
+		}
 		bypass = { has_country_flag = USA_1936_election_occured }
-		x = 110
-		y = 10
+		x = 70
+		y = 15
 		ai_will_do = {
 			factor = 100
 		}
@@ -10956,7 +10961,7 @@ focus_tree = {
 		}
 		available_if_capitulated = no
 		cancel_if_invalid = yes
-		x = 121
+		x = 80
 		y = 0
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_back_in_business"
@@ -12938,7 +12943,8 @@ focus_tree = {
 			is_in_faction = no
 			not_has_democratic_government = yes
 		}
-		x = 128
+		relative_position_id = USA_back_in_business
+		x = 7
 		y = 1
 
 		ai_will_do = {

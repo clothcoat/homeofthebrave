@@ -985,7 +985,6 @@ ideas = {
 				local_manpower = 0.05
 				non_core_manpower = 0.05
 				army_morale	= 0.1
-				non_core_manpower = 0.05
 				party_popularity_stability_factor = 0.1
 				dig_in_speed_factor = 0.05
 				supply_consumption_factor = 0.05
@@ -1197,7 +1196,6 @@ ideas = {
 				local_resources_factor = 0.08
 				conversion_cost_mil_to_civ_factor = -0.15
 				production_factory_start_efficiency_factor = 0.05
-				supply_consumption_factor = -0.05
 				monthly_population = 0.02
 			}
 			removal_cost = -1
@@ -2126,12 +2124,11 @@ ideas = {
 			removal_cost = -1
 			picture = generic_sea_focused_navy
 			modifier = {
-				supply_consumption_factor = 0.05
+				supply_consumption_factor = -0.05
 				recon_factor_while_entrenched = 0.05
 				attrition = -0.05
 				army_core_defence_factor = 0.03
 				army_core_attack_factor = 0.05
-				supply_consumption_factor = -0.05
 			}
 		}
 		
@@ -2365,7 +2362,7 @@ ideas = {
 			picture = liberty_ships_focus
 			modifier = {
 			guarantee_cost = -25
-			crypto_strength = 1
+			crypto_strength = 0.1
 			operative_slot = 0.1
 			local_manpower = 0.05
 			}
@@ -2375,7 +2372,7 @@ ideas = {
 			picture = liberty_ships_focus
 			modifier = {
 			naval_invasion_prep_speed = -0.2
-			naval_invasion_capacity	= 2
+			naval_invasion_capacity	= 0.2
 			naval_attrition	= -0.05
 			supply_consumption_factor = -0.1
 			}
@@ -2385,11 +2382,10 @@ ideas = {
 			picture = liberty_ships_focus
 			modifier = {
 			naval_invasion_prep_speed = -0.3
-			naval_invasion_capacity	= 3
+			naval_invasion_capacity	= 0.3
 			naval_attrition	= -0.1
 			supply_consumption_factor = -0.1
-			naval_speed_factor = 2
-			naval_speed_factor = 2
+			naval_speed_factor = 0.2
 			shore_bombardment_bonus = 0.1
 			navy_anti_air_attack = 0.1
 			}
@@ -2400,7 +2396,7 @@ ideas = {
 			picture = liberty_ships_focus
 			modifier = {
 			justify_war_goal_time = -0.3
-			guarantee_cost	= -5
+			guarantee_cost	= -0.5
 			mobilization_speed	= -0.05
 			}
 		}

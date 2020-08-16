@@ -8671,7 +8671,7 @@ country_event = {# Film Controlled
 		add_popularity = { ideology = paternal_autocrat popularity = 0.03 }
 	}
 	option = {# Control
-		name = pacificstates.360.a
+		name = pacificstates.360.b
 		add_political_power = 30
 		add_stability = -0.03
 		add_popularity = { ideology = national_populist popularity = 0.05 }
@@ -8741,5 +8741,19 @@ country_event = {# Long Returns
 			add_ideas = CAL_Ralph_Johnson_Bunche_for_sde
 			add_ideas = CAL_Hjalmar_Petersen_eco_sde
 			add_ideas = CAL_Konrad_Knute_Solberg_sec_sde
+		}
 	}
-}
+	option = {# Long in the Cabinet
+		name = pacificstates.400.b
+		set_politics = {
+			ruling_party = social_democrat
+			election_frequency = 48
+			elections_allowed = yes
+		}		
+		hidden_effect = {
+			add_ideas = CAL_Henry_Wallace_hog_sde
+			add_ideas = CAL_Ralph_Johnson_Bunche_for_sde
+			add_ideas = CAL_Huey_Long_eco_sde
+			add_ideas = CAL_Konrad_Knute_Solberg_sec_sde
+		}
+	}
