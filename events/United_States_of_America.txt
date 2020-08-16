@@ -5411,6 +5411,9 @@ country_event = { # Rising Resistance
 		name = ustates.9104.a
 		add_manpower = -1200
 		add_political_power = -25
+		hidden_effect = { #Reed Rises
+			country_event = { id = ustates.9105 days = 50 }
+		}
 	}
 	option = { #Fall Back
 		ai_chance = {
@@ -5423,7 +5426,7 @@ country_event = { # Rising Resistance
 				}
 			}
 		}
-		name = ustates.9104.a
+		name = ustates.9104.b
 		add_manpower = 4954
 		hidden_effect = { #Reed Rises
 			country_event = { id = ustates.9106 days = 2 }
@@ -5438,7 +5441,13 @@ country_event = { # Dealing with the Rust Belt
 	desc = ustates.9105.d
 	picture = GFX_USA_Inauguration
 
-	is_triggered_only = yes
+	fire_only_once = yes
+	
+	trigger = {
+	CSA = {
+	exists = no
+	}
+	}
 
 	option = { #Negotiate
 		ai_chance = {
@@ -5462,7 +5471,7 @@ country_event = { # Dealing with the Rust Belt
 				}
 			}
 		}
-		name = ustates.9105.a
+		name = ustates.9105.b
 		add_manpower = -1000
 		add_political_power = 20
 		hidden_effect = { #Reed Rises
