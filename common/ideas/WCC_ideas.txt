@@ -113,7 +113,7 @@ ideas = {
 	}
 	WCC_the_colorado_idea = { #The Colorado
 		on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_the_colorado_idea"}
-		picture = usa_great_depression_2
+		picture = WCC_colorado
 		modifier = {
 			river_crossing_factor = -0.25
 			reassignment_duration_factor = -0.1
