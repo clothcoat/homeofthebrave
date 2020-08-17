@@ -763,6 +763,20 @@ country_event = { # Conquest of America
 	option = { #Release
 	name = bbr.1203.a
 	release_puppet = COR
+	COR = {
+	create_country_leader = {
+			name = "Francis Parker Yockey"
+			desc = "POLITICS_FRANCIS_PARKER_YOCKEY_DESC"
+			picture = "gfx/leaders/COR/COR_Yockey.tga"
+			expire = "1965.1.1"
+			ideology = national_populist_subtype
+			traits = { young_leader }
+		}
+	set_politics = {
+			ruling_party = national_populist
+			elections_allowed = no
+		}
+	}
 	all_owned_state	 = {
 	limit = { is_core_of = USA }
 	add_core_of = COR
