@@ -613,6 +613,811 @@ news_event = { #War on BBR
 	}
 }
 
+country_event = { # Demand BBR stand down
+	id = amcivwar.3003
+	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.3003"}
+	title = amcivwar.3003.t
+	picture = ACW_soldiers_running
+	
+	trigger = {
+	BBR = {
+	exists = yes
+	}
+    OR = {
+        AND = {
+	    tag = USA
+	    OR = {
+	        NOT = {
+	            BBR = {
+	            has_war_with = USA
+			    }
+		    }
+	    }
+	    TEX = {
+	        exists = no
+		}
+	    CSA = {
+	        exists = no
+		}
+	    COR = {
+	        exists = no
+		}
+        }
+
+        AND = {
+	    tag = CAL
+	    OR = {
+	        NOT = {
+	            BBR = {
+	            has_war_with = CAL
+			    }
+		    }
+	    }
+	    TEX = {
+	        exists = no
+		}
+	    CSA = {
+	        exists = no
+		}
+	    COR = {
+	        exists = no
+		}
+	    USA = {
+	        exists = no
+		}
+        }
+
+        AND = {
+	    tag = TEX
+		NOT = {
+			BBR = { has_government = authoritarian_democrat }
+		}
+	    OR = {
+	        NOT = {
+	            BBR = {
+	            has_war_with = TEX
+			    }
+		    }
+	    }
+	    CSA = {
+	        exists = no
+		}
+	    COR = {
+	        exists = no
+		}
+	    USA = {
+	        exists = no
+		}
+        }
+	}
+	}
+	
+	mean_time_to_happen = {
+	days = 1
+	}
+	
+	fire_only_once = yes
+	
+	desc = { ###USA DEMANDS###
+	text = amcivwar.3003.d.USA
+	trigger = {
+        AND = {
+	    tag = USA
+	    OR = {
+	        NOT = {
+	            BBR = {
+	            has_war_with = USA
+			    }
+		    }
+	    }
+	    TEX = {
+	        exists = no
+		}
+	    CSA = {
+	        exists = no
+		}
+	    COR = {
+	        exists = no
+		}
+        }
+    }
+	}
+
+	desc = { ###PSA DEMANDS###
+	text = amcivwar.3003.d.CAL
+	trigger = {
+        AND = {
+	    tag = CAL
+	    OR = {
+	        NOT = {
+	            BBR = {
+	            has_war_with = CAL
+			    }
+		    }
+	    }
+	    USA = {
+	        exists = no
+		}
+	    TEX = {
+	        exists = no
+		}
+	    CSA = {
+	        exists = no
+		}
+	    COR = {
+	        exists = no
+		}
+        }
+    }
+	}
+
+	desc = { ###AUS DEMANDS###
+	text = amcivwar.3003.d.TEX
+	trigger = {
+        AND = {
+	    tag = TEX
+	    OR = {
+	        NOT = {
+	            BBR = {
+	            has_war_with = TEX
+			    }
+		    }
+	    }
+	    USA = {
+	        exists = no
+		}
+	    CSA = {
+	        exists = no
+		}
+	    COR = {
+	        exists = no
+		}
+        }
+    }
+	}
+
+	option = { ###The Revolt must rejoin
+	name = amcivwar.3003.a
+	ai_will_do = {
+			factor = 40
+	}
+	BBR = {
+	country_event = {
+	id = amcivwar.3004
+	days = 2
+			}
+	}
+	}
+
+	option = { ###Strike them now
+	name = amcivwar.3003.b
+	ai_will_do = {
+			factor = 10
+	}
+	declare_war_on = {
+	    target = BBR
+		type = annex_everything
+	}
+	}
+}
+
+country_event = { # Reintegration demand
+	id = amcivwar.3004
+	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.3004"}
+	title = amcivwar.3004.t
+	picture = ACW_soldiers_running
+	
+	is_triggered_only = yes
+		
+	desc = { ###USA demands###
+	text = amcivwar.3004.d.USA
+	trigger = {
+	    TEX = {
+	        exists = no
+		}
+	    CSA = {
+	        exists = no
+		}
+	    COR = {
+	        exists = no
+		}
+	}
+    }
+	desc = { ###PSA demands###
+	text = amcivwar.3004.d.CAL
+	trigger = {
+	    USA = {
+	        exists = no
+		}
+	    TEX = {
+	        exists = no
+		}
+	    CSA = {
+	        exists = no
+		}
+	    COR = {
+	        exists = no
+		}
+	}
+    }
+	desc = { ###AUS demands###
+	text = amcivwar.3004.d.AUS
+	trigger = {
+	    USA = {
+	        exists = no
+		}
+	    CSA = {
+	        exists = no
+		}
+	    COR = {
+	        exists = no
+		}
+	}
+    }	
+
+	option = {  #Accept
+		name = amcivwar.3004.a
+		if = {
+		limit = { 	    
+        TEX = {
+	        exists = no
+		}
+	    CSA = {
+	        exists = no
+		}
+	    COR = {
+	        exists = no
+		} 
+        }
+		hidden_effect = {
+		USA = {
+		country_event = {
+		id = amcivwar.3006
+		hours = 3
+				}
+			}
+		}
+		}
+
+		if = {
+		limit = { 	    
+        USA = {
+	        exists = no
+		}
+	    CSA = {
+	        exists = no
+		}
+	    COR = {
+	        exists = no
+		} 
+        }
+		hidden_effect = {
+		TEX = {
+		country_event = {
+		id = amcivwar.3006
+		hours = 3
+				}
+			}
+		}
+		}
+
+		if = {
+		limit = { 	    
+        USA = {
+	        exists = no
+		}
+        TEX = {
+	        exists = no
+		}
+	    CSA = {
+	        exists = no
+		}
+	    COR = {
+	        exists = no
+		} 
+        }
+		hidden_effect = {
+		CAL = {
+		country_event = {
+		id = amcivwar.3006
+		hours = 3
+				}
+			}
+		}
+		}
+	}
+	option = {
+		name = amcivwar.3004.b
+		if = {
+		limit = { 	    
+        TEX = {
+	        exists = no
+		}
+	    CSA = {
+	        exists = no
+		}
+	    COR = {
+	        exists = no
+		} 
+        }
+		hidden_effect = {
+		USA = {
+		country_event = {
+		id = amcivwar.3005
+		hours = 3
+				}
+			}
+		}
+		}
+
+		if = {
+		limit = { 	    
+        USA = {
+	        exists = no
+		}
+	    CSA = {
+	        exists = no
+		}
+	    COR = {
+	        exists = no
+		} 
+        }
+		hidden_effect = {
+		TEX = {
+		country_event = {
+		id = amcivwar.3005
+		hours = 3
+				}
+			}
+		}
+		}
+
+		if = {
+		limit = { 	    
+        USA = {
+	        exists = no
+		}
+        TEX = {
+	        exists = no
+		}
+	    CSA = {
+	        exists = no
+		}
+	    COR = {
+	        exists = no
+		} 
+        }
+		hidden_effect = {
+		CAL = {
+		country_event = {
+		id = amcivwar.3005
+		hours = 3
+				}
+			}
+		}
+		}
+	}
+}
+
+country_event = { # Reintegration rejected
+	id = amcivwar.3005
+	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.3005"}
+	title = amcivwar.3005.t
+	picture = ACW_soldiers_running
+	
+	is_triggered_only = yes
+		
+	desc = { 
+	text = amcivwar.3005.d
+    }
+
+	option = {  #Godammit
+		name = amcivwar.3005.a
+	    declare_war_on = {
+	        target = BBR
+		    type = annex_everything
+	    }
+	}
+}
+
+country_event = { # Reintegration accepted
+	id = amcivwar.3006
+	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.3006"}
+	title = amcivwar.3006.t
+	picture = ACW_soldiers_running
+	
+	is_triggered_only = yes
+		
+	desc = { 
+	text = amcivwar.3006.d
+    }
+
+	option = {  #Godammit
+		name = amcivwar.3006.a
+		if = {
+		limit = { 	    
+        TEX = {
+	        exists = no
+		}
+	    CSA = {
+	        exists = no
+		}
+	    COR = {
+	        exists = no
+		} 
+        }
+	    USA = {
+	    annex_country = {
+	    target = BBR
+	    transfer_troops = no
+	    }
+		}
+		}
+
+		if = {
+		limit = { 	    
+        USA = {
+	        exists = no
+		}
+	    CSA = {
+	        exists = no
+		}
+	    COR = {
+	        exists = no
+		} 
+        }
+	    TEX = {
+	    annex_country = {
+	    target = BBR
+	    transfer_troops = no
+	    }
+		}
+		}
+
+		if = {
+		limit = { 	    
+        USA = {
+	        exists = no
+		}
+        TEX = {
+	        exists = no
+		}
+	    CSA = {
+	        exists = no
+		}
+	    COR = {
+	        exists = no
+		} 
+        }
+	    CAL = {
+	    annex_country = {
+	    target = BBR
+	    transfer_troops = no
+	    }
+		}
+		}
+	}
+}
+
+
+country_event = { # Demand BBR stand down (CSA)
+	id = amcivwar.3007
+	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.3007"}
+	title = amcivwar.3007.t
+	picture = ACW_soldiers_running
+	
+	trigger = {
+	BBR = {
+	exists = yes
+	}
+    OR = {
+        AND = {
+	    tag = CSA
+	    OR = {
+	        NOT = {
+	            BBR = {
+	            has_war_with = CSA
+			    }
+		    }
+	    }
+	    TEX = {
+	        exists = no
+		}
+	    USA = {
+	        exists = no
+		}
+	    COR = {
+	        exists = no
+		}
+        }
+    }
+	}
+	
+	mean_time_to_happen = {
+	days = 1
+	}
+	
+	fire_only_once = yes
+	
+	desc = { ###CSA DEMANDS###
+	text = amcivwar.3007.d.soc
+    trigger = { 
+		BBR = { has_socialist_government = yes } 
+	}
+	}
+	
+	desc = { ###CSA DEMANDS###
+	text = amcivwar.3007.d.nosoc
+    trigger = { 
+		BBR = { has_socialist_government = no } 
+	}
+	}
+
+	option = { ###The Revolt may stay autonomous
+	name = amcivwar.3007.a
+    trigger = { 
+		BBR = { has_socialist_government = yes } 
+	}
+	ai_will_do = {
+			factor = 40
+	}
+
+	}
+
+	option = { ###The Revolt must join the CSA
+	name = amcivwar.3007.b
+	ai_will_do = {
+			factor = 40
+	}
+	BBR = {
+	country_event = {
+	id = amcivwar.30070
+	days = 2
+			}
+	}
+	}
+
+	option = { ###The Revolt must be socialist
+    trigger = { 
+		BBR = { 
+			has_socialist_government = no 
+		} 
+	}
+	name = amcivwar.3007.c
+	ai_will_do = {
+			factor = 40
+	}
+	BBR = {
+	country_event = {
+	id = amcivwar.3008
+	days = 2
+			}
+	}
+	}
+}
+
+
+
+country_event = { # CSA Demands we join
+	id = amcivwar.30070
+	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.30070"}
+	title = amcivwar.30070.t
+	picture = ACW_soldiers_running
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	desc = { ###CSA DEMANDS###
+	text = amcivwar.30070.d
+	}
+
+	option = { ###Accept
+	name = amcivwar.30070.b
+	ai_will_do = {
+			factor = 40
+	}
+	CSA = {
+	country_event = {
+	id = amcivwar.30071
+	hours = 13
+			}
+	}
+	}
+
+	option = { ###Reject
+	name = amcivwar.30070.b
+	ai_will_do = {
+			factor = 40
+	}
+	CSA = {
+	country_event = {
+	id = amcivwar.30072
+	hours = 13
+			}
+	}
+	}
+}
+
+country_event = { # BBR joins
+	id = amcivwar.30071
+	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.30071"}
+	title = amcivwar.30071.t
+	picture = ACW_soldiers_running
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	desc = { ###BBR REFUSES###
+	text = amcivwar.30071.d
+	}
+
+	option = { ###Excellent
+	name = amcivwar.30071.a
+	CSA = {
+	    annex_country = {
+	    target = BBR
+	    transfer_troops = no
+	    }
+	}
+	}
+}
+
+country_event = { # BBR will not join
+	id = amcivwar.30072
+	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.30072"}
+	title = amcivwar.30072.t
+	picture = ACW_soldiers_running
+	
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	desc = { ###BBR REFUSES###
+	text = amcivwar.30072.d
+	}
+
+	option = { ###Well that's that
+
+	name = amcivwar.30072.a
+	
+	}
+
+	option = { ###If that is their decision...
+	name = amcivwar.30072.b
+	declare_war_on = {
+	    target = BBR
+		type = annex_everything
+	}
+	}
+}
+
+country_event = { # CSA Demands we change government
+	id = amcivwar.3008
+	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.3008"}
+	title = amcivwar.3008.t
+	picture = ACW_soldiers_running
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	desc = { ###CSA DEMANDS###
+	text = amcivwar.3008.d
+	}
+
+	option = { ###Accept, demand elections
+	name = amcivwar.3008.a
+	ai_will_do = {
+			factor = 40
+	}
+	CSA = {
+	country_event = {
+	id = amcivwar.3010
+	hours = 3
+			}
+	}
+	}
+
+	option = { ###Reject
+	name = amcivwar.3008.b
+	ai_will_do = {
+			factor = 40
+	}
+	CSA = {
+	country_event = {
+	id = amcivwar.3009
+	hours = 3
+			}
+	}
+	}
+}
+
+country_event = { # War!
+	id = amcivwar.3009
+	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.3009"}
+	title = amcivwar.3009.t
+	picture = ACW_soldiers_running
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	desc = { ###BBR REFUSES###
+	text = amcivwar.3009.d
+	}
+
+	option = { ###Damn!
+	name = amcivwar.3009.a
+	declare_war_on = {
+	    target = BBR
+		type = annex_everything
+	}
+	}
+}
+
+country_event = { # BBR demands elections
+	id = amcivwar.3010
+	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.3010"}
+	title = amcivwar.3010.t
+	picture = ACW_soldiers_running
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	desc = { 
+	text = amcivwar.3010.d
+	}
+
+	option = { ###Yes
+    limit = { NOT = { has_government = totalist } }
+	name = amcivwar.3010.a
+	BBR = {
+	country_event = {
+	id = amcivwar.3011
+	days = 1
+			}
+	}
+	}
+
+	option = { ###No
+	name = amcivwar.3010.b
+	CSA = {
+	    annex_country = {
+	    target = BBR
+	    transfer_troops = no
+	    }
+	}
+	}
+}
+
+country_event = { # CSA allows elections
+	id = amcivwar.3011
+	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.3011"}
+	title = amcivwar.3011.t
+	picture = ACW_soldiers_running
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	desc = { 
+	text = amcivwar.3011.d
+	}
+
+	option = { ###Excellent
+	name = amcivwar.3011.a
+	add_popularity = { ideology = radical_socialist popularity = 0.07 }
+	add_popularity = { ideology = syndicalist popularity = 0.1 }
+	add_popularity = { ideology = totalist popularity = 0.1 }
+	hidden_effect = {
+			country_event = { id = bbr.15 days = 7 }
+		}
+	}
+}
+
 news_event = { #Standoff in America
 	id = amcivwar.4
 	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.4"}

@@ -614,6 +614,14 @@ focus_tree = {
 		ai_will_do = {
 			factor = 50
 		}
+		select_effect = {
+		hidden_effect = {
+			country_event = {
+				id = bbr.33
+				days = 25
+				}
+			}
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BBR_rapid_nationalization"
 			add_political_power = 55
@@ -826,6 +834,14 @@ focus_tree = {
 		prerequisite = {
 			focus = BBR_black_communist_league
 		}
+		select_effect = {
+		hidden_effect = {
+			country_event = {
+				id = bbr.27
+				days = 15
+				}
+			}
+		}
 		relative_position_id = BBR_the_vanguard
 		x = -3
 		y = 3
@@ -845,6 +861,20 @@ focus_tree = {
 		cost = 6.00
 		prerequisite = {
 			focus = BBR_the_southern_upsurge
+		}
+		select_effect = {
+		hidden_effect = {
+			country_event = {
+				id = bbr.32
+				days = 17
+				}
+			}
+		hidden_effect = {
+			country_event = {
+			id = bbr.37
+			days = 40
+				}
+			}
 		}
 		relative_position_id = BBR_the_vanguard
 		x = -3
@@ -1006,6 +1036,12 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BBR_hammer_and_hoe"
 			add_ideas = BBR_haywood_economics
+			hidden_effect = {
+			country_event = {
+				id = bbr.29
+				days = 15
+				}
+			}
 			random_owned_controlled_state = {
 				limit = { has_resources_amount = { resource = steel amount > 1 } }
 				add_resource = {
@@ -1132,6 +1168,14 @@ focus_tree = {
 			focus = BBR_hammer_and_hoe
 		}
 		relative_position_id = BBR_the_vanguard
+		select_effect = {
+		hidden_effect = {
+			country_event = {
+			id = bbr.38
+			days = 40
+				}
+			}
+		}
 		x = -1
 		y = 5
 		ai_will_do = {
@@ -1398,6 +1442,14 @@ focus_tree = {
 		ai_will_do = {
 			factor = 50
 		}
+		select_effect = {
+		hidden_effect = {
+			country_event = {
+			id = bbr.35
+			days = 34
+				}
+			}
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BBR_unite_the_left"
 			add_popularity = { ideology = totalist popularity = 0.1 }
@@ -1465,6 +1517,12 @@ focus_tree = {
 			add_popularity = { ideology = market_liberal popularity = -0.05 }
 			add_popularity = { ideology = social_conservative popularity = -0.05 }
 			add_popularity = { ideology = paternal_autocrat popularity = -0.1 }
+			hidden_effect = {
+			country_event = {
+			id = bbr.34
+			days = 1
+				}
+			}
 		}
 	}
 	focus = {# Government Plants
@@ -1594,6 +1652,14 @@ focus_tree = {
 		y = 2
 		ai_will_do = {
 			factor = 50
+		}
+		select_effect = {
+		hidden_effect = {
+			country_event = {
+			id = bbr.36
+			days = 40
+				}
+			}
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BBR_overthrow_of_capital"
@@ -1795,6 +1861,12 @@ focus_tree = {
 			producer = BBR
 				}
 			}
+			hidden_effect = {
+			country_event = {
+				id = bbr.25
+				days = 15
+				}
+			}
 		}
 	}
 	focus = {# Syndicalist Media
@@ -1866,6 +1938,14 @@ focus_tree = {
 		cost = 6.00
 		prerequisite = {
 			focus = BBR_workers_coupons
+		}
+		select_effect = {
+		hidden_effect = {
+			country_event = {
+				id = bbr.26
+				days = 20
+				}
+			}
 		}
 		relative_position_id = BBR_iwu
 		x = 1

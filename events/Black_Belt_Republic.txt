@@ -1906,3 +1906,433 @@ country_event = { # The Liberal Election
 	}
 }
 
+country_event = { # BBR Requests An Alliance
+	id = bbr.24
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.24"}
+	title = bbr.24.t
+	desc = bbr.24.d
+	picture = ACW_soldiers_watching
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = { #
+	name = bbr.24.a
+	add_popularity = { ideology = social_conservative popularity = 0.05 }
+	hidden_effect = {
+			country_event = { id = bbr.23 days = 13 }
+		}
+	}
+}
+
+#SOCIALIST EVENTS
+country_event = { # Robeson tours France
+	id = bbr.25
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.25"}
+	title = bbr.25.t
+	desc = bbr.25.d
+	picture = ACW_soldiers_watching
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = { #Interesting
+	name = bbr.25.a
+	add_opinion_modifier = { target = FRA modifier = small_increase }
+	FRA = {
+	add_opinion_modifier = { target = BBR modifier = small_increase }
+	}
+	add_popularity = { ideology = syndicalist popularity = 0.01 }
+	add_political_power = 5
+	}
+}
+
+country_event = { # Red Mobs
+	id = bbr.26
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.26"}
+	title = bbr.26.t
+	desc = bbr.26.d
+	picture = ACW_soldiers_watching
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = { #Reign them in
+	name = bbr.26.a
+	add_political_power = -20
+	add_manpower = -1100
+	add_war_support = -0.03
+	add_popularity = { ideology = paternal_autocrat popularity = -0.01 }
+	add_popularity = { ideology = social_conservative popularity = -0.01 }
+	add_popularity = { ideology = market_liberal popularity = -0.01 }
+	add_popularity = { ideology = totalist popularity = 0.01 }
+	}
+	option = { #Let it go for now
+	name = bbr.26.b
+	add_stability = -0.05
+	add_manpower = -2300
+	add_popularity = { ideology = paternal_autocrat popularity = -0.03 }
+	add_popularity = { ideology = social_conservative popularity = -0.03 }
+	add_popularity = { ideology = market_liberal popularity = -0.03 }
+	add_popularity = { ideology = totalist popularity = 0.05 }
+	add_political_power = 20
+	}
+}
+
+country_event = { # The liquidation of Faith
+	id = bbr.27
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.27"}
+	title = bbr.27.t
+	desc = bbr.27.d
+	picture = ACW_soldiers_watching
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = { #Shut down Reactionary Churches
+	name = bbr.27.a
+	add_popularity = { ideology = social_conservative popularity = -0.02 }
+	add_political_power = 25
+	}
+	option = { #Purge Conservatism
+	name = bbr.27.b
+	add_political_power = 30
+	add_stability = -0.02
+	add_manpower = -1500
+	add_popularity = { ideology = social_conservative popularity = -0.05 }
+	add_popularity = { ideology = totalist popularity = 0.02 }
+	}
+}
+
+country_event = { # Haywood Denounces the Combined Syndicates
+	id = bbr.28
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.28"}
+	title = bbr.28.t
+	desc = bbr.28.d
+	picture = ACW_soldiers_watching
+
+	fire_only_once = yes
+
+	trigger = {
+	CSA = {
+	exists = yes
+	OR = {
+	has_country_flag = CSA_social_patriot_victory
+	has_country_leader = { ruling_only = yes name = "Earl Browder"}
+	has_country_leader = { ruling_only = yes name = "James Burnham"}
+	}
+	}
+	has_country_leader = { ruling_only = yes name = "Harry Haywood"}
+	}
+	
+	mean_time_to_happen = {
+	days = 30
+	}
+	
+	option = { #Let us declare war
+	name = bbr.28.a
+	add_war_support = 0.05
+	declare_war_on = {
+    target = CSA
+    type = annex_everything
+		}
+	}
+	option = { #Let us bide our time
+	name = bbr.28.b
+	add_political_power = -5
+	}
+}
+
+country_event = { # Facing the New Communist League
+	id = bbr.29
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.29"}
+	title = bbr.29.t
+	desc = bbr.29.d
+	picture = ACW_soldiers_watching
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = { #Liquidate them directly
+	name = bbr.29.a
+	add_manpower = -5000
+	add_stability = -0.03
+	add_political_power = 40
+	hidden_effect = {
+			country_event = { id = bbr.30 days = 5 }
+		}
+	}
+	option = { #The Red Guards will eventually deal with them
+	name = bbr.29.b
+	add_political_power = -20
+	hidden_effect = {
+			country_event = { id = bbr.30 days = 60 }
+		}
+	}
+}
+
+country_event = { # Ben Davis Tried
+	id = bbr.30
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.30"}
+	title = bbr.30.t
+	desc = bbr.30.d
+	picture = ACW_soldiers_watching
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = { #Firing Squad
+	name = bbr.30.a
+	add_popularity = { ideology = totalist popularity = 0.01 }
+	add_political_power = 30
+	add_war_support = 0.01
+	}
+	option = { #Exile
+	name = bbr.30.b
+	add_popularity = { ideology = totalist popularity = 0.01 }
+	add_political_power = 15
+	add_stability = 0.01
+	}
+}
+
+country_event = { # James W. Ford Flees
+	id = bbr.31
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.31"}
+	title = bbr.31.t
+	desc = bbr.31.d
+	picture = ACW_soldiers_watching
+
+	fire_only_once = yes
+
+	trigger = {
+	OR = {
+	has_country_leader = { ruling_only = yes name = "Ben J. Davis" }
+	has_country_leader = { ruling_only = yes name = "Harry Haywood" }
+	}
+	}
+	
+	mean_time_to_happen = {
+	days = 20
+	}
+	
+	option = { #Very Well
+	name = bbr.31.a
+	add_political_power = 25
+	add_command_power = 5
+	add_manpower = -100
+	}
+}
+
+country_event = { # Harry Haywood Liquidated
+	id = bbr.32
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.32"}
+	title = bbr.32.t
+	desc = bbr.32.d
+	picture = ACW_soldiers_watching
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = { #Destroy the TUUL
+	name = bbr.32.a
+	add_political_power = 35
+	add_command_power = 10
+	add_stability = -0.03
+	add_manpower = -2000
+	}
+	option = { #Puppet the TUUL
+	name = bbr.32.b
+	add_popularity = { ideology = totalist popularity = 0.02 }
+	add_political_power = -10
+	}
+}
+
+country_event = { # Seizing the IWIU
+	id = bbr.33
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.33"}
+	title = bbr.33.t
+	desc = bbr.33.d
+	picture = ACW_soldiers_watching
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = { #Offer Leniancy
+	name = bbr.33.a
+	add_popularity = { ideology = syndicalist popularity = 0.02 }
+	add_political_power = -25
+	add_stability = 0.01
+	}
+	option = { #Arrest the Leadership
+	name = bbr.33.b
+	add_popularity = { ideology = syndicalist popularity = -0.05 }
+	add_popularity = { ideology = totalist popularity = 0.01 }
+	add_political_power = 20
+	add_stability = -0.03
+	add_manpower = -6000
+	}
+}
+
+country_event = { # Destroying Black Reactionaries
+	id = bbr.34
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.34"}
+	title = bbr.34.t
+	desc = bbr.34.d
+	picture = ACW_soldiers_watching
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = { #Destroy them
+	name = bbr.34.a
+	add_manpower = -4000
+	add_command_power = 5
+	add_political_power = 40
+	}
+	option = { #Absorb Them
+	name = bbr.34.b
+	add_popularity = { ideology = totalist popularity = 0.01 }
+	add_political_power = -30
+	}
+}
+
+country_event = { # Absorbing the Socialist Party
+	id = bbr.35
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.35"}
+	title = bbr.35.t
+	desc = bbr.35.d
+	picture = ACW_soldiers_watching
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = { #Agreed
+	name = bbr.35.a
+	add_popularity = { ideology = social_democrat popularity = 0.02 }
+	add_popularity = { ideology = radical_socialist popularity = 0.02 }
+	add_popularity = { ideology = totalist popularity = 0.02 }
+	add_manpower = 1050
+	add_political_power = -20
+	add_stability = 0.02
+	}
+	option = { #No, purge those who refuse still
+	name = bbr.35.b
+	add_popularity = { ideology = totalist popularity = 0.05 }
+	add_command_power = 5
+	add_political_power = 40
+	add_manpower = -4000
+	add_stability = -0.05
+	}
+}
+
+country_event = { # Capitalists Flee
+	id = bbr.36
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.36"}
+	title = bbr.36.t
+	desc = bbr.36.d
+	picture = ACW_soldiers_watching
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = { #Stop them
+	name = bbr.36.a
+	add_political_power = -25
+	add_manpower = -500
+	random_owned_state = {
+				limit = {
+					is_core_of = BBR
+					is_controlled_by = BBR
+					industrial_complex > 0
+				}
+				damage_building = {
+				type = industrial_complex
+				damage = 1
+			}
+		}
+	}
+	option = { #Let them go
+	name = bbr.36.b
+	add_manpower = -2000
+	random_owned_state = {
+				limit = {
+					is_core_of = BBR
+					is_controlled_by = BBR
+					industrial_complex > 0
+				}
+				damage_building = {
+				type = industrial_complex
+				damage = 2
+			}
+		}
+	}
+}
+
+country_event = { # The Great Purge
+	id = bbr.37
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.37"}
+	title = bbr.37.t
+	desc = bbr.37.d
+	picture = ACW_soldiers_watching
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = { #Of Course
+	name = bbr.37.a
+	add_popularity = { ideology = totalist popularity = 0.04 }
+	add_political_power = 50
+	add_stability = 0.05
+	add_manpower = -7850
+	add_equipment_to_stockpile = {
+			type = support_equipment
+			amount = -50
+			producer = BBR
+			}
+	}
+	option = { #I think not
+	name = bbr.37.a
+	add_political_power = 10
+	add_popularity = { ideology = totalist popularity = 0.02 }
+	add_manpower = -3400
+	}
+}
+
+country_event = { # A Social Revolution
+	id = bbr.38
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.38"}
+	title = bbr.38.t
+	desc = bbr.38.d
+	picture = ACW_soldiers_watching
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = { #Side with TUUL Leaders
+	name = bbr.38.a
+	add_popularity = { ideology = totalist popularity = 0.01 }
+	add_stability = 0.02
+	add_political_power = 10
+	}
+	option = { #Side with the Red Guard
+	name = bbr.38.b
+	add_popularity = { ideology = totalist popularity = 0.03 }
+	add_manpower = -6500
+	add_war_support = 0.02
+	add_stability = -0.05
+	add_political_power = 30
+	}
+}
