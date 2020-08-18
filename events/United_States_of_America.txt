@@ -5883,6 +5883,7 @@ country_event = { # Rust Belt Pacified
 		add_popularity = { ideology = totalist popularity = -0.03 }
 		set_global_flag = USA_civil_war_avoided_flag
 		add_country_leader_trait = savior_of_america
+		remove_ideas = USA_new_year_strike_idea
 	}
 }
 
