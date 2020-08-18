@@ -5885,6 +5885,9 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_defend_democracy"
 			custom_effect_tooltip = USA_political_recovery_tooltip
+			add_stability = -0.03
+			add_popularity = { ideology = national_populist popularity = -0.03 }
+			add_manpower = 1500
 			USA_increase_recovery = yes
 		}
 	}
@@ -5908,6 +5911,8 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_defend_democracy"
 			custom_effect_tooltip = USA_political_recovery_tooltip
+			add_stability = 0.08
+			add_political_power = 40
 			USA_increase_recovery = yes
 		}
 	}
@@ -5943,6 +5948,10 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_trial_of_the_federalists"
 			custom_effect_tooltip = USA_political_recovery_tooltip
 			USA_increase_recovery = yes
+			add_manpower = -3000
+			add_war_support = -0.05
+			add_popularity = { ideology = paternal_autocrat popularity = -0.08 }
+			add_political_power = 70
 		}
 	}
 	
@@ -5977,6 +5986,8 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_loyal_army"
 			custom_effect_tooltip = USA_political_recovery_tooltip
 			USA_increase_recovery = yes
+			add_stability = 0.05
+			add_political_power = 25
 		}
 	}
 	
@@ -6011,6 +6022,11 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_salute_the_patriots"
 			custom_effect_tooltip = USA_political_recovery_tooltip
 			USA_increase_recovery = yes
+			add_popularity = { ideology = paternal_autocrat popularity = 0.05 }
+			add_political_power = -40
+			army_experience = 25
+			add_command_power = 20
+			add_manpower = 25000
 		}
 	}
 	
