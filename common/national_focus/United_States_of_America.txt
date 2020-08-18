@@ -5863,6 +5863,9 @@ focus_tree = {
 		id = USA_trial_of_the_federalists
 		icon = GFX_goal_ideology_social_liberal
 		cost = 6.00
+		available = {
+			has_country_flag = macarthur_gives_up_power
+		}
 		prerequisite = {
 			focus = USA_american_values1
 		}
@@ -5894,6 +5897,9 @@ focus_tree = {
 		id = USA_loyal_army
 		icon = GFX_goal_ideology_social_liberal
 		cost = 6.00
+		available = {
+			has_country_flag = USA_classical_liberal_mandate_flag
+		}
 		prerequisite = {
 			focus = USA_american_values1
 		}
@@ -5925,6 +5931,9 @@ focus_tree = {
 		id = USA_salute_the_patriots
 		icon = GFX_goal_ideology_social_liberal
 		cost = 6.00
+		available = {
+			has_country_flag = USA_classical_liberal_mandate_flag
+		}
 		prerequisite = {
 			focus = USA_american_values1
 		}
