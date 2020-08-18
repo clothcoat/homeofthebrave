@@ -163,6 +163,10 @@ NEE_legitimacy_plus_1_tt:0 "Increases our §YLegitimacy§! by §G1§!"
 NEE_legitimacy_plus_3_tt:0 "Increases our §YLegitimacy§! by §G3§!"
 NEE_legitimacy_plus_5_tt:0 "Increases our §YLegitimacy§! by §G5§!"
 NEE_legitimacy_plus_7_tt:0 "Increases our §YLegitimacy§! by §G7§!"
+NEE_legitimacy_plus_10_tt:0 "Increases our §YLegitimacy§! by §G10§!"
+
+NEE_canadian_influence_plus_5_tt:0 "Increases §YCanadian Influence§! by §G5§!"
+NEE_canadian_influence_plus_10_tt:0 "Increases §YCanadian Influence§! by §G10§!"
 
 NEE_A11_Mathilda_tt:0 "§Y150§! units of Canadian §YVickers A11 'Mathilda'§! is added to the national stockpile\n"
 
@@ -322,6 +326,9 @@ NEE_Battleline_of_Freedom_desc:0 "We are surrounded by history. From the battlef
 
 NEE_Safeguard_Democracy:0 "Safeguard Democracy"
 NEE_Safeguard_Democracy_desc:0 "'He who would trade liberty for some temporary security, deserves neither liberty nor security.' - Benjamin Franklin"
+
+NEE_new_england_future:0 "New England's Future"
+NEE_new_england_future_desc:0 "We are now separate from our old countrymen. As such, we must find our own path in the world. Canada and National France insist that we help them reclaim their territories in Europe. On the other hand, we could turn inwards and try to salvage what we can, creating a prosperous New England."
 
 #Federalists
 NEE_federalists_in_command:0 "Federalist Party In Command"
@@ -714,6 +721,11 @@ newengland.15.t:0 "[From.GetNameDefCap] Declares Independence"
 newengland.15.d:0 "Chafing ever since we refused them home rule, the New England government has finally declared its independence, abandoning our alliance entirely."
 newengland.15.a:0 "So be it."
 newengland.15.b:0 "No, this cannot be allowed!"
+
+newengland.124.t:0 "New England's Foreign Policy?"
+newengland.124.d:0 "Our young nation must now create a foreign policy for itself. Two main schools of thought have presented themselves. One says we move closer to our allies in the North, and help the Entente. The other promotes a more neutral approach to foreign policy that will see us govern ourselves."`
+newengland.124.a:0 "Cooperate with the Entente"
+newengland.124.b:0 "Go our own way"
 
 ### Elections and Primaries ###
 
@@ -1186,3 +1198,6 @@ NEE_MERRITT_A_EDSON_ARMY_DESC:0 "§YGeneral Description\n§YBorn:§W April 25, 1
 NEE_MARK_CLARK_ARMY_DESC:0 "§YGeneral Description\n§YBorn:§W May 1, 1896, in Sackets Harbour, New York State, United States of America\n§YMilitary Career:§W Mark Wayne Clark was born into a family with a great military history. His grandfather was George Rogers Clark, a military general from the times of the American Revolution, and is the cousin of Army General George Marshall. He joined the United States Military Academy at West Point when he was just 17, in 1913, but unfortunately lost time in his career due to his constant illness. In his time in West Point, he met and befriended Dwight Eisenhower, and Clark graduated in April 1917 alongside Matthew Ridgway and J. Lawton Collins as a second lieutenant. Like his grandfather, he chose to serve in the Infantry corps where he was assigned to the 11th Infantry Regiment. He'd later serve in a variety of staff and training roles, gaining the rank of First Lieutenant in 1921, the rank of Captain in 1925 after completing the professional officer course at the US Army Infantry School, and reached rank of Major in 1933 after being assigned as the training instructor of the Indiana Army National Guard. He served as the deputy commander of the Civilian Conservation Corps district in Omaha, Nebraska while doing courses at the U.S. Army Command and General Staff School where he would meet old classmates like Matthew Ridgway once more, as well as meeting Walter Bedell Smith and Geoffrey Keyes, with whom he had a cordial relationship. As the internal situation deteriorated, Clark was on leave in New York, and when hostilities broke out, he moved to New England looking for safety. With the lack of capable staff, Clark has been hastily promoted to Brigadier General, where he'll now have to oversee the creation of a new army.\n§YImportant Notes:§W- While his loyalty is unquestioned, his friendship with now enemy Generals have raised concerns that General Clark will be unable to do his duty when the time comes to face them openly on the battlefield."
 NEE_WILLARD_G_WYMAN_ARMY_DESC:0 "§YGeneral Description\n§YBorn:§W March 21, 1898, in Augusta, Maine, United States of America\n§YMilitary Career:§W Willard Gordon Wyman entered the United States Military Academy in 1917 and was commissioned as a second lieutenant into the Coastal Artillery Branch, and later transferred to the Cavalry Branch of the United States Army. He became an infantry and cavalry instructor in 1921, and would gain valuable experience working as an attaché on China between 1928 and 1932, reaching the rank of Captain upon his return. The lack of capable staff forced an early promotion to Brigadier General for Wyman, but he has shown willingness to learn despite being thrown in such a difficult position."
 NEE_LEMUEL_SHEPHERD_ARMY_DESC:0 "§YGeneral Description\n§YBorn:§W February 10, 1896, in Norfolk, Virginia, United States of America\n§YMilitary Career:§W Lemuel Cornick 'Lem' Shepherd Jr. graduated from the Virginia Military Institute in 1917, and would enter the Marine Corps right after as a second lieutenant. He'd slowly climbed his way to Captain in 1922, where he was assigned to the Marine Company that assisted the Brazil's Centennial Exposition and would be later reassigned to the Marine Detachment in the USS New York. In 1927, he was shipped to Tianjin to serve in the 3rd Marine Brigade guarding the American Legation in the city. Lemuel would return to America in 1929 and graduate from the Field Officers' Course in 1932. He'd be sent to Haiti to serve with the Garde d'Haïti as a District and Department Commander, where he earned his promotion to Major. In 1934, Shepherd was detailed to the Marine Barracks, Washington, D. C., as Executive Officer and as Registrar of the Marine Corps Institute and would be promoted to Lieutenant Colonel in early 1936. After his promotion, he was assigned to the Naval War College at Newport, Rhode Island. With the country spiralling into Civil War and the Canadian seizure of New England, Shepherd presented his services to the New England Government, earning his promotion to Brigadier General and being assigned to the New England Marine Corps, where his experience shall be greatly valued by the small New England staff."
+
+infantry_equipment_research:1 "Infantry Equipment Research"
+mechanized_equipment_research:1 "Mechanized Equipment Research"
