@@ -9156,9 +9156,6 @@ focus_tree = {
 		prerequisite = {
 			focus = USA_reform_plan
 		}
-		available = {
-			always = no
-		}
 		mutually_exclusive = {
 			focus = USA_McNair_Plan
 			focus = USA_chaffee_plan
@@ -10924,7 +10921,10 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = USA_civil_war_victor
+				OR = {
 				has_global_flag = USA_civil_war_over_flag
+				has_global_flag = USA_civil_war_avoided_flag
+				}
 				NOT = {
 					country_exists = CAL
 					country_exists = CSA

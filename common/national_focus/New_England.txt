@@ -4125,15 +4125,15 @@ focus_tree = {
 		x = 54
 		y = 0
 		relative_position_id = NEE_Legitimate_America
+		available = {
+		has_completed_focus = NEE_Legitimate_America
+		}
 		ai_will_do = {
 			factor = 3
 			modifier = {
 				factor = 3
 				has_war = yes
 			}
-		}
-		available = {
-			has_completed_focus = NEE_Home_of_the_Brave
 		}
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -4694,7 +4694,7 @@ focus_tree = {
 			}
 		}
 		available = {
-			has_completed_focus = NEE_Home_of_the_Brave
+			has_completed_focus = NEE_Legitimate_America
 		}
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -4723,9 +4723,6 @@ focus_tree = {
 				factor = 3
 				has_war = yes
 			}
-		}
-		available = {
-			has_completed_focus = NEE_Home_of_the_Brave
 		}
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -4774,9 +4771,6 @@ focus_tree = {
 				has_war = yes
 			}
 		}
-		available = {
-			has_completed_focus = NEE_Home_of_the_Brave
-		}
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -4805,9 +4799,6 @@ focus_tree = {
 		relative_position_id = NEE_appoint_chaffee
 		prerequisite = {
 			focus = NEE_mechanical_cavalry
-		}
-		available = {
-			has_completed_focus = NEE_Home_of_the_Brave
 		}
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -4846,9 +4837,6 @@ focus_tree = {
 				has_war = yes
 			}
 		}
-		available = {
-			has_completed_focus = NEE_Home_of_the_Brave
-		}
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -4882,9 +4870,6 @@ focus_tree = {
 				factor = 3
 				has_war = yes
 			}
-		}
-		available = {
-			has_completed_focus = NEE_Home_of_the_Brave
 		}
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -4921,9 +4906,6 @@ focus_tree = {
 				factor = 3
 				has_war = yes
 			}
-		}
-		available = {
-			has_completed_focus = NEE_Home_of_the_Brave
 		}
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -4982,9 +4964,6 @@ focus_tree = {
 				has_war = yes
 			}
 		}
-		available = {
-			has_completed_focus = NEE_Home_of_the_Brave
-		}
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -5037,9 +5016,6 @@ focus_tree = {
 				has_war = yes
 			}
 		}
-		available = {
-			has_completed_focus = NEE_Home_of_the_Brave
-		}
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -5074,9 +5050,6 @@ focus_tree = {
 				factor = 3
 				has_war = yes
 			}
-		}
-		available = {
-			has_completed_focus = NEE_Home_of_the_Brave
 		}
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -5114,9 +5087,6 @@ focus_tree = {
 				factor = 3
 				has_war = yes
 			}
-		}
-		available = {
-			has_completed_focus = NEE_Home_of_the_Brave
 		}
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -5196,10 +5166,6 @@ focus_tree = {
 		complete_tooltip = {}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NEE_infantry_investments"
-			swap_ideas = {
-			remove_idea = NEE_pershing_plan_idea
-			add_idea = NEE_pershing_plan_idea_2
-			}
 			add_manpower = 3000
 			add_tech_bonus = {
 				name = infantry_bonus
@@ -5239,8 +5205,8 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NEE_streamlined_staff"
 			swap_ideas = {
-			remove_idea = NEE_pershing_plan_idea_2
-			add_idea = NEE_pershing_plan_idea_3
+			remove_idea = NEE_pershing_plan_idea
+			add_idea = NEE_pershing_plan_idea_2
 			}
 			add_command_power = 30
 			add_tech_bonus = {
@@ -5308,8 +5274,8 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NEE_natural_defenses"
 			swap_ideas = {
-			remove_idea = NEE_pershing_plan_idea_3
-			add_idea = NEE_pershing_plan_idea_4
+			remove_idea = NEE_pershing_plan_idea_2
+			add_idea = NEE_pershing_plan_idea_3
 			}
 			add_tech_bonus = {
 				name = NEE_grand_battleplan
@@ -5346,8 +5312,8 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NEE_breakthrough_emphasis"
 			swap_ideas = {
-			remove_idea = NEE_pershing_plan_idea_4
-			add_idea = NEE_pershing_plan_idea_5
+			remove_idea = NEE_pershing_plan_idea_3
+			add_idea = NEE_pershing_plan_idea_4
 			}
 			add_tech_bonus = {
 				name = NEE_grand_battleplan
@@ -5561,8 +5527,8 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NEE_assault_the_line"
 			swap_ideas = {
-			remove_idea = NEE_pershing_plan_idea_5
-			add_idea = NEE_pershing_plan_idea_6
+			remove_idea = NEE_pershing_plan_idea_4
+			add_idea = NEE_pershing_plan_idea_5
 			}
 			add_tech_bonus = {
 				name = NEE_grand_battleplan
@@ -5903,7 +5869,7 @@ focus_tree = {
 		complete_tooltip = {}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NEE_assault_the_line"
-			army_experience = 50
+			army_experience = 10
 			add_tech_bonus = {
 				name = NEE_firepwer_docrine
 				bonus = 1.5
@@ -5936,8 +5902,19 @@ focus_tree = {
 		complete_tooltip = {}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NEE_assault_the_line"
-			army_experience = 50
-			
+			army_experience = 20
+			add_tech_bonus = {
+				name = NEE_firepwer_docrine
+				bonus = 1.5
+				uses = 1
+				category = cat_superior_firepower
+			}
+			add_tech_bonus = {
+				name = NEE_mechanical_army
+				bonus = 1
+				uses = 1
+				category = motorized_equipment
+			}
 		}
 	}
 	focus = {
@@ -5963,8 +5940,11 @@ focus_tree = {
 		complete_tooltip = {}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NEE_firepower_purchase"
-			army_experience = 50
-			
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 65
+				producer = NEE
+			}
 		}
 	}
 	focus = {

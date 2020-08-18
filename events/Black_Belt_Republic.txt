@@ -777,23 +777,23 @@ country_event = { # Conquest of America
 			elections_allowed = no
 		}
 	}
-	all_owned_state	 = {
+	all_owned_state = {
 	limit = { is_core_of = USA }
 	add_core_of = COR
 	}
-	all_owned_state	 = {
+	all_owned_state = {
 	limit = { is_core_of = CAL }
 	add_core_of = COR
 	}
-	all_owned_state	 = {
+	all_owned_state = {
 	limit = { is_core_of = TEX }
 	add_core_of = COR
 	}
-	all_owned_state	 = {
+	all_owned_state = {
 	limit = { is_core_of = NEE }
 	add_core_of = COR
 	}
-	all_owned_state	 = {
+	all_owned_state = {
 	limit = { is_core_of = CSA }
 	add_core_of = COR
 	}
