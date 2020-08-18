@@ -5592,7 +5592,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_future_of_the_afp"
-			add_ideas = USA_american_values_ideas
+			custom_effect_tooltip = ACW_combat_minuteman
+			add_popularity = { ideology = authoritarian_democrat popularity = -0.06 }
+			add_political_power = 25
 		}
 	}
 	
@@ -5614,7 +5616,13 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_court_populists"
-			add_research_slot = 1
+			custom_effect_tooltip = ACW_combat_minuteman
+			increase_ruling_party_popularity_by_5 = yes
+			add_political_power = 4
+			modify_country_flag = {
+				flag = ACW_minutemen_resistance
+				value = -2
+			}
 		}
 	}
 	
@@ -5636,7 +5644,11 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_political_traditionalism"
-			add_research_slot = 1
+			add_stability = 0.04
+			add_popularity = { ideology = social_conservative popularity = 0.02 }
+			add_popularity = { ideology = market_liberal popularity = 0.02 }
+			add_popularity = { ideology = social_liberal popularity = 0.02 }
+			add_popularity = { ideology = social_democrat popularity = 0.02 }
 		}
 	}
 	
@@ -5656,7 +5668,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_american_values1"
+			custom_effect_tooltip = USA_political_recovery_tooltip
 			add_ideas = USA_american_values_ideas
+			USA_political_recovery = yes
 		}
 	}
 	
@@ -5678,8 +5692,13 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_bill_of_rights"
-			custom_effect_tooltip = USA_political_recovery_tooltip
-			USA_increase_recovery = yes
+			custom_effect_tooltip = ACW_combat_socialists
+			add_popularity = { ideology = syndicalist popularity = -0.03 }
+			add_popularity = { ideology = totalist popularity = -0.03 }
+			modify_country_flag = {
+				flag = ACW_socialist_resistance
+				value = -2
+			}
 		}
 	}
 	focus = {# Local Controls
@@ -5700,8 +5719,13 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_bill_of_rights"
-			custom_effect_tooltip = USA_political_recovery_tooltip
-			USA_increase_recovery = yes
+			custom_effect_tooltip = ACW_combat_socialists
+			modify_country_flag = {
+				flag = ACW_socialist_resistance
+				value = -2
+			}
+			add_stability = 0.05
+			increase_ruling_party_popularity_by_5 = yes
 		}
 	}
 	focus = {# Maintain Nationalizations
@@ -5722,8 +5746,21 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_bill_of_rights"
-			custom_effect_tooltip = USA_political_recovery_tooltip
-			USA_increase_recovery = yes
+			add_political_power = 75
+			add_command_power = 20
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = USA
+					is_controlled_by = USA
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 	}
 	focus = {# Fate of the Unions
@@ -5742,7 +5779,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_esmwt"
+			custom_effect_tooltip = USA_political_recovery_tooltip
 			country_event = { id = ustates.125 days = 1 }
+			USA_political_recovery = yes
 		}
 	}
 	focus = {# Freedman's Bureau
@@ -5763,8 +5802,15 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_fight_the_poll_tax"
-			custom_effect_tooltip = USA_political_recovery_tooltip
-			USA_increase_recovery = yes
+			custom_effect_tooltip = ACW_combat_klan
+			add_popularity = { ideology = national_populist popularity = -0.05 }
+			add_war_support = 0.05
+			add_political_power = 45
+			increase_ruling_party_popularity_by_5 = yes
+			modify_country_flag = {
+				flag = ACW_klan_resistance
+				value = -2
+			}
 		}
 	}
 	
@@ -5785,9 +5831,13 @@ focus_tree = {
 			factor = 50
 		}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus USA_defend_democracy"
-			custom_effect_tooltip = USA_political_recovery_tooltip
-			USA_increase_recovery = yes
+			log = "[GetDateText]: [Root.GetName]: Focus USA_redeemer_collaboration"
+			custom_effect_tooltip = ACW_combat_klan
+			add_stability = 0.05
+			modify_country_flag = {
+				flag = ACW_klan_resistance
+				value = -2
+			}
 		}
 	}
 	
@@ -5807,8 +5857,12 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_civil_liberties"
+			custom_effect_tooltip = ACW_combat_legion
 			increase_ruling_party_popularity_by_5 = yes
-			add_war_support = 0.05
+			modify_country_flag = {
+				flag = ACW_black_legion_resistance
+				value = -3
+			}
 		}
 	}
 	
@@ -5976,8 +6030,75 @@ focus_tree = {
 			factor = 50
 		}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus USA_malice_and_charity"
-			country_event = { id = ustates.118 days = 1 }
+			log = "[GetDateText]: [Root.GetName]: Focus USA_the_gi_bill"
+			add_stability = 0.05
+			add_war_support = 0.08
+			add_command_power = 30.5
+			army_experience = 15
+			increase_ruling_party_popularity_by_5 = yes
+			random_owned_state = {
+				limit = {
+					is_core_of = USA
+					is_controlled_by = USA
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = USA
+					is_controlled_by = USA
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = USA
+					is_controlled_by = USA
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = USA
+					is_controlled_by = USA
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = USA
+					is_controlled_by = USA
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = USA
+					is_controlled_by = USA
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+			}
 		}
 	}
 	
@@ -5998,6 +6119,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_malice_and_charity"
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			USA_political_recovery = yes
 			country_event = { id = ustates.118 days = 1 }
 		}
 	}

@@ -4248,6 +4248,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_court_populists"
 			custom_effect_tooltip = ACW_combat_minuteman
+			increase_ruling_party_popularity_by_5 = yes
 			add_political_power = 4
 			modify_country_flag = {
 				flag = ACW_minutemen_resistance
@@ -4441,7 +4442,6 @@ focus_tree = {
 				flag = ACW_klan_resistance
 				value = -2
 			}
-
 		}
 	}
 	
@@ -4772,6 +4772,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_malice_and_charity"
 			custom_effect_tooltip = USA_political_recovery_tooltip
 			USA_political_recovery = yes
+			country_event = { id = ustates.118 days = 1 }
 		}
 	}
 	
