@@ -4192,7 +4192,7 @@ country_event = { # Primer of God Save the Kaiser
 	}
 }
 
-country_event = { # The Catholic Workers Movement
+country_event = { # The Catholic GFX_report_event_generic_workers Movement
 	id = csa.77
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.77"}
 	title = csa.77.t
@@ -4489,7 +4489,7 @@ country_event = { # The Family and Freedom Program
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.92"}
 	title = csa.92.t
 	desc = csa.92.d
-	picture = USA_reconstruction1
+	picture = GFX_report_event_USA_reconstruction1
 
 	fire_only_once = yes
 
@@ -5508,7 +5508,7 @@ country_event = { # Left Socialists get promoted/exiled
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.162"}
 	title = csa.162.t
 	desc = csa.162.d
-	picture = diplomacy1
+	picture = GFX_report_event_generic_diplomacy1
 
 	fire_only_once = yes
 
@@ -5568,7 +5568,7 @@ country_event = { # CSS Youth Wing
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.164"}
 	title = csa.164.t
 	desc = csa.164.d
-	picture = july4
+	picture = GFX_report_event_USA_july4
 	
 	fire_only_once = yes
 
@@ -5703,7 +5703,7 @@ country_event = { # Four Hour Work Week
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.169"}
 	title = csa.169.t
 	desc = csa.169.d
-	picture = workers
+	picture = GFX_report_event_generic_workers
 	
 	fire_only_once = yes
 	
@@ -5734,7 +5734,7 @@ country_event = { # Energy Accounting
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.170"}
 	title = csa.170.t
 	desc = csa.170.d
-	picture = economic_policy
+	picture = GFX_report_event_generic_economic_policy
 	
 	fire_only_once = yes
 	
@@ -5840,7 +5840,7 @@ country_event = { # Corrupt Managers
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.173"}
 	title = csa.173.t
 	desc = csa.173.d
-	picture = economic_policy
+	picture = GFX_report_event_generic_economic_policy
 	
 	fire_only_once = yes
 	
@@ -5970,7 +5970,7 @@ country_event = { # Continental Constables
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.175"}
 	title = csa.175.t
 	desc = csa.175.d
-	picture = am_police
+	picture = GFX_report_event_USA_police
 	
 	fire_only_once = yes
 	
@@ -6123,7 +6123,7 @@ country_event = { # Court Officers
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.179"}
 	title = csa.179.t
 	desc = csa.179.d
-	picture = GFX_USA_national_guard
+	picture = GFX_report_event_USA_national_guard
 	
 	fire_only_once = yes
 	
@@ -6541,7 +6541,7 @@ country_event = { # Name
 	option = { # Worker's Technocracy of America
 		name = csa.188.b
 			add_political_power = 10
-			set_cosmetic_tag = CSA_american_workers_state_6
+			set_cosmetic_tag = CSA_american_GFX_report_event_generic_workers_state_6
 			
 			country_event = {
 				id = csa.189
@@ -6597,7 +6597,7 @@ country_event = { # WTA Flag
 		name = csa.189.a
 			add_political_power = 10
 			hidden_effect = {
-			set_cosmetic_tag = CSA_american_workers_state_2
+			set_cosmetic_tag = CSA_american_GFX_report_event_generic_workers_state_2
 			}
 	}
 	
@@ -6605,42 +6605,42 @@ country_event = { # WTA Flag
 		name = csa.189.b
 			add_political_power = 10
 			hidden_effect = {
-			set_cosmetic_tag = CSA_american_workers_state_3
+			set_cosmetic_tag = CSA_american_GFX_report_event_generic_workers_state_3
 			}
 	}
 	option = { # Grain and Gears
 		name = csa.189.c
 			add_political_power = 10
 			hidden_effect = {
-			set_cosmetic_tag = CSA_american_workers_state_4
+			set_cosmetic_tag = CSA_american_GFX_report_event_generic_workers_state_4
 			}
 	}
 	option = { # Socialist Eagle
 		name = csa.189.e
 			add_political_power = 10
 			hidden_effect = {
-			set_cosmetic_tag = CSA_american_workers_state_5
+			set_cosmetic_tag = CSA_american_GFX_report_event_generic_workers_state_5
 			}
 	}
 	option = { # Techno-Socialism
 		name = csa.192.f
 			add_political_power = 10
 			hidden_effect = {
-			set_cosmetic_tag = CSA_american_workers_state_6
+			set_cosmetic_tag = CSA_american_GFX_report_event_generic_workers_state_6
 			}
 	}
 	option = { # US Sword
 		name = csa.192.g
 			add_political_power = 10
 			hidden_effect = {
-			set_cosmetic_tag = CSA_american_workers_state_7
+			set_cosmetic_tag = CSA_american_GFX_report_event_generic_workers_state_7
 			}
 	}
 	option = { # US Gold and Chains
 		name = csa.192.h
 			add_political_power = 10
 			hidden_effect = {
-			set_cosmetic_tag = CSA_american_workers_state_8
+			set_cosmetic_tag = CSA_american_GFX_report_event_generic_workers_state_8
 			}
 	}
 	
@@ -7205,7 +7205,7 @@ country_event = { # Subservient population
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.212"}
 	title = csa.212.t
 	desc = csa.212.d
-	picture = newyork
+	picture = GFX_report_event_USA_chicago
 
 	fire_only_once = yes
 	
@@ -9532,7 +9532,7 @@ country_event = { #Removing Distinctions
 	}
 }
 
-country_event = { #Foster's call to foreign workers
+country_event = { #Foster's call to foreign GFX_report_event_generic_workers
 	id = csa.419
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.419"}
 	title = csa.419.t

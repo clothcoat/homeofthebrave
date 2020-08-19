@@ -629,7 +629,7 @@ country_event = { # New England granted home rule
 	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.13"}
 	title = newengland.13.t
 	desc = newengland.13.d
-	picture = diplomacy3
+	picture = GFX_report_event_generic_diplomacy3
 
 	is_triggered_only = yes
 
@@ -3101,7 +3101,7 @@ country_event = { # Creation of the Railroad
 }
 
 #CSA
-country_event = { # Refugees flood in from the Great Lakes (Underground Railroad)
+country_event = { # Refugees GFX_report_event_USA_flood in from the Great Lakes (Underground Railroad)
 	id = newengland.51
 	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.51"}
 	title = newengland.51.t
@@ -3554,7 +3554,7 @@ country_event = { # Intervention for John Winant
 	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.60"}
 	title = newengland.60.t
 	desc = newengland.60.d
-	picture = USA_fireside_chats
+	picture = GFX_report_event_USA_fireside_chats
 
 	fire_only_once = yes
 
@@ -3607,7 +3607,7 @@ country_event = { # Cocoanut Grove fire traced back to Tobin
 	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.62"}
 	title = newengland.62.t
 	desc = newengland.62.d
-	picture = USA_reconstruction1
+	picture = GFX_report_event_USA_reconstruction1
 	fire_only_once = yes
 
 	trigger = {

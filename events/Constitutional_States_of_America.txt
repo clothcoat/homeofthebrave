@@ -2756,7 +2756,7 @@ country_event = { # Black Education Act
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.59"}
 	title = constate.59.t
 	desc = constate.59.d
-	picture = diplomacy1
+	picture = GFX_report_event_generic_diplomacy1
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -2779,7 +2779,7 @@ country_event = { # Black Belt Autonomy
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.60"}
 	title = constate.60.t
 	desc = constate.60.d
-	picture = diplomacy1
+	picture = GFX_report_event_generic_diplomacy1
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -2806,7 +2806,7 @@ country_event = { # Pass Laws
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.61"}
 	title = constate.61.t
 	desc = constate.61.d
-	picture = diplomacy1
+	picture = GFX_report_event_generic_diplomacy1
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -2853,7 +2853,7 @@ country_event = { # The third Great Migration
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.63"}
 	title = constate.63.t
 	desc = constate.63.d
-	picture = newyork
+	picture = GFX_report_event_USA_chicago
 
 	fire_only_once = yes
 
