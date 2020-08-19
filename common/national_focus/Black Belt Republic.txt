@@ -2948,6 +2948,26 @@ focus_tree = {
 		available = {
 			has_government = authoritarian_democrat
 		}
+		select_effect = {
+		hidden_effect = {
+		country_event = {
+			id = bbr.41
+			days = 20
+			}
+		}
+		hidden_effect = {
+		country_event = {
+			id = bbr.42
+			days = 28
+			}
+		}
+		hidden_effect = {
+		country_event = {
+			id = bbr.45
+			days = 40
+			}
+		}
+		}
 		relative_position_id = BBR_american_party
 		x = -3
 		y = 4
@@ -3034,6 +3054,12 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BBR_american_traditions"
+			hidden_effect = {
+			country_event = {
+			id = bbr.48
+			days = 10
+			}
+		}
 			add_war_support = 0.1
 			add_political_power = 50
 			add_manpower = 1200

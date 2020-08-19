@@ -288,7 +288,7 @@ country_event = { # Duse Muhammad Elected
 		name = bbr.7.a
 		add_manpower = 1500
 		add_war_support = 0.05
-		add_popularity = { ideology = national_populist popularity = 0.05 }
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.05 }
 		hidden_effect = {
 			create_country_leader = {
 				name = "Charles Young"
@@ -302,6 +302,9 @@ country_event = { # Duse Muhammad Elected
 		set_politics = {
 			ruling_party = authoritarian_democrat
 			elections_allowed = no
+		}
+		hidden_effect = {
+			country_event = { id = bbr.40 days = 2 }
 		}
 	}
 	option = { # Appoint the ABB
@@ -524,6 +527,9 @@ country_event = { # March
 		}
 		hidden_effect = {
 			country_event = { id = bbr.13 days = 4 }
+		}
+		hidden_effect = {
+			country_event = { id = bbr.40 days = 6 }
 		}
 	}
 }
@@ -2348,5 +2354,296 @@ country_event = { # A Social Revolution
 	add_war_support = 0.02
 	add_stability = -0.05
 	add_political_power = 30
+	}
+}
+
+country_event = { # George Washington Carver Dies
+	id = bbr.39
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.39"}
+	title = bbr.39.t
+	desc = bbr.39.d
+	picture = ACW_soldiers_watching
+
+	fire_only_once = yes
+
+	trigger = {
+	tag = BBR
+	date > 1943.01.01
+	}
+	
+	mean_time_to_happen = {
+	days = 60
+	} 
+	
+	option = { #A Day of Mourning
+	name = bbr.39.a
+	add_political_power = 10
+	set_country_flag = George_Washington_Carver_dead
+	}
+}
+
+
+country_event = { # Young as Head Executive
+	id = bbr.40
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.40"}
+	title = bbr.40.t
+	desc = bbr.40.d
+	picture = ACW_soldiers_watching
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = { #Work more closely with the Left
+	name = bbr.40.a
+	add_political_power = 30
+	add_popularity = { ideology = radical_socialist popularity = 0.01 }
+	add_popularity = { ideology = social_democrat popularity = 0.01 }
+	add_popularity = { ideology = social_liberal popularity = 0.01 }
+	}
+	option = { #Work more closely with the Right
+	name = bbr.40.b
+	add_political_power = 20
+	add_popularity = { ideology = social_conservative popularity = 0.01 }
+	add_popularity = { ideology = market_liberal popularity = 0.01 }
+	}
+	option = { #Balance Both
+	name = bbr.40.c
+	add_political_power = -10
+	add_stability = 0.01
+	}
+}
+
+country_event = { # Fate of Robeson
+	id = bbr.41
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.41"}
+	title = bbr.41.t
+	desc = bbr.41.d
+	picture = ACW_soldiers_watching
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { #Deport him
+	name = bbr.41.a
+	hidden_effect = {
+	set_country_flag = Paul_Robeson_dead
+	}
+	add_popularity = { ideology = syndicalist popularity = -0.03 }
+	add_stability = -0.05
+	add_political_power = 20
+	}
+	option = { #Work with him
+	name = bbr.41.b
+	add_political_power = -20
+	add_popularity = { ideology = syndicalist popularity = 0.01 }
+	add_popularity = { ideology = authoritarian_democrat popularity = 0.01 }
+	add_stability = 0.01
+	}
+}
+
+country_event = { # TUUL Broken
+	id = bbr.42
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.42"}
+	title = bbr.42.t
+	desc = bbr.42.d
+	picture = ACW_soldiers_watching
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #Send Spies
+	name = bbr.42.a
+	add_popularity = { ideology = totalist popularity = -0.02 }
+	add_manpower = -20
+	set_country_flag = BBR_spies_after_haywood
+	}
+	option = { #Leave him be
+	name = bbr.42.b
+	add_political_power = -10
+	add_popularity = { ideology = totalist popularity = -0.01 }
+	}
+}
+
+country_event = { # Harry Haywood Dies
+	id = bbr.43
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.43"}
+	title = bbr.43.t
+	desc = bbr.43.d
+	picture = ACW_soldiers_watching
+
+	trigger = {
+	tag = BBR
+	has_country_flag = BBR_spies_after_haywood
+	ENG = {
+		exists = yes
+		}
+	}
+	
+	mean_time_to_happen = {
+	days = 200
+	}
+	
+	fire_only_once = yes
+	
+	option = { #Deny Everything
+	name = bbr.43.a
+	add_political_power = -15
+	}
+	option = { #Take Credit
+	name = bbr.43.b
+	ENG = {
+	add_opinion_modifier = { target = BBR modifier = medium_decrease }
+	}
+	add_political_power = 10
+	add_stability = 0.01
+	add_popularity = { ideology = totalist popularity = -0.01 }
+	}
+}
+
+country_event = { # Unions demand contracts
+	id = bbr.44
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.44"}
+	title = bbr.44.t
+	desc = bbr.44.d
+
+	trigger = {
+	has_completed_focus = BBR_approach_local_socialists
+	has_completed_focus = BBR_paternal_economics
+	}
+	
+	mean_time_to_happen = {
+	days = 30
+	}
+	
+	fire_only_once = yes
+	
+	option = { #Grant the Contracts
+	name = bbr.44.a
+	add_political_power = -30
+	add_stability = 0.02
+	add_popularity = { ideology = authoritarian_democrat popularity = 0.01 }
+	}
+	option = { #Don't Grant the Contracts
+	name = bbr.44.b
+	}
+}
+
+country_event = { # Page demands Concessions
+	id = bbr.45
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.45"}
+	title = bbr.45.t
+	desc = bbr.45.d
+	picture = ACW_soldiers_watching
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #Agreed
+	name = bbr.45.a
+	add_political_power = -50
+	add_popularity = { ideology = totalist popularity = 0.01 }
+	add_stability = 0.02
+	diplomatic_relation = {
+    country = FRA
+    relation = non_aggression_pact
+    active = yes
+		}
+	}
+	option = { #Disagree
+	name = bbr.45.b
+	add_manpower = -12000
+	add_war_support = -0.05
+	add_stability = -0.03
+	add_political_power = 30
+	}
+}
+
+country_event = { # State of the Judicial Branch
+	id = bbr.46
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.46"}
+	title = bbr.46.t
+	desc = bbr.46.d
+	picture = ACW_soldiers_watching
+
+	trigger = {
+	OR = {
+		has_government = social_conservative
+		has_government = market_liberal
+		has_government = social_liberal
+		has_government = social_democrat
+		}
+	}
+	
+	mean_time_to_happen = {
+	days = 100
+	}
+	
+	fire_only_once = yes
+	
+	option = { #Endorse it
+	name = bbr.46.a
+	add_stability = 0.04
+	add_political_power = -30
+	}
+	option = { #Leave the current system in place
+	name = bbr.46.b
+	add_political_power = 25
+	increase_ruling_party_popularity = yes
+	add_stability = -0.01
+	add_command_power = 5
+	}
+}
+
+country_event = { # DuBois Condemns Cultural Policies
+	id = bbr.47
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.47"}
+	title = bbr.47.t
+	desc = bbr.47.d
+
+	trigger = {
+	OR = {
+	has_completed_focus = BBR_american_traditions
+	has_completed_focus = BBR_spiritual_patriotism
+	}
+	}
+	
+	mean_time_to_happen = {
+	days = 50
+	}
+	
+	fire_only_once = yes
+	
+	option = { #Debate him
+	name = bbr.47.a
+	add_political_power = -10
+	add_popularity = { ideology = social_conservative popularity = 0.01 }
+	add_popularity = { ideology = authoritarian_democrat popularity = 0.01 }
+	}
+	option = { #Ignore him
+	name = bbr.47.b
+	}
+}
+
+country_event = { # Enacting Roman Law
+	id = bbr.48
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.48"}
+	title = bbr.48.t
+	desc = bbr.48.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #Adopt Roman Law
+	name = bbr.48.a
+	add_political_power = 25
+	add_popularity = { ideology = authoritarian_democrat popularity = 0.01 }
+	add_command_power = 10
+	add_stability = -0.03
+	}
+	option = { #Don't
+	name = bbr.48.b
+	add_stability = 0.02
+	add_political_power = -10
 	}
 }
