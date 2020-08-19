@@ -1081,6 +1081,7 @@ focus_tree = {
 			add_popularity = { ideology = authoritarian_democrat popularity = -0.03 }
 			add_popularity = { ideology = paternal_autocrat popularity = -0.03 }
 			add_popularity = { ideology = national_populist popularity = -0.03 }
+			remove_ideas = USA_klan_activity_idea
 			hidden_effect = {
 			country_event = {
 			id = ustates.1051
