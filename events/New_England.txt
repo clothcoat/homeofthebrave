@@ -12,7 +12,7 @@ country_event = { # Occupy New England
 	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.1"}
 	title = newengland.1.t
 	desc = newengland.1.d
-	picture = GFX_USA_Riots
+	picture = GFX_report_event_USA_Riots
 
 	is_triggered_only = yes
 
@@ -72,7 +72,7 @@ country_event = { # ACW nation informed that Canada has seized New England
 	id = newengland.2
 	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.2"}
 	title = newengland.2.t
-	picture = GFX_USA_Riots
+	picture = GFX_report_event_USA_Riots
 	
 	desc = {
 		text = newengland.2.d
@@ -135,7 +135,7 @@ country_event = { # Canada doesn't occupy New England
 	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.3"}
 	title = newengland.3.t
 	desc = newengland.3.d
-	picture = GFX_USA_Riots
+	picture = GFX_report_event_USA_Riots
 
 	is_triggered_only = yes
 	
@@ -453,7 +453,7 @@ country_event = { # America is reunited
 	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.7"}
 	title = newengland.7.t
 	desc = newengland.7.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	fire_only_once = yes
 
@@ -561,7 +561,7 @@ country_event = { # New England requests home rule
 	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.12"}
 	title = newengland.12.t
 	desc = newengland.12.d
-	picture = diplomacy2
+	picture = GFX_report_event_generic_diplomacy2
 
 	is_triggered_only = yes
 
@@ -629,7 +629,7 @@ country_event = { # New England granted home rule
 	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.13"}
 	title = newengland.13.t
 	desc = newengland.13.d
-	picture = diplomacy3
+	picture = GFX_report_event_generic_diplomacy3
 
 	is_triggered_only = yes
 
@@ -659,7 +659,7 @@ country_event = { # New England refused home rule
 	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.14"}
 	title = newengland.14.t
 	desc = newengland.14.d
-	picture = diplomacy2
+	picture = GFX_report_event_generic_diplomacy2
 
 	is_triggered_only = yes
 
@@ -684,7 +684,7 @@ country_event = { # Declaration of Independence
 	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.15"}
 	title = newengland.15.t
 	desc = newengland.15.d
-	picture = diplomacy2
+	picture = GFX_report_event_generic_diplomacy2
 
 	is_triggered_only = yes
 
@@ -731,7 +731,7 @@ country_event = { # The Provisional Government
 	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.20"}
 	title = newengland.20.t
 	desc = newengland.20.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	trigger = {
 		tag = NEE
@@ -824,7 +824,7 @@ country_event = { # 1940 Liberal Primary
 	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.21"}
 	title = newengland.21.t
 	desc = newengland.21.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 
@@ -862,7 +862,7 @@ country_event = { # 1940 Republican Primary
 	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.22"}
 	desc = newengland.22.d
 	title = newengland.22.t
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 	
@@ -982,7 +982,7 @@ country_event = { # 1940 Democrat Primary
 	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.23"}
 	title = newengland.23.t
 	desc = newengland.23.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 
@@ -1034,7 +1034,7 @@ country_event = { # 1940 Election
 	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.24"}
 	title = newengland.24.t
 	desc = newengland.24.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -1370,7 +1370,7 @@ country_event = { # 1944 Liberal Primary
 			}
 		}
 	}
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	trigger = {
 		tag = NEE
@@ -1436,7 +1436,7 @@ country_event = { # 1944 Republican Primary
 			}
 		}
 	}
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	trigger = {
 		tag = NEE
@@ -1502,7 +1502,7 @@ country_event = { # 1944 Democrat Primary
 			}
 		}
 	}
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	trigger = {
 		tag = NEE
@@ -1544,7 +1544,7 @@ country_event = { # 1944 election
 	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.28"}
 	title = newengland.28.t
 	desc = newengland.28.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -1765,7 +1765,7 @@ country_event = { # 1948 Liberal Primary
 			}
 		}
 	}
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	trigger = {
 		tag = NEE
@@ -1851,7 +1851,7 @@ country_event = { # 1948 Republican Primary
 			}
 		}
 	}
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	trigger = {
 		tag = NEE
@@ -1937,7 +1937,7 @@ country_event = { # 1948 Democrat Primary
 			}
 		}
 	}
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	trigger = {
 		tag = NEE
@@ -1986,7 +1986,7 @@ country_event = { # 1948 election
 	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.32"}
 	title = newengland.32.t
 	desc = newengland.32.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -2211,7 +2211,7 @@ country_event = { # 1952 Liberal Primary
 			}
 		}
 	}
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	trigger = {
 		tag = NEE
@@ -2298,7 +2298,7 @@ country_event = { # 1952 Republican Primary
 			}
 		}
 	}
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	trigger = {
 		tag = NEE
@@ -2385,7 +2385,7 @@ country_event = { # 1952 Democrat Primary
 			}
 		}
 	}
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	trigger = {
 		tag = NEE
@@ -2449,7 +2449,7 @@ country_event = { # 1952 election
 	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.37"}
 	title = newengland.37.t
 	desc = newengland.37.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -3101,7 +3101,7 @@ country_event = { # Creation of the Railroad
 }
 
 #CSA
-country_event = { # Refugees flood in from the Great Lakes (Underground Railroad)
+country_event = { # Refugees GFX_report_event_USA_flood in from the Great Lakes (Underground Railroad)
 	id = newengland.51
 	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.51"}
 	title = newengland.51.t
@@ -3530,7 +3530,7 @@ country_event = { # Appointing the New England Poet laureate
 	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.59"}
 	title = newengland.59.t
 	desc = newengland.59.d
-	picture = Diplomacy2
+	picture = GFX_report_event_generic_diplomacy2
 
 	fire_only_once = yes
 
@@ -3554,7 +3554,7 @@ country_event = { # Intervention for John Winant
 	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.60"}
 	title = newengland.60.t
 	desc = newengland.60.d
-	picture = USA_fireside_chats
+	picture = GFX_report_event_USA_fireside_chats
 
 	fire_only_once = yes
 
@@ -3579,7 +3579,7 @@ country_event = { # Gerry Campaigns for King
 	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.61"}
 	title = newengland.61.t
 	desc = newengland.61.d
-	picture = USA_victory_celebration
+	picture = GFX_report_event_USA_victory_celebration
 
 	fire_only_once = yes
 
@@ -3607,7 +3607,7 @@ country_event = { # Cocoanut Grove fire traced back to Tobin
 	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.62"}
 	title = newengland.62.t
 	desc = newengland.62.d
-	picture = USA_reconstruction1
+	picture = GFX_report_event_USA_reconstruction1
 	fire_only_once = yes
 
 	trigger = {
@@ -3631,7 +3631,7 @@ country_event = { # Rockefeller Center artifacts recovered, some defaced
 	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.63"}
 	title = newengland.63.t
 	desc = newengland.63.d
-	picture = USA_reconstruction
+	picture = GFX_report_event_USA_reconstruction
 
 	fire_only_once = yes
 
@@ -3656,7 +3656,7 @@ country_event = { # Canadians apply for West Point
 	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.64"}
 	title = newengland.64.t
 	desc = newengland.64.d
-	picture = ACW_soldiers1
+	picture = GFX_report_event_USA_soldiers1
 
 	fire_only_once = yes
 

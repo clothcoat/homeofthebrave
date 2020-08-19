@@ -336,7 +336,7 @@ news_event = {
 	}
 }
 
-# First International Congress
+# First International GFX_report_event_USA_congress
 news_event = {
 	id = worldnews.9
 	immediate = { log = "[GetDateText]: [Root.GetName]: event worldnews.9" }
@@ -590,13 +590,13 @@ news_event = {
 	}
 }
 
-# The Arab Congress
+# The Arab GFX_report_event_USA_congress
 news_event = {
 	id = worldnews.17
 	immediate = { log = "[GetDateText]: [Root.GetName]: event worldnews.17" }
 	title = worldnews.17.t
 	desc = worldnews.17.d
-	picture = GFX_news_event_EGY_Arab_Congress
+	picture = GFX_news_event_EGY_Arab_GFX_report_event_USA_congress
 
 	major = yes
 
@@ -2767,7 +2767,7 @@ news_event = {
 	}
 }
 
-# Social Reform wins Italian Congress
+# Social Reform wins Italian GFX_report_event_USA_congress
 news_event = {
 	id = worldnews.99
 	immediate = { log = "[GetDateText]: [Root.GetName]: event worldnews.99" }
@@ -2799,7 +2799,7 @@ news_event = {
 	}
 }
 
-# Anarcho Syndicalists win Italian Congress
+# Anarcho Syndicalists win Italian GFX_report_event_USA_congress
 news_event = {
 	id = worldnews.100
 	immediate = { log = "[GetDateText]: [Root.GetName]: event worldnews.100" }
@@ -2811,7 +2811,7 @@ news_event = {
 		trigger = {
 			SRI = {
 				NOT = {
-					has_country_flag = SRI_fourth_congress_compromise
+					has_country_flag = SRI_fourth_GFX_report_event_USA_congress_compromise
 				}
 			}
 		}
@@ -2820,7 +2820,7 @@ news_event = {
 		text = worldnews.100.d.comp
 		trigger = {
 			SRI = {
-				has_country_flag = SRI_fourth_congress_compromise
+				has_country_flag = SRI_fourth_GFX_report_event_USA_congress_compromise
 			}
 		}
 	}
@@ -2849,7 +2849,7 @@ news_event = {
 	}
 }
 
-# National Syndicalists win Italian Congress
+# National Syndicalists win Italian GFX_report_event_USA_congress
 news_event = {
 	id = worldnews.101
 	immediate = { log = "[GetDateText]: [Root.GetName]: event worldnews.101" }
@@ -6053,7 +6053,7 @@ news_event = {
 		name = worldnews.198.a
 	}
 }
-# Congress of Arlon
+# GFX_report_event_USA_congress of Arlon
 news_event = {
 	id = worldnews.199
 	immediate = { log = "[GetDateText]: [Root.GetName]: event worldnews.199" }

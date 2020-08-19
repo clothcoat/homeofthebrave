@@ -173,19 +173,6 @@ country_event = { #Patton's Fate
 		add_political_power = 45
 		add_popularity = { ideology = authoritarian_democrat popularity = 0.05 }
 		add_stability = -0.03
-		create_corps_commander = {# Walter Bedell Smith
-	name = "Walter Bedell Smith"
-	portrait_path = "gfx/leaders/WCC/Portrait_WCC_Walter_Bedell_Smith.tga"
-	traits = { 
-		skilled_staffer 
-		trait_engineer 
-	}
-	skill = 3
-	attack_skill = 2
-	defense_skill = 1
-	planning_skill = 2
-	logistics_skill = 3
-}
 	}
 }
 
