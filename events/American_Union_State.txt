@@ -11,7 +11,7 @@ country_event = { # The American Legion Appointment
 	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.1"}
 	title = unionstate.1.t
 	desc = unionstate.1.d
-	picture = ACW_soldiers_watching
+	picture = GFX_report_event_USA_soldiers_watching
 
 	fire_only_once = yes
 
@@ -102,7 +102,7 @@ country_event = { # Capital of America
 	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.7"}
 	title = unionstate.7.t
 	desc = unionstate.7.d
-	picture = AUS_southern_farmers
+	picture = GFX_report_event_TEX_southern_farmers
 
 	fire_only_once = yes
 
@@ -170,7 +170,7 @@ country_event = { # All Hail the Kingfish - if Long didn't make the deal with Pe
 	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.8"}
 	title = unionstate.8.t
 	desc = unionstate.8.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	trigger = {
 		tag = TEX
@@ -234,7 +234,7 @@ country_event = { # Replace Charles Coughlin?
 	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.11"}
 	title = unionstate.11.t
 	desc = unionstate.11.d
-	picture = GFX_father_coughlin
+	picture = GFX_report_event_USA_father_coughlin
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -266,7 +266,7 @@ country_event = { # The Long Dynasty
 	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.12"}
 	title = unionstate.12.t
 	desc = unionstate.12.d
-	picture = AUS_long_family
+	picture = GFX_report_event_TEX_long_family
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -321,7 +321,7 @@ country_event = { # Improve the Southern Tenant Farmers Union
 	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.13"}
 	title = unionstate.13.t
 	desc = unionstate.13.d
-	picture = AUS_southern_farmers
+	picture = GFX_report_event_TEX_southern_farmers
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -372,7 +372,7 @@ country_event = { # Schism in Share Our Wealth Societies
 	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.15"}
 	title = unionstate.15.t
 	desc = unionstate.15.d
-	picture = AUS_share_the_wealth
+	picture = GFX_report_event_TEX_share_the_wealth
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -401,7 +401,7 @@ country_event = { # McTeauge released in theatres.
 	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.16"}
 	title = unionstate.16.t
 	desc = unionstate.16.d
-	picture = AUS_movie
+	picture = GFX_report_event_TEX_movie
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -423,7 +423,7 @@ country_event = { # Accusations of crypto-socialism
 	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.17"}
 	title = unionstate.17.t
 	desc = unionstate.17.d
-	picture = AUS_share_the_wealth
+	picture = GFX_report_event_TEX_share_the_wealth
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -449,7 +449,7 @@ country_event = { # Superman vs The Klan
 	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.18"}
 	title = unionstate.18.t
 	desc = unionstate.18.d
-	picture = AUS_superman
+	picture = GFX_report_event_TEX_superman
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -506,7 +506,7 @@ country_event = { # Black No More by George Schuyler
 	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.20"}
 	title = unionstate.20.t
 	desc = unionstate.20.d
-	picture = books
+	picture = GFX_report_event_generic_books
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -528,7 +528,7 @@ country_event = { # Election Demands
 	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.21"}
 	title = unionstate.21.t
 	desc = unionstate.21.d
-	picture = books
+	picture = GFX_report_event_generic_books
 
 	fire_only_once = yes
 
@@ -569,7 +569,7 @@ country_event = { # National Progressive Campaign
 	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.2100"}
 	title = unionstate.2100.t
 	desc = unionstate.2100.d
-	picture = books
+	picture = GFX_report_event_generic_books
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -601,7 +601,7 @@ country_event = { # Formation of the Christian Party
 	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.22"}
 	title = unionstate.22.t
 	desc = unionstate.22.d
-	picture = books
+	picture = GFX_report_event_generic_books
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -806,7 +806,7 @@ country_event = { # Long associate reappears
 	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.24"}
 	title = unionstate.24.t
 	desc = unionstate.24.d
-	picture = books
+	picture = GFX_report_event_generic_books
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -821,7 +821,7 @@ country_event = { # New Election
 	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.25"}
 	title = unionstate.25.t
 	desc = unionstate.25.d
-	picture = books
+	picture = GFX_report_event_generic_books
 
 	fire_only_once = yes
 	
@@ -1042,7 +1042,7 @@ country_event = { # Texas Devils
 	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.26"}
 	title = unionstate.26.t
 	desc = unionstate.26.d
-	picture = books
+	picture = GFX_report_event_generic_books
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -1106,7 +1106,7 @@ country_event = { # Bonnie and Clyde gang
 	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.27"}
 	title = unionstate.27.t
 	desc = unionstate.27.d
-	picture = books
+	picture = GFX_report_event_generic_books
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -1143,7 +1143,7 @@ country_event = { # Pendergast Machine
 	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.28"}
 	title = unionstate.28.t
 	desc = unionstate.28.d
-	picture = books
+	picture = GFX_report_event_generic_books
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -1182,7 +1182,7 @@ country_event = { #The Southern Tenant Farmers Union
 	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.29"}
 	title = unionstate.29.t
 	desc = unionstate.29.d
-	picture = books
+	picture = GFX_report_event_generic_books
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -1228,7 +1228,7 @@ country_event = { #Progressive Merger Proposed
 	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.30"}
 	title = unionstate.30.t
 	desc = unionstate.30.d
-	picture = books
+	picture = GFX_report_event_generic_books
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -1261,7 +1261,7 @@ country_event = { #Second Great Migration
 	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.3001"}
 	title = unionstate.3001.t
 	desc = unionstate.3001.d
-	picture = books
+	picture = GFX_report_event_generic_books
 
 	fire_only_once = yes
 	
@@ -1330,7 +1330,7 @@ country_event = { #The Old Regulars
 	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.3002"}
 	title = unionstate.3002.t
 	desc = unionstate.3002.d
-	picture = books
+	picture = GFX_report_event_generic_books
 
 	fire_only_once = yes
 
@@ -1718,7 +1718,7 @@ country_event = { #Fate of Standard Oil
 	}
 }
 
-country_event = { #Power of Congress
+country_event = { #Power of GFX_report_event_USA_congress
 	id = unionstate.46
 	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.46"}
 	title = unionstate.46.t
@@ -2933,7 +2933,7 @@ country_event = { # Share Our Wealth appoints Gerald Smith CEO
 	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.77"}
 	title = unionstate.77.t
 	desc = unionstate.77.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -2959,7 +2959,7 @@ country_event = { # Democrat Loyalists Declare AFP Corrupt
 	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.78"}
 	title = unionstate.78.t
 	desc = unionstate.78.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -2985,7 +2985,7 @@ country_event = { # The Officers' Revolt
 	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.79"}
 	title = unionstate.79.t
 	desc = unionstate.79.d
-	picture = GFX_USA_Riots
+	picture = GFX_report_event_USA_Riots
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -3024,7 +3024,7 @@ country_event = { # Rebuilding the Constitution
 	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.80"}
 	title = unionstate.80.t
 	desc = unionstate.80.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -3163,7 +3163,7 @@ country_event = { # America is reunited
 	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.104"}
 	title = unionstate.104.t
 	desc = unionstate.104.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	fire_only_once = yes
 
@@ -3226,7 +3226,7 @@ country_event = { # Trial of the Weapons companies
 	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.105"}
 	title = unionstate.105.t
 	desc = unionstate.105.d
-	picture = USA_reconstruction
+	picture = GFX_report_event_USA_reconstruction
 
 	fire_only_once = yes
 
@@ -3284,7 +3284,7 @@ country_event = { # Trial of the Heavy Equipment companies
 	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.106"}
 	title = unionstate.106.t
 	desc = unionstate.106.d
-	picture = USA_reconstruction
+	picture = GFX_report_event_USA_reconstruction
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -3313,7 +3313,7 @@ country_event = { # Trial of the Aviation companies
 	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.107"}
 	title = unionstate.107.t
 	desc = unionstate.107.d
-	picture = USA_reconstruction
+	picture = GFX_report_event_USA_reconstruction
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -3342,7 +3342,7 @@ country_event = { # Trial of the Naval companies
 	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.108"}
 	title = unionstate.108.t
 	desc = unionstate.108.d
-	picture = USA_reconstruction
+	picture = GFX_report_event_USA_reconstruction
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -3371,7 +3371,7 @@ country_event = { # Trial of the Industry companies
 	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.109"}
 	title = unionstate.109.t
 	desc = unionstate.109.d
-	picture = USA_reconstruction
+	picture = GFX_report_event_USA_reconstruction
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -3442,7 +3442,7 @@ country_event = {
 	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.153"}
 	title = unionstate.153.t
 	desc = unionstate.153.d
-	picture = GFX_GFX_report_event_USA_american_brigade
+	picture = GFX_report_event_USA_american_brigade
 
 	is_triggered_only = yes
 
@@ -3460,7 +3460,7 @@ country_event = { ###Join Alliance###
 	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.155"}
 	title = unionstate.155.t
 	desc = unionstate.155.d
-	picture = GFX_GFX_report_event_USA_american_brigade
+	picture = GFX_report_event_USA_american_brigade
 
 	is_triggered_only = yes
 
@@ -3489,7 +3489,7 @@ country_event = { ###Americas Alliance###
 	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.156"}
 	title = unionstate.156.t
 	desc = unionstate.156.d
-	picture = GFX_GFX_report_event_USA_american_brigade
+	picture = GFX_report_event_USA_american_brigade
 
 	is_triggered_only = yes
 
@@ -3507,7 +3507,7 @@ country_event = { ###Declines Alliance###
 	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.157"}
 	title = unionstate.157.t
 	desc = unionstate.157.d
-	picture = GFX_GFX_report_event_USA_american_brigade
+	picture = GFX_report_event_USA_american_brigade
 
 	is_triggered_only = yes
 
@@ -3524,7 +3524,7 @@ country_event = { ###Internationale Treaty###
 	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.158"}
 	title = unionstate.158.t
 	desc = unionstate.158.d
-	picture = GFX_GFX_report_event_USA_american_brigade
+	picture = GFX_report_event_USA_american_brigade
 
 	is_triggered_only = yes
 
@@ -3561,7 +3561,7 @@ country_event = { ###Internationale Accepts###
 	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.159"}
 	title = unionstate.159.t
 	desc = unionstate.159.d
-	picture = GFX_GFX_report_event_USA_american_brigade
+	picture = GFX_report_event_USA_american_brigade
 
 	is_triggered_only = yes
 
@@ -3584,7 +3584,7 @@ country_event = { ###Deal with Canada###
 	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.160"}
 	title = unionstate.160.t
 	desc = unionstate.160.d
-	picture = GFX_GFX_report_event_USA_american_brigade
+	picture = GFX_report_event_USA_american_brigade
 
 	is_triggered_only = yes
 
@@ -3620,7 +3620,7 @@ country_event = {###We've been Embargoed
 	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.161"}
 	title = unionstate.161.t
 	desc = unionstate.161.d
-	picture = GFX_GFX_report_event_USA_american_brigade
+	picture = GFX_report_event_USA_american_brigade
 
 	is_triggered_only = yes
 

@@ -13,7 +13,7 @@ country_event = { # Socialist Constitution - Property Debate
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.1000"}
 	title = csa.1000.t
 	desc = csa.1000.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 
@@ -60,7 +60,7 @@ country_event = { # Socialist Constitution - Social Radicalism
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.1001"}
 	title = csa.1001.t
 	desc = csa.1001.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 
@@ -139,7 +139,7 @@ country_event = { # Socialist Constitution - Voting Rights
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.1002"}
 	title = csa.1002.t
 	desc = csa.1002.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 
@@ -233,12 +233,12 @@ country_event = { # Socialist Constitution - Voting Rights
 	}
 }
 
-country_event = { # Socialist Congressional Election Arrives
+country_event = { # Socialist GFX_report_event_USA_congressional Election Arrives
 	id = csa.1003
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.1003"}
 	title = csa.1003.t
 	desc = csa.1003.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 
@@ -408,7 +408,7 @@ country_event = { # Constitutional Convention begins
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.1"}
 	title = csa.1.t
 	desc = csa.1.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 
@@ -466,7 +466,7 @@ country_event = { # Socialist Constitution - System of Government
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.2"}
 	title = csa.2.t
 	desc = csa.2.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 
@@ -549,7 +549,7 @@ country_event = { # Socialist Constitution - Framework
 			has_country_flag = CSA_party
 		}
 	}
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 
@@ -570,7 +570,7 @@ country_event = { # Socialist Constitution - Judiciary
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.5"}
 	title = csa.5.t
 	desc = csa.5.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 
@@ -639,12 +639,12 @@ country_event = { # Socialist Constitution - Judiciary
 	}
 }
 
-country_event = { # Socialist Constitution - Congress and the President
+country_event = { # Socialist Constitution - GFX_report_event_USA_congress and the President
 	id = csa.7
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.7"}
 	title = csa.7.t
 	desc = csa.7.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 
@@ -761,7 +761,7 @@ country_event = { # Socialist Constitution - Centralization or decentralization
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.8"}
 	title = csa.8.t
 	desc = csa.8.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 
@@ -867,7 +867,7 @@ country_event = { # Socialist Constitution - The Capital
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.9"}
 	title = csa.9.t
 	desc = csa.9.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 
@@ -942,7 +942,7 @@ country_event = { # Constitutional Convention over
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.10"}
 	title = csa.10.t
 	desc = csa.10.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 
@@ -1027,7 +1027,7 @@ country_event = { # Socialist Constitution - Election
 	id = csa.11
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.11"}
 	title = csa.11.t
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	desc = {
 		text = csa.11.d.usas
@@ -1254,7 +1254,7 @@ country_event = { # Trial of the American First
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.12"}
 	title = csa.12.t
 	desc = csa.12.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 
@@ -1315,7 +1315,7 @@ country_event = { # Trial of the Old Federalist
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.13"}
 	title = csa.13.t
 	desc = csa.13.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 
@@ -1379,7 +1379,7 @@ country_event = { # Revolutionary Art
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.14"}
 	title = csa.14.t
 	desc = csa.14.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	trigger = {
 		tag = CSA
@@ -1400,7 +1400,7 @@ country_event = { # Architecture of the new America
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.15"}
 	title = csa.15.t
 	desc = csa.15.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	trigger = {
 		tag = CSA
@@ -1444,7 +1444,7 @@ country_event = { # fighting racism
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.16"}
 	title = csa.16.t
 	desc = csa.16.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	trigger = {
 		tag = CSA
@@ -1470,7 +1470,7 @@ country_event = { # The New American Woman
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.17"}
 	title = csa.17.t
 	desc = csa.17.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	trigger = {
 		tag = CSA
@@ -1502,7 +1502,7 @@ country_event = { # Redistributing wealth
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.18"}
 	title = csa.18.t
 	desc = csa.18.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	trigger = {
 		tag = CSA
@@ -1527,7 +1527,7 @@ country_event = { # Land Redistribution
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.19"}
 	title = csa.19.t
 	desc = csa.19.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	trigger = {
 		tag = CSA
@@ -1554,7 +1554,7 @@ country_event = { # Dealing with Reactionaries
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.20"}
 	title = csa.20.t
 	desc = csa.20.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	trigger = {
 		tag = CSA
@@ -1606,7 +1606,7 @@ country_event = { # Education reform
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.21"}
 	title = csa.21.t
 	desc = csa.21.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	trigger = {
 		tag = CSA
@@ -1631,7 +1631,7 @@ country_event = { # New Industries
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.22"}
 	title = csa.22.t
 	desc = csa.22.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	trigger = {
 		tag = CSA
@@ -1662,7 +1662,7 @@ country_event = { # Resistance to social changes
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.23"}
 	title = csa.23.t
 	desc = csa.23.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	trigger = {
 		tag = CSA
@@ -1687,7 +1687,7 @@ country_event = { # family law
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.24"}
 	title = csa.24.t
 	desc = csa.24.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	trigger = {
 		tag = CSA
@@ -3175,7 +3175,7 @@ country_event = { # Appointing a Second in Command
 		}
 	}
 	desc = csa.50.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	trigger = {
 		tag = CSA
@@ -3408,7 +3408,7 @@ country_event = { # The Struggle Begins
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.52"}
 	title = csa.52.t
 	desc = csa.52.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	trigger = {
 		tag = CSA
@@ -3430,7 +3430,7 @@ country_event = { # Foster Denounces Browder
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.53"}
 	title = csa.53.t
 	desc = csa.53.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -3452,7 +3452,7 @@ country_event = { # Browder Denounces Foster
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.54"}
 	title = csa.54.t
 	desc = csa.54.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	trigger = {
 		tag = CSA
@@ -3481,7 +3481,7 @@ country_event = { # The Arrest of Foster
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.55"}
 	title = csa.55.t
 	desc = csa.55.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -3516,7 +3516,7 @@ country_event = { # The Arrest of Browder
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.56"}
 	title = csa.56.t
 	desc = csa.56.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	trigger = {
 		tag = CSA
@@ -3558,7 +3558,7 @@ country_event = { # The Trial of Foster
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.57"}
 	title = csa.57.t
 	desc = csa.57.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 
@@ -3572,7 +3572,7 @@ country_event = { # The Trial of Browder
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.58"}
 	title = csa.58.t
 	desc = csa.58.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 
@@ -3586,7 +3586,7 @@ country_event = { # Foster goes into exile
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.59"}
 	title = csa.59.t
 	desc = csa.59.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 
@@ -3603,7 +3603,7 @@ country_event = { # Browder goes into exile
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.60"}
 	title = csa.60.t
 	desc = csa.60.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 
@@ -3620,7 +3620,7 @@ country_event = { # Foster is killed by American Agent
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.61"}
 	title = csa.61.t
 	desc = csa.61.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	trigger = {
 		tag = CSA
@@ -3646,7 +3646,7 @@ country_event = { # Browder is killed by American Agent
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.62"}
 	title = csa.62.t
 	desc = csa.62.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	trigger = {
 		tag = CSA
@@ -3671,7 +3671,7 @@ country_event = { # Ministers are sent on vacation(aka killed)
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.63"}
 	title = csa.63.t
 	desc = csa.63.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	trigger = {
 		tag = CSA
@@ -3696,7 +3696,7 @@ country_event = { # The Army restructure
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.64"}
 	title = csa.64.t
 	desc = csa.64.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	trigger = {
 		tag = CSA
@@ -3742,7 +3742,7 @@ country_event = { # Purging the Right Wing
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.65"}
 	title = csa.65.t
 	desc = csa.65.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	trigger = {
 		tag = CSA
@@ -3771,7 +3771,7 @@ country_event = { # The Show trials
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.66"}
 	title = csa.66.t
 	desc = csa.66.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	trigger = {
 		tag = CSA
@@ -3797,7 +3797,7 @@ country_event = { # Butler's Coup
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.67"}
 	title = csa.67.t
 	desc = csa.67.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	trigger = {
 		tag = CSA
@@ -3871,7 +3871,7 @@ country_event = { # Restoring Democracy
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.68"}
 	title = csa.68.t
 	desc = csa.68.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 
@@ -3912,7 +3912,7 @@ country_event = { # Self Determination in the Black Belt
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.69"}
 	title = csa.69.t
 	desc = csa.69.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	trigger = {
 		tag = CSA
@@ -3952,7 +3952,7 @@ country_event = { # Reactions to the Black Belt
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.70"}
 	title = csa.70.t
 	desc = csa.70.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	trigger = {
 		tag = CSA
@@ -3977,7 +3977,7 @@ country_event = { # The Great Sedition Trial of Harry Leland Mitchell
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.71"}
 	title = csa.71.t
 	desc = csa.71.d
-	picture = AUS_southern_farmers
+	picture = GFX_report_event_TEX_southern_farmers
 
 	fire_only_once = yes
 
@@ -4182,7 +4182,7 @@ country_event = { # Primer of God Save the Kaiser
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.76"}
 	title = csa.76.t
 	desc = csa.76.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -4197,7 +4197,7 @@ country_event = { # The Catholic Workers Movement
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.77"}
 	title = csa.77.t
 	desc = csa.77.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -4216,7 +4216,7 @@ country_event = { # Grapes of Wrath Film
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.78"}
 	title = csa.78.t
 	desc = csa.78.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -4232,7 +4232,7 @@ country_event = { # Ecosocialism
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.79"}
 	title = csa.79.t
 	desc = csa.79.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -4248,7 +4248,7 @@ country_event = { # revolutionary memorials
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.80"}
 	title = csa.80.t
 	desc = csa.80.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -4265,7 +4265,7 @@ country_event = { # cure for Polio
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.81"}
 	title = csa.81.t
 	desc = csa.81.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	trigger = {
 		tag = CSA
@@ -4290,7 +4290,7 @@ country_event = { # Fate of the Boy Scouts
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.82"}
 	title = csa.82.t
 	desc = csa.82.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -4305,12 +4305,12 @@ country_event = { # Fate of the Boy Scouts
 	}
 }
 
-country_event = { # American Artists' Congress
+country_event = { # American Artists' GFX_report_event_USA_congress
 	id = csa.83
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.83"}
 	title = csa.83.t
 	desc = csa.83.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -4326,7 +4326,7 @@ country_event = { # John Reed Clubs
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.84"}
 	title = csa.84.t
 	desc = csa.84.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -4342,7 +4342,7 @@ country_event = { # Paul Robeson Takes A World Tour
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.85"}
 	title = csa.85.t
 	desc = csa.85.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	trigger = {
 		country_exists = SRI
@@ -4364,7 +4364,7 @@ country_event = { # Unpolluting the Industrial Revolution
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.86"}
 	title = csa.86.t
 	desc = csa.86.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -4380,7 +4380,7 @@ country_event = { # Anthem for the new America
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.87"}
 	title = csa.87.t
 	desc = csa.87.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	immediate = {
 		hidden_effect = {
@@ -4423,7 +4423,7 @@ country_event = { # Stone Mountain Georgia
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.88"}
 	title = csa.88.t
 	desc = csa.88.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -4531,7 +4531,7 @@ country_event = { # The USA Trilogy by John Dos Passos.
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.90"}
 	title = csa.90.t
 	desc = csa.90.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -4559,7 +4559,7 @@ country_event = { # Union Vacations
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.91"}
 	title = csa.91.t
 	desc = csa.91.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -4575,7 +4575,7 @@ country_event = { # Paul Robenson and Woody Guthrie
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.93"}
 	title = csa.93.t
 	desc = csa.93.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -4591,7 +4591,7 @@ country_event = { # 1st World Science Fiction Convention
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.94"}
 	title = csa.94.t
 	desc = csa.94.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -4607,7 +4607,7 @@ country_event = { # Indian Revolution Act
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.95"}
 	title = csa.95.t
 	desc = csa.95.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -4624,7 +4624,7 @@ country_event = { # Travel in america
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.96"}
 	title = csa.96.t
 	desc = csa.96.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -4644,7 +4644,7 @@ country_event = { # Alternative to Hollywood
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.97"}
 	title = csa.97.t
 	desc = csa.97.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	trigger = {
 		tag = CSA
@@ -4727,7 +4727,7 @@ country_event = { # World Series(after the revolution)
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.98"}
 	title = csa.98.t
 	desc = csa.98.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -4762,7 +4762,7 @@ country_event = { # Detroit Tigers win
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.99"}
 	title = csa.99.t
 	desc = csa.99.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 
@@ -4776,7 +4776,7 @@ country_event = { # Cincinnati Reds
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.100"}
 	title = csa.100.t
 	desc = csa.100.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 
@@ -4881,7 +4881,7 @@ country_event = { # Boldness in Science
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.126"}
 	title = csa.126.t
 	desc = csa.126.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	fire_only_once = yes
 
@@ -4921,7 +4921,7 @@ country_event = { # No Longer Chained To The Earth.
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.127"}
 	title = csa.127.t
 	desc = csa.127.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 
@@ -4958,7 +4958,7 @@ country_event = { # The Atomic Chain Broken
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.128"}
 	title = csa.128.t
 	desc = csa.128.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 
@@ -4978,7 +4978,7 @@ country_event = { # America is reunited
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.129"}
 	title = csa.129.t
 	desc = csa.129.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	fire_only_once = yes
 
@@ -5232,7 +5232,7 @@ country_event = {
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.153"}
 	title = csa.153.t
 	desc = csa.153.d
-	picture = GFX_GFX_report_event_USA_american_brigade
+	picture = GFX_report_event_USA_american_brigade
 
 	is_triggered_only = yes
 
@@ -5250,7 +5250,7 @@ country_event = { # Arm Canadian resistance
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.1540"}
 	title = csa.1540.t
 	desc = csa.1540.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -5592,7 +5592,7 @@ country_event = { # Foster Criticizes Election
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.165"}
 	title = csa.165.t
 	desc = csa.165.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 	
 	fire_only_once = yes
 
@@ -5617,7 +5617,7 @@ country_event = { # Norman Thomas criticizes renewed militarism
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.166"}
 	title = csa.166.t
 	desc = csa.166.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 	
 	trigger = {
 	tag = CSA
@@ -5644,7 +5644,7 @@ country_event = { # Anarchists oppose recent measures
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.167"}
 	title = csa.167.t
 	desc = csa.167.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 	
 	fire_only_once = yes
 	
@@ -6172,7 +6172,7 @@ country_event = { # Blackmail Material
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.180"}
 	title = csa.180.t
 	desc = csa.180.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 	fire_only_once = yes
 	
 	
@@ -6204,7 +6204,7 @@ country_event = { # Foster Confesses
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.181"}
 	title = csa.181.t
 	desc = csa.181.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 	fire_only_once = yes
 	
 	
@@ -6267,7 +6267,7 @@ country_event = { # Burnham's National Anthem
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.182"}
 	title = csa.182.t
 	desc = csa.182.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 	
 	fire_only_once = yes
 	
@@ -6330,7 +6330,7 @@ country_event = { # The Newish American Woman
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.184"}
 	title = csa.184.t
 	desc = csa.184.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	trigger = {
 		tag = CSA
@@ -6360,7 +6360,7 @@ country_event = { # NAT
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.185"}
 	title = csa.185.t
 	desc = csa.185.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	fire_only_once = yes
 
@@ -6414,7 +6414,7 @@ country_event = { # Continental Director
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.186"}
 	title = csa.186.t
 	desc = csa.186.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	trigger = {
 		tag = CSA
@@ -6457,7 +6457,7 @@ country_event = { # Flag
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.187"}
 	title = csa.187.t
 	desc = csa.187.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 	
@@ -6521,7 +6521,7 @@ country_event = { # Name
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.188"}
 	title = csa.188.t
 	desc = csa.188.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 	
@@ -6587,7 +6587,7 @@ country_event = { # WTA Flag
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.189"}
 	title = csa.189.t
 	desc = csa.189.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 	
@@ -6650,7 +6650,7 @@ country_event = { # ATL
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.190"}
 	title = csa.190.t
 	desc = csa.190.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 	
@@ -6713,7 +6713,7 @@ country_event = { # APS
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.191"}
 	title = csa.191.t
 	desc = csa.191.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 	
@@ -6777,7 +6777,7 @@ country_event = { # UASR
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.192"}
 	title = csa.192.t
 	desc = csa.192.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 	
@@ -6840,7 +6840,7 @@ country_event = { # PCC
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.193"}
 	title = csa.193.t
 	desc = csa.193.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 	
@@ -6901,7 +6901,7 @@ country_event = { # Strengthen Iron Brigades
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.195"}
 	title = csa.195.t
 	desc = csa.195.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	trigger = {
 	OR = {
@@ -6988,7 +6988,7 @@ country_event = { # Flamethrowers
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.196"}
 	title = csa.196.t
 	desc = csa.196.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 	
@@ -7021,7 +7021,7 @@ country_event = { # Fate of Foster
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.196"}
 	title = csa.197.t
 	desc = csa.197.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 
@@ -7049,7 +7049,7 @@ country_event = { # Fate of Lindbergh
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.198"}
 	title = csa.198.t
 	desc = csa.198.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	trigger = {
 		has_war = yes
@@ -7176,7 +7176,7 @@ country_event = { # War Syndicalism
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.211"}
 	title = csa.211.t
 	desc = csa.211.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	trigger = {
 		has_completed_focus = CSA_the_dust_settles
@@ -7278,7 +7278,7 @@ country_event = { # The Purge
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.214"}
 	title = csa.214.t
 	desc = csa.214.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 	
@@ -7335,7 +7335,7 @@ country_event = { # Lindbergh's Redemption
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.216"}
 	title = csa.216.t
 	desc = csa.216.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	trigger = {
 	has_country_flag = lindbergh_lives
@@ -7367,7 +7367,7 @@ country_event = { # The Fort
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.217"}
 	title = csa.217.t
 	desc = csa.217.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 	
@@ -7422,7 +7422,7 @@ country_event = { # Futurism
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.218"}
 	title = csa.218.t
 	desc = csa.218.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 	
@@ -7446,7 +7446,7 @@ country_event = { # Core Columbia
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.252"}
 	title = csa.252.t
 	desc = csa.252.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 	
@@ -7465,7 +7465,7 @@ country_event = { # Canadian Liberation Front
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.253"}
 	title = csa.253.t
 	desc = csa.253.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 	
@@ -7497,7 +7497,7 @@ country_event = { # CLF Attacks
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.254"}
 	title = csa.254.t
 	desc = csa.254.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 	
@@ -7517,7 +7517,7 @@ country_event = { # The Loyalists
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.255"}
 	title = csa.255.t
 	desc = csa.255.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 	
@@ -7536,7 +7536,7 @@ country_event = { # American Entertainment in Canada
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.256"}
 	title = csa.256.t
 	desc = csa.256.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 	
@@ -7553,7 +7553,7 @@ country_event = { # Andy Griffith Show
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.257"}
 	title = csa.257.t
 	desc = csa.257.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 	
@@ -7570,7 +7570,7 @@ country_event = { # Coring the Great North
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.258"}
 	title = csa.258.t
 	desc = csa.258.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 	
@@ -7588,7 +7588,7 @@ country_event = { # Coring Greater New England
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.259"}
 	title = csa.259.t
 	desc = csa.259.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 	
@@ -7606,7 +7606,7 @@ country_event = { # North reorganized
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.260"}
 	title = csa.260.t
 	desc = csa.260.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 	
@@ -7642,7 +7642,7 @@ country_event = { # Quebec reorganized
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.261"}
 	title = csa.261.t
 	desc = csa.261.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 	
@@ -7687,7 +7687,7 @@ country_event = { # Ontario reorganized
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.262"}
 	title = csa.262.t
 	desc = csa.262.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 	
@@ -7721,7 +7721,7 @@ country_event = { # Mexico Refuses
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.263"}
 	title = csa.263.t
 	desc = csa.263.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 	
@@ -7757,7 +7757,7 @@ country_event = { # Mexico Accepts
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.264"}
 	title = csa.264.t
 	desc = csa.264.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 	
@@ -7777,7 +7777,7 @@ country_event = { # Commune of France Accepts
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.265"}
 	title = csa.265.t
 	desc = csa.265.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 	
@@ -7798,7 +7798,7 @@ country_event = { # Commune of France Refuses
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.266"}
 	title = csa.266.t
 	desc = csa.266.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 	
@@ -7826,7 +7826,7 @@ country_event = { # Organize Mexico
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.267"}
 	title = csa.267.t
 	desc = csa.267.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 	
@@ -7952,7 +7952,7 @@ country_event = { # Mexican Response
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.268"}
 	title = csa.268.t
 	desc = csa.268.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 	
@@ -7999,7 +7999,7 @@ country_event = { # CoF gets Burnham's demands
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.269"}
 	title = csa.269.t
 	desc = csa.269.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 	
@@ -8053,7 +8053,7 @@ country_event = { # Valois
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.270"}
 	title = csa.270.t
 	desc = csa.270.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	trigger = {
 	has_country_leader = {
@@ -8110,7 +8110,7 @@ country_event = { # Technocratic Claims
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.271"}
 	title = csa.271.t
 	desc = csa.271.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	trigger = {
 	has_country_leader = {
@@ -8145,12 +8145,12 @@ country_event = { # Technocratic Claims
 	}
 }
 
-country_event = { # Syndicalist Congress
+country_event = { # Syndicalist GFX_report_event_USA_congress
 	id = csa.301
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.301"}
 	title = csa.301.t
 	desc = csa.301.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 	
@@ -8158,7 +8158,7 @@ country_event = { # Syndicalist Congress
 
 	option = { # IWW Option
 	name = csa.301.a
-	add_ideas = CSA_iww_congress_idea
+	add_ideas = CSA_iww_GFX_report_event_USA_congress_idea
 	modify_country_flag = {
 	flag = CSA_iww_power
 	value = 2
@@ -8166,7 +8166,7 @@ country_event = { # Syndicalist Congress
 	}
 	option = { # De Leonist Option
 	name = csa.301.b
-	add_ideas = CSA_de_leonist_congress_idea
+	add_ideas = CSA_de_leonist_GFX_report_event_USA_congress_idea
 	modify_country_flag = {
 	flag = CSA_cio_power
 	value = 2
@@ -8178,7 +8178,7 @@ country_event = { # Syndicalist Congress
 	}
 	option = { # Anarchist Option
 	name = csa.301.c
-	add_ideas = CSA_ultra_left_congress
+	add_ideas = CSA_ultra_left_GFX_report_event_USA_congress
 	modify_country_flag = {
 	flag = CSA_radical_power
 	value = 2
@@ -8194,7 +8194,7 @@ country_event = { # Fate of the Party
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.302"}
 	title = csa.302.t
 	desc = csa.302.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 	
@@ -8253,7 +8253,7 @@ country_event = { # Worker Takeover
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.303"}
 	title = csa.303.t
 	desc = csa.303.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 	
@@ -8294,7 +8294,7 @@ country_event = { # GDC
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.304"}
 	title = csa.304.t
 	desc = csa.304.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 	
@@ -8338,7 +8338,7 @@ country_event = { # Military Organization
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.305"}
 	title = csa.305.t
 	desc = csa.305.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 	
@@ -8383,7 +8383,7 @@ country_event = { # Worker's Self Management
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.306"}
 	title = csa.306.t
 	desc = csa.306.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 	
@@ -8428,7 +8428,7 @@ country_event = { # Industrial Democracy
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.307"}
 	title = csa.307.t
 	desc = csa.307.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 	
@@ -8473,7 +8473,7 @@ country_event = { # AFL Leadership Contest
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.325"}
 	title = csa.325.t
 	desc = csa.325.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 	
@@ -8524,7 +8524,7 @@ country_event = { # Independence League Leadership Contest
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.330"}
 	title = csa.330.t
 	desc = csa.330.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 
@@ -8613,7 +8613,7 @@ country_event = { # Incorporating the AFL
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.331"}
 	title = csa.331.t
 	desc = csa.331.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 
@@ -8637,7 +8637,7 @@ country_event = { # Nationalist Club Growth
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.332"}
 	title = csa.332.t
 	desc = csa.332.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 
@@ -8660,7 +8660,7 @@ country_event = { # Economic Planning
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.333"}
 	title = csa.333.t
 	desc = csa.333.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 
@@ -8740,7 +8740,7 @@ country_event = { # Great Departments Organized
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.334"}
 	title = csa.334.t
 	desc = csa.334.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 
@@ -8764,7 +8764,7 @@ country_event = { # Clubhouses built
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.335"}
 	title = csa.335.t
 	desc = csa.335.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 
@@ -8795,7 +8795,7 @@ country_event = { # General-in-Chief Position Created
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.336"}
 	title = csa.336.t
 	desc = csa.336.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 
@@ -8831,7 +8831,7 @@ country_event = { # Appeasing the IWW
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.337"}
 	title = csa.337.t
 	desc = csa.337.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 
@@ -8856,7 +8856,7 @@ country_event = { # Collectivist Cells Attack
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.338"}
 	title = csa.338.t
 	desc = csa.338.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 
@@ -8884,7 +8884,7 @@ country_event = { # Collectivist Cells Destroyed
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.339"}
 	title = csa.339.t
 	desc = csa.339.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 
@@ -8904,7 +8904,7 @@ country_event = { #Public Service Stores
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.340"}
 	title = csa.340.t
 	desc = csa.340.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 
@@ -8923,7 +8923,7 @@ country_event = { #The Nationalization of Land
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.341"}
 	title = csa.341.t
 	desc = csa.341.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 
@@ -8948,7 +8948,7 @@ country_event = { # Gathering the Land
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.400"}
 	title = csa.400.t
 	desc = csa.400.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 	
@@ -8985,7 +8985,7 @@ country_event = { #Production Debate
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.401"}
 	title = csa.401.t
 	desc = csa.401.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 	
@@ -9015,7 +9015,7 @@ country_event = { #Export Debate
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.402"}
 	title = csa.402.t
 	desc = csa.402.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 	
@@ -9049,7 +9049,7 @@ country_event = { #Anger over TUUL Expansion
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.403"}
 	title = csa.403.t
 	desc = csa.403.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 	
@@ -9083,7 +9083,7 @@ country_event = { #Minor Food Shortage
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.404"}
 	title = csa.404.t
 	desc = csa.404.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	trigger = {
 	has_country_flag = {
@@ -9116,7 +9116,7 @@ country_event = { #Food Shortage
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.405"}
 	title = csa.405.t
 	desc = csa.405.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	trigger = {
 	has_country_flag = {
@@ -9150,7 +9150,7 @@ country_event = { #American Famine
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.406"}
 	title = csa.406.t
 	desc = csa.406.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	trigger = {
 	has_country_flag = {
@@ -9184,7 +9184,7 @@ country_event = { #Browderist-Fordist Line Destroyed
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.407"}
 	title = csa.407.t
 	desc = csa.407.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 	
@@ -9203,7 +9203,7 @@ country_event = { #Under the Table deals
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.408"}
 	title = csa.408.t
 	desc = csa.408.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 	
@@ -9234,7 +9234,7 @@ country_event = { #Teachers Attacked
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.409"}
 	title = csa.409.t
 	desc = csa.409.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 	
@@ -9259,7 +9259,7 @@ country_event = { #IWW Liquidations
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.410"}
 	title = csa.410.t
 	desc = csa.410.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 	
@@ -9286,7 +9286,7 @@ country_event = { #A Socialist Culture
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.411"}
 	title = csa.411.t
 	desc = csa.411.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 	
@@ -9306,7 +9306,7 @@ country_event = { #Worker uniformity
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.412"}
 	title = csa.412.t
 	desc = csa.412.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 	
@@ -9332,7 +9332,7 @@ country_event = { #Prisoner Complaints
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.413"}
 	title = csa.413.t
 	desc = csa.413.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 	
@@ -9367,7 +9367,7 @@ country_event = { #AFL Purged
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.414"}
 	title = csa.414.t
 	desc = csa.414.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 	
@@ -9400,7 +9400,7 @@ country_event = { #Southern Purges
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.415"}
 	title = csa.415.t
 	desc = csa.415.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 	
@@ -9436,7 +9436,7 @@ country_event = { #SPA dissolved
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.416"}
 	title = csa.416.t
 	desc = csa.416.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 	
@@ -9455,7 +9455,7 @@ country_event = { #Class Traitors arrested
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.417"}
 	title = csa.417.t
 	desc = csa.417.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 	
@@ -9488,7 +9488,7 @@ country_event = { #Removing Distinctions
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.418"}
 	title = csa.418.t
 	desc = csa.418.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 	
@@ -9537,7 +9537,7 @@ country_event = { #Foster's call to foreign workers
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.419"}
 	title = csa.419.t
 	desc = csa.419.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 	
@@ -9556,7 +9556,7 @@ country_event = { #A Fit Nation
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.420"}
 	title = csa.420.t
 	desc = csa.420.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 	
@@ -9586,7 +9586,7 @@ country_event = { #Radio Chats
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.430"}
 	title = csa.430.t
 	desc = csa.430.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 	
@@ -9609,7 +9609,7 @@ country_event = { #Dealing with Burnham
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.431"}
 	title = csa.431.t
 	desc = csa.431.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 	
@@ -9642,7 +9642,7 @@ country_event = { #Standard Oil Managers
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.432"}
 	title = csa.432.t
 	desc = csa.432.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 	
@@ -9677,7 +9677,7 @@ country_event = { #Jack Shulman
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.433"}
 	title = csa.433.t
 	desc = csa.433.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 	
@@ -9696,7 +9696,7 @@ country_event = { #Fate of the IWW
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.434"}
 	title = csa.434.t
 	desc = csa.434.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 	
@@ -9721,7 +9721,7 @@ country_event = { #Wage Setting
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.435"}
 	title = csa.435.t
 	desc = csa.435.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 	
@@ -9760,7 +9760,7 @@ country_event = { #Competing Funding
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.436"}
 	title = csa.436.t
 	desc = csa.436.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 	
@@ -9803,7 +9803,7 @@ country_event = { #President Empowered
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.437"}
 	title = csa.437.t
 	desc = csa.437.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 	
@@ -9821,7 +9821,7 @@ country_event = { #Anarchists Angered
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.438"}
 	title = csa.438.t
 	desc = csa.438.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 	
@@ -9855,7 +9855,7 @@ country_event = { #Chicago Brawl
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.439"}
 	title = csa.439.t
 	desc = csa.439.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 	
@@ -9877,7 +9877,7 @@ country_event = { #Surveillance Created
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.440"}
 	title = csa.440.t
 	desc = csa.440.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 	
@@ -9897,7 +9897,7 @@ country_event = { #Accusations of Social Capitalism
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.441"}
 	title = csa.441.t
 	desc = csa.441.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 	
@@ -9914,7 +9914,7 @@ country_event = { #Farmer's Union
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.442"}
 	title = csa.442.t
 	desc = csa.442.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 	
@@ -9937,7 +9937,7 @@ country_event = { #The National Parks
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.443"}
 	title = csa.443.t
 	desc = csa.443.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 	
@@ -9977,7 +9977,7 @@ country_event = { #Black Market Opens
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.444"}
 	title = csa.444.t
 	desc = csa.444.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 	
@@ -9996,7 +9996,7 @@ country_event = { #Funneling Funds
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.445"}
 	title = csa.445.t
 	desc = csa.445.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 	
@@ -10022,7 +10022,7 @@ country_event = { #Universal SPA Membership
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.446"}
 	title = csa.446.t
 	desc = csa.446.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 	
@@ -10046,7 +10046,7 @@ country_event = { #Communes Annexed
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.447"}
 	title = csa.447.t
 	desc = csa.447.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 	
@@ -10073,7 +10073,7 @@ country_event = { # La Internationale
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.500"}
 	title = csa.500.t
 	desc = csa.500.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 	
@@ -10138,7 +10138,7 @@ country_event = { #Address the Internationale
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.501"}
 	title = csa.501.t
 	desc = csa.501.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 	

@@ -9,7 +9,7 @@ country_event = { #A State Under Siege!
 	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.1"}
 	title = bbr.1.t
 	desc = bbr.1.d
-	picture = ACW_soldiers_watching
+	picture = GFX_report_event_USA_soldiers_watching
 
 	fire_only_once = yes
 
@@ -39,7 +39,7 @@ country_event = { # Reinforcements Arrive
 	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.2"}
 	title = bbr.2.t
 	desc = bbr.2.d
-	picture = ACW_soldiers_watching
+	picture = GFX_report_event_USA_soldiers_watching
 
 	fire_only_once = yes
 
@@ -69,7 +69,7 @@ country_event = { # NOI arrives
 	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.3"}
 	title = bbr.3.t
 	desc = bbr.3.d
-	picture = ACW_soldiers_watching
+	picture = GFX_report_event_USA_soldiers_watching
 
 	fire_only_once = yes
 
@@ -91,7 +91,7 @@ country_event = { # Nationalist Campaign
 	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.4"}
 	title = bbr.4.t
 	desc = bbr.4.d
-	picture = ACW_soldiers_watching
+	picture = GFX_report_event_USA_soldiers_watching
 
 	fire_only_once = yes
 
@@ -191,7 +191,7 @@ country_event = { # Garvey Denounces Us
 	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.5"}
 	title = bbr.5.t
 	desc = bbr.5.d
-	picture = ACW_soldiers_watching
+	picture = GFX_report_event_USA_soldiers_watching
 
 	fire_only_once = yes
 
@@ -246,7 +246,7 @@ country_event = { # Nationalists Released
 	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.6"}
 	title = bbr.6.t
 	desc = bbr.6.d
-	picture = ACW_soldiers_watching
+	picture = GFX_report_event_USA_soldiers_watching
 
 	fire_only_once = yes
 
@@ -268,7 +268,7 @@ country_event = { # Duse Muhammad Elected
 	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.7"}
 	title = bbr.7.t
 	desc = bbr.7.d
-	picture = ACW_soldiers_watching
+	picture = GFX_report_event_USA_soldiers_watching
 
 	fire_only_once = yes
 
@@ -331,7 +331,7 @@ country_event = { # ABB in Power
 	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.7"}
 	title = bbr.8.t
 	desc = bbr.8.d
-	picture = ACW_soldiers_watching
+	picture = GFX_report_event_USA_soldiers_watching
 
 	fire_only_once = yes
 
@@ -369,7 +369,7 @@ country_event = { # Nationalist Treaty
 	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.9"}
 	title = bbr.9.t
 	desc = bbr.9.d
-	picture = ACW_soldiers_watching
+	picture = GFX_report_event_USA_soldiers_watching
 
 	fire_only_once = yes
 
@@ -403,7 +403,7 @@ country_event = { # March
 	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.10"}
 	title = bbr.10.t
 	desc = bbr.10.d
-	picture = ACW_soldiers_watching
+	picture = GFX_report_event_USA_soldiers_watching
 
 	fire_only_once = yes
 
@@ -533,7 +533,7 @@ country_event = { # March Succeeds
 	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.11"}
 	title = bbr.11.t
 	desc = bbr.11.d
-	picture = ACW_soldiers_watching
+	picture = GFX_report_event_USA_soldiers_watching
 
 	fire_only_once = yes
 
@@ -564,7 +564,7 @@ country_event = { # Leadership Election
 	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.12"}
 	title = bbr.12.t
 	desc = bbr.12.d
-	picture = ACW_soldiers_watching
+	picture = GFX_report_event_USA_soldiers_watching
 
 	fire_only_once = yes
 
@@ -625,7 +625,7 @@ country_event = { # Mission from UNIA
 	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.1200"}
 	title = bbr.1200.t
 	desc = bbr.1200.d
-	picture = ACW_soldiers_watching
+	picture = GFX_report_event_USA_soldiers_watching
 
 	fire_only_once = yes
 
@@ -660,7 +660,7 @@ country_event = { # Return of Garvey
 	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.1201"}
 	title = bbr.1201.t
 	desc = bbr.1201.d
-	picture = ACW_soldiers_watching
+	picture = GFX_report_event_USA_soldiers_watching
 
 	fire_only_once = yes
 
@@ -695,7 +695,7 @@ country_event = { # Return of Garvey
 	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.1202"}
 	title = bbr.1202.t
 	desc = bbr.1202.d
-	picture = ACW_soldiers_watching
+	picture = GFX_report_event_USA_soldiers_watching
 
 	fire_only_once = yes
 
@@ -728,7 +728,7 @@ country_event = { # Conquest of America
 	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.1203"}
 	title = bbr.1203.t
 	desc = bbr.1203.d
-	picture = ACW_soldiers_watching
+	picture = GFX_report_event_USA_soldiers_watching
 
 	fire_only_once = yes
 
@@ -777,23 +777,23 @@ country_event = { # Conquest of America
 			elections_allowed = no
 		}
 	}
-	all_owned_state = {
+	all_owned_state	 = {
 	limit = { is_core_of = USA }
 	add_core_of = COR
 	}
-	all_owned_state = {
+	all_owned_state	 = {
 	limit = { is_core_of = CAL }
 	add_core_of = COR
 	}
-	all_owned_state = {
+	all_owned_state	 = {
 	limit = { is_core_of = TEX }
 	add_core_of = COR
 	}
-	all_owned_state = {
+	all_owned_state	 = {
 	limit = { is_core_of = NEE }
 	add_core_of = COR
 	}
-	all_owned_state = {
+	all_owned_state	 = {
 	limit = { is_core_of = CSA }
 	add_core_of = COR
 	}
@@ -812,7 +812,7 @@ country_event = { # Status of the NOI
 	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.1204"}
 	title = bbr.1204.t
 	desc = bbr.1204.d
-	picture = ACW_soldiers_watching
+	picture = GFX_report_event_USA_soldiers_watching
 
 	fire_only_once = yes
 
@@ -838,7 +838,7 @@ country_event = { # Young Klan Offers
 	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.1205"}
 	title = bbr.1205.t
 	desc = bbr.1205.d
-	picture = ACW_soldiers_watching
+	picture = GFX_report_event_USA_soldiers_watching
 
 	fire_only_once = yes
 
@@ -862,7 +862,7 @@ country_event = { # Status of the Mixed-Raced
 	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.1206"}
 	title = bbr.1206.t
 	desc = bbr.1206.d
-	picture = ACW_soldiers_watching
+	picture = GFX_report_event_USA_soldiers_watching
 
 	fire_only_once = yes
 
@@ -889,7 +889,7 @@ country_event = { # Liberty Halls Expand
 	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.1207"}
 	title = bbr.1207.t
 	desc = bbr.1207.d
-	picture = ACW_soldiers_watching
+	picture = GFX_report_event_USA_soldiers_watching
 
 	fire_only_once = yes
 
@@ -914,7 +914,7 @@ country_event = { # Back to Africa
 	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.1208"}
 	title = bbr.1208.t
 	desc = bbr.1208.d
-	picture = ACW_soldiers_watching
+	picture = GFX_report_event_USA_soldiers_watching
 
 	fire_only_once = yes
 
@@ -966,7 +966,7 @@ country_event = { #Arresting Gladys Bentley
 	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.1210"}
 	title = bbr.1210.t
 	desc = bbr.1210.d
-	picture = ACW_soldiers_watching
+	picture = GFX_report_event_USA_soldiers_watching
 
 	fire_only_once = yes
 
@@ -987,7 +987,7 @@ country_event = { #NOI Claims Vilified
 	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.1211"}
 	title = bbr.1211.t
 	desc = bbr.1211.d
-	picture = ACW_soldiers_watching
+	picture = GFX_report_event_USA_soldiers_watching
 
 	fire_only_once = yes
 
@@ -1004,7 +1004,7 @@ country_event = { #Arresting Gladys Bentley
 	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.1212"}
 	title = bbr.1212.t
 	desc = bbr.1212.d
-	picture = ACW_soldiers_watching
+	picture = GFX_report_event_USA_soldiers_watching
 
 	fire_only_once = yes
 
@@ -1026,7 +1026,7 @@ country_event = { #The Black Israelites
 	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.1213"}
 	title = bbr.1213.t
 	desc = bbr.1213.d
-	picture = ACW_soldiers_watching
+	picture = GFX_report_event_USA_soldiers_watching
 
 	fire_only_once = yes
 
@@ -1067,7 +1067,7 @@ country_event = { #National Savings Plan
 	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.1214"}
 	title = bbr.1214.t
 	desc = bbr.1214.d
-	picture = ACW_soldiers_watching
+	picture = GFX_report_event_USA_soldiers_watching
 
 	fire_only_once = yes
 
@@ -1168,7 +1168,7 @@ country_event = { #Liquor Smuggled
 	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.1215"}
 	title = bbr.1215.t
 	desc = bbr.1215.d
-	picture = ACW_soldiers_watching
+	picture = GFX_report_event_USA_soldiers_watching
 
 	fire_only_once = yes
 
@@ -1191,7 +1191,7 @@ country_event = { # Nationalists Fail
 	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.13"}
 	title = bbr.13.t
 	desc = bbr.13.d
-	picture = ACW_soldiers_watching
+	picture = GFX_report_event_USA_soldiers_watching
 
 	fire_only_once = yes
 
@@ -1211,7 +1211,7 @@ country_event = { # Future of the Nation
 	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.14"}
 	title = bbr.14.t
 	desc = bbr.14.d
-	picture = ACW_soldiers_watching
+	picture = GFX_report_event_USA_soldiers_watching
 
 	fire_only_once = yes
 
@@ -1302,7 +1302,7 @@ country_event = { # Socialists Celebrate
 	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.15"}
 	title = bbr.15.t
 	desc = bbr.15.d
-	picture = ACW_soldiers_watching
+	picture = GFX_report_event_USA_soldiers_watching
 
 	fire_only_once = yes
 
@@ -1326,7 +1326,7 @@ country_event = { # Left Vanguard
 	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.16"}
 	title = bbr.16.t
 	desc = bbr.16.d
-	picture = ACW_soldiers_watching
+	picture = GFX_report_event_USA_soldiers_watching
 
 	fire_only_once = yes
 
@@ -1346,7 +1346,7 @@ country_event = { # Union Elections
 	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.17"}
 	title = bbr.17.t
 	desc = bbr.17.d
-	picture = ACW_soldiers_watching
+	picture = GFX_report_event_USA_soldiers_watching
 
 	fire_only_once = yes
 
@@ -1570,7 +1570,7 @@ country_event = { # The Liberal Republic
 	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.18"}
 	title = bbr.18.t
 	desc = bbr.18.d
-	picture = ACW_soldiers_watching
+	picture = GFX_report_event_USA_soldiers_watching
 
 	fire_only_once = yes
 
@@ -1589,7 +1589,7 @@ country_event = { # Socialist Party Candidates
 	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.19"}
 	title = bbr.19.t
 	desc = bbr.19.d
-	picture = ACW_soldiers_watching
+	picture = GFX_report_event_USA_soldiers_watching
 
 	fire_only_once = yes
 
@@ -1644,7 +1644,7 @@ country_event = { # Liberal Candidates
 	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.20"}
 	title = bbr.20.t
 	desc = bbr.20.d
-	picture = ACW_soldiers_watching
+	picture = GFX_report_event_USA_soldiers_watching
 
 	fire_only_once = yes
 
@@ -1681,7 +1681,7 @@ country_event = { # Republican Party
 	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.21"}
 	title = bbr.21.t
 	desc = bbr.21.d
-	picture = ACW_soldiers_watching
+	picture = GFX_report_event_USA_soldiers_watching
 
 	fire_only_once = yes
 
@@ -1710,7 +1710,7 @@ country_event = { # The Peace Party
 	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.22"}
 	title = bbr.22.t
 	desc = bbr.22.d
-	picture = ACW_soldiers_watching
+	picture = GFX_report_event_USA_soldiers_watching
 
 	fire_only_once = yes
 
@@ -1730,7 +1730,7 @@ country_event = { # The Liberal Election
 	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.23"}
 	title = bbr.23.t
 	desc = bbr.23.d
-	picture = ACW_soldiers_watching
+	picture = GFX_report_event_USA_soldiers_watching
 
 	fire_only_once = yes
 
@@ -1925,7 +1925,7 @@ country_event = { # BBR Requests An Alliance
 	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.24"}
 	title = bbr.24.t
 	desc = bbr.24.d
-	picture = ACW_soldiers_watching
+	picture = GFX_report_event_USA_soldiers_watching
 
 	fire_only_once = yes
 
@@ -1946,7 +1946,7 @@ country_event = { # Robeson tours France
 	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.25"}
 	title = bbr.25.t
 	desc = bbr.25.d
-	picture = ACW_soldiers_watching
+	picture = GFX_report_event_USA_soldiers_watching
 
 	fire_only_once = yes
 
@@ -1968,7 +1968,7 @@ country_event = { # Red Mobs
 	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.26"}
 	title = bbr.26.t
 	desc = bbr.26.d
-	picture = ACW_soldiers_watching
+	picture = GFX_report_event_USA_soldiers_watching
 
 	fire_only_once = yes
 
@@ -2001,7 +2001,7 @@ country_event = { # The liquidation of Faith
 	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.27"}
 	title = bbr.27.t
 	desc = bbr.27.d
-	picture = ACW_soldiers_watching
+	picture = GFX_report_event_USA_soldiers_watching
 
 	fire_only_once = yes
 
@@ -2027,7 +2027,7 @@ country_event = { # Haywood Denounces the Combined Syndicates
 	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.28"}
 	title = bbr.28.t
 	desc = bbr.28.d
-	picture = ACW_soldiers_watching
+	picture = GFX_report_event_USA_soldiers_watching
 
 	fire_only_once = yes
 
@@ -2066,7 +2066,7 @@ country_event = { # Facing the New Communist League
 	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.29"}
 	title = bbr.29.t
 	desc = bbr.29.d
-	picture = ACW_soldiers_watching
+	picture = GFX_report_event_USA_soldiers_watching
 
 	fire_only_once = yes
 
@@ -2095,7 +2095,7 @@ country_event = { # Ben Davis Tried
 	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.30"}
 	title = bbr.30.t
 	desc = bbr.30.d
-	picture = ACW_soldiers_watching
+	picture = GFX_report_event_USA_soldiers_watching
 
 	fire_only_once = yes
 
@@ -2120,7 +2120,7 @@ country_event = { # James W. Ford Flees
 	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.31"}
 	title = bbr.31.t
 	desc = bbr.31.d
-	picture = ACW_soldiers_watching
+	picture = GFX_report_event_USA_soldiers_watching
 
 	fire_only_once = yes
 
@@ -2148,7 +2148,7 @@ country_event = { # Harry Haywood Liquidated
 	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.32"}
 	title = bbr.32.t
 	desc = bbr.32.d
-	picture = ACW_soldiers_watching
+	picture = GFX_report_event_USA_soldiers_watching
 
 	fire_only_once = yes
 
@@ -2173,7 +2173,7 @@ country_event = { # Seizing the IWIU
 	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.33"}
 	title = bbr.33.t
 	desc = bbr.33.d
-	picture = ACW_soldiers_watching
+	picture = GFX_report_event_USA_soldiers_watching
 
 	fire_only_once = yes
 
@@ -2200,7 +2200,7 @@ country_event = { # Destroying Black Reactionaries
 	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.34"}
 	title = bbr.34.t
 	desc = bbr.34.d
-	picture = ACW_soldiers_watching
+	picture = GFX_report_event_USA_soldiers_watching
 
 	fire_only_once = yes
 
@@ -2224,7 +2224,7 @@ country_event = { # Absorbing the Socialist Party
 	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.35"}
 	title = bbr.35.t
 	desc = bbr.35.d
-	picture = ACW_soldiers_watching
+	picture = GFX_report_event_USA_soldiers_watching
 
 	fire_only_once = yes
 
@@ -2254,7 +2254,7 @@ country_event = { # Capitalists Flee
 	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.36"}
 	title = bbr.36.t
 	desc = bbr.36.d
-	picture = ACW_soldiers_watching
+	picture = GFX_report_event_USA_soldiers_watching
 
 	fire_only_once = yes
 
@@ -2298,7 +2298,7 @@ country_event = { # The Great Purge
 	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.37"}
 	title = bbr.37.t
 	desc = bbr.37.d
-	picture = ACW_soldiers_watching
+	picture = GFX_report_event_USA_soldiers_watching
 
 	fire_only_once = yes
 
@@ -2329,7 +2329,7 @@ country_event = { # A Social Revolution
 	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.38"}
 	title = bbr.38.t
 	desc = bbr.38.d
-	picture = ACW_soldiers_watching
+	picture = GFX_report_event_USA_soldiers_watching
 
 	fire_only_once = yes
 

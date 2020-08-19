@@ -9,7 +9,7 @@ country_event = { # Start up Event
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.1"}
 	title = ustates.1.t
 	desc = ustates.1.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -47,7 +47,7 @@ country_event = { # Chapin Death
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.1000"}
 	title = ustates.1000.t
 	desc = ustates.1000.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -347,7 +347,7 @@ country_event = { # Fighting in Indiana
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.7"}
 	title = ustates.7.t
 	desc = ustates.7.d
-	picture = GFX_USA_Riots
+	picture = GFX_report_event_USA_Riots
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -719,7 +719,7 @@ country_event = { # Representatives Retiring
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.16"}
 	title = ustates.16.t
 	desc = ustates.16.d
-	picture = GFX_USA_Riots
+	picture = GFX_report_event_USA_Riots
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -754,7 +754,7 @@ country_event = { # Fighting between Everyone
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.17"}
 	title = ustates.17.t
 	desc = ustates.17.d
-	picture = GFX_USA_Riots
+	picture = GFX_report_event_USA_Riots
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -802,7 +802,7 @@ country_event = { # Mac Address
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.1700"}
 	title = ustates.1700.t
 	desc = ustates.1700.d
-	picture = GFX_USA_Riots
+	picture = GFX_report_event_USA_Riots
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -841,7 +841,7 @@ country_event = { # Father Charles Coughlin's CBS Radio Broadcasts
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.18"}
 	title = ustates.18.t
 	desc = ustates.18.d
-	picture = GFX_father_coughlin
+	picture = GFX_report_event_USA_father_coughlin
 
 	is_triggered_only = yes #Triggered by a papal event
 
@@ -1032,7 +1032,7 @@ country_event = { # Fighting between AFP and SPA politicians
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.21"}
 	title = ustates.21.t
 	desc = ustates.21.d
-	picture = GFX_USA_Riots
+	picture = GFX_report_event_USA_Riots
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -1062,7 +1062,7 @@ country_event = { # May Day Riots
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.22"}
 	title = ustates.22.t
 	desc = ustates.22.d
-	picture = GFX_USA_Riots
+	picture = GFX_report_event_USA_Riots
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -1384,7 +1384,7 @@ country_event = { # Paramilitary groups
 	}
 }
 
-country_event = { # More ODP members announcing congressional Bids
+country_event = { # More ODP members announcing GFX_report_event_USA_congressional Bids
 	id = ustates.29
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.29"}
 	title = ustates.29.t
@@ -1419,7 +1419,7 @@ country_event = { # More ODP members announcing congressional Bids
 	}
 }
 
-country_event = { # More SPA members announcing Congressional Bids
+country_event = { # More SPA members announcing GFX_report_event_USA_congressional Bids
 	id = ustates.30
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.30"}
 	title = ustates.30.t
@@ -1577,7 +1577,7 @@ country_event = { # Gone with the Wind
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.31"}
 	title = ustates.31.t
 	desc = ustates.31.d
-	picture = books
+	picture = GFX_report_event_generic_books
 
 	fire_only_once = yes
 
@@ -2966,7 +2966,7 @@ country_event = { # Fury of Reaction
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.43"}
 	title = ustates.43.t
 	desc = ustates.43.d
-	picture = GFX_USA_Riots
+	picture = GFX_report_event_USA_Riots
 
 	is_triggered_only = yes
 	
@@ -2994,7 +2994,7 @@ country_event = { # Reed as a tyrant
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.44"}
 	title = ustates.44.t
 	desc = ustates.44.d
-	picture = GFX_USA_Riots
+	picture = GFX_report_event_USA_Riots
 
 	is_triggered_only = yes
 
@@ -3354,7 +3354,7 @@ country_event = { # Hit the AFP
 	}
 }
 
-country_event = { ###Denounced by Congress###
+country_event = { ###Denounced by GFX_report_event_USA_congress###
 	id = ustates.4803
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.4803"}
 	title = ustates.4803.t
@@ -3389,7 +3389,7 @@ country_event = { # Violence and Chaos Spreads
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.49"}
 	title = ustates.49.t
 	desc = ustates.49.d
-	picture = GFX_USA_Riots
+	picture = GFX_report_event_USA_Riots
 
 	is_triggered_only = yes
 
@@ -3414,7 +3414,7 @@ country_event = { # ODP Walks Out
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.4900"}
 	title = ustates.4900.t
 	desc = ustates.4900.d
-	picture = GFX_USA_Riots
+	picture = GFX_report_event_USA_Riots
 
 	is_triggered_only = yes
 
@@ -3612,7 +3612,7 @@ country_event = { # Masters of Finance decline Share Our Wealth
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.5400"}
 	title = ustates.5400.t
 	desc = ustates.5400.d
-	picture = GFX_USA_Riots
+	picture = GFX_report_event_USA_Riots
 
 	is_triggered_only = yes
 
@@ -3636,7 +3636,7 @@ country_event = { # Trust Busting
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.5401"}
 	title = ustates.5401.t
 	desc = ustates.5401.d
-	picture = GFX_USA_Riots
+	picture = GFX_report_event_USA_Riots
 
 	is_triggered_only = yes
 
@@ -3659,7 +3659,7 @@ country_event = { # The Long Order
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.5402"}
 	title = ustates.5402.t
 	desc = ustates.5402.d
-	picture = GFX_USA_Riots
+	picture = GFX_report_event_USA_Riots
 
 	is_triggered_only = yes
 
@@ -3691,7 +3691,7 @@ country_event = { # Coughlin-Banking Bill Debate
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.55"}
 	title = ustates.55.t
 	desc = ustates.55.d
-	picture = GFX_USA_Riots
+	picture = GFX_report_event_USA_Riots
 
 	is_triggered_only = yes
 
@@ -3790,7 +3790,7 @@ country_event = { # Long Demands Order
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.59"}
 	title = ustates.59.t
 	desc = ustates.59.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 
@@ -3808,7 +3808,7 @@ country_event = { # Long Demands Order
 	}
 }
 
-country_event = { # SPA filibusters Congress
+country_event = { # SPA filibusters GFX_report_event_USA_congress
 	id = ustates.60
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.60"}
 	title = ustates.60.t
@@ -3836,7 +3836,7 @@ country_event = { # Red Guard Barricades Steel Belt
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.61"}
 	title = ustates.61.t
 	desc = ustates.61.d
-	picture = GFX_USA_Riots
+	picture = GFX_report_event_USA_Riots
 
 	is_triggered_only = yes
 
@@ -3857,7 +3857,7 @@ country_event = { # The Minutemen clash with the SPA
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.62"}
 	title = ustates.62.t
 	desc = ustates.62.d
-	picture = GFX_USA_Riots
+	picture = GFX_report_event_USA_Riots
 
 	is_triggered_only = yes
 
@@ -3883,7 +3883,7 @@ country_event = { # NDWL Declares Long a traitor
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.6200"}
 	title = ustates.6200.t
 	desc = ustates.6200.d
-	picture = GFX_USA_Riots
+	picture = GFX_report_event_USA_Riots
 
 	is_triggered_only = yes
 
@@ -3904,7 +3904,7 @@ country_event = { # The Minutemen battle the Old Democrats
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.6201"}
 	title = ustates.6201.t
 	desc = ustates.6201.d
-	picture = GFX_USA_Riots
+	picture = GFX_report_event_USA_Riots
 
 	is_triggered_only = yes
 
@@ -4099,7 +4099,7 @@ country_event = { # Smith Act Blocked
 	}
 }
 
-country_event = { # Congress Protests
+country_event = { # GFX_report_event_USA_congress Protests
 	id = ustates.6307
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.6307"}
 	title = ustates.6307.t
@@ -4688,7 +4688,7 @@ country_event = { # Issue of the Militias
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.72"}
 	title = ustates.72.t
 	desc = ustates.72.d
-	picture = GFX_USA_Riots
+	picture = GFX_report_event_USA_Riots
 
 	is_triggered_only = yes
 
@@ -5759,7 +5759,7 @@ country_event = { # Austerity Bill Voting Commences
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.96"}
 	title = ustates.96.t
 	desc = ustates.96.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 
@@ -6109,7 +6109,7 @@ country_event = { # Murray Denounces Both
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.110"}
 	title = ustates.110.t
 	desc = ustates.110.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 
@@ -6261,7 +6261,7 @@ country_event = { #Occupying the south
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.113"}
 	title = ustates.113.t
 	desc = ustates.113.d
-	picture = GFX_USA_Riots
+	picture = GFX_report_event_USA_Riots
 
 	is_triggered_only = yes
 
@@ -6303,7 +6303,7 @@ country_event = { #White Leaguers Attack
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.1131"}
 	title = ustates.1131.t
 	desc = ustates.1131.d
-	picture = GFX_USA_Riots
+	picture = GFX_report_event_USA_Riots
 
 	is_triggered_only = yes
 
@@ -6347,7 +6347,7 @@ country_event = { #More Men
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.1132"}
 	title = ustates.1132.t
 	desc = ustates.1132.d
-	picture = GFX_USA_Riots
+	picture = GFX_report_event_USA_Riots
 
 	is_triggered_only = yes
 
@@ -6388,7 +6388,7 @@ country_event = { #National Debt Growth
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.1133"}
 	title = ustates.1133.t
 	desc = ustates.1133.d
-	picture = GFX_USA_Riots
+	picture = GFX_report_event_USA_Riots
 
 	is_triggered_only = yes
 
@@ -6605,7 +6605,7 @@ country_event = { # Victory for Democracy
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.117"}
 	title = ustates.117.t
 	desc = ustates.117.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 
@@ -6642,7 +6642,7 @@ country_event = { # End of the Electoral College?
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.119"}
 	title = ustates.119.t
 	desc = ustates.119.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 
@@ -6990,7 +6990,7 @@ country_event = { # The Lavender Scare
 	}
 }
 
-country_event = { # Angered Congressmen
+country_event = { # Angered GFX_report_event_USA_congressmen
 	id = ustates.1280
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.1280"}
 	title = ustates.1280.t
@@ -7295,7 +7295,7 @@ country_event = { # Trial of the Weapons companies
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.129"}
 	title = ustates.129.t
 	desc = ustates.129.d
-	picture = USA_reconstruction
+	picture = GFX_report_event_USA_reconstruction
 
 	fire_only_once = yes
 
@@ -7353,7 +7353,7 @@ country_event = { # Trial of the Heavy Equipment companies
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.130"}
 	title = ustates.130.t
 	desc = ustates.130.d
-	picture = USA_reconstruction
+	picture = GFX_report_event_USA_reconstruction
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -7382,7 +7382,7 @@ country_event = { # Trial of the Aviation companies
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.131"}
 	title = ustates.131.t
 	desc = ustates.131.d
-	picture = USA_reconstruction
+	picture = GFX_report_event_USA_reconstruction
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -7411,7 +7411,7 @@ country_event = { # Trial of the Naval companies
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.132"}
 	title = ustates.132.t
 	desc = ustates.132.d
-	picture = USA_reconstruction
+	picture = GFX_report_event_USA_reconstruction
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -7440,7 +7440,7 @@ country_event = { # Trial of the Industry companies
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.133"}
 	title = ustates.133.t
 	desc = ustates.133.d
-	picture = USA_reconstruction
+	picture = GFX_report_event_USA_reconstruction
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -7469,7 +7469,7 @@ country_event = { # The great Migration
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.134"}
 	title = ustates.134.t
 	desc = ustates.134.d
-	picture = USA_reconstruction
+	picture = GFX_report_event_USA_reconstruction
 
 	fire_only_once = yes
 
@@ -7565,7 +7565,7 @@ country_event = { # Refugees from MacArthur(PSA)
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.135"}
 	title = ustates.135.t
 	desc = ustates.135.d
-	picture = USA_reconstruction
+	picture = GFX_report_event_USA_reconstruction
 
 	is_triggered_only = yes
 
@@ -8265,7 +8265,7 @@ country_event = {# End to the Coalition ticket
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.168"}
 	title = ustates.168.t
 	desc = ustates.168.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	fire_only_once = yes
 
@@ -8314,7 +8314,7 @@ country_event = { # Liberal Democrats split from the Democratic Party
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.169"}
 	title = ustates.169.t
 	desc = ustates.169.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	fire_only_once = yes
 
@@ -8350,7 +8350,7 @@ country_event = { # Conservative Democrats split from the Democratic Party
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.170"}
 	title = ustates.170.t
 	desc = ustates.170.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	fire_only_once = yes
 
@@ -8410,7 +8410,7 @@ country_event = { # A Hammer too Large to Break
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.172"}
 	title = ustates.172.t
 	desc = ustates.172.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	fire_only_once = yes
 
@@ -8466,7 +8466,7 @@ country_event = { # Willkie's Affair Discovered
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.176"}
 	title = ustates.176.t
 	desc = ustates.176.d
-	picture = GFX_USA_Riots
+	picture = GFX_report_event_USA_Riots
 
 	fire_only_once = yes
 
@@ -8548,7 +8548,7 @@ country_event = { # Wallace's Hi-Bred Corn
 	}
 }
 
-country_event = { # Taylor's Radical Proposal in Congress
+country_event = { # Taylor's Radical Proposal in GFX_report_event_USA_congress
 	id = ustates.180
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.180"}
 	title = ustates.180.t
@@ -8668,7 +8668,7 @@ country_event = { # Gangsters Miss Dewey By A Hair
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.184"}
 	title = ustates.184.t
 	desc = ustates.184.d
-	picture = GFX_USA_Riots
+	picture = GFX_report_event_USA_Riots
 
 	fire_only_once = yes
 
@@ -8700,7 +8700,7 @@ country_event = { # 1940 Progressive Primary
 	id = ustates.200
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.200"}
 	title = ustates.200.t
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	desc = {
 	text = ustates.200.desc.nopresidency
@@ -8822,7 +8822,7 @@ country_event = { # 1940 Republican Primary
 	id = ustates.201
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.201"}
 	title = ustates.201.t
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	desc = {
 		text = ustates.201.d.nopresidency
@@ -8976,7 +8976,7 @@ country_event = { # 1940 Democrat Primary
 			}
 		}
 	}
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	trigger = {
 		tag = USA
@@ -9086,7 +9086,7 @@ country_event = { # 1940 Election
 			has_global_flag = USA_civil_war_avoided_flag
 		}
 	}
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	trigger = {
 		tag = USA
@@ -9300,7 +9300,7 @@ country_event = { # 1944 Progressive Primary
 	id = ustates.204
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.204"}
 	title = ustates.204.t
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	desc = { # Progressive Party has the Presidency
 		text = ustates.204.d.president
@@ -9354,7 +9354,7 @@ country_event = { # 1944 Republican Primary
 	id = ustates.205
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.205"}
 	title = ustates.205.t
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	desc = { # Republican Party has the Presidency
 		text = ustates.205.d.president
@@ -9421,7 +9421,7 @@ country_event = { # 1944 Democrat Primary
 	id = ustates.206
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.206"}
 	title = ustates.206.t
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	desc = { # Democratic Party has the Presidency
 		text = ustates.206.d.president
@@ -9606,7 +9606,7 @@ country_event = { # 1944 Election
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.207"}
 	title = ustates.207.t
 	desc = ustates.207.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	trigger = {
 		tag = USA
@@ -9986,7 +9986,7 @@ country_event = { # 1948 Progressive Party
 			}
 		}
 	}
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	trigger = {
 		tag = USA
@@ -10080,7 +10080,7 @@ country_event = { # 1948 Republican Primary
 			}
 		}
 	}
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	trigger = {
 		tag = USA
@@ -10187,7 +10187,7 @@ country_event = { # 1948 Republican Primary
 country_event = { # 1948 Liberal Democrat Primary
 	id = ustates.211
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.211"}
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	title = { # Liberal democrats founded their own party
 		text = ustates.211.t.liberals
@@ -10308,7 +10308,7 @@ country_event = { # 1948 Liberal Democrat Primary
 country_event = { # 1948 Conservative Democrat Primary
 	id = ustates.212
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.212"}
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	title = { # Liberal democrats founded their own party
 		text = ustates.212.t.liberals
@@ -10431,7 +10431,7 @@ country_event = { # 1948 election
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.213"}
 	title = ustates.213.t
 	desc = ustates.213.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -10853,7 +10853,7 @@ country_event = { # 1952 Progressive Primary
 			}
 		}
 	}
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	trigger = {
 		tag = USA
@@ -10952,7 +10952,7 @@ country_event = { # 1952 Republican Primary
 			}
 		}
 	}
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	trigger = {
 		tag = USA
@@ -11022,7 +11022,7 @@ country_event = { # 1952 Liberal Democrat Primary
 	id = ustates.216
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.216"}
 	title = ustates.216.t
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	desc = { # Democrat Party won the presidency just last time
 		text = ustates.216.d.president
@@ -11110,7 +11110,7 @@ country_event = { # 1952 Conservative Democrat Primary
 	id = ustates.217
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.217"}
 	title = ustates.217.t
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	desc = { # Democrat Party won the presidency just last time
 		text = ustates.217.d.president
@@ -11199,7 +11199,7 @@ country_event = { # 1952 election
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.218"}
 	title = ustates.218.t
 	desc = ustates.218.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -12888,7 +12888,7 @@ country_event = { # cure for Polio
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.285"}
 	title = ustates.285.t
 	desc = ustates.285.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	trigger = {
 		tag = USA
@@ -12915,7 +12915,7 @@ country_event = { # Military Research
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.300"}
 	title = ustates.300.t
 	desc = ustates.300.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 
@@ -12962,7 +12962,7 @@ country_event = { # Full Utilization of Force
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.301"}
 	title = ustates.301.t
 	desc = ustates.301.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	fire_only_once = yes
 
@@ -13019,7 +13019,7 @@ country_event = { # Albuquerque Project
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.302"}
 	title = ustates.302.t
 	desc = ustates.302.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 
@@ -13040,7 +13040,7 @@ country_event = { # Winchester Project
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.303"}
 	title = ustates.303.t
 	desc = ustates.303.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 
@@ -13060,7 +13060,7 @@ country_event = { # The War and Peace Studies
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.304"}
 	title = ustates.304.t
 	desc = ustates.304.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	fire_only_once = yes
 
@@ -13086,7 +13086,7 @@ country_event = { # The White House and Xanadu
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.305"}
 	title = ustates.305.t
 	desc = ustates.305.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	fire_only_once = yes
 
@@ -13115,7 +13115,7 @@ country_event = { # The New Normal in America
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.306"}
 	title = ustates.306.t
 	desc = ustates.306.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	fire_only_once = yes
 
@@ -13152,7 +13152,7 @@ country_event = { # Superweapons on a budget
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.308"}
 	title = ustates.308.t
 	desc = ustates.308.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	fire_only_once = yes
 
@@ -13201,7 +13201,7 @@ country_event = { # Goddard's successful launch
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.309"}
 	title = ustates.309.t
 	desc = ustates.309.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 
@@ -13221,7 +13221,7 @@ country_event = { # Oppenheimer's successful bomb
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.310"}
 	title = ustates.310.t
 	desc = ustates.310.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 
@@ -13241,7 +13241,7 @@ country_event = { # Reich's Failed Explosion.
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.311"}
 	title = ustates.311.t
 	desc = ustates.311.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 
@@ -13259,7 +13259,7 @@ country_event = {
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.500"}
 	title = ustates.500.t
 	desc = ustates.500.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 
@@ -13277,7 +13277,7 @@ country_event = {
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.501"}
 	title = ustates.501.t
 	desc = ustates.501.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 
@@ -13295,7 +13295,7 @@ country_event = {
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.502"}
 	title = ustates.502.t
 	desc = ustates.502.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 
@@ -13458,7 +13458,7 @@ country_event = {
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.507"}
 	title = ustates.507.t
 	desc = ustates.507.d
-	picture = GFX_USA_Riots
+	picture = GFX_report_event_USA_Riots
 
 	is_triggered_only = yes
 
@@ -13480,7 +13480,7 @@ country_event = {
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.508"}
 	title = ustates.508.t
 	desc = ustates.508.d
-	picture = GFX_USA_Riots
+	picture = GFX_report_event_USA_Riots
 
 	is_triggered_only = yes
 
@@ -13616,7 +13616,7 @@ country_event = {
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.512"}
 	title = ustates.512.t
 	desc = ustates.512.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 
@@ -13807,7 +13807,7 @@ country_event = {
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.515"}
 	title = ustates.515.t
 	desc = ustates.515.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 
@@ -13845,7 +13845,7 @@ country_event = {
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.517"}
 	title = ustates.517.t
 	desc = ustates.517.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 
@@ -13976,7 +13976,7 @@ country_event = {
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.522"}
 	title = ustates.522.t
 	desc = ustates.522.d
-	picture = congress
+	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
 
@@ -14014,7 +14014,7 @@ country_event = {
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.524"}
 	title = ustates.524.t
 	desc = ustates.524.d
-	picture = GFX_USA_Riots
+	picture = GFX_report_event_USA_Riots
 
 	is_triggered_only = yes
 
@@ -14032,7 +14032,7 @@ country_event = {
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.525"}
 	title = ustates.525.t
 	desc = ustates.525.d
-	picture = GFX_USA_Riots
+	picture = GFX_report_event_USA_Riots
 
 	is_triggered_only = yes
 
@@ -14419,7 +14419,7 @@ country_event = {# Status of the US Army 1
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.600"}
 	title = ustates.600.t
 	desc = ustates.600.d
-#	picture = GFX_USA_Riots
+#	picture = GFX_report_event_USA_Riots
 	fire_only_once = yes
 	is_triggered_only = yes
 
@@ -14433,7 +14433,7 @@ country_event = {# Status of the US Navy
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.601"}
 	title = ustates.601.t
 	desc = ustates.601.d
-	#picture = GFX_USA_Riots
+	#picture = GFX_report_event_USA_Riots
 	fire_only_once = yes
 	is_triggered_only = yes
 
@@ -14551,7 +14551,7 @@ country_event = {# Tank Competition
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.605"}
 	title = ustates.605.t
 	desc = ustates.605.d
-	#picture = GFX_USA_Riots
+	#picture = GFX_report_event_USA_Riots
 	fire_only_once = yes
 	is_triggered_only = yes
 
@@ -14582,7 +14582,7 @@ country_event = {# Seizure of Civilian Trucks
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.606"}
 	title = ustates.606.t
 	desc = ustates.606.d
-	#picture = GFX_USA_Riots
+	#picture = GFX_report_event_USA_Riots
 	fire_only_once = yes
 	is_triggered_only = yes
 
@@ -14601,7 +14601,7 @@ country_event = {# Production Priority
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.607"}
 	title = ustates.607.t
 	desc = ustates.607.d
-	#picture = GFX_USA_Riots
+	#picture = GFX_report_event_USA_Riots
 	fire_only_once = yes
 	is_triggered_only = yes
 
