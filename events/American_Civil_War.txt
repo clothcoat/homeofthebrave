@@ -10496,9 +10496,9 @@ country_event = {
 
 	option = {
 		name = amcivwar.313.a
-		custom_effect_tooltip = CSA_four_units_GFX_report_event_USA_chicago
+		custom_effect_tooltip = CSA_four_units_newyork
 		hidden_effect = {
-			load_oob = USA_civil_war_csa_GFX_report_event_USA_chicago
+			load_oob = CSA_four_units_newyork
 		}
 	}
 }
