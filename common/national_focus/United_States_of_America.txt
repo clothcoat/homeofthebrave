@@ -6702,9 +6702,7 @@ focus_tree = {
 			focus = USA_aviation_industry
 		}
 		available = {
-			OR = {
-				has_idea = USA_civil_war_depression_idea
-				has_idea = USA_economic_recovery_idea
+			has_idea = USA_economic_recovery_idea
 			}
 		}
 		relative_position_id = USA_begin_reconstruction
