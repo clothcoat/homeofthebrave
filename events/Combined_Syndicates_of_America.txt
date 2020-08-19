@@ -4036,7 +4036,7 @@ country_event = { # Foster dissolves the AFL
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.73"}
 	title = csa.73.t
 	desc = csa.73.d
-	picture = CSA_happy_browder
+	picture = GFX_report_event_CSA_happy_browder
 
 	fire_only_once = yes
 
@@ -4448,7 +4448,7 @@ country_event = { # Syndicalist Ethics
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.89"}
 	title = csa.89.t
 	desc = csa.89.d
-	picture = CSA_workplace_music
+	picture = GFX_report_event_CSA_workplace_music
 
 	fire_only_once = yes
 
@@ -5434,7 +5434,7 @@ country_event = { # Browder Bows
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.159"}
 	title = csa.159.t
 	desc = csa.159.d
-	picture = GFX_CSA_happy_browder
+	picture = GFX_GFX_report_event_CSA_happy_browder
 
 	fire_only_once = yes
 	
