@@ -4005,7 +4005,7 @@ country_event = { # The International Peace Movement Movement disbanded.
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.72"}
 	title = csa.72.t
 	desc = csa.72.d
-	picture = CSA_black_militias
+	picture = GFX_report_event_CSA_black_militias
 
 	fire_only_once = yes
 
@@ -4792,7 +4792,7 @@ country_event = { # America wishes to join the Internationale (fired from focus)
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.101"}
 	title = csa.101.t
 	desc = csa.101.d
-	picture = diplomacy2
+	picture = GFX_report_event_generic_diplomacy2
 
 	is_triggered_only = yes
 
@@ -4823,7 +4823,7 @@ country_event = { # France refuses
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.102"}
 	title = csa.102.t
 	desc = csa.102.d
-	picture = diplomacy2
+	picture = GFX_report_event_generic_diplomacy2
 
 	is_triggered_only = yes
 
@@ -4842,7 +4842,7 @@ country_event = { # America protects Hawaii
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.103"}
 	title = csa.103.t
 	desc = csa.103.d
-	picture = diplomacy2
+	picture = GFX_report_event_generic_diplomacy2
 
 	is_triggered_only = yes
 
@@ -4860,7 +4860,7 @@ country_event = { # America protects the Philippines
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.104"}
 	title = csa.104.t
 	desc = csa.104.d
-	picture = diplomacy2
+	picture = GFX_report_event_generic_diplomacy2
 
 	is_triggered_only = yes
 
@@ -5009,7 +5009,7 @@ country_event = { # Overtures to Mexico
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.130"}
 	title = csa.130.t
 	desc = csa.130.d
-	picture = diplomacy2
+	picture = GFX_report_event_generic_diplomacy2
 
 	is_triggered_only = yes
 
@@ -5127,7 +5127,7 @@ country_event = { # Mexico has agreed
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.131"}
 	title = csa.131.t
 	desc = csa.131.d
-	picture = diplomacy2
+	picture = GFX_report_event_generic_diplomacy2
 
 	is_triggered_only = yes
 
@@ -5146,7 +5146,7 @@ country_event = { # Mexico has refused
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.132"}
 	title = csa.132.t
 	desc = csa.132.d
-	picture = diplomacy2
+	picture = GFX_report_event_generic_diplomacy2
 
 	is_triggered_only = yes
 
@@ -5186,7 +5186,7 @@ country_event = {
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.151"}
 	title = csa.151.t
 	desc = csa.151.d
-	picture = GFX_USA_reed
+	picture = GFX_report_event_USA_reed
 
 	is_triggered_only = yes
 
@@ -5232,7 +5232,7 @@ country_event = {
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.153"}
 	title = csa.153.t
 	desc = csa.153.d
-	picture = GFX_ACW_american_brigade
+	picture = GFX_GFX_report_event_USA_american_brigade
 
 	is_triggered_only = yes
 
@@ -6059,7 +6059,7 @@ country_event = { # Children Of The Revolution
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.177"}
 	title = csa.177.t
 	desc = csa.177.d
-	picture = GFX_CSA_child_soldiers
+	picture = GFX_GFX_report_event_CSA_child_soldiers
 	
 	fire_only_once = yes
 	

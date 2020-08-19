@@ -561,7 +561,7 @@ country_event = { # New England requests home rule
 	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.12"}
 	title = newengland.12.t
 	desc = newengland.12.d
-	picture = diplomacy2
+	picture = GFX_report_event_generic_diplomacy2
 
 	is_triggered_only = yes
 
@@ -659,7 +659,7 @@ country_event = { # New England refused home rule
 	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.14"}
 	title = newengland.14.t
 	desc = newengland.14.d
-	picture = diplomacy2
+	picture = GFX_report_event_generic_diplomacy2
 
 	is_triggered_only = yes
 
@@ -684,7 +684,7 @@ country_event = { # Declaration of Independence
 	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.15"}
 	title = newengland.15.t
 	desc = newengland.15.d
-	picture = diplomacy2
+	picture = GFX_report_event_generic_diplomacy2
 
 	is_triggered_only = yes
 
@@ -3530,7 +3530,7 @@ country_event = { # Appointing the New England Poet laureate
 	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.59"}
 	title = newengland.59.t
 	desc = newengland.59.d
-	picture = Diplomacy2
+	picture = GFX_report_event_generic_diplomacy2
 
 	fire_only_once = yes
 
@@ -3579,7 +3579,7 @@ country_event = { # Gerry Campaigns for King
 	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.61"}
 	title = newengland.61.t
 	desc = newengland.61.d
-	picture = USA_victory_celebration
+	picture = GFX_report_event_USA_victory_celebration
 
 	fire_only_once = yes
 
@@ -3656,7 +3656,7 @@ country_event = { # Canadians apply for West Point
 	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.64"}
 	title = newengland.64.t
 	desc = newengland.64.d
-	picture = ACW_soldiers1
+	picture = GFX_report_event_USA_soldiers1
 
 	fire_only_once = yes
 

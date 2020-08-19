@@ -343,7 +343,7 @@ country_event = { # The Truth about Hugo Black
 	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.14"}
 	title = unionstate.14.t
 	desc = unionstate.14.d
-	picture = GFX_Long_Rally
+	picture = GFX_report_event_USA_Long_Rally
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -471,7 +471,7 @@ country_event = { # Governor Earl Long Fires on Protesters
 	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.19"}
 	title = unionstate.19.t
 	desc = unionstate.19.d
-	picture = diplomacy2
+	picture = GFX_report_event_generic_diplomacy2
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -2781,7 +2781,7 @@ country_event = { # the AUS wishes to join the Entente
 	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.71"}
 	title = unionstate.71.t
 	desc = unionstate.71.d
-	picture = diplomacy2
+	picture = GFX_report_event_generic_diplomacy2
 
 	is_triggered_only = yes
 
@@ -2812,7 +2812,7 @@ country_event = { # Canada refuses
 	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.72"}
 	title = unionstate.72.t
 	desc = unionstate.72.d
-	picture = diplomacy2
+	picture = GFX_report_event_generic_diplomacy2
 
 	is_triggered_only = yes
 
@@ -2831,7 +2831,7 @@ country_event = { # the AUS wishes to join the Reichspakt
 	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.73"}
 	title = unionstate.73.t
 	desc = unionstate.73.d
-	picture = diplomacy2
+	picture = GFX_report_event_generic_diplomacy2
 
 	is_triggered_only = yes
 
@@ -2862,7 +2862,7 @@ country_event = { # Germany refuses
 	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.74"}
 	title = unionstate.74.t
 	desc = unionstate.74.d
-	picture = diplomacy2
+	picture = GFX_report_event_generic_diplomacy2
 
 	is_triggered_only = yes
 
@@ -2881,7 +2881,7 @@ country_event = { # the AUS wishes to ally with us(russia)
 	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.75"}
 	title = unionstate.75.t
 	desc = unionstate.75.d
-	picture = diplomacy2
+	picture = GFX_report_event_generic_diplomacy2
 
 	is_triggered_only = yes
 
@@ -2914,7 +2914,7 @@ country_event = { # Russia refuses
 	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.76"}
 	title = unionstate.76.t
 	desc = unionstate.76.d
-	picture = diplomacy2
+	picture = GFX_report_event_generic_diplomacy2
 
 	is_triggered_only = yes
 
@@ -3402,7 +3402,7 @@ country_event = {
 	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.151"}
 	title = unionstate.151.t
 	desc = unionstate.151.d
-	picture = GFX_Long_Rally
+	picture = GFX_report_event_USA_Long_Rally
 
 	is_triggered_only = yes
 
@@ -3442,7 +3442,7 @@ country_event = {
 	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.153"}
 	title = unionstate.153.t
 	desc = unionstate.153.d
-	picture = GFX_ACW_american_brigade
+	picture = GFX_GFX_report_event_USA_american_brigade
 
 	is_triggered_only = yes
 
@@ -3460,7 +3460,7 @@ country_event = { ###Join Alliance###
 	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.155"}
 	title = unionstate.155.t
 	desc = unionstate.155.d
-	picture = GFX_ACW_american_brigade
+	picture = GFX_GFX_report_event_USA_american_brigade
 
 	is_triggered_only = yes
 
@@ -3489,7 +3489,7 @@ country_event = { ###Americas Alliance###
 	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.156"}
 	title = unionstate.156.t
 	desc = unionstate.156.d
-	picture = GFX_ACW_american_brigade
+	picture = GFX_GFX_report_event_USA_american_brigade
 
 	is_triggered_only = yes
 
@@ -3507,7 +3507,7 @@ country_event = { ###Declines Alliance###
 	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.157"}
 	title = unionstate.157.t
 	desc = unionstate.157.d
-	picture = GFX_ACW_american_brigade
+	picture = GFX_GFX_report_event_USA_american_brigade
 
 	is_triggered_only = yes
 
@@ -3524,7 +3524,7 @@ country_event = { ###Internationale Treaty###
 	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.158"}
 	title = unionstate.158.t
 	desc = unionstate.158.d
-	picture = GFX_ACW_american_brigade
+	picture = GFX_GFX_report_event_USA_american_brigade
 
 	is_triggered_only = yes
 
@@ -3561,7 +3561,7 @@ country_event = { ###Internationale Accepts###
 	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.159"}
 	title = unionstate.159.t
 	desc = unionstate.159.d
-	picture = GFX_ACW_american_brigade
+	picture = GFX_GFX_report_event_USA_american_brigade
 
 	is_triggered_only = yes
 
@@ -3584,7 +3584,7 @@ country_event = { ###Deal with Canada###
 	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.160"}
 	title = unionstate.160.t
 	desc = unionstate.160.d
-	picture = GFX_ACW_american_brigade
+	picture = GFX_GFX_report_event_USA_american_brigade
 
 	is_triggered_only = yes
 
@@ -3620,7 +3620,7 @@ country_event = {###We've been Embargoed
 	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.161"}
 	title = unionstate.161.t
 	desc = unionstate.161.d
-	picture = GFX_ACW_american_brigade
+	picture = GFX_GFX_report_event_USA_american_brigade
 
 	is_triggered_only = yes
 

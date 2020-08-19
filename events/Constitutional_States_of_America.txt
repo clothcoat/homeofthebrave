@@ -155,7 +155,7 @@ country_event = { # Fordists
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.3"}
 	title = constate.3.t
 	desc = constate.3.d
-	picture = GFX_report_event_generic_diplomacy2
+	picture = GFX_report_event_generic_GFX_report_event_generic_diplomacy2
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -2829,7 +2829,7 @@ country_event = { # Penal Labor
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.62"}
 	title = constate.62.t
 	desc = constate.62.d
-	picture = diplomacy2
+	picture = GFX_report_event_generic_diplomacy2
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -3434,7 +3434,7 @@ country_event = { #Black Intellectuals Denounce Us
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.80"}
 	title = constate.80.t
 	desc = constate.80.d
-	picture = diplomacy2
+	picture = GFX_report_event_generic_diplomacy2
 
 	fire_only_once = yes
 
@@ -3461,7 +3461,7 @@ country_event = { # the AUS wishes to join the Entente
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.100"}
 	title = constate.100.t
 	desc = constate.100.d
-	picture = diplomacy2
+	picture = GFX_report_event_generic_diplomacy2
 
 	is_triggered_only = yes
 
@@ -3492,7 +3492,7 @@ country_event = { # Canada refuses
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.101"}
 	title = constate.101.t
 	desc = constate.101.d
-	picture = diplomacy2
+	picture = GFX_report_event_generic_diplomacy2
 
 	is_triggered_only = yes
 
@@ -3511,7 +3511,7 @@ country_event = { # the AUS wishes to join the Reichspakt
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.102"}
 	title = constate.102.t
 	desc = constate.102.d
-	picture = diplomacy2
+	picture = GFX_report_event_generic_diplomacy2
 
 	is_triggered_only = yes
 
@@ -3542,7 +3542,7 @@ country_event = { # Germany refuses
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.103"}
 	title = constate.103.t
 	desc = constate.103.d
-	picture = diplomacy2
+	picture = GFX_report_event_generic_diplomacy2
 
 	is_triggered_only = yes
 
@@ -3561,7 +3561,7 @@ country_event = { # the AUS wishes to ally with us(russia)
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.104"}
 	title = constate.104.t
 	desc = constate.104.d
-	picture = diplomacy2
+	picture = GFX_report_event_generic_diplomacy2
 
 	is_triggered_only = yes
 
@@ -3598,7 +3598,7 @@ country_event = { # Russia refuses
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.76"}
 	title = constate.76.t
 	desc = constate.76.d
-	picture = diplomacy2
+	picture = GFX_report_event_generic_diplomacy2
 
 	is_triggered_only = yes
 
@@ -3754,7 +3754,7 @@ country_event = {
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.151"}
 	title = constate.151.t
 	desc = constate.151.d
-	picture = GFX_Long_Rally
+	picture = GFX_report_event_USA_Long_Rally
 
 	is_triggered_only = yes
 
@@ -3794,7 +3794,7 @@ country_event = {
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.153"}
 	title = constate.153.t
 	desc = constate.153.d
-	picture = GFX_ACW_american_brigade
+	picture = GFX_GFX_report_event_USA_american_brigade
 
 	is_triggered_only = yes
 
@@ -3812,7 +3812,7 @@ country_event = { #Greenland Demanded
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.205"}
 	title = constate.205.t
 	desc = constate.205.d
-	picture = GFX_ACW_american_brigade
+	picture = GFX_GFX_report_event_USA_american_brigade
 
 	is_triggered_only = yes
 
@@ -3845,7 +3845,7 @@ country_event = { #Greenland Taken
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.206"}
 	title = constate.206.t
 	desc = constate.206.d
-	picture = GFX_ACW_american_brigade
+	picture = GFX_GFX_report_event_USA_american_brigade
 
 	is_triggered_only = yes
 
@@ -3866,7 +3866,7 @@ country_event = { #Join the CAR?
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.207"}
 	title = constate.207.t
 	desc = constate.207.d
-	picture = GFX_ACW_american_brigade
+	picture = GFX_GFX_report_event_USA_american_brigade
 
 	is_triggered_only = yes
 
@@ -3899,7 +3899,7 @@ country_event = { #Accepted
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.208"}
 	title = constate.208.t
 	desc = constate.208.d
-	picture = GFX_ACW_american_brigade
+	picture = GFX_GFX_report_event_USA_american_brigade
 
 	is_triggered_only = yes
 
@@ -3916,7 +3916,7 @@ country_event = { #Rejected
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.209"}
 	title = constate.209.t
 	desc = constate.209.d
-	picture = GFX_ACW_american_brigade
+	picture = GFX_GFX_report_event_USA_american_brigade
 
 	is_triggered_only = yes
 
@@ -3940,7 +3940,7 @@ country_event = {
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.300"}
 	title = constate.300.t
 	desc = constate.300.d
-	picture = GFX_ACW_american_brigade
+	picture = GFX_GFX_report_event_USA_american_brigade
 
 	fire_only_once = yes
 	
@@ -3979,7 +3979,7 @@ country_event = {
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.301"}
 	title = constate.301.t
 	desc = constate.301.d
-	picture = GFX_ACW_american_brigade
+	picture = GFX_GFX_report_event_USA_american_brigade
 
 	fire_only_once = yes
 	
