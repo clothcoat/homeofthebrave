@@ -358,6 +358,34 @@ ideas = {
 			removal_cost = -1
 			picture = guns_shield
 		}
+		ACW_nationalist_front_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ACW_nationalist_front_idea"}
+			available = {
+				country_exists = COR
+				has_war_with = COR
+			}
+			targeted_modifier = {
+				tag = COR
+				attack_bonus_against = 0.25
+				defense_bonus_against = 0.25
+			}
+			removal_cost = -1
+			picture = guns_shield
+		}
+		ACW_bbr_front_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ACW_bbr_front_idea"}
+			available = {
+				country_exists = BBR
+				has_war_with = BBR
+			}
+			targeted_modifier = {
+				tag = BBR
+				attack_bonus_against = 0.25
+				defense_bonus_against = 0.25
+			}
+			removal_cost = -1
+			picture = guns_shield
+		}
 		ACW_entente_support = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ACW_entente_support"}
 			available = {
