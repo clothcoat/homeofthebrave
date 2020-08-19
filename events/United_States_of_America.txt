@@ -6522,7 +6522,7 @@ country_event = { # Allied Militias
 		custom_effect_tooltip = USA_AFP_loses_strength
 		hidden_effect = {
 			subtract_from_variable = { var = ODP_strength value = 3 }
-			country_event = { id = ustates.115 days = 7 }
+			country_event = { id = ustates.114 days = 7 }
 		}
 	}
 }
