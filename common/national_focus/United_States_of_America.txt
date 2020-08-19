@@ -841,7 +841,7 @@ focus_tree = {
 	focus = {# Garner Triumphs
 		id = USA_garner_wins
 		icon = GFX_USA_cactusjack
-		cost = 6.00
+		cost = 1.00
 		available = {
 				has_country_leader = { ruling_only = yes name = "John Nance Garner" }
 				has_country_flag = USA_president_inaugurated
@@ -4372,6 +4372,9 @@ focus_tree = {
 				NOT = {
 				has_country_flag = USA_compromise_failed
 				}
+				NOT = {
+				has_country_flag = USA_revolt_against_compromise_flag
+				}
 			}
 			
 		}
@@ -7166,9 +7169,6 @@ focus_tree = {
 		prerequisite = {
 			focus = USA_american_caeser
 		}
-		available = {
-			has_idea = USA_cointelpro_idea
-		}
 		relative_position_id = USA_american_caeser
 		x = -1
 		y = 1
@@ -7550,6 +7550,10 @@ focus_tree = {
 		available = {
 			NOT = {
 			has_country_flag = USA_defeated_wcc
+			}
+			OR = {
+			has_country_flag = USA_mac_shared_power
+			has_country_flag = WCC_reintegrated
 			}
 		}
 		relative_position_id = USA_american_caeser
@@ -11064,8 +11068,6 @@ focus_tree = {
 		icon = GFX_goal_usa
 		cost = 5.00
 		available = {
-			custom_trigger_tooltip = {
-				tooltip = USA_civil_war_victor
 				OR = {
 				has_global_flag = USA_civil_war_over_flag
 				has_global_flag = USA_civil_war_avoided_flag
@@ -11075,7 +11077,6 @@ focus_tree = {
 					country_exists = CSA
 					country_exists = TEX
 				}
-			}
 			is_subject = no
 			is_major = yes
 			has_army_manpower = { size > 105000 }

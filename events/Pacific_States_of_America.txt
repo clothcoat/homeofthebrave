@@ -5440,10 +5440,11 @@ country_event = {# Push For America
 	picture = GFX_report_event_USA_american_brigade
 
 	trigger = {
+	tag = CAL
 	has_country_leader = { ruling_only = yes name = "William Randolph Hearst"}
 	USA = {
 		exists = yes
-		has_government = paternal_autocrat
+		has_country_leader = { ruling_only = yes name = "Douglas MacArthur"}
 		}
 	WCC = {
 		exists = no
@@ -5478,6 +5479,9 @@ country_event = {# Push For America
 	}
 	option = {# 
 		name = pacificstates.215.b
+		ai_chance = {
+		factor = 0
+		}
 		white_peace = USA
 		add_political_power = 50
 		add_stability = 0.05

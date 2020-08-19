@@ -260,6 +260,9 @@ country_event = { #WCC-USA Victory
 		add_political_power = -40
 		add_stability = -0.08
 		add_war_support = -0.2
+		USA = {
+		end_puppet = WCC
+		}
 		declare_war_on = {
 			target = USA
 			type = annex_everything
@@ -332,6 +335,9 @@ country_event = { #WCC Demands
 		add_stability = -0.1
 		add_command_power = -15
 		add_war_support = 0.05
+		USA = {
+		end_puppet = WCC
+		}
 		declare_war_on = {
 			target = WCC
 			type = annex_everything
@@ -425,14 +431,12 @@ country_event = { #MacArthur Assumes Command
 		add_war_support = -0.1
 		add_political_power = 40
 		add_popularity = { ideology = authoritarian_democrat popularity = 0.1 }
-		if = {
-			limit = {
-				country_exists = USA
-			}
-			declare_war_on = {
-				target = USA
-				type = annex_everything
-			}
+		USA = {
+		end_puppet = WCC
+		}
+		declare_war_on = {
+			target = USA
+			type = annex_everything
 		}
 	}
 }

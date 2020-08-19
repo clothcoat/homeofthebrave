@@ -504,8 +504,8 @@ USA_release_TEX = {
 
 		set_country_flag = Huey_Long_dead
 		set_country_flag = Charles_Coughlin_dead
-		set_country_flag = Henry_Ford_dead
 		set_country_flag = Gerald_K_Smith_dead
+		set_country_flag = Joseph_'Lightning_Joe'_Lawton_Collins_dead
 
 		TEX = {
 			load_oob = "USA_civil_war_aus_army"
@@ -829,6 +829,9 @@ USA_release_COR = {
 		set_country_flag = Robert_Rice_Reynolds_dead
 		set_country_flag = Strom_Thurmond_dead
 		set_country_flag = John_Elliott_Rankin_dead
+		set_country_flag = Henry_Ford_dead
+		set_country_flag = Joseph_T_McNarney_dead
+		set_country_flag = Nathan_Bedford_Forrest_III_dead
 		
 		every_navy_leader = {
 			limit = { has_id = 63 } #William Halsey Jr.
@@ -1281,6 +1284,8 @@ USA_release_CAL = {
 		set_country_flag = Chester_William_Nimitz_Sr_dead
 		set_country_flag = John_Lesesne_DeWitt_dead
 		set_country_flag = William_Randolph_Hearst_Sr_dead
+		set_country_flag = Alexander_Vandegrift_dead
+		set_country_flag = James_Harold_Doolittle_dead
 
 		CAL = {
 			load_oob = "USA_civil_war_psa_army"
