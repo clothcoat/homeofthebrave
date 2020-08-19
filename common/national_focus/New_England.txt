@@ -6222,7 +6222,7 @@ focus_tree = {
 			}
 		}
 	}
-		focus = {
+		focus = {# New England's Future
 		id = NEE_new_england_future
 		icon = GFX_goal_national_mobilization
 		cost = 6
@@ -6243,7 +6243,7 @@ focus_tree = {
 			country_event = newengland.124
 		}
 	}
-	focus = {
+	focus = {# Friend in the North
 		id = NEE_friend_north
 		icon = GFX_goal_NEE_Freinds_Up_North
 		cost = 0
@@ -6267,7 +6267,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		complete_tooltip = {}
 	}
-	focus = {
+	focus = {# Joint Entente Exercises
 		id = NEE_joint_exercises
 		icon = GFX_goal_national_mobilization
 		cost = 6
@@ -6291,7 +6291,7 @@ focus_tree = {
 			army_experience = 100
 		}
 	}
-	focus = {
+	focus = {# British Pact
 		id = NEE_british_pact
 		icon = GFX_goal_national_mobilization
 		cost = 6
@@ -6317,7 +6317,7 @@ focus_tree = {
 			}
 		}
 	}
-	focus = {
+	focus = {# Joint Coastal Defenses
 		id = NEE_joint_coastal_defenses
 		icon = GFX_goal_national_mobilization
 		cost = 10
@@ -6431,7 +6431,7 @@ focus_tree = {
 			}
 		}
     }
-	focus = {
+	focus = {# Back the French
 		id = NEE_back_french
 		icon = GFX_goal_national_mobilization
 		cost = 6
@@ -6465,7 +6465,7 @@ focus_tree = {
 			add_political_power = 100
 		}
 	}
-	focus = {
+	focus = {# Join ISAC
 		id = NEE_join_isac
 		icon = GFX_goal_national_mobilization
 		cost = 6
@@ -6511,7 +6511,7 @@ focus_tree = {
 			}
 		}
 	}
-	focus = {
+	focus = {# Boston to Ottawa
 		id = NEE_boston_to_ottawa
 		icon = GFX_goal_national_mobilization
 		cost = 6
@@ -6551,7 +6551,7 @@ focus_tree = {
 			}
 		}
 	}
-	focus = {
+	focus = {# Wealth Cooperation
 		id = NEE_wealth_cooperation
 		icon = GFX_goal_national_mobilization
 		cost = 6
@@ -6578,7 +6578,7 @@ focus_tree = {
 			add_political_power = 100
 		}
 	}
-	focus = {
+	focus = {# Harboring Exiles
 		id = NEE_harbour_exiles
 		icon = GFX_goal_national_mobilization
 		cost = 6
@@ -6603,7 +6603,7 @@ focus_tree = {
 			add_manpower = 250000
 		}
 	}
-	focus = {
+	focus = {# Armed Free Neutrality
 		id = NEE_armed_free_neutrality
 		icon = GFX_goal_national_mobilization
 		cost = 0
@@ -6627,7 +6627,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		complete_tooltip = {}
 	}
-	focus = {
+	focus = {# Boston Line
 		id = NEE_boston_line
 		icon = GFX_goal_national_mobilization
 		cost = 6
@@ -6707,8 +6707,8 @@ focus_tree = {
 			}
 		}
 	}
-	focus = {
-		id = NEE_american_infastructure
+	focus = {# American Infrastructure
+		id = NEE_american_infrastructure
 		icon = GFX_goal_USA_american_industry
 		cost = 6
 		x = 12
@@ -6731,7 +6731,7 @@ focus_tree = {
 			add_political_power = 100
 		}
 	}
-	focus = {
+	focus = {# New English Fleet
 		id = NEE_new_english_fleet
 		icon = GFX_goal_NEE_Navy
 		cost = 6
@@ -6755,7 +6755,7 @@ focus_tree = {
 			add_political_power = 100
 		}
 	}
-	focus = {
+	focus = {# Cannon City
 		id = NEE_cannon_city
 		icon = GFX_goal_NEE_Cannon_City
 		cost = 6
@@ -6779,7 +6779,7 @@ focus_tree = {
 			add_political_power = 100
 		}
 	}
-	focus = {
+	focus = {# Local Militia
 		id = NEE_local_militia
 		icon = GFX_goal_NEE_Local_Militias
 		cost = 6
@@ -6793,7 +6793,7 @@ focus_tree = {
 			}
 		}
 		prerequisite = {
-			focus = NEE_american_infastructure
+			focus = NEE_american_infrastructure
 		}
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -6803,7 +6803,7 @@ focus_tree = {
 			add_political_power = 100
 		}
 	}
-	focus = {
+	focus = {# New English Gunboat Diplomacy
 		id = NEE_new_english_gunboat_diplomacy
 		icon = GFX_goal_NEE_Gunboat_Diplomacy
 		cost = 6
@@ -6827,7 +6827,7 @@ focus_tree = {
 			add_political_power = 100
 		}
 	}
-	focus = {
+	focus = {# Protectionist Trade
 		id = NEE_protectionist_trade
 		icon = GFX_goal_NEE_Protectionist_Trade
 		cost = 6
@@ -6851,7 +6851,7 @@ focus_tree = {
 			add_political_power = 100
 		}
 	}
-	focus = {
+	focus = {# Armed Beacon
 		id = NEE_armed_beacon
 		icon = GFX_goal_NEE_Armed_Beacon
 		cost = 6
@@ -6881,7 +6881,7 @@ focus_tree = {
 			add_political_power = 100
 		}
 	}
-	focus = {
+	focus = {# Retake Long Island
 		id = NEE_retake_long_island
 		icon = GFX_goal_NEE_retake_Long_Island
 		cost = 6
@@ -6906,7 +6906,7 @@ focus_tree = {
 			add_political_power = 100
 		}
 	}
-	focus = {
+	focus = {# Irish Relations
 		id = NEE_irish_relations
 		icon = GFX_NEE_irish_ties
 		cost = 6
@@ -6931,7 +6931,7 @@ focus_tree = {
 			add_political_power = 100
 		}
 	}
-	focus = {
+	focus = {# Greater New England
 		id = NEE_greater_new_england
 		icon = GFX_goal_national_mobilization
 		cost = 6
