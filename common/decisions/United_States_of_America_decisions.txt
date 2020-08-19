@@ -3668,6 +3668,7 @@ USA_MacArthur_policies = {
 		icon = GFX_decision_generic_independence
 		allowed = { original_tag = USA }
 		available = { has_government = paternal_autocrat 
+		surrender_progress > 0.80
 		NOT = {
 		WCC = {
 		has_war_with = USA
