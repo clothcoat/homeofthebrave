@@ -9236,14 +9236,17 @@ focus_tree = {
 	
 	focus = {# Managerialism
 		id = CSA_managerialism
-		icon = GFX_goal_red_star
+		icon = GFX_CSA_president_burhham
 		cost = 1
 		available = {  has_government = totalist 
 		has_country_leader = { ruling_only = yes name = "James Burnham" }
 		}
+		prerequisite = {
+			focus = CSA_second_convention
+		}
 		cancel_if_invalid = yes
-		x = 22
-		y = 10
+		x = -8
+		y = 1
 		ai_will_do = {
 			factor = 50
 		}
@@ -9354,7 +9357,7 @@ focus_tree = {
 
 	focus = {#Squeeze Bourgousie
 		id = CSA_squeeze_bourgousie
-		icon = GFX_focus_rom_parties_end
+		icon = GFX_goal_CSA_squeeze_elites
 		cost = 5
 		prerequisite = {focus = CSA_vertical_integration }
 		prerequisite = {focus = CSA_appoint_sychophants}
@@ -9429,7 +9432,7 @@ focus_tree = {
 	}	
 	focus = {# National Economy
 		id = CSA_national_economy
-		icon = GFX_goal_production
+		icon = GFX_goal_CSA_industrial_army
 		cost = 6
 		prerequisite = {focus = CSA_reward_the_craft_unions }
 		prerequisite = {focus = CSA_squeeze_bourgousie }
@@ -9472,7 +9475,7 @@ focus_tree = {
 			
 	focus = {# The Machiavellian
 		id = CSA_the_machiavellian
-		icon = GFX_goal_backstab
+		icon = GFX_goal_CSA_Machevellii
 		cost = 4
 		prerequisite = {focus = CSA_managerialism}
 		available = { has_government = totalist }
@@ -9526,7 +9529,7 @@ focus_tree = {
 	}
 	focus = {# Proletariat Duties
 		id = CSA_proletariat_duties
-		icon = GFX_focus_generic_little_entente
+		icon = GFX_goal_CSA_draft
 		cost = 5
 		prerequisite = {focus = CSA_proletariat_Vanguard }
 		prerequisite = {focus = CSA_red_scare }
@@ -9564,7 +9567,7 @@ focus_tree = {
 	}
 		focus = {# Expand Emergency Powers
 		id = CSA_emergency_powers
-		icon = GFX_goal_generic_forceful_treaty
+		icon = GFX_goal_CSA_emergency_powers
 		cost = 6
 		prerequisite = {focus = CSA_reward_the_craft_unions }
 		prerequisite = {focus = CSA_proletariat_duties}
@@ -9622,7 +9625,7 @@ focus_tree = {
 	}
 	focus = {# Ultimatum to Leninists
 		id = CSA_ultimatum_to_leninists
-		icon = GFX_goal_generic_attack_allies
+		icon = GFX_goal_CSA_crush_leninism
 		cost = 5
 		prerequisite = {focus = CSA_emergency_powers }
 		available = { has_government = totalist }
@@ -9639,7 +9642,7 @@ focus_tree = {
 	}
 	focus = {# Oaths of Loyalty
 		id = CSA_oaths_of_loyalty
-		icon = GFX_goal_military_academy
+		icon = GFX_goal_CSA_oaths_of_loyalty
 		cost = 4
 		prerequisite = {focus = CSA_new_socialist_values }
 		prerequisite = {focus = CSA_labor_camps}
@@ -9720,7 +9723,7 @@ focus_tree = {
 	}
 	focus = {# People's Senate
 		id = CSA_peoples_senate
-		icon = GFX_focus_generic_soviet_politics
+		icon = GFX_CSA_red_senate
 		cost = 5
 		prerequisite = {focus = CSA_proletariat_commander}
 		available = { has_government = totalist }
@@ -9777,7 +9780,7 @@ focus_tree = {
 	
 	focus = {# The Patriot
 		id = CSA_the_patriot
-		icon = GFX_focus_generic_strike_at_democracy2
+		icon = GFX_goal_CSA_patriot
 		cost = 4
 		prerequisite = {focus = CSA_managerialism }
 		available = { has_government = totalist }
@@ -9794,7 +9797,7 @@ focus_tree = {
 	}
 	focus = {# Anti-Capitalist Protection Wall
 		id = CSA_anti_capitalist_protection
-		icon = GFX_goal_tfv_sever_ties_with_uk
+		icon = GFX_CSA_protection_wall
 		cost = 4
 		prerequisite = {focus = CSA_red_scare}
 		available = { has_government = totalist }
@@ -9858,7 +9861,7 @@ focus_tree = {
 	}
 	focus = {# Military Industrial Complex
 		id = CSA_military_industrial_complex
-		icon = GFX_focus_generic_combined_arms
+		icon = GFX_goal_CSA_military_industrial_complex
 		cost = 3
 		prerequisite = {focus = CSA_power_projection}
 		available = { has_government = totalist }
