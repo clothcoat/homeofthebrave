@@ -1856,7 +1856,7 @@ spriteTypes = {
 	}
 	SpriteType = {# Biological Weapons
 		name = "GFX_CSA_biological_weapons"
-		texturefile = "gfx/interface/goals/CSA/CSA_biological_weapons.tga"
+		texturefile = "gfx/interface/goals/CSA_biological_weapons.tga"
 	}
 	SpriteType = {# Burnhams Red Scare
 		name = "GFX_CSA_Burnhams_red_scare"
@@ -3518,8 +3518,68 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/goal_NEE_join_ISAC.dds"
 	}
 	spriteType = {
+		name = "GFX_goal_NEE_wealth_cooperation"
+		texturefile = "gfx/interface/goals/goal_NEE_wealth_cooperation.dds"
+	}
+	spriteType = {
 		name = "GFX_goal_NEE_boston_to_ottawa"
 		texturefile = "gfx/interface/goals/goal_NEE_boston_to_ottawa.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_CSA_patriot"
+		texturefile = "gfx/interface/goals/goal_CSA_patriot.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_CSA_oaths_of_loyalty"
+		texturefile = "gfx/interface/goals/goal_CSA_oaths_of_loyalty.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_CSA_military_industrial_complex"
+		texturefile = "gfx/interface/goals/goal_CSA_military_industrial_complex.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_CSA_Machevellii"
+		texturefile = "gfx/interface/goals/goal_CSA_Machevellii.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_CSA_industrial_army"
+		texturefile = "gfx/interface/goals/goal_CSA_industrial_army.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_CSA_emergency_powers"
+		texturefile = "gfx/interface/goals/goal_CSA_emergency_powers.dds"
+	}
+	spriteType = {
+		name = "GFX_CSA_president_burhham"
+		texturefile = "gfx/interface/goals/CSA_president_burhham.dds"
+	}
+	spriteType = {
+		name = "GFX_CSA_power_projection"
+		texturefile = "gfx/interface/goals/CSA_power_projection.dds"
+	}
+	spriteType = {
+		name = "GFX_CSA_protection_wall"
+		texturefile = "gfx/interface/goals/CSA_protection_wall.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_CSA_squeeze_elites"
+		texturefile = "gfx/interface/goals/goal_CSA_squeeze_elites.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_CSA_draft"
+		texturefile = "gfx/interface/goals/goal_CSA_draft.dds"
+	}
+	spriteType = {
+		name = "GFX_CSA_red_senate"
+		texturefile = "gfx/interface/goals/CSA_red_senate.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_CSA_crush_leninism"
+		texturefile = "gfx/interface/goals/goal_CSA_crush_leninism.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_CSA_depose_counterrevolutionaries"
+		texturefile = "gfx/interface/goals/goal_CSA_depose_counterrevolutionaries.dds"
 	}
 }
 

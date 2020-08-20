@@ -6394,6 +6394,472 @@ focus_tree = {
 			}
 		}
 	}
+	focus = {
+		id = CSA_second_continental_navy
+		icon = GFX_goal_navy_decision
+		available = { any_owned_state = { is_coastal = yes} }
+		relative_position_id = CSA_the_long_haul
+		x = 59
+		y = 6
+		cost = 6
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = 3
+				enemies_naval_strength_ratio > 0.6
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CSA_second_continental_navy"
+			add_tech_bonus = {
+				name = CSA_second_continental_navy
+				bonus = 1
+				uses = 2
+				category = naval_doctrine
+			}
+		}
+		search_filters = { FOCUS_FILTER_NAVY_BONUS }
+	}
+	focus = {
+		id = CSA_revolutionary_naval_industry
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = {
+			focus = CSA_second_continental_navy
+		}
+		relative_position_id = CSA_second_continental_navy
+		x = 0
+		y = 1
+		cost = 6
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = 3
+				enemies_naval_strength_ratio > 0.6
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CSA_revolutionary_naval_industry"
+			navy_experience = 100
+			add_ideas = CSA_revolutionary_naval_industry_4
+			hidden_effect = {
+				add_ideas = CSA_decentralized_command
+			}
+		}
+		search_filters = { FOCUS_FILTER_NAVY_BONUS }
+	}
+	focus = {
+		id = CSA_new_american_dockyards
+		icon = GFX_goal_generic_shipyard
+		prerequisite = {
+			focus = CSA_the_dust_settles
+		}
+		prerequisite = {
+			focus = CSA_revolutionary_naval_industry
+		}
+		relative_position_id = CSA_revolutionary_naval_industry
+		x = -2
+		y = 2
+		cost = 6
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 3
+				enemies_naval_strength_ratio > 0.6
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CSA_new_american_dockyards"
+			add_political_power = -100
+			navy_experience = 50
+			if = {
+				limit = { has_idea = CSA_revolutionary_naval_industry_4 }
+				swap_ideas = {
+					remove_idea = CSA_revolutionary_naval_industry_4
+					add_idea = CSA_martime_industry
+				}
+			}	
+			else_if = {
+				limit = { has_idea = CSA_revolutionary_naval_industry_5 }
+				swap_ideas = {
+					remove_idea = CSA_revolutionary_naval_industry_5
+					add_idea = CSA_martime_industry
+				}
+			}
+			else = {
+				custom_effect_tooltip = CSA_new_american_dockyards_tooltip
+				hidden_effect = {
+					swap_ideas = {
+						remove_idea = CSA_revolutionary_naval_industry_6
+						add_idea = CSA_martime_industry
+					}
+				}
+			}
+			if = {
+				limit = { has_completed_focus = CSA_new_naval_plan }
+				add_tech_bonus = {
+					name = CSA_new_american_dockyards
+					uses = 2
+					bonus = 1
+					category = bb_tech
+					category = cl_tech
+				}
+				add_tech_bonus = {
+					name = CSA_new_american_dockyards
+					uses = 3
+					bonus = 0.75
+					category = cat_gunnery
+					category = cat_targeting
+				}
+			}
+			else = {
+				add_tech_bonus = {
+					name = CSA_new_american_dockyards
+					uses = 3
+					bonus = 1
+					category = dd_tech
+					category = cl_tech
+				}
+				add_tech_bonus = {
+					name = CSA_new_american_dockyards
+					uses = 2
+					bonus = 0.75
+					category = asw_tech
+					category = cat_anti_air
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_NAVY_BONUS }
+	}
+	focus = {
+		id = CSA_new_naval_plan
+		icon = GFX_goal_generic_sea_focused_navy2
+		prerequisite = {
+			focus = CSA_the_dust_settles
+		}
+		prerequisite = {
+			focus = CSA_revolutionary_naval_industry
+		}
+		mutually_exclusive = {
+			focus = CSA_american_peoples_navy
+		}
+		relative_position_id = CSA_revolutionary_naval_industry
+		x = -1
+		y = 1
+		cost = 6
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = 3
+				enemies_naval_strength_ratio > 0.6
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CSA_new_naval_plan"
+			if = {
+				limit = { has_idea = CSA_big_red_fleet }
+				custom_effect_tooltip = CSA_new_naval_plan_tooltip
+				hidden_effect = {
+					swap_ideas = {
+						remove_idea = CSA_big_red_fleet
+						add_idea = CSA_american_peoples_navy_4
+					}
+				}
+			}	
+			else_if = {
+				limit = { has_idea = CSA_sea_hunters }
+				swap_ideas = {
+					remove_idea = CSA_sea_hunters
+					add_idea = CSA_american_peoples_navy_5
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = CSA_decentralized_command
+					add_idea = CSA_american_peoples_navy_6
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_NAVY_BONUS }
+	}
+	focus = {
+		id = CSA_american_peoples_navy
+		icon = GFX_goal_navy_hat_ships
+		prerequisite = {
+			focus = CSA_the_dust_settles
+		}
+		prerequisite = {
+			focus = CSA_revolutionary_naval_industry
+		}
+		mutually_exclusive = {
+			focus = CSA_new_naval_plan
+		}
+		relative_position_id = CSA_revolutionary_naval_industry
+		x = 1
+		y = 1
+		cost = 6
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = 3
+				enemies_naval_strength_ratio > 0.6
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CSA_american_peoples_navy"
+			if = {
+				limit = { has_idea = CSA_big_red_fleet }
+				custom_effect_tooltip = CSA_american_peoples_navy_tooltip
+				hidden_effect = {
+					swap_ideas = {
+						remove_idea = CSA_big_red_fleet
+						add_idea = CSA_american_peoples_navy_1
+					}
+				}
+			}	
+			else_if = {
+				limit = { has_idea = CSA_sea_hunters }
+				swap_ideas = {
+					remove_idea = CSA_sea_hunters
+					add_idea = CSA_american_peoples_navy_2
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = CSA_decentralized_command
+					add_idea = CSA_american_peoples_navy_3
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_NAVY_BONUS }
+	}
+	focus = {
+		id = CSA_refit_old_ships
+		icon = GFX_goal_AST_upgrade_reserves
+		prerequisite = {
+			focus = CSA_new_naval_plan
+			focus = CSA_american_peoples_navy
+		}
+		relative_position_id = CSA_revolutionary_naval_industry
+		x = 0
+		y = 2
+		cost = 6
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 3
+				enemies_naval_strength_ratio > 0.6
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CSA_refit_old_ships"
+			if = {
+				limit = { has_idea = CSA_american_peoples_navy_1 }
+				custom_effect_tooltip = CSA_refit_old_ships_tooltip_continental_navy
+				hidden_effect = {
+					swap_ideas = {
+						remove_idea = CSA_american_peoples_navy_1
+						add_idea = CSA_american_peoples_navy_7
+					}
+				}
+			}
+			else_if = {
+				limit = { has_idea = CSA_american_peoples_navy_2 }
+				swap_ideas = {
+					remove_idea = CSA_american_peoples_navy_2
+					add_idea = CSA_american_peoples_navy_8
+				}
+			}
+			else_if = {
+				limit = { has_idea = CSA_american_peoples_navy_3 }
+				swap_ideas = {
+					remove_idea = CSA_american_peoples_navy_3
+					add_idea = CSA_american_peoples_navy_9
+				}
+			}
+			else_if = {
+				limit = { has_idea = CSA_american_peoples_navy_4 }
+				custom_effect_tooltip = CSA_refit_old_ships_tooltip_peoples_navy
+				hidden_effect = {
+					swap_ideas = {
+						remove_idea = CSA_american_peoples_navy_4
+						add_idea = CSA_american_peoples_navy_10
+					}
+				}
+			}
+			else_if = {
+				limit = { has_idea = CSA_american_peoples_navy_5 }
+				swap_ideas = {
+					remove_idea = CSA_american_peoples_navy_5
+					add_idea = CSA_american_peoples_navy_11
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = CSA_american_peoples_navy_6
+					add_idea = CSA_american_peoples_navy_12
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_NAVY_BONUS }
+	}
+	focus = {
+		id = CSA_liberty_ships
+		icon = GFX_goal_USA_liberty_ships
+		prerequisite = {
+			focus = CSA_new_american_dockyards
+			focus = CSA_refit_old_ships
+		}
+		relative_position_id = CSA_revolutionary_naval_industry
+		x = -1
+		y = 3
+		cost = 6
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = 3
+				enemies_naval_strength_ratio > 0.6
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CSA_liberty_ships"
+			add_ideas = CSA_liberty_ships_ideas
+		}
+		search_filters = { FOCUS_FILTER_NAVY_BONUS }
+	}
+	focus = {
+		id = CSA_revolution_on_high_seas
+		icon = GFX_goal_generic_navy_carrier
+		prerequisite = {
+			focus = CSA_revolutionary_naval_industry
+		}
+		relative_position_id = CSA_revolutionary_naval_industry
+		x = 2
+		y = 2
+		cost = 6
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = 3
+				enemies_naval_strength_ratio > 0.6
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CSA_revolution_on_high_seas"
+			navy_experience = 30
+			add_tech_bonus = {
+				name = CSA_revolution_on_high_seas
+				uses = 1
+				bonus = 1
+				category = cv_tech
+			}
+			add_tech_bonus = {
+				name = CSA_revolution_on_high_seas
+				uses = 1
+				bonus = 1
+				category = naval_air
+			}
+		}
+		search_filters = { FOCUS_FILTER_NAVY_BONUS }
+	}
+	focus = {
+		id = CSA_recreate_continental_marines
+		icon = GFX_goal_generic_amphibious_assault
+		prerequisite = {
+			focus = CSA_revolution_on_high_seas
+		}
+		relative_position_id = CSA_revolutionary_naval_industry
+		x = 1
+		y = 3
+		cost = 6
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = 3
+				enemies_naval_strength_ratio > 0.6
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CSA_recreate_continental_marines"
+			add_ideas = CSA_continental_marines
+		}
+		search_filters = { FOCUS_FILTER_NAVY_BONUS }
+	}
+	#Navy
+	focus = {
+		id = CSA_navy_of_new_age
+		icon = GFX_goal_USA_navy
+		available = {
+			has_navy_size = { size > 299 }
+		}
+		prerequisite = {
+			focus = CSA_liberty_ships
+		}
+		prerequisite = {
+			focus = CSA_revolution_on_high_seas
+		}
+		relative_position_id = CSA_revolutionary_naval_industry
+		x = 0
+		y = 4
+		cost = 6
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = 3
+				enemies_naval_strength_ratio > 0.6
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CSA_navy_of_new_age"
+			if = {
+				limit = { has_idea = CSA_american_peoples_navy_7 }
+				custom_effect_tooltip = CSA_navy_of_new_age_tooltip_peoples_navy
+				hidden_effect = {
+					swap_ideas = {
+						remove_idea = CSA_american_peoples_navy_7
+						add_idea = CSA_american_peoples_navy_13
+					}
+				}
+			}
+			else_if = {
+				limit = { has_idea = CSA_american_peoples_navy_8 }
+				swap_ideas = {
+					remove_idea = CSA_american_peoples_navy_8
+					add_idea = CSA_american_peoples_navy_14
+				}
+			}
+			else_if = {
+				limit = { has_idea = CSA_american_peoples_navy_9 }
+				swap_ideas = {
+					remove_idea = CSA_american_peoples_navy_9
+					add_idea = CSA_american_peoples_navy_15
+				}
+			}
+			else_if = {
+				limit = { has_idea = CSA_american_peoples_navy_10 }
+				custom_effect_tooltip = CSA_navy_of_new_age_tooltip_continental_navy
+				hidden_effect = {
+					swap_ideas = {
+						remove_idea = CSA_american_peoples_navy_10
+						add_idea = CSA_american_peoples_navy_16
+					}
+				}
+			}
+			else_if = {
+				limit = { has_idea = CSA_american_peoples_navy_11 }
+				swap_ideas = {
+					remove_idea = CSA_american_peoples_navy_11
+					add_idea = CSA_american_peoples_navy_17
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = CSA_american_peoples_navy_12
+					add_idea = CSA_american_peoples_navy_18
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_NAVY_BONUS }
+	}
 	####Air Force
 	focus = {#
 		id = CSA_red_air_force
@@ -9236,14 +9702,17 @@ focus_tree = {
 	
 	focus = {# Managerialism
 		id = CSA_managerialism
-		icon = GFX_goal_red_star
+		icon = GFX_CSA_president_burhham
 		cost = 1
 		available = {  has_government = totalist 
 		has_country_leader = { ruling_only = yes name = "James Burnham" }
 		}
+		prerequisite = {
+			focus = CSA_second_convention
+		}
 		cancel_if_invalid = yes
-		x = 22
-		y = 10
+		x = -7
+		y = 1
 		ai_will_do = {
 			factor = 50
 		}
@@ -9354,7 +9823,7 @@ focus_tree = {
 
 	focus = {#Squeeze Bourgousie
 		id = CSA_squeeze_bourgousie
-		icon = GFX_focus_rom_parties_end
+		icon = GFX_goal_CSA_squeeze_elites
 		cost = 5
 		prerequisite = {focus = CSA_vertical_integration }
 		prerequisite = {focus = CSA_appoint_sychophants}
@@ -9429,7 +9898,7 @@ focus_tree = {
 	}	
 	focus = {# National Economy
 		id = CSA_national_economy
-		icon = GFX_goal_production
+		icon = GFX_goal_CSA_industrial_army
 		cost = 6
 		prerequisite = {focus = CSA_reward_the_craft_unions }
 		prerequisite = {focus = CSA_squeeze_bourgousie }
@@ -9472,7 +9941,7 @@ focus_tree = {
 			
 	focus = {# The Machiavellian
 		id = CSA_the_machiavellian
-		icon = GFX_goal_backstab
+		icon = GFX_goal_CSA_Machevellii
 		cost = 4
 		prerequisite = {focus = CSA_managerialism}
 		available = { has_government = totalist }
@@ -9526,7 +9995,7 @@ focus_tree = {
 	}
 	focus = {# Proletariat Duties
 		id = CSA_proletariat_duties
-		icon = GFX_focus_generic_little_entente
+		icon = GFX_goal_CSA_draft
 		cost = 5
 		prerequisite = {focus = CSA_proletariat_Vanguard }
 		prerequisite = {focus = CSA_red_scare }
@@ -9564,7 +10033,7 @@ focus_tree = {
 	}
 		focus = {# Expand Emergency Powers
 		id = CSA_emergency_powers
-		icon = GFX_goal_generic_forceful_treaty
+		icon = GFX_goal_CSA_emergency_powers
 		cost = 6
 		prerequisite = {focus = CSA_reward_the_craft_unions }
 		prerequisite = {focus = CSA_proletariat_duties}
@@ -9622,7 +10091,7 @@ focus_tree = {
 	}
 	focus = {# Ultimatum to Leninists
 		id = CSA_ultimatum_to_leninists
-		icon = GFX_goal_generic_attack_allies
+		icon = GFX_goal_CSA_crush_leninism
 		cost = 5
 		prerequisite = {focus = CSA_emergency_powers }
 		available = { has_government = totalist }
@@ -9639,7 +10108,7 @@ focus_tree = {
 	}
 	focus = {# Oaths of Loyalty
 		id = CSA_oaths_of_loyalty
-		icon = GFX_goal_military_academy
+		icon = GFX_goal_CSA_oaths_of_loyalty
 		cost = 4
 		prerequisite = {focus = CSA_new_socialist_values }
 		prerequisite = {focus = CSA_labor_camps}
@@ -9675,7 +10144,7 @@ focus_tree = {
 	}
 	focus = {# Purge Counter-Revolutionaries
 		id = CSA_purge_counter_revolutionaries
-		icon = GFX_goal_generic_major_war
+		icon = GFX_goal_CSA_depose_counterrevolutionaries
 		cost = 4
 		prerequisite = {focus = CSA_labor_camps }
 		prerequisite = {focus = CSA_ultimatum_to_leninists }
@@ -9720,7 +10189,7 @@ focus_tree = {
 	}
 	focus = {# People's Senate
 		id = CSA_peoples_senate
-		icon = GFX_focus_generic_soviet_politics
+		icon = GFX_CSA_red_senate
 		cost = 5
 		prerequisite = {focus = CSA_proletariat_commander}
 		available = { has_government = totalist }
@@ -9777,7 +10246,7 @@ focus_tree = {
 	
 	focus = {# The Patriot
 		id = CSA_the_patriot
-		icon = GFX_focus_generic_strike_at_democracy2
+		icon = GFX_goal_CSA_patriot
 		cost = 4
 		prerequisite = {focus = CSA_managerialism }
 		available = { has_government = totalist }
@@ -9794,7 +10263,7 @@ focus_tree = {
 	}
 	focus = {# Anti-Capitalist Protection Wall
 		id = CSA_anti_capitalist_protection
-		icon = GFX_goal_tfv_sever_ties_with_uk
+		icon = GFX_CSA_protection_wall
 		cost = 4
 		prerequisite = {focus = CSA_red_scare}
 		available = { has_government = totalist }
@@ -9858,7 +10327,7 @@ focus_tree = {
 	}
 	focus = {# Military Industrial Complex
 		id = CSA_military_industrial_complex
-		icon = GFX_focus_generic_combined_arms
+		icon = GFX_goal_CSA_military_industrial_complex
 		cost = 3
 		prerequisite = {focus = CSA_power_projection}
 		available = { has_government = totalist }
