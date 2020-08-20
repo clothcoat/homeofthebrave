@@ -71,7 +71,7 @@ ideas = {
 		
 		CSA_burnhams_economic_policy_idea1 = {#Burnham Economics
 		on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_burnham_economic_policy_idea1"}
-			picture = generic_local_self_management
+			picture = CSA_burnham_economic_policy
 			modifier = {
 				production_factory_max_efficiency_factor = -0.10
 				industrial_capacity_factory = -0.10
@@ -80,7 +80,7 @@ ideas = {
 		}
 		CSA_burnhams_economic_policy_idea2 = {#Burnham Economics
 		on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_burnham_economic_policy_idea2"}
-			picture = generic_local_self_management
+			picture = CSA_burnham_economic_policy
 			modifier = {
 				production_factory_max_efficiency_factor = -0.05
 				industrial_capacity_factory = -0.05
@@ -89,7 +89,7 @@ ideas = {
 		}
 		CSA_burnhams_economic_policy_idea3 = {#Burnham Economics
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_burnham_economic_policy_idea3"}
-			picture = generic_local_self_management
+			picture = CSA_burnham_economic_policy
 			modifier = {
 				production_factory_max_efficiency_factor = 0.05
 				industrial_capacity_factory = 0.05
@@ -97,7 +97,7 @@ ideas = {
 		}
 		CSA_burnhams_economic_policy_idea4 = {#Burnham Economics
 		on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_burnham_economic_policy_idea4"}
-			picture = generic_local_self_management
+			picture = CSA_burnham_economic_policy
 			modifier = {
 				production_factory_max_efficiency_factor = 0.10
 				industrial_capacity_factory = 0.10
@@ -106,7 +106,7 @@ ideas = {
 		}
 		CSA_burnhams_economic_policy_idea5 = {#Burnham Economics
 		on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_burnham_economic_policy_idea5"}
-			picture = generic_local_self_management
+			picture = CSA_burnham_economic_policy
 			modifier = {
 				production_factory_max_efficiency_factor = 0.15
 				industrial_capacity_factory = 0.15
@@ -116,7 +116,7 @@ ideas = {
 		}
 		CSA_burnhams_economic_policy_idea6 = {#Burnham Economics
 		on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_burnham_economic_policy_idea6"}
-			picture = state_economy
+			picture = CSA_burnham_economic_policy
 			modifier = {
 				production_factory_max_efficiency_factor = 0.15
 				industrial_capacity_factory = 0.15
@@ -124,114 +124,104 @@ ideas = {
 				MONTHLY_POPULATION = 0.25
 				research_speed_factor = 0.05
 			}
-		}
-		
+		}		
 		CSA_continental_socialist_society_idea = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_continental_socialist_society_idea"}
-			picture = saf_soviet_advisers
+			picture = CSA_technocratic_empire
 			modifier = {
 				decryption_factor = 0.05
 				encryption_factor = 0.05
+				resistance_damage_to_garrison = -0.1
 			}
-		}
-		
+		}		
 		CSA_iron_brigades_idea_1 = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_iron_brigades_idea_1"}
-			picture = death_men
+			picture = CSA_iron_brigades
 			modifier = {
 				ground_attack_factor = 0.01
 				research_speed_factor = 0.02
 				supply_consumption_factor = 0.01
 			}
-		}
-		
+		}		
 		CSA_iron_brigades_idea_2 = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_iron_brigades_idea_2"}
-			picture = death_men
+			picture = CSA_iron_brigades
 			modifier = {
 				ground_attack_factor = 0.01
 				research_speed_factor = 0.03
 				supply_consumption_factor = 0.02
 			}
-		}
-		
+		}		
 		CSA_iron_brigades_idea_3 = {
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_iron_brigades_idea_3"}
-			picture = generic_research_bonus
+			on_add = {log = "[CSA_iron_brigades]: [Root.GetName]: add idea CSA_iron_brigades_idea_3"}
+			picture = CSA_experimental_research
 			modifier = {
 				research_speed_factor = 0.01
 			}
-		}	
-		
+		}			
 		CSA_iron_brigades_idea_1_PCC = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_iron_brigades_idea_1_PCC"}
-			picture = death_men
+			picture = CSA_pcc
 			modifier = {
 				ground_attack_factor = 0.02
 				research_speed_factor = 0.03
 				supply_consumption_factor = 0.02
 				planning_speed = -0.01
 			}
-		}
-		
+		}		
 		CSA_iron_brigades_idea_2_PCC = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_iron_brigades_idea_2_PCC"}
-			picture = death_men
+			picture = CSA_pcc
 			modifier = {
 				ground_attack_factor = 0.02
 				research_speed_factor = 0.04
 				supply_consumption_factor = 0.03
 				planning_speed = -0.01
 			}
-		}
-		
+		}		
 		CSA_iron_brigades_idea_reinforced_PCC = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_iron_brigades_idea_reinforced_PCC"}
-			picture = death_men
+			picture = CSA_pcc
 			modifier = {
 				conscription_factor = 0.01
 				ground_attack_factor = 0.02
 				research_speed_factor = 0.04
 				supply_consumption_factor = 0.04
 			}
-		}
-		
+		}		
 		CSA_iron_brigades_idea_reinforced = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_iron_brigades_idea_reinforced"}
-			picture = death_men
+			picture = CSA_iron_brigades
 			modifier = {
 				conscription_factor = 0.01
 				ground_attack_factor = 0.02
 				research_speed_factor = 0.03
 				supply_consumption_factor = 0.03
 			}
-		}
-		
+		}		
 		CSA_iron_brigades_idea_reinforced_PCC_weapons = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_iron_brigades_idea_reinforced_PCC_weapons"}
-			picture = death_men
+			picture = CSA_pcc_weapons
 			modifier = {
 				conscription_factor = 0.01
 				ground_attack_factor = 0.04
 				research_speed_factor = 0.06
 				supply_consumption_factor = 0.06
 			}
-		}
-		
+		}		
 		CSA_iron_brigades_idea_reinforced_weapons = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_iron_brigades_idea_reinforced_weapons"}
-			picture = death_men
+			picture = CSA_reinforced_weapons
 			modifier = {
 				conscription_factor = 0.01
 				ground_attack_factor = 0.03
 				research_speed_factor = 0.05
 				supply_consumption_factor = 0.05
 			}
-		}
-		
+		}		
 		CSA_iron_brigades_idea_reinforced_rigged = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_iron_brigades_idea_reinforced_rigged"}
-			picture = death_men
+			picture = CSA_iron_brigades_rigged
 			modifier = {
 				conscription_factor = 0.01
 				ground_attack_factor = 0.03
@@ -241,11 +231,10 @@ ideas = {
 				max_dig_in = 1
 				land_reinforce_rate = -0.01
 			}
-		}
-		
+		}		
 		CSA_iron_brigades_idea_reinforced_PCC_rigged = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_iron_brigades_idea_reinforced_PCC_rigged"}
-			picture = death_men
+			picture = CSA_pcc_rigged
 			modifier = {
 				conscription_factor = 0.01
 				ground_attack_factor = 0.04
@@ -255,8 +244,7 @@ ideas = {
 				max_dig_in = 1
 				land_reinforce_rate = -0.02
 			}
-		}
-		
+		}		
 		CSA_continental_constabularly_idea = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_continental_constabularly_idea"}
 			picture = soviet_german_friendship
@@ -265,41 +253,37 @@ ideas = {
 				land_reinforce_rate = 0.05
 				occupation_cost = -0.05
 			}
-		}
-		
+		}		
 		CSA_proletariat_duties_idea = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_proletariat_duties_idea"}
-			picture = generic_communist_army
+			picture = CSA_proletariat_duties
 			modifier = {
 			conscription_factor = 0.05
 			training_time_army_factor = -0.1
 			}
-		}
-		
+		}	
 		CSA_proletariat_commander_idea = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_proletariat_commander_idea"}
-			picture = nkvd_2
+			picture = CSA_proletariat_commander
 			modifier = {
 			political_power_gain = 0.05
 			command_power_gain_mult = 0.05
 			stability_weekly = 0.01	
 			}
-		}
-		
+		}		
 		CSA_proletariat_commander_idea_2 = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_proletariat_commander_idea"}
-			picture = nkvd_2
+			picture = CSA_proletariat_commander
 			modifier = {
 			political_power_gain = 0.03
 			command_power_gain_mult = 0.05
 			stability_weekly = 0.01	
 			encryption_factor = 0.03
 			}
-		}
-		
+		}		
 		CSA_energy_accounting_idea = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_energy_accounting_idea"}
-			picture = generic_goods_red_bonus
+			picture = CSA_energy_accounting
 			modifier = {
 			local_resources_factor = 0.15
 			production_factory_max_efficiency_factor = 0.10
@@ -312,7 +296,7 @@ ideas = {
 		}
 		CSA_energy_accounting_idea_2 = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_energy_accounting_idea_2"}
-			picture = generic_goods_red_bonus
+			picture = CSA_energy_accounting
 			modifier = {
 			local_resources_factor = 0.15
 			production_factory_max_efficiency_factor = 0.10
@@ -322,22 +306,21 @@ ideas = {
 			min_export = -0.5
 			encryption_factor = 0.02
 			}
-		}
-		
+		}		
 		CSA_four_hour_work_week = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_four_hour_work_week"}
-			picture = economic_control_icon
+			picture = CSA_4_hours_day
 			modifier = {
 			army_morale_factor = 0.1
 			MONTHLY_POPULATION = 0.05
+			resistance_damage_to_garrison = -2	
 			research_speed_factor = 0.02
 			production_factory_max_efficiency_factor = -0.05
 			production_factory_efficiency_gain_factor = -0.05
 			line_change_production_efficiency_factor = -0.05
 			production_speed_buildings_factor = -0.1
 			}
-		}
-		
+		}		
 		CSA_female_auxilaries_idea = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_female_auxilaries_idea"}
 			picture = generic_central_management
@@ -347,17 +330,15 @@ ideas = {
 			monthly_population = 0.01
 			production_factory_efficiency_gain_factor = 0.03
 			}
-		}
-		
+		}		
 		CSA_social_units_idea = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_social_units_idea"}
-			picture = new_deal
+			picture = CSA_social_units
 			modifier = {
 			monthly_population = 0.05
 			consumer_goods_factor = 0.02
 			}
-		}
-		
+		}		
 		CSA_napalm_idea = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_napalm_idea"}
 			picture = CSA_napalm
@@ -365,10 +346,10 @@ ideas = {
 			air_strategic_bomber_bombing_factor	= 0.02
 			air_strategic_bomber_attack_factor	= 0.03
 			decryption_factor = 0.02
+			resistance_damage_to_garrison = -0.1
 			supply_consumption_factor = 0.02
 			}
-		}
-		
+		}		
 		CSA_biological_weapons = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_biological_weapons"}
 			picture = CSA_biological_weapons
@@ -378,26 +359,15 @@ ideas = {
 			supply_consumption_factor = 0.01
 			political_power_gain = -0.01
 			}
-		}
-		
+		}		
 		CSA_technocratic_empire_idea = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_technocratic_empire_idea"}
-			picture = FRA_scw_intervention_republicans_focus
+			picture = CSA_technocratic_empire
 			modifier = {
 				justify_war_goal_time = -0.25
 				non_core_manpower = 0.05
 				}
-		}
-		
-		CSA_general_defense_comitte_idea = {
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_general_defense_comitte_idea"}
-			picture = NOR_secret_police_idea_1
-			modifier = {
-				decryption_factor = 0.1
-				encryption_factor = 0.05
-			}
-		}
-		
+		}		
 		CSA_emergency_powers_idea = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_general_defense_comitte_idea"}
 			picture = NOR_secret_police_idea_1
@@ -2400,1571 +2370,455 @@ ideas = {
 			mobilization_speed	= -0.05
 			}
 		}
-	}
-### Companies ###
-	industrial_concern = {# Industrial Manufacturer
-		kr_att_csa = {#AT&T
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea kr_att_csa"}
-			allowed = {original_tag = CSA }
-			available = {
-				controls_state = 358
-				owns_state = 358
-			}
-			traits = { electronics_manufacturer }
-			modifier = {
-				production_speed_radar_station_factor = 0.3
-			}
-			research_bonus = {
-				electronics = 0.05
-			}
-			picture = idea_generic_electronics_concern_1
-		}
-		kr_general_electric_csa = {#General Electronic
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea kr_general_electric_csa"}
-			allowed = {
-				original_tag = CSA
-			}
-			available = {
-				controls_state = 796
-				owns_state = 796
-			}
-			visible = {
-				controls_state = 796
-				owns_state = 796
-				not = { country_exists = NEE }
-				has_country_flag = CSA_new_industries_flag
-			}
-			traits = {
-				electronics_manufacturer expert
-			}
-			research_bonus = {
-				electronics = 0.1
-				nuclear = 0.05
-			}
-			picture = idea_generic_electronics_concern_1
-		}
-		kr_ibm_company_csa = {#IBM
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea kr_ibm_company_csa"}
-			allowed = {
-				original_tag = CSA
-			}
-			available = {
-				controls_state = 796
-				owns_state = 796
-			}
-			visible = {
-				controls_state = 796
-				owns_state = 796
-				not = { country_exists = NEE }
-				has_country_flag = CSA_new_industries_flag
-			}
-			traits = {
-				electronics_manufacturer expert
-			}
-			modifier = {
-				industrial_capacity_factory = 0.03
-			}
-			research_bonus = {
-				electronics = 0.1
-			}
-			picture = idea_generic_electronics_concern_1
-		}
-		kr_raytheon_csa = {#Raytheon
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea kr_raytheon_csa"}
-			allowed = {original_tag = CSA }
-			available = {
-				controls_state = 932
-				owns_state = 932
-			}
-			visible = {
-				controls_state = 932
-				owns_state = 932
-				not = { country_exists = NEE }
-				has_country_flag = CSA_new_industries_flag
-			}
-			traits = { electronics_manufacturer expert }
-			research_bonus = {
-				electronics = 0.15
-			}
-			picture = idea_generic_electronics_concern_1
-		}
-		kr_westinghouse_csa = {#Westinghouse
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea kr_westinghouse_csa"}
-			allowed = { original_tag = CSA }
-			available = {
-				controls_state = 360
-				owns_state = 360
-			}
-			traits = { electronics_manufacturer }
-			research_bonus = {
-				electronics = 0.1
-				industry = 0.05
-			}
-			picture = idea_generic_electronics_concern_1
-		}
-		kr_bethlehem_steel_csa = {#Bethlehem Steel
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea kr_bethlehem_steel_csa"}
-			allowed = {
-				original_tag = CSA
-			}
-			available = {
-				controls_state = 360
-				owns_state = 360
-			}
-			traits = {
-				industrial_manufacturer expert
-			}
-			modifier = {
-				production_speed_arms_factory_factor = 0.15
-				production_speed_industrial_complex_factor = 0.15
-				local_resources_factor = 0.1
-			}
-			research_bonus = {
-				industry = 0.05
-			}
-			picture = GFX_idea_generic_industrial_concern_1
-		}
-		kr_phelpsdodge_csa = {#Phelps Dodge
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea kr_phelpsdodge_csa"}
-			allowed = {
-				original_tag = CSA
-			}
-			available = {
-				controls_state = 377
-				owns_state = 377
-			}
-			visible = {
-				controls_state = 377
-				owns_state = 377
-				not = { country_exists = USA }
-				has_country_flag = USA_industrial_companies_allowed
-			}
-			traits = {
-				industrial_manufacturer expert
-			}
-			modifier = {
-				trade_opinion_factor = 0.3
-				local_resources_factor = 0.1
-			}
-			research_bonus = {
-				industry = 0.05
-			}
-			picture = GFX_idea_generic_industrial_concern_1
-		}
-		kr_us_steel_csa = {#US Steel
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea kr_us_steel_csa"}
-			allowed = { original_tag = CSA }
-			available = {
-				controls_state = 360
-				owns_state = 360
-			}
-			traits = { industrial_manufacturer }
-			modifier = {
-				production_speed_arms_factory_factor = 0.15
-				production_speed_industrial_complex_factor = 0.15
-			}
-			research_bonus = { industry = 0.1 }
-			picture = GFX_idea_generic_industrial_concern_1
-		}
-		kr_bfgoodrichcompany_csa = {#bfgoodrich
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea kr_bfgoodrichcompany_csa"}
-			allowed = {original_tag = CSA }
-			available = {
-				controls_state = 261
-				owns_state = 261
-			}
-			traits = { chemical_producer }
-			modifier = {
-				production_speed_synthetic_refinery_factor = 0.15
-			}
-			picture = GFX_idea_generic_refining_concern_1
-			research_bonus = {
-				synth_resources = 0.1
-			}
-		}
-		kr_dupont_csa = {#DuPont
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea kr_dupont_csa"}
-			allowed = {original_tag = CSA }
-			available = {
-				controls_state = 930
-				owns_state = 930
-			}
-			visible = {
-				controls_state = 930
-				owns_state = 930
-				not = { country_exists = USA }
-				has_country_flag = CSA_new_industries_flag
-			}
-			traits = { chemical_producer expert }
-			picture = GFX_idea_generic_refining_concern_1
-			research_bonus = { synth_resources = 0.15 }
-		}
-		kr_gulf_oil_csa = {#gulf oil
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea kr_gulf_oil_csa"}
-			allowed = {
-				original_tag = CSA
-			}
-			available = {
-				controls_state = 360
-				owns_state = 360
-			}
-			traits = {
-				chemical_producer expert
-			}
-			modifier = {
-				production_speed_synthetic_refinery_factor = 0.3
-			}
-			picture = GFX_idea_generic_refining_concern_1
-			research_bonus = {
-				synth_resources = 0.05
-			}
-		}
-		kr_magnolia_oil_csa = {#magnolia
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea kr_magnolia_oil_csa"}
-			allowed = {
-				original_tag = CSA
-			}
-			available = {
-				controls_state = 375
-				owns_state = 375
-			}
-			visible = {
-				controls_state = 375
-				owns_state = 375
-				not = { country_exists = TEX }
-				has_country_flag = CSA_new_industries_flag
-			}
-			traits = {
-				chemical_producer expert
-			}
-			modifier = {
-				production_speed_synthetic_refinery_factor = 0.3
-			}
-			picture = GFX_idea_generic_refining_concern_1
-			research_bonus = {
-				synth_resources = 0.05
-			}
-		}
-		kr_standard_oil_csa = {#Standard Oil
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea kr_standard_oil_csa"}
-			allowed = {
-				original_tag = CSA
-			}
-			available = {
-				controls_state = 797
-				owns_state = 797
-			}
-			visible = {
-				controls_state = 797
-				owns_state = 797
-				not = { country_exists = CAL }
-				has_country_flag = CSA_new_industries_flag
-			}
-			traits = {
-				chemical_producer expert
-			}
-			modifier = {
-				production_speed_synthetic_refinery_factor = 0.3
-			}
-			picture = GFX_idea_generic_refining_concern_1
-			research_bonus = {
-				synth_resources = 0.05
-			}
-		}
-		kr_koch_csa = {#Koch Industires
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea kr_koch_csa"}
-			allowed = {original_tag = CSA }
-			available = {
-				controls_state = 383
-				owns_state = 383
-			}
-			visible = {
-				controls_state = 383
-				owns_state = 383
-				not = { country_exists = USA }
-				has_country_flag = CSA_new_industries_flag
-			}
-			picture = GFX_idea_generic_refining_concern_1
-			traits = { chemical_producer }
-			research_bonus = {
-				synth_resources = 0.1
-				industry = 0.05
-			}
-		}
-	}
-	weapons_manufacturer = {# Weapons Manufacturer
-		designer = yes
-		kr_auto_ordnance_company_csa = {#Auto Ordnance Company
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea kr_auto_ordnance_company_csa"}
-			allowed = { original_tag = CSA }
-			available = {
-				controls_state = 395
-				owns_state = 395
-			}
-			traits = { infantry_equipment_producer_offense_2 }
-			research_bonus = {
-				infantry_weapons = 0.1
-			}
-			picture = GFX_idea_generic_infantry_equipment_manufacturer_1
-		}
-		kr_browning_csa = {#Browning
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea kr_browning_csa"}
-			allowed = { original_tag = CSA }
-			available = {
-				controls_state = 380
-				owns_state = 380
-			}
-			visible = {
-				controls_state = 380
-				owns_state = 380
-				not = { country_exists = USA }
-				has_country_flag = CSA_new_industries_flag
-			}
-			traits = { infantry_equipment_producer_assualt_2 }
-			research_bonus = {
-				infantry_weapons = 0.1
-			}
-			picture = GFX_idea_generic_infantry_equipment_manufacturer_1
-		}
-		kr_colt_csa = {#Colt
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea kr_colt_csa"}
-			allowed = {
-				original_tag = CSA
-			}
-			available = {
-				controls_state = 366
-				owns_state = 366
-			}
-			visible = {
-				controls_state = 366
-				owns_state = 366
-				not = { country_exists = TEX }
-				has_country_flag = CSA_new_industries_flag
-			}
-			traits = {
-				infantry_equipment_producer_offense_2 blank expert
-			}
-			research_bonus = {
-				infantry_weapons = 0.1
-			}
-			picture = GFX_idea_generic_infantry_equipment_manufacturer_1
-		}
-		kr_harrington_richardson_csa = {#Harrington and Richardson
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea kr_harrington_richardson_csa"}
-			allowed = { original_tag = CSA }
-			available = {
-				controls_state = 796
-				owns_state = 796
-			}
-			visible = {
-				controls_state = 796
-				owns_state = 796
-				not = { country_exists = NEE }
-				has_country_flag = CSA_new_industries_flag
-			}
-			traits = { infantry_equipment_producer_mass_1 }
-			research_bonus = {
-				infantry_weapons = 0.1
-			}
-			picture = GFX_idea_generic_infantry_equipment_manufacturer_1
-		}
-		kr_marble_arms_csa = {#Marble
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea kr_marble_arms_csa"}
-			allowed = { original_tag = CSA }
-			available = {
-				controls_state = 393
-				owns_state = 393
-			}
-			traits = { infantry_equipment_producer_defense_0  }
-			research_bonus = {
-				infantry_weapons = 0.1
-			}
-			picture = GFX_idea_generic_infantry_equipment_manufacturer_1
-		}
-		kr_marlin_firearms_csa = {#Marlin Firearms
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea kr_marlin_firearms_csa"}
-			allowed = { original_tag = CSA }
-			available = {
-				controls_state = 931
-				owns_state = 931
-			}
-			visible = {
-				controls_state = 931
-				owns_state = 931
-				not = { country_exists = NEE }
-				CAN = {
-					has_country_flag = CAN_taking_land
-				}
-				has_country_flag = CSA_new_industries_flag
-			}
-			traits = { infantry_equipment_producer_defense_0  }
-			research_bonus = {
-				infantry_weapons = 0.1
-			}
-			picture = GFX_idea_generic_infantry_equipment_manufacturer_1
-		}
-		kr_remington_csa = {#Remington
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea kr_remington_csa"}
-			allowed = { original_tag = CSA }
-			available = {
-				controls_state = 796
-				owns_state = 796
-			}
-			visible = {
-				controls_state = 382
-				owns_state = 382
-				not = { country_exists = USA }
-				has_country_flag = CSA_new_industries_flag
-			}
-			traits = { infantry_equipment_producer_offense_2 }
-			research_bonus = {
-				infantry_weapons = 0.1
-			}
-			picture = GFX_idea_generic_infantry_equipment_manufacturer_1
-		}
-		kr_sacremento_depot_csa = {#Sacremento Depot
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea kr_sacremento_depot_csa"}
-			allowed = { original_tag = CSA }
-			available = {
-				controls_state = 378
-				owns_state = 378
-			}
-			visible = {
-				controls_state = 378
-				owns_state = 378
-				not = { country_exists = CAL }
-				has_country_flag = CSA_new_industries_flag
-				has_global_flag = ACW_pacific_states_revolted
-			}
-			traits = { infantry_equipment_producer_mass_0 }
-			research_bonus = {
-				infantry_weapons = 0.1
-			}
-			picture = GFX_idea_generic_infantry_equipment_manufacturer_1
-		}
-		kr_savage_arms_csa = {#Savage Arms
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea kr_savage_arms_csa"}
-			allowed = { original_tag = CSA }
-			available = {
-				controls_state = 796
-				owns_state = 796
-			}
-			visible = {
-				controls_state = 796
-				owns_state = 796
-				not = { country_exists = NEE }
-				has_country_flag = CSA_new_industries_flag
-			}
-			traits = { infantry_equipment_producer_assualt_1 }
-			research_bonus = {
-				infantry_weapons = 0.1
-			}
-			picture = GFX_idea_generic_infantry_equipment_manufacturer_1
-		}
-		kr_smith_wesson_csa = {#Smith and Wesson
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea kr_smith_wesson_csa"}
-			allowed = { original_tag = CSA }
-			available = {
-				controls_state = 932
-				owns_state = 932
-			}
-			visible = {
-				controls_state = 932
-				owns_state = 932
-				not = { country_exists = NEE }
-				has_country_flag = CSA_new_industries_flag
-			}
-			traits = { infantry_equipment_producer_offense_1 blank regular }
-			research_bonus = {
-				infantry_weapons = 0.1
-			}
-			picture = GFX_idea_generic_infantry_equipment_manufacturer_1
-		}
-		kr_springfield_armory_csa = {#Springfield Armory
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea kr_springfield_armory_csa"}
-			allowed = {
-				original_tag = CSA
-			}
-			available = {
-				controls_state = 932
-				owns_state = 932
-			}
-			visible = {
-				controls_state = 932
-				owns_state = 932
-				not = { country_exists = NEE }
-				has_country_flag = CSA_new_industries_flag
-			}
-			traits = {
-				infantry_equipment_producer_mass_2 blank regular
-			}
-			research_bonus = {
-				infantry_weapons = 0.1
-			}
-			picture = GFX_idea_generic_infantry_equipment_manufacturer_1
-		}
-		kr_western_cart_csa = {#Western Cartridge
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea kr_western_cart_csa"}
-			allowed = { original_tag = CSA }
-			available = {
-				controls_state = 395
-				owns_state = 395
-			}
-			traits = { infantry_equipment_producer_defense_0  }
-			research_bonus = {
-				infantry_weapons = 0.1
-			}
-			picture = GFX_idea_generic_infantry_equipment_manufacturer_1
-		}
-		kr_winchester_western_csa = {#Winchester Repeating Arms
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea kr_winchester_western_csa"}
-			allowed = {
-				original_tag = CSA
-			}
-			available = {
-				controls_state = 931
-				owns_state = 931
-			}
-			visible = {
-				controls_state = 931
-				owns_state = 931
-				not = { country_exists = NEE }
-				has_country_flag = CSA_new_industries_flag
-			}
-			traits = {
-				infantry_equipment_producer_defense_1 blank regular
-			}
-			research_bonus = {
-				infantry_weapons = 0.1
-			}
-			picture = GFX_idea_generic_infantry_equipment_manufacturer_1
-		}
-
-		kr_american_car_csa = {#American Car and Foundry
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea kr_american_car_csa"}
-			allowed = { original_tag = CSA }
-			available = {
-				controls_state = 359
-				owns_state = 359
-			}
-			traits = { artillery_producer_offense_1 }
-			research_bonus = {
-				artillery = 0.05
-			}
-			picture = GFX_idea_generic_artillery_manufacturer_1
-		}
-
-		kr_army_ordnance_department_csa = {#Army Ordence Department
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea kr_army_ordnance_department_csa"}
-			allowed = { original_tag = CSA }
-			available = {
-				controls_state = 362
-				owns_state = 362
-			}
-			visible = {
-				controls_state = 362
-				owns_state = 362
-				not = { country_exists = USA }
-				has_country_flag = CSA_new_industries_flag
-			}
-			traits = { artillery_producer_mass_1 }
-			research_bonus = {
-				artillery = 0.05
-			}
-			picture = GFX_idea_generic_artillery_manufacturer_1
-		}
-
-		kr_rock_island_arsenal_csa = {#Rock Island Arsenal
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea kr_rock_island_arsenal_csa"}
-			allowed = { original_tag = CSA }
-			available = {
-				controls_state = 395
-				owns_state = 395
-			}
-			traits = { artillery_producer_defense_1 }
-			research_bonus = {
-				artillery = 0.05
-			}
-			picture = GFX_idea_generic_artillery_manufacturer_1
-		}
-
-		kr_watervliet_arsenal_csa = {#Watervliet Arsenal
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea kr_watervliet_arsenal_csa"}
-			allowed = {
-				original_tag = CSA
-			}
-			available = {
-				controls_state = 796
-				owns_state = 796
-			}
-			visible = {
-				controls_state = 796
-				owns_state = 796
-				not = { country_exists = NEE }
-				has_country_flag = CSA_new_industries_flag
-			}
-			traits = {
-				artillery_producer_offense_1 regular
-			}
-			research_bonus = {
-				artillery = 0.05
-			}
-			picture = GFX_idea_generic_artillery_manufacturer_1
-		}
-
-		kr_buick_csa = {#Buick
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea kr_buick_csa"}
-			allowed = { original_tag = CSA }
-			available = {
-				controls_state = 393
-				owns_state = 393
-			}
-			traits = { motorised_equipment_producer_mass_2 }
-			research_bonus = {
-				artillery = 0.05
-			}
-			picture = GFX_idea_generic_artillery_manufacturer_1
-		}
-
-		kr_cushman_csa = {#Cushman
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea kr_cushman_csa"}
-			allowed = { original_tag = CSA }
-			available = {
-				controls_state = 384
-				owns_state = 384
-			}
-			visible = {
-				controls_state = 384
-				owns_state = 384
-				not = { country_exists = USA }
-				has_country_flag = CSA_new_industries_flag
-			}
-			traits = { motorised_equipment_producer_offense_1 }
-			research_bonus = {
-				motorized_equipment = 0.05
-			}
-			picture = GFX_idea_generic_motorized_equipment_manufacturer_1
-		}
-
-		kr_hudson_csa = {#Hudson
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea kr_hudson_csa"}
-			allowed = { original_tag = CSA }
-			available = {
-				controls_state = 393
-				owns_state = 393
-			}
-			traits = { motorised_equipment_producer_mass_1 }
-			research_bonus = {
-				motorized_equipment = 0.05
-			}
-			picture = GFX_idea_generic_motorized_equipment_manufacturer_1
-		}
-
-		kr_kenworth_csa = {#kenworth
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea kr_kenworth_csa"}
-			allowed = { original_tag = CSA }
-			available = {
-				controls_state = 386
-				owns_state = 386
-			}
-			visible = {
-				controls_state = 386
-				owns_state = 386
-				not = { country_exists = CAL }
-				has_country_flag = CSA_new_industries_flag
-				has_global_flag = ACW_pacific_states_revolted
-			}
-			traits = { motorised_equipment_producer_mass_1 }
-			research_bonus = {
-				motorized_equipment = 0.05
-			}
-			picture = GFX_idea_generic_motorized_equipment_manufacturer_1
-		}
-
-		kr_mack_trucks_csa = {#Mack Trucks
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea kr_mack_trucks_csa"}
-			allowed = { original_tag = CSA }
-			available = {
-				controls_state = 358
-				owns_state = 358
-			}
-			traits = { motorised_equipment_producer_mass_1 }
-			research_bonus = {
-				motorized_equipment = 0.05
-			}
-			picture = GFX_idea_generic_motorized_equipment_manufacturer_1
-		}
-
-		kr_marmon_csa = {#Marmon
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea kr_marmon_csa"}
-			allowed = { original_tag = CSA }
-			available = {
-				controls_state = 396
-				owns_state = 396
-			}
-			traits = { motorised_equipment_producer_defense_1 }
-			research_bonus = {
-				motorized_equipment = 0.05
-			}
-			picture = GFX_idea_generic_motorized_equipment_manufacturer_1
-		}
-
-		kr_nash_csa = {#Nash Motors
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea kr_nash_csa"}
-			allowed = { original_tag = CSA }
-			available = {
-				controls_state = 394
-				owns_state = 394
-			}
-			traits = { motorised_equipment_producer_offense_1 }
-			research_bonus = {
-				motorized_equipment = 0.05
-			}
-			picture = GFX_idea_generic_motorized_equipment_manufacturer_1
-		}
-
-		kr_studebacker_csa = {#Studebaker
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea kr_studebacker_csa"}
-			allowed = {
-				original_tag = CSA
-			}
-			available = {
-				controls_state = 396
-				owns_state = 396
-			}
-			traits = {
-				motorised_equipment_producer_mass_2
-			}
-			research_bonus = {
-				motorized_equipment = 0.05
-			}
-			picture = GFX_idea_generic_motorized_equipment_manufacturer_1
-		}
-
-		kr_willys_csa = {#Willys
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea kr_willys_csa"}
-			allowed = { original_tag = CSA }
-			available = {
-				controls_state = 261
-				owns_state = 261
-			}
-			traits = { motorised_equipment_producer_defense_1 }
-			research_bonus = {
-				motorized_equipment = 0.05
-			}
-			picture = GFX_idea_generic_motorized_equipment_manufacturer_1
-		}
-
-		kr_davis_csa = {#Davis
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea kr_davis_csa"}
-			allowed = { original_tag = CSA }
-			available = {
-				controls_state = 798
-				owns_state = 798
-			}
-			visible = {
-				date > 1947.01.01
-				controls_state = 798
-				owns_state = 798
-				not = { country_exists = CAL }
-				has_country_flag = CSA_new_industries_flag
-			}
-			traits = { motorised_equipment_producer_mass_1 }
-			research_bonus = {
-				armor = 0.05
-			}
-			picture = idea_generic_tank_manufacturer_1
-		}
-
-	}
-	tank_manufacturer = {# Heavy Equipment Manufacturer
-		designer = yes
-		kr_bantam_csa = {#American Bantam
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea kr_bantam_csa"}
-			allowed = { original_tag = CSA }
-			available = {
-				controls_state = 360
-				owns_state = 360
-			}
-			traits = { small_tank_producer_defense_1 }
-			research_bonus = {
-				armor = 0.05
-			}
-			picture = idea_generic_tank_manufacturer_1
-		}
-		kr_catterpillar_csa = {#Catterpillar
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea kr_catterpillar_csa"}
-			allowed = {
-				original_tag = CSA
-			}
-			available = {
-				controls_state = 395
-				owns_state = 395
-			}
-			traits = {
-				small_tank_producer_mass_1 regular
-			}
-			research_bonus = {
-				armor = 0.05
-			}
-			picture = idea_generic_tank_manufacturer_1
-		}
-		kr_chrysler_csa = {#Chyrsler
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea kr_chrysler_csa"}
-			allowed = {
-				original_tag = CSA
-			}
-			available = {
-				controls_state = 365
-				owns_state = 365
-			}
-			visible = {
-				controls_state = 365
-				owns_state = 365
-				not = { country_exists = TEX }
-				has_country_flag = CSA_new_industries_flag
-			}
-			traits = {
-				small_tank_producer_offense_1 regular
-			}
-			research_bonus = {
-				armor = 0.05
-			}
-			picture = idea_generic_tank_manufacturer_1
-		}
-		kr_cunningham_csa = {#Cunningham
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea kr_cunningham_csa"}
-			allowed = { original_tag = CSA }
-			available = {
-				controls_state = 796
-				owns_state = 796
-			}
-			visible = {
-				controls_state = 796
-				owns_state = 796
-				not = { country_exists = NEE }
-				has_country_flag = CSA_new_industries_flag
-				CAN = {
-					has_country_flag = CAN_taking_land
+		### Navy ideas ### 
+		CSA_liberty_ships_ideas = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CSA_liberty_ships_ideas"}
+			picture = liberty_ships_focus
+			equipment_bonus = {
+				convoy = {
+					build_cost_ic = -0.25
+					instant = yes
 				}
 			}
-			traits = { small_tank_producer_mass_0 }
-			research_bonus = {
-				armor = 0.05
-			}
-			picture = idea_generic_tank_manufacturer_1
 		}
-		kr_dorris_csa = {#Dorris
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea kr_dorris_csa"}
-			allowed = { original_tag = CSA }
-			available = {
-				controls_state = 373
-				owns_state = 373
-			}
-			visible = {
-				controls_state = 373
-				owns_state = 373
-				not = { country_exists = USA }
-				has_country_flag = CSA_new_industries_flag
-			}
-			traits = { small_tank_producer_offense_1 }
-			research_bonus = {
-				armor = 0.05
-			}
-			picture = idea_generic_tank_manufacturer_1
+		CSA_revolutionary_naval_industry_1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CSA_revolutionary_naval_industry_1"}
+			picture = generic_the_london_naval_treaty
+			name = CSA_revolutionary_naval_industry
+			equipment_bonus = {
+				submarine = {
+					build_cost_ic = -0.25
+					instant = yes
+				}
+			}	
 		}
-		kr_packard_csa = {#Packard
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea kr_packard_csa"}
-			allowed = { original_tag = CSA }
-			available = {
-				controls_state = 393
-				owns_state = 393
-			}
-			traits = { small_tank_producer_mass_1 }
-			research_bonus = {
-				armor = 0.05
-			}
-			picture = idea_generic_tank_manufacturer_1
+		CSA_revolutionary_naval_industry_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CSA_revolutionary_naval_industry_2"}
+			picture = generic_the_london_naval_treaty
+			name = CSA_revolutionary_naval_industry
+			equipment_bonus = {
+				destroyer = {
+					build_cost_ic = -0.25
+					instant = yes
+				}
+			}	
 		}
-		kr_american_locomotive_csa = {
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea kr_american_locomotive_csa"}
-			allowed = { original_tag = CSA }
-			available = {
-				controls_state = 796
-				owns_state = 796
-			}
-			visible = {
-				controls_state = 796
-				owns_state = 796
-				not = { country_exists = NEE }
-				has_country_flag = CSA_new_industries_flag
-			}
-			traits = { medium_tank_producer_offense_1 regular }
-			research_bonus = {
-				armor = 0.05
-			}
-			picture = idea_generic_tank_manufacturer_2
+		CSA_revolutionary_naval_industry_3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CSA_revolutionary_naval_industry_3"}
+			picture = generic_the_london_naval_treaty
+			name = CSA_revolutionary_naval_industry
+			equipment_bonus = {
+				destroyer = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				submarine = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+			}	
 		}
-		kr_dodge_csa = {#Dodge
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea kr_dodge_csa"}
-			allowed = { original_tag = CSA }
-			available = {
-				controls_state = 393
-				owns_state = 393
+		CSA_revolutionary_naval_industry_4 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CSA_revolutionary_naval_industry_4"}
+			picture = generic_the_london_naval_treaty
+			name = CSA_revolutionary_naval_industry
+			modifier = {
+				political_power_gain = -0.1
+				stability_factor = -0.05
 			}
-			traits = { medium_tank_producer_mass_1 }
-			research_bonus = {
-				armor = 0.05
-			}
-			picture = idea_generic_tank_manufacturer_2
+			equipment_bonus = {
+				submarine = {
+					build_cost_ic = -0.25
+					instant = yes
+				}
+			}	
 		}
-		kr_fisher_tank_arsenal_csa = {#Fisher tank arsenal
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea kr_fisher_tank_arsenal_csa"}
-			allowed = { original_tag = CSA }
-			available = {
-				controls_state = 393
-				owns_state = 393
+		CSA_revolutionary_naval_industry_5 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CSA_revolutionary_naval_industry_5"}
+			picture = generic_the_london_naval_treaty
+			name = CSA_revolutionary_naval_industry
+			modifier = {
+				political_power_gain = -0.1
+				stability_factor = -0.05
 			}
-			traits = { medium_tank_producer_offense_1 }
-			research_bonus = {
-				armor = 0.05
-			}
-			picture = idea_generic_tank_manufacturer_2
+			equipment_bonus = {
+				destroyer = {
+					build_cost_ic = -0.25
+					instant = yes
+				}
+			}	
 		}
-		kr_pacific_foundry_csa = {#pacar
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea kr_pacific_foundry_csa"}
-			allowed = { original_tag = CSA }
-			available = {
-				controls_state = 386
-				owns_state = 386
+		CSA_revolutionary_naval_industry_6 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CSA_revolutionary_naval_industry_6"}
+			picture = generic_the_london_naval_treaty
+			name = CSA_revolutionary_naval_industry
+			modifier = {
+				political_power_gain = -0.1
+				stability_factor = -0.05
 			}
-			visible = {
-				controls_state = 386
-				owns_state = 386
-				not = { country_exists = CAL }
-				has_country_flag = CSA_new_industries_flag
-				has_global_flag = ACW_pacific_states_revolted
-			}
-			traits = { medium_tank_producer_mass_1 }
-			research_bonus = {
-				armor = 0.05
-			}
-			picture = idea_generic_tank_manufacturer_2
+			equipment_bonus = {
+				destroyer = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				submarine = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+			}	
 		}
-		kr_stutz_csa = {#Stutz
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea kr_stutz_csa"}
-			allowed = { original_tag = CSA }
-			available = {
-				controls_state = 366
-				owns_state = 366
+		CSA_martime_industry = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CSA_martime_industry"}
+			picture = generic_the_london_naval_treaty
+			modifier = {
+				production_speed_naval_base_factor = 0.2
+				production_speed_dockyard_factor = 0.1
+				industrial_capacity_dockyard = 0.1
 			}
-			visible = {
-				controls_state = 366
-				owns_state = 366
-				not = { country_exists = TEX }
-				has_country_flag = CSA_new_industries_flag
+			equipment_bonus = {
+				submarine = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				destroyer = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				light_cruiser = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				heavy_cruiser = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
 			}
-			traits = { medium_tank_producer_mass_1 }
-			research_bonus = {
-				armor = 0.05
-			}
-			picture = idea_generic_tank_manufacturer_2
 		}
-		kr_white_motor_csa = {#White Motor
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea kr_white_motor_csa"}
-			allowed = { original_tag = CSA }
-			available = {
-				controls_state = 261
-				owns_state = 261
+		CSA_big_red_fleet = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CSA_big_red_fleet"}
+			picture = generic_navy_bonus
+			name = CSA_big_red_fleet
+			equipment_bonus = {
+				capital_ship = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
 			}
-			traits = { medium_tank_producer_defense_1 }
-			research_bonus = {
-				armor = 0.05
+			modifier = {
+				repair_speed_factor = 0.05
 			}
-			picture = idea_generic_tank_manufacturer_2
 		}
-		kr_baldwin_locomotive_works_csa = {#Baldwin Locomotive Works
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea kr_baldwin_locomotive_works_csa"}
-			available = {
-				controls_state = 360
-				owns_state = 360
+		CSA_sea_hunters = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CSA_sea_hunters"}
+			picture = generic_navy_bonus
+			name = CSA_sea_hunters
+			modifier = {
+				navy_submarine_attack_factor = 0.05
+				navy_submarine_defence_factor = 0.05
 			}
-			allowed = { original_tag = CSA }
-			traits = { heavy_tank_producer_defense_1 }
-			research_bonus = {
-				armor = 0.05
-			}
-			picture = idea_generic_tank_manufacturer_3
 		}
-		kr_ford_csa = {#Ford
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea kr_ford_csa"}
-			allowed = {
-				original_tag = CSA
+		CSA_decentralized_command = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CSA_decentralized_command"}
+			picture = generic_navy_bonus
+			name = CSA_decentralized_command 
+			modifier = {
+				navy_screen_attack_factor = 0.03
+				navy_screen_defence_factor = 0.03
 			}
-			available = {
-				controls_state = 365
-				owns_state = 365
-			}
-			visible = {
-				controls_state = 365
-				owns_state = 365
-				not = { country_exists = TEX }
-				has_country_flag = CSA_new_industries_flag
-			}
-			traits = {
-				heavy_tank_producer_offense_1 regular
-			}
-			research_bonus = {
-				armor = 0.05
-			}
-			picture = idea_generic_tank_manufacturer_3
 		}
-		kr_general_motors_csa = {#General Motors
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea kr_general_motors_csa"}
-			allowed = {
-				original_tag = CSA
+		CSA_american_peoples_navy_1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CSA_american_peoples_navy_1"}
+			picture = generic_navy_bonus
+			name = CSA_american_peoples_navy
+			equipment_bonus = {
+				capital_ship = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
 			}
-			available = {
-				controls_state = 393
-				owns_state = 393
+			modifier = {
+				repair_speed_factor = 0.05
+				navy_max_range_factor = -0.05
+				navy_fuel_consumption_factor = -0.20
 			}
-			traits = {
-				heavy_tank_producer_mass_2 regular
+		}
+		CSA_american_peoples_navy_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CSA_american_peoples_navy_2"}
+			picture = generic_navy_bonus
+			name = CSA_american_peoples_navy
+			modifier = {
+				navy_submarine_attack_factor = 0.05
+				navy_submarine_defence_factor = 0.05
+				navy_max_range_factor = -0.05
+				navy_fuel_consumption_factor = -0.20
+			}
+		}
+		CSA_american_peoples_navy_3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CSA_american_peoples_navy_3"}
+			picture = generic_navy_bonus
+			name = CSA_american_peoples_navy 
+			modifier = {
+				navy_screen_attack_factor = 0.03
+				navy_screen_defence_factor = 0.03
+				navy_max_range_factor = -0.05
+				navy_fuel_consumption_factor = -0.20
+			}
+		}
+		CSA_american_peoples_navy_4 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CSA_american_peoples_navy_4"}
+			picture = generic_navy_bonus
+			name = CSA_second_continental_navy
+			equipment_bonus = {
+				capital_ship = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+			}
+			modifier = {
+				repair_speed_factor = 0.05
+				navy_max_range_factor = 0.10
+				navy_org_factor = 0.05
+			}
+		}
+		CSA_american_peoples_navy_5 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CSA_american_peoples_navy_5"}
+			picture = generic_navy_bonus
+			name = CSA_second_continental_navy
+			modifier = {
+				navy_submarine_attack_factor = 0.05
+				navy_submarine_defence_factor = 0.05
+				navy_max_range_factor = 0.10
+				navy_org_factor = 0.05
+			}
+		}
+		CSA_american_peoples_navy_6 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CSA_american_peoples_navy_6"}
+			picture = generic_navy_bonus
+			name = CSA_second_continental_navy
+			modifier = {
+				navy_screen_attack_factor = 0.03
+				navy_screen_defence_factor = 0.03
+				navy_max_range_factor = 0.10
+				navy_org_factor = 0.05
+			}
+		}
+		CSA_american_peoples_navy_7 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CSA_american_peoples_navy_7"}
+			picture = generic_navy_bonus
+			name = CSA_american_peoples_navy
+			equipment_bonus = {
+				capital_ship = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+			}
+			modifier = {
+				navy_max_range_factor = -0.05
+				navy_fuel_consumption_factor = -0.20
+				repair_speed_factor = 0.1
+				navy_refit_speed = 0.1
+				navy_refit_ic_cost = -0.1
+			}
+		}
+		CSA_american_peoples_navy_8 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CSA_american_peoples_navy_8"}
+			picture = generic_navy_bonus
+			name = CSA_american_peoples_navy
+			modifier = {
+				navy_submarine_attack_factor = 0.05
+				navy_submarine_defence_factor = 0.05
+				navy_max_range_factor = -0.05
+				navy_fuel_consumption_factor = -0.20
+				repair_speed_factor = 0.1
+				navy_refit_speed = 0.1
+				navy_refit_ic_cost = -0.1
+			}
+		}
+		CSA_american_peoples_navy_9 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CSA_american_peoples_navy_9"}
+			picture = generic_navy_bonus
+			name = CSA_american_peoples_navy 
+			modifier = {
+				navy_screen_attack_factor = 0.03
+				navy_screen_defence_factor = 0.03
+				navy_max_range_factor = -0.05
+				navy_fuel_consumption_factor = -0.20
+				repair_speed_factor = 0.1
+				navy_refit_speed = 0.1
+				navy_refit_ic_cost = -0.1
+			}
+		}
+		CSA_american_peoples_navy_10 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CSA_american_peoples_navy_10"}
+			picture = generic_navy_bonus
+			name = CSA_second_continental_navy
+			equipment_bonus = {
+				capital_ship = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+			}
+			modifier = {
+				navy_max_range_factor = 0.10
+				navy_org_factor = 0.05
+				repair_speed_factor = 0.1
+				navy_refit_speed = 0.1
+				navy_refit_ic_cost = -0.1
+			}
+		}
+		CSA_american_peoples_navy_11 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CSA_american_peoples_navy_11"}
+			picture = generic_navy_bonus
+			name = CSA_second_continental_navy
+			modifier = {
+				navy_submarine_attack_factor = 0.05
+				navy_submarine_defence_factor = 0.05
+				navy_max_range_factor = 0.10
+				navy_org_factor = 0.05
+				repair_speed_factor = 0.1
+				navy_refit_speed = 0.1
+				navy_refit_ic_cost = -0.1
+			}
+		}
+		CSA_american_peoples_navy_12 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CSA_american_peoples_navy_12"}
+			picture = generic_navy_bonus
+			name = CSA_second_continental_navy
+			modifier = {
+				navy_screen_attack_factor = 0.03
+				navy_screen_defence_factor = 0.03
+				navy_max_range_factor = 0.10
+				navy_org_factor = 0.05
+				repair_speed_factor = 0.1
+				navy_refit_speed = 0.1
+				navy_refit_ic_cost = -0.1
+			}
+		}
+		CSA_american_peoples_navy_13 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CSA_american_peoples_navy_13"}
+			picture = generic_navy_bonus
+			name = CSA_american_peoples_navy
+			equipment_bonus = {
+				capital_ship = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+			}
+			modifier = {
+				navy_max_range_factor = -0.05
+				navy_fuel_consumption_factor = -0.20
+				repair_speed_factor = 0.1
+				navy_refit_speed = 0.1
+				navy_refit_ic_cost = -0.1
+				naval_coordination = 0.05
 			}
 			research_bonus = {
-				armor = 0.05
+				naval_doctrine = 0.15
 			}
-			picture = idea_generic_tank_manufacturer_3
+		}
+		CSA_american_peoples_navy_14 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CSA_american_peoples_navy_14"}
+			picture = generic_navy_bonus
+			name = CSA_american_peoples_navy
+			modifier = {
+				navy_submarine_attack_factor = 0.05
+				navy_submarine_defence_factor = 0.05
+				navy_max_range_factor = -0.05
+				navy_fuel_consumption_factor = -0.20
+				repair_speed_factor = 0.1
+				navy_refit_speed = 0.1
+				navy_refit_ic_cost = -0.1
+				naval_coordination = 0.05
+			}
+			research_bonus = {
+				naval_doctrine = 0.15
+			}
+		}
+		CSA_american_peoples_navy_15 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CSA_american_peoples_navy_15"}
+			picture = generic_navy_bonus
+			name = CSA_american_peoples_navy 
+			modifier = {
+				navy_screen_attack_factor = 0.03
+				navy_screen_defence_factor = 0.03
+				navy_max_range_factor = -0.05
+				navy_fuel_consumption_factor = -0.20
+				repair_speed_factor = 0.1
+				navy_refit_speed = 0.1
+				navy_refit_ic_cost = -0.1
+				naval_coordination = 0.05
+			}
+			research_bonus = {
+				naval_doctrine = 0.15
+			}
+		}
+		CSA_american_peoples_navy_16 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CSA_american_peoples_navy_16"}
+			picture = generic_navy_bonus
+			name = CSA_second_continental_navy
+			equipment_bonus = {
+				capital_ship = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+			}
+			modifier = {
+				navy_max_range_factor = 0.10
+				navy_org_factor = 0.05
+				repair_speed_factor = 0.1
+				navy_refit_speed = 0.1
+				navy_refit_ic_cost = -0.1
+				naval_coordination = 0.05
+			}
+			research_bonus = {
+				naval_doctrine = 0.15
+			}
+		}
+		CSA_american_peoples_navy_17 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CSA_american_peoples_navy_17"}
+			picture = generic_navy_bonus
+			name = CSA_second_continental_navy
+			modifier = {
+				navy_submarine_attack_factor = 0.05
+				navy_submarine_defence_factor = 0.05
+				navy_max_range_factor = 0.10
+				navy_org_factor = 0.05
+				repair_speed_factor = 0.1
+				navy_refit_speed = 0.1
+				navy_refit_ic_cost = -0.1
+				naval_coordination = 0.05
+			}
+			research_bonus = {
+				naval_doctrine = 0.15
+			}
+		}
+		CSA_american_peoples_navy_18 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CSA_american_peoples_navy_18"}
+			picture = generic_navy_bonus
+			name = CSA_second_continental_navy
+			modifier = {
+				navy_screen_attack_factor = 0.03
+				navy_screen_defence_factor = 0.03
+				navy_max_range_factor = 0.10
+				navy_org_factor = 0.05
+				repair_speed_factor = 0.1
+				navy_refit_speed = 0.1
+				navy_refit_ic_cost = -0.1
+				naval_coordination = 0.05
+			}
+			research_bonus = {
+				naval_doctrine = 0.15
+			}
+		}
+		CSA_continental_marines = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CSA_continental_marines"}
+			picture = eng_preparing_the_second_front
+			name = CSA_continental_marines
+			modifier = {
+				special_forces_cap = 0.05
+				special_forces_attack_factor = 0.05
+				extra_marine_supply_grace = 5
+			}
 		}
 	}
-	naval_manufacturer = {
-		designer = yes
-
-		kr_ingalls_shipyards_csa = {
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea kr_ingalls_shipyards_csa"}
-			allowed = { original_tag = CSA }
-			available = {
-				controls_state = 370
-				owns_state = 370
-			}
-			visible = {
-				controls_state = 370
-				owns_state = 370
-				not = { country_exists = TEX }
-				has_country_flag = CSA_new_industries_flag
-			}
-			traits = { capital_ship_producer_mass_1 }
-			research_bonus = {
-				naval_equipment = 0.05
-			}
-			picture = generic_naval_manufacturer_1
-		}
-
-		kr_newport_news_csa = {#Newport News
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea kr_newport_news_csa"}
-			allowed = {	original_tag = CSA	}
-			available = {
-				controls_state = 362
-				owns_state = 362
-			}
-			visible = {
-				controls_state = 362
-				owns_state = 362
-				not = { country_exists = USA }
-				has_country_flag = CSA_new_industries_flag
-			}
-			traits = { capital_ship_producer_offense_2 }
-			research_bonus = {
-				naval_equipment = 0.05
-			}
-			picture = generic_naval_manufacturer_1
-		}
-
-		kr_norfolk_shipyard_csa = {#Norfolk Shipyard
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea kr_norfolk_shipyard_csa"}
-			allowed = {
-				original_tag = CSA
-			}
-			available = {
-				controls_state = 362
-				owns_state = 362
-			}
-			visible = {
-				controls_state = 362
-				owns_state = 362
-				not = { country_exists = USA }
-				has_country_flag = CSA_new_industries_flag
-			}
-			traits = {
-				capital_ship_producer_defense_1
-			}
-			research_bonus = {
-				naval_equipment = 0.05
-			}
-			picture = generic_naval_manufacturer_1
-		}
-
-		kr_kaiser_shipyards_csa = {
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea kr_kaiser_shipyards_csa"}
-			allowed = { original_tag = CSA }
-			available = {
-				controls_state = 797
-				owns_state = 797
-			}
-			visible = {
-				controls_state = 797
-				owns_state = 797
-				not = { country_exists = CAL }
-				has_country_flag = CSA_new_industries_flag
-			}
-			traits = { cruiser_producer_mass_2 }
-			research_bonus = {
-				naval_equipment = 0.05
-			}
-			picture = generic_naval_manufacturer_1
-		}
-
-		kr_new_york_shipbuilding_csa = {#Newyork Shipbuilding
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea kr_new_york_shipbuilding_csa"}
-			allowed = { original_tag = CSA }
-			available = {
-				controls_state = 358
-				owns_state = 358
-			}
-			traits = { cruiser_producer_mass_2 }
-			research_bonus = { naval_equipment = 0.05 }
-			picture = generic_naval_manufacturer_1
-		}
-
-		kr_electric_boat_csa = {#Electric Boat
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea kr_electric_boat_csa"}
-			allowed = {
-				original_tag = CSA
-			}
-			available = {
-				controls_state = 931
-				owns_state = 931
-			}
-			visible = {
-				controls_state = 931
-				owns_state = 931
-				not = { country_exists = NEE }
-				has_country_flag = CSA_new_industries_flag
-			}
-			traits = {
-				small_ship_producer_defense_1
-			}
-			research_bonus = {
-				naval_equipment = 0.07
-			}
-			picture = generic_naval_manufacturer_1
-		}
-
-		kr_higgins_csa = {#Higgins
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea kr_higgins_csa"}
-			allowed = { original_tag = CSA }
-			available = {
-				controls_state = 371
-				owns_state = 371
-			}
-			visible = {
-				controls_state = 371
-				owns_state = 371
-				not = { country_exists = TEX }
-				has_country_flag = CSA_new_industries_flag
-			}
-			traits = { small_ship_producer_offense_1 }
-			research_bonus = { naval_equipment = 0.07 }
-			picture = generic_naval_manufacturer_1
-		}
-
-		kr_mare_island_shipyard_csa = {
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea kr_mare_island_shipyard_csa"}
-			allowed = { original_tag = CSA }
-			available = {
-				controls_state = 797
-				owns_state = 797
-			}
-			visible = {
-				controls_state = 797
-				owns_state = 797
-				not = { country_exists = CAL }
-				has_country_flag = CSA_new_industries_flag
-			}
-			traits = { small_ship_producer_defense_2 }
-			research_bonus = {
-				naval_equipment = 0.05
-			}
-			picture = generic_naval_manufacturer_1
-		}
-
-		kr_philadelphia_naval_shipyard_csa = {#Philadelphia Navel Shipyard
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea kr_philadelphia_naval_shipyard_csa"}
-			allowed = { original_tag = CSA }
-			available = {
-				controls_state = 360
-				owns_state = 360
-			}
-			traits = { small_ship_producer_mass_2 }
-			research_bonus = { naval_equipment = 0.05 }
-			picture = generic_naval_manufacturer_1
-		}
-
-	}
-
-	aircraft_manufacturer = {
-		designer = yes
-
-		kr_beechcraft_csa = {#Beechcraft
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea kr_beechcraft_csa"}
-			allowed = {
-				original_tag = CSA
-			}
-			available = {
-				controls_state = 383
-				owns_state = 383
-			}
-			visible = {
-				controls_state = 383
-				owns_state = 383
-				not = { country_exists = USA }
-				has_country_flag = CSA_new_industries_flag
-			}
-			traits = {
-				fighter_producer_mass_1 regular
-			}
-			research_bonus = {
-				air_equipment = 0.05
-			}
-			picture = idea_generic_air_manufacturer_1
-		}
-
-		kr_bell_aircraft_csa = {#Bell Aircraft
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea kr_bell_aircraft_csa"}
-			allowed = {
-				original_tag = CSA
-			}
-			available = {
-				controls_state = 796
-				owns_state = 796
-			}
-			visible = {
-				controls_state = 796
-				owns_state = 796
-				not = { country_exists = NEE }
-				has_country_flag = CSA_new_industries_flag
-			}
-			traits = {
-				fighter_producer_defense_1 regular
-			}
-			research_bonus = {
-				air_equipment = 0.05
-			}
-			picture = idea_generic_air_manufacturer_1
-		}
-
-		kr_consolidated_csa = {#Brewster
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea kr_consolidated_csa"}
-			allowed = { original_tag = CSA }
-			available = {
-				controls_state = 395
-				owns_state = 395
-			}
-			traits = { fighter_producer_defense_1 }
-			research_bonus = {
-				air_equipment = 0.05
-			}
-			picture = idea_generic_air_manufacturer_1
-		}
-
-		kr_grumman_csa = {#Grumman
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea kr_grumman_csa"}
-			allowed = {
-				original_tag = CSA
-			}
-			available = {
-				controls_state = 358
-				owns_state = 358
-			}
-			traits = {
-				fighter_producer_offense_2
-			}
-			research_bonus = {
-				air_equipment = 0.05
-			}
-			picture = idea_generic_air_manufacturer_1
-		}
-
-		kr_lockheed_csa = {#Lockheed
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea kr_lockheed_csa"}
-			allowed = { original_tag = CSA }
-			available = {
-				controls_state = 798
-				owns_state = 798
-			}
-			visible = {
-				controls_state = 798
-				owns_state = 798
-				not = { country_exists = CAL }
-				has_country_flag = CSA_new_industries_flag
-			}
-			traits = { fighter_producer_offense_2 }
-			research_bonus = {
-				air_equipment = 0.05
-			}
-			picture = idea_generic_air_manufacturer_1
-		}
-
-		kr_north_american_aviation_csa = {#North American Aviation
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea kr_north_american_aviation_csa"}
-			allowed = {
-				original_tag = CSA
-			}
-			available = {
-				controls_state = 361
-				owns_state = 361
-			}
-			visible = {
-				controls_state = 361
-				owns_state = 361
-				not = { country_exists = USA }
-				has_country_flag = CSA_new_industries_flag
-			}
-			traits = {
-				fighter_producer_offense_2 expert
-			}
-			research_bonus = {
-				air_equipment = 0.05
-			}
-			picture = idea_generic_air_manufacturer_1
-		}
-
-		kr_pan_american_csa = {#Pan American Airways
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea kr_pan_american_csa"}
-			allowed = { original_tag = CSA }
-			available = {
-				controls_state = 366
-				owns_state = 366
-			}
-			visible = {	has_global_flag = USA_panam_created_flag }
-			traits = { fighter_producer_mass_2 }
-			research_bonus = { air_equipment = 0.05	}
-			picture = idea_generic_air_manufacturer_1
-		}
-
-		kr_ryan_aircraft_csa = {#Ryan Aircraft
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea kr_ryan_aircraft_csa"}
-			allowed = { original_tag = CSA }
-			available = {
-				controls_state = 363
-				owns_state = 363
-			}
-			visible = {
-				controls_state = 363
-				owns_state = 363
-				not = { country_exists = TEX }
-				has_country_flag = CSA_new_industries_flag
-			}
-			traits = { fighter_producer_mass_1 }
-			research_bonus = {
-				air_equipment = 0.05
-			}
-			picture = idea_generic_air_manufacturer_1
-		}
-
-		kr_vultee_aircraft_csa = {#Vultee Aircraft
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea kr_vultee_aircraft_csa"}
-			allowed = { original_tag = CSA }
-			available = {
-				controls_state = 798
-				owns_state = 798
-			}
-			visible = {
-				controls_state = 798
-				owns_state = 798
-				not = { country_exists = CAL }
-				has_country_flag = CSA_new_industries_flag
-			}
-			traits = { fighter_producer_defense_1 }
-			research_bonus = {
-				air_equipment = 0.05
-			}
-			picture = idea_generic_air_manufacturer_1
-		}
-
-		kr_brewster_csa = {#Consolidated
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea kr_brewster_csa"}
-			allowed = { original_tag = CSA }
-			available = {
-				controls_state = 358
-				owns_state = 358
-			}
-			traits = { nav_cas_producer_offense_1 }
-			research_bonus = {
-				air_equipment = 0.05
-			}
-			picture = idea_generic_air_manufacturer_2
-		}
-
-		kr_curtiss_wright_csa = {#Curtiss Wright
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea kr_curtiss_wright_csa"}
-			allowed = {
-				original_tag = CSA
-			}
-			available = {
-				controls_state = 796
-				owns_state = 796
-			}
-			visible = {
-				controls_state = 796
-				owns_state = 796
-				not = { country_exists = NEE }
-				has_country_flag = CSA_new_industries_flag
-			}
-			traits = {
-				nav_cas_producer_offense_2
-			}
-			research_bonus = {
-				air_equipment = 0.05
-			}
-			picture = idea_generic_air_manufacturer_2
-		}
-
-		kr_fairchild_csa = {#Fairchild
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea kr_fairchild_csa"}
-			allowed = { original_tag = CSA }
-			available = {
-				controls_state = 361
-				owns_state = 361
-			}
-			visible = {
-				controls_state = 361
-				owns_state = 361
-				not = { country_exists = USA }
-				has_country_flag = CSA_new_industries_flag
-			}
-			traits = { nav_cas_producer_defense_1 }
-			research_bonus = {
-				air_equipment = 0.05
-			}
-			picture = idea_generic_air_manufacturer_2
-		}
-
-		kr_hughes_aircraft_csa = {#Hughes Aircraft
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea kr_hughes_aircraft_csa"}
-			allowed = { original_tag = CSA }
-			available = {
-				controls_state = 798
-				owns_state = 798
-			}
-			visible = {
-				controls_state = 798
-				owns_state = 798
-				not = { country_exists = CAL }
-				has_country_flag = CSA_new_industries_flag
-			}
-			traits = { nav_cas_producer_mass_2 }
-			research_bonus = {
-				air_equipment = 0.05
-			}
-			picture = idea_generic_air_manufacturer_2
-		}
-
-		kr_northrop_csa = {#Northrop
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea kr_northrop_csa"}
-			allowed = { original_tag = CSA }
-			available = {
-				controls_state = 798
-				owns_state = 798
-			}
-			visible = {
-				controls_state = 798
-				owns_state = 798
-				not = { country_exists = CAL }
-				has_country_flag = CSA_new_industries_flag
-			}
-			traits = { nav_cas_producer_offense_2 }
-			research_bonus = {
-				air_equipment = 0.05
-			}
-			picture = idea_generic_air_manufacturer_2
-		}
-
-		kr_vought_csa = {
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea kr_vought_csa"}
-			allowed = { original_tag = CSA }
-			available = {
-				controls_state = 358
-				owns_state = 358
-			}
-			traits = { nav_cas_producer_offense_2 }
-			research_bonus = {
-				air_equipment = 0.05
-			}
-			picture = idea_generic_air_manufacturer_2
-		}
-
-		kr_boeing_csa = {#Boeing
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea kr_boeing_csa"}
-			allowed = {
-				original_tag = CSA
-			}
-			available = {
-				controls_state = 930
-				owns_state = 930
-			}
-			visible = {
-				controls_state = 930
-				owns_state = 930
-				not = { country_exists = USA }
-				has_country_flag = CSA_new_industries_flag
-			}
-			traits = {
-				bomber_producer_defense_2
-			}
-			research_bonus = {
-				air_equipment = 0.05
-			}
-			picture = idea_generic_air_manufacturer_3
-		}
-
-		kr_douglas_csa = {#Douglas
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea kr_douglas_csa"}
-			allowed = { original_tag = CSA }
-			available = {
-				controls_state = 798
-				owns_state = 798
-			}
-			visible = {
-				controls_state = 798
-				owns_state = 798
-				not = { country_exists = CAL }
-				has_country_flag = CSA_new_industries_flag
-			}
-			picture = idea_generic_air_manufacturer_3
-			traits = { bomber_producer_offense_2 }
-			research_bonus = { air_equipment = 0.05 }
-		}
-
-		kr_glenn_martin_csa = {#Glenn L. Martin Company
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea kr_glenn_martin_csa"}
-			allowed = { original_tag = CSA }
-			available = {
-				controls_state = 798
-				owns_state = 798
-			}
-			visible = {
-				controls_state = 798
-				owns_state = 798
-				not = { country_exists = CAL }
-				has_country_flag = CSA_new_industries_flag
-			}
-			picture = idea_generic_air_manufacturer_3
-			traits = { bomber_producer_offense_2 }
-			research_bonus = { air_equipment = 0.05 }
-		}
-
-	}
-
-	theorist = {}
 }
