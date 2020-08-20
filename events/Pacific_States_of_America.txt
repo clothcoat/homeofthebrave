@@ -8685,3 +8685,71 @@ country_event = {# Long Returns
 			add_ideas = CAL_Konrad_Knute_Solberg_sec_sde
 		}
 	}
+
+}
+	country_event = {# Long's Head of State
+	id = pacificstates.4001
+	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.4001"}
+	title = pacificstates.4001.t
+	desc = pacificstates.4001.d
+	picture = GFX_report_event_USA_american_brigade
+
+	is_triggered_only = yes
+
+
+	option = {# Wallace
+		name = pacificstates.4001.a
+		set_politics = {
+			ruling_party = social_democrat
+			election_frequency = 48
+			elections_allowed = yes
+		}			
+		hidden_effect = {
+			add_ideas = CAL_Henry_Wallace_hog_sde
+			add_ideas = CAL_Ralph_Johnson_Bunche_for_sde
+			add_ideas = CAL_Hjalmar_Petersen_eco_sde
+			add_ideas = CAL_Konrad_Knute_Solberg_sec_sde
+		}
+	}
+	option = {# Johnson
+		name = pacificstates.4001.b
+		set_politics = {
+			ruling_party = social_democrat
+			election_frequency = 48
+			elections_allowed = yes
+		}		
+		hidden_effect = {
+			add_ideas = CAL_Hiram_Johnson_hog_sli
+			add_ideas = CAL_Ralph_Johnson_Bunche_for_sde
+			add_ideas = CAL_Hjalmar_Peterson_eco_sde
+			add_ideas = CAL_Konrad_Knute_Solberg_sec_sde
+		}
+	}
+	option = {# Keep Longism
+		name = pacificstates.4001.c
+		set_politics = {
+			ruling_party = social_democrat
+			election_frequency = 48
+			elections_allowed = yes
+		}		
+		hidden_effect = {
+			add_ideas = CAL_Huey_Long_hog_sde
+			add_ideas = CAL_Ralph_Johnson_Bunche_for_sde
+			add_ideas = CAL_Hjalmar_Peterson_eco_sde
+			add_ideas = CAL_Konrad_Knute_Solberg_sec_sde
+		}
+	}
+	option = {# Keep Long in the cabinet
+		name = pacificstates.4001.d
+		set_politics = {
+			ruling_party = social_democrat
+			election_frequency = 48
+			elections_allowed = yes
+		}		
+		hidden_effect = {
+			add_ideas = CAL_Henry_Wallace_hog_sde
+			add_ideas = CAL_Ralph_Johnson_Bunche_for_sde
+			add_ideas = CAL_Huey_Long_eco_sde
+			add_ideas = CAL_Konrad_Knute_Solberg_sec_sde
+		}
+	}
