@@ -1349,7 +1349,10 @@ country_event = { # Left Vanguard
 
 country_event = { # Union Elections
 	id = bbr.17
-	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.17"}
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event bbr.17"
+		set_country_flag = BBR_election_held
+	}
 	title = bbr.17.t
 	desc = bbr.17.d
 	picture = GFX_report_event_USA_soldiers_watching

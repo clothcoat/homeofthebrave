@@ -3142,7 +3142,7 @@ focus_tree = {
 			}
 		}
 		available = {
-			has_completed_focus = NEE_Home_of_the_Brave
+			has_completed_focus = NEE_Legitimate_America
 		}
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -3511,7 +3511,7 @@ focus_tree = {
 			}
 		}
 		available = {
-			has_completed_focus = NEE_Home_of_the_Brave
+			has_completed_focus = NEE_Legitimate_America
 			any_owned_state = { is_coastal = yes }
 		}
 		cancel_if_invalid = yes
@@ -6269,7 +6269,7 @@ focus_tree = {
 	}
 	focus = {# Joint Entente Exercises
 		id = NEE_joint_exercises
-		icon = GFX_goal_national_mobilization
+		icon = GFX_goal_NEE_joint_entente_excercises
 		cost = 6
 		x = 6
 		y = 9
@@ -6293,7 +6293,7 @@ focus_tree = {
 	}
 	focus = {# British Pact
 		id = NEE_british_pact
-		icon = GFX_goal_national_mobilization
+		icon = GFX_goal_NEE_british_pact_3
 		cost = 6
 		x = 4
 		y = 10
@@ -6319,7 +6319,7 @@ focus_tree = {
 	}
 	focus = {# Joint Coastal Defenses
 		id = NEE_joint_coastal_defenses
-		icon = GFX_goal_national_mobilization
+		icon = GFX_goal_NEE_joint_coastal_defenses
 		cost = 10
 		x = 6
 		y = 10
@@ -6433,7 +6433,7 @@ focus_tree = {
     }
 	focus = {# Back the French
 		id = NEE_back_french
-		icon = GFX_goal_national_mobilization
+		icon = GFX_goal_NEE_back_the_french
 		cost = 6
 		x = 8
 		y = 10
@@ -6467,7 +6467,7 @@ focus_tree = {
 	}
 	focus = {# Join ISAC
 		id = NEE_join_isac
-		icon = GFX_goal_national_mobilization
+		icon = GFX_goal_NEE_join_ISAC
 		cost = 6
 		x = 5
 		y = 11
@@ -6513,7 +6513,7 @@ focus_tree = {
 	}
 	focus = {# Boston to Ottawa
 		id = NEE_boston_to_ottawa
-		icon = GFX_goal_national_mobilization
+		icon = GFX_goal_NEE_boston_to_ottawa
 		cost = 6
 		x = 7
 		y = 11
