@@ -29,6 +29,12 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BBR_abb"
 			custom_effect_tooltip = unlock_focuses
+			hidden_effect = {
+			country_event = {
+				id = bbr.8000
+				days = 2
+				}
+			}
 			add_popularity = { ideology = totalist popularity = 0.03 }
 		}
 	}
@@ -50,6 +56,12 @@ focus_tree = {
 			add_ideas = BBR_the_crusaders_idea
 			add_political_power = 45
 			add_popularity = { ideology = totalist popularity = 0.05 }
+			hidden_effect = {
+			country_event = {
+				id = bbr.8005
+				days = 20
+				}
+			}
 		}
 	}
 	focus = {# Racial Expropriation
@@ -58,6 +70,14 @@ focus_tree = {
 		cost = 6.00
 		prerequisite = {
 			focus = BBR_the_crusaders
+		}
+		select_effect = {
+		hidden_effect = {
+			country_event = {
+				id = bbr.8000
+				days = 12
+				}
+			}
 		}
 		relative_position_id = BBR_abb
 		x = -1
@@ -70,6 +90,7 @@ focus_tree = {
 			add_popularity = { ideology = totalist popularity = 0.03 }
 			add_political_power = 75
 			add_stability = -0.05
+			add_manpower = -6100
 			random_owned_state = {
 				limit = {
 					is_core_of = BBR
@@ -136,6 +157,12 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus BBR_children_of_the_sun"
 			add_ideas = BBR_children_of_the_sun_idea
 			add_popularity = { ideology = totalist popularity = 0.1 }
+			hidden_effect = {
+			country_event = {
+				id = bbr.8006
+				days = 60
+				}
+			}
 		}
 	}
 	focus = {# Pharoism
@@ -157,6 +184,12 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BBR_the_black_pharoah"
 			add_ideas = BBR_the_black_pharoah_idea
+			hidden_effect = {
+			country_event = {
+				id = bbr.8002
+				days = 1
+				}
+			}
 			add_political_power = 100
 			add_stability = 0.05
 			add_war_support = 0.05
@@ -431,6 +464,14 @@ focus_tree = {
 		ai_will_do = {
 			factor = 50
 		}
+		select_effect = {
+		hidden_effect = {
+			country_event = {
+				id = bbr.8004
+				days = 10
+				}
+			}
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BBR_black_nobility"
 			swap_ideas = {
@@ -454,7 +495,7 @@ focus_tree = {
 	focus = {# Claim the Ancient World
 		id = BBR_claim_greece
 		icon = GFX_BBR_reclaim_ancient_world
-		cost = 6.00
+		cost = 3.00
 		prerequisite = {
 			focus = BBR_black_nobility
 		}
@@ -469,6 +510,12 @@ focus_tree = {
 			swap_ideas = {
 			remove_idea = BBR_the_black_pharoah_idea_2
 			add_idea = BBR_the_black_pharoah_idea_3
+			}
+			hidden_effect = {
+			country_event = {
+				id = bbr.8003
+				days = 3
+				}
 			}
 			add_popularity = { ideology = totalist popularity = 0.05 }
 			add_political_power = 50

@@ -367,6 +367,244 @@ country_event = { # ABB in Power
 	}
 }
 
+country_event = { # Potential Allies
+	id = bbr.8000
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.8000"}
+	title = bbr.8000.t
+	desc = bbr.8000.d
+	picture = GFX_report_event_USA_soldiers_watching
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = { # Work with UNIA
+		name = bbr.8000.a
+		add_manpower = 1500
+		add_war_support = 0.05
+		add_political_power = 30
+		add_popularity = { ideology = paternal_autocrat popularity = 0.03 }
+		add_popularity = { ideology = totalist popularity = 0.03 }
+		add_stability = -0.08
+	}
+	
+	option = { # Work with the Left
+		name = bbr.8000.b
+		add_political_power = -20
+		FRA = {
+			add_opinion_modifier = { target = BBR modifier = small_increase }
+			add_equipment_to_stockpile = {
+			type = infantry_equipment_1
+			amount = 50
+			producer = BBR
+				}
+			}
+		add_equipment_to_stockpile = {
+			type = infantry_equipment_1
+			amount = -50
+			producer = BBR
+				}
+		add_popularity = { ideology = syndicalist popularity = 0.01 }
+		add_popularity = { ideology = totalist popularity = 0.04 }
+		add_stability = 0.02
+	}
+}
+
+country_event = { # The White Proletariat
+	id = bbr.8001
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.8001"}
+	title = bbr.8001.t
+	desc = bbr.8001.d
+	picture = GFX_report_event_USA_soldiers_watching
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = { # Adopt Briggs View
+		name = bbr.8001.a
+		add_manpower = 3500
+		add_political_power = -10
+		add_stability = 0.02
+	}
+	
+	option = { # Adopt the Right-Wing ABB view
+		name = bbr.8001.b
+		add_political_power = 45
+		add_manpower = -5000
+		ENG = {
+			add_opinion_modifier = { target = BBR modifier = small_decrease }
+			}
+		FRA = {
+			add_opinion_modifier = { target = BBR modifier = small_decrease }
+			}
+		add_manpower = -1200
+		add_stability = -0.04
+		add_popularity = { ideology = totalist popularity = 0.01 }
+		random_owned_state = {
+			limit = {
+				is_core_of = BBR
+				is_controlled_by = BBR
+				industrial_complex > 0
+			}
+			add_extra_state_shared_building_slots = 1
+		}
+	}
+}
+
+country_event = { # The Black Pharoah
+	id = bbr.8002
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.8002"}
+	title = bbr.8002.t
+	desc = bbr.8002.d
+	picture = GFX_report_event_USA_soldiers_watching
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = { # That would be too far
+		name = bbr.8002.a
+		add_popularity = { ideology = totalist popularity = 0.03 }
+		add_stability = 0.04
+	}
+	
+	option = { # Take the Title more literally
+		name = bbr.8002.b
+		add_political_power = 50
+		ENG = {
+			add_opinion_modifier = { target = BBR modifier = small_decrease }
+			}
+		FRA = {
+			add_opinion_modifier = { target = BBR modifier = small_decrease }
+			}
+		add_political_power = 35
+		add_war_support = 0.03
+		add_command_power = 10
+		add_stability = -0.03
+		add_popularity = { ideology = totalist popularity = 0.03 }
+		add_popularity = { ideology = paternal_autocrat popularity = 0.01 }
+		
+	}
+}
+
+country_event = { # Greece Denounces our Claims
+	id = bbr.8003
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.8003"}
+	title = bbr.8003.t
+	desc = bbr.8003.d
+	picture = GFX_report_event_USA_soldiers_watching
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = { # Declare War
+		name = bbr.8003.a
+		declare_war_on = {
+			target = GER
+			type = annex_everything
+		}
+		add_war_support = 0.08
+		add_stability = -0.03
+	}
+	
+	option = { # We Wait
+		name = bbr.8003.b
+		add_political_power = -15
+		add_opinion_modifier = { target = GRE modifier = medium_decrease }
+	}
+}
+
+country_event = { # Fate of the Black Bourgeosie
+	id = bbr.8004
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.8004"}
+	title = bbr.8004.t
+	desc = bbr.8004.d
+	picture = GFX_report_event_USA_soldiers_watching
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = { # Include them
+		name = bbr.8004.a
+		random_owned_state = {
+				limit = {
+					is_core_of = BBR
+					is_controlled_by = BBR
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		add_political_power = -25
+		add_war_support = -0.03
+		add_stability = 0.02
+	}
+	
+	option = { # Exclude them
+		name = bbr.8004.b
+		add_political_power = 30
+		add_popularity = { ideology = totalist popularity = 0.03 }
+		add_command_power = 10
+		add_manpower = -100
+		add_war_support = 0.02
+	}
+}
+
+country_event = { # Robert Church Jr. Killed
+	id = bbr.8005
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.8005"}
+	title = bbr.8005.t
+	desc = bbr.8005.d
+	picture = GFX_report_event_USA_soldiers_watching
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = { # Include them
+		name = bbr.8005.a
+		add_popularity = { ideology = market_liberal popularity = -0.05 }
+		add_popularity = { ideology = totalist popularity = 0.01 }
+		add_political_power = 25
+		add_stability = -0.02
+	}
+}
+
+country_event = { # Faith in Education
+	id = bbr.8006
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.8006"}
+	title = bbr.8006.t
+	desc = bbr.8006.d
+	picture = GFX_report_event_USA_soldiers_watching
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = { # A Great Initiative
+		name = bbr.8006.a
+		add_popularity = { ideology = social_conservative popularity = -0.03 }
+		add_popularity = { ideology = totalist popularity = 0.03 }
+		add_political_power = 25
+		add_stability = 0.03
+	}
+	option = { # Go Further
+		name = bbr.8006.b
+		add_popularity = { ideology = social_conservative popularity = -0.05 }
+		add_popularity = { ideology = totalist popularity = 0.04 }
+		add_manpower = -200
+		add_political_power = 35
+		add_stability = -0.02
+	}
+}
+
 country_event = { # Nationalist Treaty
 	id = bbr.9
 	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.9"}
