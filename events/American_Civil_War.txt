@@ -1489,7 +1489,7 @@ country_event = { # Reach out
 			factor = 45
 			modifier = {
 				factor = 0
-				is_ai = no
+				is_ai = yes
 			}
 		}
 		name = amcivwar.4000.b
@@ -1618,7 +1618,7 @@ country_event = { ### HUEY LONG PEACE OUT###
 			factor = 30
 			modifier = {
 				factor = 0
-				is_ai = no
+				is_ai = yes
 			}
 		}
 		name = amcivwar.4004.b
@@ -1776,7 +1776,7 @@ country_event = { #Talk Down the CSA
 			factor = 20
 			modifier = {
 				factor = 0
-				is_ai = no
+				is_ai = yes
 			}
 		}
 		add_political_power = 20
@@ -2029,7 +2029,7 @@ country_event = { #Treaty with the US
 			factor = 20
 			modifier = {
 				factor = 0
-				is_ai = no
+				is_ai = yes
 			}
 		}
 		name = amcivwar.4017.b
@@ -2355,7 +2355,7 @@ country_event = { # Last Men Standing
 		factor = 50
 		modifier = {
 			factor = 0
-			is_ai = no
+			is_ai = yes
 		}
 	}
 	trigger = {
@@ -2388,7 +2388,7 @@ country_event = { # Last Men Standing
 		factor = 50
 		modifier = {
 			factor = 0
-			is_ai = no
+			is_ai = yes
 		}
 	}
 	name = amcivwar.5000.c
@@ -2422,7 +2422,7 @@ country_event = { # Last Men Standing
 		factor = 50
 		modifier = {
 			factor = 0
-			is_ai = no
+			is_ai = yes
 		}
 	}
 	name = amcivwar.5000.e
@@ -3725,7 +3725,7 @@ country_event = { # Reach out to the Victor (Murray)
 			factor = 40
 			modifier = {
 				factor = 0
-				is_ai = no
+				is_ai = yes
 			}
 		}
 		name = amcivwar.1015.b
