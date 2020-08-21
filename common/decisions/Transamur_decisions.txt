@@ -1,0 +1,318 @@
+TRM_japanese_influence = {
+
+	TRM_visit_from_japan = {
+		allowed = { always = no } #manually activated
+		available = {
+			hidden_trigger = {
+				always = no
+			}
+		}
+
+		days_mission_timeout = 90
+
+		cancel_trigger = {
+			NOT = { is_guaranteed_by = JAP }
+		}
+
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision timeout TRM_visit_from_japan"
+			add_political_power = 40
+			add_stability = 0.02
+			add_popularity = {
+				ideology = authoritarian_democrat
+				popularity = 0.03
+			}
+			hidden_effect = {
+				activate_mission = TRM_visit_from_japan
+			}
+		}
+	}
+
+	TRM_zaibatsus = {
+		available = {
+			NOT = { has_idea = TRM_JAP_CONS }
+		}
+
+		visible = {
+			has_completed_focus = TRM_Jap_Inv2
+			is_guaranteed_by = JAP
+		}
+
+		cost = 50
+		days_remove = 7
+		days_re_enable = 30
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				set_temp_variable = { TRM_zaibatsu_factor = ROOT.party_popularity@authoritarian_democrat }
+				multiply_temp_variable = { TRM_zaibatsu_factor = -4 }
+				add = TRM_zaibatsu_factor
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TRM_zaibatsus"
+			add_popularity = {ideology = authoritarian_democrat popularity = 0.03}
+			add_timed_idea = {
+				idea = TRM_JAP_CONS
+				days = 90
+			}
+		}
+	}
+
+	TRM_support_anti_japanese_rally = {
+		visible = {
+			is_guaranteed_by = JAP
+			NOT = { has_government = authoritarian_democrat }
+		}
+
+		cost = 50
+		days_remove = 7
+		days_re_enable = 30
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				set_temp_variable = { TRM_zaibatsu_factor = ROOT.party_popularity@authoritarian_democrat }
+				multiply_temp_variable = { TRM_zaibatsu_factor = 10 }
+				add = TRM_zaibatsu_factor
+			}
+			modifier = {
+				add = -10
+				has_political_power < 100
+			}
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove TRM_support_anti_japanese_rally"
+			add_popularity = {
+				ideology = authoritarian_democrat
+				popularity = -0.05
+			}
+		}
+	}
+
+	TRM_hold_vladivostok = {
+		icon = generic_tank
+
+		available = {
+			NOT = { controls_state = 408 }
+		}
+
+		days_mission_timeout = 180
+		is_good = yes
+
+		activation = {
+			has_war_with = JAP
+			controls_state = 408
+		}
+
+		cancel_trigger = {
+			NOT = { has_war_with = JAP }
+		}
+
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TRM_hold_vladivostok"
+			custom_effect_tooltip = dei_tt_the_timer_will_be_reset
+			hidden_effect = { activate_mission = TRM_hold_vladivostok }
+		}
+
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision timeout TRM_hold_vladivostok"
+			country_event = tram.128
+			JAP = {
+				country_event = tram.128
+				hidden_effect = {
+					white_peace_with_ROOT = yes
+				}
+			}
+		}
+	}
+
+	TRM_raise_militia = {
+		visible = {
+			has_war_with = JAP
+			controls_state = 408
+		}
+
+		cost = 0
+		days_remove = 7
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove TRM_raise_militia"
+			load_oob = TRM_militia
+		}
+	}
+}
+
+TRM_russian_expansion = {
+	TRM_relocate_capital_1 = {
+		available = {
+			566 = { is_owned_and_controlled_by = ROOT }
+		}
+
+		visible = {
+			NOT = {
+				has_country_flag = TRM_capital_nov
+				has_country_flag = TRM_capital_stp
+				has_country_flag = TRM_capital_mos
+			}
+			has_idea = TRM_dream
+		}
+
+		cost = 25
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove TRM_relocate_capital_1"
+			country_event = {
+				id = tram.129
+				days = 1
+			}
+			if = {
+				limit = {
+					country_exists = JAP
+					NOT = { has_global_flag = JAP_Fading_Sun }
+				}
+				JAP = {
+					country_event = {
+						id = tram.67
+						days = 2
+					}
+				}
+			}
+			set_country_flag = TRM_capital_irk
+		}
+	}
+
+	TRM_relocate_capital_2 = {
+		available = {
+			570 = { is_owned_and_controlled_by = ROOT }
+		}
+
+		visible = {
+			NOT = {
+				has_country_flag = TRM_capital_stp
+				has_country_flag = TRM_capital_mos
+			}
+			has_idea = TRM_dream
+		}
+
+		cost = 25
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove TRM_relocate_capital_2"
+			country_event = {
+				id = tram.130
+				days = 1
+			}
+			if = {
+				limit = {
+					country_exists = JAP
+					NOT = { has_global_flag = JAP_Fading_Sun }
+				}
+				JAP = {
+					country_event = {
+						id = tram.67
+						days = 2
+					}
+				}
+			}
+			set_country_flag = TRM_capital_nov
+		}
+	}
+
+	TRM_relocate_capital_3 = {
+		available = {
+			219 = { is_owned_and_controlled_by = ROOT }
+		}
+
+		visible = {
+			NOT = {
+				has_country_flag = TRM_capital_stp
+				has_country_flag = TRM_capital_mos
+			}
+			has_idea = TRM_dream
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove TRM_relocate_capital_3"
+			country_event = {
+				id = tram.131
+				days = 1
+			}
+			set_country_flag = TRM_capital_mos
+
+		}
+	}
+
+	TRM_relocate_capital_4 = {
+		available = {
+			195 = { is_owned_and_controlled_by = ROOT }
+		}
+
+		visible = {
+			NOT = {
+				has_country_flag = TRM_capital_stp
+				has_country_flag = TRM_capital_mos
+			}
+			has_idea = TRM_dream
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove TRM_relocate_capital_4"
+			country_event = {
+				id = tram.132
+				days = 1
+			}
+			set_country_flag = TRM_capital_stp
+		}
+	}
+}

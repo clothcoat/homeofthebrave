@@ -1,0 +1,1994 @@
+﻿###########################
+# Latvia Events
+###########################
+
+add_namespace = balticduchy
+
+country_event = {
+	id = balticduchy.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event balticduchy.1" }
+	title = balticduchy.1.t
+	desc = balticduchy.1.d
+	picture = GFX_report_event_GER_coronation
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = balticduchy.1.a
+		country_event = balticduchy.2
+	}
+	option = {
+		name = balticduchy.1.b
+	}
+}
+
+country_event = {
+	id = balticduchy.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event balticduchy.2" }
+	title = balticduchy.2.t
+	desc = balticduchy.2.d
+	picture = GFX_report_event_GER_coronation
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = balticduchy.2.a
+		country_event = balticduchy.3
+	}
+	option = {
+		name = balticduchy.2.b
+	}
+}
+
+country_event = {
+	id = balticduchy.3
+	immediate = { log = "[GetDateText]: [Root.GetName]: event balticduchy.3" }
+	title = balticduchy.3.t
+	desc = balticduchy.3.d
+	picture = GFX_report_event_GER_coronation
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = balticduchy.3.a
+	}
+}
+
+### Focus Tree Events###
+country_event = {
+	id = balticduchy.4
+	immediate = { log = "[GetDateText]: [Root.GetName]: event balticduchy.4" }
+	title = balticduchy.4.t
+	desc = balticduchy.4.d
+	picture = GFX_report_event_generic_diplomacy1
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = balticduchy.4.a
+		BAT = {
+			every_owned_state = {
+				limit = { is_core_of = BAT }
+				add_core_of = GER
+			}
+		}
+		annex_country = {
+			target = BAT
+			transfer_troops = yes
+		}
+	}
+}
+
+country_event = {
+	id = balticduchy.5
+	immediate = { log = "[GetDateText]: [Root.GetName]: event balticduchy.5" }
+	title = balticduchy.5.t
+	desc = balticduchy.5.d
+	picture = GFX_report_event_AST_election
+
+	is_triggered_only = yes
+
+	option = {
+		name = balticduchy.5.a
+
+		set_politics = {
+			ruling_party = social_conservative
+			elections_allowed = no
+		}
+	}
+
+	option = {
+		name = balticduchy.5.b
+
+		set_politics = {
+			ruling_party = authoritarian_democrat
+			elections_allowed = no
+		}
+	}
+}
+
+country_event = {
+	id = balticduchy.6
+	immediate = { log = "[GetDateText]: [Root.GetName]: event balticduchy.6" }
+	title = balticduchy.6.t
+	desc = balticduchy.6.d
+	picture = GFX_report_event_AST_election
+
+	is_triggered_only = yes
+
+	option = {
+		name = balticduchy.6.a
+		set_cosmetic_tag = BAT_FED
+		set_party_name = {
+			ideology = paternal_autocrat
+			name = BAT_FED_paternal_autocrat_party
+			long_name = BAT_FED_paternal_autocrat_party_long
+		}
+	}
+}
+
+country_event = {
+	id = balticduchy.7
+	immediate = { log = "[GetDateText]: [Root.GetName]: event balticduchy.7" }
+	title = balticduchy.7.t
+	desc = balticduchy.7.d
+	picture = GFX_report_event_AST_election
+
+	is_triggered_only = yes
+
+	option = {
+		name = balticduchy.7.a
+		set_politics = {
+			ruling_party = social_democrat
+			elections_allowed = no
+		}
+	}
+
+	option = {
+		name = balticduchy.7.b
+		set_politics = {
+			ruling_party = social_liberal
+			elections_allowed = no
+		}
+	}
+
+	option = {
+		name = balticduchy.7.c
+		set_politics = {
+			ruling_party = social_conservative
+			elections_allowed = no
+		}
+	}
+}
+
+###Black Monday and Politics###
+country_event = {
+	id = balticduchy.29
+	immediate = { log = "[GetDateText]: [Root.GetName]: event balticduchy.29" }
+	title = balticduchy.29.t
+	desc = balticduchy.29.d
+	picture = GFX_report_event_USA_police2
+	is_triggered_only = yes
+
+	option = {
+		name = balticduchy.29.a
+		set_country_flag = BAT_politic
+	}
+}
+
+country_event = {
+	id = balticduchy.30
+	immediate = { log = "[GetDateText]: [Root.GetName]: event balticduchy.30" }
+	title = balticduchy.30.t
+	desc = balticduchy.30.d
+	picture = GFX_report_event_generic_run_on_the_banks
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = balticduchy.30.a
+		add_political_power = -100
+		set_country_flag = BAT_economy
+		set_country_flag = BAT_crisis
+		add_ideas = BAT_Black_Monday
+		hidden_effect = {
+			country_event = {
+				id = balticduchy.29
+				days = 3
+			}
+		}
+	}
+}
+
+##Latvian Mutiny###
+country_event = {
+	id = balticduchy.51
+	immediate = { log = "[GetDateText]: [Root.GetName]: event balticduchy.51" }
+	title = balticduchy.51.t
+	desc = balticduchy.51.d
+	picture = GFX_report_event_JAP_coup
+
+	is_triggered_only = yes
+
+	option = {
+		ai_chance = {
+			factor = 75
+		}
+		name = balticduchy.51.a
+		add_war_support = -0.05
+	}
+
+	option = {
+		ai_chance = {
+			factor = 25
+		}
+		name = balticduchy.51.b
+		add_manpower = -10000
+	}
+}
+
+###Nationalists###
+country_event = {
+	id = balticduchy.70
+	immediate = { log = "[GetDateText]: [Root.GetName]: event balticduchy.70" }
+	title = balticduchy.70.t
+	desc = balticduchy.70.d
+	picture = GFX_report_event_HOL_zwolle_riots
+
+	fire_only_once = yes
+
+	trigger = {
+		NOT = {
+			has_government = national_populist
+		}
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = balticduchy.70.a
+		add_political_power = -40
+		add_popularity = {
+			ideology = national_populist
+			popularity = 0.02
+		}
+		hidden_effect = {
+			country_event = {
+				id = balticduchy.72
+				days = 14
+				random = 48
+			}
+			add_to_variable = {
+				var = balts_resistance_var
+				value = 10
+			}
+		}
+	}
+}
+
+###Uniting###
+country_event = {
+	id = balticduchy.72
+	immediate = { log = "[GetDateText]: [Root.GetName]: event balticduchy.72" }
+	title = balticduchy.72.t
+	desc = balticduchy.72.d
+	picture = GFX_report_event_generic_diplomacy3
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = balticduchy.72.a
+		add_stability = -0.05
+		add_popularity = {
+			ideology = national_populist
+			popularity = 0.05
+		}
+		add_to_variable = {
+			var = balts_resistance_var
+			value = 15
+		}
+	}
+}
+
+###Expel German Baltic Federation###
+country_event = {
+	id = balticduchy.91
+	immediate = { log = "[GetDateText]: [Root.GetName]: event balticduchy.91" }
+	title = balticduchy.91.t
+	desc = balticduchy.91.d
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = balticduchy.91.a
+		set_country_flag = BAT_GER_expeled
+		add_stability = -0.05
+		add_popularity = {
+			ideology = authoritarian_democrat
+			popularity = -0.1
+		}
+		add_popularity = {
+			ideology = paternal_autocrat
+			popularity = -0.1
+		}
+		random_owned_state = {
+			limit = {
+				free_building_slots = {
+					building = industrial_complex
+					size > 1
+					include_locked = yes
+				}
+			}
+
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+		hidden_effect = {
+			GER = {
+				country_event = {
+					id = balticduchy.92
+					days = 14
+				}
+			}
+		}
+	}
+
+	option = {
+		name = balticduchy.91.b
+		add_political_power = 40
+	}
+}
+
+###German Refugees from Baltic Confederation###
+country_event = {
+	id = balticduchy.92
+	immediate = { log = "[GetDateText]: [Root.GetName]: event balticduchy.92" }
+	title = balticduchy.92.t
+	desc = balticduchy.92.d
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = balticduchy.92.a
+		add_manpower = 10000
+		add_political_power = -40
+	}
+}
+
+###Break the chains###
+
+###UBD wants to be free###
+country_event = {
+	id = balticduchy.94
+	immediate = { log = "[GetDateText]: [Root.GetName]: event balticduchy.94" }
+	title = balticduchy.94.t
+	desc = balticduchy.94.d
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = balticduchy.94.a
+		add_political_power = 50
+		GER = {
+			country_event = {
+				id = balticduchy.95
+				days = 3
+			}
+		}
+	}
+}
+
+###Germany responds###
+country_event = {
+	id = balticduchy.95
+	immediate = { log = "[GetDateText]: [Root.GetName]: event balticduchy.95" }
+	title = balticduchy.95.t
+	desc = balticduchy.95.d
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		ai_chance = {
+			factor = 30
+		}
+		name = balticduchy.95.a
+		GER = {
+			end_puppet = BAT
+		}
+		BAT = {
+			country_event = {
+				id = balticduchy.97
+				days = 3
+			}
+		}
+		add_political_power = 20
+	}
+
+	option = {
+		ai_chance = {
+			factor = 70
+		}
+		name = balticduchy.95.b
+		BAT = {
+			country_event = {
+				id = balticduchy.96
+				days = 3
+			}
+		}
+	}
+}
+
+###Germany reject###
+country_event = {
+	id = balticduchy.96
+	immediate = { log = "[GetDateText]: [Root.GetName]: event balticduchy.96" }
+	title = balticduchy.96.t
+	desc = balticduchy.96.d
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		ai_chance = {
+			factor = 45
+		}
+		name = balticduchy.96.a
+	}
+
+	option = {
+		ai_chance = {
+			factor = 55
+		}
+		name = balticduchy.96.b
+		GER = {
+			end_puppet = BAT
+		}
+		GER = {
+			add_opinion_modifier = {
+				target = BAT
+				modifier = traitors
+			}
+		}
+		GER = {
+			add_opinion_modifier = {
+				target = BAT
+				modifier = embargo
+			}
+		}
+		add_political_power = -100
+		add_stability = -0.1
+		add_war_support = -0.2
+	}
+}
+
+###Germany Agrees###
+country_event = {
+	id = balticduchy.97
+	immediate = { log = "[GetDateText]: [Root.GetName]: event balticduchy.97" }
+	title = balticduchy.97.t
+	desc = balticduchy.97.d
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = balticduchy.97.a
+		GER = {
+			end_puppet = BAT
+		}
+	}
+}
+
+###BF wants to be free###
+country_event = {
+	id = balticduchy.98
+	immediate = { log = "[GetDateText]: [Root.GetName]: event balticduchy.98" }
+	title = balticduchy.98.t
+	desc = balticduchy.98.d
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = balticduchy.98.a
+		add_political_power = 50
+		GER = {
+			country_event = {
+				id = balticduchy.99
+				days = 3
+			}
+		}
+	}
+}
+
+###Germany responds BF###
+country_event = {
+	id = balticduchy.99
+	immediate = { log = "[GetDateText]: [Root.GetName]: event balticduchy.99" }
+	title = balticduchy.99.t
+	desc = balticduchy.99.d
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		ai_chance = {
+			factor = 30
+		}
+		name = balticduchy.99.a
+		GER = {
+			end_puppet = BAT
+		}
+		BAT = {
+			country_event = {
+				id = balticduchy.97
+				days = 3
+			}
+		}
+		add_political_power = 20
+	}
+
+	option = {
+		ai_chance = {
+			factor = 70
+		}
+		name = balticduchy.99.b
+		BAT = {
+			country_event = {
+				id = balticduchy.100
+				days = 3
+			}
+		}
+	}
+}
+
+###Germany reject BF###
+country_event = {
+	id = balticduchy.100
+	immediate = { log = "[GetDateText]: [Root.GetName]: event balticduchy.100" }
+	title = balticduchy.100.t
+	desc = balticduchy.100.d
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		ai_chance = {
+			factor = 45
+		}
+		name = balticduchy.100.a
+	}
+
+	option = {
+		ai_chance = {
+			factor = 55
+		}
+		name = balticduchy.100.b
+		GER = {
+			end_puppet = BAT
+		}
+		GER = {
+			add_opinion_modifier = {
+				target = BAT
+				modifier = traitors
+			}
+		}
+		GER = {
+			add_opinion_modifier = {
+				target = BAT
+				modifier = embargo
+			}
+		}
+		add_political_power = -100
+		add_stability = -0.1
+		add_war_support = -0.2
+	}
+}
+
+###KURLAND COMPLETE###
+country_event = {
+	id = balticduchy.145
+	immediate = { log = "[GetDateText]: [Root.GetName]: event balticduchy.145" }
+	title = balticduchy.145.t
+	desc = balticduchy.145.d
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = balticduchy.145.a
+		set_country_flag = BAT_COL_KUR
+	}
+}
+
+###LIVLAND COMPLETE###
+country_event = {
+	id = balticduchy.146
+	immediate = { log = "[GetDateText]: [Root.GetName]: event balticduchy.146" }
+	title = balticduchy.146.t
+	desc = balticduchy.146.d
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = balticduchy.146.a
+		set_country_flag = BAT_COL_LIV
+	}
+}
+
+###ESTLAND COMPLETE###
+country_event = {
+	id = balticduchy.147
+	immediate = { log = "[GetDateText]: [Root.GetName]: event balticduchy.147" }
+	title = balticduchy.147.t
+	desc = balticduchy.147.d
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = balticduchy.147.a
+		set_country_flag = BAT_COL_EST
+	}
+}
+
+###Elections###
+
+###Progerman###
+country_event = {
+	id = balticduchy.170
+	immediate = { log = "[GetDateText]: [Root.GetName]: event balticduchy.170" }
+	title = balticduchy.170.t
+	desc = balticduchy.170.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_country_flag = BAT_progerman
+	}
+
+	option = {
+		ai_chance = {
+			factor = 20
+		}
+		name = balticduchy.170.a
+		set_politics = {
+			ruling_party = social_conservative
+			elections_allowed = no
+		}
+		add_popularity = {
+			ideology = social_conservative
+			popularity = 0.3
+		}
+		create_country_leader = {
+			name = "Adolf Friedrich"
+			desc = "POLITICS_ADOLF_FRIEDRICH_DESC"
+			picture = "Portrait_BAT_Adolf_Friedrich.tga"
+			expire = "1965.1.1"
+			ideology = social_conservative_subtype
+		}
+		add_political_power = 100
+		remove_all_ministers = yes
+		add_ideas = {
+			BAT_Helmuth_Stegman_hog_sco
+			BAT_Edwin_Magnus_for_sco
+			BAT_Bernhard_Bielenstein_eco_sco
+			BAT_Wilhelm_von_Ruediger_sec_sco
+		}
+	}
+
+	option = {
+		ai_chance = {
+			factor = 80
+		}
+		name = balticduchy.170.b
+		set_politics = {
+			ruling_party = authoritarian_democrat
+			elections_allowed = no
+		}
+		add_popularity = {
+			ideology = authoritarian_democrat
+			popularity = 0.3
+		}
+		add_political_power = -200
+		remove_all_ministers = yes
+		add_ideas = {
+			BAT_Axel_von_Freytagh_Loringhoven_hog_pau
+			BAT_Rolf_von_Ungern_Sternberg_for_sco
+			BAT_Wilhelm_Robert_von_Bulmerincq_eco_ade
+			BAT_Alexander_Riesenkampff_sec_ade
+		}
+	}
+}
+
+###Liberals###
+country_event = {
+	id = balticduchy.171
+	immediate = { log = "[GetDateText]: [Root.GetName]: event balticduchy.171" }
+	title = balticduchy.171.t
+	desc = balticduchy.171.d
+
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			has_completed_focus = BAT_Lib1
+			has_completed_focus = BAT_Fed3
+		}
+	}
+
+	option = {
+		ai_chance = {
+			factor = 40
+		}
+		name = balticduchy.171.a
+		set_politics = {
+			ruling_party = social_conservative
+			elections_allowed = yes
+		}
+		add_popularity = {
+			ideology = social_conservative
+			popularity = 0.3
+		}
+		if = {
+			limit = { has_completed_focus = BAT_Lib1 }
+			create_country_leader = {
+				name = "Adolf Friedrich"
+				desc = "POLITICS_ADOLF_FRIEDRICH_DESC"
+				picture = "Portrait_BAT_Adolf_Friedrich.tga"
+				expire = "1965.1.1"
+				ideology = social_conservative_subtype
+			}
+		}
+		add_political_power = 100
+		remove_all_ministers = yes
+		add_ideas = {
+			BAT_Helmuth_Stegman_hog_sco
+			BAT_Edwin_Magnus_for_sco
+			BAT_Bernhard_Bielenstein_eco_sco
+			BAT_Wilhelm_von_Ruediger_sec_sco
+		}
+	}
+
+	option = {
+		ai_chance = {
+			factor = 30
+		}
+		name = balticduchy.171.b
+		set_politics = {
+			ruling_party = authoritarian_democrat
+			elections_allowed = yes
+		}
+		if = {
+			limit = { has_completed_focus = BAT_Lib1 }
+			create_country_leader = {
+				name = "Adolf Friedrich"
+				desc = "POLITICS_ADOLF_FRIEDRICH_DESC"
+				picture = "Portrait_BAT_Adolf_Friedrich.tga"
+				expire = "1965.1.1"
+				ideology = authoritarian_democrat_subtype
+			}
+		}
+		add_political_power = -200
+		remove_all_ministers = yes
+		add_ideas = {
+			BAT_Axel_von_Freytagh_Loringhoven_hog_pau
+			BAT_Rolf_von_Ungern_Sternberg_for_sco
+			BAT_Wilhelm_Robert_von_Bulmerincq_eco_ade
+			BAT_Alexander_Riesenkampff_sec_ade
+		}
+	}
+
+	option = {
+		ai_chance = {
+			factor = 30
+		}
+		name = balticduchy.171.c
+		set_politics = {
+			ruling_party = social_liberal
+			elections_allowed = yes
+		}
+		add_popularity = {
+			ideology = social_liberal
+			popularity = 0.3
+		}
+		if = {
+			limit = { has_completed_focus = BAT_Lib1 }
+			create_country_leader = {
+				name = "Adolf Friedrich"
+				desc = "POLITICS_ADOLF_FRIEDRICH_DESC"
+				picture = "Portrait_BAT_Adolf_Friedrich.tga"
+				expire = "1965.1.1"
+				ideology = social_liberal_subtype
+			}
+		}
+		add_political_power = 160
+		remove_all_ministers = yes
+		add_ideas = {
+			BAT_Friedrich_von_Samson_Himmelstjerna_hog_sli
+			BAT_Ewald_Ammende_for_sli
+			BAT_Heinrich_von_Stackelberg_eco_sli
+			BAT_Axel_de_Vries_sec_sli
+		}
+	}
+}
+
+###Additional events, not from DH###
+
+###Native rebellion###
+country_event = {
+	id = balticduchy.183
+	title = balticduchy.183.t
+	desc = balticduchy.183.d
+	fire_only_once = yes
+
+	trigger = {
+		tag = BAT
+		has_country_flag = BAT_progerman
+		check_variable = {
+			var = balts_resistance_var
+			value = 100
+			compare = greater_than_or_equals
+		}
+	}
+
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event balticduchy.183"
+		hidden_effect = {
+			LAT = {
+				add_state_core = 12
+				add_state_core = 190
+				add_state_core = 880
+				add_state_core = 1091
+				transfer_state = 12
+				transfer_technology = yes
+				country_event = { id = balticduchy.1831 hours = 2 }
+
+			}
+			EST = {
+				add_state_core = 13
+				add_state_core = 191
+				transfer_state = 191
+				transfer_technology = yes
+				country_event = { id = balticduchy.1831 hours = 2 }
+			}
+			every_navy_leader = {
+				limit = {
+					OR = {
+						has_id = 15000 #Alexander von Salza
+						has_id = 15001 #Johan Pitka
+					}
+				}
+				set_nationality = EST
+			}
+			set_country_flag = BAT_native_rebellion
+			add_ideas = BAT_balts_rebellion
+			news_event = worldnews.188
+			FRA = {
+				country_event = {
+					id = balticduchy.184
+					days = 10
+					random = 100
+				}
+			}
+			RUS = {
+				country_event = {
+					id = balticduchy.185
+					days = 15
+					random = 100
+				}
+			}
+			add_ai_strategy = {
+				type = prepare_for_war
+				id = LAT
+				value = 1000
+			}
+			add_ai_strategy = {
+				type = prepare_for_war
+				id = EST
+				value = 1000
+			}
+
+		}
+	}
+
+	option = { #Change to Latvia
+		name = balticduchy.183.a
+		trigger = { is_ai = no }
+		effect_tooltip = {
+			add_ideas = BAT_balts_rebellion
+		}
+		LAT = {
+			change_tag_from = ROOT
+		}
+		BAT = {
+			declare_war_on = {
+				target = LAT
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = EST
+				type = annex_everything
+			}
+		}
+		hidden_effect = {
+			BAT = {
+				country_event = { id = balticduchy.1830 days = 1 }
+				set_province_controller = 3174
+				set_province_controller = 6381
+				set_province_controller = 9240
+				set_province_controller = 10323
+			}
+			LAT = {
+				set_province_controller = 3255
+				set_province_controller = 11358
+			}
+			EST = {
+				set_province_controller = 11057
+				set_province_controller = 11443
+				set_province_controller = 4640
+			}
+		}
+	}
+
+	option = { #Change to Estonia
+		name = balticduchy.183.b
+		trigger = { is_ai = no }
+		effect_tooltip = {
+			add_ideas = BAT_balts_rebellion
+		}
+		EST = {
+			change_tag_from = ROOT
+		}
+		BAT = {
+			declare_war_on = {
+				target = LAT
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = EST
+				type = annex_everything
+			}
+		}
+		hidden_effect = {
+			BAT = {
+				country_event = { id = balticduchy.1830 days = 1 }
+				set_province_controller = 3174
+				set_province_controller = 6381
+				set_province_controller = 9240
+				set_province_controller = 10323
+			}
+			LAT = {
+				set_province_controller = 3255
+				set_province_controller = 11358
+			}
+			EST = {
+				set_province_controller = 11057
+				set_province_controller = 11443
+				set_province_controller = 4640
+			}
+		}
+	}
+
+	option = { #Stay as UBD
+		name = balticduchy.183.c
+		effect_tooltip = {
+			add_ideas = BAT_balts_rebellion
+		}
+		declare_war_on = {
+			target = LAT
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = EST
+			type = annex_everything
+		}
+		hidden_effect = {
+			BAT = {
+				country_event = { id = balticduchy.1830 days = 1 }
+				set_province_controller = 3174
+				set_province_controller = 6381
+				set_province_controller = 9240
+				set_province_controller = 10323
+			}
+			LAT = {
+				set_province_controller = 3255
+				set_province_controller = 11358
+			}
+			EST = {
+				set_province_controller = 11057
+				set_province_controller = 11443
+				set_province_controller = 4640
+			}
+		}
+	}
+}
+
+country_event = {
+	id = balticduchy.1830
+	immediate = { log = "[GetDateText]: [Root.GetName]: event balticduchy.1830" }
+	title = balticduchy.1830.t
+	desc = balticduchy.1830.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = balticduchy.1830.a
+		load_oob = "Baltic_War_BAT_volunteer"
+	}
+}
+
+# Get units
+country_event = {
+	id = balticduchy.1831
+	immediate = { log = "[GetDateText]: [Root.GetName]: event balticduchy.1831" }
+
+	hidden = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = { tag = LAT }
+			load_oob = "LAT"
+			give_military_access = EST
+		}
+		if = {
+			limit = { tag = EST }
+			load_oob = "EST"
+			give_military_access = LAT
+		}
+		add_ai_strategy = {
+			type = prepare_for_war
+			id = BAT
+			value = 1000
+		}
+	}
+}
+
+###French Volunteers###
+country_event = {
+	id = balticduchy.184
+	immediate = { log = "[GetDateText]: [Root.GetName]: event balticduchy.184" }
+	title = balticduchy.184.t
+	desc = balticduchy.184.d
+	fire_only_once = yes
+
+	trigger = {
+		BAT = {
+			OR = {
+				has_war_with = EST
+				has_war_with = LAT
+			}
+		}
+	}
+
+	is_triggered_only = yes
+
+	option = { #Send Volunteers to Latvia
+		ai_chance = {
+			factor = 60
+		}
+		name = balticduchy.184.a
+		add_political_power = -20
+		send_equipment = {
+			target = LAT
+			type = infantry_equipment
+			amount = 1000
+		}
+		LAT = {
+			country_event = {
+				id = balticduchy.189
+				days = 1
+			}
+		}
+	}
+
+	option = { #It's too dangerous
+		ai_chance = {
+			factor = 40
+		}
+		name = balticduchy.184.b
+	}
+}
+
+###Russian Volunteers###
+country_event = {
+	id = balticduchy.185
+	immediate = { log = "[GetDateText]: [Root.GetName]: event balticduchy.185" }
+	title = balticduchy.185.t
+	desc = balticduchy.185.d
+	fire_only_once = yes
+
+	trigger = {
+		NOT = {
+			has_idea = rus_divided_staff
+		}
+		BAT = {
+			NOT = {
+				has_government = national_populist
+			}
+			OR = {
+				has_war_with = LAT
+				has_war_with = EST
+			}
+		}
+		SOV = {
+			exists = no
+		}
+	}
+
+	is_triggered_only = yes
+
+	option = { #Send Volunteers to Latvia and Estonia
+		ai_chance = {
+			factor = 60
+		}
+		name = balticduchy.185.a
+		add_political_power = -40
+		send_equipment = {
+			target = LAT
+			type = infantry_equipment
+			amount = 1000
+		}
+		send_equipment = {
+			target = EST
+			type = infantry_equipment
+			amount = 1000
+		}
+		LAT = {
+			country_event = {
+				id = balticduchy.190
+				days = 1
+			}
+		}
+		EST = {
+			country_event = {
+				id = balticduchy.189
+				days = 1
+			}
+		}
+	}
+
+	option = { #Send Volunteers to Estonia, promise help to Latvia if they revoke their claims on Russian territory
+		ai_chance = {
+			factor = 40
+		}
+		name = balticduchy.185.b
+		add_political_power = -20
+		send_equipment = {
+			target = EST
+			type = infantry_equipment
+			amount = 1000
+		}
+		EST = {
+			country_event = {
+				id = balticduchy.190
+				days = 1
+			}
+		}
+		LAT = {
+			country_event = {
+				id = balticduchy.186
+				days = 1
+			}
+		}
+	}
+
+	option = { #Send Volunteers to Estonia
+		ai_chance = {
+			factor = 40
+		}
+		name = balticduchy.185.c
+		add_political_power = -20
+		send_equipment = {
+			target = EST
+			type = infantry_equipment
+			amount = 1000
+		}
+		EST = {
+			country_event = {
+				id = balticduchy.190
+				days = 1
+			}
+		}
+	}
+
+	option = { #Leave them be
+		ai_chance = {
+			factor = 20
+		}
+		name = balticduchy.185.e
+		add_political_power = -40
+	}
+}
+
+###Latvia gets Russian deal###
+country_event = {
+	id = balticduchy.186
+	immediate = { log = "[GetDateText]: [Root.GetName]: event balticduchy.186" }
+	title = balticduchy.186.t
+	desc = balticduchy.186.d
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #Accept the deal
+		ai_chance = {
+			factor = 40
+		}
+		name = balticduchy.186.a
+		add_political_power = -60
+		remove_state_core = 880
+		RUS = {
+			country_event = {
+				id = balticduchy.187
+				days = 1
+			}
+		}
+	}
+
+	option = { #We will ight alone
+		ai_chance = {
+			factor = 60
+		}
+		name = balticduchy.186.b
+		RUS = {
+			country_event = {
+				id = balticduchy.188
+				days = 1
+			}
+		}
+	}
+}
+
+###Latvia accepts, Russia send men###
+country_event = {
+	id = balticduchy.187
+	immediate = { log = "[GetDateText]: [Root.GetName]: event balticduchy.187" }
+	title = balticduchy.187.t
+	desc = balticduchy.187.d
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = balticduchy.187.a
+		add_political_power = -20
+		LAT = {
+			country_event = {
+				id = balticduchy.189
+				days = 1
+			}
+		}
+		send_equipment = {
+			target = LAT
+			type = infantry_equipment
+			amount = 1000
+		}
+	}
+}
+
+###Latvia rejects###
+country_event = {
+	id = balticduchy.188
+	immediate = { log = "[GetDateText]: [Root.GetName]: event balticduchy.188" }
+	title = balticduchy.188.t
+	desc = balticduchy.188.d
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = balticduchy.188.a
+	}
+}
+
+###Volunteers have arrived - Latvia###
+country_event = {
+	id = balticduchy.189
+	immediate = { log = "[GetDateText]: [Root.GetName]: event balticduchy.189" }
+	title = balticduchy.189.t
+	desc = balticduchy.189.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = balticduchy.189.a
+		effect_tooltip = {
+			FROM = {
+				send_equipment = {
+					type = infantry_equipment
+					amount = 1000
+					target = ROOT
+				}
+			}
+		}
+		FROM_send_volunteers_to_ROOT = yes
+	}
+}
+
+###Volunteers have arrived - Estonia###
+country_event = {
+	id = balticduchy.190
+	immediate = { log = "[GetDateText]: [Root.GetName]: event balticduchy.190" }
+	title = balticduchy.190.t
+	desc = balticduchy.190.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = balticduchy.190.a
+		effect_tooltip = {
+			FROM = {
+				send_equipment = {
+					type = infantry_equipment
+					amount = 1000
+					target = ROOT
+				}
+			}
+		}
+		FROM_send_volunteers_to_ROOT = yes
+	}
+}
+
+### UBD crushed the rebellion###
+country_event = {
+	id = balticduchy.195
+	immediate = { log = "[GetDateText]: [Root.GetName]: event balticduchy.195" }
+	title = balticduchy.195.t
+	desc = balticduchy.195.d
+
+	trigger = {
+		tag = BAT
+		NOT = {
+			country_exists = EST
+			country_exists = LAT
+		}
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = balticduchy.195.a
+		add_political_power = 100
+		add_popularity = {
+			ideology = national_populist
+			popularity = -0.2
+		}
+		set_country_flag = BAT_start_supress
+		remove_ideas = BAT_balts_rebellion
+		LAT = {
+			remove_state_core = 12
+			remove_state_core = 190
+			remove_state_core = 880
+			remove_state_core = 1091
+		}
+		EST = {
+			remove_state_core = 13
+			remove_state_core = 191
+		}
+		hidden_effect = {
+			add_to_variable = {
+				var = germanisation_var
+				value = 25
+			}
+			if = {
+				limit = { has_template = "Freiwilligen-Regiment" }
+				delete_unit_template_and_units = { division_template = "Freiwilligen-Regiment" }
+			}
+		}
+	}
+}
+
+### Natives crushed the Germans - Latvian variant###
+country_event = {
+	id = balticduchy.196
+	immediate = { log = "[GetDateText]: [Root.GetName]: event balticduchy.196" }
+	title = balticduchy.196.t
+	desc = balticduchy.196.d
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_country_flag = BAT_native_rebellion
+	}
+
+	option = {
+		name = balticduchy.196.a
+		add_political_power = 200
+		add_stability = 0.1
+		BAT = {
+			remove_state_core = 12
+			remove_state_core = 190
+			remove_state_core = 1091
+		}
+		hidden_effect = {
+			GER = {
+				country_event = {
+					id = balticduchy.198
+					days = 2
+					random = 120
+				}
+			}
+		}
+	}
+}
+
+### Natives crushed the Germans - Estonian variant###
+country_event = {
+	id = balticduchy.197
+	immediate = { log = "[GetDateText]: [Root.GetName]: event balticduchy.197" }
+	title = balticduchy.197.t
+	desc = balticduchy.197.d
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_country_flag = BAT_native_rebellion
+	}
+
+	option = {
+		name = balticduchy.197.a
+		add_political_power = 200
+		add_stability = 0.1
+		BAT = {
+			remove_state_core = 13
+			remove_state_core = 191
+		}
+		hidden_effect = {
+			GER = {
+				country_event = {
+					id = balticduchy.198
+					days = 2
+					random = 120
+				}
+			}
+		}
+	}
+}
+
+### Kaiser responds on UBD defeat###
+country_event = {
+	id = balticduchy.198
+	immediate = { log = "[GetDateText]: [Root.GetName]: event balticduchy.198" }
+	title = balticduchy.198.t
+	desc = balticduchy.198.d
+
+	trigger = {
+		is_subject = no
+	}
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #Restore UBD
+		ai_chance = {
+			factor = 5
+		}
+		name = balticduchy.198.a
+		declare_war_on = {
+			target = LAT
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = EST
+			type = annex_everything
+		}
+		set_country_flag = GER_restore_duchy
+	}
+
+	option = { #Lithuanian Variant - Native puppet government
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = BAT_political_path
+						option = BAT_POLITICAL_PATH_GERMANIZATION_INTEGRATION
+					}
+					has_game_rule = {
+						rule = BAT_political_path
+						option = BAT_POLITICAL_PATH_GERMANIZATION_STATUS_QUO
+					}
+					has_game_rule = {
+						rule = BAT_political_path
+						option = BAT_POLITICAL_PATH_GERMANIZATION_INDEPENDENCE
+					}
+				}
+			}
+		}
+		name = balticduchy.198.b
+		LAT = {
+			country_event = {
+				id = balticduchy.199
+				days = 1
+			}
+		}
+		EST = {
+			country_event = {
+				id = balticduchy.200
+				days = 3
+			}
+		}
+	}
+
+	option = { #Invite them into Mittleuropa
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = BAT_political_path
+						option = BAT_POLITICAL_PATH_GERMANIZATION_INTEGRATION
+					}
+					has_game_rule = {
+						rule = BAT_political_path
+						option = BAT_POLITICAL_PATH_GERMANIZATION_STATUS_QUO
+					}
+					has_game_rule = {
+						rule = BAT_political_path
+						option = BAT_POLITICAL_PATH_GERMANIZATION_INDEPENDENCE
+					}
+				}
+			}
+		}
+		name = balticduchy.198.c
+		LAT = {
+			country_event = {
+				id = balticduchy.201
+				days = 1
+			}
+		}
+		EST = {
+			country_event = {
+				id = balticduchy.202
+				days = 3
+			}
+		}
+	}
+
+	option = { #Leave them be
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = BAT_political_path
+						option = BAT_POLITICAL_PATH_GERMANIZATION_INTEGRATION
+					}
+					has_game_rule = {
+						rule = BAT_political_path
+						option = BAT_POLITICAL_PATH_GERMANIZATION_STATUS_QUO
+					}
+					has_game_rule = {
+						rule = BAT_political_path
+						option = BAT_POLITICAL_PATH_GERMANIZATION_INDEPENDENCE
+					}
+				}
+			}
+		}
+		name = balticduchy.198.e
+		add_political_power = -40
+	}
+}
+
+### Germans pressure Latvia###
+country_event = {
+	id = balticduchy.199
+	immediate = { log = "[GetDateText]: [Root.GetName]: event balticduchy.199" }
+	title = balticduchy.199.t
+	desc = balticduchy.199.d
+
+	trigger = {
+		is_subject = no
+	}
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #Submit before Germany
+		name = balticduchy.199.a
+		ai_chance = {
+			factor = 70
+		}
+		GER = {
+			set_autonomy = {
+				target = LAT
+				autonomy_state = kr_default_puppet
+			}
+		}
+		add_political_power = -100
+	}
+
+	option = { #Refuse to submit
+		name = balticduchy.199.b
+		ai_chance = {
+			factor = 30
+		}
+		GER = {
+			country_event = {
+				id = balticduchy.203
+				days = 1
+			}
+		}
+	}
+}
+
+### Germans pressure Estonia###
+country_event = {
+	id = balticduchy.200
+	immediate = { log = "[GetDateText]: [Root.GetName]: event balticduchy.200" }
+	title = balticduchy.200.t
+	desc = balticduchy.200.d
+
+	trigger = {
+		is_subject = no
+	}
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #Submit before Germany
+		name = balticduchy.200.a
+		ai_chance = {
+			factor = 70
+		}
+		GER = {
+			set_autonomy = {
+				target = EST
+				autonomy_state = kr_default_puppet
+			}
+		}
+		add_political_power = -100
+	}
+
+	option = { #Refuse to submit
+		name = balticduchy.200.b
+		ai_chance = {
+			factor = 30
+		}
+		GER = {
+			country_event = {
+				id = balticduchy.204
+				days = 1
+			}
+		}
+	}
+}
+
+### Germans want a alliance with Latvia###
+country_event = {
+	id = balticduchy.201
+	immediate = { log = "[GetDateText]: [Root.GetName]: event balticduchy.201" }
+	title = balticduchy.201.t
+	desc = balticduchy.201.d
+
+	trigger = {
+		is_subject = no
+	}
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #Accept the deal
+		name = balticduchy.201.a
+		ai_chance = {
+			factor = 70
+		}
+		GER = {
+			add_to_faction = LAT
+		}
+		add_political_power = -50
+	}
+
+	option = { #Refuse
+		name = balticduchy.201.b
+		ai_chance = {
+			factor = 30
+		}
+		GER = {
+			country_event = {
+				id = balticduchy.205
+				days = 1
+			}
+		}
+	}
+}
+
+### Germans want a alliance with Estonia###
+country_event = {
+	id = balticduchy.202
+	immediate = { log = "[GetDateText]: [Root.GetName]: event balticduchy.202" }
+	title = balticduchy.202.t
+	desc = balticduchy.202.d
+
+	trigger = {
+		is_subject = no
+	}
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #Accept the deal
+		name = balticduchy.202.a
+		GER = {
+			add_to_faction = EST
+		}
+		add_political_power = -50
+	}
+
+	option = { #Refuse
+		name = balticduchy.202.b
+		GER = {
+			country_event = {
+				id = balticduchy.206
+				days = 1
+			}
+		}
+		hidden_effect = {
+			RUS = {
+				country_event = {
+					id = balticduchy.207
+					days = 1
+				}
+			}
+		}
+	}
+}
+
+### Latvia resisting to German pressure###
+country_event = {
+	id = balticduchy.203
+	immediate = { log = "[GetDateText]: [Root.GetName]: event balticduchy.203" }
+	title = balticduchy.203.t
+	desc = balticduchy.203.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #War will resolve this
+		name = balticduchy.203.a
+		ai_chance = {
+			factor = 60
+		}
+		declare_war_on = {
+			target = LAT
+			type = annex_everything
+		}
+		set_country_flag = GER_restore_duchy
+	}
+
+	option = { #There nothing we can do
+		name = balticduchy.203.b
+		ai_chance = {
+			factor = 40
+		}
+		add_political_power = -40
+	}
+}
+
+### Estonia resisting to German pressure###
+country_event = {
+	id = balticduchy.204
+	immediate = { log = "[GetDateText]: [Root.GetName]: event balticduchy.204" }
+	title = balticduchy.204.t
+	desc = balticduchy.204.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #War will resolve this
+		name = balticduchy.204.a
+		ai_chance = {
+			factor = 60
+		}
+		declare_war_on = {
+			target = EST
+			type = annex_everything
+		}
+		set_country_flag = GER_restore_duchy
+	}
+
+	option = { #There nothing we can do
+		name = balticduchy.204.b
+		ai_chance = {
+			factor = 40
+		}
+		add_political_power = -40
+	}
+}
+
+### Latvia don't want to be in Mittleuropa###
+country_event = {
+	id = balticduchy.205
+	immediate = { log = "[GetDateText]: [Root.GetName]: event balticduchy.205" }
+	title = balticduchy.205.t
+	desc = balticduchy.205.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #War will resolve this
+		name = balticduchy.205.a
+		ai_chance = {
+			factor = 40
+		}
+		declare_war_on = {
+			target = LAT
+			type = annex_everything
+		}
+		set_country_flag = GER_restore_duchy
+	}
+
+	option = { #There nothing we can do
+		name = balticduchy.205.b
+		ai_chance = {
+			factor = 60
+		}
+		add_political_power = -40
+	}
+}
+
+### Estonia don't want to be in Mittleuropa###
+country_event = {
+	id = balticduchy.206
+	immediate = { log = "[GetDateText]: [Root.GetName]: event balticduchy.206" }
+	title = balticduchy.206.t
+	desc = balticduchy.206.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #War will resolve this
+		name = balticduchy.206.a
+		ai_chance = {
+			factor = 40
+		}
+		declare_war_on = {
+			target = EST
+			type = annex_everything
+		}
+		set_country_flag = GER_restore_duchy
+	}
+
+	option = { #There nothing we can do
+		name = balticduchy.206.b
+		ai_chance = {
+			factor = 60
+		}
+		add_political_power = -40
+	}
+}
+
+### Estonia is weak - Russian interest in Estonia###
+country_event = {
+	id = balticduchy.207
+	immediate = { log = "[GetDateText]: [Root.GetName]: event balticduchy.207" }
+	title = balticduchy.207.t
+	desc = balticduchy.207.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #Use SPO to puppet them
+		name = balticduchy.207.a
+		ai_chance = {
+			factor = 60
+		}
+		RUS = {
+			set_autonomy = {
+				target = EST
+				autonomy_state = kr_default_puppet
+			}
+		}
+		GER = {
+			country_event = balticduchy.208
+		}
+	}
+
+	option = { #Use SPO to bring them into alliance
+		name = balticduchy.207.b
+		trigger = {
+			is_faction_leader = yes
+			NOT = {
+				EST = {
+					is_in_faction_with = RUS
+				}
+			}
+		}
+		ai_chance = {
+			factor = 30
+		}
+		GER = {
+			country_event = balticduchy.208
+		}
+		add_political_power = -20
+	}
+
+	option = { #Leave them be
+		ai_chance = {
+			factor = 10
+		}
+		name = balticduchy.207.c
+		add_political_power = -40
+	}
+}
+
+### Russia behind the Estonia - German reaction###
+country_event = {
+	id = balticduchy.208
+	immediate = { log = "[GetDateText]: [Root.GetName]: event balticduchy.208" }
+	title = balticduchy.208.t
+	desc = balticduchy.208.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #Give up
+		name = balticduchy.208.a
+		ai_chance = {
+			factor = 60
+		}
+		add_political_power = -20
+		GER = {
+			white_peace_with_ROOT = yes
+		}
+		set_country_flag = GER_no_estonia
+	}
+
+	option = { #Give up and set up embargo
+		name = balticduchy.208.b
+		ai_chance = {
+			factor = 39
+		}
+		add_political_power = -20
+		set_country_flag = GER_no_estonia
+		GER = {
+			white_peace_with_ROOT = yes
+		}
+		GER = {
+			add_opinion_modifier = {
+				target = RUS
+				modifier = embargo
+			}
+		}
+	}
+
+	option = { #War will resolve this
+		ai_chance = {
+			factor = 1
+		}
+		name = balticduchy.208.c
+		add_political_power = -40
+		declare_war_on = {
+			target = RUS
+			type = annex_everything
+		}
+	}
+}

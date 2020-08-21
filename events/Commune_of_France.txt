@@ -1,0 +1,6219 @@
+﻿###########################
+# Commune of France Events
+###########################
+# By Nijato
+###########################
+
+add_namespace = comfrance
+
+country_event = { #Intro
+	id = comfrance.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.1" }
+	title = comfrance.1.t
+	desc = comfrance.1.d
+	picture = GFX_report_event_soviet_soldiers_tank
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = comfrance.1.a
+	}
+}
+
+#####
+##### BGT elections ####
+#####
+
+country_event = {
+	id = comfrance.5
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.5" }
+	title = comfrance.5.t
+	desc = comfrance.5.d
+	picture = GFX_report_event_worker_protests
+
+	is_triggered_only = yes
+
+	option = {
+		name = comfrance.5.a
+		add_stability = -0.2
+		remove_ideas_with_trait = head_of_government
+		add_ideas = FRA_Comite_de_Salut_Public_hog_syn
+		hidden_effect = {
+			country_event = {
+				id = comfrance.6
+				days = 7
+			}
+		}
+		# set 1936 election flags
+		set_country_flag = {
+			flag = FRA_ANAR
+			value = 0
+		}
+		set_country_flag = {
+			flag = FRA_JACO
+			value = 0
+		}
+		set_country_flag = {
+			flag = FRA_SORE
+			value = 0
+		}
+		set_country_flag = {
+			flag = FRA_TRAV
+			value = 0
+		}
+	}
+}
+
+country_event = {
+	id = comfrance.6
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.6" }
+	title = comfrance.6.t
+	desc = comfrance.6.d
+	picture = GFX_report_event_worker_protests
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = comfrance.7
+				days = 3
+			}
+		}
+	}
+
+	option = {
+		name = comfrance.6.a #Paul Le Gentilhomme (Travailleur) - Tank proponent
+		ai_chance = {
+			factor = 45
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_RADICAL_SOCIALIST_ANARCHISTE
+					}
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_TOTALIST_JACOBIN
+					}
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_TOTALIST_SORELIAN
+					}
+				}
+			}
+		}
+		add_stability = -0.1
+		add_popularity = {
+			ideology = syndicalist
+			popularity = 0.05
+		}
+		set_country_flag = ARMY_TRAV
+		modify_country_flag = {
+			flag = FRA_TRAV
+			value = 1
+		}
+	}
+
+	option = {
+		name = comfrance.6.b #Jacques Duclos (Jacobin) - Centralized High Command
+		ai_chance = {
+			factor = 15
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_SYNDICALIST_TRAVAILLEUR
+					}
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_RADICAL_SOCIALIST_ANARCHISTE
+					}
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_TOTALIST_SORELIAN
+					}
+				}
+			}
+		}
+		add_stability = 0.02
+		add_popularity = {
+			ideology = totalist
+			popularity = 0.05
+		}
+		set_country_flag = ARMY_JACO
+		modify_country_flag = {
+			flag = FRA_JACO
+			value = 1
+		}
+	}
+
+	option = {
+		name = comfrance.6.c #Jacques Doriot (Sorelian) - Officers' initiative
+		ai_chance = {
+			factor = 35
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_SYNDICALIST_TRAVAILLEUR
+					}
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_RADICAL_SOCIALIST_ANARCHISTE
+					}
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_TOTALIST_JACOBIN
+					}
+				}
+			}
+		}
+		add_stability = 0.02
+		add_popularity = {
+			ideology = totalist
+			popularity = 0.05
+		}
+		set_country_flag = ARMY_SORE
+		modify_country_flag = {
+			flag = FRA_SORE
+			value = 1
+		}
+	}
+
+	option = {
+		name = comfrance.6.e #Henri Tanguy (Anarchiste) - Mass conscription
+		ai_chance = {
+			factor = 200
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_SYNDICALIST_TRAVAILLEUR
+					}
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_TOTALIST_JACOBIN
+					}
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_TOTALIST_SORELIAN
+					}
+				}
+			}
+		}
+		add_stability = -0.02
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.05
+		}
+		set_country_flag = ARMY_ANAR
+		modify_country_flag = {
+			flag = FRA_ANAR
+			value = 1
+		}
+	}
+}
+
+country_event = {
+	id = comfrance.7
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.7" }
+	title = comfrance.7.t
+	desc = comfrance.7.d
+	picture = GFX_report_event_worker_protests
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = comfrance.8
+				days = 3
+			}
+		}
+	}
+
+	option = {
+		name = comfrance.7.a #Roger Salengro (Travailleur)
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_RADICAL_SOCIALIST_ANARCHISTE
+					}
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_TOTALIST_JACOBIN
+					}
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_TOTALIST_SORELIAN
+					}
+				}
+			}
+		}
+		add_stability = 0.02
+		add_popularity = {
+			ideology = syndicalist
+			popularity = 0.05
+		}
+		modify_country_flag = {
+			flag = FRA_TRAV
+			value = 1
+		}
+	}
+
+	option = {
+		name = comfrance.7.b #Waldeck Rochet (Jacobin)
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_SYNDICALIST_TRAVAILLEUR
+					}
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_RADICAL_SOCIALIST_ANARCHISTE
+					}
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_TOTALIST_SORELIAN
+					}
+				}
+			}
+		}
+		add_stability = -0.1
+		add_popularity = {
+			ideology = totalist
+			popularity = 0.05
+		}
+		modify_country_flag = {
+			flag = FRA_JACO
+			value = 1
+		}
+	}
+
+	option = {
+		name = comfrance.7.c #Pierre Villon (Sorelian)
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_SYNDICALIST_TRAVAILLEUR
+					}
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_RADICAL_SOCIALIST_ANARCHISTE
+					}
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_TOTALIST_JACOBIN
+					}
+				}
+			}
+		}
+		add_stability = -0.02
+		add_popularity = {
+			ideology = totalist
+			popularity = 0.05
+		}
+		modify_country_flag = {
+			flag = FRA_SORE
+			value = 1
+		}
+	}
+
+	option = {
+		name = comfrance.7.e #Devolve the position to the militias (Anarchiste)
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_SYNDICALIST_TRAVAILLEUR
+					}
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_TOTALIST_JACOBIN
+					}
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_TOTALIST_SORELIAN
+					}
+				}
+			}
+		}
+		add_stability = 0.1
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.05
+		}
+		modify_country_flag = {
+			flag = FRA_ANAR
+			value = 1
+		}
+	}
+}
+
+country_event = {
+	id = comfrance.8
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.8" }
+	title = comfrance.8.t
+	desc = comfrance.8.d
+	picture = GFX_report_event_worker_protests
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = comfrance.9
+				days = 3
+			}
+		}
+	}
+
+	option = {
+		name = comfrance.8.a #Marceau Pivert (Travailleur)
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_RADICAL_SOCIALIST_ANARCHISTE
+					}
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_TOTALIST_JACOBIN
+					}
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_TOTALIST_SORELIAN
+					}
+				}
+			}
+		}
+		remove_ideas_with_trait = security_minister
+		add_ideas = FRA_Marceau_Pivert_sec_syn
+		add_stability = -0.05
+		add_manpower = 50000
+		add_popularity = {
+			ideology = syndicalist
+			popularity = 0.05
+		}
+		modify_country_flag = {
+			flag = FRA_TRAV
+			value = 1
+		}
+	}
+
+	option = {
+		name = comfrance.8.b #Maurice Thorez (Jacobin)
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_SYNDICALIST_TRAVAILLEUR
+					}
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_RADICAL_SOCIALIST_ANARCHISTE
+					}
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_TOTALIST_SORELIAN
+					}
+				}
+			}
+		}
+		remove_ideas_with_trait = security_minister
+		add_ideas = FRA_Maurice_Thorez_sec_tot
+		add_stability = 0.05
+		add_manpower = -50000
+		add_popularity = {
+			ideology = totalist
+			popularity = 0.05
+		}
+		modify_country_flag = {
+			flag = FRA_JACO
+			value = 1
+		}
+	}
+
+	option = {
+		name = comfrance.8.c #Marcel Bucard (Sorelian)
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_SYNDICALIST_TRAVAILLEUR
+					}
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_RADICAL_SOCIALIST_ANARCHISTE
+					}
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_TOTALIST_JACOBIN
+					}
+				}
+			}
+		}
+		remove_ideas_with_trait = security_minister
+		add_ideas = FRA_Marcel_Bucard_sec_tot
+		add_stability = -0.01
+		add_manpower = -25000
+		add_popularity = {
+			ideology = totalist
+			popularity = 0.05
+		}
+		modify_country_flag = {
+			flag = FRA_SORE
+			value = 1
+		}
+	}
+
+	option = {
+		name = comfrance.8.e #Maurice Joyeux (Anarchiste)
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_SYNDICALIST_TRAVAILLEUR
+					}
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_TOTALIST_JACOBIN
+					}
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_TOTALIST_SORELIAN
+					}
+				}
+			}
+		}
+		remove_ideas_with_trait = security_minister
+		add_ideas = FRA_Maurice_Joyeux_sec_rso
+		add_stability = 0.1
+		add_manpower = 25000
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.05
+		}
+		modify_country_flag = {
+			flag = FRA_ANAR
+			value = 1
+		}
+	}
+}
+
+country_event = {
+	id = comfrance.9
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.9" }
+	title = comfrance.9.t
+	desc = comfrance.9.d
+	picture = GFX_report_event_worker_protests
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = comfrance.10
+				days = 3
+			}
+		}
+	}
+
+	option = {
+		name = comfrance.9.a #Benoît Frachon (Travailleur) - Orthodox Syndicalism
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_RADICAL_SOCIALIST_ANARCHISTE
+					}
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_TOTALIST_JACOBIN
+					}
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_TOTALIST_SORELIAN
+					}
+				}
+			}
+		}
+		remove_ideas_with_trait = economy_minister
+		add_ideas = FRA_Benoit_Frachon_eco_syn
+		add_ideas = FRA_economic_reforms
+		add_popularity = {
+			ideology = syndicalist
+			popularity = 0.05
+		}
+		set_country_flag = ECO_TRAV
+		modify_country_flag = {
+			flag = FRA_TRAV
+			value = 1
+		}
+		random_owned_state = {
+			limit = {
+				free_building_slots = {
+					building = arms_factory
+					size > 0
+					include_locked = yes
+				}
+			}
+
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+		random_owned_state = {
+			limit = {
+				free_building_slots = {
+					building = arms_factory
+					size > 0
+					include_locked = yes
+				}
+			}
+
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+		random_owned_state = {
+			limit = {
+				free_building_slots = {
+					building = industrial_complex
+					size > 0
+					include_locked = yes
+				}
+			}
+
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+		random_owned_state = {
+			limit = {
+				free_building_slots = {
+					building = industrial_complex
+					size > 0
+					include_locked = yes
+				}
+			}
+
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+
+	option = {
+		name = comfrance.9.b #Jean Jérôme (Jacobin) - Industrialisation
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_SYNDICALIST_TRAVAILLEUR
+					}
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_RADICAL_SOCIALIST_ANARCHISTE
+					}
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_TOTALIST_SORELIAN
+					}
+				}
+			}
+		}
+		remove_ideas_with_trait = economy_minister
+		add_ideas = FRA_Jean_Jerome_eco_tot
+		add_ideas = FRA_economic_reforms_jaco
+		add_popularity = {
+			ideology = totalist
+			popularity = 0.05
+		}
+		set_country_flag = ECO_JACO
+		modify_country_flag = {
+			flag = FRA_JACO
+			value = 1
+		}
+		random_owned_state = {
+			limit = {
+				free_building_slots = {
+					building = arms_factory
+					size > 0
+					include_locked = yes
+				}
+			}
+
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+		random_owned_state = {
+			limit = {
+				free_building_slots = {
+					building = arms_factory
+					size > 0
+					include_locked = yes
+				}
+			}
+
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+		random_owned_state = {
+			limit = {
+				free_building_slots = {
+					building = industrial_complex
+					size > 0
+					include_locked = yes
+				}
+			}
+
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+
+	option = {
+		name = comfrance.9.c #Jacques Doriot (Sorelian) - War economy and agriculture
+		ai_chance = {
+			factor = 200
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_SYNDICALIST_TRAVAILLEUR
+					}
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_RADICAL_SOCIALIST_ANARCHISTE
+					}
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_TOTALIST_JACOBIN
+					}
+				}
+			}
+		}
+		remove_ideas_with_trait = economy_minister
+		add_ideas = FRA_Jacques_Doriot_eco_tot
+		add_ideas = FRA_economic_reforms
+		custom_effect_tooltip = FRA_sorelian_economy_tooltip
+		hidden_effect = {
+			load_oob = FRA_sorelian_economy
+		}
+		add_popularity = {
+			ideology = totalist
+			popularity = 0.05
+		}
+		set_country_flag = ECO_SORE
+		modify_country_flag = {
+			flag = FRA_SORE
+			value = 1
+		}
+	}
+
+	option = {
+		name = comfrance.9.e #Daniel Guérin (Anarchiste) - Cooperatives
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_SYNDICALIST_TRAVAILLEUR
+					}
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_TOTALIST_JACOBIN
+					}
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_TOTALIST_SORELIAN
+					}
+				}
+			}
+		}
+		remove_ideas_with_trait = economy_minister
+		add_ideas = FRA_Daniel_Guerin_eco_rso
+		add_ideas = FRA_economic_reforms_anar
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.05
+		}
+		set_country_flag = ECO_ANAR
+		modify_country_flag = {
+			flag = FRA_ANAR
+			value = 1
+		}
+		random_owned_state = {
+			limit = {
+				free_building_slots = {
+					building = arms_factory
+					size > 0
+					include_locked = yes
+				}
+			}
+
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+		random_owned_state = {
+			limit = {
+				free_building_slots = {
+					building = industrial_complex
+					size > 0
+					include_locked = yes
+				}
+			}
+
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = comfrance.10
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.10" }
+	title = comfrance.10.t
+	desc = comfrance.10.d
+	picture = GFX_report_event_worker_protests
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = comfrance.900
+				days = 1
+			}
+		}
+	}
+
+	option = {
+		name = comfrance.10.a #Charles Rappoport (Travailleur)-Internationalism
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_RADICAL_SOCIALIST_ANARCHISTE
+					}
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_TOTALIST_JACOBIN
+					}
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_TOTALIST_SORELIAN
+					}
+				}
+			}
+		}
+		remove_ideas_with_trait = foreign_minister
+		add_ideas = FRA_Charles_Rappoport_for_syn
+		add_popularity = {
+			ideology = syndicalist
+			popularity = 0.05
+		}
+		modify_country_flag = {
+			flag = FRA_TRAV
+			value = 1
+		}
+	}
+
+	option = {
+		name = comfrance.10.b #Marcel Cachin (Jacobin)-World revolution
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_SYNDICALIST_TRAVAILLEUR
+					}
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_RADICAL_SOCIALIST_ANARCHISTE
+					}
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_TOTALIST_SORELIAN
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			GER = {
+				country_event = comfrance.60
+			}
+		}
+		remove_ideas_with_trait = foreign_minister
+		add_ideas = FRA_Marcel_Cachin_for_tot
+		add_popularity = {
+			ideology = totalist
+			popularity = 0.05
+		}
+		modify_country_flag = {
+			flag = FRA_JACO
+			value = 1
+		}
+	}
+
+	option = {
+		name = comfrance.10.c #Pierre Comert (Sorelian)-Revenge against Germany
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_SYNDICALIST_TRAVAILLEUR
+					}
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_RADICAL_SOCIALIST_ANARCHISTE
+					}
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_TOTALIST_JACOBIN
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			GER = {
+				country_event = comfrance.60
+			}
+		}
+		remove_ideas_with_trait = foreign_minister
+		add_ideas = FRA_Pierre_Comert_for_tot
+		add_popularity = {
+			ideology = totalist
+			popularity = 0.05
+		}
+		modify_country_flag = {
+			flag = FRA_SORE
+			value = 1
+		}
+	}
+
+	option = {
+		name = comfrance.10.e #Nestor Makhno (Anarchiste)- European Socialism
+		ai_chance = {
+			factor = 15
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_SYNDICALIST_TRAVAILLEUR
+					}
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_TOTALIST_JACOBIN
+					}
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_TOTALIST_SORELIAN
+					}
+				}
+			}
+		}
+		remove_ideas_with_trait = foreign_minister
+		add_ideas = FRA_Nestor_Makhno_for_rso
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.05
+		}
+		modify_country_flag = {
+			flag = FRA_ANAR
+			value = 1
+		}
+	}
+}
+
+country_event = {
+	id = comfrance.12
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.12" }
+	title = comfrance.12.t
+	desc = comfrance.12.d
+	picture = GFX_report_event_worker_protests
+
+	is_triggered_only = yes
+
+	option = {
+		name = comfrance.12.a #Souvarine
+		ai_chance = {
+			factor = 95
+		}
+		set_politics = {
+			ruling_party = syndicalist
+			elections_allowed = no
+		}
+		remove_ideas_with_trait = head_of_government
+		add_ideas = FRA_Boris_Souvarine_hog_syn
+		add_popularity = {
+			ideology = syndicalist
+			popularity = 0.20
+		}
+		hidden_effect = {
+			country_event = {
+				days = 7
+				id = comfrance.19
+			}
+		}
+		set_global_flag = travailleur_majority_1936
+
+		hidden_effect = {
+			random_other_country = {
+				news_event = {
+					id = worldnews.31
+					days = 1
+				}
+			}
+		}
+	}
+
+	option = {
+		name = comfrance.12.b #Pivert
+		ai_chance = {
+			factor = 5
+		}
+		set_politics = {
+			ruling_party = syndicalist
+			elections_allowed = no
+		}
+		remove_ideas_with_trait = head_of_government
+		add_ideas = FRA_Marceau_Pivert_hog_syn
+		add_popularity = {
+			ideology = syndicalist
+			popularity = 0.20
+		}
+		hidden_effect = {
+			country_event = {
+				days = 7
+				id = comfrance.19
+			}
+		}
+		set_global_flag = travailleur_majority_1936
+
+		hidden_effect = {
+			random_other_country = {
+				news_event = {
+					id = worldnews.31
+					days = 1
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = comfrance.19
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.19" }
+	title = comfrance.19.t
+	desc = comfrance.19.d
+	picture = GFX_report_event_worker_protests
+
+	is_triggered_only = yes
+
+	option = {
+		name = comfrance.19.a #Jouhaux
+		ai_chance = {
+			factor = 50
+		}
+		hidden_effect = {
+			kill_country_leader = yes
+			create_country_leader = {
+				name = "Léon Jouhaux"
+				desc = "POLITICS_LEON_JOUHAUX_DESC"
+				picture = "Portrait_France_Leon_Jouhaux.tga"
+				expire = "1965.1.1"
+				ideology = syndicalist_subtype
+			}
+			create_country_leader = {
+				name = "Léon Jouhaux"
+				desc = "POLITICS_LEON_JOUHAUX_DESC"
+				picture = "Portrait_France_Leon_Jouhaux.tga"
+				expire = "1965.1.1"
+				ideology = totalist_subtype
+			}
+			create_country_leader = {
+				name = "Léon Jouhaux"
+				desc = "POLITICS_LEON_JOUHAUX_DESC"
+				picture = "Portrait_France_Leon_Jouhaux.tga"
+				expire = "1965.1.1"
+				ideology = radical_socialist_subtype
+			}
+			remove_ideas_with_trait = economy_minister
+		}
+		add_ideas = FRA_Benoit_Frachon_eco_syn
+	}
+
+	option = {
+		name = comfrance.19.b #Frachon
+		ai_chance = {
+			factor = 50
+		}
+		hidden_effect = {
+			kill_country_leader = yes
+			create_country_leader = {
+				name = "Benoît Frachon"
+				desc = "POLITICS_BENOIT_FRACHON_DESC"
+				picture = "Portrait_France_Benoit_Frachon.tga"
+				expire = "1965.1.1"
+				ideology = syndicalist_subtype
+			}
+			create_country_leader = {
+				name = "Benoît Frachon"
+				desc = "POLITICS_BENOIT_FRACHON_DESC"
+				picture = "Portrait_France_Benoit_Frachon.tga"
+				expire = "1965.1.1"
+				ideology = totalist_subtype
+			}
+			create_country_leader = {
+				name = "Benoît Frachon"
+				desc = "POLITICS_BENOIT_FRACHON_DESC"
+				picture = "Portrait_France_Benoit_Frachon.tga"
+				expire = "1965.1.1"
+				ideology = radical_socialist_subtype
+			}
+			remove_ideas_with_trait = economy_minister
+		}
+		add_ideas = FRA_Leon_Jouhaux_eco_syn
+	}
+}
+
+country_event = {
+	id = comfrance.13
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.13" }
+	title = comfrance.13.t
+	desc = comfrance.13.d
+	picture = GFX_report_event_worker_protests
+
+	is_triggered_only = yes
+
+	option = {
+		name = comfrance.13.a #Cachin
+		ai_chance = {
+			factor = 50
+		}
+		set_party_name = {
+			ideology = totalist
+			long_name = FRA_jacobins
+			name = FRA_jacobins
+		}
+		set_politics = {
+			ruling_party = totalist
+			elections_allowed = no
+		}
+		add_stability = -0.1
+		remove_all_ministers = yes
+		add_ideas = FRA_Marcel_Cachin_hog_tot
+		add_ideas = FRA_Jacques_Duclos_for_tot
+		add_ideas = FRA_Jean_Jerome_eco_tot
+		add_ideas = FRA_Maurice_Thorez_sec_tot
+		add_popularity = {
+			ideology = totalist
+			popularity = 0.20
+		}
+		country_event = {
+			days = 7
+			id = comfrance.14
+		}
+		hidden_effect = {
+			country_event = {
+				id = comfrance.130
+				days = 15
+			}
+			country_event = {
+				days = 7
+				id = comfrance.14
+			}
+		}
+		set_global_flag = jacobin_majority_1936
+
+		hidden_effect = {
+			random_other_country = {
+				news_event = {
+					id = worldnews.33
+					days = 1
+				}
+			}
+		}
+	}
+
+	option = {
+		name = comfrance.13.b #Duclos
+		ai_chance = {
+			factor = 50
+		}
+		set_party_name = {
+			ideology = totalist
+			long_name = FRA_jacobins
+			name = FRA_jacobins
+		}
+		set_politics = {
+			ruling_party = totalist
+			elections_allowed = no
+		}
+		add_stability = -0.1
+		remove_all_ministers = yes
+		add_ideas = FRA_Jacques_Duclos_hog_tot
+		add_ideas = FRA_Marcel_Cachin_for_tot
+		add_ideas = FRA_Jean_Jerome_eco_tot
+		add_ideas = FRA_Maurice_Thorez_sec_tot
+		add_popularity = {
+			ideology = totalist
+			popularity = 0.20
+		}
+		hidden_effect = {
+			country_event = {
+				id = comfrance.130
+				days = 15
+			}
+			country_event = {
+				days = 7
+				id = comfrance.14
+			}
+		}
+		set_global_flag = jacobin_majority_1936
+
+		hidden_effect = {
+			random_other_country = {
+				news_event = {
+					id = worldnews.33
+					days = 1
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = comfrance.14
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.14" }
+	title = comfrance.14.t
+	desc = comfrance.14.d
+	picture = GFX_report_event_worker_protests
+
+	is_triggered_only = yes
+
+	option = {
+		name = comfrance.14.a #Vive la Revolution!
+		hidden_effect = {
+			kill_country_leader = yes
+			create_country_leader = {
+				name = "Marcel Déat"
+				desc = "POLITICS_MARCEL_DEAT_DESC"
+				picture = "Portrait_France_Marcel_Deat.tga"
+				expire = "1965.1.1"
+				ideology = syndicalist_subtype
+			}
+			create_country_leader = {
+				name = "Marcel Déat"
+				desc = "POLITICS_MARCEL_DEAT_DESC"
+				picture = "Portrait_France_Marcel_Deat.tga"
+				expire = "1965.1.1"
+				ideology = totalist_subtype
+			}
+			create_country_leader = {
+				name = "Marcel Déat"
+				desc = "POLITICS_MARCEL_DEAT_DESC"
+				picture = "Portrait_France_Marcel_Deat.tga"
+				expire = "1965.1.1"
+				ideology = radical_socialist_subtype
+			}
+		}
+	}
+}
+
+country_event = {
+	id = comfrance.15
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.15" }
+	title = comfrance.15.t
+	desc = comfrance.15.d
+	picture = GFX_report_event_worker_protests
+
+	is_triggered_only = yes
+
+	option = {
+		name = comfrance.15.a #Valois-Bucard
+		ai_chance = {
+			factor = 50
+		}
+		set_politics = {
+			ruling_party = totalist
+			elections_allowed = no
+		}
+		set_party_name = {
+			ideology = totalist
+			long_name = FRA_sorelians
+			name = FRA_sorelians
+		}
+		create_country_leader = {
+			name = "Georges Valois"
+			desc = "POLITICS_GEORGES_VALOIS_DESC"
+			picture = "Portrait_France_Georges_Valois.tga"
+			expire = "1965.1.1"
+			ideology = totalist_subtype
+		}
+		remove_ideas_with_trait = head_of_government
+		add_ideas = FRA_Marcel_Bucard_hog_tot
+		add_popularity = {
+			ideology = totalist
+			popularity = 0.20
+		}
+		add_stability = -0.1
+		set_global_flag = sorelian_majority_1936
+
+		hidden_effect = {
+			random_other_country = {
+				news_event = {
+					id = worldnews.34
+					days = 1
+				}
+			}
+		}
+	}
+
+	option = {
+		name = comfrance.15.b #Valois
+		ai_chance = {
+			factor = 50
+		}
+		set_party_name = {
+			ideology = totalist
+			long_name = FRA_sorelians
+			name = FRA_sorelians
+		}
+		set_politics = {
+			ruling_party = totalist
+			elections_allowed = no
+		}
+		remove_ideas_with_trait = head_of_government
+		add_ideas = FRA_Georges_Valois_hog_tot
+		add_stability = -0.1
+		add_popularity = {
+			ideology = totalist
+			popularity = 0.20
+		}
+		set_global_flag = sorelian_majority_1936
+
+		hidden_effect = {
+			random_other_country = {
+				news_event = {
+					id = worldnews.34
+					days = 1
+				}
+			}
+			country_event = {
+				days = 7
+				id = comfrance.16
+			}
+		}
+	}
+}
+
+country_event = {
+	id = comfrance.16
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.16" }
+	title = comfrance.16.t
+	desc = comfrance.16.d
+	picture = GFX_report_event_worker_protests
+
+	is_triggered_only = yes
+
+	option = {
+		name = comfrance.16.a #Merge position of chairman
+		ai_chance = {
+			factor = 90
+		}
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Georges Valois"
+			desc = "POLITICS_GEORGES_VALOIS_DESC"
+			picture = "Portrait_France_Georges_Valois.tga"
+			expire = "1965.1.1"
+			ideology = totalist_subtype
+		}
+	}
+
+	option = {
+		name = comfrance.16.b #Keep Faure in
+		ai_chance = {
+			factor = 10
+		}
+	}
+}
+
+country_event = {
+	id = comfrance.17
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.17" }
+	title = comfrance.17.t
+	desc = comfrance.17.d
+	picture = GFX_report_event_worker_protests
+
+	is_triggered_only = yes
+
+	option = {
+		name = comfrance.17.a #Guerin
+		set_politics = {
+			ruling_party = radical_socialist
+			elections_allowed = no
+		}
+		remove_ideas_with_trait = head_of_government
+		add_ideas = FRA_Daniel_Guerin_hog_rso
+		remove_ideas_with_trait = economy_minister
+		add_ideas = FRA_Benoit_Broutchoux_eco_rso
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.20
+		}
+		set_global_flag = anarchiste_majority_1936
+
+		hidden_effect = {
+			random_other_country = {
+				news_event = {
+					id = worldnews.35
+					days = 1
+				}
+			}
+			country_event = {
+				days = 7
+				id = comfrance.18
+			}
+		}
+	}
+}
+
+country_event = {
+	id = comfrance.18
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.18" }
+	title = comfrance.18.t
+	desc = comfrance.18.d
+	picture = GFX_report_event_worker_protests
+
+	is_triggered_only = yes
+
+	option = {
+		name = comfrance.18.a #Makhno
+		ai_chance = {
+			factor = 55
+		}
+		add_stability = -0.06
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Nestor Makhno"
+			desc = "POLITICS_NESTOR_MAKHNO_DESC"
+			picture = "Portrait_France_Nestor_Makhno.tga"
+			expire = "1965.1.1"
+			ideology = radical_socialist_subtype
+		}
+		create_country_leader = {
+			name = "Nestor Makhno"
+			desc = "POLITICS_NESTOR_MAKHNO_DESC"
+			picture = "Portrait_France_Nestor_Makhno.tga"
+			expire = "1965.1.1"
+			ideology = syndicalist_subtype
+		}
+		create_country_leader = {
+			name = "Nestor Makhno"
+			desc = "POLITICS_NESTOR_MAKHNO_DESC"
+			picture = "Portrait_France_Nestor_Makhno.tga"
+			expire = "1965.1.1"
+			ideology = totalist_subtype
+		}
+	}
+
+	option = {
+		name = comfrance.18.b #Faure
+		ai_chance = {
+			factor = 45
+		}
+		add_stability = -0.06
+	}
+}
+
+country_event = {
+	id = comfrance.20
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.20" }
+	title = comfrance.20.t
+	desc = comfrance.20.d
+	picture = GFX_report_event_worker_protests
+
+	is_triggered_only = yes
+
+	option = {
+		name = comfrance.20.a #Jouhaux-Blum
+		ai_chance = {
+			factor = 45
+		}
+		set_politics = {
+			ruling_party = syndicalist
+			elections_allowed = no
+		}
+		add_stability = -0.1
+		add_popularity = {
+			ideology = syndicalist
+			popularity = 0.10
+		}
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.10
+		}
+		hidden_effect = {
+			kill_country_leader = yes
+		}
+		create_country_leader = {
+			name = "Léon Jouhaux"
+			desc = "POLITICS_LEON_JOUHAUX_DESC"
+			picture = "Portrait_France_Leon_Jouhaux.tga"
+			expire = "1965.1.1"
+			ideology = syndicalist_subtype
+		}
+		create_country_leader = {
+			name = "Léon Jouhaux"
+			desc = "POLITICS_LEON_JOUHAUX_DESC"
+			picture = "Portrait_France_Leon_Jouhaux.tga"
+			expire = "1965.1.1"
+			ideology = totalist_subtype
+		}
+		create_country_leader = {
+			name = "Léon Jouhaux"
+			desc = "POLITICS_LEON_JOUHAUX_DESC"
+			picture = "Portrait_France_Leon_Jouhaux.tga"
+			expire = "1965.1.1"
+			ideology = radical_socialist_subtype
+		}
+		remove_all_ministers = yes
+		add_ideas = FRA_Leon_Blum_hog_rso
+		add_ideas = FRA_Amedee_Dunois_for_syn
+		add_ideas = FRA_Vincent_Auriol_eco_rso
+		add_ideas = FRA_Adrien_Tixier_sec_syn
+		set_global_flag = FRA_no_majority_1936
+
+		hidden_effect = {
+			random_other_country = {
+				news_event = {
+					id = worldnews.36
+					days = 1
+				}
+			}
+		}
+	}
+
+	option = {
+		name = comfrance.20.b #Frachon-Anarchiste compromise
+		ai_chance = {
+			factor = 45
+		}
+		set_politics = {
+			ruling_party = syndicalist
+			elections_allowed = no
+		}
+		add_stability = -0.1
+		add_popularity = {
+			ideology = syndicalist
+			popularity = 0.10
+		}
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.10
+		}
+		hidden_effect = {
+			kill_country_leader = yes
+		}
+		create_country_leader = {
+			name = "Benoît Frachon"
+			desc = "POLITICS_BENOIT_FRACHON_DESC"
+			picture = "Portrait_France_Benoit_Frachon.tga"
+			expire = "1965.1.1"
+			ideology = syndicalist_subtype
+		}
+		create_country_leader = {
+			name = "Benoît Frachon"
+			desc = "POLITICS_BENOIT_FRACHON_DESC"
+			picture = "Portrait_France_Benoit_Frachon.tga"
+			expire = "1965.1.1"
+			ideology = totalist_subtype
+		}
+		create_country_leader = {
+			name = "Benoît Frachon"
+			desc = "POLITICS_BENOIT_FRACHON_DESC"
+			picture = "Portrait_France_Benoit_Frachon.tga"
+			expire = "1965.1.1"
+			ideology = radical_socialist_subtype
+		}
+		remove_all_ministers = yes
+		add_ideas = FRA_Daniel_Guerin_hog_rso
+		add_ideas = FRA_Robert_Louzon_for_rso
+		add_ideas = FRA_Georges_Dumoulin_eco_syn
+		add_ideas = FRA_Marceau_Pivert_sec_syn
+		set_global_flag = FRA_no_majority_1936
+
+		hidden_effect = {
+			random_other_country = {
+				news_event = {
+					id = worldnews.36
+					days = 1
+				}
+			}
+		}
+	}
+
+	option = {
+		name = comfrance.20.c #Pivert
+		ai_chance = {
+			factor = 10
+		}
+		add_stability = -0.1
+		add_popularity = {
+			ideology = syndicalist
+			popularity = 0.10
+		}
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.10
+		}
+		remove_all_ministers = yes
+		add_ideas = FRA_Marceau_Pivert_hog_syn
+		add_ideas = FRA_Charles_Rappoport_for_syn
+		add_ideas = FRA_Daniel_Guerin_eco_rso
+		add_ideas = FRA_Sebastien_Faure_sec_rso
+		set_global_flag = FRA_no_majority_1936
+
+		hidden_effect = {
+			random_other_country = {
+				news_event = {
+					id = worldnews.36
+					days = 1
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = comfrance.22
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.22" }
+	title = comfrance.22.t
+	desc = comfrance.22.d
+	picture = GFX_report_event_soviet_soldiers_tank
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_country_flag = FRA_front_populaire }
+	}
+
+	option = {
+		name = comfrance.22.a
+		add_stability = 0.02
+	}
+}
+
+country_event = {
+	id = comfrance.23
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.23" }
+
+	title = {
+		text = comfrance.23.t.GER
+		trigger = {
+			has_war_with = GER
+			OR = {
+				24 = { #Picardie
+					controller = { is_ally_with = GER }
+				}
+				785 = { #Lorraine Plateau
+					controller = { is_ally_with = GER }
+				}
+			}
+		}
+	}
+	title = {
+		text = comfrance.23.t.RUS
+		trigger = {
+			has_war_with = RUS
+			OR = {
+				24 = { #Picardie
+					controller = { is_ally_with = RUS }
+				}
+				785 = { #Lorraine Plateau
+					controller = { is_ally_with = RUS }
+				}
+			}
+		}
+	}
+	desc = {
+		text = comfrance.23.d.GER
+		trigger = {
+			has_war_with = GER
+			OR = {
+				24 = { #Picardie
+					controller = { is_ally_with = GER }
+				}
+				785 = { #Lorraine Plateau
+					controller = { is_ally_with = GER }
+				}
+			}
+		}
+	}
+	desc = {
+		text = comfrance.23.d.RUS
+		trigger = {
+			has_war_with = RUS
+			OR = {
+				24 = { #Picardie
+					controller = { is_ally_with = RUS }
+				}
+				785 = { #Lorraine Plateau
+					controller = { is_ally_with = RUS }
+				}
+			}
+		}
+	}
+
+	picture = GFX_report_event_soviet_soldiers_tank
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+		tag = FRA
+		OR = {
+			has_war_with = GER
+			has_war_with = RUS
+		}
+		OR = {
+			24 = { #Picardie
+				controller = {
+					OR = {
+						is_ally_with = GER
+						is_ally_with = RUS
+					}
+				}
+			}
+			785 = { #Lorraine Plateau
+				controller = {
+					OR = {
+						is_ally_with = GER
+						is_ally_with = RUS
+					}
+				}
+			}
+		}
+		controls_state = 16 #Ile-de-France
+	}
+
+	option = { #Aux armes, citoyens!
+		name = comfrance.23.a
+		add_stability = -0.04
+		hidden_effect = {
+			division_template = {
+				name = "Milice Communale"
+				division_names_group = FRA_INF_02
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+					infantry = { x = 2 y = 0 }
+					infantry = { x = 2 y = 1 }
+					infantry = { x = 2 y = 2 }
+				}
+				template_counter = 67
+			}
+		}
+		16 = { #Ile-de-France
+			add_building_construction = {
+				type = bunker
+				level = 4
+				province = 11506 #Paris
+				instant_build = yes
+			}
+		}
+		18 = { #Champagne
+			if = {
+				limit = { is_controlled_by = ROOT }
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 9490 #Troyes
+					instant_build = yes
+				}
+			}
+		}
+		15 = { #Normandy
+			if = {
+				limit = { is_controlled_by = ROOT }
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 9434 #Le Havre
+					instant_build = yes
+				}
+			}
+		}
+		33 = { #Loire Plains
+			if = {
+				limit = { is_controlled_by = ROOT }
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 512 #Orleans
+					instant_build = yes
+				}
+			}
+		}
+		add_manpower = 100000
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 3000
+			producer = FRA
+		}
+		hidden_effect = {
+			load_oob = FRA_SEINE
+		}
+		custom_effect_tooltip = FRA_sxtnreserve_tt
+	}
+}
+
+country_event = {
+	id = comfrance.25
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.25" }
+	title = comfrance.25.t
+	desc = comfrance.25.d
+	picture = GFX_report_event_soviet_soldiers_tank
+
+	is_triggered_only = yes
+
+	option = { #Establish the Damocles Project !
+		name = comfrance.25.a
+		ai_chance = {
+			factor = 100
+		}
+		#german counter event, maybe make it focus
+		FRA = {
+			country_event = comfrance.26
+		}
+		add_political_power = -40
+		add_tech_bonus = {
+			name = comfrance.25.t
+			bonus = 1
+			uses = 2
+			category = nuclear
+		}
+	}
+
+	option = { #We wont waste money on such absurdity !
+		name = comfrance.25.b
+		ai_chance = {
+			factor = 0
+		}
+		add_political_power = 40
+		FRA = {
+			country_event = comfrance.27
+		}
+	}
+}
+
+country_event = {
+	id = comfrance.26
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.26" }
+	title = comfrance.26.t
+	desc = comfrance.26.d
+	picture = GFX_report_event_soviet_soldiers_tank
+
+	is_triggered_only = yes
+
+	option = { #Excellent
+		name = comfrance.26.a
+		add_tech_bonus = {
+			name = comfrance.26.t
+			bonus = 1
+			uses = 2
+			category = nuclear
+		}
+		hidden_effect = {
+			random_other_country = {
+				limit = {
+					NOT = {
+						tag = ENG
+					}
+				}
+				news_event = {
+					id = worldnews.6
+					days = 30
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = comfrance.27
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.27" }
+	title = comfrance.27.t
+	desc = comfrance.27.d
+	picture = GFX_report_event_soviet_soldiers_tank
+
+	is_triggered_only = yes
+
+	option = { #Dammit!
+		name = comfrance.27.a
+		set_country_flag = FRA_damocles_refused
+	}
+}
+
+#####
+##### The First Internationale Congress ####
+#####
+
+country_event = {
+	id = comfrance.28
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.28" }
+	title = comfrance.28.t
+	desc = comfrance.28.d
+	picture = GFX_report_event_soviet_soldiers_tank
+
+	is_triggered_only = yes
+
+	option = { #The Congress Will Be Held a week after May Day as planned!
+		name = comfrance.28.a
+		set_global_flag = first_inter_congress
+		add_opinion_modifier = {
+			target = GER
+			modifier = KR_hates_govt
+		}
+		add_opinion_modifier = {
+			target = CAN
+			modifier = KR_hates_govt
+		}
+		add_opinion_modifier = {
+			target = NFA
+			modifier = KR_hates_govt
+		}
+		add_opinion_modifier = {
+			target = SRD
+			modifier = KR_hates_govt
+		}
+		add_opinion_modifier = {
+			target = AUS
+			modifier = KR_hates_govt
+		}
+		add_opinion_modifier = {
+			target = HUN
+			modifier = KR_hates_govt
+		}
+		add_opinion_modifier = {
+			target = OTT
+			modifier = KR_hates_govt
+		}
+		add_opinion_modifier = {
+			target = RUS
+			modifier = KR_hates_govt
+		}
+		add_opinion_modifier = {
+			target = ITA
+			modifier = KR_disapproves_of_govt
+		}
+		add_opinion_modifier = {
+			target = SIC
+			modifier = KR_disapproves_of_govt
+		}
+		add_opinion_modifier = {
+			target = PAP
+			modifier = KR_disapproves_of_govt
+		}
+		add_opinion_modifier = {
+			target = BUL
+			modifier = KR_disapproves_of_govt
+		}
+		add_opinion_modifier = {
+			target = SRI
+			modifier = KR_pleased
+		}
+		add_opinion_modifier = {
+			target = BHC
+			modifier = KR_pleased
+		}
+		add_opinion_modifier = {
+			target = NIC
+			modifier = KR_pleased
+		}
+		add_opinion_modifier = {
+			target = MEX
+			modifier = KR_pleased
+		}
+		add_stability = 0.16
+		hidden_effect = {
+			GER = {
+				country_event = {
+					id = comfrance.61
+					days = 3
+				}
+			}
+			random_other_country = {
+				news_event = {
+					id = worldnews.9
+					days = 1
+				}
+			}
+			country_event = {
+				id = comfrance.29
+				days = 12
+			}
+		}
+	}
+}
+
+country_event = {
+	id = comfrance.29
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.29" }
+	title = comfrance.29.t
+	desc = comfrance.29.d
+	picture = GFX_report_event_soviet_soldiers_tank
+
+	is_triggered_only = yes
+
+	option = { #Send out the invitations!
+		name = comfrance.29.a
+		hidden_effect = {
+			country_event = {
+				id = comfrance.41
+				days = 4
+			}
+			CUB = {
+				country_event = {
+					id = cuba.221
+					days = 1
+				}
+			}
+		}
+		every_other_country = {
+			limit = {
+				NOT = { tag = CUB }
+				has_socialist_government = yes
+			}
+			country_event = {
+				id = comfrance.30
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = {
+	id = comfrance.30
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.30" }
+	title = comfrance.30.t
+	desc = comfrance.30.d
+	picture = GFX_report_event_soviet_soldiers_tank
+
+	is_triggered_only = yes
+
+	option = { #yes!
+		name = comfrance.30.a
+		set_global_flag = first_inter_congress_@ROOT
+	}
+
+	option = { #no
+		name = comfrance.30.b
+		trigger = {
+			is_ai = no
+			NOT = {
+				is_in_faction_with = FROM
+				tag = SRI
+			}
+		}
+		add_stability = -0.2
+		every_other_country = {
+			limit = { has_socialist_government = yes }
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = KR_outraged
+			}
+		}
+	}
+}
+
+country_event = {
+	id = comfrance.41
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.41" }
+	title = comfrance.41.t
+	desc = comfrance.41.d
+	picture = GFX_report_event_soviet_soldiers_tank
+
+	is_triggered_only = yes
+
+	major = yes
+	show_major = {
+		has_global_flag = first_inter_congress_@THIS
+		has_socialist_government = yes
+	}
+
+	option = { #The First Congress of the Third International is hereby opened!
+		name = comfrance.41.a
+		trigger = { tag = FRA }
+		add_stability = 0.1
+		hidden_effect = {
+			country_event = {
+				id = comfrance.42 #The Chairman of the Comité de Salut Public Takes the Floor
+				days = 1
+			}
+			country_event = {
+				id = comfrance.43 #Syndicalism in Spain
+				days = 3
+			}
+			country_event = {
+				id = comfrance.47 #John 'Jack' Reed and the Combined Syndicates
+				days = 5
+			}
+			country_event = {
+				id = comfrance.50 #Unemployment and Radicalism in Latin America
+				days = 6
+			}
+			country_event = {
+				id = comfrance.51 #Women's Role in the Worldwide Revolution
+				days = 7
+			}
+			SRI = {
+				country_event = {
+					id = comfrance.53 #Support For the Risorgimento
+					days = 8
+				}
+			}
+			country_event = {
+				id = comfrance.58 #Comrade Sail Mohammed Wants To Speak
+				days = 9
+			}
+			BHC = {
+				country_event = {
+					id = comfrance.56 #The State of Indian Socialism
+					days = 11
+				}
+			}
+			country_event = {
+				id = comfrance.45 #White Terror
+				days = 12
+			}
+			country_event = {
+				id = comfrance.55 #The World Economic Crisis and the Role of the Third International
+				days = 13
+			}
+			country_event = {
+				id = comfrance.99 #The Cambridge Conference
+				days = 14
+			}
+			country_event = {
+				id = comfrance.59 # End of the First Congress
+				days = 16
+			}
+		}
+	}
+
+	option = { #The First Congress of the Third International is hereby opened!
+		name = comfrance.41.a
+		trigger = {
+			NOT = { tag = FRA }
+		}
+	}
+}
+
+country_event = {
+	id = comfrance.42
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.42" }
+	title = comfrance.42.t
+	desc = comfrance.42.d
+	picture = GFX_report_event_soviet_soldiers_tank
+
+	is_triggered_only = yes
+
+	major = yes
+	show_major = {
+		has_global_flag = first_inter_congress_@THIS
+		has_socialist_government = yes
+	}
+
+	option = { #We must use any means to overthrow the international bourgeoisie
+		name = comfrance.42.a
+		if = {
+			limit = { tag = FRA }
+			add_stability = 0.2
+			reverse_add_opinion_modifier = {
+				target = CAN
+				modifier = KR_disapproves_of_govt
+			}
+			reverse_add_opinion_modifier = {
+				target = GER
+				modifier = KR_disapproves_of_govt
+			}
+			reverse_add_opinion_modifier = {
+				target = ITA
+				modifier = KR_disapproves_of_govt
+			}
+			reverse_add_opinion_modifier = {
+				target = AUS
+				modifier = KR_disapproves_of_govt
+			}
+			reverse_add_opinion_modifier = {
+				target = HUN
+				modifier = KR_disapproves_of_govt
+			}
+			reverse_add_opinion_modifier = {
+				target = BUL
+				modifier = KR_disapproves_of_govt
+			}
+			reverse_add_opinion_modifier = {
+				target = OTT
+				modifier = KR_disapproves_of_govt
+			}
+			reverse_add_opinion_modifier = {
+				target = RUS
+				modifier = KR_disapproves_of_govt
+			}
+			reverse_add_opinion_modifier = {
+				target = USA
+				modifier = KR_disapproves_of_govt
+			}
+			reverse_add_opinion_modifier = {
+				target = NFA
+				modifier = KR_disapproves_of_govt
+			}
+			reverse_add_opinion_modifier = {
+				target = MAF
+				modifier = KR_disapproves_of_govt
+			}
+			GER = {
+				country_event = {
+					id = comfrance.60
+					days = 2
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = comfrance.43
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.43" }
+	title = comfrance.43.t
+	desc = comfrance.43.d
+	picture = GFX_report_event_soviet_soldiers_tank
+
+	is_triggered_only = yes
+
+	major = yes
+	show_major = {
+		has_global_flag = first_inter_congress_@THIS
+		has_socialist_government = yes
+	}
+
+	option = { #The French pledge their support and ask all other members to do the same
+		name = comfrance.43.a
+		reverse_add_opinion_modifier = {
+			target = SPR
+			modifier = KR_hates_govt
+		}
+		if = {
+			limit = {
+				OR = {
+					tag = ENG
+					tag = FRA
+				}
+			}
+			set_country_flag = FRA_support_cnt
+		}
+	}
+}
+
+country_event = {
+	id = comfrance.45
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.45" }
+	title = comfrance.45.t
+	desc = comfrance.45.d
+	picture = GFX_report_event_soviet_soldiers_tank
+
+	is_triggered_only = yes
+
+	major = yes
+	show_major = {
+		has_global_flag = first_inter_congress_@THIS
+		has_socialist_government = yes
+	}
+
+	option = { #Another reason we must end the Capitalist system of murder and robbery
+		name = comfrance.45.a
+	}
+}
+
+country_event = {
+	id = comfrance.47
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.47" }
+	title = comfrance.47.t
+	desc = comfrance.47.d
+	picture = GFX_report_event_soviet_soldiers_tank
+
+	is_triggered_only = yes
+
+	major = yes
+	show_major = {
+		has_global_flag = first_inter_congress_@THIS
+		has_socialist_government = yes
+	}
+
+	option = { #A Modern Day Benjamin Franklin! They have our support!
+		name = comfrance.47.a
+		trigger = {
+			NOT = {
+				tag = MEX
+				tag = CUB
+			}
+		}
+		reverse_add_opinion_modifier = {
+			target = USA
+			modifier = KR_hates_govt
+		}
+	}
+
+	option = { #Offer support for Reed and his comrades.
+		name = comfrance.47.b
+		trigger = {
+			OR = {
+				tag = MEX
+				tag = CUB
+			}
+		}
+		ai_chance = {
+			factor = 95
+		}
+		reverse_add_opinion_modifier = {
+			target = USA
+			modifier = KR_hates_govt
+		}
+	}
+
+	option = { #We can't yet risk hostility with America
+		name = comfrance.47.c
+		trigger = {
+			OR = {
+				tag = MEX
+				tag = CUB
+			}
+		}
+		ai_chance = {
+			factor = 5
+		}
+	}
+}
+
+country_event = {
+	id = comfrance.50
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.50" }
+	title = comfrance.50.t
+	desc = comfrance.50.d
+	picture = GFX_report_event_soviet_soldiers_tank
+
+	is_triggered_only = yes
+
+	major = yes
+	show_major = {
+		has_global_flag = first_inter_congress_@THIS
+		has_socialist_government = yes
+	}
+
+	option = { #Begin to nurture Syndicalism in Latin America
+		name = comfrance.50.a
+	}
+}
+
+country_event = {
+	id = comfrance.51
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.51" }
+	title = comfrance.51.t
+
+	desc = {
+		text = comfrance.51.d.FRA
+		trigger = {
+			tag = FRA
+		}
+	}
+	desc = {
+		text = comfrance.51.d.other
+		trigger = {
+			NOT = { tag = FRA }
+		}
+	}
+
+	picture = GFX_report_event_soviet_soldiers_tank
+
+	is_triggered_only = yes
+
+	major = yes
+	show_major = {
+		NOT = { tag = ENG }
+		has_global_flag = first_inter_congress_@THIS
+		has_socialist_government = yes
+	}
+
+	option = { #Participation of working women is necessary to achieve the Worldwide Revolution
+		name = comfrance.51.a
+		ai_chance = {
+			factor = 100
+		}
+		if = {
+			limit = { tag = FRA }
+			add_stability = -0.06
+			hidden_effect = {
+				ENG = {
+					country_event = {
+						id = comfrance.52
+						days = 1
+					}
+				}
+				GER = {
+					country_event = {
+						id = gerdom.12
+						days = 30
+					}
+				}
+			}
+		}
+		else = {
+			add_stability = -0.01
+			add_political_power = 10
+		}
+	}
+
+	option = { #not yet
+		name = comfrance.51.b
+		ai_chance = {
+			factor = 0
+		}
+		add_stability = 0.01
+		add_political_power = -10
+	}
+
+}
+
+country_event = {
+	id = comfrance.52
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.52" }
+	title = comfrance.52.t
+	desc = comfrance.52.d
+	picture = GFX_report_event_soviet_soldiers_tank
+
+	is_triggered_only = yes
+
+	option = { #So it be then
+		name = comfrance.52.a
+		add_stability = 0.02
+	}
+}
+
+country_event = { # The socialist Risorgimento
+	id = comfrance.53
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.53" }
+	title = comfrance.53.t
+	desc = comfrance.53.d
+	picture = GFX_report_event_soviet_soldiers_tank
+
+	is_triggered_only = yes
+
+	option = { #Ask for support to achieve the Risorgimento!
+		name = comfrance.53.a
+		FRA = {
+			country_event = {
+				id = comfrance.54
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = { # The socialist Risorgimento
+	id = comfrance.54
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.54" }
+	title = comfrance.54.t
+	desc = comfrance.54.d
+	picture = GFX_report_event_soviet_soldiers_tank
+
+	is_triggered_only = yes
+
+	option = { #Guarantee our friends in Torino aid when the time comes
+		name = comfrance.54.a
+		reverse_add_opinion_modifier = {
+			target = ITA
+			modifier = KR_hates_govt
+		}
+		reverse_add_opinion_modifier = {
+			target = SRD
+			modifier = KR_hates_govt
+		}
+		reverse_add_opinion_modifier = {
+			target = PAP
+			modifier = KR_hates_govt
+		}
+		reverse_add_opinion_modifier = {
+			target = SIC
+			modifier = KR_hates_govt
+		}
+		reverse_add_opinion_modifier = {
+			target = SRI
+			modifier = KR_pleased
+		}
+	}
+}
+
+country_event = {
+	id = comfrance.55
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.55" }
+	title = comfrance.55.t
+	desc = comfrance.55.d
+	picture = GFX_report_event_soviet_soldiers_tank
+
+	is_triggered_only = yes
+
+	major = yes
+	show_major = {
+		has_global_flag = first_inter_congress_@THIS
+		has_socialist_government = yes
+	}
+
+	option = { #OK
+		name = comfrance.55.a
+	}
+}
+
+country_event = {
+	id = comfrance.56
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.56" }
+	title = comfrance.56.t
+	desc = comfrance.56.d
+	picture = GFX_report_event_soviet_soldiers_tank
+
+	is_triggered_only = yes
+
+	option = { #We need international support in organizing our army!
+		name = comfrance.56.a
+		reverse_add_opinion_modifier = {
+			target = DEH
+			modifier = KR_disapproves_of_govt
+		}
+		reverse_add_opinion_modifier = {
+			target = PRF
+			modifier = KR_disapproves_of_govt
+		}
+		FRA = {
+			country_event = {
+				id = comfrance.57
+				days = 1
+			}
+		}
+		ENG = {
+			country_event = {
+				id = comfrance.57
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = {
+	id = comfrance.57
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.57" }
+	title = comfrance.57.t
+	desc = comfrance.57.d
+	picture = GFX_report_event_soviet_soldiers_tank
+
+	is_triggered_only = yes
+
+	option = { #Send military advisors to train their army!
+		name = comfrance.57.a
+		ai_chance = {
+			factor = 100
+		}
+		add_political_power = -50
+		reverse_add_opinion_modifier = {
+			target = DEH
+			modifier = KR_hates_govt
+		}
+		reverse_add_opinion_modifier = {
+			target = PRF
+			modifier = KR_hates_govt
+		}
+		set_country_flag = FRA_support_bharatiya
+	}
+
+	option = { #We can't waste our resources
+		name = comfrance.57.b
+		ai_chance = {
+			factor = 0
+		}
+		reverse_add_opinion_modifier = {
+			target = BHC
+			modifier = KR_disapproves_of_govt
+		}
+	}
+}
+
+country_event = {
+	id = comfrance.58
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.58" }
+	title = comfrance.58.t
+	desc = comfrance.58.d
+	picture = GFX_report_event_soviet_soldiers_tank
+
+	is_triggered_only = yes
+
+	major = yes
+	show_major = {
+		has_global_flag = first_inter_congress_@THIS
+		has_socialist_government = yes
+	}
+
+	option = { #OK
+		name = comfrance.58.a
+	}
+}
+
+country_event = {
+	id = comfrance.59
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.59" }
+	title = comfrance.59.t
+	desc = comfrance.59.d
+	picture = GFX_report_event_soviet_soldiers_tank
+
+	is_triggered_only = yes
+
+	major = yes
+	show_major = {
+		has_global_flag = first_inter_congress_@THIS
+		has_socialist_government = yes
+	}
+
+	option = { #OK
+		name = comfrance.59.a
+		if = {
+			limit = { tag = FRA }
+			add_stability = 0.06
+			complete_national_focus = FRA_Host_the_Internationale
+		}
+	}
+}
+
+country_event = {
+	id = comfrance.60
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.60" }
+	title = comfrance.60.t
+	desc = comfrance.60.d
+	picture = GFX_report_event_soviet_soldiers_tank
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #OK
+		name = comfrance.60.a
+		add_manpower = 10000
+	}
+}
+
+country_event = {
+	id = comfrance.61
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.61" }
+	title = comfrance.61.t
+	desc = comfrance.61.d
+	picture = GFX_report_event_soviet_soldiers_tank
+
+	is_triggered_only = yes
+
+	option = { #OK
+		name = comfrance.61.a
+	}
+}
+
+country_event = {
+	id = comfrance.62
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.62" }
+	title = comfrance.62.t
+	desc = comfrance.62.d
+	picture = GFX_report_event_soviet_soldiers_tank
+
+	is_triggered_only = yes
+
+	option = { #The Red Army shall put these comrades to good use!
+		name = comfrance.62.a
+		add_tech_bonus = {
+			name = comfrance.62.t
+			bonus = 1
+			uses = 1
+			category = land_doctrine
+		}
+		add_tech_bonus = {
+			name = comfrance.62.t
+			bonus = 1
+			uses = 1
+			category = infantry_weapons
+		}
+		add_ideas = FRA_bhartiya_support
+	}
+}
+
+country_event = {
+	id = comfrance.63
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.63" }
+	title = comfrance.63.t
+	desc = comfrance.63.d
+	picture = GFX_report_event_soviet_soldiers_tank
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #To work
+		name = comfrance.63.a
+		add_political_power = 60
+		NFA = {
+			country_event = {
+				id = comfrance.64
+				days = 2
+			}
+		}
+		hidden_effect = {
+			GER = {
+				country_event = {
+					id = comfrance.65
+					days = 2
+				}
+			}
+			MOR = {
+				country_event = {
+					id = comfrance.66
+					days = 2
+				}
+			}
+			SPR = {
+				country_event = {
+					id = comfrance.67
+					days = 2
+				}
+			}
+			CAR = {
+				country_event = {
+					id = comfrance.67
+					days = 2
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = comfrance.64
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.64" }
+	title = comfrance.64.t
+	desc = comfrance.64.d
+	picture = GFX_report_event_soviet_soldiers_tank
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { # Worrying development
+		name = comfrance.64.a
+		add_stability = -0.02
+	}
+}
+
+country_event = {
+	id = comfrance.65
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.65" }
+	title = comfrance.65.t
+	desc = comfrance.65.d
+	picture = GFX_report_event_soviet_soldiers_tank
+
+	is_triggered_only = yes
+
+	option = { # How ridiculous
+		name = comfrance.65.a
+	}
+}
+
+country_event = {
+	id = comfrance.66
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.66" }
+	title = comfrance.66.t
+	desc = comfrance.66.d
+	picture = GFX_report_event_soviet_soldiers_tank
+
+	is_triggered_only = yes
+
+	option = { # Help us, Germany!
+		name = comfrance.66.a
+		add_stability = -0.05
+	}
+}
+
+country_event = {
+	id = comfrance.67
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.67" }
+	title = comfrance.67.t
+	desc = comfrance.67.d
+
+	is_triggered_only = yes
+
+	trigger = {
+		owns_state = 290
+	}
+
+	option = { # Hopefully it will not hit the Rif.
+		name = comfrance.67.a
+	}
+}
+
+country_event = {
+	id = comfrance.68
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.68" }
+	title = comfrance.68.t
+	desc = comfrance.68.d
+	picture = GFX_report_event_soviet_soldiers_tank
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #We'll gladly support this idea
+		name = comfrance.68.a
+		add_stability = 0.05
+		add_equipment_to_stockpile = {
+			type = infantry_equipment_1
+			amount = -500
+			producer = ENG
+		}
+	}
+}
+
+country_event = {
+	id = comfrance.69
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.69" }
+	title = comfrance.69.t
+	desc = comfrance.69.d
+	picture = GFX_report_event_soviet_soldiers_tank
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #Who do they think they are?
+		name = comfrance.69.a
+		add_stability = -0.02
+		random_list = {
+			20 = {
+				random_owned_controlled_state = {
+					limit = {
+						industrial_complex > 0
+					}
+					damage_building = {
+						type = industrial_complex
+						damage = 1
+					}
+				}
+			}
+			40 = {
+				random_owned_controlled_state = {
+					limit = {
+						infrastructure > 3
+					}
+					damage_building = {
+						type = infrastructure
+						damage = 1
+					}
+				}
+			}
+			40 = {
+				random_owned_controlled_state = {
+					limit = {
+						air_base > 0
+					}
+					damage_building = {
+						type = air_base
+						damage = 1
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = comfrance.70
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.70" }
+	title = comfrance.70.t
+	desc = comfrance.70.d
+	picture = GFX_report_event_soviet_soldiers_tank
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #This will not save you from the collapse.
+		name = comfrance.70.a
+		add_stability = -0.02
+		random_list = {
+			20 = {
+				random_owned_controlled_state = {
+					limit = {
+						industrial_complex > 0
+					}
+					damage_building = {
+						type = industrial_complex
+						damage = 1
+					}
+				}
+			}
+			40 = {
+				random_owned_controlled_state = {
+					limit = {
+						infrastructure > 3
+					}
+					damage_building = {
+						type = infrastructure
+						damage = 1
+					}
+				}
+			}
+			40 = {
+				random_owned_controlled_state = {
+					limit = {
+						air_base > 0
+					}
+					damage_building = {
+						type = air_base
+						damage = 1
+					}
+				}
+			}
+		}
+	}
+}
+
+#####
+##### The Second Internationale Congress ####
+#####
+
+country_event = {
+	id = comfrance.71
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.71" }
+	title = comfrance.71.t
+	desc = comfrance.71.d
+	picture = GFX_report_event_soviet_soldiers_tank
+
+	is_triggered_only = yes
+
+	option = { #It would be an honour to host the Congress
+		name = comfrance.71.a
+		ai_chance = {
+			factor = 100
+		}
+		add_stability = 0.06
+		every_other_country = {
+			limit = {
+				NOT = { has_war_with = ROOT }
+				has_socialist_government = yes
+			}
+			country_event = {
+				id = comfrance.72
+				days = 4
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = comfrance.86
+				days = 28
+			}
+		}
+	}
+}
+
+country_event = {
+	id = comfrance.72
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.72" }
+	title = comfrance.72.t
+	desc = comfrance.72.d
+	picture = GFX_report_event_soviet_soldiers_tank
+
+	is_triggered_only = yes
+
+	option = { #yes!
+		name = comfrance.72.a
+		ai_chance = {
+			factor = 100
+		}
+		set_global_flag = second_inter_congress_@ROOT
+		add_stability = 0.04
+		reverse_add_opinion_modifier = {
+			target = FROM
+			modifier = KR_approves_of_govt
+		}
+	}
+
+	option = { #no
+		name = comfrance.72.b
+		trigger = {
+			NOT = {
+				is_in_faction_with = FROM
+				tag = SRI
+			}
+		}
+		ai_chance = {
+			factor = 0
+		}
+		add_stability = -0.5
+		every_other_country = {
+			limit = { has_socialist_government = yes }
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = KR_outraged
+			}
+		}
+	}
+}
+
+### 73-86 removed
+
+country_event = {
+	id = comfrance.86
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.86" }
+	title = comfrance.86.t
+	desc = comfrance.86.d
+	picture = GFX_report_event_soviet_soldiers_tank
+
+	is_triggered_only = yes
+	major = yes
+
+	show_major = {
+		has_global_flag = second_inter_congress_@THIS
+		has_socialist_government = yes
+	}
+
+	option = { #Bravo, comrade Blair!
+		name = comfrance.86.a
+		trigger = { tag = ENG }
+		add_stability = 0.06
+		hidden_effect = {
+			random_other_country = {
+				news_event = {
+					id = worldnews.94
+					days = 1
+				}
+			}
+			GER = {
+				country_event = {
+					id = comfrance.118
+					days = 7
+				}
+			}
+		}
+		reverse_add_opinion_modifier = {
+			target = CAN
+			modifier = KR_disapproves_of_govt
+		}
+		reverse_add_opinion_modifier = {
+			target = GER
+			modifier = KR_disapproves_of_govt
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					has_global_flag = second_inter_congress_CSA
+					country_exists = CSA
+					CSA = {
+						OR = {
+							has_war_with = USA
+							has_war_with = TEX
+							has_war_with = CAL
+						}
+					}
+				}
+				### Help for the CSA
+				country_event = {
+					id = comfrance.87
+					days = 1
+				}
+				FRA = {
+					country_event = {
+						id = comfrance.87
+						days = 1
+					}
+				}
+				if = {
+					limit = { has_global_flag = second_inter_congress_MEX }
+					MEX = {
+						country_event = {
+							id = comfrance.87
+							days = 1
+						}
+					}
+				}
+			}
+			### Hemingway's Speech
+			country_event = {
+				id = comfrance.97
+				days = 2
+			}
+			### USA/TEX/CAL reaction event
+			every_other_country = {
+				limit = {
+					is_american_tag = yes
+					has_war_with = CSA
+				}
+				country_event = {
+					id = comfrance.98
+					days = 2
+				}
+			}
+			### Chile Requests Aid
+			if = {
+				limit = {
+					has_global_flag = second_inter_congress_CHL
+				}
+				CHL = {
+					country_event = {
+						id = comfrance.100
+						days = 5
+					}
+				}
+			}
+			### Death of Philip Snowden
+			country_event = {
+				id = comfrance.116
+				days = 14
+			}
+			CAN = {
+				country_event = {
+					id = comfrance.117
+					days = 14
+				}
+			}
+			### Final Act
+			country_event = {
+				id = comfrance.110
+				days = 15
+			}
+		}
+	}
+
+	option = { #Bravo, comrade Blair!
+		name = comfrance.86.a
+		trigger = {
+			NOT = { tag = ENG }
+		}
+	}
+}
+
+country_event = {
+	id = comfrance.87
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.87" }
+	title = comfrance.87.t
+	desc = comfrance.87.d
+	picture = GFX_report_event_soviet_soldiers_tank
+
+	is_triggered_only = yes
+
+	option = { #Provide industrial support
+		name = comfrance.87.a
+		trigger = {
+			tag = FRA
+		}
+		add_political_power = -30
+		hidden_effect = {
+			CSA = {
+				country_event = {
+					id = comfrance.90
+					days = 15
+				}
+			}
+		}
+	}
+
+	option = { #Red Eagles
+		name = comfrance.87.b
+		trigger = {
+			tag = ENG
+		}
+		hidden_effect = {
+			CSA = {
+				country_event = {
+					id = comfrance.91
+					days = 12
+				}
+			}
+		}
+		add_political_power = -25
+		add_timed_idea = {
+			idea = COF_prodcsaplanes
+			days = 20
+		}
+	}
+
+	option = { #Provide volunteers
+		name = comfrance.87.c
+		trigger = {
+			tag = MEX
+		}
+		CSA = {
+			country_event = {
+				id = comfrance.94
+				days = 6
+			}
+		}
+		add_manpower = -2000
+	}
+
+	option = { #We cannot spare anything more
+		name = comfrance.87.f
+		ai_chance = {
+			factor = 0
+		}
+		add_stability = -0.04
+	}
+}
+
+country_event = {
+	id = comfrance.90
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.90" }
+	title = comfrance.90.t
+	desc = comfrance.90.d
+	picture = GFX_report_event_soviet_soldiers_tank
+
+	is_triggered_only = yes
+
+	option = {
+		name = comfrance.90.a
+		395 = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = comfrance.91
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.91" }
+	title = comfrance.91.t
+	desc = comfrance.91.d
+	picture = GFX_report_event_soviet_soldiers_tank
+
+	is_triggered_only = yes
+
+	option = {
+		name = comfrance.91.a
+		hidden_effect = { load_oob = CSA_RED_EAGLES }
+		custom_effect_tooltip = CAF_redeagles_tt
+	}
+}
+
+country_event = {
+	id = comfrance.94
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.94" }
+	title = comfrance.94.t
+	desc = comfrance.94.d
+	picture = GFX_report_event_soviet_soldiers_tank
+
+	is_triggered_only = yes
+
+	option = {
+		name = comfrance.94.a
+		FROM = {
+			send_equipment = {
+				target = CSA
+				type = infantry_equipment
+				amount = 500
+			}
+		}
+	}
+}
+
+country_event = {
+	id = comfrance.97
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.97" }
+	title = comfrance.97.t
+	desc = comfrance.97.d
+	picture = GFX_report_event_soviet_soldiers_tank
+
+	is_triggered_only = yes
+	major = yes
+
+	show_major = {
+		has_global_flag = second_inter_congress_@ROOT
+		has_socialist_government = yes
+	}
+
+	option = {
+		name = comfrance.97.a
+		trigger = {
+			tag = ENG
+		}
+		add_political_power = 20
+		add_opinion_modifier = {
+			target = CSA
+			modifier = KR_pleased
+		}
+	}
+
+	option = {
+		name = comfrance.97.b
+		trigger = {
+			tag = FRA
+		}
+		add_political_power = 20
+		add_opinion_modifier = {
+			target = CSA
+			modifier = KR_pleased
+		}
+	}
+
+	option = {
+		name = comfrance.97.a
+		trigger = {
+			tag = CSA
+		}
+		add_political_power = 60
+		add_opinion_modifier = {
+			target = FRA
+			modifier = KR_pleased
+		}
+		add_opinion_modifier = {
+			target = ENG
+			modifier = KR_pleased
+		}
+	}
+
+	option = {
+		name = comfrance.97.c
+		trigger = {
+			NOT = {
+				tag = ENG
+				tag = FRA
+				tag = CSA
+			}
+		}
+	}
+}
+
+country_event = {
+	id = comfrance.98
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.98" }
+	title = comfrance.98.t
+	desc = comfrance.98.d
+	picture = GFX_report_event_soviet_soldiers_tank
+
+	is_triggered_only = yes
+
+	option = {
+		name = comfrance.98.a
+		add_political_power = -40
+	}
+}
+
+country_event = {
+	id = comfrance.99
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.99" }
+	title = comfrance.99.t
+	desc = comfrance.99.d
+	picture = GFX_report_event_soviet_soldiers_tank
+
+	is_triggered_only = yes
+
+	major = yes
+	show_major = {
+		OR = {
+			tag = FRA
+			tag = ENG
+			tag = SRI
+		}
+	}
+
+	option = {
+		name = comfrance.99.a
+	}
+}
+
+country_event = {
+	id = comfrance.100
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.100" }
+	title = comfrance.100.t
+	desc = comfrance.100.d
+	picture = GFX_report_event_soviet_soldiers_tank
+
+	is_triggered_only = yes
+
+	option = { #We shall not be alone
+		name = comfrance.100.a
+		FRA = {
+			country_event = comfrance.101
+		}
+		ENG = {
+			country_event = {
+				id = comfrance.101
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = {
+	id = comfrance.101
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.101" }
+	title = comfrance.101.t
+	desc = comfrance.101.d
+	picture = GFX_report_event_soviet_soldiers_tank
+
+	is_triggered_only = yes
+
+	option = { #Provide all the help they need
+		name = comfrance.101.a
+		ai_chance = {
+			factor = 100
+		}
+		add_political_power = -25
+		reverse_add_opinion_modifier = {
+			target = FROM
+			modifier = KR_pleased
+		}
+		if = {
+			limit = { tag = FRA }
+			set_country_flag = FRA_help_chile
+			unlock_decision_tooltip = FRA_help_CHL
+		}
+		FROM = {
+			country_event = comfrance.103
+			hidden_effect = {
+				country_event = {
+					id = comfrance.104
+					days = 9
+				}
+			}
+		}
+	}
+
+	option = { #We have nothing to spare
+		name = comfrance.101.b
+		ai_chance = {
+			factor = 0
+		}
+		reverse_add_opinion_modifier = {
+			target = FROM
+			modifier = KR_disapproves_of_govt
+		}
+		FROM = {
+			country_event = comfrance.102
+		}
+	}
+}
+
+country_event = {
+	id = comfrance.102
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.102" }
+	title = comfrance.102.t
+	desc = comfrance.102.d
+	picture = GFX_report_event_soviet_soldiers_tank
+
+	is_triggered_only = yes
+
+	option = { #Bear it
+		name = comfrance.102.a
+	}
+}
+
+country_event = { #FRA/ENG Agreed to Help!
+	id = comfrance.103
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.103" }
+	title = comfrance.103.t
+	desc = comfrance.103.d
+	picture = GFX_report_event_soviet_soldiers_tank
+
+	is_triggered_only = yes
+
+	option = { #Wonderful!
+		name = comfrance.103.a
+		add_political_power = 25
+	}
+}
+
+country_event = { #FRA/ENG Aid Arrives
+	id = comfrance.104
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.104" }
+	title = comfrance.104.t
+	desc = comfrance.104.d
+	picture = GFX_report_event_soviet_soldiers_tank
+
+	is_triggered_only = yes
+
+	option = { #The help is much needed.
+		name = comfrance.104.a
+		meta_effect = {
+			text = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 1000
+					producer = [FROM_TAG]
+				}
+			}
+			FROM_TAG = "[FROM.GetTag]"
+		}
+	}
+}
+
+country_event = { #Final Act of the Second Congress
+	id = comfrance.110
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.110" }
+	title = comfrance.110.t
+	desc = comfrance.110.d
+	picture = GFX_report_event_soviet_soldiers_tank
+
+	is_triggered_only = yes
+	major = yes
+
+	show_major = {
+		has_global_flag = second_inter_congress_@ROOT
+		has_socialist_government = yes
+	}
+
+	option = {
+		name = comfrance.110.a
+		every_other_country = {
+			limit = {
+				has_socialist_government = yes
+			}
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = KR_approves_of_govt
+			}
+		}
+		add_political_power = 40
+	}
+}
+
+country_event = { #The Death of Philip Snowden
+	id = comfrance.116
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.116" }
+	title = comfrance.116.t
+	desc = comfrance.116.d
+	picture = GFX_report_event_soviet_soldiers_tank
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = comfrance.116.a #Sic transit gloria mundi...
+		add_political_power = 20
+	}
+}
+
+country_event = { #The Death of Philip Snowden
+	id = comfrance.117
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.117" }
+	title = comfrance.117.t
+	desc = comfrance.117.d
+	picture = GFX_report_event_soviet_soldiers_tank
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = comfrance.117.a #The devil is dead
+		add_stability = 0.02
+	}
+}
+
+country_event = { #Germany and the Second Congress of the Internationale
+	id = comfrance.118
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.118" }
+	title = comfrance.118.t
+	desc = comfrance.118.d
+	picture = GFX_report_event_soviet_soldiers_tank
+
+	is_triggered_only = yes
+
+	option = { # Oh nose
+		name = comfrance.118.a
+	}
+}
+
+### Congress focuses
+country_event = {
+	id = comfrance.124
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.124" }
+	title = comfrance.124.t
+	desc = comfrance.124.d
+	picture = GFX_report_event_soviet_soldiers_tank
+
+	is_triggered_only = yes
+
+	option = { #great
+		name = comfrance.124.a
+		add_opinion_modifier = {
+			target = FRA
+			modifier = KR_close_allies
+		}
+		add_manpower = 1000
+		add_ideas = CNT_advisors_france
+		custom_effect_tooltip = received_equipment_1000
+		FROM_send_volunteers_to_ROOT = yes
+	}
+}
+
+country_event = {
+	id = comfrance.125
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.125" }
+	title = comfrance.125.t
+	desc = comfrance.125.d
+	picture = GFX_report_event_soviet_soldiers_tank
+
+	is_triggered_only = yes
+
+	option = { #Use it to improve our army
+		name = comfrance.125.a
+		ai_chance = {
+			factor = 50
+		}
+		add_tech_bonus = {
+			name = comfrance.125.t
+			bonus = 2
+			uses = 1
+			category = infantry_weapons
+		}
+		add_equipment_to_stockpile = {
+			type = infantry_equipment_1
+			amount = 1000
+			producer = FRA
+		}
+	}
+
+	option = { #Use it to improve our industry
+		name = comfrance.125.b
+		ai_chance = {
+			factor = 50
+		}
+		add_tech_bonus = {
+			name = comfrance.125.t
+			bonus = 1
+			uses = 1
+			category = industry
+		}
+		random_owned_state = {
+			limit = {
+				free_building_slots = {
+					building = industrial_complex
+					size > 0
+					include_locked = yes
+				}
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = comfrance.127
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.127" }
+	title = comfrance.127.t
+	desc = comfrance.127.d
+	picture = GFX_report_event_soviet_soldiers_tank
+
+	is_triggered_only = yes
+
+	option = { #we shall participate
+		name = comfrance.127.a
+		add_to_tech_sharing_group = phalanstere_research
+	}
+}
+
+country_event = {
+	id = comfrance.128
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.128" }
+	title = comfrance.128.t
+	desc = comfrance.128.d
+	picture = GFX_report_event_soviet_soldiers_tank
+
+	is_triggered_only = yes
+
+	option = { #we shall participate
+		name = comfrance.128.a
+		add_tech_bonus = {
+			name = comfrance.128.t
+			bonus = 1
+			uses = 1
+			category = construction_tech
+		}
+	}
+}
+
+country_event = {
+	id = comfrance.129
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.129" }
+	title = comfrance.129.t
+	desc = comfrance.129.d
+	picture = GFX_report_event_soviet_soldiers_tank
+
+	is_triggered_only = yes
+
+	option = { #wonderful
+		name = comfrance.129.a
+		add_political_power = 25
+	}
+}
+
+#### Jacobin France
+
+country_event = {
+	id = comfrance.130
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.130" }
+	title = comfrance.130.t
+	desc = comfrance.130.d
+	picture = GFX_report_event_soviet_soldiers_tank
+
+	is_triggered_only = yes
+
+	option = { #The old system shall be swept away!
+		name = comfrance.130.a
+		ai_chance = {
+			factor = 55
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = FRA_jacobin_reformation
+					option = FRA_JACOBIN_REFORMATION_PEACEFUL
+				}
+			}
+		}
+		add_stability = -0.2
+		set_country_flag = COMMUNIST_FRANCE
+		set_party_name = {
+			ideology = totalist
+			long_name = FRA_parti_communiste_long
+			name = FRA_parti_communiste
+		}
+		hidden_effect = {
+			country_event = {
+				id = comfrance.131
+				days = 7
+			}
+		}
+	}
+
+	option = { #We shall reform Syndicalism from within.
+		name = comfrance.130.b
+		ai_chance = {
+			factor = 45
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = FRA_jacobin_reformation
+						option = FRA_JACOBIN_REFORMATION_SUCCESS
+					}
+					has_game_rule = {
+						rule = FRA_jacobin_reformation
+						option = FRA_JACOBIN_REFORMATION_GAMELIN_RESTORATION
+					}
+				}
+			}
+		}
+		add_stability = -0.1
+	}
+}
+
+country_event = {
+	id = comfrance.131
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.131" }
+	title = comfrance.131.t
+	desc = comfrance.131.d
+	picture = GFX_report_event_soviet_soldiers_tank
+
+	is_triggered_only = yes
+
+	option = { #An improvement, no doubt
+		name = comfrance.131.a
+		add_stability = -0.08
+		add_popularity = {
+			ideology = totalist
+			popularity = 0.1
+		}
+		hidden_effect = {
+			country_event = {
+				id = comfrance.132
+				days = 10
+			}
+		}
+	}
+}
+
+country_event = {
+	id = comfrance.132
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.132" }
+	title = comfrance.132.t
+	desc = comfrance.132.d
+	picture = GFX_report_event_soviet_soldiers_tank
+
+	is_triggered_only = yes
+
+	option = { #They are against our Revolution
+		name = comfrance.132.a
+		add_stability = -0.16
+		hidden_effect = {
+			country_event = {
+				id = comfrance.133
+				days = 12
+			}
+		}
+	}
+}
+
+country_event = {
+	id = comfrance.133
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.133" }
+	title = comfrance.133.t
+	desc = comfrance.133.d
+	picture = GFX_report_event_soviet_soldiers_tank
+
+	is_triggered_only = yes
+
+	option = { #Keep a close eye...
+		name = comfrance.133.a
+		add_stability = -0.06
+		hidden_effect = {
+			country_event = {
+				id = comfrance.134
+				days = 18
+			}
+		}
+	}
+}
+
+country_event = {
+	id = comfrance.134
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.134" }
+	title = comfrance.134.t
+	desc = comfrance.134.d
+	picture = GFX_report_event_soviet_soldiers_tank
+
+	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag = FRA_front_populaire
+	}
+
+	option = { #Bring them to trial!
+		name = comfrance.134.a
+		ai_chance = {
+			factor = 70
+		}
+		add_stability = -0.18
+		hidden_effect = {
+			country_event = {
+				id = comfrance.135
+				days = 40
+			}
+		}
+	}
+
+	option = { #Leninist valours will endure these traitors
+		name = comfrance.134.b
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = FRA_jacobin_reformation
+					option = FRA_JACOBIN_REFORMATION_SUCCESS
+				}
+			}
+		}
+		add_stability = -0.1
+		hidden_effect = {
+			country_event = {
+				id = comfrance.137
+				days = 20
+			}
+		}
+	}
+}
+
+country_event = {
+	id = comfrance.135
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.135" }
+	title = comfrance.135.t
+	desc = comfrance.135.d
+	picture = GFX_report_event_soviet_soldiers_tank
+
+	is_triggered_only = yes
+
+	option = { #Execute these traitors!
+		name = comfrance.135.a
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = FRA_jacobin_reformation
+					option = FRA_JACOBIN_REFORMATION_GAMELIN_RESTORATION
+				}
+			}
+		}
+		add_stability = -0.2
+		set_country_flag = Maurice_Gamelin_dead
+		if = {
+			limit = {
+				has_unit_leader = 205
+			}
+			remove_unit_leader = 205
+		}
+		hidden_effect = {
+			country_event = comfrance.136
+		}
+	}
+
+	option = { #Call the whole thing off
+		name = comfrance.135.b
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = FRA_jacobin_reformation
+					option = FRA_JACOBIN_REFORMATION_SUCCESS
+				}
+			}
+		}
+		add_stability = 0.1
+		hidden_effect = {
+			country_event = {
+				id = comfrance.137
+				days = 20
+			}
+		}
+	}
+}
+
+country_event = {
+	id = comfrance.136
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.136" }
+	title = comfrance.136.t
+	desc = comfrance.136.d
+	picture = GFX_report_event_soviet_soldiers_tank
+
+	is_triggered_only = yes
+
+	option = { #Crush them!
+		name = comfrance.136.a
+		add_stability = -0.12
+		16 = {
+			damage_building = {
+				type = industrial_complex
+				damage = 1
+			}
+			damage_building = {
+				type = industrial_complex
+				damage = 1
+			}
+			damage_building = {
+				type = industrial_complex
+				damage = 1
+			}
+			damage_building = {
+				type = industrial_complex
+				damage = 0.6
+			}
+			damage_building = {
+				type = arms_factory
+				damage = 1
+			}
+			damage_building = {
+				type = arms_factory
+				damage = 1
+			}
+			damage_building = {
+				type = arms_factory
+				damage = 0.6
+			}
+			damage_building = {
+				type = infrastructure
+				damage = 4
+			}
+		}
+		add_manpower = -30000
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = -2000
+			producer = FRA
+		}
+	}
+}
+
+country_event = { #Gamelin Coup
+	id = comfrance.137
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.137" }
+	title = comfrance.137.t
+	desc = comfrance.137.d
+	picture = GFX_report_event_soviet_soldiers_tank
+
+	is_triggered_only = yes
+
+	option = { #The rebels seize the capital!
+		name = comfrance.137.b
+		country_event = {
+			id = comfrance.138
+			days = 1
+		}
+		hidden_effect = {
+			news_event = {
+				id = comfrance.1000
+				days = 2
+			}
+		}
+	}
+}
+
+country_event = {
+	id = comfrance.138
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.138" }
+	title = comfrance.138.t
+	desc = comfrance.138.d
+	picture = GFX_report_event_soviet_soldiers_tank
+
+	is_triggered_only = yes
+
+	option = { #C'est la lutte finale...
+		name = comfrance.138.a
+		add_stability = 0.5
+		set_politics = {
+			ruling_party = syndicalist
+			elections_allowed = no
+		}
+		add_popularity = {
+			ideology = syndicalist
+			popularity = 0.3
+		}
+		set_political_party = {
+			ideology = totalist
+			popularity = 0
+		}
+		kill_country_leader = yes
+		create_country_leader = {
+			name = "Maurice Gamelin"
+			desc = "POLITICS_GAMELIN_DESC"
+			picture = "Portrait_France_Maurice_Gamelin_KR.tga"
+			expire = "1965.1.1"
+			ideology = syndicalist_subtype
+		}
+		create_country_leader = {
+			name = "Maurice Gamelin"
+			desc = "POLITICS_GAMELIN_DESC"
+			picture = "Portrait_France_Maurice_Gamelin_KR.tga"
+			expire = "1965.1.1"
+			ideology = totalist_subtype
+		}
+		create_country_leader = {
+			name = "Maurice Gamelin"
+			desc = "POLITICS_GAMELIN_DESC"
+			picture = "Portrait_France_Maurice_Gamelin_KR.tga"
+			expire = "1965.1.1"
+			ideology = radical_socialist_subtype
+		}
+		remove_all_ministers = yes
+		add_ideas = FRA_Leon_Blum_hog_rso
+		add_ideas = FRA_Amedee_Dunois_for_syn
+		add_ideas = FRA_Vincent_Auriol_eco_rso
+		add_ideas = FRA_Adrien_Tixier_sec_syn
+		16 = {
+			damage_building = {
+				type = industrial_complex
+				damage = 1
+			}
+			damage_building = {
+				type = industrial_complex
+				damage = 0.6
+			}
+			damage_building = {
+				type = arms_factory
+				damage = 1
+			}
+			damage_building = {
+				type = arms_factory
+				damage = 0.6
+			}
+			damage_building = {
+				type = infrastructure
+				damage = 2
+			}
+		}
+		add_manpower = -20000
+		add_equipment_to_stockpile = {
+			type = infantry_equipment_1
+			amount = -2000
+			producer = FRA
+		}
+		set_country_flag = JACOBIN_BAN
+		clr_country_flag = COMMUNIST_FRANCE
+		set_country_flag = Marcel_Deat_dead
+		set_country_flag = Marcel_Gitton_dead
+		set_country_flag = Marcel_Cachin_dead
+		set_country_flag = Jacques_Duclos_dead
+		if = {
+			limit = {
+				has_unit_leader = 200
+			}
+			remove_unit_leader = 200
+		}
+		if = {
+			limit = {
+				has_unit_leader = 201
+			}
+			remove_unit_leader = 201
+		}
+		set_party_name = {
+			ideology = totalist
+			long_name = FRA_sorelians
+			name = FRA_sorelians
+		}
+	}
+}
+
+#####
+##### 1941 elections ####
+#####
+
+country_event = {
+	id = comfrance.144
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.144" }
+	title = comfrance.144.t
+	desc = comfrance.144.d
+	picture = GFX_report_event_worker_protests
+
+	trigger = {
+		is_subject = no
+		NOT = {
+			surrender_progress > 0.15
+			has_country_flag = COMMUNIST_FRANCE
+		}
+		controls_state = 16
+		has_socialist_government = yes
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = comfrance.144.a
+		add_stability = 0.02
+		hidden_effect = {
+			country_event = {
+				id = comfrance.145
+				days = 2
+			}
+		}
+
+		# set 1941 election counters
+		set_country_flag = {
+			flag = FRA_ANAR
+			value = 0
+		}
+		set_country_flag = {
+			flag = FRA_JACO
+			value = 0
+		}
+		set_country_flag = {
+			flag = FRA_SORE
+			value = 0
+		}
+		set_country_flag = {
+			flag = FRA_TRAV
+			value = 0
+		}
+	}
+}
+
+country_event = {
+	id = comfrance.145
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.145" }
+	title = comfrance.145.t
+	desc = comfrance.145.d
+	picture = GFX_report_event_worker_protests
+
+	is_triggered_only = yes
+
+	option = {
+		name = comfrance.145.a #Travailleurs: Modernization and optimization!
+		ai_chance = {
+			factor = 45
+		}
+		add_stability = 0.02
+		modify_country_flag = {
+			flag = FRA_TRAV
+			value = 1
+		}
+		hidden_effect = {
+			country_event = {
+				id = comfrance.146
+				days = 3
+			}
+		}
+		add_tech_bonus = {
+			name = comfrance.145.t
+			bonus = 1
+			uses = 1
+			category = infantry_weapons
+		}
+		add_popularity = {
+			ideology = syndicalist
+			popularity = 0.05
+		}
+	}
+
+	option = {
+		name = comfrance.145.b #Jacobins: A more independent high command is needed!
+		ai_chance = {
+			factor = 15
+		}
+		trigger = {
+			NOT = {
+				has_country_flag = JACOBIN_BAN
+				has_global_flag = sorelian_majority_1936
+			}
+		}
+		add_stability = 0.02
+		modify_country_flag = {
+			flag = FRA_JACO
+			value = 1
+		}
+		hidden_effect = {
+			country_event = {
+				id = comfrance.146
+				days = 3
+			}
+		}
+		army_experience = 30
+		add_popularity = {
+			ideology = totalist
+			popularity = 0.05
+		}
+	}
+
+	option = {
+		name = comfrance.145.c #Sorelians: The army must be completely subjugated to the CGT!
+		ai_chance = {
+			factor = 20
+		}
+		trigger = {
+			NOT = {
+				has_global_flag = jacobin_majority_1936
+			}
+		}
+		add_stability = -0.04
+		modify_country_flag = {
+			flag = FRA_SORE
+			value = 1
+		}
+		hidden_effect = {
+			country_event = {
+				id = comfrance.146
+				days = 3
+			}
+		}
+		add_tech_bonus = {
+			name = comfrance.145.t
+			bonus = 0.5
+			uses = 1
+			category = land_doctrine
+		}
+		add_popularity = {
+			ideology = totalist
+			popularity = 0.05
+		}
+	}
+
+	option = {
+		name = comfrance.145.e #Anarchistes: Liberalize the army and promote volunteer service!
+		ai_chance = {
+			factor = 20
+		}
+		add_stability = -0.06
+		modify_country_flag = {
+			flag = FRA_ANAR
+			value = 1
+		}
+		hidden_effect = {
+			country_event = {
+				id = comfrance.146
+				days = 3
+			}
+		}
+		add_manpower = 50000
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.05
+		}
+	}
+}
+
+country_event = {
+	id = comfrance.146
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.146" }
+	title = comfrance.146.t
+	desc = comfrance.146.d
+	picture = GFX_report_event_worker_protests
+
+	is_triggered_only = yes
+
+	option = {
+		name = comfrance.146.a #Travailleurs: The Sûreté Populaire is doing well enough!
+		ai_chance = {
+			factor = 30
+		}
+		add_stability = 0.02
+		modify_country_flag = {
+			flag = FRA_TRAV
+			value = 1
+		}
+		hidden_effect = {
+			country_event = {
+				id = comfrance.147
+				days = 3
+			}
+		}
+		add_popularity = {
+			ideology = syndicalist
+			popularity = 0.05
+		}
+	}
+
+	option = {
+		name = comfrance.146.b #Jacobins: We need paramilitary gendarmes to keep the peace!
+		ai_chance = {
+			factor = 20
+		}
+		trigger = {
+			NOT = {
+				has_country_flag = JACOBIN_BAN
+				has_global_flag = sorelian_majority_1936
+			}
+		}
+		add_stability = -0.06
+		modify_country_flag = {
+			flag = FRA_JACO
+			value = 1
+		}
+		hidden_effect = {
+			country_event = {
+				id = comfrance.147
+				days = 3
+			}
+		}
+		add_ideas = FRA_paramilitary_gendarmes
+		add_popularity = {
+			ideology = totalist
+			popularity = 0.05
+		}
+	}
+
+	option = {
+		name = comfrance.146.c #Sorelians: The secret police MUST be more active!
+		ai_chance = {
+			factor = 25
+		}
+		trigger = {
+			NOT = {
+				has_global_flag = jacobin_majority_1936
+			}
+		}
+		add_stability = -0.1
+		modify_country_flag = {
+			flag = FRA_SORE
+			value = 1
+		}
+		hidden_effect = {
+			country_event = {
+				id = comfrance.147
+				days = 3
+			}
+		}
+		add_ideas = FRA_secret_police
+		add_popularity = {
+			ideology = totalist
+			popularity = 0.05
+		}
+	}
+
+	option = {
+		name = comfrance.146.e #Anarchistes: Democratize the Sûreté Populaire!
+		ai_chance = {
+			factor = 25
+		}
+		add_stability = 0.1
+		modify_country_flag = {
+			flag = FRA_ANAR
+			value = 1
+		}
+		hidden_effect = {
+			country_event = {
+				id = comfrance.147
+				days = 3
+			}
+		}
+		add_ideas = FRA_demo_surete
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.05
+		}
+	}
+}
+
+country_event = {
+	id = comfrance.147
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.147" }
+	title = comfrance.147.t
+	desc = comfrance.147.d
+	picture = GFX_report_event_worker_protests
+
+	is_triggered_only = yes
+
+	option = {
+		name = comfrance.147.a #Travailleurs: the current system is satisfactory
+		ai_chance = {
+			factor = 10
+		}
+		add_stability = 0.02
+		set_country_flag = FRA2_SPY_TRAV
+		modify_country_flag = {
+			flag = FRA_TRAV
+			value = 1
+		}
+		hidden_effect = {
+			country_event = {
+				id = comfrance.148
+				days = 3
+			}
+		}
+		add_popularity = {
+			ideology = syndicalist
+			popularity = 0.05
+		}
+		if = {
+			limit = {
+				has_dlc = "La Resistance"
+				has_intelligence_agency = yes
+				NOT = { has_done_agency_upgrade = upgrade_decryption_boost }
+			}
+			upgrade_intelligence_agency = upgrade_decryption_boost
+		}
+	}
+
+	option = {
+		name = comfrance.147.b #Jacobins: The RG must focus on supporting revolutionaries abroad!
+		ai_chance = {
+			factor = 30
+		}
+		trigger = {
+			NOT = {
+				has_country_flag = JACOBIN_BAN
+				has_global_flag = sorelian_majority_1936
+			}
+		}
+		add_stability = -0.1
+		set_country_flag = FRA2_SPY_JACO
+		modify_country_flag = {
+			flag = FRA_JACO
+			value = 1
+		}
+		hidden_effect = {
+			country_event = {
+				id = comfrance.148
+				days = 3
+			}
+		}
+		if = {
+			limit = {
+				NOT = { has_dlc = "La Resistance" }
+				has_completed_focus = FRA_renseignements_generaux
+			}
+			add_ideas = FRA_hawkish_renseignements
+		}
+		if = {
+			limit = {
+				has_dlc = "La Resistance"
+				has_intelligence_agency = yes
+				NOT = { has_done_agency_upgrade = upgrade_commando_training }
+			}
+			upgrade_intelligence_agency = upgrade_commando_training
+		}
+		add_popularity = {
+			ideology = totalist
+			popularity = 0.05
+		}
+	}
+
+	option = {
+		name = comfrance.147.c #Sorelians: The RG shall be introduced to Totalist doctrine!
+		ai_chance = {
+			factor = 30
+		}
+		trigger = {
+			NOT = {
+				has_global_flag = jacobin_majority_1936
+			}
+		}
+		add_stability = -0.1
+		set_country_flag = FRA2_SPY_SORE
+		modify_country_flag = {
+			flag = FRA_SORE
+			value = 1
+		}
+		hidden_effect = {
+			country_event = {
+				id = comfrance.148
+				days = 3
+			}
+		}
+		if = {
+			limit = {
+				NOT = { has_dlc = "La Resistance" }
+				has_completed_focus = FRA_renseignements_generaux
+			}
+			add_ideas = FRA_hawkish_renseignements
+		}
+		if = {
+			limit = {
+				has_dlc = "La Resistance"
+				has_intelligence_agency = yes
+				NOT = { has_done_agency_upgrade = upgrade_commando_training }
+			}
+			upgrade_intelligence_agency = upgrade_commando_training
+		}
+		add_popularity = {
+			ideology = totalist
+			popularity = 0.05
+		}
+	}
+
+	option = {
+		name = comfrance.147.e #Anarchistes: The BGT must control the Renseignements Généraux!
+		ai_chance = {
+			factor = 30
+		}
+		add_stability = 0.02
+		set_country_flag = FRA2_SPY_ANAR
+		modify_country_flag = {
+			flag = FRA_ANAR
+			value = 1
+		}
+		hidden_effect = {
+			country_event = {
+				id = comfrance.148
+				days = 3
+			}
+		}
+		if = {
+			limit = {
+				NOT = { has_dlc = "La Resistance" }
+				has_completed_focus = FRA_renseignements_generaux
+			}
+			add_ideas = FRA_peace_renseignements
+		}
+		if = {
+			limit = {
+				has_dlc = "La Resistance"
+				has_intelligence_agency = yes
+				NOT = { has_done_agency_upgrade = upgrade_crypto_strength }
+			}
+			upgrade_intelligence_agency = upgrade_crypto_strength
+		}
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.05
+		}
+	}
+}
+
+country_event = {
+	id = comfrance.148
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.148" }
+	title = comfrance.148.t
+	desc = comfrance.148.d
+	picture = GFX_report_event_worker_protests
+
+	is_triggered_only = yes
+
+	option = {
+		name = comfrance.148.a #Travailleurs: Maintain the Syndicalist course!
+		ai_chance = {
+			factor = 25
+		}
+		random_owned_state = {
+			limit = {
+				free_building_slots = {
+					building = industrial_complex
+					size > 1
+					include_locked = yes
+				}
+			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+
+		modify_country_flag = {
+			flag = FRA_TRAV
+			value = 1
+		}
+		hidden_effect = {
+			country_event = {
+				id = comfrance.149
+				days = 3
+			}
+		}
+		add_popularity = {
+			ideology = syndicalist
+			popularity = 0.05
+		}
+	}
+
+	option = {
+		name = comfrance.148.b #Jacobins: Centralization is needed!
+		ai_chance = {
+			factor = 25
+		}
+		trigger = {
+			NOT = {
+				has_country_flag = JACOBIN_BAN
+				has_global_flag = sorelian_majority_1936
+			}
+		}
+		add_tech_bonus = {
+			name = comfrance.148.t
+			bonus = 1
+			uses = 1
+			category = construction_tech
+		}
+		modify_country_flag = {
+			flag = FRA_JACO
+			value = 1
+		}
+		hidden_effect = {
+			country_event = {
+				id = comfrance.149
+				days = 3
+			}
+		}
+		add_popularity = {
+			ideology = totalist
+			popularity = 0.05
+		}
+	}
+
+	option = {
+		name = comfrance.148.c #Sorelians: We must focus on the armament industries!
+		ai_chance = {
+			factor = 25
+		}
+		trigger = {
+			NOT = {
+				has_global_flag = jacobin_majority_1936
+			}
+		}
+		random_owned_state = {
+			limit = {
+				free_building_slots = {
+					building = arms_factory
+					size > 1
+					include_locked = yes
+				}
+			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+
+		modify_country_flag = {
+			flag = FRA_SORE
+			value = 1
+		}
+		hidden_effect = {
+			country_event = {
+				id = comfrance.149
+				days = 3
+			}
+		}
+		add_popularity = {
+			ideology = totalist
+			popularity = 0.05
+		}
+	}
+
+	option = {
+		name = comfrance.148.e #Anarchistes: More local power!
+		ai_chance = {
+			factor = 25
+		}
+		add_tech_bonus = {
+			name = comfrance.148.t
+			bonus = 1
+			uses = 1
+			category = industry
+		}
+
+		modify_country_flag = {
+			flag = FRA_ANAR
+			value = 1
+		}
+		hidden_effect = {
+			country_event = {
+				id = comfrance.149
+				days = 3
+			}
+		}
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.05
+		}
+	}
+}
+
+country_event = {
+	id = comfrance.149
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.149" }
+	title = comfrance.149.t
+	desc = comfrance.149.d
+	picture = GFX_report_event_worker_protests
+
+	is_triggered_only = yes
+
+	option = {
+		name = comfrance.149.a #Travailleurs: The Internationale must guarantee peace!
+		ai_chance = {
+			factor = 40
+		}
+		set_country_flag = FRA2_FOR_TRAV
+		modify_country_flag = {
+			flag = FRA_TRAV
+			value = 1
+		}
+		add_popularity = {
+			ideology = syndicalist
+			popularity = 0.05
+		}
+		hidden_effect = {
+			country_event = {
+				id = comfrance.901
+				days = 1
+			}
+		}
+	}
+
+	option = {
+		name = comfrance.149.b #Jacobins: The red flag must advance everywhere!
+		ai_chance = {
+			factor = 25
+		}
+		trigger = {
+			NOT = {
+				has_country_flag = JACOBIN_BAN
+				has_global_flag = sorelian_majority_1936
+			}
+		}
+		set_country_flag = FRA2_FOR_JACO
+		modify_country_flag = {
+			flag = FRA_JACO
+			value = 1
+		}
+		add_popularity = {
+			ideology = totalist
+			popularity = 0.05
+		}
+		hidden_effect = {
+			country_event = {
+				id = comfrance.901
+				days = 1
+			}
+		}
+	}
+
+	option = {
+		name = comfrance.149.c #Sorelians: The reactionaries must be destroyed completely!
+		ai_chance = {
+			factor = 20
+		}
+		trigger = {
+			NOT = { has_global_flag = jacobin_majority_1936 }
+		}
+		set_country_flag = FRA2_FOR_SORE
+		modify_country_flag = {
+			flag = FRA_SORE
+			value = 1
+		}
+		add_popularity = {
+			ideology = totalist
+			popularity = 0.05
+		}
+		hidden_effect = {
+			country_event = {
+				id = comfrance.901
+				days = 1
+			}
+		}
+	}
+
+	option = {
+		name = comfrance.149.e #Anarchistes: We must liberate the oppressed of the world!
+		ai_chance = {
+			factor = 15
+		}
+		set_country_flag = FRA2_FOR_ANAR
+		modify_country_flag = {
+			flag = FRA_ANAR
+			value = 1
+		}
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.05
+		}
+		hidden_effect = {
+			country_event = {
+				id = comfrance.901
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = {
+	id = comfrance.150
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.150" }
+	title = comfrance.150.t
+	desc = comfrance.150.d
+	picture = GFX_report_event_worker_protests
+
+	is_triggered_only = yes
+
+	option = {
+		name = comfrance.150.a #Jouhaux
+		ai_chance = {
+			factor = 50
+		}
+		hidden_effect = {
+			kill_country_leader = yes
+		}
+		create_country_leader = {
+			name = "Léon Jouhaux"
+			desc = "POLITICS_LEON_JOUHAUX_DESC"
+			picture = "Portrait_France_Leon_Jouhaux.tga"
+			expire = "1965.1.1"
+			ideology = syndicalist_subtype
+		}
+		create_country_leader = {
+			name = "Léon Jouhaux"
+			desc = "POLITICS_LEON_JOUHAUX_DESC"
+			picture = "Portrait_France_Leon_Jouhaux.tga"
+			expire = "1965.1.1"
+			ideology = totalist_subtype
+		}
+		create_country_leader = {
+			name = "Léon Jouhaux"
+			desc = "POLITICS_LEON_JOUHAUX_DESC"
+			picture = "Portrait_France_Leon_Jouhaux.tga"
+			expire = "1965.1.1"
+			ideology = radical_socialist_subtype
+		}
+		remove_all_ministers = yes
+		add_ideas = FRA_Leon_Blum_hog_rso
+		add_ideas = FRA_Charles_Rappoport_for_syn
+		add_ideas = FRA_Georges_Dumoulin_eco_syn
+		add_ideas = FRA_Marceau_Pivert_sec_syn
+		add_popularity = {
+			ideology = syndicalist
+			popularity = 0.20
+		}
+		add_stability = 0.06
+	}
+
+	option = {
+		name = comfrance.150.b #Frachon
+		ai_chance = {
+			factor = 50
+		}
+		hidden_effect = {
+			kill_country_leader = yes
+		}
+		create_country_leader = {
+			name = "Benoît Frachon"
+			desc = "POLITICS_BENOIT_FRACHON_DESC"
+			picture = "Portrait_France_Benoit_Frachon.tga"
+			expire = "1965.1.1"
+			ideology = syndicalist_subtype
+		}
+		create_country_leader = {
+			name = "Benoît Frachon"
+			desc = "POLITICS_BENOIT_FRACHON_DESC"
+			picture = "Portrait_France_Benoit_Frachon.tga"
+			expire = "1965.1.1"
+			ideology = totalist_subtype
+		}
+		create_country_leader = {
+			name = "Benoît Frachon"
+			desc = "POLITICS_BENOIT_FRACHON_DESC"
+			picture = "Portrait_France_Benoit_Frachon.tga"
+			expire = "1965.1.1"
+			ideology = radical_socialist_subtype
+		}
+		remove_all_ministers = yes
+		add_ideas = FRA_Leon_Blum_hog_rso
+		add_ideas = FRA_Charles_Rappoport_for_syn
+		add_ideas = FRA_Georges_Dumoulin_eco_syn
+		add_ideas = FRA_Gaston_Monmousseau_sec_syn
+		add_popularity = {
+			ideology = syndicalist
+			popularity = 0.20
+		}
+		add_stability = 0.06
+	}
+}
+
+country_event = {
+	id = comfrance.151
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.151" }
+	title = comfrance.151.t
+	desc = comfrance.151.d
+	picture = GFX_report_event_worker_protests
+
+	is_triggered_only = yes
+
+	option = {
+		name = comfrance.151.a
+		set_party_name = {
+			ideology = totalist
+			long_name = FRA_jacobins
+			name = FRA_jacobins
+		}
+		set_politics = {
+			ruling_party = totalist
+			elections_allowed = no
+		}
+		hidden_effect = {
+			kill_country_leader = yes
+		}
+		create_country_leader = {
+			name = "Marcel Cachin"
+			desc = "POLITICS_MARCEL_CACHIN_DESC"
+			picture = "Portrait_France_Marcel_Cachin.tga"
+			expire = "1965.1.1"
+			ideology = syndicalist_subtype
+		}
+		create_country_leader = {
+			name = "Marcel Cachin"
+			desc = "POLITICS_MARCEL_CACHIN_DESC"
+			picture = "Portrait_France_Marcel_Cachin.tga"
+			expire = "1965.1.1"
+			ideology = totalist_subtype
+		}
+		create_country_leader = {
+			name = "Marcel Cachin"
+			desc = "POLITICS_MARCEL_CACHIN_DESC"
+			picture = "Portrait_France_Marcel_Cachin.tga"
+			expire = "1965.1.1"
+			ideology = radical_socialist_subtype
+		}
+		remove_all_ministers = yes
+		add_ideas = FRA_Jacques_Duclos_hog_tot
+		add_ideas = FRA_Maurice_Thorez_for_tot
+		add_ideas = FRA_Jean_Jerome_eco_tot
+		add_ideas = FRA_Lucien_Midol_sec_tot
+		add_popularity = {
+			ideology = totalist
+			popularity = 0.20
+		}
+		add_stability = 0.06
+	}
+}
+
+country_event = {
+	id = comfrance.152
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.152" }
+	title = comfrance.152.t
+	desc = comfrance.152.d
+	picture = GFX_report_event_worker_protests
+
+	is_triggered_only = yes
+
+	option = {
+		name = comfrance.152.a #Valois
+		set_party_name = {
+			ideology = totalist
+			long_name = FRA_sorelians
+			name = FRA_sorelians
+		}
+		hidden_effect = {
+			kill_country_leader = yes
+		}
+		create_country_leader = {
+			name = "Georges Valois"
+			desc = "POLITICS_GEORGES_VALOIS_DESC"
+			picture = "Portrait_France_Georges_Valois.tga"
+			expire = "1965.1.1"
+			ideology = radical_socialist_subtype
+		}
+		create_country_leader = {
+			name = "Georges Valois"
+			desc = "POLITICS_GEORGES_VALOIS_DESC"
+			picture = "Portrait_France_Georges_Valois.tga"
+			expire = "1965.1.1"
+			ideology = totalist_subtype
+		}
+		create_country_leader = {
+			name = "Georges Valois"
+			desc = "POLITICS_GEORGES_VALOIS_DESC"
+			picture = "Portrait_France_Georges_Valois.tga"
+			expire = "1965.1.1"
+			ideology = syndicalist_subtype
+		}
+		set_politics = {
+			ruling_party = totalist
+			elections_allowed = no
+		}
+		remove_all_ministers = yes
+		add_ideas = FRA_Marcel_Bucard_hog_tot
+		add_ideas = FRA_Pierre_Comert_for_tot
+		add_ideas = FRA_Jacques_Doriot_eco_tot
+		add_ideas = FRA_Marcel_Bucard_sec_tot
+		add_popularity = {
+			ideology = totalist
+			popularity = 0.20
+		}
+		add_stability = 0.06
+	}
+}
+
+country_event = {
+	id = comfrance.153
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.153" }
+	title = comfrance.153.t
+	desc = comfrance.153.d
+	picture = GFX_report_event_worker_protests
+
+	is_triggered_only = yes
+
+	option = {
+		name = comfrance.153.a #Guerin/Makhno
+		hidden_effect = {
+			kill_country_leader = yes
+		}
+		create_country_leader = {
+			name = "Nestor Makhno"
+			desc = "POLITICS_NESTOR_MAKHNO_DESC"
+			picture = "Portrait_France_Nestor_Makhno.tga"
+			expire = "1965.1.1"
+			ideology = radical_socialist_subtype
+		}
+		create_country_leader = {
+			name = "Nestor Makhno"
+			desc = "POLITICS_NESTOR_MAKHNO_DESC"
+			picture = "Portrait_France_Nestor_Makhno.tga"
+			expire = "1965.1.1"
+			ideology = syndicalist_subtype
+		}
+		create_country_leader = {
+			name = "Nestor Makhno"
+			desc = "POLITICS_NESTOR_MAKHNO_DESC"
+			picture = "Portrait_France_Nestor_Makhno.tga"
+			expire = "1965.1.1"
+			ideology = totalist_subtype
+		}
+		set_politics = {
+			ruling_party = radical_socialist
+			elections_allowed = no
+		}
+		remove_all_ministers = yes
+		add_ideas = FRA_Daniel_Guerin_hog_rso
+		add_ideas = FRA_Robert_Louzon_for_rso
+		add_ideas = FRA_Benoit_Broutchoux_eco_rso
+		add_ideas = FRA_Maurice_Joyeux_sec_rso
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.20
+		}
+		add_stability = 0.06
+	}
+}
+
+country_event = {
+	id = comfrance.154
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.154" }
+	title = comfrance.154.t
+	desc = comfrance.154.d
+	picture = GFX_report_event_worker_protests
+
+	is_triggered_only = yes
+
+	option = {
+		name = comfrance.154.a #The Travailleur-Anarchiste bloc is restored to power!
+		ai_chance = {
+			factor = 50
+		}
+		set_politics = {
+			ruling_party = radical_socialist
+			elections_allowed = no
+		}
+
+		add_stability = -0.1
+		add_popularity = {
+			ideology = syndicalist
+			popularity = 0.10
+		}
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.10
+		}
+		hidden_effect = {
+			kill_country_leader = yes
+		}
+		create_country_leader = {
+			name = "Benoît Frachon"
+			desc = "POLITICS_BENOIT_FRACHON_DESC"
+			picture = "Portrait_France_Benoit_Frachon.tga"
+			expire = "1965.1.1"
+			ideology = syndicalist_subtype
+		}
+
+		create_country_leader = {
+			name = "Benoît Frachon"
+			desc = "POLITICS_BENOIT_FRACHON_DESC"
+			picture = "Portrait_France_Benoit_Frachon.tga"
+			expire = "1965.1.1"
+			ideology = totalist_subtype
+		}
+
+		create_country_leader = {
+			name = "Benoît Frachon"
+			desc = "POLITICS_BENOIT_FRACHON_DESC"
+			picture = "Portrait_France_Benoit_Frachon.tga"
+			expire = "1965.1.1"
+			ideology = radical_socialist_subtype
+		}
+
+		remove_all_ministers = yes
+		add_ideas = FRA_Daniel_Guerin_hog_rso
+		add_ideas = FRA_Leon_Blum_for_rso
+		add_ideas = FRA_Andre_Breton_eco_rso
+		add_ideas = FRA_Maurice_Joyeux_sec_rso
+	}
+
+	option = {
+		name = comfrance.154.b #Left Travailleurs and orthodox Sorelians form a coalition!
+		ai_chance = {
+			factor = 40
+		}
+		set_politics = {
+			ruling_party = syndicalist
+			elections_allowed = no
+		}
+
+		add_stability = -0.1
+		add_popularity = {
+			ideology = syndicalist
+			popularity = 0.10
+		}
+		add_popularity = {
+			ideology = totalist
+			popularity = 0.10
+		}
+		hidden_effect = {
+			kill_country_leader = yes
+		}
+		create_country_leader = {
+			name = "Jacques Doriot"
+			desc = "POLITICS_JACQUES_DORIOT_DESC"
+			picture = "Portrait_France_Jacques_Doriot.tga"
+			expire = "1965.1.1"
+			ideology = syndicalist_subtype
+		}
+		create_country_leader = {
+			name = "Jacques Doriot"
+			desc = "POLITICS_JACQUES_DORIOT_DESC"
+			picture = "Portrait_France_Jacques_Doriot.tga"
+			expire = "1965.1.1"
+			ideology = totalist_subtype
+		}
+		create_country_leader = {
+			name = "Jacques Doriot"
+			desc = "POLITICS_JACQUES_DORIOT_DESC"
+			picture = "Portrait_France_Jacques_Doriot.tga"
+			expire = "1965.1.1"
+			ideology = radical_socialist_subtype
+		}
+		remove_all_ministers = yes
+		add_ideas = FRA_Boris_Souvarine_hog_syn
+		add_ideas = FRA_Pierre_Comert_for_tot
+		add_ideas = FRA_Georges_Levy_eco_tot
+		add_ideas = FRA_Adrien_Tixier_sec_syn
+	}
+
+	option = {
+		name = comfrance.154.c #Georges Valois and his Totalist Sorelians seize the BGT!
+		ai_chance = {
+			factor = 10
+		}
+		add_stability = -0.1
+		set_party_name = {
+			ideology = totalist
+			long_name = FRA_sorelians
+			name = FRA_sorelians
+		}
+		hidden_effect = {
+			kill_country_leader = yes
+		}
+		create_country_leader = {
+			name = "Georges Valois"
+			desc = "POLITICS_GEORGES_VALOIS_DESC"
+			picture = "Portrait_France_Georges_Valois.tga"
+			expire = "1965.1.1"
+			ideology = radical_socialist_subtype
+		}
+		create_country_leader = {
+			name = "Georges Valois"
+			desc = "POLITICS_GEORGES_VALOIS_DESC"
+			picture = "Portrait_France_Georges_Valois.tga"
+			expire = "1965.1.1"
+			ideology = totalist_subtype
+		}
+		create_country_leader = {
+			name = "Georges Valois"
+			desc = "POLITICS_GEORGES_VALOIS_DESC"
+			picture = "Portrait_France_Georges_Valois.tga"
+			expire = "1965.1.1"
+			ideology = syndicalist_subtype
+		}
+		set_politics = {
+			ruling_party = totalist
+			elections_allowed = no
+		}
+		remove_all_ministers = yes
+		add_ideas = FRA_Marcel_Bucard_hog_tot
+		add_ideas = FRA_Pierre_Comert_for_tot
+		add_ideas = FRA_Auguste_Lecoeur_eco_tot
+		add_ideas = FRA_Marcel_Bucard_sec_tot
+		add_popularity = {
+			ideology = totalist
+			popularity = 0.10
+		}
+	}
+}
+
+country_event = {
+	id = comfrance.155
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.155" }
+	title = comfrance.155.t
+	desc = comfrance.155.d
+	picture = GFX_report_event_worker_protests
+
+	trigger = {
+		is_subject = no
+		NOT = {
+			has_country_flag = COMMUNIST_FRANCE
+		}
+		has_socialist_government = yes
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = comfrance.155.a #Travailleur majority : We have to make room for our Social-Democratic friends
+		ai_chance = {
+			factor = 50
+		}
+		set_politics = {
+			ruling_party = syndicalist
+			elections_allowed = no
+		}
+		add_stability = 0.04
+		add_popularity = {
+			ideology = syndicalist
+			popularity = 0.3
+		}
+		hidden_effect = {
+			kill_country_leader = yes
+		}
+		create_country_leader = {
+			name = "Léon Jouhaux"
+			desc = "POLITICS_LEON_JOUHAUX_DESC"
+			picture = "Portrait_France_Leon_Jouhaux.tga"
+			expire = "1965.1.1"
+			ideology = syndicalist_subtype
+		}
+		create_country_leader = {
+			name = "Léon Jouhaux"
+			desc = "POLITICS_LEON_JOUHAUX_DESC"
+			picture = "Portrait_France_Leon_Jouhaux.tga"
+			expire = "1965.1.1"
+			ideology = totalist_subtype
+		}
+		create_country_leader = {
+			name = "Léon Jouhaux"
+			desc = "POLITICS_LEON_JOUHAUX_DESC"
+			picture = "Portrait_France_Leon_Jouhaux.tga"
+			expire = "1965.1.1"
+			ideology = radical_socialist_subtype
+		}
+		remove_all_ministers = yes
+		add_ideas = FRA_Paul_Ramadier_hog_rso
+		add_ideas = FRA_Jean_Paul_Sartre_for_rso
+		add_ideas = FRA_Vincent_Auriol_eco_rso
+		add_ideas = FRA_Marceau_Pivert_sec_syn
+	}
+
+	option = {
+		name = comfrance.155.b #Sorelian majority : No decay of the revolutionary values will be tolerated
+		ai_chance = {
+			factor = 10
+		}
+		trigger = {
+			NOT = {
+				has_global_flag = jacobin_majority_1936
+			}
+		}
+		set_party_name = {
+			ideology = totalist
+			long_name = FRA_sorelians
+			name = FRA_sorelians
+		}
+		set_politics = {
+			ruling_party = totalist
+			elections_allowed = no
+		}
+		add_stability = -0.1
+		add_popularity = {
+			ideology = totalist
+			popularity = 0.30
+		}
+		hidden_effect = {
+			kill_country_leader = yes
+		}
+		create_country_leader = {
+			name = "Georges Valois"
+			desc = "POLITICS_GEORGES_VALOIS_DESC"
+			picture = "Portrait_France_Georges_Valois.tga"
+			expire = "1965.1.1"
+			ideology = radical_socialist_subtype
+		}
+		create_country_leader = {
+			name = "Georges Valois"
+			desc = "POLITICS_GEORGES_VALOIS_DESC"
+			picture = "Portrait_France_Georges_Valois.tga"
+			expire = "1965.1.1"
+			ideology = totalist_subtype
+		}
+		create_country_leader = {
+			name = "Georges Valois"
+			desc = "POLITICS_GEORGES_VALOIS_DESC"
+			picture = "Portrait_France_Georges_Valois.tga"
+			expire = "1965.1.1"
+			ideology = syndicalist_subtype
+		}
+		remove_all_ministers = yes
+		add_ideas = FRA_Marcel_Bucard_hog_tot
+		add_ideas = FRA_Pierre_Comert_for_tot
+		add_ideas = FRA_Jacques_Doriot_eco_tot
+		add_ideas = FRA_Jean_Marie_Clamamus_sec_tot
+	}
+
+	option = {
+		name = comfrance.155.c #Anarchiste majority : Proletarian democracy does not require Social-Democrats
+		ai_chance = {
+			factor = 30
+		}
+		add_stability = 0.04
+		hidden_effect = {
+			kill_country_leader = yes
+		}
+		create_country_leader = {
+			name = "Nestor Makhno"
+			desc = "POLITICS_NESTOR_MAKHNO_DESC"
+			picture = "Portrait_France_Nestor_Makhno.tga"
+			expire = "1965.1.1"
+			ideology = radical_socialist_subtype
+		}
+		create_country_leader = {
+			name = "Nestor Makhno"
+			desc = "POLITICS_NESTOR_MAKHNO_DESC"
+			picture = "Portrait_France_Nestor_Makhno.tga"
+			expire = "1965.1.1"
+			ideology = syndicalist_subtype
+		}
+		create_country_leader = {
+			name = "Nestor Makhno"
+			desc = "POLITICS_NESTOR_MAKHNO_DESC"
+			picture = "Portrait_France_Nestor_Makhno.tga"
+			expire = "1965.1.1"
+			ideology = totalist_subtype
+		}
+		set_politics = {
+			ruling_party = radical_socialist
+			elections_allowed = no
+		}
+		remove_all_ministers = yes
+		add_ideas = FRA_Daniel_Guerin_hog_rso
+		add_ideas = FRA_Robert_Louzon_for_rso
+		add_ideas = FRA_Benoit_Broutchoux_eco_rso
+		add_ideas = FRA_Maurice_Joyeux_sec_rso
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.30
+		}
+	}
+
+	option = {
+		name = comfrance.155.e #Jacobin majority : The Commune is ready for Bolshevism.
+		ai_chance = {
+			factor = 10
+		}
+		trigger = {
+			NOT = {
+				has_global_flag = sorelian_majority_1936
+				has_country_flag = JACOBIN_BAN
+			}
+		}
+		set_party_name = {
+			ideology = totalist
+			long_name = FRA_jacobins
+			name = FRA_jacobins
+		}
+		set_politics = {
+			ruling_party = totalist
+			elections_allowed = no
+		}
+		add_stability = -0.1
+		add_popularity = {
+			ideology = totalist
+			popularity = 0.30
+		}
+		hidden_effect = {
+			kill_country_leader = yes
+		}
+		create_country_leader = {
+			name = "Marcel Cachin"
+			desc = "POLITICS_MARCEL_CACHIN_DESC"
+			picture = "Portrait_France_Marcel_Cachin.tga"
+			expire = "1965.1.1"
+			ideology = syndicalist_subtype
+		}
+		create_country_leader = {
+			name = "Marcel Cachin"
+			desc = "POLITICS_MARCEL_CACHIN_DESC"
+			picture = "Portrait_France_Marcel_Cachin.tga"
+			expire = "1965.1.1"
+			ideology = totalist_subtype
+		}
+		create_country_leader = {
+			name = "Marcel Cachin"
+			desc = "POLITICS_MARCEL_CACHIN_DESC"
+			picture = "Portrait_France_Marcel_Cachin.tga"
+			expire = "1965.1.1"
+			ideology = radical_socialist_subtype
+		}
+		remove_all_ministers = yes
+		add_ideas = FRA_Jacques_Duclos_hog_tot
+		add_ideas = FRA_Maurice_Thorez_for_tot
+		add_ideas = FRA_Georges_Levy_eco_tot
+		add_ideas = FRA_Louis_Aragon_sec_tot
+	}
+}
+
+country_event = {
+	id = comfrance.156
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.156" }
+	title = comfrance.156.t
+	desc = comfrance.156.d
+	picture = GFX_report_event_worker_protests
+
+	trigger = {
+		is_subject = no
+		NOT = {
+			has_country_flag = COMMUNIST_FRANCE
+		}
+		has_socialist_government = yes
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = comfrance.156.a #Travailleur majority - Democratisation of the Commune should be gradual
+		ai_chance = {
+			factor = 50
+		}
+		set_politics = {
+			ruling_party = syndicalist
+			elections_allowed = no
+		}
+		add_stability = 0.02
+		add_popularity = {
+			ideology = syndicalist
+			popularity = 0.3
+		}
+		hidden_effect = {
+			kill_country_leader = yes
+		}
+		create_country_leader = {
+			name = "Vincent Auriol"
+			desc = "POLITICS_VINCENT_AURIOL_DESC"
+			picture = "Portrait_France_Vincent_Auriol.tga"
+			expire = "1965.1.1"
+			ideology = syndicalist_subtype
+		}
+		create_country_leader = {
+			name = "Vincent Auriol"
+			desc = "POLITICS_VINCENT_AURIOL_DESC"
+			picture = "Portrait_France_Vincent_Auriol.tga"
+			expire = "1965.1.1"
+			ideology = totalist_subtype
+		}
+		create_country_leader = {
+			name = "Vincent Auriol"
+			desc = "POLITICS_VINCENT_AURIOL_DESC"
+			picture = "Portrait_France_Vincent_Auriol.tga"
+			expire = "1965.1.1"
+			ideology = radical_socialist_subtype
+		}
+		remove_all_ministers = yes
+		add_ideas = FRA_Guy_Mollet_hog_syn
+		add_ideas = FRA_Jean_Paul_Sartre_for_rso
+		add_ideas = FRA_Benoit_Frachon_eco_syn
+		add_ideas = FRA_Paul_Ramadier_sec_rso
+	}
+
+	option = {
+		name = comfrance.156.b #Sorelian majority - Totalism shall stand triumphant
+		ai_chance = {
+			factor = 5
+		}
+		trigger = {
+			NOT = {
+				has_global_flag = jacobin_majority_1936
+			}
+		}
+		set_party_name = {
+			ideology = totalist
+			long_name = FRA_sorelians
+			name = FRA_sorelians
+		}
+		set_politics = {
+			ruling_party = totalist
+			elections_allowed = no
+		}
+		add_stability = -0.1
+		add_popularity = {
+			ideology = totalist
+			popularity = 0.30
+		}
+		hidden_effect = {
+			kill_country_leader = yes
+		}
+		create_country_leader = {
+			name = "Georges Valois"
+			desc = "POLITICS_GEORGES_VALOIS_DESC"
+			picture = "Portrait_France_Georges_Valois.tga"
+			expire = "1965.1.1"
+			ideology = radical_socialist_subtype
+		}
+		create_country_leader = {
+			name = "Georges Valois"
+			desc = "POLITICS_GEORGES_VALOIS_DESC"
+			picture = "Portrait_France_Georges_Valois.tga"
+			expire = "1965.1.1"
+			ideology = totalist_subtype
+		}
+		create_country_leader = {
+			name = "Georges Valois"
+			desc = "POLITICS_GEORGES_VALOIS_DESC"
+			picture = "Portrait_France_Georges_Valois.tga"
+			expire = "1965.1.1"
+			ideology = syndicalist_subtype
+		}
+		remove_all_ministers = yes
+		add_ideas = FRA_Marcel_Bucard_hog_tot
+		add_ideas = FRA_Pierre_Comert_for_tot
+		add_ideas = FRA_Jacques_Doriot_eco_tot
+		add_ideas = FRA_Jean_Marie_Clamamus_sec_tot
+	}
+
+	option = {
+		name = comfrance.156.c #Anarchiste majority - The stateless soceity awaits!
+		ai_chance = {
+			factor = 40
+		}
+		add_stability = 0.02
+		hidden_effect = {
+			kill_country_leader = yes
+		}
+		create_country_leader = {
+			name = "Daniel Guérin"
+			desc = "POLITICS_DANIEL_GUERIN_DESC"
+			picture = "Portrait_France_Daniel_Guerin.tga"
+			expire = "1965.1.1"
+			ideology = radical_socialist_subtype
+		}
+		create_country_leader = {
+			name = "Daniel Guérin"
+			desc = "POLITICS_DANIEL_GUERIN_DESC"
+			picture = "Portrait_France_Daniel_Guerin.tga"
+			expire = "1965.1.1"
+			ideology = syndicalist_subtype
+		}
+		create_country_leader = {
+			name = "Daniel Guérin"
+			desc = "POLITICS_DANIEL_GUERIN_DESC"
+			picture = "Portrait_France_Daniel_Guerin.tga"
+			expire = "1965.1.1"
+			ideology = totalist_subtype
+		}
+		set_politics = {
+			ruling_party = radical_socialist
+			elections_allowed = no
+		}
+		remove_all_ministers = yes
+		add_ideas = FRA_Maurice_Joyeux_hog_rso
+		add_ideas = FRA_Robert_Louzon_for_rso
+		add_ideas = FRA_Henri_Tanguy_eco_rso
+		add_ideas = FRA_Fernand_Despres_sec_rso
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.30
+		}
+	}
+
+	option = {
+		name = comfrance.156.e #Jacobin majority - We are true Communards
+		ai_chance = {
+			factor = 5
+		}
+		trigger = {
+			NOT = {
+				has_global_flag = sorelian_majority_1936
+				has_country_flag = JACOBIN_BAN
+			}
+		}
+		set_party_name = {
+			ideology = totalist
+			long_name = FRA_jacobins
+			name = FRA_jacobins
+		}
+		set_politics = {
+			ruling_party = totalist
+			elections_allowed = no
+		}
+		add_stability = -0.2
+		add_popularity = {
+			ideology = totalist
+			popularity = 0.30
+		}
+		hidden_effect = {
+			kill_country_leader = yes
+		}
+		create_country_leader = {
+			name = "Marcel Cachin"
+			desc = "POLITICS_MARCEL_CACHIN_DESC"
+			picture = "Portrait_France_Marcel_Cachin.tga"
+			expire = "1965.1.1"
+			ideology = syndicalist_subtype
+		}
+		create_country_leader = {
+			name = "Marcel Cachin"
+			desc = "POLITICS_MARCEL_CACHIN_DESC"
+			picture = "Portrait_France_Marcel_Cachin.tga"
+			expire = "1965.1.1"
+			ideology = totalist_subtype
+		}
+		create_country_leader = {
+			name = "Marcel Cachin"
+			desc = "POLITICS_MARCEL_CACHIN_DESC"
+			picture = "Portrait_France_Marcel_Cachin.tga"
+			expire = "1965.1.1"
+			ideology = radical_socialist_subtype
+		}
+		remove_all_ministers = yes
+		add_ideas = FRA_Jacques_Duclos_hog_tot
+		add_ideas = FRA_Maurice_Thorez_for_tot
+		add_ideas = FRA_Georges_Levy_eco_tot
+		add_ideas = FRA_Louis_Aragon_sec_tot
+	}
+}
+
+###########
+## END OF THE ELECTIONS
+##########
+
+country_event = {
+	id = comfrance.157
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.157" }
+	title = comfrance.157.t
+	desc = comfrance.157.d
+	picture = GFX_report_event_worker_protests
+
+	is_triggered_only = yes
+
+	option = {
+		name = comfrance.157.a #Fare thee well.
+		add_stability = -0.02
+		set_country_flag = Nestor_Makhno_dead
+		if = {
+			limit = {
+				has_unit_leader = 202
+			}
+			remove_unit_leader = 202
+		}
+		if = {
+			limit = {
+				has_government = radical_socialist
+			}
+			hidden_effect = {
+				kill_country_leader = yes
+			}
+			create_country_leader = {
+				name = "Daniel Guérin"
+				desc = "POLITICS_DANIEL_GUERIN_DESC"
+				picture = "Portrait_France_Daniel_Guerin.tga"
+				expire = "1965.1.1"
+				ideology = radical_socialist_subtype
+			}
+			create_country_leader = {
+				name = "Daniel Guérin"
+				desc = "POLITICS_DANIEL_GUERIN_DESC"
+				picture = "Portrait_France_Daniel_Guerin.tga"
+				expire = "1965.1.1"
+				ideology = syndicalist_subtype
+			}
+			create_country_leader = {
+				name = "Daniel Guérin"
+				desc = "POLITICS_DANIEL_GUERIN_DESC"
+				picture = "Portrait_France_Daniel_Guerin.tga"
+				expire = "1965.1.1"
+				ideology = totalist_subtype
+			}
+		}
+	}
+}
+
+country_event = {
+	id = comfrance.159
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.159" }
+	title = comfrance.159.t
+	desc = comfrance.159.d
+	picture = GFX_report_event_worker_protests
+
+	trigger = {
+		tag = FRA
+		NOT = {
+			controls_state = 16
+		}
+	}
+
+	fire_only_once = yes
+
+	option = {
+		name = comfrance.159.a #Foule esclave, debout, debout!
+		add_stability = -0.1
+	}
+}
+
+country_event = {
+	id = comfrance.160
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.160" }
+	title = comfrance.160.t
+	desc = comfrance.160.d
+	picture = GFX_report_event_worker_protests
+
+	trigger = {
+		tag = FRA
+		28 = {
+			is_owned_by = GER
+			is_fully_controlled_by = FRA
+		}
+	}
+
+	fire_only_once = yes
+
+	option = {
+		name = comfrance.160.a #...Groupons-nous, et demain...
+		add_stability = 0.1
+		add_manpower = 25000
+	}
+}
+
+country_event = {
+	id = comfrance.161
+	title = comfrance.161.t
+	desc = comfrance.161.d
+	picture = GFX_report_event_worker_protests
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = comfrance.161
+				days = 365
+			}
+		}
+	}
+
+	option = {
+		name = comfrance.161.a #VIVE LA COMMUNE
+		add_political_power = 20
+	}
+}
+
+country_event = {
+	id = comfrance.163
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.163" }
+	title = comfrance.163.t
+	desc = comfrance.163.d
+	picture = GFX_report_event_worker_protests
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = comfrance.163
+				days = 365
+			}
+		}
+	}
+
+	option = {
+		name = comfrance.163.a #celebrate
+		add_political_power = 5
+	}
+}
+
+country_event = {
+	id = comfrance.164
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.164" }
+	title = comfrance.164.t
+	desc = comfrance.164.d
+	picture = GFX_report_event_worker_protests
+
+	is_triggered_only = yes
+
+	option = {
+		name = comfrance.164.a
+		add_stability = 0.02
+	}
+}
+
+country_event = {
+	id = comfrance.165
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.165" }
+	title = comfrance.165.t
+	desc = comfrance.165.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = comfrance.165.a
+		add_ideas = FRA_avantgarde_idea
+		hidden_effect = {
+			news_event = {
+				id = worldnews.244
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = {
+	id = comfrance.166
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.166" }
+	title = comfrance.166.t
+	desc = comfrance.166.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = comfrance.166.a
+		GER = {
+			add_to_faction = ROOT
+		}
+		ai_chance = {
+			factor = 95
+		}
+	}
+
+	option = {
+		name = comfrance.166.b
+		ai_chance = {
+			factor = 5
+		}
+	}
+}
+
+country_event = {
+	id = comfrance.167
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.167" }
+	title = comfrance.167.t
+	desc = comfrance.167.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = comfrance.167.a
+		GER = {
+			add_to_faction = ROOT
+		}
+		ai_chance = {
+			factor = 95
+		}
+	}
+
+	option = {
+		name = comfrance.167.b
+		ai_chance = {
+			factor = 5
+		}
+	}
+}
+
+country_event = {
+	id = comfrance.168
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.168" }
+	title = comfrance.168.t
+	desc = comfrance.168.d
+
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { is_in_faction_with = FROM }
+	}
+
+	option = {
+		name = comfrance.168.a # Of course!
+		FROM = { add_to_faction = ROOT }
+	}
+	option = {
+		name = comfrance.168.b # Refuse
+		trigger = { is_ai = no }
+		set_country_flag = SRI_refused_intl_membership
+		add_political_power = -250
+		add_stability = -0.25
+		decrease_ruling_party_popularity_by_25 = yes
+		hidden_effect = {
+			remove_opinion_modifier = { target = FRA modifier = KR_close_allies }
+			remove_opinion_modifier = { target = ENG modifier = KR_close_allies }
+			FRA = {
+				remove_opinion_modifier = { target = SRI modifier = KR_close_allies }
+				add_opinion_modifier = { target = SRI modifier = KR_disapproves_of_govt }
+			}
+			ENG = {
+				remove_opinion_modifier = { target = SRI modifier = KR_close_allies }
+				add_opinion_modifier = { target = SRI modifier = KR_disapproves_of_govt }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = comfrance.169
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.169" }
+	title = comfrance.169.t
+	desc = comfrance.169.d
+
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { is_in_faction_with = FROM }
+	}
+
+	option = {
+		name = comfrance.168.a # Of course!
+		add_to_faction = FROM
+	}
+	option = {
+		name = comfrance.168.b # Refuse
+		trigger = { is_ai = no }
+		FROM = { set_country_flag = SRI_refused_intl_membership }
+		add_political_power = -200
+		add_stability = -0.2
+		decrease_ruling_party_popularity_by_20 = yes
+		hidden_effect = {
+			SRI = {
+				remove_opinion_modifier = { target = FRA modifier = KR_close_allies }
+				remove_opinion_modifier = { target = ENG modifier = KR_close_allies }
+				add_opinion_modifier = { target = ROOT modifier = KR_disapproves_of_govt }
+			}
+			FRA = {
+				remove_opinion_modifier = { target = SRI modifier = KR_close_allies }
+			}
+			ENG = {
+				remove_opinion_modifier = { target = SRI modifier = KR_close_allies }
+			}
+		}
+	}
+}
+
+
+# date > 1936.2.6 ?
+# 1936 election result decision
+country_event = {
+	id = comfrance.900
+	is_triggered_only = yes
+	hidden = yes
+
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event comfrance.900"
+		if = {
+			limit = {
+				has_country_flag = {
+					flag = FRA_TRAV
+					value > 2
+				}
+			}
+			country_event = comfrance.12
+		}
+		if = {
+			limit = {
+				has_country_flag = {
+					flag = FRA_JACO
+					value > 2
+				}
+			}
+			country_event = comfrance.13
+		}
+		if = {
+			limit = {
+				has_country_flag = {
+					flag = FRA_SORE
+					value > 2
+				}
+			}
+			country_event = comfrance.15
+		}
+		if = {
+			limit = {
+				has_country_flag = {
+					flag = FRA_ANAR
+					value > 2
+				}
+			}
+			country_event = comfrance.17
+		}
+		if = {
+			limit = {
+				has_country_flag = {
+					flag = FRA_ANAR
+					value < 3
+				}
+				has_country_flag = {
+					flag = FRA_JACO
+					value < 3
+				}
+				has_country_flag = {
+					flag = FRA_SORE
+					value < 3
+				}
+				has_country_flag = {
+					flag = FRA_TRAV
+					value < 3
+				}
+			}
+			country_event = comfrance.20
+		}
+	}
+}
+
+# 1941 election result decision
+country_event = {
+	id = comfrance.901
+	is_triggered_only = yes
+	hidden = yes
+
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event comfrance.901"
+		if = {
+			limit = {
+				has_country_flag = {
+					flag = FRA_TRAV
+					value > 2
+				}
+			}
+			country_event = comfrance.150
+		}
+		if = {
+			limit = {
+				has_country_flag = {
+					flag = FRA_JACO
+					value > 2
+				}
+			}
+			country_event = comfrance.151
+		}
+		if = {
+			limit = {
+				has_country_flag = {
+					flag = FRA_SORE
+					value > 2
+				}
+			}
+			country_event = comfrance.152
+		}
+		if = {
+			limit = {
+				has_country_flag = {
+					flag = FRA_ANAR
+					value > 2
+				}
+			}
+			country_event = comfrance.153
+		}
+		if = {
+			limit = {
+				has_country_flag = {
+					flag = FRA_ANAR
+					value < 3
+				}
+				has_country_flag = {
+					flag = FRA_JACO
+					value < 3
+				}
+				has_country_flag = {
+					flag = FRA_SORE
+					value < 3
+				}
+				has_country_flag = {
+					flag = FRA_TRAV
+					value < 3
+				}
+			}
+			country_event = comfrance.154
+		}
+	}
+}
+
+###Gamelin Coup News event by Omanisch###
+
+news_event = {
+	id = comfrance.1000
+	immediate = { log = "[GetDateText]: [Root.GetName]: event comfrance.1000" }
+	title = comfrance.1000.t
+	desc = comfrance.1000.d
+	picture = GFX_news_event_FRA_gamelin_coup
+
+	major = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		wants_world_news = yes
+	}
+
+	show_major = {
+		NOT = {
+			tag = FRA
+		}
+	}
+
+	option = {
+		name = comfrance.1000.a
+	}
+}
