@@ -3593,5 +3593,25 @@ spriteTypes = {
 		name = "GFX_goal_NEE_Boston_line"
 		texturefile = "gfx/interface/goals/goal_NEE_Boston_line.dds"
 	}
+	SpriteType = {# Macarthur Military
+		name = "GFX_goal_USA_macarthur_military"
+		texturefile = "gfx/interface/goals/america_goal_marcarthur_military.tga"
+	}
+	SpriteType = {# National Guard
+		name = "GFX_goal_USA_national_guard"
+		texturefile = "gfx/interface/goals/america_goal_national_guard.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_CSA_continental_army"
+		texturefile = "gfx/interface/goals/CSA_continental_army.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_CSA_continental_airforce"
+		texturefile = "gfx/interface/goals/CSA_continental_airforce.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_CSA_continental_navy"
+		texturefile = "gfx/interface/goals/CSA_continental_navy.tga"
+	}
 }
 
