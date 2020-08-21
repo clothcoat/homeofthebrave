@@ -143,7 +143,7 @@ country_event = { # Old Democrats Breakoff
 		add_war_support = 0.2
 		hidden_effect = {
 		WCC = {
-		set_politics = {
+			set_politics = {
 				ruling_party = authoritarian_democrat
 				last_election = "1936.11.08"
 				election_frequency = 48
@@ -322,6 +322,18 @@ country_event = { # WCC released
 	immediate = {
 		log = "[GetDateText]: [Root.GetName]: event amcivwar.3000"
 		USA_release_WCC = yes
+		hidden_effect = {
+			WCC = {	
+				add_ideas = {
+					WCC_Dwight_D_Eisenhower_hog_ade
+					WCC_Patrick_J_Hurley_for_ade
+					WCC_James_Garesche_Ord_eco_ade
+					WCC_Leonard_T_Gerow_sec_ade
+					WCC_Omar_Nelson_Bradley_cos
+					WCC_Dwight_D_Eisenhower_carm
+				}
+			}
+		}
 	}
 
 	option = {
