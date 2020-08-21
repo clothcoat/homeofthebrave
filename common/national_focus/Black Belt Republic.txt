@@ -4219,6 +4219,12 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BBR_entente_trade"
 			add_ideas = BBR_entente_trade_idea
+			hidden_effect = {
+				country_event = {
+					id = bbr.2300
+					days = 120
+				}
+			}
 		}
 	}
 	focus = {# Accumulation of Wealth

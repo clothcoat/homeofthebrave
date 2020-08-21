@@ -6704,7 +6704,7 @@ country_event = {# Welfare Reforms
 		}
 	}
 	option = {# Make it more exclusive
-		name = pacificstates.252.a
+		name = pacificstates.252.b
 		add_stability = 0.02
 		add_political_power = 45
 	}
@@ -8683,9 +8683,12 @@ country_event = {# Long Returns
 			add_ideas = CAL_Ralph_Johnson_Bunche_for_sde
 			add_ideas = CAL_Huey_Long_eco_sde
 			add_ideas = CAL_Konrad_Knute_Solberg_sec_sde
+			country_event = {
+				id = pacificstates.4001
+				days = 3
+			}
 		}
 	}
-
 }
 	country_event = {# Long's Head of State
 	id = pacificstates.4001
@@ -8740,7 +8743,7 @@ country_event = {# Long Returns
 		}
 	}
 	option = {# Keep Long in the cabinet
-		name = pacificstates.4001.d
+		name = pacificstates.4001.e
 		set_politics = {
 			ruling_party = social_democrat
 			election_frequency = 48
