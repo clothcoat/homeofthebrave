@@ -2888,3 +2888,29 @@ country_event = { # Enacting Roman Law
 	add_political_power = -10
 	}
 }
+
+country_event = { # Entente Alliance
+	id = bbr.2300
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.2300"}
+	title = bbr.2300.t
+	desc = bbr.2300.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #Join
+	name = bbr.2300.a
+	add_political_power = 25
+	add_popularity = { ideology = market_liberal popularity = 0.02 }
+	add_stability = -0.03
+	CAN = {
+	add_to_faction = BBR
+	}
+	}
+	
+	option = { #Don't
+	name = bbr.2300.b
+	add_stability = 0.02
+	add_political_power = -10
+	}
+}
