@@ -845,7 +845,7 @@ ideas = {
 			}
 		}
 		COR_national_corporatism_idea = {
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea COR_national_corporatism_idea_1"}
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea COR_national_corporatism_idea"}
 			allowed = { always = no }
 			removal_cost = -1
 			picture = corporatist_economy
