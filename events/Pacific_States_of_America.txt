@@ -6726,7 +6726,7 @@ country_event = {# Left Democrats Fired
 		add_stability = 0.01
 	}
 	option = {# Feel bad for Pinkos? No.
-		name = pacificstates.253.a
+		name = pacificstates.253.b
 		add_popularity = { ideology = radical_socialist popularity = -0.03 }
 		add_political_power = 20
 		add_stability = -0.01
@@ -7104,13 +7104,13 @@ country_event = {# Protests
 	fire_only_once = yes
 	
 	option = {# Talk to administrators
-		name = pacificstates.271.a
+		name = pacificstates.272.a
 		add_stability = -0.02
 		add_political_power = -30
 		add_popularity = { ideology = social_conservative popularity = 0.02 }
 	}
 	option = {# Counter these fellow-travelors
-		name = pacificstates.271.b
+		name = pacificstates.272.b
 		add_stability = -0.05
 		add_political_power = 40
 		add_popularity = { ideology = radical_socialist popularity = -0.03 }
@@ -7719,7 +7719,7 @@ country_event = {# Land Compensation
 		add_stability = -0.02
 	}
 	option = {#No, the land is idle anyways
-		name = pacificstates.317.b
+		name = pacificstates.317.c
 		add_stability = -0.04
 	}
 }
