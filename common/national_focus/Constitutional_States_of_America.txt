@@ -1571,7 +1571,7 @@ focus_tree = {
 			add_political_power = 50
 			add_popularity = { ideology = paternal_autocrat popularity = 0.05 }
 			swap_ideas = {
-			remove_idea = COR_national_corporatism_idea_1
+			remove_idea = COR_national_corporatism_idea
 			add_idea = COR_national_corporatism_idea_2
 			}
 			random_owned_controlled_state = {
@@ -1802,7 +1802,7 @@ focus_tree = {
 		y = 9
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_republic_without_democracy"
-			remove_ideas = USA_civil_war_aftermath_idea5
+			remove_ideas = USA_civil_war_war_aftermath_idea5
 		}
 	}
 
