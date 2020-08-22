@@ -6903,7 +6903,8 @@ focus_tree = {
 		available_if_capitulated = yes
 		complete_tooltip = {}
 		completion_reward = {
-			add_political_power = 100
+			add_political_power = 10
+			add_state_claim = 358 #New York City
 		}
 	}
 	focus = {# Irish Relations
@@ -6928,33 +6929,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		complete_tooltip = {}
 		completion_reward = {
-			add_political_power = 100
+			add_political_power = 10
+			add_opinion_modifier = { target = IRE modifier = small_increase }
 		}
 	}
-	focus = {# Greater New England
-		id = NEE_greater_new_england
-		icon = GFX_goal_NEE_greater_new_england
-		cost = 6
-		x = 14
-		y = 13
-		ai_will_do = {
-			factor = 3
-			modifier = {
-				factor = 3
-				has_war = yes
-			}
-		}
-		prerequisite = {
-			focus = NEE_armed_beacon
-		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-		complete_tooltip = {}
-		completion_reward = {
-			add_political_power = 100
-		}
-	}
-}
-}
-
