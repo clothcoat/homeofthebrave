@@ -329,6 +329,7 @@ ACW_foreign_volunteer_decisions = {# Foreign Volunteers
 				tag = CAL
 				tag = TEX
 				tag = NEE
+				tag = BBR
 			}
 		}
 		available = {
@@ -346,6 +347,7 @@ ACW_foreign_volunteer_decisions = {# Foreign Volunteers
 				has_country_flag = ACW_supported_USA
 				has_country_flag = ACW_supported_TEX
 				has_country_flag = ACW_supported_CAL
+				has_country_flag = ACW_supported_COR
 			}
 		}
 		fire_only_once = yes
@@ -384,6 +386,7 @@ ACW_foreign_volunteer_decisions = {# Foreign Volunteers
 				tag = COR
 				tag = TEX
 				tag = NEE
+				tag = BBR
 			}
 		}
 		available = {
@@ -401,6 +404,8 @@ ACW_foreign_volunteer_decisions = {# Foreign Volunteers
 				has_country_flag = ACW_supported_USA
 				has_country_flag = ACW_supported_TEX
 				has_country_flag = ACW_supported_CAL
+				has_country_flag = ACW_supported_COR
+				has_country_flag = ACW_supported_BBR
 			}
 			OR = {
 				is_actual_major = yes
@@ -419,10 +424,10 @@ ACW_foreign_volunteer_decisions = {# Foreign Volunteers
 		custom_cost_text = 2000_infantry_equipment_1
 		ai_will_do = {
 			factor = 1
-			modifier = {
-				factor = 0
-				has_equipment = { infantry_equipment < 4000 }
-			}
+			#modifier = {
+			#	factor = 0
+			#	has_equipment = { infantry_equipment < 4000 }
+			#}
 			modifier = {
 				factor = 0
 				has_war = yes
@@ -430,19 +435,28 @@ ACW_foreign_volunteer_decisions = {# Foreign Volunteers
 			modifier = {
 				factor = 0
 				ROOT = { tag = GER }
-				country_exists = TEX
+				country_exists = COR
 			}
 			modifier = {
 				factor = 0
 				ROOT = { tag = JAP }
 				country_exists = CAL
 			}
+			modifier = {
+				factor = 0
+				ROOT = { tag = SAF }
+				country_exists = COR
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision ACW_support_usa_dec"
 			set_country_flag = ACW_supported_USA
-			send_equipment = { target = USA type = infantry_equipment amount = 2000 }
+			send_equipment = { target = USA type = infantry_equipment amount = 1000 }
+			send_equipment = { target = WCC type = infantry_equipment amount = 1000 }
 			USA = {
+				country_event = amcivwar.611
+			}
+			WCC = {
 				country_event = amcivwar.611
 			}
 		}
@@ -458,6 +472,7 @@ ACW_foreign_volunteer_decisions = {# Foreign Volunteers
 				tag = CAL
 				tag = TEX
 				tag = NEE
+				tag = BBR
 			}
 		}
 		available = {
@@ -475,6 +490,7 @@ ACW_foreign_volunteer_decisions = {# Foreign Volunteers
 				has_country_flag = ACW_supported_USA
 				has_country_flag = ACW_supported_TEX
 				has_country_flag = ACW_supported_CAL
+				has_country_flag = ACW_supported_COR
 			}
 			OR = {
 				is_actual_major = yes
@@ -506,6 +522,16 @@ ACW_foreign_volunteer_decisions = {# Foreign Volunteers
 				ROOT = { tag = JAP }
 				country_exists = CAL
 			}
+			modifier = {
+				factor = 0
+				ROOT = { tag = SAF }
+				country_exists = COR
+			}
+			modifier = {
+				factor = 0
+				ROOT = { tag = GER }
+				country_exists = COR
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision ACW_support_aus_dec"
@@ -527,6 +553,7 @@ ACW_foreign_volunteer_decisions = {# Foreign Volunteers
 				tag = CAL
 				tag = TEX
 				tag = NEE
+				tag = BBR
 			}
 		}
 		available = {
@@ -545,6 +572,7 @@ ACW_foreign_volunteer_decisions = {# Foreign Volunteers
 				has_country_flag = ACW_supported_USA
 				has_country_flag = ACW_supported_TEX
 				has_country_flag = ACW_supported_CAL
+				has_country_flag = ACW_supported_COR
 			}
 			OR = {
 				is_actual_major = yes
@@ -554,6 +582,158 @@ ACW_foreign_volunteer_decisions = {# Foreign Volunteers
 			OR = {
 				NOT = { is_in_faction_with = CAN }
 				CAN = { has_country_flag = CAN_supports_CAL }
+			}
+		}
+		fire_only_once = yes
+		custom_cost_trigger = {
+			has_equipment = {
+				infantry_equipment > 1999
+			}
+		}
+		custom_cost_text = 2000_infantry_equipment_1
+		ai_will_do = {
+			factor = 1
+			#modifier = {
+			#	factor = 0
+			#	has_equipment = { infantry_equipment < 4000 }
+			#}
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+			modifier = {
+				factor = 0
+				ROOT = { tag = GER }
+				country_exists = COR
+			}
+			modifier = {
+				factor = 0
+				ROOT = { tag = SAF }
+				country_exists = COR
+			}
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision ACW_support_psa_dec"
+			set_country_flag = ACW_supported_CAL
+			send_equipment = { target = CAL type = infantry_equipment amount = 2000 }
+			CAL = {
+				country_event = amcivwar.611
+			}
+		}
+	}
+	
+	ACW_support_car_dec = {# Support the CAR
+		icon = ger_military_buildup
+		allowed = {
+			NOT = {
+				tag = USA
+				tag = CSA
+				tag = COR
+				tag = CAL
+				tag = TEX
+				tag = NEE
+				tag = BBR
+			}
+		}
+		available = {
+			country_exists = COR
+		}
+		visible = {
+			country_exists = COR
+			NOT = {	has_socialist_government = yes }
+			has_global_flag = USA_civil_war_begun_flag
+			NOT = { has_global_flag = USA_civil_war_over_flag }
+			arms_factory > 4
+			NOT = {
+				has_war_with = COR
+				has_country_flag = ACW_supported_CSA
+				has_country_flag = ACW_supported_USA
+				has_country_flag = ACW_supported_TEX
+				has_country_flag = ACW_supported_CAL
+				has_country_flag = ACW_supported_BBR
+				has_country_flag = ACW_supported_COR
+			}
+			OR = {
+				is_actual_major = yes
+				is_in_north_america = yes
+				is_in_south_america = yes
+				ROOT = { tag = SAF }
+			}
+			OR = {
+				NOT = { is_in_faction_with = CAN }
+				CAN = { has_country_flag = CAN_supports_COR }
+			}
+		}
+		fire_only_once = yes
+		custom_cost_trigger = {
+			has_equipment = { infantry_equipment > 1999 }
+		}
+		custom_cost_text = 2000_infantry_equipment_1
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				ROOT = { tag = JAP }
+				country_exists = CAL
+			}
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision ACW_support_car_dec"
+			set_country_flag = ACW_supported_COR
+			send_equipment = { target = COR type = infantry_equipment amount = 2000 }
+			COR = {
+				country_event = amcivwar.611
+			}
+		}
+	}
+	
+	ACW_support_bbr_dec = {# Support the BBR
+		icon = ger_military_buildup
+		allowed = {
+			NOT = {
+				tag = USA
+				tag = COR
+				tag = CSA
+				tag = CAL
+				tag = TEX
+				tag = NEE
+				tag = BBR
+			}
+		}
+		available = {
+			country_exists = BBR
+		}
+		visible = {
+			has_war = no
+			country_exists = BBR
+			OR = {
+				AND = {
+					BBR = { NOT = {	has_socialist_government = yes } }
+					NOT = {	has_socialist_government = yes }
+				}
+				
+				AND = {
+					BBR = { has_socialist_government = yes }
+					has_socialist_government = yes
+				}
+			}
+			has_global_flag = USA_civil_war_begun_flag
+			NOT = { has_global_flag = USA_civil_war_over_flag }
+			arms_factory > 4
+			NOT = {
+				has_war_with = BBR
+				has_country_flag = ACW_supported_USA
+				has_country_flag = ACW_supported_TEX
+				has_country_flag = ACW_supported_COR
+			}
+			OR = {
+				is_actual_major = yes
+				is_in_north_america = yes
+				is_in_south_america = yes
+			}
+			OR = {
+				NOT = { is_in_faction_with = BBR }
+				CAN = { has_country_flag = CAN_supports_BBR }
 			}
 		}
 		fire_only_once = yes
@@ -576,14 +756,17 @@ ACW_foreign_volunteer_decisions = {# Foreign Volunteers
 			modifier = {
 				factor = 0
 				ROOT = { tag = GER }
-				country_exists = TEX
+				OR = {
+					country_exists = TEX
+					country_exists = COR
+				}
 			}
 		}
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision ACW_support_psa_dec"
-			set_country_flag = ACW_supported_CAL
-			send_equipment = { target = CAL type = infantry_equipment amount = 2000 }
-			CAL = {
+			log = "[GetDateText]: [Root.GetName]: Decision ACW_support_bbr_dec"
+			set_country_flag = ACW_supported_BBR
+			send_equipment = { target = BBR type = infantry_equipment amount = 2000 }
+			BBR = {
 				country_event = amcivwar.611
 			}
 		}
