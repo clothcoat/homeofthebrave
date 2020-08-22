@@ -759,6 +759,7 @@ country_event = { # AUS Election
 		hidden_effect = {
 		set_country_flag = AUS_election_occured
 		set_country_flag = NPP_Victory
+		set_cosmetic_tag = TEX_not nazis
 		}
 	}
 	option = { # Christian Party
@@ -779,6 +780,7 @@ country_event = { # AUS Election
 		set_country_flag = AUS_election_occured
 		set_country_flag = CP_Victory
 		}
+		set_cosmetic_tag = TEX_commonwealth
 	}
 	option = { # The Democratic Party
 		name = unionstate.2300.e
@@ -1947,6 +1949,7 @@ country_event = { #Long Dead
 			}
 		}
 		name = unionstate.5101.a
+		set_cosmetic_tag = TEX_smith
 		if = {
 		limit = { has_government = paternal_autocrat }
 		create_country_leader = {
@@ -3895,5 +3898,44 @@ country_event = { # Federalist terrorism - factory sabotaged
 				}
 			}
 		}
+	}
+}
+
+country_event = {###Our Flag
+	id = unionstate.205
+	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.205"}
+	title = unionstate.205.t
+	desc = unionstate.205.d
+	picture = GFX_report_event_USA_american_brigade
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = TEX
+	}
+
+	option = {
+		name = unionstate.205.a
+		set_cosmetic_tag = TEX_pelican
+	}
+	option = {
+		name = unionstate.205.b
+		set_cosmetic_tag = TEX_louisiana_red_star
+	}
+	option = {
+		name = unionstate.205.c
+		set_cosmetic_tag = TEX_louisiana_secession
+	}
+	option = {
+		name = unionstate.205.e
+		set_cosmetic_tag = TEX_eagle
+	}
+	option = {
+		name = unionstate.205.f
+		set_cosmetic_tag = TEX_standard
+	}
+	option = {
+		name = unionstate.205.g
+		
 	}
 }
