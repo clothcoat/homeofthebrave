@@ -5376,7 +5376,7 @@ focus_tree = {
 	# Military
 	focus = {#The Second Continental Army
 		id = CSA_second_continental_army
-		icon = GFX_goal_Workers_Paradise
+		icon = GFX_goal_CSA_continental_army
 		cost = 5
 		x = 62
 		y = 0
@@ -6396,7 +6396,7 @@ focus_tree = {
 	}
 	focus = {
 		id = CSA_second_continental_navy
-		icon = GFX_goal_navy_decision
+		icon = GFX_goal_CSA_continental_navy
 		available = { any_owned_state = { is_coastal = yes} }
 		relative_position_id = CSA_the_long_haul
 		x = 59
@@ -6863,7 +6863,7 @@ focus_tree = {
 	####Air Force
 	focus = {#
 		id = CSA_red_air_force
-		icon = GFX_goal_generic_air_bomber
+		icon = GFX_goal_CSA_continental_airforce
 		cost = 5
 		x = 53
 		y = 6
