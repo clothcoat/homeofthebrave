@@ -931,6 +931,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus WCC_entente_relations"
+			add_opinion_modifier = { target = CAN modifier = large_increase }
 		}
 	}
 	
@@ -1070,7 +1071,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus WCC_pension_subsidies"
 			swap_ideas = {
-			remove_idea = WCC_vet_affairs
+			remove_idea = WCC_vet_affairs_idea
 			add_idea = WCC_vet_affairs_2
 			}
 			add_popularity = { ideology = authoritarian_democrat popularity = 0.05 }
