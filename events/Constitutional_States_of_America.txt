@@ -4113,8 +4113,8 @@ country_event = {
 	
 	trigger = {
 		OR = {
-		has_government = paternal_autocrat
-		has_government - national_populist
+			has_government = paternal_autocrat
+			has_government = national_populist
 		}
 		has_country_flag = {
 			flag = ACW_black_nationalist_resistance

@@ -5,6 +5,50 @@
 
 add_namespace = unionstate
 
+country_event = {###Our Flag
+	id = unionstate.205
+	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.205"}
+	title = unionstate.205.t
+	desc = unionstate.205.d
+	picture = GFX_report_event_USA_american_brigade
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = TEX
+	}
+
+	option = {
+		
+		name = unionstate.205.a
+		set_cosmetic_tag = TEX_pelican
+	}
+	option = {
+		
+		name = unionstate.205.b
+		set_cosmetic_tag = TEX_louisiana_red_star
+	}
+	option = {
+		
+		name = unionstate.205.c
+		set_cosmetic_tag = TEX_louisiana_secession
+	}
+	option = {
+		
+		name = unionstate.205.e
+		set_cosmetic_tag = TEX_eagle
+	}
+	option = {	
+		
+		name = unionstate.205.f
+		set_cosmetic_tag = TEX_standard
+	}
+	option = {
+		name = unionstate.205.g
+		
+	}
+}
+
 ### internal conflict stuff 1 - 10 ###
 country_event = { # The American Legion Appointment
 	id = unionstate.1
@@ -759,7 +803,7 @@ country_event = { # AUS Election
 		hidden_effect = {
 		set_country_flag = AUS_election_occured
 		set_country_flag = NPP_Victory
-		set_cosmetic_tag = TEX_not nazis
+		set_cosmetic_tag = TEX_not_nazis
 		}
 	}
 	option = { # Christian Party
@@ -3901,41 +3945,3 @@ country_event = { # Federalist terrorism - factory sabotaged
 	}
 }
 
-country_event = {###Our Flag
-	id = unionstate.205
-	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.205"}
-	title = unionstate.205.t
-	desc = unionstate.205.d
-	picture = GFX_report_event_USA_american_brigade
-
-	fire_only_once = yes
-	
-	trigger = {
-		tag = TEX
-	}
-
-	option = {
-		name = unionstate.205.a
-		set_cosmetic_tag = TEX_pelican
-	}
-	option = {
-		name = unionstate.205.b
-		set_cosmetic_tag = TEX_louisiana_red_star
-	}
-	option = {
-		name = unionstate.205.c
-		set_cosmetic_tag = TEX_louisiana_secession
-	}
-	option = {
-		name = unionstate.205.e
-		set_cosmetic_tag = TEX_eagle
-	}
-	option = {
-		name = unionstate.205.f
-		set_cosmetic_tag = TEX_standard
-	}
-	option = {
-		name = unionstate.205.g
-		
-	}
-}
