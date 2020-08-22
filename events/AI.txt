@@ -382,6 +382,8 @@ country_event = {
 			country_exists = CSA
 			country_exists = TEX
 			country_exists = CAL
+			country_exists = COR
+			country_exists = BBR
 		}
 		is_subject = no
 		NOT = {
@@ -389,6 +391,9 @@ country_event = {
 			tag = CSA
 			tag = TEX
 			tag = CAL
+			tag = COR
+			tag = WCC
+			tag = BBR
 			tag = PAR
 			has_socialist_government = yes
 			has_government = national_populist
@@ -399,10 +404,6 @@ country_event = {
 		OR = {
 			NOT = { tag = JAP }
 			NOT = { country_exists = CAL }
-		}
-		OR = {
-			NOT = { tag = GER }
-			NOT = { country_exists = TEX }
 		}
 		NOT = {
 			AND = {
@@ -418,6 +419,10 @@ country_event = {
 			AND = {
 				has_country_flag = sent_volunteers_CAL
 				country_exists = CAL
+			}
+			AND = {
+				has_country_flag = sent_volunteers_COR
+				country_exists = COR
 			}
 			AND = {
 				tag = CAN
@@ -447,7 +452,7 @@ country_event = {
 	}
 
 	mean_time_to_happen = {
-		days = 10
+		days = 20
 	}
 
 	option = {
@@ -460,6 +465,10 @@ country_event = {
 				any_allied_country = {
 					has_country_flag = sent_volunteers_USA
 				}
+			}
+			modifier = {
+				factor = 0
+				tag = GER
 			}
 		}
 		USA = { save_event_target_as = volunteer_target }
@@ -500,6 +509,8 @@ country_event = {
 			country_exists = USA
 			country_exists = TEX
 			country_exists = CAL
+			country_exists = COR
+			country_exists = WCC
 		}
 		has_socialist_government = yes
 		is_subject = no
@@ -508,6 +519,9 @@ country_event = {
 			tag = CSA
 			tag = TEX
 			tag = CAL
+			tag = COR
+			tag = WCC
+			tag = BBR
 			has_country_flag = sent_volunteers_CSA
 			has_country_flag = no_CSA_intervention
 			AND = {
@@ -521,6 +535,10 @@ country_event = {
 			AND = {
 				has_country_flag = sent_volunteers_CAL
 				country_exists = CAL
+			}
+			AND = {
+				has_country_flag = sent_volunteers_COR
+				country_exists = COR
 			}
 		}
 		OR = {
@@ -539,7 +557,7 @@ country_event = {
 	}
 
 	mean_time_to_happen = {
-		days = 10
+		days = 20
 	}
 
 	option = {
@@ -594,21 +612,27 @@ country_event = {
 	trigger = {
 		is_ai = yes #AI Only
 		country_exists = TEX #TEX must exist
-		num_divisions > 10
-		num_of_factories > 10
+		OR = {
+			AND = {
+				num_divisions > 10
+				num_of_factories > 10
+			}
+			AND = {
+				num_divisions > 5
+				num_of_factories > 5
+				is_in_north_america = yes
+				is_in_south_america = yes				
+			}
+		}
 		OR = {
 			country_exists = USA
 			country_exists = CSA
 			country_exists = CAL
+			country_exists = COR
+			country_exists = WCC			
 		}
+		has_socialist_government = no
 		is_subject = no
-		OR = {
-			has_government = national_populist
-			AND = {
-				tag = GER
-				has_socialist_government = no
-			}
-		}
 		OR = {
 			NOT = { tag = JAP }
 			NOT = { country_exists = CAL }
@@ -618,6 +642,9 @@ country_event = {
 			tag = CSA
 			tag = TEX
 			tag = CAL
+			tag = COR
+			tag = WCC
+			tag = BBR
 			AND = {
 				has_country_flag = sent_volunteers_CSA
 				country_exists = CSA
@@ -625,6 +652,10 @@ country_event = {
 			AND = {
 				has_country_flag = sent_volunteers_USA
 				country_exists = USA
+			}
+			AND = {
+				has_country_flag = sent_volunteers_COR
+				country_exists = COR
 			}
 			has_country_flag = sent_volunteers_TEX
 			has_country_flag = no_TEX_intervention
@@ -660,7 +691,7 @@ country_event = {
 	}
 
 	mean_time_to_happen = {
-		days = 10
+		days = 20
 	}
 
 	option = {
@@ -672,6 +703,12 @@ country_event = {
 				is_in_faction = yes
 				any_allied_country = {
 					has_country_flag = sent_volunteers_TEX
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					tag = JAP
 				}
 			}
 		}
@@ -693,14 +730,155 @@ country_event = {
 			}
 			modifier = {
 				factor = 0
-				OR = {
-					tag = CAN
-					tag = GER
-				}
+				tag = GER
+				NOT = { has_country_flag = sent_volunteers_COR }
 			}
 		}
 	}
 }
+
+##Constitutional##
+country_event = {
+	id = ai_events.601
+	immediate = { log = "[GetDateText]: [Root.GetName]: event ai_events.601" }
+	hidden = yes
+
+	trigger = {
+		is_ai = yes #AI Only
+		country_exists = COR #COR must exist
+		OR = {
+			AND = {
+				num_divisions > 10
+				num_of_factories > 10
+			}
+			tag = SAF
+		}
+		OR = {
+			country_exists = USA
+			country_exists = CSA
+			country_exists = CAL
+			country_exists = BBR
+			country_exists = WCC
+		}
+		is_subject = no
+		has_socialist_government = no
+		OR = {
+			NOT = { tag = JAP }
+			NOT = { country_exists = CAL }
+		}
+		NOT = {
+			tag = USA
+			tag = CSA
+			tag = TEX
+			tag = CAL
+			tag = COR
+			tag = WCC
+			tag = BBR
+			has_government = social_democrat
+			has_government = social_liberal
+			has_government = market_liberal
+			AND = {
+				has_country_flag = sent_volunteers_CSA
+				country_exists = CSA
+			}
+			AND = {
+				has_country_flag = sent_volunteers_USA
+				country_exists = USA
+			}
+			has_country_flag = sent_volunteers_COR
+			has_country_flag = no_COR_intervention
+			AND = {
+				has_country_flag = sent_volunteers_CAL
+				country_exists = CAL
+			}
+			AND = {
+				has_country_flag = sent_volunteers_COR
+				country_exists = COR
+			}
+			AND = {
+				tag = CAN
+				NOT = { has_country_flag = CAN_supports_COR }
+			}
+			AND = {
+				NOT = { tag = CAN }
+				NOT = { tag = SAF }
+				CAN = {
+					is_in_faction_with = ROOT
+					NOT = { has_country_flag = sent_volunteers_COR }
+				}
+			}
+		}
+		OR = {
+			any_owned_state = { is_coastal = yes }
+			is_in_north_america = yes
+			is_in_south_america = yes
+		}
+		OR = {
+			tag = SAF
+			is_actual_major = yes
+			var:faction_leader = {
+				has_country_flag = sent_volunteers_COR
+			}
+			is_in_north_america = yes
+			is_in_south_america = yes
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 20
+	}
+
+	option = {
+		name = sprc.101.a
+		ai_chance = {
+			factor = 80
+			modifier = { #Faction member supports them
+				factor = 1.25
+				is_in_faction = yes
+				any_allied_country = {
+					has_country_flag = sent_volunteers_COR
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					tag = JAP
+					tag = BRA
+				}
+			}
+		}
+		COR = { save_event_target_as = volunteer_target }
+		send_volunteers_to_TARGET = yes
+		add_political_power = -50
+	}
+	option = {
+		name = sprc.101.b
+		set_country_flag = no_COR_intervention
+		ai_chance = {
+			factor = 20
+			modifier = { #Faction member does not support
+				factor = 1.25
+				is_in_faction = yes
+				any_allied_country = {
+					has_country_flag = no_COR_intervention
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					tag = CAN
+					tag = SAF
+				}
+			}
+			modifier = {
+				factor = 0
+				tag = GER
+				NOT = { has_country_flag = sent_volunteers_TEX }
+			}
+		}
+	}
+}
+
 ##California##
 country_event = {
 	id = ai_events.7
@@ -717,6 +895,8 @@ country_event = {
 				has_war_with = USA
 				has_war_with = CSA
 				has_war_with = TEX
+				has_war_with = COR
+				has_war_with = WCC
 			}
 		}
 		is_subject = no
@@ -743,6 +923,9 @@ country_event = {
 			tag = CSA
 			tag = TEX
 			tag = CAL
+			tag = COR
+			tag = WCC
+			tag = BBR
 			tag = PAR
 			AND = {
 				has_country_flag = sent_volunteers_CSA
@@ -755,6 +938,10 @@ country_event = {
 			AND = {
 				has_country_flag = sent_volunteers_TEX
 				country_exists = TEX
+			}
+			AND = {
+				has_country_flag = sent_volunteers_COR
+				country_exists = COR
 			}
 			has_country_flag = sent_volunteers_CAL
 			has_country_flag = no_CAL_intervention
@@ -786,7 +973,7 @@ country_event = {
 	}
 
 	mean_time_to_happen = {
-		days = 10
+		days = 20
 	}
 
 	option = {
@@ -825,6 +1012,276 @@ country_event = {
 				}
 			}
 		}
+	}
+}
+
+##BBR (socialist)##
+country_event = {
+	id = ai_events.602
+	immediate = { log = "[GetDateText]: [Root.GetName]: event ai_events.602" }
+	hidden = yes
+
+	trigger = {
+		is_ai = yes #AI Only
+		country_exists = BBR #BBR must exist
+		BBR = { has_socialist_government = yes }
+		num_divisions > 10
+		num_of_factories > 10
+		OR = {
+			country_exists = USA
+			country_exists = TEX
+			country_exists = CAL
+			country_exists = COR
+			country_exists = WCC
+		}
+		has_socialist_government = yes
+		is_subject = no
+		NOT = {
+			tag = USA
+			tag = CSA
+			tag = TEX
+			tag = CAL
+			tag = COR
+			tag = WCC
+			tag = BBR
+			AND = {
+				has_country_flag = sent_volunteers_USA
+				country_exists = USA
+			}
+			AND = {
+				has_country_flag = sent_volunteers_TEX
+				country_exists = TEX
+			}
+			AND = {
+				has_country_flag = sent_volunteers_CAL
+				country_exists = CAL
+			}
+			AND = {
+				has_country_flag = sent_volunteers_COR
+				country_exists = COR
+			}
+			AND = {
+				has_country_flag = sent_volunteers_BBR
+				country_exists = BBR
+			}
+		}
+		OR = {
+			any_owned_state = { is_coastal = yes }
+			is_in_north_america = yes
+			is_in_south_america = yes
+		}
+		OR = {
+			is_actual_major = yes
+			is_in_north_america = yes
+			is_in_south_america = yes
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 5
+	}
+
+	option = {
+		name = sprc.101.a
+		ai_chance = {
+			factor = 40
+			modifier = { #Faction member supports them
+				factor = 1.25
+				is_in_faction = yes
+				any_allied_country = {
+					OR = {
+						has_country_flag = sent_volunteers_CSA
+						has_country_flag = sent_volunteers_BBR
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				tag = SRI
+				OR = {
+					country_exists = ITA
+					country_exists = SIC
+				}
+			}
+		}
+		BBR = { save_event_target_as = volunteer_target }
+		send_volunteers_to_TARGET = yes
+		add_political_power = -50
+	}
+	option = {
+		name = sprc.101.b
+		set_country_flag = no_BBR_intervention
+		ai_chance = {
+			factor = 40
+			modifier = { #Faction member does not support
+				factor = 1.25
+				is_in_faction = yes
+				any_allied_country = {
+					has_country_flag = no_BBR_intervention
+				}
+			}
+			modifier = { #Faction member does not support
+				factor = 0
+				is_in_north_america = yes
+				is_in_south_america = yes
+			}
+		}
+	}
+}
+
+##BBR (liberal/nationalist)##
+country_event = {
+	id = ai_events.603
+	immediate = { log = "[GetDateText]: [Root.GetName]: event ai_events.603" }
+	hidden = yes
+
+	trigger = {
+		is_ai = yes #AI Only
+		country_exists = BBR #BBR must exist
+		BBR = { has_socialist_government = no }
+		num_divisions > 10
+		num_of_factories > 10
+		BBR = {
+			OR = {
+				has_war_with = USA
+				has_war_with = CSA
+				has_war_with = TEX
+				has_war_with = COR
+				has_war_with = WCC
+			}
+		}
+		is_subject = no
+		OR = {
+			AND = {
+				tag = JAP
+				has_socialist_government = no
+			}
+			NOT = { country_exists = USA }
+		}
+		NOT = {
+			tag = USA
+			tag = CSA
+			tag = TEX
+			tag = CAL
+			tag = COR
+			tag = WCC
+			tag = BBR
+			tag = PAR
+			
+			AND = {
+				has_country_flag = sent_volunteers_USA
+				country_exists = USA
+			}
+			AND = {
+				has_country_flag = sent_volunteers_TEX
+				country_exists = TEX
+			}
+			AND = {
+				has_country_flag = sent_volunteers_COR
+				country_exists = COR
+			}
+			AND = {
+				has_country_flag = sent_volunteers_BBR
+				country_exists = BBR
+			}
+			AND = {
+				tag = CAN
+				has_country_flag = CAN_supports_COR
+			}
+			AND = {
+				NOT = { tag = CAN }
+				CAN = {
+					is_in_faction_with = ROOT
+					has_country_flag = sent_volunteers_COR
+				}
+			}
+		}
+		OR = {
+			any_owned_state = { is_coastal = yes }
+			is_in_north_america = yes
+			is_in_south_america = yes
+		}
+		OR = {
+			is_actual_major = yes
+			is_in_north_america = yes
+			is_in_south_america = yes
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 5
+	}
+
+	option = {
+		name = sprc.101.a
+		ai_chance = {
+			factor = 30
+			modifier = { #Faction member supports them
+				factor = 1.25
+				is_in_faction = yes
+				any_allied_country = {
+					has_country_flag = sent_volunteers_BBR
+				}
+			}
+		}
+		BBR = { save_event_target_as = volunteer_target }
+		send_volunteers_to_TARGET = yes
+		add_political_power = -50
+	}
+	option = {
+		name = sprc.101.b
+		set_country_flag = no_CAL_intervention
+		ai_chance = {
+			factor = 70
+			modifier = { #Faction member does not support
+				factor = 1.25
+				is_in_faction = yes
+				any_allied_country = {
+					has_country_flag = no_BBR_intervention
+				}
+			}
+			modifier = {
+				factor = 0
+				tag = JAP
+			}
+		}
+	}
+}
+
+##BBR (cancel socialist lend-lease)##
+country_event = {
+	id = ai_events.604
+	immediate = { log = "[GetDateText]: [Root.GetName]: event ai_events.604" }
+	hidden = yes
+
+	trigger = {
+		is_ai = yes #AI Only
+		country_exists = BBR #BBR must exist
+		has_socialist_government = yes
+		BBR = { has_socialist_government = no }
+		BBR = {
+			OR = {
+				has_war_with = USA
+				has_war_with = CSA
+				has_war_with = TEX
+				has_war_with = COR
+				has_war_with = WCC
+			}
+		}
+		is_subject = no
+
+		has_country_flag = sent_volunteers_BBR
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = sprc.101.a
+		clear_volunteers_to_TARGET = yes
+		add_political_power = 50
+		clr_country_flag = sent_volunteers_BBR
 	}
 }
 
