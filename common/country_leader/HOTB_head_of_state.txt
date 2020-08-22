@@ -41,10 +41,10 @@ leader_traits = {
 			factor = 1
 		}
 	}	
-	klan_reformer = { #Evans
+	power_hungry = { #Evans
 		random = no
-		political_power_gain = -0.05
-		stability_factor = 0.05
+		political_power_gain = 0.05
+		stability_factor = -0.05
 
 		ai_will_do = {
 			factor = 1
