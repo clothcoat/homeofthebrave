@@ -6169,6 +6169,9 @@ country_event = { # Radical Split
 			elections_allowed = yes
 		}
 		set_country_flag = NEE_sentinels
+		hidden_effect = {
+			set_cosmetic_tag = NEE_national_populist_ancap
+		}
 	}
 	option = { # Great
 		ai_chance = {
@@ -6188,6 +6191,9 @@ country_event = { # Radical Split
 			days = 4
 		}
 		set_country_flag = NEE_remnant_victory
+		hidden_effect = {
+			set_cosmetic_tag = NEE_paternal_autocrat_ancap
+		}
 	}
 }
 
