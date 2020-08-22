@@ -8465,6 +8465,9 @@ country_event = {# Boden Removed
 		add_to_faction = CAL
 		}
 		add_stability = 0.08
+		hidden_effect = {
+			set_cosmetic_tag = CAL_jap_3
+		}
 	}
 	option = {# Ralph Townsend
 		name = pacificstates.358.b
@@ -8486,6 +8489,9 @@ country_event = {# Boden Removed
 		JAP = {
 		add_political_power = 40
 		add_to_faction = CAL
+		}
+		hidden_effect = {
+			set_cosmetic_tag = CAL_jap_2
 		}
 	}
 	option = {# Kichisaburo Nomura
@@ -8522,6 +8528,9 @@ country_event = {# Boden Removed
 			type = infantry_equipment
 			amount = -2200
 			producer = CAL
+		}
+		hidden_effect = {
+			set_cosmetic_tag = CAL_jap_1
 		}
 	}
 }
@@ -8664,6 +8673,7 @@ country_event = {# Long Returns
 			ideology = social_democrat_subtype
 			traits = {}
 		}
+		remove_all_ministers = yes
 		hidden_effect = {
 			add_ideas = CAL_Huey_Long_hog_sde
 			add_ideas = CAL_Ralph_Johnson_Bunche_for_sde
@@ -8677,7 +8687,8 @@ country_event = {# Long Returns
 			ruling_party = social_democrat
 			election_frequency = 48
 			elections_allowed = yes
-		}		
+		}	
+		remove_all_ministers = yes
 		hidden_effect = {
 			add_ideas = CAL_Henry_Wallace_hog_sde
 			add_ideas = CAL_Ralph_Johnson_Bunche_for_sde
@@ -8690,7 +8701,7 @@ country_event = {# Long Returns
 		}
 	}
 }
-	country_event = {# Long's Head of State
+country_event = {# Long's Head of State
 	id = pacificstates.4001
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.4001"}
 	title = pacificstates.4001.t
@@ -8706,7 +8717,8 @@ country_event = {# Long Returns
 			ruling_party = social_democrat
 			election_frequency = 48
 			elections_allowed = yes
-		}			
+		}
+		remove_all_ministers = yes		
 		hidden_effect = {
 			add_ideas = CAL_Henry_Wallace_hog_sde
 			add_ideas = CAL_Ralph_Johnson_Bunche_for_sde
@@ -8720,7 +8732,8 @@ country_event = {# Long Returns
 			ruling_party = social_democrat
 			election_frequency = 48
 			elections_allowed = yes
-		}		
+		}
+		remove_all_ministers = yes		
 		hidden_effect = {
 			add_ideas = CAL_Hiram_Johnson_hog_sli
 			add_ideas = CAL_Ralph_Johnson_Bunche_for_sde
@@ -8735,6 +8748,7 @@ country_event = {# Long Returns
 			election_frequency = 48
 			elections_allowed = yes
 		}		
+		remove_all_ministers = yes
 		hidden_effect = {
 			add_ideas = CAL_Huey_Long_hog_sde
 			add_ideas = CAL_Ralph_Johnson_Bunche_for_sde
@@ -8748,7 +8762,8 @@ country_event = {# Long Returns
 			ruling_party = social_democrat
 			election_frequency = 48
 			elections_allowed = yes
-		}		
+		}
+		remove_all_ministers = yes
 		hidden_effect = {
 			add_ideas = CAL_Henry_Wallace_hog_sde
 			add_ideas = CAL_Ralph_Johnson_Bunche_for_sde
@@ -8756,3 +8771,27 @@ country_event = {# Long Returns
 			add_ideas = CAL_Konrad_Knute_Solberg_sec_sde
 		}
 	}
+}
+country_event = {# RadSoc Flag
+	id = pacificstates.4003
+	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.4003"}
+	title = pacificstates.4003.t
+	desc = pacificstates.4003.d
+	picture = GFX_report_event_USA_american_brigade
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = CAL
+		has_government = radical_socialist
+	}
+
+
+	option = {# Current Flag
+		name = pacificstates.4003.a
+		
+	}
+	option = {# Bee Design
+		set_cosmetic_tag = CAL_radical_socialist_2
+	}
+}
