@@ -1188,6 +1188,18 @@ focus_tree = {
 			days = 10
 			}
 		}
+		hidden_effect = {
+			country_event = {
+			id = constate.46
+			days = 20
+			}
+		}
+		hidden_effect = {
+			country_event = {
+			id = constate.39
+			days = 31
+			}
+		}
 		}
 		cancel_if_invalid = yes
 		available_if_capitulated = yes
@@ -1232,6 +1244,12 @@ focus_tree = {
 				uses = 2
 				category = industry
 			}
+			hidden_effect = {
+			country_event = {
+			id = constate.42
+			days = 10
+				}
+			}
 		}
 	}
 	
@@ -1258,6 +1276,18 @@ focus_tree = {
 			add_ideas = COR_pinkerton
 			add_stability = 0.02
 			add_political_power = 25
+			hidden_effect = {
+			country_event = {
+			id = constate.44
+			days = 35
+				}
+			}
+			hidden_effect = {
+			country_event = {
+			id = constate.45
+			days = 70
+				}
+			}
 		}
 	}
 
@@ -1289,18 +1319,23 @@ focus_tree = {
 	focus = {# Corporate Alliance
 		id = COR_coprotate_militarism
 		icon = GFX_goal_COR_corporate_alliance
-		cost = 7.25
+		cost = 6.25
 		prerequisite = {
 			focus = COR_national_corporatism
 		}
 		prerequisite = {
 			focus = COR_fordism
 		}
-		available = {
-			has_idea = COR_military_industrial_complex_idea1
-		}
 		ai_will_do = {
 			factor = 4
+		}
+		select_effect = {
+		hidden_effect = {
+			country_event = {
+			id = constate.47
+			days = 20
+				}
+			}
 		}
 		relative_position_id = COR_the_lone_eagle
 		x = 0
@@ -1327,7 +1362,7 @@ focus_tree = {
 	focus = {# Corporate Militarism
 		id = COR_banking_act
 		icon = GFX_goal_munitions_factories
-		cost = 7.25
+		cost = 6.25
 		prerequisite = {
 			focus = COR_coprotate_militarism
 		}
@@ -1639,6 +1674,14 @@ focus_tree = {
 		available = {
 			has_government = paternal_autocrat
 		}
+		select_effect = {
+		hidden_effect = {
+			country_event = {
+			id = constate.38
+			days = 30
+			}
+		}
+		}
 		cancel_if_invalid = yes
 		available_if_capitulated = yes
 		relative_position_id = COR_the_lone_eagle
@@ -1802,7 +1845,16 @@ focus_tree = {
 		y = 9
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_republic_without_democracy"
-			remove_ideas = USA_civil_war_aftermath_idea5
+			add_political_power = 100
+			add_stability = 0.1
+			add_popularity = { ideology = paternal_autocrat popularity = 0.05 }
+			add_command_power = 20
+			hidden_effect = {
+			country_event = {
+			id = constate.41
+			days = 1
+				}
+			}
 		}
 	}
 
