@@ -3337,6 +3337,12 @@ focus_tree = {
 			}
 			add_popularity = { ideology = authoritarian_democrat popularity = 0.08 }
 			add_stability = 0.05
+			hidden_effect = {
+			country_event = {
+			id = bbr.5100
+			days = 65
+				}
+			}
 		}
 	}
 	focus = {# National Projects
@@ -3636,6 +3642,12 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			hidden_effect = {
+			country_event = {
+				id = bbr.51
+				days = 3
+				}
+			}
 		}
 	}
 	focus = {# Freedom Budget
@@ -3816,6 +3828,12 @@ focus_tree = {
 					type = industrial_complex
 					level = 1
 					instant_build = yes
+				}
+			}
+			hidden_effect = {
+			country_event = {
+			id = bbr.5100
+			days = 55
 				}
 			}
 		}
@@ -4326,6 +4344,12 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			hidden_effect = {
+			country_event = {
+			id = bbr.5100
+			days = 80
+				}
+			}
 		}
 	}
 	focus = {# Incorporate Whites
@@ -4607,6 +4631,12 @@ focus_tree = {
 			add_popularity = { ideology = syndicalist popularity = -0.03 }
 			add_popularity = { ideology = paternal_autocrat popularity = -0.03 }
 			add_popularity = { ideology = national_populist popularity = -0.03 }
+			hidden_effect = {
+			country_event = {
+				id = bbr.5500
+				days = 15
+				}
+			}
 			add_equipment_to_stockpile = {
 			type = infantry_equipment_1
 			amount = 120
@@ -4697,6 +4727,12 @@ focus_tree = {
 			add_popularity = { ideology = syndicalist popularity = -0.04 }
 			add_popularity = { ideology = social_liberal popularity = 0.05 }
 			add_stability = 0.05
+			hidden_effect = {
+			country_event = {
+			id = bbr.5100
+			days = 100
+				}
+			}
 		}
 	}
 	focus = {# Attack Idleness
@@ -5105,6 +5141,12 @@ focus_tree = {
 			remove_idea = BBR_economic_independence_idea
 			add_idea = BBR_economic_independence_idea_2
 			}
+			hidden_effect = {
+			country_event = {
+			id = bbr.5100
+			days = 200
+				}
+			}
 		}
 	}
 	focus = {# Anti-Corruption
@@ -5149,6 +5191,12 @@ focus_tree = {
 			add_war_support = -0.1
 			add_stability = 0.05
 			add_popularity = { ideology = social_conservative popularity = 0.03 }
+			hidden_effect = {
+			country_event = {
+			id = bbr.52
+			days = 45
+				}
+			}
 		}
 	}
 	focus = {# MegaChurches

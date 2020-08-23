@@ -2919,3 +2919,312 @@ country_event = { # Entente Alliance
 	add_political_power = -10
 	}
 }
+
+country_event = { # Rise of Jazz
+	id = bbr.49
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.49"}
+	title = bbr.49.t
+	desc = bbr.49.d
+	
+	picture = GFX_report_event_generic_diplomacy1
+
+	trigger = {
+	tag = BBR
+	OR = {
+	has_government = radical_socialist
+	has_government = social_democrat
+	has_government = social_liberal
+	has_government = market_liberal
+	has_government = social_conservative
+	has_government = authoritarian_democrat
+	has_government = paternal_autocrat
+		}
+	BBR = {
+	has_war = no
+	}
+	}
+	
+	mean_time_to_happen = {
+	days = 800
+	}
+	
+	fire_only_once = yes
+	
+	option = { #Interesting
+	name = bbr.49.a
+	add_political_power = 5
+	add_popularity = { ideology = social_liberal popularity = 0.01 }
+	}
+	option = { #Denounce it
+	name = bbr.49.b
+	trigger = {
+	OR = {
+	has_government = social_conservative 
+	has_government = paternal_autocrat
+		}
+	add_popularity = { ideology = social_conservative popularity = 0.01 }
+	add_popularity = { ideology = paternal_autocrat popularity = 0.01 }
+		}
+	}
+}
+
+country_event = { # Interest in Creole Spikes
+	id = bbr.50
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.50"}
+	title = bbr.50.t
+	desc = bbr.50.d
+	
+	picture = GFX_report_event_generic_diplomacy1
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #Of course
+	name = bbr.50.a
+	add_political_power = -5
+	add_popularity = { ideology = social_democrat popularity = 0.01 }
+	add_stability = 0.01
+	}
+	option = { #No
+	name = bbr.50.b
+	}
+}
+
+country_event = { # Robeson Demands a Seat
+	id = bbr.51
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.51"}
+	title = bbr.51.t
+	desc = bbr.51.d
+	
+	picture = GFX_report_event_generic_diplomacy1
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #Bring him in
+	name = bbr.51.a
+	add_political_power = -20
+	add_popularity = { ideology = syndicalist popularity = 0.03 }
+	add_stability = 0.02
+	add_war_support = 0.05
+	add_manpower = 1120
+	}
+	option = { #He's too radical
+	name = bbr.51.b
+	add_popularity = { ideology = syndicalist popularity = -0.02 }
+	add_stability = -0.03
+	add_war_support = -0.01
+	}
+}
+
+country_event = { # IWIU Shrinks
+	id = bbr.5100
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.5100"}
+	title = bbr.5100.t
+	desc = bbr.5100.d
+	
+	picture = GFX_report_event_generic_diplomacy1
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #Great
+	name = bbr.5100.a
+	add_political_power = 10
+	add_popularity = { ideology = syndicalist popularity = -0.02 }
+	add_popularity = { ideology = totalist popularity = -0.02 }
+	add_stability = 0.03
+	}
+}
+
+
+country_event = { # Praise from Brazil
+	id = bbr.52
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.52"}
+	title = bbr.52.t
+	desc = bbr.52.d
+	
+	picture = GFX_report_event_generic_diplomacy1
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #No
+	name = bbr.52.a
+	add_opinion_modifier = { target = BRA modifier = small_increase }
+	BRA = {
+		add_opinion_modifier = { target = BBR modifier = medium_increase }
+		}
+	}
+	option = { #Ask for a non-aggression Pact
+	name = bbr.52.b
+	BRA = {
+	country_event = {
+		id = bbr.55
+		days = 1
+			}
+	add_opinion_modifier = { target = BBR modifier = small_increase }
+		}
+	}
+	option = { #We should enter an alliance
+	name = bbr.52.c
+	BRA = {
+	country_event = {
+		id = bbr.54
+		days = 1
+			}
+	add_opinion_modifier = { target = BBR modifier = small_increase }
+		}
+	}
+}
+
+country_event = { # Brazil Accepts
+	id = bbr.53
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.53"}
+	title = bbr.53.t
+	desc = bbr.53.d
+	
+	picture = GFX_report_event_generic_diplomacy1
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #Damn
+	name = bbr.53.a
+	add_political_power = 10
+	}
+}
+
+country_event = { # Brazil Declines
+	id = bbr.5300
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.5300"}
+	title = bbr.5300.t
+	desc = bbr.5300.d
+	
+	picture = GFX_report_event_generic_diplomacy1
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #Damn
+	name = bbr.5300.a
+	add_political_power = -10
+	}
+}
+
+country_event = { # Black Belt requests an alliance
+	id = bbr.54
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.54"}
+	title = bbr.54.t
+	desc = bbr.54.d
+	
+	picture = GFX_report_event_generic_diplomacy1
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #Accept
+	name = bbr.54.a
+	BBR = {
+		add_to_faction = BRA
+		country_event = {
+			id = bbr.53
+			days = 1
+			}
+		}
+	}
+	option = { #Decline
+	name = bbr.54.b
+	country_event = {
+		id = bbr.5300
+		days = 1
+		}
+	}
+}
+
+country_event = { # Black Belt requests a non-aggression pact
+	id = bbr.55
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.55"}
+	title = bbr.55.t
+	desc = bbr.55.d
+	
+	picture = GFX_report_event_generic_diplomacy1
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #Accept
+	name = bbr.55.a
+	diplomatic_relation = {
+    country = BBR
+    relation = non_aggression_pact
+    active = yes
+		}
+	BBR = {
+	country_event = {
+		id = bbr.53
+		days = 1
+			}
+		}
+	}
+	option = { #Decline
+	name = bbr.55.b
+	country_event = {
+		id = bbr.5300
+		days = 1
+		}
+	}
+}
+
+country_event = { # NOI base destroyed
+	id = bbr.5500
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.5500"}
+	title = bbr.5500.t
+	desc = bbr.5500.d
+	
+	picture = GFX_report_event_generic_diplomacy1
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { #Accept his deal
+	name = bbr.5500.a
+	add_popularity = { ideology = national_populist popularity = 0.02 }
+	}
+	option = { #Refuse his deal
+	name = bbr.5500.b
+	add_political_power = -10
+	add_popularity = { ideology = national_populist popularity = -0.01 }
+	add_manpower = -75
+	add_stability = -0.01
+	}
+}
+
+country_event = { # Haywood's Fosterites Retreat
+	id = bbr.56
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.56"}
+	title = bbr.56.t
+	desc = bbr.56.d
+	
+	picture = GFX_report_event_generic_diplomacy1
+
+	trigger = {
+	OR = {
+		has_government = social_conservative
+		has_government = social_liberal
+		has_government = market_liberal
+		has_government = social_democrat
+		}
+	}
+	
+	mean_time_to_happen = {
+	days = 100
+	}
+	fire_only_once = yes
+	
+	option = { #Good
+	name = bbr.56.a
+	add_stability = 0.02
+	add_popularity = { ideology = totalist popularity = -0.02 }
+	}
+}
