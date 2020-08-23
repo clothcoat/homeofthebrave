@@ -384,7 +384,18 @@ focus_tree = {
 		complete_tooltip = {}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NEE_elite_contracts"
-			add_offsite_building = { type = industrial_complex level = 2 }
+			random_owned_state = {
+				limit = {
+					is_core_of = NEE
+					is_controlled_by = NEE
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
 			hidden_effect = {
 			country_event = {
 			id = newengland.111
@@ -707,7 +718,7 @@ focus_tree = {
 		available_if_capitulated = no
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NEE_st_lawrence_seaway"
-			796 = {
+			NEE = {
 				add_building_construction = {
 					type = infrastructure
 					level = 2
@@ -1626,16 +1637,16 @@ focus_tree = {
 		available_if_capitulated = no
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NEE_housing_expansion"
-			random_owned_state = {
+			random_owned_controlled_state = {
 				add_extra_state_shared_building_slots = 1
 			}
-			random_owned_state = {
+			random_owned_controlled_state = {
 				add_extra_state_shared_building_slots = 1
 			}
-			random_owned_state = {
+			random_owned_controlled_state = {
 				add_extra_state_shared_building_slots = 1
 			}
-			random_owned_state = {
+			random_owned_controlled_state = {
 				add_extra_state_shared_building_slots = 1
 			}
 		}
@@ -6453,16 +6464,12 @@ focus_tree = {
 		complete_tooltip = {}
 		completion_reward = {
 			NEE = {
-				add_opinion_modifier = {
-					target = NFA
-					modifier = NEE_backed_us
-				}
-				add_opinion_modifier = {
-					target = FRA
-					modifier = NEE_back_french_two
+				add_opinion_modifier = { target = NFA modifier = large_increase }
+			NFA = {
+				add_opinion_modifier = { target = NEE modifier = large_increase }
 				}
 			}
-			add_political_power = 100
+			add_political_power = 20
 		}
 	}
 	focus = {# Join ISAC
@@ -6601,7 +6608,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		complete_tooltip = {}
 		completion_reward = {
-			add_manpower = 250000
+			add_manpower = 25000
 		}
 	}
 	focus = {# Armed Free Neutrality
