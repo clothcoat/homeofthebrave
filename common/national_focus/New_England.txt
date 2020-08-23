@@ -6728,6 +6728,30 @@ focus_tree = {
 		available_if_capitulated = yes
 		complete_tooltip = {}
 		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_mainland_america = yes
+					free_building_slots = { building = infrastructure size > 0 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_mainland_america = yes
+					free_building_slots = { building = infrastructure size > 0 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
 			add_political_power = 100
 		}
 	}
@@ -6752,7 +6776,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		complete_tooltip = {}
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = USA_maritime_industry_idea
 		}
 	}
 	focus = {# Cannon City
@@ -6774,9 +6798,16 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-		complete_tooltip = {}
 		completion_reward = {
-			add_political_power = 100
+			custom_effect_tooltip = boston_line_2
+			hidden_effect = {
+			set_building_level = {
+					type = bunker
+					level = 3
+					province = 3702
+					instant_build = yes
+				}
+			}
 		}
 	}
 	focus = {# Local Militia
@@ -6800,7 +6831,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		complete_tooltip = {}
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = NEE_local_militia
 		}
 	}
 	focus = {# New English Gunboat Diplomacy
@@ -6824,7 +6855,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		complete_tooltip = {}
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = NEE_american_trade
 		}
 	}
 	focus = {# Protectionist Trade
@@ -6848,7 +6879,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		complete_tooltip = {}
 		completion_reward = {
-			add_political_power = 100
+			trade_opinion_factor = 0.05
 		}
 	}
 	focus = {# Armed Beacon
