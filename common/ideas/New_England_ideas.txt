@@ -141,7 +141,7 @@ ideas = {
 			removal_cost = -1
 			picture = preferred_immigration
 			modifier = {
-				monthly_population = -0.05
+				monthly_population = -0.03
 				consumer_goods_factor = 0.01
 				stability_factor = 0.03
 			}
@@ -612,7 +612,7 @@ ideas = {
 			removal_cost = -1
 			picture = american_patriotism
 			modifier = {
-				military_leader_cost_factor	= -30
+				military_leader_cost_factor	= -0.3
 				local_manpower = 0.1
 				stability_weekly = 0.008
 				surrender_limit = 0.05
