@@ -6,6 +6,7 @@ new_england_focus:0 "New England Focus Tree"
 forts_built:0 "§gA series of level 3 forts will be built along the New English and Canadian eastern Coasts.§g"
 canada_forts_built:0 "§gThe New English government has, with New English and Canadian citizens, built a joint coastal defensive line across our eastern coastline. We as a result get level 3 forts across our mainland coastline as well, as part of the deal.§g"
 boston_line:0 "§gA series of level 3 forts will be built along our southern border due to the ongoing conflict.§g"
+boston_line_2:0 "§gA series of level 3 forts will be built in Boston due to the ongoing conflict.§g"
 ### Opinion Modifier ###
 NEE_backed_us:0 "Supported our Government!"
 NEE_back_french_two:0 "Recognized our rival Government!"
@@ -391,7 +392,7 @@ NEE_irish_relations:0 "Irish Relations"
 NEE_irish_relations_desc:0 "Many of our people can trace their roots to Ireland. It is as much a part of our identity as Britain is. We should pursue closer relations with Ireland, and perhaps take inspiration from them for our own country. As the Irish fought for and won their independence, so shall we if we must. Ireland, here we come!"
 
 NEE_greater_new_england:0 "Greater New England"
-NEE_greater_new_england_desc:0 "While we have secured our independence for now, there are those Americans who should be our brothers who are suffering under other regimes. Let us bring those people into the fold as proud citizens of New England, and defend them from the tyranny and chaos to the south."
+NEE_greater_new_england_desc:0 "While we have secured our independence for now, there are those Americans and even Canadians who should be our brother, but are suffering under other regimes. Let us bring those people into the fold as proud citizens of New England, and defend them from the tyranny and chaos to the south, as only we can."
 
 #Federalists
 NEE_federalists_in_command:0 "Federalist Party In Command"
@@ -558,7 +559,7 @@ NEE_expanded_labor_pool_desc:0 "Too many citizens behave as if the old standards
 NEE_WASP:0 "Deploy the WASPs"
 NEE_WASP_desc:0 "The birthplace of American feminism lies in Seneca, in upstate New York. We need to ensure that patriotic women can contribute to the war effort just as their male counterparts. The WASP initiative, aimed at utilizing women in the air force, has already shown promise and its full implementation will both serve as a valuable asset to our thinly-stretched forces."
 
-NEE_US_Navy:0 "US Navy"
+NEE_US_Navy:0 "New England's Navy"
 NEE_US_Navy_desc:0 "Only a few ships, and even fewer sailors, remain under the provisional government's control. We need to take stock of our maritime situation."
 
 NEE_Liberty_Ships:0 "Liberty Ships Dock Project"
@@ -1294,6 +1295,14 @@ newengland.161.t:0 "Philip Bucola Arrested"
 newengland.161.d:0 "New England Mob Boss Philip Buccola has been arrested for smuggling, tax evasion, murder and a host of other crimes. While a conviction for the head of the Boston crime family is unlikely it at least represents their dwindling power he could be arrested to begin with and is associated with the arrest of mafia soldiers as well."
 newengland.161.a:0 "Good"
 
+
+###Expansion###
+
+newengland.200.t:0 "New England Demands Land"
+newengland.200.d:0 "New England has been a troublesome investment. With a population comparable to our own, they could hinder our plans if we lose their allegiance. They have come to us demanding we cede New Brunswick and Nova Scotia to them. If we accept, they promise greater cooperation with the Entente, and have assured us that they will not join with the victor of the American Civil War, but instead remain within our sphere. If we deny them, it could have greater repercussions..."
+newengland.200.a:0 "Let's see where this goes"
+newengland.200.b:0 "Who do they think they are?"
+
 #Army General Descriptions by Drozdovite#
 
 NEE_LESLIE_GROVES_ARMY_DESC:0 "§YGeneral Description\n§YBorn:§W August 17, 1896, in Albany, New York State, United States of America\n§YMilitary Career:§W Leslie Richard Groves Jr. was born in a family with quite a history in the military, considering his father had served in the Spanish-American War, the Philippines and the Boxer Rebellion. During his late high-school years, Groves started to enroll in courses at the University of Washington, hoping to get an appointment to the United States Military Academy. He got his wish when President Woodrow Wilson himself allowed him to compete for his vacancy, but his grades weren't high enough to be accepted. Instead, Groves joined the Massachusetts Institute of Technology in the meantime while he prepared to retake West Point's entrance exam. In 1916, he took the entrance exam again, and was accepted, visiting the European battlefields on an educational tour in 1919 and graduating in 1920 as a second lieutenant in the Corps of Engineers, thanks to his experience in MIT. He was posted with the 4th Engineer corps stationed at Camp Lewis, and would later be moved to Fort Worden, where he'd meet his future wife, Grace Wilson. In late 1922, he was posted in Hawaii with the 3rd Engineer corps at the Schofield Barracks, where he earned a commendation for helping construct a trail from Kahuku to Pupukea. He would be assigned several times, becoming commander of Company D of the 1st Engineer Battalion, helping during the New England flood of 1927, being sent to Nicaragua in 1929 to conduct surveys for the construction of the Nicaragua Canal, and he being assigned to look over Nicaragua's water supply after the 1931 earthquake. It was upon his return to a shattered United States that he gained his last promotions, rising to the rank of Field Marshall in New England, mainly due to the sheer lack of capable staff in the region.\n§YImportant Notes:§W- A brilliant engineer, he has been following closely the development of Nuclear Fission technology keeping regular contact with Otto Hahn and Lise Meitner."
@@ -1304,5 +1313,6 @@ NEE_LEMUEL_SHEPHERD_ARMY_DESC:0 "§YGeneral Description\n§YBorn:§W February 10
 
 infantry_equipment_research:1 "Infantry Equipment Research"
 mechanized_equipment_research:1 "Mechanized Equipment Research"
-modifier_experience_gain_motorized_training_factor:0 "Motorized Training Experience Gain"`
+modifier_experience_gain_motorized_training_factor:0 "Motorized Training Experience Gain"
 modifier_experience_gain_mechanized_training_factor:0 "Motorized Training Experience Gain"
+NEE_american_trade:0 "New English Trade"
