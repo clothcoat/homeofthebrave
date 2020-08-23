@@ -1032,6 +1032,11 @@ country_event = { # New Election
 			long_name = TEX_christian_party_auth_long
 			name = TEX_christian_party_auth }
 		}
+		hidden_effect = {
+			add_ideas = TEX_willard_kemp_hog_sco
+			add_ideas = TEX_Orville_Roundtree_for_sco
+			add_ideas = TEX_George_Fisher_eco_sco
+		}
 	}
 	option = { # NPP
 		ai_chance = {
@@ -1078,6 +1083,12 @@ country_event = { # New Election
 			ideology = social_liberal
 			long_name = TEX_social_liberal_party_long
 			name = TEX_social_liberal_party }
+		}
+		hidden_effect = {
+			add_ideas = TEX_Philip_La_Follette_hog_sli
+			add_ideas = TEX_robert_la_follette_jr_for_sli
+			add_ideas = TEX_gladys_pyle_eco_sli
+			add_ideas = TEX_herman_ekern_sec_sli
 		}
 	}
 }
