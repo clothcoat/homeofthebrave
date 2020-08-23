@@ -298,6 +298,12 @@ country_event = { # Duse Muhammad Elected
 				ideology = authoritarian_democrat_subtype
 				traits = { quartermaster_general }
 			}
+			hidden_effect = {
+				add_ideas = BBR_Charles_Young_hog_ade
+				add_ideas = BBR_James_Weldon_Johnson_for_ade
+				add_ideas = BBR_Eugene_Bullard_eco_ade
+				add_ideas = BBR_William_Henry_Johnson_sec_ade
+			}
 		}
 		set_politics = {
 			ruling_party = authoritarian_democrat
@@ -355,6 +361,12 @@ country_event = { # ABB in Power
 			ideology = totalist
 			long_name = BBR_ABB_totalist_party_long
 			name = BBR_ABB_totalist_party }
+			hidden_effect = {
+				add_ideas = BBR_Duse_Mohamed_Ali_hog_tot
+				add_ideas = BBR_Cyril_Briggs_for_tot
+				add_ideas = BBR_Wilfred_Adolphus_Domingo_eco_tot
+				add_ideas = BBR_Richard_B_Moore_sec_tot
+			}
 		}
 		set_politics = {
 			ruling_party = totalist
@@ -758,6 +770,12 @@ country_event = { # March
 				ideology = authoritarian_democrat_subtype
 				traits = { quartermaster_general }
 			}
+			hidden_effect = {
+				add_ideas = BBR_Charles_Young_hog_ade
+				add_ideas = BBR_James_Weldon_Johnson_for_ade
+				add_ideas = BBR_Eugene_Bullard_eco_ade
+				add_ideas = BBR_William_Henry_Johnson_sec_ade
+			}
 		}
 		set_politics = {
 			ruling_party = authoritarian_democrat
@@ -837,6 +855,12 @@ country_event = { # Leadership Election
 			ruling_party = national_populist
 			elections_allowed = no
 		}
+		hidden_effect = {
+			add_ideas = BBR_Elijah_Muhammad_hog_npo
+			add_ideas = BBR_james_pasha_for_npo
+			add_ideas = BBR_edward_ali_eco_npo
+			add_ideas = BBR_lucius_bey_muhammad_sec_npo
+		}
 	}
 	option = { #UNIA
 		ai_chance = {
@@ -860,6 +884,13 @@ country_event = { # Leadership Election
 		set_politics = {
 			ruling_party = paternal_autocrat
 			elections_allowed = no
+
+			hidden_effect = {
+				add_ideas = BBR_James_R_Stewart_hog_pau
+				add_ideas = BBR_Henrietta_Vinton_Davis_for_pau
+				add_ideas = BBR_E_B_McKinney_eco_pau
+				add_ideas = BBR_J_W_H_Eason_sec_pau
+			}
 		}
 	}
 }
@@ -1663,6 +1694,12 @@ country_event = { # Union Elections
 			ruling_party = syndicalist
 			elections_allowed = no
 		}
+	hidden_effect = {
+		add_ideas = BBR_Paul_Robeson_hog_syn
+		add_ideas = BBR_Eslanda_Goode_Robeson_for_syn
+		add_ideas = BBR_Ned_Cobb_eco_syn
+		add_ideas = BBR_Claude_Lightfoot_sec_syn
+	}
 	}
 	option = { #James Ford
 	ai_chance = {
@@ -1703,6 +1740,10 @@ country_event = { # Union Elections
 				ideology = totalist_subtype
 				traits = { silent_workhorse }
 			}
+			add_ideas = BBR_James_W_Ford_hog_tot
+			add_ideas = BBR_Langston_Hughes_for_tot
+			add_ideas = BBR_Williana_Burroughs_eco_tot
+			add_ideas = BBR_William_L_Patterson_sec_tot
 		}
 		set_politics = {
 			ruling_party = totalist
@@ -1712,6 +1753,7 @@ country_event = { # Union Elections
 			ideology = totalist
 			long_name = BBR_SPA_totalist_party_long
 			name = BBR_SPA_totalist_party }
+
 	}
 	option = { #Ben Davis
 	ai_chance = {
@@ -1752,6 +1794,10 @@ country_event = { # Union Elections
 				traits = { hog_totalist_chairman }
 			}
 		}
+		add_ideas = BBR_Benjamin_J_Davis_Jr_hog_tot
+		add_ideas = BBR_Angelo_Herndon_for_tot
+		add_ideas = BBR_Williana_Burroughs_eco_tot
+		add_ideas = BBR_William_L_Patterson_sec_tot
 		set_politics = {
 			ruling_party = totalist
 			elections_allowed = no
@@ -1800,6 +1846,10 @@ country_event = { # Union Elections
 				ideology = totalist_subtype
 				traits = { rabble_rouser }
 			}
+		add_ideas = BBR_Harry_Haywood_hog_tot
+		add_ideas = BBR_George_Padmore_for_tot
+		add_ideas = BBR_Williana_Burroughs_eco_tot
+		add_ideas = BBR_William_L_Patterson_sec_tot
 		}
 		set_politics = {
 			ruling_party = totalist
@@ -2011,6 +2061,12 @@ country_event = { # The Liberal Election
 			ruling_party = social_democrat
 			elections_allowed = yes
 		}
+	hidden_effect = {
+		add_ideas = BBR_Frank_Crosswaith_hog_sde
+		add_ideas = BBR_Frank_Marshall_Davis_for_sde
+		add_ideas = BBR_Edgar_Daniel_Nixon_eco_sde
+		add_ideas = BBR_Eunice_Carter_sec_sde
+	}
 	}
 	if = { limit = { has_country_flag = SPA_abbott }
 	add_popularity = { ideology = social_democrat popularity = 0.1 }
@@ -2026,6 +2082,12 @@ country_event = { # The Liberal Election
 			ruling_party = social_democrat
 			elections_allowed = yes
 		}
+	hidden_effect = {
+		add_ideas = BBR_Frank_Crosswaith_hog_sde
+		add_ideas = BBR_Frank_Marshall_Davis_for_sde
+		add_ideas = BBR_Edgar_Daniel_Nixon_eco_sde
+		add_ideas = BBR_Eunice_Carter_sec_sde
+	}
 	}
 	if = { limit = { has_country_flag = SPA_dubois }
 	add_popularity = { ideology = radical_socialist popularity = 0.1 }
@@ -2092,6 +2154,12 @@ country_event = { # The Liberal Election
 			elections_allowed = yes
 		}
 	}
+	hidden_effect = {
+		add_ideas = BBR_Adam_Clayton_Powell_Jr_hog_sli
+		add_ideas = BBR_Clifton_Reginald_Wharton_Sr_for_sli
+		add_ideas = BBR_Percy_Lavon_Julian_eco_sli
+		add_ideas = BBR_Charles_Richard_Drew_sec_sli
+	}
 	}
 	option = { # Market Liberal
 	ai_chance = {
@@ -2136,6 +2204,12 @@ country_event = { # The Liberal Election
 			elections_allowed = yes
 		}
 	}
+	hidden_effect = {
+		add_ideas = BBR_Oscar_Stanton_De_Priest_hog_mli
+		add_ideas = BBR_Frederick_D_Patterson_for_mli
+		add_ideas = BBR_George_Washington_Lee_eco_mli
+		add_ideas = BBR_Arthur_Wergs_Mitchell_sec_mli
+	}
 	}
 	option = { #Social Conservative
 	ai_chance = {
@@ -2164,6 +2238,12 @@ country_event = { # The Liberal Election
 			ruling_party = social_conservative
 			elections_allowed = yes
 		}
+	}
+	hidden_effect = {
+		add_ideas = BBR_James_F_Jones_hog_sco
+		add_ideas = BBR_Vernon_Johns_for_sco
+		add_ideas = BBR_George_Washington_Carver_eco_sco
+		add_ideas = BBR_Marcelino_Manuel_da_Graca_sec_sco
 	}
 }
 
