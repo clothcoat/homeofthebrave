@@ -185,6 +185,29 @@ ideas = {
 			}
 		}
 		
+		NEE_local_militia = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NEE_local_militia"}
+			allowed = { always = no }
+			removal_cost = -1
+			picture = state_militias
+			modifier = {
+				recruitable_population_factor = 0.03
+				training_time_army_factor = -0.05
+				army_core_defence_factor = 0.1
+			}
+		}
+
+		NEE_american_trade = {#New English Trade
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea NEE_american_trade"}
+			allowed = {	always = no	}
+			allowed_civil_war = { always = yes }
+			picture = good_neighbor_policy
+			modifier = { 
+				production_lack_of_resource_penalty_factor = -0.05
+				trade_opinion_factor = 0.05
+			}
+		}
+
 		NEE_private_defense_forces = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NEE_private_defense_forces"}
 			allowed = { always = no }
