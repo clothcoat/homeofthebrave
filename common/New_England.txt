@@ -1,0 +1,6964 @@
+focus_tree = {
+	id = new_england_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 100
+			tag = NEE
+		}
+	}
+	default = no
+
+	#################
+	### POLITICAL ###
+	#################
+
+
+	focus = {
+		id = NEE_Legitimate_America
+		icon = GFX_focus_generic_strike_at_democracy3
+		cost = 6
+		x = 4
+		y = 0
+		ai_will_do = {
+			factor = 4
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_Legitimate_America"
+			add_stability = 0.15
+			custom_effect_tooltip = NEE_legitimacy_plus_5_tt
+			add_to_variable = {
+				var = NEE_legitimacy
+				value = 5
+			}
+		}
+	}
+	
+	focus = {
+		id = NEE_federalists_in_command
+		icon = GFX_NEE_federalist_party_in_control
+		cost = 6
+		prerequisite = {
+			focus = NEE_Legitimate_America
+		}
+		x = -2
+		y = 1
+		relative_position_id = NEE_Legitimate_America
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			has_government = authoritarian_democrat
+			has_country_flag = NEE_FEDS_APPOINTED
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_federalists_in_command"
+			add_political_power = 30
+		}
+	}
+
+	focus = {
+		id = NEE_new_english_nationalism
+		icon = GFX_NEE_new_england_nationalism
+		cost = 6
+		prerequisite = {
+			focus = NEE_federalists_in_command
+		}
+		x = -2
+		y = 1
+		relative_position_id = NEE_federalists_in_command
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			has_government = authoritarian_democrat
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_new_english_nationalism"
+				add_stability = 0.02
+				add_war_support = 0.03
+				add_popularity = { ideology = authoritarian_democrat popularity = 0.05 }
+		}
+	}
+	
+	focus = {
+		id = NEE_special_relationship
+		icon = GFX_NEE_special_relationships
+		cost = 3
+		prerequisite = {
+			focus = NEE_new_english_nationalism
+		}
+		x = -1
+		y = 2
+		relative_position_id = NEE_federalists_in_command
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			has_government = authoritarian_democrat
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		select_effect = {
+		hidden_effect = {
+		country_event = {
+			id = newengland.110
+			days = 15
+			}	
+		}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_special_relationship"
+			NEE = {
+			add_opinion_modifier = {
+			target = CAN
+			modifier = large_increase
+				}
+			}
+			CAN = {
+			add_opinion_modifier = {
+			target = NEE
+			modifier = large_increase
+				}
+			}
+			add_political_power = 20
+			custom_effect_tooltip = NEE_canadian_influence_plus_10_tt
+			add_to_variable = {
+				var = NEE_canadian_influence
+				value = 10
+			}
+		}
+	}
+	
+	focus = {
+		id = NEE_syndicalist_crackdown
+		icon = GFX_NEE_syndie_crackdown
+		cost = 4
+		prerequisite = {
+			focus = NEE_federalists_in_command
+		}
+		x = 0
+		y = 1
+		relative_position_id = NEE_federalists_in_command
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject_of = CAN
+			has_government = authoritarian_democrat
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		select_effect = {
+		hidden_effect = {
+		country_event = {
+			id = newengland.110
+			days = 7
+			}	
+		country_event = {
+			id = newengland.110
+			days = 20
+			}	
+		}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_syndicalist_crackdown"
+			add_stability = 0.02
+			add_popularity = { ideology = radical_socialist popularity = -0.03 }
+			add_popularity = { ideology = syndicalist popularity = -0.04 }
+			add_popularity = { ideology = totalist popularity = -0.04 }
+		}
+	}
+	
+	focus = {
+		id = NEE_Public_Opinion_Support
+		icon = GFX_NEE_swaying_public_opinion
+		cost = 6
+		prerequisite = {
+			focus = NEE_syndicalist_crackdown
+		}
+		prerequisite = {
+			focus = NEE_preferred_immigration
+		}
+		x = 1
+		y = 2
+		relative_position_id = NEE_federalists_in_command
+		ai_will_do = {
+			factor = 4
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_Public_Opinion_Support"
+			custom_effect_tooltip = NEE_Public_Opinion_Support_tt
+			custom_effect_tooltip = NEE_legitimacy_plus_5_tt
+			add_to_variable = {
+				var = NEE_legitimacy
+				value = 5
+			}
+			add_popularity = { ideology = authoritarian_democrat popularity = 0.08 }
+			add_political_power = 30
+		}
+	}
+	
+	focus = {
+		id = NEE_preferred_immigration
+		icon = GFX_NEE_protecting_our_heritage
+		cost = 6
+		prerequisite = {
+			focus = NEE_federalists_in_command
+		}
+		x = 2
+		y = 1
+		relative_position_id = NEE_federalists_in_command
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject_of = CAN
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_preferred_immigration"
+			add_popularity = { ideology = authoritarian_democrat popularity = 0.01 }
+			add_popularity = { ideology = social_conservative popularity = -0.03 }
+			add_manpower = 5000
+			add_ideas = NEE_tougher_immigration
+			custom_effect_tooltip = NEE_canadian_influence_plus_5_tt
+			add_to_variable = {
+				var = NEE_canadian_influence
+				value = 5
+			}
+		}
+	}
+	
+	focus = {
+		id = NEE_preserve_the_estates
+		icon = GFX_goal_COR_american_estates
+		cost = 6
+		prerequisite = {
+			focus = NEE_Public_Opinion_Support
+		}
+		x = 1
+		y = 3
+		relative_position_id = NEE_federalists_in_command
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject_of = CAN
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_preserve_the_estates"
+			add_political_power = 25
+			add_stability = 0.05
+			add_popularity = { ideology = authoritarian_democrat popularity = 0.03 }
+			random_owned_state = {
+				limit = {
+					is_core_of = NEE
+					is_controlled_by = NEE
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = NEE
+					is_controlled_by = NEE
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	
+	focus = {
+		id = NEE_Reassure_Financial_Institutions
+		icon = GFX_focus_empty_coffers
+		cost = 6
+		prerequisite = {
+			focus = NEE_Public_Opinion_Support
+		}
+		x = 3
+		y = 3
+		relative_position_id = NEE_federalists_in_command
+		ai_will_do = {
+			factor = 5
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_Reassure_Financial_Institutions"
+			add_offsite_building = { type = industrial_complex level = 1 }
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.5
+				uses = 1
+				category = industry
+			}
+			add_stability = 0.05
+		}
+	}
+	
+	focus = {
+		id = NEE_hamiltionian_victory
+		icon = GFX_NEE_hamiltonian_constitution
+		cost = 5
+		prerequisite = {
+			focus = NEE_Reassure_Financial_Institutions
+		}
+		prerequisite = {
+			focus = NEE_preserve_the_estates
+		}
+		x = 2
+		y = 4
+		relative_position_id = NEE_federalists_in_command
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject_of = CAN
+		}
+		select_effect = {
+		hidden_effect = {
+		country_event = {
+			id = newengland.112
+			days = 5
+				}	
+		country_event = {
+			id = newengland.113
+			days = 11
+				}	
+		country_event = {
+			id = newengland.113
+			days = 20
+				}	
+			}
+		}
+		cancel_if_invalid = yes
+		available_if_capitulated = no
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_hamiltionian_victory"
+			add_ideas = NEE_hamiltonian_constitution
+			add_stability = 0.12
+			add_political_power = 75
+			country_event = {
+			id = newengland.116
+			hours = 2
+			}
+		}
+	}
+	focus = {
+		id = NEE_elite_contracts
+		icon = GFX_NEE_elite_contracts
+		cost = 6
+		prerequisite = {
+			focus = NEE_special_relationship
+		}
+		x = -1
+		y = 3
+		relative_position_id = NEE_federalists_in_command
+		ai_will_do = {
+			factor = 5
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_elite_contracts"
+			add_offsite_building = { type = industrial_complex level = 2 }
+			hidden_effect = {
+			country_event = {
+			id = newengland.111
+			days = 1
+			}	
+			}
+		}
+	}
+	
+	focus = {
+		id = NEE_controlled_vice
+		icon = GFX_NEE_controlled_vice
+		cost = 6
+		prerequisite = {
+			focus = NEE_elite_contracts
+		}
+		prerequisite = {
+			focus = NEE_preserve_the_estates
+		}
+		x = 0
+		y = 4
+		relative_position_id = NEE_federalists_in_command
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject_of = CAN
+			is_in_faction_with = CAN
+			controls_all_owned_states = yes
+			num_divisions > 5
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_controlled_vice"
+			add_political_power = 40
+			add_popularity = { ideology = authoritarian_democrat popularity = 0.03 }
+			hidden_effect = {
+			country_event = {
+			id = newengland.115
+			days = 1
+			}	
+			}
+		}
+	}
+	
+	focus = {
+		id = NEE_american_aristocracy
+		icon = GFX_NEE_american_aristocracy
+		cost = 6
+		prerequisite = {
+			focus = NEE_controlled_vice
+		}
+		prerequisite = {
+			focus = NEE_hamiltionian_victory
+		}
+		x = 0
+		y = 5
+		relative_position_id = NEE_federalists_in_command
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject_of = CAN
+			is_in_faction_with = CAN
+			controls_all_owned_states = yes
+			num_divisions > 5
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_american_aristocracy"
+			add_popularity = { ideology = authoritarian_democrat popularity = 0.05 }
+			add_political_power = 50
+			add_stability = 0.05
+			custom_effect_tooltip = NEE_canadian_influence_plus_10_tt
+			add_to_variable = {
+				var = NEE_canadian_influence
+				value = 10
+			}			
+		}
+	}
+	
+	focus = {
+		id = NEE_canadian_investments
+		icon = GFX_goal_USA_reconcile_canada
+		cost = 6
+		prerequisite = {
+			focus = NEE_american_aristocracy
+		}
+		x = -2
+		y = 6
+		relative_position_id = NEE_federalists_in_command
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject_of = CAN
+			is_in_faction_with = CAN
+			controls_all_owned_states = yes
+			num_divisions > 5
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_canadian_investments"
+			add_offsite_building = { type = industrial_complex level = 1 }
+			add_political_power = 25
+			custom_effect_tooltip = NEE_canadian_influence_plus_5_tt
+			add_to_variable = {
+				var = NEE_canadian_influence
+				value = 5
+			}
+		}
+	}
+	
+	focus = {
+		id = NEE_ready_to_strike
+		icon = GFX_focus_generic_air_defense
+		cost = 6
+		prerequisite = {
+			focus = NEE_american_aristocracy
+		}
+		x = 0
+		y = 6
+		relative_position_id = NEE_federalists_in_command
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject_of = CAN
+			is_in_faction_with = CAN
+			controls_all_owned_states = yes
+			num_divisions > 5
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_ready_to_strike"
+			random_owned_state = {
+				limit = {
+					is_core_of = NEE
+					is_controlled_by = NEE
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_war_support	= 0.1
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1200
+				producer = NEE
+				}
+		}
+	}
+	
+	focus = {
+		id = NEE_elite_universities
+		icon = GFX_NEE_ivy_league
+		cost = 6
+		prerequisite = {
+			focus = NEE_american_aristocracy
+		}
+		x = 2
+		y = 6
+		relative_position_id = NEE_federalists_in_command
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject_of = CAN
+			is_in_faction_with = CAN
+			controls_all_owned_states = yes
+			num_divisions > 5
+			NOT = {
+				has_war_with = USA
+				has_war_with = CSA
+				has_war_with = TEX
+				has_war_with = CAL
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_elite_universities"
+			add_ideas = NEE_ivy_league
+		}
+	}
+	
+	focus = {
+		id = NEE_progressive_republicans
+		icon = GFX_NEE_progressives
+		cost = 6
+		prerequisite = {
+			focus = NEE_Legitimate_America
+		}
+		available = {
+		has_government = social_democrat
+		}
+		x = 6
+		y = 1
+		relative_position_id = NEE_Legitimate_America
+		ai_will_do = {
+			factor = 10
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_progressive_republicans"
+			add_stability = 0.05
+			add_popularity = { ideology = social_democrat popularity = 0.03 }
+			add_popularity = { ideology = social_liberal popularity = 0.03 }
+		}
+	}
+	
+	focus = {
+		id = NEE_break_monopolies
+		icon = GFX_CAL_new_antitrust_laws
+		cost = 6
+		prerequisite = {
+			focus = NEE_progressive_republicans
+		}
+		x = -2
+		y = 1
+		relative_position_id = NEE_progressive_republicans
+		ai_will_do = {
+			factor = 10
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_break_monopolies"
+			add_ideas = NEE_national_freedom
+			add_stability = 0.05
+			add_political_power = 25
+			add_popularity = { ideology = social_democrat popularity = 0.03 }
+			add_popularity = { ideology = social_liberal popularity = 0.03 }
+			random_owned_controlled_state = {
+				limit = {
+					is_mainland_america = yes
+					free_building_slots = { building = industrial_complex size > 0 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	
+	focus = {
+		id = NEE_regional_utilites
+		icon = GFX_goal_TEX_accessible_utilities
+		cost = 6
+		prerequisite = {
+			focus = NEE_break_monopolies
+		}
+		x = -2
+		y = 2
+		relative_position_id = NEE_progressive_republicans
+		ai_will_do = {
+			factor = 10
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_regional_utilites"
+			swap_ideas = {
+			remove_idea = NEE_national_freedom
+			add_idea = NEE_national_freedom_2
+			}
+			add_stability = 0.05
+			add_political_power = 40
+			add_popularity = { ideology = social_democrat popularity = 0.03 }
+			random_owned_controlled_state = {
+				limit = {
+					is_mainland_america = yes
+					free_building_slots = { building = industrial_complex size > 0 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = NEE_st_lawrence_seaway
+		icon = GFX_NEE_st_lawrence_seaway_2
+		cost = 6
+		available = {
+		has_full_control_of_state = 796
+		}
+		prerequisite = {
+			focus = NEE_regional_utilites
+		}
+		prerequisite = {
+			focus = NEE_national_labor_committee
+		}
+		x = -1
+		y = 3
+		relative_position_id = NEE_progressive_republicans
+		ai_will_do = {
+			factor = 10
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_st_lawrence_seaway"
+			796 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+					province = 3602
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+					province = 598
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+					province = 6778
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+					province = 6795
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+					province = 3747
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+					province = 3733
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+					province = 734
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+					province = 796
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+					province = 6707
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = NEE_tax_hike
+		icon = GFX_CAL_rich_taxation
+		cost = 6
+		prerequisite = {
+			focus = NEE_progressive_republicans
+		}
+		x = 0
+		y = 1
+		relative_position_id = NEE_progressive_republicans
+		ai_will_do = {
+			factor = 10
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_tax_hike"
+			add_stability = -0.02
+			add_ideas = NEE_fair_share
+			add_political_power = 50
+		}
+	}
+	
+	focus = {
+		id = NEE_national_labor_committee
+		icon = GFX_NEE_Labor_Committee
+		cost = 6
+		prerequisite = {
+			focus = NEE_tax_hike
+		}
+		x = 0
+		y = 2
+		relative_position_id = NEE_progressive_republicans
+		ai_will_do = {
+			factor = 10
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_national_labor_committee"
+			swap_ideas = {
+			remove_idea = NEE_fair_share	
+			add_idea = NEE_fair_share_2
+			}
+			add_stability = 0.05
+			add_political_power = 35
+			add_popularity = { ideology = social_democrat popularity = 0.03 }
+			add_popularity = { ideology = social_liberal popularity = 0.03 }
+		}
+	}
+	
+	focus = {
+		id = NEE_committee_on_agriculture
+		icon = GFX_CAL_farm_bankruptcy_act
+		cost = 6
+		prerequisite = {
+			focus = NEE_progressive_republicans
+		}
+		x = 2
+		y = 1
+		relative_position_id = NEE_progressive_republicans
+		ai_will_do = {
+			factor = 10
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_committee_on_agriculture"
+			add_ideas = NEE_committee_on_agriculture_idea
+			random_owned_controlled_state = {
+				limit = {
+					is_mainland_america = yes
+					free_building_slots = { building = industrial_complex size > 0 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_mainland_america = yes
+					free_building_slots = { building = industrial_complex size > 0 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_mainland_america = yes
+					free_building_slots = { building = industrial_complex size > 0 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_mainland_america = yes
+					free_building_slots = { building = industrial_complex size > 0 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	
+	focus = {
+		id = NEE_crop_insurance
+		icon = GFX_NEE_crop_insurance
+		cost = 6
+		prerequisite = {
+			focus = NEE_committee_on_agriculture
+		}
+		x = 2
+		y = 2
+		relative_position_id = NEE_progressive_republicans
+		ai_will_do = {
+			factor = 10
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_crop_insurance"
+			swap_ideas = {
+			remove_idea = NEE_committee_on_agriculture_idea
+			add_idea = NEE_committee_on_agriculture_idea_2
+			}
+			add_stability = 0.05
+			add_popularity = { ideology = social_democrat popularity = 0.03 }
+			add_popularity = { ideology = social_liberal popularity = 0.03 }
+			random_owned_controlled_state = {
+				limit = {
+					is_mainland_america = yes
+					free_building_slots = { building = industrial_complex size > 0 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_mainland_america = yes
+					free_building_slots = { building = industrial_complex size > 0 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	
+	focus = {
+		id = NEE_food_allotment
+		icon = GFX_goal_COR_bbbb
+		cost = 6
+		prerequisite = {
+			focus = NEE_national_labor_committee
+		}
+		prerequisite = {
+			focus = NEE_crop_insurance
+		}
+		x = 1
+		y = 3
+		relative_position_id = NEE_progressive_republicans
+		ai_will_do = {
+			factor = 10
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_food_allotment"
+			swap_ideas = {
+			remove_idea = NEE_committee_on_agriculture_idea_2
+			add_idea = NEE_committee_on_agriculture_idea_3
+			}
+			add_stability = 0.05
+			add_political_power = 30
+			add_manpower = 500
+		}
+	}
+	
+	focus = {
+		id = NEE_full_employment_act
+		icon = GFX_NEE_full_employement
+		cost = 6
+		prerequisite = {
+			focus = NEE_food_allotment
+		}
+		prerequisite = {
+			focus = NEE_st_lawrence_seaway
+		}
+		x = 0
+		y = 4
+		relative_position_id = NEE_progressive_republicans
+		ai_will_do = {
+			factor = 10
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_full_employment_act"
+			swap_ideas = {
+			remove_idea = NEE_national_freedom_2
+			add_idea = NEE_national_freedom_3
+			}
+			add_popularity = { ideology = social_democrat popularity = 0.03 }
+			add_popularity = { ideology = social_liberal popularity = 0.03 }
+			random_owned_controlled_state = {
+				limit = {
+					is_mainland_america = yes
+					free_building_slots = { building = industrial_complex size > 0 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_mainland_america = yes
+					free_building_slots = { building = industrial_complex size > 0 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_mainland_america = yes
+					free_building_slots = { building = industrial_complex size > 0 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_mainland_america = yes
+					free_building_slots = { building = infrastructure size > 0 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_mainland_america = yes
+					free_building_slots = { building = infrastructure size > 0 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_mainland_america = yes
+					free_building_slots = { building = infrastructure size > 0 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = NEE_mab
+		icon = GFX_CAL_military_lobby
+		cost = 6
+		prerequisite = {
+			focus = NEE_committee_on_agriculture
+			focus = NEE_interstate_highway
+		}
+		x = 4
+		y = 2
+		relative_position_id = NEE_progressive_republicans
+		ai_will_do = {
+			factor = 10
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_mab"
+			add_manpower = 5000
+			add_war_support = 0.05
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 150
+				producer = NEE
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_mainland_america = yes
+					free_building_slots = { building = arms_factory size > 0 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = NEE_demand_support
+		icon = GFX_goal_USA_demand_debts
+		cost = 6
+		prerequisite = {
+			focus = NEE_mab
+		}
+		x = 4
+		y = 3
+		relative_position_id = NEE_progressive_republicans
+		ai_will_do = {
+			factor = 10
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_demand_support"
+			add_war_support = 0.05
+			add_political_power = 20
+		}
+	}
+	
+	focus = {
+		id = NEE_lincolnian_republic
+		icon = GFX_NEE_abe
+		cost = 6
+		prerequisite = {
+			focus = NEE_demand_support
+		}
+		x = 4
+		y = 4
+		relative_position_id = NEE_progressive_republicans
+		ai_will_do = {
+			factor = 10
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_lincolnian_republic"
+			add_stability = -0.03
+			add_ideas = NEE_lincolnian_republic_idea
+			add_manpower = 6000
+			add_political_power = 30
+		}
+	}
+	
+	focus = {
+		id = NEE_western_intervention
+		icon = GFX_NEE_beyond_new_england
+		cost = 6
+		prerequisite = {
+			focus = NEE_lincolnian_republic
+		}
+		x = 4
+		y = 5
+		relative_position_id = NEE_progressive_republicans
+		ai_will_do = {
+			factor = 10
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_western_intervention"
+			
+		}
+	}
+	
+	focus = {
+		id = NEE_fea
+		icon = GFX_NEE_education_administration
+		cost = 6
+		prerequisite = {
+			focus = NEE_full_employment_act
+		}
+		x = -2
+		y = 5
+		relative_position_id = NEE_progressive_republicans
+		ai_will_do = {
+			factor = 10
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_fea"
+			add_ideas = NEE_fea_idea
+			add_stability = 0.05
+			add_political_power = 25
+		}
+	}
+	
+	focus = {
+		id = NEE_rural_electricity
+		icon = GFX_CAL_rea
+		cost = 6
+		prerequisite = {
+			focus = NEE_full_employment_act
+		}
+		x = 0
+		y = 5
+		relative_position_id = NEE_progressive_republicans
+		ai_will_do = {
+			factor = 10
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_rural_electricity"
+			swap_ideas = {
+			remove_idea = NEE_national_freedom_3
+			add_idea = NEE_national_freedom_4
+			}
+			add_stability = 0.03
+			random_owned_controlled_state = {
+				limit = {
+					is_mainland_america = yes
+					free_building_slots = { building = industrial_complex size > 0 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_mainland_america = yes
+					free_building_slots = { building = industrial_complex size > 0 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	
+	focus = {
+		id = NEE_farm_coops
+		icon = GFX_goal_TEX_coop_plan
+		cost = 6
+		prerequisite = {
+			focus = NEE_full_employment_act
+		}
+		x = 2
+		y = 5
+		relative_position_id = NEE_progressive_republicans
+		ai_will_do = {
+			factor = 10
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_farm_coops"
+			swap_ideas = {
+			remove_idea = NEE_committee_on_agriculture_idea_3
+			add_idea = NEE_committee_on_agriculture_idea_4
+			}
+			add_stability = 0.05
+			random_owned_controlled_state = {
+				limit = {
+					is_mainland_america = yes
+					free_building_slots = { building = industrial_complex size > 0 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_mainland_america = yes
+					free_building_slots = { building = industrial_complex size > 0 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_mainland_america = yes
+					free_building_slots = { building = industrial_complex size > 0 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	
+	focus = {
+		id = NEE_modern_republicanism
+		icon = GFX_NEE_modern_republicanism
+		cost = 6
+		prerequisite = {
+			focus = NEE_Legitimate_America
+		}
+		available = {
+			OR = {
+				has_government = market_liberal
+				has_government = social_liberal
+			}
+		}
+		x = 14
+		y = 1
+		relative_position_id = NEE_Legitimate_America
+		ai_will_do = {
+			factor = 10
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_modern_republicanism"
+			add_stability = 0.05
+			add_popularity = { ideology = market_liberal popularity = 0.03 }
+			add_popularity = { ideology = social_liberal popularity = 0.03 }
+		}
+	}
+	
+	focus = {
+		id = NEE_interstate_highway
+		icon = GFX_NEE_interstate_highway
+		cost = 6
+		prerequisite = {
+			focus = NEE_modern_republicanism
+		}
+		x = -2
+		y = 1
+		relative_position_id = NEE_modern_republicanism
+		ai_will_do = {
+			factor = 10
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_interstate_highway"
+			random_owned_state = {
+				limit = {
+					is_core_of = NEE
+					is_controlled_by = NEE
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = NEE
+					is_controlled_by = NEE
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = NEE
+					is_controlled_by = NEE
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = NEE
+					is_controlled_by = NEE
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = NEE
+					is_controlled_by = NEE
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = NEE
+					is_controlled_by = NEE
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = NEE_education_spending
+		icon = GFX_NEE_education_spending
+		cost = 5
+		prerequisite = {
+			focus = NEE_modern_republicanism
+		}
+		x = 0
+		y = 1
+		relative_position_id = NEE_modern_republicanism
+		ai_will_do = {
+			factor = 10
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_education_spending"
+			add_ideas = NEE_education_spending_Idea
+			add_popularity = { ideology = social_liberal popularity = 0.02 }
+			add_popularity = { ideology = market_liberal popularity = 0.02 }
+		}
+	}
+	
+	focus = {
+		id = NEE_entente_support
+		icon = GFX_NEE_entente_support
+		cost = 6
+		prerequisite = {
+			focus = NEE_modern_republicanism
+		}
+		x = 2
+		y = 1
+		relative_position_id = NEE_modern_republicanism
+		ai_will_do = {
+			factor = 10
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_entente_support"
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 200
+				producer = CAN
+			}
+			add_manpower = 1000
+		}
+	}
+	
+	focus = {
+		id = NEE_Townhall_Democracy
+		icon = GFX_goal_conspiracy
+		cost = 6
+		prerequisite = {
+			focus = NEE_interstate_highway
+		}
+		x = -2
+		y = 2
+		relative_position_id = NEE_modern_republicanism
+		ai_will_do = {
+			factor = 4
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_Townhall_Democracy"
+			add_ideas = NEE_localism_idea
+			add_stability = 0.05
+			increase_ruling_party_popularity_by_5 = yes
+		}
+	}
+	
+	focus = {
+		id = NEE_cultural_liberalism
+		icon = GFX_NEE_cultural_liberalism
+		cost = 6
+		prerequisite = {
+			focus = NEE_education_spending
+		}
+		x = 0
+		y = 2
+		relative_position_id = NEE_modern_republicanism
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			NOT = {
+			has_government = national_populist
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_cultural_liberalism"
+			add_ideas = NEE_cultural_liberalism_idea
+			add_stability = -0.03
+			add_manpower = 2500
+			add_popularity = { ideology = national_populist popularity = -0.05 }
+			add_popularity = { ideology = totalist popularity = -0.03 }
+			add_popularity = { ideology = syndicalist popularity = -0.03 }
+			add_popularity = { ideology = social_conservative popularity = -0.02 }
+			add_popularity = { ideology = authoritarian_democrat popularity = -0.02 }
+		}
+	}
+	
+	focus = {
+		id = NEE_fight_the_mob
+		icon = GFX_NEE_fight_the_mob
+		cost = 6
+		prerequisite = {
+			focus = NEE_entente_support
+		}
+		x = 2
+		y = 2
+		relative_position_id = NEE_modern_republicanism
+		ai_will_do = {
+			factor = 10
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		select_effect = {
+			add_timed_idea = {
+			idea = BBR_combatting_the_mob_idea
+			days = 50
+			}
+			hidden_effect = {
+			country_event = {
+				id = newengland.161
+				days = 20
+				}
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_fight_the_mob"
+			add_political_power = 50
+			add_manpower = -150
+			increase_ruling_party_popularity_by_5 = yes
+			modify_country_flag = {
+				flag = SIC_mob_power
+				value = -5
+			}
+		}
+	}
+	
+	focus = {
+		id = NEE_support_small_business
+		icon = GFX_NEE_support_small_businesses
+		cost = 6
+		prerequisite = {
+			focus = NEE_cultural_liberalism
+		}
+		prerequisite = {
+			focus = NEE_Townhall_Democracy
+		}
+		x = -1
+		y = 3
+		relative_position_id = NEE_modern_republicanism
+		ai_will_do = {
+			factor = 10
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_support_small_business"
+			swap_ideas = {
+			remove_idea = NEE_localism_idea
+			add_idea = NEE_localism_idea_2
+			}
+			add_popularity = { ideology = market_liberal popularity = 0.02 }
+			add_popularity = { ideology = social_liberal popularity = 0.02 }
+			random_owned_state = {
+				limit = {
+					is_core_of = NEE
+					is_controlled_by = NEE
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = NEE
+					is_controlled_by = NEE
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = NEE_housing_expansion
+		icon = GFX_NEE_housing_expansion
+		cost = 6
+		prerequisite = {
+			focus = NEE_fight_the_mob
+		}
+		prerequisite = {
+			focus = NEE_cultural_liberalism
+		}
+		x = 1
+		y = 3
+		relative_position_id = NEE_modern_republicanism
+		ai_will_do = {
+			factor = 10
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_housing_expansion"
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	
+	focus = {
+		id = NEE_save_the_constitution
+		icon = GFX_NEE_save_the_constitution
+		cost = 6
+		prerequisite = {
+			focus = NEE_support_small_business
+		}
+		prerequisite = {
+			focus = NEE_housing_expansion
+		}
+		x = 0
+		y = 4
+		relative_position_id = NEE_modern_republicanism
+		ai_will_do = {
+			factor = 10
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_save_the_constitution"
+			add_ideas = NEE_american_constitutionalism
+			add_stability = 0.1
+			add_popularity = { ideology = market_liberal popularity = 0.02 }
+			add_popularity = { ideology = social_liberal popularity = 0.02 }
+			custom_effect_tooltip = NEE_legitimacy_plus_10_tt
+			add_to_variable = {
+				var = NEE_legitimacy
+				value = 10
+			}
+		}
+	}
+	
+	focus = {
+		id = NEE_unifying_america
+		icon = GFX_NEE_salute_red_white_blue
+		cost = 6
+		prerequisite = {
+			focus = NEE_save_the_constitution
+		}
+		x = -2
+		y = 5
+		relative_position_id = NEE_modern_republicanism
+		ai_will_do = {
+			factor = 10
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_unifying_america"
+			swap_ideas = {
+			remove_idea = NEE_american_constitutionalism
+			add_idea = NEE_american_constitutionalism_2
+			}
+			add_war_support = 0.05
+			add_political_power = 50
+			custom_effect_tooltip = NEE_legitimacy_plus_10_tt
+			add_to_variable = {
+				var = NEE_legitimacy
+				value = 10
+			}
+		}
+	}
+	
+	focus = {
+		id = NEE_take_on_machines
+		icon = GFX_NEE_investigate_the_machines
+		cost = 6
+		prerequisite = {
+			focus = NEE_save_the_constitution
+		}
+		x = 2
+		y = 5
+		relative_position_id = NEE_modern_republicanism
+		ai_will_do = {
+			factor = 10
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_take_on_machines"
+			add_popularity = { ideology = social_conservative popularity = -0.05 }
+			add_political_power = 50
+			hidden_effect = {
+			country_event = {
+				id = newengland.160
+				days = 1
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = NEE_centrist_opinions_for_americans
+		icon = GFX_NEE_centrist_opinions
+		cost = 5
+		prerequisite = {
+			focus = NEE_save_the_constitution
+		}
+		x = 0
+		y = 5
+		relative_position_id = NEE_modern_republicanism
+		ai_will_do = {
+			factor = 10
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_centrist_opinions_for_americans"
+			swap_ideas = {
+			remove_idea = NEE_cultural_liberalism_idea
+			add_idea = NEE_cultural_liberalism_idea_2
+			}
+			add_popularity = { ideology = market_liberal popularity = 0.03 }
+			add_popularity = { ideology = social_liberal popularity = 0.03 }
+			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = NEE_International_Recognition
+		icon = GFX_focus_generic_treaty
+		cost = 6
+		prerequisite = {
+			focus = NEE_entente_support
+			focus = NEE_irish_ties
+		}
+		x = 18
+		y = 3
+		relative_position_id = NEE_Legitimate_America
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			has_idea = NEE_limited_recognation1
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_International_Recognition"
+			remove_ideas = NEE_limited_recognation1
+			add_political_power = 50
+		}
+	}
+	
+	focus = {
+		id = NEE_Safeguard_Democracy
+		icon = GFX_goal_COS_Ferrer_Coup
+		cost = 6
+		prerequisite = {
+			focus = NEE_International_Recognition
+		}
+		x = 18
+		y = 4
+		relative_position_id = NEE_Legitimate_America
+		ai_will_do = {
+			factor = 4
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_Safeguard_Democracy"
+			add_war_support = 0.20
+			add_popularity = { ideology = authoritarian_democrat popularity = -0.05 }
+			custom_effect_tooltip = NEE_legitimacy_plus_5_tt
+			add_to_variable = {
+				var = NEE_legitimacy
+				value = 5
+			}
+		}
+	}
+	
+	focus = {
+		id = NEE_Home_of_the_Brave
+		icon = GFX_goal_liberty
+		cost = 6
+		prerequisite = {
+			focus = NEE_Safeguard_Democracy
+		}
+		x = 18
+		y = 5
+		relative_position_id = NEE_Legitimate_America
+		ai_will_do = {
+			factor = 4
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_Home_of_the_Brave"
+			add_ideas = NEE_home_of_the_brave_idea
+			add_manpower = 5000
+			custom_effect_tooltip = NEE_legitimacy_plus_5_tt
+			add_to_variable = {
+				var = NEE_legitimacy
+				value = 5
+			}
+		}
+	}
+	
+	focus = {
+		id = NEE_Declare_Independence
+		icon = GFX_NEE_demand_home_rule
+		cost = 6
+		prerequisite = {
+			focus = NEE_Home_of_the_Brave
+		}
+		x = 18
+		y = 6
+		relative_position_id = NEE_Legitimate_America
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			check_variable = { NEE_legitimacy > 20 }
+			is_subject_of = CAN
+			is_in_faction_with = CAN
+			controls_all_owned_states = yes
+			num_divisions > 5
+			NOT = {
+				has_war_with = USA
+				has_war_with = CSA
+				has_war_with = TEX
+				has_war_with = CAL
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_Declare_Independence"
+			CAN = {
+				country_event = newengland.12
+			}
+		}
+	}
+
+	focus = {
+		id = NEE_democratic_machine
+		icon = GFX_NEE_democratic_machine
+		cost = 5
+		prerequisite = {
+			focus = NEE_Legitimate_America
+		}
+		available = {
+			has_government = social_conservative
+		}
+		x = 22
+		y = 1
+		relative_position_id = NEE_Legitimate_America
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			has_government = social_conservative
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_democratic_machine"
+			add_popularity = { ideology = social_conservative popularity = 0.02 }
+		}
+	}
+	
+	focus = {
+		id = NEE_irish_ties
+		icon = GFX_NEE_irish_ties
+		cost = 5
+		prerequisite = {
+			focus = NEE_democratic_machine
+		}
+		x = -2
+		y = 1
+		relative_position_id = NEE_democratic_machine
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			has_government = social_conservative
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_irish_ties"
+			add_ideas = NEE_irish_ties_idea
+			IRE = {
+				country_event = newengland.103
+			}
+			add_stability = 0.05
+			add_manpower = 1200
+			add_political_power = 30
+		}
+	}
+	
+	focus = {
+		id = NEE_court_catholics
+		icon = GFX_NEE_court_catholics
+		cost = 5
+		prerequisite = {
+			focus = NEE_irish_ties
+		}
+		x = -2
+		y = 2
+		relative_position_id = NEE_democratic_machine
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			has_government = social_conservative
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_court_catholics"
+			swap_ideas = {
+			remove_idea = NEE_irish_ties_idea
+			add_idea = NEE_irish_ties_idea_2
+			}
+			add_popularity ={ ideology = social_conservative popularity = 0.05 }
+			add_political_power = 50
+			add_to_variable = {
+				var = NEE_legitimacy
+				value = 5
+			}
+		}
+	}
+	
+	focus = {
+		id = NEE_expand_civil_service
+		icon = GFX_NEE_expand_civil_service
+		cost = 5
+		prerequisite = {
+			focus = NEE_democratic_machine
+		}
+		x = 0
+		y = 1
+		relative_position_id = NEE_democratic_machine
+		ai_will_do = {
+			factor = 10
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_expand_civil_service"
+			add_stability = 0.05
+			add_political_power = 50
+			add_popularity = { ideology = social_conservative popularity = 0.03 }
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 1
+				uses = 1
+				category = industry
+			}
+		}
+	}
+	
+	focus = {
+		id = NEE_public_kickbacks
+		icon = GFX_NEE_public_kickbacks
+		cost = 5
+		prerequisite = {
+			focus = NEE_expand_civil_service
+		}
+		x = 0
+		y = 2
+		relative_position_id = NEE_democratic_machine
+		ai_will_do = {
+			factor = 10
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_public_kickbacks"
+			random_owned_state = {
+				limit = {
+					is_core_of = NEE
+					is_controlled_by = NEE
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = NEE
+					is_controlled_by = NEE
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = NEE
+					is_controlled_by = NEE
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_popularity = { ideology = social_conservative popularity = 0.03 }
+		}
+	}
+	
+	focus = {
+		id = NEE_invest_in_the_wards
+		icon = GFX_NEE_invest_in_wards
+		cost = 5
+		prerequisite = {
+			focus = NEE_public_kickbacks
+		}
+		prerequisite = {
+			focus = NEE_court_catholics
+		}
+		x = -1
+		y = 3
+		relative_position_id = NEE_democratic_machine
+		ai_will_do = {
+			factor = 10
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_invest_in_the_wards"
+			random_owned_state = {
+				limit = {
+					is_core_of = NEE
+					is_controlled_by = NEE
+					naval_dockyard > 0
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = NEE
+					is_controlled_by = NEE
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = NEE
+					is_controlled_by = NEE
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = NEE
+					is_controlled_by = NEE
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = NEE_union_ties
+		icon = GFX_NEE_union_ties
+		cost = 5
+		prerequisite = {
+			focus = NEE_democratic_machine
+		}
+		x = 2
+		y = 1
+		relative_position_id = NEE_democratic_machine
+		ai_will_do = {
+			factor = 10
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_union_ties"
+			add_popularity = { ideology = social_conservative popularity = 0.03 }
+			random_owned_state = {
+				limit = {
+					is_core_of = NEE
+					is_controlled_by = NEE
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = NEE_tacit_agreement
+		icon = GFX_NEE_tacit_agreement
+		cost = 5
+		prerequisite = {
+			focus = NEE_union_ties
+		}
+		x = 2
+		y = 2
+		relative_position_id = NEE_democratic_machine
+		ai_will_do = {
+			factor = 10
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_tacit_agreement"
+			add_stability = 0.03
+			NEE = {
+				add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 200
+				producer = NEE
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = NEE_powers_of_the_governor
+		icon = GFX_NEE_powers_of_the_governor
+		cost = 5
+		prerequisite = {
+			focus = NEE_tacit_agreement
+		}
+		prerequisite = {
+			focus = NEE_public_kickbacks
+		}
+		x = 1
+		y = 3
+		relative_position_id = NEE_democratic_machine
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			has_government = social_conservative
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_powers_of_the_governor"
+			add_stability = 0.05
+			add_political_power = 75
+			custom_effect_tooltip = NEE_legitimacy_plus_5_tt
+			add_to_variable = {
+				var = NEE_legitimacy
+				value = 5
+			}
+		}
+	}
+	
+	focus = {
+		id = NEE_third_national_bank
+		icon = GFX_goal_government_icon
+		cost = 5
+		prerequisite = {
+			focus = NEE_powers_of_the_governor
+		}
+		prerequisite = {
+			focus = NEE_invest_in_the_wards
+		}
+		x = 0
+		y = 4
+		relative_position_id = NEE_democratic_machine
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			has_government = social_conservative
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_third_national_bank"
+			add_ideas = NEE_national_bank
+			add_stability = 0.05
+			custom_effect_tooltip = NEE_legitimacy_plus_10_tt
+			add_to_variable = {
+				var = NEE_legitimacy
+				value = 10
+			}
+		}
+	}
+	
+	focus = {
+		id = NEE_immigrant_aid
+		icon = GFX_NEE_immigrant_aid
+		cost = 5
+		prerequisite = {
+			focus = NEE_third_national_bank
+		}
+		x = -2
+		y = 5
+		relative_position_id = NEE_democratic_machine
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			has_government = social_conservative
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_immigrant_aid"
+			add_ideas = NEE_immigrant_aid_idea
+			add_manpower = 5500
+			increase_ruling_party_popularity_by_5 = yes
+			add_political_power = -10
+		}
+	}
+	
+	focus = {
+		id = NEE_raise_minimum_wage
+		icon = GFX_NEE_raise_minimum_wage
+		cost = 5
+		prerequisite = {
+			focus = NEE_third_national_bank
+		}
+		x = 0
+		y = 5
+		relative_position_id = NEE_democratic_machine
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			has_government = social_conservative
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_raise_minimum_wage"
+			add_ideas = NEE_minimum_wage
+			add_stability = 0.02
+		}
+	}
+	
+	focus = {
+		id = NEE_expand_the_machines
+		icon = GFX_NEE_expand_machines
+		cost = 5
+		prerequisite = {
+			focus = NEE_third_national_bank
+		}
+		x = 2
+		y = 5
+		relative_position_id = NEE_democratic_machine
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			has_government = social_conservative
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_expand_the_machines"
+			swap_ideas = {
+			remove_idea = NEE_union_ties_idea
+			add_idea = NEE_union_ties_idea_2
+			}
+			add_popularity = { ideology = social_conservative popularity = 0.05 }
+			add_political_power = 30
+		}
+	}
+	
+	focus = {
+		id = NEE_radical_victory
+		icon = GFX_NEE_radical_victory
+		cost = 1
+		prerequisite = {
+			focus = NEE_Legitimate_America
+		}
+		x = 31
+		y = 1
+		relative_position_id = NEE_Legitimate_America
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			OR = {
+			has_country_flag = radical_victory
+			has_country_flag = NEE_sentinels
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_radical_victory"			
+			country_event = {
+			id = newengland.120
+			days = 2
+			}
+			add_political_power = -20
+			add_war_support = 0.1
+		}
+	}
+	
+	focus = {
+		id = NEE_the_remnant
+		icon = GFX_NEE_the_remnant
+		cost = 5
+		prerequisite = {
+			focus = NEE_radical_victory
+		}
+		x = -3
+		y = 1
+		relative_position_id = NEE_radical_victory
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			has_country_flag = NEE_remnant_victory
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_the_remnant"
+			add_political_power = 30
+			add_stability = 0.05
+		}
+	}
+	
+	focus = {
+		id = NEE_the_single_tax
+		icon = GFX_NEE_single_tax
+		cost = 5
+		prerequisite = {
+			focus = NEE_the_remnant
+		}
+		x = -4
+		y = 2
+		relative_position_id = NEE_radical_victory
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			has_country_flag = NEE_remnant_victory
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_the_single_tax"
+			add_stability = 0.05
+			add_ideas = NEE_Georgist_Taxation
+			add_resource = {
+				type = oil
+				amount = 6
+				state = 357
+				}
+			random_owned_state = {
+				limit = {
+					is_core_of = NEE
+					is_controlled_by = NEE
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	
+	focus = {
+		id = NEE_nightwatchman_state
+		icon = GFX_NEE_Night_Watchmen_state
+		cost = 5
+		prerequisite = {
+			focus = NEE_the_remnant
+		}
+		x = -2
+		y = 2
+		relative_position_id = NEE_radical_victory
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			has_country_flag = NEE_remnant_victory
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_nightwatchman_state"
+			add_popularity = { ideology = paternal_autocrat popularity = 0.05 }
+			random_owned_state = {
+				limit = {
+					is_core_of = NEE
+					is_controlled_by = NEE
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = NEE_protect_liberty_from_democracy
+		icon = GFX_NEE_defend_freedom_from_democracy
+		cost = 5
+		prerequisite = {
+			focus = NEE_the_single_tax
+		}
+		prerequisite = {
+			focus = NEE_nightwatchman_state
+		}
+		x = -3
+		y = 3
+		relative_position_id = NEE_radical_victory
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			has_government = paternal_autocrat
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_protect_liberty_from_democracy"
+			add_popularity = { ideology = paternal_autocrat popularity = 0.05 }
+			add_political_power = 50
+		}
+	}
+	
+	focus = {
+		id = NEE_decentralized_currency
+		icon = GFX_NEE_decentralized_money
+		cost = 5
+		prerequisite = {
+			focus = NEE_protect_liberty_from_democracy
+		}
+		x = -4
+		y = 4
+		relative_position_id = NEE_radical_victory
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			has_country_flag = NEE_remnant_victory
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_decentralized_currency"
+			swap_ideas = {
+			remove_idea = NEE_Georgist_Taxation
+			add_idea = NEE_free_market
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = NEE
+					is_controlled_by = NEE
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	
+	focus = {
+		id = NEE_state_militias
+		icon = GFX_NEE_state_militias
+		cost = 5
+		prerequisite = {
+			focus = NEE_decentralized_currency
+		}
+		x = -4
+		y = 5
+		relative_position_id = NEE_radical_victory
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			has_country_flag = NEE_remnant_victory
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_Declare_Independence"
+			add_war_support = 0.1
+			add_manpower = 5000
+			add_ideas = NEE_state_militias
+		}
+	}
+	
+	focus = {
+		id = NEE_private_initative
+		icon = GFX_NEE_private_initiative
+		cost = 5
+		prerequisite = {
+			focus = NEE_protect_liberty_from_democracy
+		}
+		x = -2
+		y = 4
+		relative_position_id = NEE_radical_victory
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			has_country_flag = NEE_remnant_victory
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_private_initative"
+			random_owned_state = {
+				limit = {
+					is_core_of = NEE
+					is_controlled_by = NEE
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_popularity = { ideology = paternal_autocrat popularity = 0.03 }
+			add_stability = 0.05
+		}
+	}
+	
+	focus = {
+		id = NEE_end_public_schooling
+		icon = GFX_NEE_abolish_public_education
+		cost = 5
+		prerequisite = {
+			focus = NEE_private_initative
+		}
+		x = -2
+		y = 5
+		relative_position_id = NEE_radical_victory
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			has_country_flag = NEE_remnant_victory
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_end_public_schooling"
+			add_political_power = 50
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 1
+				uses = 1
+				category = industry
+			}
+		}
+	}
+	
+	focus = {
+		id = NEE_jeffersonian_confederacy
+		icon = GFX_NEE_jeffersonian_confederacy
+		cost = 5
+		prerequisite = {
+			focus = NEE_end_public_schooling
+		}
+		prerequisite = {
+			focus = NEE_state_militias
+		}
+		x = -3
+		y = 6
+		relative_position_id = NEE_radical_victory
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			has_country_flag = NEE_remnant_victory
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_jeffersonian_confederacy"
+			add_stability = 0.05
+			add_popularity = { ideology = paternal_autocrat popularity = 0.05 }
+			add_popularity = { ideology = market_liberal popularity = 0.05 }
+		}
+	}
+	
+	focus = {
+		id = NEE_declaration_of_independence
+		icon = GFX_goal_tfv_sever_ties_with_uk
+		cost = 5
+		prerequisite = {
+			focus = NEE_jeffersonian_confederacy
+		}
+		x = -3
+		y = 7
+		relative_position_id = NEE_radical_victory
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			has_country_flag = NEE_remnant_victory
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_declaration_of_independence"
+			CAN = {
+				country_event = newengland.12
+			}
+		}
+	}
+	
+	focus = {
+		id = NEE_the_sentinels_of_the_republic
+		icon = GFX_NEE_sentinels_of_republic
+		cost = 5
+		prerequisite = {
+			focus = NEE_radical_victory
+		}
+		x = 3
+		y = 1
+		relative_position_id = NEE_radical_victory
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			has_country_flag = NEE_sentinels
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_the_sentinels_of_the_republic"
+			add_political_power = 45
+		}
+	}
+	
+	focus = {
+		id = NEE_expand_the_organization
+		icon = GFX_NEE_expand_organization
+		cost = 5
+		prerequisite = {
+			focus = NEE_the_sentinels_of_the_republic
+		}
+		x = 3
+		y = 2
+		relative_position_id = NEE_radical_victory
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			has_country_flag = NEE_sentinels
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_expand_the_organization"
+			add_popularity = { ideology = national_populist popularity = 0.05 }
+			add_political_power = 50
+		}
+	}
+	
+	focus = {
+		id = NEE_private_defense_forces
+		icon = GFX_NEE_private_defence_forces
+		cost = 5
+		prerequisite = {
+			focus = NEE_the_sentinels_of_the_republic
+		}
+		x = 1
+		y = 2
+		relative_position_id = NEE_radical_victory
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			has_country_flag = NEE_sentinels
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_private_defense_forces"
+			add_ideas = NEE_private_defense_forces
+			add_manpower = 1200
+			add_tech_bonus = {
+				name = infantry_bonus
+				bonus = 1
+				uses = 1
+				category = infantry_weapons
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 100
+				producer = NEE
+			}
+		}
+	}
+	
+	focus = {
+		id = NEE_beyond_privatization
+		icon = GFX_NEE_beyond_privatization
+		cost = 5
+		prerequisite = {
+			focus = NEE_the_sentinels_of_the_republic
+		}
+		x = 5
+		y = 2
+		relative_position_id = NEE_radical_victory
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			has_country_flag = NEE_sentinels
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_beyond_privatization"
+			add_stability = -0.05
+			random_owned_state = {
+				limit = {
+					is_core_of = NEE
+					is_controlled_by = NEE
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = NEE
+					is_controlled_by = NEE
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = NEE_dissolving_the_state
+		icon = GFX_NEE_dissolving_the_state
+		cost = 5
+		prerequisite = {
+			focus = NEE_beyond_privatization
+		}
+		prerequisite = {
+			focus = NEE_expand_the_organization
+		}
+		prerequisite = {
+			focus = NEE_private_defense_forces
+		}
+		select_effect = {
+		hidden_effect = {
+		country_event = {
+		id = newengland.134
+		days = 20
+				}
+			}
+		hidden_effect = {
+		country_event = {
+		id = newengland.133
+		days = 15
+				}
+			}
+		}
+		x = 3
+		y = 3
+		relative_position_id = NEE_radical_victory
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			has_government = national_populist
+			has_country_flag = NEE_sentinels
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_dissolving_the_state"
+			add_ideas = NEE_stateless_capitalism
+			add_popularity = { ideology = national_populist popularity = 0.1 }
+			add_political_power = -50
+			add_stability = -0.15
+			hidden_effect = {
+			country_event = {
+			id = newengland.135
+			days = 20
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = NEE_might_makes_right
+		icon = GFX_NEE_might_makes_right
+		cost = 5
+		prerequisite = {
+			focus = NEE_dissolving_the_state
+		}
+		x = 2
+		y = 4
+		relative_position_id = NEE_radical_victory
+		ai_will_do = {
+			factor = 10
+		}
+		select_effect = {
+		hidden_effect = {
+		country_event = {
+		id = newengland.130
+		days = 30
+				}
+			}
+		}
+		available = {
+			has_country_flag = NEE_sentinels
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_might_makes_right"
+			add_political_power = 50
+			add_war_support = 0.1
+			add_stability = 0.05
+		}
+	}
+	
+	focus = {
+		id = NEE_crush_statists
+		icon = GFX_NEE_crush_statists
+		cost = 5
+		prerequisite = {
+			focus = NEE_might_makes_right
+		}
+		x = 2
+		y = 5
+		relative_position_id = NEE_radical_victory
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			has_country_flag = NEE_sentinels
+		}
+		select_effect = {
+		country_event = {
+		id = newengland.132
+		days = 15
+		}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_crush_statists"
+			modify_country_flag = {
+				flag = SIC_ancap_power
+				value = 1
+			}
+			add_popularity = { ideology = authoritarian_democrat popularity = -0.02 }
+			add_popularity = { ideology = social_conservative popularity = -0.02 }
+			add_popularity = { ideology = social_liberal popularity = -0.03 }
+			add_popularity = { ideology = social_democrat popularity = -0.03 }
+			add_popularity = { ideology = radical_socialist popularity = -0.05 }
+			add_popularity = { ideology = syndicalist popularity = -0.05 }
+			add_popularity = { ideology = totalist popularity = -0.05 }
+		}
+	}
+	
+	focus = {
+		id = NEE_hostile_takeover
+		icon = GFX_NEE_hostile_takeover
+		cost = 5
+		prerequisite = {
+			focus = NEE_might_makes_right
+		}
+		x = 0
+		y = 5
+		relative_position_id = NEE_radical_victory
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			has_country_flag = NEE_sentinels
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_Declare_Independence"
+			modify_country_flag = {
+				flag = SIC_ancap_power
+				value = 1
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_mainland_america = yes
+					free_building_slots = { building = arms_factory size > 0 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		hidden_effect = {
+		country_event = {
+		id = newengland.131
+		days = 50
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = NEE_right_of_contract
+		icon = GFX_NEE_right_of_contract
+		cost = 5
+		prerequisite = {
+			focus = NEE_dissolving_the_state
+		}
+		x = 4
+		y = 4
+		relative_position_id = NEE_radical_victory
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			has_country_flag = NEE_sentinels
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_Declare_Independence"
+			add_stability = 0.05
+			modify_country_flag = {
+				flag = SIC_ancap_power
+				value = 1
+			}
+		}
+	}
+	
+	focus = {
+		id = NEE_a_fee_for_our_aid
+		icon = GFX_NEE_fee_for_our_aid
+		cost = 5
+		prerequisite = {
+			focus = NEE_right_of_contract
+		}
+		x = 4
+		y = 5
+		relative_position_id = NEE_radical_victory
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			has_country_flag = NEE_sentinels
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_Declare_Independence"
+			CAN = {
+				country_event = newengland.101
+			}
+		}
+	}
+	
+	focus = {
+		id = NEE_expanded_labor_pool
+		icon = GFX_NEE_expand_labor_pool
+		cost = 5
+		prerequisite = {
+			focus = NEE_right_of_contract
+		}
+		x = 6
+		y = 5
+		relative_position_id = NEE_radical_victory
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			has_country_flag = NEE_sentinels
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_Declare_Independence"
+			modify_country_flag = {
+				flag = SIC_ancap_power
+				value = 1
+			}
+			add_political_power = 50
+			hidden_effect = {
+			country_event = {
+			id = newengland.136
+			days = 50
+				}
+			}
+		}
+	}
+	
+###########
+### AIR ###
+###########
+
+	focus = {
+		id = NEE_US_Airforce
+		icon = GFX_goal_NEE_Air_Force
+		cost = 6
+		x = 40
+		y = 1
+		relative_position_id = NEE_Legitimate_America
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		available = {
+			has_completed_focus = NEE_Legitimate_America
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_US_Airforce"
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = air_doctrine
+			}
+			air_experience = 50
+		}
+	}
+	
+	focus = {
+		id = NEE_WASP
+		icon = GFX_goal_COS_American_Staff
+		cost = 6
+		prerequisite = {
+			focus = NEE_US_Airforce
+		}
+		x = -1
+		y = 1
+		relative_position_id = NEE_US_Airforce
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = 2
+				has_manpower < 1000
+			}
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_WASP"
+			set_rule = { can_generate_female_aces = yes }
+			add_manpower = 15000
+		}
+	}
+
+	focus = {
+		id = NEE_Air_Defence_Command
+		icon = GFX_goal_generic_build_airforce
+		cost = 6
+		prerequisite = {
+			focus = NEE_US_Airforce
+		}
+		prerequisite = {
+			focus = NEE_WASP
+		}
+		x = 0
+		y = 2
+		relative_position_id = NEE_US_Airforce
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		available = {
+			OR = {
+				931 = { is_owned_and_controlled_by = ROOT }
+				796 = { is_owned_and_controlled_by = ROOT }
+			}
+		}
+		bypass = {
+			NOT = {
+				owns_state = 931
+				owns_state = 796
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_Air_Defence_Command"
+			hidden_effect = {
+				country_event = {
+					id = newengland.73
+					days = 100
+					random = 100
+				}
+			}
+			931 = {
+				if = {
+					limit = { is_owned_and_controlled_by = NEE }
+					add_building_construction = {
+						type = air_base
+						level = 3
+						instant_build = yes
+					}
+				}
+			}
+			796 = {
+				if = {
+					limit = { is_owned_and_controlled_by = NEE }
+					add_building_construction = {
+						type = air_base
+						level = 3
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = NEE_Paladin_Fighter
+		icon = GFX_goal_generic_air_fighter2
+		cost = 6
+		prerequisite = {
+			focus = NEE_Air_Defence_Command
+		}
+		mutually_exclusive = {
+			focus = NEE_B25_Bomber
+		}
+		x = -1
+		y = 3
+		relative_position_id = NEE_US_Airforce
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		available = {
+			has_tech = naval_bomber1
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_Paladin_Fighter"
+			add_ideas = NEE_F4U_Corsair
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				technology = fighter2
+			}
+		}
+	}
+
+	focus = {
+		id = NEE_B25_Bomber
+		icon = GFX_goal_generic_occupy_start_war
+		cost = 6
+		prerequisite = {
+			focus = NEE_Air_Defence_Command
+		}
+		mutually_exclusive = {
+			focus = NEE_Paladin_Fighter
+		}
+		x = 1
+		y = 3
+		relative_position_id = NEE_US_Airforce
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		available = {
+			has_tech = tactical_bomber1
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_B25_Bomber"
+			add_ideas = NEE_B25_Bomber
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				technology = tactical_bomber2
+				technology = tactical_bomber3
+			}
+		}
+	}
+
+	focus = {
+		id = NEE_P51_Mustang
+		icon = GFX_goal_generic_air_fighter
+		cost = 6
+		prerequisite = {
+			focus = NEE_B25_Bomber
+			focus = NEE_Paladin_Fighter
+		}
+		x = 0
+		y = 4
+		relative_position_id = NEE_US_Airforce
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		available = {
+			has_tech = fighter1
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_P51_Mustang"
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				technology = fighter3
+			}
+		}
+	}
+
+	focus = {
+		id = NEE_Flying_For_Freedom
+		icon = GFX_focus_chi_flying_tigers
+		cost = 6
+		prerequisite = {
+			focus = NEE_P51_Mustang
+		}
+		x = 0
+		y = 5
+		relative_position_id = NEE_US_Airforce
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		available = {
+			has_completed_focus = NEE_Public_Opinion_Support
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_Flying_For_Freedom"
+			air_experience = 25
+			custom_effect_tooltip = NEE_freedom_fliers_tt
+			custom_effect_tooltip = NEE_legitimacy_plus_5_tt
+			add_to_variable = {
+				var = NEE_legitimacy
+				value = 5
+			}
+			hidden_effect = {
+				country_event = {
+					id = newengland.71
+					days = 100
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = NEE_ISAC_Equipement
+		icon = GFX_goal_canada
+		cost = 6
+		prerequisite = {
+			focus = NEE_US_Navy
+		}
+		prerequisite = {
+			focus = NEE_US_Airforce
+		}
+		mutually_exclusive = {
+			focus = NEE_Self_Reliance
+		}
+		x = 1
+		y = 1
+		relative_position_id = NEE_US_Airforce
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		available = {
+			is_in_faction_with = CAN
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_ISAC_Equipement"
+			custom_effect_tooltip = NEE_ISAC_Equipement_tt
+		}
+	}
+
+	focus = {
+		id = NEE_Self_Reliance
+		icon = GFX_focus_generic_license_production
+		cost = 6
+		prerequisite = {
+			focus = NEE_US_Navy
+		}
+		prerequisite = {
+			focus = NEE_US_Airforce
+		}
+		mutually_exclusive = {
+			focus = NEE_ISAC_Equipement
+		}
+		x = 3
+		y = 1
+		relative_position_id = NEE_US_Airforce
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		available = {
+			796 = { is_owned_and_controlled_by = ROOT }
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_Self_Reliance"
+			796 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+#############
+### NAVAL ###
+#############	
+
+	focus = {# New England's Navy
+		id = NEE_US_Navy
+		icon = GFX_goal_NEE_Navy2
+		cost = 6
+		x = 44
+		y = 1
+		relative_position_id = NEE_Legitimate_America
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		available = {
+			has_completed_focus = NEE_Legitimate_America
+			any_owned_state = { is_coastal = yes }
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_US_Navy"
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = naval_doctrine
+			}
+			navy_experience = 50
+		}
+	}
+
+	focus = {
+		id = NEE_Liberty_Ships
+		icon = GFX_goal_generic_build_navy
+		cost = 6
+		prerequisite = {
+			focus = NEE_US_Navy
+		}
+		prerequisite = {
+			focus = NEE_Synthetic_Oil
+		}
+		x = 0
+		y = 2
+		relative_position_id = NEE_US_Navy
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		available = {
+			any_owned_state = { is_coastal = yes }
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_Liberty_Ships"
+			if = {
+				limit = {
+					935 = { is_owned_and_controlled_by = NEE }
+				}
+				935 = {
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+			}
+			custom_effect_tooltip = NEE_Liberty_Ships_tt
+		}
+	}
+
+	focus = {
+		id = NEE_destroyer_effort
+		icon = GFX_goal_generic_navy_anti_submarine
+		cost = 6
+		prerequisite = {
+			focus = NEE_Liberty_Ships
+		}
+		mutually_exclusive = {
+			focus = NEE_submarine_effort
+		}
+		x = -1
+		y = 3
+		relative_position_id = NEE_US_Navy
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		available = {
+			any_owned_state = { is_coastal = yes }
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_destroyer_effort"
+			add_ideas = kr_electric_boat_nee
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				category = dd_tech
+			}
+		}
+	}
+
+	focus = {
+		id = NEE_submarine_effort
+		icon = GFX_goal_generic_navy_submarine
+		cost = 6
+		prerequisite = {
+			focus = NEE_Liberty_Ships
+		}
+		mutually_exclusive = {
+			focus = NEE_destroyer_effort
+		}
+		x = 1
+		y = 3
+		relative_position_id = NEE_US_Navy
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		available = {
+			any_owned_state = { is_coastal = yes }
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_submarine_effort"
+			add_ideas = kr_electric_boat_nee
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				category = ss_tech
+			}
+		}
+	}
+
+	focus = {
+		id = NEE_light_cruiser_effort
+		icon = GFX_goal_generic_navy_cruiser
+		cost = 6
+		prerequisite = {
+			focus = NEE_submarine_effort
+			focus = NEE_destroyer_effort
+		}
+		x = 0
+		y = 4
+		relative_position_id = NEE_US_Navy
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		available = {
+			any_owned_state = { is_coastal = yes }
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_light_cruiser_effort"
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = cl_tech
+			}
+		}
+	}
+
+	focus = {
+		id = NEE_Colombia_Gem_of_the_Ocean
+		icon = GFX_goal_generic_navy_battleship
+		cost = 6
+		prerequisite = {
+			focus = NEE_light_cruiser_effort
+		}
+		x = 0
+		y = 5
+		relative_position_id = NEE_US_Navy
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		available = {
+			any_owned_state = { is_coastal = yes }
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_Colombia_Gem_of_the_Ocean"
+			add_ideas = NEE_Gem_of_the_Ocean
+		}
+	}
+
+
+###############
+### ECONOMY ###
+###############	
+
+	focus = {
+		id = NEE_Infrastructure_Act
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 6
+		x = 48
+		y = 0
+		relative_position_id = NEE_Legitimate_America
+		ai_will_do = {
+			factor = 4
+		}
+		available = {
+			has_completed_focus = NEE_Reassure_Financial_Institutions
+			OR = {
+				933 = { is_owned_and_controlled_by = ROOT }
+				934 = { is_owned_and_controlled_by = ROOT }
+				357 = { is_owned_and_controlled_by = ROOT }
+			}
+		}
+		bypass = {
+			NOT = {
+				owns_state = 933
+				owns_state = 934
+				owns_state = 357
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_Infrastructure_Act"
+			add_political_power = 50
+			if = {
+				limit = { 933 = { is_owned_and_controlled_by = ROOT } }
+				933 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = { 934 = { is_owned_and_controlled_by = ROOT } }
+				934 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = { 357 = { is_owned_and_controlled_by = ROOT } }
+				357 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = NEE_Maine_Steel
+		icon = GFX_focus_generic_steel
+		cost = 6
+		prerequisite = {
+			focus = NEE_bureau_of_industry
+		}
+		x = 0
+		y = 2
+		relative_position_id = NEE_Infrastructure_Act
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			357 = { is_owned_and_controlled_by = ROOT }
+		}
+		bypass = {
+			OR = {
+				NOT = { owns_state = 357 }
+				357 = { has_state_flag = CAN_steel_developed }
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_Maine_Steel"
+			357 = {
+				set_state_flag = CAN_steel_developed
+				add_extra_state_shared_building_slots = 1
+				add_resource = {
+					type = steel
+					amount = 16
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = NEE_Minutetank
+		icon = GFX_focus_NZL_bob_semple_tank
+		cost = 6
+		prerequisite = {
+			focus = NEE_Maine_Steel
+		}
+		x = 0
+		y = 3
+		relative_position_id = NEE_Infrastructure_Act
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_Minutetank"
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				technology = advanced_light_tank
+				technology = improved_light_tank
+			}
+		}
+	}
+
+	focus = {
+		id = NEE_Synthetic_Oil
+		icon = GFX_goal_generic_oil_refinery
+		cost = 6
+		prerequisite = {
+			focus = NEE_bureau_of_industry
+		}
+		x = -2
+		y = 2
+		relative_position_id = NEE_Infrastructure_Act
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		available = {
+			932 = { is_owned_and_controlled_by = ROOT }
+		}
+		bypass = {
+			OR = {
+				NOT = { owns_state = 932 }
+				932 = { has_state_flag = CAN_synth_developed }
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_Synthetic_Oil"
+			if = {
+				limit = { NOT = { has_tech = synth_oil_experiments } }
+				set_technology = {
+					synth_oil_experiments = 1
+				}
+			}
+			932 = {
+				set_state_flag = CAN_synth_developed
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = NEE_bureau_of_industry
+		icon = GFX_goal_generic_production
+		cost = 6
+		prerequisite = {
+			focus = NEE_Infrastructure_Act
+		}
+		x = -1
+		y = 1
+		relative_position_id = NEE_Infrastructure_Act
+		ai_will_do = {
+			factor = 2
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_bureau_of_industry"
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = construction_tech
+			}
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = excavation_tech
+			}
+		}
+	}
+	focus = {
+		id = NEE_Settlement_Movement
+		icon = GFX_focus_generic_self_management
+		cost = 6
+		prerequisite = {
+			focus = NEE_Infrastructure_Act
+		}
+		x = 2
+		y = 1
+		relative_position_id = NEE_Infrastructure_Act
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			OR = {
+				933 = { is_owned_and_controlled_by = ROOT }
+				934 = { is_owned_and_controlled_by = ROOT }
+			}
+		}
+		bypass = {
+			NOT = {
+				owns_state = 933
+				owns_state = 934
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_Settlement_Movement"
+			if = {
+				limit = { 933 = { is_owned_and_controlled_by = ROOT } }
+				933 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = { 934 = { is_owned_and_controlled_by = ROOT } }
+				934 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = NEE_Electrification_Effort
+		icon = GFX_goal_generic_construct_civilian
+		cost = 6
+		prerequisite = {
+			focus = NEE_Settlement_Movement
+		}
+		x = 2
+		y = 3
+		relative_position_id = NEE_Infrastructure_Act
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+			OR = {
+				933 = { is_owned_and_controlled_by = ROOT }
+				357 = { is_owned_and_controlled_by = ROOT }
+				796 = { is_owned_and_controlled_by = ROOT }
+			}
+		}
+		bypass = {
+			NOT = {
+				owns_state = 934
+				owns_state = 357
+				owns_state = 796
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_Electrification_Effort"
+			if = {
+				limit = { 934 = { is_owned_and_controlled_by = ROOT } }
+				934 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = { 357 = { is_owned_and_controlled_by = ROOT } }
+				357 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = { 796 = { is_owned_and_controlled_by = ROOT } }
+				796 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = NEE_Ivy_League_Expansion
+		icon = GFX_focus_research2
+		cost = 6
+		prerequisite = {
+			focus = NEE_Smith_and_Wessons
+			focus = NEE_Settlement_Movement
+		}
+		x = 3
+		y = 2
+		relative_position_id = NEE_Infrastructure_Act
+		ai_will_do = {
+			factor = 10
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_Ivy_League_Expansion"
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = NEE_American_Capitalism
+		icon = GFX_goal_USA_american_industry
+		cost = 6
+		prerequisite = {
+			focus = NEE_Electrification_Effort
+		}
+		prerequisite = {
+			focus = NEE_Lowel_Munition_Factory
+		}
+		x = 3
+		y = 4
+		relative_position_id = NEE_Infrastructure_Act
+		ai_will_do = {
+			factor = 4
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_American_Capitalism"
+			add_ideas = NEE_American_Capitalism
+		}
+	}
+
+
+############
+### LAND ###
+############	
+
+	focus = {
+		id = NEE_Reestablish_Minutemen
+		icon = GFX_goal_national_mobilization
+		cost = 6
+		x = 54
+		y = 0
+		relative_position_id = NEE_Legitimate_America
+		available = {
+		has_completed_focus = NEE_Legitimate_America
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_Reestablish_Minutemen"
+			army_experience = 50
+			add_ideas = NEE_Minutemen
+		}
+	}
+
+	focus = {
+		id = NEE_Smith_and_Wessons
+		icon = GFX_goal_generic_small_arms
+		cost = 6
+		prerequisite = {
+			focus = NEE_Reestablish_Minutemen
+		}
+		x = -2
+		y = 1
+		relative_position_id = NEE_Reestablish_Minutemen
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		available = {
+			796 = { is_owned_and_controlled_by = ROOT }
+		}
+		bypass = {
+			NOT = { owns_state = 796 }
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_Smith_and_Wessons"
+			796 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 500
+			producer = NEE
+			}
+		}
+	}
+
+	focus = {
+		id = NEE_Lowel_Munition_Factory
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 6
+		prerequisite = {
+			focus = NEE_Smith_and_Wessons
+		}
+		x = -2
+		y = 3
+		relative_position_id = NEE_Reestablish_Minutemen
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		available = {
+			932 = { is_owned_and_controlled_by = ROOT }
+		}
+		bypass = {
+			NOT = { owns_state = 932 }
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_Lowel_Munition_Factory"
+			932 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = NEE_long_range_patrol
+		icon = GFX_goal_generic_special_forces
+		cost = 6
+		prerequisite = {
+			focus = NEE_Reestablish_Minutemen
+		}
+		mutually_exclusive = {
+			focus = NEE_defensive_in_nature
+		}
+		x = 1
+		y = 1
+		relative_position_id = NEE_Reestablish_Minutemen
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_long_range_patrol"
+			add_ideas = NEE_Special_Forces
+		}
+	}
+
+	focus = {
+		id = NEE_marines
+		icon = GFX_goal_USA_usmc
+		cost = 6
+		prerequisite = {
+			focus = NEE_long_range_patrol
+		}
+		x = 0
+		y = 2
+		relative_position_id = NEE_Reestablish_Minutemen
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_marines"
+			add_ideas = NEE_marine_corps
+			add_tech_bonus = {
+				name = marines_bonus
+				bonus = 1
+				uses = 1
+				category = marine_tech
+			}
+		}
+	}
+
+	focus = {
+		id = NEE_Urban_Combat_Training
+		icon = GFX_SIA_Urban_Warfare_NF
+		cost = 6
+		prerequisite = {
+			focus = NEE_marines
+		}
+		x = 0
+		y = 4
+		relative_position_id = NEE_Reestablish_Minutemen
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_Urban_Combat_Training"
+			custom_effect_tooltip = SRI_asymmetrical_warfare_effect
+			hidden_effect = {
+				set_technology = { asymmetrical_warfare = 1 }
+			}
+		}
+	}
+
+	focus = {
+		id = NEE_Behind_Eneny_Lines
+		icon = GFX_focus_prc_infiltration
+		cost = 6
+		prerequisite = {
+			focus = NEE_long_range_patrol
+		}
+		mutually_exclusive = {
+			focus = NEE_Defence_Stratagem_A
+		}
+		x = 1
+		y = 3
+		relative_position_id = NEE_Reestablish_Minutemen
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_Behind_Eneny_Lines"
+			custom_effect_tooltip = NEE_Behind_Eneny_Lines_tt
+		}
+	}
+
+	focus = {
+		id = NEE_defensive_in_nature
+		icon = GFX_focus_generic_coastal_fort
+		cost = 6
+		prerequisite = {
+			focus = NEE_Reestablish_Minutemen
+		}
+		mutually_exclusive = {
+			focus = NEE_long_range_patrol
+		}
+		x = 3
+		y = 1
+		relative_position_id = NEE_Reestablish_Minutemen
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_defensive_in_nature"
+			swap_ideas = {
+				remove_idea = NEE_Minutemen
+				add_idea = NEE_Defensive_Nature
+			}
+		}
+	}
+
+	focus = {
+		id = NEE_Enfield_Imports
+		icon = GFX_focus_secret_rearmament
+		cost = 6
+		prerequisite = {
+			focus = NEE_defensive_in_nature
+			focus = NEE_long_range_patrol
+		}
+		x = 2
+		y = 2
+		relative_position_id = NEE_Reestablish_Minutemen
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		available = {
+			is_in_faction_with = CAN
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_Enfield_Imports"
+			add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 2000 producer = CAN }
+			add_political_power = -75
+		}
+	}
+
+	focus = {
+		id = NEE_Defence_Stratagem_A
+		icon = GFX_focus_generic_provoke_border_clashes
+		cost = 6
+		prerequisite = {
+			focus = NEE_defensive_in_nature
+		}
+		mutually_exclusive = {
+			focus = NEE_Behind_Eneny_Lines
+		}
+		x = 3
+		y = 3
+		relative_position_id = NEE_Reestablish_Minutemen
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_Defence_Stratagem_A"
+			custom_effect_tooltip = NEE_Defence_Stratagem_A_tt
+		}
+	}
+
+	focus = {
+		id = NEE_A11_Mathilda
+		icon = GFX_goal_generic_build_tank
+		cost = 6
+		prerequisite = {
+			focus = NEE_Defence_Stratagem_A
+			focus = NEE_Behind_Eneny_Lines
+		}
+		x = 2
+		y = 4
+		relative_position_id = NEE_Reestablish_Minutemen
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		available = {
+			is_in_faction_with = CAN
+			CAN = { has_tech = improved_light_tank }
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_A11_Mathilda"
+			add_equipment_to_stockpile = { type = light_tank_equipment_2  amount = 150 producer = CAN }
+			add_tech_bonus = {
+				bonus = 0.55
+				uses = 1
+				technology = improved_light_tank
+			}
+		}
+	}
+
+	focus = {
+		id = NEE_Entrenchement_Tactics
+		icon = GFX_goal_generic_construction2
+		cost = 6
+		prerequisite = {
+			focus = NEE_defensive_in_nature
+		}
+		x = 4
+		y = 2
+		relative_position_id = NEE_Reestablish_Minutemen
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_Entrenchement_Tactics"
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = recon_tech
+			}
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = engineers_tech
+			}
+		}
+	}
+
+	focus = {
+		id = NEE_Battleline_of_Freedom
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 6
+		prerequisite = {
+			focus = NEE_Reestablish_Minutemen
+		}
+		x = 5
+		y = 1
+		relative_position_id = NEE_Reestablish_Minutemen
+		ai_will_do = {
+			factor = 4
+		}
+		available = {
+			796 = { is_owned_and_controlled_by = ROOT }
+		}
+		bypass = {
+			OR = {
+				NOT = { owns_state = 796 }
+				owns_state = 360
+				360 = { owner = { is_in_faction_with = ROOT } }
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_Battleline_of_Freedom"
+			796 = {
+				add_building_construction = {
+					type = bunker
+					level = 4
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = NEE_Forest_Rangers
+		icon = GFX_goal_military_academy
+		cost = 6
+		prerequisite = {
+			focus = NEE_Entrenchement_Tactics
+		}
+		x = 4
+		y = 4
+		relative_position_id = NEE_Reestablish_Minutemen
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_Forest_Rangers"
+			swap_ideas = {
+				remove_idea = NEE_Defensive_Nature
+				add_idea = NEE_Green_Mountain_Boys
+			}
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = mountaineers_tech
+			}
+		}
+	}
+
+	focus = {
+		id = NEE_Underground_Railroad
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 6
+		prerequisite = {
+			focus = NEE_Behind_Eneny_Lines
+		}
+		x = 1
+		y = 5
+		relative_position_id = NEE_Reestablish_Minutemen
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		bypass = {
+			has_global_flag = USA_civil_war_over_flag
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_Underground_Railroad"
+			add_stability = 0.10
+			add_manpower = 5000
+			custom_effect_tooltip = NEE_Underground_Railroad_tt
+			hidden_effect = {
+				country_event = {
+					id = newengland.50
+					days = 8
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = NEE_Arsenal_of_Democracy
+		icon = GFX_goal_generic_construct_military
+		cost = 6
+		prerequisite = {
+			focus = NEE_Defence_Stratagem_A
+		}
+		x = 3
+		y = 5
+		relative_position_id = NEE_Reestablish_Minutemen
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		available = {
+			357 = { is_owned_and_controlled_by = ROOT }
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_Arsenal_of_Democracy"
+			357 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = industry
+			}
+		}
+	}
+	
+	focus = {
+		id = NEE_the_future_of_new_england_army
+		icon = GFX_goal_NEE_army
+		cost = 5
+		x = 70
+		y = 0
+		relative_position_id = NEE_Legitimate_America
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		available = {
+			has_completed_focus = NEE_Legitimate_America
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_the_future_of_new_england_army"
+			army_experience = 20
+			add_command_power = 10
+		}
+	}
+	
+	focus = {
+		id = NEE_appoint_chaffee
+		icon = GFX_goal_NEE_chaffee
+		cost = 6
+		x = -7
+		y = 1
+		relative_position_id = NEE_the_future_of_new_england_army
+		prerequisite = {
+			focus = NEE_the_future_of_new_england_army
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_appoint_chaffee"
+			add_tech_bonus = {
+				name = NEE_Spearhead_Doctrine
+				bonus = 1.5
+				uses = 1
+				category = cat_mobile_warfare
+			}
+			add_tech_bonus = {
+				name = COR_Spearhead_Doctrine
+				bonus = 2
+				uses = 1
+				category = cat_mobile_warfare
+			}
+			add_tech_bonus = {
+				name = NEE_tanks
+				bonus = 0.75
+				uses = 2
+				category = armor
+			}
+			add_equipment_to_stockpile = {
+				type = light_tank_equipment
+				amount = 15
+				producer = NEE
+			}
+		}
+	}
+	focus = {
+		id = NEE_mechanical_cavalry
+		icon = GFX_goal_NEE_mechanical_cavalry
+		cost = 6
+		x = 0
+		y = 1
+		relative_position_id = NEE_appoint_chaffee
+		prerequisite = {
+			focus = NEE_appoint_chaffee
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_mechanical_cavalry"
+			add_ideas = NEE_mechanical_army_idea
+			add_equipment_to_stockpile = {
+			type = mechanized_equipment
+			amount = 50
+			producer = NEE
+			}
+			add_tech_bonus = {
+				name = mechanized_bonus
+				bonus = 1
+				uses = 1
+				category = armor
+			}
+		}
+	}
+	focus = {
+		id = NEE_coordination_principal
+		icon = GFX_goal_USA_organic_air_support
+		cost = 6
+		x = 0
+		y = 2
+		relative_position_id = NEE_appoint_chaffee
+		prerequisite = {
+			focus = NEE_mechanical_cavalry
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_coordination_principal"
+			swap_ideas = {
+			remove_idea = NEE_mechanical_army_idea
+			add_idea = NEE_mechanical_army_idea_2
+			}
+			army_experience = 20
+			air_experience = 20
+			add_command_power = 40
+			add_tech_bonus = {
+				name = NEE_Spearhead_Doctrine
+				bonus = 2.5
+				uses = 1
+				category = cat_mobile_warfare
+			}
+		}
+	}
+	focus = {
+		id = NEE_experimental_organization
+		icon = GFX_focus_generic_army_tanks2
+		cost = 6
+		x = 1
+		y = 3
+		relative_position_id = NEE_appoint_chaffee
+		prerequisite = {
+			focus = NEE_coordination_principal
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_experimental_organization"
+			swap_ideas = {
+			remove_idea = NEE_mechanical_army_idea_2
+			add_idea = NEE_mechanical_army_idea_3
+			}
+			add_tech_bonus = {
+				name = NEE_Spearhead_Doctrine
+				bonus = 1.5
+				uses = 3
+				category = cat_mobile_warfare
+			}
+		}
+	}
+	focus = {
+		id = NEE_mobile_emphasis
+		icon = GFX_goal_generic_army_motorized
+		cost = 6
+		x = 1
+		y = 4
+		relative_position_id = NEE_appoint_chaffee
+		prerequisite = {
+			focus = NEE_experimental_organization
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_mobile_emphasis"
+			swap_ideas = {
+			remove_idea = NEE_mechanical_army_idea_3
+			add_idea = NEE_mechanical_army_idea_4
+			}
+			army_experience = 10
+			add_tech_bonus = {
+				name = NEE_Spearhead_Doctrine
+				bonus = 1.5
+				uses = 2
+				category = cat_mobile_warfare
+			}
+		}
+	}
+	focus = {
+		id = NEE_equipment_update
+		icon = GFX_goal_generic_small_arms
+		cost = 6
+		x = -1
+		y = 3
+		relative_position_id = NEE_appoint_chaffee
+		prerequisite = {
+			focus = NEE_coordination_principal
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_equipment_update"
+			add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 75
+			producer = NEE
+			}
+			add_equipment_to_stockpile = {
+			type = support_equipment
+			amount = 30
+			producer = NEE
+			}
+			add_equipment_to_stockpile = {
+			type = mechanized_equipment
+			amount = 20
+			producer = NEE
+			}
+			add_equipment_to_stockpile = {
+			type = motorized_equipment
+			amount = 20
+			producer = NEE
+			}
+			add_tech_bonus = {
+				name = mechanized_bonus
+				bonus = 1
+				uses = 1
+				category = armor
+			}
+			add_tech_bonus = {
+				name = mechanized_bonus
+				bonus = 1
+				uses = 1
+				category = motorized_equipment
+			}
+		}
+	}
+	focus = {
+		id = NEE_armor_production
+		icon = GFX_focus_generic_tank_production
+		cost = 6
+		x = -1
+		y = 4
+		relative_position_id = NEE_appoint_chaffee
+		prerequisite = {
+			focus = NEE_equipment_update
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_armor_production"
+			random_owned_controlled_state = {
+				limit = {
+					is_mainland_america = yes
+					is_owned_and_controlled_by = NEE
+					free_building_slots = { building = arms_factory size > 0 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name = mechanized_bonus
+				bonus = 2
+				uses = 2
+				category = armor
+			}
+			add_equipment_to_stockpile = {
+			type = light_tank_equipment
+			amount = 30
+			producer = NEE
+			}
+		}
+	}
+	focus = {
+		id = NEE_tank_deployment
+		icon = GFX_goal_generic_army_tanks
+		cost = 6
+		x = 0
+		y = 5
+		relative_position_id = NEE_appoint_chaffee
+		prerequisite = {
+			focus = NEE_armor_production
+		}
+		prerequisite = {
+			focus = NEE_mobile_emphasis
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_Reestablish_Minutemen"
+			add_equipment_to_stockpile = {
+			type = light_tank_equipment
+			amount = 160
+			producer = NEE
+			}
+			add_equipment_to_stockpile = {
+			type = medium_tank_equipment
+			amount = 15
+			producer = TEX
+			}
+		}
+	}
+	focus = {
+		id = NEE_research_grants
+		icon = GFX_goal_generic_scientific_exchange
+		cost = 6
+		x = 1
+		y = 6
+		relative_position_id = NEE_appoint_chaffee
+		prerequisite = {
+			focus = NEE_tank_deployment
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_Reestablish_Minutemen"
+			add_tech_bonus = {
+				name = NEE_Spearhead_Doctrine
+				bonus = 2
+				uses = 2
+				category = cat_mobile_warfare
+			}
+			add_tech_bonus = {
+				name = mechanized_bonus
+				bonus = 2
+				uses = 1
+				category = armor
+			}
+		}
+	}
+	focus = {
+		id = NEE_industrial_grants
+		icon = GFX_goal_generic_construction
+		cost = 5
+		x = -1
+		y = 6
+		relative_position_id = NEE_appoint_chaffee
+		prerequisite = {
+			focus = NEE_tank_deployment
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_Reestablish_Minutemen"
+			add_tech_bonus = {
+				name = NEE_industry_bonus
+				bonus = 1.5
+				uses = 1
+				category = industry
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_mainland_america = yes
+					is_owned_and_controlled_by = NEE
+					free_building_slots = { building = arms_factory size > 0 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = NEE_general_pershing
+		icon = GFX_goal_NEE_pershing
+		cost = 5
+		x = -1
+		y = 1
+		relative_position_id = NEE_the_future_of_new_england_army
+		prerequisite = {
+			focus = NEE_the_future_of_new_england_army
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_general_pershing"
+			add_ideas = NEE_pershing_plan_idea
+			army_experience = 30
+			add_command_power = 20
+		}
+	}
+	focus = {
+		id = NEE_infantry_investments
+		icon = GFX_goal_generic_military_sphere
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = NEE_general_pershing
+		prerequisite = {
+			focus = NEE_general_pershing
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_infantry_investments"
+			add_manpower = 3000
+			add_tech_bonus = {
+				name = infantry_bonus
+				bonus = 1
+				uses = 2
+				category = infantry_weapons
+			}
+			add_tech_bonus = {
+				name = NEE_grand_battleplan
+				bonus = 1
+				uses = 1
+				category = cat_grand_battle_plan
+			}
+		}
+	}
+	focus = {
+		id = NEE_streamlined_staff
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+		x = -2
+		y = 1
+		relative_position_id = NEE_general_pershing
+		prerequisite = {
+			focus = NEE_general_pershing
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_streamlined_staff"
+			swap_ideas = {
+			remove_idea = NEE_pershing_plan_idea
+			add_idea = NEE_pershing_plan_idea_2
+			}
+			add_command_power = 30
+			add_tech_bonus = {
+				name = NEE_grand_battleplan
+				bonus = 1
+				uses = 1
+				category = cat_grand_battle_plan
+			}
+		}
+	}
+	focus = {
+		id = NEE_open_warfare
+		icon = GFX_goal_NEE_open_warfare
+		cost = 5
+		x = -3
+		y = 2
+		relative_position_id = NEE_general_pershing
+		prerequisite = {
+			focus = NEE_streamlined_staff
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_open_warfare"
+			add_ideas = NEE_open_warfare_idea
+			army_experience = 10
+			add_tech_bonus = {
+				name = NEE_grand_battleplan
+				bonus = 1.25
+				uses = 2
+				category = cat_grand_battle_plan
+			}
+		}
+	}
+	focus = {
+		id = NEE_natural_defenses
+		icon = GFX_goal_fortify_the_westwall
+		cost = 5
+		x = -1
+		y = 2
+		relative_position_id = NEE_general_pershing
+		prerequisite = {
+			focus = NEE_streamlined_staff
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_natural_defenses"
+			swap_ideas = {
+			remove_idea = NEE_pershing_plan_idea_2
+			add_idea = NEE_pershing_plan_idea_3
+			}
+			add_tech_bonus = {
+				name = NEE_grand_battleplan
+				bonus = 1
+				uses = 1
+				category = cat_grand_battle_plan
+			}
+		}
+	}
+	focus = {
+		id = NEE_breakthrough_emphasis
+		icon = GFX_goal_generic_demand_territory
+		cost = 5
+		x = -2
+		y = 3
+		relative_position_id = NEE_general_pershing
+		prerequisite = {
+			focus = NEE_natural_defenses
+		}
+		prerequisite = {
+			focus = NEE_open_warfare
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_breakthrough_emphasis"
+			swap_ideas = {
+			remove_idea = NEE_pershing_plan_idea_3
+			add_idea = NEE_pershing_plan_idea_4
+			}
+			add_tech_bonus = {
+				name = NEE_grand_battleplan
+				bonus = 2
+				uses = 2
+				category = cat_grand_battle_plan
+			}
+			add_war_support = 0.05
+		}
+	}
+	focus = {
+		id = NEE_long_range_logistics
+		icon = GFX_focus_generic_license_production
+		cost = 5
+		x = -2
+		y = 4
+		relative_position_id = NEE_general_pershing
+		prerequisite = {
+			focus = NEE_breakthrough_emphasis
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_long_range_logistics"
+			swap_ideas = {
+			remove_idea = NEE_open_warfare_idea
+			add_idea = NEE_open_warfare_idea_2
+			}
+			add_tech_bonus = {
+				name = NEE_grand_battleplan
+				bonus = 0.5
+				uses = 1
+				category = cat_grand_battle_plan
+			}
+			add_equipment_to_stockpile = {
+				type = motorized_equipment
+				amount = 100
+				producer = NEE
+			}
+		}
+	}
+	focus = {
+		id = NEE_expand_westpoint
+		icon = GFX_goal_USA_honor_academies
+		cost = 5
+		x = 2
+		y = 1
+		relative_position_id = NEE_general_pershing
+		prerequisite = {
+			focus = NEE_general_pershing
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_expand_westpoint"
+			add_ideas = NEE_westpoint_idea
+			add_tech_bonus = {
+				name = NEE_grand_battleplan
+				bonus = 2.5
+				uses = 1
+				category = cat_grand_battle_plan
+			}
+		}
+	}
+	focus = {
+		id = NEE_american_marksmenship
+		icon = GFX_goal_NEE_american_marksmanship
+		cost = 5
+		x = 3
+		y = 2
+		relative_position_id = NEE_general_pershing
+		prerequisite = {
+			focus = NEE_expand_westpoint
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_american_marksmenship"
+			add_ideas = NEE_american_marksmenship_idea
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 150
+				producer = NEE
+			}
+		}
+	}
+	focus = {
+		id = NEE_iron_discipline
+		icon = GFX_BBR_mass_recruitment
+		cost = 5
+		x = 1
+		y = 2
+		relative_position_id = NEE_general_pershing
+		prerequisite = {
+			focus = NEE_expand_westpoint
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_iron_discipline"
+			swap_ideas = {
+			remove_idea = NEE_westpoint_idea
+			add_idea = NEE_westpoint_idea_2
+			}
+			add_tech_bonus = {
+				name = NEE_grand_battleplan
+				bonus = 1
+				uses = 1
+				category = cat_grand_battle_plan
+			}
+		}
+	}
+	focus = {
+		id = NEE_merit_promotion
+		icon = GFX_BBR_full_honors_act
+		cost = 5
+		x = 2
+		y = 3
+		relative_position_id = NEE_general_pershing
+		prerequisite = {
+			focus = NEE_american_marksmenship
+		}
+		prerequisite = {
+			focus = NEE_iron_discipline
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_merit_promotion"
+			swap_ideas = {
+			remove_idea = NEE_westpoint_idea_2
+			add_idea = NEE_westpoint_idea_3
+			}
+			army_experience = 25
+			add_tech_bonus = {
+				name = NEE_grand_battleplan
+				bonus = 1.5
+				uses = 1
+				category = cat_grand_battle_plan
+			}
+		}
+	}
+	focus = {
+		id = NEE_black_combat_troops
+		icon = GFX_BBR_buffalo_soldiers
+		cost = 5
+		x = 2
+		y = 4
+		relative_position_id = NEE_general_pershing
+		prerequisite = {
+			focus = NEE_merit_promotion
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_black_combat_troops"
+			swap_ideas = {
+			remove_idea = NEE_american_marksmenship_idea
+			add_idea = NEE_american_marksmenship_idea_2
+			}
+			add_manpower = 10000
+		}
+	}
+	focus = {
+		id = NEE_assault_the_line
+		icon = GFX_goal_NEE_assault_the_line
+		cost = 5
+		x = 0
+		y = 4
+		relative_position_id = NEE_general_pershing
+		prerequisite = {
+			focus = NEE_merit_promotion
+		}
+		prerequisite = {
+			focus = NEE_breakthrough_emphasis
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_assault_the_line"
+			swap_ideas = {
+			remove_idea = NEE_pershing_plan_idea_4
+			add_idea = NEE_pershing_plan_idea_5
+			}
+			add_tech_bonus = {
+				name = NEE_grand_battleplan
+				bonus = 1.25
+				uses = 3
+				category = cat_grand_battle_plan
+			}
+			add_command_power = 25
+		}
+	}
+	focus = {
+		id = NEE_old_gravel_voice
+		icon = GFX_goal_NEE_old_gravel_voice
+		cost = 5
+		x = 6
+		y = 1
+		relative_position_id = NEE_the_future_of_new_england_army
+		prerequisite = {
+			focus = NEE_the_future_of_new_england_army
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_old_gravel_voice"
+			army_experience = 15
+			add_tech_bonus = {
+				name = NEE_firepwer_docrine
+				bonus = 1
+				uses = 1
+				category = cat_superior_firepower
+			}
+			add_equipment_to_stockpile = {
+			type = light_tank_equipment
+			amount = 5
+			producer = NEE
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 15
+				producer = NEE
+			}
+		}
+	}
+	focus = {
+		id = NEE_integrated_armor
+		icon = GFX_focus_generic_combined_arms
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = NEE_old_gravel_voice
+		prerequisite = {
+			focus = NEE_old_gravel_voice
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_integrated_armor"
+			army_experience = 10
+			add_tech_bonus = {
+				name = NEE_Bonus
+				bonus = 0.5
+				uses = 1
+				category = motorized_equipment
+			}
+			add_tech_bonus = {
+				name = NEE_firepwer_docrine
+				bonus = 1
+				uses = 1
+				category = cat_superior_firepower
+			}
+			add_equipment_to_stockpile = {
+			type = light_tank_equipment
+			amount = 10
+			producer = NEE
+			}
+			add_equipment_to_stockpile = {
+				type = motorized_equipment
+				amount = 30
+				producer = NEE
+			}
+		}
+	}
+	focus = {
+		id = NEE_decisive_tactics
+		icon = GFX_goal_generic_more_territorial_claims
+		cost = 4
+		x = -1
+		y = 2
+		relative_position_id = NEE_old_gravel_voice
+		prerequisite = {
+			focus = NEE_integrated_armor
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_decisive_tactics"
+			army_experience = 10
+			add_command_power = 20
+			add_war_support = 0.03
+			add_tech_bonus = {
+				name = NEE_firepwer_docrine
+				bonus = 2
+				uses = 1
+				category = cat_superior_firepower
+			}
+		}
+	}
+	focus = {
+		id = NEE_artillery_line
+		icon = GFX_goal_generic_army_artillery2
+		cost = 5
+		x = 1
+		y = 2
+		relative_position_id = NEE_old_gravel_voice
+		prerequisite = {
+			focus = NEE_integrated_armor
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_artillery_line"
+			add_tech_bonus = {
+				name = NEE_firepwer_docrine
+				bonus = 1
+				uses = 1
+				category = cat_superior_firepower
+			}
+			add_tech_bonus = {
+				name = artillery_bonus
+				bonus = 2
+				uses = 2
+				category = artillery
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 110
+				producer = NEE
+			}
+			
+		}
+	}
+	focus = {
+		id = NEE_bombing_support
+		icon = GFX_goal_generic_air_bomber
+		cost = 5
+		x = 2
+		y = 3
+		relative_position_id = NEE_old_gravel_voice
+		prerequisite = {
+			focus = NEE_artillery_line
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_bombing_support"
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = cat_strategic_bomber
+			}
+			add_tech_bonus = {
+				bonus = 0.6
+				uses = 2
+				category = radar_tech
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 40
+				producer = NEE
+			}
+			add_equipment_to_stockpile = {
+				type = strategic_bomber_equipment
+				amount = 50
+				producer = NEE
+			}
+			
+		}
+	}
+	focus = {
+		id = NEE_shore_bombardment
+		icon = GFX_goal_generic_amphibious_assault
+		cost = 5
+		x = 2
+		y = 4
+		relative_position_id = NEE_old_gravel_voice
+		prerequisite = {
+			focus = NEE_bombing_support
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_assault_the_line"
+			navy_experience = 10
+			add_equipment_to_stockpile = { type = naval_bomber_equipment amount = 30 }
+			add_tech_bonus = {
+				name = marines_bonus
+				bonus = 1
+				uses = 1
+				category = marine_tech
+			}
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = naval_bomber
+			}
+		}
+	}
+	focus = {
+		id = NEE_counter_attack
+		icon = GFX_goal_generic_major_war
+		cost = 5
+		x = 0
+		y = 3
+		relative_position_id = NEE_old_gravel_voice
+		prerequisite = {
+			focus = NEE_decisive_tactics
+		}
+		prerequisite = {
+			focus = NEE_artillery_line
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_assault_the_line"
+			add_equipment_to_stockpile = {
+				type = anti_tank_equipment
+				amount = 180
+				producer = CAL
+			}
+			add_tech_bonus = {
+				name = artillery_bonus
+				bonus = 1.5
+				uses = 1
+				category = antitank
+			}
+			add_equipment_to_stockpile = {
+				type = anti_air_equipment
+				amount = 50
+				producer = CAL
+			}
+			add_tech_bonus = {
+				name = artillery_bonus
+				bonus = 1.5
+				uses = 1
+				category = antiair
+			}
+			add_tech_bonus = {
+				name = NEE_firepwer_docrine
+				bonus = 1
+				uses = 1
+				category = cat_superior_firepower
+			}
+		}
+	}
+	focus = {
+		id = NEE_armored_spearhead
+		icon = GFX_goal_NEE_armored_spearhead
+		cost = 5
+		x = 0
+		y = 4
+		relative_position_id = NEE_old_gravel_voice
+		prerequisite = {
+			focus = NEE_counter_attack
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_assault_the_line"
+			army_experience = 10
+			add_tech_bonus = {
+				name = NEE_firepwer_docrine
+				bonus = 1.5
+				uses = 1
+				category = cat_superior_firepower
+			}
+			
+		}
+	}
+	focus = {
+		id = NEE_mechanical_drawing
+		icon = GFX_goal_USA_integral_mechanization
+		cost = 5
+		x = -2
+		y = 3
+		relative_position_id = NEE_old_gravel_voice
+		prerequisite = {
+			focus = NEE_decisive_tactics
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_assault_the_line"
+			army_experience = 20
+			add_tech_bonus = {
+				name = NEE_firepwer_docrine
+				bonus = 1.5
+				uses = 1
+				category = cat_superior_firepower
+			}
+			add_tech_bonus = {
+				name = NEE_mechanical_army
+				bonus = 1
+				uses = 1
+				category = motorized_equipment
+			}
+		}
+	}
+	focus = {
+		id = NEE_firepower_purchase
+		icon = GFX_goal_generic_army_artillery
+		cost = 5
+		x = -2
+		y = 4
+		relative_position_id = NEE_old_gravel_voice
+		prerequisite = {
+			focus = NEE_mechanical_drawing
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_firepower_purchase"
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 65
+				producer = NEE
+			}
+		}
+	}
+	focus = {
+		id = NEE_green_policy
+		icon = GFX_goal_NEE_green_policy
+		cost = 5
+		x = 12
+		y = 1
+		relative_position_id = NEE_the_future_of_new_england_army
+		prerequisite = {
+			focus = NEE_the_future_of_new_england_army
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_green_policy"
+			add_manpower = 2000
+			add_war_support = 0.03
+			add_political_power = -30
+			add_tech_bonus = {
+				name = Green_Plan
+				bonus = 0.75
+				uses = 1
+				category = cat_mass_assault
+			}
+		}
+	}
+	focus = {
+		id = NEE_consistant_conscription
+		icon = GFX_goal_CAL_aggressive_conscription
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = NEE_green_policy
+		prerequisite = {
+			focus = NEE_green_policy
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_consistant_conscription"
+			add_ideas = NEE_green_policy_idea
+			add_manpower = 9500
+			add_tech_bonus = {
+				name = Green_Plan
+				bonus = 1
+				uses = 1
+				category = cat_mass_assault
+			}
+		}
+	}
+	focus = {
+		id = NEE_moral_idealism
+		icon = GFX_goal_USA_new_interventionism
+		cost = 5
+		x = 2
+		y = 2
+		relative_position_id = NEE_green_policy
+		prerequisite = {
+			focus = NEE_consistant_conscription
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_moral_idealism"
+			add_war_support = 0.05
+			add_manpower = 250
+			add_political_power = 30
+			add_command_power = 5
+			add_opinion_modifier = { target = CAN modifier = small_increase }
+		}
+	}
+	focus = {
+		id = NEE_yankee_nationalism
+		icon = GFX_CAL_avenge_1776
+		cost = 5
+		x = -2
+		y = 2
+		relative_position_id = NEE_green_policy
+		prerequisite = {
+			focus = NEE_consistant_conscription
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_yankee_nationalism"
+			add_manpower = 3500
+			add_war_support = 0.1
+			add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 150
+			producer = NEE
+			}
+			add_tech_bonus = {
+				name = Green_Plan
+				bonus = 1
+				uses = 1
+				category = cat_mass_assault
+			}
+		}
+	}
+	focus = {
+		id = NEE_farmer_soldiers
+		icon = GFX_goal_NEE_farmers_into_soldiers
+		cost = 5
+		x = 0
+		y = 2
+		relative_position_id = NEE_green_policy
+		prerequisite = {
+			focus = NEE_consistant_conscription
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_farmer_soldiers"
+			swap_ideas = {
+			remove_idea = NEE_green_policy_idea
+			add_idea = NEE_green_policy_idea_2
+			}
+			add_stability = -0.03
+			add_manpower = 15000
+			add_tech_bonus = {
+				name = Green_Plan
+				bonus = 0.5
+				uses = 1
+				category = cat_mass_assault
+			}
+		}
+	}
+	focus = {# Silver Lease
+		id = NEE_silver_military_lease
+		icon = GFX_goal_NEE_silver_lease
+		cost = 5
+		x = 0
+		y = 3
+		relative_position_id = NEE_green_policy
+		prerequisite = {
+			focus = NEE_farmer_soldiers
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_silver_military_lease"
+			add_political_power = 30
+			random_owned_controlled_state = {
+				limit = {
+					is_mainland_america = yes
+					free_building_slots = { building = arms_factory size > 0 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_mainland_america = yes
+					free_building_slots = { building = arms_factory size > 0 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_mainland_america = yes
+					free_building_slots = { building = arms_factory size > 0 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	focus = {
+		id = NEE_mass_spending
+		icon = GFX_CAL_bonus_bill
+		cost = 5
+		x = 0
+		y = 4
+		relative_position_id = NEE_green_policy
+		prerequisite = {
+			focus = NEE_silver_military_lease
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_mass_spending"
+			swap_ideas = {
+			remove_idea = NEE_green_policy_idea_2
+			add_idea = NEE_green_policy_idea_3
+			}
+			add_manpower = 20000
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 2200
+				producer = NEE
+			}
+			add_equipment_to_stockpile = {
+				type = motorized_equipment
+				amount = 250
+				producer = NEE
+			}
+			add_tech_bonus = {
+				name = Green_Plan
+				bonus = 1.5
+				uses = 2
+				category = cat_mass_assault
+			}
+		}
+	}
+		focus = {# New England's Future
+		id = NEE_new_england_future
+		icon = GFX_goal_NEE_new_england_future
+		cost = 6
+		x = 10
+		y = 7
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			country_event = newengland.124
+		}
+	}
+	focus = {# Friend in the North
+		id = NEE_friend_north
+		icon = GFX_goal_NEE_Freinds_Up_North
+		cost = 0
+		x = 6
+		y = 8
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		prerequisite = {
+			focus = NEE_new_england_future
+		}
+		available = {
+			has_country_flag = windsor_first
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+	}
+	focus = {# Joint Entente Exercises
+		id = NEE_joint_exercises
+		icon = GFX_goal_NEE_joint_entente_excercises
+		cost = 6
+		x = 6
+		y = 9
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		prerequisite = {
+			focus = NEE_friend_north
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			army_experience = 100
+		}
+	}
+	focus = {# British Pact
+		id = NEE_british_pact
+		icon = GFX_goal_NEE_british_pact_3
+		cost = 6
+		x = 4
+		y = 10
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		prerequisite = {
+			focus = NEE_joint_exercises
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			CAN = {
+				country_event = newengland.124
+			}
+		}
+	}
+	focus = {# Joint Coastal Defenses
+		id = NEE_joint_coastal_defenses
+		icon = GFX_goal_NEE_joint_coastal_defenses
+		cost = 10
+		x = 6
+		y = 10
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		prerequisite = {
+			focus = NEE_joint_exercises
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			custom_effect_tooltip = forts_built
+			hidden_effect = {
+				931 = {
+					set_building_level = {
+						type = coastal_bunker
+						level = 3
+						province = 9847
+						instant_build = yes
+					}
+					set_building_level = {
+						type = coastal_bunker
+						level = 3
+						province = 6909
+						instant_build = yes
+					}
+					set_building_level = {
+						type = coastal_bunker
+						level = 3
+						province = 11830
+						instant_build = yes
+					}
+				}
+				935 = {
+					set_building_level = {
+						type = coastal_bunker
+						level = 3
+						province = 9832
+						instant_build = yes
+					}
+				}
+				932 = {
+					set_building_level = {
+						type = coastal_bunker
+						level = 3
+						province = 905
+						instant_build = yes
+					}
+					set_building_level = {
+						type = coastal_bunker
+						level = 3
+						province = 3906
+						instant_build = yes
+					}
+					set_building_level = {
+						type = coastal_bunker
+						level = 3
+						province = 6732
+						instant_build = yes
+					}
+				}
+				934 = {
+					set_building_level = {
+						type = coastal_bunker
+						level = 3
+						province = 3712
+						instant_build = yes
+					}
+				}
+				357 = {
+					set_building_level = {
+						type = coastal_bunker
+						level = 3
+						province = 3732
+						instant_build = yes
+					}
+					set_building_level = {
+						type = coastal_bunker
+						level = 3
+						province = 7462
+						instant_build = yes
+					}
+					set_building_level = {
+						type = coastal_bunker
+						level = 3
+						province = 12459
+						instant_build = yes
+					}
+					set_building_level = {
+						type = coastal_bunker
+						level = 3
+						province = 1338
+						instant_build = yes
+					}
+					set_building_level = {
+						type = coastal_bunker
+						level = 3
+						province = 1619
+						instant_build = yes
+					}
+				}
+			}
+		}
+    }
+	focus = {# Back the French
+		id = NEE_back_french
+		icon = GFX_goal_NEE_back_the_french
+		cost = 6
+		x = 8
+		y = 10
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		prerequisite = {
+			focus = NEE_joint_exercises
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			NEE = {
+				add_opinion_modifier = { target = NFA modifier = large_increase }
+			NFA = {
+				add_opinion_modifier = { target = NEE modifier = large_increase }
+				}
+			}
+			add_political_power = 20
+		}
+	}
+	focus = {# Join ISAC
+		id = NEE_join_isac
+		icon = GFX_goal_NEE_join_ISAC
+		cost = 6
+		x = 5
+		y = 11
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		prerequisite = {
+			focus = NEE_british_pact
+		}
+		prerequisite = {
+			focus = NEE_joint_coastal_defenses
+		}
+		available = {
+			is_in_faction_with = ENT
+			custom_trigger_tooltip = {
+				tooltip = DEH_ISAC_has_formed
+				has_global_flag = CAN_isac_created
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			if = {
+				limit = {
+					has_global_flag = CAN_isac_created
+					NOT = { is_in_tech_sharing_group = entente_research }
+				}
+				add_to_tech_sharing_group = entente_research
+			}
+			add_tech_bonus = {
+				name = NEE_join_isac
+				bonus = 1
+				uses = 1
+				category = electronics
+			}
+		}
+	}
+	focus = {# Boston to Ottawa
+		id = NEE_boston_to_ottawa
+		icon = GFX_goal_NEE_boston_to_ottawa
+		cost = 6
+		x = 7
+		y = 11
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		prerequisite = {
+			focus = NEE_back_french
+		}
+		prerequisite = {
+			focus = NEE_joint_coastal_defenses
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			932 = {
+				set_building_level = {
+					type = infrastructure
+					level = 4
+					instant_build = yes
+				}
+			}
+			796 = {
+				set_building_level = {
+					type = infrastructure
+					level = 4
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {# Wealth Cooperation
+		id = NEE_wealth_cooperation
+		icon = GFX_goal_NEE_wealth_cooperation
+		cost = 6
+		x = 6
+		y = 12
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		prerequisite = {
+			focus = NEE_boston_to_ottawa
+		}
+		prerequisite = {
+			focus = NEE_join_isac
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			add_political_power = 50
+			add_ideas = NEE_wealth_cooperation
+		}
+	}
+	focus = {# Harboring Exiles
+		id = NEE_harbour_exiles
+		icon = GFX_goal_NEE_harboring_exiles
+		cost = 6
+		x = 10
+		y = 9
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		prerequisite = {
+			focus = NEE_armed_free_neutrality
+			focus = NEE_friend_north
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			add_manpower = 25000
+		}
+	}
+	focus = {# Armed Free Neutrality
+		id = NEE_armed_free_neutrality
+		icon = GFX_goal_NEE_armed_free_neutrality
+		cost = 0
+		x = 14
+		y = 8
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		prerequisite = {
+			focus = NEE_new_england_future
+		}
+		available = {
+			has_country_flag = armed_free_neutrality
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+	}
+	focus = {# Boston Line
+		id = NEE_boston_line
+		icon = GFX_goal_NEE_Boston_line
+		cost = 6
+		x = 14
+		y = 9
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		prerequisite = {
+			focus = NEE_armed_free_neutrality
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			custom_effect_tooltip = boston_line
+			hidden_effect = {
+				set_building_level = {
+					type = bunker
+					level = 3
+					province = 6707
+					instant_build = yes
+				}
+				set_building_level = {
+					type = bunker
+					level = 3
+					province = 9664
+					instant_build = yes
+				}
+				set_building_level = {
+					type = bunker
+					level = 3
+					province = 11680
+					instant_build = yes
+				}
+				set_building_level = {
+					type = bunker
+					level = 3
+					province = 11650
+					instant_build = yes
+				}
+				set_building_level = {
+					type = bunker
+					level = 3
+					province = 6717
+					instant_build = yes
+				}
+				set_building_level = {
+					type = bunker
+					level = 3
+					province = 11660
+					instant_build = yes
+				}
+				set_building_level = {
+					type = bunker
+					level = 3
+					province = 706
+					instant_build = yes
+				}
+				set_building_level = {
+					type = bunker
+					level = 3
+					province = 3894
+					instant_build = yes
+				}
+				set_building_level = {
+					type = bunker
+					level = 3
+					province = 6911
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {# American Infrastructure
+		id = NEE_american_infrastructure
+		icon = GFX_goal_USA_american_industry
+		cost = 6
+		x = 12
+		y = 10
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		prerequisite = {
+			focus = NEE_boston_line
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_mainland_america = yes
+					free_building_slots = { building = infrastructure size > 0 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_mainland_america = yes
+					free_building_slots = { building = infrastructure size > 0 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_political_power = 100
+		}
+	}
+	focus = {# New English Fleet
+		id = NEE_new_english_fleet
+		icon = GFX_goal_NEE_Navy
+		cost = 6
+		x = 14
+		y = 10
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		prerequisite = {
+			focus = NEE_boston_line
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			add_ideas = NEE_maritime_industry_idea
+		}
+	}
+	focus = {# Cannon City
+		id = NEE_cannon_city
+		icon = GFX_goal_NEE_Cannon_City
+		cost = 6
+		x = 16
+		y = 10
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		prerequisite = {
+			focus = NEE_boston_line
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			custom_effect_tooltip = boston_line_2
+			hidden_effect = {
+			set_building_level = {
+					type = bunker
+					level = 3
+					province = 3702
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {# Local Militia
+		id = NEE_local_militia
+		icon = GFX_goal_NEE_Local_Militias
+		cost = 6
+		x = 12
+		y = 11
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		prerequisite = {
+			focus = NEE_american_infrastructure
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			add_ideas = NEE_local_militia
+		}
+	}
+	focus = {# New English Gunboat Diplomacy
+		id = NEE_new_english_gunboat_diplomacy
+		icon = GFX_goal_NEE_Gunboat_Diplomacy
+		cost = 6
+		x = 14
+		y = 11
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		prerequisite = {
+			focus = NEE_new_english_fleet
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			add_ideas = NEE_american_trade
+		}
+	}
+	focus = {# Protectionist Trade
+		id = NEE_protectionist_trade
+		icon = GFX_goal_NEE_Protectionist_Trade
+		cost = 6
+		x = 16
+		y = 11
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		prerequisite = {
+			focus = NEE_cannon_city
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			add_ideas = NEE_protectionist_trade
+		}
+	}
+	focus = {# Armed Beacon
+		id = NEE_armed_beacon
+		icon = GFX_goal_NEE_Armed_Beacon
+		cost = 6
+		x = 14
+		y = 12
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		prerequisite = {
+			focus = NEE_local_militia
+		}
+		prerequisite = {
+			focus = NEE_new_english_gunboat_diplomacy
+		}
+		prerequisite = {
+			focus = NEE_protectionist_trade
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			add_political_power = 10
+			add_ideas = NEE_armed_beacon
+		}
+	}
+	focus = {# Retake Long Island
+		id = NEE_retake_long_island
+		icon = GFX_goal_NEE_retake_Long_Island
+		cost = 6
+		x = 9
+		y = 13
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		prerequisite = {
+			focus = NEE_wealth_cooperation
+			focus = NEE_armed_beacon
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			add_political_power = 10
+			add_state_claim = 358 #New York City
+		}
+	}
+	focus = {# Irish Relations
+		id = NEE_irish_relations
+		icon = GFX_NEE_irish_ties
+		cost = 6
+		x = 11
+		y = 13
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		prerequisite = {
+			focus = NEE_wealth_cooperation
+			focus = NEE_armed_beacon
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		complete_tooltip = {}
+		completion_reward = {
+			add_political_power = 10
+			add_opinion_modifier = { target = IRE modifier = small_increase }
+		}
+	}
