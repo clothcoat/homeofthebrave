@@ -466,6 +466,9 @@ country_event = { # Order of 76 threatened
 		}
 		name = constate.7.b
 		add_stability = -0.05
+		hidden_effect = {
+		set_country_flag = COR_fordist_victory
+		}
 	}
 }
 
