@@ -45,6 +45,35 @@ USA_garner_strategy_plan = {
 	}
 }
 
+USA_repub_strategy_plan = {
+	name = ""
+	desc = ""
+
+	enable = {
+		original_tag = USA
+		has_game_rule = {
+			rule = USA_civil_war
+			option = USA_CIVIL_WAR_AVOIDED_CURDON
+		}
+	}
+	
+	abort = {
+		NOT = {
+		original_tag = USA
+		has_game_rule = {
+			rule = USA_civil_war
+			option = USA_CIVIL_WAR_AVOIDED_CURDON
+		}
+		}
+	}
+
+	focus_factors = {
+		USA_the_republicans = 4000
+		USA_home_rule_negotiations = 4000
+		USA_calm_the_storm = 1000
+	}
+}
+
 USA_norris_strategy_plan = {
 	name = ""
 	desc = ""
