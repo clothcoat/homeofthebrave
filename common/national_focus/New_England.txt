@@ -6575,7 +6575,8 @@ focus_tree = {
 		available_if_capitulated = yes
 		complete_tooltip = {}
 		completion_reward = {
-			add_political_power = 100
+			add_political_power = 50
+			add_ideas = NEE_wealth_cooperation
 		}
 	}
 	focus = {# Harboring Exiles
@@ -6776,7 +6777,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		complete_tooltip = {}
 		completion_reward = {
-			add_ideas = USA_maritime_industry_idea
+			add_ideas = NEE_maritime_industry_idea
 		}
 	}
 	focus = {# Cannon City
@@ -6879,7 +6880,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		complete_tooltip = {}
 		completion_reward = {
-			trade_opinion_factor = 0.05
+			add_ideas = NEE_protectionist_trade
 		}
 	}
 	focus = {# Armed Beacon
@@ -6909,7 +6910,8 @@ focus_tree = {
 		available_if_capitulated = yes
 		complete_tooltip = {}
 		completion_reward = {
-			add_political_power = 100
+			add_political_power = 10
+			add_ideas = NEE_armed_beacon
 		}
 	}
 	focus = {# Retake Long Island
