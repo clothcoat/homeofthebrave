@@ -466,6 +466,12 @@ country_event = { #WCC Reintegrates
 		add_command_power = 25
 		army_experience = 20
 		add_political_power = 20
+		hidden_effect = {
+				add_ideas = WCC_Douglas_MacArthur_hog_npo
+				add_ideas = WCC_Alvin_M_Owsley_for_npo
+				add_ideas = WCC_Curtis_LeMay_eco_npo
+				add_ideas = WCC_Joseph_Raymond_McCarthy_sec_npo
+		}
 		create_country_leader = {
 				name = "Douglas MacArthur"
 				desc = "POLITICS_DOUGLAS_MACARTHUR_DESC"

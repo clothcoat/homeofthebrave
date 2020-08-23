@@ -8287,6 +8287,14 @@ country_event = {# Bodin Addresses GFX_report_event_USA_congress
 			ruling_party = national_populist
 			elections_allowed = no
 		}
+		
+		hidden_effect = {
+			add_ideas = CAL_l_ron_hubbard_hog_npo
+			add_ideas = CAL_John_W_Campbell_for_npo
+			add_ideas = CAL_Arthur_Bell_eco_npo
+			add_ideas = CAL_Bernarr_McFadden_sec_npo
+		}
+
 		remove_unit_leader = 938 #Hap
 		remove_unit_leader = 937 #Marshall
 		hidden_effect = {
@@ -8442,6 +8450,13 @@ country_event = {# Boden Removed
 	is_triggered_only = yes
 
 	fire_only_once = yes
+	
+	immediate = {
+		add_ideas = CAL_Robert_Taylor_Jones_hog_sco
+		add_ideas = CAL_Robert_MacDonald_Ford_for_npo
+		add_ideas = CAL_Walter_M_Pierce_eco_pau
+		add_ideas = CAL_sessue_hayakawa_sec_pau
+	}
 	
 	option = {# Max Thornburg
 		name = pacificstates.358.a
