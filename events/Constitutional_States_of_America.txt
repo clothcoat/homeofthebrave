@@ -385,7 +385,7 @@ country_event = { # Murray steps down!
 		hidden_effect = {
 		create_country_leader = {
 			name = "Charles Lindbergh"
-			desc = "COR_CHARLES_LINDBERGH_DESC"
+			desc = "POLITICS_CHARLES_LINDBERGH"
 			picture = "gfx/leaders/COR/COR_Portrait_TEX_charles_lindbergh.tga"
 			expire = "1965.1.1"
 			ideology = paternal_autocrat_subtype
@@ -598,7 +598,7 @@ country_event = { # The Imperial Wizard Takes Charge
 		hidden_effect = {
 			create_country_leader = {
 				name = "William Joseph Simmons"
-				desc = "POLITICS_WILLIAM_JOSEPH_SIMMONS_DESC"
+				desc = "POLITICS_WILLIAM_JOSEPH_SIMMONS"
 				picture = "gfx/leaders/COR/COR_William_Joseph_Simmons.tga"
 				expire = "1965.1.1"
 				ideology = national_populist_subtype
@@ -839,7 +839,7 @@ country_event = { # Hiram Wesley Evans killed!
 	fire_only_once = yes
 
 	option = { # No
-		name = constate.14.a
+		name = constate.15.a
 		add_stability = -0.03
 		add_political_power = -20
 		hidden_effect = {
@@ -1624,7 +1624,7 @@ country_event = { # Evans Elected
 				picture = "gfx/leaders/COR/Hiram_Evans_suit.tga"
 				expire = "1965.1.1"
 				ideology = national_populist_subtype
-				traits = { klan_reformer }
+				traits = { power_hungry }
 			}
 		}
 		set_cosmetic_tag = COR_KKK
@@ -4116,8 +4116,8 @@ country_event = {
 	
 	trigger = {
 		OR = {
-		has_government = paternal_autocrat
-		has_government - national_populist
+			has_government = paternal_autocrat
+			has_government = national_populist
 		}
 		has_country_flag = {
 			flag = ACW_black_nationalist_resistance

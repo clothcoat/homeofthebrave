@@ -5,6 +5,50 @@
 
 add_namespace = unionstate
 
+country_event = {###Our Flag
+	id = unionstate.205
+	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.205"}
+	title = unionstate.205.t
+	desc = unionstate.205.d
+	picture = GFX_report_event_USA_american_brigade
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = TEX
+	}
+
+	option = {
+		
+		name = unionstate.205.a
+		set_cosmetic_tag = TEX_pelican
+	}
+	option = {
+		
+		name = unionstate.205.b
+		set_cosmetic_tag = TEX_louisiana_red_star
+	}
+	option = {
+		
+		name = unionstate.205.c
+		set_cosmetic_tag = TEX_louisiana_secession
+	}
+	option = {
+		
+		name = unionstate.205.e
+		set_cosmetic_tag = TEX_eagle
+	}
+	option = {	
+		
+		name = unionstate.205.f
+		set_cosmetic_tag = TEX_standard
+	}
+	option = {
+		name = unionstate.205.g
+		
+	}
+}
+
 ### internal conflict stuff 1 - 10 ###
 country_event = { # The American Legion Appointment
 	id = unionstate.1
@@ -569,7 +613,7 @@ country_event = { # National Progressive Campaign
 	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.2100"}
 	title = unionstate.2100.t
 	desc = unionstate.2100.d
-	picture = GFX_report_event_generic_books
+	picture = GFX_event_TEX_npp_4
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -601,7 +645,7 @@ country_event = { # Formation of the Christian Party
 	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.22"}
 	title = unionstate.22.t
 	desc = unionstate.22.d
-	picture = GFX_report_event_generic_books
+	picture = GFX_event_TEX_pelley_and_friends
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -759,7 +803,7 @@ country_event = { # AUS Election
 		hidden_effect = {
 		set_country_flag = AUS_election_occured
 		set_country_flag = NPP_Victory
-		set_cosmetic_tag = TEX_not nazis
+		set_cosmetic_tag = TEX_not_nazis
 		}
 	}
 	option = { # Christian Party
@@ -1439,6 +1483,8 @@ country_event = { #Silver Legion Grows
 	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.3005"}
 	title = unionstate.3005.t
 	desc = unionstate.3005.d
+	
+	picture = GFX_event_TEX_Silver_Legion_grows
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -2392,6 +2438,8 @@ country_event = { #Pelley Speech Attracts Controversy
 	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.54"}
 	title = unionstate.54.t
 	desc = unionstate.54.d
+	
+	picture = GFX_event_TEX_Silver_Legion_grows
 
 	fire_only_once = yes
 	
@@ -2414,6 +2462,8 @@ country_event = { #The Silver Cavalcade
 	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.55"}
 	title = unionstate.55.t
 	desc = unionstate.55.d
+	
+	picture = GFX_event_TEX_Silver_Legion_grows
 
 	fire_only_once = yes
 	
@@ -2600,6 +2650,8 @@ country_event = { #The First Americans
 	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.5902"}
 	title = unionstate.5902.t
 	desc = unionstate.5902.d
+	
+	picture = GFX_report_event_USA_indians
 
 	fire_only_once = yes
 	
@@ -2729,6 +2781,8 @@ country_event = { #NPP absorbs the Farmer-Labor Party
 	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.65"}
 	title = unionstate.65.t
 	desc = unionstate.65.d
+	
+	picture = GFX_event_TEX_npp_2
 
 	fire_only_once = yes
 	
@@ -2752,6 +2806,8 @@ country_event = { #NPP absorbs the Farmer-Labor Party
 	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.66"}
 	title = unionstate.66.t
 	desc = unionstate.66.d
+	
+	picture = GFX_event_TEX_la_follette_2
 
 	fire_only_once = yes
 	
@@ -3901,41 +3957,3 @@ country_event = { # Federalist terrorism - factory sabotaged
 	}
 }
 
-country_event = {###Our Flag
-	id = unionstate.205
-	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.205"}
-	title = unionstate.205.t
-	desc = unionstate.205.d
-	picture = GFX_report_event_USA_american_brigade
-
-	fire_only_once = yes
-	
-	trigger = {
-		tag = TEX
-	}
-
-	option = {
-		name = unionstate.205.a
-		set_cosmetic_tag = TEX_pelican
-	}
-	option = {
-		name = unionstate.205.b
-		set_cosmetic_tag = TEX_louisiana_red_star
-	}
-	option = {
-		name = unionstate.205.c
-		set_cosmetic_tag = TEX_louisiana_secession
-	}
-	option = {
-		name = unionstate.205.e
-		set_cosmetic_tag = TEX_eagle
-	}
-	option = {
-		name = unionstate.205.f
-		set_cosmetic_tag = TEX_standard
-	}
-	option = {
-		name = unionstate.205.g
-		
-	}
-}

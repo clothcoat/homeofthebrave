@@ -3526,6 +3526,14 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/goal_NEE_boston_to_ottawa.dds"
 	}
 	spriteType = {
+		name = "GFX_goal_NEE_new_england_future"
+		texturefile = "gfx/interface/goals/goal_NEE_new_england_future.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_NEE_armed_free_neutrality"
+		texturefile = "gfx/interface/goals/goal_NEE_armed_free_neutrality.dds"
+	}
+	spriteType = {
 		name = "GFX_goal_CSA_patriot"
 		texturefile = "gfx/interface/goals/goal_CSA_patriot.dds"
 	}
@@ -3612,6 +3620,10 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_goal_CSA_continental_navy"
 		texturefile = "gfx/interface/goals/CSA_continental_navy.tga"
+	}
+	SpriteType = {
+		name = "GFX_AUS_NRA"
+		texturefile = "gfx/interface/goals/AUS_NRA.tga"
 	}
 }
 
