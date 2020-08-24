@@ -5225,14 +5225,15 @@ focus_tree = {
 				uses = 1
 				category = artillery
 			}
-		}
-		hidden_effect = {
+			hidden_effect = {
 			#country_event = { id = ustates.627 days = 70 }#Pentagon Construction
 			country_event = { id = ustates.651 days = 35 }#AUS Trials
 			country_event = { id = ustates.650 days = 45 }#CAL Trials
 			country_event = { id = ustates.6520 days = 55 }#CAR Trials
+			}
+			custom_effect_tooltip = USA_trials_will_begin
 		}
-		custom_effect_tooltip = USA_trials_will_begin
+
 	}
 
 	### Air Force Path ###
