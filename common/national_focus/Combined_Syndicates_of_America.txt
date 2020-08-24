@@ -76,7 +76,7 @@ focus_tree = {
 	focus = {# American Commonwealth
 		id = CSA_american_commonwealth
 		icon = GFX_goal_red_star_green_wreath
-		cost = 7.25
+		cost = 4.25
 		available = {
 			has_country_flag = CSA_constitutional_convention_done
 			has_country_flag = CSA_social_patriot_victory
@@ -87,6 +87,12 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = CSA_second_convention
+		}
+		select_effect = {
+		country_event = {
+			id = csa.448
+			days = 20
+			}
 		}
 		relative_position_id = CSA_second_convention
 		x = -14
@@ -1743,12 +1749,18 @@ focus_tree = {
 	focus = {# American Syndicalist Union
 		id = CSA_american_syndicalist_union
 		icon = GFX_goal_ideology_syndicalist
-		cost = 7.25
+		cost = 5.00
 		available = { has_government = syndicalist 
 		has_country_flag = CSA_constitutional_convention_done
 		}
 		prerequisite = {
 			focus = CSA_second_convention
+		}
+		select_effect = {
+		country_event = {
+			id = csa.450
+			days = 20
+			}
 		}
 		relative_position_id = CSA_second_convention
 		x = 0
@@ -1759,6 +1771,10 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_american_syndicalist_union"
 			add_popularity = { ideology = syndicalist popularity = 0.03 }
+			hidden_effect = {
+			id = csa.452
+			days = 2
+			}
 		}
 	}
 	
@@ -2687,7 +2703,7 @@ focus_tree = {
 	focus = {# United Socialist American States
 		id = CSA_usas
 		icon = GFX_goal_CSA_ussa
-		cost = 7.25
+		cost = 5.25
 		available = {
 			has_country_flag = CSA_constitutional_convention_done
 			has_government = totalist
@@ -2706,7 +2722,6 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_usas"
-			set_cosmetic_tag = CSA_socialist_union_of_america
 			set_country_flag = CSA_socialist_union_of_america_flag
 			hidden_effect = {
 				country_event = { id = csa.52 days = 90 }
@@ -2718,7 +2733,7 @@ focus_tree = {
 	focus = {# Presidential Socialism
 		id = CSA_presidential_socialism
 		icon = GFX_goal_red_star_gold_wreath
-		cost = 6
+		cost = 3
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = CSA_browder_is_leader
@@ -2728,6 +2743,12 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = CSA_usas
+		}
+		select_effect = {
+		country_event = {
+			id = csa.451
+			days = 12
+			}
 		}
 		relative_position_id = CSA_usas
 		x = -5
@@ -2739,6 +2760,11 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_presidential_socialism"
 			add_political_power = 25
 			add_stability = 0.02
+			set_cosmetic_tag = CSA_socialist_united_of_america
+			hidden_effect = {
+			id = csa.451
+			days = 2
+			}
 		}
 	}
 
@@ -3940,6 +3966,12 @@ focus_tree = {
 		prerequisite = {
 			focus = CSA_usas
 		}
+		select_effect = {
+		country_event = {
+			id = csa.449
+			days = 5
+			}
+		}
 		relative_position_id = CSA_usas
 		x = 4
 		y = 1
@@ -3947,6 +3979,11 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_proletarian_dictatorship"
 			add_war_support = 0.05
 			add_popularity = { ideology = totalist popularity = 0.03 }
+			set_cosmetic_tag = CSA_socialist_union_of_america
+			hidden_effect = {
+			id = csa.449
+			days = 2
+			}
 		}
 	}
 	
