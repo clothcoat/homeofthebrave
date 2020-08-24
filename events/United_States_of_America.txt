@@ -15185,6 +15185,12 @@ country_event = {# Trial of the US Generals
 		}
 	}
 	desc = {
+		text = ustates.650.CAR
+		trigger = {
+			tag = COR
+		}
+	}
+	desc = {
 		text = ustates.650.PSA
 		trigger = {
 			tag = CAL
@@ -15256,6 +15262,67 @@ country_event = {# Trial of the US Generals
 						has_id = 963 #J.C.H. Lee
 					}
 					set_nationality = CAL
+				}
+			}
+		}
+		if = {
+			limit = {
+				tag = COR
+			}
+			USA = {
+				every_unit_leader = {
+					limit = {
+						has_id = 950 #Eisenhower
+					}
+					set_nationality = COR
+				}
+			}
+			USA = {
+				every_unit_leader = {
+					limit = {
+						has_id = 951 #Bradley
+					}
+					set_nationality = COR
+				}
+			}
+			USA = {
+				every_unit_leader = {
+					limit = {
+						has_id = 952 #Huebner
+					}
+					set_nationality = COR
+				}
+			}
+			USA = {
+				every_unit_leader = {
+					limit = {
+						has_id = 958 #McNair
+					}
+					set_nationality = COR
+				}
+			}
+			USA = {
+				every_unit_leader = {
+					limit = {
+						has_id = 959 #Fredendall
+					}
+					set_nationality = COR
+				}
+			}
+			USA = {
+				every_unit_leader = {
+					limit = {
+						has_id = 965 #Harding
+					}
+					set_nationality = COR
+				}
+			}
+			USA = {
+				every_unit_leader = {
+					limit = {
+						has_id = 963 #J.C.H. Lee
+					}
+					set_nationality = COR
 				}
 			}
 		}
@@ -15362,6 +15429,12 @@ country_event = {# Trial of the AUS Generals
 			tag = CAL
 		}
 	}
+	desc = {
+		text = ustates.651.CAR
+		trigger = {
+			tag = COR
+		}
+	}
 	picture = GFX_USA_military_trial
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -15380,7 +15453,7 @@ country_event = {# Trial of the AUS Generals
 			TEX = {
 				every_unit_leader = {
 					limit = {
-						has_id = 940 #Puller
+						has_id = 988 #Conner
 					}
 					set_nationality = USA
 				}
@@ -15420,10 +15493,64 @@ country_event = {# Trial of the AUS Generals
 			TEX = {
 				every_unit_leader = {
 					limit = {
-						has_id = 76 #Patton
+						has_id = 966 #Devers
 					}
 					demote_leader = yes
 					set_nationality = USA
+				}
+			}
+		}
+		if = {
+			limit = {
+				tag = COR
+			}
+			TEX = {
+				every_unit_leader = {
+					limit = {
+						has_id = 940 #Puller
+					}
+					set_nationality = COR
+				}
+			}
+			TEX = {
+				every_unit_leader = {
+					limit = {
+						has_id = 941 #Cates
+					}
+					set_nationality = COR
+				}
+			}
+			TEX = {
+				every_unit_leader = {
+					limit = {
+						has_id = 945 #Walker
+					}
+					set_nationality = COR
+				}
+			}
+			TEX = {
+				every_unit_leader = {
+					limit = {
+						has_id = 967 #Collins
+					}
+					set_nationality = COR
+				}
+			}
+			TEX = {
+				every_unit_leader = {
+					limit = {
+						has_id = 968 #Hodges
+					}
+					set_nationality = COR
+				}
+			}
+			TEX = {
+				every_unit_leader = {
+					limit = {
+						has_id = 988 #Conner
+					}
+					demote_leader = yes
+					set_nationality = COR
 				}
 			}
 		}
@@ -15434,7 +15561,7 @@ country_event = {# Trial of the AUS Generals
 			TEX = {
 				every_unit_leader = {
 					limit = {
-						has_id = 76 #Patton
+						has_id = 75 #de La Mesa Allen
 					}
 					demote_leader = yes
 					set_nationality = CAL
@@ -15519,6 +15646,12 @@ country_event = {# Trial of the PSA Generals
 			tag = USA
 		}
 	}
+	desc = {
+		text = ustates.652.CAR
+		trigger = {
+			tag = COR
+		}
+	}
 	picture = GFX_USA_military_trial
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -15564,6 +15697,43 @@ country_event = {# Trial of the PSA Generals
 						has_id = 985 #Windle Read
 					}
 					set_nationality = TEX
+				}
+			}
+		}
+		if = {
+			limit = {
+				tag = COR
+			}
+			CAL = {
+				every_unit_leader = {
+					limit = {
+						has_id = 982 #White
+					}
+					set_nationality = COR
+				}
+			}
+			CAL = {
+				every_unit_leader = {
+					limit = {
+						has_id = 936 #Wedemeyer
+					}
+					set_nationality = COR
+				}
+			}
+			CAL = {
+				every_unit_leader = {
+					limit = {
+						has_id = 935 #Vandegrift
+					}
+					set_nationality = COR
+				}
+			}
+			CAL = {
+				every_unit_leader = {
+					limit = {
+						has_id = 985 #Windle Read
+					}
+					set_nationality = COR
 				}
 			}
 		}
@@ -15635,6 +15805,227 @@ country_event = {# Trial of the PSA Generals
 				country_event = { id = ustates.653 days = 10 }
 			}
 		}
+	}
+}
+
+country_event = {# Trial of the CAR Generals
+	id = ustates.6520
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.6520"}
+	title = ustates.6520.t
+	desc = {
+		text = ustates.6520.AUS
+		trigger = {
+			tag = TEX
+		}
+	}
+	desc = {
+		text = ustates.6520.USA
+		trigger = {
+			tag = USA
+		}
+	}
+	desc = {
+		text = ustates.6520.PSA
+		trigger = {
+			tag = CAL
+		}
+	}
+	picture = GFX_USA_military_trial
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		has_global_flag = USA_COR_existed
+	}
+	option = {# Pardon the Generals
+		name = ustates.6520.a
+		ai_chance = {
+			factor = 5
+		}
+		if = {
+			limit = {
+				tag = TEX
+			}
+			COR = {
+				every_unit_leader = {
+					limit = {
+						has_id = 124 #Patton
+					}
+					set_nationality = TEX
+				}
+			}
+			COR = {
+				every_unit_leader = {
+					limit = {
+						has_id = 126 #McNarney
+					}
+					set_nationality = TEX
+				}
+			}
+			COR = {
+				every_unit_leader = {
+					limit = {
+						has_id = 982 #Nathan Bedford Forrest III
+					}
+					set_nationality = TEX
+				}
+			}
+			COR = {
+				every_unit_leader = {
+					limit = {
+						has_id = 141 # Buckner
+					}
+					set_nationality = TEX
+				}
+			}
+			COR = {
+				every_unit_leader = {
+					limit = {
+						has_id = 8880 #Jeb Stuart IV
+					}
+					set_nationality = TEX
+				}
+			}
+			COR = {
+				every_unit_leader = {
+					limit = {
+						has_id = 985 #Julian Larcombe Schley
+					}
+					set_nationality = TEX
+				}
+			}
+			COR = {
+				every_unit_leader = {
+					limit = {
+						has_id = 142 #Julian Larcombe Schley
+					}
+					set_nationality = TEX
+				}
+			}
+		}
+		if = {
+			limit = {
+				tag = CAL
+			}
+			COR = {
+				every_unit_leader = {
+					limit = {
+						has_id = 124 #Patton
+					}
+					set_nationality = CAL
+				}
+			}
+			COR = {
+				every_unit_leader = {
+					limit = {
+						has_id = 141 # Buckner
+					}
+					set_nationality = CAL
+				}
+			}
+			COR = {
+				every_unit_leader = {
+					limit = {
+						has_id = 8880 #Jeb Stuart IV
+					}
+					set_nationality = CAL
+				}
+			}
+			COR = {
+				every_unit_leader = {
+					limit = {
+						has_id = 985 #Julian Larcombe Schley
+					}
+					set_nationality = CAL
+				}
+			}
+			COR = {
+				every_unit_leader = {
+					limit = {
+						has_id = 142 #Julian Larcombe Schley
+					}
+					set_nationality = CAL
+				}
+			}
+		}
+		if = {
+			limit = {
+				tag = USA
+			}
+			COR = {
+				every_unit_leader = {
+					limit = {
+						has_id = 124 #Patton
+					}
+					set_nationality = USA
+				}
+			}
+			COR = {
+				every_unit_leader = {
+					limit = {
+						has_id = 126 #McNarney
+					}
+					set_nationality = TEX
+				}
+			}
+			COR = {
+				every_unit_leader = {
+					limit = {
+						has_id = 982 #Nathan Bedford Forrest III
+					}
+					set_nationality = USA
+				}
+			}
+			COR = {
+				every_unit_leader = {
+					limit = {
+						has_id = 141 # Buckner
+					}
+					set_nationality = USA
+				}
+			}
+			COR = {
+				every_unit_leader = {
+					limit = {
+						has_id = 8880 #Jeb Stuart IV
+					}
+					set_nationality = USA
+				}
+			}
+			COR = {
+				every_unit_leader = {
+					limit = {
+						has_id = 985 #Julian Larcombe Schley
+					}
+					set_nationality = USA
+				}
+			}
+			COR = {
+				every_unit_leader = {
+					limit = {
+						has_id = 142 #Julian Larcombe Schley
+					}
+					set_nationality = USA
+				}
+			}
+		}
+		add_political_power = -50
+		decrease_ruling_party_popularity_by_5 = yes
+	}
+	option = {# Discharge them
+		name = ustates.6520.b
+		ai_chance = {
+			factor = 5
+		}
+		add_political_power = 50
+		increase_ruling_party_popularity_by_5 = yes
+	}
+	option = {# Exile the Traitors!
+		name = ustates.6520.c
+		ai_chance = {
+			factor = 5
+		}
+		add_political_power = 100
+		increase_ruling_party_popularity_by_10 = yes
 	}
 }
 
@@ -15764,6 +16155,7 @@ country_event = {# Event for New England to Pick up PSA exiles in case they deci
 		}
 	}
 }
+
 
 country_event = {# United States demands Greenland
 	id = ustates.670
