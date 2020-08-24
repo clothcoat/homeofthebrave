@@ -2,6 +2,7 @@
 # New England Flavor
 ###################################
 # By herkles and Jeankedezeehond
+# Fun stuff by ClothCoat
 ###################################
 
 add_namespace = newengland
@@ -5432,6 +5433,8 @@ country_event = { # Minor Syndie Revolts
 	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.101"}
 	title = newengland.101.t
 	desc = newengland.101.d
+	
+	picture = GFX_report_event_generic_strike
 
 	is_triggered_only = yes
 
@@ -5455,6 +5458,8 @@ country_event = { # Not Ancaps
 	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.102"}
 	title = newengland.102.t
 	desc = newengland.102.d
+	
+	picture = GFX_report_event_generic_diplomacy1
 
 	is_triggered_only = yes
 
@@ -5479,6 +5484,8 @@ country_event = { # The Great Strike
 	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.103"}
 	title = newengland.103.t
 	desc = newengland.103.d
+	
+	picture = GFX_report_event_generic_strike
 
 	is_triggered_only = yes
 
@@ -5544,6 +5551,8 @@ country_event = { # Canada gains power
 	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.104"}
 	title = newengland.104.t
 	desc = newengland.104.d
+	
+	picture = GFX_report_event_USA_soldiers1
 
 	is_triggered_only = yes
 
@@ -5573,6 +5582,8 @@ country_event = { # Canada's Decision
 	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.105"}
 	title = newengland.105.t
 	desc = newengland.105.d
+	
+	picture = GFX_report_event_generic_diplomacy3
 
 	is_triggered_only = yes
 
@@ -5631,6 +5642,8 @@ country_event = { # Feds appointed
 	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.106"}
 	title = newengland.106.t
 	desc = newengland.106.d
+	
+	picture = GFX_report_event_generic_diplomacy2
 
 	is_triggered_only = yes
 
@@ -5706,6 +5719,8 @@ country_event = { # Feds appointed
 	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.107"}
 	title = newengland.107.t
 	desc = newengland.107.d
+	
+	picture = GFX_report_event_generic_diplomacy2
 
 	is_triggered_only = yes
 
@@ -5811,6 +5826,8 @@ country_event = { # Federalist Party Sworn in
 	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.1070"}
 	title = newengland.1070.t
 	desc = newengland.1070.d
+	
+	picture = GFX_report_event_USA_Inauguration
 
 	is_triggered_only = yes
 
@@ -5834,6 +5851,8 @@ country_event = { # Federalist Party Sworn in
 	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.108"}
 	title = newengland.108.t
 	desc = newengland.108.d
+	
+	picture = GFX_event_NEE_ship
 
 	is_triggered_only = yes
 
@@ -5868,6 +5887,8 @@ country_event = { # Federalist Party Sworn in
 	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.109"}
 	title = newengland.109.t
 	desc = newengland.109.d
+	
+	picture = GFX_report_event_CSA_militia
 
 	is_triggered_only = yes
 
@@ -5913,6 +5934,8 @@ country_event = { # Ship Contracts
 	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.111"}
 	title = newengland.111.t
 	desc = newengland.111.d
+	
+	picture = GFX_event_NEE_ship
 
 	is_triggered_only = yes
 
@@ -5931,6 +5954,8 @@ country_event = { # The Hamiltonian Debate
 	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.112"}
 	title = newengland.112.t
 	desc = newengland.112.d
+	
+	picture = GFX_report_event_generic_diplomacy2
 
 	is_triggered_only = yes
 
@@ -5949,6 +5974,9 @@ country_event = { # Radicals Attack
 	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.113"}
 	title = newengland.113.t
 	desc = newengland.113.d
+	
+	picture = GFX_report_event_USA_national_guard
+
 
 	is_triggered_only = yes
 
@@ -5967,16 +5995,24 @@ country_event = { # Sentinel Offer
 	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.114"}
 	title = newengland.114.t
 	desc = newengland.114.d
+	
+	picture = GFX_report_event_generic_diplomacy2
 
 	is_triggered_only = yes
 
 	fire_only_once = yes
 
 	option = { # Just monitor them
-		name = newengland.114.a
+		name = newengland.114.b
 		add_political_power = -20
-		add_popularity = { ideology = radical_socialist popularity = -0.01 }
+		add_popularity = { ideology = national_populist popularity = -0.01 }
 		add_stability = 0.02
+	}
+	option = { # Just monitor them
+		name = newengland.114.a
+		add_political_power = 20
+		add_popularity = { ideology = national_populist popularity = 0.01 }
+		add_stability = -0.02
 	}
 }
 
@@ -5985,6 +6021,8 @@ country_event = { # Absinthe
 	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.115"}
 	title = newengland.115.t
 	desc = newengland.115.d
+	
+	picture = GFX_event_NEE_Absinthe
 
 	is_triggered_only = yes
 
@@ -6003,6 +6041,8 @@ country_event = { # Hamiltonian Constitution
 	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.116"}
 	title = newengland.116.t
 	desc = newengland.116.d
+	
+	picture = GFX_report_event_generic_diplomacy1
 
 	is_triggered_only = yes
 
@@ -6028,6 +6068,8 @@ country_event = { # John Jacob Astor
 	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.1160"}
 	title = newengland.1160.t
 	desc = newengland.1160.d
+	
+	picture = GFX_event_NEE_John_Jacob_Astor
 
 	is_triggered_only = yes
 
@@ -6067,6 +6109,8 @@ country_event = { # Radicals Push Back
 	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.117"}
 	title = newengland.117.t
 	desc = newengland.117.d
+	
+	picture = GFX_report_event_USA_national_guard
 
 	is_triggered_only = yes
 
@@ -6092,6 +6136,8 @@ country_event = { # Out of the Frying Pot
 	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.118"}
 	title = newengland.118.t
 	desc = newengland.118.d
+	
+	picture = GFX_event_NEE_Ancap_Victory
 
 	is_triggered_only = yes
 
@@ -6120,6 +6166,8 @@ country_event = { # Out of the Frying Pot
 	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.119"}
 	title = newengland.119.t
 	desc = newengland.119.d
+	
+	picture = GFX_report_event_generic_diplomacy1
 
 	is_triggered_only = yes
 
@@ -6145,6 +6193,8 @@ country_event = { # Radical Split
 	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.120"}
 	title = newengland.120.t
 	desc = newengland.120.d
+	
+	picture = GFX_event_NEE_Ancap_Victory
 
 	is_triggered_only = yes
 
@@ -6202,6 +6252,8 @@ country_event = { # Remnant Leader Election
 	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.121"}
 	title = newengland.121.t
 	desc = newengland.121.d
+	
+	picture = GFX_report_event_generic_diplomacy1
 
 	is_triggered_only = yes
 
@@ -6248,6 +6300,8 @@ country_event = { # Radical Split
 	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.122"}
 	title = newengland.122.t
 	desc = newengland.122.d
+	
+	picture = GFX_report_event_generic_diplomacy1
 
 	is_triggered_only = yes
 
@@ -6511,6 +6565,8 @@ country_event = { # Settling Business
 	id = newengland.130
 	title = newengland.130.t
 	desc = newengland.130.d
+	
+	picture = GFX_report_event_USA_national_guard
 
 	is_triggered_only = yes
 
@@ -6541,6 +6597,8 @@ country_event = { # Worker's Strike
 	id = newengland.131
 	title = newengland.131.t
 	desc = newengland.131.d
+	
+	picture = GFX_report_event_generic_strike
 
 	is_triggered_only = yes
 
@@ -6563,6 +6621,8 @@ country_event = { # Fate of Jewish Business
 	id = newengland.132
 	title = newengland.132.t
 	desc = newengland.132.d
+	
+	picture = GFX_event_NEE_Jewish_Buisness
 
 	is_triggered_only = yes
 
@@ -6594,6 +6654,8 @@ country_event = { # Independence of Boston
 	id = newengland.133
 	title = newengland.133.t
 	desc = newengland.133.d
+	
+	picture = GFX_event_NEE_Curley
 
 	is_triggered_only = yes
 
@@ -6618,6 +6680,8 @@ country_event = { # Battle with Vermont
 	id = newengland.134
 	title = newengland.134.t
 	desc = newengland.134.d
+	
+	picture = GFX_event_NEE_Aiken
 
 	is_triggered_only = yes
 
@@ -6639,6 +6703,8 @@ country_event = { # Survival of the Fittest
 	id = newengland.135
 	title = newengland.135.t
 	desc = newengland.135.d
+	
+	picture = GFX_report_event_USA_national_guard
 
 	is_triggered_only = yes
 
@@ -6661,6 +6727,8 @@ country_event = { # Children attempt to escape
 	title = newengland.136.t
 	desc = newengland.136.d
 
+	picture = GFX_event_NEE_Child_Labour
+
 	is_triggered_only = yes
 
 	fire_only_once = yes
@@ -6681,6 +6749,8 @@ country_event = { #Fate of Democracy
 	id = newengland.140
 	title = newengland.140.t
 	desc = newengland.140.d
+	
+	picture = GFX_report_event_AST_election
 
 	is_triggered_only = yes
 
@@ -6732,7 +6802,7 @@ country_event = { # Tammany Hall
 	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.150"}
 	title = newengland.150.t
 	desc = newengland.150.d
-	picture = GFX_new_york
+	picture = GFX_event_NEE_Tammany_Hall
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -6776,6 +6846,8 @@ country_event = { #Curley Investigated
 	id = newengland.160
 	title = newengland.160.t
 	desc = newengland.160.d
+	
+	picture = GFX_event_NEE_Curley
 
 	is_triggered_only = yes
 
@@ -6791,6 +6863,8 @@ country_event = { #Philip Bucola Arrested
 	id = newengland.161
 	title = newengland.161.t
 	desc = newengland.161.d
+	
+	picture = GFX_report_event_USA_police
 
 	is_triggered_only = yes
 
