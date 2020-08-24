@@ -134,7 +134,11 @@ country_event = { # Old Democrats Breakoff
 		}
 		add_popularity = {
 			ideology = paternal_autocrat
-			popularity = -0.1
+			popularity = -0.05
+		}
+		add_popularity = {
+			ideology = social_conservative
+			popularity = -0.05
 		}
 		add_popularity = {
 			ideology = national_populist
@@ -212,6 +216,14 @@ country_event = { # Huey Long declares Rebellion against MacArthur
 		add_popularity = {
 			ideology = authoritarian_democrat
 			popularity = -0.3
+		}
+		add_popularity = {
+			ideology = social_democrat
+			popularity = -0.15
+		}
+		add_popularity = {
+			ideology = social_liberal
+			popularity = -0.15
 		}
 		add_stability = 0.15
 		add_war_support = 0.2

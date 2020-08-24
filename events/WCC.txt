@@ -111,6 +111,46 @@ country_event = { #PSA Fate
 		add_popularity = { ideology = social_conservative popularity = 0.02 }
 		add_manpower = 20000
 		add_stability = 0.05
+		CAL = {
+				every_unit_leader = {
+					limit = {
+						has_id = 982 #White
+					}
+					set_nationality = WCC
+				}
+			}
+			CAL = {
+				every_unit_leader = {
+					limit = {
+						has_id = 984 #Vandegrift
+					}
+					set_nationality = WCC
+				}
+			}
+			CAL = {
+				every_unit_leader = {
+					limit = {
+						has_id = 986 #Doolittle
+					}
+					set_nationality = WCC
+				}
+			}
+			CAL = {
+				every_unit_leader = {
+					limit = {
+						has_id = 938 #Arnold
+					}
+					set_nationality = WCC
+				}
+			}
+			CAL = {
+				every_unit_leader = {
+					limit = {
+						has_id = 937 #Marshall
+					}
+					set_nationality = WCC
+				}
+			}
 	}
 	option = {
 		name = wcc.4.b
@@ -139,6 +179,12 @@ country_event = { #The Fallen Cause
 		add_popularity = { ideology = social_conservative popularity = 0.02 }
 		add_manpower = 20000
 		add_stability = 0.05
+		USA = {
+			every_unit_leader = {
+				limit = { has_id = 56 }
+				set_nationality = WCC
+			}
+		}
 	}
 	option = {
 		name = wcc.5.b
@@ -167,6 +213,14 @@ country_event = { #Patton's Fate
 		add_popularity = { ideology = social_conservative popularity = 0.02 }
 		add_manpower = 20000
 		add_stability = 0.05
+		COR = {
+			every_unit_leader = {
+				limit = {
+					has_id = 124 #Patton
+				}
+				set_nationality = WCC
+			}
+		}
 	}
 	option = {
 		name = wcc.6.b
@@ -313,10 +367,35 @@ country_event = { #WCC Demands
 		set_country_flag = USA_mac_shared_power
 		add_political_power = -50
 		USA = {
-		country_event = {
+			country_event = {
 				id = wcc.9
 				days = 1
-			} #
+			} 
+		}
+		set_party_name = {
+			ideology = authoritarian_democrat
+			long_name = USA_paternal_autocrat_military_junta_long
+			name = USA_paternal_autocrat_military_junta
+		}
+		create_country_leader = {
+			name = "Douglas MacArthur"
+			desc = "POLITICS_DOUGLAS_MACARTHUR_DESC"
+			picture = "Portrait_USA_gen_douglas_macarthur.tga"
+			expire = "1965.1.1"
+			ideology = authoritarian_democrat_subtype
+			traits = { american_caesar }
+		}
+		set_politics = {
+			ruling_party = authoritarian_democrat
+			elections_allowed = no
+		}
+		add_popularity = {
+			ideology = authoritarian_democrat
+			popularity = 0.2
+		}	
+		add_popularity = {
+			ideology = paternal_autocrat
+			popularity = -0.2
 		}
 	}
 	option = { #Disagree
@@ -358,11 +437,16 @@ country_event = { #MacArthur Accepts
 	option = { #Agree
 		name = wcc.9.a
 		USA = {
-		annex_country = {
-		target = WCC
-		transfer_troops = yes
+			annex_country = {
+				target = WCC
+				transfer_troops = yes
 			}
 		}
+		WCC = {
+			every_unit_leader = {
+				set_nationality = USA
+			}
+		}	
 	}
 }
 

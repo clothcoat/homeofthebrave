@@ -37,7 +37,7 @@ ideas = {
 				}
 			}
 			removal_cost = -1
-			picture = GFX_idea_socialist_purge
+			picture = socialist_purge
 			modifier = {
 				stability_weekly = -0.03
 				stability_factor = -0.1
@@ -84,7 +84,7 @@ ideas = {
 			allowed = { always = no }
 			available = { has_government = paternal_autocrat }
 			removal_cost = -1
-			picture = japanese_loyalism
+			picture = eastern_exchange
 			modifier = {
 				research_speed_factor = 0.05
 				monthly_population = 0.03
