@@ -8233,6 +8233,7 @@ focus_tree = {
 			NOT = {
 				country_exists = TEX
 				country_exists = CSA
+				country_exists = COR
 			}
 		}
 		x = 0
@@ -8250,6 +8251,7 @@ focus_tree = {
 				country_event = { id = ustates.627 days = 70 }#Pentagon Construction
 				country_event = { id = ustates.651 days = 35 }#AUS Trials
 				country_event = { id = ustates.652 days = 45 }#PSA Trials
+				country_event = { id = ustates.6520 days = 55 }#CAR Trials
 			}
 			custom_effect_tooltip = USA_trials_will_begin
 		}
