@@ -1162,7 +1162,18 @@ focus_tree = {
 		available_if_capitulated = no
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NEE_western_intervention"
-			
+			create_wargoal = {
+				type = annex_everything
+				target = USA
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = CSA
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = COR
+			}
 		}
 	}
 	
