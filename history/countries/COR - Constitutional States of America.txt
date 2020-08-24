@@ -407,6 +407,22 @@ create_corps_commander = { #Strom
 	logistics_skill = 1
 }
 
+create_corps_commander = { #Edwin Walker
+	name = "Edwin Walker"
+#	desc = "TEX_JOHN_HINES_DESC"
+	portrait_path = "gfx/leaders/COR/Portrait_COR_Edwin_Walker.tga"
+	traits = {
+		air_commander
+		artillery_officer
+		politically_connected
+	}
+	skill = 1
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 1
+}
+
 create_corps_commander = { #Lindy
 	name = "Charles Lindbergh"
 #	desc = "TEX_JOHN_HINES_DESC"

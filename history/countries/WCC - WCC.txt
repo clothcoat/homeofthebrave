@@ -322,13 +322,26 @@ create_corps_commander = {#
 		trait_reckless
 		politically_connected
 		war_hero
-		media_personality
 	}
 	skill = 3
-	attack_skill = 1
-	defense_skill = 3
+	attack_skill = 3
+	defense_skill = 2
 	planning_skill = 2
 	logistics_skill = 1
+}
+create_corps_commander = {#
+	name = "Archibald Bulloch Roosevelt"
+	portrait_path = "gfx/leaders/WCC/Portrait_WCC_Archibald_Bulloch_Roosevelt.tga"
+	traits = {
+		infantry_officer
+		war_hero
+		
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 2
 }
 create_corps_commander = {# Leonard Gerow
 	name = "Leonard Gerow"
