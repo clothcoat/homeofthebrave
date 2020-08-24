@@ -4724,6 +4724,11 @@ focus_tree = {
 		cost = 6
 		x = -7
 		y = 1
+		mutually_exclusive = {
+			focus = NEE_general_pershing
+			focus = NEE_old_gravel_voice
+			focus = NEE_green_policy
+		}
 		relative_position_id = NEE_the_future_of_new_england_army
 		prerequisite = {
 			focus = NEE_the_future_of_new_england_army
@@ -5135,6 +5140,11 @@ focus_tree = {
 		relative_position_id = NEE_the_future_of_new_england_army
 		prerequisite = {
 			focus = NEE_the_future_of_new_england_army
+		}
+		mutually_exclusive = {
+			focus = NEE_appoint_chaffee
+			focus = NEE_old_gravel_voice
+			focus = NEE_green_policy
 		}
 		ai_will_do = {
 			factor = 3
@@ -5560,6 +5570,12 @@ focus_tree = {
 		prerequisite = {
 			focus = NEE_the_future_of_new_england_army
 		}
+		mutually_exclusive = {
+			focus = NEE_general_pershing
+			focus = NEE_green_policy
+			focus = NEE_appoint_chaffee
+		}
+		rel
 		ai_will_do = {
 			factor = 3
 			modifier = {
@@ -5964,6 +5980,11 @@ focus_tree = {
 		cost = 5
 		x = 12
 		y = 1
+		mutually_exclusive = {
+			focus = NEE_general_pershing
+			focus = NEE_old_gravel_voice
+			focus = NEE_appoint_chaffee
+		}
 		relative_position_id = NEE_the_future_of_new_england_army
 		prerequisite = {
 			focus = NEE_the_future_of_new_england_army
