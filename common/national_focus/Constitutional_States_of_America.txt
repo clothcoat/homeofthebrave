@@ -4686,8 +4686,21 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_purge_dissidents"
-			unlock_decision_tooltip = COR_fight_socialist_terrorists
-			unlock_decision_tooltip = COR_fight_federalist_terrorists
+			custom_effect_tooltip = ACW_combat_socialists
+			modify_country_flag = {
+				flag = ACW_socialist_resistance
+				value = -2
+			}
+			custom_effect_tooltip = ACW_combat_minuteman
+			modify_country_flag = {
+				flag = ACW_minutemen_resistance
+				value = -2
+			}
+			custom_effect_tooltip = ACW_fight_fed_terrorists_tooltip
+			modify_country_flag = {
+				flag = ACW_fed_resistance
+				value = -2
+			}
 		}
 	}
 	

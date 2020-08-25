@@ -208,8 +208,8 @@ country_event = { #1939 election
 				limit = {
 					USA = {
 						OR = {
-							has_completed_focus = USA_rebuild_monroe
-							has_completed_focus = USA_enter_the_fray
+							has_completed_focus = USA_spirit_of_monroe
+							has_completed_focus = USA_american_imperialism
 						}
 					}
 				}
@@ -223,7 +223,7 @@ country_event = { #1939 election
 			if = {
 				limit = {
 					CAL = {
-						has_completed_focus = USA_enter_the_fray
+						has_completed_focus = USA_american_imperialism
 					}
 				}
 				CAL = {
@@ -237,8 +237,8 @@ country_event = { #1939 election
 				limit = {
 					TEX = {
 						OR = {
-							has_completed_focus = TEX_manifest_destiny
-							has_completed_focus = TEX_enter_the_fray
+							has_completed_focus = COR_manifest_destiny
+							has_completed_focus = COR_western_brothers
 						}
 					}
 				}
@@ -1566,8 +1566,8 @@ country_event = { #1944 election
 					is_in_faction = no
 					USA = {
 						OR = {
-							has_completed_focus = USA_rebuild_monroe
-							has_completed_focus = USA_enter_the_fray
+							has_completed_focus = USA_spirit_of_monroe
+							has_completed_focus = USA_american_imperialism
 						}
 					}
 				}
@@ -1583,8 +1583,8 @@ country_event = { #1944 election
 					is_in_faction = no
 					TEX = {
 						OR = {
-							has_completed_focus = TEX_manifest_destiny
-							has_completed_focus = TEX_enter_the_fray
+							has_completed_focus = COR_manifest_destiny
+							has_completed_focus = COR_western_brothers
 						}
 					}
 				}
@@ -1727,8 +1727,8 @@ country_event = { #1949 election
 					is_in_faction = no
 					USA = {
 						OR = {
-							has_completed_focus = USA_rebuild_monroe
-							has_completed_focus = USA_enter_the_fray
+							has_completed_focus = USA_spirit_of_monroe
+							has_completed_focus = USA_american_imperialism
 						}
 					}
 				}
@@ -1744,8 +1744,8 @@ country_event = { #1949 election
 					is_in_faction = no
 					TEX = {
 						OR = {
-							has_completed_focus = TEX_manifest_destiny
-							has_completed_focus = TEX_enter_the_fray
+							has_completed_focus = COR_manifest_destiny
+							has_completed_focus = COR_western_brothers
 						}
 					}
 				}
@@ -1887,8 +1887,8 @@ country_event = { #1954 election
 					is_in_faction = no
 					USA = {
 						OR = {
-							has_completed_focus = USA_rebuild_monroe
-							has_completed_focus = USA_enter_the_fray
+							has_completed_focus = USA_spirit_of_monroe
+							has_completed_focus = USA_american_imperialism
 						}
 					}
 				}
@@ -1904,8 +1904,8 @@ country_event = { #1954 election
 					is_in_faction = no
 					TEX = {
 						OR = {
-							has_completed_focus = TEX_manifest_destiny
-							has_completed_focus = TEX_enter_the_fray
+							has_completed_focus = COR_manifest_destiny
+							has_completed_focus = COR_western_brothers
 						}
 					}
 				}
@@ -2076,8 +2076,8 @@ country_event = { #1959 election
 					is_in_faction = no
 					USA = {
 						OR = {
-							has_completed_focus = USA_rebuild_monroe
-							has_completed_focus = USA_enter_the_fray
+							has_completed_focus = USA_spirit_of_monroe
+							has_completed_focus = USA_american_imperialism
 						}
 					}
 				}
@@ -2093,8 +2093,8 @@ country_event = { #1959 election
 					is_in_faction = no
 					TEX = {
 						OR = {
-							has_completed_focus = TEX_manifest_destiny
-							has_completed_focus = TEX_enter_the_fray
+							has_completed_focus = COR_manifest_destiny
+							has_completed_focus = COR_western_brothers
 						}
 					}
 				}
