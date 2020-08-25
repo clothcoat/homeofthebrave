@@ -480,11 +480,16 @@ ACW_civil_war_decisions = {
 				limit = {
 					is_federal_tag = yes
 				}
-				custom_effect_tooltip = ACW_recruit_1_unit
+				custom_effect_tooltip = ACW_recruit_2_unit
 				hidden_effect = {
 					377 = {
 						create_unit = {
 							division = "name = \"1st Arizona Loyalists\" division_template = \"Loyalist Militia\"  start_experience_factor = 0.0"
+							allow_spawning_on_enemy_provs = yes
+							owner = ROOT
+						}
+						create_unit = {
+							division = "name = \"2nd Arizona Loyalists\" division_template = \"Loyalist Militia\"  start_experience_factor = 0.0"
 							allow_spawning_on_enemy_provs = yes
 							owner = ROOT
 						}
@@ -587,7 +592,7 @@ ACW_civil_war_decisions = {
 				limit = {
 					is_federal_tag = yes
 				}
-				custom_effect_tooltip = ACW_recruit_2_units
+				custom_effect_tooltip = ACW_recruit_3_units
 				hidden_effect = {
 					382 = {
 						create_unit = {
@@ -595,6 +600,11 @@ ACW_civil_war_decisions = {
 							allow_spawning_on_enemy_provs = yes
 							owner = ROOT
 						}
+						create_unit = {
+							division = "name = \"Rocky Mountain Loyalists\" division_template = \"Mounted Loyalists\"  start_experience_factor = 0.0"
+							allow_spawning_on_enemy_provs = yes
+							owner = ROOT
+						}	
 						create_unit = {
 							division = "name = \"Rocky Mountain Loyalists\" division_template = \"Mounted Loyalists\"  start_experience_factor = 0.0"
 							allow_spawning_on_enemy_provs = yes
@@ -1395,11 +1405,16 @@ ACW_civil_war_decisions = {
 				limit = {
 					is_federal_tag = yes
 				}
-				custom_effect_tooltip = ACW_recruit_1_unit
+				custom_effect_tooltip = ACW_recruit_2_unit
 				hidden_effect = {
 					387 = {
 						create_unit = {
 							division = "name = \"1st Idaho Loyalists\" division_template = \"Loyalist Militia\"  start_experience_factor = 0.0"
+							allow_spawning_on_enemy_provs = yes
+							owner = ROOT
+						}
+						create_unit = {
+							division = "name = \"2nd Idaho Loyalists\" division_template = \"Loyalist Militia\"  start_experience_factor = 0.0"
 							allow_spawning_on_enemy_provs = yes
 							owner = ROOT
 						}
@@ -5480,11 +5495,16 @@ ACW_civil_war_decisions = {
 				limit = {
 					is_federal_tag = yes
 				}
-				custom_effect_tooltip = ACW_recruit_1_unit
+				custom_effect_tooltip = ACW_recruit_2_unit
 				hidden_effect = {
 					376 = {
 						create_unit = {
 							division = "name = \"1st New Mexico Loyalists\" division_template = \"Mounted Loyalists\"  start_experience_factor = 0.0"
+							allow_spawning_on_enemy_provs = yes
+							owner = ROOT
+						}
+						create_unit = {
+							division = "name = \"2nd New Mexico Loyalists\" division_template = \"Mounted Loyalists\"  start_experience_factor = 0.0"
 							allow_spawning_on_enemy_provs = yes
 							owner = ROOT
 						}
@@ -10166,11 +10186,23 @@ ACW_civil_war_decisions = {
 				limit = {
 					is_federal_tag = yes
 				}
-				custom_effect_tooltip = ACW_recruit_1_unit
+				custom_effect_tooltip = ACW_recruit_3_unit
 				hidden_effect = {
 					380 = {
 						create_unit = {
 							division = "name = \"1st Utah Loyalists\" division_template = \"Loyalist Militia\"  start_experience_factor = 0.0"
+							prioritize_location = 4865
+							allow_spawning_on_enemy_provs = yes
+							owner = ROOT
+						}
+						create_unit = {
+							division = "name = \"2nd Utah Loyalists\" division_template = \"Loyalist Militia\"  start_experience_factor = 0.0"
+							prioritize_location = 4865
+							allow_spawning_on_enemy_provs = yes
+							owner = ROOT
+						}
+						create_unit = {
+							division = "name = \"3rd Utah Loyalists\" division_template = \"Loyalist Militia\"  start_experience_factor = 0.0"
 							prioritize_location = 4865
 							allow_spawning_on_enemy_provs = yes
 							owner = ROOT
