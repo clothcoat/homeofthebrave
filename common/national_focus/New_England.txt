@@ -1162,7 +1162,18 @@ focus_tree = {
 		available_if_capitulated = no
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NEE_western_intervention"
-			
+			create_wargoal = {
+				type = annex_everything
+				target = USA
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = CSA
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = COR
+			}
 		}
 	}
 	
@@ -4721,6 +4732,11 @@ focus_tree = {
 	focus = {
 		id = NEE_appoint_chaffee
 		icon = GFX_goal_NEE_chaffee
+		mutually_exclusive = {
+			focus = NEE_general_pershing
+			focus = NEE_old_gravel_voice
+			focus = NEE_green_policy
+		}
 		cost = 6
 		x = -7
 		y = 1
@@ -5132,6 +5148,11 @@ focus_tree = {
 		cost = 5
 		x = -1
 		y = 1
+		mutually_exclusive = {
+			focus = NEE_appoint_chaffee
+			focus = NEE_old_gravel_voice
+			focus = NEE_green_policy
+		}
 		relative_position_id = NEE_the_future_of_new_england_army
 		prerequisite = {
 			focus = NEE_the_future_of_new_england_army
@@ -5560,6 +5581,11 @@ focus_tree = {
 		prerequisite = {
 			focus = NEE_the_future_of_new_england_army
 		}
+		mutually_exclusive = {
+			focus = NEE_general_pershing
+			focus = NEE_green_policy
+			focus = NEE_appoint_chaffee
+		}
 		ai_will_do = {
 			factor = 3
 			modifier = {
@@ -5964,6 +5990,11 @@ focus_tree = {
 		cost = 5
 		x = 12
 		y = 1
+		mutually_exclusive = {
+			focus = NEE_general_pershing
+			focus = NEE_old_gravel_voice
+			focus = NEE_appoint_chaffee
+		}
 		relative_position_id = NEE_the_future_of_new_england_army
 		prerequisite = {
 			focus = NEE_the_future_of_new_england_army
