@@ -468,7 +468,10 @@ country_event = {
 			}
 			modifier = {
 				factor = 0
-				tag = GER
+				OR = {
+					tag = JAP
+					tag = GER
+				}
 			}
 		}
 		USA = { save_event_target_as = volunteer_target }
@@ -759,6 +762,12 @@ country_event = {
 			country_exists = CAL
 			country_exists = BBR
 			country_exists = WCC
+		}
+		OR = {
+			has_government = national_populist
+			has_government = authoritarian_democrat
+			has_government = paternal_autocrat
+			has_government = social_conservative
 		}
 		is_subject = no
 		has_socialist_government = no

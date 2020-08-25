@@ -7641,6 +7641,176 @@ country_event = { # Chief of Air Force
 }
 
 
+### CAR 
+
+country_event = { # Chief of Staff
+	id = amcivwar.800
+	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.800"}
+	title = amcivwar.800.t
+	desc = amcivwar.800.d
+	picture = GFX_report_event_USA_civil_war
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+		tag = COR
+		NOT = {
+			has_idea = COR_George_Van_Horn_Moseley_cos
+			has_idea = COR_Arthur_Hornbui_Bell_cos
+			has_idea = COR_Virgil_H_'Bert'_Effinger_cos
+		}
+	}
+
+	option = { # George Van Horn Moseley
+		name = amcivwar.800.a
+		add_ideas = COR_George_Van_Horn_Moseley_cos
+	}
+	option = { # Arthur Hornhui Bell
+		name = amcivwar.800.b
+		add_ideas = COR_Arthur_Hornbui_Bell_cos
+	}
+	option = { # Bert
+		name = amcivwar.800.c
+		add_ideas = COR_Virgil_H_'Bert'_Effinger_cos
+	}
+}
+
+country_event = { # Chief of Staff
+	id = amcivwar.801
+	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.801"}
+	title = amcivwar.801.t
+	desc = amcivwar.801.d
+	picture = GFX_report_event_USA_civil_war
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+		tag = COR
+		NOT = {
+			has_idea = COR_George_Van_Horn_Moseley_cos
+			has_idea = COR_Arthur_Hornbui_Bell_cos
+		}
+	}
+
+	option = { # Patton
+		name = amcivwar.801.a
+		add_ideas = COR_George_Smith_Patton_Jr_carm
+	}
+	option = { # Arthur Hornhui Bell
+		name = amcivwar.801.b
+		add_ideas = COR_Arthur_J_Smith_carm
+	}
+}
+
+country_event = { # Chief of Staff
+	id = amcivwar.802
+	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.802"}
+	title = amcivwar.802.t
+	desc = amcivwar.802.d
+	picture = GFX_report_event_USA_civil_war
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+		tag = COR
+		NOT = {
+			has_idea = COR_Bert_Hall_cair
+			has_idea = COR_Arthur_J_Smith_carm
+			has_idea = COR_Martin_James_Monti_cair
+		}
+	}
+
+	option = { # Hall
+		name = amcivwar.802.a
+		add_ideas = COR_Bert_Hall_cair
+	}
+	option = { # Lindbergh
+		name = amcivwar.802.b
+		add_ideas = COR_Charles_Augustus_Lindbergh_cair
+	}
+	option = { # Lindbergh
+		name = amcivwar.802.c
+		add_ideas = COR_Martin_James_Monti_cair
+	}
+}
+
+### WCC 
+
+country_event = { # WCC init
+	id = amcivwar.900
+	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.900"}
+	title = amcivwar.900.t
+	desc = amcivwar.900.d
+	picture = GFX_report_event_USA_soldiers_running
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = amcivwar.900.a
+		add_political_power = 30
+		add_manpower = 800
+	}
+}
+
+country_event = { # WCC recruitment
+	id = amcivwar.901
+	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.901"}
+	title = amcivwar.901.t
+	desc = amcivwar.901.d
+	picture = GFX_report_event_USA_police
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = amcivwar.901.a
+		add_political_power = 30
+		add_manpower = 2000
+		add_stability = -0.07
+		add_popularity = {
+			ideology = paternal_autocrat
+			popularity = 0.02
+		}
+		add_popularity = {
+			ideology = national_populist
+			popularity = 0.04
+		}
+	}
+	option = {
+		name = amcivwar.901.b
+		add_political_power = -30
+		add_stability = 0.05
+		add_manpower = 100
+		add_popularity = {
+			ideology = market_liberal
+			popularity = 0.04
+		}
+		hidden_effect = {
+			country_event = { id = amcivwar.902 days = 3 }
+		}
+	}
+}
+
+country_event = { # WCC recruitment
+	id = amcivwar.902
+	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.902"}
+	title = amcivwar.902.t
+	desc = amcivwar.902.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = amcivwar.902.a
+		add_stability = -0.02
+	}
+}
+
+
 ### Rebellion Events
 country_event = { # PSA support
 	id = amcivwar.90
