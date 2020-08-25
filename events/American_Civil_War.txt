@@ -5007,6 +5007,105 @@ country_event = { # USA wins the civil war
 		}
 	}
 }
+country_event = { # WCC wins the civil war
+	id = amcivwar.260
+	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.260"}
+	title = amcivwar.26.t
+	picture = GFX_report_event_USA_victory_celebration
+
+	desc = {
+		text = amcivwar.26.d.noceasefire
+		trigger = {
+			NOT = {
+				has_global_flag = PSA_rockies_ceasefire
+			}
+		}
+	}
+	desc = {
+		text = amcivwar.26.d.ceasefire
+		trigger = {
+			has_global_flag = PSA_rockies_ceasefire
+		}
+	}
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = USA
+		has_global_flag = USA_civil_war_begun_flag
+		NOT = {
+			has_war_with = CAN
+			has_war_with = MEX
+			has_war_with = NEE
+			has_war_with = CAL
+			country_exists = TEX
+			country_exists = CSA
+			country_exists = WCC
+			country_exists = USA
+		}
+		OR = {
+			has_global_flag = PSA_rockies_ceasefire
+			has_global_flag = CAL_seperatist_claim
+			NOT = {
+				country_exists = CAL
+			}
+		}
+	}
+
+	option = {
+		name = amcivwar.26.a
+		USA_civil_war_ends = yes
+		add_ideas = USA_civil_war_political_aftermath_idea
+		add_ideas = USA_civil_war_war_aftermath_idea
+		WCC = {
+			set_cosmetic_tag = WCC_USA
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = USA_ACW_compromise_rejected
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = USA_ACW_austerity_rejected
+				}
+			}
+		}
+		hidden_effect = {
+			add_ideas = {
+				civilian_economy
+				volunteer_only
+			}
+			USA_demobilize_forces = yes
+
+			if = {
+				limit = {
+					NOT = {
+						has_global_flag = PSA_rockies_ceasefire
+					}
+				}
+				if = {
+					limit = {
+						has_government = paternal_autocrat
+					}
+					news_event = {
+						id = worldnews.39
+						days = 1
+					}
+					else = {
+						news_event = {
+							id = worldnews.38
+							days = 1
+						}
+					}
+				}
+			}
+		}
+	}
+}
 
 country_event = { # COR wins the civil war
 	id = amcivwar.2600

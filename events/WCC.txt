@@ -525,6 +525,52 @@ country_event = { #MacArthur Assumes Command
 	}
 }
 
+country_event = { #MacArthur Assumes Command
+	id = wcc.11
+	immediate = {log = "[GetDateText]: [Root.GetName]: event wcc.11"}
+	title = wcc.11.t
+	desc = wcc.11.d
+	
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #Agree
+		name = wcc.11.a
+		ai_chance = {
+			factor = 100
+		}
+		add_stability = 0.05
+		add_war_support = 0.05
+		add_popularity = { ideology = national_populist popularity = 0.1 }
+		USA = {
+		country_event = {
+		id = wcc.12
+		days = 1
+			}
+		}
+	}
+	
+	option = { #No
+		name = wcc.11.b
+		ai_chance = {
+			factor = 0
+		}
+		add_stability = -0.1
+		add_manpower = -15000
+		add_war_support = -0.1
+		add_political_power = 40
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.1 }
+		USA = {
+		end_puppet = WCC
+		}
+		declare_war_on = {
+			target = USA
+			type = annex_everything
+		}
+	}
+}
+
 country_event = { #WCC Reintegrates
 	id = wcc.12
 	immediate = {log = "[GetDateText]: [Root.GetName]: event wcc.12"}
@@ -566,15 +612,56 @@ country_event = { #WCC Reintegrates
 			}
 			add_popularity = { ideology = national_populist popularity = 0.32 }
 			set_party_name = {
-					ideology = national_populist
-					long_name = WCC_MAC_PARTY
-					name = WCC_MAC_PARTY_long 
-				}
-				set_politics = {
-					ruling_party = national_populist
-					elections_allowed = no
+				ideology = national_populist
+				long_name = WCC_MAC_PARTY
+				name = WCC_MAC_PARTY_long 
+			}
+			set_politics = {
+				ruling_party = national_populist
+				elections_allowed = no
+			}
+		}
+	}
+}
+
+country_event = { #America Re-United
+	id = wcc.13
+	immediate = {log = "[GetDateText]: [Root.GetName]: event wcc.13"}
+	title = wcc.13.t
+	desc = wcc.13.d
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = WCC
+		has_war = no
+		has_global_flag = USA_civil_war_over_flag
+		NOT = {
+			has_idea = USA_civil_war_political_aftermath_idea
+			has_idea = USA_civil_war_political_aftermath_idea2
+			has_idea = USA_civil_war_political_aftermath_idea3
+			has_idea = USA_civil_war_political_aftermath_idea4
+			has_idea = USA_civil_war_political_aftermath_idea5
+			has_idea = USA_civil_war_political_aftermath_idea6
+			USA_civil_war_war_aftermath_idea
+			USA_civil_war_war_aftermath_idea2
+			USA_civil_war_war_aftermath_idea3
+			USA_civil_war_war_aftermath_idea4
+			USA_civil_war_war_aftermath_idea5
+			USA_civil_war_war_aftermath_idea6
+		}
+	}
+	option = {
+		name = wcc.13.a
+		set_cosmetic_tag = NEE_america
+		set_capital = 361
+		hidden_effect = {
+			every_owned_state = {
+				FROM.OWNER = { 
+					add_state_core = PREV 
 				}
 			}
+			remove_ACW_cores = yes
 		}
 	}
 }

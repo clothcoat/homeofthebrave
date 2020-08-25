@@ -2289,6 +2289,82 @@ CSA_increase_political_recovery = {
 	}
 }
 
+COR_increase_recovery = {
+	if = {
+		limit = { has_idea = USA_civil_war_war_aftermath_idea }
+		swap_ideas = {
+			remove_idea = USA_civil_war_war_aftermath_idea
+			add_idea = USA_civil_war_war_aftermath_idea2
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_civil_war_war_aftermath_idea2 }
+		swap_ideas = {
+			remove_idea = USA_civil_war_war_aftermath_idea2
+			add_idea = USA_civil_war_war_aftermath_idea3
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_civil_war_war_aftermath_idea3 }
+		swap_ideas = {
+			remove_idea = USA_civil_war_war_aftermath_idea3
+			add_idea = USA_civil_war_war_aftermath_idea4
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_civil_war_war_aftermath_idea4 }
+		swap_ideas = {
+			remove_idea = USA_civil_war_war_aftermath_idea4
+			add_idea = USA_civil_war_war_aftermath_idea5
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_civil_war_war_aftermath_idea5 }
+			remove_ideas = USA_civil_war_war_aftermath_idea5
+	}
+COR_increase_political_recovery = {
+	if = {
+		limit = { has_idea = USA_civil_war_political_aftermath_idea }
+		swap_ideas = {
+			remove_idea = USA_civil_war_political_aftermath_idea
+			add_idea = USA_civil_war_political_aftermath_idea2
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_civil_war_political_aftermath_idea2 }
+		swap_ideas = {
+			remove_idea = USA_civil_war_political_aftermath_idea2
+			add_idea = USA_civil_war_political_aftermath_idea3
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_civil_war_political_aftermath_idea3 }
+		swap_ideas = {
+			remove_idea = USA_civil_war_political_aftermath_idea3
+			add_idea = USA_civil_war_political_aftermath_idea4
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_civil_war_political_aftermath_idea4 }
+		swap_ideas = {
+			remove_idea = USA_civil_war_political_aftermath_idea4
+			add_idea = USA_civil_war_political_aftermath_idea5
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_civil_war_political_aftermath_idea5 }
+		swap_ideas = {
+			remove_idea = USA_civil_war_political_aftermath_idea5
+			add_idea = USA_civil_war_political_aftermath_idea6
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_civil_war_political_aftermath_idea6 }
+			remove_ideas = USA_civil_war_political_aftermath_idea6
+	}
+}
+
+
 COR_american_empire_strenghtens = {
 	if = {
 		limit = { has_idea = COR_american_empire }
@@ -2362,6 +2438,34 @@ remove_ACW_cores = {
 			ROOT = { NOT = { tag = TEX } }
 		}
 		remove_claim_by = TEX
+	}
+	if = {
+		limit = {
+			is_core_of = COR
+			ROOT = { NOT = { tag = COR } }
+		}
+		remove_core_of = COR
+	}
+	if = {
+		limit = {
+			is_claimed_by = COR
+			ROOT = { NOT = { tag = COR } }
+		}
+		remove_claim_by = COR
+	}	
+	if = {
+		limit = {
+			is_core_of = WCC
+			ROOT = { NOT = { tag = WCC } }
+		}
+		remove_core_of = WCC
+	}
+	if = {
+		limit = {
+			is_claimed_by = WCC
+			ROOT = { NOT = { tag = WCC } }
+		}
+		remove_claim_by = WCC
 	}
 	if = {
 		limit = {
