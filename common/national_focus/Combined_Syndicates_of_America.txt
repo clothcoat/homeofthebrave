@@ -5830,16 +5830,14 @@ focus_tree = {
 		relative_position_id = CSA_artillery_production_lines
 		completion_reward = {
 			add_tech_bonus = {
-				name = CSA_gun_bonus
 				bonus = 1
 				uses = 1
-				category = antitank
+				category = cat_anti_tank
 			}
 			add_tech_bonus = {
-				name = CSA_gun_bonus
 				bonus = 1
 				uses = 1
-				category = antiair
+				category = cat_anti_air
 			}
 			add_equipment_to_stockpile = {
 				type = anti_tank_equipment
