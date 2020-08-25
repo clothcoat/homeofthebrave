@@ -89,6 +89,22 @@ CAL_initial_events = {
 	}
 }
 
+COR_initial_events = {
+	COR = {
+		country_event = { id = amcivwar.800 days = 7 } #Chief of Staff
+		country_event = { id = amcivwar.801 days = 14 } #Chief of Army
+		country_event = { id = amcivwar.802 days = 21 } #Chief of Air Force
+	}
+}
+
+WCC_initial_events = {
+	WCC = {
+		country_event = { id = amcivwar.900 days = 10 } #Init
+		country_event = { id = amcivwar.901 days = 60 } #Recruitment
+		country_event = { id = amcivwar.312 days = 25 } #Deadline Running Out
+	}
+}
+
 USA_release_CSA = {
 	hidden_effect = {
 		CSA = {
