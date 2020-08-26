@@ -205,7 +205,7 @@ country_event = { # 1937 Republican Primary
 	option = { # Howard Hughes
 		name = pacificstates.4.c
 		ai_chance = {
-			factor = 30
+			factor = 25
 		}
 		hidden_effect = {
 			set_country_flag = PSA_1937_republican_primary_hughes
@@ -218,10 +218,23 @@ country_event = { # 1937 Republican Primary
 	option = { # Frank Merriam
 		name = pacificstates.4.e
 		ai_chance = {
-			factor = 40
+			factor = 30
 		}
 		hidden_effect = {
 			set_country_flag = PSA_1937_republican_primary_merriam
+			country_event = {
+				id = pacificstates.3
+				days = 5
+			}
+		}
+	}
+	option = { # Frank Knox
+		name = pacificstates.4.e
+		ai_chance = {
+			factor = 20
+		}
+		hidden_effect = {
+			set_country_flag = PSA_1937_republican_primary_knox
 			country_event = {
 				id = pacificstates.3
 				days = 5
@@ -527,6 +540,19 @@ country_event = { # 1937 Election
 					expire = "1965.1.1"
 					ideology = market_liberal_subtype
 					traits = { prince_of_terror }
+				}
+			}
+			if = { # Frank Knox
+				limit = {
+					has_country_flag = PSA_1937_republican_primary_knox
+				}
+				create_country_leader = {
+					name = "Frank Knox"
+					desc = "POLITICS_FRANK_KNOX_DESC"
+					picture = "Portrait_CAL_Frank_Knox.tga"
+					expire = "1965.1.1"
+					ideology = market_liberal_subtype
+					traits = { sec_media_magnate }
 				}
 			}
 			if = { # Louis B Meyer
