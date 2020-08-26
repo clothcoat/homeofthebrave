@@ -10373,3 +10373,80 @@ country_event = { # Canada refuses to return New England
 		}
 	}
 }
+
+country_event = { #America demands Suriname!
+	id = csa.558
+	immediate = { log = "[GetDateText]: [Root.GetName]: event csa.558" }
+	title = csa.558.t
+	desc = csa.558.d
+
+	is_triggered_only = yes
+
+	option = { #Never!
+		name = csa.558.a
+		ai_chance = {
+			factor = 50
+		}
+
+		add_political_power = 10
+		CSA = {
+			country_event = {
+				id = csa.559
+				days = 1
+			}
+		}
+	}
+
+	option = { #Give in
+		name = csa.558.b
+		trigger = {
+			OR = {
+				is_ai = no
+				surrender_progress > 0.25
+			}
+		}
+		ai_chance = {
+			factor = 50
+		}
+
+		CSA = {
+			country_event = {
+				id = csa.560
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = { #The Dutch Refuse
+	id = csa.559
+	immediate = { log = "[GetDateText]: [Root.GetName]: event csa.559" }
+	title = csa.559.t
+	desc = csa.559.d
+
+	is_triggered_only = yes
+
+	option = { #Only a small setback...
+		name = csa.559.a
+
+		add_political_power = -10
+	}
+}
+
+country_event = { #The Dutch Fold
+	id = csa.560
+	immediate = { log = "[GetDateText]: [Root.GetName]: event csa.560" }
+	title = csa.560.t
+	desc = csa.560.d
+
+	is_triggered_only = yes
+
+	option = { #Another victory against colonialism!
+		name = csa.560.a
+
+		transfer_state = 309
+		transfer_state = 1038
+		add_political_power = 10
+	}
+}
+
