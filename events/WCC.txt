@@ -11,6 +11,8 @@ country_event = { #Entente Aid
 	immediate = {log = "[GetDateText]: [Root.GetName]: event wcc.1"}
 	title = wcc.1.t
 	desc = wcc.1.d
+	
+	picture = GFX_event_wcc_7
 
 	fire_only_once = yes
 
@@ -52,6 +54,8 @@ country_event = { #Entente Aid Received
 	immediate = {log = "[GetDateText]: [Root.GetName]: event wcc.2"}
 	title = wcc.2.t
 	desc = wcc.2.d
+	
+	picture = GFX_event_wcc_12
 
 	fire_only_once = yes
 
@@ -81,6 +85,8 @@ country_event = { #Entente Aid Declined
 	immediate = {log = "[GetDateText]: [Root.GetName]: event wcc.3"}
 	title = wcc.3.t
 	desc = wcc.3.d
+	
+	picture = GFX_event_wcc_17
 
 	fire_only_once = yes
 
@@ -97,6 +103,8 @@ country_event = { #PSA Fate
 	immediate = {log = "[GetDateText]: [Root.GetName]: event wcc.4"}
 	title = wcc.4.t
 	desc = wcc.4.d
+	
+	picture = GFX_event_wcc_4
 
 	fire_only_once = yes
 
@@ -165,6 +173,8 @@ country_event = { #The Fallen Cause
 	immediate = {log = "[GetDateText]: [Root.GetName]: event wcc.5"}
 	title = wcc.5.t
 	desc = wcc.5.d
+	
+	picture = GFX_event_wcc_2
 
 	fire_only_once = yes
 
@@ -199,6 +209,8 @@ country_event = { #Patton's Fate
 	immediate = {log = "[GetDateText]: [Root.GetName]: event wcc.6"}
 	title = wcc.6.t
 	desc = wcc.6.d
+	
+	picture = GFX_event_wcc_3
 
 	fire_only_once = yes
 
@@ -235,6 +247,8 @@ country_event = { #WCC-USA Victory
 	immediate = {log = "[GetDateText]: [Root.GetName]: event wcc.7"}
 	title = wcc.7.t
 	desc = wcc.7.d
+	
+	picture = GFX_event_wcc_1
 
 	trigger = {
 	tag = WCC
@@ -355,6 +369,8 @@ country_event = { #WCC Demands
 	title = wcc.8.t
 	desc = wcc.8.d
 	
+	picture = GFX_event_wcc_25
+	
 	fire_only_once = yes
 
 	is_triggered_only = yes
@@ -430,6 +446,8 @@ country_event = { #MacArthur Accepts
 	title = wcc.9.t
 	desc = wcc.9.d
 	
+	picture = GFX_event_wcc_26
+	
 	fire_only_once = yes
 
 	is_triggered_only = yes
@@ -455,6 +473,8 @@ country_event = { #WCC Reintegrates
 	immediate = {log = "[GetDateText]: [Root.GetName]: event wcc.10"}
 	title = wcc.10.t
 	desc = wcc.10.d
+	
+	picture = GFX_event_wcc_18
 	
 	fire_only_once = yes
 
@@ -485,51 +505,7 @@ country_event = { #MacArthur Assumes Command
 	title = wcc.11.t
 	desc = wcc.11.d
 	
-	fire_only_once = yes
-
-	is_triggered_only = yes
-
-	option = { #Agree
-		name = wcc.11.a
-		ai_chance = {
-			factor = 100
-		}
-		add_stability = 0.05
-		add_war_support = 0.05
-		add_popularity = { ideology = national_populist popularity = 0.1 }
-		USA = {
-		country_event = {
-		id = wcc.12
-		days = 1
-			}
-		}
-	}
-	
-	option = { #No
-		name = wcc.11.b
-		ai_chance = {
-			factor = 0
-		}
-		add_stability = -0.1
-		add_manpower = -15000
-		add_war_support = -0.1
-		add_political_power = 40
-		add_popularity = { ideology = authoritarian_democrat popularity = 0.1 }
-		USA = {
-		end_puppet = WCC
-		}
-		declare_war_on = {
-			target = USA
-			type = annex_everything
-		}
-	}
-}
-
-country_event = { #MacArthur Assumes Command
-	id = wcc.11
-	immediate = {log = "[GetDateText]: [Root.GetName]: event wcc.11"}
-	title = wcc.11.t
-	desc = wcc.11.d
+	picture = GFX_mac
 	
 	fire_only_once = yes
 
@@ -576,6 +552,8 @@ country_event = { #WCC Reintegrates
 	immediate = {log = "[GetDateText]: [Root.GetName]: event wcc.12"}
 	title = wcc.12.t
 	desc = wcc.12.d
+	
+	picture = GFX_mac_i_have_returned
 	
 	fire_only_once = yes
 
@@ -631,6 +609,8 @@ country_event = { #America Re-United
 	title = wcc.13.t
 	desc = wcc.13.d
 	
+	picture = GFX_event_wcc_23
+	
 	fire_only_once = yes
 
 	trigger = {
@@ -673,6 +653,8 @@ country_event = { #Appointing Lippmann
 	title = wcc.14.t
 	desc = wcc.14.d
 	
+	picture = GFX_event_wcc_16
+	
 	fire_only_once = yes
 
 	is_triggered_only = yes
@@ -697,6 +679,8 @@ country_event = { #Cultivating Ties
 	title = wcc.15.t
 	desc = wcc.15.d
 	
+	picture = GFX_event_wcc_5
+	
 	fire_only_once = yes
 
 	is_triggered_only = yes
@@ -719,6 +703,8 @@ country_event = { #Experts Recommend lower tariffs
 	immediate = {log = "[GetDateText]: [Root.GetName]: event wcc.16"}
 	title = wcc.16.t
 	desc = wcc.16.d
+	
+	picture = GFX_event_wcc_4
 	
 	fire_only_once = yes
 
@@ -749,6 +735,8 @@ country_event = { #A New Federal Reserve
 	title = wcc.17.t
 	desc = wcc.17.d
 	
+	picture = GFX_event_wcc_9
+	
 	fire_only_once = yes
 
 	is_triggered_only = yes
@@ -777,6 +765,8 @@ country_event = { #Push for Entente Membership
 	title = wcc.18.t
 	desc = wcc.18.d
 	
+	picture = GFX_event_wcc_14
+	
 	fire_only_once = yes
 
 	is_triggered_only = yes
@@ -799,6 +789,8 @@ country_event = { #Establishment of Policy Planning Staff
 	immediate = {log = "[GetDateText]: [Root.GetName]: event wcc.19"}
 	title = wcc.19.t
 	desc = wcc.19.d
+	
+	picture = GFX_event_wcc_22
 	
 	fire_only_once = yes
 
@@ -823,6 +815,8 @@ country_event = { #Cultivating Ties
 	title = wcc.20.t
 	desc = wcc.20.d
 	
+	picture = GFX_event_wcc_19
+	
 	fire_only_once = yes
 
 	is_triggered_only = yes
@@ -845,6 +839,8 @@ country_event = { #A New President
 	immediate = {log = "[GetDateText]: [Root.GetName]: event wcc.21"}
 	title = wcc.21.t
 	desc = wcc.21.d
+	
+	picture = GFX_event_wcc_20
 	
 	fire_only_once = yes
 

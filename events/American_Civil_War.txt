@@ -7758,7 +7758,7 @@ country_event = { # WCC init
 	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.900"}
 	title = amcivwar.900.t
 	desc = amcivwar.900.d
-	picture = GFX_report_event_USA_soldiers_running
+	picture = GFX_event_wcc_21
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -7775,7 +7775,7 @@ country_event = { # WCC recruitment
 	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.901"}
 	title = amcivwar.901.t
 	desc = amcivwar.901.d
-	picture = GFX_report_event_USA_police
+	picture = GFX_event_wcc_24
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -7814,6 +7814,8 @@ country_event = { # WCC recruitment
 	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.902"}
 	title = amcivwar.902.t
 	desc = amcivwar.902.d
+	
+	picture = GFX_event_wcc_24
 
 	fire_only_once = yes
 	is_triggered_only = yes
