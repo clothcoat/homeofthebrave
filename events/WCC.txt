@@ -770,3 +770,100 @@ country_event = { #A New Federal Reserve
 		add_stability = 0.01
 	}
 }
+
+country_event = { #Push for Entente Membership
+	id = wcc.18
+	immediate = {log = "[GetDateText]: [Root.GetName]: event wcc.18"}
+	title = wcc.18.t
+	desc = wcc.18.d
+	
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #Very Well
+		name = wcc.18.a
+		CAN = {
+		add_to_faction = WCC
+		}
+		add_war_support = 0.03
+	}
+	option = { #No, we must remain independent
+		name = wcc.18.b
+		add_political_power = 10
+	}
+}
+
+country_event = { #Establishment of Policy Planning Staff
+	id = wcc.19
+	immediate = {log = "[GetDateText]: [Root.GetName]: event wcc.19"}
+	title = wcc.19.t
+	desc = wcc.19.d
+	
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #Follow the Report
+		name = wcc.19.a
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.04 }
+		add_political_power = 20
+		add_stability = -0.02
+	}
+	option = { #Only invest in counter-propaganda
+		name = wcc.19.b
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.02 }
+		add_political_power = 10
+	}
+}
+
+country_event = { #Cultivating Ties
+	id = wcc.20
+	immediate = {log = "[GetDateText]: [Root.GetName]: event wcc.20"}
+	title = wcc.20.t
+	desc = wcc.20.d
+	
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #Of course
+		name = wcc.20.a
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.04 }
+		add_political_power = 20
+		add_stability = -0.02
+	}
+	option = { #Take it slow
+		name = wcc.20.b
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.02 }
+		add_political_power = 10
+	}
+}
+
+country_event = { #A New President
+	id = wcc.21
+	immediate = {log = "[GetDateText]: [Root.GetName]: event wcc.21"}
+	title = wcc.21.t
+	desc = wcc.21.d
+	
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #Nominate Omar Bradley
+		name = wcc.21.a
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.04 }
+		add_political_power = 20
+		add_stability = -0.02
+	}
+	option = { #Use politician Pat McCarren
+		name = wcc.21.b
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.02 }
+		add_political_power = 10
+	}
+	option = { #Put forward Eisenhower
+		name = wcc.21.c
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.02 }
+		add_political_power = 10
+	}
+}
