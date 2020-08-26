@@ -2984,6 +2984,8 @@ country_event = { # Entente Alliance
 	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.2300"}
 	title = bbr.2300.t
 	desc = bbr.2300.d
+	
+	picture = GFX_report_event_generic_diplomacy1
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -3011,7 +3013,7 @@ country_event = { # Rise of Jazz
 	title = bbr.49.t
 	desc = bbr.49.d
 	
-	picture = GFX_report_event_generic_diplomacy1
+	picture = GFX_event_BBR_Jazz
 
 	trigger = {
 	tag = BBR
@@ -3059,7 +3061,7 @@ country_event = { # Interest in Creole Spikes
 	title = bbr.50.t
 	desc = bbr.50.d
 	
-	picture = GFX_report_event_generic_diplomacy1
+	picture = GFX_report_event_HAI_students
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -3081,7 +3083,7 @@ country_event = { # Robeson Demands a Seat
 	title = bbr.51.t
 	desc = bbr.51.d
 	
-	picture = GFX_report_event_generic_diplomacy1
+	picture = GFX_event_BBR_paul_robeson
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -3108,7 +3110,7 @@ country_event = { # IWIU Shrinks
 	title = bbr.5100.t
 	desc = bbr.5100.d
 	
-	picture = GFX_report_event_generic_diplomacy1
+	picture = GFX_report_event_generic_diplomacy2
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -3267,7 +3269,7 @@ country_event = { # NOI base destroyed
 	title = bbr.5500.t
 	desc = bbr.5500.d
 	
-	picture = GFX_report_event_generic_diplomacy1
+	picture = GFX_BBR_NOI2
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -3291,7 +3293,7 @@ country_event = { # Haywood's Fosterites Retreat
 	title = bbr.56.t
 	desc = bbr.56.d
 	
-	picture = GFX_report_event_generic_diplomacy1
+	picture = GFX_event_BBR_harry_haywood
 
 	trigger = {
 	OR = {
