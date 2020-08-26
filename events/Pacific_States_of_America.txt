@@ -5687,7 +5687,7 @@ country_event = {# Mankind United Cult
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.222"}
 	title = pacificstates.222.t
 	desc = pacificstates.222.d
-	#picture = GFX_report_event_USA_american_brigade
+	picture = GFX_CAL_mankind_united_group
 
 	is_triggered_only = yes
 
@@ -5704,7 +5704,7 @@ country_event = {# Bodin Working with Japan?
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.224"}
 	title = pacificstates.224.t
 	desc = pacificstates.224.d
-	#picture = GFX_report_event_USA_american_brigade
+	picture = GFX_CAL_mankind_united_group
 
 	is_triggered_only = yes
 
@@ -8195,6 +8195,8 @@ country_event = {# Anti-Syndicalist Organizations
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.350"}
 	title = pacificstates.350.t
 	desc = pacificstates.350.d
+	
+	picture = GFX_CAL_mankind_united_group
 
 	is_triggered_only = yes
 
