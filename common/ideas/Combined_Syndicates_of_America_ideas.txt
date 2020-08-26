@@ -2341,8 +2341,9 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea red_navy_idea"}
 			picture = liberty_ships_focus
 			modifier = {
-			naval_invasion_prep_speed = -0.2
-			naval_invasion_capacity	= 0.2
+			invasion_preparation = -0.2
+			naval_invasion_capacity = 2
+			amphibious_invasion = 0.20
 			naval_attrition	= -0.05
 			supply_consumption_factor = -0.1
 			}
@@ -2351,13 +2352,26 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea red_navy_idea_2"}
 			picture = liberty_ships_focus
 			modifier = {
-			naval_invasion_prep_speed = -0.3
-			naval_invasion_capacity	= 0.3
+			invasion_preparation = -0.3
+			naval_invasion_capacity	= 4
 			naval_attrition	= -0.1
 			supply_consumption_factor = -0.1
 			naval_speed_factor = 0.2
 			shore_bombardment_bonus = 0.1
 			navy_anti_air_attack = 0.1
+			}
+		}
+
+		CSA_on_the_beach_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_on_the_beach_idea"}
+			allowed = { always = no }
+			removal_cost = -1
+			picture = escort_effort_focus
+			modifier = {
+				amphibious_invasion = 0.10
+				invasion_preparation = -0.10
+				special_forces_min = 5
+				navy_max_range_factor = 0.05
 			}
 		}
 		
