@@ -8431,10 +8431,12 @@ country_event = {# Bodin Addresses Congress
 			elections_allowed = no
 		}
 		
+		remove_all_ministers = yes
+		
 		hidden_effect = {
-			add_ideas = CAL_l_ron_hubbard_hog_npo
+			add_ideas = CAL_Edward_Longstreet_Bodin_hog_npo
 			add_ideas = CAL_John_W_Campbell_for_npo
-			add_ideas = CAL_Arthur_Bell_eco_npo
+			add_ideas = CAL_l_ron_hubbard_eco_npo
 			add_ideas = CAL_Bernarr_McFadden_sec_npo
 		}
 
@@ -8596,6 +8598,8 @@ country_event = {# Boden Removed
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.358"}
 	title = pacificstates.358.t
 	desc = pacificstates.358.d
+	
+	picture = GFX_report_event_CAL_legislature
 
 	is_triggered_only = yes
 
@@ -8747,6 +8751,14 @@ country_event = {# Boden Dead
 			ideology = national_populist_subtype
 			traits = { l_ron_hubbard_was_a_black_man }
 			}
+		remove_all_ministers = yes
+		
+		hidden_effect = {
+			add_ideas = CAL_l_ron_hubbard_hog_npo
+			add_ideas = CAL_John_W_Campbell_for_npo
+			add_ideas = CAL_Jack_Parsons_eco_npo
+			add_ideas = CAL_Bernarr_McFadden_sec_npo
+		}
 		set_politics = {
 			ruling_party = national_populist
 			election_frequency = 48
