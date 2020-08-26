@@ -806,6 +806,11 @@ country_event = { # AUS Election
 		set_country_flag = NPP_Victory
 		set_cosmetic_tag = TEX_not_nazis
 		}
+		hidden_effect = {
+			random_other_country = {
+				news_event = { id = worldnews.203 days = 1 }
+			}
+		}
 	}
 	option = { # Christian Party
 		name = unionstate.2300.c
@@ -826,6 +831,11 @@ country_event = { # AUS Election
 		set_country_flag = CP_Victory
 		}
 		set_cosmetic_tag = TEX_commonwealth
+		hidden_effect = {
+			random_other_country = {
+				news_event = { id = worldnews.204 days = 1 }
+			}
+		}
 	}
 	option = { # The Democratic Party
 		name = unionstate.2300.e

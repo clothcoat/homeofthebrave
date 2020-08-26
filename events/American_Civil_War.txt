@@ -5105,15 +5105,15 @@ country_event = { # WCC wins the civil war
 				}
 				if = {
 					limit = {
-						has_government = paternal_autocrat
+						has_government = authoritarian_democrat
 					}
 					news_event = {
-						id = worldnews.39
+						id = worldnews.390
 						days = 1
 					}
 					else = {
 						news_event = {
-							id = worldnews.38
+							id = worldnews.391
 							days = 1
 						}
 					}
