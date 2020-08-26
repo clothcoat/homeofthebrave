@@ -806,6 +806,11 @@ country_event = { # AUS Election
 		set_country_flag = NPP_Victory
 		set_cosmetic_tag = TEX_not_nazis
 		}
+		hidden_effect = {
+			random_other_country = {
+				news_event = { id = worldnews.203 days = 1 }
+			}
+		}
 	}
 	option = { # Christian Party
 		name = unionstate.2300.c
@@ -826,6 +831,11 @@ country_event = { # AUS Election
 		set_country_flag = CP_Victory
 		}
 		set_cosmetic_tag = TEX_commonwealth
+		hidden_effect = {
+			random_other_country = {
+				news_event = { id = worldnews.204 days = 1 }
+			}
+		}
 	}
 	option = { # The Democratic Party
 		name = unionstate.2300.e
@@ -2633,6 +2643,8 @@ country_event = { #Cleansing Hollywood
 	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.5901"}
 	title = unionstate.5901.t
 	desc = unionstate.5901.d
+	
+	picture = GFX_hollywood_event
 
 	fire_only_once = yes
 	
@@ -2681,6 +2693,8 @@ country_event = { #Effinger Captured
 	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.60"}
 	title = unionstate.60.t
 	desc = unionstate.60.d
+	
+	picture = GFX_event_TEX_Effinger
 
 	fire_only_once = yes
 	
@@ -2702,6 +2716,8 @@ country_event = { #Cutting the Red Tape
 	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.61"}
 	title = unionstate.61.t
 	desc = unionstate.61.d
+	
+	picture = GFX_TEX_npp_event
 
 	fire_only_once = yes
 	
@@ -2720,6 +2736,8 @@ country_event = { #Endorse Deweyism
 	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.62"}
 	title = unionstate.62.t
 	desc = unionstate.62.d
+	
+	picture = GFX_TEX_la_follette_5
 
 	fire_only_once = yes
 	
@@ -2742,6 +2760,8 @@ country_event = { #Long criticizes the NPP
 	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.63"}
 	title = unionstate.63.t
 	desc = unionstate.63.d
+	
+	picture = GFX_report_event_USA_Long_Rally
 
 	fire_only_once = yes
 	

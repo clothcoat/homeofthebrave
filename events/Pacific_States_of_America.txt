@@ -205,7 +205,7 @@ country_event = { # 1937 Republican Primary
 	option = { # Howard Hughes
 		name = pacificstates.4.c
 		ai_chance = {
-			factor = 30
+			factor = 25
 		}
 		hidden_effect = {
 			set_country_flag = PSA_1937_republican_primary_hughes
@@ -218,10 +218,23 @@ country_event = { # 1937 Republican Primary
 	option = { # Frank Merriam
 		name = pacificstates.4.e
 		ai_chance = {
-			factor = 40
+			factor = 30
 		}
 		hidden_effect = {
 			set_country_flag = PSA_1937_republican_primary_merriam
+			country_event = {
+				id = pacificstates.3
+				days = 5
+			}
+		}
+	}
+	option = { # Frank Knox
+		name = pacificstates.4.e
+		ai_chance = {
+			factor = 20
+		}
+		hidden_effect = {
+			set_country_flag = PSA_1937_republican_primary_knox
 			country_event = {
 				id = pacificstates.3
 				days = 5
@@ -527,6 +540,19 @@ country_event = { # 1937 Election
 					expire = "1965.1.1"
 					ideology = market_liberal_subtype
 					traits = { prince_of_terror }
+				}
+			}
+			if = { # Frank Knox
+				limit = {
+					has_country_flag = PSA_1937_republican_primary_knox
+				}
+				create_country_leader = {
+					name = "Frank Knox"
+					desc = "POLITICS_FRANK_KNOX_DESC"
+					picture = "Portrait_CAL_Frank_Knox.tga"
+					expire = "1965.1.1"
+					ideology = market_liberal_subtype
+					traits = { sec_media_magnate }
 				}
 			}
 			if = { # Louis B Meyer
@@ -5189,7 +5215,7 @@ country_event = {# Election Declared
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.205"}
 	title = pacificstates.205.t
 	desc = pacificstates.205.d
-	picture = GFX_report_event_USA_american_brigade
+	picture = GFX_report_event_AST_election
 
 	is_triggered_only = yes
 
@@ -5209,7 +5235,7 @@ country_event = {# The Campaigns
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.2050"}
 	title = pacificstates.2050.t
 	desc = pacificstates.2050.d
-	picture = GFX_report_event_USA_american_brigade
+	picture = GFX_report_event_IRE_victory_rally
 
 	is_triggered_only = yes
 
@@ -5241,7 +5267,7 @@ country_event = {# President Arrives
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.2050"}
 	title = pacificstates.206.t
 	desc = pacificstates.2050.d
-	picture = GFX_report_event_USA_american_brigade
+	picture = GFX_report_event_USA_capitol_hill
 
 	is_triggered_only = yes
 
@@ -5261,7 +5287,7 @@ country_event = {# Hearst Runs
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.207"}
 	title = pacificstates.207.t
 	desc = pacificstates.207.d
-	picture = GFX_report_event_USA_american_brigade
+	picture = GFX_hearst_event
 
 	is_triggered_only = yes
 
@@ -5318,7 +5344,7 @@ country_event = {# AFP-Progressive Unity
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.208"}
 	title = pacificstates.208.t
 	desc = pacificstates.208.d
-	picture = GFX_report_event_USA_american_brigade
+	picture = GFX_report_event_USA_huey_long
 
 	is_triggered_only = yes
 
@@ -5334,7 +5360,7 @@ country_event = {# Celebrity Endorsements
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.209"}
 	title = pacificstates.209.t
 	desc = pacificstates.209.d
-	picture = GFX_report_event_USA_american_brigade
+	picture = GFX_hollywood_events
 
 	is_triggered_only = yes
 
@@ -5355,7 +5381,7 @@ country_event = {# Hearst's Horror Stories
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.210"}
 	title = pacificstates.210.t
 	desc = pacificstates.210.d
-	picture = GFX_report_event_USA_american_brigade
+	picture = GFX_hearst_event
 
 	is_triggered_only = yes
 
@@ -5378,7 +5404,7 @@ country_event = {# The New Liberalism Promise
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.211"}
 	title = pacificstates.211.t
 	desc = pacificstates.211.d
-	picture = GFX_report_event_USA_american_brigade
+	picture = GFX_report_event_generic_diplomacy1
 
 	is_triggered_only = yes
 
@@ -5396,7 +5422,7 @@ country_event = {# Ceasefire with MacArthur
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.214"}
 	title = pacificstates.214.t
 	desc = pacificstates.214.d
-	picture = GFX_report_event_USA_american_brigade
+	picture = GFX_mac_4
 
 	is_triggered_only = yes
 
@@ -5438,7 +5464,7 @@ country_event = {# Push For America
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.215"}
 	title = pacificstates.215.t
 	desc = pacificstates.215.d
-	picture = GFX_report_event_USA_american_brigade
+	picture = GFX_mac_3
 
 	trigger = {
 	tag = CAL
@@ -5501,7 +5527,7 @@ country_event = {# Hearst Requests our Annexation
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.216"}
 	title = pacificstates.216.t
 	desc = pacificstates.216.d
-	picture = GFX_report_event_USA_american_brigade
+	picture = GFX_hearst_event
 
 	is_triggered_only = yes
 	
@@ -5518,7 +5544,7 @@ country_event = {# Hearst Requests our Annexation
 		}
 		CAL = {
 		country_event = {
-			id = pacificstates.216
+			id = pacificstates.2160
 			days = 1
 			}
 		}
@@ -5538,7 +5564,7 @@ country_event = {# Mac Accepts
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.2160"}
 	title = pacificstates.2160.t
 	desc = pacificstates.2160.d
-	picture = GFX_report_event_USA_american_brigade
+	picture = GFX_mac_2
 
 	is_triggered_only = yes
 	
@@ -5567,7 +5593,7 @@ country_event = {# Papers Report Our Parties
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.217"}
 	title = pacificstates.217.t
 	desc = pacificstates.217.d
-	picture = GFX_report_event_USA_american_brigade
+	picture = GFX_hearst_event
 
 	trigger = { has_completed_focus = CAL_roaring_parties 
 	NOT = {
@@ -5593,7 +5619,7 @@ country_event = {# Media Resistance
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.218"}
 	title = pacificstates.218.t
 	desc = pacificstates.218.d
-	picture = GFX_report_event_USA_american_brigade
+	picture = GFX_hollywood_event
 
 	is_triggered_only = yes
 
@@ -5617,7 +5643,7 @@ country_event = {# Suspend Habeas Corpus
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.219"}
 	title = pacificstates.219.t
 	desc = pacificstates.219.d
-	picture = GFX_report_event_USA_american_brigade
+	picture = GFX_report_event_generic_diplomacy1
 
 	is_triggered_only = yes
 	
@@ -5640,7 +5666,7 @@ country_event = {# The Hearst Deficit
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.221"}
 	title = pacificstates.221.t
 	desc = pacificstates.221.d
-	picture = GFX_report_event_USA_american_brigade
+	picture = GFX_hearst_event
 
 	is_triggered_only = yes
 
@@ -5661,7 +5687,7 @@ country_event = {# Mankind United Cult
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.222"}
 	title = pacificstates.222.t
 	desc = pacificstates.222.d
-	picture = GFX_report_event_USA_american_brigade
+	picture = GFX_CAL_mankind_united_group
 
 	is_triggered_only = yes
 
@@ -5678,7 +5704,7 @@ country_event = {# Bodin Working with Japan?
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.224"}
 	title = pacificstates.224.t
 	desc = pacificstates.224.d
-	picture = GFX_report_event_USA_american_brigade
+	picture = GFX_CAL_mankind_united_group
 
 	is_triggered_only = yes
 
@@ -5702,7 +5728,7 @@ country_event = {# Cease Japanese Immigration
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.225"}
 	title = pacificstates.225.t
 	desc = pacificstates.225.d
-	picture = GFX_report_event_USA_american_brigade
+	picture = GFX_report_event_JAP_voting
 
 	is_triggered_only = yes
 
@@ -5727,7 +5753,7 @@ country_event = {# GOP Investigations
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.226"}
 	title = pacificstates.226.t
 	desc = pacificstates.226.d
-	picture = GFX_report_event_USA_american_brigade
+	picture = GFX_report_event_generic_scandal
 
 	is_triggered_only = yes
 
@@ -5751,7 +5777,7 @@ country_event = {# Opposition Infuriated
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.227"}
 	title = pacificstates.227.t
 	desc = pacificstates.227.d
-	picture = GFX_report_event_USA_american_brigade
+	picture = GFX_report_event_USA_Riots
 
 	is_triggered_only = yes
 
@@ -5773,7 +5799,7 @@ country_event = {# Protests Increase
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.228"}
 	title = pacificstates.228.t
 	desc = pacificstates.228.d
-	picture = GFX_report_event_USA_american_brigade
+	picture = GFX_report_event_USA_Riots
 
 	is_triggered_only = yes
 
@@ -5829,7 +5855,7 @@ country_event = {# Hearst couped by Arnold and Marshall
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.229"}
 	title = pacificstates.229.t
 	desc = pacificstates.229.d
-	picture = GFX_report_event_USA_american_brigade
+	picture = GFX_report_event_CAL_legislature
 
 	is_triggered_only = yes
 
@@ -5872,7 +5898,7 @@ country_event = {# Protests Put Down
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.230"}
 	title = pacificstates.230.t
 	desc = pacificstates.230.d
-	picture = GFX_report_event_USA_american_brigade
+	picture = GFX_report_event_USA_Riots
 
 	is_triggered_only = yes
 
@@ -5918,7 +5944,7 @@ country_event = {# Opposition Crushed
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.231"}
 	title = pacificstates.231.t
 	desc = pacificstates.231.d
-	picture = GFX_report_event_USA_american_brigade
+	picture = GFX_report_event_USA_Riots
 
 	is_triggered_only = yes
 
@@ -5971,7 +5997,7 @@ country_event = {# Leftists Rounded Up
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.234"}
 	title = pacificstates.234.t
 	desc = pacificstates.234.d
-	picture = GFX_report_event_USA_american_brigade
+	picture = GFX_report_event_USA_Riots
 
 	is_triggered_only = yes
 
@@ -5991,7 +6017,7 @@ country_event = {# Cohen Shot
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.235"}
 	title = pacificstates.235.t
 	desc = pacificstates.235.d
-	picture = GFX_report_event_USA_american_brigade
+	picture = GFX_event_Mickey_Cohen
 
 	is_triggered_only = yes
 
@@ -6010,7 +6036,7 @@ country_event = {# Liquor Laws
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.236"}
 	title = pacificstates.236.t
 	desc = pacificstates.236.d
-	picture = GFX_report_event_USA_american_brigade
+	picture = GFX_report_event_HOL_alcoholism_on_the_rise3
 
 	is_triggered_only = yes
 
@@ -6042,7 +6068,7 @@ country_event = {# Oil and Electricity
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.237"}
 	title = pacificstates.237.t
 	desc = pacificstates.237.d
-	picture = GFX_report_event_USA_american_brigade
+	picture = GFX_report_event_BRM_oil_fields
 
 	is_triggered_only = yes
 
@@ -6066,7 +6092,7 @@ country_event = {# Hearst Castle Expansion
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.238"}
 	title = pacificstates.238.t
 	desc = pacificstates.238.d
-	picture = GFX_report_event_USA_american_brigade
+	picture = GFX_event_hearst_castle
 
 	is_triggered_only = yes
 
@@ -6254,7 +6280,7 @@ country_event = {# Nature Reserves
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.242"}
 	title = pacificstates.242.t
 	desc = pacificstates.242.d
-	picture = GFX_report_event_USA_american_brigade
+	picture = GFX_CAL_nature_event
 
 	is_triggered_only = yes
 
@@ -6300,7 +6326,7 @@ country_event = {# Pillage Hawaii
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.243"}
 	title = pacificstates.243.t
 	desc = pacificstates.243.d
-	picture = GFX_report_event_USA_american_brigade
+	picture = GFX_report_event_USA_naval_battle
 
 	is_triggered_only = yes
 
@@ -6324,7 +6350,7 @@ country_event = {# Debt under control
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.244"}
 	title = pacificstates.244.t
 	desc = pacificstates.244.d
-	picture = GFX_report_event_USA_american_brigade
+	picture = GFX_report_event_generic_run_on_the_banks
 	
 	is_triggered_only = yes
 
@@ -6403,7 +6429,7 @@ country_event = {# Federal Police Purged
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.246"}
 	title = pacificstates.246.t
 	desc = pacificstates.246.d
-	picture = GFX_report_event_USA_american_brigade
+	picture = GFX_report_event_USA_police2
 
 	is_triggered_only = yes
 
@@ -6430,7 +6456,7 @@ country_event = {# MacArthur's Demands
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.247"}
 	title = pacificstates.247.t
 	desc = pacificstates.247.d
-	picture = GFX_report_event_USA_american_brigade
+	picture = GFX_mac_4
 
 	is_triggered_only = yes
 
@@ -6473,7 +6499,7 @@ country_event = {# Speech to California
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.248"}
 	title = pacificstates.248.t
 	desc = pacificstates.248.d
-	picture = GFX_report_event_USA_american_brigade
+	picture = GFX_report_event_CAL_legislature
 
 	is_triggered_only = yes
 
@@ -6503,12 +6529,12 @@ country_event = {# Speech to California
 	}
 }
 
-country_event = {# Re-Open GFX_report_event_USA_congress
+country_event = {# Re-Open Congress
 	id = pacificstates.249
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.249"}
 	title = pacificstates.249.t
 	desc = pacificstates.249.d
-	picture = GFX_report_event_USA_american_brigade
+	picture = GFX_report_event_CAL_legislature
 
 	is_triggered_only = yes
 
@@ -6635,7 +6661,7 @@ country_event = {# RAND
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.250"}
 	title = pacificstates.250.t
 	desc = pacificstates.250.d
-	picture = GFX_report_event_USA_american_brigade
+	picture = GFX_CAL_Marshall_event
 
 	trigger = {
 	has_completed_focus = CAL_military_research
@@ -6669,6 +6695,8 @@ country_event = {# Walt Disney Accepts
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.251"}
 	title = pacificstates.251.t
 	desc = pacificstates.251.d
+	
+	picture = GFX_CAL_disney_president
 
 	is_triggered_only = yes
 
@@ -6687,6 +6715,8 @@ country_event = {# Welfare Reforms
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.252"}
 	title = pacificstates.252.t
 	desc = pacificstates.252.d
+	
+	picture = GFX_report_event_generic_diplomacy1
 
 	is_triggered_only = yes
 
@@ -6716,6 +6746,8 @@ country_event = {# Left Democrats Fired
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.253"}
 	title = pacificstates.253.t
 	desc = pacificstates.253.d
+	
+	picture = GFX_report_event_HOL_february_strike
 
 	is_triggered_only = yes
 
@@ -6739,6 +6771,8 @@ country_event = {# Competing Grants - Shell VS Chevron
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.254"}
 	title = pacificstates.254.t
 	desc = pacificstates.254.d
+	
+	picture = GFX_report_event_BRM_oil_fields
 
 	is_triggered_only = yes
 
@@ -6773,6 +6807,8 @@ country_event = {# Release of Education for Death: Syndicalist Madness
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.255"}
 	title = pacificstates.255.t
 	desc = pacificstates.255.d
+	
+	picture = GFX_report_event_TEX_movie
 
 	is_triggered_only = yes
 
@@ -6799,6 +6835,8 @@ country_event = {# Commando Duck vs the Klan
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.205"}
 	title = pacificstates.256.t
 	desc = pacificstates.256.d
+	
+	picture = GFX_CAL_movies
 
 	trigger = {
 	COR = {
@@ -6837,6 +6875,8 @@ country_event = {# The Chief's Face
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.257"}
 	title = pacificstates.257.t
 	desc = pacificstates.257.d
+	
+	picture = GFX_CAL_movies
 
 	trigger = {
 	has_war_with = USA
@@ -6870,6 +6910,8 @@ country_event = {# Entente sends goods
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.258"}
 	title = pacificstates.258.t
 	desc = pacificstates.258.d
+	
+	picture = GFX_report_event_USA_american_brigade
 
 	is_triggered_only = yes
 
@@ -6890,6 +6932,8 @@ country_event = {# Comic Codes Authority
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.259"}
 	title = pacificstates.259.t
 	desc = pacificstates.259.d
+	
+	picture = GFX_report_event_generic_diplomacy1
 
 	is_triggered_only = yes
 
@@ -6906,6 +6950,8 @@ country_event = {# Universities Refuse to Support Immorality
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.260"}
 	title = pacificstates.260.t
 	desc = pacificstates.260.d
+	
+	picture = GFX_report_event_generic_diplomacy1
 
 	is_triggered_only = yes
 
@@ -6926,6 +6972,8 @@ country_event = {# Industrial League for Clean Living
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.261"}
 	title = pacificstates.261.t
 	desc = pacificstates.261.d
+	
+	picture = GFX_report_event_generic_diplomacy3
 
 	is_triggered_only = yes
 
@@ -6942,6 +6990,8 @@ country_event = {# Prominent Syndicalists arrested
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.263"}
 	title = pacificstates.263.t
 	desc = pacificstates.263.d
+	
+	picture = GFX_report_event_HOL_mass_arrests
 
 	is_triggered_only = yes
 
@@ -6958,6 +7008,8 @@ country_event = {# Defense Attorney's Attacked
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.264"}
 	title = pacificstates.264.t
 	desc = pacificstates.264.d
+	
+	picture = GFX_report_event_generic_trial
 
 	is_triggered_only = yes
 
@@ -6981,6 +7033,8 @@ country_event = {# Is Social Hygiene going too far?
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.266"}
 	title = pacificstates.266.t
 	desc = pacificstates.266.d
+	
+	picture = GFX_report_event_USA_medical_camp
 
 	is_triggered_only = yes
 
@@ -7008,6 +7062,8 @@ country_event = {# The Hollywood Ten
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.269"}
 	title = pacificstates.269.t
 	desc = pacificstates.269.d
+	
+	picture = GFX_hollywood_event
 
 	trigger = {
 	OR = {
@@ -7036,6 +7092,8 @@ country_event = {# Hollywood Blacklist
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.270"}
 	title = pacificstates.270.t
 	desc = pacificstates.270.d
+	
+	picture = GFX_hollywood_event
 
 	is_triggered_only = yes
 
@@ -7075,6 +7133,8 @@ country_event = {# Hays Code Backlash
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.271"}
 	title = pacificstates.271.t
 	desc = pacificstates.271.d
+	
+	picture = GFX_hollywood_event
 
 	is_triggered_only = yes
 
@@ -7099,6 +7159,8 @@ country_event = {# Protests
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.271"}
 	title = pacificstates.271.t
 	desc = pacificstates.271.d
+	
+	picture = GFX_report_event_USA_Riots
 
 	is_triggered_only = yes
 
@@ -7125,6 +7187,8 @@ country_event = {# Mass Produced TV
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.273"}
 	title = pacificstates.273.t
 	desc = pacificstates.273.d
+	
+	picture = GFX_hollywood_event
 
 	is_triggered_only = yes
 
@@ -7143,6 +7207,8 @@ country_event = {# International Film making explodes
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.275"}
 	title = pacificstates.275.t
 	desc = pacificstates.275.d
+	
+	picture = GFX_hollywood_event
 
 	is_triggered_only = yes
 
@@ -7161,6 +7227,8 @@ country_event = {# Panic!
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.276"}
 	title = pacificstates.276.t
 	desc = pacificstates.276.d
+	
+	picture = GFX_report_event_generic_run_on_the_banks
 
 	trigger = {
 	has_completed_focus = CAL_american_laisze_faire
@@ -7191,6 +7259,8 @@ country_event = {# Recovery
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.277"}
 	title = pacificstates.277.t
 	desc = pacificstates.277.d
+	
+	picture = GFX_report_event_generic_run_on_the_banks
 
 	is_triggered_only = yes
 
@@ -7217,6 +7287,8 @@ country_event = {# Rotary Club
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.278"}
 	title = pacificstates.278.t
 	desc = pacificstates.278.d
+	
+	picture = GFX_report_event_generic_economic_policy
 
 	is_triggered_only = yes
 
@@ -7241,6 +7313,8 @@ country_event = {# USS Roosevelt
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.282"}
 	title = pacificstates.282.t
 	desc = pacificstates.282.d
+	
+	picture = GFX_report_event_USA_naval_battle
 
 	is_triggered_only = yes
 
@@ -7256,6 +7330,8 @@ country_event = {# Refugee Influx
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.283"}
 	title = pacificstates.283.t
 	desc = pacificstates.283.d
+	
+	picture = GFX_report_event_CAN_refugees
 
 	is_triggered_only = yes
 
@@ -7284,6 +7360,8 @@ country_event = {# Workingman's Party
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.284"}
 	title = pacificstates.284.t
 	desc = pacificstates.284.d
+	
+	picture = GFX_report_event_generic_scandal
 
 	is_triggered_only = yes
 
@@ -7309,6 +7387,8 @@ country_event = {# Automatic transmission
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.289"}
 	title = pacificstates.289.t
 	desc = pacificstates.289.d
+	
+	picture = ROM_michael_car
 
 	trigger = {
 	OR = {
@@ -7338,6 +7418,8 @@ country_event = {# Office of Minority Affairs
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.290"}
 	title = pacificstates.290.t
 	desc = pacificstates.290.d
+	
+	picture = GFX_report_event_generic_diplomacy1
 
 	is_triggered_only = yes
 
@@ -7360,6 +7442,8 @@ country_event = {# Pride of the Bowery
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.291"}
 	title = pacificstates.291.t
 	desc = pacificstates.291.d
+	
+	picture = GFX_CAL_movies
 
 	is_triggered_only = yes
 
@@ -7378,6 +7462,8 @@ country_event = {# CCC Statues
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.292"}
 	title = pacificstates.292.t
 	desc = pacificstates.292.d
+	
+	picture = GFX_report_event_USA_ccc
 
 	is_triggered_only = yes
 
@@ -7396,6 +7482,8 @@ country_event = {# AAA disdained
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.296"}
 	title = pacificstates.296.t
 	desc = pacificstates.296.d
+	
+	picture = GFX_report_event_generic_diplomacy3
 
 	is_triggered_only = yes
 
@@ -7417,6 +7505,8 @@ country_event = {# Steinbeck
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.300"}
 	title = pacificstates.300.t
 	desc = pacificstates.300.d
+	
+	picture = GFX_CAL_steinbeck
 
 	trigger = {
 	OR = {
@@ -7440,6 +7530,8 @@ country_event = {# LORAN Breakthrough
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.301"}
 	title = pacificstates.301.t
 	desc = pacificstates.301.d
+	
+	picture = GFX_report_event_POL_radio
 
 	is_triggered_only = yes
 
@@ -7462,6 +7554,8 @@ country_event = {# Hearst Denounces New Liberalism
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.303"}
 	title = pacificstates.303.t
 	desc = pacificstates.303.d
+	
+	picture = GFX_hearst_event
 
 	trigger = {
 	OR = {
@@ -7500,6 +7594,8 @@ country_event = {# American Liberty League
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.305"}
 	title = pacificstates.305.t
 	desc = pacificstates.305.d
+	
+	picture = GFX_report_event_generic_diplomacy2
 
 	trigger = {
 	OR = {
@@ -7534,6 +7630,8 @@ country_event = {# Fair Employment Practice Committee
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.308"}
 	title = pacificstates.308.t
 	desc = pacificstates.308.d
+	
+	picture = GFX_report_event_generic_diplomacy3
 
 	is_triggered_only = yes
 
@@ -7561,6 +7659,8 @@ country_event = {# American Guide Series
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.311"}
 	title = pacificstates.311.t
 	desc = pacificstates.311.d
+	
+	picture = GFX_report_event_generic_books
 
 	is_triggered_only = yes
 
@@ -7578,6 +7678,8 @@ country_event = {# Wrangle Edison
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.312"}
 	title = pacificstates.312.t
 	desc = pacificstates.312.d
+	
+	picture = GFX_report_event_USA_reconstruction
 
 	is_triggered_only = yes
 
@@ -7616,6 +7718,8 @@ country_event = {# Temperance Fountains
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.313"}
 	title = pacificstates.313.t
 	desc = pacificstates.313.d
+	
+	picture = GFX_report_event_HOL_alcoholism_on_the_rise3
 
 	is_triggered_only = yes
 
@@ -7633,6 +7737,8 @@ country_event = {# Liberty Lobby Growth
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.314"}
 	title = pacificstates.314.t
 	desc = pacificstates.314.d
+	
+	picture = GFX_report_event_generic_diplomacy3
 
 	trigger = {
 	has_completed_focus = CAL_radical_taxation
@@ -7658,6 +7764,8 @@ country_event = {# Progressive Unity
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.315"}
 	title = pacificstates.315.t
 	desc = pacificstates.315.d
+	
+	picture = GFX_report_event_generic_diplomacy1
 
 	trigger = {
 	has_government = social_democrat
@@ -7678,6 +7786,8 @@ country_event = {# Hearst's treachery
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.316"}
 	title = pacificstates.316.t
 	desc = pacificstates.316.d
+	
+	picture = GFX_hearst_event
 
 	is_triggered_only = yes
 
@@ -7703,6 +7813,8 @@ country_event = {# Land Compensation
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.317"}
 	title = pacificstates.317.t
 	desc = pacificstates.317.d
+	
+	picture = GFX_report_event_DEN_farm
 
 	is_triggered_only = yes
 
@@ -7732,6 +7844,8 @@ country_event = {# Religious Conservatives Organize
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.319"}
 	title = pacificstates.319.t
 	desc = pacificstates.319.d
+	
+	picture = GFX_report_event_IRE_victory_rally
 
 	is_triggered_only = yes
 
@@ -7748,6 +7862,8 @@ country_event = {# Communications Breakthrough
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.321"}
 	title = pacificstates.321.t
 	desc = pacificstates.321.d
+	
+	picture = GFX_report_event_POL_radio
 
 	is_triggered_only = yes
 
@@ -7775,6 +7891,8 @@ country_event = {# CSA Policy
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.323"}
 	title = pacificstates.323.t
 	desc = pacificstates.323.d
+	
+	picture = GFX_report_event_CSA_militia
 
 	is_triggered_only = yes
 
@@ -7803,6 +7921,8 @@ country_event = {# PSA Peace Offer
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.324"}
 	title = pacificstates.324.t
 	desc = pacificstates.324.d
+	
+	picture = GFX_report_event_generic_diplomacy1
 
 	is_triggered_only = yes
 
@@ -7833,6 +7953,8 @@ country_event = {# CSA Accepts
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.3240"}
 	title = pacificstates.3240.t
 	desc = pacificstates.3240.d
+	
+	picture = GFX_report_event_generic_diplomacy1
 
 	is_triggered_only = yes
 
@@ -7853,6 +7975,8 @@ country_event = {# Capital Flight
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.325"}
 	title = pacificstates.325.t
 	desc = pacificstates.325.d
+	
+	picture = GFX_report_event_CAN_fleeing
 
 	is_triggered_only = yes
 
@@ -7871,6 +7995,8 @@ country_event = {# Negotiate with CSA?
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.326"}
 	title = pacificstates.326.t
 	desc = pacificstates.326.d
+	
+	picture = GFX_report_event_generic_diplomacy2
 
 	is_triggered_only = yes
 
@@ -7892,7 +8018,9 @@ country_event = {# Mexican Resistance
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.327"}
 	title = pacificstates.327.t
 	desc = pacificstates.327.d
-
+	
+	picture = GFX_report_event_USA_american_brigade
+	
 	is_triggered_only = yes
 
 	fire_only_once = yes
@@ -7996,6 +8124,8 @@ country_event = {# Japanese Internment
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.3310"}
 	title = pacificstates.3310.t
 	desc = pacificstates.3310.d
+	
+	picture = GFX_report_event_JAP_troops_gas
 
 	is_triggered_only = yes
 
@@ -8017,6 +8147,8 @@ country_event = {# Deport Canadians
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.332"}
 	title = pacificstates.332.t
 	desc = pacificstates.332.d
+	
+	picture = GFX_report_event_AST_deportation
 
 	is_triggered_only = yes
 
@@ -8039,6 +8171,8 @@ country_event = {# War Power Act
 	title = pacificstates.333.t
 	desc = pacificstates.333.d
 	picture = GFX_report_event_USA_american_brigade
+	
+	picture = GFX_report_event_generic_diplomacy1
 
 	is_triggered_only = yes
 
@@ -8061,6 +8195,8 @@ country_event = {# Anti-Syndicalist Organizations
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.350"}
 	title = pacificstates.350.t
 	desc = pacificstates.350.d
+	
+	picture = GFX_CAL_mankind_united_group
 
 	is_triggered_only = yes
 
@@ -8115,6 +8251,8 @@ country_event = {# Bodin Working With Japan
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.3500"}
 	title = pacificstates.3500.t
 	desc = pacificstates.3500.d
+	
+	picture = GFX_report_event_JAP_rising_sun
 
 	is_triggered_only = yes
 
@@ -8160,6 +8298,8 @@ country_event = {# Spiritualist Counter-Coup
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.351"}
 	title = pacificstates.351.t
 	desc = pacificstates.351.d
+	
+	picture = GFX_report_event_USA_american_brigade
 
 	is_triggered_only = yes
 
@@ -8214,6 +8354,8 @@ country_event = {# Battle of Bakersfield
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.352"}
 	title = pacificstates.352.t
 	desc = pacificstates.352.d
+	
+	picture = GFX_report_event_USA_american_brigade
 
 	is_triggered_only = yes
 
@@ -8261,11 +8403,13 @@ country_event = {# Battle of Bakersfield
 	}
 }
 
-country_event = {# Bodin Addresses GFX_report_event_USA_congress
+country_event = {# Bodin Addresses Congress
 	id = pacificstates.353
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.353"}
 	title = pacificstates.353.t
 	desc = pacificstates.353.d
+	
+	picture = GFX_report_event_CAL_legislature
 
 	is_triggered_only = yes
 
@@ -8289,10 +8433,12 @@ country_event = {# Bodin Addresses GFX_report_event_USA_congress
 			elections_allowed = no
 		}
 		
+		remove_all_ministers = yes
+		
 		hidden_effect = {
-			add_ideas = CAL_l_ron_hubbard_hog_npo
+			add_ideas = CAL_Edward_Longstreet_Bodin_hog_npo
 			add_ideas = CAL_John_W_Campbell_for_npo
-			add_ideas = CAL_Arthur_Bell_eco_npo
+			add_ideas = CAL_l_ron_hubbard_eco_npo
 			add_ideas = CAL_Bernarr_McFadden_sec_npo
 		}
 
@@ -8312,7 +8458,9 @@ country_event = {# Spiritualist Counter-Coup
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.354"}
 	title = pacificstates.354.t
 	desc = pacificstates.354.d
-
+	
+	picture = GFX_report_event_CAN_refugees
+	
 	is_triggered_only = yes
 
 	fire_only_once = yes
@@ -8338,6 +8486,8 @@ country_event = {# Japanese Aid
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.355"}
 	title = pacificstates.355.t
 	desc = pacificstates.355.d
+	
+	picture = GFX_report_event_JAP_revolt
 
 	is_triggered_only = yes
 
@@ -8383,6 +8533,8 @@ country_event = {# Party Beliefs
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.356"}
 	title = pacificstates.356.t
 	desc = pacificstates.356.d
+	
+	picture = GFX_CAL_l_ron_1
 
 	is_triggered_only = yes
 
@@ -8412,6 +8564,7 @@ country_event = {# International Outcry
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.357"}
 	title = pacificstates.357.t
 	desc = pacificstates.357.d
+
 
 	is_triggered_only = yes
 
@@ -8447,6 +8600,8 @@ country_event = {# Boden Removed
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.358"}
 	title = pacificstates.358.t
 	desc = pacificstates.358.d
+	
+	picture = GFX_report_event_CAL_legislature
 
 	is_triggered_only = yes
 
@@ -8574,6 +8729,8 @@ country_event = {# Boden Dead
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.359"}
 	title = pacificstates.359.t
 	desc = pacificstates.359.d
+	
+	picture = GFX_CAL_l_ron_2
 
 	trigger = {
 	tag = CAL
@@ -8596,6 +8753,14 @@ country_event = {# Boden Dead
 			ideology = national_populist_subtype
 			traits = { l_ron_hubbard_was_a_black_man }
 			}
+		remove_all_ministers = yes
+		
+		hidden_effect = {
+			add_ideas = CAL_l_ron_hubbard_hog_npo
+			add_ideas = CAL_John_W_Campbell_for_npo
+			add_ideas = CAL_Jack_Parsons_eco_npo
+			add_ideas = CAL_Bernarr_McFadden_sec_npo
+		}
 		set_politics = {
 			ruling_party = national_populist
 			election_frequency = 48
@@ -8608,6 +8773,8 @@ country_event = {# Film Controlled
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.360"}
 	title = pacificstates.360.t
 	desc = pacificstates.360.d
+	
+	picture = GFX_CAL_movies
 
 	trigger = {
 	tag = CAL
@@ -8635,6 +8802,8 @@ country_event = {# Funds for Psychics
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.361"}
 	title = pacificstates.361.t
 	desc = pacificstates.361.d
+	
+	picture = GFX_CAL_dianetics_test
 
 	is_triggered_only = yes
 
@@ -8652,6 +8821,8 @@ country_event = {# Our Publishing Houses
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.362"}
 	title = pacificstates.362.t
 	desc = pacificstates.362.d
+	
+	picture = GFX_CAL_ufo_event_pic
 
 	is_triggered_only = yes
 
@@ -8669,7 +8840,7 @@ country_event = {# Long Returns
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.400"}
 	title = pacificstates.400.t
 	desc = pacificstates.400.d
-	picture = GFX_report_event_USA_american_brigade
+	picture = GFX_report_event_USA_huey_long
 
 	is_triggered_only = yes
 
@@ -8722,7 +8893,7 @@ country_event = {# Long's Head of State
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.4001"}
 	title = pacificstates.4001.t
 	desc = pacificstates.4001.d
-	picture = GFX_report_event_USA_american_brigade
+	picture = GFX_report_event_USA_huey_long
 
 	is_triggered_only = yes
 

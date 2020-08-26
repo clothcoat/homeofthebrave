@@ -146,6 +146,7 @@ country_event = { # Old Democrats Breakoff
 		}
 		add_stability = 0.15
 		add_war_support = 0.2
+		COR_initial_events = yes
 		hidden_effect = {
 		WCC = {
 			set_politics = {
@@ -178,6 +179,7 @@ country_event = { # Old Democrats Breakoff
 			ideology = national_populist
 			popularity = -0.3
 		}
+		COR_initial_events = yes
 		hidden_effect = {
 		WCC = {
 		set_politics = {
@@ -346,6 +348,7 @@ country_event = { # WCC released
 					WCC_Dwight_D_Eisenhower_carm
 				}
 			}
+			WCC_initial_events = yes
 		}
 	}
 
@@ -354,6 +357,7 @@ country_event = { # WCC released
 		ai_chance = {
 			factor = 100
 		}
+		WCC_initial_events = yes
 		WCC = {
 			set_country_flag = choice_made
 		}
@@ -373,6 +377,7 @@ country_event = { # WCC released
 		add_manpower = 15000
 		hidden_effect = {
 			USA_initial_events = yes
+			WCC_initial_events = yes
 			if = {
 			limit = { has_global_flag = USA_reed_was_president }
 			news_event = { id = amcivwar.4 hours = 8 }
@@ -410,6 +415,7 @@ country_event = { # WCC released
 		ai_chance = {
 			factor = 0
 		}
+		WCC_initial_events = yes
 		WCC = {
 			set_country_flag = choice_made
 		}
@@ -3212,6 +3218,7 @@ country_event = { # Old Democrats Breakoff
 		}
 		add_stability = 0.15
 		add_war_support = 0.2
+		COR_initial_events = yes
 	}
 	option = {
 		name = amcivwar.6000.b
@@ -3234,6 +3241,7 @@ country_event = { # Old Democrats Breakoff
 		COR = {
 			change_tag_from = USA
 		}
+		COR_initial_events = yes
 	}
 }
 
@@ -3850,6 +3858,7 @@ country_event = { # Old Democrats Revolt
 				}
 			}
 		}
+		COR_initial_events = yes
 	}
 	option = {
 		name = amcivwar.1018.b
@@ -3860,6 +3869,7 @@ country_event = { # Old Democrats Revolt
 		hours = 5
 			}
 		}
+		COR_initial_events = yes
 	}
 }
 
@@ -4032,6 +4042,7 @@ country_event = { # Old Democrats Breakoff
 		}
 		add_stability = 0.15
 		add_war_support = 0.2
+		COR_initial_events = yes
 	}
 	option = {
 		name = amcivwar.1102.b
@@ -4054,6 +4065,7 @@ country_event = { # Old Democrats Breakoff
 		COR = {
 			change_tag_from = USA
 		}
+		COR_initial_events = yes
 	}
 }
 
@@ -4458,6 +4470,7 @@ country_event = { # Old Democrats Breakoff
 		}
 		add_stability = 0.15
 		add_war_support = 0.2
+		COR_initial_events = yes
 	}
 	option = {
 		name = amcivwar.1500.b
@@ -4480,6 +4493,7 @@ country_event = { # Old Democrats Breakoff
 		COR = {
 			change_tag_from = USA
 		}
+		COR_initial_events = yes
 	}
 }
 
@@ -4594,6 +4608,7 @@ country_event = { # Old Democrats Breakoff
 		}
 		add_stability = 0.15
 		add_war_support = 0.2
+		COR_initial_events = yes
 	}
 	option = {
 		name = amcivwar.18.b
@@ -4616,6 +4631,7 @@ country_event = { # Old Democrats Breakoff
 		COR = {
 			change_tag_from = USA
 		}
+		COR_initial_events = yes
 	}
 }
 
@@ -5089,15 +5105,15 @@ country_event = { # WCC wins the civil war
 				}
 				if = {
 					limit = {
-						has_government = paternal_autocrat
+						has_government = authoritarian_democrat
 					}
 					news_event = {
-						id = worldnews.39
+						id = worldnews.390
 						days = 1
 					}
 					else = {
 						news_event = {
-							id = worldnews.38
+							id = worldnews.391
 							days = 1
 						}
 					}
@@ -7654,7 +7670,6 @@ country_event = { # Chief of Staff
 	is_triggered_only = yes
 
 	trigger = {
-		tag = COR
 		NOT = {
 			has_idea = COR_George_Van_Horn_Moseley_cos
 			has_idea = COR_Arthur_Hornbui_Bell_cos
@@ -7687,20 +7702,20 @@ country_event = { # Chief of Staff
 	is_triggered_only = yes
 
 	trigger = {
-		tag = COR
 		NOT = {
-			has_idea = COR_George_Van_Horn_Moseley_cos
-			has_idea = COR_Arthur_Hornbui_Bell_cos
+			has_idea = COR_George_Smith_Patton_Jr_carm
+			has_idea = COR_Arthur_J_Smith_carm
 		}
 	}
 
-	option = { # Patton
-		name = amcivwar.801.a
-		add_ideas = COR_George_Smith_Patton_Jr_carm
-	}
 	option = { # Arthur Hornhui Bell
+		name = amcivwar.801.a
+		add_ideas = 
+
+	}
+	option = { # Patton
 		name = amcivwar.801.b
-		add_ideas = COR_Arthur_J_Smith_carm
+		add_ideas = COR_George_Smith_Patton_Jr_carm
 	}
 }
 
@@ -7715,7 +7730,6 @@ country_event = { # Chief of Staff
 	is_triggered_only = yes
 
 	trigger = {
-		tag = COR
 		NOT = {
 			has_idea = COR_Bert_Hall_cair
 			has_idea = COR_Arthur_J_Smith_carm

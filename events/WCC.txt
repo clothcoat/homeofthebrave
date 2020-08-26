@@ -587,6 +587,7 @@ country_event = { #WCC Reintegrates
 			every_unit_leader = {
 				set_nationality = WCC
 			}
+			end_puppet = WCC
 		}
 		WCC = {
 			change_tag_from = USA
