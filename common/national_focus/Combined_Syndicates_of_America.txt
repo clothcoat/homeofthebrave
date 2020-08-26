@@ -8938,6 +8938,10 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_master_of_the_west"
 			add_stability = 0.05
 			add_political_power = 45
+			create_wargoal = {
+			type = puppet_wargoal_focus
+			target = COL
+			}
 		}
 	}
 	
@@ -8997,8 +9001,12 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_release_suriname"
-			add_stability = 0.10
-			add_political_power = 200
+			CSA = {
+				country_event = {
+				id = csa.558
+				days = 1
+				}
+			}
 		}
 	}
 	
