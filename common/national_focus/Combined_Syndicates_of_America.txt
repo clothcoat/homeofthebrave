@@ -8835,6 +8835,10 @@ focus_tree = {
 			}
 			create_wargoal = {
 				type = puppet_wargoal_focus
+				target = NFA
+			}
+			create_wargoal = {
+				type = puppet_wargoal_focus
 				target = SAF
 			}
 
@@ -8907,8 +8911,22 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_master_of_the_west"
-			add_stability = 0.10
-			add_political_power = 200
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = CUB
+			}
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = HAI
+			}
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = CUB
+			}
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = CAF
+			}
 		}
 	}
 	
