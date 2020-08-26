@@ -10066,6 +10066,157 @@ country_event = { #Communes Annexed
 	}
 }
 
+country_event = { # Social Patriot Flag
+	id = csa.448
+	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.448"}
+	title = csa.448.t
+	desc = csa.448.d
+	picture = GFX_report_event_USA_congress
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = { # Restore the Stripes and Stars
+		name = csa.448.a
+			hidden_effect = {
+			set_cosmetic_tag = CSA_US_socialist_republic
+		}
+	}
+	option = { # A Commonwealth Flag
+		name = csa.448.b
+			hidden_effect = {
+			set_cosmetic_tag = CSA_commonwealth_america
+		}
+	}
+	option = { # A Socialist Republican Flag
+		name = csa.448.c
+			hidden_effect = {
+			set_cosmetic_tag = CSA_socialist_republic_totalist
+		}
+	}
+}
+
+country_event = { # Vanguard Flag
+	id = csa.449
+	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.449"}
+	title = csa.449.t
+	desc = csa.449.d
+	picture = GFX_report_event_USA_congress
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = { #A Red Fosterite Flag
+		name = csa.449.a
+			hidden_effect = {
+			set_cosmetic_tag = CSA_foster_ussa
+		}
+	}
+	option = { #Use the TUUL Emblem
+		name = csa.449.b
+			add_political_power = 10
+			set_cosmetic_tag = CSA_TUUL_Emblem
+		}
+	}
+	option = { #Red USA flag
+		name = csa.449.c
+			hidden_effect = {
+			set_cosmetic_tag = CSA_uob_style
+		}
+	}
+}
+
+country_event = { # Syndicalist Flag
+	id = csa.450
+	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.450"}
+	title = csa.450.t
+	desc = csa.450.d
+	picture = GFX_report_event_USA_congress
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = { #Keep the current flag
+		name = csa.450.a
+			add_political_power = 5
+			add_popularity = { ideology = syndicalist popularity = 0.01 }
+	}
+	option = { #Red White and Blue
+		name = csa.450.b
+			hidden_effect = {
+			set_cosmetic_tag = CSA_red_white_and_blue
+		}
+	}
+	option = { #A Red Flag
+		name = csa.450.c
+			hidden_effect = {
+			set_cosmetic_tag = CSA_red_us
+		}
+	}
+}
+
+country_event = { # Pan-Syndicalist Flag
+	id = csa.451
+	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.451"}
+	title = csa.451.t
+	desc = csa.451.d
+	picture = GFX_report_event_USA_congress
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = { #A traditional design
+		name = csa.451.a
+			hidden_effect = {
+			set_cosmetic_tag = CSA_red_us
+			}
+	}
+	option = { #Revolutionary Libertas
+		name = csa.451.b
+			hidden_effect = {
+			set_cosmetic_tag = CSA_socialist_union_of_america
+			}
+	}
+	option = { #Gear
+		name = csa.451.c
+			hidden_effect = {
+			set_cosmetic_tag = CSA_lovestone_2
+			}
+	}
+}
+
+country_event = { # Title for the CSA
+	id = csa.452
+	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.452"}
+	title = csa.452.t
+	desc = csa.452.d
+	picture = GFX_report_event_USA_congress
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = { #Keep the current title
+		name = csa.452.a
+		add_war_support = 0.02
+	}
+	option = { #The Socialist Syndicates of America
+		name = csa.452.b
+			hidden_effect = {
+			set_cosmetic_tag = CSA_communes_of_america
+			}
+	}
+	option = { #Gear
+		name = csa.452.c
+			hidden_effect = {
+			set_cosmetic_tag = CSA_union_of_america
+			}
+	}
+}
 
 ###Foreign Policy###
 country_event = { # La Internationale
