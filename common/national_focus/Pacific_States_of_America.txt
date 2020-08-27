@@ -4986,6 +4986,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_rebuild_americas_industry"
+			custom_effect_tooltip = USA_economic_recovery_tooltip
+			USA_depression_recovery = yes
 			add_tech_bonus = {
 				name = industrial_bonus
 				bonus = 1
@@ -5017,6 +5019,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_economic_investments"
+			custom_effect_tooltip = USA_economic_recovery_tooltip
+			USA_depression_recovery = yes
 			random_owned_state = {
 				limit = {
 					is_core_of = CAL
@@ -5077,7 +5081,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_american_industry"
-			custom_effect_tooltip = CAL_economic_recovery_tooltip
+			custom_effect_tooltip = USA_economic_recovery_tooltip
 			USA_depression_recovery = yes
 		}
 	}
@@ -5184,29 +5188,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_rebuild_agriculture"
-			add_tech_bonus = {
-				bonus = 1
-				uses = 2
-				category = industry
-			}
-		}
-	}
-	
-	focus = {# rebuild agriculture
-		id = CAL_rebuild_agriculture
-		icon = GFX_focus_AUS_agriculture
-		cost = 6.00
-		prerequisite = {
-			focus = CAL_rebuild_the_roads
-		}
-		relative_position_id = CAL_begin_reconstruction
-		x = 1
-		y = 2
-		ai_will_do = {
-			factor = 40
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CAL_rebuild_agriculture"
+			custom_effect_tooltip = USA_economic_recovery_tooltip
+			USA_depression_recovery = yes
 			add_tech_bonus = {
 				bonus = 1
 				uses = 2
@@ -5241,7 +5224,6 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_aviation_industry"
-			custom_effect_tooltip = CAL_aviation_industry_tooltip
 			384 = {
 				if = {
 					limit = { is_owned_and_controlled_by = CAL }
@@ -5340,7 +5322,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_farming_subsidies"
-			custom_effect_tooltip = CAL_farming_recovery_tooltip
+			custom_effect_tooltip = USA_economic_recovery_tooltip
 			USA_depression_recovery = yes
 		}
 	}
@@ -5470,8 +5452,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_bill_of_rights"
-			custom_effect_tooltip = CAL_political_recovery_tooltip
-			CAL_increase_recovery = yes
+			custom_effect_tooltip = USA_economic_recovery_tooltip
+			USA_depression_recovery = yes
 		}
 	}
 	
