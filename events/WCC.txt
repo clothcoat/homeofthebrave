@@ -818,7 +818,30 @@ country_event = { #Establishment of Policy Planning Staff
 }
 
 country_event = { #Cultivating Ties
-	id = wcc.20
+	id = wcc.21
+	immediate = {log = "[GetDateText]: [Root.GetName]: event wcc.21"}
+	title = wcc.21.t
+	desc = wcc.21.d
+	
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #Of course
+		name = wcc.21.a
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.04 }
+		add_political_power = 20
+		add_stability = -0.02
+	}
+	option = { #Take it slow
+		name = wcc.21.b
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.02 }
+		add_political_power = 10
+	}
+}
+
+country_event = { #Cultivating Ties
+	id = wcc.21
 	immediate = {log = "[GetDateText]: [Root.GetName]: event wcc.20"}
 	title = wcc.20.t
 	desc = wcc.20.d
@@ -841,28 +864,28 @@ country_event = { #Cultivating Ties
 }
 
 country_event = { #A New President
-	id = wcc.21
-	immediate = {log = "[GetDateText]: [Root.GetName]: event wcc.21"}
-	title = wcc.21.t
-	desc = wcc.21.d
+	id = wcc.22
+	immediate = {log = "[GetDateText]: [Root.GetName]: event wcc.22"}
+	title = wcc.22.t
+	desc = wcc.22.d
 	
 	fire_only_once = yes
 
 	is_triggered_only = yes
 
 	option = { #Nominate Omar Bradley
-		name = wcc.21.a
+		name = wcc.22.a
 		add_popularity = { ideology = authoritarian_democrat popularity = 0.04 }
 		add_political_power = 20
 		add_stability = -0.02
 	}
 	option = { #Use politician Pat McCarren
-		name = wcc.21.b
+		name = wcc.22.b
 		add_popularity = { ideology = authoritarian_democrat popularity = 0.02 }
 		add_political_power = 10
 	}
 	option = { #Put forward Eisenhower
-		name = wcc.21.c
+		name = wcc.22.c
 		add_popularity = { ideology = authoritarian_democrat popularity = 0.02 }
 		add_political_power = 10
 	}
