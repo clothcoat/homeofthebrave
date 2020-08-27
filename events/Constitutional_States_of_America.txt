@@ -309,6 +309,8 @@ country_event = { # Dinner with Alfalfa Bill
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.5"}
 	title = constate.5.t
 	desc = constate.5.d
+	
+	picture = GFX_USA_murray
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -631,6 +633,8 @@ country_event = { # Simmons Heart Attack
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.11"}
 	title = constate.11.t
 	desc = constate.11.d
+	
+	picture = GFX_report_event_HOL_natpop_funeral
 
 	trigger = {
 	has_country_leader = { ruling_only = yes name = "William Joseph Simmons" }
@@ -1820,7 +1824,6 @@ country_event = { # Teacher Policy
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.2600"}
 	title = constate.2600.t
 	desc = constate.2600.d
-	picture = AUS_christian_identity
 
 	is_triggered_only = yes
 	
@@ -1851,7 +1854,6 @@ country_event = { # Papal deal
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.27"}
 	title = constate.27.t
 	desc = constate.27.d
-	picture = AUS_christian_identity
 
 	is_triggered_only = yes
 	
@@ -1880,7 +1882,6 @@ country_event = { # Confederate Revival
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.28"}
 	title = constate.28.t
 	desc = constate.28.d
-	picture = AUS_christian_identity
 
 	trigger = {
 	has_global_flag = USA_civil_war_over_flag
@@ -1918,7 +1919,6 @@ country_event = { # Immigrant Repatriation
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.30"}
 	title = constate.30.t
 	desc = constate.30.d
-	picture = AUS_christian_identity
 
 	is_triggered_only = yes
 	
@@ -1942,7 +1942,7 @@ country_event = { # National Showing: Birth of a Nation
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.31"}
 	title = constate.31.t
 	desc = constate.31.d
-	picture = AUS_christian_identity
+	picture = GFX_CAR_cinema
 
 	is_triggered_only = yes
 	
@@ -1961,7 +1961,7 @@ country_event = { # National Ceremonies
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.32"}
 	title = constate.32.t
 	desc = constate.32.d
-	picture = AUS_christian_identity
+	picture = GFX_CAR_kkk_dc
 
 	is_triggered_only = yes
 	
@@ -1980,7 +1980,7 @@ country_event = { # Stoddardism
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.33"}
 	title = constate.33.t
 	desc = constate.33.d
-	picture = AUS_christian_identity
+	picture = GFX_CAR_stoddard
 
 	is_triggered_only = yes
 	
@@ -2005,7 +2005,7 @@ country_event = { # Eugenics push
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.34"}
 	title = constate.34.t
 	desc = constate.34.d
-	picture = AUS_christian_identity
+	picture = GFX_CAR_good
 
 	is_triggered_only = yes
 	
@@ -2030,7 +2030,7 @@ country_event = { # The Hollywood List
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.35"}
 	title = constate.35.t
 	desc = constate.35.d
-	picture = AUS_christian_identity
+	picture = GFX_hollywood_event
 
 	trigger = {
 	tag = COR
@@ -2058,7 +2058,7 @@ country_event = { # Persistence of Antisemitism
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.36"}
 	title = constate.36.t
 	desc = constate.36.d
-	picture = AUS_christian_identity
+	picture = 
 
 	is_triggered_only = yes
 	
@@ -2085,7 +2085,7 @@ country_event = { # The State Social Department
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.37"}
 	title = constate.37.t
 	desc = constate.37.d
-	picture = AUS_christian_identity
+	picture = 
 
 	is_triggered_only = yes
 	
@@ -2150,7 +2150,7 @@ country_event = { # Black Legion Protests
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.39"}
 	title = constate.39.t
 	desc = constate.39.d
-	picture = AUS_christian_identity
+	picture = GFX_CAR_harrasment
 
 	is_triggered_only = yes
 	
@@ -2181,7 +2181,7 @@ country_event = { # White League Attacks
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.40"}
 	title = constate.40.t
 	desc = constate.40.d
-	picture = AUS_christian_identity
+	picture = GFX_CAR_I_can't_see_outta_this_thing
 
 	is_triggered_only = yes
 	

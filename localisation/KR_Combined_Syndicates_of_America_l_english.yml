@@ -461,6 +461,8 @@ CSA_liberty_ships_ideas:0 "Liberty Ships"
 CSA_american_peoples_navy:0 "American People's Navy"
 CSA_continental_marines:0 "Continental Marines"
 CSA_decentralized_command:0 "Decentralized Command"
+CSA_power_of_the_revolution_idea:0 "Power of the Revolution"
+CSA_on_the_beach_idea:0 "A World Without Chains"
 ### Red Army ###
 CSA_butlers_doctrine_idea:0 "The Butler Doctrine"
 CSA_butlers_doctrine_idea_2:0 "The Butler Doctrine"
@@ -646,7 +648,7 @@ CSA_create_the_pla_tooltip:0 "We shall create the People's Liberation, and their
 CSA_huanting_spectre_tooltip:0 "§GWe shall work on spreading socialism throughout the Americas.§!"
 CSA_international_industry_tooltip:0 "§GWe shall begin a program to help industrialize syndicalist countries throughout the Americas.§!"
 CSA_arsenal_of_syndicalsim_tooltip:0 "§GWe shall work on improving the trade with other countries of the International. On the shoulders of America shall we help to liberate the world from capitalistic tyranny.\n§!"
-CSA_destroy_longists:0 "§GWe shall destroy the Longist Terrorists§!"
+CSA_destroy_longists:0 "§GWe shall destroy the reactionary terrorists§!"
 CSA_destroy_federalists:0 "§GWe shall destroy the terrorists fighting for the old government§!"
 CSA_export_the_revolution_tooltip:0 "§GWe shall begin to look to spread Socialism throughout the Americas\n§!"
 CSA_same_wars_as_Intl:0 "Any enemy is also at war with the Internationale"
@@ -2627,6 +2629,33 @@ csa.200.a:0 "We shall crush these terrorists."
 csa.204.t:0 "Federalist Bombing"
 csa.204.d:0 "Federalists who still fight for their delusions of capitalism and exploitation have targeted factories, railways, and troop installations throughout [attack_state.GetName], causing a great deal of damage and the loss of many lives. The National Guard are on the scene in [attack_state.GetName], and claim they are closer to catching the ringleaders behind these groups than they were before."
 csa.204.a:0 "We shall crush these terrorists."
+
+csa.2700.t:0 "Demand New England"
+csa.2700.d:0 "With the civil war now over, [From.GetNameDef] has demanded we return New England. We had intervened in the region to protect our interests, but with [From.GetNameDef]'s victory in the civil war, they - as the claimant to American legitimacy - are asking for New England's rightful return. Their ambassador has stressed that war is rather likely should we refuse. What shall our response be? Is it worth keeping?"
+csa.2700.a:0 "We don't have a choice."
+csa.2700.b:0 "Over our dead bodies!"
+
+csa.2701.t:0 "New England rejoins America"
+csa.2701.d:0 "The Canadians have withdrawn their troops from Boston and the cities of New England and have stated their occupation is over. Their decision to leave was controversial with their people, but it seems that reason has prevailed. The last major piece of the country is under our control."
+csa.2701.a:0 "We are truly reunited."
+
+csa.2702.t:0 "Canada Refuses"
+csa.2702.d:0 "The imperialist vultures in Canada have informed us that they will not return New England to us. Many of our politicians have angrily denounced this decision, and demand we go to war. There is also a small but vocal minority who urges us to bide our time."
+csa.2702.a:0 "War it is."
+csa.2702.b:0 "We shall bide our time."
+
+csa.558.t:0 "America demands Suriname!"
+csa.558.d:0 "We have held Suriname for centuries, but now our colony is threatened. The CSA, recently victorious in the Second American Civil War, is now trying to reestablish the Monroe Doctrine. Do we give in, or resist and potentially anger this behemoth?"
+csa.558.a:0 "Never!"
+csa.558.b:0 "Give in..."
+
+csa.559.t:0 "The Dutch Refuse"
+csa.559.d:0 "Though we are bold, the Netherlands sees that we are still recovering from the Second Civil War, and have called our bluff. There is little we can do but scowl for the time being."
+csa.559.a:0 "Only a small setback..."
+
+csa.560.t:0 "The Dutch Fold"
+csa.560.d:0 "Our gamble has worked, and the imperialists have given in to our demands. We now control another part of South America, which can be used as a staging point for further incursions into the continent!"
+csa.560.a:0 "Another victory against colonialism!"
 
 ###############################################
 #CSA's Army General Descriptions by Drozdovite#
