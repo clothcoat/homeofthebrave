@@ -63,7 +63,7 @@ change_to_soclib_popularity = {
 	}
 	add_popularity = { ideology = social_liberal popularity = new_soclib_popularity }
 	add_popularity = { ideology = authoritarian_democrat popularity = new_authoritarian_democrat_popularity } 
-	custom_effect_tooltip = long_change_to_socdem_popularity
+	custom_effect_tooltip = long_change_to_soclib_popularity
 	hidden_effect = {
 			create_country_leader = {
 				name = "Huey Long"
@@ -105,7 +105,7 @@ change_to_soccon_popularity = {
 	}
 	add_popularity = { ideology = social_conservative popularity = new_social_conservative_popularity }
 	add_popularity = { ideology = authoritarian_democrat popularity = new_authoritarian_democrat_popularity } 
-	custom_effect_tooltip = long_change_to_socdem_popularity
+	custom_effect_tooltip = long_change_to_soccon_popularity
 	hidden_effect = {
 			create_country_leader = {
 				name = "Huey Long"
@@ -189,7 +189,7 @@ change_to_hearst_pataut_popularity = {
 	}
 	add_popularity = { ideology = paternal_autocrat popularity = new_paternal_popularity }
 	add_popularity = { ideology = authoritarian_democrat popularity = new_authoritarian_democrat_popularity } 
-	custom_effect_tooltip = long_change_to_paternal_autocrat_popularity
+	custom_effect_tooltip = hearst_change_to_paternal_autocrat_popularity
 	set_politics = {
 		ruling_party = paternal_autocrat
 		election_frequency = 48

@@ -1479,7 +1479,7 @@ news_event = {
 	immediate = { log = "[GetDateText]: [Root.GetName]: event worldnews.40" }
 	title = worldnews.40.t
 	desc = worldnews.40.d
-	picture = GFX_news_KKK_victory
+	picture = GFX_news_event_USA_americans_marching
 
 	major = yes
 
@@ -1491,6 +1491,27 @@ news_event = {
 
 	option = {
 		name = worldnews.40.a
+	}
+}
+
+# COR wins ACW
+news_event = {
+	id = worldnews.400
+	immediate = { log = "[GetDateText]: [Root.GetName]: event worldnews.400" }
+	title = worldnews.400.t
+	desc = worldnews.400.d
+	picture = GFX_news_KKK_victory
+
+	major = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		wants_world_news = yes
+	}
+
+	option = {
+		name = worldnews.400.a
 	}
 }
 
