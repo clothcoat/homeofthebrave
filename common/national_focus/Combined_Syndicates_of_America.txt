@@ -5061,9 +5061,9 @@ focus_tree = {
 		x = 47
 		y = 0
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CSA_rebuilding_the_country"
-			USA_depression_recovery = yes
-			USA_political_recovery = yes
+			log = "[GetDateText]: [Root.GetName]: Focus CSA_rebuilding_the_country"				
+			CSA_increase_recovery = yes
+			CSA_increase_political_recovery = yes = yes
 		}
 	}
 
@@ -5082,9 +5082,12 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_redistribute_wealth"
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			custom_effect_tooltip = USA_economic_recovery_tooltip
 			increase_ruling_party_popularity_by_5 = yes
 			add_political_power = -40
-			USA_depression_recovery = yes
+			CSA_increase_recovery = yes
+			CSA_increase_political_recovery = yes = yes
 		}
 	}
 	
@@ -5106,8 +5109,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_womens_liberation"
-			USA_depression_recovery = yes
-			USA_political_recovery = yes
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			CSA_increase_political_recovery = yes = yes
 			hidden_effect = {
 				country_event = { id = csa.24 days = 240 random = 10 }
 				if = {
@@ -5138,7 +5141,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_social_revolution"
-			USA_political_recovery = yes
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			CSA_increase_political_recovery = yes 
 			add_manpower = 10000
 		}
 	}
@@ -5162,7 +5166,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_emancipation_for_all"
-			USA_political_recovery = yes
+			custom_effect_tooltip = USA_political_recovery_tooltip 	
+			CSA_increase_political_recovery = yes 
 			add_stability = 0.04
 			add_political_power = 30
 		}
@@ -5187,7 +5192,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_emancipation_for_all"
-			USA_political_recovery = yes
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			CSA_increase_political_recovery = yes 
 			add_manpower = 8000
 		}
 	}
@@ -5208,8 +5214,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_revolutionary_education"
+			custom_effect_tooltip = USA_political_recovery_tooltip
 			add_research_slot = 1
-			USA_political_recovery = yes
+			CSA_increase_political_recovery = yes
 		}
 	}
 
@@ -5228,8 +5235,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_reconstruction"
+			custom_effect_tooltip = USA_economic_recovery_tooltip
 			add_ideas = USA_civil_reconstruction_idea
-			USA_depression_recovery = yes
+			CSA_increase_recovery = yes
 			hidden_effect = {
 				country_event = { id = csa.22 days = 335 random = 10 }
 				country_event = { id = csa.14 days = 365 random = 10 }
@@ -5337,7 +5345,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_homes_for_the_people"
-			USA_depression_recovery = yes
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			custom_effect_tooltip = USA_economic_recovery_tooltip
+			CSA_increase_political_recovery = yes
+			CSA_increase_recovery = yes
 		}
 	}
 
@@ -5356,10 +5367,11 @@ focus_tree = {
 		y = 4
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_reconstruction_is_over"
+			custom_effect_tooltip = USA_economic_recovery_tooltip
 			remove_ideas = USA_civil_reconstruction_idea
 			add_stability = 0.1
 			add_political_power = 100
-			USA_depression_recovery = yes
+			CSA_increase_recovery = yes
 		}
 	}
 	
@@ -5381,10 +5393,11 @@ focus_tree = {
 		y = 5
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_reconstruction_is_over"
+			custom_effect_tooltip = USA_economic_recovery_tooltip
 			remove_ideas = USA_civil_reconstruction_idea
 			add_stability = 0.1
 			add_political_power = 100
-			USA_depression_recovery = yes
+			CSA_increase_recovery = yes
 		}
 	}
 
@@ -5405,7 +5418,6 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_a_new_america"
 			increase_ruling_party_popularity_by_5 = yes
 			add_political_power = 100
-			USA_depression_recovery = yes
 		}
 	}
 
