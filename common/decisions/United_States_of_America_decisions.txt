@@ -2167,6 +2167,8 @@ USA_reconstruction_decisions = {# Reconstruction Stuff
 				tag = CSA
 				tag = TEX
 				tag = NEE
+				tag = COR
+				tag = WCC
 			}
 		}
 		available = {
@@ -2215,6 +2217,7 @@ USA_reconstruction_decisions = {# Reconstruction Stuff
 				tag = COR
 				tag = CSA
 				tag = TEX
+				tag = WCC
 			}
 		}
 		available = {
@@ -2264,6 +2267,8 @@ USA_reconstruction_decisions = {# Reconstruction Stuff
 					country_exists = CAL
 					country_exists = TEX
 					country_exists = CSA
+					country_exists = COR
+					country_exists = WCC
 				}
 			}
 			OR = {
@@ -2318,6 +2323,7 @@ USA_reconstruction_decisions = {# Reconstruction Stuff
 				tag = CAL
 				tag = COR
 				tag = TEX
+				tag = WCC
 			}
 		}
 		available = {
@@ -2345,6 +2351,8 @@ USA_reconstruction_decisions = {# Reconstruction Stuff
 					country_exists = CAL
 					country_exists = TEX
 					country_exists = CSA
+					country_exists = COR
+					country_exists = WCC
 				}
 			}
 			has_global_flag = USA_civil_war_over_flag
@@ -2382,6 +2390,7 @@ USA_reconstruction_decisions = {# Reconstruction Stuff
 				tag = COR
 				tag = TEX
 				tag = NEE
+				tag = WCC
 			}
 		}
 		available = {
@@ -2401,6 +2410,7 @@ USA_reconstruction_decisions = {# Reconstruction Stuff
 					country_exists = CAL
 					country_exists = TEX
 					country_exists = CSA
+					country_exists = WCC
 				}
 			}
 			has_global_flag = USA_civil_war_over_flag
@@ -2434,6 +2444,7 @@ USA_reconstruction_decisions = {# Reconstruction Stuff
 		allowed = {
 			OR = {
 				tag = USA
+				tag = WCC
 				tag = CAL
 			}
 		}
@@ -2453,6 +2464,7 @@ USA_reconstruction_decisions = {# Reconstruction Stuff
 					country_exists = COR
 					country_exists = TEX
 					country_exists = CSA
+					country_exists = WCC
 				}
 			}
 		}
