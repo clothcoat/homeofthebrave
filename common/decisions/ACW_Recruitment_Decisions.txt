@@ -149,7 +149,7 @@ ACW_civil_war_decisions = {
 				limit = {
 					tag = COR
 				}
-				custom_effect_tooltip = ACW_recruit_6_units
+				custom_effect_tooltip = ACW_recruit_5_units
 				hidden_effect = {
 					367 = {
 						create_unit = {
@@ -169,11 +169,6 @@ ACW_civil_war_decisions = {
 						}
 						create_unit = {
 							division = "name = \"4th Alabama Militia\" division_template = \"CAR Militia\"  start_experience_factor = 0.0"
-							allow_spawning_on_enemy_provs = yes
-							owner = ROOT
-						}
-						create_unit = {
-							division = "name = \"5th Alabama Militia\" division_template = \"CAR Garrison\"  start_experience_factor = 0.0"
 							allow_spawning_on_enemy_provs = yes
 							owner = ROOT
 						}
@@ -1268,7 +1263,7 @@ ACW_civil_war_decisions = {
 				limit = {
 					tag = COR
 				}
-				custom_effect_tooltip = ACW_recruit_6_units
+				custom_effect_tooltip = ACW_recruit_5_units
 				hidden_effect = {
 					365 = {
 						create_unit = {
@@ -1288,16 +1283,6 @@ ACW_civil_war_decisions = {
 						}
 						create_unit = {
 							division = "name = \"4th Georgia Militia\" division_template = \"CAR Garrison\"  start_experience_factor = 0.0"
-							allow_spawning_on_enemy_provs = yes
-							owner = ROOT
-						}
-						create_unit = {
-							division = "name = \"5th Georgia Militia\" division_template = \"CAR Militia\"  start_experience_factor = 0.0"
-							allow_spawning_on_enemy_provs = yes
-							owner = ROOT
-						}
-						create_unit = {
-							division = "name = \"6th Georgia Militia\" division_template = \"CAR Militia\"  start_experience_factor = 0.0"
 							allow_spawning_on_enemy_provs = yes
 							owner = ROOT
 						}
@@ -1528,7 +1513,7 @@ ACW_civil_war_decisions = {
 				limit = {
 					is_federal_tag = yes
 				}
-				custom_effect_tooltip = ACW_recruit_3_units
+				custom_effect_tooltip = ACW_recruit_2_units
 				hidden_effect = {
 					396 = {
 						create_unit = {
@@ -1553,7 +1538,7 @@ ACW_civil_war_decisions = {
 				limit = {
 					tag = CSA
 				}
-				custom_effect_tooltip = ACW_recruit_6_units
+				custom_effect_tooltip = ACW_recruit_4_units
 				hidden_effect = {
 					396 = {
 						create_unit = {
@@ -1576,16 +1561,6 @@ ACW_civil_war_decisions = {
 							allow_spawning_on_enemy_provs = yes
 							owner = ROOT
 						}
-						create_unit = {
-							division = "name = \"5th Indiana Revolutionary Militia\" division_template = \"Revolutionary Garrison\"  start_experience_factor = 0.0"
-							allow_spawning_on_enemy_provs = yes
-							owner = ROOT
-						}
-						create_unit = {
-							division = "name = \"6th Indiana Revolutionary Militia\" division_template = \"Revolutionary Militia\"  start_experience_factor = 0.0"
-							allow_spawning_on_enemy_provs = yes
-							owner = ROOT
-						}
 					}
 				}
 			}
@@ -1593,7 +1568,7 @@ ACW_civil_war_decisions = {
 				limit = {
 					tag = TEX
 				}
-				custom_effect_tooltip = ACW_recruit_3_units
+				custom_effect_tooltip = ACW_recruit_2_units
 				hidden_effect = {
 					396 = {
 						create_unit = {
@@ -1606,11 +1581,6 @@ ACW_civil_war_decisions = {
 							allow_spawning_on_enemy_provs = yes
 							owner = ROOT
 						}
-						create_unit = {
-							division = "name = \"3rd Indiana Militia\" division_template = \"AUS Militia\"  start_experience_factor = 0.0"
-							allow_spawning_on_enemy_provs = yes
-							owner = ROOT
-						}
 					}
 				}
 			}
@@ -1618,7 +1588,7 @@ ACW_civil_war_decisions = {
 				limit = {
 					tag COR
 				}
-				custom_effect_tooltip = ACW_recruit_3_units
+				custom_effect_tooltip = ACW_recruit_2_units
 				hidden_effect = {
 					396 = {
 						create_unit = {
@@ -1631,11 +1601,6 @@ ACW_civil_war_decisions = {
 							allow_spawning_on_enemy_provs = yes
 							owner = ROOT
 						}
-						create_unit = {
-							division = "name = \"3rd Indiana Militia\" division_template = \"CAR Militia\"  start_experience_factor = 0.0"
-							allow_spawning_on_enemy_provs = yes
-							owner = ROOT
-						}
 					}
 				}
 			}
@@ -1643,7 +1608,7 @@ ACW_civil_war_decisions = {
 				limit = {
 					tag = CAL
 				}
-				custom_effect_tooltip = ACW_recruit_3_units
+				custom_effect_tooltip = ACW_recruit_2_units
 				hidden_effect = {
 					396 = {
 						create_unit = {
@@ -1653,11 +1618,6 @@ ACW_civil_war_decisions = {
 						}
 						create_unit = {
 							division = "name = \"2nd Indiana Resistance\" division_template = \"PSA Militia\"  start_experience_factor = 0.0"
-							allow_spawning_on_enemy_provs = yes
-							owner = ROOT
-						}
-						create_unit = {
-							division = "name = \"3rd Indiana Resistance\" division_template = \"PSA Militia\"  start_experience_factor = 0.0"
 							allow_spawning_on_enemy_provs = yes
 							owner = ROOT
 						}
@@ -1756,7 +1716,7 @@ ACW_civil_war_decisions = {
 				limit = {
 					is_federal_tag = yes
 				}
-				custom_effect_tooltip = ACW_recruit_8_units
+				custom_effect_tooltip = ACW_recruit_6_units
 				hidden_effect = {
 					395 = {
 						create_unit = {
@@ -1776,26 +1736,6 @@ ACW_civil_war_decisions = {
 						}
 						create_unit = {
 							division = "name = \"4th Illinois Loyalists\" division_template = \"Loyalist Militia\"  start_experience_factor = 0.0"
-							allow_spawning_on_enemy_provs = yes
-							owner = ROOT
-						}
-						create_unit = {
-							division = "name = \"5th Illinois Loyalists\" division_template = \"Loyalist Militia\"  start_experience_factor = 0.0"
-							allow_spawning_on_enemy_provs = yes
-							owner = ROOT
-						}
-						create_unit = {
-							division = "name = \"6th Illinois Loyalists\" division_template = \"Loyalist Militia\"  start_experience_factor = 0.0"
-							allow_spawning_on_enemy_provs = yes
-							owner = ROOT
-						}
-						create_unit = {
-							division = "name = \"7th Illinois Loyalists\" division_template = \"Loyalist Garrison\"  start_experience_factor = 0.0"
-							allow_spawning_on_enemy_provs = yes
-							owner = ROOT
-						}
-						create_unit = {
-							division = "name = \"8th Illinois Loyalists\" division_template = \"Loyalist Garrison\"  start_experience_factor = 0.0"
 							allow_spawning_on_enemy_provs = yes
 							owner = ROOT
 						}
@@ -1839,56 +1779,6 @@ ACW_civil_war_decisions = {
 							allow_spawning_on_enemy_provs = yes
 							owner = ROOT
 						}
-						create_unit = {
-							division = "name = \"7th Illinois Revolutionary Militia\" division_template = \"Revolutionary Militia\"  start_experience_factor = 0.0"
-							allow_spawning_on_enemy_provs = yes
-							owner = ROOT
-						}
-						create_unit = {
-							division = "name = \"8th Illinois Revolutionary Militia\" division_template = \"Revolutionary Militia\"  start_experience_factor = 0.0"
-							allow_spawning_on_enemy_provs = yes
-							owner = ROOT
-						}
-						create_unit = {
-							division = "name = \"9th Illinois Revolutionary Militia\" division_template = \"Revolutionary Militia\"  start_experience_factor = 0.0"
-							allow_spawning_on_enemy_provs = yes
-							owner = ROOT
-						}
-						create_unit = {
-							division = "name = \"10th Illinois Revolutionary Militia\" division_template = \"Revolutionary Militia\"  start_experience_factor = 0.0"
-							allow_spawning_on_enemy_provs = yes
-							owner = ROOT
-						}
-						create_unit = {
-							division = "name = \"11th Illinois Revolutionary Militia\" division_template = \"Revolutionary Militia\"  start_experience_factor = 0.0"
-							allow_spawning_on_enemy_provs = yes
-							owner = ROOT
-						}
-						create_unit = {
-							division = "name = \"12th Illinois Revolutionary Militia\" division_template = \"Revolutionary Militia\"  start_experience_factor = 0.0"
-							allow_spawning_on_enemy_provs = yes
-							owner = ROOT
-						}
-						create_unit = {
-							division = "name = \"13th Illinois Revolutionary Militia\" division_template = \"Revolutionary Garrison\"  start_experience_factor = 0.0"
-							allow_spawning_on_enemy_provs = yes
-							owner = ROOT
-						}
-						create_unit = {
-							division = "name = \"14th Illinois Revolutionary Militia\" division_template = \"Revolutionary Garrison\"  start_experience_factor = 0.0"
-							allow_spawning_on_enemy_provs = yes
-							owner = ROOT
-						}
-						create_unit = {
-							division = "name = \"15th Illinois Revolutionary Militia\" division_template = \"Revolutionary Garrison\"  start_experience_factor = 0.0"
-							allow_spawning_on_enemy_provs = yes
-							owner = ROOT
-						}
-						create_unit = {
-							division = "name = \"16th Illinois Revolutionary Militia\" division_template = \"Revolutionary Garrison\"  start_experience_factor = 0.0"
-							allow_spawning_on_enemy_provs = yes
-							owner = ROOT
-						}
 					}
 				}
 			}
@@ -1896,7 +1786,7 @@ ACW_civil_war_decisions = {
 				limit = {
 					tag = TEX
 				}
-				custom_effect_tooltip = ACW_recruit_8_units
+				custom_effect_tooltip = ACW_recruit_4_units
 				hidden_effect = {
 					395 = {
 						create_unit = {
@@ -1919,26 +1809,6 @@ ACW_civil_war_decisions = {
 							allow_spawning_on_enemy_provs = yes
 							owner = ROOT
 						}
-						create_unit = {
-							division = "name = \"5th Illinois Militia\" division_template = \"AUS Militia\"  start_experience_factor = 0.0"
-							allow_spawning_on_enemy_provs = yes
-							owner = ROOT
-						}
-						create_unit = {
-							division = "name = \"6th Illinois Militia\" division_template = \"AUS Militia\"  start_experience_factor = 0.0"
-							allow_spawning_on_enemy_provs = yes
-							owner = ROOT
-						}
-						create_unit = {
-							division = "name = \"7th Illinois Militia\" division_template = \"AUS Garrison\"  start_experience_factor = 0.0"
-							allow_spawning_on_enemy_provs = yes
-							owner = ROOT
-						}
-						create_unit = {
-							division = "name = \"8th Illinois Militia\" division_template = \"AUS Garrison\"  start_experience_factor = 0.0"
-							allow_spawning_on_enemy_provs = yes
-							owner = ROOT
-						}
 					}
 				}
 			}
@@ -1946,7 +1816,7 @@ ACW_civil_war_decisions = {
 				limit = {
 					tag = COR
 				}
-				custom_effect_tooltip = ACW_recruit_8_units
+				custom_effect_tooltip = ACW_recruit_5_units
 				hidden_effect = {
 					395 = {
 						create_unit = {
@@ -1974,21 +1844,6 @@ ACW_civil_war_decisions = {
 							allow_spawning_on_enemy_provs = yes
 							owner = ROOT
 						}
-						create_unit = {
-							division = "name = \"6th Illinois Militia\" division_template = \"CAR Militia\"  start_experience_factor = 0.0"
-							allow_spawning_on_enemy_provs = yes
-							owner = ROOT
-						}
-						create_unit = {
-							division = "name = \"7th Illinois Militia\" division_template = \"CAR Garrison\"  start_experience_factor = 0.0"
-							allow_spawning_on_enemy_provs = yes
-							owner = ROOT
-						}
-						create_unit = {
-							division = "name = \"8th Illinois Militia\" division_template = \"CAR Garrison\"  start_experience_factor = 0.0"
-							allow_spawning_on_enemy_provs = yes
-							owner = ROOT
-						}
 					}
 				}
 			}
@@ -1996,7 +1851,7 @@ ACW_civil_war_decisions = {
 				limit = {
 					tag = CAL
 				}
-				custom_effect_tooltip = ACW_recruit_8_units
+				custom_effect_tooltip = ACW_recruit_4_units
 				hidden_effect = {
 					395 = {
 						create_unit = {
@@ -2016,26 +1871,6 @@ ACW_civil_war_decisions = {
 						}
 						create_unit = {
 							division = "name = \"4th Illinois Resistance\" division_template = \"PSA Militia\"  start_experience_factor = 0.0"
-							allow_spawning_on_enemy_provs = yes
-							owner = ROOT
-						}
-						create_unit = {
-							division = "name = \"5th Illinois Resistance\" division_template = \"PSA Militia\"  start_experience_factor = 0.0"
-							allow_spawning_on_enemy_provs = yes
-							owner = ROOT
-						}
-						create_unit = {
-							division = "name = \"6th Illinois Resistance\" division_template = \"PSA Militia\"  start_experience_factor = 0.0"
-							allow_spawning_on_enemy_provs = yes
-							owner = ROOT
-						}
-						create_unit = {
-							division = "name = \"7th Illinois Resistance\" division_template = \"PSA Garrison\"  start_experience_factor = 0.0"
-							allow_spawning_on_enemy_provs = yes
-							owner = ROOT
-						}
-						create_unit = {
-							division = "name = \"8th Illinois Resistance\" division_template = \"PSA Garrison\"  start_experience_factor = 0.0"
 							allow_spawning_on_enemy_provs = yes
 							owner = ROOT
 						}
@@ -3480,7 +3315,7 @@ ACW_civil_war_decisions = {
 				limit = {
 					is_federal_tag = yes
 				}
-				custom_effect_tooltip = ACW_recruit_9_units
+				custom_effect_tooltip = ACW_recruit_6_units
 				hidden_effect = {
 					932 = {
 						create_unit = {
@@ -3510,21 +3345,6 @@ ACW_civil_war_decisions = {
 						}
 						create_unit = {
 							division = "name = \"6th Massachusetts Loyalists\" division_template = \"Loyalist Militia\"  start_experience_factor = 0.0"
-							allow_spawning_on_enemy_provs = yes
-							owner = ROOT
-						}
-						create_unit = {
-							division = "name = \"7th Massachusetts Loyalists\" division_template = \"Loyalist Militia\"  start_experience_factor = 0.0"
-							allow_spawning_on_enemy_provs = yes
-							owner = ROOT
-						}
-						create_unit = {
-							division = "name = \"8th Massachusetts Loyalists\" division_template = \"Loyalist Garrison\"  start_experience_factor = 0.0"
-							allow_spawning_on_enemy_provs = yes
-							owner = ROOT
-						}
-						create_unit = {
-							division = "name = \"9th Massachusetts Loyalists\" division_template = \"Loyalist Garrison\"  start_experience_factor = 0.0"
 							allow_spawning_on_enemy_provs = yes
 							owner = ROOT
 						}
@@ -3738,7 +3558,7 @@ ACW_civil_war_decisions = {
 				limit = {
 					is_federal_tag = yes
 				}
-				custom_effect_tooltip = ACW_recruit_5_units
+				custom_effect_tooltip = ACW_recruit_3_units
 				hidden_effect = {
 					393 = {
 						create_unit = {
@@ -3759,18 +3579,6 @@ ACW_civil_war_decisions = {
 							allow_spawning_on_enemy_provs = yes
 							owner = ROOT
 						}
-						create_unit = {
-							division = "name = \"4th Michigan Loyalists\" division_template = \"Loyalist Militia\"  start_experience_factor = 0.0"
-							prioritize_location = 6710
-							allow_spawning_on_enemy_provs = yes
-							owner = ROOT
-						}
-						create_unit = {
-							division = "name = \"5th Michigan Loyalists\" division_template = \"Loyalist Garrison\"  start_experience_factor = 0.0"
-							prioritize_location = 6769
-							allow_spawning_on_enemy_provs = yes
-							owner = ROOT
-						}
 					}
 				}
 			}
@@ -3778,7 +3586,7 @@ ACW_civil_war_decisions = {
 				limit = {
 					tag = CSA
 				}
-				custom_effect_tooltip = ACW_recruit_10_units
+				custom_effect_tooltip = ACW_recruit_7_units
 				hidden_effect = {
 					393 = {
 						create_unit = {
@@ -3823,24 +3631,6 @@ ACW_civil_war_decisions = {
 							allow_spawning_on_enemy_provs = yes
 							owner = ROOT
 						}
-						create_unit = {
-							division = "name = \"8th Michigan Revolutionary Militia\" division_template = \"Revolutionary Garrison\"  start_experience_factor = 0.0"
-							prioritize_location = 6710
-							allow_spawning_on_enemy_provs = yes
-							owner = ROOT
-						}
-						create_unit = {
-							division = "name = \"9th Michigan Revolutionary Militia\" division_template = \"Revolutionary Garrison\"  start_experience_factor = 0.0"
-							prioritize_location = 6769
-							allow_spawning_on_enemy_provs = yes
-							owner = ROOT
-						}
-						create_unit = {
-							division = "name = \"10th Michigan Revolutionary Militia\" division_template = \"Revolutionary Garrison\"  start_experience_factor = 0.0"
-							prioritize_location = 6769
-							allow_spawning_on_enemy_provs = yes
-							owner = ROOT
-						}
 					}
 				}
 			}
@@ -3848,7 +3638,7 @@ ACW_civil_war_decisions = {
 				limit = {
 					tag = TEX
 				}
-				custom_effect_tooltip = ACW_recruit_5_units
+				custom_effect_tooltip = ACW_recruit_3_units
 				hidden_effect = {
 					393 = {
 						create_unit = {
@@ -3869,18 +3659,6 @@ ACW_civil_war_decisions = {
 							allow_spawning_on_enemy_provs = yes
 							owner = ROOT
 						}
-						create_unit = {
-							division = "name = \"4th Michigan Militia\" division_template = \"AUS Militia\"  start_experience_factor = 0.0"
-							prioritize_location = 6710
-							allow_spawning_on_enemy_provs = yes
-							owner = ROOT
-						}
-						create_unit = {
-							division = "name = \"5th Michigan Militia\" division_template = \"AUS Garrison\"  start_experience_factor = 0.0"
-							prioritize_location = 6769
-							allow_spawning_on_enemy_provs = yes
-							owner = ROOT
-						}
 					}
 				}
 			}
@@ -3888,7 +3666,7 @@ ACW_civil_war_decisions = {
 				limit = {
 					tag = COR
 				}
-				custom_effect_tooltip = ACW_recruit_5_units
+				custom_effect_tooltip = ACW_recruit_3_units
 				hidden_effect = {
 					393 = {
 						create_unit = {
@@ -3909,18 +3687,6 @@ ACW_civil_war_decisions = {
 							allow_spawning_on_enemy_provs = yes
 							owner = ROOT
 						}
-						create_unit = {
-							division = "name = \"4th Michigan Militia\" division_template = \"CAR Militia\"  start_experience_factor = 0.0"
-							prioritize_location = 6710
-							allow_spawning_on_enemy_provs = yes
-							owner = ROOT
-						}
-						create_unit = {
-							division = "name = \"5th Michigan Militia\" division_template = \"CAR Garrison\"  start_experience_factor = 0.0"
-							prioritize_location = 6769
-							allow_spawning_on_enemy_provs = yes
-							owner = ROOT
-						}
 					}
 				}
 			}
@@ -3928,7 +3694,7 @@ ACW_civil_war_decisions = {
 				limit = {
 					tag = CAL
 				}
-				custom_effect_tooltip = ACW_recruit_5_units
+				custom_effect_tooltip = ACW_recruit_3_units
 				hidden_effect = {
 					393 = {
 						create_unit = {
@@ -3946,18 +3712,6 @@ ACW_civil_war_decisions = {
 						create_unit = {
 							division = "name = \"3rd Michigan Resistance\" division_template = \"PSA Militia\"  start_experience_factor = 0.0"
 							prioritize_location = 6710
-							allow_spawning_on_enemy_provs = yes
-							owner = ROOT
-						}
-						create_unit = {
-							division = "name = \"4th Michigan Resistance\" division_template = \"PSA Militia\"  start_experience_factor = 0.0"
-							prioritize_location = 6710
-							allow_spawning_on_enemy_provs = yes
-							owner = ROOT
-						}
-						create_unit = {
-							division = "name = \"5th Michigan Resistance\" division_template = \"PSA Garrison\"  start_experience_factor = 0.0"
-							prioritize_location = 6769
 							allow_spawning_on_enemy_provs = yes
 							owner = ROOT
 						}
@@ -8438,7 +8192,7 @@ ACW_civil_war_decisions = {
 				limit = {
 					is_federal_tag = yes
 				}
-				custom_effect_tooltip = ACW_recruit_9_units
+				custom_effect_tooltip = ACW_recruit_4_units
 				hidden_effect = {
 					360 = {
 						create_unit = {
@@ -8461,31 +8215,6 @@ ACW_civil_war_decisions = {
 							allow_spawning_on_enemy_provs = yes
 							owner = ROOT
 						}
-						create_unit = {
-							division = "name = \"5th Pennsylvania Loyalists\" division_template = \"Loyalist Militia\"  start_experience_factor = 0.0"
-							allow_spawning_on_enemy_provs = yes
-							owner = ROOT
-						}
-						create_unit = {
-							division = "name = \"6th Pennsylvania Loyalists\" division_template = \"Loyalist Militia\"  start_experience_factor = 0.0"
-							allow_spawning_on_enemy_provs = yes
-							owner = ROOT
-						}
-						create_unit = {
-							division = "name = \"7th Pennsylvania Loyalists\" division_template = \"Loyalist Militia\"  start_experience_factor = 0.0"
-							allow_spawning_on_enemy_provs = yes
-							owner = ROOT
-						}
-						create_unit = {
-							division = "name = \"8th Pennsylvania Loyalists\" division_template = \"Loyalist Garrison\"  start_experience_factor = 0.0"
-							allow_spawning_on_enemy_provs = yes
-							owner = ROOT
-						}
-						create_unit = {
-							division = "name = \"9th Pennsylvania Loyalists\" division_template = \"Loyalist Garrison\"  start_experience_factor = 0.0"
-							allow_spawning_on_enemy_provs = yes
-							owner = ROOT
-						}
 					}
 				}
 			}
@@ -8493,7 +8222,7 @@ ACW_civil_war_decisions = {
 				limit = {
 					tag = CSA
 				}
-				custom_effect_tooltip = ACW_recruit_19_units
+				custom_effect_tooltip = ACW_recruit_7_units
 				hidden_effect = {
 					360 = {
 						create_unit = {
@@ -8531,66 +8260,6 @@ ACW_civil_war_decisions = {
 							allow_spawning_on_enemy_provs = yes
 							owner = ROOT
 						}
-						create_unit = {
-							division = "name = \"8th Pennsylvania Revolutionary Militia\" division_template = \"Revolutionary Militia\"  start_experience_factor = 0.0"
-							allow_spawning_on_enemy_provs = yes
-							owner = ROOT
-						}
-						create_unit = {
-							division = "name = \"9th Pennsylvania Revolutionary Militia\" division_template = \"Revolutionary Militia\"  start_experience_factor = 0.0"
-							allow_spawning_on_enemy_provs = yes
-							owner = ROOT
-						}
-						create_unit = {
-							division = "name = \"10th Pennsylvania Revolutionary Militia\" division_template = \"Revolutionary Militia\"  start_experience_factor = 0.0"
-							allow_spawning_on_enemy_provs = yes
-							owner = ROOT
-						}
-						create_unit = {
-							division = "name = \"11th Pennsylvania Revolutionary Militia\" division_template = \"Revolutionary Militia\"  start_experience_factor = 0.0"
-							allow_spawning_on_enemy_provs = yes
-							owner = ROOT
-						}
-						create_unit = {
-							division = "name = \"12th Pennsylvania Revolutionary Militia\" division_template = \"Revolutionary Militia\"  start_experience_factor = 0.0"
-							allow_spawning_on_enemy_provs = yes
-							owner = ROOT
-						}
-						create_unit = {
-							division = "name = \"13th Pennsylvania Revolutionary Militia\" division_template = \"Revolutionary Militia\"  start_experience_factor = 0.0"
-							allow_spawning_on_enemy_provs = yes
-							owner = ROOT
-						}
-						create_unit = {
-							division = "name = \"14th Pennsylvania Revolutionary Militia\" division_template = \"Revolutionary Militia\"  start_experience_factor = 0.0"
-							allow_spawning_on_enemy_provs = yes
-							owner = ROOT
-						}
-						create_unit = {
-							division = "name = \"15th Pennsylvania Revolutionary Militia\" division_template = \"Revolutionary Garrison\"  start_experience_factor = 0.0"
-							allow_spawning_on_enemy_provs = yes
-							owner = ROOT
-						}
-						create_unit = {
-							division = "name = \"16th Pennsylvania Revolutionary Militia\" division_template = \"Revolutionary Garrison\"  start_experience_factor = 0.0"
-							allow_spawning_on_enemy_provs = yes
-							owner = ROOT
-						}
-						create_unit = {
-							division = "name = \"17th Pennsylvania Revolutionary Militia\" division_template = \"Revolutionary Garrison\"  start_experience_factor = 0.0"
-							allow_spawning_on_enemy_provs = yes
-							owner = ROOT
-						}
-						create_unit = {
-							division = "name = \"18th Pennsylvania Revolutionary Militia\" division_template = \"Revolutionary Garrison\"  start_experience_factor = 0.0"
-							allow_spawning_on_enemy_provs = yes
-							owner = ROOT
-						}
-						create_unit = {
-							division = "name = \"19th Pennsylvania Revolutionary Militia\" division_template = \"Revolutionary Garrison\"  start_experience_factor = 0.0"
-							allow_spawning_on_enemy_provs = yes
-							owner = ROOT
-						}
 					}
 				}
 			}
@@ -8598,7 +8267,7 @@ ACW_civil_war_decisions = {
 				limit = {
 					tag = TEX
 				}
-				custom_effect_tooltip = ACW_recruit_9_units
+				custom_effect_tooltip = ACW_recruit_4_units
 				hidden_effect = {
 					360 = {
 						create_unit = {
@@ -8621,31 +8290,6 @@ ACW_civil_war_decisions = {
 							allow_spawning_on_enemy_provs = yes
 							owner = ROOT
 						}
-						create_unit = {
-							division = "name = \"5th Pennsylvania Militia\" division_template = \"AUS Militia\"  start_experience_factor = 0.0"
-							allow_spawning_on_enemy_provs = yes
-							owner = ROOT
-						}
-						create_unit = {
-							division = "name = \"6th Pennsylvania Militia\" division_template = \"AUS Militia\"  start_experience_factor = 0.0"
-							allow_spawning_on_enemy_provs = yes
-							owner = ROOT
-						}
-						create_unit = {
-							division = "name = \"7th Pennsylvania Militia\" division_template = \"AUS Militia\"  start_experience_factor = 0.0"
-							allow_spawning_on_enemy_provs = yes
-							owner = ROOT
-						}
-						create_unit = {
-							division = "name = \"8th Pennsylvania Militia\" division_template = \"AUS Garrison\"  start_experience_factor = 0.0"
-							allow_spawning_on_enemy_provs = yes
-							owner = ROOT
-						}
-						create_unit = {
-							division = "name = \"9th Pennsylvania Militia\" division_template = \"AUS Garrison\"  start_experience_factor = 0.0"
-							allow_spawning_on_enemy_provs = yes
-							owner = ROOT
-						}
 					}
 				}
 			}
@@ -8653,7 +8297,7 @@ ACW_civil_war_decisions = {
 				limit = {
 					tag = COR
 				}
-				custom_effect_tooltip = ACW_recruit_9_units
+				custom_effect_tooltip = ACW_recruit_4_units
 				hidden_effect = {
 					360 = {
 						create_unit = {
@@ -8676,31 +8320,6 @@ ACW_civil_war_decisions = {
 							allow_spawning_on_enemy_provs = yes
 							owner = ROOT
 						}
-						create_unit = {
-							division = "name = \"5th Pennsylvania Militia\" division_template = \"CAR Militia\"  start_experience_factor = 0.0"
-							allow_spawning_on_enemy_provs = yes
-							owner = ROOT
-						}
-						create_unit = {
-							division = "name = \"6th Pennsylvania Militia\" division_template = \"CAR Militia\"  start_experience_factor = 0.0"
-							allow_spawning_on_enemy_provs = yes
-							owner = ROOT
-						}
-						create_unit = {
-							division = "name = \"7th Pennsylvania Militia\" division_template = \"CAR Militia\"  start_experience_factor = 0.0"
-							allow_spawning_on_enemy_provs = yes
-							owner = ROOT
-						}
-						create_unit = {
-							division = "name = \"8th Pennsylvania Militia\" division_template = \"CAR Garrison\"  start_experience_factor = 0.0"
-							allow_spawning_on_enemy_provs = yes
-							owner = ROOT
-						}
-						create_unit = {
-							division = "name = \"9th Pennsylvania Militia\" division_template = \"CAR Garrison\"  start_experience_factor = 0.0"
-							allow_spawning_on_enemy_provs = yes
-							owner = ROOT
-						}
 					}
 				}
 			}
@@ -8708,7 +8327,7 @@ ACW_civil_war_decisions = {
 				limit = {
 					tag = CAL
 				}
-				custom_effect_tooltip = ACW_recruit_9_units
+				custom_effect_tooltip = ACW_recruit_4_units
 				hidden_effect = {
 					360 = {
 						create_unit = {
@@ -8728,31 +8347,6 @@ ACW_civil_war_decisions = {
 						}
 						create_unit = {
 							division = "name = \"4th Pennsylvania Resistance\" division_template = \"PSA Militia\"  start_experience_factor = 0.0"
-							allow_spawning_on_enemy_provs = yes
-							owner = ROOT
-						}
-						create_unit = {
-							division = "name = \"5th Pennsylvania Resistance\" division_template = \"PSA Militia\"  start_experience_factor = 0.0"
-							allow_spawning_on_enemy_provs = yes
-							owner = ROOT
-						}
-						create_unit = {
-							division = "name = \"6th Pennsylvania Resistance\" division_template = \"PSA Militia\"  start_experience_factor = 0.0"
-							allow_spawning_on_enemy_provs = yes
-							owner = ROOT
-						}
-						create_unit = {
-							division = "name = \"7th Pennsylvania Resistance\" division_template = \"PSA Militia\"  start_experience_factor = 0.0"
-							allow_spawning_on_enemy_provs = yes
-							owner = ROOT
-						}
-						create_unit = {
-							division = "name = \"8th Pennsylvania Resistance\" division_template = \"PSA Garrison\"  start_experience_factor = 0.0"
-							allow_spawning_on_enemy_provs = yes
-							owner = ROOT
-						}
-						create_unit = {
-							division = "name = \"9th Pennsylvania Resistance\" division_template = \"PSA Garrison\"  start_experience_factor = 0.0"
 							allow_spawning_on_enemy_provs = yes
 							owner = ROOT
 						}
@@ -9688,7 +9282,7 @@ ACW_civil_war_decisions = {
 				limit = {
 					tag = TEX
 				}
-				custom_effect_tooltip = ACW_recruit_3_units
+				custom_effect_tooltip = ACW_recruit_4_units
 				hidden_effect = {
 					833 = {
 						create_unit = {
@@ -9706,6 +9300,11 @@ ACW_civil_war_decisions = {
 							allow_spawning_on_enemy_provs = yes
 							owner = ROOT
 						}
+						create_unit = {
+							division = "name = \"3rd Southern Texas Militia\" division_template = \"AUS Militia\"  start_experience_factor = 0.0"
+							allow_spawning_on_enemy_provs = yes
+							owner = ROOT
+						}
 					}
 				}
 			}
@@ -9714,7 +9313,7 @@ ACW_civil_war_decisions = {
 					833 = { is_core_of = COR }
 					tag = COR
 				}
-				custom_effect_tooltip = ACW_recruit_5_units
+				custom_effect_tooltip = ACW_recruit_2_units
 				hidden_effect = {
 					833 = {
 						create_unit = {
@@ -9724,47 +9323,6 @@ ACW_civil_war_decisions = {
 						}
 						create_unit = {
 							division = "name = \"2nd Southern Texas Militia\" division_template = \"CAR Militia\"  start_experience_factor = 0.0"
-							allow_spawning_on_enemy_provs = yes
-							owner = ROOT
-						}
-						create_unit = {
-							division = "name = \"3rd Southern Texas Militia\" division_template = \"CAR Militia\"  start_experience_factor = 0.0"
-							allow_spawning_on_enemy_provs = yes
-							owner = ROOT
-						}
-						create_unit = {
-							division = "name = \"1st Southern Texas Riders\" division_template = \"Mounted CAR Militia\"  start_experience_factor = 0.0"
-							allow_spawning_on_enemy_provs = yes
-							owner = ROOT
-						}
-						create_unit = {
-							division = "name = \"2nd Southern Texas Riders\" division_template = \"Mounted CAR Militia\"  start_experience_factor = 0.0"
-							allow_spawning_on_enemy_provs = yes
-							owner = ROOT
-						}
-					}
-				}
-			}
-			else_if = {
-				limit = {
-					833 = { NOT = { is_core_of = COR } }
-					tag = COR
-				}
-				custom_effect_tooltip = ACW_recruit_3_units
-				hidden_effect = {
-					833 = {
-						create_unit = {
-							division = "name = \"1st Southern Texas Militia\" division_template = \"CAR Militia\"  start_experience_factor = 0.0"
-							allow_spawning_on_enemy_provs = yes
-							owner = ROOT
-						}
-						create_unit = {
-							division = "name = \"2nd Southern Texas Militia\" division_template = \"CAR Militia\"  start_experience_factor = 0.0"
-							allow_spawning_on_enemy_provs = yes
-							owner = ROOT
-						}
-						create_unit = {
-							division = "name = \"3rd Southern Texas Militia\" division_template = \"CAR Militia\"  start_experience_factor = 0.0"
 							allow_spawning_on_enemy_provs = yes
 							owner = ROOT
 						}

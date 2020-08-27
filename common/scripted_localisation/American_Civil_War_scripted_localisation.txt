@@ -106,7 +106,7 @@ defined_text = {
 	}
 	text = {
 		trigger = { tag = COR }
-		localization_key = ACW_6_mil
+		localization_key = ACW_5_mil
 	}
 	text = {
 		trigger = { NOT = { tag = TEX } }
@@ -188,7 +188,7 @@ defined_text = {
 	name = georgia_num
 	text = {
 		trigger = { tag = COR }
-		localization_key = ACW_6_mil
+		localization_key = ACW_4_mil
 	}
 	text = {
 		trigger = { NOT = { tag = COR } }
@@ -224,11 +224,15 @@ defined_text = {
 	name = illinois_num
 	text = {
 		trigger = { tag = CSA }
-		localization_key = ACW_16_mil
+		localization_key = ACW_6_mil
 	}
 	text = {
-		trigger = { NOT = { tag = CSA } }
-		localization_key = ACW_8_mil
+		trigger = { tag = CSA }
+		localization_key = ACW_5_mil
+	}
+	text = {
+		trigger = { NOT = { tag = CSA tag = COR } }
+		localization_key = ACW_4_mil
 	}
 }
 
@@ -374,7 +378,7 @@ defined_text = {
 	name = massachusetts_num
 	text = {
 		trigger = { is_federal_tag = yes }
-		localization_key = ACW_9_mil
+		localization_key = ACW_6_mil
 	}
 	text = {
 		trigger = { NOT = { is_federal_tag = yes } }
@@ -390,11 +394,11 @@ defined_text = {
 	name = michigan_num
 	text = {
 		trigger = { tag = CSA }
-		localization_key = ACW_10_mil
+		localization_key = ACW_7_mil
 	}
 	text = {
 		trigger = { NOT = { tag = CSA } }
-		localization_key = ACW_5_mil
+		localization_key = ACW_3_mil
 	}
 }
 
@@ -736,11 +740,11 @@ defined_text = {
 	name = pennsylvania_num
 	text = {
 		trigger = { tag = CSA }
-		localization_key = ACW_19_mil
+		localization_key = ACW_7_mil
 	}
 	text = {
 		trigger = { NOT = { tag = CSA } }
-		localization_key = ACW_9_mil
+		localization_key = ACW_5_mil
 	}
 }
 
@@ -784,7 +788,6 @@ defined_text = {
 			OR = {
 				is_federal_tag = yes
 				tag = TEX
-				tag = COR
 			}
 		}
 		localization_key = ACW_5_mil
@@ -795,7 +798,6 @@ defined_text = {
 			OR = {
 				is_federal_tag = yes
 				tag = TEX
-				tag = COR
 			}
 		}
 		localization_key = ACW_2_mil
@@ -804,7 +806,7 @@ defined_text = {
 		trigger = {
 			OR = {
 				tag = CSA
-				tag = CAL
+				tag = COR
 			}
 		}
 		localization_key = ACW_2_mil

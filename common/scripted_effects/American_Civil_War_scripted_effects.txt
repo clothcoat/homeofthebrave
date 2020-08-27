@@ -92,10 +92,11 @@ CAL_initial_events = {
 COR_initial_events = {
 	hidden_effect = {
 	COR = {
-		country_event = { id = amcivwar.800 days = 7 } #Chief of Staff
-		country_event = { id = amcivwar.801 days = 14 } #Chief of Army
-		country_event = { id = amcivwar.802 days = 21 } #Chief of Air Force
-	}
+			country_event = { id = amcivwar.800 days = 7 } #Chief of Staff
+			country_event = { id = amcivwar.801 days = 14 } #Chief of Army
+			country_event = { id = amcivwar.802 days = 21 } #Chief of Air Force
+			country_event = { id = constate.150 days = 21 } #Southern Governors
+		}
 	}
 }
 
