@@ -6355,6 +6355,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_rebuild_americas_industry"
+			custom_effect_tooltip = USA_economic_recovery_tooltip
+			USA_depression_recovery = yes
 			add_tech_bonus = {
 				name = industrial_bonus
 				bonus = 1
@@ -6386,6 +6388,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_economic_investments"
+			custom_effect_tooltip = USA_economic_recovery_tooltip
+			USA_depression_recovery = yes
 			random_owned_state = {
 				limit = {
 					is_core_of = USA
@@ -6446,8 +6450,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_review_the_fed"
-			custom_effect_tooltip = USA_political_recovery_tooltip
-			USA_increase_recovery = yes
+			custom_effect_tooltip = USA_economic_recovery_tooltip
+			USA_depression_recovery = yes
 		}
 	}
 	
@@ -6577,12 +6581,13 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_rebuild_agriculture"
+			custom_effect_tooltip = USA_economic_recovery_tooltip
+			USA_depression_recovery = yes
 			add_tech_bonus = {
 				bonus = 1
 				uses = 2
 				category = industry
 			}
-			USA_depression_recovery = yes
 		}
 	}
 
@@ -6701,9 +6706,6 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = USA_aviation_industry
-		}
-		available = {
-			has_idea = USA_economic_recovery_idea
 		}
 		relative_position_id = USA_begin_reconstruction
 		x = 2
@@ -7032,11 +7034,11 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_restore_democracy"
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			USA_political_recovery = yes
 			add_popularity = { ideology = paternal_autocrat popularity = -0.05 }
 			add_political_power = -30
 			add_stability = 0.05
-			custom_effect_tooltip = USA_political_recovery_tooltip
-			USA_political_recovery = yes
 		}
 	}
 	focus = {# The American Legion
@@ -7054,6 +7056,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_the_american_legion"
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			USA_political_recovery = yes
 			add_popularity = { ideology = paternal_autocrat popularity = -0.03 }
 			add_political_power = 25
 			add_stability = 0.05
@@ -7075,10 +7079,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_defend_the_republic"
-			add_ideas = USA_defenders_of_republicanism_idea
-			add_stability = 0.05
 			custom_effect_tooltip = USA_political_recovery_tooltip
 			USA_political_recovery = yes
+			add_ideas = USA_defenders_of_republicanism_idea
+			add_stability = 0.05
 		}
 	}
 	focus = {# Congress Freed
@@ -7099,6 +7103,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_the_american_legion"
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			USA_political_recovery = yes
 			add_stability = 0.15
 			add_popularity = { ideology = paternal_autocrat popularity = -0.1 }
 			add_political_power = -50
@@ -7123,6 +7129,8 @@ focus_tree = {
 		y = 3
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_american_caeser"
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			USA_political_recovery = yes
 			add_ideas = USA_american_caeser_idea
 			add_popularity = { ideology = paternal_autocrat popularity = 0.05 }
 			add_political_power = 100
@@ -7153,6 +7161,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_fbi_cointelpro"
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			USA_political_recovery = yes
 			add_ideas = USA_american_protective_league_idea
 			add_stability = 0.05
 			add_popularity = { ideology = paternal_autocrat popularity = 0.03 }
@@ -7175,6 +7185,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_office_of_war_information"
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			USA_political_recovery = yes
 			add_ideas = USA_office_of_war_information_idea
 			army_experience = 10
 			navy_experience = 10
@@ -7201,6 +7213,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_control_congress"
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			USA_political_recovery = yes
 			swap_ideas = {
 			remove_idea = USA_american_caeser_idea
 			add_idea = USA_american_caeser_idea_2
