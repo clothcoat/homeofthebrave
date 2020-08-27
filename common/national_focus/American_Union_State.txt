@@ -7228,7 +7228,7 @@ focus_tree = {
 			FROM = { add_popularity = { ideology = national_populist popularity = -0.02 }
 			}
 			add_popularity = { ideology = national_populist popularity = -0.03 }
-			unlock_decision_category_tooltip = TEX_break_militarists_desc
+			unlock_decision_category_tooltip = TEX_break_militarists_tooltip
 			set_rule = {
 				    can_guarantee_other_ideologies = yes
 			    }
