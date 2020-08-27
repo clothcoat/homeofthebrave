@@ -834,9 +834,9 @@ country_event = { #Cultivating Ties
 
 country_event = { #Cultivating Ties
 	id = wcc.21
-	immediate = {log = "[GetDateText]: [Root.GetName]: event wcc.20"}
-	title = wcc.20.t
-	desc = wcc.20.d
+	immediate = {log = "[GetDateText]: [Root.GetName]: event wcc.21"}
+	title = wcc.21.t
+	desc = wcc.21.d
 	
 	picture = GFX_event_wcc_19
 	
@@ -845,13 +845,13 @@ country_event = { #Cultivating Ties
 	is_triggered_only = yes
 
 	option = { #Of course
-		name = wcc.20.a
+		name = wcc.21.a
 		add_popularity = { ideology = authoritarian_democrat popularity = 0.04 }
 		add_political_power = 20
 		add_stability = -0.02
 	}
 	option = { #Take it slow
-		name = wcc.20.b
+		name = wcc.21.b
 		add_popularity = { ideology = authoritarian_democrat popularity = 0.02 }
 		add_political_power = 10
 	}
