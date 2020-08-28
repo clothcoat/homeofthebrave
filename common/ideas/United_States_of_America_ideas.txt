@@ -2487,6 +2487,25 @@ ideas = {
 				guarantee_cost = -20
 			}
 		}
+		USA_league_of_america_3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_league_of_america_3"}
+			allowed = { always = no }
+			removal_cost = -1
+			picture = USA_fighting_for_america
+			targeted_modifier = {
+				tag = USA
+				trade_cost_for_target_factor = -0.75
+				extra_trade_to_target_factor = 0.75
+			}
+			modifier = {
+				training_time_army_factor = -0.15
+				planning_speed = 0.15
+				consumer_goods_factor = -0.10
+				production_speed_industrial_complex_factor = 0.12
+				production_speed_infrastructure_factor = 0.12
+				guarantee_cost = -30
+			}
+		}
 		USA_arsenal_of_democracy_idea = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_arsenal_of_democracy_idea"}
 			allowed = { always = no }
