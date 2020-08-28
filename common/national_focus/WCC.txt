@@ -869,6 +869,12 @@ focus_tree = {
 			army_experience = 10
 			add_political_power = 50
 			USA_political_recovery = yes
+			hidden_effect = {
+			country_event = {
+				id = wcc.20
+				days = 40
+				}
+			}
 		}
 	}
 	
@@ -891,6 +897,12 @@ focus_tree = {
 			add_popularity = { ideology = authoritarian_democrat popularity = 0.05 }
 			add_political_power = 40
 			USA_political_recovery = yes
+			hidden_effect = {
+			country_event = {
+				id = wcc.22
+				days = 20
+				}
+			}
 		}
 	}
 	
@@ -920,6 +932,12 @@ focus_tree = {
 			add_popularity = { ideology = authoritarian_democrat popularity = 0.03 }
 			add_political_power = 50
 			USA_political_recovery = yes
+			hidden_effect = {
+			country_event = {
+				id = wcc.23
+				days = 50
+				}
+			}
 		}
 	}
 	
@@ -939,6 +957,15 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus WCC_entente_relations"
 			add_opinion_modifier = { target = CAN modifier = large_increase }
+			CAN = {
+			add_opinion_modifier = { target = WCC modifier = large_increase }
+			}
+			hidden_effect = {
+			country_event = {
+				id = wcc.18
+				days = 20
+				}
+			}
 		}
 	}
 	
@@ -1059,6 +1086,18 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			hidden_effect = {
+			country_event = {
+				id = wcc.15
+				days = 10
+				}
+			}
+			hidden_effect = {
+			country_event = {
+				id = wcc.17
+				days = 70
+				}
+			}
 			USA_political_recovery = yes
 			USA_depression_recovery = yes
 		}
@@ -1143,6 +1182,18 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 1
 			}
 			USA_depression_recovery = yes
+			hidden_effect = {
+			country_event = {
+				id = wcc.16
+				days = 20
+				}
+			}
+			hidden_effect = {
+			country_event = {
+				id = wcc.19
+				days = 55
+				}
+			}
 		}
 	}
 	

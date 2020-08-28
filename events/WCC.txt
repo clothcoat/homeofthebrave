@@ -37,14 +37,14 @@ country_event = { #Entente Aid
 		add_political_power = -15
 		country_event = {
 				id = wcc.2
-				days = 20
+				days = 2
 		} #WCC Aided
 	}
 	option = {
 		name = wcc.1.b
 		country_event = {
 				id = wcc.3
-				days = 20
+				days = 2
 		} #WCC Denied
 	}
 }
@@ -657,7 +657,16 @@ country_event = { #Appointing Lippmann
 	
 	fire_only_once = yes
 
-	is_triggered_only = yes
+	trigger = {
+	has_completed_focus = WCC_the_wise_men
+	NEE = {
+	exists = no
+	}
+	}
+	
+	mean_time_to_happen = {
+	days = 155
+	}
 
 	option = { #Empower Lippmann
 		name = wcc.14.a
@@ -809,30 +818,89 @@ country_event = { #Establishment of Policy Planning Staff
 	}
 }
 
-country_event = { #Cultivating Ties
-	id = wcc.21
-	immediate = {log = "[GetDateText]: [Root.GetName]: event wcc.21"}
-	title = wcc.21.t
-	desc = wcc.21.d
+country_event = { #Lobbyist Competition
+	id = wcc.20
+	immediate = {log = "[GetDateText]: [Root.GetName]: event wcc.20"}
+	title = wcc.20.t
+	desc = wcc.20.d
 	
 	fire_only_once = yes
 
 	is_triggered_only = yes
 
-	option = { #Of course
-		name = wcc.21.a
-		add_popularity = { ideology = authoritarian_democrat popularity = 0.04 }
-		add_political_power = 20
-		add_stability = -0.02
+	option = { #Favor Neither
+		name = wcc.20.a
+		add_stability = 0.03
+		random_owned_state = {
+				limit = {
+					is_core_of = WCC
+					is_controlled_by = WCC
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		random_owned_state = {
+				limit = {
+					is_core_of = WCC
+					is_controlled_by = WCC
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+			}
 	}
-	option = { #Take it slow
-		name = wcc.21.b
+	option = { #Favor Military Lobbyists
+		name = wcc.20.b
+		add_manpower = 3000
+		add_war_support = 0.04
+		add_political_power = -25
+		random_owned_state = {
+				limit = {
+					is_core_of = WCC
+					is_controlled_by = WCC
+					arms_factory > 0
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+	}
+	option = { #Favor Civilian Lobbyists
+		name = wcc.20.c
 		add_popularity = { ideology = authoritarian_democrat popularity = 0.02 }
 		add_political_power = 10
+		random_owned_state = {
+				limit = {
+					is_core_of = WCC
+					is_controlled_by = WCC
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = WCC
+					is_controlled_by = WCC
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
 	}
 }
 
-country_event = { #Cultivating Ties
+country_event = { #Recruiting Harriman
 	id = wcc.21
 	immediate = {log = "[GetDateText]: [Root.GetName]: event wcc.21"}
 	title = wcc.21.t
@@ -844,16 +912,21 @@ country_event = { #Cultivating Ties
 
 	is_triggered_only = yes
 
-	option = { #Of course
+	option = { #Appoint Harriman as a leader
 		name = wcc.21.a
-		add_popularity = { ideology = authoritarian_democrat popularity = 0.04 }
-		add_political_power = 20
-		add_stability = -0.02
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.01 }
+		add_stability = 0.03
+		add_political_power = 15
 	}
-	option = { #Take it slow
+	option = { #Make Harriman a diplomat
 		name = wcc.21.b
-		add_popularity = { ideology = authoritarian_democrat popularity = 0.02 }
-		add_political_power = 10
+		CAN = {
+		add_opinion_modifier = { target = WCC modifier = small_increase }
+		}
+		NFA = {
+		add_opinion_modifier = { target = WCC modifier = small_increase }
+		}
+		add_war_support = 0.05
 	}
 }
 
@@ -871,18 +944,147 @@ country_event = { #A New President
 
 	option = { #Nominate Omar Bradley
 		name = wcc.22.a
-		add_popularity = { ideology = authoritarian_democrat popularity = 0.04 }
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.03 }
 		add_political_power = 20
 		add_stability = -0.02
+		hidden_effect = {
+			country_event = {
+				id = wcc.26
+				days = 150
+				}
+			}
 	}
 	option = { #Use politician Pat McCarren
 		name = wcc.22.b
 		add_popularity = { ideology = authoritarian_democrat popularity = 0.02 }
 		add_political_power = 10
+		hidden_effect = {
+			country_event = {
+				id = wcc.24
+				days = 150
+				}
+			}
 	}
 	option = { #Put forward Eisenhower
 		name = wcc.22.c
 		add_popularity = { ideology = authoritarian_democrat popularity = 0.02 }
 		add_political_power = 10
+		hidden_effect = {
+			country_event = {
+				id = wcc.25
+				days = 150
+				}
+			}
+	}
+}
+
+country_event = { #Return of Indirect Elections
+	id = wcc.23
+	immediate = {log = "[GetDateText]: [Root.GetName]: event wcc.23"}
+	title = wcc.23.t
+	desc = wcc.23.d
+	
+	picture = GFX_event_wcc_20
+	
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #Of course
+		name = wcc.23.a
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.04 }
+		add_political_power = 40
+		add_stability = -0.03
+	}
+	option = { #It's not needed
+		name = wcc.23.a
+		add_popularity = { ideology = social_conservative popularity = 0.01 }
+		add_popularity = { ideology = social_liberal popularity = 0.01 }
+		add_stability = 0.03
+	}
+}
+
+country_event = { #Pat McCarren Elected
+	id = wcc.24
+	immediate = {log = "[GetDateText]: [Root.GetName]: event wcc.24"}
+	title = wcc.24.t
+	desc = wcc.24.d
+	
+	picture = GFX_event_wcc_20
+	
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #Of course
+		name = wcc.24.a
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.05 }
+		add_political_power = 40
+		add_stability = 0.05
+		create_country_leader = {
+				name = "Pat McCarren"
+				desc = "POLITICS_PAT_MCCARREN_DESC"
+				picture = "gfx/leaders/USA/Portrait_USA_gen_douglas_macarthur.tga"
+				expire = "1965.1.1"
+				ideology = authoritarian_democrat_subtype
+				traits = { }
+			}
+			set_politics = {
+				ruling_party = authoritarian_democrat
+				elections_allowed = yes
+			}
+	}
+}
+
+country_event = { #Eisenhower elected president
+	id = wcc.25
+	immediate = {log = "[GetDateText]: [Root.GetName]: event wcc.25"}
+	title = wcc.25.t
+	desc = wcc.25.d
+	
+	picture = GFX_event_wcc_20
+	
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #Of course
+		name = wcc.25.a
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.05 }
+		add_political_power = 50
+		add_stability = 0.04
+		create_country_leader = {
+				name = "Dwight Eisenhower"
+				desc = "POLITICS_DWIGHT_EISENHOWER_DESC"
+				picture = "gfx/leaders/USA/Portrait_USA_Dwight_Eisenhower.tga"
+				expire = "1965.1.1"
+				ideology = authoritarian_democrat_subtype
+				traits = { }
+			}
+			set_politics = {
+				ruling_party = authoritarian_democrat
+				elections_allowed = yes
+			}
+	}
+}
+
+country_event = { #Bradley elected president
+	id = wcc.26
+	immediate = {log = "[GetDateText]: [Root.GetName]: event wcc.26"}
+	title = wcc.26.t
+	desc = wcc.26.d
+	
+	picture = GFX_event_wcc_20
+	
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #Of course
+		name = wcc.26.a
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.04 }
+		add_political_power = 50
+		add_stability = 0.03
+		add_war_support = 0.02
 	}
 }
