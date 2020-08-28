@@ -2281,9 +2281,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 50
 		}
-		bypass = {
-			NOT = { has_idea = CSA_syndicalist_economics5 }
-		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_syndicalist_economics"
 			if = {
@@ -2307,6 +2304,7 @@ focus_tree = {
 					add_idea = CSA_decentralized_planning_idea
 				}
 			}
+			add_ideas = CSA_decentralized_planning_idea
 		}
 	}
 	
@@ -5110,7 +5108,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_womens_liberation"
 			custom_effect_tooltip = USA_political_recovery_tooltip
-			CSA_increase_political_recovery = yes = yes
+			CSA_increase_political_recovery = yes
 			hidden_effect = {
 				country_event = { id = csa.24 days = 240 random = 10 }
 				if = {
