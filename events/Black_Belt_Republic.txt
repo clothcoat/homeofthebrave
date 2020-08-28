@@ -299,6 +299,7 @@ country_event = { # Duse Muhammad Elected
 				ideology = authoritarian_democrat_subtype
 				traits = { quartermaster_general }
 			}
+			remove_all_ministers = yes
 			hidden_effect = {
 				add_ideas = BBR_Charles_Young_hog_ade
 				add_ideas = BBR_James_Weldon_Johnson_for_ade
@@ -362,12 +363,14 @@ country_event = { # ABB in Power
 			ideology = totalist
 			long_name = BBR_ABB_totalist_party_long
 			name = BBR_ABB_totalist_party }
+			remove_all_ministers = yes
 			hidden_effect = {
 				add_ideas = BBR_Duse_Mohamed_Ali_hog_tot
 				add_ideas = BBR_Cyril_Briggs_for_tot
 				add_ideas = BBR_Wilfred_Adolphus_Domingo_eco_tot
 				add_ideas = BBR_Richard_B_Moore_sec_tot
 			}
+			set_cosmetic_tag = BBR_totalist_abb
 		}
 		set_politics = {
 			ruling_party = totalist
@@ -856,6 +859,7 @@ country_event = { # Leadership Election
 			ruling_party = national_populist
 			elections_allowed = no
 		}
+		set_cosmetic_tag = BBR_nationalist
 		hidden_effect = {
 			add_ideas = BBR_Elijah_Muhammad_hog_npo
 			add_ideas = BBR_james_pasha_for_npo
@@ -876,6 +880,7 @@ country_event = { # Leadership Election
 				}
 			}
 		}
+		set_cosmetic_tag = BBR_nationalist
 		name = bbr.12.b
 		add_popularity = { ideology = paternal_autocrat popularity = 0.1 }
 		add_stability = 0.08
@@ -1750,6 +1755,7 @@ country_event = { # Union Elections
 			add_ideas = BBR_Williana_Burroughs_eco_tot
 			add_ideas = BBR_William_L_Patterson_sec_tot
 		}
+		set_cosmetic_tag = BBR_totalist_soc
 		set_politics = {
 			ruling_party = totalist
 			elections_allowed = no
@@ -1799,6 +1805,7 @@ country_event = { # Union Elections
 				traits = { hog_totalist_chairman }
 			}
 		}
+		set_cosmetic_tag = BBR_totalist_ncl
 		add_ideas = BBR_Benjamin_J_Davis_Jr_hog_tot
 		add_ideas = BBR_Angelo_Herndon_for_tot
 		add_ideas = BBR_Williana_Burroughs_eco_tot
@@ -1851,6 +1858,7 @@ country_event = { # Union Elections
 				ideology = totalist_subtype
 				traits = { rabble_rouser }
 			}
+			set_cosmetic_tag = BBR_totalist_tuul
 		add_ideas = BBR_Harry_Haywood_hog_tot
 		add_ideas = BBR_George_Padmore_for_tot
 		add_ideas = BBR_Williana_Burroughs_eco_tot
@@ -2029,7 +2037,12 @@ country_event = { # The Peace Party
 
 country_event = { # The Liberal Election
 	id = bbr.23
-	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.23"}
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event bbr.23"
+		hidden_effect = {
+			remove_all_ministers = yes
+		}
+	}
 	title = bbr.23.t
 	desc = bbr.23.d
 	picture = GFX_report_event_AST_election
@@ -2066,6 +2079,7 @@ country_event = { # The Liberal Election
 			ruling_party = social_democrat
 			elections_allowed = yes
 		}
+
 	hidden_effect = {
 		add_ideas = BBR_Frank_Crosswaith_hog_sde
 		add_ideas = BBR_Frank_Marshall_Davis_for_sde
@@ -2159,6 +2173,7 @@ country_event = { # The Liberal Election
 			elections_allowed = yes
 		}
 	}
+
 	hidden_effect = {
 		add_ideas = BBR_Adam_Clayton_Powell_Jr_hog_sli
 		add_ideas = BBR_Clifton_Reginald_Wharton_Sr_for_sli
@@ -2209,6 +2224,7 @@ country_event = { # The Liberal Election
 			elections_allowed = yes
 		}
 	}
+
 	hidden_effect = {
 		add_ideas = BBR_Oscar_Stanton_De_Priest_hog_mli
 		add_ideas = BBR_Frederick_D_Patterson_for_mli
@@ -2242,15 +2258,16 @@ country_event = { # The Liberal Election
 	set_politics = {
 			ruling_party = social_conservative
 			elections_allowed = yes
+		}	
+		hidden_effect = {
+			add_ideas = BBR_James_F_Jones_hog_sco
+			add_ideas = BBR_Vernon_Johns_for_sco
+			add_ideas = BBR_George_Washington_Carver_eco_sco
+			add_ideas = BBR_Marcelino_Manuel_da_Graca_sec_sco
 		}
 	}
-	hidden_effect = {
-		add_ideas = BBR_James_F_Jones_hog_sco
-		add_ideas = BBR_Vernon_Johns_for_sco
-		add_ideas = BBR_George_Washington_Carver_eco_sco
-		add_ideas = BBR_Marcelino_Manuel_da_Graca_sec_sco
-	}
 }
+
 
 country_event = { # BBR Requests An Alliance
 	id = bbr.24
