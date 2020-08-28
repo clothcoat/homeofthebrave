@@ -182,7 +182,7 @@ ideas = {
 		}
 		USA_the_fair_deal = { #Fair Deal
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_the_fair_deal"}
-			picture = can_wartime_prices_and_trade_board
+			picture = usa_great_depression_2
 			modifier = {
 				production_factory_max_efficiency_factor = -0.05
 				production_factory_start_efficiency_factor = 0.05
@@ -194,7 +194,7 @@ ideas = {
 		}
 		USA_the_fair_deal_2 = { #Fair Deal
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_the_fair_deal_2"}
-			picture = can_wartime_prices_and_trade_board
+			picture = usa_great_depression_2
 			modifier = {
 				production_factory_start_efficiency_factor = 0.05
 				monthly_population = 0.08
@@ -205,7 +205,7 @@ ideas = {
 		}
 		USA_the_fair_deal_3 = { #Fair Deal
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_the_fair_deal_3"}
-			picture = can_wartime_prices_and_trade_board
+			picture = usa_great_depression_2
 			modifier = {
 				production_factory_start_efficiency_factor = 0.05
 				monthly_population = 0.05
@@ -217,7 +217,7 @@ ideas = {
 		}
 		USA_southern_occupation = { #Southern Occupation
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_southern_occupation"}
-			picture = young_klan_resistance
+			picture = usa_great_depression_2
 			modifier = {
 				production_factory_start_efficiency_factor = -0.05
 				production_factory_efficiency_gain_factor = -0.03
@@ -231,7 +231,7 @@ ideas = {
 		}
 		USA_southern_occupation_2 = { #Southern Occupation
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_southern_occupation"}
-			picture = generic_coins
+			picture = usa_great_depression_2
 			modifier = {
 				production_factory_start_efficiency_factor = -0.02
 				monthly_population = -0.02
@@ -244,7 +244,7 @@ ideas = {
 		}
 		USA_prohibition_idea = { #Southern Occupation
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_southern_occupation"}
-			picture = nationalized_liquor
+			picture = usa_great_depression_2
 			modifier = {
 				consumer_goods_factor = 0.01
 				production_factory_efficiency_gain_factor = 0.03
@@ -1194,7 +1194,7 @@ ideas = {
 		}
 		USA_national_youth_idea = { #National Youth Administration
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_national_youth_idea"}
-			picture = USA_idea_NYA
+			picture = general_staff
 			modifier = {
 				research_speed_factor = 0.05
 				political_power_gain = 0.02
@@ -1204,7 +1204,7 @@ ideas = {
 		}
 		USA_national_youth_idea_2 = { #National Youth Administration
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_national_youth_idea_2"}
-			picture = USA_ny_education
+			picture = general_staff
 			modifier = {
 				research_speed_factor = 0.05
 				political_power_gain = 0.03
@@ -1218,7 +1218,7 @@ ideas = {
 		}
 		USA_national_youth_idea_3 = { #National Youth Administration
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_national_youth_idea_3"}
-			picture = USA_ny_recruitment
+			picture = general_staff
 			modifier = {
 				research_speed_factor = 0.05
 				political_power_gain = 0.03
@@ -1247,7 +1247,7 @@ ideas = {
 		}
 		USA_purge_rebels_idea = { #Purge Rebels
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_purge_rebels_idea"}
-			picture = USA_purge_rebels
+			picture = general_staff
 			modifier = {
 				political_power_gain = 0.01
 				monthly_population = -0.45
@@ -1268,7 +1268,20 @@ ideas = {
 		}
 		USA_martial_law_idea = { #Martial Law
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_martial_law_idea"}
-			picture = USA_martial_law
+			picture = general_staff
+			modifier = {
+				political_power_gain = 0.005
+				monthly_population = -0.1
+				local_non_core_manpower	= 0.05
+				stability_factor = -0.05
+				conversion_cost_civ_to_mil_factor = -0.1
+				production_speed_buildings_factor = 0.03
+				production_factory_efficiency_gain_factor = -0.02
+			}
+		}
+		USA_martial_law_idea = { #Martial Law
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_martial_law_idea"}
+			picture = general_staff
 			modifier = {
 				political_power_gain = 0.005
 				monthly_population = -0.1
