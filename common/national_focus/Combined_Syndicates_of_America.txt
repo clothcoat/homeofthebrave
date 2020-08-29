@@ -5170,7 +5170,7 @@ focus_tree = {
 
 	focus = {# Stomp Nationalism
 		id = CSA_illegalize_racism
-		icon = GFX_goal_LIB_whiter_pale
+		icon = GFX_CSA_racial_liberation
 		cost = 7.25
 		prerequisite = {
 			focus = CSA_social_revolution
@@ -5282,7 +5282,7 @@ focus_tree = {
 
 	focus = {# Deal with American First
 		id = CSA_deal_with_firsters
-		icon = GFX_goal_DOM_The_Trial
+		icon = GFX_goal_CSA_deal_with_odp
 		cost = 7.25
 		prerequisite = {
 			focus = CSA_reconstruction
