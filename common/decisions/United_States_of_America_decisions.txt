@@ -7,9 +7,23 @@ political_actions = {
 	USA_help_economy_mission = {
 		icon = us_flag
 
-		allowed = { always = no } #manually activated
+		allowed = { tag = USA }
+
+		activation = {
+			has_country_flag = USA_start_economic_timer
+		}
 
 		available = {
+			hidden_trigger = {
+				always = no
+			}
+		}
+
+		days_mission_timeout = 300
+		is_good = no
+		fire_only_once = yes
+
+		cancel_trigger = {
 			OR = {
 				has_completed_focus = USA_gwbill_fails
 				AND = {
@@ -18,10 +32,6 @@ political_actions = {
 				}
 			}
 		}
-
-		days_mission_timeout = 301
-		is_good = no
-		fire_only_once = yes
 
 		timeout_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision timeout USA_help_economy_mission"
@@ -83,193 +93,20 @@ political_actions = {
 			}
 		}
 	}
-
-	USA_oldorder_act_quickly = {
-		icon = us_flag
-
-		allowed = { always = no } #manually activated
-
-		available = {
-			hidden_trigger = {
-				always = no
-			}
-		}
-
-		days_mission_timeout = 100
-		is_good = no
-		fire_only_once = yes
-
-		cancel_trigger = {
-			OR = {
-				has_completed_focus = USA_velvet_glove
-				has_completed_focus = USA_company_bailouts
-				has_completed_focus = USA_offer_fair_deal
-				has_completed_focus = USA_iron_fist
-				has_country_flag = USA_macarthur_coup
-			}
-		}
-
-		timeout_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision timeout USA_oldorder_act_quickly"
-			add_political_power = -100
-			country_event = ustates.526
-		}
-	}
-
-	USA_long_act_quickly = {
-		icon = us_flag
-
-		allowed = { always = no } #manually activated
-
-		available = {
-			hidden_trigger = {
-				always = no
-			}
-		}
-
-		days_mission_timeout = 50
-		is_good = no
-		fire_only_once = yes
-
-		cancel_trigger = {
-			OR = {
-				has_completed_focus = USA_pass_relief_bill
-				has_completed_focus = USA_fight_anarchists
-				has_country_flag = USA_macarthur_coup
-			}
-		}
-
-		timeout_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision timeout USA_long_act_quickly"
-			add_political_power = -100
-			country_event = ustates.526
-		}
-	}
-
-	USA_reed_act_quickly = {
-		icon = us_flag
-
-		allowed = { always = no } #manually activated
-
-		available = {
-			hidden_trigger = {
-				always = no
-			}
-		}
-
-		days_mission_timeout = 50
-		is_good = no
-		fire_only_once = yes
-
-		cancel_trigger = {
-			OR = {
-				has_completed_focus = USA_sweeping_reforms
-				has_completed_focus = USA_focus_on_long
-				has_country_flag = USA_macarthur_coup
-			}
-		}
-
-		timeout_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision timeout USA_reed_act_quickly"
-			add_political_power = -100
-			country_event = ustates.526
-		}
-	}
 }
 
-foreign_politics = {
-	USA_attack_puerto_rico = {
-		icon = generic_prepare_civil_war
-
-		allowed = {
-			OR = {
-				tag = USA
-				tag = TEX
-				tag = CAL
-				tag = NEE
-			}
-		}
-
-		available = {
-			has_war = no
-		}
-
-		visible = {
-			can_declare_war_on = FROM
-			FROM = {
-				OR = {
-					has_country_flag = PUE_US_CITIZENS_KICKED
-					has_country_flag = PUE_US_LANDLORDS_KICKED
-				}
-			}
-			has_global_flag = USA_civil_war_over_flag
-			NOT = { has_global_flag = PSA_rockies_ceasefire }
-		}
-
-		targets = { PUE }
-		target_root_trigger = {
-			has_global_flag = USA_civil_war_over_flag
-			NOT = { has_global_flag = PSA_rockies_ceasefire }
-		}
-		target_trigger = {
-			can_declare_war_on = FROM
-			FROM = {
-				OR = {
-					has_country_flag = PUE_US_CITIZENS_KICKED
-					has_country_flag = PUE_US_LANDLORDS_KICKED
-				}
-			}
-		}
-		cost = 0
-		days_remove = 10
-		fire_only_once = yes
-		war_with_target_on_remove = yes
-
-		ai_will_do = {
-			factor = 100
-			modifier = {
-				factor = 0
-				has_war = yes
-			}
-			modifier = {
-				factor = 0
-				FROM = { is_in_faction = yes }
-			}
-			modifier = {
-				factor = 0
-				strength_ratio = { tag = FROM ratio < 1 }
-			}
-			modifier = {
-				factor = 0
-				has_country_flag = imminent_war
-			}
-		}
-
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision USA_attack_puerto_rico"
-			set_country_flag = { flag = imminent_war days = 12 value = 1 }
-		}
-
-		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision USA_attack_puerto_rico"
-			declare_war_on = {
-				type = annex_everything
-				target = FROM
-			}
-		}
-	}
-}
-
-USA_new_monroe_doctrine = {
+USA_american_imperialism = {
 	USA_attack_canada = {
 		icon = generic_prepare_civil_war
 
-		allowed = { original_tag = USA }
+		allowed = { 
+		original_tag = USA }
 
 		available = {
 			is_subject = no
 			controls_all_owned_states = yes
 			can_declare_war_on = CAN
+			OR = {
 			CAN = {
 				OR = {
 					has_socialist_government = yes
@@ -285,10 +122,15 @@ USA_new_monroe_doctrine = {
 					}
 				}
 			}
+			has_completed_focus = CAL_dismantle_the_empire
+			}
 		}
 
 		visible = {
-			has_completed_focus = USA_new_monroe_doctrine
+			OR = {
+			has_completed_focus = CAL_western_dominance
+			has_completed_focus = USA_western_dominance
+			}
 			CAN = {
 				exists = yes
 				NOT = {
@@ -301,7 +143,7 @@ USA_new_monroe_doctrine = {
 		}
 
 		fire_only_once = yes
-		cost = 50
+		cost = 15
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -317,9 +159,9 @@ USA_new_monroe_doctrine = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision USA_attack_canada"
 			add_war_support = 0.10
-			create_wargoal = {
-				type = annex_everything
+			declare_war_on = {
 				target = CAN
+				type = annex_everything
 			}
 		}
 	}
@@ -327,31 +169,24 @@ USA_new_monroe_doctrine = {
 	USA_attack_mexico = {
 		icon = generic_prepare_civil_war
 
-		allowed = { original_tag = USA }
+		allowed = { 
+		OR = {
+		tag = USA 
+		tag = CAL 
+		}
+		}
 
 		available = {
 			is_subject = no
 			controls_all_owned_states = yes
 			can_declare_war_on = MEX
-			MEX = {
-				OR = {
-					has_socialist_government = yes
-					has_government = national_populist
-					custom_trigger_tooltip = {
-						tooltip = USA_subject_of_foreign_power
-						is_subject = yes
-						NOT = { is_subject_of = USA }
-					}
-					custom_trigger_tooltip = {
-						tooltip = USA_owns_american_cores
-						any_owned_state = { is_claim_or_core_of_ROOT = yes }
-					}
-				}
-			}
 		}
 
 		visible = {
-			has_completed_focus = USA_new_monroe_doctrine
+			OR = {
+			has_completed_focus = CAL_make_mexico_friendly
+			has_completed_focus = USA_make_mexico_friendly
+			}
 			MEX = {
 				exists = yes
 				NOT = {
@@ -364,7 +199,7 @@ USA_new_monroe_doctrine = {
 		}
 
 		fire_only_once = yes
-		cost = 50
+		cost = 10
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -379,7 +214,6 @@ USA_new_monroe_doctrine = {
 
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision USA_attack_mexico"
-			add_war_support = 0.10
 			create_wargoal = {
 				type = annex_everything
 				target = MEX
@@ -387,10 +221,530 @@ USA_new_monroe_doctrine = {
 		}
 	}
 
+	USA_attack_guatemala = {
+		icon = generic_prepare_civil_war
+
+		allowed = {
+		OR = {
+		tag = USA 
+		tag = CAL 
+			}
+		}
+
+		available = {
+			is_subject = no
+			controls_all_owned_states = yes
+			can_declare_war_on = GUA
+		}
+
+		visible = {
+			OR = {
+			has_completed_focus = CAL_banana_republics
+			has_completed_focus = USA_banana_republics
+			}
+			GUA = {
+				exists = yes
+				NOT = {
+					has_war_with = ROOT
+					has_war_together_with = ROOT
+					is_in_faction_with = ROOT
+					is_subject_of = ROOT
+				}
+			}
+		}
+
+		fire_only_once = yes
+		cost = 5
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+			modifier = {
+				factor = 0
+				strength_ratio = { tag = GUA ratio < 3.0 }
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision USA_attack_mexico"
+			create_wargoal = {
+				type = annex_everything
+				target = GUA
+			}
+		}
+	}
+	
+	USA_attack_nicaragua = {
+		icon = generic_prepare_civil_war
+
+		allowed = { 
+		OR = { tag = USA 
+		tag = CAL 
+		} 
+		}
+
+		available = {
+			is_subject = no
+			controls_all_owned_states = yes
+			can_declare_war_on = NIC
+		}
+
+		visible = {
+			OR = {
+			has_completed_focus = CAL_banana_republics
+			has_completed_focus = USA_banana_republics
+			}
+			NIC = {
+				exists = yes
+				NOT = {
+					has_war_with = ROOT
+					has_war_together_with = ROOT
+					is_in_faction_with = ROOT
+					is_subject_of = ROOT
+				}
+			}
+		}
+
+		fire_only_once = yes
+		cost = 5
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+			modifier = {
+				factor = 0
+				strength_ratio = { tag = NIC ratio < 3.0 }
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision USA_attack_mexico"
+			create_wargoal = {
+				type = annex_everything
+				target = NIC
+			}
+		}
+	}
+	
+	USA_attack_el_salvador = {
+		icon = generic_prepare_civil_war
+
+		allowed = { 
+		OR = { tag = USA 
+		tag = CAL } 
+		}
+
+		available = {
+			is_subject = no
+			controls_all_owned_states = yes
+			can_declare_war_on = ELS
+		}
+
+		visible = {
+			OR = {
+			has_completed_focus = CAL_banana_republics
+			has_completed_focus = USA_banana_republics
+			}
+			ELS = {
+				exists = yes
+				NOT = {
+					has_war_with = ROOT
+					has_war_together_with = ROOT
+					is_in_faction_with = ROOT
+					is_subject_of = ROOT
+				}
+			}
+		}
+
+		fire_only_once = yes
+		cost = 5
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+			modifier = {
+				factor = 0
+				strength_ratio = { tag = ELS ratio < 3.0 }
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision USA_attack_el_salvador"
+			create_wargoal = {
+				type = annex_everything
+				target = ELS
+			}
+		}
+	}
+	
+	USA_attack_costa_rica = {
+		icon = generic_prepare_civil_war
+
+		allowed = { OR = {original_tag = USA 
+		original_tag = CAL } }
+
+		available = {
+			is_subject = no
+			controls_all_owned_states = yes
+			can_declare_war_on = COS	
+		}
+
+		visible = {
+			OR = {
+			has_completed_focus = CAL_banana_republics
+			has_completed_focus = USA_banana_republics
+			}
+			COS = {
+				exists = yes
+				NOT = {
+					has_war_with = ROOT
+					has_war_together_with = ROOT
+					is_in_faction_with = ROOT
+					is_subject_of = ROOT
+				}
+			}
+		}
+
+		fire_only_once = yes
+		cost = 5
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+			modifier = {
+				factor = 0
+				strength_ratio = { tag = COS ratio < 3.0 }
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision USA_attack_mexico"
+			create_wargoal = {
+				type = annex_everything
+				target = COS
+			}
+		}
+	}
+	
+	USA_attack_cuba = {
+		icon = generic_prepare_civil_war
+
+		allowed = { OR = {original_tag = USA 
+		original_tag = CAL } }
+
+		available = {
+			is_subject = no
+			controls_all_owned_states = yes
+			can_declare_war_on = CUB
+		}
+
+		visible = {
+			OR = {
+			has_completed_focus = CAL_banana_republics
+			has_completed_focus = USA_banana_republics
+			}
+			CUB = {
+				exists = yes
+				NOT = {
+					has_war_with = ROOT
+					has_war_together_with = ROOT
+					is_in_faction_with = ROOT
+					is_subject_of = ROOT
+				}
+			}
+		}
+
+		fire_only_once = yes
+		cost = 5
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+			modifier = {
+				factor = 0
+				strength_ratio = { tag = CUB ratio < 3.0 }
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision USA_attack_mexico"
+			create_wargoal = {
+				type = annex_everything
+				target = CUB
+			}
+		}
+	}
+	
+	USA_attack_hai = {
+		icon = generic_prepare_civil_war
+
+		allowed = { OR = {original_tag = USA 
+		original_tag = CAL } }
+
+		available = {
+			is_subject = no
+			controls_all_owned_states = yes
+			can_declare_war_on = HAI
+		}
+
+		visible = {
+			OR = {
+			has_completed_focus = CAL_banana_republics
+			has_completed_focus = USA_banana_republics
+			}
+			HAI = {
+				exists = yes
+				NOT = {
+					has_war_with = ROOT
+					has_war_together_with = ROOT
+					is_in_faction_with = ROOT
+					is_subject_of = ROOT
+				}
+			}
+		}
+
+		fire_only_once = yes
+		cost = 5
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+			modifier = {
+				factor = 0
+				strength_ratio = { tag = HAI ratio < 3.0 }
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision USA_attack_mexico"
+			create_wargoal = {
+				type = annex_everything
+				target = HAI
+			}
+		}
+	}
+	
+	USA_attack_dom = {
+		icon = generic_prepare_civil_war
+
+		allowed = { OR = {original_tag = USA 
+		original_tag = CAL } }
+
+		available = {
+			is_subject = no
+			controls_all_owned_states = yes
+			can_declare_war_on = DOM
+		}
+
+		visible = {
+			OR = {
+			has_completed_focus = CAL_banana_republics
+			has_completed_focus = USA_banana_republics
+			}
+			DOM = {
+				exists = yes
+				NOT = {
+					has_war_with = ROOT
+					has_war_together_with = ROOT
+					is_in_faction_with = ROOT
+					is_subject_of = ROOT
+				}
+			}
+		}
+
+		fire_only_once = yes
+		cost = 5
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+			modifier = {
+				factor = 0
+				strength_ratio = { tag = DOM ratio < 3.0 }
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision USA_attack_dom"
+			create_wargoal = {
+				type = annex_everything
+				target = DOM
+			}
+		}
+	}
+	
+	USA_attack_colombia = {
+		icon = generic_prepare_civil_war
+
+		allowed = { OR = { original_tag = USA 
+		original_tag = CAL } }
+
+		available = {
+			is_subject = no
+			controls_all_owned_states = yes
+			can_declare_war_on = COL	
+		}
+
+		visible = {
+			OR = {
+			has_completed_focus = CAL_push_further
+			has_completed_focus = USA_push_further
+			}
+			COL = {
+				exists = yes
+				NOT = {
+					has_war_with = ROOT
+					has_war_together_with = ROOT
+					is_in_faction_with = ROOT
+					is_subject_of = ROOT
+				}
+			}
+		}
+
+		fire_only_once = yes
+		cost = 5
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+			modifier = {
+				factor = 0
+				strength_ratio = { tag = COL ratio < 3.0 }
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision USA_attack_colombia"
+			create_wargoal = {
+				type = annex_everything
+				target = COL
+			}
+		}
+	}
+	
+	USA_attack_venezuela = {
+		icon = generic_prepare_civil_war
+
+		allowed = { OR = { original_tag = USA 
+		original_tag = CAL } }
+
+		available = {
+			is_subject = no
+			controls_all_owned_states = yes
+			can_declare_war_on = VEN
+		}
+
+		visible = {
+			OR = {
+			has_completed_focus = CAL_push_further
+			has_completed_focus = USA_push_further
+			}
+			VEN = {
+				exists = yes
+				NOT = {
+					has_war_with = ROOT
+					has_war_together_with = ROOT
+					is_in_faction_with = ROOT
+					is_subject_of = ROOT
+				}
+			}
+		}
+
+		fire_only_once = yes
+		cost = 5
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+			modifier = {
+				factor = 0
+				strength_ratio = { tag = VEN ratio < 3.0 }
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision USA_attack_venezuela"
+			create_wargoal = {
+				type = annex_everything
+				target = VEN
+			}
+		}
+	}
+	
+	USA_attack_peru = {
+		icon = generic_prepare_civil_war
+
+		allowed = { OR = { original_tag = USA 
+		original_tag = CAL } }
+
+		available = {
+			is_subject = no
+			controls_all_owned_states = yes
+			can_declare_war_on = PRU	
+		}
+
+		visible = {
+			OR = {
+			has_completed_focus = CAL_push_further
+			has_completed_focus = USA_push_further
+			}
+			PRU = {
+				exists = yes
+				NOT = {
+					has_war_with = ROOT
+					has_war_together_with = ROOT
+					is_in_faction_with = ROOT
+					is_subject_of = ROOT
+				}
+			}
+		}
+
+		fire_only_once = yes
+		cost = 5
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+			modifier = {
+				factor = 0
+				strength_ratio = { tag = PRU ratio < 3.0 }
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision USA_attack_peru"
+			create_wargoal = {
+				type = annex_everything
+				target = PRU
+			}
+		}
+	}
+	
 	USA_attack_phillipines = {
 		icon = generic_prepare_civil_war
 
-		allowed = { original_tag = USA }
+		allowed = { OR = {original_tag = USA 
+		original_tag = CAL } }
 
 		available = {
 			is_subject = no
@@ -414,7 +768,6 @@ USA_new_monroe_doctrine = {
 		}
 
 		visible = {
-			has_completed_focus = USA_new_monroe_doctrine
 			"PHI" = {
 				exists = yes
 				NOT = {
@@ -442,10 +795,57 @@ USA_new_monroe_doctrine = {
 		}
 	}
 
+	USA_attack_australasia = {
+		icon = generic_prepare_civil_war
+
+		allowed = { OR = { original_tag = USA 
+		original_tag = CAL } }
+
+		available = {
+			is_subject = no
+			controls_all_owned_states = yes
+			can_declare_war_on = AST
+			NOT = {
+			AST = {
+				is_in_faction_with = AST
+				}
+			}
+		}
+
+		visible = {
+			has_completed_focus = CAL_claim_australasia
+			AST = {
+				exists = yes
+				NOT = {
+					has_war_with = ROOT
+					has_war_together_with = ROOT
+					is_in_faction_with = ROOT
+					is_subject_of = ROOT
+				}
+			}
+		}
+
+		fire_only_once = yes
+		cost = 50
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision USA_attack_australasia"
+			add_war_support = 0.05
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = AST
+			}
+		}
+	}
+	
 	USA_claim_phillipines = {
 		icon = generic_prepare_civil_war
 
-		allowed = { original_tag = USA }
+		allowed = { OR = { original_tag = USA 
+		original_tag = CAL } }
 
 		available = {
 			is_subject = no
@@ -457,7 +857,7 @@ USA_new_monroe_doctrine = {
 		}
 
 		visible = {
-			has_completed_focus = USA_new_monroe_doctrine
+			has_completed_focus = USA_western_dominance
 			NOT = {
 				country_exists = "PHI"
 				owns_state = 327
@@ -501,12 +901,20 @@ USA_new_monroe_doctrine = {
 	USA_invite_to_league = {
 		icon = generic_political_discourse
 
-		allowed = { original_tag = USA }
+		allowed = { OR = { original_tag = USA 
+		original_tag = CAL } }
 
 		available = {
 			ROOT = {
 				NOT = { has_country_flag = USA_recent_league_invite }
-				at_peace_or_same_enemies_as_FROM = yes
+				OR = {
+					has_war = no
+					custom_trigger_tooltip = {
+						tooltip = USA_same_wars_as_FROM
+						has_war = yes
+						any_enemy_country = { has_war_with = FROM }
+					}
+				}
 			}
 			FROM = {
 				is_major = no
@@ -522,21 +930,20 @@ USA_new_monroe_doctrine = {
 					custom_trigger_tooltip = {
 						tooltip = BRA_same_wars_as_usa
 						has_war = yes
-						NOT = {
-							any_enemy_country = {
-								NOT = { has_war_with = USA }
-							}
-						}
+						any_enemy_country = { has_war_with = USA }
 					}
 				}
 			}
 		}
 
 		visible = {
-			has_completed_focus = USA_cooperaton_treaties
 			is_major = yes
 			is_subject = no
 			FROM = {
+				OR = {
+					is_in_north_america = yes
+					is_in_south_america = yes
+				}
 				exists = yes
 				is_subject = no
 				NOT = {
@@ -559,10 +966,11 @@ USA_new_monroe_doctrine = {
 					has_government = paternal_autocrat
 				}
 			}
-			has_completed_focus = USA_cooperaton_treaties
+			OR = {
+			has_completed_focus = CAL_league_of_anti_imperialism
+			has_completed_focus = USA_league_of_anti_imperialism
+			}
 		}
-
-		target_array = global.american_tags_array
 
 		target_root_trigger = {
 			has_completed_focus = USA_cooperaton_treaties
@@ -570,6 +978,11 @@ USA_new_monroe_doctrine = {
 
 		target_trigger = {
 			FROM = {
+				OR = {
+					is_in_north_america = yes
+					is_in_south_america = yes
+				}
+				exists = yes
 				is_subject = no
 				NOT = {
 					has_country_flag = USA_sent_league_invite
@@ -639,7 +1052,8 @@ USA_new_monroe_doctrine = {
 	USA_install_league_puppet = {
 		icon = generic_political_discourse
 
-		allowed = { original_tag = USA }
+		allowed = { OR = { original_tag = USA 
+		original_tag = CAL } }
 
 		available = {
 			has_war = no
@@ -653,7 +1067,7 @@ USA_new_monroe_doctrine = {
 		visible = {
 			is_major = yes
 			is_subject = no
-			has_completed_focus = USA_propping_up_allies
+			has_completed_focus = USA_new_interventionism
 			FROM = {
 				exists = yes
 				has_idea = USA_league_of_america_2
@@ -671,11 +1085,12 @@ USA_new_monroe_doctrine = {
 		}
 
 		target_root_trigger = {
-			has_completed_focus = USA_propping_up_allies
+			has_completed_focus = USA_new_interventionism
 		}
 
 		target_trigger = {
 			FROM = {
+				exists = yes
 				has_idea = USA_league_of_america_2
 				is_subject = no
 				NOT = { has_war_with = USA }
@@ -740,34 +1155,224 @@ USA_new_monroe_doctrine = {
 	}
 }
 
+USA_american_anti_imperialism = {
+	CAL_league_of_anti_imperialism_invites = {
+		icon = generic_political_discourse
+
+		allowed = { OR = { original_tag = USA 
+		original_tag = CAL } }
+
+		available = {
+			ROOT = {
+				NOT = { has_country_flag = USA_has_been_invited }
+				OR = {
+					has_war = no
+					custom_trigger_tooltip = {
+						tooltip = USA_same_wars_as_FROM
+						has_war = yes
+						any_enemy_country = { has_war_with = FROM }
+					}
+				}
+			}
+			FROM = {
+				is_major = no
+				custom_trigger_tooltip = {
+					tooltip = USA_is_neutral_country
+					OR = {
+						is_in_faction = no
+						is_in_faction_with = USA
+					}
+				}
+				OR = {
+					has_war = no
+					custom_trigger_tooltip = {
+						tooltip = BRA_same_wars_as_usa
+						has_war = yes
+						any_enemy_country = { has_war_with = USA }
+					}
+				}
+			}
+		}
+
+		visible = {
+			has_completed_focus = CAL_league_of_anti_imperialism
+			is_major = yes
+			is_subject = no
+			FROM = {
+				OR = {
+					is_in_north_america = yes
+					is_in_south_america = yes
+				}
+				exists = yes
+				is_subject = no
+				NOT = {
+					has_country_flag = USA_sent_league_invite
+					has_idea = USA_league_of_america_1
+					has_idea = USA_league_of_america_2
+					has_war_with = USA
+				}
+				OR = {
+					any_owned_state = { is_coastal = yes }
+					any_neighbor_country = { is_in_faction_with = USA }
+					any_neighbor_country = { gives_military_access_to = USA }
+				}
+				OR = {
+					has_government = social_democrat
+					has_government = social_liberal
+					has_government = market_liberal
+					has_government = social_conservative
+					has_government = authoritarian_democrat
+					has_government = paternal_autocrat
+				}
+			}
+		}
+
+		target_root_trigger = {
+			OR = {
+			has_completed_focus = CAL_league_of_anti_imperialism
+			}
+		}
+
+		target_trigger = {
+			FROM = {
+				OR = {
+					is_in_north_america = yes
+					is_in_south_america = yes
+					AND = {
+					tag	= PHI
+					is_puppet = no
+					exists = yes
+					is_in_faction = no
+					}
+					AND = {
+					tag	= LIB
+					is_puppet = no
+					exists = yes
+					is_in_faction = no
+					}
+					AND = {
+					tag	= VIE
+					is_puppet = no
+					exists = yes
+					is_in_faction = no
+					}
+					AND = {
+					tag	= IRE
+					is_puppet = no
+					exists = yes
+					is_in_faction = no
+					}
+				}
+				exists = yes
+				is_subject = no
+				NOT = {
+					has_country_flag = USA_sent_league_invite
+					has_idea = USA_league_of_america_1
+					has_idea = USA_league_of_america_2
+					has_war_with = USA
+				}
+				OR = {
+					any_owned_state = { is_coastal = yes }
+					any_neighbor_country = { is_in_faction_with = USA }
+					any_neighbor_country = { gives_military_access_to = USA }
+				}
+				OR = {
+					has_government = syndicalist
+					has_government = radical_socialist
+					has_government = social_democrat
+					has_government = social_liberal
+					has_government = market_liberal
+					has_government = social_conservative
+					has_government = authoritarian_democrat
+					has_government = paternal_autocrat
+				}
+			}
+		}
+
+		days_remove = 30
+
+		cost = 25
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision USA_invite_to_league target: [From.GetName]"
+			set_country_flag = USA_recent_league_invite
+			FROM = {
+				set_country_flag = USA_sent_league_invite
+				country_event = ustates.250
+			}
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove USA_invite_to_league target: [From.GetName]"
+			clr_country_flag = USA_recent_league_invite
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				FROM = { any_owned_state = { is_claim_or_core_of_ROOT = yes } }
+			}
+			modifier = {
+				factor = 0
+				NEE = { is_subject_of = FROM }
+			}
+			modifier = {
+				factor = 5
+				is_in_north_america = yes
+			}
+			modifier = {
+				factor = 20
+				is_neighbor_of = FROM
+			}
+			modifier = {
+				factor = 5
+				FROM = { num_divisions > 10 }
+			}
+		}
+	}
+}
+
 USA_Pan_American_Development_Foundation = {
 	USA_develop_ally = {
 		icon = GFX_decision_category_generic_industry
-		allowed = { original_tag = USA }
+		allowed = { OR = { original_tag = USA 
+		original_tag = CAL } }
 
 		available = {
 			FROM = { controls_all_owned_states = yes }
 		}
 
 		visible = {
-			has_completed_focus = USA_propping_up_allies
+			OR = {
+			has_completed_focus = CAL_arsenal_of_democracy
+			has_completed_focus = USA_arsenal_of_democracy
+			}
 			FROM = {
-				exists = yes
 				NOT = { tag = CAN }
+				OR = {
+					is_in_north_america = yes
+					is_in_south_america = yes
+				}
 				has_idea = USA_league_of_america_1
 				NOT = { has_country_flag = USA_received_industrial_aid }
 			}
 		}
 
-		target_array = global.american_tags_array
-
 		target_root_trigger = {
-			has_completed_focus = USA_propping_up_allies
+			OR = {
+			has_completed_focus = CAL_arsenal_of_democracy
+			has_completed_focus = USA_arsenal_of_democracy
+			}
 		}
 
 		target_trigger = {
 			FROM = {
 				NOT = { tag = CAN }
+				OR = {
+					is_in_north_america = yes
+					is_in_south_america = yes
+				}
 				has_idea = USA_league_of_america_1
 				NOT = { has_country_flag = USA_received_industrial_aid }
 			}
@@ -867,7 +1472,7 @@ USA_Pan_American_Development_Foundation = {
 			log = "[GetDateText]: [Root.GetName]: Decision USA_form_ant"
 			DOM = {
 				country_event = {
-					id = ant.1
+					id = cuba.300
 					days = 1
 				}
 			}
@@ -879,6 +1484,16 @@ USA_Pan_American_Development_Foundation = {
 USA_reconstruction_decisions = {# Reconstruction Stuff
 	USA_rebuild_new_england = {# Rebuild New England
 		icon = generic_political_discourse
+		allowed = {
+			OR = {
+				tag = USA
+				tag = CAL
+				tag = COR
+				tag = CSA
+				tag = TEX
+				tag = NEE
+			}
+		}
 		available = {
 			NOT = { has_country_flag = USA_currently_rebuilding }
 			358 = { is_owned_and_controlled_by = ROOT }
@@ -896,6 +1511,7 @@ USA_reconstruction_decisions = {# Reconstruction Stuff
 				has_completed_focus = USA_begin_reconstruction
 				has_completed_focus = CSA_reconstruction
 				has_completed_focus = TEX_begin_reconstruction
+				has_completed_focus = COR_begin_reconstruction
 				AND = {
 					tag = NEE
 					has_country_flag = NEE_claimed_america
@@ -949,6 +1565,16 @@ USA_reconstruction_decisions = {# Reconstruction Stuff
 
 	USA_rebuild_the_south = {# Rebuild the South
 		icon = generic_political_discourse
+		allowed = {
+			OR = {
+				tag = USA
+				tag = CAL
+				tag = CSA
+				tag = TEX
+				tag = COR
+				tag = NEE
+			}
+		}
 		available = {
 			NOT = { has_country_flag = USA_currently_rebuilding }
 			367 = { is_owned_and_controlled_by = ROOT }
@@ -971,6 +1597,7 @@ USA_reconstruction_decisions = {# Reconstruction Stuff
 					tag = NEE
 					has_country_flag = NEE_claimed_america
 				}
+				has_completed_focus = COR_begin_reconstruction
 			}
 			NOT = {
 				AND = {
@@ -1022,6 +1649,16 @@ USA_reconstruction_decisions = {# Reconstruction Stuff
 
 	USA_rebuild_the_south_atlantic = {# Rebuild the South Atlantic
 		icon = generic_political_discourse
+		allowed = {
+			OR = {
+				tag = USA
+				tag = CAL
+				tag = COR
+				tag = CSA
+				tag = TEX
+				tag = NEE
+			}
+		}
 		available = {
 			NOT = { has_country_flag = USA_currently_rebuilding }
 			361 = { is_owned_and_controlled_by = ROOT }
@@ -1043,6 +1680,7 @@ USA_reconstruction_decisions = {# Reconstruction Stuff
 					tag = NEE
 					has_country_flag = NEE_claimed_america
 				}
+				has_completed_focus = COR_begin_reconstruction
 			}
 			NOT = {
 				AND = {
@@ -1092,6 +1730,16 @@ USA_reconstruction_decisions = {# Reconstruction Stuff
 
 	USA_rebuild_the_steel_belt = {# Rebuild the Steel Belt
 		icon = generic_political_discourse
+		allowed = {
+			OR = {
+				tag = USA
+				tag = CAL
+				tag = COR
+				tag = CSA
+				tag = TEX
+				tag = NEE
+			}
+		}
 		available = {
 			NOT = { has_country_flag = USA_currently_rebuilding }
 			394 = { is_owned_and_controlled_by = ROOT }
@@ -1112,6 +1760,7 @@ USA_reconstruction_decisions = {# Reconstruction Stuff
 					tag = NEE
 					has_country_flag = NEE_claimed_america
 				}
+				has_completed_focus = COR_begin_reconstruction
 			}
 			NOT = {
 				AND = {
@@ -1159,6 +1808,16 @@ USA_reconstruction_decisions = {# Reconstruction Stuff
 
 	USA_rebuild_the_west = {# Rebuild the west
 		icon = generic_political_discourse
+		allowed = {
+			OR = {
+				tag = USA
+				tag = CAL
+				tag = COR
+				tag = CSA
+				tag = TEX
+				tag = NEE
+			}
+		}
 		available = {
 			NOT = { has_country_flag = USA_currently_rebuilding }
 			389 = { is_owned_and_controlled_by = ROOT }
@@ -1179,6 +1838,7 @@ USA_reconstruction_decisions = {# Reconstruction Stuff
 					tag = NEE
 					has_country_flag = NEE_claimed_america
 				}
+				has_completed_focus = COR_begin_reconstruction
 			}
 			NOT = {
 				AND = {
@@ -1226,6 +1886,16 @@ USA_reconstruction_decisions = {# Reconstruction Stuff
 
 	USA_rebuild_rockies = {# Rebuild The Rockies
 		icon = generic_political_discourse
+		allowed = {
+			OR = {
+				tag = USA
+				tag = CAL
+				tag = COR
+				tag = CSA
+				tag = TEX
+				tag = NEE
+			}
+		}
 		available = {
 			NOT = { has_country_flag = USA_currently_rebuilding }
 			387 = { is_owned_and_controlled_by = ROOT }
@@ -1247,6 +1917,7 @@ USA_reconstruction_decisions = {# Reconstruction Stuff
 					tag = NEE
 					has_country_flag = NEE_claimed_america
 				}
+				has_completed_focus = COR_begin_reconstruction
 			}
 			NOT = {
 				AND = {
@@ -1296,6 +1967,16 @@ USA_reconstruction_decisions = {# Reconstruction Stuff
 
 	USA_rebuild_the_pacific_coast = {# Rebuild Pacific Coast
 		icon = generic_political_discourse
+		allowed = {
+			OR = {
+				tag = USA
+				tag = CAL
+				tag = COR
+				tag = CSA
+				tag = TEX
+				tag = NEE
+			}
+		}
 		available = {
 			NOT = { has_country_flag = USA_currently_rebuilding }
 			386 = { is_owned_and_controlled_by = ROOT }
@@ -1315,6 +1996,7 @@ USA_reconstruction_decisions = {# Reconstruction Stuff
 					tag = NEE
 					has_country_flag = NEE_claimed_america
 				}
+				has_completed_focus = COR_begin_reconstruction
 			}
 			NOT = {
 				AND = {
@@ -1360,6 +2042,16 @@ USA_reconstruction_decisions = {# Reconstruction Stuff
 
 	USA_rebuild_alaska = {
 		icon = generic_political_discourse
+		allowed = {
+			OR = {
+				tag = USA
+				tag = CAL
+				tag = COR
+				tag = CSA
+				tag = TEX
+				tag = NEE
+			}
+		}
 		available = {
 			NOT = { has_country_flag = USA_currently_rebuilding }
 			463 = { is_owned_and_controlled_by = ROOT }
@@ -1374,6 +2066,7 @@ USA_reconstruction_decisions = {# Reconstruction Stuff
 					tag = NEE
 					has_country_flag = NEE_claimed_america
 				}
+				has_completed_focus = COR_begin_reconstruction
 			}
 			NOT = {
 				463 = { is_core_of = ROOT }
@@ -1399,6 +2092,16 @@ USA_reconstruction_decisions = {# Reconstruction Stuff
 
 	USA_rebuild_hawaii = {
 		icon = generic_political_discourse
+		allowed = {
+			OR = {
+				tag = USA
+				tag = CAL
+				tag = COR
+				tag = CSA
+				tag = TEX
+				tag = NEE
+			}
+		}
 		available = {
 			NOT = { has_country_flag = USA_currently_rebuilding }
 			629 = { is_owned_and_controlled_by = ROOT }
@@ -1413,6 +2116,7 @@ USA_reconstruction_decisions = {# Reconstruction Stuff
 					tag = NEE
 					has_country_flag = NEE_claimed_america
 				}
+				has_completed_focus = COR_begin_reconstruction
 			}
 			NOT = {
 				629 = { is_core_of = ROOT }
@@ -1456,6 +2160,17 @@ USA_reconstruction_decisions = {# Reconstruction Stuff
 
 	USA_rebuild_puerto_rico = {
 		icon = generic_political_discourse
+		allowed = {
+			OR = {
+				tag = USA
+				tag = CAL
+				tag = CSA
+				tag = TEX
+				tag = NEE
+				tag = COR
+				tag = WCC
+			}
+		}
 		available = {
 			NOT = { has_country_flag = USA_currently_rebuilding }
 			686 = { is_owned_and_controlled_by = ROOT }
@@ -1499,12 +2214,19 @@ USA_reconstruction_decisions = {# Reconstruction Stuff
 			OR = {
 				tag = USA
 				tag = CAL
+				tag = COR
+				tag = CSA
 				tag = TEX
+				tag = WCC
 			}
 		}
 		available = {
 			is_subject = no
 			controls_all_owned_states = yes
+			if = {
+				limit = { tag = CSA }
+				has_completed_focus = CSA_demand_new_england
+			}
 			if = {
 				limit = { country_exists = NEE }
 				NEE = {
@@ -1545,6 +2267,8 @@ USA_reconstruction_decisions = {# Reconstruction Stuff
 					country_exists = CAL
 					country_exists = TEX
 					country_exists = CSA
+					country_exists = COR
+					country_exists = WCC
 				}
 			}
 			OR = {
@@ -1579,8 +2303,7 @@ USA_reconstruction_decisions = {# Reconstruction Stuff
 			}
 			modifier = {
 				factor = 0
-				strength_ratio = { tag = CAN ratio < 2.0 }
-				NOT = { is_in_faction_with = CAN }
+				has_army_manpower = { size < 250000 }
 			}
 		}
 
@@ -1598,7 +2321,9 @@ USA_reconstruction_decisions = {# Reconstruction Stuff
 			OR = {
 				tag = USA
 				tag = CAL
+				tag = COR
 				tag = TEX
+				tag = WCC
 			}
 		}
 		available = {
@@ -1626,6 +2351,8 @@ USA_reconstruction_decisions = {# Reconstruction Stuff
 					country_exists = CAL
 					country_exists = TEX
 					country_exists = CSA
+					country_exists = COR
+					country_exists = WCC
 				}
 			}
 			has_global_flag = USA_civil_war_over_flag
@@ -1642,7 +2369,7 @@ USA_reconstruction_decisions = {# Reconstruction Stuff
 			}
 			modifier = {
 				factor = 0
-				has_army_manpower = { size < 100000 }
+				has_army_manpower = { size < 250000 }
 			}
 		}
 
@@ -1660,8 +2387,10 @@ USA_reconstruction_decisions = {# Reconstruction Stuff
 			OR = {
 				tag = USA
 				tag = CAL
+				tag = COR
 				tag = TEX
 				tag = NEE
+				tag = WCC
 			}
 		}
 		available = {
@@ -1681,6 +2410,7 @@ USA_reconstruction_decisions = {# Reconstruction Stuff
 					country_exists = CAL
 					country_exists = TEX
 					country_exists = CSA
+					country_exists = WCC
 				}
 			}
 			has_global_flag = USA_civil_war_over_flag
@@ -1699,8 +2429,7 @@ USA_reconstruction_decisions = {# Reconstruction Stuff
 			}
 			modifier = {
 				factor = 0
-				strength_ratio = { tag = CAN ratio < 2.0 }
-				NOT = { is_in_faction_with = CAN }
+				has_army_manpower = { size < 250000 }
 			}
 		}
 		complete_effect = {
@@ -1715,6 +2444,7 @@ USA_reconstruction_decisions = {# Reconstruction Stuff
 		allowed = {
 			OR = {
 				tag = USA
+				tag = WCC
 				tag = CAL
 			}
 		}
@@ -1731,8 +2461,10 @@ USA_reconstruction_decisions = {# Reconstruction Stuff
 					amount = 2
 					country_exists = USA
 					country_exists = CAL
+					country_exists = COR
 					country_exists = TEX
 					country_exists = CSA
+					country_exists = WCC
 				}
 			}
 		}
@@ -1743,6 +2475,10 @@ USA_reconstruction_decisions = {# Reconstruction Stuff
 			modifier = {
 				factor = 0
 				has_war = yes
+			}
+			modifier = {
+				factor = 0
+				has_army_manpower = { size < 250000 }
 			}
 		}
 		complete_effect = {
@@ -1769,7 +2505,7 @@ USA_reconstruction_decisions = {# Reconstruction Stuff
 			}
 		}
 		fire_only_once = yes
-		cost = 0
+		cost = freedec?0
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -1802,7 +2538,7 @@ USA_reconstruction_decisions = {# Reconstruction Stuff
 			}
 		}
 		fire_only_once = yes
-		cost = 0
+		cost = freedec?0
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -1850,75 +2586,89 @@ USA_rainbow_war_plans_decisions = {
 			}
 		}
 		available = {
-			at_peace_or_same_enemies_as_FROM = yes
-		}
-		visible = {
 			is_in_faction = no
 			is_subject = no
-			FROM = {
-				is_faction_leader = yes
-				if = {
-					limit = {
-						ROOT = { tag = CAL }
-					}
-					has_elected_government = yes
-				}
-				NOT = {
-					is_in_faction_with = NEE
-					has_war_with = ROOT
+			OR = {
+				has_war = no
+				custom_trigger_tooltip = {
+					tooltip = USA_same_wars_as_Entente
+					has_war = yes
+					any_enemy_country = { has_war_with = CAN }
 				}
 			}
 		}
-		
-		targets = { ENT }
-		target_root_trigger = {
+		visible = {
 			OR = {
 				has_completed_focus = USA_enter_the_fray
 				has_completed_focus = CAL_enter_the_fray
 			}
-			is_in_faction = no
-			is_subject = no
-		}
-		target_trigger = {
-			FROM = {
-				is_faction_leader = yes
-				if = {
-					limit = {
-						ROOT = { tag = CAL }
+			country_exists = CAN
+			has_socialist_government = no
+			OR = {
+				CAN = {
+					is_faction_leader = yes
+					has_socialist_government = no
+					NOT = {
+						is_in_faction_with = ROOT
+						is_in_faction_with = NEE
+						has_war_with = ROOT
 					}
-					has_elected_government = yes
 				}
-				NOT = {
-					is_in_faction_with = NEE
-					has_war_with = ROOT
+				GBR = {
+					is_faction_leader = yes
+					is_in_faction_with = CAN
+					has_socialist_government = no
+					NOT = {
+						is_in_faction_with = ROOT
+						is_in_faction_with = NEE
+						has_war_with = ROOT
+					}
 				}
 			}
 		}
-		
 		fire_only_once = yes
 		cost = 50
-		
 		ai_will_do = {
 			factor = 10
 			modifier = {
 				factor = 0
-				FROM = {
+				CAN = {
 					any_owned_state = { is_claim_or_core_of_ROOT = yes }
 				}
 			}
 			modifier = {
 				factor = 0
-				FROM = {
+				CAN = {
+					is_faction_leader = yes
 					has_war = yes
 					surrender_progress > 0.10
 				}
 			}
 			modifier = {
 				factor = 0
-				FROM = {
+				GBR = {
+					is_faction_leader = yes
+					has_war = yes
+					surrender_progress > 0.10
+				}
+			}
+			modifier = {
+				factor = 0
+				ROOT = { tag = USA }
+				CAN = {
 					NOT = {
-						has_country_flag = CAN_supports_@ROOT
-						has_country_flag = ACW_supported_@ROOT
+						has_country_flag = CAN_supports_USA
+						has_country_flag = ACW_supported_usa
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				ROOT = { tag = CAL }
+				CAN = {
+					NOT = {
+						has_country_flag = CAN_supports_CAL
+						has_country_flag = ACW_supported_psa
 					}
 				}
 			}
@@ -1929,7 +2679,13 @@ USA_rainbow_war_plans_decisions = {
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision USA_join_entente"
-			FROM = { country_event = ustates.279 }
+			if = {
+				limit = { GBR = { is_faction_leader = yes } }
+				GBR = { country_event = { id = ustates.279 days = 3 } }
+				else = {
+					CAN = { country_event = { id = ustates.279 days = 3 } }
+				}
+			}
 		}
 	}
 
@@ -1938,126 +2694,164 @@ USA_rainbow_war_plans_decisions = {
 		allowed = {
 			tag = CAL
 		}
-		
 		available = {
-			at_peace_or_same_enemies_as_FROM = yes
+			is_in_faction = no
+			is_subject = no
+			OR = {
+				has_war = no
+				custom_trigger_tooltip = {
+					tooltip = USA_same_wars_as_JAP
+					has_war = yes
+					any_enemy_country = { has_war_with = JAP }
+				}
+			}
 		}
-		
 		visible = {
-			is_in_faction = no
-			is_subject = no
-			FROM = {
-				is_faction_leader = yes
-				has_elected_government = yes
-				NOT = { has_war_with = ROOT }
-			}
-		}
-		
-		targets = { JAP }
-		target_root_trigger = {
 			has_completed_focus = CAL_enter_the_fray
-			is_in_faction = no
-			is_subject = no
-		}
-		target_trigger = {
-			FROM = {
+			country_exists = JAP
+			has_socialist_government = no
+			JAP = {
 				is_faction_leader = yes
-				has_elected_government = yes
-				NOT = { has_war_with = ROOT }
+				has_socialist_government = no
+				NOT = {
+					is_in_faction_with = ROOT
+					is_in_faction_with = NEE
+					has_war_with = ROOT
+				}
 			}
 		}
-		
 		fire_only_once = yes
 		cost = 50
-		
 		ai_will_do = {
 			factor = 10
 			modifier = {
 				factor = 0
-				FROM = {
+				JAP = {
 					any_owned_state = { is_claim_or_core_of_ROOT = yes }
 				}
 			}
 			modifier = {
 				factor = 0
-				FROM = {
+				JAP = {
 					has_war = yes
 					surrender_progress > 0.10
 				}
 			}
 			modifier = {
 				factor = 0
-				FROM = {
-					NOT = { has_country_flag = ACW_supported_CAL }
+				JAP = {
+					NOT = {
+						has_country_flag = ACW_supported_psa
+					}
 				}
 			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision CAL_join_japan"
-			FROM = { country_event = pacificstates.29 }
+			JAP = {	country_event = pacificstates.29 }
 		}
 	}
 
 	TEX_join_germany = {# Join Reichspakt
 		icon = generic_political_discourse
 		allowed = {
-			tag = TEX
+			tag = COR
 		}
-		
 		available = {
-			at_peace_or_same_enemies_as_FROM = yes
+			is_in_faction = no
+			is_subject = no
+			OR = {
+				has_war = no
+				custom_trigger_tooltip = {
+					tooltip = USA_same_wars_as_GER
+					has_war = yes
+					any_enemy_country = { has_war_with = GER }
+				}
+			}
 		}
-		
 		visible = {
-			is_in_faction = no
-			is_subject = no
-			FROM = {
+			has_completed_focus = COR_look_to_the_reichsadler
+			country_exists = GER
+			has_socialist_government = no
+			GER = {
 				is_faction_leader = yes
-				NOT = { has_war_with = ROOT }
+				has_socialist_government = no
+				NOT = {
+					is_in_faction_with = ROOT
+					is_in_faction_with = NEE
+					has_war_with = ROOT
+				}
 			}
 		}
-		
-		targets = { GER }
-		target_root_trigger = {
-			has_completed_focus = TEX_enter_the_fray
-			is_in_faction = no
-			is_subject = no
-		}
-		target_trigger = {
-			FROM = {
-				is_faction_leader = yes
-				NOT = { has_war_with = ROOT }
-			}
-		}
-		
 		fire_only_once = yes
 		cost = 50
-		
 		ai_will_do = {
 			factor = 10
 			modifier = {
 				factor = 0
-				FROM = {
+				GER = {
 					any_owned_state = { is_claim_or_core_of_ROOT = yes }
 				}
 			}
 			modifier = {
 				factor = 0
-				FROM = {
+				GER = {
 					has_war = yes
 					surrender_progress > 0.30
 				}
 			}
 			modifier = {
 				factor = 0
-				FROM = {
-					NOT = { has_country_flag = ACW_supported_TEX }
+				GER = {
+					NOT = {
+						has_country_flag = ACW_supported_aus
+					}
 				}
 			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision TEX_join_germany"
-			FROM = { country_event = ustates.281 }
+			GER = {	country_event = ustates.281 }
+		}
+	}
+
+	CAL_join_japan_tech = {# Join japan's tech sharing
+		icon = generic_research
+		allowed = {
+			tag = CAL
+		}
+		available = {
+			is_in_faction_with = JAP
+		}
+		visible = {
+			is_in_faction_with = JAP
+			NOT = { is_in_tech_sharing_group = japan_research }
+		}
+		fire_only_once = yes
+		cost = 25
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision CAL_join_japan_tech"
+			add_to_tech_sharing_group = japan_research
+		}
+	}
+
+	TEX_join_germany_tech = {# Join Germany's tech sharing
+		icon = generic_research
+		allowed = {
+			tag = TEX
+		}
+		available = {
+			is_in_faction_with = GER
+		}
+		visible = {
+			is_in_faction_with = GRE
+			NOT = { is_in_tech_sharing_group = german_research }
+		}
+		fire_only_once = yes
+		cost = 25
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TEX_join_germany_tech"
+			add_to_tech_sharing_group = german_research
 		}
 	}
 
@@ -2094,7 +2888,6 @@ USA_rainbow_war_plans_decisions = {
 			OR = {
 				has_completed_focus = USA_enter_the_fray
 				has_completed_focus = CAL_enter_the_fray
-				has_completed_focus = TEX_enter_the_fray
 			}
 			country_exists = JAP
 			JAP = {
@@ -2180,7 +2973,6 @@ USA_rainbow_war_plans_decisions = {
 			OR = {
 				has_completed_focus = USA_enter_the_fray
 				has_completed_focus = CAL_enter_the_fray
-				has_completed_focus = TEX_enter_the_fray
 			}
 			has_socialist_government = no
 			country_exists = FRA
@@ -2262,7 +3054,6 @@ USA_rainbow_war_plans_decisions = {
 			OR = {
 				has_completed_focus = USA_enter_the_fray
 				has_completed_focus = CAL_enter_the_fray
-				has_completed_focus = TEX_enter_the_fray
 			}
 			country_exists = GER
 			GER = {
@@ -2301,7 +3092,7 @@ USA_rainbow_war_plans_decisions = {
 		}
 	}
 
-	USA_war_plan_red = {# War against Socialist Russia
+	USA_war_plan_red = {# War against Soviet Union
 		icon = generic_prepare_civil_war
 		allowed = {
 			OR = {
@@ -2331,7 +3122,6 @@ USA_rainbow_war_plans_decisions = {
 			OR = {
 				has_completed_focus = USA_enter_the_fray
 				has_completed_focus = CAL_enter_the_fray
-				has_completed_focus = TEX_enter_the_fray
 			}
 			country_exists = SOV
 			SOV = {
@@ -2404,7 +3194,6 @@ USA_rainbow_war_plans_decisions = {
 			OR = {
 				has_completed_focus = USA_enter_the_fray
 				has_completed_focus = CAL_enter_the_fray
-				has_completed_focus = TEX_enter_the_fray
 			}
 			country_exists = RUS
 			RUS = {
@@ -2465,13 +3254,12 @@ USA_rainbow_war_plans_decisions = {
 
 		visible = {
 			OR = {
-				has_completed_focus = USA_working_with_allies
-				has_completed_focus = CAL_working_with_allies
-				has_completed_focus = TEX_working_with_allies
+				has_completed_focus = CAL_western_alliance
+				has_completed_focus = USA_western_alliance
+				has_completed_focus = TEX_friendship_in_the_americas
 			}
 			has_socialist_government = no
 			FROM = {
-				exists = yes
 				has_socialist_government = no
 				NOT = {
 					has_war_with = ROOT
@@ -2492,18 +3280,13 @@ USA_rainbow_war_plans_decisions = {
 					any_enemy_country = { has_war_with = ROOT }
 				}
 			}
-			OR = {
-				has_completed_focus = USA_working_with_allies
-				has_completed_focus = CAL_working_with_allies
-				has_completed_focus = TEX_working_with_allies
-			}
 		}
 
 		target_root_trigger = {
 			OR = {
-				has_completed_focus = USA_working_with_allies
-				has_completed_focus = CAL_working_with_allies
-				has_completed_focus = TEX_working_with_allies
+				has_completed_focus = CAL_western_alliance
+				has_completed_focus = USA_western_alliance
+				has_completed_focus = TEX_friendship_in_the_americas
 			}
 		}
 
@@ -2562,126 +3345,6 @@ USA_rainbow_war_plans_decisions = {
 						NOT = { is_neighbor_of = ROOT }
 					}
 				}
-			}
-		}
-	}
-}
-
-USA_deal_with_terrorists_decisions = {# deal with terrorists
-	USA_fight_socialist_terrorists = {# fight socialists
-		icon = GFX_decision_generic_industry
-		allowed = {
-			OR = {
-				tag = USA
-				tag = CAL
-			}
-		}
-		visible = {
-			OR = {
-				has_idea = USA_socialist_resistance1
-				has_idea = USA_socialist_resistance2
-				has_idea = USA_socialist_resistance3
-				has_idea = USA_socialist_resistance4
-			}
-			OR = {
-				has_completed_focus = USA_root_out_traitors
-				has_completed_focus = USA_destroy_radicalism
-				has_country_flag = USA_assassinated_reed
-				tag = CAL
-			}
-		}
-
-		cost = 25
-
-		days_re_enable = 10
-		days_remove = 100
-
-		ai_will_do = { factor = 100 }
-		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove USA_fight_socialist_terrorists"
-			if = {
-				limit = { has_idea = USA_socialist_resistance1 }
-				swap_ideas = {
-					remove_idea = USA_socialist_resistance1
-					add_idea = USA_socialist_resistance2
-				}
-			}
-			else_if = {
-				limit = { has_idea = USA_socialist_resistance2 }
-				swap_ideas = {
-					remove_idea = USA_socialist_resistance2
-					add_idea = USA_socialist_resistance3
-				}
-			}
-			else_if = {
-				limit = { has_idea = USA_socialist_resistance3 }
-				swap_ideas = {
-					remove_idea = USA_socialist_resistance3
-					add_idea = USA_socialist_resistance4
-				}
-			}
-			else_if = {
-				limit = { has_idea = USA_socialist_resistance4 }
-				remove_ideas = USA_socialist_resistance4
-			}
-		}
-	}
-
-	USA_fight_longist_terrorists = {# fight longists
-		icon = GFX_decision_generic_industry
-		allowed = {
-			OR = {
-				tag = USA
-				tag = CAL
-			}
-		}
-		visible = {
-			OR = {
-				has_idea = USA_longist_resistance1
-				has_idea = USA_longist_resistance2
-				has_idea = USA_longist_resistance3
-				has_idea = USA_longist_resistance4
-			}
-			OR = {
-				has_completed_focus = USA_root_out_traitors
-				has_completed_focus = USA_destroy_radicalism
-				has_country_flag = USA_assassinated_long
-				tag = CAL
-			}
-		}
-
-		cost = 25
-
-		days_re_enable = 10
-		days_remove = 100
-
-		ai_will_do = { factor = 100 }
-		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove USA_fight_longist_terrorists"
-			if = {
-				limit = { has_idea = USA_longist_resistance1 }
-				swap_ideas = {
-					remove_idea = USA_longist_resistance1
-					add_idea = USA_longist_resistance2
-				}
-			}
-			else_if = {
-				limit = { has_idea = USA_longist_resistance2 }
-				swap_ideas = {
-					remove_idea = USA_longist_resistance2
-					add_idea = USA_longist_resistance3
-				}
-			}
-			else_if = {
-				limit = { has_idea = USA_longist_resistance3 }
-				swap_ideas = {
-					remove_idea = USA_longist_resistance3
-					add_idea = USA_longist_resistance4
-				}
-			}
-			else_if = {
-				limit = { has_idea = USA_longist_resistance4 }
-				remove_ideas = USA_longist_resistance4
 			}
 		}
 	}
@@ -2752,110 +3415,10 @@ USA_progressive_policy_decisions = {# Progressive Policies
 		}
 	}
 
-	USA_progressive_great_lakes_waterway = {
-		icon = GFX_decision_generic_independence
-		allowed = { original_tag = USA }
-		available = {
-			has_government = social_democrat
-			796 = { is_owned_and_controlled_by = USA }
-			466 = { is_owned_and_controlled_by = CAN }
-			832 = { is_owned_and_controlled_by = CAN }
-			739 = { is_owned_and_controlled_by = CAN }
-			276 = { is_owned_and_controlled_by = CAN }
-		}
-		visible = {
-			country_exists = CAN
-			NOT = { has_war_with = CAN }
-		}
-		cost = 50
-		fire_only_once = yes
-
-		ai_will_do = { factor = 40 }
-
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision USA_progressive_great_lakes_waterway"
-			CAN = {	country_event = ustates.165 }
-		}
-	}
-
-	USA_progressive_medicare = {
-		icon = GFX_decision_generic_independence
-		allowed = { original_tag = USA }
-		available = { has_government = social_democrat }
-		visible = {
-			NOT = { has_country_flag = USA_medicare_created }
-		}
-		cost = 100
-		fire_only_once = yes
-
-		ai_will_do = { factor = 40 }
-
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision USA_progressive_medicare"
-			set_country_flag = USA_medicare_created
-			add_popularity = { ideology = social_democrat popularity = 0.03 }
-			add_tech_bonus = {
-				name = USA_progressive_medicare
-				bonus = 1
-				uses = 1
-				category = hospital_tech
-			}
-		}
-	}
-
-	USA_progressive_farming_subsides = {
-		icon = GFX_decision_generic_independence
-		allowed = { original_tag = USA }
-		available = { has_government = social_democrat }
-		visible = { always = yes }
-		cost = 50
-		fire_only_once = yes
-
-		ai_will_do = { factor = 40 }
-
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision USA_progressive_farming_subsides"
-			add_stability = 0.05
-		}
-	}
-
-	USA_progressive_tariffs = {
-		icon = GFX_decision_generic_independence
-		allowed = { original_tag = USA }
-		available = { has_government = social_democrat }
-		visible = { always = yes }
-		cost = 50
-		fire_only_once = yes
-
-		ai_will_do = { factor = 40 }
-
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision USA_progressive_tariffs"
-			add_stability = 0.03
-			add_ideas = limited_exports
-		}
-	}
-
-	USA_progressive_anti_trust = {
-		icon = GFX_decision_generic_independence
-		allowed = { original_tag = USA }
-		available = { has_government = social_democrat }
-		visible = { always = yes }
-		cost = 50
-		fire_only_once = yes
-
-		ai_will_do = { factor = 40 }
-
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision USA_progressive_anti_trust"
-			add_stability = 0.03
-		}
-	}
-
 	USA_progressive_anti_lynching_law = {
 		icon = GFX_decision_generic_independence
 		allowed = { original_tag = USA }
-		available = { has_government = social_democrat }
+		available = { has_completed_focus =  }
 		visible = { always = yes }
 		cost = 50
 		fire_only_once = yes
@@ -2864,22 +3427,6 @@ USA_progressive_policy_decisions = {# Progressive Policies
 
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision USA_progressive_anti_lynching_law"
-			add_stability = 0.03
-		}
-	}
-
-	USA_progressive_minimum_wage = {
-		icon = GFX_decision_generic_independence
-		allowed = { original_tag = USA }
-		available = { has_government = social_democrat }
-		visible = { always = yes }
-		cost = 50
-		fire_only_once = yes
-
-		ai_will_do = { factor = 40 }
-
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision USA_progressive_minimum_wage"
 			add_stability = 0.03
 		}
 	}
@@ -2900,7 +3447,7 @@ USA_progressive_policy_decisions = {# Progressive Policies
 		}
 		cost = 25
 		fire_only_once = yes
-		highlight_state_targets = { state = 368 }
+		highlight_states = { state = 368 }
 		modifier = { civilian_factory_use = 4 }
 		days_remove = 60
 		ai_will_do = { factor = 50 }
@@ -2924,8 +3471,18 @@ USA_progressive_policy_decisions = {# Progressive Policies
 	USA_progressive_post_office_support = {
 		icon = GFX_decision_generic_independence
 		allowed = { original_tag = USA }
-		available = { has_government = social_democrat }
-		visible = { always = yes }
+		available = { 
+		OR = {
+		has_completed_focus =  USA_rebuild_the_roads
+		has_country_flag = USA_Civil_War_Averted
+			}
+		}
+		visible = { 
+		OR = {
+		has_completed_focus =  USA_rebuild_the_roads
+		has_country_flag = USA_Civil_War_Averted
+			} 
+		}
 		cost = 50
 		fire_only_once = yes
 
@@ -2933,7 +3490,7 @@ USA_progressive_policy_decisions = {# Progressive Policies
 
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision USA_progressive_post_office_support"
-			add_stability = 0.03
+			add_stability = 0.02
 		}
 	}
 }
@@ -2942,7 +3499,7 @@ USA_republican_policies = {# Republican Policies
 	USA_republican_desegregate_the_military = {
 		icon = GFX_decision_generic_independence
 		allowed = { original_tag = USA }
-		available = { has_government = social_liberal }
+		available = { has_completed_focus = CAL_encourage_integration }
 		cost = 100
 		fire_only_once = yes
 
@@ -2977,22 +3534,6 @@ USA_republican_policies = {# Republican Policies
 		}
 	}
 
-	USA_republican_minimum_wage = {
-		icon = GFX_decision_generic_independence
-		allowed = { original_tag = USA }
-		available = { has_government = social_liberal }
-		visible = { always = yes }
-		cost = 50
-		fire_only_once = yes
-
-		ai_will_do = { factor = 40 }
-
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision USA_republican_minimum_wage"
-			add_stability = 0.03
-		}
-	}
-
 	USA_republican_energy_companies = {
 		icon = aluminium
 		allowed = { original_tag = USA }
@@ -3009,7 +3550,7 @@ USA_republican_policies = {# Republican Policies
 		}
 		cost = 25
 		fire_only_once = yes
-		highlight_state_targets = { state = 368 }
+		highlight_states = { state = 368 }
 		days_remove = 60
 		modifier = { civilian_factory_use = 4 }
 		ai_will_do = { factor = 50 }
@@ -3062,122 +3603,6 @@ USA_republican_policies = {# Republican Policies
 			}
 		}
 	}
-
-	USA_republican_medicare = {
-		icon = GFX_decision_generic_independence
-		allowed = { original_tag = USA }
-		available = { has_government = social_liberal }
-		visible = {
-			NOT = { has_country_flag = USA_medicare_created }
-		}
-		cost = 50
-		fire_only_once = yes
-
-		ai_will_do = { factor = 40 }
-
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision USA_republican_medicare"
-			set_country_flag = USA_medicare_created
-			add_popularity = { ideology = social_liberal popularity = 0.03 }
-			add_tech_bonus = {
-				name = USA_republican_medicare
-				bonus = 1
-				uses = 1
-				category = hospital_tech
-			}
-		}
-	}
-
-	USA_republican_immigration_act = {
-		icon = GFX_decision_generic_independence
-		allowed = { original_tag = USA }
-		available = { has_government = social_liberal }
-		visible = { always = yes }
-		cost = 50
-		fire_only_once = yes
-
-		ai_will_do = { factor = 40 }
-
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision USA_republican_immigration_act"
-			add_stability = 0.03
-		}
-	}
-
-	USA_republican_trade_liberalization = {
-		icon = GFX_decision_generic_independence
-		allowed = { original_tag = USA }
-		available = { has_government = social_liberal }
-		visible = { always = yes }
-		cost = 50
-		fire_only_once = yes
-
-		ai_will_do = { factor = 40 }
-
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision USA_republican_trade_liberalization"
-			add_ideas = free_trade
-		}
-	}
-
-	USA_republican_anti_trust = {
-		icon = GFX_decision_generic_independence
-		allowed = { original_tag = USA }
-		available = { has_government = social_liberal }
-		visible = { always = yes }
-		cost = 50
-		fire_only_once = yes
-
-		ai_will_do = { factor = 40 }
-
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision USA_republican_anti_trust"
-			add_stability = 0.03
-			add_popularity = { ideology = social_liberal popularity = 0.03 }
-		}
-	}
-
-	USA_republican_banking_act = {
-		icon = GFX_decision_generic_independence
-		allowed = { original_tag = USA }
-		available = { has_government = social_liberal }
-		visible = { always = yes }
-		cost = 50
-		fire_only_once = yes
-
-		ai_will_do = { factor = 40 }
-
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision USA_republican_banking_act"
-			add_stability = 0.03
-		}
-	}
-
-	USA_republican_business_support = {
-		icon = GFX_decision_generic_independence
-		allowed = { original_tag = USA }
-		available = { has_government = social_liberal }
-		visible = { always = yes }
-
-		cost = 50
-
-		fire_only_once = yes
-
-		ai_will_do = { factor = 40 }
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision USA_republican_business_support"
-			random_owned_controlled_state = {
-				limit = { is_in_home_area = yes	}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = { type = industrial_complex	level = 1 instant_build = yes }
-			}
-			random_owned_controlled_state = {
-				limit = { is_in_home_area = yes	}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = { type = industrial_complex	level = 1 instant_build = yes }
-			}
-		}
-	}
 }
 
 USA_liberal_democratic_policies = {# Liberal Democratic Policies
@@ -3215,22 +3640,6 @@ USA_liberal_democratic_policies = {# Liberal Democratic Policies
 		}
 	}
 
-	USA_liberal_trade_liberalization = {
-		icon = GFX_decision_generic_independence
-		allowed = { original_tag = USA }
-		available = { has_government = market_liberal }
-		visible = { always = yes }
-		cost = 50
-		fire_only_once = yes
-
-		ai_will_do = { factor = 40 }
-
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision USA_liberal_trade_liberalization"
-			add_ideas = free_trade
-		}
-	}
-
 	USA_liberal_business_support = {
 		icon = GFX_decision_generic_independence
 		allowed = { original_tag = USA }
@@ -3255,72 +3664,9 @@ USA_liberal_democratic_policies = {# Liberal Democratic Policies
 			}
 		}
 	}
-
-	USA_liberal_banking_act = {
-		icon = GFX_decision_generic_independence
-		allowed = { original_tag = USA }
-		available = { has_government = market_liberal }
-		visible = { always = yes }
-		cost = 50
-		fire_only_once = yes
-
-		ai_will_do = { factor = 40 }
-
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision USA_liberal_banking_act"
-			add_stability = 0.03
-		}
-	}
-
-	USA_liberal_gospel_of_wealth = {
-		icon = GFX_decision_generic_independence
-		allowed = { original_tag = USA }
-		available = { has_government = market_liberal }
-		visible = { always = yes }
-		cost = 50
-		fire_only_once = yes
-
-		ai_will_do = { factor = 40 }
-
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision USA_liberal_gospel_of_wealth"
-			add_stability = 0.03
-		}
-	}
-
-	USA_liberal_liberal_tax = {
-		icon = GFX_decision_generic_independence
-		allowed = { original_tag = USA }
-		available = { has_government = market_liberal }
-		visible = { always = yes }
-		cost = 50
-		fire_only_once = yes
-
-		ai_will_do = { factor = 40 }
-
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision USA_liberal_liberal_tax"
-			add_stability = 0.03
-		}
-	}
 }
 
 USA_conservative_democratic_policies = {# Conservative Democratic Policies
-	USA_conservative_social_hygine = {
-		icon = GFX_decision_generic_independence
-		allowed = { original_tag = USA }
-		available = { has_government = social_conservative }
-		visible = { always = yes }
-		cost = 50
-		fire_only_once = yes
-
-		ai_will_do = { factor = 40 }
-
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision USA_conservative_social_hygine"
-			add_stability = 0.03
-		}
-	}
 
 	USA_conservative_southern_investment = {
 		icon = GFX_decision_generic_independence
@@ -3347,52 +3693,40 @@ USA_conservative_democratic_policies = {# Conservative Democratic Policies
 			370 = {	if = { limit = {is_owned_and_controlled_by = USA }	add_extra_state_shared_building_slots = 1 } }
 		}
 	}
+}
 
-	USA_conservative_moral_education = {
+USA_MacArthur_policies = {
+	USA_mac_retreats = {
 		icon = GFX_decision_generic_independence
 		allowed = { original_tag = USA }
-		available = { has_government = social_conservative }
-		visible = { always = yes }
-		cost = 50
-		fire_only_once = yes
-
-		ai_will_do = { factor = 40 }
-
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision USA_conservative_moral_education"
-			add_stability = 0.03
+		available = { has_government = paternal_autocrat 
+		surrender_progress > 0.80
+		NOT = {
+		WCC = {
+		has_war_with = USA
+				}
+			}
+		USA = {
+		has_War = yes
+			}
 		}
-	}
-
-	USA_conservative_tarrifs = {
-		icon = GFX_decision_generic_independence
-		allowed = { original_tag = USA }
-		available = { has_government = social_conservative }
-		visible = { always = yes }
-		cost = 50
-		fire_only_once = yes
-
-		ai_will_do = { factor = 40 }
-
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision USA_conservative_tarrifs"
-			add_ideas = limited_exports
+		visible = {
+		WCC = {
+		exists = yes
+			} 
 		}
-	}
-
-	USA_conservative_gospel_of_wealth = {
-		icon = GFX_decision_generic_independence
-		allowed = { original_tag = USA }
-		available = { has_government = social_conservative }
-		visible = { always = yes }
-		cost = 50
+		cost = 10
 		fire_only_once = yes
 
 		ai_will_do = { factor = 40 }
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision USA_conservative_gospel_of_wealth"
-			add_stability = 0.03
+			log = "[GetDateText]: [Root.GetName]: Decision USA_mac_retreats"
+			WCC = {
+			country_event = {
+			id = wcc.11
+				}
+			}
 		}
 	}
 }
