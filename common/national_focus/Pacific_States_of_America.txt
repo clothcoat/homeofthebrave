@@ -6524,10 +6524,6 @@ focus_tree = {
 				has_government = social_conservative
 				has_government = market_liberal
 			}
-			OR = {
-				has_idea = CAL_social_gospel_idea1
-				has_idea = CAL_social_gospel_idea2
-			}
 		}
 		ai_will_do = {
 			factor = 5
@@ -6557,7 +6553,6 @@ focus_tree = {
 				has_government = social_conservative
 				has_government = market_liberal
 			}
-			has_idea = CAL_social_gospel_idea
 		}
 		ai_will_do = {
 			factor = 5
@@ -6619,7 +6614,6 @@ focus_tree = {
 				has_government = social_conservative
 				has_government = market_liberal
 			}
-			has_idea = CAL_social_gospel_idea4
 		}
 		ai_will_do = {
 			factor = 5
