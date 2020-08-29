@@ -233,7 +233,7 @@ country_event = { # Socialist Constitution - Voting Rights
 	}
 }
 
-country_event = { # Socialist GFX_report_event_USA_congressional Election Arrives
+country_event = { # Socialist Election Arrives
 	id = csa.1003
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.1003"}
 	title = csa.1003.t
