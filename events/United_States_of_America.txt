@@ -4748,7 +4748,7 @@ country_event = { # The Compromise Succeeds
 		add_political_power = 100
 		set_global_flag = USA_civil_war_avoided_flag
 		add_country_leader_trait = savior_of_america
-		remove_ideas = syndicalist_strikes
+		remove_ideas = USA_syndicalist_strikes_idea
 	}
 }
 
@@ -16250,7 +16250,7 @@ country_event = {# Denmark accepts
 
 	option = {#Great
 		name = ustates.672.a
-		CAL = {
+		USA = {
 		transfer_state = 101
 		}
 	}
