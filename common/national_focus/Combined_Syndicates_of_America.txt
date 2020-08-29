@@ -3862,9 +3862,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 50
 		}
-		bypass = {
-			NOT = { has_idea = CSA_revolutionary_guards_idea }
-		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_create_the_cia"
 			add_ideas = CSA_cia_idea
@@ -4057,7 +4054,7 @@ focus_tree = {
 	
 	focus = {# Revolutionary Guards
 		id = CSA_revolutionary_guards
-		icon = GFX_goal_national_arsenal
+		icon = GFX_goal_CSA_revolutionary_guards
 		cost = 4.50
 		available = {
 			has_government = totalist

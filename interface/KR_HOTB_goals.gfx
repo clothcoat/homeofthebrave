@@ -313,6 +313,10 @@ spriteTypes = {
 		name = "GFX_BBR_marches_against_oppression"
 		texturefile = "gfx/interface/goals/BBR_marches_against_oppression.dds"
 	}
+	SpriteType = {# Mass Conscription
+		name = "GFX_BBR_mass_conscription"
+		texturefile = "gfx/interface/goals/BBR_mass_conscription.dds"
+	}
 	SpriteType = {# Mass Recruitment
 		name = "GFX_BBR_mass_recruitment"
 		texturefile = "gfx/interface/goals/BBR_mass_recruitment.dds"
@@ -774,6 +778,10 @@ spriteTypes = {
 	SpriteType = {# Investigate GOP
 		name = "GFX_CAL_investigate_gop"
 		texturefile = "gfx/interface/goals/CAL_investigate_gop.dds"	
+	}
+	SpriteType = {# Labor Colonies
+		name = "GFX_CAL_labor_colonies"
+		texturefile = "gfx/interface/goals/CAL_labor_colonies.dds"
 	}
 	SpriteType = {# Levering Act
 		name = "GFX_CAL_levering_act"
@@ -1468,6 +1476,11 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_goal_COR_corporate_alliance"
 		texturefile = "gfx/interface/goals/COR_corporate_alliance.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_COR_corporate_patriotism"
+		texturefile = "gfx/interface/goals/COR_corporate_patriotism.dds"
 	}
 	
 	SpriteType = {
@@ -2246,6 +2259,11 @@ spriteTypes = {
 	}
 	
 	SpriteType = {# CSA
+		name = "GFX_goal_CSA_revolutionary_guards"
+		texturefile = "gfx/interface/goals/CSA_revolutionary_guards.dds"
+	}
+	
+	SpriteType = {# CSA
 		name = "GFX_goal_CSA_social_dividends"
 		texturefile = "gfx/interface/goals/CSA_social_dividends.dds"
 	}
@@ -2671,6 +2689,11 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/TEX_perfect_democracy.dds"
 	}
 	
+	SpriteType = {# Rebuild Urban Housing
+		name = "GFX_goal_TEX_rebuild_urban_housing"
+		texturefile = "gfx/interface/goals/TEX_rebuild_urban_housing.dds"
+	}
+	
 	SpriteType = {# Reconcile the Left
 		name = "GFX_goal_TEX_reconcile_the_left"
 		texturefile = "gfx/interface/goals/TEX_reconcile_the_left.dds"
@@ -2734,6 +2757,11 @@ spriteTypes = {
 	SpriteType = {# Silver Rangers
 		name = "GFX_goal_TEX_silver_rangers"
 		texturefile = "gfx/interface/goals/TEX_silver_rangers.dds"
+	}
+	
+	SpriteType = {# Strike Left Expansionists
+		name = "GFX_goal_TEX_strike_left_expansionists"
+		texturefile = "gfx/interface/goals/TEX_strike_left_expansionists.dds"
 	}
 	
 	SpriteType = {# Strike Oil
@@ -3067,6 +3095,10 @@ spriteTypes = {
 	SpriteType = {# Nationalist Rhetoric
 		name = "GFX_goal_USA_nationalist_rhetoric"
 		texturefile = "gfx/interface/goals/USA_nationalist_rhetoric.dds"
+	}
+	SpriteType = {# New Admirals
+		name = "GFX_goal_USA_new_admirals"
+		texturefile = "gfx/interface/goals/USA_new_admirals.dds"
 	}
 	SpriteType = {# Pacific Powerhouse
 		name = "GFX_goal_USA_pacific_powerhouse"
