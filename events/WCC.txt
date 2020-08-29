@@ -1010,7 +1010,7 @@ country_event = { #Pat McCarren Elected
 	title = wcc.24.t
 	desc = wcc.24.d
 	
-	picture = GFX_event_wcc_20
+	picture = GFX_event_wcc_5
 	
 	fire_only_once = yes
 
@@ -1024,7 +1024,7 @@ country_event = { #Pat McCarren Elected
 		create_country_leader = {
 				name = "Pat McCarren"
 				desc = "POLITICS_PAT_MCCARREN_DESC"
-				picture = "gfx/leaders/USA/Portrait_USA_gen_douglas_macarthur.tga"
+				picture = "gfx/leaders/WCC/Pat_McCarran.tga"
 				expire = "1965.1.1"
 				ideology = authoritarian_democrat_subtype
 				traits = { }
@@ -1042,7 +1042,7 @@ country_event = { #Eisenhower elected president
 	title = wcc.25.t
 	desc = wcc.25.d
 	
-	picture = GFX_event_wcc_20
+	picture = GFX_event_wcc_26
 	
 	fire_only_once = yes
 
@@ -1074,7 +1074,7 @@ country_event = { #Bradley elected president
 	title = wcc.26.t
 	desc = wcc.26.d
 	
-	picture = GFX_event_wcc_20
+	picture = GFX_event_wcc_2
 	
 	fire_only_once = yes
 
