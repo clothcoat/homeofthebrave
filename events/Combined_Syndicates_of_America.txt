@@ -8145,7 +8145,7 @@ country_event = { # Technocratic Claims
 	}
 }
 
-country_event = { # Syndicalist GFX_report_event_USA_congress
+country_event = { # Syndicalist Congress
 	id = csa.301
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.301"}
 	title = csa.301.t
@@ -8158,7 +8158,7 @@ country_event = { # Syndicalist GFX_report_event_USA_congress
 
 	option = { # IWW Option
 	name = csa.301.a
-	add_ideas = CSA_iww_GFX_report_event_USA_congress_idea
+	add_ideas = CSA_iww_congress_idea
 	modify_country_flag = {
 	flag = CSA_iww_power
 	value = 2
@@ -8166,7 +8166,7 @@ country_event = { # Syndicalist GFX_report_event_USA_congress
 	}
 	option = { # De Leonist Option
 	name = csa.301.b
-	add_ideas = CSA_de_leonist_GFX_report_event_USA_congress_idea
+	add_ideas = CSA_de_leonist_congress_idea
 	modify_country_flag = {
 	flag = CSA_cio_power
 	value = 2
@@ -8178,7 +8178,7 @@ country_event = { # Syndicalist GFX_report_event_USA_congress
 	}
 	option = { # Anarchist Option
 	name = csa.301.c
-	add_ideas = CSA_ultra_left_GFX_report_event_USA_congress
+	add_ideas = CSA_ultra_left_congress
 	modify_country_flag = {
 	flag = CSA_radical_power
 	value = 2
