@@ -1980,7 +1980,6 @@ focus_tree = {
 				id = csa.304
 				days = 1
 			}
-			add_ideas = CSA_general_defense_comitte_idea
 			add_political_power = 25
 			add_war_support = 0.05
 			add_equipment_to_stockpile = {
@@ -2482,7 +2481,27 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_empower_militias"
-			add_ideas = CSA_red_militias_idea
+			if = {
+				limit = { has_idea = CSA_democratic_military_idea }
+				swap_ideas = {
+					remove_idea = CSA_deocratic_military_idea
+					add_idea = CSA_red_militias_idea
+				}
+			}
+			else_if = {
+				limit = { has_idea = CSA_republican_military_idea }
+				swap_ideas = {
+					remove_idea = CSA_republican_military_idea
+					add_idea = CSA_red_militias_idea
+				}
+			}
+			else_if = {
+				limit = { has_idea = CSA_militia_military_idea }
+				swap_ideas = {
+					remove_idea = CSA_militia_military_idea
+					add_idea = CSA_red_militias_idea
+				}
+			}
 			add_manpower = 6000
 			add_war_support = 0.1
 			add_political_power = 45

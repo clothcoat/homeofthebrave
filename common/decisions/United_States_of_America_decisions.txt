@@ -775,6 +775,9 @@ USA_american_imperialism = {
 					has_war_together_with = ROOT
 					is_in_faction_with = ROOT
 					is_subject_of = ROOT
+					country_exists = COR
+					country_exists = CSA
+					country_exists = TEX
 				}
 			}
 		}
@@ -857,7 +860,7 @@ USA_american_imperialism = {
 		}
 
 		visible = {
-			has_completed_focus = USA_rightful_domain
+			has_completed_focus = USA_western_dominance
 			NOT = {
 				country_exists = "PHI"
 				owns_state = 327
