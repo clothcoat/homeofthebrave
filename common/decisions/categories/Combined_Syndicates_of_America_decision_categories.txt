@@ -6,6 +6,7 @@ CSA_international_decisions = {
 CSA_expanding_the_revolution_decisions = {
 	icon = ger_military_buildup
 	allowed = {	tag = CSA }
+	visible = { has_completed_focus = CSA_look_to_the_south }
 }
 
 CSA_deal_with_terrorists_decisions = {
