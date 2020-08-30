@@ -3524,6 +3524,8 @@ country_event = { # Long's Inaugural Address
 	picture = GFX_report_event_USA_Inauguration
 
 	is_triggered_only = yes
+	
+	fire_only_once = yes
 
 	option = {
 		name = ustates.52.a
@@ -3547,6 +3549,8 @@ country_event = { # Long's Agricultural Reforms
 	trigger = {
 		NOT = { has_country_flag = USA_macarthur_coup }
 	}
+	
+	fire_only_once = yes
 
 	option = {
 		name = ustates.53.a
@@ -3569,6 +3573,8 @@ country_event = { # Assembling the Cabinet
 	trigger = {
 		NOT = { has_country_flag = USA_macarthur_coup }
 	}
+	
+	fire_only_once = yes
 
 	option = { #Lean Towards Conservative Appointees
 		name = ustates.54.a
