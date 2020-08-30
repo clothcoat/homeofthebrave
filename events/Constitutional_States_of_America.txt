@@ -405,6 +405,7 @@ country_event = { # Murray steps down!
 			name = COR_national_corporatism_paternal_autocrat }
 		hidden_effect = {
 			country_event = { id = constate.7 days = 13 }
+			remove_all_ministers = yes
 			add_ideas = COR_Henry_Ford_hog_pau
 			add_ideas = COR_George_Sylvester_Viereck_for_pau
 			add_ideas = COR_Fred_Chase_Koch_eco_ade
@@ -1391,6 +1392,7 @@ country_event = { # Meeting Place bombed
 				ideology = national_populist_subtype
 				traits = { terror_of_the_midwest }
 			}
+			remove_all_ministers = yes
 			add_ideas = COR_Edward_L_Jackson_hog_npo
 			add_ideas = COR_Arthur_Raymond_Robinson_for_npo
 			add_ideas = COR_Robert_Rice_Reynolds_eco_npo
@@ -1443,6 +1445,7 @@ country_event = { # Patton
 				ideology = paternal_autocrat_subtype
 				traits = { blood_and_guts }
 			}
+			remove_all_ministers = yes
 			add_ideas = COR_John_Elliott_Rankin_hog_pau
 			add_ideas = COR_William_Bell_Riley_for_pau
 			add_ideas = COR_John_Geraerdt_Crommelin_Jr_eco_npo
@@ -1655,6 +1658,7 @@ country_event = { # Evans Elected
 				ideology = national_populist_subtype
 				traits = { power_hungry }
 			}
+			remove_all_ministers = yes
 			add_ideas = COR_Hiram_Wesley_Evans_hog_npo
 			add_ideas = COR_William_Bell_Riley_for_pau
 			add_ideas = COR_Gerald_Burton_Winrod_eco_npo
@@ -2427,6 +2431,7 @@ country_event = { # Armstrong's Victory
 				ideology = national_populist_subtype
 				traits = { the_prophet }
 			}
+			remove_all_ministers = yes
 			add_ideas = COR_Herbert_W_Armstrong_hog_npo
 			add_ideas = COR_Alma_Bridwell_White_for_npo
 			add_ideas = COR_Arthur_Kent_White_eco_npo
@@ -2544,6 +2549,7 @@ country_event = { # Armstrong Dead
 	kill_ideology_leader = national_populist
 	set_country_flag = Herbert_W_Armstrong_dead
 	set_country_flag = young_klan_victory
+	remove_all_ministers = yes
 	add_ideas = COR_Richard_Girnt_Butler_hog_npo
 	add_ideas = COR_William_Bell_Riley_for_pau
 	add_ideas = COR_George_W_Christians_eco_npo

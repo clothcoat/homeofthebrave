@@ -2658,6 +2658,12 @@ focus_tree = {
 			id = constate.2501
 			days = 20
 			}
+			if = {	
+				limit = { has_country_leader = { ruling_only = yes name = "Hiram Wesley Evans" } }
+					set_country_leader_portrait = {
+						portrait = "gfx/leaders/COR/Hiram_Wesley_Evans_Robes.tga"
+					}
+				}
 			}
 		}
 	}
