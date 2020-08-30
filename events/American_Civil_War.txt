@@ -10788,8 +10788,11 @@ country_event = { # Deadline Running Out
 
 	is_triggered_only = yes
 
+	fire_only_once = yes
+	
 	trigger = {
 		NOT = { has_global_flag = USA_civil_war_begun_flag }
+		has_war = no
 	}
 
 	option = {
