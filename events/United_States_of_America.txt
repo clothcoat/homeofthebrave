@@ -12587,17 +12587,6 @@ country_event = { # Alaska has been returned to us
 				add_state_core = 463
 			}
 		}
-		if = {
-			limit = {
-				FROM = {
-					owns_state = 650
-				}
-			}
-			ROOT = {
-				transfer_state = 650
-				add_state_core = 650
-			}
-		}
 	}
 }
 
