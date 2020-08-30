@@ -2324,9 +2324,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 50
 		}
-		bypass = {
-			NOT = { has_idea = CSA_general_defense_comitte_idea }
-		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_strategic_services"
 				swap_ideas = {
@@ -2385,9 +2382,6 @@ focus_tree = {
 		y = 5
 		ai_will_do = {
 			factor = 50
-		}
-		bypass = {
-			NOT = { has_idea = CSA_general_defense_comitte_idea }
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_strategic_services"

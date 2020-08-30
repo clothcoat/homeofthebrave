@@ -8617,7 +8617,7 @@ news_event = { #The birth of the democratic CSA
 	option = {
 		name = worldnews.205.b
 		trigger = {
-			not_has_socialist_government = yes
+			has_socialist_government = no
 		}
 	}
 }
@@ -8652,7 +8652,7 @@ news_event = { #William Zebulon Foster is NMBed President
 	option = {
 		name = worldnews.206.b
 		trigger = {
-			not_has_socialist_government = yes
+			has_socialist_government = no
 		}
 	}
 }
@@ -8687,7 +8687,7 @@ news_event = { #Earl Browder is Named President
 	option = {
 		name = worldnews.207.b
 		trigger = {
-			not_has_socialist_government = yes
+			has_socialist_government = no
 		}
 	}
 }
@@ -8722,7 +8722,7 @@ news_event = { #General Smedley Butler overthrows the Centralist Clique
 	option = {
 		name = worldnews.208.b
 		trigger = {
-			not_has_socialist_government = yes
+			has_socialist_government = no
 		}
 	}
 }

@@ -8730,6 +8730,32 @@ country_event = { # Gangsters Miss Dewey By A Hair
 	}
 }
 
+country_event = { # Gangsters Miss Dewey By A Hair
+	id = ustates.2000
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.2000"}
+	title = ustates.2000.t
+	desc = ustates.2000.d
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = USA
+		has_global_flag = USA_civil_war_avoided_flag
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+
+	option = { # Send the FBI
+		name = ustates.2000.a
+		add_political_power = -30
+	}
+	option = { # Ignore them for now
+		name = ustates.2000.b
+		add_stability = -0.05
+	}
+}
 
 ### 1940 Elections and Primaries ###
 country_event = { # 1940 Progressive Primary
