@@ -4466,7 +4466,7 @@ focus_tree = {
 			hidden_effect = {
 			if = {
 			limit = { NOT = {
-			has_country_flag = USA_civil_war_avoided_flag }
+			has_global_flag = USA_civil_war_avoided_flag }
 				}
 			country_event = { id = ustates.6902 days = 4 }
 			set_country_flag = USA_compromise_failed
