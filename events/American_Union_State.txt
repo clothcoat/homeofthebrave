@@ -1788,7 +1788,7 @@ country_event = { #Fate of Standard Oil
 	}
 }
 
-country_event = { #Power of GFX_report_event_USA_congress
+country_event = { #Power of Congress
 	id = unionstate.46
 	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.46"}
 	title = unionstate.46.t

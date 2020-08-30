@@ -4183,14 +4183,20 @@ focus_tree = {
 		cost = 6.00
 		available = {
 			OR = {
-				has_country_flag = macarthur_gives_up_power
-				has_country_flag = CAL_classical_liberal_mandate_flag
+				has_government = social_conservative
+				has_government = market_liberal
+				has_government = social_liberal
+				has_government = social_democrat
+				has_government = radical_socialist
 			}
 		}
 		bypass = {
 			OR = {
-				has_country_flag = macarthur_gives_up_power
-				has_country_flag = CAL_classical_liberal_mandate_flag
+				has_government = social_conservative
+				has_government = market_liberal
+				has_government = social_liberal
+				has_government = social_democrat
+				has_government = radical_socialist
 			}
 		}
 		prerequisite = {
