@@ -2120,6 +2120,7 @@ USA_political_recovery = {
 	else_if = {
 		limit = { has_idea = USA_civil_war_political_aftermath_idea6 }
 			remove_ideas = USA_civil_war_political_aftermath_idea6
+		}
 	}
 }
 
@@ -2155,6 +2156,7 @@ USA_depression_recovery = {
 	else_if = {
 		limit = { has_idea = USA_civil_war_war_aftermath_idea5 }
 			remove_ideas = USA_civil_war_war_aftermath_idea5
+		}
 	}
 }
 
@@ -2266,7 +2268,10 @@ CSA_increase_recovery = {
 	else_if = {
 		limit = { has_idea = USA_civil_war_war_aftermath_idea5 }
 			remove_ideas = USA_civil_war_war_aftermath_idea5
+		}
 	}
+}
+
 CSA_increase_political_recovery = {
 	if = {
 		limit = { has_idea = USA_civil_war_political_aftermath_idea }
@@ -2306,6 +2311,7 @@ CSA_increase_political_recovery = {
 	else_if = {
 		limit = { has_idea = USA_civil_war_political_aftermath_idea6 }
 			remove_ideas = USA_civil_war_political_aftermath_idea6
+		}
 	}
 }
 
@@ -2341,8 +2347,10 @@ COR_increase_recovery = {
 	else_if = {
 		limit = { has_idea = USA_civil_war_war_aftermath_idea5 }
 			remove_ideas = USA_civil_war_war_aftermath_idea5
+		}
 	}
 }
+
 COR_increase_political_recovery = {
 	if = {
 		limit = { has_idea = USA_civil_war_political_aftermath_idea }
@@ -2382,9 +2390,9 @@ COR_increase_political_recovery = {
 	else_if = {
 		limit = { has_idea = USA_civil_war_political_aftermath_idea6 }
 			remove_ideas = USA_civil_war_political_aftermath_idea6
+		}
 	}
 }
-
 
 COR_american_empire_strenghtens = {
 	if = {
