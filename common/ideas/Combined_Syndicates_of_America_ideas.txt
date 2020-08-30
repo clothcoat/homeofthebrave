@@ -1861,17 +1861,6 @@ ideas = {
 				planning_speed = 0.05
 			}
 		}
-		CSA_on_the_beach_idea = {
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_on_the_beach_idea"}
-			allowed = { always = no }
-			removal_cost = -1
-			picture = escort_effort_focus
-			modifier = {
-				amphibious_invasion = 0.25
-				invasion_preparation = -0.25
-				special_forces_min = 10
-			}
-		}
 		CSA_from_the_sky_idea = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_from_the_sky_idea"}
 			allowed = { always = no }
@@ -2416,16 +2405,6 @@ ideas = {
 			}
 		}
 		### Navy ideas ### 
-		CSA_liberty_ships_ideas = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CSA_liberty_ships_ideas"}
-			picture = liberty_ships_focus
-			equipment_bonus = {
-				convoy = {
-					build_cost_ic = -0.25
-					instant = yes
-				}
-			}
-		}
 		CSA_revolutionary_naval_industry_1 = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CSA_revolutionary_naval_industry_1"}
 			picture = generic_the_london_naval_treaty
