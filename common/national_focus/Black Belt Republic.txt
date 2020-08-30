@@ -7095,7 +7095,6 @@ focus_tree = {
 		TEX = { exists = yes }
 		CSA = { exists = yes }
 		CAL = { exists = yes }
-		NEE = { exists = yes }
 			}
 		}
 		prerequisite = {
@@ -7121,15 +7120,6 @@ focus_tree = {
 			if = {
 			limit = { CSA = { exists = yes } }
 			CSA = { 
-			country_event = { 
-				id = amcivwar.505
-				days = 2
-					}
-				}
-			}
-			if = {
-			limit = { NEE = { exists = yes } }
-			NEE = { 
 			country_event = { 
 				id = amcivwar.505
 				days = 2

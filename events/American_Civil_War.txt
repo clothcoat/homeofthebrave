@@ -489,7 +489,7 @@ country_event = { # BBR released
 		OR = {
 		has_country_flag = {
 			flag = ACW_black_nationalist_resistance
-			value > 6
+			value > 15
 			}
 		has_completed_focus = COR_black_laws
 		has_country_flag = BBR_black_uprising
@@ -10980,6 +10980,39 @@ country_event = {
 		event_target:restored_core = {
 			remove_claim_by = ROOT
 			add_core_of = ROOT
+		}
+	}
+}
+
+country_event = { ### Surrender Checks ###
+	id = amcivwar.505
+	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.505"}
+	title = amcivwar.505.t
+	desc = amcivwar.505.d
+	picture = GFX_report_event_USA_american_brigade
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = amcivwar.505.a
+		add_political_power = -60
+		add_stability = -0.03
+		add_command_power = -5
+		annex_country = {
+			target = BBR
+			transfer_troops = no
+			}
+		decrease_ruling_party_popularity_by_5 = yes
+		add_manpower = -2000
+	}
+	option = {
+		name = amcivwar.505.b
+		add_war_support = 0.02
+		declare_war_on = {
+		target = BBR
+		type = annex_everything
 		}
 	}
 }

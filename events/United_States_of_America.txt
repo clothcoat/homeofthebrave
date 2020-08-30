@@ -13277,6 +13277,40 @@ country_event = { # Reich's Failed Explosion.
 	}
 }
 
+country_event = { #The Patriot Party
+	id = ustates.312
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.312"}
+	title = ustates.312.t
+	desc = ustates.312.d
+	picture = GFX_report_event_USA_congress
+
+	is_triggered_only = yes
+
+	option = { # Found the Party
+		name = ustates.312.a
+		add_political_power = -50
+		set_party_name = {
+				ideology = authoritarian_democrat
+				long_name = USA_authoritarian_democrat_patriots_party_long
+				name = USA_authoritarian_democrat_patriots_party
+			}
+		set_party_name = {
+				ideology = paternal_autocrat
+				long_name = USA_paternal_autocrat_patriots_party_long
+				name = USA_paternal_autocrat_patriots_party
+			}
+		set_party_name = {
+				ideology = national_populist
+				long_name = USA_national_populist_patriots_party_long
+				name = USA_national_populist_patriots_party
+			}
+	}
+	option = { # A Party is not needed
+		name = ustates.312.a
+		add_political_power = -50
+	}
+}
+
 ### New Pre-ACW Events ###
 
 # Reintroducing the Garner-Wagner Bill

@@ -1088,3 +1088,142 @@ country_event = { #Bradley elected president
 		add_war_support = 0.02
 	}
 }
+
+country_event = { #MacArthur Addresses Congress
+	id = wcc.27
+	immediate = {log = "[GetDateText]: [Root.GetName]: event wcc.27"}
+	title = wcc.27.t
+	desc = wcc.27.d
+	
+	picture = GFX_event_wcc_2
+	
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #Victory at last
+		name = wcc.27.a
+		add_popularity = { ideology = national_populist popularity = 0.05 }
+		add_political_power = 80
+		add_stability = 0.05
+		add_war_support = 0.05
+		add_manpower = 12000
+	}
+}
+
+country_event = { #Alvin Owlsey appointed Legion Chief
+	id = wcc.28
+	immediate = {log = "[GetDateText]: [Root.GetName]: event wcc.28"}
+	title = wcc.28.t
+	desc = wcc.28.d
+	
+	picture = GFX_event_wcc_2
+	
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #Wonderful
+		name = wcc.28.a
+		add_popularity = { ideology = national_populist popularity = 0.02 }
+		add_political_power = 20
+		add_war_support = 0.03
+	}
+}
+
+country_event = { #The Blue Terror
+	id = wcc.29
+	immediate = {log = "[GetDateText]: [Root.GetName]: event wcc.29"}
+	title = wcc.29.t
+	desc = wcc.29.d
+	
+	picture = GFX_event_wcc_2
+	
+	fire_only_once = yes
+
+	trigger = {
+	has_completed_focus = WCC_mobile_state
+	owns_state = 395
+	owns_state = 365
+	CSA = {
+	exists = no
+		}
+	TEX = {
+	exists = no
+		}
+	}
+	
+	mean_time_to_happen = {
+	days = 50
+	}
+
+	option = { #Lean towards direct control
+		name = wcc.29.a
+		add_political_power = 50
+		add_stability = -0.05
+		add_manpower = 15000
+	}
+	option = { #Lean towards autonomy
+		name = wcc.29.b
+		add_political_power = -30
+		add_stability = 0.05
+	}
+}
+
+country_event = { #Fate of DuPont
+	id = wcc.30
+	immediate = {log = "[GetDateText]: [Root.GetName]: event wcc.30"}
+	title = wcc.30.t
+	desc = wcc.30.d
+	
+	picture = GFX_event_wcc_2
+	
+	fire_only_once = yes
+
+	trigger = {
+	has_completed_focus = WCC_address_congress
+	owns_state = 357
+	}
+	
+	mean_time_to_happen = {
+	days = 100
+	}
+
+	option = { #Nationalize them
+		name = wcc.30.a
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.04 }
+		add_political_power = 30
+		add_stability = 0.03
+		add_war_support = 0.02
+		add_manpower = -2000
+		357 = {
+				limit = {
+					is_core_of = WCC
+					is_controlled_by = WCC
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+	}
+	option = { #Conditional Amnesty
+		name = wcc.30.b
+		add_popularity = { ideology = national_populist popularity = 0.02 }
+		add_political_power = -25
+		add_stability = -0.02
+		add_war_support = 0.02
+		add_manpower = 5000
+		357 = {
+				limit = {
+					is_core_of = WCC
+					is_controlled_by = WCC
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+		}
+	}
+}

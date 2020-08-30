@@ -1497,7 +1497,13 @@ focus_tree = {
 	focus = {# Address Congress
 		id = WCC_address_congress
 		icon = GFX_goal_USA_eagle
-		cost = 6.00
+		cost = 5.00
+		select_effect = {
+		country_event = {
+			id = wcc.27
+			days = 25
+			}
+		}
 		prerequisite = {
 			focus = WCC_mobile_state
 		}
@@ -1518,6 +1524,10 @@ focus_tree = {
 			add_war_support = 0.05
 			hidden_effect = {
 				remove_idea = USA_civil_war_political_aftermath_idea
+				country_event = {
+				id = wcc.28
+				days = 60
+				}
 			}
 		}
 	}
