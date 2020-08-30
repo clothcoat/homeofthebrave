@@ -2265,11 +2265,6 @@ CSA_increase_recovery = {
 			add_idea = USA_civil_war_war_aftermath_idea5
 		}
 	}
-	else_if = {
-		limit = { has_idea = USA_civil_war_war_aftermath_idea5 }
-			remove_ideas = USA_civil_war_war_aftermath_idea5
-		}
-	}
 }
 
 CSA_increase_political_recovery = {
