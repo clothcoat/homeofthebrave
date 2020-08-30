@@ -4748,7 +4748,7 @@ country_event = { # The Compromise Succeeds
 		add_political_power = 100
 		set_global_flag = USA_civil_war_avoided_flag
 		add_country_leader_trait = savior_of_america
-		remove_ideas = USA_syndicalist_strikes_idea
+		remove_ideas = USA_syndicalist_strike_idea
 	}
 }
 
@@ -8911,7 +8911,7 @@ country_event = { # 1940 Republican Primary
 			create_country_leader = {
 					name = "Robert Taft"
 					desc = "POLITICS_Robert_Taft_DESC"
-					picture = "gfx/leaders/CAL/CAL_R_A_Taft.tga"
+					picture = "gfx/leaders/PSA/CAL_R_A_Taft.tga"
 					expire = "1965.1.1"
 					ideology = market_liberal_subtype
 					traits = { staunch_constitutionalist }
@@ -12585,6 +12585,17 @@ country_event = { # Alaska has been returned to us
 			ROOT = {
 				transfer_state = 463
 				add_state_core = 463
+			}
+		}
+		if = {
+			limit = {
+				FROM = {
+					owns_state = 650
+				}
+			}
+			ROOT = {
+				transfer_state = 650
+				add_state_core = 650
 			}
 		}
 	}
