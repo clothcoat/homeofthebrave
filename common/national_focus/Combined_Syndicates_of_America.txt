@@ -6449,13 +6449,242 @@ focus_tree = {
 			}
 		}
 	}
+	focus = {# Protecting Columbia
+		id = CSA_the_dust_settles
+		icon = GFX_goal_generic_isolation
+		cost = 5
+		prerequisite = {
+			focus = CSA_IWW_production
+			focus = CSA_modernized_army
+			focus = CSA_revolutionary_army
+			focus = CSA_red_republican_army
+		}
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				NOT = { has_global_flag = CAL_civil_war_over_flag }
+			}
+		}
+		available = {
+			has_global_flag = USA_civil_war_over_flag
+			NOT = {
+				country_exists = CAL
+				country_exists = USA
+				country_exists = TEX
+			}
+		}
+		x = 0
+		y = 6
+		relative_position_id = CSA_second_continental_army
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_protecting_Columbia"
+			add_tech_bonus = {
+				name = doctrine_bonus
+				bonus = 1
+				uses = 2
+				category = land_doctrine
+			}
+			if = {
+				limit = { has_idea = CSA_war_measures }
+				remove_ideas = CSA_war_measures
+			}
+			add_stability = 0.15
+			add_political_power = 100
+		}
+	}
+	focus = {# Military Research
+		id = CSA_military_research
+		icon = GFX_goal_double_research
+		cost = 5
+		prerequisite = {
+			focus = CSA_the_dust_settles
+		}
+		x = -1
+		y = 1
+		relative_position_id = CSA_the_dust_settles
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+			modifier = {
+				factor = 2
+				NOT = { has_global_flag = CAL_civil_war_over_flag }
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_military_research"
+			country_event = { id = ustates.300 days = 1 }
+		}
+	}
+	
+	focus = {# Weapon Designs
+		id = CSA_weapon_designs
+		icon = GFX_goal_national_arsenal
+		cost = 5
+		prerequisite = {
+			focus = CSA_military_research
+		}
+		x = 0
+		y = 1
+		relative_position_id = CSA_military_research
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				NOT = { has_global_flag = CAL_civil_war_over_flag }
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_weapon_designs"
+			add_tech_bonus = {
+				name = infantry_bonus
+				bonus = 1
+				uses = 2
+				category = infantry_weapons
+			}
+		}
+
+	}
+	focus = { # Bring the 'Complex West
+		id = CSA_bring_the_complex_west
+		icon = GFX_goal_Focus_Military_Mobilisation
+		cost = 5
+		prerequisite = {
+			focus = CSA_the_dust_settles
+		}
+		x = 1
+		y = 1
+		relative_position_id = CSA_the_dust_settles
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_bring_the_complex_west"
+			random_owned_state = {
+				limit = {
+					is_core_of = TEX
+					is_controlled_by = TEX
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = { # Columbia Needs You
+		id = CSA_Columbia_needs_you
+		icon = GFX_goal_COS_American_Staff
+		cost = 5
+		prerequisite = {
+			focus = CSA_bring_the_complex_west
+		}
+		x = 1
+		y = 2
+		relative_position_id = CSA_the_dust_settles
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				NOT = { has_global_flag = CAL_civil_war_over_flag }
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_Columbia_needs_you"
+			add_tech_bonus = {
+				name = doctrine_bonus
+				bonus = 1
+				uses = 2
+				category = land_doctrine
+			}
+		}
+	}
+	focus = {# GI Bill
+		id = CSA_gi_bill
+		icon = GFX_goal_American_Service
+		cost = 5
+		prerequisite = {
+			focus = CSA_military_research
+		}
+		x = -2
+		y = 1
+		relative_position_id = CSA_military_research
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				NOT = { has_global_flag = CAL_civil_war_over_flag }
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_gi_bill"
+			add_research_slot = 1
+		}
+
+	}
+	focus = {# War Bonds
+		id = CSA_war_bonds
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 5
+		prerequisite = {
+			focus = CSA_bring_the_complex_west
+		}
+		x = 2
+		y = 1
+		relative_position_id = CSA_bring_the_complex_west
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				NOT = { has_global_flag = CAL_civil_war_over_flag }
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_war_bonds"
+			random_owned_state = {
+				limit = {
+					is_core_of = TEX
+					is_controlled_by = TEX
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	##Navy###
 	focus = {
 		id = CSA_second_continental_navy
 		icon = GFX_goal_CSA_continental_navy
 		available = { any_owned_state = { is_coastal = yes} }
 		relative_position_id = CSA_the_long_haul
-		x = 59
-		y = 6
+		x = 55
+		y = 7
 		cost = 6
 		ai_will_do = {
 			factor = 4
@@ -6505,9 +6734,6 @@ focus_tree = {
 	focus = {
 		id = CSA_new_american_dockyards
 		icon = GFX_goal_generic_shipyard
-		prerequisite = {
-			focus = CSA_the_dust_settles
-		}
 		prerequisite = {
 			focus = CSA_revolutionary_naval_industry
 		}
@@ -6589,9 +6815,6 @@ focus_tree = {
 		id = CSA_new_naval_plan
 		icon = GFX_goal_generic_sea_focused_navy2
 		prerequisite = {
-			focus = CSA_the_dust_settles
-		}
-		prerequisite = {
 			focus = CSA_revolutionary_naval_industry
 		}
 		mutually_exclusive = {
@@ -6639,9 +6862,6 @@ focus_tree = {
 	focus = {
 		id = CSA_american_peoples_navy
 		icon = GFX_goal_navy_hat_ships
-		prerequisite = {
-			focus = CSA_the_dust_settles
-		}
 		prerequisite = {
 			focus = CSA_revolutionary_naval_industry
 		}
@@ -6920,8 +7140,8 @@ focus_tree = {
 		id = CSA_red_air_force
 		icon = GFX_goal_CSA_continental_airforce
 		cost = 5
-		x = 53
-		y = 6
+		x = 48
+		y = 7
 		ai_will_do = {
 			factor = 10
 			modifier = {

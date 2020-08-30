@@ -4214,6 +4214,242 @@ unlock_decision_category_tooltip = USA_reconstruction_decisions
 			}
 		}
 	}
+	focus = {# Protecting Columbia
+		id = TEX_protecting_Columbia
+		icon = GFX_goal_america_fortress
+		cost = 5
+		prerequisite = {
+			focus = TEX_aggressive_tactics
+			focus = TEX_faith_and_fire
+			focus = TEX_focus_on_concentration
+			focus = TEX_combined_arms_doctrine
+		}
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				NOT = { has_global_flag = CAL_civil_war_over_flag }
+			}
+		}
+		available = {
+			has_global_flag = USA_civil_war_over_flag
+			NOT = {
+				country_exists = CAL
+				country_exists = CSA
+				country_exists = USA
+			}
+		}
+		x = 0
+		y = 8
+		relative_position_id = TEX_From_a_Militia_to_a_force
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_protecting_Columbia"
+			add_tech_bonus = {
+				name = doctrine_bonus
+				bonus = 1
+				uses = 2
+				category = land_doctrine
+			}
+			if = {
+				limit = { has_idea = CAL_Marshall_plan_idea_5 }
+				swap_ideas = {
+					remove_idea = CAL_Marshall_plan_idea_5
+					add_idea = CAL_Marshall_plan_idea_6
+				}
+			}
+			hidden_effect = {
+				#country_event = { id = ustates.627 days = 70 }#Pentagon Construction
+				country_event = { id = ustates.652 days = 35 }#AUS Trials
+				country_event = { id = ustates.650 days = 45 }#CAL Trials
+				country_event = { id = ustates.6520 days = 55 }#CAR Trials
+			}
+			custom_effect_tooltip = USA_trials_will_begin
+		}
+	}
+	focus = {# Military Research
+		id = TEX_military_research
+		icon = GFX_goal_double_research
+		cost = 5
+		prerequisite = {
+			focus = TEX_protecting_Columbia
+		}
+		x = -1
+		y = 1
+		relative_position_id = TEX_protecting_Columbia
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+			modifier = {
+				factor = 2
+				NOT = { has_global_flag = CAL_civil_war_over_flag }
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_military_research"
+			country_event = { id = ustates.300 days = 1 }
+		}
+	}
+	
+	focus = {# Weapon Designs
+		id = TEX_weapon_designs
+		icon = GFX_goal_national_arsenal
+		cost = 5
+		prerequisite = {
+			focus = TEX_military_research
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_military_research
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				NOT = { has_global_flag = CAL_civil_war_over_flag }
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_weapon_designs"
+			add_tech_bonus = {
+				name = infantry_bonus
+				bonus = 1
+				uses = 2
+				category = infantry_weapons
+			}
+		}
+
+	}
+	focus = { # Bring the 'Complex West
+		id = TEX_bring_the_complex_west
+		icon = GFX_goal_Focus_Military_Mobilisation
+		cost = 5
+		prerequisite = {
+			focus = TEX_protecting_Columbia
+		}
+		x = 1
+		y = 1
+		relative_position_id = TEX_protecting_Columbia
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_bring_the_complex_west"
+			random_owned_state = {
+				limit = {
+					is_core_of = TEX
+					is_controlled_by = TEX
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = { # Columbia Needs You
+		id = TEX_Columbia_needs_you
+		icon = GFX_goal_COS_American_Staff
+		cost = 5
+		prerequisite = {
+			focus = TEX_bring_the_complex_west
+		}
+		x = 1
+		y = 2
+		relative_position_id = TEX_protecting_Columbia
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				NOT = { has_global_flag = CAL_civil_war_over_flag }
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_Columbia_needs_you"
+			add_tech_bonus = {
+				name = doctrine_bonus
+				bonus = 1
+				uses = 2
+				category = land_doctrine
+			}
+		}
+	}
+	focus = {# GI Bill
+		id = TEX_gi_bill
+		icon = GFX_goal_American_Service
+		cost = 5
+		prerequisite = {
+			focus = TEX_military_research
+		}
+		x = -2
+		y = 1
+		relative_position_id = TEX_military_research
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				NOT = { has_global_flag = CAL_civil_war_over_flag }
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_gi_bill"
+			add_research_slot = 1
+		}
+
+	}
+	focus = {# War Bonds
+		id = TEX_war_bonds
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 5
+		prerequisite = {
+			focus = TEX_bring_the_complex_west
+		}
+		x = 2
+		y = 1
+		relative_position_id = TEX_bring_the_complex_west
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				NOT = { has_global_flag = CAL_civil_war_over_flag }
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_war_bonds"
+			random_owned_state = {
+				limit = {
+					is_core_of = TEX
+					is_controlled_by = TEX
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
 	focus = {
 		id = TEX_Terrible_Terry
 		icon = GFX_goal_TEX_terrible_terry
