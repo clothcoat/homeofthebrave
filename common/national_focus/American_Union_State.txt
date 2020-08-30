@@ -3591,6 +3591,12 @@ unlock_decision_category_tooltip = USA_reconstruction_decisions
 			log = "[GetDateText]: [Root.GetName]: Focus TEX_harsh_reconstruction"
 			add_political_power = 100
 			add_manpower = -3000
+			
+			hidden_effect = {
+			#country_event = { id = ustates.627 days = 70 }#Pentagon Construction
+			country_event = { id = ustates.651 days = 35 }#AUS Trials
+			country_event = { id = ustates.650 days = 45 }#CAL Trials
+			}
 		}
 	}
 
@@ -3614,6 +3620,11 @@ unlock_decision_category_tooltip = USA_reconstruction_decisions
 			log = "[GetDateText]: [Root.GetName]: Focus TEX_reconciliation"
 			add_stability = 0.1
 			add_political_power = -25
+			hidden_effect = {
+			#country_event = { id = ustates.627 days = 70 }#Pentagon Construction
+			country_event = { id = ustates.651 days = 35 }#AUS Trials
+			country_event = { id = ustates.650 days = 45 }#CAL Trials
+			}
 		}
 	}
 	
@@ -4872,13 +4883,6 @@ unlock_decision_category_tooltip = USA_reconstruction_decisions
 				amount = 10
 				producer = BRA
 			}
-			hidden_effect = {
-				#country_event = { id = ustates.627 days = 70 }#Pentagon Construction
-				country_event = { id = ustates.652 days = 35 }#PSA Trials
-				country_event = { id = ustates.650 days = 45 }#USA Trials
-				country_event = { id = ustates.6520 days = 55 }#CAR Trials
-			}
-			custom_effect_tooltip = USA_trials_will_begin
 		}
 	}
 	focus = {
@@ -5228,13 +5232,6 @@ unlock_decision_category_tooltip = USA_reconstruction_decisions
 				uses = 1
 				category = artillery
 			}
-			hidden_effect = {
-			#country_event = { id = ustates.627 days = 70 }#Pentagon Construction
-			country_event = { id = ustates.651 days = 35 }#AUS Trials
-			country_event = { id = ustates.650 days = 45 }#CAL Trials
-			country_event = { id = ustates.6520 days = 55 }#CAR Trials
-			}
-			custom_effect_tooltip = USA_trials_will_begin
 		}
 
 	}
