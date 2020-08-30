@@ -6958,6 +6958,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BBR_american_confederation"
+			increase_ruling_party_popularity_by_5 = yes
+			add_political_power = 75
 		}
 	}
 	focus = {# Reclaim the States
@@ -7155,6 +7157,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BBR_a_new_america"
+			add_political_power = 10
 		}
 	}
 	focus = {# Defend the new State
