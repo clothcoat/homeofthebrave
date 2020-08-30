@@ -1496,10 +1496,10 @@ news_event = {
 
 # COR wins ACW
 news_event = {
-	id = worldnews.400
-	immediate = { log = "[GetDateText]: [Root.GetName]: event worldnews.400" }
-	title = worldnews.400.t
-	desc = worldnews.400.d
+	id = worldnews.4000
+	immediate = { log = "[GetDateText]: [Root.GetName]: event worldnews.4000" }
+	title = worldnews.4000.t
+	desc = worldnews.4000.d
 	picture = GFX_news_KKK_victory
 
 	major = yes
@@ -1511,7 +1511,7 @@ news_event = {
 	}
 
 	option = {
-		name = worldnews.400.a
+		name = worldnews.4000.a
 	}
 }
 
