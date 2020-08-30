@@ -1204,13 +1204,12 @@ focus_tree = {
 		id = USA_last_bastion
 		icon = GFX_goal_liberty
 		cost = 5.00
-		available = { has_country_flag = USA_1936_election_occured
+		available = { has_country_flag = USA_had_1936_election
 			OR = {
 				has_global_flag = USA_civil_war_avoided_flag
 				has_global_flag = USA_civil_war_over_flag
 			}
 		}
-		bypass = { has_country_flag = USA_1936_election_occured }
 		x = 70
 		y = 15
 		ai_will_do = {
@@ -3691,7 +3690,6 @@ focus_tree = {
 				has_government = social_conservative
 				has_government = market_liberal
 			}
-			has_idea = CAL_social_gospel_idea3
 		}
 		ai_will_do = {
 			factor = 5
@@ -3753,7 +3751,6 @@ focus_tree = {
 				has_government = social_conservative
 				has_government = market_liberal
 			}
-			has_idea = CAL_social_gospel_idea4
 		}
 		ai_will_do = {
 			factor = 5
