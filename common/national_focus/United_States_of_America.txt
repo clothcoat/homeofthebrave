@@ -1713,9 +1713,9 @@ focus_tree = {
 		}
 	}
 	
-	focus = {# Support Share the Wealth
-		id = USA_support_long
-		icon = GFX_CAL_save_Kingfish
+	focus = {# Fight Crime
+		id = USA_fight_crime
+		icon = GFX_goal_generic_stable_government
 		cost = 5.00
 		prerequisite = {
 			focus = USA_farm_credit_act
@@ -1735,14 +1735,32 @@ focus_tree = {
 		y = 4
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_support_long"
-			add_opinion_modifier = {
-				target = TEX
-				modifier = large_increase
+			random_owned_state = {
+				limit = {
+					is_core_of = USA
+					is_controlled_by = USA
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
 			}
-			set_country_flag = CAL_court_long
-			country_event = { id = pacificstates.400 days = 3
-
+			random_owned_state = {
+				limit = {
+					is_core_of = USA
+					is_controlled_by = USA
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
 			}
+			add_popularity = { ideology = social_democrat popularity = 0.01 }
+			add_manpower = 2000
 		}
 	}
 	
