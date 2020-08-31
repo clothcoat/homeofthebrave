@@ -6229,12 +6229,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 50
 		}
-		select_effect = {
-		add_timed_idea = {
-			idea = BBR_haitian_integration
-			days = 61
-			}
-		}
 		completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BBR_take_haiti"
 		add_state_core = 318
@@ -6772,10 +6766,6 @@ focus_tree = {
 				instant_build = yes
 			}
 			1113 = {
-				limit = {
-					is_core_of = BBR
-					is_controlled_by = BBR
-				}
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = bunker
@@ -6785,10 +6775,6 @@ focus_tree = {
 				}
 			}
 			1113 = {
-				limit = {
-					is_core_of = BBR
-					is_controlled_by = BBR
-				}
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = bunker
@@ -6985,7 +6971,7 @@ focus_tree = {
 			add_manpower = 3000
 			if = {
 			limit = {
-				USA = all_owned_state
+				is_core_of = USA
 				}
 			add_claim_by = BBR
 			}
@@ -7182,7 +7168,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BBR_a_new_america"
-			add_political_power = 10
+			add_political_power = 30
+			add_manpower = 1000
 			set_cosmetic_tag = NEE_america
 		}
 	}
