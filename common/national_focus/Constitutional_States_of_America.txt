@@ -5498,15 +5498,14 @@ focus_tree = {
 				has_war = yes
 			}
 		}
-		add_equipment_to_stockpile = {
-			type = motorized_equipment
-			amount = 50
-			producer = COR
-			}
 		relative_position_id = COR_tank_commission
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_motorize_the_men"
-			country_event = { id = unionstate.500 days = 7 }
+			add_equipment_to_stockpile = {
+			type = motorized_equipment
+			amount = 60
+			producer = COR
+			}
 			if = {
 				limit = {
 					NOT = { 
