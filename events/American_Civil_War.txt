@@ -3503,14 +3503,14 @@ country_event = { # Civil War Begins
 
 	immediate = {
 		USA_civil_war_begins = yes	
-		remove_ideas = USA_great_depression_garner_1
-		remove_ideas = USA_great_depression_garner_2
-		remove_ideas = USA_austerity_garner
-		remove_ideas = USA_black_monday2_garner
 	}
 
 	option = {
 		name = amcivwar.10.a
+		remove_ideas = USA_great_depression_garner_1
+		remove_ideas = USA_great_depression_garner_2
+		remove_ideas = USA_austerity_garner
+		remove_ideas = USA_black_monday2_garner
 	}
 }
 
