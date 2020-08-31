@@ -3332,6 +3332,7 @@ country_event = { # Haywood's Fosterites Retreat
 		has_government = market_liberal
 		has_government = social_democrat
 		}
+		tag = BBR
 	}
 	
 	mean_time_to_happen = {
@@ -3344,4 +3345,35 @@ country_event = { # Haywood's Fosterites Retreat
 	add_stability = 0.02
 	add_popularity = { ideology = totalist popularity = -0.02 }
 	}
+}
+
+country_event = { # New Name
+	id = bbr.57
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event bbr.56"
+		set_cosmetic_tag = BBR
+	}
+	title = bbr.56.t
+	desc = bbr.56.d
+	
+	picture = GFX_report_event_generic_diplomacy1
+	trigger = {
+		has_war = no
+		NOT = {
+			country_exists = COR
+		}
+		OR = {
+			has_government = social_conservative
+			has_government = social_liberal
+			has_government = market_liberal
+			has_government = social_democrat
+			has_government = radical_socialist
+			has_government = syndicalist
+			has_government = authoritarian_democrat
+		}
+	}
+	hidden = yes
+	
+	fire_only_once = yes
+	
 }

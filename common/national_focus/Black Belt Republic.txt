@@ -7148,6 +7148,31 @@ focus_tree = {
 		prerequisite = {
 			focus = BBR_american_federation
 		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = BBR_controls_all_american_states
+				owns_state = 361 #Maryland
+				owns_state = 371 #Louisiana
+				owns_state = 395 #Illinois
+				owns_state = 797 #San Francisco
+				owns_state = 932 #Massachusetts
+				COR = {
+				exists = no
+				}
+				CSA = {
+				exists = no
+				}
+				CAL = {
+				exists = no
+				}
+				USA = {
+				exists = no
+				}
+				TEX = {
+				exists = no
+				}
+			}
+		}
 		relative_position_id = BBR_american_identity
 		cost = 6.00
 		x = 1
@@ -7158,6 +7183,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BBR_a_new_america"
 			add_political_power = 10
+			set_cosmetic_tag = NEE_america
 		}
 	}
 	focus = {# Defend the new State
