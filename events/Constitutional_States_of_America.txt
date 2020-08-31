@@ -122,7 +122,7 @@ country_event = { # White Defense League requests army promotions
 		add_war_support = 0.03
 		set_country_flag = draper_plan_unlocked
 		hidden_effect = {
-			country_event = { id = constate.64 days = 15 }
+			country_event = { id = constate.65 days = 15 }
 		}
 		add_equipment_to_stockpile = {
 			type = infantry_equipment
@@ -3147,6 +3147,10 @@ country_event = { # NDWL Expansion
 			flag = ACW_black_nationalist_resistance
 			value = 1
 			}
+		country_event = {
+		id = constate.66
+		days = 10
+		}
 		}
 	}
 	option = {
@@ -3183,6 +3187,12 @@ country_event = { #Simmons Calls for Convention
 		add_popularity = { ideology = national_populist popularity = 0.05 }
 		add_political_power = -15
 		add_war_support = 0.03
+		hidden_effect = {
+		country_event = {
+		id = constate.67
+		days = 10
+		}
+		}
 	}
 }
 
@@ -3262,6 +3272,12 @@ country_event = { #Black Taxation
 			flag = ACW_black_nationalist_resistance
 			value = 2
 			}
+		}
+		hidden_effect = {
+		country_event = {
+		id = constate.69
+		days = 10
+		}
 		}
 	}
 }
