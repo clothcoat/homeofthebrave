@@ -6525,14 +6525,20 @@ country_event = { # Allied Militias
 	trigger = {
 	has_country_leader = { ruling_only = yes name = "George Norris" }
 	has_completed_focus = USA_war_on_unemployment
+	has_completed_focus = USA_jeffersonian_agrarianism
 	has_country_flag = USA_norris_appeasement
 	}
 
+	mean_time_to_happen = {
+	days = 150
+	}
+	
 	option = { #America Saved
 		name = ustates.1151.a
 		add_popularity = { ideology = social_democrat popularity = 0.02 }
 		add_political_power = 55
 		add_stability = 0.15
+		set_global_flag = USA_civil_war_avoided_flag
 		custom_effect_tooltip = USA_SPA_loses_strength
 		custom_effect_tooltip = USA_AFP_loses_strength
 		hidden_effect = {

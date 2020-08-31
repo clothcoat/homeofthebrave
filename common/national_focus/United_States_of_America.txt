@@ -5511,7 +5511,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_fight_the_debt"
-			custom_effect_tooltip = unlock_decision_tooltip
+			add_stability = 0.05
+			add_political_power = 20
 		}
 	}
 	
