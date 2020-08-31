@@ -4627,10 +4627,10 @@ focus_tree = {
 		icon = GFX_USA_old_guard
 		cost = 6.00
 		available = {
-			OR = {
-				has_country_leader = { ruling_only = yes name = "Alf Landon" }
-				has_country_leader = { ruling_only = yes name = "Charles Curtis" }
-			}
+			has_country_leader = { ruling_only = yes name = "Charles Curtis" }
+		}
+		mutually_exclusive = {
+			focus = USA_new_republicans
 		}
 		prerequisite = {
 			focus = USA_return_to_normalcy
@@ -4749,13 +4749,13 @@ focus_tree = {
 		icon = GFX_USA_new_republicans
 		cost = 6.00
 		available = {
-			OR = {
-				has_country_leader = { ruling_only = yes name = "Alf Landon" }
-				has_country_leader = { ruling_only = yes name = "Charles Curtis" }
-			}
+			has_country_leader = { ruling_only = yes name = "Alf Landon" }
 		}
 		prerequisite = {
 			focus = USA_return_to_normalcy
+		}
+		mutually_exclusive = {
+			focus = USA_curtis_in_charge
 		}
 		relative_position_id = USA_the_republicans
 		x = 2
