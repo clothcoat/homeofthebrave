@@ -959,7 +959,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_austerity"
 			swap_ideas = {
 			remove_idea = USA_black_monday
-			add_idea = USA_black_monday2_garner
+			add_idea = USA_austerity_garner
 			}
 			add_stability = 0.05
 			add_political_power = 20
@@ -1169,6 +1169,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_yay_liquor"
+			swap_ideas = {
+			remove_idea = USA_austerity_garner
+			add_idea = USA_black_monday2_garner
+			}
 			add_political_power = 40
 			add_popularity = { ideology = social_conservative popularity = 0.03 }
 		}
@@ -1197,6 +1201,8 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_sovereignity_of_legislature"
 			add_political_power = 50
 			add_popularity = { ideology = social_conservative popularity = 0.05 }
+			remove_ideas = USA_great_depression_garner_2
+			remove_ideas = USA_black_monday2_garner
 			remove_ideas = USA_political_crisis
 		}
 	}
