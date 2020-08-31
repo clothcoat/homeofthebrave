@@ -538,6 +538,9 @@ focus_tree = {
 		cost = 1.00
 		available = {
 			has_government = totalist
+			NOT = {
+			has_country_leader = { ruling_only = yes name = "Duse Muhammad" }
+			}
 		}
 		x = 13
 		y = 0
