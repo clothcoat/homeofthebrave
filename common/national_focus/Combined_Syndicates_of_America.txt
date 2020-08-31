@@ -141,6 +141,12 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_federalism"
 			add_stability = 0.03
+			hidden_effect = {
+			country_event = {
+			id = csa.328
+			days = 20
+			}
+			}
 		}
 	}
 	
@@ -242,6 +248,12 @@ focus_tree = {
 			add_popularity = { ideology = syndicalist popularity = -0.02 }
 			add_stability = 0.08
 			add_manpower = 4500
+			hidden_effect = {
+			country_event = {
+			id = csa.327
+			days = 10
+			}
+			}
 		}
 	}
 	
@@ -348,6 +360,12 @@ focus_tree = {
 				uses = 2
 				category = industry
 			}
+			hidden_effect = {
+			country_event = {
+			id = csa.3270
+			days = 15
+			}
+			}
 		}
 	}
 	
@@ -432,6 +450,12 @@ focus_tree = {
 			remove_idea = CSA_workers_cooperatives_idea_2
 			add_idea = CSA_workers_cooperatives_idea_3
 			}
+			hidden_effect = {
+			country_event = {
+			id = csa.326
+			days = 5
+			}
+			}
 			add_stability = 0.1
 			add_political_power = 50
 			add_popularity = { ideology = social_democrat popularity = 0.1 }
@@ -500,6 +524,12 @@ focus_tree = {
 			}
 			add_stability = 0.08
 			add_popularity = { ideology = social_democrat popularity = 0.05 }
+			hidden_effect = {
+			country_event = {
+			id = csa.329
+			days = 8
+			}
+			}
 		}
 	}
 	

@@ -8490,6 +8490,94 @@ country_event = { # AFL Leadership Contest
 			ideology = social_democrat_subtype
 			traits = { captain_of_industry }
 			}
+			country_event = {
+			id = csa.3250
+			days = 1460
+			}
+		}
+		set_politics = {
+			ruling_party = social_democrat
+			election_frequency = 48
+			last_election = "1936.11.08"
+			elections_allowed = no
+		}
+	}
+	option = { # William Green
+	name = csa.325.b
+	hidden_effect = {
+		create_country_leader = {
+			name = "William Green"
+			desc = "POLITICS_SAMEUL_GREEN_DESC"
+			picture = "gfx/leaders/CSA/Portrait_Samuel_Green.dds"
+			expire = "1965.1.1"
+			ideology = social_democrat_subtype
+			traits = { union_man }
+			}
+			country_event = {
+			id = csa.3250
+			days = 1460
+			}
+		}
+		set_politics = {
+			ruling_party = social_democrat
+			election_frequency = 48
+			last_election = "1936.11.08"
+			elections_allowed = no
+		}
+	}
+	option = { # David Dubinsky
+	name = csa.325.c
+	hidden_effect = {
+		create_country_leader = {
+					name = "David Dubinsky"
+					desc = "POLITICS_DAVID_DUBINSKY_DESC"
+					picture = "Portrait_CSA_David_Dubinsky.tga"
+					expire = "1965.1.1"
+					ideology = social_democrat_subtype
+					traits = {
+						backroom_backstabber
+					}
+				}
+			country_event = {
+			id = csa.3250
+			days = 1460
+			}
+		}
+		set_politics = {
+			ruling_party = social_democrat
+			election_frequency = 48
+			last_election = "1936.11.08"
+			elections_allowed = no
+		}
+	}
+}
+
+country_event = { # AFL Leadership Contest
+	id = csa.3250
+	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.3250"}
+	title = csa.3250.t
+	desc = csa.3250.d
+	picture = GFX_report_event_USA_congress
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = { # John Lewis
+	name = csa.3250.a
+	hidden_effect = {
+		create_country_leader = {
+			name = "John Lewis"
+			desc = "POLITICS_JOHN_LEWIS_DESC"
+			picture = "gfx/leaders/CSA/Portrait_John_Lewis.dds"
+			expire = "1965.1.1"
+			ideology = social_democrat_subtype
+			traits = { captain_of_industry }
+			}
+		country_event = {
+			id = csa.3251
+			days = 1460
+			}
 		}
 		set_politics = {
 			ruling_party = social_democrat
@@ -8499,7 +8587,87 @@ country_event = { # AFL Leadership Contest
 		}
 	}
 	option = { # Samuel Green
-	name = csa.325.b
+	name = csa.3250.b
+	hidden_effect = {
+		create_country_leader = {
+			name = "William Green"
+			desc = "POLITICS_SAMEUL_GREEN_DESC"
+			picture = "gfx/leaders/CSA/Portrait_Samuel_Green.dds"
+			expire = "1965.1.1"
+			ideology = social_democrat_subtype
+			traits = { union_man }
+			}
+		country_event = {
+			id = csa.3251
+			days = 1460
+			}
+		}
+		set_politics = {
+			ruling_party = social_democrat
+			election_frequency = 48
+			last_election = "1936.11.08"
+			elections_allowed = no
+		}
+	}
+	option = { # David Dubinsky
+	name = csa.3250.c
+	hidden_effect = {
+		create_country_leader = {
+					name = "David Dubinsky"
+					desc = "POLITICS_DAVID_DUBINSKY_DESC"
+					picture = "Portrait_CSA_David_Dubinsky.tga"
+					expire = "1965.1.1"
+					ideology = social_democrat_subtype
+					traits = {
+						backroom_backstabber
+					}
+				}
+			country_event = {
+			id = csa.3251
+			days = 1460
+			}
+		}
+		set_politics = {
+			ruling_party = social_democrat
+			election_frequency = 48
+			last_election = "1936.11.08"
+			elections_allowed = no
+		}
+	}
+}
+
+country_event = { # AFL Leadership Contest
+	id = csa.3251
+	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.3251"}
+	title = csa.3251.t
+	desc = csa.3251.d
+	picture = GFX_report_event_USA_congress
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = { # John Lewis
+	name = csa.3251.a
+	hidden_effect = {
+		create_country_leader = {
+			name = "John Lewis"
+			desc = "POLITICS_JOHN_LEWIS_DESC"
+			picture = "gfx/leaders/CSA/Portrait_John_Lewis.dds"
+			expire = "1965.1.1"
+			ideology = social_democrat_subtype
+			traits = { captain_of_industry }
+			}
+		}
+		set_politics = {
+			ruling_party = social_democrat
+			election_frequency = 48
+			last_election = "1936.11.08"
+			elections_allowed = no
+		}
+	}
+	option = { # Samuel Green
+	name = csa.3251.b
 	hidden_effect = {
 		create_country_leader = {
 			name = "William Green"
@@ -8516,6 +8684,151 @@ country_event = { # AFL Leadership Contest
 			last_election = "1936.11.08"
 			elections_allowed = no
 		}
+	}
+	option = { # David Dubinsky
+	name = csa.3251.c
+	hidden_effect = {
+		create_country_leader = {
+					name = "David Dubinsky"
+					desc = "POLITICS_DAVID_DUBINSKY_DESC"
+					picture = "Portrait_CSA_David_Dubinsky.tga"
+					expire = "1965.1.1"
+					ideology = social_democrat_subtype
+					traits = {
+						backroom_backstabber
+					}
+				}
+		}
+		set_politics = {
+			ruling_party = social_democrat
+			election_frequency = 48
+			last_election = "1936.11.08"
+			elections_allowed = no
+		}
+	}
+}
+
+country_event = { # Radical Riots
+	id = csa.326
+	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.326"}
+	title = csa.326.t
+	desc = csa.326.d
+	picture = GFX_report_event_USA_congress
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = { # Send the army
+	name = csa.326.a
+	add_political_power = -30
+	add_popularity = { ideology = totalist popularity = -0.01 }
+	add_popularity = { ideology = syndicalist popularity = -0.01 }
+	}
+	option = { # Wait it out
+	name = csa.326.b
+	add_stability = -0.05
+	add_popularity = { ideology = social_democrat popularity = -0.01 }
+	add_manpower = -200
+	}
+}
+
+country_event = { # Absorbing the CIO
+	id = csa.327
+	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.327"}
+	title = csa.327.t
+	desc = csa.327.d
+	picture = GFX_report_event_USA_congress
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = { # Negotiate with the CIO
+	name = csa.327.a
+	add_political_power = 20
+	add_popularity = { ideology = social_democrat popularity = 0.01 }
+	add_popularity = { ideology = radical_socialist popularity = 0.01 }
+	add_popularity = { ideology = syndicalist popularity = 0.01 }
+	}
+	option = { # We don't need them
+	name = csa.327.b
+	}
+}
+
+country_event = { # AWP offers support
+	id = csa.3270
+	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.3270"}
+	title = csa.3270.t
+	desc = csa.3270.d
+	picture = GFX_report_event_USA_congress
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = { # Accept
+	name = csa.3270.a
+	add_political_power = -20
+	add_popularity = { ideology = totalist popularity = 0.02 }
+	add_stability = 0.01
+	random_owned_controlled_state = {
+				limit = {
+					is_mainland_america = yes
+					free_building_slots = { building = arms_factory size > 0 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+	army_experience = 10
+	}
+	option = { # I don't think so
+	name = csa.3270.b
+	add_political_power = 10
+	add_popularity = { ideology = totalist popularity = -0.01 }
+	}
+}
+
+country_event = { # Fist Fight in Congress
+	id = csa.328
+	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.328"}
+	title = csa.328.t
+	desc = csa.328.d
+	picture = GFX_report_event_USA_congress
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = { # interesting
+	name = csa.328.a
+	add_stability = -0.01
+	add_popularity = { ideology = social_democrat popularity = 0.01 }
+	}
+}
+
+country_event = { # Black Support Offered
+	id = csa.329
+	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.329"}
+	title = csa.329.t
+	desc = csa.329.d
+	picture = GFX_report_event_USA_congress
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = { # Accept
+	name = csa.329.a
+	add_stability = -0.05
+	add_political_power = -35
+	add_popularity = { ideology = social_democrat popularity = 0.04 }
+	add_manpower = 8000
+	}
+	option = { # Decline
+	name = csa.329.b
+	add_stability = 0.01
+	add_political_power = 20
+	add_popularity = { ideology = social_democrat popularity = -0.01 }
 	}
 }
 
