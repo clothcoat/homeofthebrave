@@ -505,6 +505,14 @@ country_event = { # BBR released
 	months = 1
 	}
 	immediate = {
+		if = {
+			limit = {
+				has_template = "CAR Militia"
+			}
+			delete_unit_template_and_units = {
+				division_template = "CAR Militia"
+			}
+		}
 		log = "[GetDateText]: [Root.GetName]: event amcivwar.3001"
 		COR_release_BBR = yes
 	}
@@ -14787,7 +14795,6 @@ country_event = { # Panama Garrison
 	fire_only_once = yes
 
 	trigger = {
-		tag = BBR
 		NOT = {
 			has_global_flag = USA_civil_war_over_flag
 		}
@@ -14796,8 +14803,10 @@ country_event = { # Panama Garrison
 	mean_time_to_happen = {
 		days = 5
 	}
-
+	
 	immediate = {
+		BBR = {
+		transfer_technology = yes
 		if = {
 			limit = { has_template = "CAR Militia" }
 			delete_unit_template_and_units = { division_template = "CAR Militia" }
