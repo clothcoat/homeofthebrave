@@ -3727,11 +3727,37 @@ USA_MacArthur_policies = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision USA_mac_retreats"
 			WCC = {
+			manpower 20000
 			country_event = {
 			id = wcc.11
+			}
+			if = {
+					limit = { USA = { is_ruled_by_kmt = yes } }
+					annex_country = {
+						target = USA
+						transfer_troops = no
+					}
+					USA = {
+						every_unit_leader = {
+							limit = {
+								OR = {
+									has_id = 1408
+									has_id = 2202
+								}
+							}
+							set_nationality = WCC
+						}
+						every_navy_leader = {
+							set_nationality = WCC
+						}
+					}
+				}
+				else = {
+					annex_country = {
+						target = USA
+						transfer_troops = no
+					}
 				}
 			}
 		}
-	}
-}
 

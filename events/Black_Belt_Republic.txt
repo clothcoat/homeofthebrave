@@ -2026,6 +2026,14 @@ country_event = { # Republican Party
 			set_country_flag = RP_Spaulding
 		}
 	}
+	option = { #Johnson
+	name = bbr.21.c
+	add_popularity = { ideology = market_liberal popularity = 0.05 }
+	hidden_effect = {
+			country_event = { id = bbr.22 days = 13 }
+			set_country_flag = RP_Johnson
+		}
+	}
 }
 
 country_event = { # The Peace Party
@@ -2230,6 +2238,20 @@ country_event = { # The Liberal Election
 				ideology = market_liberal_subtype
 				traits = { perserver_of_culture }
 			}
+	}
+	if = { limit = { has_country_flag = RP_Johnson }
+		set_politics = {
+			ruling_party = market_liberal
+			elections_allowed = yes
+		}
+		create_country_leader = {
+			name = "Henry Lincoln Johnson"
+			desc = "POLITICS_HENRY_LINCOLN_JOHNSON_DESC"
+			picture = "gfx/leaders/BBR/Henry_Lincoln_Johnson.tga"
+			expire = "1965.1.1"
+			ideology = market_liberal_subtype
+			traits = { silent_workhorse }
+		}
 	}
 	if = { limit = { has_country_flag = RP_Spaulding }
 	set_politics = {
@@ -2718,7 +2740,7 @@ country_event = { # George Washington Carver Dies
 	immediate = {log = "[GetDateText]: [Root.GetName]: event bbr.39"}
 	title = bbr.39.t
 	desc = bbr.39.d
-	picture = ACW_soldiers_watching
+	picture = GFX_event_event_BBR_George_Washington_Carver
 
 	fire_only_once = yes
 
@@ -2734,6 +2756,11 @@ country_event = { # George Washington Carver Dies
 	option = { #A Day of Mourning
 	name = bbr.39.a
 	add_political_power = 10
+	if = {
+		limit = { has_idea = BBR_George_Washington_Carver_eco_sco }
+		remove_ideas = BBR_George_Washington_Carver_eco_sco
+		add_ideas = BBR_George_Schuyler_eco_sco
+	}
 	set_country_flag = George_Washington_Carver_dead
 	}
 }
@@ -3351,10 +3378,9 @@ country_event = { # New Name
 	id = bbr.57
 	immediate = {
 		log = "[GetDateText]: [Root.GetName]: event bbr.56"
-		set_cosmetic_tag = BBR
 	}
-	title = bbr.56.t
-	desc = bbr.56.d
+	title = bbr.57.t
+	desc = bbr.57.d
 	
 	picture = GFX_report_event_generic_diplomacy1
 	trigger = {
@@ -3372,8 +3398,15 @@ country_event = { # New Name
 			has_government = authoritarian_democrat
 		}
 	}
-	hidden = yes
 	
 	fire_only_once = yes
-	
+	option = {
+		name = bbr.57.a
+		set_cosmetic_tag = BBR
+	}
+	option = {
+		trigger = { NOT = { has_government = syndicalist has_government = radical_socialist } }
+		name = bbr.57.b
+		set_cosmetic_tag = BBR_south
+	}
 }
