@@ -3388,6 +3388,7 @@ country_event = { # New Name
 		NOT = {
 			country_exists = COR
 		}
+		tag = BBR
 		OR = {
 			has_government = social_conservative
 			has_government = social_liberal
