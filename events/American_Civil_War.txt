@@ -505,14 +505,6 @@ country_event = { # BBR released
 	months = 1
 	}
 	immediate = {
-		if = {
-			limit = {
-				has_template = "CAR Militia"
-			}
-			delete_unit_template_and_units = {
-				division_template = "CAR Militia"
-			}	
-		}
 		log = "[GetDateText]: [Root.GetName]: event amcivwar.3001"
 		COR_release_BBR = yes
 	}
