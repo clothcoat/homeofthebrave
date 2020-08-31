@@ -2919,6 +2919,7 @@ focus_tree = {
 		available_if_capitulated = no
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NEE_dissolving_the_state"
+			set_cosmetic_tag = NEE_radical_america_national_populist
 			add_ideas = NEE_stateless_capitalism
 			add_popularity = { ideology = national_populist popularity = 0.1 }
 			add_political_power = -50
