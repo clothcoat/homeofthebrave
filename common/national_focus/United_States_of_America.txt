@@ -11108,8 +11108,10 @@ focus_tree = {
 		icon = GFX_mexican_repatriation
 		cost = 5.00
 		available = {
+		OR = {
 		has_global_flag = USA_civil_war_avoided_flag
 			has_global_flag = USA_civil_war_over_flag
+			}
 		}
 		mutually_exclusive = {
 		focus = USA_quota_adjustments
@@ -11143,8 +11145,10 @@ focus_tree = {
 		focus = USA_national_immigration_act
 		}
 		available = {
-			has_global_flag = USA_civil_war_avoided_flag
+			OR = {
+		has_global_flag = USA_civil_war_avoided_flag
 			has_global_flag = USA_civil_war_over_flag
+			}
 			NOT = {
 			has_government = paternal_autocrat
 			has_government = national_populist
@@ -11174,8 +11178,10 @@ focus_tree = {
 		focus = USA_repatriation
 		}
 		available = {
-			has_global_flag = USA_civil_war_avoided_flag
+			OR = {
+		has_global_flag = USA_civil_war_avoided_flag
 			has_global_flag = USA_civil_war_over_flag
+			}
 			NOT = {
 			OR = {
 			has_government = authoritarian_democrat
