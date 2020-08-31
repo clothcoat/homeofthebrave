@@ -1666,8 +1666,7 @@ country_event = { # Resistance to social changes
 
 	trigger = {
 		tag = CSA
-		has_completed_focus = CSA_social_revolution
-		has_completed_focus = CSA_equality_for_all
+		has_completed_focus = CSA_illegalize_racism
 	}
 
 	mean_time_to_happen = {
@@ -1691,7 +1690,7 @@ country_event = { # family law
 
 	trigger = {
 		tag = CSA
-		has_completed_focus = CSA_womens_liberation
+		has_completed_focus = CSA_social_revolution
 	}
 
 	fire_only_once = yes
@@ -1721,7 +1720,7 @@ country_event = { # family law
 			ideology = syndicalist
 			popularity = 0.02
 		}
-		add_stability = -0.02
+		add_stability = -0.05
 	}
 }
 

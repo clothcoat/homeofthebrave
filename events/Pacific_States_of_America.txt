@@ -4927,9 +4927,6 @@ country_event = { # Superweapons on a budget
 		NOT = {
 			has_idea = CAL_economic_recovery_idea
 		}
-		NOT = {
-			has_idea = USA_civil_war_depression_idea
-		}
 		OR = {
 			has_completed_focus = CAL_medicare
 			has_completed_focus = CAL_free_trade1

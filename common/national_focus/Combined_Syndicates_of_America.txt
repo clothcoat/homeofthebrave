@@ -5149,15 +5149,8 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_womens_liberation"
 			custom_effect_tooltip = USA_political_recovery_tooltip
 			CSA_increase_political_recovery = yes
-			hidden_effect = {
-				country_event = { id = csa.24 days = 240 random = 10 }
-				if = {
-				limit = { has_country_leader = { ruling_only = yes name = "William Z. Foster" } }
-				country_event = { id = csa.176 days = 280 random = 10 }
-			}
 			add_stability = 0.04
 			add_political_power = 30
-			}
 		}
 	}
 	
@@ -5180,7 +5173,14 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_social_revolution"
 			custom_effect_tooltip = USA_political_recovery_tooltip
-			CSA_increase_political_recovery = yes 
+			CSA_increase_political_recovery = yes
+			hidden_effect = {
+				country_event = { id = csa.24 days = 30 random = 10 }
+				if = {
+				limit = { has_country_leader = { ruling_only = yes name = "William Z. Foster" } }
+				country_event = { id = csa.176 days = 280 random = 10 }
+				}
+			}			
 			add_manpower = 10000
 		}
 	}
@@ -8576,7 +8576,8 @@ focus_tree = {
 		cancel_if_invalid = yes
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CSA_on_the_beach"
+			log = "[GetDateText]: [Root.GetName]: Focus CSA_new_red_faction"
+			add_war_support = 0.03
 			country_event = {
 			id = csa.501
 			days = 1
@@ -8610,7 +8611,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CSA_on_the_beach"
+			log = "[GetDateText]: [Root.GetName]: Focus CSA_strike_ireland"
 			create_wargoal = {
 			type = puppet_wargoal_focus
 			target = IRE
@@ -8644,7 +8645,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CSA_on_the_beach"
+			log = "[GetDateText]: [Root.GetName]: Focus CSA_strike_faux_socialists"
 			add_war_support = 0.05
 			increase_ruling_party_popularity_by_5 = yes
 			add_stability = -0.03
