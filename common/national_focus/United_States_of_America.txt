@@ -13112,7 +13112,14 @@ focus_tree = {
 		available = {
 			is_subject = no
 			is_in_faction = no
-			not_has_democratic_government = yes
+			OR = {
+			has_government = authoritarian_democrat
+			has_government = paternal_autocrat
+			has_government = national_populist
+			has_country_leader = { ruling_only = yes name = "Harry F. Byrd" }
+			has_country_leader = { ruling_only = yes name = "James E. Murray" }
+			has_country_leader = { ruling_only = yes name = "William Averell Harriman" }
+			}
 		}
 		relative_position_id = USA_back_in_business
 		x = 7
