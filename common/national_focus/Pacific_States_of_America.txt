@@ -14286,7 +14286,14 @@ focus_tree = {
 		available = {
 			is_subject = no
 			is_in_faction = no
-			not_has_democratic_government = yes
+			OR = {
+			has_government = authoritarian_democrat
+			has_government = paternal_autocrat
+			has_government = national_populist
+			has_country_leader = { ruling_only = yes name = "Charles Martin" }
+			has_country_leader = { ruling_only = yes name = "William Gibbs McAdoo" }
+				}
+			}
 		}
 		x = 128
 		y = 1

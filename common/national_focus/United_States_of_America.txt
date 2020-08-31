@@ -11103,6 +11103,591 @@ focus_tree = {
 		}
 	}
 
+	focus = {# Repatriation
+		id = USA_repatriation
+		icon = GFX_mexican_repatriation
+		cost = 5.00
+		available = {
+		OR = {
+		has_global_flag = USA_civil_war_avoided_flag
+			has_global_flag = USA_civil_war_over_flag
+			}
+		}
+		mutually_exclusive = {
+		focus = USA_quota_adjustments
+		focus = USA_national_immigration_act
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		available_if_capitulated = yes
+		cancel_if_invalid = yes
+		x = 48
+		y = 9
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_mexican_repatriation"
+			country_event = {
+			id = pacificstates.327
+			days = 5
+			}
+			add_stability = 0.05
+			increase_ruling_party_popularity_by_5 = yes
+			add_political_power = 50
+		}
+	}
+	
+	focus = {# Quota Adjustments
+		id = USA_quota_adjustments
+		icon = GFX_quota_adjustments
+		cost = 5.00
+		mutually_exclusive = {
+		focus = USA_repatriation
+		focus = USA_national_immigration_act
+		}
+		available = {
+			OR = {
+		has_global_flag = USA_civil_war_avoided_flag
+			has_global_flag = USA_civil_war_over_flag
+			}
+			NOT = {
+			has_government = paternal_autocrat
+			has_government = national_populist
+			}
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		available_if_capitulated = yes
+		cancel_if_invalid = yes
+		relative_position_id = USA_repatriation
+		x = 2
+		y = 0
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_quota_adjustments"
+			add_stability = 0.03
+			add_manpower = 3000
+		}
+	}
+	
+	focus = {# National Immigration Act Reform
+		id = USA_national_immigration_act
+		icon = GFX_immigration_act_reformed
+		cost = 5.00
+		mutually_exclusive = {
+		focus = USA_quota_adjustments
+		focus = USA_repatriation
+		}
+		available = {
+			OR = {
+		has_global_flag = USA_civil_war_avoided_flag
+			has_global_flag = USA_civil_war_over_flag
+			}
+			NOT = {
+			OR = {
+			has_government = authoritarian_democrat
+			has_government = paternal_autocrat
+			has_government = national_populist
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		available_if_capitulated = yes
+		cancel_if_invalid = yes
+		relative_position_id = USA_repatriation
+		x = 4
+		y = 0
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_national_immigration_act"
+			add_ideas = CAL_NIAR_idea
+			add_manpower = 5000
+			add_opinion_modifier = {
+			target = MEX
+			modifier = small_increase
+			}
+			add_opinion_modifier = {
+			target = CHI
+			modifier = small_increase
+			}
+			add_opinion_modifier = {
+			target = JAP
+			modifier = small_increase
+			}
+			decrease_ruling_party_popularity_by_5 = yes
+		}
+	}
+	
+	### Anti-Civil Rights###
+
+	focus = {# Federal Ban on Race Mixing
+		id = USA_ban_race_mixing
+		icon = GFX_ban_on_race_mixing
+		cost = 5.00
+		prerequisite = {
+		focus = USA_repatriation
+		}
+		mutually_exclusive = {
+		focus = USA_denounce_race_hatred
+		}
+		available = {
+			OR = {
+			has_government = social_conservative
+			has_government = authoritarian_democrat
+			NOT = {
+			has_country_leader = {
+				ruling_only = yes
+				name = "Walt Disney"
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		available_if_capitulated = yes
+		cancel_if_invalid = yes
+		relative_position_id = USA_repatriation
+		x = 1
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_ban_race_mixing"
+			add_political_power = 50
+			add_command_power = 10
+			modify_country_flag = {
+				flag = ACW_klan_resistance
+				value = -2
+			}
+		}
+	}
+	
+	focus = {# Jazz Crackdown
+		id = USA_jazz_crackdown
+		icon = GFX_jazz_cracdown
+		cost = 5.00
+		prerequisite = {
+		focus = USA_ban_race_mixing
+		}
+		mutually_exclusive = {
+		focus = USA_conditional_black_aid
+		focus = USA_negro_bureau
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		available_if_capitulated = yes
+		cancel_if_invalid = yes
+		relative_position_id = USA_ban_race_mixing
+		x = -1
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_jazz_crackdown"
+			add_political_power = 20
+			add_popularity = { ideology = social_liberal popularity = -0.03 }
+			add_popularity = { ideology = social_democrat popularity = -0.03 }
+			add_popularity = { ideology = radical_socialist popularity = -0.02 }
+
+		}
+	}
+	
+	focus = {# Blind Eye
+		id = USA_blind_eye
+		icon = GFX_turn_blind_eye
+		cost = 5.00
+		prerequisite = {
+		focus = USA_jazz_crackdown
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		available_if_capitulated = yes
+		cancel_if_invalid = yes
+		relative_position_id = USA_ban_race_mixing
+		x = -1
+		y = 2
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_blind_eye"
+			add_popularity = { ideology = syndicalist popularity = -0.05 }
+			add_popularity = { ideology = totalist popularity = -0.05 }
+			add_political_power = 25
+			add_war_support = 0.05
+			modify_country_flag = {
+				flag = ACW_klan_resistance
+				value = -2
+			}
+		}
+	}
+	
+	focus = {# Denounce Rate Hatred
+		id = USA_denounce_race_hatred
+		icon = GFX_denounce_race_hatred
+		cost = 5.00
+		prerequisite = {
+		focus = USA_repatriation
+		focus = USA_quota_adjustments
+		focus = USA_national_immigration_act
+		}
+		mutually_exclusive = {
+		focus = USA_ban_race_mixing
+		}
+		available = {
+			OR = {
+			has_government = social_conservative
+			has_government = market_liberal
+			has_government = social_liberal
+			has_government = social_democrat
+			}
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		available_if_capitulated = yes
+		cancel_if_invalid = yes
+		relative_position_id = USA_ban_race_mixing
+		x = 2
+		y = 0
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_denounce_race_hatred"
+			add_political_power = -20
+			add_stability = 0.08
+			add_manpower = 1000
+			hidden_effect = {
+			country_event = {
+			id = ustates.308
+			days = 15
+				}
+			}
+		}
+	}
+	
+	focus = {# Limited Support
+		id = USA_conditional_black_aid
+		icon = GFX_conditional_black_help
+		cost = 5.00
+		prerequisite = {
+		focus = USA_denounce_race_hatred
+		focus = USA_ban_race_mixing
+		}
+		available = {
+		NOT = {
+			has_government = paternal_autocrat
+		}
+		}
+		mutually_exclusive = {
+		focus = USA_jazz_crackdown
+		focus = USA_negro_bureau
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		available_if_capitulated = yes
+		cancel_if_invalid = yes
+		relative_position_id = USA_ban_race_mixing
+		x = 1
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_conditional_black_aid"
+			add_political_power = 20
+			add_stability = 0.04
+			increase_ruling_party_popularity_by_5 = yes
+		}
+	}
+	
+	focus = {# Oppose Integration
+		id = USA_oppose_radicals
+		icon = GFX_oppose_radicals
+		cost = 5.00
+		prerequisite = {
+		focus = USA_conditional_black_aid
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		available_if_capitulated = yes
+		cancel_if_invalid = yes
+		relative_position_id = USA_ban_race_mixing
+		x = 1
+		y = 2
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_oppose_radicals"
+			add_popularity = { ideology = syndicalist popularity = -0.02 }
+			add_popularity = { ideology = totalist popularity = -0.02 }
+			add_popularity = { ideology = paternal_autocrat popularity = -0.02 }
+			modify_country_flag = {
+				flag = ACW_klan_resistance
+				value = -1
+			}
+		}
+	}
+	
+	focus = {# Negro Bureau
+		id = USA_negro_bureau
+		icon = GFX_negro_bureau
+		cost = 5.00
+		prerequisite = {
+		focus = USA_denounce_race_hatred
+		}
+		available = {
+		NOT = {
+			has_government = social_conservative
+			has_government = authoritarian_democrat
+			has_government = paternal_autocrat
+			has_government = national_populist
+			}
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		available_if_capitulated = yes
+		cancel_if_invalid = yes
+		relative_position_id = USA_ban_race_mixing
+		x = 3
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_negro_bureau"
+			add_ideas = CAL_negro_bureau_idea
+			add_manpower = 15000
+			increase_ruling_party_popularity_by_5 = yes
+			add_stability = -0.03
+			hidden_effect = {
+			country_event = {
+			id = ustates.290
+			days = 20
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = USA
+					is_controlled_by = USA
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	
+	focus = {# Fund Black Education
+		id = USA_fund_black_education
+		icon = GFX_fund_black_education
+		cost = 5.00
+		prerequisite = {
+		focus = USA_negro_bureau
+		}
+		available = {
+			NOT = {
+			has_government = social_conservative
+			has_government = authoritarian_democrat
+			has_government = paternal_autocrat
+			has_government = national_populist
+			}
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		available_if_capitulated = yes
+		cancel_if_invalid = yes
+		relative_position_id = USA_ban_race_mixing
+		x = 3
+		y = 2
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_fund_black_education"
+			swap_ideas = {
+			remove_idea = CAL_negro_bureau_idea
+			add_idea = CAL_negro_bureau_idea_2
+			}
+		}
+	}
+	
+	focus = {# Hire Black Americans
+		id = USA_hire_black_americans
+		icon = GFX_hire_black_americans
+		cost = 5.00
+		prerequisite = {
+		focus = USA_oppose_radicals
+		focus = USA_fund_black_education
+		}
+		available = {
+			OR = {
+			has_government = social_conservative
+			has_government = market_liberal
+			has_government = social_liberal
+			has_government = social_democrat
+			has_government = radical_socialist
+			}
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		available_if_capitulated = yes
+		cancel_if_invalid = yes
+		relative_position_id = USA_repatriation
+		x = 3
+		y = 4
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_hire_black_americans"
+			add_political_power = -45
+			add_manpower = 10000
+			increase_ruling_party_popularity_by_5 = yes
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = CAL
+					is_controlled_by = CAL
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = CAL
+					is_controlled_by = CAL
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = CAL
+					is_controlled_by = CAL
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = CAL
+					is_controlled_by = CAL
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = CAL
+					is_controlled_by = CAL
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = CAL
+					is_controlled_by = CAL
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	
+	
+	focus = {# New Lily White Movement
+		id = USA_lily_white_movement
+		icon = GFX_new_lily_white_movement
+		cost = 5.00
+		prerequisite = {
+		focus = USA_blind_eye
+		focus = USA_oppose_radicals
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		available_if_capitulated = yes
+		cancel_if_invalid = yes
+		relative_position_id = USA_ban_race_mixing
+		x = 0
+		y = 3
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_lily_white_movement"
+			add_political_power = 75
+			add_command_power = 30
+			increase_ruling_party_popularity_by_5 = yes
+		}
+	}
+	
+	focus = {# Local Segregation
+		id = USA_increase_segregation
+		icon = GFX_fund_local_segregation
+		cost = 5.00
+		prerequisite = {
+		focus = USA_lily_white_movement
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		available_if_capitulated = yes
+		cancel_if_invalid = yes
+		relative_position_id = USA_ban_race_mixing
+		x = -1
+		y = 4
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_increase_segregation"
+			add_ideas = CAL_increased_segregation_idea
+			add_political_power = 35
+			add_stability = 0.1
+			add_war_support = 0.05
+		}
+	}
+	
+	focus = {# Calm Racial Conservatives
+		id = USA_support_seperatism
+		icon = GFX_calm_racial_conservatives
+		cost = 5.00
+		prerequisite = {
+		focus = USA_lily_white_movement
+		focus = USA_hire_black_americans
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		available_if_capitulated = yes
+		cancel_if_invalid = yes
+		relative_position_id = USA_ban_race_mixing
+		x = 1
+		y = 4
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_support_seperatism"
+			add_popularity = { ideology = paternal_autocrat popularity = -0.02 }
+			add_stability = 0.05
+			add_war_support = 0.03
+		}
+	}
+	
+	focus = {# Encourage Integration
+		id = USA_encourage_integration
+		icon = GFX_encourage_integration
+		cost = 5.00
+		prerequisite = {
+		focus = USA_hire_black_americans
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		available_if_capitulated = yes
+		cancel_if_invalid = yes
+		relative_position_id = USA_ban_race_mixing
+		x = 3
+		y = 4
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_encourage_integration"
+			add_political_power = -50
+			add_manpower = 25000
+		}
+	}
 
 		#Foreign Policy
 	focus = {
@@ -13112,7 +13697,16 @@ focus_tree = {
 		available = {
 			is_subject = no
 			is_in_faction = no
-			not_has_democratic_government = yes
+			OR = {
+			has_government = authoritarian_democrat
+			has_government = paternal_autocrat
+			has_government = national_populist
+			has_country_leader = { ruling_only = yes name = "Harry F. Byrd" }
+			has_country_leader = { ruling_only = yes name = "James E. Murray" }
+			has_country_leader = { ruling_only = yes name = "William Averell Harriman" }
+			has_country_leader = { ruling_only = yes name = "Strom Thurmond" }
+			has_country_leader = { ruling_only = yes name = "Douglas MacArthur" }
+			}
 		}
 		relative_position_id = USA_back_in_business
 		x = 7
