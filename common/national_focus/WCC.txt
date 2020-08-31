@@ -1576,6 +1576,10 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			create_wargoal = {
+			type = puppet_wargoal_focus
+			target = MEX
+			}
 		}
 	}
 	
