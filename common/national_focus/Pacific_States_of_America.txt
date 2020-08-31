@@ -14259,7 +14259,6 @@ focus_tree = {
 			}
 			add_equipment_to_stockpile = { type = convoy amount = 50 }
 			if = {
-			limit = {
 			FROM = {
 			is_puppet_of = CAL
 				}
@@ -14267,7 +14266,6 @@ focus_tree = {
 			add_opinion_modifier = { target = CAL modifier = medium_increase }
 			}
 		}
-	}
 	
 	##American Imperialism##
 	
@@ -14294,7 +14292,6 @@ focus_tree = {
 			has_country_leader = { ruling_only = yes name = "William Gibbs McAdoo" }
 				}
 			}
-		}
 		x = 128
 		y = 1
 
