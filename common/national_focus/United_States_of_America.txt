@@ -1138,6 +1138,7 @@ focus_tree = {
 			add_popularity = { ideology = syndicalist popularity = -0.1 }
 			add_popularity = { ideology = totalist popularity = -0.05 }
 			remove_ideas = USA_syndicalist_strike_idea
+			remove_ideas = USA_new_year_strike_idea
 			hidden_effect = {
 			country_event = {
 			id = ustates.99
@@ -4526,6 +4527,7 @@ focus_tree = {
 			hidden_effect = {
 			add_to_variable = { var = SPA_strength value = -1 }
 			}
+			remove_ideas = USA_new_year_strike_idea
 		}
 	}
 	
@@ -4969,6 +4971,7 @@ focus_tree = {
 			hidden_effect = {
 			country_event = { id = ustates.112 days = 7 }
 			}
+			remove_ideas = USA_new_year_strike_idea
 		}
 	}
 	
