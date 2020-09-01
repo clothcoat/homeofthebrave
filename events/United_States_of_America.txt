@@ -5734,7 +5734,7 @@ country_event = { # General Strike Spreads (Too Long)
 		OR = {
 		has_completed_focus = USA_smash_radicals
 		country_exists = CSA
-		country_exists = AUS
+		country_exists = TEX
 		country_exists = CAR
 		}
 		}
@@ -5819,7 +5819,7 @@ country_event = { # Violence in Atlanta
 		OR = {
 		has_completed_focus = USA_smash_radicals
 		country_exists = CSA
-		country_exists = AUS
+		country_exists = TEX
 		country_exists = CAR
 		has_global_flag = USA_civil_war_avoided_flag
 		}
@@ -7318,7 +7318,7 @@ country_event = { # Huey Long falls
 	trigger = {
 	has_government = paternal_autocrat
 	has_global_flag = USA_civil_war_begun_flag
-	AUS = {
+	TEX = {
 	exists = no
 		}
 	has_country_flag = USA_Radio_Reagan
