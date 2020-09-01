@@ -12,6 +12,8 @@ TEX_populist_alliance_decision = {
 			is_subject = no
 		}
 		visible = {
+			has_completed_focus = TEX_populist_alliance
+			can_declare_war_on = FROM
 			FROM = {
 				is_major = no
 				has_war = no
