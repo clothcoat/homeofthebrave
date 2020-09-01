@@ -10208,9 +10208,6 @@ focus_tree = {
 		prerequisite = {
 			focus = CAL_nationalize_communication
 		}
-		prerequisite = {
-			focus = CAL_national_health_insurance
-		}
 		available = {
 			has_government = radical_socialist
 		}
@@ -10426,6 +10423,9 @@ focus_tree = {
 		cost = 5.00
 		prerequisite = {
 			focus = CAL_hit_the_stomach
+		}
+		prerequisite = {
+			focus = CAL_national_health_insurance
 		}
 		available = {
 			has_government = radical_socialist
