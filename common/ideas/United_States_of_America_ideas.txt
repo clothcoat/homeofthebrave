@@ -255,6 +255,7 @@ ideas = {
 		### Civil War Ideas ###
 		amcivwar_idea = { #Fighting for America
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea amcivwar_idea"}
+			picture = usa_great_depression_2
 			available = {
 				has_global_flag = USA_civil_war_begun_flag
 				NOT = { has_global_flag = USA_civil_war_over_flag }
