@@ -1885,7 +1885,6 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			check_variable = { NEE_legitimacy > 20 }
 			is_subject_of = CAN
 			is_in_faction_with = CAN
 			controls_all_owned_states = yes
