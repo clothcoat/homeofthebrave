@@ -1436,6 +1436,22 @@ COR_release_BBR = {
 
 USA_civil_war_begins = {
 	hidden_effect = {
+		USA = {
+		remove_ideas = {
+		USA_great_depression
+		USA_great_depression_2
+		USA_great_depression_3
+		USA_great_depression_4
+		USA_great_depression_garner_1
+		USA_great_depression_garner_2
+		USA_black_monday
+		USA_black_monday2
+		USA_austerity_garner
+		USA_black_monday2_garner
+		USA_great_depression_Norris_1
+		USA_great_depression_Norris_2
+					}
+				}
 		set_global_flag = USA_civil_war_begun_flag
 		NIC = {
 			country_event = {
