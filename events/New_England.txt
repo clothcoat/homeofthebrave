@@ -21,6 +21,13 @@ country_event = { # Occupy New England
 		name = newengland.1.a
 		ai_chance = { # Take New England
 			factor = 4000
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = CAN_acw_new_england
+					option = CAN_ACW_NEW_ENGLAND_NOT_TAKE
+				}
+			}
 		}
 		every_state = {
 			limit = {
