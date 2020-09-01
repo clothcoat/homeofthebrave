@@ -5547,7 +5547,11 @@ country_event = {# Hearst Requests our Annexation
 		}
 	}
 	option = {# Nope
-		name = pacificstates.216.a
+		name = pacificstates.216.b
+		if = {
+			limit = { country_exists = USA 	}
+			USA = { declare_war_on = { target = CAL type = annex_everything
+} }
 		add_stability = -0.1
 		add_popularity = { ideology = paternal_autocrat popularity = -0.05 }
 		add_manpower = -5000
