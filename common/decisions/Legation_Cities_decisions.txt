@@ -1605,7 +1605,10 @@ LEC_influence_category = {
 			}
 		}
 		available = {
+			OR = {
 			has_global_flag = USA_civil_war_over_flag
+			has_global_flag = USA_civil_war_avoided_flag
+				}
 			OR = {
 				NOT = {
 					has_global_flag = PSA_rockies_ceasefire
