@@ -1116,9 +1116,12 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus NEE_demand_support"
 			add_war_support = 0.05
 			add_political_power = 20
+			CAN = {
+			country_event = newengland.12
+			}
 		}
 	}
-	
+
 	focus = {
 		id = NEE_lincolnian_republic
 		icon = GFX_NEE_abe
@@ -1141,9 +1144,9 @@ focus_tree = {
 			add_ideas = NEE_lincolnian_republic_idea
 			add_manpower = 6000
 			add_political_power = 30
+			}
 		}
-	}
-	
+
 	focus = {
 		id = NEE_western_intervention
 		icon = GFX_NEE_beyond_new_england
