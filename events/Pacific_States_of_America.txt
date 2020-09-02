@@ -5556,7 +5556,7 @@ country_event = {# Hearst Requests our Annexation
 		add_popularity = { ideology = paternal_autocrat popularity = -0.05 }
 		add_manpower = -5000
 		add_war_support = -0.1
-		
+		}
 	}
 }
 
@@ -5724,6 +5724,7 @@ country_event = {# Bodin Working with Japan?
 		add_popularity = { ideology = national_populist popularity = 0.01 }
 	}
 }
+
 country_event = {# Cease Japanese Immigration
 	id = pacificstates.225
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.225"}
@@ -5851,6 +5852,7 @@ country_event = {# Protests Increase
 		}
 	}
 }
+
 country_event = {# Hearst couped by Arnold and Marshall
 	id = pacificstates.229
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.229"}
@@ -5915,6 +5917,7 @@ country_event = {# Protests Put Down
 		}
 	}
 }
+
 country_event = {# Feds push them back
 	id = pacificstates.2301
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.230"}
@@ -6168,12 +6171,11 @@ country_event = {# Border Raids Response
 	}
 }
 
-
 country_event = {# Canadian Demands
-	id = pacificstates.240
-	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.240"}
-	title = pacificstates.240.t
-	desc = pacificstates.240.d
+	id = pacificstates.2400
+	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.2400"}
+	title = pacificstates.2400.t
+	desc = pacificstates.2400.d
 	picture = GFX_report_event_USA_american_brigade
 
 	is_triggered_only = yes
@@ -6181,7 +6183,7 @@ country_event = {# Canadian Demands
 	fire_only_once = yes
 	
 	option = {# Pay him off
-		name = pacificstates.240.a
+		name = pacificstates.2400.a
 		ai_chance = {
 			factor = 90
 		}
@@ -6190,8 +6192,8 @@ country_event = {# Canadian Demands
 			days = 1
 		}
 	}
-	option = {# 
-		name = pacificstates.240.b
+	option = {# How dare they?
+		name = pacificstates.2400.b
 		ai_chance = {
 			factor = 10
 		}
@@ -6274,7 +6276,6 @@ country_event = {# Canadian Demands Met
 		}
 	}
 }
-
 
 country_event = {# Nature Reserves
 	id = pacificstates.242
