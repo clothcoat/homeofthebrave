@@ -3999,6 +3999,7 @@ focus_tree = {
 		cost = 2.25
 		available = {
 			has_government = totalist
+			has_country_leader = { ruling_only = yes name = "William Z. Foster" }
 		}
 		cancel_if_invalid = yes
 		prerequisite = {
