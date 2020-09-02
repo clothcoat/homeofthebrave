@@ -117,7 +117,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_great_depression_garner_1"}
 			picture = usa_great_depression_2
 			modifier = {
-				recruitable_population_factor = 0.02
+				conscription_factor = 0.02
 				dig_in_speed_factor	= 0.05
 				navy_max_range = -0.1
 			}
