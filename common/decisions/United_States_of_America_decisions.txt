@@ -3731,12 +3731,6 @@ USA_MacArthur_policies = {
 			country_event = {
 			id = wcc.11
 			}
-			if = {
-					limit = { USA = { is_ruled_by_kmt = yes } }
-					annex_country = {
-						target = USA
-						transfer_troops = no
-					}
 					USA = {
 						every_unit_leader = {
 							limit = {
