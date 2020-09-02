@@ -1581,7 +1581,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea COR_black_nationalist_1_idea"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = black_nationalist
+			picture = GFX_idea_black_nationalist
 			modifier = {
 				local_manpower = -0.05
 				production_speed_buildings_factor = -0.03
@@ -1595,7 +1595,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea COR_black_nationalist_2_idea"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = black_nationalist
+			picture = GFX_idea_black_nationalist
 			modifier = {
 				local_manpower = -0.1
 				production_speed_buildings_factor = -0.05
@@ -1609,7 +1609,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea COR_black_nationalist_3_idea"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = black_nationalist
+			picture = GFX_idea_black_nationalist
 			modifier = {
 				local_manpower = -0.15
 				production_speed_buildings_factor = -0.1
