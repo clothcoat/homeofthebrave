@@ -443,7 +443,6 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_peoples_commission"
-			custom_effect_tooltip = USA_political_recovery_tooltip
 			random_owned_controlled_state = {
 			limit = { has_resources_amount = { resource = oil amount > 1 } }
 			add_resource = {
@@ -854,6 +853,7 @@ focus_tree = {
 			focus = COR_alfalfa_bill
 		}
 		available = {
+			has_global_flag = USA_civil_war_over_flag
 			has_government = paternal_autocrat
 		}
 		cancel_if_invalid = yes
@@ -865,6 +865,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_american_nationalism"
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			COR_increase_political_recovery = yes
 			add_manpower = 12500
 			add_war_support = 0.05
 			hidden_effect = {
@@ -896,8 +898,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_traditional_values"
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			COR_increase_political_recovery = yes
 			add_stability = 0.05
-			add_popularity = { ideology = paternal_autocrat popularity = 0.03 }
+			add_popularity = { ideology = paternal_autocrat popularity = 0.03 			}
 		}
 	}
 	
@@ -921,6 +925,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_red_scare"
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			COR_increase_political_recovery = yes
 			add_political_power = 35
 			add_war_support = 0.05
 			add_popularity = { ideology = paternal_autocrat popularity = 0.03 }
@@ -954,6 +960,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_purge_dissidents"
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			COR_increase_political_recovery = yes
 			add_popularity = { ideology = social_democrat popularity = -0.02 }
 			add_popularity = { ideology = social_liberal popularity = -0.02 }
 			add_popularity = { ideology = market_liberal popularity = -0.02 }
@@ -1012,6 +1020,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_jewish_segregation"
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			COR_increase_political_recovery = yes
 			add_ideas = COR_jewish_segregation
 			add_political_power = 20
 			add_stability = -0.03
@@ -1044,6 +1054,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_nationalize_boy_scouts"
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			COR_increase_political_recovery = yes
 			add_ideas = USA_boy_scouts_idea
 			add_popularity = { ideology = paternal_autocrat popularity = 0.03 }
 			add_war_support = 0.05
@@ -1188,6 +1200,18 @@ focus_tree = {
 			days = 10
 			}
 		}
+		hidden_effect = {
+		country_event = {
+			id = constate.39
+			days = 20
+			}
+		}
+		hidden_effect = {
+			country_event = {
+			id = constate.46
+			days = 30
+				}
+			}
 		}
 		cancel_if_invalid = yes
 		available_if_capitulated = yes
@@ -1214,7 +1238,8 @@ focus_tree = {
 			focus = COR_the_order_of_76
 		}
 		available = {
-			has_government = paternal_autocrat
+			has_government = paternal_autocrat	
+			has_global_flag = USA_civil_war_over_flag		
 		}
 		cancel_if_invalid = yes
 		available_if_capitulated = yes
@@ -1231,6 +1256,12 @@ focus_tree = {
 				bonus = 1
 				uses = 2
 				category = industry
+			}
+			hidden_effect = {
+			country_event = {
+			id = constate.42
+			days = 10
+				}
 			}
 		}
 	}
@@ -1258,6 +1289,18 @@ focus_tree = {
 			add_ideas = COR_pinkerton
 			add_stability = 0.02
 			add_political_power = 25
+			hidden_effect = {
+			country_event = {
+			id = constate.44
+			days = 35
+				}
+			}
+			hidden_effect = {
+			country_event = {
+			id = constate.45
+			days = 90
+				}
+			}
 		}
 	}
 
@@ -1296,11 +1339,16 @@ focus_tree = {
 		prerequisite = {
 			focus = COR_fordism
 		}
-		available = {
-			has_idea = COR_military_industrial_complex_idea1
-		}
 		ai_will_do = {
 			factor = 4
+		}
+		select_effect = {
+		hidden_effect = {
+			country_event = {
+			id = constate.47
+			days = 20
+				}
+			}
 		}
 		relative_position_id = COR_the_lone_eagle
 		x = 0
@@ -1505,7 +1553,6 @@ focus_tree = {
 		y = 5
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_military_industrial_complex"
-			custom_effect_tooltip = USA_economic_recovery_tooltip
 			random_owned_controlled_state = {
 				limit = {
 					is_mainland_america = yes
@@ -1638,6 +1685,14 @@ focus_tree = {
 		}
 		available = {
 			has_government = paternal_autocrat
+		}
+		select_effect = {
+		hidden_effect = {
+		country_event = {
+			id = constate.38
+			days = 20
+			}
+		}
 		}
 		cancel_if_invalid = yes
 		available_if_capitulated = yes
@@ -1802,17 +1857,28 @@ focus_tree = {
 		y = 9
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_republic_without_democracy"
-			remove_ideas = USA_civil_war_aftermath_idea5
+			hidden_effect = {
+			country_event = {
+			id = constate.41
+			days = 2
+				}
+			}
+			add_stability = 0.1
+			add_political_power = 100
+			add_command_power = 20
+			add_popularity = { ideology = paternal_autocrat popularity = 0.05 }
+			add_war_support = 0.05
 		}
 	}
 
 	### Simmons Path ###
 	focus = {# Mine Eyes have seen the Glory
 		id = COR_mine_have_seen_the_glory
-		icon = GFX_goal_COR_Invisible_Empire
+		icon = GFX_goal_ideology_national_populist
 		cost = 1.25
 		available = {
 			has_government = national_populist
+			has_country_leader = { ruling_only = yes name = "William Joseph Simmons" }
 		}
 		cancel_if_invalid = yes
 		available_if_capitulated = yes
@@ -1826,7 +1892,7 @@ focus_tree = {
 
 	focus = {# Absorb Militants
 		id = COR_organize_militants
-		icon = GFX_goal_COR_White_Caps
+		icon = GFX_goal_military_academy
 		cost = 5.25
 		prerequisite = {
 			focus = COR_mine_have_seen_the_glory
@@ -1856,7 +1922,7 @@ focus_tree = {
 	
 	focus = {# Kinship Economics
 		id = COR_kinship_economics
-		icon = GFX_goal_COR_Kinship_Economy
+		icon = GFX_focus_generic_strike_at_democracy1
 		cost = 5.25
 		prerequisite = {
 			focus = COR_organize_militants
@@ -2146,7 +2212,7 @@ focus_tree = {
 	}
 	focus = {# Klan Oath
 		id = COR_klan_oath
-		icon = GFX_goal_COR_Klan_Oath
+		icon = GFX_goal_national_populism
 		cost = 5
 		prerequisite = {
 			focus = COR_crackdown_on_traitors
@@ -2171,7 +2237,7 @@ focus_tree = {
 	}
 	focus = {# Black Laws
 		id = COR_black_laws
-		icon = GFX_goal_COR_Black_Laws
+		icon = GFX_focus_generic_oppression
 		cost = 5
 		prerequisite = {
 			focus = COR_crackdown_on_traitors
@@ -2380,7 +2446,7 @@ focus_tree = {
 	focus = {# The Covenant
 		id = COR_the_convenent
 		icon = GFX_goal_COR_midnight_klan
-		cost = 7.25
+		cost = 2.00
 		available = {
 			has_government = national_populist
 			OR = {
@@ -2592,6 +2658,12 @@ focus_tree = {
 			id = constate.2501
 			days = 20
 			}
+			if = {	
+				limit = { has_country_leader = { ruling_only = yes name = "Hiram Wesley Evans" } }
+					set_country_leader_portrait = {
+						portrait = "gfx/leaders/COR/Hiram_Wesley_Evans_Robes.tga"
+					}
+				}
 			}
 		}
 	}
@@ -2616,6 +2688,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_amnesty_for_patriotic_corps"
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			COR_increase_political_recovery = yes
 			random_owned_state = {
 				limit = {
 					is_core_of = COR
@@ -2694,6 +2768,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_true_corporatism"
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			COR_increase_political_recovery = yes
 			random_owned_state = {
 				limit = {
 					is_core_of = COR
@@ -2730,6 +2806,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_ceasefire_with_black_pop"
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			COR_increase_political_recovery = yes
 			add_stability = 0.05
 			modify_country_flag = {
 			country_flag = ACW_black_nationalist_resistance
@@ -2772,6 +2850,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_liberia_plan"
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			COR_increase_political_recovery = yes
 			modify_country_flag = {
 			country_flag = ACW_black_nationalist_resistance
 			value = -3
@@ -2838,6 +2918,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_klan_education"
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			COR_increase_political_recovery = yes
 			add_popularity = { ideology = national_populist popularity = 0.03 }
 			add_ideas = COR_klan_education_idea
 			hidden_effect = {
@@ -2869,6 +2951,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_family_programs"
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			COR_increase_political_recovery = yes
 			add_popularity = { ideology = national_populist popularity = 0.05 }
 			add_stability = 0.05
 		}
@@ -3085,7 +3169,7 @@ focus_tree = {
 	focus = {# The Sword
 		id = COR_the_sword
 		icon = GFX_goal_COR_old_klan
-		cost = 7.25
+		cost = 2.00
 		available = {
 			has_government = national_populist
 			has_country_leader = {
@@ -3148,7 +3232,7 @@ focus_tree = {
 	focus = {# Knights of the White Camelia
 		id = COR_knights_of_the_white_camelia
 		icon = GFX_goal_COR_Knights_of_the_Red
-		cost = 7.25
+		cost = 7.00
 		prerequisite = {
 			focus = COR_the_sword
 		}
@@ -3173,7 +3257,7 @@ focus_tree = {
 	focus = {# The Black Legion
 		id = COR_the_black_legion
 		icon = GFX_goal_COR_black_legion_in_command
-		cost = 7.25
+		cost = 7.00
 		prerequisite = {
 			focus = COR_the_sword
 		}
@@ -3273,6 +3357,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_legion_chiefs"
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			COR_increase_political_recovery = yes
 			add_stability = -0.05
 			swap_ideas = {
 			remove_idea = COR_black_legion_idea
@@ -3301,6 +3387,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_kommon_law"
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			COR_increase_political_recovery = yes
 			add_stability = -0.02
 			add_political_power = 50
 			add_ideas = COR_kommon_law_idea
@@ -3327,6 +3415,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_Klan_capitalism"
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			COR_increase_political_recovery = yes
 			add_stability = -0.03
 			add_tech_bonus = {
 				name = industrial_bonus
@@ -3402,6 +3492,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_expand_labor_camps"
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			COR_increase_political_recovery = yes
 			swap_ideas = {
 			remove_idea = COR_work_camps_idea
 			add_idea = COR_work_camps_idea_2
@@ -3465,6 +3557,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_knights_rider_in_the_bb"
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			COR_increase_political_recovery = yes
 			add_stability = -0.05
 			add_political_power = 30
 			add_war_support = 0.1
@@ -3497,6 +3591,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_stomp_out_rome"
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			COR_increase_political_recovery = yes
 			swap_ideas = {
 			remove_idea = COR_non_conformist_regulations
 			add_idea = COR_non_conformist_extortion
@@ -4020,6 +4116,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_the_eyes_of_god"
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			COR_increase_political_recovery = yes
 			add_ideas = COR_the_eyes_of_god_idea
 			add_manpower = 500
 			add_stability = 0.03
@@ -4047,6 +4145,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_old_covenant"
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			COR_increase_political_recovery = yes
 			add_political_power = 75
 			add_popularity = { ideology = national_populist popularity = 0.03 }
 			add_stability = -0.02
@@ -4115,6 +4215,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_christian_education"
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			COR_increase_political_recovery = yes
 			random_owned_state = {
 				limit = {
 					is_core_of = COR
@@ -4178,6 +4280,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_christian_education"
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			COR_increase_political_recovery = yes
 			add_political_power = 50
 			random_owned_controlled_state = {
 				limit = {
@@ -4224,6 +4328,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_christian_education"
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			COR_increase_political_recovery = yes
 			add_stability = -0.1
 			add_political_power = 65
 			add_command_power = 30
@@ -4258,6 +4364,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_christian_education"
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			COR_increase_political_recovery = yes
 			add_ideas = COR_christian_education_idea
 			add_popularity = { ideology = national_populist popularity = 0.05 }
 		}
@@ -4632,14 +4740,27 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_purge_dissidents"
-			unlock_decision_tooltip = COR_fight_socialist_terrorists
-			unlock_decision_tooltip = COR_fight_federalist_terrorists
+			custom_effect_tooltip = ACW_combat_socialists
+			modify_country_flag = {
+				flag = ACW_socialist_resistance
+				value = -2
+			}
+			custom_effect_tooltip = ACW_combat_minuteman
+			modify_country_flag = {
+				flag = ACW_minutemen_resistance
+				value = -2
+			}
+			custom_effect_tooltip = ACW_fight_fed_terrorists_tooltip
+			modify_country_flag = {
+				flag = ACW_fed_resistance
+				value = -2
+			}
 		}
 	}
 	
 	focus = {# Corporate Patriotism
 		id = COR_corporate_patriotism
-		icon = GFX_goal_USA_nra
+		icon = GFX_goal_COR_corporate_patriotism
 		cost = 7.25
 		available = {
 			OR = {
@@ -4661,6 +4782,8 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_national_recovery"
+			custom_effect_tooltip = USA_economic_recovery_tooltip
+			COR_increase_recovery = yes
 			random_owned_state = {
 				limit = {
 					is_core_of = COR
@@ -4707,6 +4830,8 @@ focus_tree = {
 		y = 2
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_public_works"
+			custom_effect_tooltip = USA_economic_recovery_tooltip
+			COR_increase_recovery = yes
 			random_owned_state = {
 				limit = {
 					is_core_of = COR
@@ -4800,7 +4925,7 @@ focus_tree = {
 		icon = GFX_goal_Schelle
 		cost = 7.25
 		prerequisite = {
-			focus = COR_public_works
+			focus = COR_military_factories
 		}
 		ai_will_do = {
 			factor = 4
@@ -4835,7 +4960,7 @@ focus_tree = {
 		x = 0
 		y = 4
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus COR_farm_security_administration"
+			log = "[GetDateText]: [Root.GetName]: Focus COR_national_farm_bureau"
 			random_owned_state = {
 				limit = {
 					is_core_of = COR
@@ -4979,6 +5104,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_business_subsides"
 			custom_effect_tooltip = USA_economic_recovery_tooltip
+			COR_increase_recovery = yes
 			COR_increase_military_complex = yes
 		}
 	}
@@ -4999,6 +5125,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_business_subsides"
 			custom_effect_tooltip = USA_economic_recovery_tooltip
+			COR_increase_recovery = yes
 			COR_increase_military_complex = yes
 		}
 	}
@@ -5042,6 +5169,8 @@ focus_tree = {
 		y = 3
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_military_factories"
+			custom_effect_tooltip = USA_economic_recovery_tooltip
+			COR_increase_recovery = yes
 			random_owned_controlled_state = {
 				limit = {
 					is_mainland_america = yes
@@ -5369,15 +5498,14 @@ focus_tree = {
 				has_war = yes
 			}
 		}
-		add_equipment_to_stockpile = {
-			type = motorized_equipment
-			amount = 50
-			producer = COR
-			}
 		relative_position_id = COR_tank_commission
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_motorize_the_men"
-			country_event = { id = unionstate.500 days = 7 }
+			add_equipment_to_stockpile = {
+			type = motorized_equipment
+			amount = 60
+			producer = COR
+			}
 			if = {
 				limit = {
 					NOT = { 
@@ -6332,6 +6460,7 @@ focus_tree = {
 				country_exists = USA
 				country_exists = CSA
 				country_exists = CAL
+				country_exists = TEX
 			}
 		}
 		x = 0
@@ -6355,7 +6484,8 @@ focus_tree = {
 			army_experience = 50
 			hidden_effect = {
 				country_event = { id = ustates.650 days = 35 }#USA Trials
-				country_event = { id = ustates.652 days = 45 }#PSA Trials
+				country_event = { id = ustates.651 days = 45 }#AUS Trials
+				country_event = { id = ustates.652 days = 55 }#PSA Trials
 			}
 			custom_effect_tooltip = USA_trials_will_begin
 		}
