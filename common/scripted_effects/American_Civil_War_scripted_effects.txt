@@ -1051,13 +1051,11 @@ USA_release_WCC = {
 		USA = {
 			if = {
 			limit = { has_idea = USA_great_depression }
-			swap_ideas = {
 			remove_ideas = USA_great_depression
 				}
 			}
 			if = {
 			limit = { has_idea = USA_political_crisis }
-			swap_ideas = {
 			remove_ideas = USA_political_crisis
 				}
 			}
@@ -2135,7 +2133,7 @@ USA_political_recovery = {
 	}
 	else_if = {
 		limit = { has_idea = USA_civil_war_political_aftermath_idea6 }
-			remove_idea = USA_civil_war_political_aftermath_idea6
+			remove_ideas = USA_civil_war_political_aftermath_idea6
 		}
 	}
 }

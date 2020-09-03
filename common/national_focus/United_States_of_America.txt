@@ -5930,7 +5930,7 @@ focus_tree = {
 			add_stability = -0.03
 			add_popularity = { ideology = national_populist popularity = -0.03 }
 			add_manpower = 1500
-			USA_increase_recovery = yes
+			USA_political_recovery = yes
 		}
 	}
 	
@@ -5955,7 +5955,7 @@ focus_tree = {
 			custom_effect_tooltip = USA_political_recovery_tooltip
 			add_stability = 0.08
 			add_political_power = 40
-			USA_increase_recovery = yes
+			USA_political_recovery = yes
 		}
 	}
 	
@@ -5989,7 +5989,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_trial_of_the_federalists"
 			custom_effect_tooltip = USA_political_recovery_tooltip
-			USA_increase_recovery = yes
+			USA_political_recovery = yes
 			add_manpower = -3000
 			add_war_support = -0.05
 			add_popularity = { ideology = paternal_autocrat popularity = -0.08 }
@@ -6027,7 +6027,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_loyal_army"
 			custom_effect_tooltip = USA_political_recovery_tooltip
-			USA_increase_recovery = yes
+			USA_political_recovery = yes
 			add_stability = 0.05
 			add_political_power = 25
 		}
@@ -6063,7 +6063,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_salute_the_patriots"
 			custom_effect_tooltip = USA_political_recovery_tooltip
-			USA_increase_recovery = yes
+			USA_political_recovery = yes
 			add_popularity = { ideology = paternal_autocrat popularity = 0.05 }
 			add_political_power = -40
 			army_experience = 25
@@ -6392,7 +6392,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_rebuild_americas_industry"
 			custom_effect_tooltip = USA_economic_recovery_tooltip
-			USA_depression_recovery = yes
+			CSA_increase_recovery = yes
 			add_tech_bonus = {
 				name = industrial_bonus
 				bonus = 1
@@ -6425,7 +6425,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_economic_investments"
 			custom_effect_tooltip = USA_economic_recovery_tooltip
-			USA_depression_recovery = yes
+			CSA_increase_recovery = yes
 			random_owned_state = {
 				limit = {
 					is_core_of = USA
@@ -6487,7 +6487,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_review_the_fed"
 			custom_effect_tooltip = USA_economic_recovery_tooltip
-			USA_depression_recovery = yes
+			CSA_increase_recovery = yes
 		}
 	}
 	
@@ -6510,7 +6510,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_american_industry"
 			custom_effect_tooltip = USA_economic_recovery_tooltip
-			USA_depression_recovery = yes
+			CSA_increase_recovery = yes
 		}
 	}
 
@@ -6598,7 +6598,6 @@ focus_tree = {
 				}
 				add_building_construction = { type = infrastructure	level = 1 instant_build = yes }
 			}
-			USA_depression_recovery = yes
 		}
 	}
 
@@ -6618,7 +6617,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_rebuild_agriculture"
 			custom_effect_tooltip = USA_economic_recovery_tooltip
-			USA_depression_recovery = yes
+			CSA_increase_recovery = yes
 			add_tech_bonus = {
 				bonus = 1
 				uses = 2
@@ -6752,7 +6751,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_farming_subsidies"
 			custom_effect_tooltip = USA_economic_recovery_tooltip
-			USA_depression_recovery = yes
+			CSA_increase_recovery = yes
 		}
 	}
 
