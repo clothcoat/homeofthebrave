@@ -5006,7 +5006,10 @@ country_event = { # USA wins the civil war
 				}
 				if = {
 					limit = {
-						has_government = paternal_autocrat
+						OR = {
+							has_government = paternal_autocrat
+							has_government = authoritarian_democrat
+						}
 					}
 					news_event = {
 						id = worldnews.39
