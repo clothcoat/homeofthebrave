@@ -6265,7 +6265,7 @@ unlock_decision_category_tooltip = USA_reconstruction_decisions
 	}
 
 	focus = {# Coast Guard
-		id = TEX_coast_guard
+		id = TEX_our_coast_guard
 		icon = GFX_goal_USA_coast_guard
 		cost = 7.25
 		prerequisite = {
@@ -6288,7 +6288,7 @@ unlock_decision_category_tooltip = USA_reconstruction_decisions
 			}
 		}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TEX_coast_guard"
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_our_coast_guard"
 			add_tech_bonus = {
 				name = navy_bonus
 				bonus = 1
