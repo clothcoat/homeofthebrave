@@ -900,6 +900,17 @@ ideas = {
 				party_popularity_stability_factor = 0.2
 			}
 		}
+		CAL_states_autonomy_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_states_autonomy_idea"}
+			allowed = { always = no }
+			removal_cost = -1
+			picture = family_law
+			modifier = {
+				stability_weekly = 0.005
+				political_power_gain = -0.004
+				party_popularity_stability_factor = 0.2
+			}
+		}
 		CAL_orphan_support_idea = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_orphan_support_idea"}
 			allowed = { always = no }
