@@ -1807,7 +1807,7 @@ country_event = { # Centralist IWW Faction
 		}
 	}
 	option = { # Elmer Allison
-		name = csa.25.e
+		name = csa.25.f
 		create_country_leader = {
 				name = "Elmer Allison"
 				desc = "POLITICS_ELMER_ALLISON_DESC"
@@ -1824,8 +1824,8 @@ country_event = { # Centralist IWW Faction
 			elections_allowed = yes
 		}
 	}
-	option = { # Elmer Allison
-		name = csa.25.e
+	option = { # Ludwig Katterfeld
+		name = csa.25.g
 		create_country_leader = {
 				name = "Ludwig E. Katterfeld"
 				desc = "POLITICS_LUDWIG_KATTERFELD_DESC"
