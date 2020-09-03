@@ -1874,7 +1874,7 @@ focus_tree = {
 	### Simmons Path ###
 	focus = {# Mine Eyes have seen the Glory
 		id = COR_mine_have_seen_the_glory
-		icon = GFX_goal_ideology_national_populist
+		icon = GFX_goal_COR_Invisible_Empire
 		cost = 1.25
 		available = {
 			has_government = national_populist
@@ -1892,7 +1892,7 @@ focus_tree = {
 
 	focus = {# Absorb Militants
 		id = COR_organize_militants
-		icon = GFX_goal_military_academy
+		icon = GFX_goal_COR_White_Caps
 		cost = 5.25
 		prerequisite = {
 			focus = COR_mine_have_seen_the_glory
@@ -1922,7 +1922,7 @@ focus_tree = {
 	
 	focus = {# Kinship Economics
 		id = COR_kinship_economics
-		icon = GFX_focus_generic_strike_at_democracy1
+		icon = GFX_goal_COR_Kinship_Economy
 		cost = 5.25
 		prerequisite = {
 			focus = COR_organize_militants
@@ -2212,7 +2212,7 @@ focus_tree = {
 	}
 	focus = {# Klan Oath
 		id = COR_klan_oath
-		icon = GFX_goal_national_populism
+		icon = GFX_goal_COR_Klan_Oath
 		cost = 5
 		prerequisite = {
 			focus = COR_crackdown_on_traitors
@@ -2237,7 +2237,7 @@ focus_tree = {
 	}
 	focus = {# Black Laws
 		id = COR_black_laws
-		icon = GFX_focus_generic_oppression
+		icon = GFX_goal_COR_Black_Laws
 		cost = 5
 		prerequisite = {
 			focus = COR_crackdown_on_traitors
