@@ -1467,7 +1467,7 @@ ideas = {
 				monthly_population = 0.02
 			}
 		}
-		TEX_monroeism = {
+		TEX_popular_monroeism_idea = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_monroeism"}
 			allowed = { always = no }
 			removal_cost = -1
