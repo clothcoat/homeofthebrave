@@ -3966,7 +3966,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_dewitt_raids"
 			custom_effect_tooltip = USA_political_recovery_tooltip
-			CAL_increase_political_recovery = yes
+			USA_political_recovery = yes
 			add_political_power = 50
 			add_stability = 0.05
 			add_popularity = { ideology = syndicalist popularity = -0.03 }
@@ -3998,7 +3998,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_media_empire"
 			custom_effect_tooltip = USA_political_recovery_tooltip
-			CAL_increase_political_recovery = yes
+			USA_political_recovery = yes
 			swap_ideas = {
 			remove_idea = CAL_media_regulation_act_idea
 			add_idea = CAL_media_empire_idea
@@ -4068,7 +4068,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_oaths_of_loyalty"
 			custom_effect_tooltip = USA_political_recovery_tooltip
-			CAL_increase_political_recovery = yes
+			USA_political_recovery = yes
 			add_political_power = 45
 			add_popularity = { ideology = paternal_autocrat popularity = 0.05 }
 			add_manpower = 200
@@ -4099,7 +4099,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_reconcilation"
 			custom_effect_tooltip = USA_political_recovery_tooltip
-			CAL_increase_political_recovery = yes
+			USA_political_recovery = yes
 			add_political_power = 55
 		}
 	}
@@ -4134,7 +4134,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_absorb_democrats"
 			custom_effect_tooltip = USA_political_recovery_tooltip
-			CAL_increase_political_recovery = yes
+			USA_political_recovery = yes
 			add_political_power = 75
 			add_stability = 0.1
 			add_popularity = {
@@ -4165,7 +4165,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_white_house_socials"
 			custom_effect_tooltip = USA_political_recovery_tooltip
-			CAL_increase_political_recovery = yes
+			USA_political_recovery = yes
 			swap_ideas = {
 			remove_idea = CAL_high_tariffs_idea_3
 			add_idea = CAL_high_tariffs_idea_4
@@ -4308,7 +4308,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_american_values1"
 			custom_effect_tooltip = USA_political_recovery_tooltip
 			add_ideas = CAL_american_values_ideas
-			CAL_increase_political_recovery = yes
+			USA_political_recovery = yes
 		}
 	}
 	
@@ -4419,7 +4419,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_esmwt"
 			custom_effect_tooltip = USA_political_recovery_tooltip
 			country_event = { id = ustates.125 days = 1 }
-			CAL_increase_political_recovery = yes
+			USA_political_recovery = yes
 		}
 	}
 	focus = {# Freedman's Bureau
@@ -4527,7 +4527,7 @@ focus_tree = {
 			add_stability = -0.03
 			add_popularity = { ideology = national_populist popularity = -0.03 }
 			add_manpower = 1500
-			CAL_increase_political_recovery = yes
+			USA_political_recovery = yes
 		}
 	}
 	
@@ -4552,7 +4552,7 @@ focus_tree = {
 			custom_effect_tooltip = USA_political_recovery_tooltip
 			add_stability = 0.08
 			add_political_power = 40
-			CAL_increase_political_recovery = yes
+			USA_political_recovery = yes
 		}
 	}
 	
@@ -4583,7 +4583,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_trial_of_the_federalists"
 			custom_effect_tooltip = USA_political_recovery_tooltip
-			CAL_increase_political_recovery = yes
+			USA_political_recovery = yes
 			add_manpower = -3000
 			add_war_support = -0.05
 			add_popularity = { ideology = paternal_autocrat popularity = -0.08 }
@@ -4620,7 +4620,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_loyal_army"
 			custom_effect_tooltip = USA_political_recovery_tooltip
-			CAL_increase_political_recovery = yes
+			USA_political_recovery = yes
 			add_stability = 0.05
 			add_political_power = 25
 			custom_effect_tooltip = ACW_fight_fed_terrorists_tooltip
@@ -4658,7 +4658,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_salute_the_patriots"
 			custom_effect_tooltip = USA_political_recovery_tooltip
-			CAL_increase_political_recovery = yes
+			USA_political_recovery = yes
 			add_popularity = { ideology = paternal_autocrat popularity = 0.05 }
 			add_political_power = -40
 			army_experience = 25
@@ -4778,7 +4778,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_malice_and_charity"
 			custom_effect_tooltip = USA_political_recovery_tooltip
-			CAL_increase_political_recovery = yes
+			USA_political_recovery = yes
 			country_event = { id = ustates.118 days = 1 }
 		}
 	}
@@ -4803,7 +4803,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_civil_liberties"
 			add_stability = 0.1
 			custom_effect_tooltip = USA_political_recovery_tooltip
-			CAL_increase_political_recovery = yes
+			USA_political_recovery = yes
 		}
 	}
 	
@@ -4993,7 +4993,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_rebuild_americas_industry"
 			custom_effect_tooltip = USA_economic_recovery_tooltip
-			CAL_increase_recovery = yes
+			USA_depression_recovery = yes
 			add_tech_bonus = {
 				name = industrial_bonus
 				bonus = 1
@@ -5026,7 +5026,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_economic_investments"
 			custom_effect_tooltip = USA_economic_recovery_tooltip
-			CAL_increase_recovery = yes
+			USA_depression_recovery = yes
 			random_owned_state = {
 				limit = {
 					is_core_of = CAL
@@ -5088,7 +5088,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_american_industry"
 			custom_effect_tooltip = USA_economic_recovery_tooltip
-			CAL_increase_recovery = yes
+			USA_depression_recovery = yes
 		}
 	}
 
@@ -5195,7 +5195,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_rebuild_agriculture"
 			custom_effect_tooltip = USA_economic_recovery_tooltip
-			CAL_increase_recovery = yes
+			USA_depression_recovery = yes
 			add_tech_bonus = {
 				bonus = 1
 				uses = 2
@@ -5329,7 +5329,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_farming_subsidies"
 			custom_effect_tooltip = USA_economic_recovery_tooltip
-			CAL_increase_recovery = yes
+			USA_depression_recovery = yes
 		}
 	}
 
@@ -5459,7 +5459,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_bill_of_rights"
 			custom_effect_tooltip = USA_economic_recovery_tooltip
-			CAL_increase_recovery = yes
+			USA_depression_recovery = yes
 		}
 	}
 	
