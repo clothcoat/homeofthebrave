@@ -6189,6 +6189,7 @@ country_event = { # Out of the Frying Pot
 
 	option = { # Great
 		name = newengland.119.a
+		set_country_flag = NEE_Radicals_Win
 		add_political_power = 20
 		add_popularity = { ideology = market_liberal popularity = 0.04 }
 		add_popularity = { ideology = paternal_autocrat popularity = 0.03 }

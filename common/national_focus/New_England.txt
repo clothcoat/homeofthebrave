@@ -2398,11 +2398,8 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			OR = {
-			has_country_flag = radical_victory
-			has_country_flag = NEE_sentinels
+			has_country_flag = NEE_Radicals_Win
 			}
-		}
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
