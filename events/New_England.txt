@@ -6233,6 +6233,14 @@ country_event = { # Radical Split
 			elections_allowed = yes
 		}
 		set_country_flag = NEE_sentinels
+		create_country_leader = {
+			name = "Irenee du Pont"
+			desc = "POLITICS_Irenee_du_Pont_DESC"
+			picture = "gfx/leaders/NEE/Irenee_du_Pont.tga"
+			expire = "1965.1.1"
+			ideology = national_populist_subtype
+			traits = { anti_statist }
+		}
 		hidden_effect = {
 			set_cosmetic_tag = NEE_national_populist_ancap
 		}
@@ -6289,6 +6297,12 @@ country_event = { # Remnant Leader Election
 			election_frequency = 48
 			elections_allowed = yes
 		}
+			hidden_effect = {
+			add_ideas = NEE_Albert_Jay_Nock_hog_pau
+			add_ideas = NEE_H_L_Mencken_for_npo
+			add_ideas = NEE_Leonard_Read_eco_pau
+			add_ideas = NEE_Lewis_Mumford_sec_pau 
+			}
 	}
 	option = { # Robert McCormick
 		name = newengland.121.b
@@ -6306,6 +6320,12 @@ country_event = { # Remnant Leader Election
 			election_frequency = 48
 			elections_allowed = yes
 		}
+		hidden_effect = {
+			add_ideas = NEE_Albert_Jay_Nock_hog_pau
+			add_ideas = NEE_H_L_Mencken_for_npo
+			add_ideas = NEE_Leonard_Read_eco_pau
+			add_ideas = NEE_Lewis_Mumford_sec_pau 
+			}
 	}
 }
 
