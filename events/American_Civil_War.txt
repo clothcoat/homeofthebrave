@@ -3553,6 +3553,7 @@ country_event = { # COR forms
 		}
 		add_stability = 0.15
 		add_war_support = 0.2
+		COR_initial_events = yes
 	}
 	option = {
 		name = amcivwar.1011.b
@@ -3570,6 +3571,7 @@ country_event = { # COR forms
 		COR = {
 			change_tag_from = USA
 		}
+		COR_initial_events = yes
 	}
 }
 country_event = { # Jack Reed declares revolution against Murray and Mac
