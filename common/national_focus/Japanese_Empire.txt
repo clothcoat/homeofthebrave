@@ -1382,7 +1382,10 @@ focus_tree = {
 		id = JAP_BUR_CAR_1
 		icon = GFX_goal_JAP_industry
 		available = {
-			has_global_flag = USA_civil_war_begun_flag
+			OR = {
+				has_global_flag = USA_civil_war_avoided_flag
+				has_global_flag = USA_civil_war_begun_flag
+			}
 			OR = {
 				282 = { is_owned_and_controlled_by = JAP }
 				531 = { is_owned_and_controlled_by = JAP }
@@ -2848,7 +2851,10 @@ focus_tree = {
 		id = JAP_rising_sun
 		icon = GFX_goal_japanese_imperialism
 		available = {
-			has_global_flag = USA_civil_war_begun_flag
+			OR = {
+				has_global_flag = USA_civil_war_avoided_flag
+				has_global_flag = USA_civil_war_begun_flag
+			}
 			is_subject = no
 			NOT = {
 				has_global_flag = JAP_Fading_Sun
