@@ -1590,6 +1590,10 @@ USA_reconstruction_decisions = {# Reconstruction Stuff
 			374 = { is_owned_and_controlled_by = ROOT }
 			375 = { is_owned_and_controlled_by = ROOT }
 			833 = { is_owned_and_controlled_by = ROOT }
+			1113 = { is_owned_and_controlled_by = ROOT }
+			1114 = { is_owned_and_controlled_by = ROOT }
+			1102 = { is_owned_and_controlled_by = ROOT }
+			1112 = { is_owned_and_controlled_by = ROOT }
 		}
 		visible = {
 			OR = {
@@ -1614,6 +1618,10 @@ USA_reconstruction_decisions = {# Reconstruction Stuff
 					374 = { is_core_of = ROOT }
 					375 = { is_core_of = ROOT }
 					833 = { is_core_of = ROOT }
+					1113 = { is_core_of = ROOT }
+					1114 = { is_core_of = ROOT }
+					1102 = { is_core_of = ROOT }
+					1112 = { is_core_of = ROOT }
 				}
 			}
 		}
@@ -1637,6 +1645,10 @@ USA_reconstruction_decisions = {# Reconstruction Stuff
 						state = 374
 						state = 375
 						state = 833
+						state = 1113
+						state = 1114
+						state = 1102
+						state = 1112
 					}
 				}
 				remove_ACW_cores = yes
@@ -1673,6 +1685,14 @@ USA_reconstruction_decisions = {# Reconstruction Stuff
 			364 = { is_owned_and_controlled_by = ROOT }
 			365 = { is_owned_and_controlled_by = ROOT }
 			366 = { is_owned_and_controlled_by = ROOT }
+			1105 = { is_owned_and_controlled_by = ROOT }
+			1106 = { is_owned_and_controlled_by = ROOT }
+			1101 = { is_owned_and_controlled_by = ROOT }
+			1104 = { is_owned_and_controlled_by = ROOT }
+			1116 = { is_owned_and_controlled_by = ROOT }
+			1115 = { is_owned_and_controlled_by = ROOT }
+			1117 = { is_owned_and_controlled_by = ROOT }
+			1118 = { is_owned_and_controlled_by = ROOT }
 		}
 		visible = {
 			OR = {
@@ -1696,6 +1716,14 @@ USA_reconstruction_decisions = {# Reconstruction Stuff
 					364 = { is_core_of = ROOT }
 					365 = { is_core_of = ROOT }
 					366 = { is_core_of = ROOT }
+					1105 = { is_core_of = ROOT }
+					1106 = { is_core_of = ROOT }
+					1101 = { is_core_of = ROOT }
+					1104 = { is_core_of = ROOT }
+					1116 = { is_core_of = ROOT }
+					1115 = { is_core_of = ROOT }
+					1117 = { is_core_of = ROOT }
+					1118 = { is_core_of = ROOT }
 				}
 			}
 		}
@@ -1718,6 +1746,14 @@ USA_reconstruction_decisions = {# Reconstruction Stuff
 						state = 364
 						state = 365
 						state = 366
+						state = 1105
+						state = 1106
+						state = 1101
+						state = 1104
+						state = 1116
+						state = 1115
+						state = 1117
+						state = 1118
 					}
 				}
 				remove_ACW_cores = yes
@@ -1753,6 +1789,11 @@ USA_reconstruction_decisions = {# Reconstruction Stuff
 			261 = { is_owned_and_controlled_by = ROOT }
 			360 = { is_owned_and_controlled_by = ROOT }
 			359 = { is_owned_and_controlled_by = ROOT }
+			1108 = { is_owned_and_controlled_by = ROOT }
+			1098 = { is_owned_and_controlled_by = ROOT }
+			1100 = { is_owned_and_controlled_by = ROOT }
+			1097 = { is_owned_and_controlled_by = ROOT }
+			1099 = { is_owned_and_controlled_by = ROOT }
 		}
 		visible = {
 			OR = {
@@ -1775,6 +1816,11 @@ USA_reconstruction_decisions = {# Reconstruction Stuff
 					261 = { is_core_of = ROOT }
 					360 = { is_core_of = ROOT }
 					359 = { is_core_of = ROOT }
+					1108 = { is_core_of = ROOT }
+					1098 = { is_core_of = ROOT }
+					1100 = { is_core_of = ROOT }
+					1097 = { is_core_of = ROOT }
+					1099 = { is_core_of = ROOT }
 				}
 			}
 		}
@@ -1796,6 +1842,11 @@ USA_reconstruction_decisions = {# Reconstruction Stuff
 						state = 261
 						state = 360
 						state = 359
+						state = 1108
+						state = 1098
+						state = 1100
+						state = 1097
+						state = 1099
 					}
 				}
 				remove_ACW_cores = yes
@@ -1831,6 +1882,8 @@ USA_reconstruction_decisions = {# Reconstruction Stuff
 			391 = { is_owned_and_controlled_by = ROOT }
 			392 = { is_owned_and_controlled_by = ROOT }
 			373 = { is_owned_and_controlled_by = ROOT }
+			1119 = { is_owned_and_controlled_by = ROOT }
+			1109 = { is_owned_and_controlled_by = ROOT }
 		}
 		visible = {
 			OR = {
@@ -1853,6 +1906,8 @@ USA_reconstruction_decisions = {# Reconstruction Stuff
 					391 = { is_core_of = ROOT }
 					392 = { is_core_of = ROOT }
 					373 = { is_core_of = ROOT }
+					1119 = { is_core_of = ROOT }
+					1109 = { is_core_of = ROOT }
 				}
 			}
 		}
@@ -1874,6 +1929,8 @@ USA_reconstruction_decisions = {# Reconstruction Stuff
 						state = 391
 						state = 392
 						state = 373
+						state = 1119
+						state = 1109
 					}
 				}
 				remove_ACW_cores = yes
@@ -1910,6 +1967,11 @@ USA_reconstruction_decisions = {# Reconstruction Stuff
 			377 = { is_owned_and_controlled_by = ROOT }
 			376 = { is_owned_and_controlled_by = ROOT }
 			382 = { is_owned_and_controlled_by = ROOT }
+			1096 = { is_owned_and_controlled_by = ROOT }
+			1100 = { is_owned_and_controlled_by = ROOT }
+			1103 = { is_owned_and_controlled_by = ROOT }
+			1107 = { is_owned_and_controlled_by = ROOT }
+			1111 = { is_owned_and_controlled_by = ROOT }
 		}
 		visible = {
 			OR = {
@@ -1933,6 +1995,11 @@ USA_reconstruction_decisions = {# Reconstruction Stuff
 					377 = { is_core_of = ROOT }
 					376 = { is_core_of = ROOT }
 					382 = { is_core_of = ROOT }
+					1096 = { is_core_of = ROOT }
+					1100 = { is_core_of = ROOT }
+					1103 = { is_core_of = ROOT }
+					1107 = { is_core_of = ROOT }
+					1111 = { is_core_of = ROOT }
 				}
 			}
 		}
@@ -1955,6 +2022,11 @@ USA_reconstruction_decisions = {# Reconstruction Stuff
 						state = 377
 						state = 376
 						state = 382
+						state = 1096
+						state = 1100
+						state = 1103
+						state = 1107
+						state = 1101
 					}
 				}
 				remove_ACW_cores = yes
