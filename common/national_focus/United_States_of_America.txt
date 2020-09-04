@@ -4835,8 +4835,8 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_landon_plan"
 			swap_ideas = {
-			remove_idea = USA_great_depression_3
-			add_idea = USA_great_depression_4
+			remove_idea = USA_great_depression_2
+			add_idea = USA_great_depression_3
 			}
 			add_popularity = { ideology = market_liberal popularity = 0.05 }
 			add_stability = 0.05
@@ -4900,8 +4900,10 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_unite_federal_americans"
 			custom_effect_tooltip = unlock_focuses
+			remove_ideas = USA_great_depression_4
+			remove_ideas = USA_black_monday2
+			}
 		}
-	}
 	
 	###Norris Rooseveltian Plan###
 	focus = {# Chad Norris
