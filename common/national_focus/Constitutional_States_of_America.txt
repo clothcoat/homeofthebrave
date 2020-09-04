@@ -1187,7 +1187,6 @@ focus_tree = {
 		}
 		relative_position_id = COR_the_lone_eagle
 		available = {
-			has_global_flag = USA_civil_war_over_flag
 			has_government = paternal_autocrat
 		}
 		ai_will_do = {
@@ -1238,8 +1237,7 @@ focus_tree = {
 			focus = COR_the_order_of_76
 		}
 		available = {
-			has_government = paternal_autocrat	
-			has_global_flag = USA_civil_war_over_flag		
+			has_government = paternal_autocrat			
 		}
 		cancel_if_invalid = yes
 		available_if_capitulated = yes
