@@ -11458,6 +11458,10 @@ focus_tree = {
 			has_government = national_populist
 			}
 		}
+		mutually_exclusive = {
+		focus = USA_conditional_black_aid
+		focus = USA_jazz_crackdown
+		}
 		ai_will_do = {
 			factor = 5
 		}
