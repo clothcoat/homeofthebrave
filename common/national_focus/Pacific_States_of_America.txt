@@ -4993,7 +4993,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_rebuild_americas_industry"
 			custom_effect_tooltip = USA_economic_recovery_tooltip
-			USA_ = yes
+			COR_increase_recovery = yes
 			add_tech_bonus = {
 				name = industrial_bonus
 				bonus = 1
@@ -5026,7 +5026,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_economic_investments"
 			custom_effect_tooltip = USA_economic_recovery_tooltip
-			USA_depression_recovery = yes
+			COR_increase_recovery = yes
 			random_owned_state = {
 				limit = {
 					is_core_of = CAL
@@ -5088,7 +5088,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_american_industry"
 			custom_effect_tooltip = USA_economic_recovery_tooltip
-			USA_depression_recovery = yes
+			COR_increase_recovery = yes
 		}
 	}
 
@@ -5195,7 +5195,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_rebuild_agriculture"
 			custom_effect_tooltip = USA_economic_recovery_tooltip
-			USA_depression_recovery = yes
+			COR_increase_recovery = yes
 			add_tech_bonus = {
 				bonus = 1
 				uses = 2
@@ -5329,7 +5329,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_farming_subsidies"
 			custom_effect_tooltip = USA_economic_recovery_tooltip
-			USA_depression_recovery = yes
+			COR_increase_recovery = yes
 		}
 	}
 
@@ -5459,7 +5459,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_bill_of_rights"
 			custom_effect_tooltip = USA_economic_recovery_tooltip
-			USA_depression_recovery = yes
+			COR_increase_recovery = yes
 		}
 	}
 	

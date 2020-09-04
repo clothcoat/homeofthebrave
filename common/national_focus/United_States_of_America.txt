@@ -1215,7 +1215,11 @@ focus_tree = {
 		id = USA_last_bastion
 		icon = GFX_goal_liberty
 		cost = 5.00
-		available = { has_country_flag = USA_had_1936_election
+		available = {
+			OR = {
+				has_country_flag = USA_had_1936_election
+				has_country_flag = USA_macarthur_coup
+			}
 			OR = {
 				has_global_flag = USA_civil_war_avoided_flag
 				has_global_flag = USA_civil_war_over_flag
@@ -6395,7 +6399,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_rebuild_americas_industry"
 			custom_effect_tooltip = USA_economic_recovery_tooltip
-			CSA_increase_recovery = yes
+			COR_increase_recovery = yes = yes
 			add_tech_bonus = {
 				name = industrial_bonus
 				bonus = 1
@@ -6428,7 +6432,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_economic_investments"
 			custom_effect_tooltip = USA_economic_recovery_tooltip
-			CSA_increase_recovery = yes
+			COR_increase_recovery = yes = yes
 			random_owned_state = {
 				limit = {
 					is_core_of = USA
@@ -6490,7 +6494,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_review_the_fed"
 			custom_effect_tooltip = USA_economic_recovery_tooltip
-			CSA_increase_recovery = yes
+			COR_increase_recovery = yes = yes
 		}
 	}
 	
@@ -6513,7 +6517,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_american_industry"
 			custom_effect_tooltip = USA_economic_recovery_tooltip
-			CSA_increase_recovery = yes
+			COR_increase_recovery = yes = yes
 		}
 	}
 
@@ -6620,7 +6624,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_rebuild_agriculture"
 			custom_effect_tooltip = USA_economic_recovery_tooltip
-			CSA_increase_recovery = yes
+			COR_increase_recovery = yes = yes
 			add_tech_bonus = {
 				bonus = 1
 				uses = 2
@@ -6754,7 +6758,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_farming_subsidies"
 			custom_effect_tooltip = USA_economic_recovery_tooltip
-			CSA_increase_recovery = yes
+			COR_increase_recovery = yes = yes
 		}
 	}
 
