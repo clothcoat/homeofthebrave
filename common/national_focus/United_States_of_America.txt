@@ -5882,7 +5882,10 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_redeemer_collaboration"
 			custom_effect_tooltip = ACW_combat_klan
+			add_popularity = { ideology = national_populist popularity = 0.03 }
 			add_stability = 0.05
+			add_political_power = 40
+			increase_ruling_party_popularity_by_5 = yes
 			modify_country_flag = {
 				flag = ACW_klan_resistance
 				value = -2
