@@ -339,12 +339,14 @@ foreign_influence = {
 				NOT = {
 					has_idea = CAN_csa_strikes
 					has_war_with = ROOT
+					has_global_flag = USA_civil_war_over_flag
 				}
 			}
 		}
 
 		visible = {
 			is_subject = no
+
 			FROM = {
 				exists = yes
 				is_subject = no
