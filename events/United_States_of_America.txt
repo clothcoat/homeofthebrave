@@ -8743,7 +8743,7 @@ country_event = { # Gangsters Miss Dewey By A Hair
 	}
 }
 
-country_event = { # Gangsters Miss Dewey By A Hair
+country_event = { # Gangsters Miss Curtis By A Hair
 	id = ustates.2000
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.2000"}
 	title = ustates.2000.t
@@ -8753,6 +8753,9 @@ country_event = { # Gangsters Miss Dewey By A Hair
 
 	trigger = {
 		tag = USA
+		has_country_leader = {
+			name = "Charles Curtis"
+			ruling_only = yes
 		has_global_flag = USA_civil_war_avoided_flag
 	}
 
@@ -8766,6 +8769,36 @@ country_event = { # Gangsters Miss Dewey By A Hair
 	}
 	option = { # Ignore them for now
 		name = ustates.2000.b
+		add_stability = -0.05
+	}
+}
+
+country_event = { # Gangsters Miss Landon By A Hair
+	id = ustates.2004
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.2000"}
+	title = ustates.2004.t
+	desc = ustates.2004.d
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = USA
+		has_country_leader = {
+			name = "Alf Landon"
+			ruling_only = yes
+		has_global_flag = USA_civil_war_avoided_flag
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+
+	option = { # Send the FBI
+		name = ustates.2004.a
+		add_political_power = -30
+	}
+	option = { # Ignore them for now
+		name = ustates.2004.b
 		add_stability = -0.05
 	}
 }
