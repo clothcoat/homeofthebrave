@@ -1802,8 +1802,10 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_american_syndicalist_union"
 			add_popularity = { ideology = syndicalist popularity = 0.03 }
 			hidden_effect = {
+			country_event = {
 			id = csa.452
 			days = 2
+				}
 			}
 		}
 	}
@@ -3731,6 +3733,14 @@ focus_tree = {
 		prerequisite = {
 			focus = CSA_price_controls
 		}
+		select_effect = {
+			hidden_effect = {
+			country_event = {
+			id = csa.436
+			days = 25
+				}
+			}
+			}
 		relative_position_id = CSA_presidential_socialism
 		x = -1
 		y = 8
@@ -3742,14 +3752,6 @@ focus_tree = {
 			swap_ideas = {
 			remove_idea = CSA_practical_trade_idea_2
 			add_idea = CSA_practical_trade_idea_3
-			}
-			select_effect = {
-			hidden_effect = {
-			country_event = {
-			id = csa.436
-			days = 25
-				}
-			}
 			}
 			add_political_power = 50
 			add_stability = 0.05

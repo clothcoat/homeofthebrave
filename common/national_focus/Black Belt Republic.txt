@@ -6762,12 +6762,6 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BBR_defend_the_border"
-			add_building_construction = {
-				type = bunker
-				province = 12735
-				level = 3
-				instant_build = yes
-			}
 			1113 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
@@ -6972,10 +6966,7 @@ focus_tree = {
 			add_war_support = 0.05
 			add_command_power = 5
 			add_manpower = 3000
-			if = {
-			limit = {
-				is_core_of = USA
-				}
+			USA = {
 			add_claim_by = BBR
 			}
 		}
@@ -7301,7 +7292,6 @@ focus_tree = {
 			amount = 205
 			producer = BBR
 			}
-			producer = BBR
 			}
 		}
 	focus = {# Hit and Run tactics
@@ -7971,7 +7961,7 @@ focus_tree = {
 				name = artillery_bonus
 				bonus = 1
 				uses = 2
-				category = anti_air
+				category = cat_anti_air
 			}
 			add_tech_bonus = {
 				name = CAR_Overwhelming_Firepower
@@ -8017,7 +8007,7 @@ focus_tree = {
 				name = artillery_bonus
 				bonus = 1
 				uses = 1
-				category = antiair
+				category = cat_anti_air
 			}
 		}
 	}
