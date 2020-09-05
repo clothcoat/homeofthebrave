@@ -60,6 +60,7 @@ TEX_initial_events = {
 	TEX = {
 		if = {
 			limit = { NOT = { has_global_flag = USA_TEX_existed } }
+		}
 		if = {
 			limit = {
 				USA = { has_country_flag = USA_long_was_president }
