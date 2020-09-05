@@ -3309,6 +3309,7 @@ focus_tree = {
 		y = 2
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TEX_public_works"
+			custom_effect_tooltip = USA_economic_recovery_tooltip
 			random_owned_state = {
 				limit = {
 					is_core_of = TEX
@@ -3362,7 +3363,6 @@ focus_tree = {
 				}
 			}
 			TEX_increase_recovery = yes
-			custom_effect_tooltip = USA_economic_recovery_tooltip
 		}
 	}
 

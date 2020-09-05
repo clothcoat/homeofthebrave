@@ -6539,6 +6539,7 @@ country_event = { # Allied Militias
 		add_political_power = 55
 		add_stability = 0.15
 		set_global_flag = USA_civil_war_avoided_flag
+		add_country_leader_trait = savior_of_america
 		custom_effect_tooltip = USA_SPA_loses_strength
 		custom_effect_tooltip = USA_AFP_loses_strength
 		hidden_effect = {
