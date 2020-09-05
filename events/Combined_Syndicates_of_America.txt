@@ -639,7 +639,7 @@ country_event = { # Socialist Constitution - Judiciary
 	}
 }
 
-country_event = { # Socialist Constitution - GFX_report_event_USA_congress and the President
+country_event = { # Socialist Constitution - the President
 	id = csa.7
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.7"}
 	title = csa.7.t
