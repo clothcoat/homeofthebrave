@@ -2787,12 +2787,6 @@ focus_tree = {
 		prerequisite = {
 			focus = CSA_usas
 		}
-		select_effect = {
-		country_event = {
-			id = csa.451
-			days = 12
-			}
-		}
 		relative_position_id = CSA_usas
 		x = -5
 		y = 1
@@ -2806,7 +2800,7 @@ focus_tree = {
 			set_cosmetic_tag = CSA_socialist_united_of_america
 			hidden_effect = {
 			country_event = {
-			id = csa.452
+			id = csa.451
 			days = 2
 			}
 			}
