@@ -2952,6 +2952,7 @@ country_event = { # State of the Judicial Branch
 	picture = GFX_report_event_generic_trial
 
 	trigger = {
+	tag = BBR
 	OR = {
 		has_government = social_conservative
 		has_government = market_liberal
