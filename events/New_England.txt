@@ -5742,6 +5742,7 @@ country_event = { # Feds appointed
 
 	option = { # John Jacob Astor
 		name = newengland.107.a
+		set_country_flag = NEE_FEDS_APPOINTED
 		add_political_power = 35
 		add_stability = -0.03
 		add_manpower = 500
@@ -5771,6 +5772,7 @@ country_event = { # Feds appointed
 	}
 	option = { # Vincent Astor
 		name = newengland.107.b
+		set_country_flag = NEE_FEDS_APPOINTED
 		add_political_power = 35
 		add_popularity = { ideology = authoritarian_democrat popularity = 0.01 }
 		add_stability = 0.03
