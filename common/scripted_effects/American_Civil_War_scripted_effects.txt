@@ -53,12 +53,6 @@ CSA_initial_events = {
 TEX_initial_events = {
 	TEX = {
 		if = {
-<<<<<<< HEAD
-			limit = { NOT = { has_global_flag = USA_TEX_existed } }
-		}
-		if = {
-=======
->>>>>>> parent of d5898556... Fixes?
 			limit = {
 				USA = { has_country_flag = USA_long_was_president }
 			}
