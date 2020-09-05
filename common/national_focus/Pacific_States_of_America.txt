@@ -4188,6 +4188,7 @@ focus_tree = {
 				has_government = social_liberal
 				has_government = social_democrat
 				has_government = radical_socialist
+				has_government = national_populist
 			}
 		}
 		bypass = {
@@ -4197,6 +4198,7 @@ focus_tree = {
 				has_government = social_liberal
 				has_government = social_democrat
 				has_government = radical_socialist
+				has_government = national_populist
 			}
 		}
 		prerequisite = {
@@ -4349,6 +4351,9 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = CAL_maintain_nationalizations
 		}
+		available = {
+		NOT = { has_government = national_populist }
+		}
 		relative_position_id = CAL_classical_liberal_mandate
 		x = 4
 		y = 2
@@ -4432,6 +4437,9 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = CAL_redeemer_collaboration
 		}
+		available = {
+		NOT = { has_government = national_populist }
+		}
 		relative_position_id = CAL_classical_liberal_mandate
 		x = 1
 		y = 1
@@ -4514,6 +4522,9 @@ focus_tree = {
 		}
 		mutually_exclusive = {
 			focus = CAL_traditional_machines
+		}
+		available = {
+		NOT = { has_government = national_populist }
 		}
 		relative_position_id = CAL_classical_liberal_mandate
 		x = 1
@@ -4993,7 +5004,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_rebuild_americas_industry"
 			custom_effect_tooltip = USA_economic_recovery_tooltip
-			USA_ = yes
+			USA_depression_recovery = yes
 			add_tech_bonus = {
 				name = industrial_bonus
 				bonus = 1
