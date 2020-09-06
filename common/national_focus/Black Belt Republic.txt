@@ -2883,6 +2883,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BBR_american_party"
+			add_popularity = { ideology =authoritarian_democrat popularity = 0.02 }
 		}
 	}
 	focus = {# Work with Socialists
