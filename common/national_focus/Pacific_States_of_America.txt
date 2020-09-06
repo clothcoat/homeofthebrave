@@ -3467,9 +3467,11 @@ focus_tree = {
 		icon = GFX_goal_ideology_paternal_autocrat
 		cost = 5.00
 		available = {
+			OR = {
 			has_government = authoritarian_democrat
-			has_country_leader = { ruling_only = yes name = "William Randolph Hearst"}
-			has_country_flag = CAL_national_democrats_win_twice_flag
+			has_government = paternal_autocrat
+			}
+			has_country_leader = { ruling_only = yes name = "William Randolph Hearst" }
 		}
 		ai_will_do = {
 			factor = 5

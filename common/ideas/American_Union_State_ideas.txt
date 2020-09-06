@@ -1458,12 +1458,12 @@ ideas = {
 			removal_cost = -1
 			picture = TEX_fighting_for_america
 			modifier = {
-				production_speed_industrial_complex_factor = 0.1
-				production_speed_infrastructure_factor = 0.05
+				production_speed_industrial_complex_factor = 0.12
+				production_speed_infrastructure_factor = 0.1
 				production_speed_arms_factory_factor = -0.1
 				mobilization_speed = -0.05
 				political_power_cost = -0.2
-				consumer_goods_factor = -0.02
+				consumer_goods_factor = 0.02
 				monthly_population = 0.02
 			}
 		}
@@ -1473,13 +1473,12 @@ ideas = {
 			removal_cost = -1
 			picture = TEX_fighting_for_america
 			modifier = {
-				production_speed_industrial_complex_factor = 0.1
+				production_speed_industrial_complex_factor = -0.1
 				production_speed_infrastructure_factor = 0.05
-				production_speed_arms_factory_factor = -0.1
-				mobilization_speed = -0.05
-				political_power_cost = -0.20
+				production_speed_arms_factory_factor = 0.1
+				mobilization_speed = 0.05
+				political_power_cost = -0.1
 				consumer_goods_factor = -0.02
-				monthly_population = 0.02
 			}
 		}
 		TEX_trade_deals = {
