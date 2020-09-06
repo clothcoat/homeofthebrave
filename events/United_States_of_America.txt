@@ -8760,7 +8760,7 @@ country_event = { # Gangsters Miss Curtis By A Hair
 	}
 
 	mean_time_to_happen = {
-		months = 12
+		months = 24
 	}
 
 	option = { # Send the FBI
@@ -8770,12 +8770,13 @@ country_event = { # Gangsters Miss Curtis By A Hair
 	option = { # Ignore them for now
 		name = ustates.2000.b
 		add_stability = -0.05
+		}
 	}
 }
 
 country_event = { # Gangsters Miss Landon By A Hair
 	id = ustates.2004
-	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.2000"}
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.2004"}
 	title = ustates.2004.t
 	desc = ustates.2004.d
 
@@ -8790,7 +8791,7 @@ country_event = { # Gangsters Miss Landon By A Hair
 	}
 
 	mean_time_to_happen = {
-		months = 12
+		months = 24
 	}
 
 	option = { # Send the FBI
@@ -8800,6 +8801,7 @@ country_event = { # Gangsters Miss Landon By A Hair
 	option = { # Ignore them for now
 		name = ustates.2004.b
 		add_stability = -0.05
+		}
 	}
 }
 
@@ -9401,7 +9403,6 @@ country_event = { # 1940 Election
 			}
 		}
 	}
-
 
 ### 1944 Elections and Primaries ###
 country_event = { # 1944 Progressive Primary
