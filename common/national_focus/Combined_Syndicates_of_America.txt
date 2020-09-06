@@ -5503,6 +5503,10 @@ focus_tree = {
 		prerequisite = { focus = CSA_second_continental_army }
 		relative_position_id = CSA_second_continental_army
 		completion_reward = {
+			swap_ideas = {
+			remove_idea = CSA_militia_idea
+			add_idea = CSA_militia_idea2
+			}
 			add_popularity = { ideology = syndicalist popularity = 0.05 }
 			add_tech_bonus = {
 				name = CSA_iww_doctrine_bonus
@@ -5533,7 +5537,10 @@ focus_tree = {
 		prerequisite = { focus = CSA_iww_doctrine }
 		relative_position_id = CSA_iww_doctrine
 		completion_reward = {
-			add_ideas = CSA_iww_doctrine_idea
+			swap_ideas = {
+			remove_idea = CSA_militia_idea2
+			add_idea = CSA_iww_doctrine_idea
+			}
 			add_equipment_to_stockpile = {
 			type = motorized_equipment
 			amount = 55
@@ -5791,6 +5798,10 @@ focus_tree = {
 		prerequisite = { focus = CSA_second_continental_army }
 		relative_position_id = CSA_second_continental_army
 		completion_reward = {
+			swap_ideas = {
+			remove_idea = CSA_militia_idea
+			add_idea = CSA_militia_idea2
+			}
 			add_equipment_to_stockpile = {
 			type = artillery_equipment
 			amount = 15
@@ -5821,7 +5832,10 @@ focus_tree = {
 		prerequisite = { focus = CSA_centralist_doctrine }
 		relative_position_id = CSA_centralist_doctrine
 		completion_reward = {
-			add_ideas = CSA_centralist_doctrine_idea
+			swap_ideas = {
+			remove_idea = CSA_militia_idea2
+			add_idea = CSA_centralist_doctrine_idea
+			}
 			add_tech_bonus = {
 				name = CSA_artillery
 				bonus = 2
@@ -6018,6 +6032,10 @@ focus_tree = {
 		prerequisite = { focus = CSA_second_continental_army }
 		relative_position_id = CSA_second_continental_army
 		completion_reward = {
+			swap_ideas = {
+			remove_idea = CSA_militia_idea
+			add_idea = CSA_militia_idea2
+			}
 			add_popularity = { ideology = totalist popularity = 0.03 }
 			add_popularity = { ideology = syndicalist popularity = 0.02 }
 			add_manpower = 3000
@@ -6045,7 +6063,10 @@ focus_tree = {
 		prerequisite = { focus = CSA_collectivist_doctrine }
 		relative_position_id = CSA_collectivist_doctrine
 		completion_reward = {
-			add_ideas = CSA_collectivist_doctrine_idea
+			swap_ideas = {
+			remove_idea = CSA_militia_idea2
+			add_idea = CSA_collectivist_doctrine_idea
+			}
 			add_manpower = 10000
 			add_war_support = 0.1
 			add_tech_bonus = {
@@ -6275,6 +6296,10 @@ focus_tree = {
 		prerequisite = { focus = CSA_second_continental_army }
 		relative_position_id = CSA_second_continental_army
 		completion_reward = {
+			swap_ideas = {
+			remove_idea = CSA_militia_idea
+			add_idea = CSA_militia_idea2
+			}
 			add_popularity = { ideology = social_democrat popularity = 0.03 }
 			add_popularity = { ideology = radical_socialist popularity = 0.03 }
 			add_tech_bonus = {
@@ -6304,7 +6329,10 @@ focus_tree = {
 		prerequisite = { focus = CSA_butlers_doctrine }
 		relative_position_id = CSA_butlers_doctrine
 		completion_reward = {
-			add_ideas = CSA_butlers_doctrine_idea
+			swap_ideas = {
+			remove_idea = CSA_militia_idea2
+			add_idea = CSA_butlers_doctrine_idea
+			}
 			add_tech_bonus = {
 				name = CSA_Plan_bonus
 				bonus = 1.5
