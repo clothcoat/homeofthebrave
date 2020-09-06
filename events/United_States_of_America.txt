@@ -2614,6 +2614,7 @@ country_event = { # The 1936 Election - You're Fucked (Or are you...)
 			}
 		}
 		add_political_power = -100
+		set_country_flag = USA_had_1936_election
 		hidden_effect = {
 			set_global_flag = USA_garner_is_president
 		}
