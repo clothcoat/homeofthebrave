@@ -903,14 +903,13 @@ country_event = { # Leadership Election
 		set_politics = {
 			ruling_party = paternal_autocrat
 			elections_allowed = no
-
-			hidden_effect = {
+		}
+		hidden_effect = {
 				add_ideas = BBR_James_R_Stewart_hog_pau
 				add_ideas = BBR_Henrietta_Vinton_Davis_for_pau
 				add_ideas = BBR_E_B_McKinney_eco_pau
 				add_ideas = BBR_J_W_H_Eason_sec_pau
 			}
-		}
 	}
 }
 
@@ -1075,23 +1074,23 @@ country_event = { # Conquest of America
 	add_ideas = COR_George_W_Christians_eco_npo
 	add_ideas = COR_Elizabeth_Eloise_Kirkpatrick_Dilling_sec_npo
 	}
-	all_owned_state	 = {
+	if = {
 	limit = { is_core_of = USA }
 	add_core_of = COR
 	}
-	all_owned_state	 = {
+	if = {
 	limit = { is_core_of = CAL }
 	add_core_of = COR
 	}
-	all_owned_state	 = {
+	if = {
 	limit = { is_core_of = TEX }
 	add_core_of = COR
 	}
-	all_owned_state	 = {
+	if = {
 	limit = { is_core_of = NEE }
 	add_core_of = COR
 	}
-	all_owned_state	 = {
+	if = {
 	limit = { is_core_of = CSA }
 	add_core_of = COR
 	}
@@ -2975,7 +2974,7 @@ country_event = { # State of the Judicial Branch
 	option = { #Leave the current system in place
 	name = bbr.46.b
 	add_political_power = 25
-	increase_ruling_party_popularity = yes
+	increase_ruling_party_popularity_by_5 = yes
 	add_stability = -0.01
 	add_command_power = 5
 	}
