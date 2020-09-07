@@ -2937,7 +2937,7 @@ ideas = {
 			}
 			visible = {
 				if = {
-					limit = { NOT = { tag = TEX } }
+					limit = { NOT = { tag = USA } }
 					OR = {
 						has_country_flag = USA_industrial_companies_allowed
 						NOT = { has_global_flag = USA_civil_war_begun_flag }
@@ -2993,7 +2993,7 @@ ideas = {
 			available = { owns_state = 366 }
 			visible = {
 				if = {
-					limit = { NOT = { tag = COR } }
+					limit = { NOT = { tag = TEX } }
 					OR = {
 						has_country_flag = USA_weapon_companies_allowed
 						NOT = { has_global_flag = USA_civil_war_begun_flag }
@@ -3269,7 +3269,7 @@ ideas = {
 			available = { owns_state = 384 }
 			visible = {
 				if = {
-					limit = { NOT = { tag = TEX } }
+					limit = { NOT = { tag = USA } }
 					OR = {
 						has_country_flag = USA_heavy_equipment_companies_allowed
 						NOT = { has_global_flag = USA_civil_war_begun_flag }
@@ -3452,7 +3452,7 @@ ideas = {
 			available = { owns_state = 365 }
 			visible = {
 				if = {
-					limit = { NOT = { tag = COR } }
+					limit = { NOT = { tag = TEX } }
 					OR = {
 						has_country_flag = USA_heavy_equipment_companies_allowed
 						NOT = { has_global_flag = USA_civil_war_begun_flag }
@@ -3484,7 +3484,7 @@ ideas = {
 			available = { owns_state = 373 }
 			visible = {
 				if = {
-					limit = { NOT = { tag = COR } }
+					limit = { NOT = { tag = USA } }
 					OR = {
 						has_country_flag = USA_heavy_equipment_companies_allowed
 						NOT = { has_global_flag = USA_civil_war_begun_flag }
@@ -3581,7 +3581,7 @@ ideas = {
 			available = { owns_state = 366 }
 			visible = {
 				if = {
-					limit = { NOT = { tag = COR } }
+					limit = { NOT = { tag = TEX } }
 					OR = {
 						has_country_flag = USA_heavy_equipment_companies_allowed
 						NOT = { has_global_flag = USA_civil_war_begun_flag }
@@ -3629,7 +3629,7 @@ ideas = {
 			available = { owns_state = 365 }
 			visible = {
 				if = {
-					limit = { NOT = { tag = COR } }
+					limit = { NOT = { tag = TEX } }
 					OR = {
 						has_country_flag = USA_heavy_equipment_companies_allowed
 						NOT = { has_global_flag = USA_civil_war_begun_flag }
@@ -3666,7 +3666,7 @@ ideas = {
 			available = { owns_state = 370 }
 			visible = {
 				if = {
-					limit = { NOT = { tag = COR } }
+					limit = { NOT = { tag = TEX } }
 					OR = {
 						has_country_flag = USA_naval_companies_allowed
 						NOT = { has_global_flag = USA_civil_war_begun_flag }
@@ -3841,7 +3841,7 @@ ideas = {
 			available = { owns_state = 383 }
 			visible = {
 				if = {
-					limit = { NOT = { tag = TEX } }
+					limit = { NOT = { tag = USA } }
 					OR = {
 						has_country_flag = USA_aviation_companies_allowed
 						NOT = { has_global_flag = USA_civil_war_begun_flag }
@@ -3951,7 +3951,7 @@ ideas = {
 			available = { owns_state = 363 }
 			visible = {
 				if = {
-					limit = { NOT = { tag =COR } }
+					limit = { NOT = { tag = TEX } }
 					OR = {
 						has_country_flag = USA_aviation_companies_allowed
 						NOT = { has_global_flag = USA_civil_war_begun_flag }
