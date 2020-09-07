@@ -2,6 +2,7 @@ state = {
 	id = 1101
 	name = "STATE_1101"
 	manpower = 778000
+
 	state_category = eleven
 
 	history = {
@@ -11,11 +12,8 @@ state = {
 			industrial_complex = 2
 			dockyard = 3
 			arms_factory = 1
-		}	
-		add_core_of = USA
-		victory_points = {
-			1506 4
 		}
+		add_core_of = USA
 	}
 
 	provinces = {
