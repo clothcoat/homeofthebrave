@@ -1981,6 +1981,18 @@ USA_demobilize_forces = {
 			limit = { has_template = "Revolutionary Union Militia" }
 			delete_unit_template_and_units = { division_template = "Revolutionary Union Militia" }
 		}
+		if = {
+			limit = { has_template = "Revolutionary Militia" }
+			delete_unit_template_and_units = { division_template = "Revolutionary Militia" }
+		}
+		if = {
+			limit = { has_template = "Mounted Revolutionary Militia" }
+			delete_unit_template_and_units = { division_template = "Mounted Revolutionary Militia" }
+		}
+		if = {
+			limit = { has_template = "Revolutionary Garrison" }
+			delete_unit_template_and_units = { division_template = "Revolutionary Garrison" }
+		}
 	}
 	TEX = {
 		if = {
