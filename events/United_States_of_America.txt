@@ -8757,6 +8757,7 @@ country_event = { # Gangsters Miss Curtis By A Hair
 		has_country_leader = {
 			name = "Charles Curtis"
 			ruling_only = yes
+			}
 		has_global_flag = USA_civil_war_avoided_flag
 	}
 
@@ -8773,7 +8774,6 @@ country_event = { # Gangsters Miss Curtis By A Hair
 		add_stability = -0.05
 		}
 	}
-}
 
 country_event = { # Gangsters Miss Landon By A Hair
 	id = ustates.2004
