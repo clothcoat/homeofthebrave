@@ -732,8 +732,8 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_indepedent_media"
 			swap_ideas = {
-			remove_idea = CSA_social_patriotism_idea
-			add_idea = CSA_social_patriotism_idea_2
+			remove_idea = CSA_social_patriotism_idea_2
+			add_idea = CSA_social_patriotism_idea_3
 			}
 			add_stability = 0.05
 			add_popularity = { ideology = social_democrat popularity = 0.03 }
@@ -766,8 +766,8 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_protect_the_working_class"
 			swap_ideas = {
-			remove_idea = CSA_social_patriotism_idea_2
-			add_idea = CSA_social_patriotism_idea_3
+			remove_idea = CSA_social_patriotism_idea_3
+			add_idea = CSA_social_patriotism_idea_4
 			}
 			add_political_power = 45
 			add_popularity = { ideology = social_democrat popularity = 0.03 }
@@ -799,8 +799,8 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_mutal_economic_comitee"
 			swap_ideas = {
-			remove_idea = CSA_social_patriotism_idea_3
-			add_idea = CSA_social_patriotism_idea_4
+			remove_idea = CSA_social_patriotism_idea
+			add_idea = CSA_social_patriotism_idea_2
 			}
 			add_political_power = 75
 			increase_ruling_party_popularity_by_5 = yes
