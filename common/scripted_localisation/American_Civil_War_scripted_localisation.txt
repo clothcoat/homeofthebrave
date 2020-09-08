@@ -223,7 +223,7 @@ defined_text = {
 defined_text = {
 	name = illinois_num
 	text = {
-		trigger = { tag = is_federal_tag = yes}
+		trigger = { is_federal_tag = yes}
 		localization_key = ACW_6_mil
 	}
 	text = {
