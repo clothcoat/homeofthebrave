@@ -10449,20 +10449,32 @@ country_event = { # Social Patriot Flag
 
 	fire_only_once = yes
 
-	option = { # Restore the Stripes and Stars
-		name = csa.448.a
-			hidden_effect = {
-			set_cosmetic_tag = CSA_US_socialist_republic
-		}
-	}
 	option = { # A Commonwealth Flag
 		name = csa.448.b
+		ai_chance = {
+			factor = 50
+		}
+		CSA = {
+			country_event = {
+				id = csa.458
+				days = 1
+			}
+		}
 			hidden_effect = {
 			set_cosmetic_tag = CSA_commonwealth_america
 		}
 	}
 	option = { # A Socialist Republican Flag
 		name = csa.448.c
+		ai_chance = {
+			factor = 50
+		}
+		CSA = {
+			country_event = {
+				id = csa.453
+				days = 1
+			}
+		}
 			hidden_effect = {
 			set_cosmetic_tag = CSA_socialist_republic_totalist
 		}
@@ -10787,6 +10799,35 @@ country_event = { # Title for the CSA
 			hidden_effect = {
 			set_cosmetic_tag = CSA_lovestonetwo_2
 			}
+	}
+}
+
+country_event = { # United States?
+	id = csa.458
+	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.448"}
+	title = csa.458.t
+	desc = csa.458.d
+	picture = GFX_report_event_USA_congress
+
+	is_triggered_only = yes
+
+	trigger = { 
+		tag = CSA
+		has_global_flag = USA_civil_war_over_flag
+		has_country_flag = CSA_america_united
+	}
+
+	fire_only_once = yes
+
+	option = { # Restore the Stripes and Stars
+		name = csa.458.a
+			hidden_effect = {
+			set_cosmetic_tag = CSA_US_socialist_republic
+		}
+	}
+	option = { #Keep the current title
+		name = csa.458.b
+		add_war_support = 0.02
 	}
 }
 
