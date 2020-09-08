@@ -1528,8 +1528,8 @@ country_event = { #Silver Legion Grows
 	option = { #Pay them off
 		name = unionstate.3005.a
 		add_political_power = -40
-		add_popularity = { ideology = totalist popularity = 0.01 }
-		add_popularity = { ideology = syndicalist popularity = 0.02 }
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.01 }
+		add_popularity = { ideology = social_conservative popularity = 0.02 }
 	}
 }
 
