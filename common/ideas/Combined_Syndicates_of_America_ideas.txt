@@ -20,6 +20,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_militia_idea"}
 			picture = UoB_militia_idea
 			modifier = {
+				surrender_limit = 0.05
 				army_morale_factor = 0.02
 				army_org_Factor = -0.2
 				max_planning = -0.5
