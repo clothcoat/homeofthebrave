@@ -2564,6 +2564,48 @@ country_event = { # The 1936 Election - You're Fucked (Or are you...)
 		ai_chance = {
 			factor = 70
 		}
+		add_political_power = 50
+		add_war_support = 0.10
+		add_manpower = 10500
+		add_stability = 0.02
+		hidden_effect = {
+			set_country_flag = USA_evacuation
+			set_party_name = {
+				ideology = paternal_autocrat
+				long_name = USA_paternal_autocrat_military_junta_long
+				name = USA_paternal_autocrat_military_junta
+			}
+			create_country_leader = {
+				name = "Douglas MacArthur"
+				desc = "POLITICS_DOUGLAS_MACARTHUR_DESC"
+				picture = "Portrait_USA_gen_douglas_macarthur.tga"
+				expire = "1965.1.1"
+				ideology = paternal_autocrat_subtype
+				traits = { american_caesar }
+			}
+			add_ideas = USA_Douglas_MacArthur_hog_pau
+			add_ideas = USA_John_William_Davis_for_pau
+			add_ideas = USA_William_Harrison_Standley_eco_pau
+			add_ideas = USA_John_Edgar_Hoover_sec_pau
+			USA = {
+			country_event = { id = amcivwar.1001 days = 5 }
+			country_event = { id = amcivwar.7 days = 6 }
+			country_event = { id = amcivwar.2 days = 7 }
+			country_event = { id = amcivwar.3 days = 8 }
+			country_event = { id = amcivwar.3000 days = 9 }
+			}
+		}
+		set_politics = {
+			ruling_party = paternal_autocrat
+			elections_allowed = no
+		}
+	}
+
+	option = { # Evacuate
+		name = ustates.35.b
+		ai_chance = {
+			factor = 70
+		}
 		add_political_power = 75
 		add_war_support = 0.15
 		add_manpower = 6500
@@ -2602,7 +2644,7 @@ country_event = { # The 1936 Election - You're Fucked (Or are you...)
 	}
 
 	option = { # John Nance Garner
-		name = ustates.35.b
+		name = ustates.35.c
 		ai_chance = {
 			factor = 20
 			modifier = {
@@ -2655,7 +2697,7 @@ country_event = { # The 1936 Election - You're Fucked (Or are you...)
 		}
 	}
 	option = { # George Norris
-		name = ustates.35.c
+		name = ustates.35.e
 		ai_chance = {
 			factor = 10
 			modifier = {
