@@ -2587,6 +2587,10 @@ country_event = { # The 1936 Election - You're Fucked (Or are you...)
 			add_ideas = USA_John_William_Davis_for_pau
 			add_ideas = USA_William_Harrison_Standley_eco_pau
 			add_ideas = USA_John_Edgar_Hoover_sec_pau
+			add_timed_idea = {
+				idea = USA_righteous_nation
+				days = 180
+			}
 			USA = {
 			country_event = { id = amcivwar.1001 days = 5 }
 			country_event = { id = amcivwar.7 days = 6 }
