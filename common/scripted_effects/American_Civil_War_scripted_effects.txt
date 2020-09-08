@@ -2164,6 +2164,10 @@ USA_depression_recovery = {
 			add_idea = USA_civil_war_war_aftermath_idea5
 		}
 	}
+	else_if = {
+		limit = { has_idea = USA_civil_war_war_aftermath_idea5 }
+			remove_ideas = USA_civil_war_war_aftermath_idea5
+	}
 }
 
 TEX_increase_recovery = {
@@ -2382,6 +2386,24 @@ COR_increase_political_recovery = {
 			remove_idea = USA_civil_war_political_aftermath_idea4
 			add_idea = USA_civil_war_political_aftermath_idea5
 		}
+	}
+	else_if = {
+		limit = { has_idea = USA_civil_war_political_aftermath_idea4 }
+		swap_ideas = {
+			remove_idea = USA_civil_war_political_aftermath_idea4
+			add_idea = USA_civil_war_political_aftermath_idea5
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_civil_war_political_aftermath_idea5 }
+		swap_ideas = {
+			remove_idea = USA_civil_war_political_aftermath_idea5
+			add_idea = USA_civil_war_political_aftermath_idea6
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_civil_war_political_aftermath_idea6 }
+			remove_ideas = USA_civil_war_political_aftermath_idea6
 	}
 }
 
