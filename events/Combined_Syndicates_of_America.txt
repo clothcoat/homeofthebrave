@@ -394,11 +394,21 @@ country_event = { # Socialist Election Arrives
 			create_country_leader = {
 				name = "James Burnham"
 				desc = "POLITICS_JAMES_BURNHAM_DESC"
-				picture = "gfx/leaders/CSA/Portrait_CSA_burnham.dds"
+				picture = "gfx/leaders/CSA/Portrait_CSA_burnham.tga"
 				expire = "1965.1.1"
 				ideology = totalist_subtype
 				traits = { managerialist }
 			}
+		}
+		set_politics = {
+			ruling_party = totalist
+			election_frequency = 48
+			elections_allowed = yes
+		}
+		set_party_name = {
+			ideology = totalist
+			long_name = CSA_totalist_syndicalism_party_long
+			name = CSA_totalist_syndicalism_party
 		}
 	}
 }

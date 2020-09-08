@@ -6579,7 +6579,7 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CAL_military_research"
+			log = "[GetDateText]: [Root.GetName]: Focus CSA_military_research"
 			country_event = { id = ustates.300 days = 1 }
 		}
 	}
@@ -6606,7 +6606,7 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CAL_weapon_designs"
+			log = "[GetDateText]: [Root.GetName]: Focus CSA_weapon_designs"
 			add_tech_bonus = {
 				name = infantry_bonus
 				bonus = 1
@@ -6630,8 +6630,8 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_bring_the_complex_west"
 			random_owned_state = {
 				limit = {
-					is_core_of = TEX
-					is_controlled_by = TEX
+					is_core_of = CSA
+					is_controlled_by = CSA
 				}
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
@@ -6725,8 +6725,8 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_war_bonds"
 			random_owned_state = {
 				limit = {
-					is_core_of = TEX
-					is_controlled_by = TEX
+					is_core_of = CSA
+					is_controlled_by = CSA
 				}
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
@@ -7634,7 +7634,7 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_demand_new_england"
-			CSA = {
+			CAN = {
 				country_event = {
 				id = csa.2700
 				days = 1
