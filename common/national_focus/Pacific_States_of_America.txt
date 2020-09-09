@@ -11913,6 +11913,10 @@ focus_tree = {
 			has_government = national_populist
 			}
 		}
+		mutually_exclusive = {
+		focus = CAL_conditional_black_aid
+		focus = CAL_negro_bureau
+		}
 		ai_will_do = {
 			factor = 5
 		}

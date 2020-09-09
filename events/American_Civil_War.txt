@@ -9028,6 +9028,27 @@ country_event = {
 					country_exists = CSA
 				}
 				NOT = {
+					country_exists = COR
+				}
+				NOT = {
+					country_exists = TEX
+				}
+				NOT = {
+					country_exists = CAL
+				}
+			}
+			AND = {
+				tag = COR
+				NOT = {
+					country_exists = CSA
+				}
+				NOT = {
+					country_exists = USA
+				}
+				NOT = {
+					country_exists = WCC
+				}
+				NOT = {
 					country_exists = TEX
 				}
 				NOT = {
@@ -9038,6 +9059,12 @@ country_event = {
 				tag = CSA
 				NOT = {
 					country_exists = USA
+				}
+				NOT = {
+					country_exists = COR
+				}
+				NOT = {
+					country_exists = WCC
 				}
 				NOT = {
 					country_exists = TEX
@@ -9052,6 +9079,12 @@ country_event = {
 					country_exists = CSA
 				}
 				NOT = {
+					country_exists = COR
+				}
+				NOT = {
+					country_exists = WCC
+				}
+				NOT = {
 					country_exists = USA
 				}
 				NOT = {
@@ -9062,6 +9095,12 @@ country_event = {
 				tag = CAL
 				NOT = {
 					country_exists = CSA
+				}
+				NOT = {
+					country_exists = COR
+				}
+				NOT = {
+					country_exists = WCC
 				}
 				NOT = {
 					country_exists = TEX
@@ -9094,6 +9133,14 @@ country_event = {
 				if = {
 					limit = {
 						has_cosmetic_tag = CSA_ACW
+					}
+					drop_cosmetic_tag = yes
+				}
+			}
+			COR = {
+				if = {
+					limit = {
+						has_cosmetic_tag = COR_ACW
 					}
 					drop_cosmetic_tag = yes
 				}
