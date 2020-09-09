@@ -4390,7 +4390,7 @@ country_event = { # American Artists' GFX_report_event_USA_congress
 	}
 }
 
-country_event = { # John Reed Clubs
+country_event = { # Bellamy Clubs
 	id = csa.84
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.84"}
 	title = csa.84.t
@@ -4414,6 +4414,7 @@ country_event = { # Paul Robeson Takes A World Tour
 	picture = GFX_report_event_USA_congress
 
 	trigger = {
+		tag = BBR
 		country_exists = SRI
 		country_exists = FRA
 		country_exists = ENG
