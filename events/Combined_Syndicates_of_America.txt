@@ -21,6 +21,14 @@ country_event = { # Socialist Constitution - Property Debate
 	
 	option = { #The Laborists win out
 		name = csa.1000.a	
+		add_popularity = {
+			ideology = social_democrat
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = totalist
+			popularity = 0.02
+		}
 		hidden_effect = {
 		country_event = {
 			id = csa.1001
@@ -38,6 +46,14 @@ country_event = { # Socialist Constitution - Property Debate
 	}
 	option = { # The Nationalists win out
 		name = csa.1000.b
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = totalist
+			popularity = 0.03
+		}
 		hidden_effect = {
 		country_event = {
 			id = csa.1001
@@ -83,7 +99,15 @@ country_event = { # Socialist Constitution - Social Radicalism
 				}
 			}
 		}
-		name = csa.1001.a	
+		name = csa.1001.a
+		add_popularity = {
+			ideology = social_democrat
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = totalist
+			popularity = 0.03
+		}	
 		country_event = {
 			id = csa.1002
 			days = 7
@@ -117,6 +141,14 @@ country_event = { # Socialist Constitution - Social Radicalism
 			}
 		}
 		name = csa.1001.b
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = totalist
+			popularity = 0.02
+		}
 		country_event = {
 			id = csa.1002
 			days = 7
@@ -166,7 +198,11 @@ country_event = { # Socialist Constitution - Voting Rights
 				}
 			}
 		}
-		name = csa.1002.a	
+		name = csa.1002.a
+		add_popularity = {
+			ideology = social_democrat
+			popularity = 0.08
+		}
 		country_event = {
 			id = csa.1003
 			days = 6
@@ -193,6 +229,10 @@ country_event = { # Socialist Constitution - Voting Rights
 			}
 		}
 		name = csa.1002.b
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.08
+		}
 		country_event = {
 			id = csa.1003
 			days = 6
@@ -223,6 +263,10 @@ country_event = { # Socialist Constitution - Voting Rights
 			}
 		}
 		name = csa.1002.c
+		add_popularity = {
+			ideology = totalist
+			popularity = 0.12
+		}
 		country_event = {
 			id = csa.1003
 			days = 6
