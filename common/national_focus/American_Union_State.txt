@@ -1874,7 +1874,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus TEX_modern_farms"
 			swap_ideas = { 
 			remove_idea = TEX_farmer_labor_alliance_idea
-			add_idea TEX_modern_farms_idea
+			add_idea = TEX_modern_farms_idea
 			}
 			add_manpower = 5000
 			random_owned_state = {
