@@ -2218,7 +2218,7 @@ country_event = { # New ODP Secretary
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.41"}
 	title = constate.41.t
 	desc = constate.41.d
-	picture = AUS_christian_identity
+	picture = GFX_COR_ODP_Secretary
 
 	is_triggered_only = yes
 	
@@ -2238,7 +2238,7 @@ country_event = { # Spirit of St. Louis Moved to Smithsonian
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.42"}
 	title = constate.42.t
 	desc = constate.42.d
-	picture = GFX_CAR_Spirit_of_St_Louis
+	picture = GFX_COR_Spirit_of_St_Louis
 
 	is_triggered_only = yes
 	
@@ -2292,6 +2292,8 @@ country_event = { # Royal S. Gulden Dead
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.44"}
 	title = constate.44.t
 	desc = constate.44.d
+	
+	picture = GFX_COR_stfu
 
 	is_triggered_only = yes
 	
@@ -3406,7 +3408,7 @@ country_event = { #Legality of the Republican Party
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.71"}
 	title = constate.71.t
 	desc = constate.71.d
-	picture = GFX_report_event_usa_funeral
+	picture = GFX_COR_gop_legality
 
 	fire_only_once = yes
 
@@ -3434,7 +3436,7 @@ country_event = { #State of Sequoyah
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.72"}
 	title = constate.72.t
 	desc = constate.72.d
-	picture = GFX_report_event_usa_funeral
+	picture = GFX_COR_sequoyah
 
 	fire_only_once = yes
 
@@ -3495,7 +3497,7 @@ country_event = { #The Jacksonian Democratic Party
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.74"}
 	title = constate.74.t
 	desc = constate.74.d
-	picture = GFX_report_event_usa_funeral
+	picture = GFX_COR_jacksonianism
 
 	fire_only_once = yes
 
@@ -3524,7 +3526,7 @@ country_event = { #National Klan Regulations
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.75"}
 	title = constate.75.t
 	desc = constate.75.d
-	picture = GFX_report_event_usa_funeral
+	picture = GFX_CAR_cross_2
 
 	fire_only_once = yes
 
@@ -3553,7 +3555,7 @@ country_event = { #The Potential Scandal
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.76"}
 	title = constate.76.t
 	desc = constate.76.d
-	picture = GFX_report_event_usa_funeral
+	picture = GFX_event_Stephenson
 
 	fire_only_once = yes
 
@@ -3585,7 +3587,7 @@ country_event = { #D.C. Stephenson dies
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.77"}
 	title = constate.77.t
 	desc = constate.77.d
-	picture = GFX_report_event_usa_funeral
+	picture = GFX_COR_dc_killed
 
 	fire_only_once = yes
 
@@ -3603,7 +3605,7 @@ country_event = { #The Potential Scandal
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.78"}
 	title = constate.78.t
 	desc = constate.78.d
-	picture = GFX_report_event_usa_funeral
+	picture = GFX_COR_dc_arrested
 
 	fire_only_once = yes
 
