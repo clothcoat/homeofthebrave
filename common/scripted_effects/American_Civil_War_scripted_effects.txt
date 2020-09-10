@@ -1060,7 +1060,6 @@ USA_release_WCC = {
 				}
 			}
 			WCC = { transfer_technology = yes }
-			hidden_effect = {
 			if = {
 				set_cosmetic_tag = USA_ACW
 				country_event = kr.political.208
@@ -1094,7 +1093,33 @@ USA_release_WCC = {
 					add_manpower = 75000
 				}
 			}
-
+			create_corps_commander = {#More Unit Leaders to deal with WCC staff
+				name = "Hugh S. Johnson"
+				portrait_path = "gfx/leaders/USA/Portrait_Hugh_S_Johnson.tga"
+				traits = { 
+					politically_connected 
+					trait_cautious 
+				}
+				skill = 2
+				attack_skill = 1
+				defense_skill = 2
+				planning_skill = 2
+				logistics_skill = 1
+			}
+			create_corps_commander = {#More Unit Leaders to deal with WCC staff
+				name = "John R. Hodge"
+				portrait_path = "gfx/leaders/USA/Portrait_john_r_hodge.tga"
+				traits = { 
+					air_commander 
+					naval_invader 
+				}
+				skill = 2
+				attack_skill = 3
+				defense_skill = 1
+				planning_skill = 2
+				logistics_skill = 1
+			}
+		
 		remove_unit_leader = 88 #Bradley
 		remove_unit_leader = 90 #Ike
 		remove_unit_leader = 68 #Keyes

@@ -355,32 +355,6 @@ create_corps_commander = {# Leonard Gerow
 	planning_skill = 2
 	logistics_skill = 3
 }
-create_corps_commander = {#More Unit Leaders to deal with WCC staff
-				name = "Hugh S. Johnson"
-				portrait_path = "gfx/leaders/USA/Portrait_Hugh_S_Johnson.tga"
-				traits = { 
-					politically_connected 
-					trait_cautious 
-				}
-				skill = 2
-				attack_skill = 1
-				defense_skill = 2
-				planning_skill = 2
-				logistics_skill = 1
-			}
-			create_corps_commander = {#More Unit Leaders to deal with WCC staff
-				name = "John R. Hodge"
-				portrait_path = "gfx/leaders/USA/Portrait_john_r_hodge.tga"
-				traits = { 
-					air_commander 
-					naval_invader 
-				}
-				skill = 2
-				attack_skill = 3
-				defense_skill = 1
-				planning_skill = 2
-				logistics_skill = 1
-			}
 create_corps_commander = {# Walter Bedell Smith
 	name = "Walter Bedell Smith"
 	portrait_path = "gfx/leaders/WCC/Portrait_WCC_Walter_Bedell_Smith.tga"
