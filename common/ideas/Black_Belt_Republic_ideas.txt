@@ -4,23 +4,20 @@ ideas = {
 	country = {
 	### Starting Ideas ###
 		### Civil War Ideas ###
-		amcivwar_idea = { #New Republic
+		bbr_new_republic_idea = { #New Republic
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea bbr_new_republic_idea"}
 			available = {
 				NOT = { has_global_flag = USA_civil_war_over_flag }
 			}
 			modifier = {
-				surrender_limit = 0.20
 				war_support_factor = 0.25
 				training_time_army_factor = -0.10
-				special_forces_cap = -0.1
-				army_org = -0.02
 				conscription_factor = 0.1
 				out_of_supply_factor = -0.50
 				no_supply_grace = 168
 			}
 			removal_cost = -1
-			picture = BBR_USA_fighting_for_america
+			picture = USA_fighting_for_america
 		}
 	### National Totalist Path ###
 		BBR_the_crusaders_idea = { #The Crusaders
