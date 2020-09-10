@@ -1147,7 +1147,7 @@ country_event = { # Progressives Join the Democratic-Republicans
 		hidden_effect = {
 			set_country_flag = PSA_Libs_Win
 			country_event = {
-				id = pacificstates.6006
+				id = pacificstates.6007
 				days = 35
 			}
 		}
@@ -1177,7 +1177,7 @@ country_event = { # Democrats join the Republicans
 		hidden_effect = {
 			set_country_flag = PSA_MarkLibs_Win
 			country_event = {
-				id = pacificstates.6006
+				id = pacificstates.6008
 				days = 35
 			}
 		}
@@ -1207,7 +1207,7 @@ country_event = { # Republicans join the Democrats
 		hidden_effect = {
 			set_country_flag = PSA_Conservatives_Win
 			country_event = {
-				id = pacificstates.6006
+				id = pacificstates.6009
 				days = 35
 			}
 		}
@@ -1237,7 +1237,7 @@ country_event = { # Progressives drift toward the Commonwealth Party
 		hidden_effect = {
 			set_country_flag = PSA_Radicals_Win
 			country_event = {
-				id = pacificstates.6006
+				id = pacificstates.6010
 				days = 35
 			}
 		}
@@ -1292,9 +1292,25 @@ country_event = { # Two Party System Formalizes
 		add_popularity = { ideology = social_conservative popularity = 0.05 }
 		add_popularity = { ideology = market_liberal popularity = -0.06 }
 		set_party_name = {
+			ideology = radical_socialist
+			long_name = CAL_prog_dominance_long
+			name = CAL_prog_dominance_party }	
+		set_party_name = {
+			ideology = social_democrat
+			long_name = CAL_prog_dominance_long
+			name = CAL_prog_dominance_party }	
+		set_party_name = {
 			ideology = market_liberal
 			long_name = CAL_conservative_dominance_long
 			name = CAL_conservative_dominance_party }
+		set_party_name = {
+			ideology = authoritarian_democrat
+			long_name = CAL_conservative_dominance_long
+			name = CAL_conservative_dominance_party }	
+		set_party_name = {
+			ideology = paternal_autocrat
+			long_name = CAL_conservative_dominance_long
+			name = CAL_conservative_dominance_party }	
 		set_country_flag = PSA_Conservatives_Win
 		}
 		if = {
@@ -1304,9 +1320,33 @@ country_event = { # Two Party System Formalizes
 		add_popularity = { ideology = social_conservative popularity = 0.05 }
 		add_popularity = { ideology = market_liberal popularity = -0.06 }
 		set_party_name = {
+			ideology = radical_socialist
+			long_name = CAL_liberal_dominance_long
+			name = CAL_liberal_dominance_party }	
+		set_party_name = {
+			ideology = social_democrat
+			long_name = CAL_liberal_dominance_long
+			name = CAL_liberal_dominance_party }
+		set_party_name = {
+			ideology = social_liberal
+			long_name = CAL_liberal_dominance_long
+			name = CAL_liberal_dominance_party }		
+		set_party_name = {
 			ideology = market_liberal
-			long_name = CAL_conservative_dominance_long
-			name = CAL_conservative_dominance_party }
+			long_name = CAL_new_aut_dem_party_long
+			name = CAL_new_aut_dem_party }
+		set_party_name = {
+			ideology = social_conservative
+			long_name = CAL_new_aut_dem_party_long
+			name = CAL_new_aut_dem_party }
+		set_party_name = {
+			ideology = authoritarian_democrat
+			long_name = CAL_new_aut_dem_party_long
+			name = CAL_new_aut_dem_party }
+		set_party_name = {
+			ideology = paternal_autocrat
+			long_name = CAL_new_aut_dem_party_long
+			name = CAL_new_aut_dem_party }
 		set_country_flag = PSA_Conservatives_Win
 		}
 		if = {
@@ -1344,6 +1384,231 @@ country_event = { # Two Party System Formalizes
 			long_name = CAL_conservative_dominance_long
 			name = CAL_conservative_dominance_party }
 			set_country_flag = PSA_Conservatives_Win
+		}
+	}
+}
+
+country_event = { # Two Party System Formalizes
+	id = pacificstates.6007
+	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.6007"}
+	title = pacificstates.6007.t
+	picture = GFX_report_event_USA_congress
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	desc = {
+	text = pacificstates.6007.d.libs
+	trigger = {
+			has_country_flag = PSA_Libs_Win
+		}
+	}
+	option = { # Very Well
+		name = pacificstates.6007.a
+		if = {
+		limit = {
+		has_country_flag = PSA_Libs_Win
+			}
+		add_popularity = { ideology = social_conservative popularity = 0.05 }
+		add_popularity = { ideology = market_liberal popularity = -0.06 }
+		set_party_name = {
+			ideology = radical_socialist
+			long_name = CAL_liberal_dominance_long
+			name = CAL_liberal_dominance_party }	
+		set_party_name = {
+			ideology = social_democrat
+			long_name = CAL_liberal_dominance_long
+			name = CAL_liberal_dominance_party }
+		set_party_name = {
+			ideology = social_liberal
+			long_name = CAL_liberal_dominance_long
+			name = CAL_liberal_dominance_party }		
+		set_party_name = {
+			ideology = market_liberal
+			long_name = CAL_classic_liberal_dominance_long
+			name = CAL_classic_liberal_dominance_party }
+		set_party_name = {
+			ideology = social_conservative
+			long_name = CAL_classic_liberal_dominance_long
+			name = CAL_classic_liberal_dominance_party }
+		set_party_name = {
+			ideology = authoritarian_democrat
+			long_name = CAL_classic_liberal_dominance_long
+			name = CAL_classic_liberal_dominance_party }
+		set_party_name = {
+			ideology = paternal_autocrat
+			long_name = CAL_classic_liberal_dominance_long
+			name = CAL_classic_liberal_dominance_party }
+		set_country_flag = PSA_Conservatives_Win
+		}
+	}
+}
+
+country_event = { # Two Party System Formalizes
+	id = pacificstates.6008
+	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.6008"}
+	title = pacificstates.6008.t
+	picture = GFX_report_event_USA_congress
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	desc = {
+	text = pacificstates.6008.d.reps
+	trigger = {
+			has_country_flag = PSA_MarkLibs_Win
+		}
+	}
+	option = { # Very Well
+		name = pacificstates.6008.a
+		if = {
+		limit = {
+		has_country_flag = PSA_MarkLibs_Win
+			}
+		add_popularity = { ideology = social_democrat popularity = 0.05 }
+		add_popularity = { ideology = social_liberal popularity = -0.06 }
+		set_party_name = {
+			ideology = radical_socialist
+			long_name = CAL_conservative_dominance_long
+			name = CAL_conservative_dominance_party }	
+		set_party_name = {
+			ideology = social_democrat
+			long_name = CAL_conservative_dominance_long
+			name = CAL_conservative_dominance_party }
+		set_party_name = {
+			ideology = social_liberal
+			long_name = CAL_conservative_dominance_long
+			name = CAL_conservative_dominance_party }		
+		set_party_name = {
+			ideology = market_liberal
+			long_name = CAL_classical_liberal_dominance_long
+			name = CAL_classical_liberal_dominance_party }
+		set_party_name = {
+			ideology = social_conservative
+			long_name = CAL_classical_liberal_dominance_long
+			name = CAL_classical_liberal_dominance_party }
+		set_party_name = {
+			ideology = authoritarian_democrat
+			long_name = CAL_classical_liberal_dominance_long
+			name = CAL_classical_liberal_dominance_party }
+		set_party_name = {
+			ideology = paternal_autocrat
+			long_name = CAL_classical_liberal_dominance_long
+			name = CAL_classical_liberal_dominance_party }
+		set_country_flag = PSA_Conservatives_Win
+		}
+	}
+}
+
+country_event = { # Two Party System Formalizes
+	id = pacificstates.6009
+	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.6009"}
+	title = pacificstates.6009.t
+	picture = GFX_report_event_USA_congress
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	desc = {
+	text = pacificstates.6009.d.dems
+	trigger = {
+			has_country_flag = PSA_Conservatives_Win
+		}
+	}
+	option = { # Very Well
+		name = pacificstates.6009.a
+		if = {
+		limit = {
+		has_country_flag = PSA_Conservatives_Win
+			}
+		add_popularity = { ideology = social_democrat popularity = 0.05 }
+		add_popularity = { ideology = social_liberal popularity = -0.06 }
+		set_party_name = {
+			ideology = radical_socialist
+			long_name = CAL_radical_republican_dominance_long
+			name = CAL_radical_republican_dominance_party }	
+		set_party_name = {
+			ideology = social_democrat
+			long_name = CAL_radical_republican_dominance_long
+			name = CAL_radical_republican_dominance_party }
+		set_party_name = {
+			ideology = social_liberal
+			long_name = CAL_radical_republican_dominance_long
+			name = CAL_radical_republican_dominance_party }		
+		set_party_name = {
+			ideology = market_liberal
+			long_name = CAL_conservative_dominance_long
+			name = CAL_conservative_dominance_party }
+		set_party_name = {
+			ideology = social_conservative
+			long_name = CAL_conservative_dominance_long
+			name = CAL_conservative_dominance_party }
+		set_party_name = {
+			ideology = authoritarian_democrat
+			long_name = CAL_conservative_dominance_long
+			name = CAL_conservative_dominance_party }
+		set_party_name = {
+			ideology = paternal_autocrat
+			long_name = CAL_conservative_dominance_long
+			name = CAL_conservative_dominance_party }
+		set_country_flag = PSA_Progs_Win
+		}
+	}
+}
+
+country_event = { # Two Party System Formalizes
+	id = pacificstates.6010
+	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.6010"}
+	title = pacificstates.6010.t
+	picture = GFX_report_event_USA_congress
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	desc = {
+	text = pacificstates.6010.d.commonwealth
+	trigger = {
+			has_country_flag = PSA_Conservatives_Win
+		}
+	}
+	option = { # Very Well
+		name = pacificstates.6010.a
+		if = {
+		limit = {
+		has_country_flag = PSA_Radicals_Win
+			}
+		add_popularity = { ideology = social_conservative popularity = 0.05 }
+		add_popularity = { ideology = market_liberal popularity = -0.06 }
+		set_party_name = {
+			ideology = radical_socialist
+			long_name = CAL_radical_dominance_long
+			name = CAL_radical_dominance_party }	
+		set_party_name = {
+			ideology = social_democrat
+			long_name = CAL_radical_dominance_long
+			name = CAL_radical_dominance_party }
+		set_party_name = {
+			ideology = social_liberal
+			long_name = CAL_radical_dominance_long
+			name = CAL_radical_dominance_party }		
+		set_party_name = {
+			ideology = market_liberal
+			long_name = CAL_liberal_dominance_long
+			name = CAL_liberal_dominance_party }
+			set_country_flag = PSA_Conservatives_Win
+		set_party_name = {
+			ideology = social_conservative
+			long_name = CAL_liberal_dominance_long
+			name = CAL_liberal_dominance_party }
+		set_party_name = {
+			ideology = authoritarian_democrat
+			long_name = CAL_liberal_dominance_long
+			name = CAL_liberal_dominance_party }
+		set_party_name = {
+			ideology = paternal_autocrat
+			long_name = CAL_liberal_dominance_long
+			name = CAL_liberal_dominance_party }
+		set_country_flag = PSA_Conservatives_Win
 		}
 	}
 }
