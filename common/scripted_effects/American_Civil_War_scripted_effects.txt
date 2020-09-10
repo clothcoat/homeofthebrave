@@ -103,9 +103,9 @@ COR_initial_events = {
 WCC_initial_events = {
 	hidden_effect = {
 	WCC = {
-		country_event = { id = amcivwar.900 days = 10 } #Init
-		country_event = { id = amcivwar.901 days = 60 } #Recruitment
-	}
+		    country_event = { id = amcivwar.900 days = 10 } #Init
+		    country_event = { id = amcivwar.901 days = 60 } #Recruitment
+	    }
 	}
 }
 
@@ -1055,9 +1055,8 @@ USA_release_WCC = {
 				}
 			}
 			if = {
-			limit = { has_idea = USA_political_crisis }
-			remove_ideas = USA_political_crisis
-				}
+			   limit = { has_idea = USA_political_crisis }
+			  remove_ideas = USA_political_crisis
 			}
 			WCC = { transfer_technology = yes }
 			if = {
@@ -1224,6 +1223,7 @@ USA_release_WCC = {
 			}
 		}
 	}
+}
 
 USA_release_CAL = {
 	hidden_effect = {
