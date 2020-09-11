@@ -176,9 +176,12 @@ CAL_capital_flight:0 "Capital Flight"
 
 ### Spiritualists ###
 CAL_pacific_purge:0 "Mass Disappearances"
+CAL_sudden_dissapearances:0 "Sudden Disappearances"
+CAL_syndicalist_purge_idea:0 "Syndicalist Purge"
+CAL_syndicalist_purge_idea_desc:0 "Some eastern and even foreign syndicalists have attempted to destabilize our regime, undermining us at every turn. We should pay them back for this treachery. We shall begin to purge them, aiming to wipe syndicalism and all other forms of leftism from the country. In the long-term, this will make our rule a more secure one, but in the short-term, we can expect many repercussions for this..." 
 CAL_media_blackout_idea:0 "Limited Media"
 CAL_media_blackout_idea_2:0 "State Media"
-CAL_media_blackout_idea_3:0 "Revanchist Propaganda"
+CAL_media_blackout_idea_3:0 "Redshirt Media"
 CAL_shadow_recruitment_idea:0 "Shadow Recruitment"
 CAL_christian_mysticism_idea:0 "New Mysticism"
 CAL_christian_mysticism_idea_2:0 "Spiritual Supernaturalism"
@@ -319,6 +322,7 @@ CAL_classical_liberal_mandate_flag:0 "Classical Liberal Mandate"
 CAL_radicals_won_twice_flag:0 "Radicals Won Re-Election"
 PSA_1937_election_democrat:0 "Democrats Won the Election"
 CAL_civil_war_over_flag:0 "Civil War has ended"
+
 
 ### Decisions ###
 USA_civil_war_decisions:0 "Civil War Decisions"
@@ -2232,8 +2236,17 @@ pacificstates.352.a:0 "Attack!"
 pacificstates.352.b:0 "This can't go on, retreat to Canada"
 
 pacificstates.353.t:0 "Bodin Addresses Congress"
-pacificstates.353.d:0 "With Marshall and Arnold falling back to Entente lands Edward Longstreet Bodin addressed the Pacific Congress today, pledging "the Body and Mind" of the Spiritualist movement and its allies to the Pacific as its protectors from foreign spies and that he would root out the enemy whatever the cost. He announced that he would be sending out arrest warrents for those whom were proven to have connection to Britain, the coup and foreign syndicalism. While their allies within Congress and those most concerned about the coup supported the decision much of Congress remained silent to the decision before Homer Bone openly called him a "crackpot", causing chuckles and jeers from sectors of Congress. Nonetheless after calling for order Bodin stated that the time for political inepitence was finished."
+pacificstates.353.d:0 "With Marshall and Arnold falling back to Entente lands, Edward Longstreet Bodin addressed the Pacific Congress today. He has pledged "the Body and Mind" of the Spiritualist movement and its allies to the Pacific as its protectors from foreign spies, and that he would root out the enemy, whatever the cost. He also announced that he would be sending out arrest warrents for those whom were proven to have connections to Canada, the coup, and foreign syndicalism. While their allies within Congress and those most concerned about the coup supported the decision, much of Congress remained silent to the decision. At one point, Homer Bone openly called him a "crackpot", causing chuckles and jeers from sectors of Congress. Nonetheless, after calling for order, Bodin stated that the time for political impotence was finished."
 pacificstates.353.a:0 "Let them Laugh"
+
+pacificstates.3529.t:0 "Spiritualist takeover in the West!"
+pacificstates.3529.d:0 "MacArthur has become increasingly concerned with his allies on the West Coast. Our ally, William Randolph Hearst, was deposed in a military coup. Though the loss of Hearst made MacArthur furious, it seems that the situation has evolved rapidly. Now, a group calling themselves the Spiritualists, led by Edward Longstreet Bodin, has performed a counter-coup against the millitary. This group claims to want to continue Hearst's legacy, but it is clear that they have their own agenda, and MacArthur will have to decide how to proceed. Should we restore order to this "Wild West" or leave it alone for now?"
+pacificstates.3529.a:0 "We don't have the resources."
+pacificstates.3529.b:0 "They cannot be trusted!"
+
+pacificstates.3530.t:0 "MacArthur has betrayed us!"
+pacificstates.3530.d:0 "Though we hoped overthrowing the military dogs who removed Hearst would be enough to satisfy MacArthur, it seems that he does not trust us. Even worse, in light of the recent chaos, they have decided that they would be better off restoring order to our region themselves rather than letting us manage it. As such, they have broken our peace treaty and now march against us!"
+pacificstates.3530.a:0 "To war!"
 
 pacificstates.354.t:0 "Fate of Collaborators"
 pacificstates.354.d:0 "We have made the promised list of collaborators against the state with the most prominent including Robert Taft, Henry Wallace, Clarence D. Martin, Homer Bone, Culbert Olson and Upton Sinclair. We could simply round them up and put an end to it but our Japanese contacts would prefer if we simply warn them they have two days to flee for Canada, arguing that it would be much 'cleaner' and solve the problem of critics of the government without incurring as much protest. Perhaps we should consider?"

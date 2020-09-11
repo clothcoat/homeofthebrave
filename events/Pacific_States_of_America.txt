@@ -5690,6 +5690,7 @@ country_event = {# Ceasefire with MacArthur
 
 	option = {# 
 		name = pacificstates.214.a
+		set_global_flag = USA_PSA_peace
 		white_peace = USA
 		white_peace = WCC
 		USA = {
@@ -5698,6 +5699,7 @@ country_event = {# Ceasefire with MacArthur
 	}
 	option = {# 
 		name = pacificstates.214.b
+		set_global_flag = USA_PSA_peace
 		white_peace = USA
 		add_political_power = -20
 		add_equipment_to_stockpile = {
@@ -8714,6 +8716,77 @@ country_event = {# Bodin Addresses Congress
 			id = pacificstates.354
 			days = 4
 			}
+		USA = {
+		country_event = {
+			id = pacificstates.3529
+			days = 3
+			}
+			}
+		}
+	}
+}
+
+country_event = {# Spiritualists take the West
+	id = pacificstates.3529
+	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.3529"}
+	title = pacificstates.3529.t
+	desc = pacificstates.3529.d
+	
+	picture = GFX_hearst_event
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = {# Let them be
+		ai_chance = {
+			factor = 30
+		}
+		name = pacificstates.3529.a
+		add_political_power = -20
+		add_popularity = { ideology = national_populist popularity = -0.01 }
+		add_stability = 0.02
+	}
+	option = {# They are out of control!
+		ai_chance = {
+			factor = 70
+		}
+		name = pacificstates.3529.b
+		add_popularity = { ideology = national_populist popularity = -0.03 }
+		add_stability = -0.01
+		hidden_effect = {
+		CAL = {
+		country_event = {
+			id = pacificstates.3530
+			days = 6
+			}
+			}
+		}
+	}
+}
+
+country_event = {# The U.S. has betrayed us!
+	id = pacificstates.3530
+	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.3530"}
+	title = pacificstates.3530.t
+	desc = pacificstates.3530.d
+	picture = GFX_hearst_event
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {# Nope
+		name = pacificstates.3530.a
+		if = {
+			limit = { country_exists = USA 	}
+			USA = { declare_war_on = { target = CAL type = annex_everything
+} }
+			WCC = { declare_war_on = { target = CAL type = annex_everything
+} }
+		add_stability = -0.02
+		add_manpower = 5000
+		add_war_support = 0.02
 		}
 	}
 }
