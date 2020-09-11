@@ -14884,12 +14884,10 @@ country_event = { # Panama Garrison
 			limit = { has_template = "CAR Infantry Division" }
 			delete_unit_template_and_units = { division_template = "CAR Infantry Division" }
 			}
-		}
 	}
 
 	option = { # Flavor
 		name = amcivwar.1312.a
 		custom_effect_tooltip = ACW_bbr_unit_tooltip
-		}
 	}
 }
