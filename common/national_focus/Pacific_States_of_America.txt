@@ -3467,6 +3467,7 @@ focus_tree = {
 		icon = GFX_goal_ideology_paternal_autocrat
 		cost = 5.00
 		available = {
+			date > 1940.11.14
 			OR = {
 			has_government = authoritarian_democrat
 			has_government = paternal_autocrat
