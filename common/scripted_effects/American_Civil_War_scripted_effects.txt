@@ -1058,7 +1058,6 @@ USA_release_WCC = {
 			limit = { has_idea = USA_political_crisis }
 			remove_ideas = USA_political_crisis
 				}
-			}
 			WCC = { transfer_technology = yes }
 			if = {
 				set_cosmetic_tag = USA_ACW
@@ -1224,6 +1223,7 @@ USA_release_WCC = {
 			}
 		}
 	}
+}
 
 USA_release_CAL = {
 	hidden_effect = {
