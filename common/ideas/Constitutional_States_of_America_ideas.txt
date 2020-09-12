@@ -4,18 +4,6 @@ ideas = {
 	### Country ideas
 	country = {
 		### Army Tree ###
-		COR_righteous_nation = {# Moseley Plan
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_righteous_nation"}
-			allowed = { always = no }
-			removal_cost = -1
-			picture = FRA_national_mobilization_focus
-			modifier = {
-				local_manpower = 0.05
-				stability_factor = 0.1
-				local_resources = 0.1
-				army_morale_factor = 0.15
-			}
-		}
 		COR_Moseley_plan1 = {# Moseley Plan
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea COR_Moseley_plan1"}
 			allowed = { always = no }
