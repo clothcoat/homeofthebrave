@@ -36,6 +36,9 @@ CSA_initial_events = {
 			}
 		}
 		hidden_effect = {
+		if = {
+			limit = { NOT = { has_global_flag = USA_CSA_existed } }
+		}
 		country_event = { id = csa.150 days = 6 } # Initialization event
 		country_event = { id = amcivwar.32 days = 10 } # Revolutionary Military
 		country_event = { id = amcivwar.44 days = 21 } # Revolutionary Staff Leader
@@ -62,6 +65,9 @@ TEX_initial_events = {
 			}
 		}
 		hidden_effect = {
+		if = {
+			limit = { NOT = { has_global_flag = USA_TEX_existed } }
+		}
 		country_event = { id = unionstate.26 days = 5 } #Initial Events - Texas Rangers
 		country_event = { id = unionstate.3002 days = 2 } #The Old Regulars
 		country_event = { id = unionstate.3004 days = 10 } #Minneapolis Syndicalists Strike
@@ -78,6 +84,9 @@ TEX_initial_events = {
 
 CAL_initial_events = {
 	hidden_effect = {
+	if = {
+			limit = { NOT = { has_global_flag = USA_CAL_existed } }
+	}
 	CAL = {
 		country_event = { id = pacificstates.150 days = 1 } #Initial Events
 		country_event = { id = amcivwar.77 days = 7 } #Chief of Staff
@@ -91,25 +100,36 @@ CAL_initial_events = {
 
 COR_initial_events = {
 	hidden_effect = {
+	if = {
+			limit = { NOT = { has_global_flag = USA_COR_existed } }
+	}
 	COR = {
 			country_event = { id = amcivwar.800 days = 7 } #Chief of Staff
 			country_event = { id = amcivwar.801 days = 14 } #Chief of Army
 			country_event = { id = amcivwar.802 days = 21 } #Chief of Air Force
 			country_event = { id = constate.150 days = 21 } #Southern Governors
-		}
+	}
+	set_global_flag = USA_COR_existed
 	}
 }
 
 WCC_initial_events = {
 	hidden_effect = {
+	if = {
+			limit = { NOT = { has_global_flag = USA_WCC_existed } }
+	}
 	WCC = {
 		country_event = { id = amcivwar.900 days = 10 } #Init
 		country_event = { id = amcivwar.901 days = 60 } #Recruitment
 	}
+	set_global_flag = USA_WCC_existed
 	}
 }
 
 USA_release_CSA = {
+	if = {
+			limit = { NOT = { has_global_flag = USA_CSA_existed } }
+	}
 	hidden_effect = {
 		CSA = {
 			add_state_core = 395
@@ -398,6 +418,9 @@ USA_release_CSA = {
 }
 
 USA_release_TEX = {
+	if = {
+			limit = { NOT = { has_global_flag = USA_TEX_existed } }
+	}
 	hidden_effect = {
 	transfer_ship = { prefer_name = "USS Iowa" type = SH_battleship target = TEX }
 		transfer_ship = { prefer_name = "USS Texas" type = SH_battleship target = TEX }
@@ -701,6 +724,9 @@ USA_release_TEX = {
 }
 
 USA_release_COR = {
+	if = {
+			limit = { NOT = { has_global_flag = USA_COR_existed } }
+	}
 	hidden_effect = {
 		transfer_ship = { prefer_name = "USS Idaho" type = SH_battleship target = COR }
 		transfer_ship = { prefer_name = "USS Mississippi" type = SH_battleship target = COR }
@@ -1015,6 +1041,9 @@ USA_release_COR = {
 }
 
 USA_release_WCC = {
+	if = {
+			limit = { NOT = { has_global_flag = USA_WCC_existed } }
+	}
 	hidden_effect = {
 		WCC = {
 			add_state_core = 376
@@ -1226,6 +1255,9 @@ USA_release_WCC = {
 }
 
 USA_release_CAL = {
+	if = {
+			limit = { NOT = { has_global_flag = USA_CAL_existed } }
+	}
 	hidden_effect = {
 		set_global_flag = ACW_pacific_states_revolted
 
