@@ -1296,19 +1296,6 @@ ideas = {
 				production_factory_efficiency_gain_factor = -0.02
 			}
 		}
-		USA_martial_law_idea = { #Martial Law
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_martial_law_idea"}
-			picture = general_staff
-			modifier = {
-				political_power_gain = 0.005
-				monthly_population = -0.1
-				local_non_core_manpower	= 0.05
-				stability_factor = -0.05
-				conversion_cost_civ_to_mil_factor = -0.1
-				production_speed_buildings_factor = 0.03
-				production_factory_efficiency_gain_factor = -0.02
-			}
-		}
 		USA_american_caeser_idea = { #American Caeser
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_american_caeser_idea"}
 			picture = USA_lifetime_president_1
