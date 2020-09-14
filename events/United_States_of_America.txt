@@ -8177,10 +8177,7 @@ country_event = { # William McAdoo has died
 	fire_only_once = yes
 
 	trigger = {
-		OR = {
-			tag = USA
-			tag = CAL
-		}
+		tag = USA
 		date > 1939.2.1
 	}
 
@@ -8191,6 +8188,73 @@ country_event = { # William McAdoo has died
 	option = { # Support the Manifesto.
 		name = ustates.160.a
 		add_political_power = 5
+	}
+}
+
+country_event = { # William McAdoo has died
+	id = ustates.1600
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.1600"}
+	title = ustates.1600.t
+	picture = GFX_report_event_usa_funeral
+
+	desc = { # Civil War Avoided
+		text = ustates.1600.d.civil_war_avoided
+		trigger = {
+			has_global_flag = USA_civil_war_avoided_flag
+		}
+	}
+	desc = { # civil war happened(no PSA)
+		text = ustates.1600.d.civil_war_no_psa
+		trigger = {
+			has_global_flag = USA_civil_war_begun_flag
+			NOT = {
+				country_exists = CAL
+			}
+		}
+	}
+	desc = { # civil war happened, PSA formed(USA)
+		text = ustates.1600.d.civil_war_psa_usa
+		trigger = {
+			has_global_flag = USA_civil_war_begun_flag
+			country_exists = CAL
+			TAG = USA
+		}
+	}
+	desc = { # civil war happened, PSA formed(PSA)
+		text = ustates.1600.d.civil_war_psa_psa
+		trigger = {
+			has_global_flag = USA_civil_war_begun_flag
+			country_exists = CAL
+			TAG = CAL
+		}
+	}
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = CAL
+		date > 1939.2.1
+	}
+
+	mean_time_to_happen = {
+		months = 24
+	}
+
+	option = { # Earl Warren
+		name = ustates.1600.a
+		add_political_power = 5
+		create_country_leader = {
+					name = "Earl Warren"
+					desc = "POLITICS_EARL_WARREN_DESC"
+					picture = "Portrait_CAL_Earl_Warren.tga"
+					expire = "1965.1.1"
+					ideology = social_liberal_subtype
+					traits = { backroom_backstabber }
+	}
+}
+	option = { # Keep Current Leader
+		name = ustates.1600.b
+		add_political_power = 10
 	}
 }
 
