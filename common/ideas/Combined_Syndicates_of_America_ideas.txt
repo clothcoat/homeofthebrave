@@ -1502,7 +1502,7 @@ ideas = {
 			allowed = { always = no }
 			modifier = {
 				political_power_gain = 0.02
-				political_power_cost = -15
+				political_power_cost = -0.15
 				conscription_factor = 0.02
 				party_popularity_stability_factor = 0.15
 				command_power_gain = 0.02
@@ -1516,7 +1516,7 @@ ideas = {
 			allowed = { always = no }
 			modifier = {
 				political_power_gain = 0.05
-				political_power_cost = -20
+				political_power_cost = -0.2
 				conscription_factor = 0.03
 				stability_weekly = 0.001
 				party_popularity_stability_factor = 0.25

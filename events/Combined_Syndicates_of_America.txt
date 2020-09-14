@@ -6129,7 +6129,7 @@ country_event = { # Social Units
 	trigger = {
 	has_country_leader = {
 	ruling_only = yes
-	name = "James Burnham"
+	name = "James Burnham" } }
 	
 	is_triggered_only = yes
 	
@@ -6151,7 +6151,7 @@ country_event = { # Social Units
 	
 	option = {
 		name = csa.176.b
-		add_stability = 0.02
+		add_stability = 0.04
 		add_political_power = -30
 		add_popularity = {ideology = totalist popularity = -0.02}
 		add_ideas = CSA_social_units_idea
