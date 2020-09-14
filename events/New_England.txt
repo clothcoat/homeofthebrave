@@ -756,6 +756,41 @@ country_event = { # The Provisional Government
 	fire_only_once = yes
 	is_triggered_only = yes
 
+	option = { # George Aiken
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = NEE_start_path
+					option = NEE_START_PATH_LIBERAL
+				}
+			}
+		}
+		name = newengland.20.a
+		hidden_effect = {
+			add_ideas = NEE_George_Aiken_hog_sde
+			add_ideas = NEE_Frederick_Hale_for_sde
+			add_ideas = NEE_Scott_Nearing_eco_sde
+			add_ideas = NEE_Edith_Nourse_Rogers_sec_sde
+		}
+		create_country_leader = {
+					name = "George Aiken"
+					desc = "POLITICS_GEORGE_AIKEN_DESC"
+					picture = "gfx/leaders/NEE/George_Aiken.tga"
+					expire = "1965.1.1"
+					ideology = social_democrat_subtype
+					traits = {
+						captain_of_industry
+		}
+		}
+		set_politics = {
+			ruling_party = social_democrat
+			last_election = "1936.11.16"
+			election_frequency = 48
+			elections_allowed = yes
+		}
+	}
 	option = { # William Averell Harriman
 		ai_chance = {
 			factor = 25
@@ -767,12 +802,12 @@ country_event = { # The Provisional Government
 				}
 			}
 		}
-		name = newengland.20.a
+		name = newengland.20.b
 		hidden_effect = {
 			add_ideas = NEE_John_Gilbert_Winant_hog_sli
-			add_ideas = NEE_Frederick_Hale_for_sli
+			add_ideas = NEE_Frederick_Hale_for_sde
 			add_ideas = NEE_Charles_Russell_Clason_eco_sli
-			add_ideas = NEE_Edith_Nourse_Rogers_sec_sli
+			add_ideas = NEE_Edith_Nourse_Rogers_sec_sde
 		}
 		set_politics = {
 			ruling_party = social_liberal
@@ -792,7 +827,7 @@ country_event = { # The Provisional Government
 				}
 			}
 		}
-		name = newengland.20.b
+		name = newengland.20.c
 		hidden_effect = {
 			add_ideas = NEE_Percival_P_Baxter_hog_mli
 			add_ideas = NEE_John_Hay_Whitney_for_mli
@@ -817,7 +852,7 @@ country_event = { # The Provisional Government
 				}
 			}
 		}
-		name = newengland.20.c
+		name = newengland.20.e
 		hidden_effect = {
 			add_ideas = NEE_Christian_Herter_hog_sco
 			add_ideas = NEE_Herbert_Claiborne_Pell_Jr_for_sco
@@ -834,7 +869,7 @@ country_event = { # The Provisional Government
 }
 
 ### 1940 Elections and Primaries ###
-country_event = { # 1940 Liberal Primary
+country_event = { # 1940 National Party Primary
 	id = newengland.21
 	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.21"}
 	title = newengland.21.t
@@ -900,7 +935,7 @@ country_event = { # 1940 Republican Primary
 		}
 		hidden_effect = {
 		country_event = {
-			id = newengland.23
+			id = newengland.2200
 			days = 6
 			}
 		}
@@ -922,7 +957,7 @@ country_event = { # 1940 Republican Primary
 		}
 		hidden_effect = {
 		country_event = {
-			id = newengland.23
+			id = newengland.2200
 			days = 9
 			}
 		}
@@ -937,19 +972,31 @@ country_event = { # 1940 Republican Primary
 		}
 		hidden_effect = {
 		country_event = {
-			id = newengland.23
+			id = newengland.2200
 			days = 9
 			}
 		}
 	}
+}
+
+country_event = { # 1940 Liberal Republican Primary
+	id = newengland.2200
+	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.2200"}
+	desc = newengland.2200.d
+	title = newengland.2200.t
+	picture = GFX_report_event_USA_congress
+
+	is_triggered_only = yes
 	
+	fire_only_once = yes
+
 	option = { # Herbert H. Lehman
-		name = newengland.22.e
+		name = newengland.2200.a
 		ai_chance = {
 			factor = 50
 		}
 		hidden_effect = {
-			set_country_flag = NEE_1940_republican_primary_lehman
+			set_country_flag = NEE_1940_liberal_republican_primary_lehman
 		}
 		hidden_effect = {
 		country_event = {
@@ -960,12 +1007,12 @@ country_event = { # 1940 Republican Primary
 	}
 	
 	option = { # John Gilbert Winant
-		name = newengland.22.f
+		name = newengland.2200.b
 		ai_chance = {
 			factor = 50
 		}
 		hidden_effect = {
-			set_country_flag = NEE_1940_republican_primary_winant
+			set_country_flag = NEE_1940_liberal_republican_primary_winant
 		}
 		hidden_effect = {
 		country_event = {
@@ -976,12 +1023,12 @@ country_event = { # 1940 Republican Primary
 	}
 	
 	option = { # Thomas Dewey
-		name = newengland.22.g
+		name = newengland.2200.c
 		ai_chance = {
 			factor = 50
 		}
 		hidden_effect = {
-			set_country_flag = NEE_1940_republican_primary_dewey
+			set_country_flag = NEE_1940_liberal_republican_primary_dewey
 		}
 		hidden_effect = {
 		country_event = {
@@ -1103,7 +1150,7 @@ country_event = { # 1940 Election
 			
 			if = { # John Gilbert Winant
 				limit = {
-					has_country_flag = NEE_1940_republican_primary_winant
+					has_country_flag = NEE_1940_liberal_republican_primary_winant
 				}
 				create_country_leader = {
 					name = "John Gilbert Winant"
@@ -1119,7 +1166,7 @@ country_event = { # 1940 Election
 			
 			else_if = { # Herbert H. Lehman
 				limit = {
-					has_country_flag = NEE_1940_republican_primary_lehman
+					has_country_flag = NEE_1940_liberal_republican_primary_lehman
 				}
 				create_country_leader = {
 					name = " Herbert H. Lehman"
@@ -1166,7 +1213,7 @@ country_event = { # 1940 Election
 			}
 			
 			else_if = { # Thomas Dewey
-				limit = { has_country_flag = NEE_1940_republican_primary_dewey }
+				limit = { has_country_flag = NEE_1940_liberal_republican_primary_dewey }
 				create_country_leader = {
 					name = "Thomas Dewey"
 					desc = "POLITICS_THOMAS_DEWEY_DESC"
@@ -1220,11 +1267,11 @@ country_event = { # 1940 Election
 			set_country_flag = NEE_1940_election_liberal
 		}
 		add_popularity = {
-			ideology = social_liberal
+			ideology = social_democrat
 			popularity = 0.20
 		}
 		set_politics = {
-			ruling_party = social_liberal
+			ruling_party = social_democrat
 			election_frequency = 48
 			elections_allowed = yes
 		}
@@ -1233,10 +1280,10 @@ country_event = { # 1940 Election
 				limit = {
 					has_country_flag = NEE_1940_liberal_primary_aiken
 				}
-				add_ideas = NEE_George_Aiken_hog_mli
-				add_ideas = NEE_Frederick_Hale_for_sli
-				add_ideas = NEE_Scott_Nearing_eco_sli
-				add_ideas = NEE_Edith_Nourse_Rogers_sec_sli
+				add_ideas = NEE_George_Aiken_hog_sde
+				add_ideas = NEE_Frederick_Hale_for_sde
+				add_ideas = NEE_Scott_Nearing_eco_sde
+				add_ideas = NEE_Edith_Nourse_Rogers_sec_sde
 				hidden_effect = {
 					country_event = {
 						id = newengland.60
@@ -1249,15 +1296,51 @@ country_event = { # 1940 Election
 				limit = {
 					has_country_flag = NEE_1940_liberal_primary_perkins
 				}
-				add_ideas = NEE_George_Aiken_hog_mli
-				add_ideas = NEE_Frederick_Hale_for_sli
-				add_ideas = NEE_Scott_Nearing_eco_sli
-				add_ideas = NEE_Edith_Nourse_Rogers_sec_sli
+				add_ideas = NEE_George_Aiken_hog_sde
+				add_ideas = NEE_Frederick_Hale_for_sde
+				add_ideas = NEE_Scott_Nearing_eco_sde
+				add_ideas = NEE_Edith_Nourse_Rogers_sec_sde
+			}
+		}
+	}
+	option = { # Liberal Republican
+		name = newengland.24.b
+		set_country_flag = NEE_had_1940_election
+		hidden_effect = {
+			set_country_flag = NEE_1940_election_liberal_republican
+		}
+		add_popularity = {
+			ideology = social_liberal
+			popularity = 0.20
+		}
+		set_politics = {
+			ruling_party = social_liberal
+			election_frequency = 48
+			elections_allowed = yes
+		}
+		hidden_effect = {
+			if = { # John Winant
+				limit = {
+					has_country_flag = NEE_1940_republican_primary_winant
+				}
+				add_ideas = NEE_John_Gilbert_Winant_hog_sli
+				add_ideas = NEE_George_Higgins_Moses_for_sli
+				add_ideas = NEE_Donald_L_Harlow_eco_sli
+				add_ideas = NEE_Wallace_Humphrey_White_Jr_sec_sli
+			}
+			else_if = { # Thomas Dewey
+				limit = {
+					has_country_flag = NEE_1940_republican_primary_dewey
+				}
+				add_ideas = NEE_Dennis_J_Roberts_hog_sli
+				add_ideas = NEE_Peter_Hoyt_Dominick_for_sli
+				add_ideas = NEE_Frederick_George_Payne_eco_sli
+				add_ideas = NEE_Ruth_Baker_Pratt_sec_sli
 			}
 		}
 	}
 	option = { # Republican
-		name = newengland.24.b
+		name = newengland.24.c
 		set_country_flag = NEE_had_1940_election
 		hidden_effect = {
 			set_country_flag = NEE_1940_election_republican
@@ -1281,24 +1364,6 @@ country_event = { # 1940 Election
 				add_ideas = NEE_Harry_Gabriel_Hamlet_eco_mli
 				add_ideas = NEE_Pierrepont_Burt_Noyes_sec_mli
 			}
-			else_if = { # John Winant
-				limit = {
-					has_country_flag = NEE_1940_republican_primary_winant
-				}
-				add_ideas = NEE_John_Gilbert_Winant_hog_sli
-				add_ideas = NEE_George_Higgins_Moses_for_sli
-				add_ideas = NEE_Donald_L_Harlow_eco_sli
-				add_ideas = NEE_Wallace_Humphrey_White_Jr_sec_sli
-			}
-			else_if = { # Thomas Dewey
-				limit = {
-					has_country_flag = NEE_1940_republican_primary_dewey
-				}
-				add_ideas = NEE_Dennis_J_Roberts_hog_sli
-				add_ideas = NEE_Peter_Hoyt_Dominick_for_sli
-				add_ideas = NEE_Frederick_George_Payne_eco_sli
-				add_ideas = NEE_Ruth_Baker_Pratt_sec_sli
-			}
 			else_if = { # Hamilton Fish III
 				limit = {
 					has_country_flag = NEE_1940_republican_primary_fish
@@ -1320,7 +1385,7 @@ country_event = { # 1940 Election
 		}
 	}
 	option = { # Democrat
-		name = newengland.24.c
+		name = newengland.24.e
 		set_country_flag = NEE_had_1940_election
 		hidden_effect = {
 			set_country_flag = NEE_1940_election_democrat
@@ -1664,7 +1729,7 @@ country_event = { # 1944 election
 					has_country_flag = NEE_1944_liberal_primary_roberts
 				}
 				add_ideas = NEE_Dennis_J_Roberts_hog_sli
-				add_ideas = NEE_Frederick_Hale_for_sli
+				add_ideas = NEE_Frederick_Hale_for_sde
 				add_ideas = NEE_Charles_Russell_Clason_eco_sli
 				add_ideas = NEE_Wallace_Humphrey_White_Jr_sec_sli
 			}
@@ -1673,7 +1738,7 @@ country_event = { # 1944 election
 					has_country_flag = NEE_1944_liberal_primary_gerry
 				}
 				add_ideas = NEE_Peter_G_Gerry_hog_sli
-				add_ideas = NEE_Frederick_Hale_for_sli
+				add_ideas = NEE_Frederick_Hale_for_sde
 				add_ideas = NEE_Charles_Russell_Clason_eco_sli
 				add_ideas = NEE_Wallace_Humphrey_White_Jr_sec_sli
 				hidden_effect = {
@@ -2109,7 +2174,7 @@ country_event = { # 1948 election
 				add_ideas = NEE_Maurice_J_Tobin_hog_sli
 				add_ideas = NEE_Henry_Styles_Bridges_for_sli
 				add_ideas = NEE_Ralph_Edward_Flanders_eco_sli
-				add_ideas = NEE_Edith_Nourse_Rogers_sec_sli
+				add_ideas = NEE_Edith_Nourse_Rogers_sec_sde
 				hidden_effect = {
 					country_event = {
 						id = newengland.62
@@ -2125,7 +2190,7 @@ country_event = { # 1948 election
 				add_ideas = NEE_Paul_A_Dever_hog_sli
 				add_ideas = NEE_Henry_Styles_Bridges_for_sli
 				add_ideas = NEE_Ralph_Edward_Flanders_eco_sli
-				add_ideas = NEE_Edith_Nourse_Rogers_sec_sli
+				add_ideas = NEE_Edith_Nourse_Rogers_sec_sde
 			}
 		}
 	}
@@ -2149,7 +2214,7 @@ country_event = { # 1948 election
 				limit = {
 					has_country_flag = NEE_1948_republican_primary_aiken
 				}
-				add_ideas = NEE_George_Aiken_hog_mli
+				add_ideas = NEE_George_Aiken_hog_sde
 				add_ideas = NEE_Joseph_Patrick_Kennedy_Jr_for_mli
 				add_ideas = NEE_Leslie_Richard_Groves_Jr_eco_mli
 				add_ideas = NEE_Warren_Fales_Draper_sec_mli
@@ -2586,7 +2651,7 @@ country_event = { # 1952 election
 				add_ideas = NEE_Paul_A_Dever_hog_sli
 				add_ideas = NEE_Henry_Styles_Bridges_for_sli
 				add_ideas = NEE_Ralph_Edward_Flanders_eco_sli
-				add_ideas = NEE_Edith_Nourse_Rogers_sec_sli
+				add_ideas = NEE_Edith_Nourse_Rogers_sec_sde
 			}
 			else_if = { # Charles Poletti
 				limit = {
@@ -2595,7 +2660,7 @@ country_event = { # 1952 election
 				add_ideas = NEE_Charles_Poletti_hog_sli
 				add_ideas = NEE_Henry_Styles_Bridges_for_sli
 				add_ideas = NEE_Ralph_Edward_Flanders_eco_sli
-				add_ideas = NEE_Edith_Nourse_Rogers_sec_sli
+				add_ideas = NEE_Edith_Nourse_Rogers_sec_sde
 			}
 		}
 	}
