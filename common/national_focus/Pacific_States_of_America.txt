@@ -9171,7 +9171,7 @@ focus_tree = {
 		available = {
 			has_government = social_democrat
 			NOT = {
-			has_war_with = TEX
+			country_exists = TEX
 			}
 		}
 		ai_will_do = {

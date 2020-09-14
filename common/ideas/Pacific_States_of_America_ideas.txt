@@ -2282,12 +2282,9 @@ ideas = {
 			allowed_civil_war = { always = yes }
 			picture = HOL_welfare_state
 			modifier = {
-				justify_war_goal_time = -0.25
+				justify_war_goal_time = -0.15
 				conscription_factor = 0.03
-				max_command_power = 50
-				mobilization_speed = 0.05
-				production_speed_arms_factory_factor = 0.03
-				party_popularity_stability_factor = 0.05
+				max_command_power = 10
 			}
 		}
 		
@@ -2297,12 +2294,12 @@ ideas = {
 			allowed_civil_war = { always = yes }
 			picture = HOL_welfare_state
 			modifier = {
-				justify_war_goal_time = -0.35
-				conscription_factor = 0.04
-				max_command_power = 100
-				mobilization_speed = 0.1
-				production_speed_arms_factory_factor = 0.05
-				party_popularity_stability_factor = 0.15
+				justify_war_goal_time = -0.25
+				conscription_factor = 0.03
+				max_command_power = 20
+				mobilization_speed = 0.05
+				production_speed_arms_factory_factor = 0.03
+				party_popularity_stability_factor = 0.10
 			}
 		}
 		
@@ -2314,10 +2311,10 @@ ideas = {
 			modifier = {
 				justify_war_goal_time = -0.35
 				conscription_factor = 0.04
-				max_command_power = 100
+				max_command_power = 30
 				mobilization_speed = 0.1
 				production_speed_arms_factory_factor = 0.05
-				party_popularity_stability_factor = 0.15
+				party_popularity_stability_factor = 0.10
 				invasion_preparation = -0.25
 				special_forces_attack_factor = 0.05
 				special_forces_cap = 0.2
