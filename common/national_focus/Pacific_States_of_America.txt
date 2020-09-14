@@ -9184,8 +9184,8 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_support_long"
 			add_opinion_modifier = {
-				target = TEX
-				modifier = large_increase
+				target = CAN
+				modifier = small_decrease
 			}
 			set_country_flag = CAL_court_long
 			country_event = {
