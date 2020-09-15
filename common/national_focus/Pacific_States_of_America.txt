@@ -8276,7 +8276,7 @@ focus_tree = {
 		y = 4
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_free_trade1"
-			add_ideas = free_trade
+			add_ideas = free_trade_idea
 			add_popularity = { ideology = social_liberal popularity = 0.03 }
 			add_tech_bonus = {
 				name = assembly_bonus
