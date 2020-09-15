@@ -9100,7 +9100,7 @@ country_event = { # 1940 Republican Primary
 			create_country_leader = {
 					name = "Robert Taft"
 					desc = "POLITICS_Robert_Taft_DESC"
-					picture = "gfx/leaders/PSA/CAL_R_A_Taft.tga"
+					picture = "gfx/leaders/USA/R_A_Taft.tga"
 					expire = "1965.1.1"
 					ideology = market_liberal_subtype
 					traits = { staunch_constitutionalist }
@@ -11750,6 +11750,9 @@ country_event = { # Join the League?
 			give_military_access = FROM
 		}
 		add_ideas = USA_league_of_america_1
+		USA = {
+		add_to_faction = ROOT
+		}
 		hidden_effect = {
 			FROM = {
 				country_event = {
