@@ -1994,6 +1994,26 @@ USA_demobilize_forces = {
 			delete_unit_template_and_units = { division_template = "AUS Militia" }
 		}
 	}
+	COR = {
+		if = {
+			limit = { has_template = "CAR Militia" }
+			delete_unit_template_and_units = { division_template = "CAR Militia" }
+		}
+		if = {
+			limit = { has_template = "CAR Garrison" }
+			delete_unit_template_and_units = { division_template = "CAR Garrison" }
+		}
+	}
+	WCC = {
+		if = {
+			limit = { has_template = "National Guard Division" }
+			delete_unit_template_and_units = { division_template = "National Guard Division" }
+		}
+		if = {
+			limit = { has_template = "Army-National Guard Division" }
+			delete_unit_template_and_units = { division_template = "Army-National Guard Division" }
+		}
+	}
 	USA = {
 		if = {
 			limit = { has_template = "Loyalist Cavalry Guard" }
@@ -2050,6 +2070,8 @@ ACW_surrender_effect = {
 					is_controlled_by = CAL
 					is_controlled_by = USA
 					is_controlled_by = NEE
+					is_controlled_by = WCC
+					is_controlled_by = COR
 				}
 			}
 			controller = { transfer_state = PREV }
