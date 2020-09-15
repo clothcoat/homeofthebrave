@@ -7563,7 +7563,9 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BBR_buffalo_soldiers"
 			add_manpower = 10000
+			hidden_effect = {
 			load_oob = "ACW_BBR_Buffalo_Soldiers"
+			}
 		}
 	}
 	focus = {# Tuskeegee Airmen
