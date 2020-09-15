@@ -11906,6 +11906,176 @@ country_event = { # PSA Surrenders
 	}
 }
 
+country_event = { # WCC Surrenders
+	id = amcivwar.6004
+	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.6004"}
+	title = amcivwar.600.t
+	desc = amcivwar.600.d
+	picture = GFX_report_event_USA_civil_war
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = WCC
+		has_global_flag = USA_civil_war_begun_flag
+		NOT = { has_global_flag = USA_civil_war_over_flag }
+		OR = {
+			has_war_with = TEX
+			has_war_with = COR
+			has_war_with = CSA
+			has_war_with = CAL
+		}
+		
+		#check number of controlled states in the continental USA
+		set_temp_variable = { global.num = 0 }
+		all_of = {
+			array = controlled_states
+			var:v = {
+				if = {
+					limit = { is_mainland_america = yes }
+					add_to_temp_variable = { global.num = 1 }
+				}
+			}
+		}		
+		
+		OR = {
+			check_variable = { global.num < 2 } #down to last state
+			surrender_progress > 0.85
+			AND = {
+				controls_state = 382 # Colorado
+				surrender_progress > 0.80
+				check_variable = { global.num < 4 } #controls 3 or less states
+				NOT = {
+					AND = {
+						controls_state = 361 #Washington
+						361 = { is_core_of = WCC }
+					}
+					AND = {
+						controls_state = 797 #San Francisco
+						797 = { is_core_of = WCC }
+					}
+					AND = {
+						controls_state = 798 #Los Angeles
+						798 = { is_core_of = WCC }
+					}
+					AND = {
+						controls_state = 375 #Northern Texas
+						375 = { is_core_of = WCC }
+					}
+					AND = {
+						controls_state = 395 #Illinois
+						395 = { is_core_of = WCC }
+					}
+					AND = {
+						controls_state = 358 #New York City
+						358 = { is_core_of = WCC }
+					}
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 10
+	}
+
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					382 = {
+						is_owned_by = ROOT
+					}
+				}
+				382 = {
+					controller = {
+						save_event_target_as = annex_to
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					1112 = {
+						is_owned_by = ROOT
+					}
+				}
+				1112 = {
+					controller = {
+						save_event_target_as = annex_to
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					any_neighbor_country = {
+						has_war_with = ROOT
+						OR = {
+							tag = CSA
+							tag = COR
+							tag = TEX
+							tag = CAL
+							tag = USA
+						}
+					}
+				}
+				random_neighbor_country = {
+					limit = {
+						has_war_with = ROOT
+						OR = {
+							tag = CSA
+							tag = COR
+							tag = TEX
+							tag = CAL
+							tag = USA
+						}
+					}
+					save_event_target_as = annex_to
+				}
+			}
+			else = {
+				random_country = {
+					limit = {
+						exists = yes
+						has_war_with = ROOT
+						OR = {
+							tag = CSA
+							tag = COR
+							tag = TEX
+							tag = CAL
+							tag = USA
+						}
+					}
+					save_event_target_as = annex_to
+				}
+			}
+			capital_scope = {
+				save_event_target_as = last_state
+			}
+		}
+	}
+
+	option = {
+		name = amcivwar.600.a
+		if = {
+			limit = {
+				has_idea = amcivwar_idea
+			}
+			remove_ideas = amcivwar_idea
+		}
+		else = {
+			custom_effect_tooltip = amcivwar_surrender_tooltip
+			hidden_effect = {
+				add_ideas = amcviwar_ready_to_surrender
+			}
+		}
+		hidden_effect = {
+			event_target:annex_to = {
+				news_event = amcivwar.609
+			}
+		}
+	}
+}
+
 country_event = { # Cleanup event
 	id = amcivwar.606
 	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.606"}
