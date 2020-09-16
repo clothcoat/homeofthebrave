@@ -7433,7 +7433,9 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BBR_new_cavalry_units"
 			add_ideas = BBR_cavalry_bonus
+			hidden_effect = {
 			load_oob = "ACW_BBR_young_cavalry" 
+			}
 		}
 	}
 	focus = {# Infantry Morale
