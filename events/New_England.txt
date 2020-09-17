@@ -1053,7 +1053,7 @@ country_event = { # 1940 Democrat Primary
 	option = { # Joseph Kennedy Sr.
 		name = newengland.23.a
 		ai_chance = {
-			factor = 50
+			factor = 33
 			modifier = {
 				factor = 2
 				NOT = {
@@ -1065,7 +1065,7 @@ country_event = { # 1940 Democrat Primary
 			}
 		}
 		hidden_effect = {
-			set_country_flag = NEE_1940_democrat_primary_kennedy
+			set_country_flag = NEE_1940_democratic_primary_kennedy
 		}
 		hidden_effect = {
 		country_event = {
@@ -1077,10 +1077,25 @@ country_event = { # 1940 Democrat Primary
 	option = { # James Michael Curley
 		name = newengland.23.b
 		ai_chance = {
-			factor = 50
+			factor = 33
 		}
 		hidden_effect = {
 			set_country_flag = NEE_1940_democratic_primary_curley
+		}
+		hidden_effect = {
+		country_event = {
+			id = newengland.24
+			days = 9
+			}
+		}
+	}
+	option = { # Al Smith
+		name = newengland.23.c
+		ai_chance = {
+			factor = 33
+		}
+		hidden_effect = {
+			set_country_flag = NEE_1940_democratic_primary_smith
 		}
 		hidden_effect = {
 		country_event = {
@@ -1105,7 +1120,7 @@ country_event = { # 1940 Election
 		hidden_effect = {
 			if = { # Joseph Kennedy Sr.
 				limit = {
-					has_country_flag = NEE_1940_democrat_primary_kennedy
+					has_country_flag = NEE_1940_democratic_primary_kennedy
 				}
 				create_country_leader = {
 					name = "Joseph Kennedy Sr."
@@ -1116,6 +1131,7 @@ country_event = { # 1940 Election
 					traits = { tenacious_negotiator }
 				}
 			}
+
 			else_if = { # James Curley
 				limit = {
 					has_country_flag = NEE_1940_democratic_primary_curley
@@ -1131,20 +1147,18 @@ country_event = { # 1940 Election
 					}
 				}
 			}
-			
-			else_if = { # Al Smith
+
+			if = { # Al Smith
 				limit = {
 					has_country_flag = NEE_1940_democratic_primary_smith
 				}
-				create_country_leader = {# Curley
+				create_country_leader = {
 					name = "Al Smith"
 					desc = "POLITICS_AL_SMITH_DESC"
-					picture = "gfx/leaders/NEE/Alsmith.tga"
+					picture = "gfx/leaders/NEE/Al_Smith.tga"
 					expire = "1965.1.1"
 					ideology = social_conservative_subtype
-					traits = {
-						political_boss
-					}
+					traits = { political_boss }
 				}
 			}
 			
@@ -1400,7 +1414,7 @@ country_event = { # 1940 Election
 			elections_allowed = yes
 		}
 		hidden_effect = {
-			else_if = { # Joseph William Martin Jr.
+			else_if = { # Joseph Kennedy
 				limit = {
 					has_country_flag = NEE_1940_democrat_primary_kennedy
 				}
@@ -1409,7 +1423,7 @@ country_event = { # 1940 Election
 				add_ideas = NEE_William_Stuart_Symington_Jr_eco_sco
 				add_ideas = NEE_Wilbur_Lucius_Cross_sec_sco
 			}
-			else_if = { # Joseph William Martin Jr.
+			else_if = { # Curley
 				limit = {
 					has_country_flag = NEE_1940_democratic_primary_curley
 				}
@@ -1727,7 +1741,7 @@ country_event = { # 1944 election
 				create_country_leader = {
 					name = "Ernest W. Gibson"
 					desc = "POLITICS_ERNEST_GIBSON_DESC"
-					picture = "Portrait_NEE_Peter_Gerry.tga"
+					picture = "Ernest_William_Gibson_Jr.tga"
 					expire = "1965.1.1"
 					ideology = social_democrat_subtype
 					traits = { economic_reformer }

@@ -2025,7 +2025,7 @@ country_event = { # 1940 election
 					traits = { silent_workhorse }
 				}
 			}
-			if = {
+			if = { # Henry Wallace
 				limit = {
 					has_country_flag = PSA_1940_progressive_primary_wallace
 				}
@@ -2036,6 +2036,32 @@ country_event = { # 1940 election
 					expire = "1965.1.1"
 					ideology = social_democrat_subtype
 					traits = { great_survivor }
+				}
+			}
+			if = { # Homer Bone
+				limit = {
+					has_country_flag = PSA_1940_progressive_primary_bone
+				}
+				create_country_leader = {
+					name = "Homer Bone"
+					desc = "POLITICS_HOMER_BONE_DESC"
+					picture = "CAL_Homer_Bone.tga"
+					expire = "1965.1.1"
+					ideology = social_democrat_subtype
+					traits = { backroom_backstabber }
+				}
+			}
+			if = { # Sheridan Downey
+				limit = {
+					has_country_flag = PSA_1940_progressive_primary_downey
+				}
+				create_country_leader = {
+					name = "Sheridan Downey"
+					desc = "POLITICS_SHERIDAN_DOWNEY_DESC"
+					picture = "CAL_sheridan_downey.tga"
+					expire = "1965.1.1"
+					ideology = social_democrat_subtype
+					traits = { silent_workhorse }
 				}
 			}
 			if = { # Earl Warren
