@@ -13,7 +13,7 @@ ideas = {
 				max_planning = 0.10
 				army_core_defence_factor = 0.05
 				max_command_power = 20
-				army_org = 0.2
+				army_org_Factor = 0.2
 				land_reinforce_rate = 0.01
 				out_of_supply_factor = 0.05
 			}
@@ -27,7 +27,7 @@ ideas = {
 				max_planning = 0.10
 				army_core_defence_factor = 0.1
 				max_command_power = 20
-				army_org = 0.2
+				army_org_Factor = 0.2
 				land_reinforce_rate = 0.01
 				attrition = -0.05
 				supply_consumption_factor = -0.10
@@ -44,7 +44,7 @@ ideas = {
 				max_command_power = 30
 				army_core_defence_factor = 0.1
 				land_reinforce_rate = 0.01
-				army_org = 0.5
+				army_org_Factor = 0.5
 				supply_consumption_factor = -0.10
 				experience_gain_factor = 0.10
 				planning_speed = 0.05
@@ -61,7 +61,7 @@ ideas = {
 				max_command_power = 30
 				army_core_defence_factor = 0.1
 				land_reinforce_rate = 0.02
-				army_org = 0.5
+				army_org_Factor = 0.5
 				recon_factor_while_entrenched = 0.05
 				supply_consumption_factor = -0.10
 				experience_gain_factor = 0.10
@@ -81,7 +81,7 @@ ideas = {
 				army_core_attack_factor = 0.03
 				recon_factor_while_entrenched = 0.05
 				max_dig_in = 1
-				army_org = 1.0
+				army_org_Factor = 1.0
 				land_reinforce_rate = 0.02
 				supply_consumption_factor = -0.10
 				experience_gain_factor = 0.15
@@ -270,7 +270,7 @@ ideas = {
 			modifier = {
 				cavalry_attack_factor = 0.05
 				cavalry_defence_factor = 0.03
-				decryption = -0.03
+				decryption_factor = -0.03
 				recon_factor = 0.1
 				max_commander_army_size = 3
 				army_leader_cost_factor = -0.1
@@ -305,7 +305,7 @@ ideas = {
 			modifier = {
 				army_core_attack_factor = 0.1
 				army_morale_factor = -0.05
-				army_org_factor = 0.05
+				army_org_Factor = 0.05
 				army_speed_factor = 0.05
 			}
 			equipment_bonus = {
@@ -327,7 +327,7 @@ ideas = {
 			modifier = {
 				army_core_attack_factor = 0.1
 				army_morale_factor = -0.10
-				army_org_factor = 0.05
+				army_org_Factor = 0.05
 				army_speed_factor = 0.05
 				army_armor_attack_factor = 0.10
 				army_armor_defence_factor = 0.10
@@ -351,7 +351,7 @@ ideas = {
 			modifier = {
 				army_core_attack_factor = 0.1
 				army_morale_factor = -0.10
-				army_org_factor = 0.05
+				army_org_Factor = 0.05
 				army_speed_factor = 0.05
 				army_armor_attack_factor = 0.10
 				army_armor_defence_factor = 0.10
@@ -375,7 +375,7 @@ ideas = {
 			modifier = {
 				army_attack_factor = 0.1
 				#army_morale_factor = -0.10
-				army_org_factor = 0.10
+				army_org_Factor = 0.10
 				army_speed_factor = 0.05
 				army_armor_attack_factor = 0.15
 				army_armor_defence_factor = 0.15
@@ -740,7 +740,7 @@ ideas = {
 			modifier = {
 				political_power_gain = -0.01
 				conscription_factor = 0.01
-				encryption = 0.05
+				encryption_factor = 0.05
 			}
 		}
 		COR_cavalier_ideal_idea = {
@@ -828,8 +828,8 @@ ideas = {
 			modifier = {
 				party_popularity_stability_factor = 0.02
 				weekly_manpower	= 80
-				decryption = 0.05
-				encryption = 0.02
+				decryption_factor = 0.05
+				encryption_factor = 0.02
 			}
 		}
 		COR_national_corporatism_idea = {
@@ -1028,7 +1028,7 @@ ideas = {
 				conscription_factor = -0.03
 				stability_factor = -0.02
 				monthly_population = -0.01
-				encryption = 0.03
+				encryption_factor = 0.03
 			}
 		}
 		COR_non_conformist_extortion = {# Non-Conformist Extortion
@@ -1043,7 +1043,7 @@ ideas = {
 				party_popularity_stability_factor = 0.08
 				consumer_goods_factor = -0.03
 				conscription_factor = -0.04
-				encryption = 0.05
+				encryption_factor = 0.05
 				local_resources_factor = 0.02
 			}
 		}
@@ -1059,7 +1059,7 @@ ideas = {
 				conscription_factor = -0.01
 				war_support_factor = 0.05
 				monthly_population = -0.02
-				encryption = 0.02
+				encryption_factor = 0.02
 			}
 		}
 		COR_non_conformist_regulations_3 = {# Young Klan Regulations
@@ -1075,7 +1075,7 @@ ideas = {
 				party_popularity_stability_factor = 0.1
 				war_support_factor = 0.1
 				monthly_population = -0.02
-				encryption = 0.05
+				encryption_factor = 0.05
 			}
 		}
 		COR_Kinship_economics_idea = {# Kinship Economics
@@ -1292,7 +1292,7 @@ ideas = {
 				stability_factor = -0.1
 				production_factory_efficiency_gain_factor = -0.05
 				local_factory_sabotage	= 0.05
-				encryption = -0.05
+				encryption_factor = -0.05
 				conscription_factor = -0.2
 				party_popularity_stability_factor = -0.05
 			}
@@ -1398,7 +1398,7 @@ ideas = {
 				army_core_defence_factor = 0.05
 				army_attack_factor = 0.05
 				out_of_supply_factor = 0.02
-				army_org = -0.5
+				army_org_Factor = -0.5
 			}
 		}
 		COR_kommon_law_idea = {# Kommon Law Idea
@@ -1470,8 +1470,8 @@ ideas = {
 			picture = agents_of_jacob
 			modifier = {
 				political_power_gain = 0.03
-				encryption = 0.05
-				decryption = 0.05
+				encryption_factor = 0.05
+				decryption_factor = 0.05
 				command_power_gain = 0.02
 				resistance_activity = -0.05
 			}
@@ -1673,7 +1673,7 @@ ideas = {
 			removal_cost = -1
 			picture = federalist_activity
 			modifier = {
-				encryption = -0.05
+				encryption_factor = -0.05
 				military_leader_cost_factor	= 0.1
 				local_resources	= -0.03
 				political_power_gain = -0.02

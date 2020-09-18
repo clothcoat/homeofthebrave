@@ -297,14 +297,14 @@ country_event = { # 1937 Democrat Primary
 		add_political_power = -10
 		hidden_effect = {
 			set_country_flag = PSA_1937_democratic_primary_disney
-			country_event = {
-				id = pacificstates.4
-				days = 6
 			}
 			country_event = {
 				id = pacificstates.251
 				days = 2
 			}
+			country_event = {
+				id = pacificstates.4
+				days = 6
 		}
 	}
 	option = { # Keep Garner
@@ -8916,7 +8916,7 @@ country_event = {# Party Beliefs
 		add_stability = -0.1
 		hidden_effect = {
 		country_event = {
-			id = pacificstates.354
+			id = pacificstates.358
 			days = 4
 			}
 		}
