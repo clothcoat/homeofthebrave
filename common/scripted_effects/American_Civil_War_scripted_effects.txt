@@ -99,6 +99,16 @@ CAL_initial_events = {
 }
 
 COR_initial_events = {
+	COR = {
+		if = {
+			limit = {
+				USA = { has_global_flag = USA_murray_is_president }
+			}
+			add_timed_idea = {
+				idea = COR_righteous_nation
+				days = 360
+			}
+		}
 	hidden_effect = {
 	if = {
 			limit = { NOT = { has_global_flag = USA_COR_existed } }
@@ -789,17 +799,7 @@ USA_release_COR = {
 			value = 5
 			}
 		}
-
-		if = {
-			limit = {
-				USA = { has_country_flag = USA_murray_is_president }
-			}
-			add_timed_idea = {
-				idea = COR_righteous_nation
-				days = 360
-			}
-		}
-			
+		
 		USA = {
 			if = {
 			limit = { has_idea = USA_klan_activity_idea }
