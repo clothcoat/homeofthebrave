@@ -109,6 +109,7 @@ COR_initial_events = {
 				days = 360
 			}
 		}
+	}
 	hidden_effect = {
 	if = {
 			limit = { NOT = { has_global_flag = USA_COR_existed } }

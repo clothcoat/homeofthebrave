@@ -2548,6 +2548,7 @@ country_event = { # Armstrong Dead
 	is_triggered_only = yes
 
 	immediate = {
+	hidden_effect = {
 	kill_ideology_leader = national_populist
 	set_country_flag = Herbert_W_Armstrong_dead
 	set_country_flag = young_klan_victory
@@ -2556,6 +2557,7 @@ country_event = { # Armstrong Dead
 	add_ideas = COR_William_Bell_Riley_for_pau
 	add_ideas = COR_George_W_Christians_eco_npo
 	add_ideas = COR_Elizabeth_Eloise_Kirkpatrick_Dilling_sec_npo
+	}
 	}
 	option = { #George Lincoln Rockwell
 		name = constate.5101.a
@@ -2970,6 +2972,7 @@ country_event = { # Black Belt Autonomy
 		tag = COR
 		has_global_flag = USA_civil_war_over_flag
 		has_government = national_populist
+		has_country_leader = { ruling_only = yes name = "Herbert W. Armstrong"} 
 	}
 
 	option = {
