@@ -606,6 +606,7 @@ CSA_red_army_influence_2:0 "Moderate Red Army Influence"
 CSA_red_army_influence_3:0 "Strong Red Army Influence"
 CSA_war_racket_idea:0 "War Is A Racket"
 CSA_defensive_doctrine_idea:0 "Defensive Doctrine"
+CSA_veteran_bill:0 "Veteran's Bill"
 CSA_motor_production_idea:0 "Increased Automobile Production"
 CSA_liberty_ships_ideas:0 "Liberty Ships"
 CSA_militia_disbanded:0 "Large Labour Pool"
@@ -1815,9 +1816,30 @@ csa.67.d:0 "The unthinkable has happened. Smedley Butler has gathered supporters
 csa.67.a:0 "Butler's Forces capture the Citadel."
 csa.67.b:0 "Butler's Forces are routed."
 
-csa.68.t:0 "Restoring Democracy"
-csa.68.d:0 "'Americans did not fight and die in the revolution to overthrow a capitalistic dictatorship only to install a socialist dictatorship. The president, however, corrupted the revolution and tainted it. I have removed him from power, not to make myself a dictator, but to stop a tyrant. A new and free election shall be held within a year's time.' With these words on the radio from Smedly Butler, America was shocked to find that the government had been overthrown. Perhaps, however, some measure of freedom had been restored."
-csa.68.a:0 "Democracy Now, and Forever."
+csa.68.t:0 "Butler's Speech"
+csa.68.d:0 "'Americans did not fight and die in the revolution to overthrow a capitalistic dictatorship only to install a socialist dictatorship. The president, however, corrupted the revolution and tainted it. I have removed him from power, not to make myself a dictator, but to stop a tyrant. A new and free election shall be held within a year's time, assuming the country can become stable enough to do so, and I hope it can.' With these words on the radio from Smedly Butler, America was shocked to find that the government had been overthrown. Perhaps, however, some measure of freedom had been restored. All eyes are on Butler now, and nobody knows what he will do next."
+csa.68.a:0 "Democracy Now, and Forever"
+csa.68.b:0 "The Military must stabilize things"
+
+csa.6800.t:0 "Butler's Government"
+csa.6800.d:0 "Smedly Butler has decided to remain in power for now, to ensure that totalism is completely eradicated and that the Revolution does not fail before it can even find its footing. To do so, however, he will need help. To that end, he has been torn between two different possibilities for what his government could look like. On one hand, he wants to restore some semblance of democracy to the government, and hopes to appoint civilians to his cabinet. On the other hand, his military allies inisist that they would be better able to establish stability if they had more direct power within Butler's government. Butler's closest friend, Evans Fordyce Carlson, promises to support him either way, but urges Butler to act quickly so that we do not seem weak to our totalist foes."
+csa.6800.a:0 "A Democratic Cabinet"
+csa.6800.b:0 "A Miliary Cabinet"
+
+csa.6801.t:0 "Prohibition Bill?"
+csa.6801.d:0 "Coming from a Quaker background, Smedly Butler was exposed to their tradition of temperance. Butler himself advocated prohibition in the early 30's, and now that he is in charge, there has been a renewed push for a form of it in Congress. However, there are also strong contingents who are against prohibition, including some leftists, and some might see Butler passing the bill as him universally enforcing his will without taking the opinions of all his citizens into account. What should we do?"
+csa.6801.a:0 "Pass it"
+csa.6801.b:0 "Veto the bill"`
+
+csa.6802.t:0 "Veteran's Bill"
+csa.6802.d:0 "There are millions of veterans from the recent Civil War, and whether they fought for our side or not, they are still soldiers. While there is already legislation giving benefits to our own veterans, those who fought for other factions received nothing but disdain -or worse- under the previous centralist government. Smedly Butler, as a military official himself, is widely seen as being more sympathetic to giving veterans aid, especially given recent speeches he has given in which he has mentioned the issue. Passing the bill would win us good will with the veterans in question, and possibly secure their support if another conflict happened in the new future. However, should we choose to give pensions and other benefits to all veterans, we could risk angering the families of deceased soldiers who fought for us. What should we do?"
+csa.6802.a:0 "Aid for all veterans"
+csa.6802.b:0 "Public outrage defeats the bill"
+
+csa.6803.t:0 "A New Government"
+csa.6803.d.democrat:0 "In the wake of William Foster's destruction, a new government has begun to form. Under Smedly Butler's careful guidance, the country is beginning to heal from the wounds inflicted by both Foster and the disastrous conflicts and strife of recent years. Butler has fostered close ties with the Nationalists, who have been given spots in Butler's cabinet, and allowed to run in elections in local, state, and national elections, as have many other factions of the SPA. However, the Centralists, led primarily by Foster, have been pursued relentlessly. Foster himself has fled to locations unknown, but some of his top advisors now sit in prison and await their hearings in court. For now, the country admires Butler as the man who saved the country from tyranny, and believe he is the right man to lead the nation into a new socialist age."
+csa.6803.d.military:0 "In the wake of William Foster's destruction, a new government has begun to form. Under Smedly Butler's careful guidance, the country is beginning to heal from the wounds inflicted by both Foster and the disastrous conflicts and strife of recent years. Wary of further chaos, Butler has entrusted cabinet positions to military officials whom he can believes he can trust. On a national level, a mix of military and civilian officials run the country. On the state and local levels, however, Butler has decided to allow elections, entrusting control of such areas to whoever may win. However, the Centralists, led primarily by Foster, have been pursued relentlessly. Foster himself has fled to locations unknown, but some of his top advisors now sit in prison and await their hearings in court. For now, the country admires Butler as the man who saved the country from tyranny, and believe he is the right man to lead the nation into a new socialist age."`
+csa.6803.a:0 "Ok"
 
 csa.69.t:0 "Self Determination in the Black Belt"
 csa.69.d:0 "Before the revolution, there were plans by [CSA.GetLeader] to implement an autonomous region within the South for the African-American community. With the ascension of William Z Foster comes a dedication to the dream to create a more perfect union, as opposed to a greater union. Foster has drafted a plan with James W. Ford to ensure the perpetual safety and self determination of African American minorities in the South. This plan is to create a Black Belt in the south of autonomous communities with their own representatives separate from Congress. While the ruling party as a whole supports this, several critics from other parties note that this policy would create an unequal standard for civil rights."

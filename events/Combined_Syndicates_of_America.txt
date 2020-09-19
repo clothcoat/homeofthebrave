@@ -3996,7 +3996,7 @@ country_event = { # Restoring Democracy
 		}
 	}
 
-	option = {
+	option = { #Democracy
 		name = csa.68.a
 		hidden_effect = {
 			set_country_flag = CSA_had_1940_election
@@ -4017,6 +4017,189 @@ country_event = { # Restoring Democracy
 				days = 222
 			}
 		}
+	}
+	option = { #Military
+		name = csa.68.b
+		hidden_effect = {
+			set_country_flag = CSA_butler_in_charge
+			set_politics = {
+				ruling_party = radical_socialist
+				elections_allowed = no
+			}
+			country_event = {
+				id = csa.6800
+				days = 10
+			}
+
+		}
+	}
+}
+
+country_event = { # Butler's Cabinet
+	id = csa.6800
+	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.6800"}
+	title = csa.6800.t
+	desc = csa.6800.d
+	picture = GFX_report_event_USA_congress
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_government = radical_socialist
+		has_country_leader = {
+			ruling_only = yes
+			name = "Smedly Butler"
+		}
+	}
+
+	option = { #Democratic Government
+		name = csa.6800.a
+		hidden_effect = {
+			set_country_flag = CSA_butler_democrat
+			country_event = {
+				id = csa.6803
+				days = 10
+			}
+			add_ideas = CSA_Meyer_London_hog_rso
+			add_ideas = CSA_Asa_P_Randolph_for_rso
+			add_ideas = CSA_John_Gates_eco_rso
+			add_ideas = CSA_John_Dewey_sec_rso
+			add_ideas = CSA_Joseph_Sharts_int_rso
+		}
+	}
+	
+	option = { #Military Men
+		name = csa.6800.b
+		hidden_effect = {
+			set_country_flag = CSA_butler_military
+			country_event = {
+				id = csa.6803
+				days = 10
+			}
+			add_ideas = CSA_Meyer_London_hog_rso
+			add_ideas = CSA_Asa_P_Randolph_for_rso
+			add_ideas = CSA_John_Gates_eco_rso
+			add_ideas = CSA_John_Dewey_sec_rso
+			add_ideas = CSA_Joseph_Sharts_int_rso 
+			}
+		}	
+	}
+
+country_event = { # Prohibition
+	id = csa.6801
+	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.6801"}
+	title = csa.6801.t
+	desc = csa.6801.d
+	picture = GFX_report_event_USA_reconstruction1
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_government = radical_socialist
+		has_country_leader = {
+			ruling_only = yes
+			name = "Smedly Butler"
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 4
+	}
+
+	option = { # Pass it
+		name = csa.6801.a
+		ai_chance = {
+			factor = 50
+		}
+		add_political_power = 10
+		decrease_ruling_party_popularity_by_3 = yes
+	}
+
+	option = { # Veto it
+		name = csa.6801.b
+		ai_chance = {
+			factor = 50
+		}
+		add_stability = -0.02
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.03
+		}
+	}
+}	
+
+country_event = { # Aid for Veterans
+	id = csa.6802
+	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.6802"}
+	title = csa.6802.t
+	desc = csa.6802.d
+	picture = GFX_report_event_USA_reconstruction1
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_government = radical_socialist
+		has_country_leader = {
+			ruling_only = yes
+			name = "Smedly Butler"
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 8
+	}
+
+	option = { # Pass it
+		name = csa.6802.a
+		ai_chance = {
+			factor = 50
+		}
+		add_political_power = -20
+		add_ideas = CSA_veteran_bill
+	}
+
+	option = { # Veto it
+		name = csa.6802.b
+		ai_chance = {
+			factor = 50
+		}
+		add_stability = -0.02
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = -0.03
+		}
+	}
+}	
+
+country_event = { # A New Government
+	id = csa.6803
+	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.6803"}
+	title = csa.6803.t
+	picture = GFX_report_event_USA_congress
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	desc = {
+	text = csa.6803.d.democrat
+	trigger = {
+			has_country_flag = CSA_butler_democrat
+		}
+	}
+	desc = {
+	text = csa.6803.d.military
+	trigger = {
+			has_country_flag = CSA_butler_military
+		}
+	}
+
+	option = {# Ok
+		name = csa.6803.a
+		add_political_power = 10
 	}
 }
 
