@@ -4010,11 +4010,11 @@ country_event = { # Restoring Democracy
 			}
 			country_event = {
 				id = csa.28
-				days = 215
+				days = 14
 			}
 			country_event = {
 				id = csa.29
-				days = 222
+				days = 21
 			}
 		}
 	}
@@ -4202,6 +4202,116 @@ country_event = { # A New Government
 		add_political_power = 10
 	}
 }
+
+country_event = { # Foreign Policy
+	id = csa.6804
+	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.6804"}
+	title = csa.6804.t
+	desc = csa.6804.d
+	picture = GFX_report_event_USA_congress
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_government = radical_socialist
+		has_country_leader = {
+		ruling_only = yes
+		name = "Smedly Butler"
+		}
+	FRA = {
+	OR = {
+	has_government = social_democrat
+	has_government = radical_socialist
+	has_government = syndicalist			
+		}
+	}
+}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	option = { # Ask to join the Internationale
+		name = csa.6804.a
+		ai_chance = {
+			factor = 40
+		}
+		add_political_power = 20
+		decrease_ruling_party_popularity_by_1 = yes
+		FRA = {
+		country_event = {
+		id = csa.101
+		days = 2
+		}
+	}
+}
+
+	option = { # Return the favor
+		name = csa.6804.b
+		ai_chance = {
+			factor = 60
+		}
+		country_event = { id = csa.500 days = 2 }
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.03
+		}
+	}
+}	
+
+country_event = { # Foreign Policy
+	id = csa.6805
+	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.6805"}
+	title = csa.6805.t
+	desc = csa.6805.d
+	picture = GFX_report_event_USA_congress
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_government = radical_socialist
+		has_country_leader = {
+		ruling_only = yes
+		name = "Smedly Butler"
+		}
+	FRA = {
+	has_government = totalist		
+	}
+}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	option = { # Our own faction
+		name = csa.6805.a
+		ai_chance = {
+			factor = 40
+		}
+		add_political_power = 20
+		increase_ruling_party_popularity_by_3 = yes
+		CSA = {
+		country_event = {
+		id = csa.5010
+		days = 2
+		}
+	}
+}
+
+	option = { # Return the favor
+		name = csa.6805.b
+		ai_chance = {
+			factor = 60
+		}
+		country_event = { id = csa.500 days = 2 }
+		decrease_ruling_party_popularity_by_5 = yes
+		}
+	}
+}	
 
 country_event = { # Self Determination in the Black Belt
 	id = csa.69
@@ -11150,6 +11260,24 @@ country_event = { #Address the Internationale
 	name = csa.501.b
 	add_political_power = 30
 	create_faction = "true_revolutionary_faction"
+	}
+}
+
+country_event = { #Address the Internationale
+	id = csa.5010
+	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.5010"}
+	title = csa.5010.t
+	desc = csa.5010.d
+	picture = GFX_report_event_USA_congress
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = { #Fourth Internationale
+	name = csa.5010.a
+	add_political_power = 30
+	create_faction = "fourth_internationale"
 	}
 }
 

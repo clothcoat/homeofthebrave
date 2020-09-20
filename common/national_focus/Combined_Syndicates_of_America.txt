@@ -5086,6 +5086,7 @@ focus_tree = {
 		available = {
 			has_country_leader = { ruling_only = yes name = "Smedly Butler" }
 			has_government = radical_socialist
+			has_country_flag = CSA_butler_in_charge
 		}
 		x = 12
 		y = 10
@@ -5107,7 +5108,7 @@ focus_tree = {
 	
 	focus = {# Finish Totalism
 		id = CSA_finish_totalism
-		icon = GFX_goal_USA_american_cincinnatus
+		icon = GFX_CSA_finish_centralism
 		cost = 6.00
 		available = {
 			has_country_leader = { ruling_only = yes name = "Smedly Butler" }
@@ -5278,9 +5279,9 @@ focus_tree = {
 			factor = 50
 		}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CSA_strategic_services"
+			log = "[GetDateText]: [Root.GetName]: Focus CSA_red_junta"
 			add_ideas = CSA_red_junta
-			add_political_power = 50
+			add_political_power = 80
 			add_stability = 0.05
 			}
 		}
