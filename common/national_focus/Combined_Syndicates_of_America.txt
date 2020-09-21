@@ -9495,7 +9495,6 @@ focus_tree = {
 		available = {
 			is_subject = no
 			is_major = yes
-			controls_all_owned_states = yes
 			OR = {
 				is_in_faction = no
 				is_faction_leader = yes
@@ -9779,7 +9778,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_release_suriname"
-			CSA = {
+			HOL = {
 				country_event = {
 				id = csa.558
 				days = 1
@@ -10737,7 +10736,7 @@ focus_tree = {
 				add_idea = CSA_burnhams_economic_policy_idea5
 			}
 			hidden_effect = {
-				country_event = { id = csa.53 days = 90 }
+				country_event = { id = csa.53 days = 3 }
 			}	
 		random_owned_controlled_state = {
 				limit = {

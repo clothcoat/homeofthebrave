@@ -3554,7 +3554,7 @@ country_event = { # Foster Denounces Browder
 			set_country_flag = CSA_foster_denounces_browder
 			country_event = {
 				id = csa.55
-				days = 180
+				days = 18
 			}
 		}
 	}
@@ -3583,7 +3583,7 @@ country_event = { # Browder Denounces Foster
 			set_country_flag = CSA_browder_denounces_foster
 			country_event = {
 				id = csa.56
-				days = 180
+				days = 18
 			}
 		}
 	}
@@ -5696,7 +5696,7 @@ country_event = { # Arm Canadian resistance
 		}
 	}
 	option = {
-		name = csa.154.e
+		name = csa.1540.e
 		add_manpower = -2000
 		add_equipment_to_stockpile = {
 			type = infantry_equipment_1
@@ -5710,18 +5710,19 @@ country_event = { # Arm Canadian resistance
 		}
 	}
 }
+
 country_event = { # Responding to small resistance
-	id = csa.155
-	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.155"}
-	title = csa.155.t
-	desc = csa.155.d
+	id = csa.1550
+	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.1550"}
+	title = csa.1550.t
+	desc = csa.1550.d
 	picture = GFX_report_event_CAN_commons1
 
 	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = { #No War
-		name = csa.155.a
+		name = csa.1550.a
 
 		ai_chance = {
 			factor = 100
@@ -5731,17 +5732,17 @@ country_event = { # Responding to small resistance
 	}
 	
 country_event = { # Responding to mild resistance
-	id = csa.156
-	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.156"}
-	title = csa.156.t
-	desc = csa.156.d
+	id = csa.1560
+	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.1560"}
+	title = csa.1560.t
+	desc = csa.1560.d
 	picture = GFX_report_event_CAN_commons1
 
 	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = { #No War
-		name = csa.156.a
+		name = csa.1560.a
 
 		ai_chance = {
 			factor = 100
@@ -5751,7 +5752,7 @@ country_event = { # Responding to mild resistance
 		add_popularity = { ideology = totalist popularity = 0.2}
 		}
 	option = { #War with Burnham
-		name = csa.156.b
+		name = csa.1560.b
 
 		ai_chance = {
 			factor = 0
@@ -5764,17 +5765,17 @@ country_event = { # Responding to mild resistance
 	}
 }
 country_event = { # Responding to Communist resistance
-	id = csa.157
-	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.157"}
-	title = csa.157.t
-	desc = csa.157.d
+	id = csa.1570
+	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.1570"}
+	title = csa.1570.t
+	desc = csa.1570.d
 	picture = GFX_report_event_CAN_commons1
 
 	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = { #No War
-		name = csa.157.a
+		name = csa.1570.a
 
 		ai_chance = {
 			factor = 100
@@ -5783,7 +5784,7 @@ country_event = { # Responding to Communist resistance
 		add_popularity = { ideology = totalist popularity = 0.05}
 		}
 	option = { #War with Burnham
-		name = csa.157.b
+		name = csa.1570.b
 
 		ai_chance = {
 			factor = 0
@@ -5796,17 +5797,17 @@ country_event = { # Responding to Communist resistance
 	}
 }
 country_event = { # Responding to massive resistance
-	id = csa.158
+	id = csa.1580
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.158"}
-	title = csa.158.t
-	desc = csa.158.d
+	title = csa.1580.t
+	desc = csa.1580.d
 	picture = GFX_report_event_CAN_commons1
 
 	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = { #No War
-		name = csa.158.a
+		name = csa.1580.a
 
 		ai_chance = {
 			factor = 70
@@ -5817,7 +5818,7 @@ country_event = { # Responding to massive resistance
 		add_popularity = { ideology = national_populist popularity = 0.04 }
 		}
 	option = { #War with Burnham
-		name = csa.158.b
+		name = csa.1580.b
 
 		ai_chance = {
 			factor = 30
