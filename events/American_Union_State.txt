@@ -198,25 +198,25 @@ country_event = { # Capital of America
 		}
 		set_capital = 371
 	}
-	option = { # Charleston
+	option = { # Houston
 		name = unionstate.7.c
 		trigger = {
-			owns_state = 364
+			owns_state = 375
 		}
 		ai_chance = {
 			factor = 15
 		}
-		set_capital = 364
+		set_capital = 375
 	}
-	option = { # Saint Louis
+	option = { # Topeka
 		name = unionstate.7.e
 		trigger = {
-			owns_state = 373
+			owns_state = 383
 		}
 		ai_chance = {
 			factor = 15
 		}
-		set_capital = 373
+		set_capital = 383
 	}
 }
 

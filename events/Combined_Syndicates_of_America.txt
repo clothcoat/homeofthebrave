@@ -11502,6 +11502,162 @@ country_event = { # Canada refuses to return New England
 	}
 }
 
+country_event = { # Time to Retreat?
+	id = csa.2705
+	title = csa.2705.t
+	desc = csa.2705.d
+	picture = GFX_report_event_INC_vietnam
+
+	is_triggered_only = yes
+
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event csa.2705"
+		CSA = {
+			save_event_target_as = white_peace_receiver
+		}
+	}
+
+
+	option = {
+		name = csa.2705.a # Fight!
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 0
+				any_enemy_country = {
+					is_major = yes
+				}
+			}
+			modifier = {
+				factor = 0.75
+				tag = NFA
+			}
+			modifier = {
+				factor = 0.75
+				has_war_support < 0.5
+			}
+			modifier = {
+				factor = 0.3
+				CSA = {
+					controls_state = 739
+				}
+			}
+			modifier = {
+				factor = 0.3
+				CSA = {
+					controls_state = 832
+				}
+			}
+			modifier = {
+				factor = 0.35
+				date > 1937.6.1
+			}
+			modifier = {
+				factor = 0.35
+				date > 1938.6.1
+			}
+			modifier = {
+				factor = 0.25
+				date > 1939.3.1
+			}
+			modifier = {
+				factor = 0
+				date > 1939.7.1
+			}
+		}
+		add_political_power = -25
+		if = {
+			limit = {
+				CSA = {
+					controls_state = 739
+				}
+			}
+			add_war_support = -0.03
+		}
+	}
+	option = {
+		name = csa.2705.b # Time to retreat
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 2
+				CSA = {
+					controls_state = 739
+				}
+			}
+			modifier = {
+				factor = 1.5
+				CSA = {
+					controls_state = 832
+				}
+			}
+		}
+		CAN = {
+			every_owned_state = {
+				CSA = {
+					transfer_state = PREV
+				}
+			}
+		}
+		MEX = {
+			if = {
+			limit = { 
+				MEX = { is_in_faction_with = NFA }
+			every_owned_state = {
+				CSA = {
+					transfer_state = PREV
+				}
+			}
+		}
+	}
+	}
+		if = {
+			limit = {
+				CAN = {
+					exists = yes
+				}
+			}
+			CSA = {
+				annex_country = {
+					target = CAN
+					transfer_troops = no
+				}
+			}
+		}
+		if = {
+			limit = {
+				MEX = {
+					is_in_faction_with = NFA
+				}
+				CSA = {
+				controls_state = 277
+				}
+			}
+			CSA = {
+				annex_country = {
+					target = MEX
+					transfer_troops = no
+				}
+			}
+		}
+		white_peace_with_TARGET = yes
+		every_enemy_country = {
+			limit = { 
+				is_valid_peace_target = yes 
+				is_in_faction_with = NFA
+			}
+			white_peace_with_TARGET = yes
+			}
+		CAF = {
+			limit = { 
+				is_valid_peace_target = yes 
+			}
+			white_peace_with_TARGET = yes
+			}
+		}
+	}
+}
+
 country_event = { #America demands Suriname!
 	id = csa.558
 	immediate = { log = "[GetDateText]: [Root.GetName]: event csa.558" }

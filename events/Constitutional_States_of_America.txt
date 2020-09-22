@@ -1881,6 +1881,240 @@ country_event = { # Papal deal
 	}
 }
 
+country_event = { # Capital of America
+	id = constate.29
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.29"}
+	title = constate.29.t
+	desc = constate.29.d
+	picture = GFX_report_event_TEX_southern_farmers
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = COR
+		has_global_flag = USA_civil_war_over_flag
+		controls_all_owned_states = yes
+		count_triggers = {
+			amount = 2
+			owns_state = 361
+			owns_state = 371
+			owns_state = 364
+			owns_state = 373
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	option = { # Washington DC
+		name = constate.29.a
+		trigger = {
+			owns_state = 361
+		}
+		ai_chance = {
+			factor = 50
+		}
+		set_capital = 361
+	}
+	option = { # Atlanta
+		name = constate.29.b
+		trigger = {
+			owns_state = 365
+		}
+		ai_chance = {
+			factor = 15
+		}
+		set_capital = 365
+	}
+	option = { # Charleston
+		name = constate.29.c
+		trigger = {
+			owns_state = 1116
+		}
+		ai_chance = {
+			factor = 15
+		}
+		set_capital = 1116
+	}
+	option = { # Saint Louis
+		name = constate.29.e
+		trigger = {
+			owns_state = 373
+		}
+		ai_chance = {
+			factor = 15
+		}
+		set_capital = 373
+	}
+	option = { # Richmond
+		name = constate.29.f
+		trigger = {
+			owns_state = 362
+		}
+		ai_chance = {
+			factor = 15
+		}
+		set_capital = 362
+	}
+}
+
+country_event = { # Time to Retreat?
+	id = constate.2705
+	title = constate.2705.t
+	desc = constate.2705.d
+	picture = GFX_report_event_INC_vietnam
+
+	is_triggered_only = yes
+
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event constate.2705"
+		COR = {
+			save_event_target_as = white_peace_receiver
+		}
+	}
+
+
+	option = {
+		name = constate.2705.a # Fight!
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 0
+				any_enemy_country = {
+					is_major = yes
+				}
+			}
+			modifier = {
+				factor = 0.75
+				tag = NFA
+			}
+			modifier = {
+				factor = 0.75
+				has_war_support < 0.5
+			}
+			modifier = {
+				factor = 0.3
+				COR = {
+					controls_state = 739
+				}
+			}
+			modifier = {
+				factor = 0.3
+				COR = {
+					controls_state = 832
+				}
+			}
+			modifier = {
+				factor = 0.35
+				date > 1937.6.1
+			}
+			modifier = {
+				factor = 0.35
+				date > 1938.6.1
+			}
+			modifier = {
+				factor = 0.25
+				date > 1939.3.1
+			}
+			modifier = {
+				factor = 0
+				date > 1939.7.1
+			}
+		}
+		add_political_power = -25
+		if = {
+			limit = {
+				COR = {
+					controls_state = 739
+				}
+			}
+			add_war_support = -0.03
+		}
+	}
+	option = {
+		name = constate.2705.b # Time to retreat
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 2
+				COR= {
+					controls_state = 739
+				}
+			}
+			modifier = {
+				factor = 1.5
+				COR = {
+					controls_state = 832
+				}
+			}
+		}
+		CAN = {
+			every_owned_state = {
+				COR = {
+					transfer_state = PREV
+				}
+			}
+		}
+		MEX = {
+			if = {
+			limit = { 
+				MEX = { is_in_faction_with = NFA }
+			every_owned_state = {
+				COR = {
+					transfer_state = PREV
+				}
+			}
+		}
+	}
+	}
+		if = {
+			limit = {
+				CAN = {
+					exists = yes
+				}
+			}
+			COR = {
+				annex_country = {
+					target = CAN
+					transfer_troops = no
+				}
+			}
+		}
+		if = {
+			limit = {
+				MEX = {
+					is_in_faction_with = NFA
+				}
+				COR = {
+				controls_state = 277
+				}
+			}
+			COR = {
+				annex_country = {
+					target = MEX
+					transfer_troops = no
+				}
+			}
+		}
+		white_peace_with_TARGET = yes
+		every_enemy_country = {
+			limit = { 
+				is_valid_peace_target = yes 
+				is_in_faction_with = NFA
+			}
+			white_peace_with_TARGET = yes
+			}
+		CAF = {
+			limit = { 
+				is_valid_peace_target = yes 
+			}
+			white_peace_with_TARGET = yes
+			}
+		}
+	}
+}
+
 country_event = { # Confederate Revival
 	id = constate.28
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.28"}
