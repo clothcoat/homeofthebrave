@@ -3601,6 +3601,8 @@ country_event = { # The Arrest of Foster
 
 	option = {
 		name = csa.55.a
+		remove_unit_leader = 991
+		set_country_flag = Jack_Shulman_dead
 		hidden_effect = {
 			random_list = {
 				60 = {

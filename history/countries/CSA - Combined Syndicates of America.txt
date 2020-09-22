@@ -436,12 +436,14 @@ create_corps_commander = {# Jack Shulman
 	desc = "CSA_JACK_SHULMAN_ARMY_DESC"
 	portrait_path = "gfx/leaders/CSA/CSA_Jack_Shulman.tga"
 	traits = {
+		offensive_doctrine
 	}
 	skill = 1
 	attack_skill = 2
 	defense_skill = 1
 	planning_skill = 1
 	logistics_skill = 1
+	id = 991
 }
 create_corps_commander = {# Jesse Wallach
 	name = "Jesse Wallach"
