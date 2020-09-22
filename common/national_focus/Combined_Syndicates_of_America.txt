@@ -5399,7 +5399,7 @@ focus_tree = {
 
 	focus = { #Defensive Outlook
 		id = CSA_defensive_outlook
-		icon = GFX_goal_CSA_professional_red_army
+		icon = GFX_CSA_defensive_outlook
 		cost = 6
 		prerequisite = {
 			focus = CSA_special_ops
@@ -10557,9 +10557,7 @@ focus_tree = {
 		}
 		relative_position_id = CSA_managerialism
 			completion_reward = {
-		swap_ideas = {
-				remove_idea = USA_civil_war_war_aftermath_idea
-				add_idea = CSA_burnhams_economic_policy_idea1 }
+			add_ideas = CSA_burnhams_economic_policy_idea1
 	}
 }
 	focus = {# Technocratic Committees
