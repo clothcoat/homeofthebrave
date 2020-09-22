@@ -7800,7 +7800,7 @@ country_event = { # Provisional President
 			add_ideas = USA_Wendell_Willkie_hog_mli
 			add_ideas = USA_Cordell_Hull_for_mli
 			add_ideas = USA_Roy_Dikeman_Chapin_Sr_eco_mli
-			add_ideas = USA_Alben_William_Barkley_sec_mli
+			add_ideas = USA_Alben_William_Barkley_sec_sli
 		}
 		set_politics = {
 			ruling_party = market_liberal
@@ -9414,7 +9414,7 @@ country_event = { # 1940 Election
 					has_country_flag = USA_1940_republican_primary_dewey
 					}
 				}
-				add_ideas = USA_Alben_W_Barkley_hog_mli
+				add_ideas = USA_Alben_W_Barkley_hog_sli
 				add_ideas = USA_John_Bassett_Moore_for_sli
 				add_ideas = USA_Vannevar_Bush_eco_sli
 				add_ideas = USA_Charles_Evans_Hughes_Sr_sec_sli
@@ -9471,7 +9471,7 @@ country_event = { # 1940 Election
 				add_ideas = USA_Wendell_Willkie_hog_mli
 				add_ideas = USA_Cordell_Hull_for_mli
 				add_ideas = USA_Roy_Dikeman_Chapin_Sr_eco_mli
-				add_ideas = USA_Alben_William_Barkley_sec_mli
+				add_ideas = USA_Alben_William_Barkley_sec_sli
 			}
 			if = { # Harry F. Byrd
 				limit = {
@@ -10117,16 +10117,16 @@ country_event = { # 1944 Election
 				add_ideas = USA_James_E_Murray_hog_mli
 				add_ideas = USA_Henry_Morgenthau_Jr_for_mli
 				add_ideas = USA_Daniel_Calhoun_Roper_eco_sco
-				add_ideas = USA_Alben_William_Barkley_sec_mli
+				add_ideas = USA_Alben_William_Barkley_sec_sli
 			}
 			if = { # Alben W. Barkley
 				limit = {
 					has_country_flag = USA_1944_democratic_primary_barkley
 				}
-				add_ideas = USA_Alben_W_Barkley_hog_mli
+				add_ideas = USA_Alben_W_Barkley_hog_sli
 				add_ideas = USA_Henry_Morgenthau_Jr_for_mli
 				add_ideas = USA_Daniel_Calhoun_Roper_eco_sco
-				add_ideas = USA_Robert_Ferdinand_Wagner_I_sec_mli
+				add_ideas = USA_Robert_Ferdinand_Wagner_I_sec_sde
 			}
 			if = { # Richard Russell Jr.
 				limit = {
@@ -10960,7 +10960,7 @@ country_event = { # 1948 election
 				add_ideas = USA_Harry_Truman_hog_mli
 				add_ideas = USA_Henry_Morgenthau_Jr_for_mli
 				add_ideas = USA_Daniel_Calhoun_Roper_eco_sco
-				add_ideas = USA_Robert_Ferdinand_Wagner_I_sec_mli
+				add_ideas = USA_Robert_Ferdinand_Wagner_I_sec_sde
 			}
 			if = { # William Averell Harriman
 				limit = {
@@ -10969,7 +10969,7 @@ country_event = { # 1948 election
 				add_ideas = USA_William_Averell_Harriman_hog_mli
 				add_ideas = USA_Henry_Morgenthau_Jr_for_mli
 				add_ideas = USA_Daniel_Calhoun_Roper_eco_sco
-				add_ideas = USA_Robert_Ferdinand_Wagner_I_sec_mli
+				add_ideas = USA_Robert_Ferdinand_Wagner_I_sec_sde
 			}
 
 			# next primaries
@@ -11649,7 +11649,7 @@ country_event = { # 1952 election
 				add_ideas = USA_Dwight_D_Eisenhower_hog_mli
 				add_ideas = USA_Henry_Morgenthau_Jr_for_mli
 				add_ideas = USA_Daniel_Calhoun_Roper_eco_sco
-				add_ideas = USA_Robert_Ferdinand_Wagner_I_sec_mli
+				add_ideas = USA_Robert_Ferdinand_Wagner_I_sec_sde
 			}
 			if = { # Adlai Stevenson
 				limit = {
@@ -11658,7 +11658,7 @@ country_event = { # 1952 election
 				add_ideas = USA_Adlai_Stevenson_hog_mli
 				add_ideas = USA_Henry_Morgenthau_Jr_for_mli
 				add_ideas = USA_Daniel_Calhoun_Roper_eco_sco
-				add_ideas = USA_Robert_Ferdinand_Wagner_I_sec_mli
+				add_ideas = USA_Robert_Ferdinand_Wagner_I_sec_sde
 			}
 		}
 	}
