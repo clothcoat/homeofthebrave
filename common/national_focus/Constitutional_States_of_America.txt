@@ -1094,6 +1094,12 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_the_lone_eagle"
 			custom_effect_tooltip = unlock_focuses
+			hidden_effect = {
+			country_event = {
+			id = constate.303
+			days = 3
+			}
+			}
 		}
 	}
 
@@ -1885,6 +1891,12 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_mine_have_seen_the_glory"
 			custom_effect_tooltip = unlock_focuses
+			hidden_effect = {
+			country_event = {
+			id = constate.306
+			days = 3
+			}
+			}
 		}
 	}
 
@@ -2463,6 +2475,12 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_the_convenent"
 			custom_effect_tooltip = unlock_focuses
+			hidden_effect = {
+			country_event = {
+			id = constate.305
+			days = 3
+			}
+			}
 		}
 	}
 	
@@ -3186,6 +3204,12 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_the_sword"
 			custom_effect_tooltip = unlock_focuses
+			hidden_effect = {
+			country_event = {
+			id = constate.304
+			days = 3
+			}
+			}
 		}
 	}
 	
@@ -3962,6 +3986,12 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_the_lord"
 			custom_effect_tooltip = unlock_focuses
+			hidden_effect = {
+			country_event = {
+			id = constate.307
+			days = 3
+			}
+			}
 		}
 	}
 	

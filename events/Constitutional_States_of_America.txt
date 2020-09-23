@@ -1191,7 +1191,6 @@ country_event = { # A New Nation
 		add_political_power = 30
 		add_stability = -0.03
 		add_popularity = { ideology = national_populist popularity = 0.05 }
-		set_cosmetic_tag = COR_black_legion_america
 	}
 	option = { # We'll stay traditional
 		name = constate.1706.b
@@ -1664,7 +1663,6 @@ country_event = { # Evans Elected
 			add_ideas = COR_Gerald_Burton_Winrod_eco_npo
 			add_ideas = COR_Samuel_Green_sec_npo
 		}
-		set_cosmetic_tag = COR_KKK
 		set_politics = {
 			ruling_party = national_populist
 			elections_allowed = no
@@ -2673,7 +2671,6 @@ country_event = { # Armstrong's Victory
 			add_ideas = COR_Arthur_Kent_White_eco_npo
 			add_ideas = COR_C_O_Dodd_sec_npo
 		}
-		set_cosmetic_tag = COR_theocracy
 		set_politics = {
 			ruling_party = national_populist
 			elections_allowed = no
@@ -4493,3 +4490,128 @@ country_event = { #flag
 		set_cosmetic_tag = COR_bonnie_blue
 	}
 }
+
+country_event = { #Fordist Flag
+	id = constate.303
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.303"}
+	title = constate.303.t
+	desc = constate.303.d
+	picture = GFX_report_event_USA_american_brigade
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = COR
+		has_government = paternal_autocrat
+		has_completed_focus = COR_the_lone_eagle
+	}
+
+	option = {
+		name = constate.303.a
+	}
+	option = {
+		name = constate.303.b
+		set_cosmetic_tag = COR_business_plot
+	}
+}
+
+country_event = { #Old Klan Flag
+	id = constate.304
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.304"}
+	title = constate.304.t
+	desc = constate.304.d
+	picture = GFX_report_event_USA_american_brigade
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = COR
+		has_government = national_populist
+		has_completed_focus = COR_the_sword
+	}
+
+	option = {
+		name = constate.304.a
+	}
+	option = {
+		name = constate.304.b
+		set_cosmetic_tag = COR_legion
+	}
+}
+
+country_event = { #Young Klan Flag
+	id = constate.305
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.305"}
+	title = constate.305.t
+	desc = constate.305.d
+	picture = GFX_report_event_USA_american_brigade
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = COR
+		has_government = national_populist
+		has_completed_focus = COR_the_covenant
+	}
+
+	option = {
+		name = constate.305.a
+	}
+	option = {
+		name = constate.305.b
+		set_cosmetic_tag = COR_KKK
+	}
+	option = {
+		name = constate.305.c
+		set_cosmetic_tag = COR_black_legion_america_national_populist
+	}
+}
+
+country_event = { #Young Klan Flag
+	id = constate.306
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.306"}
+	title = constate.306.t
+	desc = constate.306.d
+	picture = GFX_report_event_USA_american_brigade
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = COR
+		has_government = national_populist
+		has_completed_focus = COR_mine_have_seen_the_glory
+	}
+
+	option = {
+		name = constate.306.a
+	}
+	option = {
+		name = constate.306.b
+		set_cosmetic_tag = COR_KKK
+	}
+}
+
+country_event = { #Armstrong Flag
+	id = constate.307
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.307"}
+	title = constate.307.t
+	desc = constate.307.d
+	picture = GFX_report_event_USA_american_brigade
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = COR
+		has_government = national_populist
+		has_completed_focus = COR_the_lord
+	}
+
+	option = {
+		name = constate.307.a
+	}
+	option = {
+		name = constate.307.b
+		set_cosmetic_tag = COR_theocracy
+	}
+}
+
