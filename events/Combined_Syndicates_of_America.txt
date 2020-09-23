@@ -9248,8 +9248,27 @@ country_event = { # Independence League Leadership Contest
 
 	fire_only_once = yes
 
-	option = { # John Dewey
+	option = { # Norman Thomas
 	name = csa.330.a
+	hidden_effect = {
+		create_country_leader = {
+			name = "Norman Thomas"
+			desc = "POLITICS_NORMAN_THOMAS_DESC"
+			picture = "gfx/leaders/CSA/Portrait_CSA_Norman_Thomas.tga"
+			expire = "1965.1.1"
+			ideology = radical_socialist_subtype
+			traits = { tenacious_negotiator }
+			}
+		}
+		set_politics = {
+			ruling_party = radical_socialist
+			election_frequency = 48
+			last_election = "1936.11.08"
+			elections_allowed = no
+		}
+	}
+	option = { # John Dewey
+	name = csa.330.b
 	hidden_effect = {
 		create_country_leader = {
 			name = "John Dewey"
@@ -9268,7 +9287,7 @@ country_event = { # Independence League Leadership Contest
 		}
 	}
 	option = { # Roger Nash Baldwin
-	name = csa.330.b
+	name = csa.330.c
 	hidden_effect = {
 		create_country_leader = {
 			name = "Roger Nash Baldwin"
@@ -9287,7 +9306,7 @@ country_event = { # Independence League Leadership Contest
 		}
 	}
 	option = { # Heywood Broun
-	name = csa.330.c
+	name = csa.330.e
 	hidden_effect = {
 		create_country_leader = {
 			name = "Heywood Broun"
@@ -9306,7 +9325,7 @@ country_event = { # Independence League Leadership Contest
 		}
 	}
 	option = { # Arthur Ernest Morgan
-	name = csa.330.e
+	name = csa.330.f
 	hidden_effect = {
 		create_country_leader = {
 			name = "Arthur Ernest Morgan"
