@@ -437,7 +437,16 @@ create_navy_leader = {# Edward Ellsberg
 	maneuvering_skill = 2
 	coordination_skill = 2
 }
-
+create_navy_leader = {# Harold Rainsford Stark
+	name = "Harold Rainsford Stark"
+	portrait_path = "gfx/leaders/NEE/Portrait_NEE_Harold_Rainsford_Stark.tga"
+	traits = {spotter blockade_runner}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	maneuvering_skill = 1
+	coordination_skill = 2
+}
 create_navy_leader = {# Joseph P. Kennedy Jr. - need to delete later, 21 years old
 	name = "Joseph P. Kennedy Jr."
 	portrait_path = "gfx/leaders/NEE/Portrait_NEE_joseph_kennedy.tga"
