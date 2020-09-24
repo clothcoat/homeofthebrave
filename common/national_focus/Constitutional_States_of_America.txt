@@ -5726,7 +5726,9 @@ focus_tree = {
 		relative_position_id = COR_logistics_management_expertise
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_expand_Fort_Benning_for_Training"
+			hidden_effect = {
 			load_oob = "ACW_COR_inspire_georgia"
+ 			}
 			add_war_support = 0.03
 			army_experience = 15
 			add_command_power = 15
