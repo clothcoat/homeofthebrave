@@ -4799,9 +4799,6 @@ focus_tree = {
 		prerequisite = {
 			focus = COR_rebuilding_the_country
 		}
-		mutually_exclusive = {
-			focus = COR_military_industrial_complex
-		}
 		ai_will_do = {
 			factor = 4
 		}
