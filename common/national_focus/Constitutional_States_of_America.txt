@@ -5272,9 +5272,6 @@ focus_tree = {
 		icon = GFX_america_goal_champagn
 		cost = 7.25
 		prerequisite = {
-			focus = COR_american_business_is_business
-		}
-		prerequisite = {
 			focus = COR_rural_electrification
 			}
 		prerequisite = {
@@ -5286,26 +5283,6 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = COR_reconstruction_is_over_tooltip
-				OR = {
-					AND = {# National Recovery Administration
-						has_completed_focus = COR_research_projects
-						has_completed_focus = COR_rural_electrification
-						has_completed_focus = COR_farm_security_administration
-						OR = {
-							has_completed_focus = COR_reconciliation
-							has_completed_focus = COR_harsh_reconstruction
-						}
-					}
-					AND = {# Military Industrial Complex
-						has_completed_focus = COR_building_grants
-						has_completed_focus = COR_military_factories
-						has_completed_focus = COR_create_esmwt
-						OR = {
-							has_completed_focus = COR_reconciliation
-							has_completed_focus = COR_harsh_reconstruction
-						}
-					}
-				}
 			}
 		}
 		ai_will_do = {
