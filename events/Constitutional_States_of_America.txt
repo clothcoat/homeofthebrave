@@ -4480,13 +4480,25 @@ country_event = { #flag
 
 	option = {
 		name = constate.302.a
+		hidden_effect = {
+		add_timed_idea = { idea = COR_fighting_for_car_idea
+		days = 365 }
+		}
 	}
 	option = {
 		name = constate.302.b
+		hidden_effect = {
+		add_timed_idea = { idea = COR_fighting_for_car_idea
+		days = 365 }
+		}
 		set_cosmetic_tag = COR_cross
 	}
 	option = {
 		name = constate.302.c
+		hidden_effect = {
+		add_timed_idea = { idea = COR_fighting_for_car_idea
+		days = 365 }
+		}
 		set_cosmetic_tag = COR_bonnie_blue
 	}
 }
