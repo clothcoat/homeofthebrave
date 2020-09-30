@@ -22,7 +22,7 @@ ideas = {
 		}
 	}
 	WCC_america_last_hope = { #America's Last Hope
-		on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_bradley_plan"}
+		on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_america_last_hope"}
 		picture = WCC_Ike_Bradley_Plan
 		modifier = {
 			army_org_Factor = -0.03
