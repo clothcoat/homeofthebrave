@@ -6160,7 +6160,7 @@ focus_tree = {
 		icon = GFX_goal_USA_mac_in_command
 		cost = 6.00
 		available = {
-			has_country_flag = macarthur_gives_up_power
+			has_country_flag = USA_spqa_flag
 		}
 		prerequisite = {
 			focus = USA_american_values1
@@ -6196,7 +6196,7 @@ focus_tree = {
 		icon = GFX_goal_USA_selective_service
 		cost = 6.00
 		available = {
-			has_country_flag = USA_classical_liberal_mandate_flag
+			has_country_flag = USA_cincinnatus_flag
 		}
 		prerequisite = {
 			focus = USA_american_values1
@@ -6230,7 +6230,7 @@ focus_tree = {
 		icon = GFX_goal_USA_grand_leadership
 		cost = 6.00
 		available = {
-			has_country_flag = USA_classical_liberal_mandate_flag
+			has_country_flag = USA_cincinnatus_flag
 		}
 		prerequisite = {
 			focus = USA_american_values1
@@ -7392,13 +7392,10 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_congress_courted"
 			custom_effect_tooltip = USA_political_recovery_tooltip
 			USA_political_recovery = yes
-			add_stability = 0.15
-			add_popularity = { ideology = paternal_autocrat popularity = -0.1 }
-			add_political_power = -50
-			hidden_effect = {
-			country_event = ustates.1289
+			add_popularity = { ideology = authoritarian_democrat = 0.05 }
+			add_political_power = -5
+			country_event = ustates.3134
 			days = 1
-			}
 		}
 	}
 	focus = {# Civilianization

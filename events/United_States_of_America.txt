@@ -14848,6 +14848,7 @@ country_event = { # Easing Restrictions
 					state = 360 #Penn
 					state = 261 #Ohio
 					state = 1099 #Cinn
+					}	
 				}
 			}
 			add_state_modifier = {
@@ -14958,6 +14959,7 @@ country_event = { # Removing Restrictions
 					state = 360 #Penn
 					state = 261 #Ohio
 					state = 1099 #Cinn
+					}
 				}
 			}
 			add_state_modifier = {
@@ -14988,6 +14990,102 @@ country_event = { # Restoring Order Two
 		set_country_flag = USA_full_restoration_of_order
 		}
 	}
+
+country_event = {# Trial of the US Generals
+	id = ustates.3145
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.3145"}
+	title = ustates.3145.t
+	desc = {
+		text = ustates.3145.d
+		trigger = {
+			tag = USA
+		}
+	}
+	picture = GFX_USA_military_trial
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {# Arrest the Generals
+		name = ustates.3145.a
+		ai_chance = {
+			factor = 5
+		}
+		remove_unit_leader = 14511 #Hines
+		remove_unit_leader = 66 #Brooks
+		remove_unit_leader = 68 #Keyes
+		remove_unit_leader = 70 #Wainwright
+		remove_unit_leader = 82 #Griswold
+		add_political_power = -20
+		increase_ruling_party_popularity_by_10 = yes
+	}
+	
+	option = {# Discharge them
+		name = ustates.3145.b
+		ai_chance = {
+			factor = 5
+		}
+		remove_unit_leader = 14511 #Hines
+		remove_unit_leader = 66 #Brooks
+		remove_unit_leader = 68 #Keyes
+		remove_unit_leader = 70 #Wainwright
+		remove_unit_leader = 82 #Griswold
+		add_political_power = -10
+		increase_ruling_party_popularity_by_5 = yes
+	}
+	
+	option = {# Keep them!
+		name = ustates.3145.c
+		ai_chance = {
+			factor = 5
+		}
+		add_political_power = 40
+		decrease_ruling_party_popularity_by_5 = yes
+	}
+}
+
+country_event = {# Trial of Douglas MacArthur
+	id = ustates.3146
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.3146"}
+	title = ustates.3146.t
+	desc = {
+		text = ustates.3146.d
+		trigger = {
+			tag = USA
+		}
+	}
+	picture = GFX_USA_military_trial
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {# Arrest Mac
+		name = ustates.3146.a
+		ai_chance = {
+			factor = 5
+		}
+		remove_unit_leader = 56 #Douglas MacArthur
+		add_political_power = -20
+		decrease_ruling_party_popularity_by_10 = yes
+	}
+	
+	option = {# Discharge him
+		name = ustates.3146.b
+		ai_chance = {
+			factor = 5
+		}
+		remove_unit_leader = 56 #Douglas MacArthur
+		add_political_power = -10
+		increase_ruling_party_popularity_by_5 = yes
+	}
+	
+	option = {# Keep him!
+		name = ustates.3146.c
+		ai_chance = {
+			factor = 5
+		}
+		add_political_power = 20
+		increase_ruling_party_popularity_by_3 = yes
+	}
+}
 
 ### New Pre-ACW Events ###
 
