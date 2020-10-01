@@ -1,0 +1,326 @@
+### American Ideas
+ideas = {
+### Country ideas
+	head_of_government = { ### Head of Government ###
+		CSA_James_Burnham_hog_tot = {
+			allowed = { original_tag = CSA }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					totalist_allowed = yes
+					NOT = { has_country_flag = James_Burnham_dead }
+					has_country_flag = can_replace_hog
+				}
+			}
+			visible = {
+				totalist_allowed = yes
+				NOT = { has_country_flag = James_Burnham_dead }
+			}
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea CSA_James_Burnham_hog_tot"
+			}
+			traits = {
+				head_of_government
+				totalist
+				hog_political_protege
+			}
+			
+		}
+		
+		CSA_Howard_Scott_hog_tot = {
+			allowed = { original_tag = CSA }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					totalist_allowed = yes
+					NOT = { has_country_flag = Howard_Scott_dead }
+					has_country_flag = can_replace_hog
+				}
+			}
+			visible = {
+				totalist_allowed = yes
+				NOT = { has_country_flag = Howard_Scott_dead }
+			}
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea CSA_Howard_Scott_hog_tot"
+			}
+			traits = {
+				head_of_government
+				totalist
+				hog_naive_optimist
+			}
+			
+		}
+
+		CSA_Jay_Lovestone_hog_tot = {
+			allowed = { original_tag = CSA }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					totalist_allowed = yes
+					NOT = { has_country_flag = Jay_Lovestone_dead }
+					has_country_flag = can_replace_hog
+				}
+			}
+			visible = {
+				totalist_allowed = yes
+				NOT = { has_country_flag = Jay_Lovestone_dead }
+			}
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea CSA_Jay_Lovestone_hog_tot"
+			}
+			traits = {
+				head_of_government
+				totalist
+				hog_flamboyant_tough_guy
+			}
+			
+		}
+	}
+	
+	foreign_minister = { ### Foreign Minister ###
+		CSA_Lawrence_Dennis_for_tot = {
+			allowed = { original_tag = CSA }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					totalist_allowed = yes
+					NOT = { has_country_flag = Lawrence_Dennis_dead }
+				}
+			}
+			visible = {
+				totalist_allowed = yes
+				NOT = { has_country_flag = Lawrence_Dennis_dead }
+			}
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea CSA_Lawrence_Dennis_for_tot"
+			}
+			traits = {
+				foreign_minister
+				totalist
+				for_biased_intellectual
+			}
+			
+		}
+		
+		CSA_Jay_Lovestone_for_tot = {
+			allowed = { original_tag = CSA }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					totalist_allowed = yes
+					NOT = { has_country_flag = Jay_Lovestone_dead }
+				}
+			}
+			visible = {
+				totalist_allowed = yes
+				NOT = { has_country_flag = Jay_Lovestone_dead }
+			}
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea CSA_Jay_Lovestone_for_tot"
+			}
+			traits = {
+				foreign_minister
+				totalist
+				for_the_cloak_n_dagger_schemer
+			}
+			
+		}
+	}
+	
+	economy_minister = { ### Economy Minister ###
+		CSA_Frederick_L_Ackerman_eco_tot = {
+			allowed = { original_tag = CSA }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					totalist_allowed = yes
+					NOT = { has_country_flag = Frederick_L_Ackerman_dead }
+				}
+			}
+			visible = {
+				totalist_allowed = yes
+				NOT = { has_country_flag = Frederick_L_Ackerman_dead }
+			}
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea CSA_Frederick_L_Ackerman_eco_tot"
+			}
+			traits = {
+				economy_minister
+				totalist
+				eco_administrative_genius
+			}
+			
+		}
+		
+		CSA_M_King_Hubbert_eco_tot = {
+			allowed = { original_tag = CSA }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					totalist_allowed = yes
+					NOT = { has_country_flag = M_King_Hubbert_dead }
+				}
+			}
+			visible = {
+				totalist_allowed = yes
+				NOT = { has_country_flag = M_King_Hubbert_dead }
+			}
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea CSA_M_King_Hubbert_eco_tot"
+			}
+			traits = {
+				economy_minister
+				totalist
+				eco_industrial_chemist
+			}
+			
+		}
+		
+		CSA_Howard_Scott_eco_tot = {
+			allowed = { original_tag = CSA }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					totalist_allowed = yes
+					NOT = { has_country_flag = Howard_Scott_dead }
+				}
+			}
+			visible = {
+				totalist_allowed = yes
+				NOT = { has_country_flag = Howard_Scott_dead }
+			}
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea CSA_Howard_Scott_eco_tot"
+			}
+			traits = {
+				economy_minister
+				totalist
+				eco_planned_economy_proponent
+			}
+			
+		}
+		
+		CSA_Richard_C_Tolman_eco_tot = {
+			allowed = { original_tag = CSA }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					totalist_allowed = yes
+					NOT = { has_country_flag = Richard_C_Tolman_dead }
+				}
+			}
+			visible = {
+				totalist_allowed = yes
+				NOT = { has_country_flag = Richard_C_Tolman_dead }
+			}
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea CSA_Richard_C_Tolman_eco_tot"
+			}
+			traits = {
+				economy_minister
+				totalist
+				eco_theoretical_scientist
+			}
+			
+		}
+	}
+	security_minister = { ### Security Minister ###		
+		CSA_Lawrence_Dennis_sec_tot = {
+			allowed = { original_tag = CSA }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					totalist_allowed = yes
+					NOT = { has_country_flag = Lawrence_Dennis_dead }
+				}
+			}
+			visible = {
+				totalist_allowed = yes
+				NOT = { has_country_flag = Lawrence_Dennis_dead }
+			}
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea CSA_Lawrence_Dennis_hog_tot"
+			}
+			traits = {
+				security_minister
+				totalist
+				sec_crime_fighter
+			}
+			
+		}
+	}
+	head_of_intel = { ### Head of Intel ###	
+		CSA_Frederick_L_Ackerman_int_tot = {
+			allowed = { original_tag = CSA }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					totalist_allowed = yes
+					NOT = { has_country_flag = Frederick_L_Ackerman_dead }
+				}
+			}
+			visible = {
+				totalist_allowed = yes
+				NOT = { has_country_flag = Frederick_L_Ackerman_dead }
+			}
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea CSA_Frederick_L_Ackerman_eco_tot"
+			}
+			traits = {
+				head_of_intel
+				totalist
+				int_logistics_specialist
+			}
+			
+		}
+		
+		CSA_M_King_Hubbert_int_tot = {
+			allowed = { original_tag = CSA }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					totalist_allowed = yes
+					NOT = { has_country_flag = M_King_Hubbert_dead }
+				}
+			}
+			visible = {
+				totalist_allowed = yes
+				NOT = { has_country_flag = M_King_Hubbert_dead }
+			}
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea CSA_M_King_Hubbert_eco_tot"
+			}
+			traits = {
+				head_of_intel
+				totalist
+				int_industrial_specialist
+			}
+			
+		}
+		
+		CSA_Richard_C_Tolman_int_tot = {
+			allowed = { original_tag = CSA }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					totalist_allowed = yes
+					NOT = { has_country_flag = Richard_C_Tolman_dead }
+				}
+			}
+			visible = {
+				totalist_allowed = yes
+				NOT = { has_country_flag = Richard_C_Tolman_dead }
+			}
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea CSA_Richard_C_Tolman_eco_tot"
+			}
+			traits = {
+				head_of_intel
+				totalist
+				int_technical_specialist
+			}
+			
+		}
+	}
+}
