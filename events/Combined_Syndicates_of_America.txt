@@ -1,6 +1,6 @@
 ﻿#############################################
 # Combined Syndicates of America Events
-# By Herkles
+# By Clothcoat
 #############################################
 
 add_namespace = csa
@@ -385,6 +385,9 @@ country_event = { # Socialist Election Arrives
 		name = csa.1003.c
 		set_country_flag = CSA_constitutional_convention_done
 		hidden_effect = {
+			add_ideas = CSA_Ernest_Hemingway_for_tot
+			add_ideas = CSA_Gus_Hall_eco_tot
+			add_ideas = CSA_Steve_Nelson_sec_tot
 			create_country_leader = {
 				name = "Earl Browder"
 				desc = "POLITICS_EARL_BROWDER_DESC"
@@ -434,6 +437,9 @@ country_event = { # Socialist Election Arrives
 		set_country_flag = CSA_burnham_is_leader
 		}
 		set_country_flag = CSA_constitutional_convention_done
+			add_ideas = CSA_Joseph_Zack_Kornfeder_for_tot
+			add_ideas = CSA_Frederick_L_Ackerman_eco_tot
+			add_ideas = CSA_Lawrence_Dennis_sec_tot 
 		hidden_effect = {
 			create_country_leader = {
 				name = "James Burnham"
@@ -1168,6 +1174,9 @@ country_event = { # Socialist Constitution - Election
 		}
 		set_country_flag = CSA_constitutional_convention_done
 		hidden_effect = {
+			add_ideas = CSA_Ernest_Hemingway_for_tot
+			add_ideas = CSA_Gus_Hall_eco_tot
+			add_ideas = CSA_Steve_Nelson_sec_tot
 		create_country_leader = {
 				name = "Earl Browder"
 				desc = "POLITICS_EARL_BROWDER_DESC"
@@ -1215,6 +1224,9 @@ country_event = { # Socialist Constitution - Election
 		set_country_flag = CSA_foster_is_leader
 		set_country_flag = CSA_constitutional_convention_done
 		hidden_effect = {
+			add_ideas = CSA_Sam_Darcy_for_tot
+			add_ideas = CSA_John_J_Ballam_eco_tot
+			add_ideas = CSA_Jack_Shulman_sec_tot
 			create_country_leader = {
 				name = "William Z. Foster"
 				desc = "POLITICS_WILLIAM_FOSTER_DESC"
@@ -1268,6 +1280,9 @@ country_event = { # Socialist Constitution - Election
 		set_country_flag = CSA_burnham_is_leader
 		set_country_flag = CSA_constitutional_convention_done
 		hidden_effect = {
+			add_ideas = CSA_Joseph_Zack_Kornfeder_for_tot
+			add_ideas = CSA_Frederick_L_Ackerman_eco_tot
+			add_ideas = CSA_Lawrence_Dennis_sec_tot 
 			create_country_leader = {
 				name = "James Burnham"
 				desc = "POLITICS_JAMES_BURNHAM_DESC"
@@ -1792,6 +1807,12 @@ country_event = { # Centralist IWW Faction
 
 	option = { # Big Bill Haywood
 		name = csa.25.a
+		set_country_flag = CSA_1940_iww_election_haywood
+		add_ideas = {
+				CSA_William_F_Dunne_for_syn
+				CSA_Harry_Bridges_eco_syn
+				CSA_Lee_Pressman_sec_syn
+			}
 		create_country_leader = {
 			name = "Big Bill Haywood"
 			desc = "POLITICS_BIG_BILL_HAYWOOD_DESC"
@@ -1805,9 +1826,21 @@ country_event = { # Centralist IWW Faction
 			election_frequency = 48
 			elections_allowed = yes
 		}
+		hidden_effect = {
+		country_event = {
+		id = csa.37
+		days = 3
+		}
+		}
 	}
 	option = { # James P. Cannon
 		name = csa.25.b
+		set_country_flag = CSA_1940_iww_election_cannon
+		add_ideas = {
+				CSA_Arne_Swabeck_for_syn
+				CSA_Vincent_R_Dunne_eco_syn
+				CSA_Eugene_Dennis_sec_syn
+			}
 		create_country_leader = {
 				name = "James P. Cannon"
 				desc = "POLITICS_JAMES_CANNON_DESC"
@@ -1823,9 +1856,21 @@ country_event = { # Centralist IWW Faction
 			election_frequency = 48
 			elections_allowed = yes
 		}
+		hidden_effect = {
+		country_event = {
+		id = csa.37
+		days = 3
+		}
+		}
 	}
 	option = { # Arturo Giovannitti
 		name = csa.25.c
+		set_country_flag = CSA_1940_iww_election_giovannitti
+		add_ideas = {
+				CSA_Arne_Swabeck_for_syn
+				CSA_Vincent_R_Dunne_eco_syn
+				CSA_Lee_Pressman_sec_syn
+			}
 		create_country_leader = {
 			name = "Arturo Giovannitti"
 			desc = "POLITICS_ARTURO_GIOVANNITTI_DESC"
@@ -1841,9 +1886,21 @@ country_event = { # Centralist IWW Faction
 			election_frequency = 48
 			elections_allowed = yes
 		}
+		hidden_effect = {
+		country_event = {
+		id = csa.37
+		days = 3
+		}
+		}
 	}
 	option = { # Harry Bridges
 		name = csa.25.e
+		set_country_flag = CSA_1940_iww_election_bridges
+		add_ideas = {
+				CSA_William_F_Dunne_for_syn
+				CSA_Elizabeth_Nord_eco_syn
+				CSA_Eugene_Dennis_sec_syn
+			}
 		create_country_leader = {
 					name = "Harry Bridges"
 					desc = "POLITICS_HARRY_BRIDGES_DESC"
@@ -1859,9 +1916,21 @@ country_event = { # Centralist IWW Faction
 			election_frequency = 48
 			elections_allowed = yes
 		}
+		hidden_effect = {
+		country_event = {
+		id = csa.37
+		days = 3
+		}
+		}
 	}
 	option = { # Elmer Allison
 		name = csa.25.f
+		set_country_flag = CSA_1940_iww_election_allison
+		add_ideas = {
+				CSA_Max_Shachtman_for_syn
+				CSA_Elizabeth_Nord_eco_syn
+				CSA_Eugene_Dennis_sec_syn
+			}
 		create_country_leader = {
 				name = "Elmer Allison"
 				desc = "POLITICS_ELMER_ALLISON_DESC"
@@ -1877,9 +1946,21 @@ country_event = { # Centralist IWW Faction
 			election_frequency = 48
 			elections_allowed = yes
 		}
+		hidden_effect = {
+		country_event = {
+		id = csa.37
+		days = 3
+		}
+		}
 	}
 	option = { # Ludwig Katterfeld
 		name = csa.25.g
+		set_country_flag = CSA_1940_iww_election_katterfeld
+		add_ideas = {
+				CSA_Max_Shachtman_for_syn
+				CSA_Harry_Bridges_eco_syn
+				CSA_Lee_Pressman_sec_syn
+			}
 		create_country_leader = {
 				name = "Ludwig E. Katterfeld"
 				desc = "POLITICS_LUDWIG_KATTERFELD_DESC"
@@ -1894,6 +1975,12 @@ country_event = { # Centralist IWW Faction
 			ruling_party = syndicalist
 			election_frequency = 48
 			elections_allowed = yes
+		}
+		hidden_effect = {
+		country_event = {
+		id = csa.37
+		days = 3
+		}
 		}
 	}
 }
@@ -1910,6 +1997,12 @@ country_event = { # Orthodox Syndicalist Election
 
 	option = { # Big Bill Haywood
 		name = csa.26.a
+		set_country_flag = CSA_1940_orthodox_election_haywood
+		add_ideas = {
+				CSA_Ralph_Chaplin_for_syn
+				CSA_Paul_Mattick_eco_syn
+				CSA_John_Abt_sec_syn
+			}
 		create_country_leader = {
 			name = "Big Bill Haywood"
 			desc = "POLITICS_BIG_BILL_HAYWOOD_DESC"
@@ -1923,9 +2016,21 @@ country_event = { # Orthodox Syndicalist Election
 			election_frequency = 48
 			elections_allowed = yes
 		}
+		hidden_effect = {
+		country_event = {
+		id = csa.3700
+		days = 3
+		}
+		}
 	}
 	option = { # Frank T. Johns
 		name = csa.26.b
+		set_country_flag = CSA_1940_orthodox_election_johns
+		add_ideas = {
+				CSA_Robert_Minor_for_syn
+				CSA_Bessie_Abramowitz_Hillman_eco_syn
+				CSA_John_Abt_sec_syn
+			}
 		create_country_leader = {
 			name = "Frank T. Johns"
 			desc = "POLITICS_FRANK_JOHNS_DESC"
@@ -1941,9 +2046,21 @@ country_event = { # Orthodox Syndicalist Election
 			election_frequency = 48
 			elections_allowed = yes
 		}
+		hidden_effect = {
+		country_event = {
+		id = csa.3700
+		days = 3
+		}
+		}
 	}
 	option = { # Elizabeth Gurley Flynn
 		name = csa.26.c
+		set_country_flag = CSA_1940_orthodox_election_flynn
+		add_ideas = {
+				CSA_Robert_Minor_for_syn
+				CSA_Frank_Little_eco_syn
+				CSA_John_Abt_sec_syn
+			}
 		create_country_leader = {
 				name = "Elizabeth Gurley Flynn"
 				desc = "POLITICS_ELIZABETH_FLYNN_DESC"
@@ -1960,9 +2077,21 @@ country_event = { # Orthodox Syndicalist Election
 			election_frequency = 48
 			elections_allowed = yes
 		}
+		hidden_effect = {
+		country_event = {
+		id = csa.3700
+		days = 3
+		}
+		}
 	}
 	option = { # Robert Minor
-		name = csa.26.c
+		name = csa.26.e
+		set_country_flag = CSA_1940_orthodox_election_minor
+		add_ideas = {
+				CSA_Ralph_Chaplin_for_syn
+				CSA_Frank_Little_eco_syn
+				CSA_John_Abt_sec_syn
+			}
 		create_country_leader = {
 				name = "Robert Minor"
 				desc = "POLITICS_ROBERT_MINOR_DESC"
@@ -1979,6 +2108,12 @@ country_event = { # Orthodox Syndicalist Election
 			election_frequency = 48
 			elections_allowed = yes
 		}
+		hidden_effect = {
+		country_event = {
+		id = csa.3700
+		days = 3
+		}
+		}
 	}
 }
 
@@ -1994,6 +2129,11 @@ country_event = { # Anarchist Election
 
 	option = { # Emma Goldman
 		name = csa.27.a
+		add_ideas = {
+				CSA_Carlo_Tresca_for_syn
+				CSA_Wyndham_Mortimer_eco_syn
+				CSA_Salaria_Kea_sec_syn
+			}
 		create_country_leader = {
 			name = "Emma Goldman"
 			desc = "POLITICS_EMMA_GOLDMAN_DESC"
@@ -2010,6 +2150,11 @@ country_event = { # Anarchist Election
 	}
 	option = { # Dorothy Day
 		name = csa.27.b
+		add_ideas = {
+				CSA_Carlo_Tresca_for_syn
+				CSA_Wyndham_Mortimer_eco_syn
+				CSA_Salaria_Kea_sec_syn
+			}
 		create_country_leader = {
 			name = "Dorothy Day"
 			desc = "POLITICS_DOROTHY_DAY_DESC"
@@ -2026,6 +2171,11 @@ country_event = { # Anarchist Election
 	}
 	option = { # Modest Stein
 		name = csa.27.c
+		add_ideas = {
+				CSA_Carlo_Tresca_for_syn
+				CSA_Wyndham_Mortimer_eco_syn
+				CSA_Salaria_Kea_sec_syn
+			}
 		create_country_leader = {
 			name = "Modest Stein"
 			desc = "POLITICS_MODEST_STEIN_DESC"
@@ -3027,7 +3177,7 @@ country_event = { # 1952 Election
 	}
 }
 
-country_event = { # Head of State Election[1940]
+country_event = { # Head of State Election CENTRALIST IWW
 	id = csa.37
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.37"}
 	title = csa.37.t
@@ -3040,6 +3190,121 @@ country_event = { # Head of State Election[1940]
 		name = csa.37.a
 		trigger = {
 			has_government = syndicalist
+			NOT = { has_country_flag = CSA_1940_iww_election_giovannitti }
+		}
+		add_popularity = {
+			ideology = syndicalist
+			popularity = 0.02
+		}
+		add_ideas = CSA_Arturo_Giovannitti_hog_syn
+	}
+	option = { # James P Cannon
+		name = csa.37.b
+		trigger = {
+			has_government = syndicalist
+			NOT = { has_country_flag = CSA_1940_iww_election_cannon }
+		}
+		add_popularity = {
+			ideology = syndicalist
+			popularity = 0.02
+		}
+		add_ideas = CSA_James_P_Cannon_hog_syn
+	}
+	option = { # Elizabeth Nord
+		name = csa.37.c
+		trigger = {
+			has_government = radical_socialist
+		}
+		add_popularity = {
+			ideology = syndicalist
+			popularity = 0.02
+		}
+		add_ideas = CSA_Elizabeth_Nord_hog_syn
+	}
+	option = { # Eugene Dennis
+		name = csa.37.e
+		trigger = {
+			has_government = syndicalist
+		}
+		add_popularity = {
+			ideology = syndicalist
+			popularity = 0.02
+		}
+		add_ideas = CSA_Eugene_Dennis_hog_syn
+	}
+	option = { # Harry Bridges
+		name = csa.37.f
+		trigger = {
+			has_government = syndicalist
+			NOT = { has_country_flag = CSA_1940_iww_election_bridges }
+		}
+		add_popularity = {
+			ideology = syndicalist
+			popularity = 0.02
+		}
+		add_ideas = CSA_Harry_Bridges_hog_syn
+	}
+}
+
+country_event = { # Head of State Election ORTHODOX IWW
+	id = csa.3700
+	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.3700"}
+	title = csa.3700.t
+	desc = csa.3700.d
+	picture = GFX_report_event_election_vote
+
+	is_triggered_only = yes
+
+	option = { # Elizabeth Gurley Flynn
+		name = csa.3700.a
+		trigger = {
+			has_government = syndicalist
+			NOT = { has_country_flag = CSA_1940_orthodox_election_flynn }
+		}
+		add_popularity = {
+			ideology = syndicalist
+			popularity = 0.02
+		}
+		add_ideas = CSA_Elizabeth_Gurly_Flynn_hog_syn
+	}
+	option = { # Henning A Blomen
+		name = csa.3700.b
+		trigger = {
+			has_government = syndicalist
+		}
+		add_popularity = {
+			ideology = syndicalist
+			popularity = 0.02
+		}
+		add_ideas = CSA_Henning_A_Blomen_hog_syn
+	}
+	option = { # Robert Minor
+		name = csa.3700.c
+		trigger = {
+			has_government = syndicalist
+			NOT = { has_country_flag = CSA_1940_orthodox_election_minor }
+		}
+		add_popularity = {
+			ideology = syndicalist
+			popularity = 0.02
+		}
+		add_ideas = CSA_Robert_Minor_hog_syn
+	}
+}
+
+country_event = { # Head of State Election RADSOCS
+	id = csa.3701
+	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.3701"}
+	title = csa.3701.t
+	desc = csa.3701.d
+	picture = GFX_report_event_election_vote
+
+	is_triggered_only = yes
+
+	option = { # Arturo Giovannitti
+		name = csa.3701.a
+		trigger = {
+			has_government = syndicalist
 			NOT = { has_country_flag = CSA_1940_iww_primary_giovannitti }
 		}
 		add_popularity = {
@@ -3049,7 +3314,7 @@ country_event = { # Head of State Election[1940]
 		add_ideas = CSA_Arturo_Giovannitti_hog_syn
 	}
 	option = { # Elizabeth Gurley Flynn
-		name = csa.37.b
+		name = csa.3701.b
 		trigger = {
 			has_government = syndicalist
 			NOT = { has_country_flag = CSA_1940_iww_primary_flynn }
@@ -3061,7 +3326,7 @@ country_event = { # Head of State Election[1940]
 		add_ideas = CSA_Elizabeth_Gurly_Flynn_hog_syn
 	}
 	option = { # Daniel Hoan
-		name = csa.37.c
+		name = csa.3701.c
 		trigger = {
 			has_government = radical_socialist
 			NOT = { has_country_flag = CSA_1940_cio_primary_london }
@@ -3073,7 +3338,7 @@ country_event = { # Head of State Election[1940]
 		add_ideas = CSA_Daniel_Hoan_hog_rso
 	}
 	option = { # Meyer London
-		name = csa.37.e
+		name = csa.3701.e
 		trigger = {
 			has_government = radical_socialist
 		}
