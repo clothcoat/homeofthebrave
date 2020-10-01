@@ -530,6 +530,9 @@ country_event = { #MacArthur's Next Move
 				set_nationality = USA
 			}
 		}	
+		USA = {
+			change_tag_from = WCC
+		}
 	}
 	option = { #War
 		name = wcc.7002.b
