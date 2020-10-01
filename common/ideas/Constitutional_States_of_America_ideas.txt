@@ -807,6 +807,23 @@ ideas = {
 				command_power_gain_mult	= 0.05
 			}
 		}
+		COR_yellow_cowards_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea COR_yellow_cowards_idea"}
+			allowed = { always = no }
+			removal_cost = -1
+			picture = generic_war_preparation
+			modifier = {
+			army_morale_factor = -0.05
+			military_leader_cost_factor = 0.2
+			surrender_limit = 0.2
+			conversion_cost_civ_to_mil_factor = -0.05
+			industrial_capacity_factory = -0.03
+			political_power_gain = -0.01
+			equipment_conversion_speed = 0.05
+			local_manpower = -0.05
+			industry_repair_factor	= 0.05
+			}
+		}
 		COR_jewish_segregation = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea COR_jewish_segregation"}
 			allowed = { always = no }
