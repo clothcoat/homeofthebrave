@@ -3348,6 +3348,62 @@ country_event = { # Head of State Election RADSOCS
 	}
 }
 
+country_event = { # Head of State Election SOCDEM
+	id = csa.3703
+	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.3703"}
+	title = csa.3703.t
+	desc = csa.3703.d
+	picture = GFX_report_event_election_vote
+
+	is_triggered_only = yes
+
+	option = { # Matthew Woll
+		name = csa.3703.a
+		trigger = {
+			has_government = social_democrat
+		}
+		add_popularity = {
+			ideology = social_democrat
+			popularity = 0.02
+		}
+		add_ideas = CSA_Matthew_Woll_hog_sde
+	}
+	option = { # Bayard Rustin
+		name = csa.3703.b
+		trigger = {
+			has_government = social_democrat
+		}
+		add_popularity = {
+			ideology = social_democrat
+			popularity = 0.02
+		}
+		add_ideas = CSA_Bayard_Rustin_hog_rso
+	}
+	option = { # Daniel Hoan
+		name = csa.3703.c
+		trigger = {
+			has_government = social_democrat
+		}
+		add_popularity = {
+			ideology = social_democrat
+			popularity = 0.02
+		}
+		add_ideas = CSA_Daniel_Hoan_hog_rso
+	}
+	option = { # Meyer London
+		name = csa.3703.e
+		trigger = {
+			has_government = social_democrat
+			NOT = { has_country_flag = CSA_1940_cio_election_london }
+		}
+		add_popularity = {
+			ideology = social_democrat
+			popularity = 0.02
+		}
+		add_ideas = CSA_Meyer_London_hog_rso
+	}
+}
+
 country_event = { # Head of State Election[1944]
 	id = csa.38
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.38"}
@@ -9153,7 +9209,7 @@ country_event = { # AFL Leadership Contest
 		create_country_leader = {
 			name = "John Lewis"
 			desc = "POLITICS_JOHN_LEWIS_DESC"
-			picture = "gfx/leaders/CSA/Portrait_John_Lewis.dds"
+			picture = "gfx/leaders/CSA/Portrait_CSA_John_Lewis.tga"
 			expire = "1965.1.1"
 			ideology = social_democrat_subtype
 			traits = { captain_of_industry }
@@ -9176,7 +9232,7 @@ country_event = { # AFL Leadership Contest
 		create_country_leader = {
 			name = "William Green"
 			desc = "POLITICS_SAMEUL_GREEN_DESC"
-			picture = "gfx/leaders/CSA/Portrait_Samuel_Green.dds"
+			picture = "gfx/leaders/CSA/Portrait_Samuel_Green.tga"
 			expire = "1965.1.1"
 			ideology = social_democrat_subtype
 			traits = { union_man }
@@ -9254,7 +9310,7 @@ country_event = { # AFL Leadership Contest
 			elections_allowed = no
 		}
 	}
-	option = { # Samuel Green
+	option = { # William Green
 	name = csa.3250.b
 	hidden_effect = {
 		create_country_leader = {
@@ -11984,6 +12040,18 @@ country_event = { # Time to Retreat?
 		}
 	}
 	}
+		NEE = {
+			if = {
+			limit = { 
+				MEX = { is_in_faction_with = NFA }
+			every_owned_state = {
+				CSA = {
+					transfer_state = PREV
+				}
+			}
+		}
+	}
+	}
 		if = {
 			limit = {
 				CAN = {
@@ -12009,6 +12077,22 @@ country_event = { # Time to Retreat?
 			CSA = {
 				annex_country = {
 					target = MEX
+					transfer_troops = no
+				}
+			}
+		}
+		if = {
+			limit = {
+				NEE = {
+					is_in_faction_with = NFA
+				}
+				CSA = {
+				controls_state = 932
+				}
+			}
+			CSA = {
+				annex_country = {
+					target = NEE
 					transfer_troops = no
 				}
 			}
