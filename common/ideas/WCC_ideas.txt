@@ -53,7 +53,7 @@ ideas = {
 		on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_bradley_plan_2"}
 		picture = WCC_ike_bradley_strategy
 		modifier = {
-			army_org_Factor = 2.5
+			army_org_Factor = 0.25
 			max_planning = 0.15
 			planning_speed = 0.1
 			terrain_penalty_reduction = 0.2
