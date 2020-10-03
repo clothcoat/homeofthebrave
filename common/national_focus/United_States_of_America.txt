@@ -5682,9 +5682,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_congress_restored"
-			hidden_effect = {
 			country_event = { id = ustates.3124 days = 15 }
-		}
 			add_political_power = 30
 		}
 	}
@@ -6174,6 +6172,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_trial_of_the_federalists"
+			country_event = { id = ustates.3145 days = 3 }
+			country_event = { id = ustates.3146 days = 5 }
 			add_manpower = -3000
 			add_war_support = -0.05
 			add_popularity = { ideology = paternal_autocrat popularity = -0.08 }
