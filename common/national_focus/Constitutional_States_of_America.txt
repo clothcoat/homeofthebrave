@@ -1875,6 +1875,195 @@ focus_tree = {
 		}
 	}
 
+	### George S. Patton Path ###
+	focus = {# Old Blood and Guts
+		id = COR_old_blood_and_guts
+		icon =  GFX_goal_generic_army_tanks
+		cost = 1
+		available = {
+			has_government = authoritarian_democrat
+			has_country_leader = {
+			ruling_only = yes
+			name = "George Patton"
+			}
+		}
+		ai_will_do = { factor = 5 }
+		x = 9
+		y = 10
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus COR_old_blood_and_guts"
+			custom_effect_tooltip = unlock_focuses
+		}
+	}
+
+	focus = {# Patton's Speech
+		id = COR_patton_speech
+		icon = GFX_goal_TEX_universal_jobs_registry
+		cost = 7.25
+		prerequisite = {
+			focus = COR_old_blood_and_guts
+		}
+		available = {
+			has_government = authoritarian_democrat
+		}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 100
+		}
+		relative_position_id = COR_old_blood_and_guts
+		x = -2
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus COR_patton_speech"
+			country_event = {
+			id = constate.1101
+			days = 2
+			}
+			add_stability = 0.05
+			add_political_power = 30
+			add_command_power = 20
+			add_war_support = 0.05
+		}
+	}
+
+	focus = {# No Place For Yellow Cowards
+		id = COR_no_place_for_yellow_cowards
+		icon = GFX_goal_workers_for_business
+		cost = 7.25
+		prerequisite = {
+			focus = COR_old_blood_and_guts
+		}
+		available = {
+			has_government = authoritarian_democrat
+		}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 100
+		}
+		relative_position_id = COR_old_blood_and_guts
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus COR_no_place_for_yellow_cowards"
+			add_ideas = COR_yellow_cowards_idea
+			add_stability = -0.02
+			add_political_power = -10
+		}
+	}
+
+	focus = {# No Place For Yellow Cowards
+		id = COR_no_place_for_yellow_cowards
+		icon = GFX_goal_workers_for_business
+		cost = 7.25
+		prerequisite = {
+			focus = COR_old_blood_and_guts
+		}
+		available = {
+			has_government = authoritarian_democrat
+		}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 100
+		}
+		relative_position_id = COR_old_blood_and_guts
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus COR_no_place_for_yellow_cowards"
+			add_ideas = COR_yellow_cowards_idea
+			add_stability = -0.02
+			add_political_power = -10
+		}
+	}
+
+	focus = {# White Crosses
+		id = COR_white_crosses
+		icon = GFX_goal_SHX_Christian_Influence
+		cost = 7.25
+		prerequisite = {
+			focus = COR_old_blood_and_guts
+		}
+		available = {
+			has_government = authoritarian_democrat
+		}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 100
+		}
+		relative_position_id = COR_old_blood_and_guts
+		x = 2
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus COR_white_crosses"
+			add_ideas = COR_honor_the_dead_idea
+			add_manpower = 1000
+			add_political_power = -10
+		}
+	}
+
+	focus = {# Visit the Soldiers
+		id = COR_visit_the_soldiers
+		icon = GFX_goal_conscription
+		cost = 7.25
+		prerequisite = {
+			focus = COR_white_crosses
+		}
+		prerequisite = {
+			focus = COR_no_place_for_yellow_cowards
+		}
+		available = {
+			has_government = authoritarian_democrat
+		}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 100
+		}
+		relative_position_id = COR_old_blood_and_guts
+		x = 1
+		y = 2
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus COR_visit_the_soldiers"
+			add_ideas = COR_inspire_the_men_idea
+			add_manpower = 2000
+		}
+	}
+
+	focus = {# Separate but Equal?
+		id = COR_separate_but_equal
+		icon = GFX_goal_conscription
+		cost = 7.25
+		prerequisite = {
+			focus = COR_patton_speech
+		}
+		prerequisite = {
+			focus = COR_no_place_for_yellow_cowards
+		}
+		available = {
+			has_government = authoritarian_democrat
+		}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 100
+		}
+		relative_position_id = COR_old_blood_and_guts
+		x = -1
+		y = 2
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus COR_separate_but_equal"
+			country_event = {
+			id = constate.1102
+			days = 3
+			}
+		}
+	}
+
+
 	### Simmons Path ###
 	focus = {# Mine Eyes have seen the Glory
 		id = COR_mine_have_seen_the_glory
@@ -2826,7 +3015,7 @@ focus_tree = {
 			COR_increase_political_recovery = yes
 			add_stability = 0.05
 			modify_country_flag = {
-			country_flag = ACW_black_nationalist_resistance
+			flag = ACW_black_nationalist_resistance
 			value = -5
 			}
 			swap_ideas = {
@@ -2869,7 +3058,7 @@ focus_tree = {
 			custom_effect_tooltip = USA_political_recovery_tooltip
 			COR_increase_political_recovery = yes
 			modify_country_flag = {
-			country_flag = ACW_black_nationalist_resistance
+			flag = ACW_black_nationalist_resistance
 			value = -3
 			}
 		}
@@ -3587,7 +3776,7 @@ focus_tree = {
 			army_experience = 15
 			add_manpower = -550
 			modify_country_flag = {
-			country_flag = ACW_black_nationalist_resistance
+			flag = ACW_black_nationalist_resistance
 			value = -2
 			}
 		}
@@ -9333,6 +9522,9 @@ focus_tree = {
 			owns_state = 101
 			controls_state = 101
 			}
+			NOT = {
+			is_in_faction_with = DEN
+			}
 		}
 		relative_position_id = COR_look_to_the_reichsadler
 		x = 2
@@ -9353,9 +9545,6 @@ focus_tree = {
 			id = constate.205
 			days = 2
 				}
-			}
-			NOT = {
-			is_in_faction_with = DEN
 			}
 		}
 	}

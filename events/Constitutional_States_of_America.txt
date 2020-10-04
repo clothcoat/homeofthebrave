@@ -747,6 +747,70 @@ country_event = { # Patton's Speech
 	}
 }
 
+country_event = { # Separate but Equal?
+	id = constate.1102
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.1102"}
+	title = constate.1102.t
+	desc = constate.1102.d
+	picture = GFX_report_event_generic_diplomacy1
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { # Military Exceptions
+		name = constate.1102.a
+		if = {
+				limit = { has_idea = COR_jim_crow_idea }
+				swap_ideas = {
+					remove_idea = COR_jim_crow_idea
+					add_idea = COR_separate_but_equal_idea
+				}
+			}
+			else_if = {
+				limit = { has_idea = COR_jim_crow_idea_2 }
+				swap_ideas = {
+					remove_idea = COR_jim_crow_idea_2
+					add_idea = COR_separate_but_equal_idea_2
+				}
+			}
+		}
+		add_popularity = { ideology = authoritarian_democrat popularity = -0.02 }
+
+	option = { # Status Quo
+		name = constate.1102.b
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.01 }
+		add_popularity = { ideology = national_populist popularity = -0.03 }
+		add_stability = 0.02
+	}
+}
+
+country_event = { # Separate but Equal?
+	id = constate.1103
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.1103"}
+	title = constate.1103.t
+	desc = constate.1103.d
+	picture = GFX_report_event_generic_diplomacy1
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { # Pass Legislation
+		name = constate.1103.a
+		add_ideas = COR_jewish_segregation
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.01 }
+		add_popularity = { ideology = paternal_autocrat popularity = -0.03 }
+		add_political_power = -30
+	}
+
+	option = { # Rhetoric Only
+		name = constate.1103.b
+		add_popularity = { ideology = authoritarian_democrat popularity = -0.02 }
+		add_popularity = { ideology = paternal_autocrat popularity = 0.01 }
+		add_popularity = { ideology = national_populist popularity = 0.01 }
+		add_stability = 0.02
+	}
+}
+
 country_event = { # Simmons Death
 	id = constate.12
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.12"}
@@ -2136,13 +2200,12 @@ country_event = { # Time to Retreat?
 				is_in_faction_with = NFA
 			}
 			white_peace_with_TARGET = yes
-			}
+		}
 		CAF = {
 			limit = { 
 				is_valid_peace_target = yes 
 			}
 			white_peace_with_TARGET = yes
-			}
 		}
 	}
 }

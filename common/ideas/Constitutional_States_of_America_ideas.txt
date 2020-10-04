@@ -824,6 +824,60 @@ ideas = {
 			industry_repair_factor	= 0.05
 			}
 		}
+		COR_honor_the_dead_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea COR_honor_the_dead_idea"}
+			allowed = { always = no }
+			removal_cost = -1
+			picture = generic_war_preparation
+			modifier = {
+			party_popularity_stability_factor = 0.05
+			consumer_goods_factor = -0.02
+			conscription_factor = 0.03
+			stability_factor = 0.02
+			}
+		}
+		COR_inspire_the_men_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea COR_honor_the_dead_idea"}
+			allowed = { always = no }
+			removal_cost = -1
+			picture = generic_war_preparation
+			modifier = {
+			army_attack_factor = 0.02
+			out_of_supply_factor = -0.02
+			army_morale_factor = 0.05
+			}
+		}
+		COR_separate_but_equal_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea COR_separate_but_equal_idea"}
+			allowed = { always = no }
+			removal_cost = -1
+			picture = jim_crow
+			modifier = {
+				political_power_gain = 0.03
+				party_popularity_stability_factor = 0.05
+				production_lack_of_resource_penalty_factor = -0.1
+				local_resources_factor = 0.1
+				conscription_factor = -0.06
+				production_factory_efficiency_gain_factor = -0.05
+				research_speed_factor = -0.1
+				stability_factor = -0.07
+			}
+		}
+		COR_separate_but_equal_idea_2 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea COR_separate_but_equal_idea_2"}
+			allowed = { always = no }
+			removal_cost = -1
+			picture = jim_crow
+			modifier = {
+				political_power_gain = 0.05
+				party_popularity_stability_factor = 0.15
+				production_lack_of_resource_penalty_factor = -0.09
+				local_resources_factor = 0.05
+				conscription_factor = -0.05
+				production_factory_efficiency_gain_factor = -0.05
+				research_speed_factor = -0.08
+			}
+		}
 		COR_jewish_segregation = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea COR_jewish_segregation"}
 			allowed = { always = no }
