@@ -2136,13 +2136,12 @@ country_event = { # Time to Retreat?
 				is_in_faction_with = NFA
 			}
 			white_peace_with_TARGET = yes
-			}
+		}
 		CAF = {
 			limit = { 
 				is_valid_peace_target = yes 
 			}
 			white_peace_with_TARGET = yes
-			}
 		}
 	}
 }
