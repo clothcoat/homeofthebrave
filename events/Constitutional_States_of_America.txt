@@ -725,6 +725,7 @@ country_event = { # Patton's Speech
 
 	option = { # Add a Racial Message
 		name = constate.1101.a
+		set_country_flag = COR_klan_appeal
 		add_political_power = -10
 		add_popularity = { ideology = authoritarian_democrat popularity = 0.03 }
 		add_popularity = { ideology = national_populist popularity = -0.05 }
@@ -733,6 +734,7 @@ country_event = { # Patton's Speech
 
 	option = { # Attack the Banks
 		name = constate.1101.b
+		set_country_flag = COR_odp_appeal
 		add_political_power = 30
 		add_popularity = { ideology = authoritarian_democrat popularity = 0.05 }
 		add_stability = -0.02
@@ -740,6 +742,7 @@ country_event = { # Patton's Speech
 
 	option = { # Decry Socialism
 		name = constate.1101.c
+		set_country_flag = COR_ford_appeal
 		add_political_power = -10
 		add_popularity = { ideology = authoritarian_democrat popularity = 0.03 }
 		add_popularity = { ideology = paternal_autocrat popularity = -0.05 }
@@ -775,12 +778,20 @@ country_event = { # Separate but Equal?
 			}
 		}
 		add_popularity = { ideology = authoritarian_democrat popularity = -0.02 }
+		add_popularity = { ideology = national_populist popularity = 0.02 }
+		hidden_effect = {
+			country_event = { id = constate.1103 days = 1 }
+		}
 
 	option = { # Status Quo
 		name = constate.1102.b
 		add_popularity = { ideology = authoritarian_democrat popularity = 0.01 }
-		add_popularity = { ideology = national_populist popularity = -0.03 }
+		add_popularity = { ideology = national_populist popularity = -0.01 }
 		add_stability = 0.02
+		hidden_effect = {
+			country_event = { id = constate.1103 days = 1 }
+		}
+
 	}
 }
 
@@ -808,6 +819,68 @@ country_event = { # Separate but Equal?
 		add_popularity = { ideology = paternal_autocrat popularity = 0.01 }
 		add_popularity = { ideology = national_populist popularity = 0.01 }
 		add_stability = 0.02
+	}
+}
+
+country_event = { # The Slap
+	id = constate.1104
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.1104"}
+	title = constate.1104.t
+	picture = GFX_report_event_generic_diplomacy1
+
+	desc = {
+	text = constate.1104.d.ford
+	trigger = {
+			has_country_flag = COR_klan_appeal
+		}
+	}
+	desc = {
+	text = constate.1104.d.klan
+	trigger = {
+			has_country_flag = COR_ford_appeal
+		}
+	}
+	desc = {
+	text = constate.1104.d.odp
+	trigger = {
+			has_country_flag = COR_odp_appeal
+		}
+	}
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { # Slap Lindbergh
+		name = constate.1104.a
+		trigger = {
+			has_country_flag = COR_klan_appeal
+		}
+		set_country_flag = COR_fordists_angry
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.01 }
+		add_popularity = { ideology = national_populist popularity = -0.03 }
+		add_stability = -0.01
+	}
+
+	option = { # Slap Klan
+		name = constate.1104.b
+		trigger = {
+			has_country_flag = COR_ford_appeal
+		}
+		set_country_flag = COR_klan_angry
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.01 }
+		add_popularity = { ideology = paternal_autocrat popularity = -0.03 }
+		add_stability = -0.01
+	}
+	option = { # Slap Coward
+		name = constate.1104.c
+		trigger = {
+			has_country_flag = COR_odp_appeal
+		}
+		set_country_flag = COR_patton_apology
+		add_popularity = { ideology = authoritarian_democrat popularity = -0.02 }
+		add_popularity = { ideology = paternal_autocrat popularity = 0.01 }
+		add_popularity = { ideology = national_populist popularity = 0.01 }
+		add_political_power = -30
 	}
 }
 
@@ -4692,7 +4765,7 @@ country_event = { #Young Klan Flag
 	}
 }
 
-country_event = { #Young Klan Flag
+country_event = { #The Klan Flag
 	id = constate.306
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.306"}
 	title = constate.306.t

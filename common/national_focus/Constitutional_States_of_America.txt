@@ -1878,7 +1878,7 @@ focus_tree = {
 	### George S. Patton Path ###
 	focus = {# Old Blood and Guts
 		id = COR_old_blood_and_guts
-		icon =  GFX_goal_generic_army_tanks
+		icon =  GFX_COR_Old_Blood_and_Guts
 		cost = 1
 		available = {
 			has_government = authoritarian_democrat
@@ -1898,7 +1898,7 @@ focus_tree = {
 
 	focus = {# Patton's Speech
 		id = COR_patton_speech
-		icon = GFX_goal_TEX_universal_jobs_registry
+		icon = GFX_COR_Pattons_Speech
 		cost = 7.25
 		prerequisite = {
 			focus = COR_old_blood_and_guts
@@ -1929,33 +1929,7 @@ focus_tree = {
 
 	focus = {# No Place For Yellow Cowards
 		id = COR_no_place_for_yellow_cowards
-		icon = GFX_goal_workers_for_business
-		cost = 7.25
-		prerequisite = {
-			focus = COR_old_blood_and_guts
-		}
-		available = {
-			has_government = authoritarian_democrat
-		}
-		cancel_if_invalid = yes
-		available_if_capitulated = yes
-		ai_will_do = {
-			factor = 100
-		}
-		relative_position_id = COR_old_blood_and_guts
-		x = 0
-		y = 1
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus COR_no_place_for_yellow_cowards"
-			add_ideas = COR_yellow_cowards_idea
-			add_stability = -0.02
-			add_political_power = -10
-		}
-	}
-
-	focus = {# No Place For Yellow Cowards
-		id = COR_no_place_for_yellow_cowards
-		icon = GFX_goal_workers_for_business
+		icon = GFX_goal_COR_No_Room_for_Yellow_Cowards
 		cost = 7.25
 		prerequisite = {
 			focus = COR_old_blood_and_guts
@@ -2062,6 +2036,182 @@ focus_tree = {
 			}
 		}
 	}
+
+	focus = {# National Discipline
+		id = COR_national_discipline
+		icon = GFX_focus_generic_industry_3
+		cost = 7.25
+		prerequisite = {
+			focus = COR_visit_the_soldiers
+		}
+		prerequisite = {
+			focus = COR_separate_but_equal
+		}
+		available = {
+			has_government = authoritarian_democrat
+		}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 100
+		}
+		relative_position_id = COR_old_blood_and_guts
+		x = 0
+		y = 3
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus COR_national_discipline"
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			COR_increase_political_recovery = yes
+			swap_ideas = {
+			remove_idea = COR_yellow_cowards_idea
+			add_idea = COR_yellow_cowards_idea_2
+			}
+		}
+	}
+
+	focus = {# Kick Insurgents in the Balls
+		id = COR_kick_insurgents
+		icon = GFX_goal_offensive_army
+		cost = 7.25
+		prerequisite = {
+			focus = COR_separate_but_equal
+		}
+		available = {
+			has_government = authoritarian_democrat
+		}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 100
+		}
+		relative_position_id = COR_old_blood_and_guts
+		x = -2
+		y = 3
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus COR_kick_insurgents"
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			COR_increase_political_recovery = yes
+			add_manpower = -500
+			add_stability = 0.03
+			add_political_power = 30
+			custom_effect_tooltip = ACW_combat_socialists
+			modify_country_flag = {
+				flag = ACW_socialist_resistance
+				value = -1
+			}
+			custom_effect_tooltip = ACW_combat_minuteman
+			modify_country_flag = {
+				flag = ACW_minutemen_resistance
+				value = -1
+			}
+			custom_effect_tooltip = ACW_fight_fed_terrorists_tooltip
+			modify_country_flag = {
+				flag = ACW_fed_resistance
+				value = -1
+			}
+			hidden_effect = {
+			country_event = {
+			id = constate.71
+			days = 30
+				}
+			}
+		}
+	}
+
+	focus = {# New Tank Forces
+		id = COR_new_tank_forces
+		icon = GFX_goal_generic_army_tanks
+		cost = 7.25
+		prerequisite = {
+			focus = COR_visit_the_soldiers
+		}
+		available = {
+			has_government = authoritarian_democrat
+		}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 100
+		}
+		relative_position_id = COR_old_blood_and_guts
+		x = 2
+		y = 3
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus COR_new_tank_forces"
+			if = {
+				limit = {
+					NOT = { has_template = "Patton Tank Division" }
+				}
+				division_template = {
+					name = "Patton Tank Division"
+					is_locked = no
+					division_names_group = USA_ARM_01
+					regiments = {
+						light_armor = { x = 0 y = 0 }
+						light_armor = { x = 0 y = 1 }
+						light_armor = { x = 0 y = 2 }
+						light_armor = { x = 1 y = 0 }
+						light_armor = { x = 1 y = 1 }
+						light_armor = { x = 1 y = 2 }
+						motorized = { x = 2 y = 0 }
+						motorized = { x = 2 y = 1 }
+						motorized = { x = 2 y = 2 }
+						motorized = { x = 2 y = 3 }
+					}
+					support = {
+						recon = { x = 0 y = 0 }
+						engineer = { x = 0 y = 1 }
+						artillery = { x = 0 y = 2 }
+					}
+					priority = 2
+				}
+			}
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			custom_effect_tooltip = COR_tank_division_tooltip
+			COR_increase_political_recovery = yes
+			hidden_effect = {
+				361 = {
+					create_unit = {
+						division = "division_template = \"Patton Tank Division\" start_experience_factor = 0.3 start_equipment_factor = 1.0"
+						owner = ROOT
+					}
+				}
+			}
+		}
+	}
+
+	focus = {# The Slap Heard Nationwide
+		id = COR_the_slap_heard_nationwide
+		icon = GFX_goal_offensive_army
+		cost = 7.25
+		prerequisite = {
+			focus = COR_kick_insurgents
+		}
+		available = {
+			has_government = authoritarian_democrat
+		}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 100
+		}
+		relative_position_id = COR_old_blood_and_guts
+		x = -2
+		y = 4
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus COR_the_slap_heard_nationwide"
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			COR_increase_political_recovery = yes
+			add_stability = 0.01
+			add_political_power = -15
+			hidden_effect = {
+			country_event = {
+			id = constate.1104
+			days = 3
+			}
+		}
+	}
+}
 
 
 	### Simmons Path ###
