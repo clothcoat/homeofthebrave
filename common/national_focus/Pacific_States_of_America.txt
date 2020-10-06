@@ -12196,7 +12196,7 @@ focus_tree = {
 				tooltip = CAL_civil_war_victor
 				has_global_flag = CAL_civil_war_over_flag
 				NOT = {
-					country_exists = CAL
+					country_exists = COR
 					country_exists = CSA
 					country_exists = TEX
 				}

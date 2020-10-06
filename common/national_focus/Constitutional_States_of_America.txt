@@ -2213,6 +2213,64 @@ focus_tree = {
 	}
 }
 
+	focus = {# American Values
+		id = COR_american_values
+		icon = GFX_goal_KTG_Educate_natives
+		cost = 7.25
+		prerequisite = {
+			focus = COR_national_discipline
+		}
+		available = {
+			has_government = authoritarian_democrat
+		}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 100
+		}
+		relative_position_id = COR_old_blood_and_guts
+		x = 0
+		y = 4
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus COR_american_values"
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			COR_increase_political_recovery = yes
+			swap_ideas = {
+			remove_idea = COR_yellow_cowards_idea_2
+			add_idea = COR_yellow_cowards_idea_3
+			}
+		}
+	}
+
+
+	focus = {# Lessons of History
+		id = COR_lessons_of_history
+		icon = GFX_goal_KTG_Educate_natives
+		cost = 7.25
+		prerequisite = {
+			focus = COR_new_tank_forces
+		}
+		available = {
+			has_government = authoritarian_democrat
+		}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 100
+		}
+		relative_position_id = COR_old_blood_and_guts
+		x = 2
+		y = 4
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus COR_lessons_of_history"
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			COR_increase_political_recovery = yes
+			swap_ideas = {
+			remove_idea = COR_inspire_the_men_idea
+			add_idea = COR_inspire_the_men_idea_2
+			}
+		}
+	}
 
 	### Simmons Path ###
 	focus = {# Mine Eyes have seen the Glory
