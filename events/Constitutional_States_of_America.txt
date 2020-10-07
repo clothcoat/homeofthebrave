@@ -884,6 +884,36 @@ country_event = { # The Slap
 	}
 }
 
+country_event = { # Reorganize the Democratic Party
+	id = constate.1105
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.1105"}
+	title = constate.1105.t
+	desc = constate.1105.d
+	picture = GFX_report_event_generic_diplomacy1
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { # Byrd and Idk
+		name = constate.1105.a
+		add_stability = -0.02
+		add_political_power = 20
+		hidden_effect = {
+		create_country_leader = {
+			name = "Harry F. Byrd"
+			desc = "POLITICS_HARRY_BYRD_DESC"
+			picture = "Portrait_USA_Harry_F_Byrd.tga"
+			expire = "1965.1.1"
+			ideology = social_conservative_subtype
+			traits = { backroom_backstabber }
+		}
+		set_party_name = {
+			ideology = social_conservative
+			long_name = COR_social_conservative_party_long
+			name = COR_social_conservative_party }
+			}
+		}
+
 country_event = { # Simmons Death
 	id = constate.12
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.12"}

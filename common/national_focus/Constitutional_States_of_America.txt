@@ -1889,7 +1889,7 @@ focus_tree = {
 		}
 		ai_will_do = { factor = 5 }
 		x = 9
-		y = 10
+		y = 9
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_old_blood_and_guts"
 			custom_effect_tooltip = unlock_focuses
@@ -1955,7 +1955,7 @@ focus_tree = {
 
 	focus = {# White Crosses
 		id = COR_white_crosses
-		icon = GFX_goal_SHX_Christian_Influence
+		icon = GFX_goal_COR_White_Crosses
 		cost = 7.25
 		prerequisite = {
 			focus = COR_old_blood_and_guts
@@ -2009,7 +2009,7 @@ focus_tree = {
 
 	focus = {# Separate but Equal?
 		id = COR_separate_but_equal
-		icon = GFX_goal_conscription
+		icon = GFX_goal_COR_Seperate_But_Equal
 		cost = 7.25
 		prerequisite = {
 			focus = COR_patton_speech
@@ -2268,6 +2268,96 @@ focus_tree = {
 			swap_ideas = {
 			remove_idea = COR_inspire_the_men_idea
 			add_idea = COR_inspire_the_men_idea_2
+			}
+		}
+	}
+
+	focus = {# Restore the Initiative 
+		id = COR_restore_the_initiative
+		icon = GFX_goal_KTG_Educate_natives
+		cost = 7.25
+		prerequisite = {
+			focus = COR_the_slap_heard_nationwide
+		}
+		prerequisite = {
+			focus = COR_american_values
+		}
+		available = {
+			has_government = authoritarian_democrat
+		}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 100
+		}
+		relative_position_id = COR_old_blood_and_guts
+		x = -1
+		y = 5
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus COR_restore_the_initiative"
+			country_event = {
+			id = constate.1105
+			days = 3
+			}
+		}
+	}
+
+	focus = {# Reorganize the Old Parties
+		id = COR_reorganize_politics
+		icon = GFX_goal_KTG_Educate_natives
+		cost = 7.25
+		prerequisite = {
+			focus = COR_lessons_of_history
+		}
+		prerequisite = {
+			focus = COR_american_values
+		}
+		available = {
+			has_government = authoritarian_democrat
+		}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 100
+		}
+		relative_position_id = COR_old_blood_and_guts
+		x = 1
+		y = 5
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus COR_reorganize_politics"
+			country_event = {
+			id = constate.1105
+			days = 3
+			}
+		}
+	}
+
+	focus = {# Unbroken Spirit 
+		id = COR_unbroken_spirit
+		icon = GFX_goal_KTG_Educate_natives
+		cost = 7.25
+		prerequisite = {
+			focus = COR_restore_the_initiative
+		}
+		prerequisite = {
+			focus = COR_reorganize_politics
+		}
+		available = {
+			has_government = authoritarian_democrat
+		}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 100
+		}
+		relative_position_id = COR_old_blood_and_guts
+		x = 0
+		y = 6
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus COR_unbroken_spirit"
+			swap_ideas = {
+			remove_idea = COR_yellow_cowards_idea_3
+			add_idea = COR_yellow_cowards_idea_4
 			}
 		}
 	}
