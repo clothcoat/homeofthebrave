@@ -3911,21 +3911,26 @@ country_event = { # New Party Head
 	}
 	option = {
 		name = amcivwar.1019.c
-		add_popularity = { ideology = paternal_autocrat popularity = 0.03 }
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.03 }
 		hidden_effect = {
 			create_country_leader = {
 				name = "George Patton"
 				desc = "POLITICS_GEORGE_PATTON_DESC"
 				picture = "gfx/leaders/COR/Portrait_COR_George_Patton.tga"
 				expire = "1965.1.1"
-				ideology = paternal_autocrat_subtype
+				ideology = authoritarian_democrat_subtype
 				traits = { blood_and_guts }
 			}
 		}
 		set_politics = {
-			ruling_party = paternal_autocrat
+			ruling_party = authoritarian_democrat
 			elections_allowed = no
 		}
+		set_party_name = {
+			ideology = authoritarian_democrat
+			long_name = COR_authoritarian_democrat_patton_party_long
+			name = COR_authoritarian_democrat_patton_party 
+			}
 	}
 }
 
@@ -9813,7 +9818,10 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
+		OR = {
 		tag = CAL
+		tag = TEX
+		}
 
 		WCC = {
 			OR = {

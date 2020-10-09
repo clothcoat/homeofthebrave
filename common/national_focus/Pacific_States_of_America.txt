@@ -1268,7 +1268,7 @@ focus_tree = {
 			}
 		}
 		available = {
-			has_global_flag = CAL_civil_war_over_flag
+			has_global_flag = USA_civil_war_over_flag
 			NOT = {
 				country_exists = COR
 				country_exists = CSA
@@ -3654,8 +3654,12 @@ focus_tree = {
 			focus = CAL_expand_war_powers
 		}
 		available = {
+			date > 1940.11.14
+			OR = {
 			has_government = authoritarian_democrat
-			has_country_leader = { ruling_only = yes name = "William Randolph Hearst"}
+			has_government = paternal_autocrat
+			}
+			has_country_leader = { ruling_only = yes name = "William Randolph Hearst" }
 		}
 		ai_will_do = {
 			factor = 5
@@ -6311,6 +6315,7 @@ focus_tree = {
 			OR = {
 				has_government = social_conservative
 				has_government = authoritarian_democrat
+				has_government = paternal_autocrat
 			}
 		}
 		prerequisite = {
@@ -6342,6 +6347,7 @@ focus_tree = {
 			OR = {
 				has_government = social_conservative
 				has_government = authoritarian_democrat
+				has_government = paternal_autocrat
 			}
 		}
 		prerequisite = {

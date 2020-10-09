@@ -1881,17 +1881,18 @@ focus_tree = {
 		icon =  GFX_COR_Old_Blood_and_Guts
 		cost = 1
 		available = {
+			has_global_flag = USA_civil_war_over_flag
 			has_government = authoritarian_democrat
-			has_country_leader = {
-			ruling_only = yes
-			name = "George Patton"
-			}
 		}
 		ai_will_do = { factor = 5 }
 		x = 9
 		y = 9
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_old_blood_and_guts"
+			country_event = {
+			id = constate.1107
+			days = 2
+			}
 			custom_effect_tooltip = unlock_focuses
 		}
 	}
@@ -1981,7 +1982,7 @@ focus_tree = {
 
 	focus = {# Visit the Soldiers
 		id = COR_visit_the_soldiers
-		icon = GFX_goal_conscription
+		icon = GFX_goal_COR_Meet_with_Soldiers
 		cost = 7.25
 		prerequisite = {
 			focus = COR_white_crosses
@@ -2120,7 +2121,7 @@ focus_tree = {
 
 	focus = {# New Tank Forces
 		id = COR_new_tank_forces
-		icon = GFX_goal_generic_army_tanks
+		icon = GFX_goal_COR_new_tank_forces_icon
 		cost = 7.25
 		prerequisite = {
 			focus = COR_visit_the_soldiers
@@ -2182,7 +2183,7 @@ focus_tree = {
 
 	focus = {# The Slap Heard Nationwide
 		id = COR_the_slap_heard_nationwide
-		icon = GFX_goal_offensive_army
+		icon = GFX_goal_COR_Slap_Heard_Nationwide
 		cost = 7.25
 		prerequisite = {
 			focus = COR_kick_insurgents
@@ -2245,7 +2246,7 @@ focus_tree = {
 
 	focus = {# Lessons of History
 		id = COR_lessons_of_history
-		icon = GFX_goal_KTG_Educate_natives
+		icon = GFX_goal_COR_The_Lessons_of_History
 		cost = 7.25
 		prerequisite = {
 			focus = COR_new_tank_forces
@@ -2274,7 +2275,7 @@ focus_tree = {
 
 	focus = {# Restore the Initiative 
 		id = COR_restore_the_initiative
-		icon = GFX_goal_KTG_Educate_natives
+		icon = GFX_goal_generic_army_tanks
 		cost = 7.25
 		prerequisite = {
 			focus = COR_the_slap_heard_nationwide
@@ -2304,7 +2305,7 @@ focus_tree = {
 
 	focus = {# Reorganize the Old Parties
 		id = COR_reorganize_politics
-		icon = GFX_goal_KTG_Educate_natives
+		icon = GFX_goal_generic_major_alliance
 		cost = 7.25
 		prerequisite = {
 			focus = COR_lessons_of_history
@@ -2329,12 +2330,16 @@ focus_tree = {
 			id = constate.1105
 			days = 3
 			}
+			country_event = {
+			id = constate.1106
+			days = 6
+			}
 		}
 	}
 
 	focus = {# Unbroken Spirit 
 		id = COR_unbroken_spirit
-		icon = GFX_goal_KTG_Educate_natives
+		icon = GFX_goal_COR_patton
 		cost = 7.25
 		prerequisite = {
 			focus = COR_restore_the_initiative

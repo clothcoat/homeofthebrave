@@ -669,7 +669,7 @@ ideas = {
 		
 		CAL_military_lobby_idea = {#Military Lobby 
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_military_lobby_idea"}
-			allowed = { always = no }
+			allowed = { always = yes }
 			available = { has_government = authoritarian_democrat 
 			has_government = paternal_autocrat
 			has_government = national_populist
@@ -689,7 +689,7 @@ ideas = {
 		
 		CAL_military_lobby_idea_2 = {#Military Lobby 
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_military_lobby_idea_2"}
-			allowed = { always = no }
+			allowed = { always = yes }
 			available = { has_government = authoritarian_democrat 
 			has_government = paternal_autocrat
 			has_government = national_populist
@@ -709,7 +709,7 @@ ideas = {
 		
 		CAL_military_lobby_idea_3 = {#Military Lobby 
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_military_lobby_idea_3"}
-			allowed = { always = no }
+			allowed = { always = yes }
 			available = { has_government = authoritarian_democrat 
 			has_government = paternal_autocrat
 			has_government = national_populist
@@ -724,6 +724,29 @@ ideas = {
 				production_speed_arms_factory_factor = -0.08
 				production_speed_dockyard_factor = -0.08
 				consumer_goods_factor = 0.02
+			}
+		}
+
+		CAL_hearst_debt = {#Hearst Debt
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_hearst_debt"}
+			allowed = { always = no }
+			available = { has_government = authoritarian_democrat 
+			has_government = paternal_autocrat
+			has_government = national_populist
+			}
+			removal_cost = -1
+			picture = generic_army
+			modifier = {
+				production_factory_efficiency_gain_factor = -0.01
+				command_power_gain_mult = -0.01
+				production_speed_arms_factory_factor = -0.01
+				production_speed_dockyard_factor = -0.01
+				consumer_goods_factor = 0.02
+				political_power_gain = -0.02
+				industrial_capacity_factory = -0.02
+				mobilization_speed = -0.02
+				party_popularity_stability_factor = -0.05
+				local_supplies = -0.04
 			}
 		}
 		
