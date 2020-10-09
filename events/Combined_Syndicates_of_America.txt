@@ -1681,6 +1681,12 @@ country_event = { # Education reform
 		tag = CSA
 		has_completed_focus = CSA_social_revolution
 		has_completed_focus = CSA_revolutionary_education
+		NOT = {
+				has_country_leader = {
+				ruling_only = yes
+				name = "John Dewey"
+				}
+			}
 	}
 
 	mean_time_to_happen = {
@@ -1691,6 +1697,35 @@ country_event = { # Education reform
 
 	option = { # Flavor
 		name = csa.21.a
+		add_political_power = 50
+	}
+}
+
+country_event = { # Education reform (Dewey)
+	id = csa.2100
+	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.2100"}
+	title = csa.2100.t
+	desc = csa.2100.d
+	picture = GFX_report_event_USA_congress
+
+	trigger = {
+		tag = CSA
+		has_completed_focus = CSA_social_revolution
+		has_completed_focus = CSA_revolutionary_education
+		has_country_leader = {
+				ruling_only = yes
+				name = "John Dewey"
+				}
+	}
+
+	mean_time_to_happen = {
+		months = 11
+	}
+
+	fire_only_once = yes
+
+	option = { # Flavor
+		name = csa.2100.a
 		add_political_power = 50
 	}
 }
