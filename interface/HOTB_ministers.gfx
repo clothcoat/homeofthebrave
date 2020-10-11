@@ -8499,12 +8499,12 @@ spriteTypes = {
 		texturefile = "gfx/interface/ministers/CAL/CAL_Alger_Hiss.tga"
 	}
 	spriteType = {
-		name = "GFX_idea_CAL_Hugh_Simons_Gibson_for_sde"
-		texturefile = "gfx/interface/ministers/CAL/CAL_Hugh_Simons_Gibson.tga"
-	}
-	spriteType = {
 		name = "GFX_idea_CAL_Ralph_Johnson_Bunche_for_sde"
 		texturefile = "gfx/interface/ministers/CAL/CAL_Ralph_Johnson_Bunche.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_CAL_Hugh_Simons_Gibson_for_sli"
+		texturefile = "gfx/interface/ministers/CAL/CAL_Hugh_Simons_Gibson.tga"
 	}
 	spriteType = {
 		name = "GFX_idea_CAL_Franck_Roberts_Havenner_for_sli"
@@ -62716,6 +62716,14 @@ spriteTypes = {
 		texturefile = "gfx/interface/ministers/USA/USA_Philip_La_Follette.tga"
 	}
 	spriteType = {
+		name = "GFX_idea_USA_Quentin_Roosevelt_hog_sde"
+		texturefile = "gfx/interface/ministers/USA/USA_Quentin_Roosevelt.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_USA_James_E_Murray_hog_sde"
+		texturefile = "gfx/interface/ministers/USA/USA_James_E_Murray.tga"
+	}
+	spriteType = {
 		name = "GFX_idea_USA_Alf_Landon_hog_sli"
 		texturefile = "gfx/interface/ministers/USA/USA_Alf_Landon.tga"
 	}
@@ -62732,16 +62740,8 @@ spriteTypes = {
 		texturefile = "gfx/interface/ministers/USA/USA_Harold_Stassen.tga"
 	}
 	spriteType = {
-		name = "GFX_idea_USA_Herbert_Hoover_hog_sli"
-		texturefile = "gfx/interface/ministers/USA/USA_Herbert_Hoover.tga"
-	}
-	spriteType = {
 		name = "GFX_idea_USA_John_W_Bricker_hog_sli"
 		texturefile = "gfx/interface/ministers/USA/USA_John_W_Bricker.tga"
-	}
-	spriteType = {
-		name = "GFX_idea_USA_Quentin_Roosevelt_hog_sli"
-		texturefile = "gfx/interface/ministers/USA/USA_Quentin_Roosevelt.tga"
 	}
 	spriteType = {
 		name = "GFX_idea_USA_Quentin_Roosevelt_II_hog_sli"
@@ -62760,16 +62760,16 @@ spriteTypes = {
 		texturefile = "gfx/interface/ministers/USA/USA_Alben_W_Barkley.tga"
 	}
 	spriteType = {
+		name = "GFX_idea_USA_Herbert_Hoover_hog_mli"
+		texturefile = "gfx/interface/ministers/USA/USA_Herbert_Hoover.tga"
+	}
+	spriteType = {
 		name = "GFX_idea_USA_Dwight_D_Eisenhower_hog_mli"
 		texturefile = "gfx/interface/ministers/USA/USA_Dwight_D_Eisenhower.tga"
 	}
 	spriteType = {
 		name = "GFX_idea_USA_Harry_Truman_hog_mli"
 		texturefile = "gfx/interface/ministers/USA/USA_Harry_Truman.tga"
-	}
-	spriteType = {
-		name = "GFX_idea_USA_James_E_Murray_hog_mli"
-		texturefile = "gfx/interface/ministers/USA/USA_James_E_Murray.tga"
 	}
 	spriteType = {
 		name = "GFX_idea_USA_Wendell_Willkie_hog_mli"
@@ -62851,16 +62851,16 @@ spriteTypes = {
 		texturefile = "gfx/interface/ministers/USA/USA_George_Catlett_Marshall_Jr.tga"
 	}
 	spriteType = {
-		name = "GFX_idea_USA_Hugh_Simons_Gibson_for_sde"
-		texturefile = "gfx/interface/ministers/USA/USA_Hugh_Simons_Gibson.tga"
-	}
-	spriteType = {
 		name = "GFX_idea_USA_Ralph_Johnson_Bunche_for_sde"
 		texturefile = "gfx/interface/ministers/USA/USA_Ralph_Johnson_Bunche.tga"
 	}
 	spriteType = {
 		name = "GFX_idea_USA_William_Borah_for_sde"
 		texturefile = "gfx/interface/ministers/USA/USA_William_Borah.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_USA_Hugh_Simons_Gibson_for_sli"
+		texturefile = "gfx/interface/ministers/USA/USA_Hugh_Simons_Gibson.tga"
 	}
 	spriteType = {
 		name = "GFX_idea_USA_Edward_Reilly_Stettinius_Jr_for_sli"
@@ -62875,12 +62875,12 @@ spriteTypes = {
 		texturefile = "gfx/interface/ministers/USA/USA_John_Bassett_Moore.tga"
 	}
 	spriteType = {
-		name = "GFX_idea_USA_John_Foster_Dulles_for_sli"
-		texturefile = "gfx/interface/ministers/USA/USA_John_Foster_Dulles.tga"
-	}
-	spriteType = {
 		name = "GFX_idea_USA_Patrick_Jay_Hurley_for_sli"
 		texturefile = "gfx/interface/ministers/USA/USA_Patrick_Jay_Hurley.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_USA_John_Foster_Dulles_for_mli"
+		texturefile = "gfx/interface/ministers/USA/USA_John_Foster_Dulles.tga"
 	}
 	spriteType = {
 		name = "GFX_idea_USA_Cordell_Hull_for_mli"
@@ -62949,7 +62949,7 @@ spriteTypes = {
 		texturefile = "gfx/interface/ministers/USA/USA_Hjalmar_Petersen.tga"
 	}
 	spriteType = {
-		name = "GFX_idea_USA_Jesse_Holman_Jones_eco_sde"
+		name = "GFX_idea_USA_Jesse_Holman_Jones_eco_sli"
 		texturefile = "gfx/interface/ministers/USA/USA_Jesse_Holman_Jones.tga"
 	}
 	spriteType = {
@@ -62957,16 +62957,16 @@ spriteTypes = {
 		texturefile = "gfx/interface/ministers/USA/USA_Charles_Edison.tga"
 	}
 	spriteType = {
-		name = "GFX_idea_USA_Robert_Porter_Patterson_Sr_eco_sli"
-		texturefile = "gfx/interface/ministers/USA/USA_Robert_Porter_Patterson_Sr.tga"
-	}
-	spriteType = {
 		name = "GFX_idea_USA_Vannevar_Bush_eco_sli"
 		texturefile = "gfx/interface/ministers/USA/USA_Vannevar_Bush.tga"
 	}
 	spriteType = {
-		name = "GFX_idea_USA_Alfred_Emanuel_Smith_eco_mli"
+		name = "GFX_idea_USA_Alfred_Emanuel_Smith_eco_sli"
 		texturefile = "gfx/interface/ministers/USA/USA_Alfred_Emanuel_Smith.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_USA_Robert_Porter_Patterson_Sr_eco_mli"
+		texturefile = "gfx/interface/ministers/USA/USA_Robert_Porter_Patterson_Sr.tga"
 	}
 	spriteType = {
 		name = "GFX_idea_USA_Charles_Linza_McNary_eco_mli"
@@ -63039,10 +63039,6 @@ spriteTypes = {
 		texturefile = "gfx/interface/ministers/USA/USA_Elmer_Austin_Benson.tga"
 	}
 	spriteType = {
-		name = "GFX_idea_USA_Francis_Beverley_Biddle_sec_sde"
-		texturefile = "gfx/interface/ministers/USA/USA_Francis_Beverley_Biddle.tga"
-	}
-	spriteType = {
 		name = "GFX_idea_USA_Harold_LeClair_Ickes_sec_sde"
 		texturefile = "gfx/interface/ministers/USA/USA_Harold_LeClair_Ickes.tga"
 	}
@@ -63051,20 +63047,16 @@ spriteTypes = {
 		texturefile = "gfx/interface/ministers/USA/USA_Konrad_Knute_Solberg.tga"
 	}
 	spriteType = {
-		name = "GFX_idea_USA_Charles_Douglas_Jackson_sec_sli"
-		texturefile = "gfx/interface/ministers/USA/USA_Charles_Douglas_Jackson.tga"
+		name = "GFX_idea_USA_Robert_Ferdinand_Wagner_I_sec_sde"
+		texturefile = "gfx/interface/ministers/USA/USA_Robert_Ferdinand_Wagner_I.tga"
 	}
 	spriteType = {
-		name = "GFX_idea_USA_Charles_Evans_Hughes_Sr_sec_sli"
-		texturefile = "gfx/interface/ministers/USA/USA_Charles_Evans_Hughes_Sr.tga"
+		name = "GFX_idea_USA_Francis_Beverley_Biddle_sec_sli"
+		texturefile = "gfx/interface/ministers/USA/USA_Francis_Beverley_Biddle.tga"
 	}
 	spriteType = {
 		name = "GFX_idea_USA_Fannie_Coralie_Perkins_sec_sli"
 		texturefile = "gfx/interface/ministers/USA/USA_Fannie_Coralie_Perkins.tga"
-	}
-	spriteType = {
-		name = "GFX_idea_USA_Ray_Lyman_Wilbur_sec_sli"
-		texturefile = "gfx/interface/ministers/USA/USA_Ray_Lyman_Wilbur.tga"
 	}
 	spriteType = {
 		name = "GFX_idea_USA_Samuel_Dickstein_sec_sli"
@@ -63075,16 +63067,24 @@ spriteTypes = {
 		texturefile = "gfx/interface/ministers/USA/USA_Alben_William_Barkley.tga"
 	}
 	spriteType = {
-		name = "GFX_idea_USA_Frederick_'Fred'_Moore_Vinson_sec_mli"
+		name = "GFX_idea_USA_Frederick_'Fred'_Moore_Vinson_sec_sli"
 		texturefile = "gfx/interface/ministers/USA/USA_Frederick_'Fred'_Moore_Vinson.tga"
 	}
 	spriteType = {
-		name = "GFX_idea_USA_James_Middleton_Cox_sec_mli"
+		name = "GFX_idea_USA_James_Middleton_Cox_sec_sli"
 		texturefile = "gfx/interface/ministers/USA/USA_James_Middleton_Cox.tga"
 	}
+		spriteType = {
+		name = "GFX_idea_USA_Charles_Evans_Hughes_Sr_sec_mli"
+		texturefile = "gfx/interface/ministers/USA/USA_Charles_Evans_Hughes_Sr.tga"
+	}
 	spriteType = {
-		name = "GFX_idea_USA_Robert_Ferdinand_Wagner_I_sec_sde"
-		texturefile = "gfx/interface/ministers/USA/USA_Robert_Ferdinand_Wagner_I.tga"
+		name = "GFX_idea_USA_Charles_Douglas_Jackson_sec_mli"
+		texturefile = "gfx/interface/ministers/USA/USA_Charles_Douglas_Jackson.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_USA_Ray_Lyman_Wilbur_sec_mli"
+		texturefile = "gfx/interface/ministers/USA/USA_Ray_Lyman_Wilbur.tga"
 	}
 	spriteType = {
 		name = "GFX_idea_USA_Robert_Houghwout_Jackson_sec_mli"
@@ -63093,6 +63093,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_USA_William_Francis_'Frank'_Murphy_sec_mli"
 		texturefile = "gfx/interface/ministers/USA/USA_William_Francis_'Frank'_Murphy.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_USA_John_Jay_McCloy_sec_mli"
+		texturefile = "gfx/interface/ministers/USA/USA_John_Jay_McCloy.tga"
 	}
 	spriteType = {
 		name = "GFX_idea_USA_Henry_John_Kaiser_sec_sco"
@@ -63105,10 +63109,6 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_USA_John_Elliott_Rankin_sec_pau"
 		texturefile = "gfx/interface/ministers/USA/USA_John_Elliott_Rankin.tga"
-	}
-	spriteType = {
-		name = "GFX_idea_USA_John_Jay_McCloy_sec_sco"
-		texturefile = "gfx/interface/ministers/USA/USA_John_Jay_McCloy.tga"
 	}
 	spriteType = {
 		name = "GFX_idea_USA_Kenneth_Claiborne_Royall_Sr_sec_sco"
