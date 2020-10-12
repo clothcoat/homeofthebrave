@@ -50,15 +50,39 @@ ideas = {
 			}
 			cancel_if_invalid = no
 		}
+		
+	CSA_Philip_Murray_hog_sde = {
+			allowed = { original_tag = CSA }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					social_democrat_allowed = yes
+					NOT = { has_country_flag = Philip_Murray_dead }
+				}
+			}
+			visible = {
+				social_democrat_allowed = yes
+				NOT = { has_country_flag = Philip_Murray_dead }
+			}
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea CAL_Philip_Murray_hog_sde"
+			}
+			traits = {
+				head_of_government
+				social_democrat
+				hog_political_protege
+			}
+			cancel_if_invalid = no
+		}
 	}
 
 	foreign_minister = { ### Foreign Minister ###
 
-	
+	}
 
 	economy_minister = { ### Economy Minister ###
 
-
+	}
 
 	security_minister = { ### Security Minister ###	
 	CSA_John_Abt_sec_sde = {

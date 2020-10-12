@@ -48,6 +48,14 @@ leader_traits = {
 		random = no
 	}
 
+	hog_anti_establishment_maverick = {
+		industrial_capacity_factory = 0.04
+		stability_factor = 0.02
+		political_power_gain = -0.05
+
+		random = no
+	}
+
 	hog_happy_amateur = {
 		production_speed_buildings_factor = -0.04
 		political_power_gain = 0.07
