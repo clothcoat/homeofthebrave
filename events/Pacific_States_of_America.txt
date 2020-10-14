@@ -739,7 +739,7 @@ country_event = { # 1937 Election
 					has_country_flag = PSA_1937_liberal_primary_warren
 				}
 				add_ideas = CAL_Earl_Warren_hog_sli
-				add_ideas = CAL_Friend_William_Richardson_for_sli
+				add_ideas =  CAL_Hugh_Simons_Gibson_for_sli
 				add_ideas = CAL_Harley_Eugene_Knox_eco_sli
 				add_ideas = CAL_Bestor_Robinson_sec_sli
 			}
@@ -748,7 +748,7 @@ country_event = { # 1937 Election
 					has_country_flag = PSA_1937_progressive_primary_olson
 				}
 				add_ideas = CAL_Culbert_Olson_hog_sli
-				add_ideas = CAL_Friend_William_Richardson_for_sli
+				add_ideas =  CAL_Franck_Roberts_Havenner_for_sli
 				add_ideas = CAL_Harley_Eugene_Knox_eco_sli
 				add_ideas = CAL_Bestor_Robinson_sec_sli
 			}
@@ -757,7 +757,7 @@ country_event = { # 1937 Election
 					has_country_flag = PSA_1937_liberal_primary_mcnary
 				}
 				add_ideas = CAL_Charles_L_McNary_hog_sli
-				add_ideas = CAL_Friend_William_Richardson_for_sli
+				add_ideas = CAL_George_Catlett_Marshall_Jr_for_sli
 				add_ideas = CAL_Harley_Eugene_Knox_eco_sli
 				add_ideas = CAL_Bestor_Robinson_sec_sli
 			}
@@ -829,21 +829,30 @@ country_event = { # 1937 Election
 			elections_allowed = yes
 		}
 		hidden_effect = {
+			if = { # Robert Taft
+				limit = {
+					has_country_flag = PSA_1937_republican_primary_taft
+				}
+				add_ideas = CAL_Charles_A_Sprague_hog_mli
+				add_ideas = CAL_David_Prescott_Barrows_for_mli
+				add_ideas = CAL_Donald_Wills_Douglas_Sr_eco_mli
+				add_ideas = CAL_Frank_L_Shaw_sec_mli
+			}
 			if = { # Harry Chandler
 				limit = {
 					has_country_flag = PSA_1937_republican_primary_chandler
 				}
 				add_ideas = CAL_Douglas_McKay_hog_mli
-				add_ideas = CAL_David_Prescott_Barrows_for_mli
+				add_ideas = CAL_Friend_William_Richardson_for_mli
 				add_ideas = CAL_Donald_Wills_Douglas_Sr_eco_mli
 				add_ideas = CAL_Frank_L_Shaw_sec_mli
 			}
-			if = { # John Arthur Gellatly
+			if = { # Frank Merriam
 				limit = {
-					has_country_flag = PSA_1937_republican_primary_gellatly
+					has_country_flag = PSA_1937_republican_primary_merriam
 				}
-				add_ideas = CAL_John_Arthur_Gellatly_hog_mli
-				add_ideas = CAL_David_Prescott_Barrows_for_mli
+				add_ideas =  CAL_Ralph_Lawrence_Carr_hog_mli
+				add_ideas = CAL_Friend_William_Richardson_for_mli
 				add_ideas = CAL_Donald_Wills_Douglas_Sr_eco_mli
 				add_ideas = CAL_Frank_L_Shaw_sec_mli
 			}
@@ -851,8 +860,26 @@ country_event = { # 1937 Election
 				limit = {
 					has_country_flag = PSA_1937_republican_primary_hughes
 				}
-				add_ideas = CAL_Howard_Hughes_hog_mli
+				add_ideas = CAL_George_N_Craig_hog_mli
 				add_ideas = CAL_David_Prescott_Barrows_for_mli
+				add_ideas = CAL_Donald_Wills_Douglas_Sr_eco_mli
+				add_ideas = CAL_Frank_L_Shaw_sec_mli
+			}
+			if = { # Frank Knox
+				limit = {
+					has_country_flag = PSA_1937_republican_primary_knox
+				}
+				add_ideas = CAL_John_Arthur_Gellatly_hog_mli
+				add_ideas = CAL_David_Prescott_Barrows_for_mli
+				add_ideas = CAL_Donald_Wills_Douglas_Sr_eco_mli
+				add_ideas = CAL_Frank_L_Shaw_sec_mli
+			}
+			if = { # Louis B. Meyer
+				limit = {
+					has_country_flag = PSA_1937_republican_primary_meyer
+				}
+				add_ideas = CAL_Arthur_B_Langlie_hog_mli
+				add_ideas = CAL_Friend_William_Richardson_for_mli
 				add_ideas = CAL_Donald_Wills_Douglas_Sr_eco_mli
 				add_ideas = CAL_Frank_L_Shaw_sec_mli
 			}
@@ -926,19 +953,28 @@ country_event = { # 1937 Election
 		hidden_effect = {
 			if = {
 				limit = {
-					has_country_flag = PSA_1937_democratic_primary_merriam
+					has_country_flag = PSA_1937_democratic_primary_kaiser
 				}
-				add_ideas = CAL_Frank_Merriam_hog_sco
-				add_ideas = CAL_Sheridan_Downey_for_sco
+				add_ideas = CAL_Robert_Taylor_Jones_hog_sco
+				add_ideas =  CAL_Louis_Arthur_Johnson_for_sco
 				add_ideas = CAL_Norman_Chandler_eco_sco
 				add_ideas = CAL_Henry_Fountain_Ashurst_sec_sco
 			}
 			if = {
 				limit = {
-					has_country_flag = PSA_1937_democratic_primary_jones
+					has_country_flag = PSA_1937_democratic_primary_martin
 				}
-				add_ideas = CAL_Robert_Taylor_Jones_hog_sco
-				add_ideas = CAL_Sheridan_Downey_for_sco
+				add_ideas = CAL_Val_Peterson_hog_sco
+				add_ideas = CAL_Henry_Morgenthau_Jr_for_sco
+				add_ideas = CAL_Norman_Chandler_eco_sco
+				add_ideas = CAL_Henry_Fountain_Ashurst_sec_sco
+			}
+			if = {
+				limit = {
+					has_country_flag = PSA_1937_democratic_primary_disney
+				}
+				add_ideas = CAL_Harry_P_Cain_hog_sco
+				add_ideas = CAL_William_Averell_Harriman_for_sco
 				add_ideas = CAL_Norman_Chandler_eco_sco
 				add_ideas = CAL_Henry_Fountain_Ashurst_sec_sco
 			}
@@ -2238,7 +2274,7 @@ country_event = { # 1940 election
 					has_country_flag = PSA_1940_liberal_primary_warren
 				}
 				add_ideas = CAL_Earl_Warren_hog_sli
-				add_ideas = CAL_Friend_William_Richardson_for_sli
+				add_ideas =  CAL_Hugh_Simons_Gibson_for_sli
 				add_ideas = CAL_Harley_Eugene_Knox_eco_sli
 				add_ideas = CAL_Bestor_Robinson_sec_sli
 			}
@@ -2247,7 +2283,7 @@ country_event = { # 1940 election
 					has_country_flag = PSA_1940_liberal_primary_martin
 				}
 				add_ideas = CAL_Clarence_D_Martin_hog_sli
-				add_ideas = CAL_Friend_William_Richardson_for_sli
+				add_ideas =  CAL_Franck_Roberts_Havenner_for_sli
 				add_ideas = CAL_Harley_Eugene_Knox_eco_sli
 				add_ideas = CAL_Bestor_Robinson_sec_sli
 			}
@@ -2256,7 +2292,7 @@ country_event = { # 1940 election
 					has_country_flag = PSA_1940_liberal_primary_west
 				}
 				add_ideas = CAL_Oswald_West_hog_sli
-				add_ideas = CAL_Friend_William_Richardson_for_sli
+				add_ideas =  CAL_George_Catlett_Marshall_Jr_for_sli
 				add_ideas = CAL_Harley_Eugene_Knox_eco_sli
 				add_ideas = CAL_Bestor_Robinson_sec_sli
 			}
@@ -2368,7 +2404,8 @@ country_event = { # 1940 election
 				limit = {
 					has_country_flag = PSA_1940_democratic_primary_lee
 				}
-				add_ideas = CAL_Sheridan_Downey_for_sco
+				add_ideas = CAL_Bourke_B_Hickenlooper_hog_sco
+				add_ideas = CAL_John_Francis_Dockweiler_for_sco
 				add_ideas = CAL_Norman_Chandler_eco_sco
 				add_ideas = CAL_Henry_Fountain_Ashurst_sec_sco
 			}
@@ -2377,7 +2414,7 @@ country_event = { # 1940 election
 					has_country_flag = PSA_1940_democratic_primary_jones
 				}
 				add_ideas = CAL_Robert_Taylor_Jones_hog_sco
-				add_ideas = CAL_Sheridan_Downey_for_sco
+				add_ideas =  CAL_Louis_Arthur_Johnson_for_sco
 				add_ideas = CAL_Norman_Chandler_eco_sco
 				add_ideas = CAL_Henry_Fountain_Ashurst_sec_sco
 			}
@@ -9347,7 +9384,7 @@ country_event = {# Long's Head of State
 		}
 		remove_all_ministers = yes		
 		hidden_effect = {
-			add_ideas = CAL_Hiram_Johnson_hog_sli
+			add_ideas = CAL_Hiram_Johnson_hog_sde
 			add_ideas = CAL_Ralph_Johnson_Bunche_for_sde
 			add_ideas = CAL_Hjalmar_Peterson_eco_sde
 			add_ideas = CAL_Konrad_Knute_Solberg_sec_sde
