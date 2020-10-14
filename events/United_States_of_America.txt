@@ -9540,6 +9540,7 @@ country_event = { # 1940 Election
 			}
 		}
 	}
+}
 
 ### 1944 Elections and Primaries ###
 country_event = { # 1944 Progressive Primary
@@ -13645,7 +13646,7 @@ country_event = { # Republican Convention
 			create_country_leader = {
 					name = "John Taber"
 					desc = "POLITICS_JOHN_TABER_DESC"
-					picture = "gfx/leaders/USA/Portrait_USA_John_Bricker.tga"
+					picture = "gfx/leaders/USA/Portrait_USA_John_Taber.tga"
 					expire = "1965.1.1"
 					ideology = market_liberal_subtype
 					traits = { staunch_constitutionalist }
@@ -13679,7 +13680,7 @@ country_event = { # Democratic Convention
 			create_country_leader = {
 					name = "Carter Glass"
 					desc = "POLITICS_Carter_Glass_DESC"
-					picture = "gfx/leaders/USA/R_A_Taft.tga"
+					picture = "gfx/leaders/USA/Portrait_USA_Carter_Glass.tga"
 					expire = "1965.1.1"
 					ideology = social_conservative_subtype
 					traits = { staunch_constitutionalist }
