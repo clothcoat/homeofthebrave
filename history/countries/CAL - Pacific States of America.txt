@@ -359,6 +359,67 @@ create_corps_commander = {# Jimmy Doolittle
 	logistics_skill = 4
 	id = 986
 }
+create_corps_commander = {# Ross E. Rowell
+	name = "Ross E. Rowell"
+	desc = "CAL_ROSS_ROWELL_ARMY_DESC"
+	portrait_path = "gfx/leaders/CAL/Portrait_CAL_Ross_E_Rowell.tga"
+	traits = {
+		career_officer
+		air_commander
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 1
+	id = 9861
+}
+create_corps_commander = {# Harry B. Liversedge
+	name = "Harry B. Liversedge"
+	desc = "CAL_HARRY_LIVERSEDGE_ARMY_DESC"
+	portrait_path = "gfx/leaders/CAL/Portrait_CAL_Harry_B_Liversedge.tga"
+	traits = {
+		media_personality
+		naval_invader
+	}
+	skill = 3
+	attack_skill = 3
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 2
+	id = 9862
+}
+create_corps_commander = {# Millard Fillmore Harmon
+	name = "Millard Fillmore Harmon"
+	desc = "CAL_MILLARD_FILLMORE_HARMON_ARMY_DESC"
+	portrait_path = "gfx/leaders/CAL/Portrait_CAL_Millard_Fillmore_Harmon.tga"
+	traits = {
+		air_commander
+		skilled_staffer
+		career_officer
+	}
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 2
+	id = 9862
+}
+create_corps_commander = {# George C. Shaw
+	name = "George C. Shaw"
+	desc = "CAL_GEORGE_SHAW_ARMY_DESC"
+	portrait_path = "gfx/leaders/CAL/Portrait_CAL_George_c_shaw.tga"
+	traits = {
+		war_hero
+		career_officer
+	}
+	skill = 2
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 1
+	id = 9863
+}
 create_corps_commander = {# Herbert B. Powell
 	name = "Herbert B. Powell"
 	desc = "CAL_HERBERT_POWELL_ARMY_DESC"
