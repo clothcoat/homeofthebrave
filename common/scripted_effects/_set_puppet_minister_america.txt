@@ -559,7 +559,7 @@ set_puppet_minister_america = {
 		else_if = {
 			limit = { has_government = social_liberal }
 			add_ideas = {
-				CAL_Hiram_Johnson_hog_sli
+				CAL_Culbert_Olson_hog_sli
 				CAL_George_Catlett_Marshall_Jr_for_sli
 				CAL_Harley_Eugene_Knox_eco_sli
 				CAL_Bestor_Robinson_sec_sli
@@ -583,7 +583,7 @@ set_puppet_minister_america = {
 				}
 			}
 			add_ideas = {
-				CAL_Frank_Merriam_hog_sco
+				 CAL_Robert_Taylor_Jones_hog_sco
 				CAL_Henry_Morgenthau_Jr_for_sco
 				CAL_William_Mulholland_eco_sco
 				CAL_Claude_A_Watson_sec_sco
@@ -2092,8 +2092,8 @@ set_puppet_minister_america = {
 				}
 			}
 			add_ideas = {
-				NEE_Christian_Herter_hog_sco
-				NEE_Herbert_Claiborne_Pell_Jr_for_sco
+				NEE_Joseph_Kennedy_Sr_hog_sco
+				 NEE_Dean_Gooderham_Acheson_for_sco
 				NEE_William_Stuart_Symington_Jr_eco_sco
 				NEE_Wilbur_Lucius_Cross_sec_sco
 			}
