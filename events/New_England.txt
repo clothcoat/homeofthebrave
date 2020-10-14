@@ -841,7 +841,7 @@ country_event = { # The Provisional Government
 			elections_allowed = yes
 		}
 	}
-	option = { # Joseph William Martin Jr.
+	option = { # James Michael Curley 
 		ai_chance = {
 			factor = 25
 			modifier = {
@@ -854,8 +854,8 @@ country_event = { # The Provisional Government
 		}
 		name = newengland.20.e
 		hidden_effect = {
-			add_ideas = NEE_Christian_Herter_hog_sco
-			add_ideas = NEE_Herbert_Claiborne_Pell_Jr_for_sco
+			add_ideas = NEE_Joseph_Kennedy_Sr_hog_sco
+			add_ideas = NEE_Dean_Gooderham_Acheson_for_sco
 			add_ideas = NEE_William_Stuart_Symington_Jr_eco_sco
 			add_ideas = NEE_Wilbur_Lucius_Cross_sec_sco
 		}
@@ -1418,8 +1418,8 @@ country_event = { # 1940 Election
 				limit = {
 					has_country_flag = NEE_1940_democrat_primary_kennedy
 				}
-				add_ideas = NEE_Joseph_Kennedy_Sr_hog_mli
-				add_ideas = NEE_Herbert_Claiborne_Pell_Jr_for_sco
+				add_ideas = NEE_Joseph_Kennedy_Sr_hog_sco
+				add_ideas = NEE_Dean_Gooderham_Acheson_for_sco
 				add_ideas = NEE_William_Stuart_Symington_Jr_eco_sco
 				add_ideas = NEE_Wilbur_Lucius_Cross_sec_sco
 			}
@@ -1427,8 +1427,8 @@ country_event = { # 1940 Election
 				limit = {
 					has_country_flag = NEE_1940_democratic_primary_curley
 				}
-				add_ideas = NEE_Joseph_Kennedy_Sr_hog_mli
-				add_ideas = NEE_Herbert_Claiborne_Pell_Jr_for_sco
+				add_ideas = NEE_Joseph_Kennedy_Sr_hog_sco
+				add_ideas = NEE_Dean_Gooderham_Acheson_for_sco
 				add_ideas = NEE_William_Stuart_Symington_Jr_eco_sco
 				add_ideas = NEE_Wilbur_Lucius_Cross_sec_sco
 			}
@@ -1436,8 +1436,8 @@ country_event = { # 1940 Election
 				limit = {
 					has_country_flag = NEE_1940_democratic_primary_smith
 				}
-				add_ideas = NEE_Joseph_Kennedy_Sr_hog_mli
-				add_ideas = NEE_Herbert_Claiborne_Pell_Jr_for_sco
+				add_ideas = NEE_Joseph_Kennedy_Sr_hog_sco
+				add_ideas = NEE_Dean_Gooderham_Acheson_for_sco
 				add_ideas = NEE_William_Stuart_Symington_Jr_eco_sco
 				add_ideas = NEE_Wilbur_Lucius_Cross_sec_sco
 			}
@@ -1951,7 +1951,7 @@ country_event = { # 1944 election
 					has_country_flag = NEE_1944_democratic_primary_herter
 				}
 				add_ideas = NEE_Christian_Herter_hog_sco
-				add_ideas = NEE_Herbert_Claiborne_Pell_Jr_for_sco
+				add_ideas = NEE_Dean_Gooderham_Acheson_for_sco
 				add_ideas = NEE_William_Stuart_Symington_Jr_eco_sco
 				add_ideas = NEE_Wilbur_Lucius_Cross_sec_sco
 			}
