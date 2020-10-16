@@ -51,8 +51,8 @@ set_puppet_minister_africa = {
 			}
 			add_ideas = {
 				ALG_Mouloud_Feraoun_hog_sli
-				ALG_Abderrahmane_Fares_for_sli
-				ALG_Ahmed_Francis_eco_sli
+				ALG_Abane_Ramdane_for_sli
+				ALG_Abderrahmane_Fares_eco_sli
 				ALG_Mohamed_Khider_sec_sli
 			}
 		}
@@ -296,10 +296,10 @@ set_puppet_minister_africa = {
 		if = {
 			limit = { has_government = totalist }
 			add_ideas = {
-				ERI_Misghina_Almedom_hog_tot
+				ERI_Kegnazmach_Seleba_Wolde_Selassie_hog_tot
 				ERI_Keshi_Dimetros_Ghebremariam_for_tot
-				ERI_Tsegai_Negash_eco_tot
-				ERI_Amine_Gebre_Kristos_sec_tot
+				EST_Juhan_Narma_Nihtig_eco_tot
+				EST_Aleksander_Rusev_sec_tot
 			}
 		}
 		else_if = {
@@ -307,26 +307,26 @@ set_puppet_minister_africa = {
 			add_ideas = {
 				ERI_Kegnazmach_Assefa_Bhata_hog_syn
 				ERI_Temertza_Ogbazghi_for_syn
-				ERI_A_bebe_Yasin_eco_syn
-				ERI_Elias_Teklu_sec_syn
+				EST_Paul_Keerdo_eco_tot
+				EST_Maksim_Unt_sec_tot
 			}
 		}
 		else_if = {
 			limit = { has_government = radical_socialist }
 			add_ideas = {
 				ERI_Kegnazmach_Adom_Tesfatsion_hog_rso
-				ERI_Ras_Kidanemariam_Ghebremeskel_for_rso
-				ERI_Issayas_Tesfai_eco_rso
-				ERI_Sirji_Abdu_sec_rso
+				ERI_Rasi_Kidanemariam_for_rso
+				EST_Paul_Keerdo_eco_tot
+				EST_Maksim_Unt_sec_tot
 			}
 		}
 		else_if = {
 			limit = { has_government = social_democrat }
 			add_ideas = {
-				ERI_Woldeab_Woldemariam_hog_sde
-				ERI_Omer_Baduri_for_sde
-				ERI_Abraha_Deboch_eco_sde
-				ERI_Mohammed_Saeed_Abera_sec_sde
+				ERI_Suliman_Omer_hog_sde
+				ERI_Rasi_Kidanemariam_for_rso
+				EST_Paul_Keerdo_eco_tot
+				EST_Maksim_Unt_sec_tot
 			}
 		}
 		else_if = {
@@ -341,7 +341,7 @@ set_puppet_minister_africa = {
 		else_if = {
 			limit = { has_government = market_liberal }
 			add_ideas = {
-				ERI_Maascio_Zewede_hog_mli
+				ERI_Yassin_Ahmed_Batouq_hog_mli
 				ERI_Blatta_Mohamed_Abdella_for_mli
 				ERI_Raoul_Magrin_Vernerey_eco_mli
 				ERI_Ali_Radadi_sec_mli
@@ -351,7 +351,7 @@ set_puppet_minister_africa = {
 			limit = { has_government = social_conservative }
 			add_ideas = {
 				ERI_Biene_Baraki_hog_sco
-				ERI_Knzmaa_Berhzanu_Hmdyn_for_sco
+				ERI_Ibrahim_Sultan_Ali_for_sco
 				ERI_Andom_Tesfazion_eco_sco
 				ERI_Abdulkader_Kebire_sec_sco
 			}

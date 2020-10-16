@@ -7818,7 +7818,7 @@ country_event = { # Provisional President
 			factor = 25
 		}
 		hidden_effect = {
-			add_ideas = USA_Wendell_Willkie_hog_mli
+			add_ideas = USA_Wendell_Willkie_hog_sli
 			add_ideas = USA_Cordell_Hull_for_mli
 			add_ideas = USA_Roy_Dikeman_Chapin_Sr_eco_mli
 			add_ideas = USA_Alben_William_Barkley_sec_sli
@@ -9488,7 +9488,7 @@ country_event = { # 1940 Election
 				limit = {
 					has_country_flag = USA_1940_democratic_primary_smith
 				}
-				add_ideas = USA_Wendell_Willkie_hog_mli
+				add_ideas = USA_Wendell_Willkie_hog_sli
 				add_ideas = USA_Cordell_Hull_for_mli
 				add_ideas = USA_Roy_Dikeman_Chapin_Sr_eco_mli
 				add_ideas = USA_Alben_William_Barkley_sec_sli

@@ -146,6 +146,17 @@ ideas = {
 				stability_factor = 0.03
 			}
 		}
+		NEE_immigrant_aid_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NEE_immigrant_aid_idea"}
+			allowed = { always = no }
+			removal_cost = -1
+			picture = preferred_immigration
+			modifier = {
+				monthly_population = 0.05
+				consumer_goods_factor = -0.01
+				stability_factor = -0.01
+			}
+		}
 		NEE_hamiltonian_constitution = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NEE_hamiltonian_constitution"}
 			allowed = { always = no }
