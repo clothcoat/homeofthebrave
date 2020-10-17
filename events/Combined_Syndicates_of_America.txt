@@ -1681,6 +1681,12 @@ country_event = { # Education reform
 		tag = CSA
 		has_completed_focus = CSA_social_revolution
 		has_completed_focus = CSA_revolutionary_education
+		NOT = {
+				has_country_leader = {
+				ruling_only = yes
+				name = "John Dewey"
+				}
+			}
 	}
 
 	mean_time_to_happen = {
@@ -1691,6 +1697,35 @@ country_event = { # Education reform
 
 	option = { # Flavor
 		name = csa.21.a
+		add_political_power = 50
+	}
+}
+
+country_event = { # Education reform (Dewey)
+	id = csa.2100
+	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.2100"}
+	title = csa.2100.t
+	desc = csa.2100.d
+	picture = GFX_report_event_USA_congress
+
+	trigger = {
+		tag = CSA
+		has_completed_focus = CSA_social_revolution
+		has_completed_focus = CSA_revolutionary_education
+		has_country_leader = {
+				ruling_only = yes
+				name = "John Dewey"
+				}
+	}
+
+	mean_time_to_happen = {
+		months = 11
+	}
+
+	fire_only_once = yes
+
+	option = { # Flavor
+		name = csa.2100.a
 		add_political_power = 50
 	}
 }
@@ -3368,7 +3403,7 @@ country_event = { # Head of State Election SOCDEM
 		}
 		add_ideas = CSA_Matthew_Woll_hog_sde
 	}
-	option = { # Bayard Rustin
+	option = { # George Meany
 		name = csa.3703.b
 		trigger = {
 			has_government = social_democrat
@@ -3377,9 +3412,9 @@ country_event = { # Head of State Election SOCDEM
 			ideology = social_democrat
 			popularity = 0.02
 		}
-		add_ideas = CSA_Bayard_Rustin_hog_rso
+		add_ideas = CSA_George_Meany_hog_sde
 	}
-	option = { # Daniel Hoan
+	option = { # Philip Murray
 		name = csa.3703.c
 		trigger = {
 			has_government = social_democrat
@@ -3388,19 +3423,7 @@ country_event = { # Head of State Election SOCDEM
 			ideology = social_democrat
 			popularity = 0.02
 		}
-		add_ideas = CSA_Daniel_Hoan_hog_rso
-	}
-	option = { # Meyer London
-		name = csa.3703.e
-		trigger = {
-			has_government = social_democrat
-			NOT = { has_country_flag = CSA_1940_cio_election_london }
-		}
-		add_popularity = {
-			ideology = social_democrat
-			popularity = 0.02
-		}
-		add_ideas = CSA_Meyer_London_hog_rso
+		add_ideas = CSA_Philip_Murray_hog_sde
 	}
 }
 
@@ -9219,11 +9242,22 @@ country_event = { # AFL Leadership Contest
 			days = 1460
 			}
 		}
+		add_ideas = {
+			CSA_Thomas_Kennedy_for_sde
+			CSA_Reuben_Soderstrom_eco_sde
+			CSA_Frank_J_Hayes_sec_sde
+		}
 		set_politics = {
 			ruling_party = social_democrat
 			election_frequency = 48
 			last_election = "1936.11.08"
 			elections_allowed = no
+		}
+		hidden_effect = {
+		country_event = {
+		id = csa.3703
+		days = 3
+		}
 		}
 	}
 	option = { # William Green
@@ -9242,11 +9276,22 @@ country_event = { # AFL Leadership Contest
 			days = 1460
 			}
 		}
+		add_ideas = {
+			CSA_Thomas_Kennedy_for_sde
+			CSA_Reuben_Soderstrom_eco_sde
+			CSA_Frank_J_Hayes_sec_sde
+		}
 		set_politics = {
 			ruling_party = social_democrat
 			election_frequency = 48
 			last_election = "1936.11.08"
 			elections_allowed = no
+		}
+		hidden_effect = {
+		country_event = {
+		id = csa.3703
+		days = 3
+		}
 		}
 	}
 	option = { # David Dubinsky
@@ -9267,11 +9312,22 @@ country_event = { # AFL Leadership Contest
 			days = 1460
 			}
 		}
+		add_ideas = {
+			CSA_Thomas_Kennedy_for_sde
+			CSA_Reuben_Soderstrom_eco_sde
+			CSA_Frank_J_Hayes_sec_sde
+		}
 		set_politics = {
 			ruling_party = social_democrat
 			election_frequency = 48
 			last_election = "1936.11.08"
 			elections_allowed = no
+		}
+		hidden_effect = {
+		country_event = {
+		id = csa.3703
+		days = 3
+		}
 		}
 	}
 }
@@ -9390,7 +9446,7 @@ country_event = { # AFL Leadership Contest
 			elections_allowed = no
 		}
 	}
-	option = { # Samuel Green
+	option = { # William Green
 	name = csa.3251.b
 	hidden_effect = {
 		create_country_leader = {
