@@ -2331,7 +2331,7 @@ country_event = { # The 1936 Election - Coalition
 			set_country_flag = USA_president_norris
 		}
 		hidden_effect = {
-			add_ideas = USA_George_Norris_hog_sde
+			add_ideas = USA_Quentin_Roosevelt_hog_sde
 			add_ideas = USA_William_Borah_for_sde
 			add_ideas = USA_George_Henry_Dern_eco_sde
 			add_ideas = USA_Bronson_Murray_Cutting_sec_sde
@@ -2439,7 +2439,7 @@ country_event = { # The 1936 Election - Coalition
 		hidden_effect = {
 			add_ideas = USA_John_Nance_Garner_hog_sco
 			add_ideas = USA_Louis_Arthur_Johnson_for_sco
-			add_ideas = USA_Alfred_Emanuel_Smith_eco_sli
+			add_ideas = USA_Claude_Augustus_Swanson_eco_sco
 			add_ideas = USA_Kenneth_Claiborne_Royall_Sr_sec_sco
 		}
 		hidden_effect = {
@@ -2674,8 +2674,8 @@ country_event = { # The 1936 Election - You're Fucked (Or are you...)
 		}
 		hidden_effect = {
 			add_ideas = USA_John_Nance_Garner_hog_sco
-			add_ideas = USA_Cordell_Hull_for_mli
-			add_ideas = USA_Alfred_Emanuel_Smith_eco_mli
+			add_ideas = USA_Dean_Gooderham_Acheson_for_sco
+			add_ideas = USA_James_Francis_Byrnes_eco_sco
 			add_ideas = USA_Martin_Dies_Jr_sec_sco
 		}
 		add_popularity = {
@@ -2735,7 +2735,7 @@ country_event = { # The 1936 Election - You're Fucked (Or are you...)
 			set_country_flag = USA_president_norris
 		}
 		hidden_effect = {
-			add_ideas = USA_George_Norris_hog_sde
+			add_ideas = USA_Quentin_Roosevelt_hog_sde
 			add_ideas = USA_William_Borah_for_sde
 			add_ideas = USA_George_Henry_Dern_eco_sde
 			add_ideas = USA_Bronson_Murray_Cutting_sec_sde
@@ -7803,7 +7803,7 @@ country_event = { # Provisional President
 		}
 		hidden_effect = {
 			add_ideas = USA_Quentin_Roosevelt_hog_sli
-			add_ideas = USA_John_Bassett_Moore_for_sli
+			add_ideas = USA_Cordell_Hull_for_sli
 			add_ideas = USA_Robert_Porter_Patterson_Sr_eco_sli
 			add_ideas = USA_Charles_Evans_Hughes_Sr_sec_mli
 		}
@@ -7819,7 +7819,7 @@ country_event = { # Provisional President
 		}
 		hidden_effect = {
 			add_ideas = USA_Wendell_Willkie_hog_sli
-			add_ideas = USA_Cordell_Hull_for_mli
+			add_ideas = USA_Henry_Morgenthau_Jr_for_mli
 			add_ideas = USA_Roy_Dikeman_Chapin_Sr_eco_mli
 			add_ideas = USA_Alben_William_Barkley_sec_sli
 		}
@@ -7847,7 +7847,7 @@ country_event = { # Provisional President
 		}
 		hidden_effect = {
 			add_ideas = USA_John_Nance_Garner_hog_sco
-			add_ideas = USA_Cordell_Hull_for_mli
+			add_ideas = USA_James_Watson_Gerard_Jr_for_sco
 			add_ideas = USA_Alfred_Emanuel_Smith_eco_mli
 			add_ideas = USA_Martin_Dies_Jr_sec_sco
 		}
@@ -9160,30 +9160,8 @@ country_event = { # 1940 Republican Primary
 			}
 		}
 	}
-	option = { # nominate Wendell Willkie
-		name = ustates.201.e
-		trigger = {
-			NOT = {
-				has_country_leader = {
-					ruling_only = yes
-					name = "Alf Landon"
-				}
-			}
-		}
-		hidden_effect = {
-			set_country_flag = USA_1940_republican_primary_willkie
-			create_country_leader = {
-				name = "Wendell Willkie"
-				desc = "POLITICS_WENDELL_WILLKIE_DESC"
-				picture = "Portrait_USA_Wendell_Willkie_KR.tga"
-				expire = "1965.1.1"
-				ideology = social_liberal_subtype
-				traits = { smooth_talking_charmer }
-			}
-		}
-	}
 	option = { # nominate Thomas Dewey
-		name = ustates.201.f
+		name = ustates.201.e
 		trigger = {
 			NOT = {
 				has_country_leader = {
@@ -9316,6 +9294,28 @@ country_event = { # 1940 Democrat Primary
 			}
 		}
 	}
+	option = { # nominate Wendell Willkie
+		name = ustates.202.f
+		trigger = {
+			NOT = {
+				has_country_leader = {
+					ruling_only = yes
+					name = "John Nance Garner"
+				}
+			}
+		}
+		hidden_effect = {
+			set_country_flag = USA_1940_democratic_primary_willkie
+			create_country_leader = {
+				name = "Wendell Willkie"
+				desc = "POLITICS_WENDELL_WILLKIE_DESC"
+				picture = "Portrait_USA_Wendell_Willkie_KR.tga"
+				expire = "1965.1.1"
+				ideology = social_liberal_subtype
+				traits = { smooth_talking_charmer }
+			}
+		}
+	}
 }
 
 country_event = { # 1940 Election
@@ -9343,6 +9343,9 @@ country_event = { # 1940 Election
 		NOT = {
 			has_country_flag = USA_had_1940_election
 		}
+		NOT = {
+			has_country_flag = USA_macarthur_coup
+		}
 	}
 
 	is_triggered_only = yes
@@ -9366,11 +9369,30 @@ country_event = { # 1940 Election
 			ideology = social_democrat
 			popularity = 0.12
 		}
+		
 		hidden_effect = {
+		if = { # Not Wallace
+				limit = {
+					OR = {
+					has_country_flag = USA_1940_progressive_primary_la_follete
+					has_country_flag = USA_1940_progressive_primary_mcnary
+					has_country_flag = USA_1940_progressive_primary_roosevelt
+					}
+				}
 			add_ideas = USA_Henry_Wallace_hog_sde
 			add_ideas = USA_Hugh_Simons_Gibson_for_sli
 			add_ideas = USA_Hjalmar_Petersen_eco_sde
 			add_ideas = USA_Konrad_Knute_Solberg_sec_sde
+			}
+		if = { # Henry Wallace
+				limit = {
+					has_country_flag = USA_1940_progressive_primary_wallace
+				}
+			add_ideas = USA_Quentin_Roosevelt_hog_sde
+			add_ideas = USA_George_Catlett_Marshall_Jr_for_sde
+			add_ideas = USA_George_Henry_Dern_eco_sde
+			add_ideas = USA_Harold_LeClair_Ickes_sec_sde
+			}
 
 			# next primaries
 			country_event = {
@@ -9428,29 +9450,29 @@ country_event = { # 1940 Election
 			}
 		}
 		hidden_effect = {
-			if = { # Alf Landon
+			if = { # Alf Landon Wing
 				limit = {
 					OR = {
 					has_country_flag = USA_1940_republican_primary_willkie
 					has_country_flag = USA_1940_republican_primary_dewey
 					}
 				}
-				add_ideas = USA_Alben_W_Barkley_hog_sli
+				add_ideas = USA_Charles_L_McNary_hog_sli
 				add_ideas = USA_John_Bassett_Moore_for_sli
 				add_ideas = USA_Vannevar_Bush_eco_sli
 				add_ideas = USA_Charles_Evans_Hughes_Sr_sec_mli
 			}
-			if = { # Quentin Roosevelt
+			if = { # Charles Curtis Wing
 				limit = {
 					OR = {
 						has_country_flag = USA_1940_republican_primary_bricker
 						has_country_flag = USA_1940_republican_primary_taft
 					}
 				}
-				add_ideas = USA_Thomas_Dewey_hog_sli
-				add_ideas = USA_Cordell_Hull_for_mli
+				add_ideas = USA_John_W_Bricker_hog_sli
+				add_ideas = USA_Norman_H_Davis_for_mli
 				add_ideas = USA_Ray_Lyman_Wilbur_Sr_eco_mli
-				add_ideas = USA_James_Middleton_Cox_sec_sli
+				add_ideas = USA_John_Jay_McCloy_sec_mli
 			}
 
 			# next primaries
@@ -9474,31 +9496,57 @@ country_event = { # 1940 Election
 		hidden_effect = {
 			set_country_flag = USA_1940_election_democrat
 		}
-			set_politics = {
-				ruling_party = social_conservative
-				election_frequency = 48
-				elections_allowed = yes
+		if = {
+		limit = {
+		OR = { 
+		has_country_flag = USA_1940_democratic_primary_smith
+		has_country_flag = USA_1940_democratic_primary_willkie
+				}
 			}
-			add_popularity = {
-				ideology = social_conservative
-				popularity = 0.20
+		set_politics = {
+			ruling_party = social_liberal
+			election_frequency = 48
+			elections_allowed = yes
 			}
+		add_popularity = {
+			ideology = social_liberal
+			popularity = 0.12
+			}
+		}
+		if = {
+		limit = {
+		OR = { 
+		has_country_flag = USA_1940_democratic_primary_byrd
+		has_country_flag = USA_1940_democratic_primary_garner
+		has_country_flag = USA_1940_democratic_primary_macarthur
+				}
+			}
+		set_politics = {
+			ruling_party = social_conservative
+			election_frequency = 48
+			elections_allowed = yes
+			}
+		add_popularity = {
+			ideology = social_conservative
+			popularity = 0.12
+			}
+		}
 		hidden_effect = {
 			if = { # Al Smith
 				limit = {
 					has_country_flag = USA_1940_democratic_primary_smith
 				}
 				add_ideas = USA_Wendell_Willkie_hog_sli
-				add_ideas = USA_Cordell_Hull_for_mli
-				add_ideas = USA_Roy_Dikeman_Chapin_Sr_eco_mli
-				add_ideas = USA_Alben_William_Barkley_sec_sli
+				add_ideas = USA_Cordell_Hull_for_sli
+				add_ideas = USA_Jesse_Holman_Jones_eco_sli
+				add_ideas = USA_Robert_Ferdinand_Wagner_I_sec_sde
 			}
 			if = { # Harry F. Byrd
 				limit = {
 					has_country_flag = USA_1940_democratic_primary_byrd
 				}
 				add_ideas = USA_Harry_F_Byrd_hog_sco
-				add_ideas = USA_Cordell_Hull_for_mli
+				add_ideas = USA_Louis_Arthur_Johnson_for_sco
 				add_ideas = USA_William_Daniel_Leahy_eco_sco
 				add_ideas = USA_Martin_Dies_Jr_sec_sco
 			}
@@ -9506,8 +9554,8 @@ country_event = { # 1940 Election
 				limit = {
 					has_country_flag = USA_1940_democratic_primary_macarthur
 				}
-				add_ideas = USA_Douglas_MacArthur_hog_sco
-				add_ideas = USA_Cordell_Hull_for_mli
+				add_ideas = USA_James_Eastland_hog_sco
+				add_ideas = USA_Louis_Arthur_Johnson_for_sco
 				add_ideas = USA_William_Daniel_Leahy_eco_sco
 				add_ideas = USA_Martin_Dies_Jr_sec_sco
 			}
@@ -9519,10 +9567,19 @@ country_event = { # 1940 Election
 						has_country_flag = USA_1940_democratic_primary_macarthur
 					}
 				}
-				add_ideas = USA_John_Nance_Garner_hog_sco
-				add_ideas = USA_Cordell_Hull_for_mli
-				add_ideas = USA_Alfred_Emanuel_Smith_eco_mli
+				add_ideas = USA_John_Sparkman_hog_sco
+				add_ideas = USA_Thomas_Terry_'Tom'_Connally_for_sco
+				add_ideas = USA_Alfred_Emanuel_Smith_eco_sli
 				add_ideas = USA_Martin_Dies_Jr_sec_sco
+			}
+			if = { # Wendell Willkie
+				limit = {
+					has_country_flag = USA_1940_democratic_primary_willkie
+				}
+				add_ideas = USA_Adlai_Stevenson_hog_sli
+				add_ideas = USA_Cordell_Hull_for_sli
+				add_ideas = USA_Jesse_Holman_Jones_eco_sli
+				add_ideas = USA_Robert_Ferdinand_Wagner_I_sec_sde
 			}
 
 			# next primaries
@@ -13758,7 +13815,7 @@ country_event = { # SPQA Election
 					}
 				}
 				add_ideas = USA_Dwight_D_Eisenhower_hog_mli
-				add_ideas = USA_John_Bassett_Moore_for_sli
+				add_ideas = USA_John_Foster_Dulles_for_mli
 				add_ideas = USA_Ray_Lyman_Wilbur_Sr_eco_mli
 				add_ideas = USA_Charles_Evans_Hughes_Sr_sec_mli
 			}
@@ -13770,7 +13827,7 @@ country_event = { # SPQA Election
 					}
 				}
 				add_ideas = USA_Dwight_D_Eisenhower_hog_mli 
-				add_ideas = USA_Cordell_Hull_for_mli
+				add_ideas = USA_John_Foster_Dulles_for_mli
 				add_ideas = USA_Vannevar_Bush_eco_sli
 				add_ideas = USA_James_Middleton_Cox_sec_sli
 			}
@@ -13812,7 +13869,7 @@ country_event = { # SPQA Election
 					has_country_flag = USA_democratic_convention_glass
 				}
 				add_ideas = USA_Richard_Russell_Jr_hog_sco
-				add_ideas = USA_Cordell_Hull_for_mli
+				add_ideas = USA_Louis_Arthur_Johnson_for_sco
 				add_ideas = USA_William_Daniel_Leahy_eco_sco
 				add_ideas = USA_Martin_Dies_Jr_sec_sco
 			}
@@ -13821,7 +13878,7 @@ country_event = { # SPQA Election
 					has_country_flag = USA_democratic_convention_rayburn
 				}
 				add_ideas = USA_James_Eastland_hog_sco
-				add_ideas = USA_Cordell_Hull_for_mli
+				add_ideas = USA_James_Watson_Gerard_Jr_for_sco
 				add_ideas = USA_Daniel_Calhoun_Roper_eco_sco
 				add_ideas = USA_Martin_Dies_Jr_sec_sco
 			}
@@ -13933,6 +13990,7 @@ country_event = { # Cincinnatus Republican Convention
 		}
 		hidden_effect = {
 			set_country_flag = USA_cincinnatus_republican_primary_bricker
+			set_country_flag = USA_mark_liberal_win
 			create_country_leader = {
 					name = "John Bricker"
 					desc = "POLITICS_JOHN_BRICKER_DESC"
@@ -13955,6 +14013,7 @@ country_event = { # Cincinnatus Republican Convention
 		}
 		hidden_effect = {
 			set_country_flag = USA_cincinnatus_republican_primary_vandenberg
+			set_country_flag = USA_mark_liberal_win
 			create_country_leader = {
 					name = "Arthur Vandenberg"
 					desc = "POLITICS_ARTHUR_VANDENBERG_DESC"
@@ -13977,6 +14036,7 @@ country_event = { # Cincinnatus Republican Convention
 		}
 		hidden_effect = {
 			set_country_flag = USA_cincinnatus_republican_primary_teddy_roosevelt
+			set_country_flag = USA_mark_liberal_win
 			create_country_leader = {
 					name = "Theodore Roosevelt Jr."
 					desc = "POLITICS_THEODORE_ROOSEVELT_DESC"
@@ -13984,6 +14044,26 @@ country_event = { # Cincinnatus Republican Convention
 					expire = "1965.1.1"
 					ideology = market_liberal_subtype
 					traits = { great_war_hero }
+			}
+		}
+	}
+	option = { # nominate Alf Landon
+		name = ustates.3127.e
+		trigger = {
+			NOT = {
+			has_global_flag = USA_president_landon
+			}
+		}
+		hidden_effect = {
+			set_country_flag = USA_cincinnatus_republican_primary_landon
+			set_country_flag = USA_soc_liberal_win
+			create_country_leader = {
+				name = "Alf Landon"
+				desc = "POLITICS_ALF_LANDON_DESC"
+				picture = "gfx/leaders/USA/Portrait_USA_Alf_Landon_KR.tga"
+				expire = "1965.1.1"
+				ideology = social_liberal_subtype
+				traits = { economic_reformer }
 			}
 		}
 	}
@@ -14011,6 +14091,7 @@ country_event = { # Cincinnatus Democratic Convention
 		}
 		hidden_effect = {
 			set_country_flag = USA_cincinnatus_democratic_primary_chandler
+			set_country_flag = USA_social_con_win
 			create_country_leader = {
 					name = "Happy Chandler"
 					desc = "POLITICS_HAPPY_CHANDLER_DESC"
@@ -14033,6 +14114,7 @@ country_event = { # Cincinnatus Democratic Convention
 		}
 		hidden_effect = {
 			set_country_flag = USA_cincinnatus_democratic_primary_stevenson
+			set_country_flag = USA_social_lib_win
 			create_country_leader = {
 					name = " Adlai Stevenson"
 					desc = "POLITICS_ADLAI_STEVENSON_DESC"
@@ -14055,6 +14137,7 @@ country_event = { # Cincinnatus Democratic Convention
 		}
 		hidden_effect = {
 			set_country_flag = USA_cincinnatus_democratic_primary_barkley
+			set_country_flag = USA_social_lib_win
 			create_country_leader = {
 					name = "Alben W. Barkley"
 					desc = "POLITICS_ALBEN_BARKLEY_DESC"
@@ -14077,6 +14160,7 @@ country_event = { # Cincinnatus Democratic Convention
 		}
 		hidden_effect = {
 			set_country_flag = USA_cincinnatus_democratic_primary_dies
+			set_country_flag = USA_social_con_win
 			create_country_leader = {
 				name = "Martin Dies Jr."
 				desc = "POLITICS_MARTIN_DIES_DESC"
@@ -14111,7 +14195,7 @@ country_event = { # Cincinnatus Election
 		name = ustates.3125.a
 		set_country_flag = USA_had_1940_election
 		hidden_effect = {
-			set_country_flag = USA_1940_election_progressive
+			set_country_flag = USA_cincinnatus_election_progressive
 		}
 		set_politics = {
 			ruling_party = social_democrat
@@ -14121,6 +14205,20 @@ country_event = { # Cincinnatus Election
 		add_popularity = {
 			ideology = social_democrat
 			popularity = 0.12
+		}
+		hidden_effect = {
+			country_event = {
+				id = ustates.3147
+				days = 30
+			}
+			country_event = {
+				id = ustates.3148
+				days = 35
+			}
+			country_event = {
+				id = ustates.3150
+				days = 40
+			}
 		}
 		hidden_effect = {
 			add_ideas = USA_Glen_H_Taylor_hog_sde
@@ -14146,24 +14244,97 @@ country_event = { # Cincinnatus Election
 	option = { # Republican
 		name = ustates.3125.b
 		set_country_flag = USA_had_1940_election
+		
+		if = {
+		limit = {
+		has_country_flag = USA_cincinnatus_republican_primary_landon
+			}
 		hidden_effect = {
-			set_country_flag = USA_1940_election_republican
+			set_country_flag = USA_cincinnatus_election_lib_republican
+		}
+		set_politics = {
+			ruling_party = social_liberal
+			election_frequency = 48
+			elections_allowed = yes
+			}
+		set_party_name = {
+			ideology = social_liberal
+			long_name = USA_social_liberal_rep_party_long
+			name = USA_social_liberal_rep_party }
+		add_popularity = {
+			ideology = social_liberal
+			popularity = 0.12
+			}
+		hidden_effect = {
+			country_event = {
+				id = ustates.3147
+				days = 30
+			}
+			country_event = {
+				id = ustates.3148
+				days = 35
+			}
+			country_event = {
+				id = ustates.3151
+				days = 40
+			}
+			}
+		}
+		if = {
+		limit = {
+		OR = { 
+		has_country_flag = USA_cincinnatus_republican_primary_bricker
+		has_country_flag = USA_cincinnatus_republican_primary_vandenberg
+		has_country_flag = USA_cincinnatus_republican_primary_teddy_roosevelt
+				}
+			}
+		hidden_effect = {
+			set_country_flag = USA_cincinnatus_election_con_republican
 		}
 		set_politics = {
 			ruling_party = market_liberal
 			election_frequency = 48
 			elections_allowed = yes
-		}
+			}
 		add_popularity = {
 			ideology = market_liberal
 			popularity = 0.12
-		}
+			}
 		hidden_effect = {
-			add_ideas = USA_Dwight_D_Eisenhower_hog_mli
-			add_ideas = USA_Henry_Lewis_Stimson_for_sli
-			add_ideas = USA_Ray_Lyman_Wilbur_Sr_eco_mli
-			add_ideas = USA_James_Middleton_Cox_sec_sli
-
+			country_event = {
+				id = ustates.3149
+				days = 30
+			}
+			country_event = {
+				id = ustates.3152
+				days = 40
+			}
+			}
+		}
+		
+		hidden_effect = {
+			if = { # Market Liberal
+				limit = {
+				OR = {
+					has_country_flag = USA_cincinnatus_republican_primary_bricker
+					has_country_flag = USA_cincinnatus_republican_primary_vandenberg
+					has_country_flag = USA_cincinnatus_republican_primary_teddy_roosevelt
+					}
+				}
+				add_ideas = USA_Dwight_D_Eisenhower_hog_mli
+				add_ideas = USA_Henry_Lewis_Stimson_for_sli
+				add_ideas = USA_Ray_Lyman_Wilbur_Sr_eco_mli
+				add_ideas = USA_James_Middleton_Cox_sec_sli
+			}
+			if = { # Alf Landon
+				limit = {
+					has_country_flag = USA_cincinnatus_republican_primary_landon
+				}
+				add_ideas = USA_Harold_Stassen_hog_sli
+				add_ideas = USA_Henry_Lewis_Stimson_for_sli
+				add_ideas = USA_Robert_Porter_Patterson_Sr_eco_sli
+				add_ideas = USA_Fannie_Coralie_Perkins_sec_sli
+			
 			# next primaries
 			country_event = {
 				id = ustates.204
@@ -14179,6 +14350,7 @@ country_event = { # Cincinnatus Election
 			}
 		}
 	}
+	}
 	option = { # Democrat
 		name = ustates.3125.c
 		set_country_flag = USA_had_1940_election
@@ -14189,6 +14361,9 @@ country_event = { # Cincinnatus Election
 		has_country_flag = USA_cincinnatus_democratic_primary_stevenson
 				}
 			}
+		hidden_effect = {
+			set_country_flag = USA_cincinnatus_election_lib_democrat
+		}
 		set_politics = {
 			ruling_party = social_liberal
 			election_frequency = 48
@@ -14202,9 +14377,20 @@ country_event = { # Cincinnatus Election
 			ideology = social_liberal
 			popularity = 0.12
 			}
-		}
 		hidden_effect = {
-			set_country_flag = USA_1940_election_democrat
+			country_event = {
+				id = ustates.3147
+				days = 30
+			}
+			country_event = {
+				id = ustates.3148
+				days = 35
+			}
+			country_event = {
+				id = ustates.3153
+				days = 40
+			}
+			}
 		}
 		if = {
 		limit = {
@@ -14213,6 +14399,9 @@ country_event = { # Cincinnatus Election
 		has_country_flag = USA_cincinnatus_democratic_primary_dies
 				}
 			}
+		hidden_effect = {
+			set_country_flag = USA_cincinnatus_election_con_democrat
+		}
 		set_politics = {
 			ruling_party = social_conservative
 			election_frequency = 48
@@ -14222,9 +14411,16 @@ country_event = { # Cincinnatus Election
 			ideology = social_conservative
 			popularity = 0.12
 			}
-		}
 		hidden_effect = {
-			set_country_flag = USA_1940_election_democrat
+			country_event = {
+				id = ustates.3149
+				days = 30
+			}
+			country_event = {
+				id = ustates.3154
+				days = 40
+			}
+			}
 		}
 		hidden_effect = {
 			if = { # Happy Chandler
@@ -14236,14 +14432,29 @@ country_event = { # Cincinnatus Election
 				add_ideas = USA_Dean_Gooderham_Acheson_for_sco
 				add_ideas = USA_Martin_Dies_Jr_sec_sco
 			}
-			if = { # Barkley or Stevenson
+			if = { # Martin Dies Jr
 				limit = {
-				OR = {
+					has_country_flag = USA_cincinnatus_democratic_primary_dies
+				}
+				add_ideas = USA_John_Sparkman_hog_sco
+				add_ideas = USA_James_Watson_Gerard_Jr_for_sco
+				add_ideas = USA_Dean_Gooderham_Acheson_for_sco
+				add_ideas = USA_James_E_Ferguson_sec_sco
+			}
+			if = { # Stevenson
+				limit = {
 					has_country_flag = USA_cincinnatus_democratic_primary_stevenson
-					has_country_flag = USA_cincinnatus_democratic_primary_barkley
-					}
 				}
 				add_ideas = USA_Alben_W_Barkley_hog_sli
+				add_ideas = USA_Henry_Morgenthau_Jr_for_mli
+				add_ideas = USA_Daniel_Calhoun_Roper_eco_sco
+				add_ideas = USA_Robert_Ferdinand_Wagner_I_sec_sde
+			}
+			if = { # Barkley
+				limit = {
+					has_country_flag = USA_cincinnatus_democratic_primary_barkley
+				}
+				add_ideas = USA_Adlai_Stevenson_hog_sli
 				add_ideas = USA_Henry_Morgenthau_Jr_for_mli
 				add_ideas = USA_Daniel_Calhoun_Roper_eco_sco
 				add_ideas = USA_Robert_Ferdinand_Wagner_I_sec_sde
@@ -15079,6 +15290,443 @@ country_event = {# Trial of Douglas MacArthur
 		}
 		add_political_power = 20
 		increase_ruling_party_popularity_by_3 = yes
+	}
+}
+
+country_event = {# Meeting with Longists
+	id = ustates.3147
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.3147"}
+	title = ustates.3147.t
+	desc = {
+		text = ustates.3147.d.progs
+		trigger = {
+			has_country_flag = USA_cincinnatus_election_progressive
+		}
+	}
+	desc = {
+		text = ustates.3147.d.replibs
+		trigger = {
+			has_country_flag = USA_cincinnatus_election_lib_republican
+		}
+	}
+	desc = {
+		text = ustates.3147.d.demlibs
+		trigger = {
+			has_country_flag = USA_cincinnatus_election_lib_democrat
+		}
+	}
+	picture = GFX_report_event_USA_congress
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {# On to New Orleans
+		name = ustates.3147.a
+		ai_chance = {
+			factor = 1
+		}
+		add_political_power = 20
+		increase_ruling_party_popularity_by_5 = yes
+	}
+}
+
+country_event = {# Meeting with Syndicalists
+	id = ustates.3148
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.3148"}
+	title = ustates.3148.t
+	desc = {
+		text = ustates.3148.d.progs
+		trigger = {
+			has_country_flag = USA_cincinnatus_election_progressive
+		}
+	}
+	desc = {
+		text = ustates.3148.d.replibs
+		trigger = {
+			has_country_flag = USA_cincinnatus_election_lib_republican
+		}
+	}
+	desc = {
+		text = ustates.3148.d.demlibs
+		trigger = {
+			has_country_flag = USA_cincinnatus_election_lib_democrat
+		}
+	}
+	picture = GFX_report_event_USA_congress
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {# On to Chicago
+		name = ustates.3148.a
+		ai_chance = {
+			factor = 1
+		}
+		add_political_power = 20
+		increase_ruling_party_popularity_by_5 = yes
+	}
+}
+
+country_event = {# Meeting with Old Democrats
+	id = ustates.3149
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.3149"}
+	title = ustates.3149.t
+	desc = {
+		text = ustates.3149.d.repcons
+		trigger = {
+			has_country_flag = USA_cincinnatus_election_con_republican
+		}
+	}
+	desc = {
+		text = ustates.3149.d.demcons
+		trigger = {
+			has_country_flag = USA_cincinnatus_election_con_democrat
+		}
+	}
+	picture = GFX_report_event_USA_congress
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {# On to Atlanta
+		name = ustates.3149.a
+		ai_chance = {
+			factor = 1
+		}
+		add_political_power = 20
+		increase_ruling_party_popularity_by_5 = yes
+	}
+}
+
+country_event = { # Fifth Political System
+	id = ustates.3150
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.3150"}
+	title = ustates.3150.t
+	picture = GFX_report_event_USA_congress
+
+	is_triggered_only = yes
+	
+	desc = {
+	text = ustates.3150.d.progs
+	trigger = {
+			has_country_flag = USA_cincinnatus_election_progressive
+		}
+	}
+	option = { # Very Well
+		name = ustates.3150.a
+		if = {
+		limit = {
+		has_country_flag = USA_cincinnatus_election_progressive
+		}
+		add_popularity = { ideology = social_conservative popularity = 0.05 }
+		add_popularity = { ideology = market_liberal popularity = 0.05 }
+		set_party_name = {
+			ideology = totalist
+			long_name = USA_prog_dominance_long
+			name = USA_prog_dominance_party }
+		set_party_name = {
+			ideology = syndicalist
+			long_name = USA_prog_dominance_long
+			name = USA_prog_dominance_party }
+		set_party_name = {
+			ideology = radical_socialist
+			long_name = USA_prog_dominance_long
+			name = USA_prog_dominance_party }	
+		set_party_name = {
+			ideology = social_democrat
+			long_name = USA_prog_dominance_long
+			name = USA_prog_dominance_party }
+		set_party_name = {
+			ideology = social_liberal
+			long_name = USA_prog_dominance_long
+			name = USA_prog_dominance_party }		
+		set_party_name = {
+			ideology = market_liberal
+			long_name = USA_liberal_dominance_long
+			name = USA_liberal_dominance_party }
+		set_party_name = {
+			ideology = social_conservative
+			long_name = USA_liberal_dominance_long
+			name = USA_liberal_dominance_party }
+		set_party_name = {
+			ideology = authoritarian_democrat
+			long_name = USA_liberal_dominance_long
+			name = USA_liberal_dominance_party }
+		set_party_name = {
+			ideology = paternal_autocrat
+			long_name = USA_liberal_dominance_long
+			name = USA_liberal_dominance_party }
+		set_party_name = {
+			ideology = national_populist
+			long_name = USA_liberal_dominance_long
+			name = USA_liberal_dominance_party }
+		set_country_flag = USA_progressive_dominance
+		}
+	}
+}
+
+country_event = { # Fifth Political System
+	id = ustates.3151
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.3151"}
+	title = ustates.3151.t
+	picture = GFX_report_event_USA_congress
+
+	is_triggered_only = yes
+	
+	desc = {
+	text = ustates.3151.d.replibs
+	trigger = {
+			has_country_flag = USA_cincinnatus_election_lib_republican
+		}
+	}
+	option = { # Very Well
+		name = ustates.3151.a
+		if = {
+		limit = {
+		has_country_flag = USA_cincinnatus_election_lib_republican
+		}
+		add_popularity = { ideology = social_conservative popularity = 0.05 }
+		add_popularity = { ideology = market_liberal popularity = 0.05 }
+		set_party_name = {
+			ideology = totalist
+			long_name = USA_classical_liberal_dominance_long
+			name = USA_classical_liberal_dominance_party }
+		set_party_name = {
+			ideology = syndicalist
+			long_name = USA_classical_liberal_dominance_long
+			name = USA_classical_liberal_dominance_party }
+		set_party_name = {
+			ideology = radical_socialist
+			long_name = USA_classical_liberal_dominance_long
+			name = USA_classical_liberal_dominance_party }	
+		set_party_name = {
+			ideology = social_democrat
+			long_name = USA_classical_liberal_dominance_long
+			name = USA_classical_liberal_dominance_party }
+		set_party_name = {
+			ideology = social_liberal
+			long_name = USA_classical_liberal_dominance_long
+			name = USA_classical_liberal_dominance_party }		
+		set_party_name = {
+			ideology = market_liberal
+			long_name = USA_conservative_dominance_long
+			name = USA_conservative_dominance_party }
+		set_party_name = {
+			ideology = social_conservative
+			long_name = USA_conservative_dominance_long
+			name = USA_conservative_dominance_party }
+		set_party_name = {
+			ideology = authoritarian_democrat
+			long_name = USA_conservative_dominance_long
+			name = USA_conservative_dominance_party }
+		set_party_name = {
+			ideology = paternal_autocrat
+			long_name = USA_conservative_dominance_long
+			name = USA_conservative_dominance_party }
+		set_party_name = {
+			ideology = national_populist
+			long_name = USA_conservative_dominance_long
+			name = USA_conservative_dominance_party }
+		set_country_flag = USA_lib_republican_dominance
+		}
+	}
+}
+
+country_event = { # Fifth Political System
+	id = ustates.3152
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.3152"}
+	title = ustates.3152.t
+	picture = GFX_report_event_USA_congress
+
+	is_triggered_only = yes
+	
+	desc = {
+	text = ustates.3152.d.repcons
+	trigger = {
+			has_country_flag = USA_cincinnatus_election_con_republican
+		}
+	}
+	option = { # Very Well
+		name = ustates.3152.a
+		if = {
+		limit = {
+		has_country_flag = USA_cincinnatus_election_con_republican
+		}
+		add_popularity = { ideology = social_democrat popularity = 0.05 }
+		add_popularity = { ideology = social_liberal popularity = 0.05 }
+		set_party_name = {
+			ideology = totalist
+			long_name = USA_classic_liberal_dominance_long
+			name = USA_classic_liberal_dominance_party }
+		set_party_name = {
+			ideology = syndicalist
+			long_name = USA_classic_liberal_dominance_long
+			name = USA_classic_liberal_dominance_party }
+		set_party_name = {
+			ideology = radical_socialist
+			long_name = USA_classic_liberal_dominance_long
+			name = USA_classic_liberal_dominance_party }	
+		set_party_name = {
+			ideology = social_democrat
+			long_name = USA_classic_liberal_dominance_long
+			name = USA_classic_liberal_dominance_party }
+		set_party_name = {
+			ideology = social_liberal
+			long_name = USA_classic_liberal_dominance_long
+			name = USA_classic_liberal_dominance_party }		
+		set_party_name = {
+			ideology = market_liberal
+			long_name = USA_classical_liberal_dominance_long
+			name = USA_classical_liberal_dominance_party }
+		set_party_name = {
+			ideology = social_conservative
+			long_name = USA_classical_liberal_dominance_long
+			name = USA_classical_liberal_dominance_party }
+		set_party_name = {
+			ideology = authoritarian_democrat
+			long_name = USA_classical_liberal_dominance_long
+			name = USA_classical_liberal_dominance_party }
+		set_party_name = {
+			ideology = paternal_autocrat
+			long_name = USA_classical_liberal_dominance_long
+			name = USA_classical_liberal_dominance_party }
+		set_party_name = {
+			ideology = national_populist
+			long_name = USA_classical_liberal_dominance_long
+			name = USA_classical_liberal_dominance_party }
+		set_country_flag = USA_con_republican_dominance
+		}
+	}
+}
+
+country_event = { # Fifth Political System
+	id = ustates.3153
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.3153"}
+	title = ustates.3153.t
+	picture = GFX_report_event_USA_congress
+
+	is_triggered_only = yes
+	
+	desc = {
+	text = ustates.3153.d.demlibs
+	trigger = {
+			has_country_flag = USA_cincinnatus_election_lib_democrat
+		}
+	}
+	option = { # Very Well
+		name = ustates.3153.a
+		if = {
+		limit = {
+		has_country_flag = USA_cincinnatus_election_lib_democrat
+		}
+		add_popularity = { ideology = market_liberal popularity = 0.05 }
+		add_popularity = { ideology = social_conservative popularity = 0.05 }
+		set_party_name = {
+			ideology = totalist
+			long_name = USA_old_liberal_dominance_long
+			name = USA_old_liberal_dominance_party }
+		set_party_name = {
+			ideology = syndicalist
+			long_name = USA_old_liberal_dominance_long
+			name = USA_old_liberal_dominance_party }
+		set_party_name = {
+			ideology = radical_socialist
+			long_name = USA_old_liberal_dominance_long
+			name = USA_old_liberal_dominance_party }	
+		set_party_name = {
+			ideology = social_democrat
+			long_name = USA_old_liberal_dominance_long
+			name = USA_old_liberal_dominance_party }
+		set_party_name = {
+			ideology = social_liberal
+			long_name = USA_old_liberal_dominance_long
+			name = USA_old_liberal_dominance_party }		
+		set_party_name = {
+			ideology = market_liberal
+			long_name = USA_conservative_republican_dominance_long
+			name = USA_conservative_republican_dominance_party }
+		set_party_name = {
+			ideology = social_conservative
+			long_name = USA_conservative_republican_dominance_long
+			name = USA_conservative_republican_dominance_party }
+		set_party_name = {
+			ideology = authoritarian_democrat
+			long_name = USA_conservative_republican_dominance_long
+			name = USA_conservative_republican_dominance_party }
+		set_party_name = {
+			ideology = paternal_autocrat
+			long_name = USA_conservative_republican_dominance_long
+			name = USA_conservative_republican_dominance_party }
+		set_party_name = {
+			ideology = national_populist
+			long_name = USA_conservative_republican_dominance_long
+			name = USA_conservative_republican_dominance_party }
+		set_country_flag = USA_lib_democrat_dominance
+		}
+	}
+}
+
+country_event = { # Fifth Political System
+	id = ustates.3154
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.3154"}
+	title = ustates.3154.t
+	picture = GFX_report_event_USA_congress
+
+	is_triggered_only = yes
+	
+	desc = {
+	text = ustates.3154.d.demcons
+	trigger = {
+			has_country_flag = USA_cincinnatus_election_con_democrat
+		}
+	}
+	option = { # Very Well
+		name = ustates.3154.a
+		if = {
+		limit = {
+		has_country_flag = USA_cincinnatus_election_con_democrat
+		}
+		add_popularity = { ideology = social_democrat popularity = 0.05 }
+		add_popularity = { ideology = social_liberal popularity = 0.05 }
+		set_party_name = {
+			ideology = totalist
+			long_name = USA_radical_republican_dominance_long
+			name = USA_radical_republican_dominance_party }
+		set_party_name = {
+			ideology = syndicalist
+			long_name = USA_radical_republican_dominance_long
+			name = USA_radical_republican_dominance_party }
+		set_party_name = {
+			ideology = radical_socialist
+			long_name = USA_radical_republican_dominance_long
+			name = USA_radical_republican_dominance_party }	
+		set_party_name = {
+			ideology = social_democrat
+			long_name = USA_radical_republican_dominance_long
+			name = USA_radical_republican_dominance_party }
+		set_party_name = {
+			ideology = social_liberal
+			long_name = USA_radical_republican_dominance_long
+			name = USA_radical_republican_dominance_party }		
+		set_party_name = {
+			ideology = market_liberal
+			long_name = USA_old_liberal_dominance_long
+			name = USA_old_liberal_dominance_party }
+		set_party_name = {
+			ideology = social_conservative
+			long_name = USA_old_liberal_dominance_long
+			name = USA_old_liberal_dominance_party }
+		set_party_name = {
+			ideology = authoritarian_democrat
+			long_name = USA_old_liberal_dominance_long
+			name = USA_old_liberal_dominance_party }
+		set_party_name = {
+			ideology = paternal_autocrat
+			long_name = USA_old_liberal_dominance_long
+			name = USA_old_liberal_dominance_party }
+		set_party_name = {
+			ideology = national_populist
+			long_name = USA_old_liberal_dominance_long
+			name = USA_old_liberal_dominance_party }
+		set_country_flag = USA_con_democrat_dominance
+		}
 	}
 }
 
