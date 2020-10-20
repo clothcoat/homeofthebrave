@@ -2677,6 +2677,7 @@ country_event = { # The 1936 Election - You're Fucked (Or are you...)
 		}
 		add_political_power = -100
 		set_country_flag = USA_had_1936_election
+		set_country_flag = USA_deadlock_garner
 		hidden_effect = {
 			set_global_flag = USA_garner_is_president
 		}
@@ -2711,7 +2712,9 @@ country_event = { # The 1936 Election - You're Fucked (Or are you...)
 			country_event = { id = ustates.91 days = 73 }
 
 			#next primaries
-			country_event = { id = ustates.190 days = 1250 }
+			country_event = { id = ustates.190 days = 1240 }
+			country_event = { id = ustates.191 days = 1245 }
+			country_event = { id = ustates.192 days = 1250 }
 			country_event = { id = ustates.200 days = 1283 }
 			country_event = { id = ustates.201 days = 1290 }
 			country_event = { id = ustates.202 days = 1297 }
@@ -2730,6 +2733,7 @@ country_event = { # The 1936 Election - You're Fucked (Or are you...)
 			}
 		}
 		set_country_flag = USA_had_1936_election
+		set_country_flag = USA_deadlock_norris
 		hidden_effect = {
 			create_country_leader = {
 				name = "George Norris"
@@ -2781,7 +2785,15 @@ country_event = { # The 1936 Election - You're Fucked (Or are you...)
 			#next primaries
 			country_event = { 
 				id = ustates.190 
-				days = 1250 
+				days = 1240
+			}
+			country_event = { 
+				id = ustates.191
+				days = 1245
+			}
+			country_event = { 
+				id = ustates.192
+				days = 1250
 			}
 			country_event = {
 				id = ustates.200
@@ -8971,6 +8983,9 @@ country_event = { # The Upcoming Election
 		text = ustates.190.d.progs
 		trigger = {
 			has_government = social_democrat
+			NOT = {
+			has_country_flag = USA_deadlock_norris
+			}
 		}
 	}
 	desc = { # Republican Party has the Presidency
@@ -8989,6 +9004,21 @@ country_event = { # The Upcoming Election
 		text = ustates.190.d.garner
 		trigger = {
 			has_government = social_conservative
+			NOT = {
+			has_country_flag = USA_deadlock_garner
+			}
+		}
+	}
+	desc = { # Deadlock Garner Presidency
+		text = ustates.190.d.deadlockgarner
+		trigger = {
+			has_country_flag = USA_deadlock_garner
+		}
+	}
+	desc = { # Deadlock Norris Presidency
+		text = ustates.190.d.deadlocknorris
+		trigger = {
+			has_country_flag = USA_deadlock_norris
 		}
 	}
 	picture = GFX_report_event_USA_congress
@@ -9010,6 +9040,135 @@ country_event = { # The Upcoming Election
 		add_political_power = 5
 		}
 	}
+
+country_event = { # The San Fran Conference
+	id = ustates.191
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.191"}
+	title = ustates.191.t
+	desc = { # Sinclair
+		text = ustates.191.d.sinclair
+		trigger = {
+			has_country_flag = USA_deadlock_garner
+			}
+		}
+	desc = { # Hearst
+		text = ustates.191.d.hearst
+		trigger = {
+			has_country_flag = USA_deadlock_norris
+			}
+		}
+	picture = GFX_report_event_USA_congress
+
+	trigger = {
+		tag = USA
+		has_elected_government = yes
+		has_country_flag = USA_had_1936_election
+		NOT = {
+			has_country_flag = USA_had_1940_election
+		}
+	}
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { # Success
+		name = ustates.191.a
+		trigger = {
+			has_country_flag = USA_deadlock_garner
+		}
+		custom_effect_tooltip = PP_gains_strength
+		add_popularity = { ideology = social_democrat popularity = 0.05 }
+		}
+	option = { # Failure
+		name = ustates.191.b
+		trigger = {
+			has_country_flag = USA_deadlock_garner
+		}
+		custom_effect_tooltip = PP_loses_strength
+		add_popularity = { ideology = social_democrat popularity = -0.05 }
+		}
+	option = { # Success
+		name = ustates.191.c
+		trigger = {
+			has_country_flag = USA_deadlock_norris
+		}
+		custom_effect_tooltip = NPP_gains_strength
+		add_popularity = { ideology = social_conservative popularity = 0.05 }
+		}
+	option = { # Failure
+		name = ustates.191.e
+		trigger = {
+			has_country_flag = USA_deadlock_norris
+		}
+		custom_effect_tooltip = NPP_loses_strength
+		add_popularity = { ideology = social_conservative popularity = -0.05 }
+		}
+	}
+	
+country_event = { # The Omaha Conference
+	id = ustates.192
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.192"}
+	title = ustates.192.t
+	desc = { # Sinclair
+		text = ustates.192.d.norris
+		trigger = {
+			has_country_flag = USA_deadlock_garner
+			}
+		}
+	desc = { # Hearst
+		text = ustates.192.d.pelley
+		trigger = {
+			has_country_flag = USA_deadlock_norris
+			}
+		}
+	picture = GFX_report_event_USA_congress
+
+	trigger = {
+		tag = USA
+		has_elected_government = yes
+		has_country_flag = USA_had_1936_election
+		NOT = {
+			has_country_flag = USA_had_1940_election
+		}
+	}
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { # Success
+		name = ustates.192.a
+		trigger = {
+			has_country_flag = USA_deadlock_garner
+		}
+		custom_effect_tooltip = PP_gains_strength
+		add_popularity = { ideology = social_democrat popularity = 0.05 }
+		}
+	option = { # Failure
+		name = ustates.192.b
+		trigger = {
+			has_country_flag = USA_deadlock_garner
+		}
+		custom_effect_tooltip = PP_loses_strength
+		add_popularity = { ideology = social_democrat popularity = -0.05 }
+		}
+	option = { # Success
+		name = ustates.192.c
+		trigger = {
+			has_country_flag = USA_deadlock_norris
+		}
+		custom_effect_tooltip = NPP_gains_strength
+		add_popularity = { ideology = social_conservative popularity = 0.05 }
+		}
+	option = { # Failure
+		name = ustates.192.e
+		trigger = {
+			has_country_flag = USA_deadlock_norris
+		}
+		custom_effect_tooltip = NPP_loses_strength
+		add_popularity = { ideology = social_conservative popularity = -0.05 }
+		}
+	}
+
 
 country_event = { # 1940 Progressive Primary
 	id = ustates.200
