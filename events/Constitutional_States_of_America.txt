@@ -83,6 +83,12 @@ country_event = { # White Defense League requests army promotions
 	fire_only_once = yes
 	is_triggered_only = yes
 
+	trigger = {
+	NOT = {
+	has_country_leader = { ruling_only = yes name = "William Joseph Simmons" }
+	}
+	}
+
 	option = { # Or course
 		ai_chance = {
 			factor = 1

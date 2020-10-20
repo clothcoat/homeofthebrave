@@ -2964,8 +2964,8 @@ set_puppet_minister_america = {
 		else_if = {
 			limit = { has_government = market_liberal }
 			add_ideas = {
-				USA_Wendell_Willkie_hog_sli
-				USA_Cordell_Hull_for_mli
+				USA_Harry_Truman_hog_mli
+				USA_Henry_Morgenthau_Jr_for_mli
 				USA_Roy_Dikeman_Chapin_Sr_eco_mli
 				USA_Alben_W_Barkley_sec_mli
 			}

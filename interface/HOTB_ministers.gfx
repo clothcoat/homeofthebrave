@@ -18129,6 +18129,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/ministers/ECU/ECU_Enrique_Gil_Gilbert.tga"
 	}
 	spriteType = {
+		name = "GFX_idea_ECU_Jacinto_Jijon_y_Caamano_for_rso"
+		texturefile = "gfx/interface/ministers/ECU/ECU_Jacinto_Jijon_y_Caamano.tga"
+	}
+	spriteType = {
 		name = "GFX_idea_ECU_Federico_Paez_Chiriboaga_hog_sde"
 		texturefile = "gfx/interface/ministers/ECU/ECU_Federico_Paez_Chiriboaga.tga"
 	}
@@ -18232,6 +18236,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/ministers/ECU/ECU_Enrique_Gil_Gilbert.tga"
 	}
 	spriteType = {
+		name = "GFX_idea_ECU_Carlos_Maria_Javier_de_la_Torre_y_Nieto_for_sde"
+		texturefile = "gfx/interface/ministers/ECU/ECU_Carlos_Maria_Javier_de_la_Torre_y_Nieto.tga"
+	}
+	spriteType = {
 		name = "GFX_idea_ECU_Alberto_Larrea_Chiriboaga_for_sli"
 		texturefile = "gfx/interface/ministers/ECU/ECU_Alberto_Larrea_Chiriboaga.tga"
 	}
@@ -18242,10 +18250,6 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_ECU_Juan_de_Dios_Mera_for_mli"
 		texturefile = "gfx/interface/ministers/ECU/ECU_Juan_de_Dios_Mera.tga"
-	}
-	spriteType = {
-		name = "GFX_idea_ECU_Antonio_Pons_Campuzano_for_sco"
-		texturefile = "gfx/interface/ministers/ECU/ECU_Antonio_Pons_Campuzano.tga"
 	}
 	spriteType = {
 		name = "GFX_idea_ECU_Camillo_Ponce_Enriquez_for_sco"
@@ -18260,11 +18264,23 @@ spriteTypes = {
 		texturefile = "gfx/interface/ministers/ECU/ECU_Jose_Maria_Velasco_Ibarra.tga"
 	}
 	spriteType = {
+		name = "GFX_idea_ECU_Antonio_Pons_Campuzano_for_sco"
+		texturefile = "gfx/interface/ministers/ECU/ECU_Antonio_Pons_Campuzano.tga"
+	}
+	spriteType = {
 		name = "GFX_idea_ECU_Marcos_Gandara_Enriquez_for_ade"
 		texturefile = "gfx/interface/ministers/ECU/ECU_Marcos_Gandara_Enriquez.tga"
 	}
+	spriteType = {
+		name = "GFX_idea_ECU_Arizaga_Francisco_Luque_for_npo"
+		texturefile = "gfx/interface/ministers/ECU/ECU_Arizaga_Francisco_Luque.tga"
+	}
 
 	# Economy Minister
+	spriteType = {
+		name = "GFX_idea_ECU_Victor_Emilio_Estrada_eco_rso"
+		texturefile = "gfx/interface/ministers/ECU/ECU_Victor_Emilio_Estrada.tga"
+	}
 	spriteType = {
 		name = "GFX_idea_ECU_Federico_Paez_Chiriboaga_eco_sde"
 		texturefile = "gfx/interface/ministers/ECU/ECU_Federico_Paez_Chiriboaga.tga"
@@ -18329,11 +18345,27 @@ spriteTypes = {
 		name = "GFX_idea_ECU_Gustave_Uriarte_eco_ade"
 		texturefile = "gfx/interface/ministers/ECU/ECU_Gustave_Uriarte.tga"
 	}
+	spriteType = {
+		name = "GFX_idea_ECU_Jose_Peralta_Serrano_eco_npo"
+		texturefile = "gfx/interface/ministers/ECU/ECU_Jose_Peralta_Serrano.tga"
+	}
 
 	# Security Minister
 	spriteType = {
+		name = "GFX_idea_ECU_Manuel_Agustin_Aguirre_Rios_sec_rso"
+		texturefile = "gfx/interface/ministers/ECU/ECU_Manuel_Agustin_Aguirre_Rios.tga"
+	}
+	spriteType = {
 		name = "GFX_idea_ECU_Bravo_Gonzalez_Luis_sec_sde"
 		texturefile = "gfx/interface/ministers/ECU/ECU_Bravo_Gonzalez_Luis.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_ECU_Aurelio_Espinosa_Polit_sec_sli"
+		texturefile = "gfx/interface/ministers/ECU/ECU_Aurelio_Espinosa_Polit.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_ECU_Juan_de_Dios_Mera_sec_mli"
+		texturefile = "gfx/interface/ministers/ECU/ECU_Juan_de_Dios_Mera.tga"
 	}
 	spriteType = {
 		name = "GFX_idea_ECU_Abelardo_Montalvo_Alvear_sec_mli"
@@ -18344,36 +18376,24 @@ spriteTypes = {
 		texturefile = "gfx/interface/ministers/ECU/ECU_Isidro_Ayora.tga"
 	}
 	spriteType = {
-		name = "GFX_idea_ECU_Juan_de_Dios_Mera_sec_mli"
-		texturefile = "gfx/interface/ministers/ECU/ECU_Juan_de_Dios_Mera.tga"
-	}
-	spriteType = {
-		name = "GFX_idea_ECU_Julio_Moreno_Penaherrera_sec_mli"
-		texturefile = "gfx/interface/ministers/ECU/ECU_Julio_Moreno_Penaherrera.tga"
+		name = "GFX_idea_ECU_Abelardo_Montalvo_Alvear_sec_mli"
+		texturefile = "gfx/interface/ministers/ECU/ECU_Abelardo_Montalvo_Alvear.tga"
 	}
 	spriteType = {
 		name = "GFX_idea_ECU_Camillo_Ponce_Enriquez_sec_sco"
 		texturefile = "gfx/interface/ministers/ECU/ECU_Camillo_Ponce_Enriquez.tga"
 	}
 	spriteType = {
-		name = "GFX_idea_ECU_Carlos_Arosemena_Tola_sec_sco"
-		texturefile = "gfx/interface/ministers/ECU/ECU_Carlos_Arosemena_Tola.tga"
-	}
-	spriteType = {
-		name = "GFX_idea_ECU_Jose_Maria_Velasco_Ibarra_sec_sco"
-		texturefile = "gfx/interface/ministers/ECU/ECU_Jose_Maria_Velasco_Ibarra.tga"
-	}
-	spriteType = {
 		name = "GFX_idea_ECU_Rafael_Valdez_Murillo_sec_sco"
 		texturefile = "gfx/interface/ministers/ECU/ECU_Rafael_Valdez_Murillo.tga"
 	}
 	spriteType = {
-		name = "GFX_idea_ECU_Cabrera_Sevilla_Gral_Luis_sec_ade"
-		texturefile = "gfx/interface/ministers/ECU/ECU_Cabrera_Sevilla_Gral_Luis.tga"
-	}
-	spriteType = {
 		name = "GFX_idea_ECU_Manuel_Borrero_Gonzalez_sec_ade"
 		texturefile = "gfx/interface/ministers/ECU/ECU_Manuel_Borrero_Gonzalez.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_ECU_Assad_Bucaram_Elmhalin_sec_npo"
+		texturefile = "gfx/interface/ministers/ECU/ECU_Assad_Bucaram_Elmhalin.tga"
 	}
 
 
@@ -18411,7 +18431,7 @@ spriteTypes = {
 		texturefile = "gfx/interface/ministers/ECU/ECU_Luis_Larrea_Alba.tga"
 	}
 	spriteType = {
-		name = "GFX_idea_ECU_Carlos_Mancheno_Cajas_cos_pau"
+		name = "GFX_idea_ECU_Carlos_Mancheno_Cajas_cos_npo"
 		texturefile = "gfx/interface/ministers/ECU/ECU_Carlos_Mancheno_Cajas.tga"
 	}
 
@@ -62911,12 +62931,12 @@ spriteTypes = {
 		texturefile = "gfx/interface/ministers/USA/USA_Patrick_Jay_Hurley.tga"
 	}
 	spriteType = {
-		name = "GFX_idea_USA_John_Foster_Dulles_for_mli"
-		texturefile = "gfx/interface/ministers/USA/USA_John_Foster_Dulles.tga"
+		name = "GFX_idea_USA_Cordell_Hull_for_sli"
+		texturefile = "gfx/interface/ministers/USA/USA_Cordell_Hull.tga"
 	}
 	spriteType = {
-		name = "GFX_idea_USA_Cordell_Hull_for_mli"
-		texturefile = "gfx/interface/ministers/USA/USA_Cordell_Hull.tga"
+		name = "GFX_idea_USA_John_Foster_Dulles_for_mli"
+		texturefile = "gfx/interface/ministers/USA/USA_John_Foster_Dulles.tga"
 	}
 	spriteType = {
 		name = "GFX_idea_USA_Henry_Morgenthau_Jr_for_mli"
