@@ -3901,6 +3901,7 @@ country_event = { # New Party Head
 	}
 	option = {
 		name = amcivwar.1019.b
+		set_country_flag = COR_simmons_takeover
 		add_popularity = { ideology = national_populist popularity = 0.03 }
 		hidden_effect = {
 		country_event = {
