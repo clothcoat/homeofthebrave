@@ -1807,6 +1807,7 @@ country_event = { # The 1936 Election - Coalition
 			country_event = { id = ustates.64 days = 73 }
 
 			#next primaries
+			country_event = { id = ustates.190 days = 1250 }
 			country_event = { id = ustates.200 days = 1283 }
 			country_event = { id = ustates.201 days = 1290 }
 			country_event = { id = ustates.202 days = 1297 }
@@ -1905,6 +1906,7 @@ country_event = { # The 1936 Election - Coalition
 			country_event = { id = ustates.64 days = 73 }
 
 			#next primaries
+			country_event = { id = ustates.190 days = 1250 }
 			country_event = { id = ustates.200 days = 1283 }
 			country_event = { id = ustates.201 days = 1290 }
 			country_event = { id = ustates.202 days = 1297 }
@@ -1981,6 +1983,10 @@ country_event = { # The 1936 Election - Coalition
 			}
 
 			#next primaries
+			country_event = { 
+				id = ustates.190 
+				days = 1250 
+			}
 			country_event = {
 				id = ustates.200
 				days = 1283
@@ -2108,6 +2114,10 @@ country_event = { # The 1936 Election - Coalition
 			}
 
 			#next primaries
+			country_event = { 
+				id = ustates.190 
+				days = 1250 
+			}
 			country_event = {
 				id = ustates.200
 				days = 1283
@@ -2244,6 +2254,7 @@ country_event = { # The 1936 Election - Coalition
 			}
 
 			#next primaries
+			country_event = { id = ustates.190 days = 1250 }
 			country_event = {
 				id = ustates.200
 				days = 1283
@@ -2353,6 +2364,7 @@ country_event = { # The 1936 Election - Coalition
 			}
 
 			#next primaries
+			country_event = { id = ustates.190 days = 1250 }
 			country_event = {
 				id = ustates.200
 				days = 1283
@@ -2463,6 +2475,7 @@ country_event = { # The 1936 Election - Coalition
 			}
 
 			#next primaries
+			country_event = { id = ustates.190 days = 1250 }
 			country_event = {
 				id = ustates.200
 				days = 1283
@@ -2698,6 +2711,7 @@ country_event = { # The 1936 Election - You're Fucked (Or are you...)
 			country_event = { id = ustates.91 days = 73 }
 
 			#next primaries
+			country_event = { id = ustates.190 days = 1250 }
 			country_event = { id = ustates.200 days = 1283 }
 			country_event = { id = ustates.201 days = 1290 }
 			country_event = { id = ustates.202 days = 1297 }
@@ -2765,6 +2779,10 @@ country_event = { # The 1936 Election - You're Fucked (Or are you...)
 			}
 
 			#next primaries
+			country_event = { 
+				id = ustates.190 
+				days = 1250 
+			}
 			country_event = {
 				id = ustates.200
 				days = 1283
@@ -8944,6 +8962,55 @@ country_event = { # Gangsters Miss Landon By A Hair
 
 
 ### 1940 Elections and Primaries ###
+
+country_event = { # The Upcoming Election
+	id = ustates.190
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.190"}
+	title = ustates.190.t
+	desc = { # Progressive Party has the Presidency
+		text = ustates.190.d.progs
+		trigger = {
+			has_government = social_democrat
+		}
+	}
+	desc = { # Republican Party has the Presidency
+		text = ustates.190.d.landon
+		trigger = {
+			has_government = social_liberal
+		}
+	}
+	desc = { # Republican Party has the Presidency
+		text = ustates.190.d.curtis
+		trigger = {
+			has_government = market_liberal
+		}
+	}
+	desc = { # Democratic Party has the Presidency
+		text = ustates.190.d.garner
+		trigger = {
+			has_government = social_conservative
+		}
+	}
+	picture = GFX_report_event_USA_congress
+
+	trigger = {
+		tag = USA
+		has_elected_government = yes
+		has_country_flag = USA_had_1936_election
+		NOT = {
+			has_country_flag = USA_had_1940_election
+		}
+	}
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { # Interesting...
+		name = ustates.190.a
+		add_political_power = 5
+		}
+	}
+
 country_event = { # 1940 Progressive Primary
 	id = ustates.200
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.200"}
@@ -16059,6 +16126,7 @@ country_event = {
 		hidden_effect = {
 			add_to_variable = { var = AFP_strength value = 1 }
 			add_to_variable = { var = SPA_strength value = 1 }
+			add_to_variable = { var = ODP_strength value = -1 }
 		}
 	}
 }
