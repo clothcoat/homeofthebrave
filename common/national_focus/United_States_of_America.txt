@@ -5599,6 +5599,9 @@ focus_tree = {
 		available = {
 			has_country_flag = USA_spqa_flag
 		}
+		available = {
+			has_country_flag = USA_spqa_flag
+		}
 		prerequisite = {
 			focus = USA_national_rehabilition
 		}
@@ -7244,6 +7247,9 @@ focus_tree = {
 			focus = USA_national_rehabilition
 		}
 		available = {
+			has_country_flag = USA_mac_shared_power
+		}
+		bypass = {
 			has_country_flag = USA_mac_shared_power
 		}
 		relative_position_id = USA_national_rehabilitation
