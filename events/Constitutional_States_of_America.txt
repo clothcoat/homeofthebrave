@@ -2261,6 +2261,7 @@ country_event = { # Head of the ODP
 				ideology = paternal_autocrat_subtype
 				traits = { }
 				}
+		}
 }
 
 country_event = { # Marshal Policy
@@ -4935,7 +4936,7 @@ country_event = { #flag
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.302"}
 	title = constate.302.t
 	desc = constate.302.d
-	picture = GFX_report_event_USA_american_brigade
+	picture = GFX_COR_flags_event
 
 	fire_only_once = yes
 	
