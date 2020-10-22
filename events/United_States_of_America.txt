@@ -14165,6 +14165,10 @@ country_event = { # SPQA Election
 
 			# next primaries
 			country_event = {
+				id = ustates.3160
+				days = 20
+			}
+			country_event = {
 				id = ustates.204
 				days = 1283
 			}
@@ -14215,6 +14219,10 @@ country_event = { # SPQA Election
 			}
 
 			# next primaries
+			country_event = {
+				id = ustates.3160
+				days = 20
+			}
 			country_event = {
 				id = ustates.204
 				days = 1283
@@ -16370,7 +16378,7 @@ country_event = { # Fifth Political System
 		set_party_name = {
 			ideology = social_liberal
 			long_name = USA_1940_radical_republican_dominance_long
-			name = USA_1940_radical_republican_dominance_party }		
+			name = USA_1940_radical_republican_dominance_party }	
 		set_party_name = {
 			ideology = market_liberal
 			long_name = USA_1940_old_liberal_dominance_long
@@ -16393,6 +16401,23 @@ country_event = { # Fifth Political System
 			name = USA_1940_old_liberal_dominance_party }
 		set_country_flag = USA_con_democrat_dominance
 		}
+	}
+}
+
+country_event = {# FOPC
+	id = ustates.3160
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.3160"}
+	title = ustates.3160.t
+	desc = ustates.3160.d
+	picture = GFX_report_event_USA_DOD_interior
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {# No more radicals
+		name = ustates.3160.a
+		add_ideas = USA_fopc_idea
+		add_popularity = { ideology = market_liberal popularity = 0.25}
+		add_popularity = { ideology = social_conservative popularity = 0.25}
 	}
 }
 

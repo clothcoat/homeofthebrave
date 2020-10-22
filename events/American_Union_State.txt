@@ -1209,7 +1209,7 @@ country_event = { # Bonnie and Clyde gang
 		add_manpower = -150
 		add_stability = 0.04
 		add_political_power = 10
-		add_popularity = { ideology = authoritarian_democrat}
+		add_popularity = { ideology = authoritarian_democrat popularity = -0.02 }
 		modify_country_flag = {
 			flag = ACW_crime_resistance
 			value = -2
