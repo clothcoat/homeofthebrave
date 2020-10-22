@@ -90,6 +90,21 @@ country_event = { # Progressive Primary
 			}
 		}
 	}
+	option = { # Keep Norris
+		name = pacificstates.2.f
+		trigger = {
+		has_country_leader = { ruling_only = yes name = "George Norris" }
+		}
+		add_political_power = -30
+		add_stability = 0.03
+		hidden_effect = {
+			set_country_flag = PSA_1937_progressive_primary_norris
+			country_event = {
+				id = pacificstates.1
+				days = 8
+			}
+		}
+	}
 }
 
 country_event = { # 1937 Dem-Rep Primary

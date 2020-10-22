@@ -5020,10 +5020,6 @@ country_event = { # MacArthur and the Army Remove Republicans
 				traits = { american_caesar }
 			}
 		}
-		add_popularity = {
-		ideology = paternal_autocrat
-		popularity = 0.2
-		}
 	}
 
 	trigger = {
@@ -5041,6 +5037,10 @@ country_event = { # MacArthur and the Army Remove Republicans
 			ruling_party = paternal_autocrat
 			elections_allowed = no
 		}
+		add_popularity = {
+		ideology = paternal_autocrat
+		popularity = 0.2
+		}
 		hidden_effect = {
 			add_ideas = USA_Douglas_MacArthur_hog_pau
 			add_ideas = USA_John_William_Davis_for_pau
@@ -5056,11 +5056,68 @@ country_event = { # MacArthur and the Army Remove Republicans
 			ruling_party = paternal_autocrat
 			elections_allowed = no
 		}
+		add_popularity = {
+		ideology = paternal_autocrat
+		popularity = 0.2
+		}
 		hidden_effect = {
 			add_ideas = USA_Douglas_MacArthur_hog_pau
 			add_ideas = USA_John_William_Davis_for_pau
 			add_ideas = USA_William_Harrison_Standley_eco_pau
 			add_ideas = USA_John_Edgar_Hoover_sec_pau
+		}
+	}
+}
+
+country_event = { # MacArthur and the Army Remove Norris
+	id = ustates.781
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.781"}
+	title = ustates.781.t
+	desc = ustates.781.d
+	picture = GFX_report_event_usa_macarthur_speech
+
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_country_flag = USA_macarthur_coup }
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = USA_macarthur_coup
+			set_party_name = {
+				ideology = paternal_autocrat
+				long_name = USA_paternal_autocrat_military_junta_long
+				name = USA_paternal_autocrat_military_junta
+			}
+			create_country_leader = {
+				name = "Douglas MacArthur"
+				desc = "POLITICS_DOUGLAS_MACARTHUR_DESC"
+				picture = "Portrait_USA_gen_douglas_macarthur.tga"
+				expire = "1965.1.1"
+				ideology = paternal_autocrat_subtype
+				traits = { american_caesar }
+			}
+		}
+	}
+
+	option = {
+		name = ustates.781.a
+		add_political_power = -30
+		add_stability = -0.08
+		set_politics = {
+			ruling_party = paternal_autocrat
+			elections_allowed = no
+		}
+		hidden_effect = {
+			add_ideas = USA_Douglas_MacArthur_hog_pau
+			add_ideas = USA_John_William_Davis_for_pau
+			add_ideas = USA_William_Harrison_Standley_eco_pau
+			add_ideas = USA_John_Edgar_Hoover_sec_pau
+		}
+		hidden_effect = {
+			country_event = { id = amcivwar.15 days = 1 }
+			set_global_flag = USA_Norris_Flees
 		}
 	}
 }
@@ -6282,7 +6339,7 @@ country_event = { # General Strike Spreads
 			country_event = { id = amcivwar.18 days = 5 }
 		}
 		hidden_effect = {
-			country_event = { id = ustates.78 days = 6 }
+			country_event = { id = ustates.781 days = 6 }
 		}
 		hidden_effect = {
 			country_event = { id = amcivwar.1012 days = 7 }
@@ -6336,7 +6393,7 @@ country_event = { # General Strike Spreads
 			country_event = { id = amcivwar.18 days = 5 }
 		}
 		hidden_effect = {
-			country_event = { id = ustates.78 days = 6 }
+			country_event = { id = ustates.781 days = 6 }
 		}
 		hidden_effect = {
 			country_event = { id = amcivwar.1012 days = 7 }

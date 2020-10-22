@@ -4172,6 +4172,7 @@ country_event = {
 	OR = {
 	has_global_flag = USA_Republicans_Flee
 	has_global_flag = USA_Garner_Flees
+	has_global_flag = USA_Norris_Flees
 		}
 	}
 	
@@ -4243,6 +4244,25 @@ country_event = {
 			election_frequency = 48
 			elections_allowed = yes
 			}
+		}
+		if = {
+		limit = {
+			has_global_flag = USA_president_norris
+		}
+		create_country_leader = {
+				name = "George Norris"
+				desc = "POLITICS_GEORGE_NORRIS_DESC"
+				picture = "gfx/leaders/USA/Portrait_George_W_Norris.tga"
+				expire = "1965.1.1"
+				ideology = social_democrat_subtype
+				traits = { the_fighting_liberal }
+			}
+		}
+		set_politics = {
+			ruling_party = social_democrat
+			election_frequency = 48
+			elections_allowed = yes
+			}	
 		}
 	}
 }
@@ -4524,7 +4544,7 @@ country_event = { # Huey Long declares Rebellion against Norris
 	is_triggered_only = yes
 
 	immediate = {
-		set_country_flag = USA_landon_was_president
+		set_country_flag = USA_norris_was_president
 		USA_release_TEX = yes
 	}
 
