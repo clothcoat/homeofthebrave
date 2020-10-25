@@ -9817,6 +9817,12 @@ country_event = {
 				has_capitulated = yes
 			}
 		}
+		USA = {
+			OR = {
+				surrender_progress > 0.80
+				has_capitulated = yes
+			}
+		}
 	}
 
 	option = {
