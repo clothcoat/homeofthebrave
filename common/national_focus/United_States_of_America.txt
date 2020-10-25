@@ -1878,8 +1878,8 @@ focus_tree = {
 		}
 		available = {
 			OR = {
+				has_government = social_democrat
 				has_government = social_liberal
-				has_government = market_liberal
 			}
 		}
 		ai_will_do = {
@@ -5538,6 +5538,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_fight_the_debt"
 			remove_ideas = USA_great_depression_Norris_2
 			remove_ideas = USA_black_monday
+			remove_ideas = USA_black_monday2
 			add_stability = 0.05
 			add_political_power = 20
 		}
@@ -5563,7 +5564,6 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_model_legislature"
 			remove_ideas = USA_southern_occupation_2
-			remove_ideas = USA_black_monday2
 			add_political_power = 50
 			add_stability = 0.03
 		}
