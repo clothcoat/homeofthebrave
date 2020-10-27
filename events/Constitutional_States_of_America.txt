@@ -1160,6 +1160,118 @@ country_event = { # Assassination Attempt
 	}
 }
 
+country_event = { # Choosing a Vice President (Russel)
+	id = constate.1112
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.1112"}
+	title = constate.1112.t
+	desc = constate.1112.d
+	picture = GFX_report_event_USA_congress
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = { #Strom Thurmond
+		name = constate.1112.a
+		add_stability = 0.05
+		add_political_power = 20
+			add_ideas = COR_Strom_Thurmond_hog_sco
+}
+	option = { #James F. Byrnes
+		name = constate.1112.b
+		add_stability = 0.05
+		add_political_power = 20
+			add_ideas = COR_James_Francis_Byrnes_hog_sco
+	}
+}
+
+country_event = { # Eliminating Corruption
+	id = constate.1113
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.1113"}
+	title = constate.1113.t
+	desc = constate.1113.d
+	picture = GFX_report_event_USA_congress
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = { #For the people
+		name = constate.1113.a
+		add_popularity = { ideology = social_conservative popularity = 0.05 }
+		add_stability = 0.04
+		add_political_power = -5
+		}
+}
+
+country_event = { # Fordists Resist Changes
+	id = constate.1114
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.1114"}
+	title = constate.1114.t
+	desc = constate.1114.d
+	picture = GFX_report_event_USA_congress
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = { #Backroom Maneuvering 
+		name = constate.1114.b
+		add_stability = 0.02
+		add_political_power = -20
+		add_command_power = 5
+		}
+	option = { #Move forward regardless
+		name = constate.1114.b
+		add_stability = -0.02
+		add_political_power = 10
+		add_command_power = -10
+		}
+}
+
+country_event = { # A Rivalry Reborn
+	id = constate.1115
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.1115"}
+	title = constate.1115.t
+	desc = constate.1115.d
+	picture = GFX_report_event_USA_congress
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = { #Ensure we have Farmer support
+		name = constate.1115.a
+		add_ideas = COR_political_rival_farmer
+		add_popularity = { ideology = social_conservative popularity = 0.03 }
+		}
+	option = { #Undermine Talmadge within the ODP
+		name = constate.1115.b
+		add_ideas = COR_political_rival_odp
+		add_popularity = { ideology = paternal_autocrat popularity = 0.02 }
+		}
+}
+
+country_event = { # Backroom Deals
+	id = constate.1117
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.1117"}
+	title = constate.1117.t
+	desc = constate.1117.d
+	picture = GFX_report_event_USA_congress
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = { #Ensure we have Farmer support
+		name = constate.1117.a
+		add_ideas = COR_political_rival_farmer
+		}
+	option = { #Undermine Talmadge within the ODP
+		name = constate.1117.b
+		add_ideas = COR_political_rival_odp
+		}
+}
 
 country_event = { # Simmons Death
 	id = constate.12
