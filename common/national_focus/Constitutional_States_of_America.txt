@@ -1989,9 +1989,9 @@ focus_tree = {
 			}
 		}
 	}
-}
+	}
 
-	focus = {# Segregation Now, Segregation Forever
+	focus = {# New Democrats
 		id = COR_new_democrats
 		icon = GFX_goal_agricultural_aid
 		cost = 7.25
@@ -2014,12 +2014,17 @@ focus_tree = {
 		y = 2
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_new_democrats"
-			add_ideas = COR_farmers_relief
-			add_stability = 0.05
-			add_political_power = 30
-			add_command_power = 20
+			add_ideas = COR_weaken_machines
+			add_political_power = 10
+			add_command_power = -5
 			add_war_support = 0.05
+			hidden_effect = {
+			country_event = {
+			id = constate.1118
+			days = 30
+			}
 		}
+	}
 	}
 
 	focus = {# Segregation Now, Segregation Forever
@@ -2053,7 +2058,7 @@ focus_tree = {
 		}
 	}
 
-	focus = {# Segregation Now, Segregation Forever
+	focus = {# Agricultural Research
 		id = COR_agriculture_research
 		icon = GFX_goal_agricultural_aid
 		cost = 7.25
@@ -2073,15 +2078,11 @@ focus_tree = {
 		y = 3
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_agriculture_research"
-			add_ideas = COR_farmers_relief
-			add_stability = 0.05
-			add_political_power = 30
-			add_command_power = 20
-			add_war_support = 0.05
+			add_ideas = COR_agricultural_research_idea
 		}
 	}
 
-	focus = {# Segregation Now, Segregation Forever
+	focus = {# Infrastructure Programs
 		id = COR_infrastructure_programs
 		icon = GFX_goal_agricultural_aid
 		cost = 7.25
@@ -2104,15 +2105,45 @@ focus_tree = {
 		y = 3
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_infrastructure_programs"
-			add_ideas = COR_farmers_relief
-			add_stability = 0.05
-			add_political_power = 30
-			add_command_power = 20
-			add_war_support = 0.05
+			random_owned_controlled_state = {
+				limit = {
+					is_mainland_america = yes
+					free_building_slots = { building = infrastructure size > 0 }
+				}
+				add_building_construction = { type = infrastructure	level = 1 instant_build = yes }
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_mainland_america = yes
+					free_building_slots = { building = infrastructure size > 0 }
+				}
+				add_building_construction = { type = infrastructure	level = 1 instant_build = yes }
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_mainland_america = yes
+					free_building_slots = { building = infrastructure size > 0 }
+				}
+				add_building_construction = { type = infrastructure	level = 1 instant_build = yes }
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_mainland_america = yes
+					free_building_slots = { building = infrastructure size > 0 }
+				}
+				add_building_construction = { type = infrastructure	level = 1 instant_build = yes }
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_mainland_america = yes
+					free_building_slots = { building = infrastructure size > 0 }
+				}
+				add_building_construction = { type = infrastructure	level = 1 instant_build = yes }
+			}
 		}
 	}
 
-	focus = {# Segregation Now, Segregation Forever
+	focus = {# Smaller Government
 		id = COR_smaller_government
 		icon = GFX_goal_agricultural_aid
 		cost = 7.25
@@ -2132,15 +2163,13 @@ focus_tree = {
 		y = 3
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_smaller_government"
-			add_ideas = COR_farmers_relief
-			add_stability = 0.05
-			add_political_power = 30
+			add_ideas = COR_cut_bloated_government
+			add_political_power = 5
 			add_command_power = 20
-			add_war_support = 0.05
 		}
 	}
 
-	focus = {# Segregation Now, Segregation Forever
+	focus = {#Southern Electrification
 		id = COR_southern_electrification
 		icon = GFX_goal_agricultural_aid
 		cost = 7.25
@@ -2160,15 +2189,16 @@ focus_tree = {
 		y = 4
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_southern_electrification"
-			add_ideas = COR_farmers_relief
-			add_stability = 0.05
-			add_political_power = 30
-			add_command_power = 20
-			add_war_support = 0.05
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 1
+				uses = 2
+				category = electronics
+			}
 		}
 	}
 
-	focus = {# Segregation Now, Segregation Forever
+	focus = {# University System of America
 		id = COR_university_system_of_america
 		icon = GFX_goal_agricultural_aid
 		cost = 7.25
@@ -2188,15 +2218,13 @@ focus_tree = {
 		y = 4
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_university_system_of_america"
-			add_ideas = COR_farmers_relief
-			add_stability = 0.05
-			add_political_power = 30
-			add_command_power = 20
+			add_ideas = COR_university_system_idea
+			add_political_power = 20
 			add_war_support = 0.05
 		}
 	}
 
-	focus = {# Segregation Now, Segregation Forever
+	focus = {# Fiscal Responsability
 		id = COR_fiscal_responsability
 		icon = GFX_goal_agricultural_aid
 		cost = 7.25
@@ -2216,15 +2244,11 @@ focus_tree = {
 		y = 4
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_fiscal_responsability"
-			add_ideas = COR_farmers_relief
-			add_stability = 0.05
-			add_political_power = 30
-			add_command_power = 20
-			add_war_support = 0.05
+			add_ideas = COR_fiscal_responsability_idea
 		}
 	}
 
-	focus = {# Segregation Now, Segregation Forever
+	focus = {# Balanced Budget
 		id = COR_balanced_budget
 		icon = GFX_goal_agricultural_aid
 		cost = 7.25
@@ -2247,15 +2271,14 @@ focus_tree = {
 		y = 5
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus  COR_balanced_budget"
-			add_ideas = COR_farmers_relief
+			increase_ruling_party_popularity_by_5 = yes
 			add_stability = 0.05
-			add_political_power = 30
-			add_command_power = 20
-			add_war_support = 0.05
+			add_political_power = 50
+			add_war_support = 0.02
 		}
 	}
 
-	focus = {# Segregation Now, Segregation Forever
+	focus = {# Agrarian Heritage
 		id = COR_agrarian_heritage
 		icon = GFX_goal_agricultural_aid
 		cost = 7.25
@@ -2278,15 +2301,13 @@ focus_tree = {
 		y = 5
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus  COR_agrarian_heritage"
-			add_ideas = COR_farmers_relief
-			add_stability = 0.05
-			add_political_power = 30
-			add_command_power = 20
-			add_war_support = 0.05
+			add_ideas = COR_rural_heritage_idea
+			add_manpower = -800
+			add_political_power = 10
 		}
 	}
 
-	focus = {# Segregation Now, Segregation Forever
+	focus = {# States Rights
 		id = COR_states_rights
 		icon = GFX_goal_agricultural_aid
 		cost = 7.25
@@ -2309,15 +2330,14 @@ focus_tree = {
 		y = 6
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus  COR_states_rights"
-			add_ideas = COR_farmers_relief
-			add_stability = 0.05
-			add_political_power = 30
-			add_command_power = 20
-			add_war_support = 0.05
+			country_event = {
+			id = constate.1119
+			days = 1
+			}
 		}
 	}
 
-	focus = {# Segregation Now, Segregation Forever
+	focus = {# School Lunch Programs
 		id = COR_school_lunch_programs
 		icon = GFX_goal_agricultural_aid
 		cost = 7.25
@@ -2337,15 +2357,17 @@ focus_tree = {
 		y = 7
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_school_lunch_programs"
-			add_ideas = COR_farmers_relief
-			add_stability = 0.05
-			add_political_power = 30
-			add_command_power = 20
-			add_war_support = 0.05
+			swap_ideas = {
+			remove_idea = COR_farmers_relief
+			add_idea = COR_increased_farmers_relief
+			}
+			increase_ruling_party_popularity_by_5 = yes
+			add_stability = 0.03
+			add_political_power = 10
 		}
 	}
 
-	focus = {# Segregation Now, Segregation Forever
+	focus = {# Limit Immigration
 		id = COR_limit_immigration
 		icon = GFX_goal_agricultural_aid
 		cost = 7.25
@@ -2365,11 +2387,7 @@ focus_tree = {
 		y = 7
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_limit_immigration"
-			add_ideas = COR_farmers_relief
-			add_stability = 0.05
-			add_political_power = 30
-			add_command_power = 20
-			add_war_support = 0.05
+			add_ideas = COR_immigration_limit_idea
 		}
 	}
 
