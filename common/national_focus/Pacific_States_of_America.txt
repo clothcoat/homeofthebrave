@@ -14299,8 +14299,8 @@ focus_tree = {
 			}
 			add_equipment_to_stockpile = { type = convoy amount = 50 }
 			if = {
-			FROM = {
-			is_puppet_of = CAL
+				FROM = {
+					is_puppet_of = CAL
 				}
 			}
 			add_opinion_modifier = { target = CAL modifier = medium_increase }

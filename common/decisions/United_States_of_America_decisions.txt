@@ -1495,7 +1495,6 @@ USA_reconstruction_decisions = {# Reconstruction Stuff
 				tag = CSA
 				tag = TEX
 				tag = NEE
-				has_completed_focus = BBR_a_new_america
 			}
 		}
 		available = {
@@ -2587,8 +2586,6 @@ USA_reconstruction_decisions = {# Reconstruction Stuff
 		icon = generic_political_discourse
 		allowed = {
 			tag = COR
-			has_country_leader = { ruling_only = yes name = "George Patton" }
-			has_global_flag = USA_civil_war_over_flag
 		}
 		available = {
 			is_subject = no
@@ -3904,31 +3901,36 @@ USA_MacArthur_policies = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision USA_mac_retreats"
 			WCC = {
-			manpower 20000
-			country_event = {
-			id = wcc.11
+				add_manpower = 20000
+				country_event = {
+					id = wcc.11
+					days = 7
+				}
 			}
-					USA = {
-						every_unit_leader = {
-							limit = {
-								OR = {
-									has_id = 1408
-									has_id = 2202
-								}
-							}
-							set_nationality = WCC
+			USA = {
+				every_unit_leader = {
+					limit = {
+						OR = {
+							has_id = 1408
+							has_id = 2202
 						}
-						every_navy_leader = {
-							set_nationality = WCC
+					}
+					set_nationality = WCC
+				}
+				every_navy_leader = {
+					set_nationality = WCC
+				}
+				if = {
+					else = {
+						annex_country = {
+							target = USA
+							transfer_troops = no
 						}
 					}
 				}
-				else = {
-					annex_country = {
-						target = USA
-						transfer_troops = no
-					}
-				}
 			}
+			
 		}
+	}
+}
 

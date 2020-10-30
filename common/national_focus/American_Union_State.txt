@@ -56,7 +56,7 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TEX_to_the_victor"
-			TEX_reconstruction_is_begun_tooltip = yes
+			custom_effect_tooltip = TEX_reconstruction_is_begun_tooltip
 			add_stability = 0.05
 			add_political_power = 50
 		}
@@ -162,7 +162,7 @@ focus_tree = {
 			add_popularity = { ideology = paternal_autocrat popularity = -0.1 }
 			add_stability = 0.1
 			add_war_support = -0.05
-			TEX_reconcile_left_tooltip = yes
+			custom_effect_tooltip = TEX_reconcile_left_tooltip
 			modify_country_flag = {
 			flag = AFP_leftism
 			value = -2
@@ -232,7 +232,7 @@ focus_tree = {
 			add_popularity = { ideology = paternal_autocrat popularity = 0.03 }
 			add_stability = 0.1
 			add_war_support = -0.05
-			TEX_reconcile_right_tooltip = yes
+			custom_effect_tooltip = TEX_reconcile_right_tooltip
 			modify_country_flag = {
 			flag = AFP_leftism
 			value = -2
@@ -4089,13 +4089,11 @@ unlock_decision_category_tooltip = USA_reconstruction_decisions
 				}
 				add_building_construction = {
 					type = dockyard
-					province = 10337
 					level = 1
 					instant_build = yes
 				}
 				add_building_construction = {
 					type = dockyard
-					province = 6785
 					level = 1
 					instant_build = yes
 				}
