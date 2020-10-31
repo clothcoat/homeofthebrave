@@ -5655,7 +5655,10 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = COR_erase_false_hebrewism
-			}
+		}
+		mutually_exclusive = {
+			focus = COR_new_pacifism
+		}
 		available = {
 			has_government = national_populist
 		}
@@ -6225,7 +6228,6 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_business_subsides"
 			custom_effect_tooltip = USA_economic_recovery_tooltip
 			COR_increase_recovery = yes
-			COR_increase_military_complex = yes
 		}
 	}
 	
@@ -6246,7 +6248,6 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_business_subsides"
 			custom_effect_tooltip = USA_economic_recovery_tooltip
 			COR_increase_recovery = yes
-			COR_increase_military_complex = yes
 		}
 	}
 
@@ -6389,7 +6390,6 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_reconstruction_is_over"
 			COR_increase_recovery = yes
-			COR_increase_military_complex = yes
 		}
 	}
 
@@ -6567,9 +6567,9 @@ focus_tree = {
 				add_idea = COR_Patton_plan3
 			}
 			add_equipment_to_stockpile = {
-			type = tank_equipment
-			amount = 50
-			producer = COR
+				type = light_tank_equipment
+				amount = 50
+				producer = COR
 			}
 			add_tech_bonus = {
 				name = infantry_weapons_bonus
@@ -6944,10 +6944,6 @@ focus_tree = {
 		prerequisite = {
 			focus = COR_mcnarney_advisory
 		}
-		mutually_exclusive = {
-			focus = COR_Patton_Plan
-			focus = COR_Moseley_Plan
-		}
 		x = 0
 		y = 1
 		ai_will_do = {
@@ -6991,10 +6987,6 @@ focus_tree = {
 		prerequisite = {
 			focus = COR_artillery_support
 		}
-		mutually_exclusive = {
-			focus = COR_Patton_Plan
-			focus = COR_Moseley_Plan
-		}
 		x = -1
 		y = 2
 		ai_will_do = {
@@ -7025,10 +7017,6 @@ focus_tree = {
 		cost = 5.00
 		prerequisite = {
 			focus = COR_artillery_support
-		}
-		mutually_exclusive = {
-			focus = COR_Patton_Plan
-			focus = COR_Moseley_Plan
 		}
 		x = 1
 		y = 2
@@ -7083,10 +7071,6 @@ focus_tree = {
 		prerequisite = {
 			focus = COR_counter_arnaments
 		}
-		mutually_exclusive = {
-			focus = COR_Patton_Plan
-			focus = COR_Moseley_Plan
-		}
 		x = 0
 		y = 3
 		ai_will_do = {
@@ -7119,10 +7103,6 @@ focus_tree = {
 		prerequisite = {
 			focus = COR_counter_operations
 		}
-		mutually_exclusive = {
-			focus = COR_Patton_Plan
-			focus = COR_Moseley_Plan
-		}
 		x = 0
 		y = 4
 		ai_will_do = {
@@ -7154,10 +7134,6 @@ focus_tree = {
 		cost = 5.00
 		prerequisite = {
 			focus = COR_death_from_above
-		}
-		mutually_exclusive = {
-			focus = COR_Patton_Plan
-			focus = COR_Moseley_Plan
 		}
 		x = 0
 		y = 5
@@ -9583,7 +9559,7 @@ focus_tree = {
 			focus = COR_back_in_business
 		}
 		mutually_exclusive = {
-			focus = COR_manifest_destiny
+			focus = COR_american_empire
 			focus = COR_fortress_america
 			focus = COR_look_to_the_reichsadler
 		}
@@ -9641,16 +9617,21 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_western_brothers"
 			if = {
-			has_country_leader = { ruling_only = yes name = "Charles Lindbergh" }
-			add_political_power = -25
-			add_war_support = 0.05
-			add_stability = 0.03
+				limit = {
+					has_country_leader = {
+						ruling_only = yes
+						name = "Charles Lindbergh"
+					}
+				}
+				add_political_power = -25
+				add_war_support = 0.05
+				add_stability = 0.03
 			}
 			else = {
-			add_political_power = 30
+				add_political_power = 30
 			}
 			CAN = {
-			add_to_faction = COR
+				add_to_faction = COR
 			}
 		}
 	}
@@ -9819,9 +9800,11 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_entente_research"
 			add_ideas = COR_american_entente_research_idea
-			ROOT = {
-			is_in_faction_with = COR
-			add_ideas = COR_american_entente_research_idea
+			if = {
+				limit = {
+					is_in_faction_with = COR
+				}
+				add_ideas = COR_american_entente_research_idea
 			}
 			add_tech_bonus = {
 				name = industrial_bonus
@@ -9934,16 +9917,16 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_anti_syndicalist_action"
 			add_ideas = COR_counter_syndicalist_idea
-		CAN = {
-			add_ideas = COR_counter_syndicalist_idea
+			CAN = {
+				add_ideas = COR_counter_syndicalist_idea
 			}
 			create_wargoal = {
-			type = annex_everything
-			target = ENG
+				type = annex_everything
+				target = ENG
 			}
-		}
-		NFA = {
-		add_ideas = COR_counter_syndicalist_idea
+			NFA = {
+				add_ideas = COR_counter_syndicalist_idea
+			}
 		}
 	}
 	
@@ -10010,20 +9993,25 @@ focus_tree = {
 		available = {
 			is_subject = no
 			OR = {
-			OR = {
-			has_country_leader = {
-			ruling_only = yes
-			name = "William H. Murray"
+				OR = {
+					has_country_leader = {
+						ruling_only = yes
+						name = "William H. Murray"
+					}
+					has_country_leader = {
+						ruling_only = yes
+						name = "George Patton"
+					}
 				}
-			has_country_leader = {
-			ruling_only = yes
-			name = "George Patton"
+				if = {
+					limit = {
+						has_country_leader = {
+							ruling_only = yes
+							name = "Herbert W. Armstrong"
+						}
+					}
 				}
-			}
-			if = {
-			limit = { ruling_only = yes name = "Herbert W. Armstrong"}
-			}
-			has_completed_focus = COR_unite_the_lost_tribes
+				has_completed_focus = COR_unite_the_lost_tribes
 			}
 		}
 		relative_position_id = COR_back_in_business

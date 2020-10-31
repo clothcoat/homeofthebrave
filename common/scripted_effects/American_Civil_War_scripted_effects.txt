@@ -574,7 +574,7 @@ USA_release_TEX = {
 			producer = TEX
 			}
 			add_equipment_to_stockpile = { 
-			type = bomber_equipment
+			type = tac_bomber_equipment
 			amount = 120
 			producer = TEX
 			}
@@ -898,7 +898,7 @@ USA_release_COR = {
 			producer = COR
 			}
 			add_equipment_to_stockpile = { 
-			type = bomber_equipment
+			type = tac_bomber_equipment 
 			amount = 100
 			producer = COR
 			}
@@ -1235,7 +1235,7 @@ USA_release_WCC = {
 			producer = TEX
 			}
 			add_equipment_to_stockpile = { 
-			type = bomber_equipment
+			type = tac_bomber_equipment 
 			amount = 120
 			producer = TEX
 			}

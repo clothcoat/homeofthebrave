@@ -3278,9 +3278,6 @@ focus_tree = {
 		prerequisite = {
 			focus = TEX_rebuilding_the_country
 		}
-		mutually_exclusive = {
-			focus = TEX_military_industrial_complex
-		}
 		ai_will_do = {
 			factor = 4
 		}
@@ -3556,7 +3553,6 @@ focus_tree = {
 		cost = 7.25
 		prerequisite = {
 			focus = TEX_national_recovery
-			focus = TEX_military_industrial_complex
 		}
 		ai_will_do = {
 			factor = 4
@@ -3567,8 +3563,7 @@ focus_tree = {
 		y = 2
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TEX_begin_reconstruction"
-
-unlock_decision_category_tooltip = USA_reconstruction_decisions
+			unlock_decision_category_tooltip = USA_reconstruction_decisions
 		}
 	}
 
@@ -5950,7 +5945,11 @@ unlock_decision_category_tooltip = USA_reconstruction_decisions
 				uses = 1
 				category = cat_strategic_bomber
 			}
-			add_equipment_to_stockpile = { type = naval_bomber_equipment amount = 30 }
+			add_equipment_to_stockpile = {
+				type = nav_bomber_equipment
+				amount = 30
+				producer = TEX
+			}
 		}
 	}
 	focus = {
@@ -6372,7 +6371,7 @@ unlock_decision_category_tooltip = USA_reconstruction_decisions
 		cost = 7.25
 		prerequisite = {
 			focus = TEX_battleships
-			focus = TEX_coast_guard
+			focus = TEX_our_coast_guard
 			focus = TEX_naval_aviation
 		}
 		available = {
@@ -6526,7 +6525,7 @@ unlock_decision_category_tooltip = USA_reconstruction_decisions
 		cost = 7.25
 		prerequisite = {
 			focus = TEX_battleships
-			focus = TEX_coast_guard
+			focus = TEX_our_coast_guard
 			focus = TEX_naval_aviation
 		}
 		available = {
@@ -6968,10 +6967,6 @@ unlock_decision_category_tooltip = USA_reconstruction_decisions
 		cost = 6.00
 		prerequisite = {
 			focus = TEX_americanist_doctrine
-		}
-		mutually_exclusive = {
-			focus = TEX_manifest_destiny
-			focus = TEX_enter_the_fray
 		}
 		available = {
 			is_subject = no

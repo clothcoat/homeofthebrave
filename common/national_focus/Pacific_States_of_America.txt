@@ -944,7 +944,7 @@ focus_tree = {
 		relative_position_id = CAL_mcnair_report
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_bombing_support"
-			add_equipment_to_stockpile = { type = naval_bomber_equipment amount = 40 }
+			add_equipment_to_stockpile = { type = nav_bomber_equipment amount = 40 }
 			add_tech_bonus = {
 				bonus = 1
 				uses = 1
@@ -1249,10 +1249,6 @@ focus_tree = {
 		id = CAL_protecting_Columbia
 		icon = GFX_goal_america_fortress
 		cost = 5
-		prerequisite = {
-			focus = CAL_coast_to_coast_planning
-			focus = CAL_one_switft_push
-		}
 		prerequisite = {
 			focus = CAL_defense_logistics_agency
 		}
@@ -4348,9 +4344,6 @@ focus_tree = {
 		prerequisite = {
 			focus = CAL_classical_liberal_mandate
 		}
-		mutually_exclusive = {
-			focus = CAL_moderate_the_spa
-		}
 		relative_position_id = CAL_classical_liberal_mandate
 		x = 3
 		y = 1
@@ -7074,7 +7067,7 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = dockyard
-					level = 
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -9356,10 +9349,18 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_fpc"
 			add_popularity = { ideology = social_liberal popularity = 0.05 }
-			local_resources = 0.05
+			random_owned_state = {
+				limit = {
+					is_core_of = CAL
+					is_controlled_by = CAL
+				}
+				add_state_modifier = {
+					local_resources = 0.05
+				}
+			}
 			swap_ideas = {
-			remove_idea = CAL_new_freedom_5
-			add_idea = CAL_new_freedom_6
+				remove_idea = CAL_new_freedom_5
+				add_idea = CAL_new_freedom_6
 			}
 		}
 	}  
@@ -9833,7 +9834,7 @@ focus_tree = {
 		}
 		available = {
 			has_government = radical_socialist
-			flag = 
+			has_country_flag = CSA_social_patriot_victory
 		}
 		ai_will_do = {
 			factor = 5
@@ -10066,10 +10067,14 @@ focus_tree = {
 			add_popularity = { ideology = radical_socialist popularity = 0.05 }
 			add_stability = 0.03
 			if = {
-			CSA = { has_country_flag = CSA_social_patriot_victory }
-			country_event = {
-				id = pacificstates.323
-				days = 3
+				limit = {
+					CSA = {
+						has_country_flag = CSA_social_patriot_victory
+					}
+				}
+				country_event = {
+					id = pacificstates.323
+					days = 3
 				}
 			}
 		}
@@ -11210,7 +11215,7 @@ focus_tree = {
 		icon = GFX_CAL_christian_mysticism
 		cost = 5.00
 		mutually_exclusive = {
-		focus = CAL_dianetics
+			focus = CAL_dianetics
 		}
 		prerequisite = {
 		focus = CAL_media_blackout
@@ -11240,10 +11245,13 @@ focus_tree = {
 		icon = GFX_CAL_excalibur
 		cost = 5.00
 		prerequisite = {
-		focus = CAL_media_blackout
+			focus = CAL_media_blackout
 		}
 		available = {
 			has_government = national_populist
+		}
+		mutually_exclusive = {
+			focus = CAL_christian_mysticism
 		}
 		ai_will_do = {
 			factor = 5
@@ -11765,11 +11773,11 @@ focus_tree = {
 		icon = GFX_jazz_cracdown
 		cost = 5.00
 		prerequisite = {
-		focus = CAL_ban_race_mixing
+			focus = CAL_ban_race_mixing
 		}
 		mutually_exclusive = {
-		focus = CAL_conditional_black_aid
-		focus = CAL_negro_bureau
+			focus = CAL_conditional_black_aid
+			focus = CAL_negro_bureau
 		}
 		ai_will_do = {
 			factor = 5
@@ -11937,7 +11945,7 @@ focus_tree = {
 		}
 		mutually_exclusive = {
 		focus = CAL_conditional_black_aid
-		focus = CAL_negro_bureau
+		focus = CAL_jazz_crackdown
 		}
 		ai_will_do = {
 			factor = 5
@@ -12762,9 +12770,6 @@ focus_tree = {
 		prerequisite = {
 			focus = CAL_anti_imperialism
 		}
-		mutually_exclusive = {
-			focus = CAL_fortress_america
-		}
 		available = {
 			is_subject = no
 		}
@@ -12837,57 +12842,65 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_warn_japan"
 			add_war_support = 0.1
 			JAP = {
-			add_opinion_modifier = { target = USA modifier = medium_decrease }
+				add_opinion_modifier = { target = USA modifier = medium_decrease }
 			}
 			PHI = {
-			add_opinion_modifier = { target = USA modifier = medium_increase }
+				add_opinion_modifier = { target = USA modifier = medium_increase }
 			}
 			QIE = {
-			add_opinion_modifier = { target = USA modifier = medium_increase }
+				add_opinion_modifier = { target = USA modifier = medium_increase }
 			}
-			VIE = {
-			add_opinion_modifier = { target = USA modifier = medium_increase }
+			VIN = {
+				add_opinion_modifier = { target = USA modifier = medium_increase }
 			}
 			CHI = {
-			add_opinion_modifier = { target = USA modifier = medium_increase }
+				add_opinion_modifier = { target = USA modifier = medium_increase }
 			}
 			if = {
-			limit = { 
-			NOT = {
-			PHI = {is_puppet_of	= JAP }
+				limit = { 
+					NOT = {
+						PHI = {
+							is_puppet_of = JAP
+						}
 					}
-			PHI = {
-			exists = yes
-			}
+					PHI = {
+						exists = yes
+					}
 				}
-			give_guarantee = PHI
+				give_guarantee = PHI
 			}
 			if = {
-			limit = { 
-			NOT = {
-			QIE = { is_puppet_of = JAP	}
+				limit = { 
+					NOT = {
+						QIE = {
+							is_puppet_of = JAP
+						}
 					}
 				}
-			give_guarantee = QIE
+				give_guarantee = QIE
 			}
 			if = {
-			limit = { 
-			NOT = {
-			QIE = { is_puppet_of = CHI	}
+				limit = { 
+					NOT = {
+						QIE = {
+							is_puppet_of = CHI
+						}
 					}
 				}
-			give_guarantee = CHI
+				give_guarantee = CHI
 			}
 			if = {
-			limit = { 
-			NOT = {
-			VIE = { is_puppet_of = CHI	}
+				limit = { 
+					NOT = {
+						VIN = {
+							is_puppet_of = CHI
+						}
 					}
-			VIE = {
-			exists = yes
+					VIN = {
+						exists = yes
+					}
 				}
-			}
-			give_guarantee = VIE
+				give_guarantee = VIN
 			}
 		}
 	}
@@ -12974,51 +12987,59 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_embargo_japan"
 			add_war_support = 0.1
 			JAP = {
-			add_opinion_modifier = { target = USA modifier = medium_decrease }
+				add_opinion_modifier = { target = USA modifier = medium_decrease }
 			}
 			PHI = {
-			add_opinion_modifier = { target = USA modifier = medium_increase }
+				add_opinion_modifier = { target = USA modifier = medium_increase }
 			}
 			QIE = {
-			add_opinion_modifier = { target = USA modifier = medium_increase }
+				add_opinion_modifier = { target = USA modifier = medium_increase }
 			}
-			VIE = {
-			add_opinion_modifier = { target = USA modifier = medium_increase }
+			VIN = {
+				add_opinion_modifier = { target = USA modifier = medium_increase }
 			}
 			CHI = {
-			add_opinion_modifier = { target = USA modifier = medium_increase }
+				add_opinion_modifier = { target = USA modifier = medium_increase }
 			}
 			if = {
-			limit = { 
-			NOT = {
-			PHI = {is_puppet_of	= JAP }
+				limit = { 
+					NOT = {
+						PHI = {
+							is_puppet_of = JAP 
+						}
 					}
 				}
-			give_guarantee = PHI
+				give_guarantee = PHI
 			}
 			if = {
-			limit = { 
-			NOT = {
-			QIE = { is_puppet_of = JAP	}
+				limit = { 
+					NOT = {
+						QIE = {
+							is_puppet_of = JAP	
+						}
 					}
 				}
-			give_guarantee = QIE
+				give_guarantee = QIE
 			}
 			if = {
-			limit = { 
-			NOT = {
-			QIE = { is_puppet_of = CHI	}
+				limit = { 
+					NOT = {
+						QIE = {
+							is_puppet_of = CHI
+						}
 					}
 				}
-			give_guarantee = CHI
+				give_guarantee = CHI
 			}
 			if = {
-			limit = { 
-			NOT = {
-			VIE = { is_puppet_of = CHI	}
+				limit = { 
+					NOT = {
+						VIN = {
+							is_puppet_of = CHI
+						}
 					}
 				}
-			give_guarantee = VIE
+				give_guarantee = VIN
 			}
 		}
 	}
@@ -13058,16 +13079,14 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_fortress_america"
 			if = {
-			FROM = {
-			limit = {
-			is_in_faction_with = ROOT
-			}
-			random_owned_controlled_state = {
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-						}
+				limit = {
+					is_in_faction_with = ROOT
+				}
+				random_owned_controlled_state = {
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
 					}
 				}
 			}
@@ -13171,16 +13190,14 @@ focus_tree = {
 				category = naval_doctrine
 			}
 			if = {
-			FROM = {
-			limit = {
-			is_in_faction_with = ROOT
-			}
-			}
-			add_tech_bonus = {
-				bonus = 1
-				uses = 1
-				category = naval_doctrine
-			}
+				limit = {
+					is_in_faction_with = ROOT
+				}
+				add_tech_bonus = {
+					bonus = 1
+					uses = 1
+					category = naval_doctrine
+				}
 			}
 		}
 	}
@@ -13241,9 +13258,6 @@ focus_tree = {
 		cost = 5.00
 		prerequisite = {
 			focus = CAL_new_interventionism
-		}
-		mutually_exclusive = {
-			focus = CAL_fortress_america
 		}
 		available = {
 			is_subject = no
@@ -13354,6 +13368,9 @@ focus_tree = {
 		available = {
 			is_subject = no
 		}
+		mutually_exclusive = {
+			focus = CAL_warn_japan
+		}
 		relative_position_id = CAL_new_interventionism
 		x = -2
 		y = 3
@@ -13456,9 +13473,6 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = CAL_longer_reach
-		}
-		mutually_exclusive = {
-			focus = CAL_fortress_america
 		}
 		available = {
 			is_subject = no
@@ -13602,35 +13616,37 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_lend_lease"
 			add_equipment_to_stockpile = {
-			type = support_equipment
-			amount = -2000
-			producer = CAL
+				type = support_equipment
+				amount = -2000
+				producer = CAL
 			}
 			add_equipment_to_stockpile = {
-			type = light_tank_equipment
-			amount = -200
-			producer = CAL
+				type = light_tank_equipment
+				amount = -200
+				producer = CAL
 			}
 			add_equipment_to_stockpile = {
-			type = infantry_equipment
-			amount = -3000
-			producer = CAL
+				type = infantry_equipment
+				amount = -3000
+				producer = CAL
 			}
 			CAN = {
-			type = support_equipment
-			amount = 2000
-			producer = CAL
-			add_equipment_to_stockpile = {
-			type = light_tank_equipment
-			amount = 200
-			producer = CAL
-			}
-			add_equipment_to_stockpile = {
-			type = infantry_equipment
-			amount = 3000
-			producer = CAL
-			}
-			add_opinion_modifier = { target = CAL modifier = medium_increase }
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = 2000
+					producer = CAL
+				}
+				add_equipment_to_stockpile = {
+					type = light_tank_equipment
+					amount = 200
+					producer = CAL
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 3000
+					producer = CAL
+				}
+				add_opinion_modifier = { target = CAL modifier = medium_increase }
 			}
 		}
 	}
@@ -14248,7 +14264,6 @@ focus_tree = {
 		cost = 5.00
 		prerequisite = {
 			focus = CAL_stop_south_american_syndicalism
-			focus = CAL_banana_republics
 		}
 		available = {
 			is_subject = no
@@ -14294,18 +14309,19 @@ focus_tree = {
 					type = dockyard
 					level = 2
 					instant_build = yes
-					province = 7883
 				}
 			}
 			add_equipment_to_stockpile = { type = convoy amount = 50 }
 			if = {
-				FROM = {
-					is_puppet_of = CAL
+				limit = {
+					FROM = {
+						is_puppet_of = CAL
+					}
 				}
-			}
-			add_opinion_modifier = { target = CAL modifier = medium_increase }
+				add_opinion_modifier = { target = CAL modifier = medium_increase }
 			}
 		}
+	}
 	
 	##American Imperialism##
 	
@@ -14472,9 +14488,10 @@ focus_tree = {
 		cost = 6.00
 		prerequisite = {
 			focus = CAL_make_mexico_friendly
+			focus = CAL_ally_new_mexico
 		}
 		mutually_exclusive = {
-			focus = CAL_sphere_of_influence
+			focus = CAL_stop_south_american_syndicalism
 		}
 		available = {
 			is_major = yes

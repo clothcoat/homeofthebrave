@@ -5509,9 +5509,9 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus BBR_black_star_line"
 			add_ideas = BBR_black_star_line_idea
 			add_equipment_to_stockpile = {
-			type = convoys
-			amount = 15
-			producer = BBR
+				type = convoy
+				amount = 15
+				producer = BBR
 			}
 			random_owned_state = {
 				limit = {
@@ -6989,7 +6989,12 @@ focus_tree = {
 			add_war_support = 0.05
 			add_command_power = 5
 			add_manpower = 3000
-			add_claim_by = BBR
+			every_state = {
+				limit = {
+					is_owned_by = USA
+				}
+				add_claim_by = BBR
+			}
 		}
 	}
 	focus = {# Finish CAR
@@ -7398,7 +7403,11 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BBR_coastal_support"
-			add_equipment_to_stockpile = { type = naval_bomber_equipment amount = 20 }
+			add_equipment_to_stockpile = {
+				type = nav_bomber_equipment
+				amount = 20
+				producer = BBR
+			}
 			add_tech_bonus = {
 				name = navy_air_bonus
 				bonus = 1
@@ -7725,9 +7734,15 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BBR_aireal_offense"
-			add_equipment_to_stockpile = { type = close_air_support amount = 10 }
+			add_equipment_to_stockpile = {
+				type = CAS_equipment
+				amount = 10
+				producer = BBR
+			}
 			random_owned_controlled_state = {
-				limit = { is_owned_and_controlled_by = BBR }
+				limit = {
+					is_owned_and_controlled_by = BBR
+				}
 				add_building_construction = {
 					type = air_base
 					level = 3
@@ -8026,7 +8041,7 @@ focus_tree = {
 				name = artillery_bonus
 				bonus = 1
 				uses = 1
-				category = antitank
+				category = cat_anti_tank
 			}
 			add_tech_bonus = {
 				name = artillery_bonus

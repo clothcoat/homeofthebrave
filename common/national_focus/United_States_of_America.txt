@@ -458,9 +458,6 @@ focus_tree = {
 		prerequisite = {
 			focus = USA_president_long
 		}
-		mutually_exclusive = {
-			focus = USA_fight_anarchists
-		}
 		relative_position_id = USA_president_long
 		x = 0
 		y = 2
@@ -525,9 +522,6 @@ focus_tree = {
 		prerequisite = {
 			focus = USA_president_reed
 		}
-		mutually_exclusive = {
-			focus = USA_focus_on_long
-		}
 		relative_position_id = USA_president_reed
 		x = 0
 		y = 2
@@ -560,9 +554,6 @@ focus_tree = {
 		cost = 3.00
 		prerequisite = {
 			focus = USA_president_reed
-		}
-		mutually_exclusive = {
-			focus = USA_focus_on_long
 		}
 		relative_position_id = USA_president_reed
 		x = -1
@@ -597,9 +588,6 @@ focus_tree = {
 		prerequisite = {
 			focus = USA_president_reed
 			focus = USA_president_long
-		}
-		mutually_exclusive = {
-			focus = USA_sweeping_reforms
 		}
 		select_effect = {
 		if = {
@@ -9626,9 +9614,6 @@ focus_tree = {
 		icon = GFX_goal_generic_small_arms
 		cost = 5.00
 		prerequisite = {
-			focus = USA_gi_bill
-		}
-		prerequisite = {
 			focus = USA_woman_army_corps
 		}
 		x = 0
@@ -10200,9 +10185,9 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_marine_support"
 			add_equipment_to_stockpile = {
-			type = convoys
-			amount = 25
-			producer = CSA
+				type = convoy
+				amount = 25
+				producer = CSA
 			}
 			add_tech_bonus = {
 				name = doctrine_bonus
@@ -10614,7 +10599,7 @@ focus_tree = {
 		relative_position_id = USA_macarthur_army_plan
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_USAAC"
-			add_equipment_to_stockpile = { type = naval_bomber_equipment amount = 30 }
+			add_equipment_to_stockpile = { type = nav_bomber_equipment amount = 30 }
 			361 = {
 				if = {
 					limit = {
