@@ -2030,6 +2030,10 @@ USA_demobilize_forces = {
 			limit = { has_template = "Loyalist Motorized Guard" }
 			delete_unit_template_and_units = { division_template = "Loyalist Motorized Guard" }
 		}
+		if = {
+			limit = { has_template = "Irish Volunteers" }
+			delete_unit_template_and_units = { division_template = "Irish Volunteers" disband = yes }
+		}
 	}
 	CAL = {
 		if = {

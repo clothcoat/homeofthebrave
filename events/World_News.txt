@@ -8523,6 +8523,12 @@ news_event = { #NPP takes power in the AUS
 	is_triggered_only = yes
 	trigger = {
 		wants_world_news = yes
+		TEX = {
+		has_country_leader = {
+				ruling_only = yes
+				name = "Philip Fox La Follette."
+				}
+		}
 		NOT = {
 			tag = TEX
 		}
@@ -8560,6 +8566,11 @@ news_event = { #Pelley seizes control of the AUS
 	is_triggered_only = yes
 	trigger = {
 		wants_world_news = yes
+		has_country_leader = {
+				ruling_only = yes
+				name = "William Dudley Pelley"
+				}
+		}
 		NOT = {
 			tag = TEX
 		}
