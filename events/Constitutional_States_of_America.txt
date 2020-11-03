@@ -1314,6 +1314,7 @@ country_event = { # Backroom Deals
 
 	option = { #Give Bossert the leadership 
 		name = constate.1117.a
+		set_country_flag = COR_odp_bossert
 		add_ideas = COR_political_rival_farmer
 		add_political_power = 20
 		add_popularity = { ideology = national_populist popularity = 0.03 }
@@ -1606,6 +1607,158 @@ country_event = { # Deal with Talmadge
 		add_political_power = -10
 		add_command_power = 5
 		}
+}
+
+country_event = { # Meet with the Klan
+	id = constate.1125
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.1125"}
+	title = constate.1125.t
+	desc = constate.1125.d
+	picture = GFX_report_event_USA_congress
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = { #Help discredit the Old Klan
+		name = constate.1125.a
+		set_country_flag = COR_old_klan_weak
+		add_stability = 0.02
+		add_political_power = -10
+		add_command_power = 5
+		hidden_effect = {
+			country_event = { id = constate.1126 days = 7 }
+		}
+		}
+	option = { #Arrest members of Old Klan leadership
+		name = constate.1125.b
+		set_country_flag = COR_old_klan_weak
+		add_stability = 0.02
+		add_political_power = 10
+		add_command_power = -5
+		hidden_effect = {
+			country_event = { id = constate.1126 days = 7 }
+		}
+		}
+	option = { #Encourage him to ally with Armstrong
+		name = constate.1125.c
+		set_country_flag = COR_old_klan_strong
+		add_stability = -0.02
+		add_political_power = 10
+		add_command_power = 5
+		hidden_effect = {
+			country_event = { id = constate.1126 days = 7 }
+		}
+		}
+}
+
+country_event = { # Old Klan Furious!
+	id = constate.1126
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.1126"}
+	title = constate.1126.t
+	picture = GFX_report_event_USA_congress
+	
+	desc = {
+	text = constate.1126.d.revolt
+	trigger = {
+			has_country_flag = COR_old_klan_weak
+		}
+	}
+	desc = {
+	text = constate.1126.d.deal
+	trigger = {
+			has_country_flag = COR_old_klan_strong
+		}
+	}
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = { #Old Klan Revolts!
+		name = constate.1126.a
+		trigger = {
+			has_country_flag = COR_old_klan_strong
+		}
+		add_ideas = COR_old_klan_revolts
+		}
+	option = { #A Done Deal...
+		name = constate.1126.b
+		trigger = {
+			has_country_flag = COR_old_klan_weak
+		}
+		add_political_power = 10
+		add_popularity = { ideology = national_populist popularity = 0.05 }
+		}
+}
+
+country_event = { # Evans Coup
+	id = constate.1127
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.1127"}
+	title = constate.1127.t
+	desc = constate.1127.d
+	
+	trigger = {
+			has_country_flag = COR_odp_bossert
+			has_country_flag = COR_no_black_plan
+		}
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = { # Excellent
+		name = constate.1127.a
+		add_stability = 0.05
+		add_political_power = 25
+		hidden_effect = {
+			create_country_leader = {
+				name = "Hiram Wesley Evans"
+				desc = "POLITICS_HIRAM_WESLEY_EVANS_DESC"
+				picture = "gfx/leaders/COR/Hiram_Evans_suit.tga"
+				expire = "1965.1.1"
+				ideology = national_populist_subtype
+				traits = { power_hungry }
+			}
+			remove_all_ministers = yes
+			add_ideas = COR_Hiram_Wesley_Evans_hog_npo
+			add_ideas = COR_William_Bell_Riley_for_pau
+			add_ideas = COR_Gerald_Burton_Winrod_eco_npo
+			add_ideas = COR_Samuel_Green_sec_npo
+		}
+		set_politics = {
+			ruling_party = national_populist
+			elections_allowed = no
+		}
+		add_ideas = COR_black_legion_resistance
+	}
+}
+
+country_event = { # The Liberia Plan
+	id = constate.1128
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.1128"}
+	title = constate.1128.t
+	desc = constate.1128.d
+	picture = GFX_CAR_black_legion_weapons
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = { #Do it
+		name = constate.1128.a
+		add_stability = 0.03
+		add_political_power = -20
+		add_ideas = COR_Liberia_plan_idea
+	}
+	option = { #No deal 
+		name = constate.1128.a
+		add_stability = -0.03
+		add_political_power = 20
+		hidden_effect = {
+			country_event = { id = constate.1127 days = 5 }
+		}
+	}
 }
 
 country_event = { # Simmons Death

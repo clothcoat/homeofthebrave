@@ -772,6 +772,19 @@ ideas = {
 				local_manpower = 0.01
 			}
 		}
+		COR_old_klan_revolts = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea COR_old_klan_revolts"}
+			allowed = { always = no }
+			removal_cost = -1
+			picture = black_legion
+			modifier = {
+				political_power_gain = -0.02
+				party_popularity_stability_factor = -0.03
+				army_morale_factor = -0.02
+				local_manpower = -0.01
+				local_factories = -0.01
+			}
+		}
 		COR_jim_crow_idea = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea COR_jim_crow_idea"}
 			allowed = { always = no }
@@ -1037,6 +1050,20 @@ ideas = {
 				local_factories = 0.02
 				production_speed_buildings_factor = -0.02
 				industrial_capacity_factory = 0.02
+			}
+		}
+		COR_southern_fordists_idea_3 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea COR_southern_fordists_idea_3"}
+			allowed = { always = no }
+			removal_cost = -1
+			picture = corporatist_economy
+			modifier = {
+				political_power_gain = 0.10
+				stability_factor = 0.03
+				consumer_goods_factor = -0.04
+				local_factories = 0.05
+				production_speed_buildings_factor = 0.02
+				industrial_capacity_factory = 0.04
 			}
 		}
 		COR_yellow_cowards_idea = {

@@ -2054,6 +2054,9 @@ focus_tree = {
 			id = constate.1124
 			days = 3
 			}
+			hidden_effect = {
+			country_event = { id = constate.1125 days = 3 }
+			}
 		}
 	}
 
@@ -2390,7 +2393,7 @@ focus_tree = {
 		}
 	}
 
-	focus = {# Segregation Now, Segregation Forever
+	focus = {# Wrestle Industrialists
 		id = COR_wrestle_industrialists
 		icon = GFX_goal_agricultural_aid
 		cost = 7.25
@@ -2410,15 +2413,14 @@ focus_tree = {
 		y = 8
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_wrestle_industrialists"
-			add_ideas = COR_farmers_relief
-			add_stability = 0.05
-			add_political_power = 30
-			add_command_power = 20
-			add_war_support = 0.05
+			swap_ideas = {
+			remove_idea = COR_southern_fordists_idea_2
+			add_idea = COR_southern_fordists_idea_3
+			}
 		}
 	}
 
-	focus = {# Segregation Now, Segregation Forever
+	focus = {# Deal with Race Baitors
 		id = COR_deal_with_race_baitors
 		icon = GFX_goal_agricultural_aid
 		cost = 7.25
@@ -2438,15 +2440,14 @@ focus_tree = {
 		y = 8
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_deal_with_race_baitors"
-			add_ideas = COR_farmers_relief
-			add_stability = 0.05
-			add_political_power = 30
-			add_command_power = 20
-			add_war_support = 0.05
+			country_event = {
+			id = constate.1128
+			days = 1
+			}
 		}
 	}
 
-	focus = {# Segregation Now, Segregation Forever
+	focus = {# Nationalist Effort
 		id = COR_nationalist_effort
 		icon = GFX_goal_agricultural_aid
 		cost = 7.25
