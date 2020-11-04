@@ -163,6 +163,7 @@ focus_tree = {
 			add_stability = 0.1
 			add_war_support = -0.05
 			custom_effect_tooltip = TEX_reconcile_left_tooltip
+			custom_effect_tooltip = TEX_leftism_tooltip
 			modify_country_flag = {
 			flag = AFP_leftism
 			value = -2
@@ -233,6 +234,7 @@ focus_tree = {
 			add_stability = 0.1
 			add_war_support = -0.05
 			custom_effect_tooltip = TEX_reconcile_right_tooltip
+			custom_effect_tooltip = TEX_rightism_tooltip
 			modify_country_flag = {
 			flag = AFP_leftism
 			value = 2
@@ -309,6 +311,7 @@ focus_tree = {
 			add_political_power = 75
 			add_stability = 0.1
 			add_popularity = { ideology = authoritarian_democrat popularity = 0.08 }
+			custom_effect_tooltip = TEX_leftism_tooltip
 			modify_country_flag = {
 			flag = AFP_leftism
 			value = -1
@@ -387,6 +390,7 @@ focus_tree = {
 			add_stability = 0.05
 			add_political_power = 50
 			add_popularity = { ideology = authoritarian_democrat popularity = 0.05 }
+			custom_effect_tooltip = TEX_rightism_tooltip
 			modify_country_flag = {
 			flag = AFP_leftism
 			value = 1
@@ -1143,6 +1147,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			custom_effect_tooltip = TEX_rightism_tooltip
 			modify_country_flag = {
 			flag = AFP_leftism
 			value = 1
@@ -1206,6 +1211,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			custom_effect_tooltip = TEX_rightism_tooltip
 			modify_country_flag = {
 			flag = AFP_leftism
 			value = -1
@@ -1374,6 +1380,7 @@ focus_tree = {
 				}
 				add_extra_state_shared_building_slots = 1
 			}
+			custom_effect_tooltip = TEX_leftism_tooltip
 			modify_country_flag = {
 			flag = AFP_leftism
 			value = -1
@@ -4695,6 +4702,7 @@ focus_tree = {
 				uses = 1
 				category = cat_mass_assault
 			}
+			custom_effect_tooltip = TEX_rightism_tooltip
 			modify_country_flag = {
 				flag = AFP_leftism
 				value = 2
