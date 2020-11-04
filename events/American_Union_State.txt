@@ -2528,6 +2528,10 @@ country_event = { # AFP Primary
 
 	fire_only_once = yes
 	
+	trigger = {
+		tag = TEX
+	}
+	
 	is_triggered_only = yes
 	
 	option = { #Gerald L.K. Smith
@@ -2988,6 +2992,10 @@ country_event = { # Second AFP Primary
 
 	fire_only_once = yes
 	
+	trigger = {
+		tag = TEX
+	}
+	
 	is_triggered_only = yes
 	
 	option = { #Gerald L.K. Smith
@@ -3380,6 +3388,10 @@ country_event = { # AUS Election
 	picture = GFX_report_event_election_vote
 
 	fire_only_once = yes
+	
+	trigger = {
+		tag = TEX
+	}
 
 	is_triggered_only = yes
 
