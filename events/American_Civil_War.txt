@@ -3575,6 +3575,7 @@ country_event = { # COR forms
 		COR_initial_events = yes
 	}
 }
+
 country_event = { # Jack Reed declares revolution against Murray and Mac
 	id = amcivwar.1012
 	title = amcivwar.1012.t
@@ -3639,6 +3640,7 @@ country_event = { # Jack Reed declares revolution against Murray and Mac
 		}
 	}
 }
+
 country_event = { # Huey Long declares Rebellion against Murray
 	id = amcivwar.1013
 	title = amcivwar.1013.t
@@ -3869,6 +3871,32 @@ country_event = { # Old Democrats Revolt
 		country_event = {
 		id = amcivwar.1017
 		hours = 5
+			}
+		}
+	}
+	option = {
+		name = amcivwar.1018.c
+		add_popularity = { ideology = social_conservative popularity = 0.03 }
+		hidden_effect = {
+			create_country_leader = {
+				name = "Richard Russel Jr."
+				desc = "POLITICS_RICHARD_RUSSEL_DESC"
+				picture = "gfx/leaders/COR/Portrait_COR_Richard_Russel.tga"
+				expire = "1965.1.1"
+				ideology = social_conservative_subtype
+				traits = { clever_aristocrat }
+			}
+		}
+		set_politics = {
+			ruling_party = social_conservative
+			elections_allowed = no
+		}
+		hidden_effect = {
+		COR = {
+		country_event = {
+		id = constate.601
+		hours = 5
+				}
 			}
 		}
 	}
@@ -9801,15 +9829,34 @@ country_event = {
 	title = amcivwar.2041.t
 	desc = amcivwar.2041.d
 	picture = GFX_report_event_generic_diplomacy2
+	
+	desc = {
+	text = amcivwar.2041.d.aus
+	trigger = {
+			tag = TEX
+		}
+	}
+	desc = {
+	text = amcivwar.2041.d.psa
+	trigger = {
+			tag = CAL
+		}
+	}
+	desc = {
+	text = amcivwar.2041.d.other
+	trigger = {
+			NOT = {
+			OR = {
+			tag = CAL
+			tag = TEX
+			}
+		}
+		}
+	}
 
 	is_triggered_only = yes
 
 	trigger = {
-		OR = {
-		tag = CAL
-		tag = TEX
-		}
-
 		WCC = {
 			OR = {
 				surrender_progress > 0.80

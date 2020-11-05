@@ -420,6 +420,41 @@ country_event = { # Murray steps down!
 	}
 }
 
+country_event = { # Another Southern Populist?
+	id = constate.601
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.601"}
+	title = constate.601.t
+	desc = constate.601.d
+	picture = GFX_report_event_USA_military_trial
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { # So it begins...
+		name = constate.601.a
+		add_popularity = { ideology = social_conservative popularity = 0.05 }
+		add_political_power = -50
+		}
+	option = {#
+		name = constate.601.b
+		add_popularity = { ideology = paternal_autocrat popularity = 0.03 }
+		hidden_effect = {
+			create_country_leader = {
+				name = "Eugene Talmadge"
+				desc = "POLITICS_EUGENE_TALMADGE_DESC"
+				picture = "gfx/leaders/COR/COR_Eugene_Talmadge.tga"
+				expire = "1965.1.1"
+				ideology = paternal_autocrat_subtype
+				traits = { }
+			}
+		}
+		set_politics = {
+			ruling_party = paternal_autocrat
+			elections_allowed = no
+		}
+	}
+}
+
 country_event = { # Order of 76 threatened
 	id = constate.7
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.7"}
@@ -2841,8 +2876,8 @@ country_event = { # Head of the ODP
 		add_popularity = { ideology = national_populist popularity = 0.01 }
 		create_country_leader = {
 			name = "Eugene Talmadge"
-			desc = "POLITICS_CHARLES_LINDBERGH"
-			picture = "gfx/leaders/COR/COR_lindberg.tga"
+			desc = "POLITICS_EUGENE_TALMADGE_DESC"
+			picture = "gfx/leaders/COR/COR_Eugene_Talmadge.tga"
 			expire = "1965.1.1"
 			ideology = paternal_autocrat_subtype
 			traits = { }

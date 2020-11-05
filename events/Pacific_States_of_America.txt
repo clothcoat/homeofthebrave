@@ -1195,9 +1195,15 @@ country_event = { # Democratic-Republicans Join the Progressives
 	title = pacificstates.6000.t
 	desc = pacificstates.6000.d
 	picture = GFX_report_event_USA_congress
-
+	
 	fire_only_once = yes
 	is_triggered_only = yes
+
+	trigger = {
+	NOT = {
+		has_country_flag = CAL_dem_rep_system
+		}
+	}
 
 	option = { # Good
 		name = pacificstates.6000.a
@@ -1205,6 +1211,7 @@ country_event = { # Democratic-Republicans Join the Progressives
 		add_stability = 0.05
 		add_popularity = { ideology = social_liberal popularity = -0.06 }
 		add_popularity = { ideology = social_democrat popularity = 0.05 }
+		set_country_flag = CAL_dem_rep_system
 		set_party_name = {
 			ideology = social_liberal
 			long_name = CAL_prog_dominance_long
@@ -1233,8 +1240,8 @@ country_event = { # Progressives Join the Democratic-Republicans
 		name = pacificstates.6002.a
 		add_political_power = 45
 		add_stability = 0.05
-		add_popularity = { ideology = social_liberal popularity = 0.05 }
-		add_popularity = { ideology = social_democrat popularity = -0.06 }
+		add_popularity = { ideology = social_liberal popularity = 0.06 }
+		add_popularity = { ideology = social_democrat popularity = -0.05 }
 		set_party_name = {
 			ideology = social_democrat
 			long_name = CAL_liberal_dominance_long
@@ -1323,8 +1330,8 @@ country_event = { # Progressives drift toward the Commonwealth Party
 		name = pacificstates.6005.a
 		add_political_power = 35
 		add_stability = 0.08
-		add_popularity = { ideology = social_democrat popularity = -0.05 }
-		add_popularity = { ideology = radical_socialist popularity = 0.04 }
+		add_popularity = { ideology = social_democrat popularity = -0.06 }
+		add_popularity = { ideology = radical_socialist popularity = 0.05 }
 		set_party_name = {
 			ideology = social_democrat
 			long_name = CAL_radical_dominance_long
@@ -1354,38 +1361,19 @@ country_event = { # Two Party System Formalizes
 			has_country_flag = PSA_Progs_Win
 		}
 	}
-	desc = {
-	text = pacificstates.6006.d.libs
-	trigger = {
-			has_country_flag = PSA_Libs_Win
-		}
-	}
-	desc = {
-	text = pacificstates.6006.d.reps
-	trigger = {
-			has_country_flag = PSA_MarkLibs_Win
-		}
-	}
-	desc = {
-	text = pacificstates.6006.d.dems
-	trigger = {
-			has_country_flag = PSA_Conservatives_Win
-		}
-	}
-	desc = {
-	text = pacificstates.6006.d.commonwealth
-	trigger = {
-			has_country_flag = PSA_Radicals_Win
-		}
-	}
 	option = { # Very Well
 		name = pacificstates.6006.a
 		if = {
 		limit = {
 		has_country_flag = PSA_Progs_Win
 			}
-		add_popularity = { ideology = social_conservative popularity = 0.05 }
-		add_popularity = { ideology = market_liberal popularity = -0.06 }
+		add_popularity = { ideology = radical_socialist popularity = 0.12 }
+		add_popularity = { ideology = social_democrat popularity = 0.18 }
+		add_popularity = { ideology = social_liberal popularity = 0.12 }
+		add_popularity = { ideology = market_liberal popularity = 0.12 }
+		add_popularity = { ideology = social_conservative popularity = 0.18 }
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.12 }
+		add_popularity = { ideology = paternal_autocrat popularity = 0.12 }
 		set_party_name = {
 			ideology = radical_socialist
 			long_name = CAL_prog_dominance_long
@@ -1407,78 +1395,6 @@ country_event = { # Two Party System Formalizes
 			long_name = CAL_conservative_dominance_long
 			name = CAL_conservative_dominance_party }	
 		set_country_flag = PSA_Conservatives_Win
-		}
-		if = {
-		limit = {
-		has_country_flag = PSA_Libs_Win
-			}
-		add_popularity = { ideology = social_conservative popularity = 0.05 }
-		add_popularity = { ideology = market_liberal popularity = -0.06 }
-		set_party_name = {
-			ideology = radical_socialist
-			long_name = CAL_liberal_dominance_long
-			name = CAL_liberal_dominance_party }	
-		set_party_name = {
-			ideology = social_democrat
-			long_name = CAL_liberal_dominance_long
-			name = CAL_liberal_dominance_party }
-		set_party_name = {
-			ideology = social_liberal
-			long_name = CAL_liberal_dominance_long
-			name = CAL_liberal_dominance_party }		
-		set_party_name = {
-			ideology = market_liberal
-			long_name = CAL_new_aut_dem_party_long
-			name = CAL_new_aut_dem_party }
-		set_party_name = {
-			ideology = social_conservative
-			long_name = CAL_new_aut_dem_party_long
-			name = CAL_new_aut_dem_party }
-		set_party_name = {
-			ideology = authoritarian_democrat
-			long_name = CAL_new_aut_dem_party_long
-			name = CAL_new_aut_dem_party }
-		set_party_name = {
-			ideology = paternal_autocrat
-			long_name = CAL_new_aut_dem_party_long
-			name = CAL_new_aut_dem_party }
-		set_country_flag = PSA_Conservatives_Win
-		}
-		if = {
-		limit = {
-		has_country_flag = PSA_MarkLibs_Win
-			}
-		add_popularity = { ideology = social_democrat popularity = 0.05 }
-		add_popularity = { ideology = social_liberal popularity = -0.06 }
-		set_party_name = {
-			ideology = social_liberal
-			long_name = CAL_prog_dominance_long
-			name = CAL_prog_dominance_party }
-		set_country_flag = PSA_Progs_Win
-		}
-		if = {
-		limit = {
-		has_country_flag = PSA_Conservatives_Win
-			}
-		add_popularity = { ideology = social_democrat popularity = 0.05 }
-		add_popularity = { ideology = social_liberal popularity = -0.06 }
-		set_party_name = {
-			ideology = social_liberal
-			long_name = CAL_prog_dominance_long
-			name = CAL_prog_dominance_party }
-			set_country_flag = PSA_Progs_Win
-		}
-		if = {
-		limit = {
-		has_country_flag = PSA_Radicals_Win
-			}
-		add_popularity = { ideology = social_conservative popularity = 0.05 }
-		add_popularity = { ideology = market_liberal popularity = -0.06 }
-		set_party_name = {
-			ideology = market_liberal
-			long_name = CAL_conservative_dominance_long
-			name = CAL_conservative_dominance_party }
-			set_country_flag = PSA_Conservatives_Win
 		}
 	}
 }
@@ -1504,8 +1420,13 @@ country_event = { # Two Party System Formalizes
 		limit = {
 		has_country_flag = PSA_Libs_Win
 			}
-		add_popularity = { ideology = social_conservative popularity = 0.05 }
-		add_popularity = { ideology = market_liberal popularity = -0.06 }
+		add_popularity = { ideology = radical_socialist popularity = 0.12 }
+		add_popularity = { ideology = social_democrat popularity = 0.12 }
+		add_popularity = { ideology = social_liberal popularity = 0.18 }
+		add_popularity = { ideology = market_liberal popularity = 0.15 }
+		add_popularity = { ideology = social_conservative popularity = 0.15 }
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.12 }
+		add_popularity = { ideology = paternal_autocrat popularity = 0.12 }
 		set_party_name = {
 			ideology = radical_socialist
 			long_name = CAL_liberal_dominance_long
@@ -1560,8 +1481,13 @@ country_event = { # Two Party System Formalizes
 		limit = {
 		has_country_flag = PSA_MarkLibs_Win
 			}
-		add_popularity = { ideology = social_democrat popularity = 0.05 }
-		add_popularity = { ideology = social_liberal popularity = -0.06 }
+		add_popularity = { ideology = radical_socialist popularity = 0.12 }
+		add_popularity = { ideology = social_democrat popularity = 0.15 }
+		add_popularity = { ideology = social_liberal popularity = 0.15 }
+		add_popularity = { ideology = market_liberal popularity = 0.18 }
+		add_popularity = { ideology = social_conservative popularity = 0.12 }
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.12 }
+		add_popularity = { ideology = paternal_autocrat popularity = 0.12 }
 		set_party_name = {
 			ideology = radical_socialist
 			long_name = CAL_conservative_dominance_long
@@ -1616,8 +1542,13 @@ country_event = { # Two Party System Formalizes
 		limit = {
 		has_country_flag = PSA_Conservatives_Win
 			}
-		add_popularity = { ideology = social_democrat popularity = 0.05 }
-		add_popularity = { ideology = social_liberal popularity = -0.06 }
+		add_popularity = { ideology = radical_socialist popularity = 0.12 }
+		add_popularity = { ideology = social_democrat popularity = 0.15 }
+		add_popularity = { ideology = social_liberal popularity = 0.15 }
+		add_popularity = { ideology = market_liberal popularity = 0.12 }
+		add_popularity = { ideology = social_conservative popularity = 0.18 }
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.12 }
+		add_popularity = { ideology = paternal_autocrat popularity = 0.12 }
 		set_party_name = {
 			ideology = radical_socialist
 			long_name = CAL_radical_republican_dominance_long
@@ -1672,8 +1603,13 @@ country_event = { # Two Party System Formalizes
 		limit = {
 		has_country_flag = PSA_Radicals_Win
 			}
-		add_popularity = { ideology = social_conservative popularity = 0.05 }
-		add_popularity = { ideology = market_liberal popularity = -0.06 }
+		add_popularity = { ideology = radical_socialist popularity = 0.18 }
+		add_popularity = { ideology = social_democrat popularity = 0.12 }
+		add_popularity = { ideology = social_liberal popularity = 0.12 }
+		add_popularity = { ideology = market_liberal popularity = 0.15 }
+		add_popularity = { ideology = social_conservative popularity = 0.15 }
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.12 }
+		add_popularity = { ideology = paternal_autocrat popularity = 0.12 }
 		set_party_name = {
 			ideology = radical_socialist
 			long_name = CAL_radical_dominance_long
