@@ -1882,14 +1882,14 @@ focus_tree = {
 	### Richard Russel Jr. Path ###
 	focus = {# The People's Senator
 		id = COR_peoples_senator
-		icon =  GFX_COR_Old_Blood_and_Guts
+		icon =  GFX_goal_COR_Peoples_Senator
 		cost = 1
 		available = {
 			has_government = social_conservative
 		}
 		ai_will_do = { factor = 5 }
 		x = 11
-		y = 20
+		y = 9
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_peoples_senator"
 			hidden_effect = {
@@ -1904,7 +1904,7 @@ focus_tree = {
 
 	focus = {# Tackle Corruption
 		id = COR_tackle_corruption
-		icon = GFX_goal_agricultural_aid
+		icon = GFX_goal_COR_tackle_corruption
 		cost = 7.25
 		prerequisite = {
 			focus = COR_peoples_senator
@@ -1939,7 +1939,7 @@ focus_tree = {
 
 	focus = {# Southern Stimulus
 		id = COR_southern_stimulus
-		icon = GFX_goal_agricultural_aid
+		icon = GFX_goal_COR_southern_stimulus
 		cost = 7.25
 		prerequisite = {
 			focus = COR_peoples_senator
@@ -1997,7 +1997,7 @@ focus_tree = {
 
 	focus = {# New Democrats
 		id = COR_new_democrats
-		icon = GFX_goal_agricultural_aid
+		icon = GFX_goal_COR_New_Democrats
 		cost = 7.25
 		prerequisite = {
 			focus = COR_southern_stimulus
@@ -2033,7 +2033,7 @@ focus_tree = {
 
 	focus = {# It's Only Good Politics
 		id = COR_good_politics
-		icon = GFX_goal_agricultural_aid
+		icon = GFX_goal_COR_Only_Good_Politics
 		cost = 7.25
 		prerequisite = {
 			focus = COR_southern_stimulus
@@ -2151,7 +2151,7 @@ focus_tree = {
 
 	focus = {# Smaller Government
 		id = COR_smaller_government
-		icon = GFX_goal_agricultural_aid
+		icon = GFX_USA_congress_released
 		cost = 7.25
 		prerequisite = {
 			focus = COR_good_politics
@@ -2177,7 +2177,7 @@ focus_tree = {
 
 	focus = {#Southern Electrification
 		id = COR_southern_electrification
-		icon = GFX_goal_agricultural_aid
+		icon = GFX_goal_Schelle
 		cost = 7.25
 		prerequisite = {
 			focus = COR_agriculture_research
@@ -2206,7 +2206,7 @@ focus_tree = {
 
 	focus = {# University System of America
 		id = COR_university_system_of_america
-		icon = GFX_goal_agricultural_aid
+		icon = GFX_goal_COR_University_System_of_America
 		cost = 7.25
 		prerequisite = {
 			focus = COR_infrastructure_programs
@@ -2232,7 +2232,7 @@ focus_tree = {
 
 	focus = {# Fiscal Responsability
 		id = COR_fiscal_responsability
-		icon = GFX_goal_agricultural_aid
+		icon = GFX_goal_bag_of_money
 		cost = 7.25
 		prerequisite = {
 			focus = COR_smaller_government
@@ -2256,7 +2256,7 @@ focus_tree = {
 
 	focus = {# Balanced Budget
 		id = COR_balanced_budget
-		icon = GFX_goal_agricultural_aid
+		icon = GFX_goal_generic_stable_government
 		cost = 7.25
 		prerequisite = {
 			focus = COR_fiscal_responsability
@@ -2286,7 +2286,7 @@ focus_tree = {
 
 	focus = {# Agrarian Heritage
 		id = COR_agrarian_heritage
-		icon = GFX_goal_agricultural_aid
+		icon = GFX_goal_COR_south_agrarian
 		cost = 7.25
 		prerequisite = {
 			focus = COR_southern_electrification
@@ -2315,7 +2315,7 @@ focus_tree = {
 
 	focus = {# States Rights
 		id = COR_states_rights
-		icon = GFX_goal_agricultural_aid
+		icon = GFX_goal_volunteer_alliance
 		cost = 7.25
 		prerequisite = {
 			focus = COR_balanced_budget
