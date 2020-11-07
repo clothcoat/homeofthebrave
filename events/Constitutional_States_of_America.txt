@@ -434,8 +434,12 @@ country_event = { # Another Southern Populist?
 		name = constate.601.a
 		add_popularity = { ideology = social_conservative popularity = 0.05 }
 		add_political_power = -50
+		set_country_flag = COR_done_deal
+		hidden_effect = {
+			country_event = { id = constate.602 days = 2 }
+			}
 		}
-	option = {#
+	option = {#Damn!
 		name = constate.601.b
 		add_popularity = { ideology = paternal_autocrat popularity = 0.03 }
 		hidden_effect = {
@@ -451,6 +455,51 @@ country_event = { # Another Southern Populist?
 		set_politics = {
 			ruling_party = paternal_autocrat
 			elections_allowed = no
+		}
+	}
+}
+
+country_event = { # A Done Deal?
+	id = constate.602
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.602"}
+	title = constate.602.t
+	desc = constate.602.d
+	picture = GFX_report_event_USA_soldiers_running
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	trigger = {
+	has_country_flag = COR_done_deal
+	CAL = {
+		has_government = social_conservative
+		}
+	}
+
+	option = { # Pass it
+		ai_chance = {
+			factor = 50
+		}
+		name = constate.602.a
+		diplomatic_relation = {
+		country = CAL
+		relation = non_aggression_pact
+		active = yes
+		}
+		add_popularity = { ideology = social_conservative popularity = -0.05 }
+		add_political_power = 5
+	}
+	option = { # Shoot it down
+		ai_chance = {
+			factor = 50
+		}
+		name = constate.602.b
+		CAL = {
+		add_political_power = 10
+		add_opinion_modifier = { target = COR modifier = small_decrease }
+		}
+		add_popularity = { ideology = social_conservative popularity = 0.05 }
+		add_political_power = -5
 		}
 	}
 }

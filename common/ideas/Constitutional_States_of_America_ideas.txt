@@ -1024,6 +1024,21 @@ ideas = {
 			monthly_population = -0.05
 			}
 		}
+		COR_nationalist_effort = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea COR_nationalist_effort"}
+			allowed = { always = no }
+			removal_cost = -1
+			picture = generic_war_preparation
+			modifier = {
+			political_power_gain = 0.02
+			army_morale_factor = 0.03
+			industrial_capacity_factory = 0.03
+			surrender_limit = 0.1
+			conversion_cost_civ_to_mil_factor = 0.05
+			equipment_conversion_speed = 0.05
+			industry_repair_factor = 0.05
+			}
+		}
 		COR_southern_fordists_idea = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea COR_southern_fordists_idea"}
 			allowed = { always = no }
