@@ -8866,12 +8866,11 @@ country_event = { # Russel's Chain Gang Labor Exposed
 	fire_only_once = yes
 
 	trigger = {
-		tag = USA
+		tag = COR
 		has_country_leader = {
 			name = "Richard Russell Jr."
 			ruling_only = yes
 		}
-		has_country_flag = USA_had_1940_election
 	}
 
 	mean_time_to_happen = {
@@ -10090,32 +10089,8 @@ country_event = { # 1944 Democrat Primary
 	fire_only_once = yes
 	is_triggered_only = yes
 
-	option = { # Richard Russell Jr.
-		name = ustates.206.a
-		trigger = {
-			NOT = {
-				has_government = social_conservative
-				has_government = market_liberal
-			}
-		}
-		hidden_effect = {
-			set_country_flag = USA_1944_democratic_primary_russell
-		}
-		hidden_effect = {
-			modify_country_flag = {
-				flag = USA_conservative_democratic_power
-				value = 1
-			}
-		}
-		hidden_effect = {
-			modify_country_flag = {
-				flag = USA_liberal_democratic_power
-				value = -1
-			}
-		}
-	}
 	option = { # Alben W. Barkley
-		name = ustates.206.b
+		name = ustates.206.a
 		trigger = {
 			NOT = {
 				has_government = social_conservative
@@ -10139,7 +10114,7 @@ country_event = { # 1944 Democrat Primary
 		}
 	}
 	option = { # James E. Murray
-		name = ustates.206.c
+		name = ustates.206.b
 		trigger = {
 			NOT = {
 				has_government = social_conservative
@@ -10163,7 +10138,7 @@ country_event = { # 1944 Democrat Primary
 		}
 	}
 	option = { # re-nominate the President
-		name = ustates.206.e
+		name = ustates.206.c
 		trigger = {
 			OR = {
 				has_government = social_conservative
@@ -10339,23 +10314,6 @@ country_event = { # 1944 Election
 					expire = "1965.1.1"
 					ideology = market_liberal_subtype
 					traits = { silent_workhorse }
-				}
-			}
-			if = {
-				limit = {
-					NOT = {
-						has_country_flag = USA_1944_democratic_primary_murray
-						has_country_flag = USA_1944_democratic_primary_barkley
-						has_country_flag = USA_1944_democratic_primary_president
-					}
-				}
-				create_country_leader = {
-					name = "Richard Russell Jr."
-					desc = "POLITICS_RICHARD_RUSSELL_DESC"
-					picture = "Portrait_USA_Richard_Russell_Jr.tga"
-					expire = "1965.1.1"
-					ideology = social_conservative_subtype
-					traits = { nationalist_symbol }
 				}
 			}
 		}
@@ -10537,20 +10495,7 @@ country_event = { # 1944 Election
 				add_ideas = USA_Daniel_Calhoun_Roper_eco_sco
 				add_ideas = USA_Robert_Ferdinand_Wagner_I_sec_sde
 			}
-			if = { # Richard Russell Jr.
-				limit = {
-					NOT = {
-						has_country_flag = USA_1944_democratic_primary_murray
-						has_country_flag = USA_1944_democratic_primary_barkley
-						has_country_flag = USA_1944_democratic_primary_president
-					}
-				}
-				add_ideas = USA_Richard_Russell_Jr_hog_sco
-				add_ideas = USA_James_Watson_Gerard_Jr_for_sco
-				add_ideas = USA_Dean_Gooderham_Acheson_for_sco
-				add_ideas = USA_Martin_Dies_Jr_sec_sco
-			}
-
+		
 			# next primaries
 			country_event = {
 				id = ustates.209

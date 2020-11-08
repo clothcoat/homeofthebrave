@@ -2090,7 +2090,7 @@ focus_tree = {
 
 	focus = {# Infrastructure Programs
 		id = COR_infrastructure_programs
-		icon = GFX_goal_agricultural_aid
+		icon = GFX_goal_generic_construct_infrastructure
 		cost = 7.25
 		prerequisite = {
 			focus = COR_new_democrats
@@ -2479,6 +2479,12 @@ focus_tree = {
 			add_political_power = 30
 			add_command_power = 20
 			add_war_support = 0.05
+			hidden_effect = {
+			country_event = {
+			id = constate.1129
+			days = 20
+			}
+			}
 		}
 	}
 

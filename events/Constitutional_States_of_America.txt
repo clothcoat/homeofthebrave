@@ -481,13 +481,14 @@ country_event = { # A Done Deal?
 			factor = 50
 		}
 		name = constate.602.a
-		diplomatic_relation = {
-		country = CAL
-		relation = non_aggression_pact
-		active = yes
-		}
 		add_popularity = { ideology = social_conservative popularity = -0.05 }
 		add_political_power = 5
+		CAL = {
+		country_event = {
+		id = amcivwar.1021
+		hours = 8
+				}
+			}
 	}
 	option = { # Shoot it down
 		ai_chance = {
@@ -1842,6 +1843,28 @@ country_event = { # The Liberia Plan
 		hidden_effect = {
 			country_event = { id = constate.1127 days = 5 }
 		}
+	}
+}
+
+country_event = { # New Textbooks
+	id = constate.1129
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.1129"}
+	title = constate.1129.t
+	desc = constate.1129.d
+	picture = GFX_report_event_generic_diplomacy1
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+		tag = COR
+		has_global_flag = USA_civil_war_over_flag
+		has_government = social_conservative
+	}
+
+	option = { # Flavor
+		name = constate.1129.a
+		add_political_power = 20
 	}
 }
 

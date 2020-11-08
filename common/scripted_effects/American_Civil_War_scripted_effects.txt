@@ -1588,7 +1588,6 @@ USA_civil_war_begins = {
 			limit = { country_exists = CAL 	}
 			CAL = { declare_war_on = { target = USA type = annex_everything	} }
 			CAL = { declare_war_on = { target = WCC type = annex_everything	} }
-			CAL = { declare_war_on = { target = COR type = annex_everything	} }
 		}
 		if = {
 			limit = { country_exists = COR 	
@@ -1598,6 +1597,16 @@ USA_civil_war_begins = {
 			}
 			COR = { declare_war_on = { target = USA type = annex_everything	} }
 			COR = { declare_war_on = { target = WCC type = annex_everything	} }
+		}
+		if = {
+			limit = {
+				country_exists = COR
+				country_exists = CAL
+				NOT = {
+				has_global_flag = PSA_COR_TREATY
+				}
+			}
+			CAL = { declare_war_on = { target = COR type = annex_everything	} }
 		}
 		if = {
 			limit = { country_exists = TEX
@@ -1630,6 +1639,17 @@ USA_civil_war_begins = {
 				country_exists = USA
 				NOT = {
 				has_country_flag = CAR_USA_TREATY
+				}
+			}
+			CSA = { declare_war_on = { target = COR type = annex_everything	} }
+			TEX = { declare_war_on = { target = COR type = annex_everything	} }
+		}
+		if = {
+			limit = {
+				country_exists = COR
+				country_exists = CAL
+				NOT = {
+				has_country_flag = PSA_COR_TREATY
 				}
 			}
 			CSA = { declare_war_on = { target = COR type = annex_everything	} }
