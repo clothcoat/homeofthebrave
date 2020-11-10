@@ -1200,6 +1200,7 @@ country_event = { # Democratic-Republicans Join the Progressives
 	is_triggered_only = yes
 
 	trigger = {
+	tag = CAL
 	NOT = {
 		has_country_flag = CAL_dem_rep_system
 		}
@@ -1235,6 +1236,10 @@ country_event = { # Progressives Join the Democratic-Republicans
 
 	fire_only_once = yes
 	is_triggered_only = yes
+	
+	trigger = {
+	tag = CAL
+	}
 
 	option = { # Good
 		name = pacificstates.6002.a
@@ -1266,6 +1271,10 @@ country_event = { # Democrats join the Republicans
 	fire_only_once = yes
 	is_triggered_only = yes
 
+	trigger = {
+	tag = CAL
+	}
+
 	option = { # Good
 		name = pacificstates.6003.a
 		add_political_power = 45
@@ -1295,6 +1304,10 @@ country_event = { # Republicans join the Democrats
 
 	fire_only_once = yes
 	is_triggered_only = yes
+
+	trigger = {
+	tag = CAL
+	}
 
 	option = { # Good
 		name = pacificstates.6004.a
@@ -1326,6 +1339,10 @@ country_event = { # Progressives drift toward the Commonwealth Party
 	fire_only_once = yes
 	is_triggered_only = yes
 
+	trigger = {
+	tag = CAL
+	}
+
 	option = { # Good
 		name = pacificstates.6005.a
 		add_political_power = 35
@@ -1354,6 +1371,10 @@ country_event = { # Two Party System Formalizes
 
 	fire_only_once = yes
 	is_triggered_only = yes
+
+	trigger = {
+	tag = CAL
+	}
 
 	desc = {
 	text = pacificstates.6006.d.progs
@@ -1407,6 +1428,10 @@ country_event = { # Two Party System Formalizes
 
 	fire_only_once = yes
 	is_triggered_only = yes
+
+	trigger = {
+	tag = CAL
+	}
 
 	desc = {
 	text = pacificstates.6007.d.libs
@@ -1469,6 +1494,10 @@ country_event = { # Two Party System Formalizes
 	fire_only_once = yes
 	is_triggered_only = yes
 
+	trigger = {
+	tag = CAL
+	}
+
 	desc = {
 	text = pacificstates.6008.d.reps
 	trigger = {
@@ -1530,6 +1559,10 @@ country_event = { # Two Party System Formalizes
 	fire_only_once = yes
 	is_triggered_only = yes
 
+	trigger = {
+	tag = CAL
+	}
+
 	desc = {
 	text = pacificstates.6009.d.dems
 	trigger = {
@@ -1590,6 +1623,10 @@ country_event = { # Two Party System Formalizes
 
 	fire_only_once = yes
 	is_triggered_only = yes
+
+	trigger = {
+	tag = CAL
+	}
 
 	desc = {
 	text = pacificstates.6010.d.commonwealth
