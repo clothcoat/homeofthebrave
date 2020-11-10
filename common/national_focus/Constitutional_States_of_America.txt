@@ -1967,7 +1967,7 @@ focus_tree = {
 
 	focus = {# Segregation Now, Segregation Forever
 		id = COR_segregation_now
-		icon = GFX_goal_agricultural_aid
+		icon = GFX_goal_generic_neutrality_focus
 		cost = 7.25
 		prerequisite = {
 			focus = COR_peoples_senator
@@ -2090,7 +2090,7 @@ focus_tree = {
 
 	focus = {# Infrastructure Programs
 		id = COR_infrastructure_programs
-		icon = GFX_goal_generic_construct_infrastructure
+		icon = GFX_COR_national_highway_system
 		cost = 7.25
 		prerequisite = {
 			focus = COR_new_democrats
@@ -2315,7 +2315,7 @@ focus_tree = {
 
 	focus = {# States Rights
 		id = COR_states_rights
-		icon = GFX_goal_volunteer_alliance
+		icon = GFX_goal_COR_states_rights
 		cost = 7.25
 		prerequisite = {
 			focus = COR_balanced_budget
@@ -2345,7 +2345,7 @@ focus_tree = {
 
 	focus = {# School Lunch Programs
 		id = COR_school_lunch_programs
-		icon = GFX_goal_agricultural_aid
+		icon = GFX_goal_COR_school_lunch_programs
 		cost = 7.25
 		prerequisite = {
 			focus = COR_states_rights
@@ -2375,7 +2375,7 @@ focus_tree = {
 
 	focus = {# Limit Immigration
 		id = COR_limit_immigration
-		icon = GFX_goal_agricultural_aid
+		icon = GFX_goal_COR_limit_immigration
 		cost = 7.25
 		prerequisite = {
 			focus = COR_states_rights
@@ -2399,7 +2399,7 @@ focus_tree = {
 
 	focus = {# Wrestle Industrialists
 		id = COR_wrestle_industrialists
-		icon = GFX_goal_agricultural_aid
+		icon = GFX_goal_COR_Outmanouver_the_Industrialists
 		cost = 7.25
 		prerequisite = {
 			focus = COR_school_lunch_programs
@@ -2426,7 +2426,7 @@ focus_tree = {
 
 	focus = {# Deal with Race Baitors
 		id = COR_deal_with_race_baitors
-		icon = GFX_goal_agricultural_aid
+		icon = GFX_goal_COR_deal_with_race_baitors
 		cost = 7.25
 		prerequisite = {
 			focus = COR_limit_immigration
@@ -2453,7 +2453,7 @@ focus_tree = {
 
 	focus = {# Nationalist Effort
 		id = COR_nationalist_effort
-		icon = GFX_goal_agricultural_aid
+		icon = GFX_goal_COR_southern_bloc
 		cost = 7.25
 		prerequisite = {
 			focus = COR_deal_with_race_baitors
