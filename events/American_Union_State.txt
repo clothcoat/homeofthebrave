@@ -764,6 +764,10 @@ country_event = { # AUS Election
 
 	is_triggered_only = yes
 
+	trigger = {
+	tag = TEX
+	}
+
 	desc = { ###Marland in the election###
 	text = unionstate.2300.d.marland
 	trigger = {
