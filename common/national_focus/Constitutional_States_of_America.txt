@@ -4765,6 +4765,10 @@ focus_tree = {
 			type = annex_everything
 			target = MAF
 			}
+			create_wargoal = {
+			type = puppet_wargoal_focus
+			target = COG
+			}
 		}
 	}
 	
