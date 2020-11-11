@@ -862,6 +862,11 @@ country_event = { # AUS Election
 			random_other_country = {
 				news_event = { id = worldnews.203 days = 1 }
 			}
+			country_event = {
+				id = unionstate.5102
+				days = 1420
+				random = 10
+			}
 		}
 	}
 	option = { # Christian Party
@@ -887,6 +892,11 @@ country_event = { # AUS Election
 			random_other_country = {
 				news_event = { id = worldnews.204 days = 1 }
 			}
+			country_event = {
+				id = unionstate.5102
+				days = 1420
+				random = 10
+			}
 		}
 	}
 	option = { # The Democratic Party
@@ -906,6 +916,11 @@ country_event = { # AUS Election
 		}
 		hidden_effect = {
 		set_country_flag = AUS_election_occured
+		country_event = {
+				id = unionstate.5102
+				days = 1420
+				random = 10
+			}
 		}
 	}
 }
@@ -1031,7 +1046,6 @@ country_event = { # New Election
 			long_name = TEX_authoritarian_democrat_party_long
 			name = TEX_authoritarian_democrat_party }
 		}
-		
 	}
 	hidden_effect = {
 		set_country_flag = AUS_election_occured
@@ -1044,19 +1058,17 @@ country_event = { # New Election
 			limit = { has_country_flag = NPP_Victory }
 			clr_country_flag = NPP_Victory
 		}
-	}
-	hidden_effect = {
-			country_event = {
+		country_event = {
 				id = unionstate.5103
 				days = 1420
 				random = 10
-			}
-			country_event = {
+		}
+		country_event = {
 				id = unionstate.5104
 				days = 1460
 				random = 10
-			}
 		}
+	}
 	option = { # Christian Party
 		ai_chance = {
 			factor = 25
@@ -1476,7 +1488,7 @@ country_event = { #Second Great Migration
 			days = 20
 			}
 		}
-`		custom_effect_tooltip = TEX_rightism_tooltip
+		custom_effect_tooltip = TEX_rightism_tooltip
 		modify_country_flag = {
 		flag = AFP_leftism
 		value = 1
@@ -2110,6 +2122,7 @@ country_event = { #Long Dead
 	
 	option = { #Gerald L.K. Smith
 		trigger = {
+		tag = TEX
 		OR = {
 		has_completed_focus = TEX_reconcile_the_right
 		has_country_flag = TEX_AFP_smiths_army
@@ -2156,6 +2169,7 @@ country_event = { #Long Dead
 	option = { #Charles Coughlin
 		name = unionstate.5101.b
 		trigger = {
+		tag = TEX
 		OR = {
 		has_completed_focus = TEX_reconcile_the_right
 		has_completed_focus = TEX_afp_alone
@@ -2218,6 +2232,7 @@ country_event = { #Long Dead
 	option = { #Paul H. Maloney
 		name = unionstate.5101.c
 		trigger = {
+		tag = TEX
 		has_completed_focus = TEX_afp_alone
 		OR = {
 		has_government = paternal_autocrat
@@ -2256,6 +2271,7 @@ country_event = { #Long Dead
 	option = { #Big Jim Folsom
 		name = unionstate.5101.e
 		trigger = {
+		tag = TEX
 		OR = {
 		AND = {
 		has_completed_focus = TEX_afp_alone
@@ -2299,6 +2315,7 @@ country_event = { #Long Dead
 	option = { #Sid McMath
 		name = unionstate.5101.f
 		trigger = {
+		tag = TEX
 		OR = {
 		has_government = social_democrat
 		AND = {
@@ -2346,6 +2363,7 @@ country_event = { #Long Dead
 	option = { #Bronson M. Cutting
 		name = unionstate.5101.g
 		trigger = {
+		tag = TEX
 		OR = {
 		has_government = social_liberal
 		has_government = social_democrat
@@ -2412,6 +2430,7 @@ country_event = { #Long Dead
 	option = { #Alfred Mitchell Bingham
 		name = unionstate.5101.h
 		trigger = { 
+		tag = TEX
 		has_country_flag = {
 			flag = AFP_leftism
 			value < 2
@@ -2471,6 +2490,9 @@ country_event = { #Long Dead
 	}
 	option = { #Earl Long
 		name = unionstate.5101.i
+		trigger = {
+		tag = TEX
+		}
 		if = {
 		limit = { has_government = paternal_autocrat }
 		create_country_leader = {
@@ -2563,13 +2585,14 @@ country_event = { # AFP Primary
 	fire_only_once = yes
 	
 	trigger = {
-		tag = TEX
+	tag = TEX
 	}
 	
 	is_triggered_only = yes
 	
 	option = { #Gerald L.K. Smith
 		trigger = {
+		tag = TEX
 		OR = {
 		has_completed_focus = TEX_reconcile_the_right
 		has_country_flag = TEX_AFP_smiths_army
@@ -2616,6 +2639,7 @@ country_event = { # AFP Primary
 	option = { #Charles Coughlin
 		name = unionstate.5102.b
 		trigger = {
+		tag = TEX
 		OR = {
 		has_completed_focus = TEX_reconcile_the_right
 		has_completed_focus = TEX_afp_alone
@@ -2678,6 +2702,7 @@ country_event = { # AFP Primary
 	option = { #Paul H. Maloney
 		name = unionstate.5102.c
 		trigger = {
+		tag = TEX
 		has_completed_focus = TEX_afp_alone
 		OR = {
 		has_government = paternal_autocrat
@@ -2716,6 +2741,7 @@ country_event = { # AFP Primary
 	option = { #Big Jim Folsom
 		name = unionstate.5102.e
 		trigger = {
+		tag = TEX
 		OR = {
 		AND = {
 		has_completed_focus = TEX_afp_alone
@@ -2759,6 +2785,7 @@ country_event = { # AFP Primary
 	option = { #Sid McMath
 		name = unionstate.5102.f
 		trigger = {
+		tag = TEX
 		OR = {
 		has_government = social_democrat
 		AND = {
@@ -2806,6 +2833,7 @@ country_event = { # AFP Primary
 	option = { #Bronson M. Cutting
 		name = unionstate.5102.g
 		trigger = {
+		tag = TEX
 		OR = {
 		has_government = social_liberal
 		has_government = social_democrat
@@ -2872,6 +2900,7 @@ country_event = { # AFP Primary
 	option = { #Alfred Mitchell Bingham
 		name = unionstate.5102.h
 		trigger = { 
+		tag = TEX
 		has_country_flag = {
 			flag = AFP_leftism
 			value < 2
@@ -2931,6 +2960,9 @@ country_event = { # AFP Primary
 	}
 	option = { #Earl Long
 		name = unionstate.5102.i
+		trigger = {
+		tag = TEX
+		}
 		if = {
 		limit = { has_government = paternal_autocrat }
 		create_country_leader = {
