@@ -35,7 +35,7 @@ focus_tree = {
 			}
 		}
 		ai_will_do = { factor = 5 }
-		x = 5
+		x = 15
 		y = 0
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_alfalfa_bill"
@@ -846,6 +846,254 @@ focus_tree = {
 		}
 	}
 
+	## Shared OldDem ###
+
+	focus = {#National Restoration
+		id = COR_nationalist_restoration
+		icon = GFX_goal_usa
+		cost = 7.25
+		prerequisite = {
+			focus = COR_alfalfa_bill
+			focus = COR_old_blood_and_guts
+		}
+		available = {
+			has_global_flag = USA_civil_war_over_flag
+			OR = {
+			has_government = paternal_autocrat
+			has_government = authoritarian_democrat
+			}
+		}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		x = 10
+		y = 1
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus COR_nationalist_restoration"
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			COR_increase_political_recovery = yes
+			add_manpower = 12500
+			add_war_support = 0.05
+			hidden_effect = {
+			country_event = {
+			id = constate.360
+			days = 5
+				}
+			}
+		}
+	}
+	
+	focus = {# Old Democrats Go Nationwide
+		id = COR_odp_spreads
+		icon = GFX_goal_support_democracy
+		cost = 5.25
+		prerequisite = {
+			focus = COR_nationalist_restoration
+		}
+		available = {
+			OR = {
+			has_government = paternal_autocrat
+			has_government = authoritarian_democrat
+			}
+		}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = COR_nationalist_restoration
+		x = 1
+		y = 1
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus COR_odp_spreads"
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			COR_increase_political_recovery = yes
+			add_stability = 0.05
+			increase_ruling_party_popularity_by_5 = yes 
+			custom_effect_tooltip = ACW_fight_fed_terrorists_tooltip
+			modify_country_flag = {
+				flag = ACW_fed_resistance
+				value = -1
+			}
+		}
+	}
+	
+	focus = {# Embrace The Wild West
+		id = COR_embrace_wild_west
+		icon = GFX_goal_purge_opposition
+		cost = 6.00
+		prerequisite = {
+			focus = COR_nationalist_restoration
+		}
+		available = {
+			OR = {
+			has_government = paternal_autocrat
+			has_government = authoritarian_democrat
+			}
+		}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = COR_nationalist_restoration
+		x = -1
+		y = 1
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus COR_embrace_wild_west"
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			COR_increase_political_recovery = yes
+			add_popularity = { ideology = social_democrat popularity = -0.02 }
+			add_popularity = { ideology = social_liberal popularity = -0.02 }
+			add_popularity = { ideology = market_liberal popularity = -0.02 }
+			add_popularity = { ideology = social_conservative popularity = -0.01 }
+			add_manpower = -2000
+			add_stability = 0.03
+			add_political_power = 30
+			add_command_power = 20
+			custom_effect_tooltip = ACW_combat_minuteman
+			modify_country_flag = {
+				flag = ACW_minutemen_resistance
+				value = -1
+			}
+			hidden_effect = {
+			country_event = {
+			id = constate.71
+			days = 120
+				}
+			}
+			hidden_effect = {
+			country_event = {
+			id = constate.76
+			days = 10
+				}
+			}
+		}
+	}
+
+	focus = {# Traitorous Reds
+		id = COR_traitorous_reds
+		icon = GFX_HOL_red_scare
+		cost = 5.25
+		prerequisite = {
+			focus = COR_odp_spreads
+		}
+		prerequisite = {
+			focus = COR_embrace_wild_west
+		}
+		available = {
+			OR = {
+			has_government = paternal_autocrat
+			has_government = authoritarian_democrat
+			}
+		}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = COR_nationalist_restoration
+		x = 0
+		y = 2
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus COR_traitorous_reds"
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			COR_increase_political_recovery = yes
+			add_political_power = 35
+			add_war_support = 0.05
+			add_popularity = { ideology = paternal_autocrat popularity = 0.03 }
+			add_popularity = { ideology = authoritarian_democrat popularity = 0.03 }
+			add_popularity = { ideology = radical_socialist popularity = -0.02 }
+			add_popularity = { ideology = syndicalist popularity = -0.02 }
+			add_popularity = { ideology = totalist popularity = -0.02 }
+	`		custom_effect_tooltip = ACW_combat_socialists
+			modify_country_flag = {
+				flag = ACW_socialist_resistance
+				value = -1
+			}
+		}
+	}
+
+	
+	focus = {# Fight Miscegenation
+		id = COR_fight_miscegenation
+		icon = GFX_goal_COR_jewish_segregation
+		cost = 4.50
+		prerequisite = {
+			focus = COR_embrace_wild_west
+		}
+		available = {
+			OR = {
+			has_government = paternal_autocrat
+			has_government = authoritarian_democrat
+			}
+		}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = COR_nationalist_restoration
+		x = 0
+		y = 3
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus COR_fight_miscegenation"
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			COR_increase_political_recovery = yes
+			add_ideas = COR_fight_miscegenation_idea
+			add_political_power = 20
+			add_stability = -0.03
+			hidden_effect = {
+			country_event = {
+			id = constate.43
+			days = 120
+				}
+			}
+		}
+	}
+	
+	focus = {# Support Small Business
+		id = COR_small_businesses
+		icon = GFX_goal_COR_control_boy_scouts
+		cost = 7.25
+		prerequisite = {
+			focus = COR_fight_miscegenation
+		}
+		available = {
+			OR = {
+			has_government = paternal_autocrat
+			has_government = authoritarian_democrat
+			}
+		}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = COR_nationalist_restoration
+		x = 0
+		y = 4
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus COR_small_businesses"
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			COR_increase_political_recovery = yes
+			add_ideas = COR_small_towns_idea
+			increase_ruling_party_popularity_by_3 = yes 
+			add_war_support = 0.05
+			army_experience = 10
+			add_political_power = 20
+			add_command_power = 10
+			hidden_effect = {
+			country_event = {
+			id = constate.70
+			days = 60
+			}
+			}
+		}
+	}
+
 	## Shared PatAut ###
 
 	focus = {# American Nationalism
@@ -862,7 +1110,7 @@ focus_tree = {
 		}
 		cancel_if_invalid = yes
 		available_if_capitulated = yes
-		x = 10
+		x = 20
 		y = 1
 		ai_will_do = {
 			factor = 5
@@ -1093,7 +1341,7 @@ focus_tree = {
 		}
 		cancel_if_invalid = yes
 		available_if_capitulated = yes
-		x = 16
+		x = 25
 		y = 0
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_the_lone_eagle"
@@ -2498,8 +2746,8 @@ focus_tree = {
 			has_government = authoritarian_democrat
 		}
 		ai_will_do = { factor = 5 }
-		x = 2
-		y = 9
+		x = 5
+		y = 0
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_old_blood_and_guts"
 			country_event = {
@@ -2991,7 +3239,7 @@ focus_tree = {
 		}
 		cancel_if_invalid = yes
 		available_if_capitulated = yes
-		x = 32
+		x = 42
 		y = 0
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_mine_have_seen_the_glory"
@@ -5850,7 +6098,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 4
 		}
-		x = 47
+		x = 57
 		y = 0
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_rebuilding_the_country"
@@ -6453,7 +6701,7 @@ focus_tree = {
 		id = COR_From_a_Militia_to_a_force
 		icon = GFX_focus_generic_license_production
 		cost = 5.00
-		x = 60
+		x = 70
 		y = 0
 		ai_will_do = {
 			factor = 2
@@ -7800,7 +8048,7 @@ focus_tree = {
 		id = COR_air_force_reform
 		icon = GFX_goal_USA_usaaf
 		cost = 5
-		x = 74
+		x = 84
 		y = 0
 		ai_will_do = {
 			factor = 1
@@ -8389,7 +8637,7 @@ focus_tree = {
 				is_coastal = yes
 			}
 		}
-		x = 74
+		x = 84
 		y = 6
 		ai_will_do = {
 			factor = 1
@@ -9122,7 +9370,7 @@ focus_tree = {
 		id = COR_back_in_business
 		icon = GFX_goal_COR_car
 		cost = 6.00
-		x = 90
+		x = 100
 		y = 0
 
 		available = {
@@ -10011,6 +10259,10 @@ focus_tree = {
 					has_country_leader = {
 						ruling_only = yes
 						name = "William H. Murray"
+					}
+					has_country_leader = {
+						ruling_only = yes
+						name = "Richard Russel Jr."
 					}
 					has_country_leader = {
 						ruling_only = yes
