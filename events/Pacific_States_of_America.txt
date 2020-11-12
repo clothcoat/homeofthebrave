@@ -8303,7 +8303,7 @@ country_event = {# PSA Peace Offer
 		}
 	}
 	option = {#Decline
-		name = pacificstates.324.a
+		name = pacificstates.324.b
 		add_war_support = 0.05
 		add_manpower = 500
 		add_popularity = { ideology = radical_socialist popularity = -0.02 }
@@ -8327,7 +8327,6 @@ country_event = {# CSA Accepts
 		add_political_power = 100
 		add_stability = 0.05
 		add_popularity = { ideology = radical_socialist popularity = 0.08 }
-		set_global_flag = PSA_CSA_TREATY
 		white_peace = CSA
 	}
 }

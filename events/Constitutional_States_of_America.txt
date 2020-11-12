@@ -84,9 +84,7 @@ country_event = { # White Defense League requests army promotions
 	is_triggered_only = yes
 
 	trigger = {
-	NOT = {
-	has_country_leader = { ruling_only = yes name = "William Joseph Simmons" }
-	}
+	has_country_leader = { ruling_only = yes name = "William H. Murray" }
 	}
 
 	option = { # Or course
@@ -166,6 +164,10 @@ country_event = { # Fordists
 
 	fire_only_once = yes
 	is_triggered_only = yes
+
+	trigger = 
+	has_country_leader = { ruling_only = yes name = "William H. Murray" }
+	}
 
 	option = { # Or course
 		ai_chance = {
@@ -249,6 +251,10 @@ country_event = { # White Leagues ask us to stop Ford
 	fire_only_once = yes
 	is_triggered_only = yes
 
+	trigger = 
+	has_country_leader = { ruling_only = yes name = "William H. Murray" }
+	}
+
 	option = { # Tell that sommabitch to quit it
 		ai_chance = {
 			factor = 1
@@ -320,6 +326,10 @@ country_event = { # Dinner with Alfalfa Bill
 
 	fire_only_once = yes
 	is_triggered_only = yes
+
+	trigger = 
+	has_country_leader = { ruling_only = yes name = "William H. Murray" }
+	}
 
 	option = { # For the Nation, I accept
 		ai_chance = {

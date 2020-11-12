@@ -279,6 +279,19 @@ ideas = {
 			removal_cost = -1
 			picture = USA_fighting_for_america
 		}
+		ACW_in_progress_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea amcivwar_idea"}
+			picture = usa_great_depression_2
+			cancel_if_invalid = no
+			available = {
+				has_global_flag = USA_civil_war_begun_flag
+				NOT = { has_global_flag = USA_civil_war_over_flag }
+			}
+			modifier = {
+				unit_limit_ACW_in_progress = 0.15
+			}
+			removal_cost = -1
+		}
 		ACW_fired_up = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ACW_fired_up"}
 			available = { has_war_with = USA }
