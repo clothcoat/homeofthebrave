@@ -18337,10 +18337,18 @@ country_event = {# Trial of the US Generals
 			limit = {
 				tag = CAL
 			}
-			USA = {
+			WCC = {
 				every_unit_leader = {
 					limit = {
-						has_id = 950 #Eisenhower
+						has_id = 9500 #Eisenhower
+					}
+					set_nationality = CAL
+				}
+			}
+			WCC = {
+				every_unit_leader = {
+					limit = {
+						has_id = 9510 #Bradley
 					}
 					set_nationality = CAL
 				}
@@ -18348,7 +18356,7 @@ country_event = {# Trial of the US Generals
 			USA = {
 				every_unit_leader = {
 					limit = {
-						has_id = 951 #Bradley
+						has_id = 64 #Huebner
 					}
 					set_nationality = CAL
 				}
@@ -18356,7 +18364,7 @@ country_event = {# Trial of the US Generals
 			USA = {
 				every_unit_leader = {
 					limit = {
-						has_id = 952 #Huebner
+						has_id = 76 #McNair
 					}
 					set_nationality = CAL
 				}
@@ -18364,7 +18372,7 @@ country_event = {# Trial of the US Generals
 			USA = {
 				every_unit_leader = {
 					limit = {
-						has_id = 958 #McNair
+						has_id = 78 #Fredendall
 					}
 					set_nationality = CAL
 				}
@@ -18372,7 +18380,7 @@ country_event = {# Trial of the US Generals
 			USA = {
 				every_unit_leader = {
 					limit = {
-						has_id = 959 #Fredendall
+						has_id = 9650 #Harding
 					}
 					set_nationality = CAL
 				}
@@ -18380,15 +18388,7 @@ country_event = {# Trial of the US Generals
 			USA = {
 				every_unit_leader = {
 					limit = {
-						has_id = 965 #Harding
-					}
-					set_nationality = CAL
-				}
-			}
-			USA = {
-				every_unit_leader = {
-					limit = {
-						has_id = 963 #J.C.H. Lee
+						has_id = 94 #J.C.H. Lee
 					}
 					set_nationality = CAL
 				}
@@ -18401,7 +18401,7 @@ country_event = {# Trial of the US Generals
 			USA = {
 				every_unit_leader = {
 					limit = {
-						has_id = 950 #Eisenhower
+						has_id = 9500 #Eisenhower
 					}
 					set_nationality = COR
 				}
@@ -18409,7 +18409,7 @@ country_event = {# Trial of the US Generals
 			USA = {
 				every_unit_leader = {
 					limit = {
-						has_id = 951 #Bradley
+						has_id = 9510 #Bradley
 					}
 					set_nationality = COR
 				}
@@ -18417,7 +18417,7 @@ country_event = {# Trial of the US Generals
 			USA = {
 				every_unit_leader = {
 					limit = {
-						has_id = 952 #Huebner
+						has_id = 64 #Huebner
 					}
 					set_nationality = COR
 				}
@@ -18425,7 +18425,7 @@ country_event = {# Trial of the US Generals
 			USA = {
 				every_unit_leader = {
 					limit = {
-						has_id = 958 #McNair
+						has_id = 76 #McNair
 					}
 					set_nationality = COR
 				}
@@ -18433,7 +18433,7 @@ country_event = {# Trial of the US Generals
 			USA = {
 				every_unit_leader = {
 					limit = {
-						has_id = 959 #Fredendall
+						has_id = 78 #Fredendall
 					}
 					set_nationality = COR
 				}
@@ -18441,7 +18441,7 @@ country_event = {# Trial of the US Generals
 			USA = {
 				every_unit_leader = {
 					limit = {
-						has_id = 965 #Harding
+						has_id = 9650 #Harding
 					}
 					set_nationality = COR
 				}
@@ -18449,7 +18449,7 @@ country_event = {# Trial of the US Generals
 			USA = {
 				every_unit_leader = {
 					limit = {
-						has_id = 963 #J.C.H. Lee
+						has_id = 94 #J.C.H. Lee
 					}
 					set_nationality = COR
 				}
@@ -18462,7 +18462,7 @@ country_event = {# Trial of the US Generals
 			USA = {
 				every_unit_leader = {
 					limit = {
-						has_id = 950 #Eisenhower
+						has_id = 9500 #Eisenhower
 					}
 					set_nationality = TEX
 				}
@@ -18470,7 +18470,7 @@ country_event = {# Trial of the US Generals
 			USA = {
 				every_unit_leader = {
 					limit = {
-						has_id = 951 #Bradley
+						has_id = 9510 #Bradley
 					}
 					set_nationality = TEX
 				}
@@ -18478,7 +18478,7 @@ country_event = {# Trial of the US Generals
 			USA = {
 				every_unit_leader = {
 					limit = {
-						has_id = 952 #Huebner
+						has_id = 64 #Huebner
 					}
 					set_nationality = TEX
 				}
@@ -18486,7 +18486,7 @@ country_event = {# Trial of the US Generals
 			USA = {
 				every_unit_leader = {
 					limit = {
-						has_id = 956 #Stillwell
+						has_id = 72 #Stillwell
 					}
 					set_nationality = TEX
 				}
@@ -18494,7 +18494,7 @@ country_event = {# Trial of the US Generals
 			USA = {
 				every_unit_leader = {
 					limit = {
-						has_id = 957 #Gerow
+						has_id = 74 #Gerow
 					}
 					set_nationality = TEX
 				}
@@ -18502,7 +18502,7 @@ country_event = {# Trial of the US Generals
 			USA = {
 				every_unit_leader = {
 					limit = {
-						has_id = 961 #Walter Krueger
+						has_id = 84 #Walter Krueger
 					}
 					set_nationality = TEX
 				}
@@ -18510,7 +18510,7 @@ country_event = {# Trial of the US Generals
 			USA = {
 				every_unit_leader = {
 					limit = {
-						has_id = 965 #Harding
+						has_id = 98 #Harding
 					}
 					set_nationality = TEX
 				}
