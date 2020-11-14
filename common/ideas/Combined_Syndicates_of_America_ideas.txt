@@ -2141,7 +2141,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_iww_doctrine_idea"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = generic_sea_focused_navy
+			picture = iww_restructuring
 			modifier = {
 				experience_gain_motorized_training_factor = 0.05
 				army_fuel_consumption_factor = -0.03
@@ -2156,7 +2156,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_iww_doctrine_idea_2"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = generic_sea_focused_navy
+			picture = iww_restructuring
 			modifier = {
 				motorized_attack_factor = 0.03
 				motorized_defence_factor = 0.03
@@ -2173,7 +2173,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_iww_doctrine_idea_3"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = generic_sea_focused_navy
+			picture = iww_restructuring
 			modifier = {
 				motorized_attack_factor = 0.05
 				motorized_defence_factor = 0.05
@@ -2190,7 +2190,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_iww_doctrine_idea_4"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = generic_sea_focused_navy
+			picture = iww_restructuring
 			modifier = {
 				motorized_attack_factor = 0.05
 				motorized_defence_factor = 0.05
@@ -2208,7 +2208,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_centralist_doctrine_idea"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = generic_sea_focused_navy
+			picture = centralist_gdc
 			modifier = {
 				max_planning = 0.05
 				planning_speed = 0.02
@@ -2222,7 +2222,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_centralist_doctrine_idea_2"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = generic_sea_focused_navy
+			picture = centralist_gdc
 			modifier = {
 				max_planning = 0.1
 				planning_speed = 0.05
@@ -2239,7 +2239,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_centralist_doctrine_idea_3"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = generic_sea_focused_navy
+			picture = centralist_gdc
 			modifier = {
 				max_planning = 0.1
 				planning_speed = 0.5
@@ -2260,7 +2260,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_centralist_doctrine_idea_4"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = generic_sea_focused_navy
+			picture = centralist_gdc
 			modifier = {
 				max_planning = 0.2
 				planning_speed = 0.1
@@ -2361,7 +2361,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_butlers_doctrine_idea"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = generic_sea_focused_navy
+			picture = republican_military
 			modifier = {
 				max_planning = 0.10
 				planning_speed = 0.05
@@ -2377,7 +2377,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_butlers_doctrine_idea_2"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = generic_sea_focused_navy
+			picture = republican_military
 			modifier = {
 				max_planning = 0.10
 				planning_speed = 0.05
@@ -2395,7 +2395,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_butlers_doctrine_idea_3"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = generic_sea_focused_navy
+			picture = republican_military
 			modifier = {
 				max_planning = 0.15
 				planning_speed = 0.1
@@ -2414,7 +2414,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_butlers_doctrine_idea_4"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = generic_sea_focused_navy
+			picture = republican_military
 			modifier = {
 				max_planning = 0.20
 				planning_speed = 0.2
