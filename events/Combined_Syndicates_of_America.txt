@@ -347,6 +347,10 @@ country_event = { # Socialist Election Arrives
 		}
 		hidden_effect = {
 		country_event = {
+		id = csa.901
+		days = 6
+		}
+		country_event = {
 		id = csa.330
 		days = 5
 		}
@@ -392,6 +396,10 @@ country_event = { # Socialist Election Arrives
 		}
 		set_country_flag = CSA_constitutional_convention_done
 		hidden_effect = {
+		country_event = {
+		id = csa.901
+		days = 6
+		}
 		set_country_flag = CSA_AFL_In_Power
 		}
 		set_politics = {
@@ -430,6 +438,10 @@ country_event = { # Socialist Election Arrives
 		}
 		set_country_flag = CSA_constitutional_convention_done
 		hidden_effect = {
+			country_event = {
+			id = csa.901
+			days = 6
+			}
 			add_ideas = CSA_Ernest_Hemingway_for_tot
 			add_ideas = CSA_Gus_Hall_eco_tot
 			add_ideas = CSA_Steve_Nelson_sec_tot
@@ -485,6 +497,10 @@ country_event = { # Socialist Election Arrives
 			}
 		}
 		hidden_effect = {
+		country_event = {
+		id = csa.901
+		days = 6
+		}
 		set_country_flag = CSA_burnham_is_leader
 		set_country_flag = CSA_constitutional_convention_done
 			add_ideas = CSA_Joseph_Zack_Kornfeder_for_tot
