@@ -1445,7 +1445,7 @@ country_event = { # Socialist Constitution - Election
 }
 
 ### Reconstruction Events 12 - 24 ###
-country_event = { # Trial of the American First
+country_event = { # Trial of the ODP
 	id = csa.12
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.12"}
 	title = csa.12.t
