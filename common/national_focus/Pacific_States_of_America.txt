@@ -1290,10 +1290,15 @@ focus_tree = {
 				}
 			}
 			hidden_effect = {
+			if = {
+				NOT = { 
+				has_global_flag = USA_PSA_peace
+				}
 				#country_event = { id = ustates.627 days = 70 }#Pentagon Construction
 				country_event = { id = ustates.651 days = 35 }#AUS Trials
 				country_event = { id = ustates.650 days = 45 }#CAL Trials
 				country_event = { id = ustates.6520 days = 55 }#CAR Trials
+				}
 			}
 			custom_effect_tooltip = USA_trials_will_begin
 		}
@@ -3341,11 +3346,9 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_punish_hawaii"
 			add_war_support = 0.05
-			hidden_effect = {
 			country_event = {
 			id = pacificstates.243
 			days = 1
-				}
 			}
 		}
 	}
@@ -3718,7 +3721,7 @@ focus_tree = {
 			owns_state = 361
 			}
 		}
-		x = 108
+		x = 115
 		y = 10
 		ai_will_do = {
 			factor = 100
@@ -3730,6 +3733,382 @@ focus_tree = {
 		}
 	}
 	
+	## Spiritualist Reconstruction ##
+	focus = {# Spiritualists In Control
+		id = CAL_spiritualists_in_control
+		icon = GFX_CAL_spiritualists_in_control
+		cost = 1.50
+		prerequisite = {
+			focus = CAL_constitutional_convention
+		}
+		available = {
+			OR = {
+			has_government = national_populist
+			has_government = paternal_autocrat
+			}
+		}
+		available = {
+			NOT = {
+			has_country_leader = { ruling_only = yes name = "William Randolph Hearst" } 
+			}
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		available_if_capitulated = yes
+		relative_position_id = CAL_constitutional_convention
+		cancel_if_invalid = yes
+		x = -18
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_spiritualists_in_control"
+			custom_effect_tooltip = unlock_focuses
+			add_political_power = 50
+			add_stability = 0.05
+			add_popularity = { ideology = national_populist popularity = 0.05 }
+		}
+	}
+	
+	focus = {# A Sane Economy
+		id = CAL_sane_economy
+		icon = GFX_CAL_rational_economics
+		cost = 7.25
+		prerequisite = {
+			focus = CAL_spiritualists_in_control
+		}
+		relative_position_id = CAL_spiritualists_in_control
+		x = -2
+		y = 1
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_sane_economy"
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			add_ideas = CAL_sane_economics_idea
+			increase_ruling_party_popularity_by_5 = yes
+			add_political_power = -40
+			USA_political_recovery = yes
+		}
+	}
+	
+	focus = {# Japanese Propaganda
+		id = CAL_japanese_propaganda
+		icon = GFX_CAL_japanese_propaganda
+		cost = 7.25
+		prerequisite = {
+			focus = CAL_sane_economy
+		}
+		mutually_exclusive = {
+			focus = CAL_new_media
+		}
+		relative_position_id = CAL_spiritualists_in_control
+		x = -3
+		y = 2
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_japanese_propaganda"
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			USA_political_recovery = yes
+			add_ideas = CAL_japanese_propaganda_idea
+			add_stability = 0.04
+			add_political_power = 15
+		}
+	}
+	
+	focus = {# New Media
+		id = CAL_new_media
+		icon = GFX_goal_big_news
+		cost = 7.25
+		prerequisite = {
+			focus = CAL_sane_economy
+		}
+		mutually_exclusive = {
+			focus = CAL_japanese_propaganda
+		}
+		relative_position_id = CAL_spiritualists_in_control
+		x = -1
+		y = 2
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_new_media"
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			USA_political_recovery = yes
+			add_ideas = CAL_spiritualist_media_idea
+			add_stability = 0.04
+			add_political_power = 15
+		}
+	}
+	
+	focus = {# Shinto Influence
+		id = CAL_shinto_influence
+		icon = GFX_CAL_shinto_influences
+		cost = 7.25
+		prerequisite = {
+			focus = CAL_japanese_propaganda
+		}
+		relative_position_id = CAL_spiritualists_in_control
+		x = -3
+		y = 3
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_shinto_influence"
+			custom_effect_tooltip = USA_political_recovery_tooltip 	
+			USA_political_recovery = yes
+			add_ideas = CAL_shinto_influence_idea
+			add_stability = 0.06
+			add_political_power = 60
+		}
+	}
+
+	focus = {# Spiritual Revolution
+		id = CAL_spiritual_revolution
+		icon = GFX_CAL_spiritual_revolution
+		cost = 7.25
+		prerequisite = {
+			focus = CAL_new_media
+		}
+		relative_position_id = CAL_spiritualists_in_control
+		x = -1
+		y = 3
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_spiritual_revolution"
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			USA_political_recovery = yes 
+			country_event = { id = pacificstates.3521 days = 2 }
+			add_manpower = 4000
+		}
+	}
+	
+	focus = {# Re-education
+		id = CAL_reeducation_effort
+		icon = GFX_CAL_reeducation
+		cost = 7.25
+		prerequisite = {
+			focus = CAL_shinto_influence
+			focus = CAL_spiritual_revolution
+		}
+		relative_position_id = CAL_spiritualists_in_control
+		x = -2
+		y = 4
+		ai_will_do = {
+			factor = 40
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_reeducation_effort"
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			add_research_slot = 1
+			USA_political_recovery = yes
+		}
+	}
+
+	focus = {# Rehabilitate and Indoctrinate
+		id = CAL_rehabilitate_and_indoctrinate
+		icon = GFX_goal_manage_industries
+		cost = 7.25
+		prerequisite = {
+			focus = CAL_spiritualists_in_control
+		}
+		relative_position_id = CAL_spiritualists_in_control
+		x = 2
+		y = 1
+		ai_will_do = {
+			factor = 40
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_rehabilitate_and_indoctrinate"
+			country_event = { id = pacificstates.3520 days = 3 }
+		}
+	}
+
+	focus = {# Deal with the Syndies
+		id = CAL_deal_with_csa
+		icon = GFX_goal_DOM_The_Trial
+		cost = 7.25
+		prerequisite = {
+			focus = CAL_rehabilitate_and_indoctrinate
+		}
+		relative_position_id = CAL_spiritualists_in_control
+		x = 1
+		y = 2
+		ai_will_do = {
+			factor = 40
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_deal_with_csa"
+			country_event = { id = pacificstates.3523 days = 2 }
+		}
+	}
+
+	focus = {# Destroy Syndicalist Parasites
+		id = CAL_destroy_syndie_parasites
+		icon = GFX_CAL_destroy_parasites
+		cost = 7.25
+		prerequisite = {
+			focus = CAL_deal_with_csa
+		}
+		relative_position_id = CAL_spiritualists_in_control
+		x = 1
+		y = 3
+		ai_will_do = {
+			factor = 40
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_destroy_syndie_parasites"
+			custom_effect_tooltip = ACW_combat_socialists
+			modify_country_flag = {
+				flag = ACW_socialist_resistance
+				value = -2
+			}
+		}
+	}
+
+	focus = {# Deal with American First
+		id = CAL_deal_with_odp
+		icon = GFX_CAL_deal_with_odp
+		cost = 7.25
+		prerequisite = {
+			focus = CAL_rehabilitate_and_indoctrinate
+		}
+		relative_position_id = CAL_spiritualists_in_control
+		x = 3
+		y = 2
+		ai_will_do = {
+			factor = 40
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_deal_with_odp"
+			country_event = { id = pacificstates.3522 days = 2 }
+		}
+	}
+
+	focus = {# Destroy Jim Crow
+		id = CAL_destroy_anglophiles
+		icon = GFX_HOL_crackdown_natpop
+		cost = 7.25
+		prerequisite = {
+			focus = CAL_deal_with_odp
+		}
+		relative_position_id = CAL_spiritualists_in_control
+		x = 3
+		y = 3
+		ai_will_do = {
+			factor = 40
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_destroy_anglophiles"
+			custom_effect_tooltip = ACW_combat_klan
+			modify_country_flag = {
+				flag = ACW_klan_resistance
+				value = -2
+			}
+		}
+	}
+
+	focus = {# The Plan for Japan
+		id = CAL_plan_for_japan
+		icon = GFX_CAL_plan_with_japan
+		cost = 7.25
+		prerequisite = {
+			focus = CAL_destroy_anglophiles
+		}
+		prerequisite = {
+			focus = CAL_destroy_syndie_parasites
+		}
+		prerequisite = {
+			focus = CAL_shinto_influence
+			focus = CAL_spiritual_revolution
+		}
+		relative_position_id = CAL_spiritualists_in_control
+		x = 0
+		y = 4
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_plan_for_japan"
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			USA_political_recovery = yes
+			country_event = { id = pacificstates.3524 days = 1 }
+		}
+	}
+
+	focus = {# Ally with NOI
+		id = CAL_noi_alliance
+		icon = GFX_CAL_ally_noi
+		cost = 7.25
+		prerequisite = {
+			focus = CAL_destroy_syndie_parasites
+		}
+		prerequisite = {
+			focus = CAL_destroy_anglophiles
+		}
+		relative_position_id = CAL_spiritualists_in_control
+		x = 2
+		y = 4
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_noi_alliance"
+			country_event = {
+			id = pacificstates.363
+			days = 3
+			}
+			add_stability = 0.04
+			add_political_power = 50
+		}
+	}
+	
+	focus = {# Restore Elections
+		id = CAL_restore_elections
+		icon = GFX_goal_generic_elections
+		cost = 7.25
+		prerequisite = {
+			focus = CAL_reeducation_effort
+		}
+		prerequisite = {
+			focus = CAL_plan_for_japan
+		}
+		prerequisite = {
+			focus = CAL_noi_alliance
+		}
+		relative_position_id = CAL_spiritualists_in_control
+		x = 0
+		y = 5
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_restore_elections"
+			add_stability = 0.06
+			add_political_power = 50
+		}
+	}
+
+	focus = {# The Final Struggle
+		id = CAL_a_new_era
+		icon = GFX_CAL_a_new_era
+		cost = 7.25
+		prerequisite = {
+			focus = CAL_restore_elections
+		}
+		relative_position_id = CAL_spiritualists_in_control
+		x = 0
+		y = 6
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_a_new_era"
+			increase_ruling_party_popularity_by_5 = yes
+			add_political_power = 100
+		}
+	}
+
 	## President Hearst ##
 	focus = {# President Hearst
 		id = CAL_president_hearst
@@ -3743,6 +4122,9 @@ focus_tree = {
 			has_government = authoritarian_democrat
 			has_government = paternal_autocrat
 			}
+		}
+		available = {
+			has_country_leader = { ruling_only = yes name = "William Randolph Hearst" } 
 		}
 		ai_will_do = {
 			factor = 5
@@ -10973,6 +11355,12 @@ focus_tree = {
 			add_popularity = { ideology = social_democrat popularity = -0.02 }
 			add_political_power = 50
 			add_manpower = -1500
+			hidden_effect = {
+			country_event = {
+			id = pacificstates.356
+			days = 5
+			}
+		}
 		}
 	}
 	
@@ -10985,6 +11373,7 @@ focus_tree = {
 		}
 		available = {
 			has_government = paternal_autocrat
+			has_country_flag = CAL_hubbard_too_much
 		}
 		ai_will_do = {
 			factor = 5
@@ -11176,6 +11565,7 @@ focus_tree = {
 		}
 		available = {
 			has_government = national_populist
+			has_country_flag = CAL_followed_hubbard
 		}
 		ai_will_do = {
 			factor = 5

@@ -5796,6 +5796,7 @@ country_event = {# Ceasefire with MacArthur
 		name = pacificstates.214.b
 		set_global_flag = USA_PSA_peace
 		white_peace = USA
+		white_peace = WCC
 		add_political_power = -20
 		add_equipment_to_stockpile = {
 			type = infantry_equipment
@@ -8764,6 +8765,446 @@ country_event = {# Battle of Bakersfield
 	}
 }
 
+country_event = {# Trials of Patton and Pelley
+	id = pacificstates.3520
+	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.3520"}
+	title = pacificstates.3520.t
+	desc = {
+		text = pacificstates.3520.d
+		trigger = {
+			tag = CAL
+		}
+	}
+	picture = GFX_USA_military_trial
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {# Spare Pelley
+		name = pacificstates.3520.a
+		ai_chance = {
+			factor = 5
+		}
+		create_country_leader = {
+				name = "William Dudley Pelley"
+				desc = "POLITICS_WILLIAM_DUDLEY_PELLEY"
+				picture = "gfx/leaders/TEX/Portrait_TEX_William_Dudley_Pelley.tga"
+				expire = "1965.1.1"
+				ideology = social_conservative_subtype
+				traits = { authoritarian_tendencies }
+		}
+		add_political_power = -10
+		increase_ruling_party_popularity_by_2 = yes
+	}
+	
+	option = {# Spare Patton
+		name = pacificstates.3520.b
+		ai_chance = {
+			factor = 5
+		}
+		create_country_leader = {
+				name = "George Patton"
+				desc = "POLITICS_GEORGE_PATTON_DESC"
+				picture = "gfx/leaders/COR/Portrait_COR_George_Patton.tga"
+				expire = "1965.1.1"
+				ideology = authoritarian_democrat_subtype
+				traits = { blood_and_guts }
+		}
+		add_political_power = -15
+		increase_ruling_party_popularity_by_2 = yes
+	}
+	
+	option = {# Keep both!
+		name = pacificstates.3520.c
+		ai_chance = {
+			factor = 5
+		}
+		create_country_leader = {
+				name = "William Dudley Pelley"
+				desc = "POLITICS_WILLIAM_DUDLEY_PELLEY"
+				picture = "gfx/leaders/TEX/Portrait_TEX_William_Dudley_Pelley.tga"
+				expire = "1965.1.1"
+				ideology = social_conservative_subtype
+				traits = { authoritarian_tendencies }
+		}
+		create_country_leader = {
+				name = "George Patton"
+				desc = "POLITICS_GEORGE_PATTON_DESC"
+				picture = "gfx/leaders/COR/Portrait_COR_George_Patton.tga"
+				expire = "1965.1.1"
+				ideology = authoritarian_democrat_subtype
+				traits = { blood_and_guts }
+		}
+		add_political_power = -25
+		decrease_ruling_party_popularity_by_3 = yes
+	}
+	option = {# Jail both!
+		name = pacificstates.3520.e
+		ai_chance = {
+			factor = 5
+		}
+		add_political_power = 20
+		increase_ruling_party_popularity_by_3 = yes
+	}
+}
+
+country_event = {# Spiritual Revolution
+	id = pacificstates.3521
+	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.3521"}
+	title = pacificstates.3521.t
+	desc = {
+		text = pacificstates.3521.d
+		trigger = {
+			tag = CAL
+		}
+	}
+	picture = GFX_CAL_ufo_event_pic
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {# Invest in Space Technology
+		name = pacificstates.3521.a
+		ai_chance = {
+			factor = 5
+		}
+		add_tech_bonus = {
+			name = jet_rocket_bonus
+			bonus = 1.0
+			uses = 1
+			category = rocketry
+			category = jet_technology
+		}
+		add_political_power = 10
+		increase_ruling_party_popularity_by_2 = yes
+	}
+	
+	option = {# Invest in Paranormal Technology
+		name = pacificstates.3521.b
+		ai_chance = {
+			factor = 5
+		}
+		add_tech_bonus = {
+			name = secret_bonus
+			bonus = 1.0
+			uses = 1
+			category = electronics
+		}
+		add_political_power = 15
+		increase_ruling_party_popularity_by_2 = yes
+	}
+	
+	option = {# Propaganda for the Masses
+		name = pacificstates.3521.c
+		ai_chance = {
+			factor = 5
+		}
+		add_ideas = CAL_mass_appeals
+		add_political_power = -10
+		increase_ruling_party_popularity_by_5 = yes
+	}
+	option = {# An American Faith
+		name = pacificstates.3521.e
+		ai_chance = {
+			factor = 5
+		}
+		add_ideas = CAL_american_faith
+		add_political_power = -15
+		increase_ruling_party_popularity_by_5 = yes
+	}
+}
+
+country_event = { # Trial of the ODP
+	id = pacificstates.3522
+	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.3522"}
+	title = pacificstates.3522.t
+	desc = pacificstates.3522.d
+	picture = GFX_report_event_USA_congress
+
+	is_triggered_only = yes
+
+	option = {
+		name = pacificstates.3522.a
+		add_political_power = -100
+		create_field_marshal = {# George S. Patton Jr.
+			name = "George S. Patton"
+			desc = "COR_GEORGE_PATTON_ARMY_DESC"
+			portrait_path = "gfx/leaders/COR/Portrait_COR_George_Patton.tga"
+			traits = {
+				trickster
+				armor_officer
+				panzer_leader
+				war_hero
+				trait_reckless
+			}
+			skill = 3
+			attack_skill = 5
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+			id = 124
+		}
+		create_corps_commander = { # Matthew Ridgway
+			name = "Matthew Ridgway"
+			portrait_path = "gfx/leaders/TEX/Portrait_TEX_matthew_ridgway.tga"
+			traits = {
+				inflexible_strategist
+				trait_cautious
+				commando
+			}
+			skill = 3
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 4
+		}
+		create_navy_leader = { # Samuel Murray Robinson
+			name = "Samuel Murray Robinson"
+			portrait_path = "gfx/leaders/TEX/Portrait_TEX_samuel_robinson.tga"
+			traits = {}
+			skill = 3 #naval guy, don't patch
+		}
+	}
+	option = {
+		name = pacificstates.3522.b
+		add_manpower = -500
+		add_political_power = 50
+		increase_ruling_party_popularity_by_5 = yes
+	}
+	option = {
+		name = pacificstates.3522.c
+		add_manpower = -2500
+		add_political_power = 150
+		add_stability = -0.03
+	}
+}
+
+country_event = { # Trial of the CSA
+	id = pacificstates.3523
+	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.3523"}
+	title = pacificstates.3523.t
+	desc = pacificstates.3523.d
+	picture = GFX_report_event_USA_congress
+
+	is_triggered_only = yes
+
+	option = { # Torture and Deport the leaders
+		name = pacificstates.3523.a
+		add_manpower = -500
+		add_political_power = 100
+	}
+	option = { # Execute the leaders
+		name = pacificstates.3523.b
+		add_manpower = -500
+		add_political_power = 50
+		increase_ruling_party_popularity_by_2 = yes
+	}
+	option = { #Execute all party members
+		name = pacificstates.3523.c
+		add_manpower = -2500
+		add_political_power = 25
+		add_stability = -0.03
+	}
+}
+
+country_event = {# The Plan for Japan
+	id = pacificstates.3524
+	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.3524"}
+	title = pacificstates.3524.t
+	desc = {
+		text = pacificstates.3524.d
+		trigger = {
+			tag = CAL
+		}
+	}
+	picture = GFX_report_event_JAP_revolt
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {# Ask for Hawaii (PatAut)
+		name = pacificstates.3524.a
+		trigger = {
+		has_government = paternal_autocrat
+		HAW = {
+		exists = yes
+		}
+		}
+		ai_chance = {
+			factor = 5
+		}
+		CAL = {
+			annex_country = {
+			target = HAW
+			transfer_troops = no
+			}
+		}
+	}
+	
+	option = {# Ask for Hawaii (NatPop)
+		name = pacificstates.3524.b
+		trigger = {
+		has_government = national_populist
+		HAW = {
+		exists = yes
+		}
+		}
+		ai_chance = {
+			factor = 5
+		}
+		JAP = {
+		set_country_flag = CAL_demand_hawaii
+		country_event = {
+			id = pacificstates.3525
+			days = 3
+			}
+			}
+	}
+	option = {# Repay them and leave it at that
+		name = pacificstates.3524.c
+		ai_chance = {
+			factor = 5
+		}
+		JAP = {
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 1000
+			producer = CAL
+			}
+		}
+		add_political_power = -10
+		increase_ruling_party_popularity_by_5 = yes
+	}
+	option = {# Force them out
+		name = pacificstates.3524.e
+		trigger = {
+		has_government = national_populist
+		}
+		ai_chance = {
+			factor = 5
+		}
+		JAP = {
+		add_opinion_modifier = {
+			target = CAL
+			modifier = ITA_dislikes_govt
+			}
+		}
+		add_political_power = -15
+		increase_ruling_party_popularity_by_3 = yes
+	}
+	option = {# Send them extra equipment
+		name = pacificstates.3524.f
+		trigger = {
+		has_government = paternal_autocrat
+		}
+		ai_chance = {
+			factor = 5
+		}
+		JAP = {
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 1500
+			producer = CAL
+			}
+		add_equipment_to_stockpile = {
+			type = motorized_equipment
+			amount = 500
+			producer = CAL
+			}
+		}
+		add_political_power = -15
+		increase_ruling_party_popularity_by_2 = yes
+	}
+}
+
+country_event = {# Demand Hawaii!
+	id = pacificstates.3525
+	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.3525"}
+	title = pacificstates.3525.t
+	desc = pacificstates.3525.d
+	picture = GFX_report_event_USA_DOD_interior
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	trigger = {
+	tag = JAP
+	has_country_flag = CAL_demand_hawaii
+	}
+	
+	option = {# Very well, take the money
+		name = pacificstates.3525.a
+		CAL = {
+			country_event = { id = pacificstates.3527 days = 2 }
+		}
+	}
+	option = {# Never
+		name = pacificstates.3525.b
+		CAL = {
+			country_event = { id = pacificstates.3526 days = 2 }
+		}
+	}
+}
+
+country_event = {# Japan Declines
+	id = pacificstates.3526
+	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.3526"}
+	title = pacificstates.3526.t
+	desc = pacificstates.3526.d
+	picture = GFX_report_event_USA_DOD_interior
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {#Declare War Now
+		name = pacificstates.3526.a
+		declare_war_on = {
+		target = JAP
+		type = annex_everything
+		}
+	}
+	option = {#We will wait
+		name = pacificstates.3526.b
+		add_war_support = -0.02
+		add_political_power = -10
+		add_state_claim = 629
+	}
+}
+
+country_event = {# Japan accepts
+	id = pacificstates.3527
+	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.3527"}
+	title = pacificstates.3527.t
+	desc = pacificstates.3527.d
+	picture = GFX_report_event_USA_DOD_interior
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {#Great
+		name = pacificstates.3527.a
+		CAL = {
+		transfer_state = 629
+		629 = {
+				add_core_of = CAL
+			}
+		}
+	}
+}
+
+country_event = { # Spiritualist "Election"
+	id = pacificstates.3528
+	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.3528"}
+	title = pacificstates.3528.t
+	desc = pacificstates.3528.d
+	picture = GFX_report_event_USA_congress
+
+	is_triggered_only = yes
+
+	option = { # The Spiritualist Candidate
+		name = pacificstates.3528.a
+		add_political_power = 20
+	}
+	option = { # The Spiritualist Candidate
+		name = pacificstates.3528.b
+		increase_ruling_party_popularity_by_5 = yes
+	}
+}
+
 country_event = {# Bodin Addresses Congress
 	id = pacificstates.353
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.353"}
@@ -8974,12 +9415,14 @@ country_event = {# Party Beliefs
 	
 	option = {# Hubbard's Advice
 		name = pacificstates.356.a
+		set_country_flag = CAL_followed_hubbard
 		add_political_power = -40
 		add_popularity = { ideology = national_populist popularity = -0.01 }
 		add_stability = 0.05
 	}
 	option = {# No, this is enough
 		name = pacificstates.356.b
+		set_country_flag = CAL_hubbard_too_much
 		add_popularity = { ideology = national_populist popularity = 0.05 }
 		add_stability = -0.1
 		hidden_effect = {
@@ -9039,13 +9482,6 @@ country_event = {# Boden Removed
 
 	fire_only_once = yes
 	
-	immediate = {
-		add_ideas = CAL_Robert_Taylor_Jones_hog_sco
-		add_ideas = CAL_Robert_MacDonald_Ford_for_npo
-		add_ideas = CAL_Walter_M_Pierce_eco_pau
-		add_ideas = CAL_sessue_hayakawa_sec_pau
-	}
-	
 	option = {# Max Thornburg
 		name = pacificstates.358.a
 		create_country_leader = {
@@ -9060,6 +9496,12 @@ country_event = {# Boden Removed
 			ruling_party = paternal_autocrat
 			election_frequency = 48
 			elections_allowed = yes
+		}
+		hidden_effect = {
+		add_ideas = CAL_Robert_Taylor_Jones_hog_sco
+		add_ideas = CAL_Robert_MacDonald_Ford_for_npo
+		add_ideas = CAL_Walter_M_Pierce_eco_pau
+		add_ideas = CAL_sessue_hayakawa_sec_pau
 		}
 		add_popularity = { ideology = paternal_autocrat popularity = 0.02 }
 		add_popularity = { ideology = national_populist popularity = -0.05 }
@@ -9086,6 +9528,12 @@ country_event = {# Boden Removed
 			ruling_party = paternal_autocrat
 			election_frequency = 48
 			elections_allowed = yes
+		}
+		hidden_effect = {
+		add_ideas = CAL_Robert_Taylor_Jones_hog_sco
+		add_ideas = CAL_Robert_MacDonald_Ford_for_npo
+		add_ideas = CAL_Walter_M_Pierce_eco_pau
+		add_ideas = CAL_sessue_hayakawa_sec_pau
 		}
 		add_political_power = 20
 		add_stability = 0.03
@@ -9124,6 +9572,12 @@ country_event = {# Boden Removed
 			election_frequency = 48
 			elections_allowed = yes
 		}
+		hidden_effect = {
+		add_ideas = CAL_Robert_Taylor_Jones_hog_sco
+		add_ideas = CAL_Robert_MacDonald_Ford_for_npo
+		add_ideas = CAL_Walter_M_Pierce_eco_pau
+		add_ideas = CAL_sessue_hayakawa_sec_pau
+		}
 		add_political_power = 20
 		add_stability = -0.1
 		add_manpower = -5000
@@ -9134,6 +9588,13 @@ country_event = {# Boden Removed
 		}
 		hidden_effect = {
 			set_cosmetic_tag = CAL_jap_1
+			if = {
+			limit = { country_exists = CAL 	}
+			CAL = { declare_war_on = { target = USA type = annex_everything	} 			}
+			CAL = { declare_war_on = { target = WCC type = annex_everything	} 			}
+			CAL = { declare_war_on = { target = CSA type = annex_everything	} 			}
+			CAL = { declare_war_on = { target = COR type = annex_everything	} 				}
+			CAL = { declare_war_on = { target = TEX type = annex_everything	} 				}
 		}
 	}
 }
@@ -9276,7 +9737,7 @@ country_event = {# The Nation of Islam
 
 	trigger = {
 	tag = CAL
-	has_completed_focus = CAL_hunt_down_every_syndicalist
+	has_completed_focus = CAL_noi_alliance
 	CAL = {
 	controls_state = 1113
 	controls_state = 1114
