@@ -5796,6 +5796,7 @@ country_event = {# Ceasefire with MacArthur
 		name = pacificstates.214.b
 		set_global_flag = USA_PSA_peace
 		white_peace = USA
+		white_peace = WCC
 		add_political_power = -20
 		add_equipment_to_stockpile = {
 			type = infantry_equipment
