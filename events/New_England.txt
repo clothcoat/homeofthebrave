@@ -1066,6 +1066,7 @@ country_event = { # 1940 Democrat Primary
 		}
 		hidden_effect = {
 			set_country_flag = NEE_1940_democratic_primary_kennedy
+			set_country_flag = NEE_election_time
 		}
 		hidden_effect = {
 		country_event = {
@@ -1081,6 +1082,7 @@ country_event = { # 1940 Democrat Primary
 		}
 		hidden_effect = {
 			set_country_flag = NEE_1940_democratic_primary_curley
+			set_country_flag = NEE_election_time
 		}
 		hidden_effect = {
 		country_event = {
@@ -1096,6 +1098,7 @@ country_event = { # 1940 Democrat Primary
 		}
 		hidden_effect = {
 			set_country_flag = NEE_1940_democratic_primary_smith
+			set_country_flag = NEE_election_time
 		}
 		hidden_effect = {
 		country_event = {
@@ -1115,6 +1118,10 @@ country_event = { # 1940 Election
 
 	is_triggered_only = yes
 	fire_only_once = yes
+
+	trigger = {
+	has_country_flag = NEE_election_time
+	}
 
 	immediate = {
 		hidden_effect = {

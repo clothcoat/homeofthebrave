@@ -9557,7 +9557,7 @@ country_event = {# Boden Removed
 			amount = 2200
 			producer = CAL
 			}
-		puppet = CAL
+		add_to_faction = CAL
 		}
 		create_country_leader = {
 		name = "Kichisaburo Nomura"
@@ -9588,13 +9588,6 @@ country_event = {# Boden Removed
 		}
 		hidden_effect = {
 			set_cosmetic_tag = CAL_jap_1
-			if = {
-			limit = { country_exists = CAL 	}
-			CAL = { declare_war_on = { target = USA type = annex_everything	} 			}
-			CAL = { declare_war_on = { target = WCC type = annex_everything	} 			}
-			CAL = { declare_war_on = { target = CSA type = annex_everything	} 			}
-			CAL = { declare_war_on = { target = COR type = annex_everything	} 				}
-			CAL = { declare_war_on = { target = TEX type = annex_everything	} 				}
 		}
 	}
 }

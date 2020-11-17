@@ -297,9 +297,99 @@ ideas = {
 				command_power_gain = 0.03
 			}
 		}
-		
-		### Hearst Ideas ###
-		
+
+		CAL_sane_economics_idea = {#Sane Economics
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_sane_economics_idea"}
+			allowed = { always = no }
+			available = { has_government = national_populist }
+			removal_cost = -1
+			picture = business_grants
+			modifier = {
+				stability_factor = 0.02
+				political_power_gain = 0.01
+				production_speed_buildings_factor = 0.05
+				production_factory_start_efficiency_factor = 0.03
+				industrial_capacity_factory = 0.03
+				local_supplies = 0.06
+			}
+		}
+
+		CAL_japanese_propaganda_idea = {#Japanese Propaganda
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_japanese_propaganda_idea"}
+			allowed = {	always = no	}
+			allowed_civil_war = { always = yes }
+			picture = japanese_pacific_trade
+			modifier = { 
+				production_factory_efficiency_gain_factor = 0.03
+				recruitable_population_factor = 0.03
+				encryption_factor = 0.02
+				decryption_factor = 0.04
+				party_popularity_stability_factor = 0.05
+			}
+		}
+
+		CAL_spiritualist_media_idea = {# Spiritualist Media 
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_spiritualist_media_idea"}
+			allowed = { always = no }
+			available = { OR = {
+			has_government = authoritarian_democrat
+			has_government = paternal_autocrat
+			has_government = national_populist
+				} }
+			removal_cost = -1
+			picture = media_regulation
+			modifier = {
+				political_power_gain = 0.02
+				war_support_weekly = 0.005
+				stability_weekly = 0.001
+				encryption_factor = 0.04
+				decryption_factor = 0.02
+				party_popularity_stability_factor = 0.03
+			}
+		}
+
+		CAL_shinto_influence_idea = {#Shinto Influence
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_shinto_influence_idea"}
+			allowed = {	always = no }
+			allowed_civil_war = { always = yes }
+			picture = American_corporatism
+			modifier = { 
+				forced_surrender_limit = 0.1
+				consumer_goods_factor = -0.02
+				army_morale_factor = 0.04
+				political_power_gain = 0.01
+			}
+		}
+
+		CAL_mass_appeals = {#Mass Appeals
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_mass_appeals"}
+			allowed = {	always = no }
+			allowed_civil_war = { always = yes }
+			picture = immigration_influx
+			modifier = { 
+				recruitable_population_factor = 0.01
+				monthly_population = 0.05
+				production_speed_buildings_factor = 0.05
+				local_non_core_manpower = 0.1
+				production_lack_of_resource_penalty_factor = -0.03
+				industry_free_repair_factor = 0.02
+			}
+		}
+
+		CAL_american_faith = {#American Faith
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_american_faith"}
+			allowed = {	always = no }
+			allowed_civil_war = { always = yes }
+			picture = usa_great_depression_2
+			modifier = { 
+				forced_surrender_limit = 0.05
+				consumer_goods_factor = -0.02
+				stability_weekly = 0.01
+				political_power_gain = 0.05
+				party_popularity_stability_factor = 0.1
+			}
+		}
+
 		### Hearst Ideas ###
 		CAL_nia = {#National Recovery Administration
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_nia"}
