@@ -5282,6 +5282,36 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 	spriteType = {
+		name = "GFX_CAL_handle_odp"
+		texturefile = "gfx/interface/goals/CAL_handle_odp.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/CAL_absorb_remaining_democrats.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	
+			animationrotation = -90.0		
+			animationlooping = no			
+			animationtime = 0.75				
+			animationdelay = 0			
+			animationblendmode = "add"       
+			animationtype = "scrolling"      
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/CAL_handle_odp.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	
+			animationrotation = 90.0		
+			animationlooping = no			
+			animationtime = 0.75				
+			animationdelay = 0			
+			animationblendmode = "add"       
+			animationtype = "scrolling"      
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+				animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = {
 		name = "GFX_CAL_hays_code_shine"
 		texturefile = "gfx/interface/goals/CAL_hays_code.dds"
 		effectFile = "gfx/FX/buttonstate.lua"

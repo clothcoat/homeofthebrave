@@ -1115,11 +1115,6 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/CAL_ally_noi.dds"
 	}
 
-	SpriteType = {# Deal with ODP
-		name = "GFX_CAL_deal_with_odp"
-		texturefile = "gfx/interface/goals/CAL_deal_with_odp.dds"
-	}
-
 	SpriteType = {# Plan for Japan
 		name = "GFX_CAL_plan_with_japan"
 		texturefile = "gfx/interface/goals/CAL_plan_with_japan.dds"
@@ -1135,9 +1130,9 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/CAL_spiritual_revolution.dds"
 	}
 
-	SpriteType = {# Spiritual Revolution
-		name = "GFX_CAL_handle_odp"
-		texturefile = "gfx/interface/goals/CAL_handle_odp.dds"
+	SpriteType = {# Handle the ODP
+		name = "GFX_CAL_deal_with_odp"
+		texturefile = "gfx/interface/goals/CAL_deal_with_odp.dds"
 	}
 
 	SpriteType = {# Shinto Influences
