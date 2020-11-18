@@ -3762,6 +3762,7 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_spiritualists_in_control"
+			custom_effect_tooltip = unlock_focuses
 			add_political_power = 50
 			add_stability = 0.05
 			add_popularity = { ideology = national_populist popularity = 0.05 }
@@ -3774,6 +3775,12 @@ focus_tree = {
 		cost = 7.25
 		prerequisite = {
 			focus = CAL_spiritualists_in_control
+		}
+		available = {
+			OR = {
+			has_government = national_populist
+			has_government = paternal_autocrat
+			}
 		}
 		relative_position_id = CAL_spiritualists_in_control
 		x = -2
@@ -3797,6 +3804,9 @@ focus_tree = {
 		cost = 7.25
 		prerequisite = {
 			focus = CAL_sane_economy
+		}
+		available = {
+			has_government = paternal_autocrat
 		}
 		mutually_exclusive = {
 			focus = CAL_new_media
@@ -3823,6 +3833,9 @@ focus_tree = {
 		cost = 7.25
 		prerequisite = {
 			focus = CAL_sane_economy
+		}
+		available = {
+			has_government = national_populist
 		}
 		mutually_exclusive = {
 			focus = CAL_japanese_propaganda
