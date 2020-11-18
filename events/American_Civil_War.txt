@@ -677,7 +677,16 @@ country_event = { # Demand BBR stand down
 
         AND = {
 	    tag = CAL
-		CAL = { NOT = { has_government = national_populist } }
+		CAL = { 
+		NOT = { 
+		has_government = national_populist 
+		} 
+		}
+		CAL = { 
+		NOT = { 
+		has_government = paternal_autocrat
+		} 
+		}
 	    OR = {
 	        NOT = {
 	            BBR = {

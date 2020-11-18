@@ -9261,6 +9261,69 @@ country_event = {# Bodin Addresses Congress
 	}
 }
 
+country_event = { #Meeting in the Cabinet Room 
+	id = pacificstates.3531
+	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.3531"}
+	title = pacificstates.3531.t
+	desc = pacificstates.3531.d
+	picture = GFX_report_event_USA_DOD_interior
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = CAL
+		has_completed_focus = CAL_sane_economy
+		has_government = national_populist
+	}
+	
+	mean_time_to_happen = {
+	days = 20
+	}
+
+	option = { # Flavor
+		name = pacificstates.3531.a
+		add_stability = 0.03
+		add_popularity = { ideology = national_populist popularity = 0.02 }
+	}
+	option = { # Flavor
+		name = pacificstates.3531.b
+		trigger = {
+		OR = {
+		has_government = paternal_autocrat
+		has_government = national_populist
+			}
+		}
+		add_stability = 0.02
+		add_political_power = 20
+	}
+}
+
+country_event = { #Japanese Emperor Loves Disney!
+	id = pacificstates.3532
+	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.3532"}
+	title = pacificstates.3532.t
+	desc = pacificstates.3532.d
+	picture = GFX_report_event_USA_DOD_interior
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = CAL
+		has_completed_focus = CAL_sane_economy
+		has_government = paternal_autocrat
+	}
+	
+	mean_time_to_happen = {
+	days = 25
+	}
+
+	option = { # Flavor
+		name = pacificstates.3532.a
+		add_stability = 0.03
+		add_popularity = { ideology = paternal_autocrat popularity = 0.02 }
+	}
+}
+
 country_event = {# Spiritualists take the West
 	id = pacificstates.3529
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.3529"}
