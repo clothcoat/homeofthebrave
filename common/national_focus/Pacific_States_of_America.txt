@@ -3762,7 +3762,6 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_spiritualists_in_control"
-			custom_effect_tooltip = unlock_focuses
 			add_political_power = 50
 			add_stability = 0.05
 			add_popularity = { ideology = national_populist popularity = 0.05 }
