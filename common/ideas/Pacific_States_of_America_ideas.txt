@@ -301,7 +301,12 @@ ideas = {
 		CAL_sane_economics_idea = {#Sane Economics
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_sane_economics_idea"}
 			allowed = { always = no }
-			available = { has_government = national_populist }
+			available = { 
+			OR = {
+			has_government = paternal_autocrat 
+			has_government = national_populist
+				}
+			}
 			removal_cost = -1
 			picture = business_grants
 			modifier = {
@@ -317,7 +322,12 @@ ideas = {
 		CAL_japanese_propaganda_idea = {#Japanese Propaganda
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_japanese_propaganda_idea"}
 			allowed = {	always = no	}
-			allowed_civil_war = { always = yes }
+			available = { 
+			OR = {
+			has_government = paternal_autocrat 
+			has_government = national_populist
+				}
+			}
 			picture = japanese_pacific_trade
 			modifier = { 
 				production_factory_efficiency_gain_factor = 0.03
@@ -331,11 +341,12 @@ ideas = {
 		CAL_spiritualist_media_idea = {# Spiritualist Media 
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_spiritualist_media_idea"}
 			allowed = { always = no }
-			available = { OR = {
-			has_government = authoritarian_democrat
-			has_government = paternal_autocrat
+			available = { 
+			OR = {
+			has_government = paternal_autocrat 
 			has_government = national_populist
-				} }
+				}
+			}
 			removal_cost = -1
 			picture = media_regulation
 			modifier = {
@@ -351,7 +362,12 @@ ideas = {
 		CAL_shinto_influence_idea = {#Shinto Influence
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_shinto_influence_idea"}
 			allowed = {	always = no }
-			allowed_civil_war = { always = yes }
+			available = { 
+			OR = {
+			has_government = paternal_autocrat 
+			has_government = national_populist
+				}
+			}
 			picture = American_corporatism
 			modifier = { 
 				forced_surrender_limit = 0.1
@@ -364,7 +380,12 @@ ideas = {
 		CAL_mass_appeals = {#Mass Appeals
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_mass_appeals"}
 			allowed = {	always = no }
-			allowed_civil_war = { always = yes }
+			available = { 
+			OR = {
+			has_government = paternal_autocrat 
+			has_government = national_populist
+				}
+			}
 			picture = immigration_influx
 			modifier = { 
 				recruitable_population_factor = 0.01
@@ -379,7 +400,12 @@ ideas = {
 		CAL_american_faith = {#American Faith
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_american_faith"}
 			allowed = {	always = no }
-			allowed_civil_war = { always = yes }
+			available = { 
+			OR = {
+			has_government = paternal_autocrat 
+			has_government = national_populist
+				}
+			}
 			picture = usa_great_depression_2
 			modifier = { 
 				forced_surrender_limit = 0.05
