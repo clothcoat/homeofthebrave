@@ -4489,6 +4489,7 @@ focus_tree = {
 			}
 			hidden_effect = {
 			remove_ideas = USA_klan_activity_idea
+			add_idea = USA_klan_activity_idea_2
 			if = {
 			limit = {
 			has_country_flag = USA_civil_war_avoided_flag }
@@ -4894,6 +4895,7 @@ focus_tree = {
 			custom_effect_tooltip = unlock_focuses
 			remove_ideas = USA_great_depression_4
 			remove_ideas = USA_black_monday2
+			remove_ideas = USA_klan_activity_idea_2
 			}
 		}
 	
