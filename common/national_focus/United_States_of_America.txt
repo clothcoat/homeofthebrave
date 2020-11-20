@@ -4488,6 +4488,7 @@ focus_tree = {
 				}
 			}
 			hidden_effect = {
+			remove_ideas = USA_klan_activity_idea
 			if = {
 			limit = {
 			has_country_flag = USA_civil_war_avoided_flag }
