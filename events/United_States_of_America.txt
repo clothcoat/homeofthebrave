@@ -15538,9 +15538,15 @@ country_event = {# Trial of Douglas MacArthur
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.3146"}
 	title = ustates.3146.t
 	desc = {
-		text = ustates.3146.d
+		text = ustates.3146.d.usa
 		trigger = {
 			tag = USA
+		}
+	}
+	desc = {
+		text = ustates.3146.d.wcc
+		trigger = {
+			tag = WCC
 		}
 	}
 	picture = GFX_USA_military_trial
