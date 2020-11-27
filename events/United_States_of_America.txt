@@ -6414,7 +6414,7 @@ country_event = { #Occupying the south
 		name = ustates.113.b
 		add_manpower = 1500
 		hidden_effect = {
-			country_event = { id = amcivwar.18 days = 2 }
+			country_event = { id = ustates.1100 days = 2 }
 		}
 	}
 }
@@ -6458,7 +6458,7 @@ country_event = { #White Leaguers Attack
 		name = ustates.1131.b
 		add_manpower = -1500
 		hidden_effect = {
-			country_event = { id = amcivwar.18 days = 8 }
+			country_event = { id = ustates.1100 days = 8 }
 		}
 	}
 }
@@ -6499,7 +6499,7 @@ country_event = { #More Men
 		name = ustates.1132.b
 		add_stability = -0.03
 		hidden_effect = {
-			country_event = { id = amcivwar.18 days = 8 }
+			country_event = { id = ustates.1100 days = 8 }
 		}
 	}
 }
