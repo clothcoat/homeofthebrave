@@ -1275,6 +1275,14 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/COR_legacy_of_jackson.dds"
 	}
 	SpriteType = {
+		name = "GFX_goal_COR_Wild_West"
+		texturefile = "gfx/interface/goals/COR_Wild_West.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_COR_expand_odp"
+		texturefile = "gfx/interface/goals/COR_expand_odp.dds"
+	}
+	SpriteType = {
 		name = "GFX_goal_COR_Peoples_Senator"
 		texturefile = "gfx/interface/goals/COR_Peoples_Senator.dds"
 	}
@@ -3172,6 +3180,11 @@ spriteTypes = {
 		name = "GFX_goal_WCC_recreational_mcnukes_tm"
 		texturefile = "gfx/interface/goals/WCC_recreational_mcnukes_tm.dds"
 	}
+
+	SpriteType = {# Restore Politicians
+		name = "GFX_goal_WCC_restore_politicians"
+		texturefile = "gfx/interface/goals/WCC_restore_politicians.dds"
+	}
 	
 	SpriteType = {# WCC Security Forces
 		name = "GFX_goal_WCC_security_forces"
@@ -3181,6 +3194,11 @@ spriteTypes = {
 	SpriteType = {# Stragle the Cobra
 		name = "GFX_goal_WCC_strangle_cobra"
 		texturefile = "gfx/interface/goals/WCC_strangle_cobra.dds"
+	}
+
+	SpriteType = {# Election Puppeteering
+		name = "GFX_goal_WCC_election_puppeteering"
+		texturefile = "gfx/interface/goals/WCC_election_puppeteering.dds"
 	}
 	
 	SpriteType = {# Washingtonian Tactics
@@ -3196,6 +3214,81 @@ spriteTypes = {
 	SpriteType = {# Wise Men
 		name = "GFX_goal_WCC_wise_men"
 		texturefile = "gfx/interface/goals/WCC_wise_men.dds"
+	}
+
+	SpriteType = {# Wisemen in the White House
+		name = "GFX_goal_WCC_wisemen_white_house"
+		texturefile = "gfx/interface/goals/WCC_wisemen_white_house.dds"
+	}
+
+	SpriteType = {# Trial of MacArthurites
+		name = "GFX_goal_WCC_trial_macarthurites"
+		texturefile = "gfx/interface/goals/WCC_trial_macarthurites.dds"
+	}
+
+	SpriteType = {# Condemn Tyranny
+		name = "GFX_goal_WCC_condemn_tyranny"
+		texturefile = "gfx/interface/goals/WCC_condemn_tyranny.dds"
+	}
+
+	SpriteType = {# Punish Capital
+		name = "GFX_goal_WCC_punish_capital"
+		texturefile = "gfx/interface/goals/WCC_punish_capital.dds"
+	}
+
+	SpriteType = {# Side with Capital
+		name = "GFX_goal_WCC_side_with_capital"
+		texturefile = "gfx/interface/goals/WCC_side_with_capital.dds"
+	}
+
+	SpriteType = {# Side with Labor
+		name = "GFX_goal_WCC_side_with_labor"
+		texturefile = "gfx/interface/goals/WCC_side_with_labor.dds"
+	}
+
+	SpriteType = {# Suppress Radicals
+		name = "GFX_goal_WCC_suppress_radicals"
+		texturefile = "gfx/interface/goals/WCC_suppress_radicals.dds"
+	}
+
+	SpriteType = {# Silence Critics
+		name = "GFX_goal_WCC_silence_critics"
+		texturefile = "gfx/interface/goals/WCC_silence_critics.dds"
+	}
+
+	SpriteType = {# Price of Rebellion
+		name = "GFX_goal_WCC_price_of_rebellion"
+		texturefile = "gfx/interface/goals/WCC_price_of_rebellion.dds"
+	}
+
+	SpriteType = {# Martial Law
+		name = "GFX_goal_WCC_martial_law"
+		texturefile = "gfx/interface/goals/WCC_martial_law.dds"
+	}
+
+	SpriteType = {# Expand Wisemen
+		name = "GFX_goal_WCC_expand_wisemen"
+		texturefile = "gfx/interface/goals/WCC_expand_wisemen.dds"
+	}
+
+	SpriteType = {# States of the Union
+		name = "GFX_goal_WCC_states_of_the_union"
+		texturefile = "gfx/interface/goals/WCC_states_of_the_union.dds"
+	}
+
+	SpriteType = {# Down with the Traitors
+		name = "GFX_goal_WCC_down_with_the_traitors"
+		texturefile = "gfx/interface/goals/WCC_down_with_the_traitors.dds"
+	}
+
+	SpriteType = {# Civilian Allies
+		name = "GFX_goal_WCC_civilian_allies"
+		texturefile = "gfx/interface/goals/WCC_civilian_allies.dds"
+	}
+
+	SpriteType = {# Reconstruction
+		name = "GFX_goal_WCC_reconstruction"
+		texturefile = "gfx/interface/goals/WCC_reconstruction.dds"
 	}
 	
 	SpriteType = {# WCC VBA
@@ -3639,6 +3732,10 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_goal_COR_education_icon"
 		texturefile = "gfx/interface/goals/COR_education_icon.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_COR_small_town_america"
+		texturefile = "gfx/interface/goals/COR_small_town_america.dds"
 	}
 	SpriteType = {
 		name = "GFX_goal_COR_Jim_Crow_focus"
