@@ -2290,15 +2290,15 @@ country_event = { # Last Men Standing
 	ai_will_do = {
 			factor = 95
 			modifier = {
-				factor = 0.1
+				modifier = 0.1
 				has_government = social_conservative
 			}
 			modifier = {
-				factor = 0.3
+				modifier = 0.3
 				has_government = market_liberal
 			}
 			modifier = {
-				factor = 0.5
+				modifier = 0.5
 				has_government = social_liberal
 			}
 	}

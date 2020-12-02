@@ -7102,7 +7102,7 @@ focus_tree = {
 	### Post Civil War - Mac Arthur ###
 	focus = {# Martial Law
 		id = USA_martial_law
-		icon = GFX_goal_WCC_martial_law
+		icon = GFX_goal_ideology_authoritarian_democrat
 		cost = 1.00
 		available = {
 			has_country_leader = { ruling_only = yes name = "Douglas MacArthur" } 
@@ -10678,7 +10678,7 @@ focus_tree = {
 			}
 		}
 		cost = 6.00
-		x = 73
+		x = 64
 		y = 8
 		
 		offset = {

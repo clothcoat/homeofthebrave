@@ -3772,7 +3772,7 @@ focus_tree = {
 	focus = {# A Sane Economy
 		id = CAL_sane_economy
 		icon = GFX_CAL_rational_economics
-		cost = 5.0
+		cost = 7.25
 		prerequisite = {
 			focus = CAL_spiritualists_in_control
 		}
@@ -3801,7 +3801,7 @@ focus_tree = {
 	focus = {# Japanese Propaganda
 		id = CAL_japanese_propaganda
 		icon = GFX_CAL_japanese_propaganda
-		cost = 5.0
+		cost = 7.25
 		prerequisite = {
 			focus = CAL_sane_economy
 		}
@@ -3830,7 +3830,7 @@ focus_tree = {
 	focus = {# New Media
 		id = CAL_new_media
 		icon = GFX_goal_big_news
-		cost = 5.0
+		cost = 7.25
 		prerequisite = {
 			focus = CAL_sane_economy
 		}
@@ -3859,7 +3859,7 @@ focus_tree = {
 	focus = {# Shinto Influence
 		id = CAL_shinto_influence
 		icon = GFX_CAL_shinto_influences
-		cost = 5.0
+		cost = 7.25
 		prerequisite = {
 			focus = CAL_japanese_propaganda
 		}
@@ -3882,7 +3882,7 @@ focus_tree = {
 	focus = {# Spiritual Revolution
 		id = CAL_spiritual_revolution
 		icon = GFX_CAL_spiritual_revolution
-		cost = 5.0
+		cost = 7.25
 		prerequisite = {
 			focus = CAL_new_media
 		}
@@ -3904,7 +3904,7 @@ focus_tree = {
 	focus = {# Re-education
 		id = CAL_reeducation_effort
 		icon = GFX_CAL_reeducation
-		cost = 5.0
+		cost = 7.25
 		prerequisite = {
 			focus = CAL_shinto_influence
 			focus = CAL_spiritual_revolution
@@ -3926,7 +3926,7 @@ focus_tree = {
 	focus = {# Rehabilitate and Indoctrinate
 		id = CAL_rehabilitate_and_indoctrinate
 		icon = GFX_goal_manage_industries
-		cost = 5.0
+		cost = 7.25
 		prerequisite = {
 			focus = CAL_spiritualists_in_control
 		}
@@ -3945,7 +3945,7 @@ focus_tree = {
 	focus = {# Deal with the Syndies
 		id = CAL_deal_with_csa
 		icon = GFX_goal_DOM_The_Trial
-		cost = 5.0
+		cost = 7.25
 		prerequisite = {
 			focus = CAL_rehabilitate_and_indoctrinate
 		}
@@ -3964,7 +3964,7 @@ focus_tree = {
 	focus = {# Destroy Syndicalist Parasites
 		id = CAL_destroy_syndie_parasites
 		icon = GFX_CAL_destroy_parasites
-		cost = 5.0
+		cost = 7.25
 		prerequisite = {
 			focus = CAL_deal_with_csa
 		}
@@ -3987,7 +3987,7 @@ focus_tree = {
 	focus = {# Deal with American First
 		id = CAL_deal_with_odp
 		icon = GFX_CAL_deal_with_odp
-		cost = 5.0
+		cost = 7.25
 		prerequisite = {
 			focus = CAL_rehabilitate_and_indoctrinate
 		}
@@ -4006,7 +4006,7 @@ focus_tree = {
 	focus = {# Destroy Jim Crow
 		id = CAL_destroy_anglophiles
 		icon = GFX_HOL_crackdown_natpop
-		cost = 5.0
+		cost = 7.25
 		prerequisite = {
 			focus = CAL_deal_with_odp
 		}
@@ -4029,7 +4029,7 @@ focus_tree = {
 	focus = {# The Plan for Japan
 		id = CAL_plan_for_japan
 		icon = GFX_CAL_plan_with_japan
-		cost = 5.0
+		cost = 7.25
 		prerequisite = {
 			focus = CAL_destroy_anglophiles
 		}
@@ -4057,7 +4057,7 @@ focus_tree = {
 	focus = {# Ally with NOI
 		id = CAL_noi_alliance
 		icon = GFX_CAL_ally_noi
-		cost = 5.0
+		cost = 7.25
 		prerequisite = {
 			focus = CAL_destroy_syndie_parasites
 		}
@@ -4083,7 +4083,7 @@ focus_tree = {
 	focus = {# Restore Elections
 		id = CAL_restore_elections
 		icon = GFX_goal_generic_elections
-		cost = 5.0
+		cost = 7.25
 		prerequisite = {
 			focus = CAL_reeducation_effort
 		}
@@ -4106,7 +4106,7 @@ focus_tree = {
 	focus = {# The Final Struggle
 		id = CAL_a_new_era
 		icon = GFX_CAL_a_new_era
-		cost = 5.0
+		cost = 7.25
 		prerequisite = {
 			focus = CAL_restore_elections
 		}
@@ -10231,6 +10231,7 @@ focus_tree = {
 		}
 		available = {
 			has_government = radical_socialist
+			has_country_flag = CSA_social_patriot_victory
 		}
 		ai_will_do = {
 			factor = 5
@@ -12422,9 +12423,6 @@ focus_tree = {
 		focus = CAL_oppose_radicals
 		focus = CAL_fund_black_education
 		}
-		mutually_exclusive = {
-			focus = CAL_lily_white_movement
-		}
 		available = {
 			OR = {
 			has_government = social_conservative
@@ -12520,9 +12518,6 @@ focus_tree = {
 		prerequisite = {
 		focus = CAL_blind_eye
 		focus = CAL_oppose_radicals
-		}
-		mutually_exclusive = {
-			focus = CAL_hire_black_americans
 		}
 		ai_will_do = {
 			factor = 5
@@ -15125,7 +15120,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_claim_australasia"
 			add_war_support = 0.03
-			unlock_decision_tooltip = WCC_attack_australasia
+			unlock_decision_tooltip = USA_attack_australasia
 		}
 	}
 	focus = {

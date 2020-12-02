@@ -1402,7 +1402,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_martial_law_idea"}
 			picture = general_staff
 			modifier = {
-				political_power_gain = 0.05
+				political_power_gain = 0.005
 				monthly_population = -0.1
 				local_non_core_manpower	= 0.05
 				stability_factor = -0.05
