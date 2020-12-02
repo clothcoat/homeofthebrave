@@ -3500,6 +3500,34 @@ country_event = { # Persistence of Antisemitism
 	}
 }
 
+country_event = { # Nationalist Restoration
+	id = constate.360
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.360"}
+	title = constate.360.t
+	desc = constate.360.d
+	picture = GFX_report_event_USA_congress
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = { # Emphasize Southern Culture
+		name = constate.360.a
+		add_popularity = { ideology = paternal_autocrat popularity = 0.02 }
+		add_popularity = { ideology = national_populist popularity = 0.02 }
+		add_political_power = 20
+		add_war_support = 0.03
+		add_stability = -0.01
+	}
+	option = { # Emphasize American Culture
+		name = constate.360.b
+		add_stability = 0.03
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.01 }
+		add_popularity = { ideology = social_conservative popularity = 0.01 }
+		add_popularity = { ideology = paternal_autocrat popularity = 0.01 }
+	}
+}
+
 country_event = { # The State Social Department
 	id = constate.37
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.37"}

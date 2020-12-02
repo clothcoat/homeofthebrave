@@ -887,7 +887,7 @@ focus_tree = {
 	
 	focus = {# Old Democrats Go Nationwide
 		id = COR_odp_spreads
-		icon = GFX_goal_support_democracy
+		icon = GFX_goal_COR_expand_odp
 		cost = 5.25
 		prerequisite = {
 			focus = COR_nationalist_restoration
@@ -922,8 +922,8 @@ focus_tree = {
 	
 	focus = {# Embrace The Wild West
 		id = COR_embrace_wild_west
-		icon = GFX_goal_purge_opposition
-		cost = 6.00
+		icon = GFX_goal_COR_Wild_West
+		cost = 5.25
 		prerequisite = {
 			focus = COR_nationalist_restoration
 		}
@@ -948,7 +948,9 @@ focus_tree = {
 			add_popularity = { ideology = social_democrat popularity = -0.02 }
 			add_popularity = { ideology = social_liberal popularity = -0.02 }
 			add_popularity = { ideology = market_liberal popularity = -0.02 }
-			add_popularity = { ideology = social_conservative popularity = -0.01 }
+			add_popularity = { ideology = social_conservative popularity = 0.02 }
+			add_popularity = { ideology = authoritarian_democrat popularity = 0.05 }
+			add_popularity = { ideology = paternal_autocrat popularity = 0.05 }
 			add_manpower = -2000
 			add_stability = 0.03
 			add_political_power = 30
@@ -976,7 +978,7 @@ focus_tree = {
 	focus = {# Traitorous Reds
 		id = COR_traitorous_reds
 		icon = GFX_HOL_red_scare
-		cost = 5.25
+		cost = 6.1
 		prerequisite = {
 			focus = COR_odp_spreads
 		}
@@ -999,7 +1001,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_traitorous_reds"
-			custom_effect_tooltip = USA_political_recovery_tooltip
+			modify_country_flag = {
+				flag = ACW_socialist_resistance
+				value = -1
+			}
 			COR_increase_political_recovery = yes
 			add_political_power = 35
 			add_war_support = 0.05
@@ -1008,18 +1013,18 @@ focus_tree = {
 			add_popularity = { ideology = radical_socialist popularity = -0.02 }
 			add_popularity = { ideology = syndicalist popularity = -0.02 }
 			add_popularity = { ideology = totalist popularity = -0.02 }
-	`		custom_effect_tooltip = ACW_combat_socialists
 			modify_country_flag = {
 				flag = ACW_socialist_resistance
 				value = -1
 			}
+			custom_effect_tooltip = ACW_combat_socialists
 		}
 	}
 
 	
 	focus = {# Fight Miscegenation
 		id = COR_fight_miscegenation
-		icon = GFX_goal_COR_jewish_segregation
+		icon = GFX_ban_on_race_mixing
 		cost = 4.50
 		prerequisite = {
 			focus = COR_embrace_wild_west
@@ -1056,7 +1061,7 @@ focus_tree = {
 	
 	focus = {# Support Small Business
 		id = COR_small_businesses
-		icon = GFX_goal_COR_control_boy_scouts
+		icon = GFX_goal_COR_small_town_america
 		cost = 7.25
 		prerequisite = {
 			focus = COR_fight_miscegenation

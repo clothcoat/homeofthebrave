@@ -1227,6 +1227,32 @@ ideas = {
 				local_resources_factor = 0.02	
 			}
 		}
+		COR_fight_miscegenation_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea COR_fight_miscegenation_idea"}
+			allowed = { always = no }
+			removal_cost = -1
+			picture = jim_crow
+			modifier = {
+				local_manpower = -0.03
+				research_speed_factor = -0.01
+				production_lack_of_resource_penalty_factor = -0.02
+				local_resources_factor = 0.04	
+			}
+		}
+		COR_small_towns_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea COR_small_towns_idea"}
+			allowed = { always = no }
+			removal_cost = -1
+			picture = corporatist_economy
+			modifier = {
+				party_popularity_stability_factor = 0.02
+				stability_factor = 0.05
+				consumer_goods_factor = 0.03
+				local_factories = -0.03
+				industry_repair_factor	= 0.04
+				supply_consumption_factor = -0.03
+			}
+		}
 		## Fordist Ideas###
 		COR_the_order_of_76 = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea COR_the_order_of_76"}
