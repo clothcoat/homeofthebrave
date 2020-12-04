@@ -12145,6 +12145,8 @@ focus_tree = {
 			OR = {
 			has_government = social_conservative
 			has_government = authoritarian_democrat
+			}
+			AND = {
 			NOT = {
 			has_country_leader = {
 				ruling_only = yes
