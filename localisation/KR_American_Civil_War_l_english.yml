@@ -58,6 +58,7 @@ ACW_longist_front_idea:0 "Push Against the Longists"
 ACW_pacific_front_idea:0 "Push Against the Pacific"
 ACW_nationalist_front_idea:0 "Push Against the Nationalists"
 ACW_bbr_front_idea:0 "Push Against the Black Revolt"
+ACW_war_failing:0 "The War is Lost!"
 
 ### Tooltips ###
 ACW_liberia_rally:0 "We shall Rally our people to defend Liberia"
@@ -128,6 +129,7 @@ ACW_times_up:0 "Taking Too Long"
 ACW_times_up_desc:0 "The civil war has been taking too long, with too little hope of progress. It has begun to wear on our forces."
 CP_25_PP_25:0 "£pol_power §Y25§! £command_power §Y25§!"
 CP_25_PP_25_blocked:0 "£pol_power §R25§! £command_power §R25§!"
+unit_limit_ACW_in_progress:0 "Unit Limit from 2nd ACW"
 
 ### Flags ###
 TEX_AFP_smiths_army:0 "Gerald L.K. Smith is directing the Military"
@@ -1775,6 +1777,10 @@ amcivwar.677.a:0 "Finish it!"
 amcivwar.678.t:0 "Black Resistance Collapses"
 amcivwar.678.d:0 "Black Resistance to our regime has finally collapsed as fugitives associated with them flee our nation, usually unsuccessfully. While some militias remain they can no longer hold any black territories from our military much less hope to go on the offensive."
 amcivwar.678.a:0 "It is finished."
+
+amcivwar.1313.t:0 "We have lost"
+amcivwar.1313.d:0 "With only a small percentage of our land still under control, our people have given up any hope of victory. Now all we can hope is that the victors give us some degree of mercy..."
+amcivwar.1313.a:0 "Guess we couldn't do it after all"
 
 2000_infantry_equipment_1:0 "£rifle_texticon §H2000§!"
 2000_infantry_equipment_1_blocked:0 "£rifle_texticon §R2000§!"

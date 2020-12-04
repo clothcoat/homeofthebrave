@@ -15785,3 +15785,32 @@ country_event = { # Panama Garrison
 		custom_effect_tooltip = ACW_bbr_unit_tooltip
 	}
 }
+
+country_event = { #Event to Weaken Dying Factions (99%)
+	id = amcivwar.1313
+	title = amcivwar.1313.t
+	desc = amcivwar.1313.d
+	picture = GFX_report_event_USA_soldiers_running
+		
+	fire_only_once = yes
+
+	trigger = {
+	tag = CSA
+	CSA = {
+	surrender_progress > 0.98
+	}
+	}
+	
+	mean_time_to_happen = {
+	days = 3
+	}
+	
+	option = { #We're dead
+		name = amcivwar.1313.a
+		ai_chance = {
+			factor = 100
+		}
+		add_political_power = -400
+		add_ideas = ACW_war_failing
+	}
+}
