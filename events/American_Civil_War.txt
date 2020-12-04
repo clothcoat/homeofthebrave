@@ -15795,9 +15795,32 @@ country_event = { #Event to Weaken Dying Factions (99%)
 	fire_only_once = yes
 
 	trigger = {
+	OR = {
+	AND = {
 	tag = CSA
 	CSA = {
 	surrender_progress > 0.98
+	}}
+	AND = {
+	tag = COR
+	COR = {
+	surrender_progress > 0.98
+	}}
+	AND = {
+	tag = TEX
+	TEX = {
+	surrender_progress > 0.98
+	}}
+	AND = {
+	tag = USA
+	USA = {
+	surrender_progress > 0.98
+	}}
+	AND = {
+	tag = WCC
+	WCC = {
+	surrender_progress > 0.98
+	}}
 	}
 	}
 	
