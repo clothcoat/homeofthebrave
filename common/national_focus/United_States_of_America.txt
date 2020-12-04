@@ -5534,9 +5534,11 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_fight_the_debt"
+			hidden_effect = {
 			remove_ideas = USA_great_depression_Norris_2
 			remove_ideas = USA_black_monday
 			remove_ideas = USA_black_monday2
+			}
 			add_stability = 0.05
 			add_political_power = 20
 		}
@@ -10678,7 +10680,7 @@ focus_tree = {
 			}
 		}
 		cost = 6.00
-		x = 73
+		x = 64
 		y = 8
 		
 		offset = {
