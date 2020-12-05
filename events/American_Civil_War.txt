@@ -2658,7 +2658,7 @@ country_event = { # PSA offers peace
 		hours = 3
 				}
 			}
-		set_global_flag = ACW_RUSSEL_ACCEPTS_PEACE
+		set_global_flag = ACW_RUSSELL_ACCEPTS_PEACE
 		}
 		if = {
 		limit = { tag = CSA }
@@ -3937,9 +3937,9 @@ country_event = { # Old Democrats Revolt
 		add_popularity = { ideology = social_conservative popularity = 0.03 }
 		hidden_effect = {
 			create_country_leader = {
-				name = "Richard Russel Jr."
-				desc = "POLITICS_RICHARD_RUSSEL_DESC"
-				picture = "gfx/leaders/COR/COR_Richard_Russel.tga"
+				name = "Richard Russell Jr."
+				desc = "POLITICS_RICHARD_Russell_DESC"
+				picture = "gfx/leaders/COR/COR_Richard_Russell.tga"
 				expire = "1965.1.1"
 				ideology = social_conservative_subtype
 				traits = { clever_aristocrat }
@@ -4021,7 +4021,7 @@ country_event = { # New Party Head
 	}
 }
 
-country_event = { #Russel's Demands
+country_event = { #Russell's Demands
 	id = amcivwar.1021
 	title = amcivwar.1021.t
 	desc = amcivwar.1021.d
@@ -4212,7 +4212,7 @@ country_event = { # Results are in
 	limit = {
 	COR = {
 	exists = yes
-	has_global_flag = ACW_RUSSEL_ACCEPTS_PEACE
+	has_global_flag = ACW_RUSSELL_ACCEPTS_PEACE
 		}
 	}
 	CAL = {
@@ -4228,7 +4228,7 @@ country_event = { # Results are in
 	trigger = {
 	COR = {
 	exists = yes
-	has_global_flag = ACW_RUSSEL_ACCEPTS_PEACE
+	has_global_flag = ACW_RUSSELL_ACCEPTS_PEACE
 		}
 	}
 	COR = {
@@ -4309,7 +4309,7 @@ country_event = { # Last Men Standing
 			}
 		}
 	}
-	option = { #Russel's Militiamen must stand down
+	option = { #Russell's Militiamen must stand down
 	name = amcivwar.1027.b
 	ai_chance = {
 		factor = 5

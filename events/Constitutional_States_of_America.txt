@@ -1255,7 +1255,7 @@ country_event = { # Assassination Attempt
 	}
 }
 
-country_event = { # Choosing a Vice President (Russel)
+country_event = { # Choosing a Vice President (Russell)
 	id = constate.1112
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.1112"}
 	title = constate.1112.t
