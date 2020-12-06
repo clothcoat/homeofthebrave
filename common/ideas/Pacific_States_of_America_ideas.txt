@@ -1549,7 +1549,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea free_trade_idea"}
 			allowed = {	always = no	}
 			allowed_civil_war = { always = yes }
-			picture = free_trade
+			picture = CAL_free_trade
 			modifier = { consumer_goods_factor = 0.02 
 			stability_factor = 0.05
 			monthly_population	= 0.01
