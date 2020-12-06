@@ -12624,10 +12624,10 @@ focus_tree = {
 					country_exists = CSA
 					country_exists = TEX
 				}
-			}
 			is_subject = no
 			is_major = yes
 			has_army_manpower = { size > 250000 }
+			}
 		ai_will_do = {
 			factor = 40
 			modifier = {
