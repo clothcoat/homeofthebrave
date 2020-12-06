@@ -4202,6 +4202,7 @@ country_event = { # America is reunited
 	fire_only_once = yes
 
 	trigger = {
+		has_country_leader = { ruling_only = yes name = "Richard Russell Jr."} 
 		tag = COR
 		NOT = {
 			country_exists = TEX
