@@ -780,7 +780,7 @@ WCC_american_imperialism = {
 	}
 
 	WCC_invite_to_league = {
-		icon = generic_politiWCC_discourse
+		icon = generic_political_discourse
 
 		allowed = {
 		original_tag = WCC } 
@@ -928,7 +928,7 @@ WCC_american_imperialism = {
 	}
 
 	WCC_install_league_puppet = {
-		icon = generic_politiWCC_discourse
+		icon = generic_political_discourse
 
 		allowed = { OR = { original_tag = WCC 
 		original_tag = WCC } }
@@ -1015,7 +1015,7 @@ WCC_american_imperialism = {
 				FROM = { country_event = ustates.258 }
 			}
 			else = {
-				add_politiWCC_power = 100
+				add_political_power = 100
 			}
 		}
 
@@ -1027,7 +1027,7 @@ WCC_american_imperialism = {
 			}
 			modifier = {
 				factor = 0
-				has_politiWCC_power < 250
+				has_political_power < 250
 			}
 		}
 	}
