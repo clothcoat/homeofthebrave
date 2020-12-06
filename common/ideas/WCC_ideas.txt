@@ -6,6 +6,10 @@ ideas = {
 	WCC_defending_the_west = { #Defending the West
 		on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_bradley_plan"}
 		picture = WCC_western_command_center
+		available = {
+				has_global_flag = USA_civil_war_begun_flag
+				NOT = { has_global_flag = USA_civil_war_over_flag }
+		}
 		modifier = {
 			army_org_Factor = 0.2
 			command_power_gain = 0.3

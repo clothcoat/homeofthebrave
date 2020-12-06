@@ -288,7 +288,28 @@ ideas = {
 				NOT = { has_global_flag = USA_civil_war_over_flag }
 			}
 			modifier = {
-				unit_limit_ACW_in_progress = 0.15
+				unit_limit_ACW_in_progress = 0.20
+			}
+			removal_cost = -1
+		}
+		ACW_war_failing = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea amcivwar_idea"}
+			picture = usa_great_depression_2
+			cancel_if_invalid = no
+			available = {
+				tag = CSA
+				surrender_progress > 0.95
+			}
+			modifier = {
+				unit_limit_ACW_in_progress = -0.15
+				war_support_factor = -0.20
+				army_morale_factor = -0.10
+				army_speed_factor = -0.10
+				army_org_factor = -0.10
+				training_time_army_factor = -0.10
+				conscription_factor = -0.25
+				out_of_supply_factor = 0.50
+				no_supply_grace = -168
 			}
 			removal_cost = -1
 		}

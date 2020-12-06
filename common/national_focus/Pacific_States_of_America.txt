@@ -4607,7 +4607,6 @@ focus_tree = {
 				has_government = social_liberal
 				has_government = social_democrat
 				has_government = radical_socialist
-				has_government = national_populist
 			}
 		}
 		bypass = {
@@ -4617,7 +4616,6 @@ focus_tree = {
 				has_government = social_liberal
 				has_government = social_democrat
 				has_government = radical_socialist
-				has_government = national_populist
 			}
 		}
 		prerequisite = {
@@ -12145,6 +12143,10 @@ focus_tree = {
 			OR = {
 			has_government = social_conservative
 			has_government = authoritarian_democrat
+			has_government = paternal_autocrat
+			has_government = national_populist
+			}
+			AND = {
 			NOT = {
 			has_country_leader = {
 				ruling_only = yes

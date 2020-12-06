@@ -1774,10 +1774,12 @@ country_event = { #Fate of DuPont
 		add_war_support = 0.02
 		add_manpower = -2000
 		357 = {
+				if = {
 				limit = {
 					is_core_of = WCC
 					is_controlled_by = WCC
 					industrial_complex > 0
+				}
 				}
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {

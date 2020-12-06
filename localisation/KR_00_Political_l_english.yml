@@ -77,7 +77,7 @@ unit_limit_desc:0 "Every country only has the ability to support a certain numbe
 unit_limit_desc_above_limit:0 "\n\n--------------\n\n§RWe have currently exceeded our capacity, and the only way to alleviate the stress on our country will be to remove some of our divisions.§!\n\nDivision Organisation: [?mobilisation_penalty_var|+=%1]\nConsumer Goods Factories: [?mobilisation_penalty_var_positive|=%H0]\nFactory Output: [?mobilisation_penalty_var|+=%]\nTraining Time: [?mobilisation_penalty_var_positive|-=%]\nReinforce Rate: [?mobilisation_penalty_var|+=%1]"
 
 unit_limit_major_power_desc:0 "\n   - Major Power/Head of Faction: §G+15%§!"
-unit_limit_ACW_in_progress_desc:0 "\n   - Fighting for America: §G+10%§!"
+unit_limit_ACW_in_progress_desc:0 "\n   - Fighting for America: §G+20%§!"
 unit_limit_world_tension_desc:0 "\n   - World Tension 70% or higher: §G+5%§!"
 unit_limit_was_capped_desc:0 "\n   - Uncapped Total: §W[?net_max_divisions]§!\n   - Division Limit Cap (from [unit_limit_economy_law]): §W[?upper_limit]§!"
 unit_limit_manpower_used_desc:0 "\n\n   Because the total provided by factories was lower than that provided by Total Manpower (§W[?lower_limit_from_manpower]§!}, that was used instead."
