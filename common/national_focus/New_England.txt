@@ -1877,9 +1877,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		available = {
-			has_government = social_conservative
-		}
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -3091,6 +3088,77 @@ focus_tree = {
 			id = newengland.136
 			days = 50
 				}
+			}
+		}
+	}
+
+	focus = {
+		id = NEE_lothrop_stoddard
+		icon = GFX_NEE_the_remnant
+		cost = 5
+		x = 35
+		y = 10
+		relative_position_id = NEE_legitimate_america
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			has_country_flag = NEE_stoddard_takeover
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_lothrop_stoddard"
+			add_political_power = 30
+			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = NEE_block_foreign_hordes
+		icon = GFX_NEE_fee_for_our_aid
+		cost = 5
+		prerequisite = {
+			focus = NEE_lothrop_stoddard
+		}
+		x = -2
+		y = 1
+		relative_position_id = NEE_lothrop_stoddard
+		ai_will_do = {
+			factor = 10
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_Declare_Independence"
+			CAN = {
+				country_event = newengland.101
+			}
+		}
+	}
+
+	focus = {
+		id = NEE_racial_catalogues
+		icon = GFX_NEE_fee_for_our_aid
+		cost = 5
+		prerequisite = {
+			focus = NEE_lothrop_stoddard
+		}
+		x = 0
+		y = 1
+		relative_position_id = NEE_lothrop_stoddard
+		ai_will_do = {
+			factor = 10
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_racial_catalogues"
+			CAN = {
+				country_event = newengland.101
 			}
 		}
 	}
