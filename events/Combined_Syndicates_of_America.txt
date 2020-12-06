@@ -4420,9 +4420,9 @@ country_event = { # Butler's Coup
 		set_country_flag = CSA_butlers_counter_coup
 		remove_all_ministers = yes
 		create_country_leader = {
-			name = "Smedly Butler"
-			desc = "POLITICS_SMEDLY_BUTLER_DESC"
-			picture = "Portrait_CSA_smedly_butler_G.tga"
+			name = "Smedley Butler"
+			desc = "POLITICS_Smedley_BUTLER_DESC"
+			picture = "Portrait_CSA_Smedley_butler_G.tga"
 			expire = "1965.1.1"
 			ideology = radical_socialist_subtype
 			traits = { cornered_fox }
@@ -4463,7 +4463,7 @@ country_event = { # Restoring Democracy
 		has_government = radical_socialist
 		has_country_leader = {
 			ruling_only = yes
-			name = "Smedly Butler"
+			name = "Smedley Butler"
 		}
 	}
 
@@ -4519,7 +4519,7 @@ country_event = { # Butler's Cabinet
 		has_government = radical_socialist
 		has_country_leader = {
 			ruling_only = yes
-			name = "Smedly Butler"
+			name = "Smedley Butler"
 		}
 	}
 
@@ -4571,7 +4571,7 @@ country_event = { # Prohibition
 		has_government = radical_socialist
 		has_country_leader = {
 			ruling_only = yes
-			name = "Smedly Butler"
+			name = "Smedley Butler"
 		}
 	}
 
@@ -4616,7 +4616,7 @@ country_event = { # Aid for Veterans
 		has_government = radical_socialist
 		has_country_leader = {
 			ruling_only = yes
-			name = "Smedly Butler"
+			name = "Smedley Butler"
 		}
 	}
 
@@ -4689,7 +4689,7 @@ country_event = { # Foreign Policy
 		has_government = radical_socialist
 		has_country_leader = {
 		ruling_only = yes
-		name = "Smedly Butler"
+		name = "Smedley Butler"
 		}
 	FRA = {
 	OR = {
@@ -4747,7 +4747,7 @@ country_event = { # Foreign Policy
 		has_government = radical_socialist
 		has_country_leader = {
 		ruling_only = yes
-		name = "Smedly Butler"
+		name = "Smedley Butler"
 		}
 	FRA = {
 	has_government = totalist		
@@ -10148,8 +10148,8 @@ country_event = { # General-in-Chief Position Created
 		}
 	create_country_leader = {
 				name = "Smedley Butler"
-				desc = "POLITICS_PRESIDENT_SMEDLY_BUTLER_DESC"
-				picture = "Portrait_CSA_smedly_butler_G.tga"
+				desc = "POLITICS_PRESIDENT_Smedley_BUTLER_DESC"
+				picture = "Portrait_CSA_Smedley_butler_G.tga"
 				expire = "1965.1.1"
 				ideology = radical_socialist_subtype
 				traits = { cornered_fox }
