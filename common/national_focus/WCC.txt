@@ -4638,7 +4638,9 @@ focus_tree = {
 		id = WCC_stunning_victory
 		icon = GFX_goal_WCC_reconstruction
 		cost = 7.25
-		available = { has_global_flag = USA_civil_war_over_flag	}
+		available = { 
+		has_global_flag = USA_civil_war_over_flag
+		}
 		ai_will_do = {
 			factor = 4
 		}
@@ -4665,10 +4667,7 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus WCC_martial_law"
-			add_timed_idea = {
-			idea = USA_martial_law_idea
-			days = 60
-			}
+			add_ideas = USA_martial_law_idea
 		}
 	}
 
@@ -5254,6 +5253,8 @@ focus_tree = {
 			focus = WCC_expand_wisemen
 		}
 		available = {
+			owns_state = 932
+			owns_state = 378
 			custom_trigger_tooltip = {
 				tooltip = TEX_reconstruction_is_over_tooltip
 			}
@@ -5296,6 +5297,8 @@ focus_tree = {
 			focus = WCC_veteran_pensions
 		}
 		available = {
+			owns_state = 932
+			owns_state = 378
 			custom_trigger_tooltip = {
 				tooltip = TEX_reconstruction_is_over_tooltip
 			}

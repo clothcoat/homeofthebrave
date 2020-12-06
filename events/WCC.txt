@@ -891,12 +891,14 @@ country_event = { #America Re-United
 		has_war = no
 		has_global_flag = USA_civil_war_over_flag
 		NOT = {
+			OR = {
 			has_idea = USA_civil_war_political_aftermath_idea
 			has_idea = USA_civil_war_political_aftermath_idea2
 			has_idea = USA_civil_war_political_aftermath_idea3
 			has_idea = USA_civil_war_political_aftermath_idea4
 			has_idea = USA_civil_war_political_aftermath_idea5
 			has_idea = USA_civil_war_political_aftermath_idea6
+			}
 		}
 	}
 	option = {
