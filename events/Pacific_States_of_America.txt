@@ -9436,7 +9436,7 @@ country_event = {
 	immediate = {log = "[GetDateText]: [Root.GetName]: event pacificstates.3534"}
 	title = pacificstates.3534.t
 	desc = pacificstates.3534.d
-	picture = GFX_CAL_Mickey_Cohen
+	picture = GFX_CAL_ufo_event_pic
 
                   is_triggered_only = no
 
@@ -9462,6 +9462,21 @@ country_event = {
 		name = pacificstates.3534.c
 	       	add_political_power = 20
 	       	add_stability = -0.05
+		add_opinion_modifier = { target = CUB modifier = small_decrease }
+            		add_opinion_modifier = { target = MEX modifier = small_decrease }
+               		add_opinion_modifier = { target = BRA modifier = small_decrease }
+               		add_opinion_modifier = { target = PRU modifier = small_decrease }
+               		add_opinion_modifier = { target = GUA modifier = small_decrease }
+		add_opinion_modifier = { target = HON modifier = small_decrease }
+            		add_opinion_modifier = { target = NIC modifier = small_decrease }
+               		add_opinion_modifier = { target = COS modifier = small_decrease }
+               		add_opinion_modifier = { target = PAN modifier = small_decrease }
+            		add_opinion_modifier = { target = COL modifier = small_decrease }
+           		add_opinion_modifier = { target = ECU modifier = small_decrease }
+            		add_opinion_modifier = { target = CHL modifier = small_decrease }
+               		add_opinion_modifier = { target = PRU modifier = small_decrease }
+               		add_opinion_modifier = { target = BOL modifier = small_decrease }
+		add_opinion_modifier = { target = PAR modifier = small_decrease }
 		}
 	}
 
