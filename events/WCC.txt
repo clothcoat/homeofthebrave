@@ -891,14 +891,12 @@ country_event = { #America Re-United
 		has_war = no
 		has_global_flag = USA_civil_war_over_flag
 		NOT = {
-			OR = {
 			has_idea = USA_civil_war_political_aftermath_idea
 			has_idea = USA_civil_war_political_aftermath_idea2
 			has_idea = USA_civil_war_political_aftermath_idea3
 			has_idea = USA_civil_war_political_aftermath_idea4
 			has_idea = USA_civil_war_political_aftermath_idea5
 			has_idea = USA_civil_war_political_aftermath_idea6
-			}
 		}
 	}
 	option = {
@@ -1776,12 +1774,10 @@ country_event = { #Fate of DuPont
 		add_war_support = 0.02
 		add_manpower = -2000
 		357 = {
-				if = {
 				limit = {
 					is_core_of = WCC
 					is_controlled_by = WCC
 					industrial_complex > 0
-				}
 				}
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
