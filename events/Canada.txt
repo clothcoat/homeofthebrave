@@ -6601,6 +6601,7 @@ country_event = {
 					NOT = {
 						tag = ROOT
 						tag = CAN
+						is_subject_of = ROOT
 						is_in_faction_with = CAN
 					}
 				}
