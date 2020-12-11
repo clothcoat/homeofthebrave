@@ -1056,7 +1056,7 @@ country_event = { # Conquest of America
 	
 	option = { #Release
 	name = bbr.1203.a
-	release_puppet = COR
+	puppet = COR
 	COR = {
 	create_country_leader = {
 			name = "Francis Parker Yockey"
@@ -1066,39 +1066,203 @@ country_event = { # Conquest of America
 			ideology = national_populist_subtype
 			traits = { young_leader }
 		}
+	hidden_effect = {
 	set_politics = {
 			ruling_party = national_populist
 			elections_allowed = no
 		}
-	add_ideas = COR_Richard_Girnt_Butler_hog_npo
-	add_ideas = COR_William_Bell_Riley_for_pau
-	add_ideas = COR_George_W_Christians_eco_npo
-	add_ideas = COR_Elizabeth_Eloise_Kirkpatrick_Dilling_sec_npo
 	}
-	if = {
-	limit = { is_core_of = USA }
-	add_core_of = COR
+	hidden_effect = {
+	set_popularities = {
+		totalist = 3
+		radical_socialist = 4
+		syndicalist = 8
+		social_democrat = 5
+		social_liberal = 2
+		market_liberal = 1
+		social_conservative = 3
+		authoritarian_democrat = 3
+		paternal_autocrat = 29
+		national_populist = 42
+		}
 	}
-	if = {
-	limit = { is_core_of = CAL }
-	add_core_of = COR
+	hidden_effect = {
+		add_ideas = COR_Richard_Girnt_Butler_hog_npo
+		add_ideas = COR_William_Bell_Riley_for_pau
+		add_ideas = COR_George_W_Christians_eco_npo
+		add_ideas = COR_Elizabeth_Eloise_Kirkpatrick_Dilling_sec_npo
 	}
-	if = {
-	limit = { is_core_of = TEX }
-	add_core_of = COR
+	hidden_effect ={
+	transfer_state = 391
+	transfer_state = 392
+	transfer_state = 1109
+	transfer_state = 373
+	transfer_state = 369
+	transfer_state = 1100
+	transfer_state = 1119
+	transfer_state = 1098
+	transfer_state = 395
+	transfer_state = 394
+	transfer_state = 393
+	transfer_state = 1097
+	transfer_state = 396
+	transfer_state = 393
+	transfer_state = 261
+	transfer_state = 929
+	transfer_state = 1106
+	transfer_state = 1099
+	add_state_core = 391
+	add_state_core = 392
+	add_state_core = 1109
+	add_state_core = 373
+	add_state_core = 369
+	add_state_core = 1100
+	add_state_core = 1119
+	add_state_core = 1098
+	add_state_core = 395
+	add_state_core = 394
+	add_state_core = 393
+	add_state_core = 1097
+	add_state_core = 396
+	add_state_core = 393
+	add_state_core = 261
+	add_state_core = 929
+	add_state_core = 1106
+	add_state_core = 1099
 	}
-	if = {
-	limit = { is_core_of = NEE }
-	add_core_of = COR
 	}
-	if = {
-	limit = { is_core_of = CSA }
-	add_core_of = COR
+	puppet = CAL
+	CAL = {
+	create_country_leader = {
+			name = "L. Ron Hubbard"
+			desc = "POLITICS_L_RON_HUBBARD_DESC"
+			picture = "gfx/leaders/CAL/CAL_L_Ron_Hubbard.tga"
+			expire = "1965.1.1"
+			ideology = national_populist_subtype
+			traits = { l_ron_hubbard_was_a_black_man }
+			}
+	hidden_effect = {
+	set_politics = {
+			ruling_party = national_populist
+			elections_allowed = no
+		}
 	}
+	hidden_effect = {
+	set_popularities = {
+		totalist = 1
+		radical_socialist = 8
+		syndicalist = 1
+		social_democrat = 4
+		social_liberal = 8
+		market_liberal = 7
+		social_conservative = 10
+		authoritarian_democrat = 4
+		paternal_autocrat = 14
+		national_populist = 43
+		}
+	}
+	hidden_effect = {
+		add_ideas = CAL_l_ron_hubbard_hog_npo
+		add_ideas = CAL_John_W_Campbell_for_npo
+		add_ideas = CAL_Jack_Parsons_eco_npo
+		add_ideas = CAL_Bernarr_McFadden_sec_npo
+	}
+	hidden_effect ={
+	transfer_state = 386
+	transfer_state = 385
+	transfer_state = 378
+	transfer_state = 797
+	transfer_state = 798
+	transfer_state = 829
+	transfer_state = 1111
+	transfer_state = 379
+	transfer_state = 387
+	transfer_state = 377
+	transfer_state = 376
+	transfer_state = 1107
+	transfer_state = 380
+	transfer_state = 1110
+	transfer_state = 381
+	transfer_state = 1103
+	transfer_state = 388
+	transfer_state = 389
+	transfer_state = 390
+	transfer_state = 384
+	transfer_state = 383
+	transfer_state = 374
+	transfer_state = 1112
+	transfer_state = 375
+	transfer_state = 833
+	transfer_state = 382
+	transfer_state = 1096
+	add_state_core = 386
+	add_state_core = 385
+	add_state_core = 378
+	add_state_core = 797
+	add_state_core = 798
+	add_state_core = 829
+	add_state_core = 1111
+	add_state_core = 379
+	add_state_core = 387
+	add_state_core = 377
+	add_state_core = 376
+	add_state_core = 1107
+	add_state_core = 380
+	add_state_core = 1110
+	add_state_core = 381
+	add_state_core = 1103
+	add_state_core = 388
+	add_state_core = 389
+	add_state_core = 390
+	add_state_core = 384
+	add_state_core = 383
+	add_state_core = 374
+	add_state_core = 1112
+	add_state_core = 375
+	add_state_core = 833
+	add_state_core = 382
+	add_state_core = 1096
+	}
+	custom_effect_tooltip = BBR_special_factories_tooltip
 	add_political_power = 50
 	add_manpower = 2000
 	}
-	option = { #Release
+	hidden_effect = {
+	BBR = {
+	add_ideas = BBR_white_reparations_idea
+	add_offsite_building = { type = industrial_complex level = 12 }
+	add_offsite_building = { type = arms_factory level = 3 }
+	add_state_core = 371
+	add_state_core = 372
+	add_state_core = 1102
+	add_state_core = 370
+	add_state_core = 1114
+	add_state_core = 368
+	add_state_core = 367
+	add_state_core = 1113
+	add_state_core = 1118
+	add_state_core = 1117
+	add_state_core = 366
+	add_state_core = 1115
+	add_state_core = 365
+	add_state_core = 364
+	add_state_core = 1116
+	add_state_core = 363
+	add_state_core = 1104
+	add_state_core = 1101
+	add_state_core = 362
+	add_state_core = 361
+	add_state_core = 1105
+	add_state_core = 930
+	add_state_core = 1108
+	add_state_core = 359
+	add_state_core = 358
+	add_state_core = 360
+		}
+	}
+	}
+
+	option = { #Hold it
 	name = bbr.1203.b
 	add_stability = -0.15
 	add_political_power = -80

@@ -20,6 +20,18 @@ ideas = {
 			picture = USA_fighting_for_america
 		}
 	### National Totalist Path ###
+		BBR_white_reparations_idea = { #White Reparations
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_white_reparations_idea"}
+			available = {
+				tag = BBR
+			}
+			modifier = {
+			consumer_goods_factor = -0.05
+			political_power_gain = 0.01
+			}
+			removal_cost = -1
+			picture = generic_trade
+		}
 		BBR_the_crusaders_idea = { #The Crusaders
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_the_crusaders_idea"}
 			available = {
