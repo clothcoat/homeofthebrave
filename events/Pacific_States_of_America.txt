@@ -3866,6 +3866,14 @@ country_event = { # America is reunited
 			remove_ACW_cores = yes
 		}
 	}
+	option = { # at long last we are reunited
+		name = pacificstates.22.b
+		set_country_flag = PSA_reunited_america_flag
+		set_cosmetic_tag = NEE_yellow
+		every_state = {
+			remove_ACW_cores = yes
+		}
+	}
 }
 
 # country_event = { # America protects Hawaii
