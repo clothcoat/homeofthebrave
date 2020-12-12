@@ -347,6 +347,20 @@ create_corps_commander = {# Alvah Bessie
 	planning_skill = 1
 	logistics_skill = 1
 }
+create_corps_commander = {# Gus Hall
+	name = "Gus Hall"
+	desc = "CSA_GUS_HALL_ARMY_DESC"
+	portrait_path = "gfx/leaders/CSA/Portrait_CSA_General_Gus_Hall.tga"
+	traits = {
+		politically_connected
+		trait_cautious
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 2
+}
 create_corps_commander = {# Bill Aalto
 	name = "Bill Aalto"
 	desc = "CSA_BILL_AALTO_ARMY_DESC"
