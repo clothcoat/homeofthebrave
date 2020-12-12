@@ -663,6 +663,23 @@ create_corps_commander = {# Smedley Butler
 	logistics_skill = 4
 	id = 100
 }
+create_corps_commander = {# Charles Pelot Summerall
+	name = "Charles P. Summerall"
+	desc = "USA_CHARLES_P_SUMMERALL_ARMY_DESC"
+	portrait_path = "gfx/leaders/USA/Portrait_USA_Charles_Pelot_Summerall.tga"
+	traits = {
+		old_guard
+		career_officer
+		bearer_of_artillery
+	}
+	skill = 2
+
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 2
+	#id = 8601
+}
 #create_corps_commander = {# Herbert Holdridge
 	#name = "Herbert Charles Heitke"
 	#desc = "USA_HERBERT_HOLDRIDGE_ARMY_DESC"

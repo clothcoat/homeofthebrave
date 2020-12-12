@@ -420,6 +420,21 @@ create_corps_commander = {# George C. Shaw
 	logistics_skill = 1
 	id = 9863
 }
+create_corps_commander = {# Robert L. Denig
+	name = "Robert L. Denig"
+	desc = "CAL_ROBERT_L_DENIG_ARMY_DESC"
+	portrait_path = "gfx/leaders/CAL/Portrait_CAL_Robert_L_Denig.tga"
+	traits = {
+		organizer 
+		naval_invader
+	}
+	skill = 2
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 4
+	id = 9863
+}
 create_corps_commander = {# Herbert B. Powell
 	name = "Herbert B. Powell"
 	desc = "CAL_HERBERT_POWELL_ARMY_DESC"
