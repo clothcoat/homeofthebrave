@@ -6414,22 +6414,7 @@ country_event = { #Occupying the south
 		name = ustates.113.b
 		add_manpower = 1500
 		hidden_effect = {
-			country_event = { id = amcivwar.18 days = 5 }
-		}
-		hidden_effect = {
-			country_event = { id = ustates.78 days = 6 }
-		}
-		hidden_effect = {
-			country_event = { id = amcivwar.1012 days = 7 }
-		}
-		hidden_effect = {
-			country_event = { id = amcivwar.17 days = 8 }
-		}
-		hidden_effect = {
-			country_event = { id = amcivwar.3 days = 9 }
-		}
-		hidden_effect = { #WCC Rises
-			country_event = { id = amcivwar.3000 days = 10 }
+			country_event = { id = ustates.1100 days = 2 }
 		}
 	}
 }
