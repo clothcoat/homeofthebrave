@@ -57,6 +57,62 @@ leader_traits = {
 		}
 	}	
 
+	### Hoover
+	failed_humanitarian = {
+		random = no
+		political_power_gain = -0.15
+		consumer_goods_factor = 0.01
+		local_resources_factor = -0.01
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	unpopular_president = {
+		random = no
+		political_power_gain = -0.30
+		consumer_goods_factor = 0.05
+		industrial_capacity_factory = -0.05
+		local_resources_factor = -0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	hated_president  = {
+		random = no
+		political_power_gain = -0.50
+		consumer_goods_factor = 0.15
+		industrial_capacity_factory = -0.10
+		local_resources_factor = -0.10
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	beloved_president = {
+		random = no
+		political_power_gain = 0.50
+		stability_weekly = 0.005
+		consumer_goods_factor = -0.10
+		industrial_capacity_factory = 0.05
+		local_resources_factor = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	the_old_man = {
+		random = no
+		stability_factor = 0.10
+		drift_defence_factor = 0.5
+		market_liberal_drift = 0.01
+		social_conservative_drift = 0.01
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
 	#### India
 	chamberofprinces = {
 		random = no

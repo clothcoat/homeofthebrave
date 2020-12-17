@@ -2342,6 +2342,14 @@ USA_reconstruction_decisions = {# Reconstruction Stuff
 				has_completed_focus = CSA_demand_new_england
 			}
 			if = {
+				limit = { tag = COR }
+				NEE = {
+				NOT = {
+				has_country_leader = { ruling_only = yes name = "Lothrop Stoddard" }
+					}
+				}	
+			}
+			if = {
 				limit = { country_exists = NEE }
 				NEE = {
 					controls_all_owned_states = yes
@@ -2447,6 +2455,14 @@ USA_reconstruction_decisions = {# Reconstruction Stuff
 			NEE = {
 				is_neighbor_of = ROOT
 				controls_all_owned_states = yes
+			}
+			if = {
+				limit = { tag = COR }
+				NEE = {
+				NOT = {
+				has_country_leader = { ruling_only = yes name = "Lothrop Stoddard" }
+					}
+				}	
 			}
 		}
 		visible = {

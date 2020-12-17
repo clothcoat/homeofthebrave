@@ -950,10 +950,13 @@ country_event = { # New Election
 	fire_only_once = yes
 	
 	trigger = { 
+	tag = TEX
 	NOT = {
 	has_completed_focus = TEX_imperial_presidency
 		}
 	}
+
+	is_triggered_only = yes
 
 	option = { # AFP
 		ai_chance = {

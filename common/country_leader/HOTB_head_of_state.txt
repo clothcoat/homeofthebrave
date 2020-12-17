@@ -339,6 +339,15 @@ leader_traits = {
 			factor = 1
 		}
 	}
+	popular_author = { #Stoddard
+		random = no 
+		stability_factor = 0.04
+		political_power_factor = 0.03
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
 	###Black Belt###
 	the_pharoah = { #Duse Muhammad
 		random = no 

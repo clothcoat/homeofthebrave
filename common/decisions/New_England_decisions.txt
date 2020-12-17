@@ -359,6 +359,46 @@ NEE_entente_allies = {
 }
 
 NEE_reclaiming_america = {
+	NEE_become_puppet = {
+		icon = generic_prepare_civil_war
+
+		allowed = { 
+		original_tag = NEE }
+
+		available = {
+			has_war = no
+			has_completed_focus = NEE_war_against_chaos
+			has_global_flag = NEE_canadian_american_agreement_flag
+			COR = {
+				exists = yes
+				has_war = no
+				has_global_flag = USA_civil_war_over_flag
+				}
+			}
+	
+		visible = {
+			has_completed_focus = NEE_war_against_chaos
+			COR = {
+				exists = yes
+				has_war = no
+				has_global_flag = USA_civil_war_over_flag
+				}
+			}
+
+		fire_only_once = yes
+		cost = 1
+		ai_will_do = {
+			factor = 1
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision NEE_become_puppet"
+			COR = {
+			puppet = NEE
+			}
+			add_stability = 0.05
+		}
+	}
 	NEE_claim_usa_territory = {
 		icon = generic_prepare_civil_war
 		allowed = {	original_tag = NEE	}
