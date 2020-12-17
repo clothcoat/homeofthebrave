@@ -11762,8 +11762,6 @@ country_event = { # United States?
 	desc = csa.458.d
 	picture = GFX_report_event_USA_congress
 
-	is_triggered_only = yes
-
 	trigger = { 
 		tag = CSA
 		has_global_flag = USA_civil_war_over_flag
