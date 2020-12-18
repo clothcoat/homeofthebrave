@@ -14979,8 +14979,10 @@ country_event = { # Eastern Syndie District
 				}
 		}
 			hidden_effect = {
-			country_event = ustates.3135
+			country_event = {
+			id = ustates.3135
 			days = 2 
+				}
 			}
 		}
 
@@ -14989,8 +14991,10 @@ country_event = { # Eastern Syndie District
 		add_stability = -0.1
 		add_political_power = -10
 		hidden_effect = {
-		country_event = ustates.3135
+		country_event = { 
+		id = ustates.3135
 		days = 2 
+			}
 		}
 	}
 }
@@ -15034,8 +15038,10 @@ country_event = { # Western Syndie District
 				}
 		}
 			hidden_effect = {
-			country_event = ustates.3136
+			country_event = { 
+			id = ustates.3136
 			days = 2 
+				}
 			}
 		}
 
@@ -15044,8 +15050,10 @@ country_event = { # Western Syndie District
 		add_stability = -0.03
 		add_political_power = -10
 		hidden_effect = {
-		country_event = ustates.3136
+		country_event = {
+		id = ustates.3136
 		days = 2 
+			}
 		}
 	}
 }
@@ -15089,8 +15097,10 @@ country_event = { # South Atlantic District
 				}
 		}
 			hidden_effect = {
-			country_event = ustates.3137
+			country_event = {
+			id = ustates.3137
 			days = 2 
+				}
 			}
 		}
 
@@ -15099,8 +15109,10 @@ country_event = { # South Atlantic District
 		add_stability = -0.03
 		add_political_power = -10
 		hidden_effect = {
-		country_event = ustates.3137
+		country_event = {
+		id = ustates.3137
 		days = 2 
+			}
 		}
 	}
 }
@@ -15143,8 +15155,10 @@ country_event = { # Deep South District
 				}
 		}
 			hidden_effect = {
-			country_event = ustates.3138
+			country_event = {
+			is = ustates.3138
 			days = 2 
+				}
 			}
 		}
 
@@ -15153,8 +15167,10 @@ country_event = { # Deep South District
 		add_stability = -0.03
 		add_political_power = -10
 		hidden_effect = {
-		country_event = ustates.3138
+		country_event = {
+		id = ustates.3138
 		days = 2 
+			}
 		}
 	}
 }
@@ -15196,18 +15212,21 @@ country_event = { # Texas District
 				}
 		}
 			hidden_effect = {
-			country_event = ustates.3139
+			country_event = {
+			id = ustates.3139
 			days = 2 
 			}
 		}
-
+	}
 	option = { #Don't Create it
 		name = ustates.3138.b
 		add_stability = -0.03
 		add_political_power = -10
 		hidden_effect = {
-		country_event = ustates.3139
+		country_event = {
+		id = ustates.3139
 		days = 2 
+		}
 		}
 	}
 }
@@ -15255,18 +15274,22 @@ country_event = { # Plains District
 				}
 		}
 			hidden_effect = {
-			country_event = ustates.3140
+			country_event = {
+			id = ustates.3140
 			days = 2 
 			}
 		}
+	}
 
 	option = { #Don't Create it
 		name = ustates.3139.b
 		add_stability = -0.03
 		add_political_power = -10
 		hidden_effect = {
-		country_event = ustates.3140
+		country_event = {
+		id = ustates.3140
 		days = 2 
+			}
 		}
 	}
 }
@@ -15314,10 +15337,14 @@ country_event = { # Western District
 				}
 			}
 			hidden_effect = {
-			country_event = ustates.3142
+			country_event = { 
+			id = ustates.3142
 			days = 365
-			country_event = ustates.3144
+			}
+			country_event = { 
+			id = ustates.3144
 			days = 500
+				}
 			}
 		}
 
@@ -15326,13 +15353,17 @@ country_event = { # Western District
 		add_stability = -0.03
 		add_political_power = -10
 			hidden_effect = {
-			country_event = ustates.3142
+			country_event = {
+			id = ustates.3142
 			days = 365
-			country_event = ustates.3144
+				}
+			country_event = {
+			id = ustates.3144
 			days = 500
+				}
 			}
+		}
 	}
-}
 
 country_event = { # Easing Restrictions
 	id = ustates.3141
@@ -15442,8 +15473,8 @@ country_event = { # Restoring Order
 		name = ustates.3142.a
 		set_country_flag = USA_military_districts
 		set_country_flag = USA_initial_restoration_of_order
-		}
 	}
+}
 	
 country_event = { # Removing Restrictions
 	id = ustates.3143
@@ -15553,8 +15584,8 @@ country_event = { # Restoring Order Two
 		name = ustates.3144.a
 		set_country_flag = USA_removed_military_districts
 		set_country_flag = USA_full_restoration_of_order
-		}
 	}
+}
 
 country_event = {# Trial of the US Generals
 	id = ustates.3145
