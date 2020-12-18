@@ -10226,11 +10226,9 @@ country_event = {
 
 	trigger = {
 		is_acw_tag = yes
+		has_global_flag = USA_civil_war_begun_flag
 		WCC = {
-			OR = {
-				surrender_progress > 0.80
-				has_capitulated = yes
-			}
+			surrender_progress > 0.80
 		}
 	}
 
