@@ -5084,7 +5084,7 @@ focus_tree = {
 		icon = GFX_goal_CSA_butlers_plan
 		cost = 5
 		available = {
-			has_country_leader = { ruling_only = yes name = "Smedly Butler" }
+			has_country_leader = { ruling_only = yes name = "smedley Butler" }
 			has_government = radical_socialist
 			has_country_flag = CSA_butler_in_charge
 		}
@@ -5098,7 +5098,7 @@ focus_tree = {
 			}
 			modifier = {
 				factor = 2
-				has_country_leader = { ruling_only = yes name = "Smedly Butler" }
+				has_country_leader = { ruling_only = yes name = "smedley Butler" }
 			}
 		}
 		completion_reward = {
@@ -5111,7 +5111,7 @@ focus_tree = {
 		icon = GFX_CSA_finish_centralism
 		cost = 6.00
 		available = {
-			has_country_leader = { ruling_only = yes name = "Smedly Butler" }
+			has_country_leader = { ruling_only = yes name = "smedley Butler" }
 			has_government = radical_socialist
 		}
 		prerequisite = {
@@ -5136,7 +5136,7 @@ focus_tree = {
 		icon = GFX_goal_CSA_nationalism
 		cost = 6.00
 		available = {
-			has_country_leader = { ruling_only = yes name = "Smedly Butler" }
+			has_country_leader = { ruling_only = yes name = "smedley Butler" }
 			has_government = radical_socialist
 		}
 		cancel_if_invalid = yes
@@ -5161,7 +5161,7 @@ focus_tree = {
 		icon = GFX_goal_CSA_peoples_republican_army
 		cost = 6
 		available = {
-			has_country_leader = { ruling_only = yes name = "Smedly Butler" }
+			has_country_leader = { ruling_only = yes name = "smedley Butler" }
 			has_government = radical_socialist
 		}
 		x = 2
@@ -5181,7 +5181,7 @@ focus_tree = {
 		icon = GFX_goal_CSA_democratic_centralism
 		cost = 6
 		available = {
-			has_country_leader = { ruling_only = yes name = "Smedly Butler" }
+			has_country_leader = { ruling_only = yes name = "smedley Butler" }
 			has_government = radical_socialist
 		}
 		cancel_if_invalid = yes
@@ -5210,7 +5210,7 @@ focus_tree = {
 		icon = GFX_goal_HOL_list_left
 		cost = 6
 		available = {
-			has_country_leader = { ruling_only = yes name = "Smedly Butler" }
+			has_country_leader = { ruling_only = yes name = "smedley Butler" }
 			has_government = radical_socialist
 		}
 		cancel_if_invalid = yes
@@ -5241,7 +5241,7 @@ focus_tree = {
 		icon = GFX_goal_CSA_empower_red_militias
 		cost = 6
 		available = {
-			has_country_leader = { ruling_only = yes name = "Smedly Butler" }
+			has_country_leader = { ruling_only = yes name = "smedley Butler" }
 			has_government = radical_socialist
 		}
 		x = 1
@@ -5265,7 +5265,7 @@ focus_tree = {
 		icon = GFX_goal_CSA_empower_congress
 		cost = 6
 		available = {
-			has_country_leader = { ruling_only = yes name = "Smedly Butler" }
+			has_country_leader = { ruling_only = yes name = "smedley Butler" }
 			has_government = radical_socialist
 		}
 		cancel_if_invalid = yes
@@ -5290,7 +5290,7 @@ focus_tree = {
 		icon = GFX_goal_CSA_red_marines
 		cost = 6
 		available = {
-			has_country_leader = { ruling_only = yes name = "Smedly Butler" }
+			has_country_leader = { ruling_only = yes name = "smedley Butler" }
 			has_government = radical_socialist
 		}
 		x = 2
@@ -5343,7 +5343,7 @@ focus_tree = {
 			focus = CSA_humane_society
 		}
 		available = {
-			has_country_leader = { ruling_only = yes name = "Smedly Butler" }
+			has_country_leader = { ruling_only = yes name = "smedley Butler" }
 			has_government = radical_socialist
 		}
 		relative_position_id = CSA_butler_coup
@@ -5370,7 +5370,7 @@ focus_tree = {
 		icon = GFX_goal_CSA_fair_days_pay
 		cost = 6.5
 		available = {
-			has_country_leader = { ruling_only = yes name = "Smedly Butler" }
+			has_country_leader = { ruling_only = yes name = "smedley Butler" }
 			has_government = radical_socialist
 		}
 		prerequisite = {
@@ -5407,7 +5407,7 @@ focus_tree = {
 			focus = CSA_war_is_a_racket
 		}
 		available = {
-			has_country_leader = { ruling_only = yes name = "Smedly Butler" }
+			has_country_leader = { ruling_only = yes name = "smedley Butler" }
 			has_government = radical_socialist
 		}
 		relative_position_id = CSA_butler_coup
@@ -5438,7 +5438,7 @@ focus_tree = {
 			focus = CSA_war_is_a_racket
 		}
 		available = {
-			has_country_leader = { ruling_only = yes name = "Smedly Butler" }
+			has_country_leader = { ruling_only = yes name = "smedley Butler" }
 			has_government = radical_socialist
 		}
 		relative_position_id = CSA_butler_coup
@@ -5520,7 +5520,7 @@ focus_tree = {
 			focus = CSA_defensive_outlook
 		}
 		available = {
-			has_country_leader = { ruling_only = yes name = "Smedly Butler" }
+			has_country_leader = { ruling_only = yes name = "smedley Butler" }
 			has_government = radical_socialist
 		}
 		relative_position_id = CSA_butler_coup
