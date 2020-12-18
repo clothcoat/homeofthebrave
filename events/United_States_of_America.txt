@@ -20491,6 +20491,7 @@ country_event = { # The Compromise Succeeds -Murrey and Long
 			remove_country_leader_trait = hated_president
 			add_country_leader_trait = unpopular_president
 			set_country_flag = New_Radical_Republicans
+			set_country_flag = USA_political_crisis_Solved
 		}
 	}
 }
@@ -20875,13 +20876,24 @@ country_event = { #Murray Death
 	trigger = {
 		has_country_flag = USA_HUEYANDMURREYDEAD_coup
 		has_idea = USA_SECRET_POLICE
+		}
+	option = { #F
+		name = ustates.4093.a 
+		add_stability = 0.15
+		add_political_power = -100
+			hidden_effect = {
+			       create_country_leader = {
+               			 name = "Disorganized ODP"
+               			 desc = "POLITICS_ODP_DESC"
+               			 picture = "gfx/leaders/USA/idkpickasnake.tga"
+                		 expire = "1965.1.1"
+               			 ideology = national_populist_subtype
+               			 traits = {
+                    		 }
+                		}
+			}
+		}
 	}
-		option = { #F
-			name = ustates.4093.a 
-			add_stability = 0.15
-			add_political_power = -100
-	}
-}
 country_event = { #Long Death
 	id = ustates.4094
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.4094"}
@@ -20899,8 +20911,19 @@ country_event = { #Long Death
 			name = ustates.4094.a #Civil War Averted
 			add_stability = 0.15
 			add_political_power = -100
+			hidden_effect = {
+         		   create_country_leader = {
+              		   name = "Disorganized AFP"
+                	   desc = "POLITICS_AFP_DESC"
+                           picture = "gfx/leaders/USA/idkpicksomethinglikearock.tga"
+                           expire = "1965.1.1"
+                           ideology = authoritarian_democrat_subtype
+                           traits = {
+                    		}
+               		     }
+			}
+		}
 	}
-}
 
 #assassination of Hoover
 
