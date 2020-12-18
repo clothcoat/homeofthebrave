@@ -4673,6 +4673,8 @@ country_event = { # Huey Long declares Rebellion against Garner
 	desc = amcivwar.14.d
 	picture = GFX_report_event_USA_Long_Rally
 
+	fire_only_once = yes
+
 	is_triggered_only = yes
 
 	immediate = {
@@ -4745,6 +4747,8 @@ country_event = { # Jack Reed declares revolution against Garner
 	title = amcivwar.15.t
 	desc = amcivwar.15.d
 	picture = GFX_report_event_USA_reed
+
+	fire_only_once = yes
 
 	is_triggered_only = yes
 
@@ -4917,6 +4921,8 @@ country_event = { # Huey Long declares Rebellion against Norris
 	desc = amcivwar.17.d
 	picture = GFX_report_event_USA_Long_Rally
 
+	fire_only_once = yes
+
 	is_triggered_only = yes
 
 	immediate = {
@@ -5031,6 +5037,8 @@ country_event = { # CSA Decalres against Norris
 	title = amcivwar.1800.t
 	desc = amcivwar.1800.d
 	picture = GFX_report_event_USA_reed
+
+	fire_only_once = yes
 
 	is_triggered_only = yes
 
@@ -10242,9 +10250,7 @@ country_event = {
 		if = {
 			every_state = {
 			limit = {
-				OR = {
 				state = 1111
-				}
 				OR = {
 					is_owned_by = CAL
 					owner = {
@@ -10270,9 +10276,7 @@ country_event = {
 			if = {
 			every_state = {
 			limit = {
-				OR = {
 				state = 382
-				}
 				OR = {
 					is_owned_by = TEX
 					owner = {
@@ -10293,9 +10297,7 @@ country_event = {
 			if = {
 			every_state = {
 			limit = {
-				OR = {
 				state = 382
-				}
 				OR = {
 					is_owned_by = CAL
 					owner = {
@@ -10316,9 +10318,7 @@ country_event = {
 			if = {
 			every_state = {
 			limit = {
-				OR = {
 				state = 382
-				}
 				OR = {
 					is_owned_by = COR
 					owner = {
@@ -10339,15 +10339,8 @@ country_event = {
 			if = {
 			every_state = {
 			limit = {
-				OR = {
 				state = 382
-				}
-				OR = {
-					is_owned_by = USA
-					owner = {
-						is_subject_of = USA
-					}
-				}
+				is_owned_by = USA
 				}
 				USA = {
 				transfer_state = 1112
@@ -10362,9 +10355,7 @@ country_event = {
 			if = {
 			every_state = {
 			limit = {
-				OR = {
 				state = 382
-				}
 				OR = {
 					is_owned_by = CSA
 					owner = {
@@ -10385,9 +10376,7 @@ country_event = {
 			if = {
 			every_state = {
 			limit = {
-				OR = {
 				state = 382
-				}
 				OR = {
 					is_owned_by = BBR
 					owner = {
@@ -10408,9 +10397,7 @@ country_event = {
 			if = {
 			every_state = {
 			limit = {
-				OR = {
 				state = 382
-				}
 				OR = {
 					is_owned_by = NEE
 					owner = {

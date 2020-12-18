@@ -13335,7 +13335,7 @@ country_event = { # Hawaii refuses to rejoin america
 		name = ustates.278.a
 		trigger = {
 			HAW = {
-				is_major = yes
+				exists = yes
 			}
 		}
 		ai_chance = {
@@ -13354,6 +13354,11 @@ country_event = { # Hawaii refuses to rejoin america
 	}
 	option = {
 		name = ustates.278.b
+		trigger = {
+			HAW = {
+				exists = yes
+			}
+		}
 		ai_chance = {
 			factor = 70
 		}
