@@ -1692,9 +1692,13 @@ focus_tree = {
 				popularity = 0.08
 			}
 			add_stability = 0.25
-		}
+			}
+			hidden_effect = {
+				remove_ideas = USA_Dustbowl_Intense
+				remove_ideas = USA_Hoovervilles
+			}
 		ai_will_do = {
-			factor = 1
+			factor = 100
 		}
 	}
 	

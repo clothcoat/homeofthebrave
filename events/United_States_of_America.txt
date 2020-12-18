@@ -4928,6 +4928,7 @@ country_event = { # The Compromise Succeeds
 		set_global_flag = USA_civil_war_avoided_flag
 		add_country_leader_trait = savior_of_america
 		remove_country_leader_trait = failed_humanitarian
+		remove_ideas = USA_political_crisis
 		remove_ideas = USA_syndicalist_strike_idea
 		hidden_effect = {
 			set_country_flag = USA_political_crisis_Solved
@@ -20516,6 +20517,7 @@ country_event = { # The Compromise Succeeds -Murrey and Long
 		set_global_flag = USA_civil_war_avoided_flag
 		add_country_leader_trait = savior_of_america
 		remove_country_leader_trait = failed_humanitarian
+		remove_ideas = USA_political_crisis
 		remove_ideas = USA_syndicalist_strike_idea
 		hidden_effect = {
 			country_event = { id = ustates.4034 days = 8 }
@@ -20524,7 +20526,6 @@ country_event = { # The Compromise Succeeds -Murrey and Long
 			set_country_flag = New_Radical_Republicans
 			set_country_flag = USA_political_crisis_Solved
 			remove_ideas = USA_new_year_strike_idea
-			remove_ideas = USA_syndicalist_strike_idea
 		}
 	}
 }
