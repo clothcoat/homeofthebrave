@@ -1909,7 +1909,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus NEE_irish_ties"
 			add_ideas = NEE_irish_ties_idea
 			IRE = {
-				country_event = newengland.103
+				add_opinion_modifier = { target = NEE modifier = medium_increase }
 			}
 			add_stability = 0.05
 			add_manpower = 1200
