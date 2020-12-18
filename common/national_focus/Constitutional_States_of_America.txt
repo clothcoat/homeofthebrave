@@ -446,7 +446,7 @@ focus_tree = {
 			factor = 5
 		}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus COR_peoples_commission"
+			log = "[GetDateText]: [Root.GetName]: Focus COR_oil_oligarchy"
 			random_owned_controlled_state = {
 			limit = { has_resources_amount = { resource = oil amount > 1 } }
 			add_resource = {

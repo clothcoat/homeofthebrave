@@ -8833,7 +8833,7 @@ country_event = {# Trials of Patton and Pelley
 				traits = { authoritarian_tendencies }
 		}
 		add_political_power = -10
-		increase_ruling_party_popularity_by_2 = yes
+		increase_ruling_party_popularity_by_5 = yes
 	}
 	
 	option = {# Spare Patton
@@ -8850,7 +8850,7 @@ country_event = {# Trials of Patton and Pelley
 				traits = { blood_and_guts }
 		}
 		add_political_power = -15
-		increase_ruling_party_popularity_by_2 = yes
+		increase_ruling_party_popularity_by_5 = yes
 	}
 	
 	option = {# Keep both!
@@ -8875,7 +8875,7 @@ country_event = {# Trials of Patton and Pelley
 				traits = { blood_and_guts }
 		}
 		add_political_power = -25
-		decrease_ruling_party_popularity_by_3 = yes
+		increase_ruling_party_popularity_by_5 = yes
 	}
 	option = {# Jail both!
 		name = pacificstates.3520.e
@@ -8883,7 +8883,7 @@ country_event = {# Trials of Patton and Pelley
 			factor = 5
 		}
 		add_political_power = 20
-		increase_ruling_party_popularity_by_3 = yes
+		increase_ruling_party_popularity_by_5 = yes
 	}
 }
 
@@ -8914,7 +8914,7 @@ country_event = {# Spiritual Revolution
 			category = jet_technology
 		}
 		add_political_power = 10
-		increase_ruling_party_popularity_by_2 = yes
+		add_popularity = { ideology = national_populist popularity = 0.02 }
 	}
 	
 	option = {# Invest in Paranormal Technology
@@ -8929,7 +8929,7 @@ country_event = {# Spiritual Revolution
 			category = electronics
 		}
 		add_political_power = 15
-		increase_ruling_party_popularity_by_2 = yes
+		add_popularity = { ideology = national_populist popularity = 0.02 }
 	}
 	
 	option = {# Propaganda for the Masses
@@ -9035,7 +9035,7 @@ country_event = { # Trial of the CSA
 		name = pacificstates.3523.b
 		add_manpower = -500
 		add_political_power = 50
-		increase_ruling_party_popularity_by_2 = yes
+		increase_ruling_party_popularity_by_5 = yes
 	}
 	option = { #Execute all party members
 		name = pacificstates.3523.c

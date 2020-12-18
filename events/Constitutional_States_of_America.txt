@@ -165,7 +165,7 @@ country_event = { # Fordists
 	fire_only_once = yes
 	is_triggered_only = yes
 
-	trigger = 
+	trigger = {
 	has_country_leader = { ruling_only = yes name = "William H. Murray" }
 	}
 
@@ -251,7 +251,7 @@ country_event = { # White Leagues ask us to stop Ford
 	fire_only_once = yes
 	is_triggered_only = yes
 
-	trigger = 
+	trigger = {
 	has_country_leader = { ruling_only = yes name = "William H. Murray" }
 	}
 
@@ -327,7 +327,7 @@ country_event = { # Dinner with Alfalfa Bill
 	fire_only_once = yes
 	is_triggered_only = yes
 
-	trigger = 
+	trigger = {
 	has_country_leader = { ruling_only = yes name = "William H. Murray" }
 	}
 
