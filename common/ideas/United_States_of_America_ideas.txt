@@ -297,7 +297,15 @@ ideas = {
 			picture = usa_great_depression_2
 			cancel_if_invalid = no
 			available = {
+				OR = {
 				tag = CSA
+				tag = COR
+				tag = USA
+				tag = BBR
+				tag = CAL
+				tag = WCC
+				tag = NEE
+				}
 				surrender_progress > 0.95
 			}
 			modifier = {
