@@ -3311,7 +3311,7 @@ country_event = { # Red Executive Agreement
 				}
 			add_equipment_to_stockpile = {
 			type = infantry_equipment
-			amount = 600
+			amount = -600
 			producer = USA
 				}
 			}
@@ -19785,10 +19785,6 @@ country_event = { #Dealing with the riots
 		ai_chance = { factor = 10}
 		add_stability = -0.025
 		hidden_effect = {
-			country_event = {
-				id = ustates.4020
-				days = 15
-			}
 			add_popularity = {
 				ideology = market_liberal
 				popularity = 0.025
