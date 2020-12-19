@@ -1695,12 +1695,14 @@ country_event = { # Deal with Talmadge
 		add_stability = -0.02
 		add_political_power = 10
 		add_command_power = 5
+		set_country_flag = Eugene_Talmadge_dead
 		}
 	option = { #Arrest him!
 		name = constate.1124.b
 		add_stability = 0.02
 		add_political_power = -10
 		add_command_power = 5
+		set_country_flag = Eugene_Talmadge_dead
 		}
 }
 
@@ -1847,7 +1849,7 @@ country_event = { # The Liberia Plan
 		add_ideas = COR_Liberia_plan_idea
 	}
 	option = { #No deal 
-		name = constate.1128.a
+		name = constate.1128.b
 		add_stability = -0.03
 		add_political_power = 20
 		hidden_effect = {
