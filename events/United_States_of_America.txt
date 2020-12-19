@@ -249,7 +249,9 @@ country_event = { # Curtis's Health in question
 	}
 	option = { # Bring in Hoover
 		name = ustates.4001.c
-		trigger = { has_country_flag = USA_Relief_Bill_Passed }
+		trigger = { 
+			has_country_flag = USA_gwbill_passes
+		}
 		ai_chance = {
 			factor = 25
 		}
