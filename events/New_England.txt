@@ -7808,7 +7808,7 @@ country_event = { # Better Babies Contests
 		ai_chance = {	
 		factor = 50 	
 		}
-               		add_political_power = 3
+               		add_political_power = 5
 	}
 }
 
@@ -7848,7 +7848,7 @@ country_event = { # Negro Project
 		factor = 40 	
 		}
 	        	add_manpower = -50
-                		add_political_power = -3
+                		add_political_power = -5
                 		add_stability = 0.05
 		add_popularity = { ideology = national_populist popularity = 0.03 }
 	}
@@ -7900,7 +7900,7 @@ country_event = { # The Jewish Question
 		}
 	        	add_manpower = -150
                 		add_political_power = -20
-                		add_stability = -0.01
+                		add_stability = -0.05
 		add_popularity = { ideology = national_populist popularity = 0.05 }
 	}
         	option = { #Science!
@@ -7910,7 +7910,7 @@ country_event = { # The Jewish Question
 		}	     
 	        	add_manpower = -100
                 		add_political_power = -80
-                		add_stability = 0.01
+                		add_stability = 0.05
 		add_popularity = { ideology = national_populist popularity = 0.05 }
 	}
 }
@@ -7942,7 +7942,7 @@ country_event = { # Superman
 		ai_chance = {	
 		factor = 50 	
 		}
-                		add_political_power = 1 
+                		add_political_power = 5 
 	}
        	option = { #educational campaign  
 		name = newengland.177.b 
@@ -7958,7 +7958,7 @@ country_event = { # Superman
 		factor = 20 	
 		}     	
                 		add_political_power = -25
-                		add_stability = 0.01
+                		add_stability = 0.02
 	}
 }
 
@@ -7986,7 +7986,7 @@ country_event = { #  Lombroso
 		ai_chance = {	
 		factor = 90 	
 		}
-                		add_political_power = 1
+                		add_political_power = 3
                 		add_stability = -0.01
 	}
        	option = { #WTF minority raport
@@ -8021,7 +8021,7 @@ country_event = { #  Christians
 
        	option = { #legalism
 		name = newengland.179.a 
-                		add_political_power = -1
+                		add_political_power = -5
                 		add_stability = -0.1
 	}
 }
