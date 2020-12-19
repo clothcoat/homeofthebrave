@@ -6516,8 +6516,7 @@ country_event = { # Radical Split
 		add_stability = 0.02
 		set_politics = {
 			ruling_party = national_populist
-			election_frequency = 48
-			elections_allowed = yes
+			elections_allowed = no
 		}
 		set_party_name = {
 			ideology = national_populist
