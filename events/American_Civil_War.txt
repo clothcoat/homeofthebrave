@@ -4240,6 +4240,44 @@ country_event = { # Results are in
 		}
 	}
 	}
+	option = {
+	name = amcivwar.1026.c
+	if = {
+	limit = {
+	COR = {
+	exists = yes
+	has_global_flag = ACW_RUSSELL_ACCEPTS_PEACE
+		}
+	}
+	CAL = {
+	annex_country = {
+	target = COR
+	transfer_troops = no
+			}
+		}
+	}
+	CAL = {
+			change_tag_from = COR
+		}
+	}
+	option = {
+	name = amcivwar.1026.e
+	trigger = {
+	COR = {
+	exists = yes
+	has_global_flag = ACW_RUSSELL_ACCEPTS_PEACE
+		}
+	}
+	COR = {
+	annex_country = {
+	target = CAL
+	transfer_troops = no
+		}
+	}
+	COR = {
+			change_tag_from = CAL
+		}
+	}
 }
 
 country_event = { # Last Men Standing
