@@ -319,11 +319,21 @@ leader_traits = {
 		}
 	}
 	###New England###
-	elite_family_ties = { #Astors
+	elite_family_ties = { #Astors & Cornelius Vanderbilt
 		random = no 
 		stability_factor = 0.04
 		political_power_factor = 0.05
 		production_speed_buildings_factor = 0.5
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	the_shy_peer = { #Fairhaven
+		random = no 
+		stability_factor = 0.05
+		political_power_factor = -0.02
+		research_speed_factor = 0.02
 
 		ai_will_do = {
 			factor = 1
@@ -339,7 +349,7 @@ leader_traits = {
 			factor = 1
 		}
 	}
-	popular_author = { #Stoddard
+	popular_author = { #Stoddard & Derleth
 		random = no 
 		stability_factor = 0.04
 		political_power_factor = 0.03
