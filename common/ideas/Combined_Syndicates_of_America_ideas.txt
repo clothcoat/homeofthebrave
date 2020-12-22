@@ -153,32 +153,32 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_iron_brigades_idea_1"}
 			picture = CSA_iron_brigades
 			modifier = {
-				ground_attack_factor = 0.01
+				ground_attack_factor = 0.02
 				research_speed_factor = 0.02
-				supply_consumption_factor = 0.01
+				supply_consumption_factor = 0.02
 			}
 		}		
 		CSA_iron_brigades_idea_2 = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_iron_brigades_idea_2"}
 			picture = CSA_iron_brigades
 			modifier = {
-				ground_attack_factor = 0.01
+				ground_attack_factor = 0.02
 				research_speed_factor = 0.03
-				supply_consumption_factor = 0.02
+				supply_consumption_factor = 0.03
 			}
 		}		
 		CSA_iron_brigades_idea_3 = {
 			on_add = {log = "[CSA_iron_brigades]: [Root.GetName]: add idea CSA_iron_brigades_idea_3"}
 			picture = CSA_experimental_research
 			modifier = {
-				research_speed_factor = 0.01
+				research_speed_factor = 0.05
 			}
 		}			
 		CSA_iron_brigades_idea_1_PCC = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_iron_brigades_idea_1_PCC"}
 			picture = CSA_pcc
 			modifier = {
-				ground_attack_factor = 0.02
+				army_attack_factor = 0.02
 				research_speed_factor = 0.03
 				supply_consumption_factor = 0.02
 				planning_speed = -0.01
@@ -188,7 +188,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_iron_brigades_idea_2_PCC"}
 			picture = CSA_pcc
 			modifier = {
-				ground_attack_factor = 0.02
+				army_attack_factor = 0.04
 				research_speed_factor = 0.04
 				supply_consumption_factor = 0.03
 				planning_speed = -0.01
@@ -199,7 +199,7 @@ ideas = {
 			picture = CSA_pcc
 			modifier = {
 				conscription_factor = 0.01
-				ground_attack_factor = 0.02
+				army_attack_factor = 0.03
 				research_speed_factor = 0.04
 				supply_consumption_factor = 0.04
 			}
@@ -208,8 +208,8 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_iron_brigades_idea_reinforced"}
 			picture = CSA_iron_brigades
 			modifier = {
-				conscription_factor = 0.01
-				ground_attack_factor = 0.02
+				conscription_factor = 0.02
+				army_attack_factor = 0.03
 				research_speed_factor = 0.03
 				supply_consumption_factor = 0.03
 			}
@@ -218,8 +218,8 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_iron_brigades_idea_reinforced_PCC_weapons"}
 			picture = CSA_pcc_weapons
 			modifier = {
-				conscription_factor = 0.01
-				ground_attack_factor = 0.04
+				conscription_factor = 0.04
+				army_attack_factor = 0.04
 				research_speed_factor = 0.06
 				supply_consumption_factor = 0.06
 			}
@@ -228,8 +228,8 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_iron_brigades_idea_reinforced_weapons"}
 			picture = CSA_reinforced_weapons
 			modifier = {
-				conscription_factor = 0.01
-				ground_attack_factor = 0.03
+				conscription_factor = 0.04
+				army_attack_factor = 0.03
 				research_speed_factor = 0.05
 				supply_consumption_factor = 0.05
 			}
@@ -238,8 +238,8 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_iron_brigades_idea_reinforced_rigged"}
 			picture = CSA_iron_brigades_rigged
 			modifier = {
-				conscription_factor = 0.01
-				ground_attack_factor = 0.03
+				conscription_factor = 0.04
+				army_attack_factor = 0.03
 				army_defence_factor = 0.02
 				research_speed_factor = 0.04
 				supply_consumption_factor = 0.08
@@ -251,8 +251,8 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_iron_brigades_idea_reinforced_PCC_rigged"}
 			picture = CSA_pcc_rigged
 			modifier = {
-				conscription_factor = 0.01
-				ground_attack_factor = 0.04
+				conscription_factor = 0.05
+				army_attack_factor = 0.04
 				army_defence_factor = 0.02
 				research_speed_factor = 0.05
 				supply_consumption_factor = 0.1
@@ -267,6 +267,8 @@ ideas = {
 				max_command_power = 50
 				land_reinforce_rate = 0.05
 				occupation_cost = -0.05
+				encryption_factor = 0.04
+				decryption_factor = 0.02
 			}
 		}		
 		CSA_proletariat_duties_idea = {
@@ -304,12 +306,12 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_energy_accounting_idea"}
 			picture = CSA_energy_accounting
 			modifier = {
-			local_resources_factor = 0.15
-			production_factory_max_efficiency_factor = 0.10
+			local_resources_factor = 0.10
+			production_factory_max_efficiency_factor = 0.08
 			line_change_production_efficiency_factor = 0.05
 			production_speed_buildings_factor = -0.05
 			consumer_goods_factor = 0.1
-			min_export = -0.25
+			min_export = -0.20
 			encryption_factor = 0.02
 			}
 		}
@@ -332,8 +334,8 @@ ideas = {
 			modifier = {
 			army_morale_factor = 0.1
 			MONTHLY_POPULATION = 0.05
-			resistance_damage_to_garrison = -0.2	
-			research_speed_factor = 0.02
+			resistance_damage_to_garrison = -0.3	
+			research_speed_factor = 0.03
 			production_factory_max_efficiency_factor = -0.05
 			production_factory_efficiency_gain_factor = -0.05
 			line_change_production_efficiency_factor = -0.05
@@ -345,8 +347,8 @@ ideas = {
 			picture = generic_central_management
 			modifier = {
 			conscription_factor = -0.05
-			supply_consumption_factor = -0.01
-			monthly_population = 0.01
+			supply_consumption_factor = -0.05
+			monthly_population = 0.05
 			production_factory_efficiency_gain_factor = 0.03
 			}
 		}		
@@ -354,8 +356,10 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_social_units_idea"}
 			picture = CSA_social_units
 			modifier = {
-			monthly_population = 0.05
-			consumer_goods_factor = 0.02
+			monthly_population = 0.15
+			consumer_goods_factor = 0.03
+			stability_weekly = 0.004
+			political_power_gain = -0.02
 			}
 		}		
 		CSA_napalm_idea = {
