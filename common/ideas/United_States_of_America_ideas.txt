@@ -1203,6 +1203,19 @@ ideas = {
 				stability_factor = 0.1
 			}
 		}
+		USA_righteous_nation_2 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea USA_righteous_nation_2"}
+			allowed = { always = no }
+			removal_cost = -1
+			picture = FRA_national_mobilization_focus
+			modifier = {
+				army_morale_factor = 0.20
+				land_reinforce_rate = 0.10
+				army_speed_factor = 0.15
+				local_manpower = 0.1
+				stability_factor = 0.1
+			}
+		}
 		USA_western_betrayal = { #Western Betrayal
 		on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_western_betrayal"}
 		picture = USA_american_stratocracy

@@ -2377,6 +2377,7 @@ country_event = { # The 1936 Election - Coalition
 			factor = 10
 		}
 		set_country_flag = USA_had_1936_election
+		set_country_flag = USA_progressives_exist
 		hidden_effect = {
 			create_country_leader = {
 				name = "George Norris"
@@ -4395,7 +4396,7 @@ country_event = { # Rep Inaugural Address
 	id = ustates.64
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.64"}
 	title = ustates.64.t
-	picture = 
+	picture = GFX_report_event_USA_Inauguration
 
 	desc = { # Curtis
 		text = ustates.64.dc

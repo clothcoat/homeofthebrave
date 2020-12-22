@@ -4642,6 +4642,10 @@ country_event = {
 			election_frequency = 48
 			elections_allowed = yes
 			}
+		add_timed_idea = {
+				idea = USA_righteous_nation_2
+				days = 360
+			}
 		}
 		if = {
 		limit = {
@@ -4660,6 +4664,10 @@ country_event = {
 			election_frequency = 48
 			elections_allowed = yes
 			}
+		add_timed_idea = {
+				idea = USA_righteous_nation_2
+				days = 360
+			}
 		}
 		if = {
 		limit = {
@@ -4677,6 +4685,10 @@ country_event = {
 			ruling_party = market_liberal
 			election_frequency = 48
 			elections_allowed = yes
+			}
+		add_timed_idea = {
+				idea = USA_righteous_nation_2
+				days = 360
 			}
 		}
 	}
@@ -10311,15 +10323,27 @@ country_event = {
 				transfer_state = 386
 				}
 			}
-		}
-			if = {
+			}
+		if = {
 			every_state = {
 			limit = {
+				OR = {
 				state = 382
 				OR = {
 					is_owned_by = TEX
 					owner = {
 						is_subject_of = TEX
+						}
+					}
+				AND = {
+				state = 1112
+				state = 388
+				}
+				OR = {
+					is_owned_by = TEX
+					owner = {
+						is_subject_of = TEX
+						}
 					}
 				}
 				}
@@ -10333,14 +10357,26 @@ country_event = {
 				}
 			}
 			}
-			if = {
+		else_if = {
 			every_state = {
 			limit = {
+				OR = {
 				state = 382
 				OR = {
 					is_owned_by = CAL
 					owner = {
 						is_subject_of = CAL
+						}
+					}
+				AND = {
+				state = 1112
+				state = 388
+				}
+				OR = {
+					is_owned_by = CAL
+					owner = {
+						is_subject_of = CAL
+						}
 					}
 				}
 				}
@@ -10354,14 +10390,26 @@ country_event = {
 				}
 			}
 			}
-			if = {
+		else_if = {
 			every_state = {
 			limit = {
+				OR = {
 				state = 382
 				OR = {
 					is_owned_by = COR
 					owner = {
 						is_subject_of = COR
+						}
+					}
+				AND = {
+				state = 1112
+				state = 388
+				}
+				OR = {
+					is_owned_by = COR
+					owner = {
+						is_subject_of = COR
+						}
 					}
 				}
 				}
@@ -10375,10 +10423,17 @@ country_event = {
 				}
 			}
 			}
-			if = {
+		else_if = {
 			every_state = {
 			limit = {
+				OR = {
 				state = 382
+				is_owned_by = USA
+				}
+				AND = {
+				state = 1112
+				state = 388
+				}
 				is_owned_by = USA
 				}
 				USA = {
@@ -10391,14 +10446,26 @@ country_event = {
 				}
 			}
 			}
-			if = {
+		else_if = {
 			every_state = {
 			limit = {
+				OR = {
 				state = 382
 				OR = {
 					is_owned_by = CSA
 					owner = {
 						is_subject_of = CSA
+						}
+					}
+				AND = {
+				state = 1112
+				state = 388
+				}
+				OR = {
+					is_owned_by = CSA
+					owner = {
+						is_subject_of = CSA
+						}
 					}
 				}
 				}
@@ -10412,14 +10479,26 @@ country_event = {
 				}
 			}
 			}
-			if = {
+		else_if = {
 			every_state = {
 			limit = {
+				OR = {
 				state = 382
 				OR = {
 					is_owned_by = BBR
 					owner = {
 						is_subject_of = BBR
+						}
+					}
+				AND = {
+				state = 1112
+				state = 388
+				}
+				OR = {
+					is_owned_by = BBR
+					owner = {
+						is_subject_of = BBR
+						}
 					}
 				}
 				}
@@ -10433,14 +10512,26 @@ country_event = {
 				}
 			}
 			}
-			if = {
+		else_if = {
 			every_state = {
 			limit = {
+				OR = {
 				state = 382
 				OR = {
 					is_owned_by = NEE
 					owner = {
 						is_subject_of = NEE
+						}
+					}
+				AND = {
+				state = 1112
+				state = 388
+				}
+				OR = {
+					is_owned_by = NEE
+					owner = {
+						is_subject_of = NEE
+						}
 					}
 				}
 				}
@@ -10451,8 +10542,8 @@ country_event = {
 				transfer_state = 382
 				transfer_state = 376
 				set_country_flag = WCC_annexation
-					}
 				}
+			}
 			}
 		}
 	}
