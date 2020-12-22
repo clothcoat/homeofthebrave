@@ -5957,6 +5957,7 @@ country_event = {# Hearst Requests our Annexation
 		add_popularity = { ideology = paternal_autocrat popularity = -0.05 }
 		add_manpower = -5000
 		add_war_support = -0.1
+		set_country_flag = CAL_Hearst_War
 		}
 	}
 }
@@ -5981,6 +5982,7 @@ country_event = {# Mac Accepts
 		add_political_power = 100
 		add_stability = -0.1
 		add_popularity = { ideology = paternal_autocrat popularity = 0.05 }
+		set_country_flag = CAL_Hearst_Peace
 		CAL = {
 			annex_country = {
 			target = USA
