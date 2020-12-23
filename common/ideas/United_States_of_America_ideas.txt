@@ -297,16 +297,8 @@ ideas = {
 			picture = usa_great_depression_2
 			cancel_if_invalid = no
 			available = {
-				OR = {
-				tag = CSA
-				tag = COR
-				tag = USA
-				tag = BBR
-				tag = CAL
-				tag = WCC
-				tag = NEE
-				}
-				surrender_progress > 0.95
+				has_global_flag = USA_civil_war_begun_flag
+				NOT = { has_global_flag = USA_civil_war_over_flag }
 			}
 			modifier = {
 				unit_limit_ACW_in_progress = -0.15

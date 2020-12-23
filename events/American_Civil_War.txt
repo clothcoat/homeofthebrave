@@ -15903,7 +15903,7 @@ country_event = { # Panama Garrison
 	}
 }
 
-country_event = { #Event to Weaken Dying Factions (99%)
+country_event = { #Event to Weaken Dying Factions (99%) (CSA)
 	id = amcivwar.1313
 	title = amcivwar.1313.t
 	desc = amcivwar.1313.d
@@ -15912,33 +15912,155 @@ country_event = { #Event to Weaken Dying Factions (99%)
 	fire_only_once = yes
 
 	trigger = {
-	OR = {
-	AND = {
-	tag = CSA
-	CSA = {
-	surrender_progress > 0.98
-	}}
-	AND = {
-	tag = COR
-	COR = {
-	surrender_progress > 0.98
-	}}
-	AND = {
-	tag = TEX
-	TEX = {
-	surrender_progress > 0.98
-	}}
-	AND = {
-	tag = USA
-	USA = {
-	surrender_progress > 0.98
-	}}
-	AND = {
-	tag = WCC
-	WCC = {
-	surrender_progress > 0.98
-	}}
+		CSA = {
+		is_ai = yes
+		surrender_progress > 0.98
+		}
 	}
+	
+	mean_time_to_happen = {
+	days = 3
+	}
+	
+	option = { #We're dead
+		name = amcivwar.1313.a
+		ai_chance = {
+			factor = 100
+		}
+		add_political_power = -400
+		add_ideas = ACW_war_failing
+	}
+}
+
+country_event = { #Event to Weaken Dying Factions (99%) (COR)
+	id = amcivwar.1314
+	title = amcivwar.1313.t
+	desc = amcivwar.1313.d
+	picture = GFX_report_event_USA_soldiers_running
+		
+	fire_only_once = yes
+
+	trigger = {
+		COR = {
+		is_ai = yes
+		surrender_progress > 0.98
+		}
+	}
+	
+	mean_time_to_happen = {
+	days = 3
+	}
+	
+	option = { #We're dead
+		name = amcivwar.1313.a
+		ai_chance = {
+			factor = 100
+		}
+		add_political_power = -400
+		add_ideas = ACW_war_failing
+	}
+}
+
+country_event = { #Event to Weaken Dying Factions (99%) (USA)
+	id = amcivwar.1315
+	title = amcivwar.1313.t
+	desc = amcivwar.1313.d
+	picture = GFX_report_event_USA_soldiers_running
+		
+	fire_only_once = yes
+
+	trigger = {
+		USA = {
+		is_ai = yes
+		surrender_progress > 0.98
+		}
+	}
+	
+	mean_time_to_happen = {
+	days = 3
+	}
+	
+	option = { #We're dead
+		name = amcivwar.1313.a
+		ai_chance = {
+			factor = 100
+		}
+		add_political_power = -400
+		add_ideas = ACW_war_failing
+	}
+}
+
+country_event = { #Event to Weaken Dying Factions (99%) (TEX)
+	id = amcivwar.1316
+	title = amcivwar.1313.t
+	desc = amcivwar.1313.d
+	picture = GFX_report_event_USA_soldiers_running
+		
+	fire_only_once = yes
+
+	trigger = {
+		TEX = {
+		is_ai = yes
+		surrender_progress > 0.98
+		}
+	}
+	
+	mean_time_to_happen = {
+	days = 3
+	}
+	
+	option = { #We're dead
+		name = amcivwar.1313.a
+		ai_chance = {
+			factor = 100
+		}
+		add_political_power = -400
+		add_ideas = ACW_war_failing
+	}
+}
+
+country_event = { #Event to Weaken Dying Factions (99%) (BBR)
+	id = amcivwar.1317
+	title = amcivwar.1313.t
+	desc = amcivwar.1313.d
+	picture = GFX_report_event_USA_soldiers_running
+		
+	fire_only_once = yes
+
+	trigger = {
+		BBR = {
+		is_ai = yes
+		surrender_progress > 0.98
+		}
+	}
+	
+	mean_time_to_happen = {
+	days = 3
+	}
+	
+	option = { #We're dead
+		name = amcivwar.1313.a
+		ai_chance = {
+			factor = 100
+		}
+		add_political_power = -400
+		add_ideas = ACW_war_failing
+	}
+}
+
+country_event = { #Event to Weaken Dying Factions (99%) (CAL)
+	id = amcivwar.1318
+	title = amcivwar.1313.t
+	desc = amcivwar.1313.d
+	picture = GFX_report_event_USA_soldiers_running
+		
+	fire_only_once = yes
+
+	trigger = {
+		CAL = {
+		is_ai = yes
+		surrender_progress > 0.98
+		}
 	}
 	
 	mean_time_to_happen = {
