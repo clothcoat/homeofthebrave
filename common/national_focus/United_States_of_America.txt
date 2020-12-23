@@ -659,11 +659,11 @@ focus_tree = {
 		select_effect = {
 			if = { 
 			limit = { has_country_leader = { ruling_only = yes name = "William H. Murray" } }
-			country_event = { id = amcivwar.6310 days = 8 }
+			country_event = { id = ustates.6310 days = 8 }
 			}
 			if = { 
 			limit = { has_country_leader = { ruling_only = yes name = "Huey Long" } }
-			country_event = { id = amcivwar.59 days = 8 }
+			country_event = { id = ustates.59 days = 8 }
 			}
 		}
 		bypass = {
