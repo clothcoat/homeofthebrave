@@ -332,6 +332,8 @@ country_event = { # WCC released
 	desc = amcivwar.3000.d
 	picture = GFX_event_WCC_Denver
 
+	fire_only_once = yes
+
 	is_triggered_only = yes
 
 	immediate = {
@@ -3178,6 +3180,8 @@ country_event = { # Huey Long declares Rebellion against MacArthur
 	desc = amcivwar.6.d
 	picture = GFX_report_event_USA_Long_Rally
 
+	fire_only_once = yes
+
 	is_triggered_only = yes
 
 	immediate = {
@@ -3230,6 +3234,8 @@ country_event = { # Old Democrats Breakoff
 	id = amcivwar.6000
 	title = amcivwar.6000.t
 	picture = GFX_USA_murray
+
+	fire_only_once = yes
 
 	is_triggered_only = yes
 
@@ -3314,6 +3320,8 @@ country_event = { # Jack Reed declares revolution against MacArthur
 	desc = amcivwar.7.d
 	picture = GFX_report_event_USA_reed
 
+	fire_only_once = yes
+
 	is_triggered_only = yes
 
 	immediate = {
@@ -3383,6 +3391,8 @@ country_event = { # Pacific States declares revolution against MacArthur
 	title = amcivwar.8.t
 	desc = amcivwar.8.d
 	picture = GFX_report_event_CAL_golden_gate_crowd
+
+	fire_only_once = yes
 
 	is_triggered_only = yes
 
