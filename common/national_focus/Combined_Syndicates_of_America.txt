@@ -8736,7 +8736,9 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_join_the_internationale"
-			country_event = csa.101
+			INT = {
+				country_event = { id = csa.101 days = 1 }
+			}
 		}
 	}
 	

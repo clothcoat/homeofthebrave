@@ -11405,6 +11405,15 @@ country_event = { # Social Patriot Flag
 
 	is_triggered_only = yes
 
+	trigger = {
+		has_country_flag = CSA_constitutional_convention_done
+		has_country_flag = CSA_social_patriot_victory
+		OR = {
+			has_government = social_democrat
+			has_government = radical_socialist
+			}
+		}
+
 	fire_only_once = yes
 
 	option = { # A Commonwealth Flag
