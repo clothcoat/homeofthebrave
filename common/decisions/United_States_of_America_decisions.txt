@@ -3949,6 +3949,12 @@ USA_MacArthur_policies = {
 					id = wcc.1101
 					days = 10
 				}
+				hidden_effect = {
+				set_autonomy = {
+					target = WCC
+					autonomy_state = autonomy_free
+					}
+				}
 			}
 			USA = {
 				every_unit_leader = {
