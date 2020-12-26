@@ -659,11 +659,11 @@ focus_tree = {
 		select_effect = {
 			if = { 
 			limit = { has_country_leader = { ruling_only = yes name = "William H. Murray" } }
-			country_event = { id = amcivwar.6310 days = 8 }
+			country_event = { id = ustates.6310 days = 8 }
 			}
 			if = { 
 			limit = { has_country_leader = { ruling_only = yes name = "Huey Long" } }
-			country_event = { id = amcivwar.59 days = 8 }
+			country_event = { id = ustates.59 days = 8 }
 			}
 		}
 		bypass = {
@@ -2370,7 +2370,7 @@ focus_tree = {
 			add_popularity = { ideology = social_democrat popularity = 0.02 }
 			hidden_effect = {
 			country_event = {
-			id = ustates.313
+			id = pacificstates.313
 			days = 7
 				}
 			}
@@ -3137,11 +3137,11 @@ focus_tree = {
 			}
 			hidden_effect = {
 			country_event = {
-			id = ustates.292
+			id = pacificstates.292
 			days = 80
 				}
 			country_event = {
-			id = ustates.291
+			id = pacificstates.291
 			days = 120
 				}
 			}
@@ -3232,7 +3232,7 @@ focus_tree = {
 			}
 			hidden_effect = {
 			country_event = {
-			id = ustates.301
+			id = pacificstates.301
 			days = 95
 				}
 			}
@@ -3477,7 +3477,7 @@ focus_tree = {
 			add_stability = 0.05
 			hidden_effect = {
 			country_event = {
-			id = ustates.296
+			id = pacificstates.296
 			days = 120
 				}
 			}
@@ -4017,7 +4017,7 @@ focus_tree = {
 			add_popularity = { ideology = market_liberal popularity = 0.04 }
 			hidden_effect = {
 			country_event = {
-			id = ustates.278
+			id = pacificstates.278
 			days = 20
 				}
 			}
@@ -4082,7 +4082,7 @@ focus_tree = {
 			add_popularity = { ideology = market_liberal popularity = 0.08 }
 			hidden_effect = {
 			country_event = {
-			id = ustates.275
+			id = pacificstates.275
 			days = 40
 				}
 			}
@@ -4181,7 +4181,7 @@ focus_tree = {
 			}
 			hidden_effect = {
 			country_event = {
-			id = ustates.282
+			id = pacificstates.282
 			days = 70
 				}
 			}
@@ -4351,11 +4351,11 @@ focus_tree = {
 			}
 			hidden_effect = {
 			country_event = {
-			id = ustates.283
+			id = pacificstates.283
 			days = 45
 				}
 			country_event = {
-			id = ustates.284
+			id = pacificstates.284
 			days = 100
 				}
 			}
@@ -4997,7 +4997,7 @@ focus_tree = {
 			add_war_support = 0.05
 			add_manpower = 1200
 			hidden_effect = {
-			country_event = { id = ustates.255 days = 45 }
+			country_event = { id = pacificstates.255 days = 45 }
 			}
 		}
 	}
@@ -5142,15 +5142,15 @@ focus_tree = {
 			}
 			hidden_effect = {
 			country_event = {
-			id = ustates.259
+			id = pacificstates.259
 			days = 30
 				}
 			country_event = {
-			id = ustates.260
+			id = pacificstates.260
 			days = 60
 				}
 			country_event = {
-			id = ustates.261
+			id = pacificstates.261
 			days = 100
 				}
 			}

@@ -3774,8 +3774,12 @@ country_event = { # Appointing the New England Poet laureate
 	option = { # H.P Lovecraft, the master of horror
 		name = newengland.59.b
 		add_popularity = {
-			ideology = social_conservative
-			popularity = 0.02
+			ideology = authoritarian_democrat
+			popularity = 0.01
+		}
+		add_popularity = {
+			ideology = national_populist
+			popularity = 0.01
 		}
 	}
 }
@@ -5821,7 +5825,7 @@ country_event = { # Canada's Decision
 
 	option = { # Feds appointed
 		ai_chance = {
-			factor = 25
+			factor = 33
 		}
 		name = newengland.105.a
 		add_political_power = 50
@@ -5833,9 +5837,23 @@ country_event = { # Canada's Decision
 			}
 		}
 	}
+	option = { # Governor-General appointed
+		ai_chance = {
+			factor = 33
+		}
+		name = newengland.105.b
+		add_political_power = -10
+		NEE = {
+		add_popularity = { ideology = paternal_autocrat popularity = 0.1 }
+		country_event = {
+			id = newengland.1060
+			days = 2
+			}
+		}
+	}
 	option = {
 		ai_chance = {
-			factor = 25
+			factor = 33
 			modifier = {
 				factor = 0
 				OR = {
@@ -5854,7 +5872,7 @@ country_event = { # Canada's Decision
 				}
 			}
 		}
-		name = newengland.105.b
+		name = newengland.105.c
 		ai_will_do = {
 			factor = 0
 		}
@@ -5943,6 +5961,317 @@ country_event = { # Feds appointed
 	}
 	
 }
+
+country_event = { # Feds appointed
+	id = newengland.1060
+	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.1060"}
+	title = newengland.1060.t
+	desc = newengland.1060.d
+	
+	picture = GFX_report_event_generic_diplomacy2
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = { # Baron Fairhaven
+		name = newengland.1060.a
+		set_country_flag = NEE_GOV_APPOINTED
+		add_political_power = 15
+		add_stability = -0.05
+		add_manpower = 500
+		army_experience = 20
+		add_popularity = { ideology = paternal_autocrat popularity = -0.02 }
+		CAN = {
+		add_political_power = 50
+		add_stability = 0.03
+		add_opinion_modifier = { target = NEE modifier = medium_increase }
+		}
+		set_politics = {
+			ruling_party = paternal_autocrat
+			last_election = "1936.11.16"
+			elections_allowed = no
+		}
+		set_party_name = {
+			ideology = paternal_autocrat
+			long_name = NEE_Dominionist_party_long
+			name = NEE_Dominionist_party 
+		}
+		hidden_effect = {
+			add_ideas = NEE_Robert_Shaw_hog_pau
+			add_ideas = NEE_Frank_Hale_for_pau
+			add_ideas = NEE_Viscount_Astor_eco_pau
+			add_ideas = NEE_William_Thaw_sec_pau
+		}
+		hidden_effect = {
+			create_country_leader = {
+				name = "Baron Fairhaven"
+				desc = "NEE_BARON_FAIRHAVEN_DESC"
+				picture = "gfx/leaders/NEE/Portrait_NEE_Baron_Fairhaven.tga"
+				expire = "1965.1.1"
+				ideology = paternal_autocrat_subtype
+				traits = { the_shy_peer }
+			}
+		}
+	}
+	option = { # August Derleth 
+		name = newengland.1060.b
+		set_country_flag = NEE_GOV_APPOINTED
+		add_political_power = 35
+		add_popularity = { ideology = paternal_autocrat popularity = 0.03 }
+		add_stability = 0.03
+		CAN = {
+		add_political_power = 10
+		add_stability = 0.02
+		add_opinion_modifier = { target = NEE modifier = small_increase }
+		}
+		set_politics = {
+			ruling_party = paternal_autocrat
+			last_election = "1936.11.16"
+			elections_allowed = no
+		}
+		set_party_name = {
+			ideology = paternal_autocrat
+			long_name = NEE_Dominionist_party_long
+			name = NEE_Dominionist_party 
+		}
+		hidden_effect = {
+			add_ideas = NEE_Robert_Shaw_hog_pau
+			add_ideas = NEE_Frank_Hale_for_pau
+			add_ideas = NEE_Viscount_Astor_eco_pau
+			add_ideas = NEE_William_Thaw_sec_pau
+		}
+		hidden_effect = {
+			create_country_leader = {
+				name = "August Delerth"
+				desc = "NEE_AUGUST_DERLETH_DESC"
+				picture = "gfx/leaders/NEE/Portrait_NEE_August_Derleth.tga"
+				expire = "1965.1.1"
+				ideology = paternal_autocrat_subtype
+				traits = { popular_author }
+			}
+		}
+	}
+	
+	option = { # Cornelius Vanderbilt III
+		name = newengland.1060.c
+		set_country_flag = NEE_GOV_APPOINTED
+		add_political_power = 30
+		add_popularity = { ideology = paternal_autocrat popularity = 0.05 }
+		add_stability = 0.02
+		CAN = {
+		add_political_power = 20
+		add_stability = 0.01
+		add_opinion_modifier = { target = NEE modifier = small_increase }
+		}
+		set_politics = {
+			ruling_party = paternal_autocrat
+			last_election = "1936.11.16"
+			elections_allowed = no
+		}
+		set_party_name = {
+			ideology = paternal_autocrat
+			long_name = NEE_Dominionist_party_long
+			name = NEE_Dominionist_party 
+		}
+		hidden_effect = {
+			add_ideas = NEE_Robert_Shaw_hog_pau
+			add_ideas = NEE_Frank_Hale_for_pau
+			add_ideas = NEE_Viscount_Astor_eco_pau
+			add_ideas = NEE_William_Thaw_sec_pau
+		}
+		hidden_effect = {
+			create_country_leader = {
+				name = "Cornelius Vanderbilt III"
+				desc = "NEE_CORNELIUS_VANDERBILT_III_DESC"
+				picture = "gfx/leaders/NEE/Portrait_NEE_Cornelius_Vanderbilt_III.tga"
+				expire = "1965.1.1"
+				ideology = paternal_autocrat_subtype
+				traits = { elite_family_ties }
+			}
+		}
+	}
+}
+
+country_event = { #New Executive Powers
+	id = newengland.1061
+	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.1061"}
+	title = newengland.1061.t
+	desc = newengland.1061.d
+	
+	picture = GFX_report_event_USA_congress
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = { # Military
+		name = newengland.1061.a
+		add_ideas = NEE_gov_military
+		add_popularity = { ideology = paternal_autocrat popularity = 0.03 }
+		add_stability = 0.02
+		add_political_power = -5
+		}
+	option = { # Laws
+		name = newengland.1061.b
+		add_ideas = NEE_gov_laws
+		add_popularity = { ideology = paternal_autocrat popularity = 0.01 }
+		add_stability = 0.04
+		add_political_power = -15
+		}
+	option = { # Courts
+		name = newengland.1061.b
+		add_ideas = NEE_gov_laws
+		add_popularity = { ideology = paternal_autocrat popularity = -0.02 }
+		add_stability = -0.01
+		add_political_power = 25
+		}
+	}
+
+country_event = { #Oath of Loyalty
+	id = newengland.1062
+	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.1062"}
+	title = newengland.1062.t
+	desc = newengland.1062.d
+	
+	picture = GFX_report_event_USA_congress
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = { # Hurrah
+		name = newengland.1062.a
+		add_popularity = { ideology = paternal_autocrat popularity = 0.05 }
+		add_stability = 0.01
+		add_political_power = 15
+		}
+	}
+
+country_event = { #Everyday Life in New England
+	id = newengland.1063
+	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.1063"}
+	title = newengland.1063.t
+	desc = newengland.1063.d
+	
+	picture = GFX_event_NEE_Everyday_Life
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = { # Hurrah
+		name = newengland.1063.a
+		add_stability = 0.01
+		add_political_power = 5
+		}
+	}
+
+country_event = { #Royal Coronation
+	id = newengland.1064
+	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.1064"}
+	title = newengland.1064.t
+	desc = newengland.1064.d
+	
+	picture = GFX_event_NEE_Coronation
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = { # Magnificent
+		name = newengland.1064.a
+		add_popularity = { ideology = paternal_autocrat popularity = 0.05 }
+		add_stability = 0.03
+		add_political_power = 20
+		CAN = {
+		add_political_power = 50
+		add_stability = 0.01
+		add_opinion_modifier = { target = NEE modifier = medium_increase }
+			}
+		}
+	}
+
+country_event = { #Viscount Kennedy
+	id = newengland.1065
+	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.1065"}
+	title = newengland.1065.t
+	desc = newengland.1065.d
+	
+	picture = GFX_event_NEE_Coronation
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = { # Yes
+		name = newengland.1065.a
+		add_popularity = { ideology = social_conservative popularity = 0.02 }
+		add_stability = 0.01
+		add_political_power = 5
+		}
+	option = { # No
+		name = newengland.1065.b
+		add_popularity = { ideology = social_conservative popularity = -0.02 }
+		add_political_power = -3
+		}
+	}
+
+country_event = { #Baron Rockefeller
+	id = newengland.1066
+	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.1066"}
+	title = newengland.1066.t
+	desc = newengland.1066.d
+	
+	picture = GFX_event_NEE_Coronation
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = { # Yes
+		name = newengland.1066.a
+		add_popularity = { ideology = market_liberal popularity = 0.02 }
+		add_popularity = { ideology = social_liberal popularity = 0.01 }
+		add_stability = -0.02
+		add_political_power = 20
+		}
+	option = { # No
+		name = newengland.1066.b
+		add_popularity = { ideology = market_liberal popularity = -0.01 }
+		add_popularity = { ideology = social_liberal popularity = -0.02 }
+		add_stability = 0.03
+		add_political_power = -12
+		}
+	}
+
+country_event = { #Earl Nahant
+	id = newengland.1067
+	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.1067"}
+	title = newengland.1067.t
+	desc = newengland.1067.d
+	
+	picture = GFX_event_NEE_Coronation
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = { # Yes
+		name = newengland.1067.a
+		add_popularity = { ideology = market_liberal popularity = 0.02 }
+		add_popularity = { ideology = social_liberal popularity = 0.01 }
+		add_stability = -0.02
+		add_political_power = 20
+		}
+	option = { # No
+		name = newengland.1067.b
+		add_popularity = { ideology = market_liberal popularity = -0.01 }
+		add_popularity = { ideology = social_liberal popularity = -0.02 }
+		add_stability = 0.03
+		add_political_power = -12
+		}
+	}
 
 country_event = { # Feds appointed
 	id = newengland.107
@@ -6078,7 +6407,7 @@ country_event = { # Federalist Party Sworn in
 		}
 	}
 	
-	country_event = { # Investigate sailors
+country_event = { # Investigate sailors
 	id = newengland.108
 	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.108"}
 	title = newengland.108.t
@@ -6408,7 +6737,6 @@ country_event = { # Out of the Frying Pot
 
 	option = { # Great
 		name = newengland.119.a
-		set_country_flag = NEE_Radicals_Win
 		add_political_power = 20
 		add_popularity = { ideology = market_liberal popularity = 0.04 }
 		add_popularity = { ideology = paternal_autocrat popularity = 0.03 }
@@ -6453,6 +6781,7 @@ country_event = { # Radical Split
 			elections_allowed = yes
 		}
 		set_country_flag = NEE_sentinels
+		set_country_flag = NEE_Radicals_Win
 		create_country_leader = {
 			name = "Irenee du Pont"
 			desc = "POLITICS_IRENEE_DU_PONT_DESC"
@@ -6489,6 +6818,7 @@ country_event = { # Radical Split
 			days = 4
 		}
 		set_country_flag = NEE_remnant_victory
+		set_country_flag = NEE_Radicals_Win
 		hidden_effect = {
 			set_cosmetic_tag = NEE_paternal_autocrat_ancap
 		}
@@ -6516,8 +6846,7 @@ country_event = { # Radical Split
 		add_stability = 0.02
 		set_politics = {
 			ruling_party = national_populist
-			election_frequency = 48
-			elections_allowed = yes
+			elections_allowed = no
 		}
 		set_party_name = {
 			ideology = national_populist
@@ -7204,8 +7533,8 @@ country_event = { #Ban Immigration
 		ai_chance = {
 			factor = 50
 		}
-		add_political_power = 10
-		add_manpower = 4000
+		add_political_power = 40
+		add_manpower = -4000
 		USA = {
 		add_opinion_modifier = { target = NEE modifier = ITA_dislikes_govt }
 		}
@@ -7284,7 +7613,7 @@ country_event = { #Ban Immigration
 		ai_chance = {
 			factor = 50
 		}
-		add_political_power = 20
+		add_political_power = 80
 		add_manpower = -2000
 		POR = {
 		add_opinion_modifier = { target = NEE modifier = ITA_dislikes_govt }
@@ -7429,24 +7758,24 @@ country_event = { # Klan Agreement
 		add_manpower = -800
 		add_equipment_to_stockpile = {
 			type = fighter_equipment
-			amount = -200
+			amount = -400
 			producer = NEE
 			}
 			add_equipment_to_stockpile = {
 			type = infantry_equipment
-			amount = -500
+			amount = -600
 			producer = NEE
 			}
 			COR = {
 			add_manpower = 800
 			add_equipment_to_stockpile = {
 			type = fighter_equipment
-			amount = 200
+			amount = 400
 			producer = NEE
 			}
 			add_equipment_to_stockpile = {
 			type = infantry_equipment
-			amount = 500
+			amount = 600
 			producer = NEE
 				}
 			}
@@ -7458,24 +7787,24 @@ country_event = { # Klan Agreement
 		add_manpower = -2000
 		add_equipment_to_stockpile = {
 			type = fighter_equipment
-			amount = -250
+			amount = -150
 			producer = NEE
 			}
 			add_equipment_to_stockpile = {
 			type = infantry_equipment
-			amount = -600
+			amount = -300
 			producer = NEE
 			}
 			COR = {
 			add_manpower = 2000
 			add_equipment_to_stockpile = {
 			type = fighter_equipment
-			amount = 250
+			amount = 150
 			producer = NEE
 				}
 			add_equipment_to_stockpile = {
 			type = infantry_equipment
-			amount = 600
+			amount = 300
 			producer = NEE
 				}
 			}
@@ -7632,6 +7961,13 @@ country_event = {# Intervene in the South
 	
 	option = {# Nah
 		name = newengland.168.b
+		add_political_power = -25
+		add_war_support = -0.05
+		add_manpower = -50
+	}
+
+	option = {# A Third Option...
+		name = newengland.168.c
 		add_political_power = -25
 		add_war_support = -0.05
 		add_manpower = -50
@@ -7809,7 +8145,7 @@ country_event = { # Better Babies Contests
 		ai_chance = {	
 		factor = 50 	
 		}
-               		add_political_power = 3
+               		add_political_power = 5
 	}
 }
 
@@ -7849,7 +8185,7 @@ country_event = { # Negro Project
 		factor = 40 	
 		}
 	        	add_manpower = -50
-                		add_political_power = -3
+                		add_political_power = -5
                 		add_stability = 0.05
 		add_popularity = { ideology = national_populist popularity = 0.03 }
 	}
@@ -7901,7 +8237,7 @@ country_event = { # The Jewish Question
 		}
 	        	add_manpower = -150
                 		add_political_power = -20
-                		add_stability = -0.01
+                		add_stability = -0.05
 		add_popularity = { ideology = national_populist popularity = 0.05 }
 	}
         	option = { #Science!
@@ -7911,7 +8247,7 @@ country_event = { # The Jewish Question
 		}	     
 	        	add_manpower = -100
                 		add_political_power = -80
-                		add_stability = 0.01
+                		add_stability = 0.05
 		add_popularity = { ideology = national_populist popularity = 0.05 }
 	}
 }
@@ -7943,7 +8279,7 @@ country_event = { # Superman
 		ai_chance = {	
 		factor = 50 	
 		}
-                		add_political_power = 1 
+                		add_political_power = 5 
 	}
        	option = { #educational campaign  
 		name = newengland.177.b 
@@ -7959,7 +8295,7 @@ country_event = { # Superman
 		factor = 20 	
 		}     	
                 		add_political_power = -25
-                		add_stability = 0.01
+                		add_stability = 0.02
 	}
 }
 
@@ -7987,7 +8323,7 @@ country_event = { #  Lombroso
 		ai_chance = {	
 		factor = 90 	
 		}
-                		add_political_power = 1
+                		add_political_power = 3
                 		add_stability = -0.01
 	}
        	option = { #WTF minority raport
@@ -8022,7 +8358,7 @@ country_event = { #  Christians
 
        	option = { #legalism
 		name = newengland.179.a 
-                		add_political_power = -1
+                		add_political_power = -5
                 		add_stability = -0.1
 	}
 }

@@ -1632,8 +1632,8 @@ ideas = {
 		}
 		COR_Liberia_plan_idea = {# Liberia Plan
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea COR_Liberia_plan_idea"}
-			allowed = { always = no }
-			available = { has_government = national_populist }
+			allowed = { always = yes }
+			available = { has_government = social_conservative }
 			removal_cost = -1
 			picture = liberia_plan
 			modifier = {

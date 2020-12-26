@@ -332,6 +332,8 @@ country_event = { # WCC released
 	desc = amcivwar.3000.d
 	picture = GFX_event_WCC_Denver
 
+	fire_only_once = yes
+
 	is_triggered_only = yes
 
 	immediate = {
@@ -2764,6 +2766,7 @@ country_event = { ### Voting Begins ###
 	is_triggered_only = yes
 	
 	option = {
+	name = amcivwar.5005.a
 	add_political_power = 25
 	add_stability = 0.05
 	increase_ruling_party_popularity_by_5 = yes
@@ -3177,6 +3180,8 @@ country_event = { # Huey Long declares Rebellion against MacArthur
 	desc = amcivwar.6.d
 	picture = GFX_report_event_USA_Long_Rally
 
+	fire_only_once = yes
+
 	is_triggered_only = yes
 
 	immediate = {
@@ -3229,6 +3234,8 @@ country_event = { # Old Democrats Breakoff
 	id = amcivwar.6000
 	title = amcivwar.6000.t
 	picture = GFX_USA_murray
+
+	fire_only_once = yes
 
 	is_triggered_only = yes
 
@@ -3313,6 +3320,8 @@ country_event = { # Jack Reed declares revolution against MacArthur
 	desc = amcivwar.7.d
 	picture = GFX_report_event_USA_reed
 
+	fire_only_once = yes
+
 	is_triggered_only = yes
 
 	immediate = {
@@ -3382,6 +3391,8 @@ country_event = { # Pacific States declares revolution against MacArthur
 	title = amcivwar.8.t
 	desc = amcivwar.8.d
 	picture = GFX_report_event_CAL_golden_gate_crowd
+
+	fire_only_once = yes
 
 	is_triggered_only = yes
 
@@ -4240,6 +4251,44 @@ country_event = { # Results are in
 		}
 	}
 	}
+	option = {
+	name = amcivwar.1026.c
+	if = {
+	limit = {
+	COR = {
+	exists = yes
+	has_global_flag = ACW_RUSSELL_ACCEPTS_PEACE
+		}
+	}
+	CAL = {
+	annex_country = {
+	target = COR
+	transfer_troops = no
+			}
+		}
+	}
+	CAL = {
+			change_tag_from = COR
+		}
+	}
+	option = {
+	name = amcivwar.1026.e
+	trigger = {
+	COR = {
+	exists = yes
+	has_global_flag = ACW_RUSSELL_ACCEPTS_PEACE
+		}
+	}
+	COR = {
+	annex_country = {
+	target = CAL
+	transfer_troops = no
+		}
+	}
+	COR = {
+			change_tag_from = CAL
+		}
+	}
 }
 
 country_event = { # Last Men Standing
@@ -4603,6 +4652,10 @@ country_event = {
 			election_frequency = 48
 			elections_allowed = yes
 			}
+		add_timed_idea = {
+				idea = USA_righteous_nation_2
+				days = 360
+			}
 		}
 		if = {
 		limit = {
@@ -4621,6 +4674,10 @@ country_event = {
 			election_frequency = 48
 			elections_allowed = yes
 			}
+		add_timed_idea = {
+				idea = USA_righteous_nation_2
+				days = 360
+			}
 		}
 		if = {
 		limit = {
@@ -4638,6 +4695,10 @@ country_event = {
 			ruling_party = market_liberal
 			election_frequency = 48
 			elections_allowed = yes
+			}
+		add_timed_idea = {
+				idea = USA_righteous_nation_2
+				days = 360
 			}
 		}
 	}
@@ -10272,15 +10333,27 @@ country_event = {
 				transfer_state = 386
 				}
 			}
-		}
-			if = {
+			}
+		if = {
 			every_state = {
 			limit = {
+				OR = {
 				state = 382
 				OR = {
 					is_owned_by = TEX
 					owner = {
 						is_subject_of = TEX
+						}
+					}
+				AND = {
+				state = 1112
+				state = 388
+				}
+				OR = {
+					is_owned_by = TEX
+					owner = {
+						is_subject_of = TEX
+						}
 					}
 				}
 				}
@@ -10294,14 +10367,26 @@ country_event = {
 				}
 			}
 			}
-			if = {
+		else_if = {
 			every_state = {
 			limit = {
+				OR = {
 				state = 382
 				OR = {
 					is_owned_by = CAL
 					owner = {
 						is_subject_of = CAL
+						}
+					}
+				AND = {
+				state = 1112
+				state = 388
+				}
+				OR = {
+					is_owned_by = CAL
+					owner = {
+						is_subject_of = CAL
+						}
 					}
 				}
 				}
@@ -10315,14 +10400,26 @@ country_event = {
 				}
 			}
 			}
-			if = {
+		else_if = {
 			every_state = {
 			limit = {
+				OR = {
 				state = 382
 				OR = {
 					is_owned_by = COR
 					owner = {
 						is_subject_of = COR
+						}
+					}
+				AND = {
+				state = 1112
+				state = 388
+				}
+				OR = {
+					is_owned_by = COR
+					owner = {
+						is_subject_of = COR
+						}
 					}
 				}
 				}
@@ -10336,10 +10433,17 @@ country_event = {
 				}
 			}
 			}
-			if = {
+		else_if = {
 			every_state = {
 			limit = {
+				OR = {
 				state = 382
+				is_owned_by = USA
+				}
+				AND = {
+				state = 1112
+				state = 388
+				}
 				is_owned_by = USA
 				}
 				USA = {
@@ -10352,14 +10456,26 @@ country_event = {
 				}
 			}
 			}
-			if = {
+		else_if = {
 			every_state = {
 			limit = {
+				OR = {
 				state = 382
 				OR = {
 					is_owned_by = CSA
 					owner = {
 						is_subject_of = CSA
+						}
+					}
+				AND = {
+				state = 1112
+				state = 388
+				}
+				OR = {
+					is_owned_by = CSA
+					owner = {
+						is_subject_of = CSA
+						}
 					}
 				}
 				}
@@ -10373,14 +10489,26 @@ country_event = {
 				}
 			}
 			}
-			if = {
+		else_if = {
 			every_state = {
 			limit = {
+				OR = {
 				state = 382
 				OR = {
 					is_owned_by = BBR
 					owner = {
 						is_subject_of = BBR
+						}
+					}
+				AND = {
+				state = 1112
+				state = 388
+				}
+				OR = {
+					is_owned_by = BBR
+					owner = {
+						is_subject_of = BBR
+						}
 					}
 				}
 				}
@@ -10394,14 +10522,26 @@ country_event = {
 				}
 			}
 			}
-			if = {
+		else_if = {
 			every_state = {
 			limit = {
+				OR = {
 				state = 382
 				OR = {
 					is_owned_by = NEE
 					owner = {
 						is_subject_of = NEE
+						}
+					}
+				AND = {
+				state = 1112
+				state = 388
+				}
+				OR = {
+					is_owned_by = NEE
+					owner = {
+						is_subject_of = NEE
+						}
 					}
 				}
 				}
@@ -10412,8 +10552,8 @@ country_event = {
 				transfer_state = 382
 				transfer_state = 376
 				set_country_flag = WCC_annexation
-					}
 				}
+			}
 			}
 		}
 	}
@@ -15773,7 +15913,7 @@ country_event = { # Panama Garrison
 	}
 }
 
-country_event = { #Event to Weaken Dying Factions (99%)
+country_event = { #Event to Weaken Dying Factions (99%) (CSA)
 	id = amcivwar.1313
 	title = amcivwar.1313.t
 	desc = amcivwar.1313.d
@@ -15782,33 +15922,155 @@ country_event = { #Event to Weaken Dying Factions (99%)
 	fire_only_once = yes
 
 	trigger = {
-	OR = {
-	AND = {
-	tag = CSA
-	CSA = {
-	surrender_progress > 0.98
-	}}
-	AND = {
-	tag = COR
-	COR = {
-	surrender_progress > 0.98
-	}}
-	AND = {
-	tag = TEX
-	TEX = {
-	surrender_progress > 0.98
-	}}
-	AND = {
-	tag = USA
-	USA = {
-	surrender_progress > 0.98
-	}}
-	AND = {
-	tag = WCC
-	WCC = {
-	surrender_progress > 0.98
-	}}
+		CSA = {
+		is_ai = yes
+		surrender_progress > 0.98
+		}
 	}
+	
+	mean_time_to_happen = {
+	days = 3
+	}
+	
+	option = { #We're dead
+		name = amcivwar.1313.a
+		ai_chance = {
+			factor = 100
+		}
+		add_political_power = -400
+		add_ideas = ACW_war_failing
+	}
+}
+
+country_event = { #Event to Weaken Dying Factions (99%) (COR)
+	id = amcivwar.1314
+	title = amcivwar.1313.t
+	desc = amcivwar.1313.d
+	picture = GFX_report_event_USA_soldiers_running
+		
+	fire_only_once = yes
+
+	trigger = {
+		COR = {
+		is_ai = yes
+		surrender_progress > 0.98
+		}
+	}
+	
+	mean_time_to_happen = {
+	days = 3
+	}
+	
+	option = { #We're dead
+		name = amcivwar.1313.a
+		ai_chance = {
+			factor = 100
+		}
+		add_political_power = -400
+		add_ideas = ACW_war_failing
+	}
+}
+
+country_event = { #Event to Weaken Dying Factions (99%) (USA)
+	id = amcivwar.1315
+	title = amcivwar.1313.t
+	desc = amcivwar.1313.d
+	picture = GFX_report_event_USA_soldiers_running
+		
+	fire_only_once = yes
+
+	trigger = {
+		USA = {
+		is_ai = yes
+		surrender_progress > 0.98
+		}
+	}
+	
+	mean_time_to_happen = {
+	days = 3
+	}
+	
+	option = { #We're dead
+		name = amcivwar.1313.a
+		ai_chance = {
+			factor = 100
+		}
+		add_political_power = -400
+		add_ideas = ACW_war_failing
+	}
+}
+
+country_event = { #Event to Weaken Dying Factions (99%) (TEX)
+	id = amcivwar.1316
+	title = amcivwar.1313.t
+	desc = amcivwar.1313.d
+	picture = GFX_report_event_USA_soldiers_running
+		
+	fire_only_once = yes
+
+	trigger = {
+		TEX = {
+		is_ai = yes
+		surrender_progress > 0.98
+		}
+	}
+	
+	mean_time_to_happen = {
+	days = 3
+	}
+	
+	option = { #We're dead
+		name = amcivwar.1313.a
+		ai_chance = {
+			factor = 100
+		}
+		add_political_power = -400
+		add_ideas = ACW_war_failing
+	}
+}
+
+country_event = { #Event to Weaken Dying Factions (99%) (BBR)
+	id = amcivwar.1317
+	title = amcivwar.1313.t
+	desc = amcivwar.1313.d
+	picture = GFX_report_event_USA_soldiers_running
+		
+	fire_only_once = yes
+
+	trigger = {
+		BBR = {
+		is_ai = yes
+		surrender_progress > 0.98
+		}
+	}
+	
+	mean_time_to_happen = {
+	days = 3
+	}
+	
+	option = { #We're dead
+		name = amcivwar.1313.a
+		ai_chance = {
+			factor = 100
+		}
+		add_political_power = -400
+		add_ideas = ACW_war_failing
+	}
+}
+
+country_event = { #Event to Weaken Dying Factions (99%) (CAL)
+	id = amcivwar.1318
+	title = amcivwar.1313.t
+	desc = amcivwar.1313.d
+	picture = GFX_report_event_USA_soldiers_running
+		
+	fire_only_once = yes
+
+	trigger = {
+		CAL = {
+		is_ai = yes
+		surrender_progress > 0.98
+		}
 	}
 	
 	mean_time_to_happen = {

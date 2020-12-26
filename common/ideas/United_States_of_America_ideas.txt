@@ -297,16 +297,8 @@ ideas = {
 			picture = usa_great_depression_2
 			cancel_if_invalid = no
 			available = {
-				OR = {
-				tag = CSA
-				tag = COR
-				tag = USA
-				tag = BBR
-				tag = CAL
-				tag = WCC
-				tag = NEE
-				}
-				surrender_progress > 0.95
+				has_global_flag = USA_civil_war_begun_flag
+				NOT = { has_global_flag = USA_civil_war_over_flag }
 			}
 			modifier = {
 				unit_limit_ACW_in_progress = -0.15
@@ -1192,6 +1184,19 @@ ideas = {
 		### Mac and Cheese ###
 		USA_righteous_nation = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea USA_righteous_nation"}
+			allowed = { always = no }
+			removal_cost = -1
+			picture = FRA_national_mobilization_focus
+			modifier = {
+				army_morale_factor = 0.20
+				land_reinforce_rate = 0.10
+				army_speed_factor = 0.15
+				local_manpower = 0.1
+				stability_factor = 0.1
+			}
+		}
+		USA_righteous_nation_2 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea USA_righteous_nation_2"}
 			allowed = { always = no }
 			removal_cost = -1
 			picture = FRA_national_mobilization_focus

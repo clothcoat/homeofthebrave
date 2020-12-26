@@ -1512,7 +1512,7 @@ USA_reconstruction_decisions = {# Reconstruction Stuff
 		}
 		visible = {
 			OR = {
-				tag = CAL
+				has_completed_focus = CAL_begin_reconstruction
 				has_completed_focus = BBR_a_new_america
 				has_completed_focus = USA_begin_reconstruction
 				has_completed_focus = CSA_reconstruction
@@ -1602,7 +1602,7 @@ USA_reconstruction_decisions = {# Reconstruction Stuff
 		}
 		visible = {
 			OR = {
-				tag = CAL
+				has_completed_focus = USA_begin_reconstruction
 				has_completed_focus = BBR_a_new_america
 				has_completed_focus = USA_begin_reconstruction
 				has_completed_focus = CSA_reconstruction
@@ -1705,7 +1705,7 @@ USA_reconstruction_decisions = {# Reconstruction Stuff
 		}
 		visible = {
 			OR = {
-				tag = CAL
+				has_completed_focus = USA_begin_reconstruction
 				has_completed_focus = BBR_a_new_america
 				has_completed_focus = USA_begin_reconstruction
 				has_completed_focus = CSA_reconstruction
@@ -1810,7 +1810,7 @@ USA_reconstruction_decisions = {# Reconstruction Stuff
 		}
 		visible = {
 			OR = {
-				tag = CAL
+				has_completed_focus = USA_begin_reconstruction
 				has_completed_focus = BBR_a_new_america
 				has_completed_focus = USA_begin_reconstruction
 				has_completed_focus = CSA_reconstruction
@@ -1904,7 +1904,7 @@ USA_reconstruction_decisions = {# Reconstruction Stuff
 		}
 		visible = {
 			OR = {
-				tag = CAL
+				has_completed_focus = USA_begin_reconstruction
 				has_completed_focus = BBR_a_new_america
 				has_completed_focus = USA_begin_reconstruction
 				has_completed_focus = CSA_reconstruction
@@ -1992,11 +1992,12 @@ USA_reconstruction_decisions = {# Reconstruction Stuff
 			1100 = { is_owned_and_controlled_by = ROOT }
 			1103 = { is_owned_and_controlled_by = ROOT }
 			1107 = { is_owned_and_controlled_by = ROOT }
+			1110 = { is_owned_and_controlled_by = ROOT }
 			1111 = { is_owned_and_controlled_by = ROOT }
 		}
 		visible = {
 			OR = {
-				tag = CAL
+				has_completed_focus = USA_begin_reconstruction
 				has_completed_focus = BBR_a_new_america
 				has_completed_focus = USA_begin_reconstruction
 				has_completed_focus = CSA_reconstruction
@@ -2022,6 +2023,7 @@ USA_reconstruction_decisions = {# Reconstruction Stuff
 					1100 = { is_core_of = ROOT }
 					1103 = { is_core_of = ROOT }
 					1107 = { is_core_of = ROOT }
+					1110 = { is_core_of = ROOT }
 					1111 = { is_core_of = ROOT }
 				}
 			}
@@ -2049,7 +2051,8 @@ USA_reconstruction_decisions = {# Reconstruction Stuff
 						state = 1100
 						state = 1103
 						state = 1107
-						state = 1101
+						state = 1110
+						state = 1111
 					}
 				}
 				remove_ACW_cores = yes
@@ -2089,7 +2092,7 @@ USA_reconstruction_decisions = {# Reconstruction Stuff
 		}
 		visible = {
 			OR = {
-				tag = CAL
+				has_completed_focus = USA_begin_reconstruction
 				has_completed_focus = BBR_a_new_america
 				has_completed_focus = USA_begin_reconstruction
 				has_completed_focus = CSA_reconstruction
@@ -2163,7 +2166,7 @@ USA_reconstruction_decisions = {# Reconstruction Stuff
 		}
 		visible = {
 			OR = {
-				tag = CAL
+				has_completed_focus = USA_begin_reconstruction
 				has_completed_focus = BBR_a_new_america
 				has_completed_focus = USA_begin_reconstruction
 				has_completed_focus = CSA_reconstruction
@@ -2217,7 +2220,7 @@ USA_reconstruction_decisions = {# Reconstruction Stuff
 		}
 		visible = {
 			OR = {
-				tag = CAL
+				has_completed_focus = USA_begin_reconstruction
 				has_completed_focus = BBR_a_new_america
 				has_completed_focus = USA_begin_reconstruction
 				has_completed_focus = CSA_reconstruction
@@ -2289,7 +2292,7 @@ USA_reconstruction_decisions = {# Reconstruction Stuff
 		}
 		visible = {
 			OR = {
-				tag = CAL
+				has_completed_focus = USA_begin_reconstruction
 				has_completed_focus = BBR_a_new_america
 				has_completed_focus = USA_begin_reconstruction
 				has_completed_focus = CSA_reconstruction

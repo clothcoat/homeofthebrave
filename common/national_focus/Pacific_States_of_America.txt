@@ -4995,6 +4995,19 @@ focus_tree = {
 			focus = CAL_traditional_machines
 			focus = CAL_end_jim_crow
 		}
+		available = {
+			OR = {
+			has_country_flag = CAL_Hearst_War
+			has_government = radical_socialist
+			has_government = social_democrat
+			has_government = social_liberal
+			has_government = market_liberal
+			has_government = social_conservative
+			has_government = authoritarian_democrat
+			has_government = paternal_autocrat
+			has_government = national_populist
+			}
+		}
 		mutually_exclusive = {
 			focus = CAL_loyal_army
 			focus = CAL_salute_the_patriots
@@ -5031,6 +5044,16 @@ focus_tree = {
 		prerequisite = {
 			focus = CAL_traditional_machines
 			focus = CAL_end_jim_crow
+		}
+		available = {
+			OR = {
+			has_country_flag = CAL_Hearst_War
+			has_government = social_democrat
+			has_government = social_liberal
+			has_government = market_liberal
+			has_government = social_conservative
+			has_government = authoritarian_democrat
+			}
 		}
 		mutually_exclusive = {
 			focus = CAL_trial_of_the_federalists
@@ -5069,6 +5092,9 @@ focus_tree = {
 		prerequisite = {
 			focus = CAL_traditional_machines
 			focus = CAL_end_jim_crow
+		}
+		available = {
+			has_country_flag = CAL_Hearst_Peace
 		}
 		mutually_exclusive = {
 			focus = CAL_trial_of_the_federalists
@@ -8152,7 +8178,6 @@ focus_tree = {
 				has_government = market_liberal
 				has_government = social_liberal
 			}
-			has_idea = CAL_economic_recovery_idea
 		}
 		ai_will_do = {
 			factor = 5

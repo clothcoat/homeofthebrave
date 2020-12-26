@@ -3914,10 +3914,6 @@ focus_tree = {
 		icon = GFX_goal_CSA_resource_nationalisation
 		cost = 7.25
 		available = {
-			custom_trigger_tooltip = {
-				tooltip = CSA_foster_is_leader
-				has_country_leader = { ruling_only = yes name = "William Z. Foster" }
-			}
 			has_government = totalist
 		}
 		cancel_if_invalid = yes
@@ -8740,7 +8736,9 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_join_the_internationale"
-			country_event = csa.101
+			INT = {
+				country_event = { id = csa.101 days = 1 }
+			}
 		}
 	}
 	
