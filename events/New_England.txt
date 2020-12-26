@@ -5742,6 +5742,10 @@ country_event = { # The Great Strike
 					has_game_rule = {
 						rule = NEE_start_path
 						option = NEE_START_PATH_REMNANT
+					}
+					has_game_rule = {
+						rule = NEE_start_path
+						option = NEE_START_PATH_DOMINION
 					}	
 				}
 			}
@@ -5826,6 +5830,13 @@ country_event = { # Canada's Decision
 	option = { # Feds appointed
 		ai_chance = {
 			factor = 33
+			modifier = {
+				factor = 0												has_game_rule = {
+						rule = NEE_start_path
+						option = NEE_START_PATH_DOMINION
+					}
+				}
+			}
 		}
 		name = newengland.105.a
 		add_political_power = 50
@@ -5868,6 +5879,9 @@ country_event = { # Canada's Decision
 					has_game_rule = {
 						rule = NEE_start_path
 						option = NEE_START_PATH_REMNANT
+					}											has_game_rule = {
+						rule = NEE_start_path
+						option = NEE_START_PATH_DOMINION
 					}
 				}
 			}

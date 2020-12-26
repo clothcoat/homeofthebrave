@@ -8512,7 +8512,27 @@ news_event = { #Annexations
 		name = worldnews.500.b
 	}
 }
+# President Hoover
+news_event = {
+	id = worldnews.1017
+	immediate = { log = "[GetDateText]: [Root.GetName]: event worldnews.1010" }
+	title = worldnews.1017.t
+	desc = worldnews.1017.d
+	picture = GFX_news_event_USA_hoover
 
+	major = yes
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		wants_world_news = yes
+	}
+
+	option = {
+		name = worldnews.1017.a
+	}
+}
 news_event = { #NPP takes power in the AUS
 	id = worldnews.203
 	immediate = { log = "[GetDateText]: [Root.GetName]: event worldnews.203" }

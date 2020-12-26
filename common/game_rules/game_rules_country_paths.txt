@@ -1771,6 +1771,12 @@ NEE_start_path = {
 		allow_achievements = yes
 	}
 	option = {
+		name = NEE_START_PATH_DOMINION #PatAut2
+		text = "RULE_OPTION_NEE_START_PATH_DOMINION"
+		desc = "RULE_OPTION_NEE_START_PATH_DOMINION_DESC"
+		allow_achievements = yes
+	}
+	option = {
 		name = NEE_START_PATH_REMNANT #PatAut
 		text = "RULE_OPTION_NEE_START_PATH_REMNANT"
 		desc = "RULE_OPTION_NEE_START_PATH_REMNANT_DESC"

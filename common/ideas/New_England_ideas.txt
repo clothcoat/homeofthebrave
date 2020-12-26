@@ -988,7 +988,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NEE_racial_catalogues_idea"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = generic_reserve_divisions
+			picture = racial_catalogues
 			modifier = {
 				political_power_gain = 0.04
 				consumer_goods_factor = -0.02
