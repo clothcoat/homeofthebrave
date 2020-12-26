@@ -12290,6 +12290,139 @@ country_event = { # Time to Retreat?
 		}
 	}
 
+country_event = { #CSS Report: Jay Lovestone
+	id = csa.510
+	immediate = { log = "[GetDateText]: [Root.GetName]: event csa.510" }
+	title = csa.510.t
+	desc = csa.510.d
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = { #Increase Surveillance
+		name = csa.510.a
+		ai_chance = {
+			factor = 80
+		}
+		add_political_power = -10
+		CSA = {
+			country_event = {
+				id = csa.511
+				days = 6
+			}
+		}
+	}
+
+	option = { #Maintain Current Surveillance
+		name = csa.510.b
+		trigger = {
+			OR = {
+				is_ai = no
+				surrender_progress > 0.25
+			}
+		}
+		ai_chance = {
+			factor = 20
+		}
+
+		CSA = {
+			country_event = {
+				id = csa.514
+				days = 30
+			}
+		}
+	}
+}
+
+country_event = { #Lovestone Plots Against the CSS
+	id = csa.511
+	immediate = { log = "[GetDateText]: [Root.GetName]: event csa.511" }
+	title = csa.511.t
+	desc = csa.511.d
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = { #Increase Surveillance
+		name = csa.511.a
+		ai_chance = {
+			factor = 80
+		}
+		add_political_power = -10
+		CSA = {
+			country_event = {
+				id = csa.511
+				days = 6
+			}
+		}
+	}
+}
+
+country_event = { #Lovestone Coup Ended
+	id = csa.512
+	immediate = { log = "[GetDateText]: [Root.GetName]: event csa.512" }
+	title = csa.512.t
+	desc = csa.512.d
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = { #Blackmail him
+		name = csa.512.a
+		ai_chance = {
+			factor = 80
+		}
+		add_political_power = -10
+		CSA = {
+			country_event = {
+				id = csa.511
+				days = 6
+			}
+		}
+	}
+	option = { #Trial followed by Punishment
+		name = csa.512.a
+		ai_chance = {
+			factor = 80
+		}
+		add_political_power = -10
+		CSA = {
+			country_event = {
+				id = csa.511
+				days = 6
+			}
+		}
+	}
+}
+
+country_event = { #Lovestone Coup Ended
+	id = csa.512
+	immediate = { log = "[GetDateText]: [Root.GetName]: event csa.512" }
+	title = csa.512.t
+	desc = csa.512.d
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = { #Blackmail him
+		name = csa.512.a
+		ai_chance = {
+			factor = 80
+		}
+		add_political_power = -10
+		CSA = {
+			country_event = {
+				id = csa.511
+				days = 6
+			}
+		}
+	}
+}
+
 country_event = { #America demands Suriname!
 	id = csa.558
 	immediate = { log = "[GetDateText]: [Root.GetName]: event csa.558" }
