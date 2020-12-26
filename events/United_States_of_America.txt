@@ -2591,6 +2591,9 @@ country_event = { # The 1936 Election - You're Fucked (Or are you...)
 		add_manpower = 10500
 		add_stability = 0.02
 		hidden_effect = {
+			random_other_country = {
+				news_event = { id = worldnews.2202 days = 1 }
+			}
 			set_country_flag = USA_evacuation
 			set_country_flag = USA_had_1936_election
 			set_party_name = {
@@ -2638,6 +2641,9 @@ country_event = { # The 1936 Election - You're Fucked (Or are you...)
 		add_manpower = 6500
 		add_stability = -0.08
 		hidden_effect = {
+			random_other_country = {
+				news_event = { id = worldnews.2203 days = 1 }
+			}
 			set_country_flag = USA_macarthur_coup
 			set_country_flag = USA_had_1936_election
 			set_party_name = {
@@ -2711,7 +2717,7 @@ country_event = { # The 1936 Election - You're Fucked (Or are you...)
 
 		hidden_effect = {
 			random_other_country = {
-				news_event = { id = worldnews.97 days = 1 }
+				news_event = { id = worldnews.2201 days = 1 }
 			}
 			country_event = { id = ustates.36 days = 5 }
 			country_event = { id = ustates.3701 days = 7 }
@@ -2770,7 +2776,7 @@ country_event = { # The 1936 Election - You're Fucked (Or are you...)
 		hidden_effect = {
 			random_other_country = {
 				news_event = {
-					id = worldnews.2100
+					id = worldnews.2201
 					days = 1
 				}
 			}
