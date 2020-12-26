@@ -1880,6 +1880,202 @@ country_event = { # New Textbooks
 	}
 }
 
+country_event = { # Federal ban on mixed marriages
+	id = constate.1130 
+	title = constate.1130.t 
+	desc = constate.1130.d
+	picture =  GFX_report_event_generic_diplomacy1
+   	is_triggered_only = no
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = COR
+		OR = {
+		has_government = social_conservative
+		has_government = paternal_autocrat 
+		}
+		has_completed_focus = COR_reconstruction_is_over
+		has_completed_focus = COR_segregation_now
+		has_completed_focus = COR_states_rights
+		}
+
+		mean_time_to_happen = {
+		days = 100
+		}
+
+      	 option = { #Federal
+		name = constate.1130.a 
+		ai_chance = {	
+		factor = 25 	
+		}
+		add_political_power = -50
+		add_stability = -0.05
+		add_popularity = { ideology = social_conservative popularity = 0.03	}
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.05 }	
+		add_popularity = { ideology = paternal_autocrat popularity = 0.05 }
+		add_popularity = { ideology = national_populist popularity = 0.07 }   
+		}
+       	option = { #State
+		name = constate.1130.b 
+		ai_chance = {	
+		factor = 50 	
+		}
+		add_political_power = -5
+		add_popularity = { ideology = social_conservative popularity = 0.03	}	   
+		add_stability = 0.03
+		}
+     	  option = { #Presure on States
+		name = constate.1130.c 
+		ai_chance = {
+		factor = 25 	
+		}
+		add_political_power = -15
+		add_popularity = { ideology = social_conservative popularity = 0.05	}	   
+		add_stability = 0.02
+		}
+	}
+
+country_event = {
+	id = constate.1131 # Marihuana Tax Act
+	title = constate.1131.t 
+	desc = constate.1131.d
+	picture =  GFX_report_event_generic_diplomacy1
+      	is_triggered_only = no
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = COR
+		has_government = social_conservative		
+		has_completed_focus = COR_tackle_corruption
+		}
+
+		mean_time_to_happen = {
+		days = 25
+		}
+
+       	option = { #YES
+		name = constate.1131.a 
+		ai_chance = {	
+		factor = 50 	
+		}
+                		add_political_power = 5
+              		add_stability = -0.03
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.05 }
+		add_popularity = { ideology = social_conservative popularity = 0.03    }
+		}
+       	option = { #No
+		name = constate.1131.b 
+		ai_chance = {	
+		factor = 50 	
+		} 
+		add_popularity = { ideology = social_conservative popularity = -0.03	}
+		add_popularity = { ideology = authoritarian_democrat popularity = -0.01 }	
+		add_popularity = { ideology = paternal_autocrat popularity = -0.01 }
+		add_popularity = { ideology = national_populist popularity = -0.01 }   
+		}
+	}
+
+country_event = {
+	id = constate.1132 # Southern Companies promote the Southern way of life
+	title = constate.1132.t 
+	desc = constate.1132.d
+	picture =  GFX_report_event_generic_diplomacy1
+       	is_triggered_only = no
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = COR
+		OR = {
+		has_government = social_conservative
+		has_government = paternal_autocrat 
+		}
+		has_completed_focus = COR_reconstruction_is_over
+		has_completed_focus = COR_southern_stimulus
+		}
+
+		mean_time_to_happen = {
+		days = 25
+		}
+
+       	option = { #Yes :)
+		name = constate.1132.a 
+		add_stability = 0.01
+		add_popularity = { ideology = social_conservative popularity = 0.03    }
+		}
+	}
+
+country_event = { # Segregation in the Catholic Church
+	id = constate.1133 
+	title = constate.1133.t 
+	desc = constate.1133.d
+	picture =  GFX_report_event_generic_diplomacy1
+        	is_triggered_only = no
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = COR
+		has_completed_focus = COR_southern_stimulus
+		}
+
+		mean_time_to_happen = {
+		days = 25
+		}
+
+       	option = { #YES
+		name = constate.1133.a 
+		ai_chance = {	
+		factor = 50 	
+		}
+                		add_political_power = -15
+                		add_stability = 0.03
+		}
+       	option = { #No
+		name = constate.1133.b 
+		ai_chance = {	
+		factor = 50 
+		}
+		add_popularity = { ideology = social_conservative popularity = -0.01	}
+		add_popularity = { ideology = authoritarian_democrat popularity = -0.01 }	
+		add_popularity = { ideology = paternal_autocrat popularity = -0.01 }
+		add_popularity = { ideology = national_populist popularity = -0.01 }   
+		}
+	}
+
+
+country_event = { # 'I Married a Syndicalist'
+	id = constate.1134 
+	title = constate.1134.t 
+	desc = constate.1134.d
+	picture =  GFX_report_event_generic_diplomacy1
+        	is_triggered_only = no
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = COR
+		has_completed_focus =  COR_good_politics
+		}
+
+		mean_time_to_happen = {
+		days = 25
+		}
+
+       	option = { #Yes :)
+		name = constate.1134.a 
+		add_political_power = 25
+		add_popularity = { ideology = social_conservative popularity = 0.03    }
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.01 }
+		add_popularity = { ideology = totalist popularity = -0.05 }  
+		add_popularity = { ideology = syndicalist popularity = -0.05 }
+		add_popularity = { ideology = radical_socialist popularity = -0.05 }
+		add_popularity = { ideology = social_democrat popularity = -0.03 } 
+		}
+	}
+
 country_event = { # Simmons Death
 	id = constate.12
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.12"}
