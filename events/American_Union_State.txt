@@ -1049,7 +1049,6 @@ country_event = { # New Election
 			long_name = TEX_authoritarian_democrat_party_long
 			name = TEX_authoritarian_democrat_party }
 		}
-	}
 	hidden_effect = {
 		set_country_flag = AUS_election_occured
 		set_country_flag = AFP_Victory
@@ -1070,6 +1069,7 @@ country_event = { # New Election
 				id = unionstate.5104
 				days = 1460
 				random = 10
+			}
 		}
 	}
 	option = { # Christian Party
@@ -4040,7 +4040,6 @@ country_event = { #NPP absorbs the Farmer-Labor Party
 					type = industrial_complex
 					level = 1
 					instant_build = yes
-					province = 12588
 				}
 		}
 		add_popularity = { ideology = social_liberal popularity = -0.03 }

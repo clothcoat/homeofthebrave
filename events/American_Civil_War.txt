@@ -821,7 +821,7 @@ country_event = { # Demand BBR stand down
 
 	option = { ###The Revolt must rejoin
 	name = amcivwar.3003.a
-	ai_will_do = {
+	ai_chance = {
 			factor = 40
 	}
 	BBR = {
@@ -834,7 +834,7 @@ country_event = { # Demand BBR stand down
 
 	option = { ###Strike them now
 	name = amcivwar.3003.b
-	ai_will_do = {
+	ai_chance = {
 			factor = 10
 	}
 	declare_war_on = {
@@ -1201,7 +1201,7 @@ country_event = { # Demand BBR stand down (CSA)
     trigger = { 
 		BBR = { has_socialist_government = yes } 
 	}
-	ai_will_do = {
+	ai_chance = {
 			factor = 40
 	}
 
@@ -1209,7 +1209,7 @@ country_event = { # Demand BBR stand down (CSA)
 
 	option = { ###The Revolt must join the CSA
 	name = amcivwar.3007.b
-	ai_will_do = {
+	ai_chance = {
 			factor = 40
 	}
 	BBR = {
@@ -1227,7 +1227,7 @@ country_event = { # Demand BBR stand down (CSA)
 		} 
 	}
 	name = amcivwar.3007.c
-	ai_will_do = {
+	ai_chance = {
 			factor = 40
 	}
 	BBR = {
@@ -1257,7 +1257,7 @@ country_event = { # CSA Demands we join
 
 	option = { ###Accept
 	name = amcivwar.30070.b
-	ai_will_do = {
+	ai_chance = {
 			factor = 40
 	}
 	CSA = {
@@ -1270,7 +1270,7 @@ country_event = { # CSA Demands we join
 
 	option = { ###Reject
 	name = amcivwar.30070.a
-	ai_will_do = {
+	ai_chance = {
 			factor = 40
 	}
 	CSA = {
@@ -1352,7 +1352,7 @@ country_event = { # CSA Demands we change government
 
 	option = { ###Accept, demand elections
 	name = amcivwar.3008.a
-	ai_will_do = {
+	ai_chance = {
 			factor = 40
 	}
 	CSA = {
@@ -1365,7 +1365,7 @@ country_event = { # CSA Demands we change government
 
 	option = { ###Reject
 	name = amcivwar.3008.b
-	ai_will_do = {
+	ai_chance = {
 			factor = 40
 	}
 	CSA = {
@@ -2289,7 +2289,7 @@ country_event = { # Last Men Standing
 
 	option = { ###Send the Offer
 	name = amcivwar.5000.a
-	ai_will_do = {
+	ai_chance = {
 			factor = 95
 			modifier = {
 				factor = 0.1
@@ -4342,7 +4342,7 @@ country_event = { # Last Men Standing
 	
 	option = { ###Send the Offer
 	name = amcivwar.1027.a
-	ai_will_do = {
+	ai_chance = {
 			factor = 95
 			modifier = {
 				modifier = 0.1

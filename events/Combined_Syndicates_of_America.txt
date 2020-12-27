@@ -4709,14 +4709,14 @@ country_event = { # Foreign Policy
 			factor = 40
 		}
 		add_political_power = 20
-		decrease_ruling_party_popularity_by_1 = yes
+		decrease_ruling_party_popularity_by_5 = yes
 		FRA = {
 		country_event = {
 		id = csa.101
 		days = 2
+			}
 		}
 	}
-}
 
 	option = { # Return the favor
 		name = csa.6804.b
@@ -4783,7 +4783,7 @@ country_event = { # Foreign Policy
 	}
 }	
 
-country_event = { # Self Determination in the Black Belt
+country_event = { #Self Determination in the Black Belt
 	id = csa.69
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.69"}
 	title = csa.69.t
@@ -4823,7 +4823,7 @@ country_event = { # Self Determination in the Black Belt
 	}
 }
 
-country_event = { # Reactions to the Black Belt
+country_event = { #Reactions to the Black Belt
 	id = csa.70
 	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.70"}
 	title = csa.70.t
