@@ -112,6 +112,18 @@ leader_traits = {
 			factor = 1
 		}
 	}
+	
+	staunch_constitutionalist = {
+		random = no
+		stability_factor = 0.05
+		drift_defence_factor = 0.5
+		market_liberal_drift = 0.01
+		political_power_gain = -0.01
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
 
 	#### India
 	chamberofprinces = {

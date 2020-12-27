@@ -1415,7 +1415,7 @@ country_event = { # BBR demands elections
 	}
 
 	option = { ###Yes
-    limit = { NOT = { has_government = totalist } }
+    trigger = { NOT = { has_government = totalist } }
 	name = amcivwar.3010.a
 	BBR = {
 	country_event = {

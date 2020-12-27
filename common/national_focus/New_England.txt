@@ -7802,12 +7802,11 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = boston_line
 			hidden_effect = {
+				796 = {
 				set_building_level = {
 					type = bunker
 					level = 3
-					province = {
-						id = 6707
-					}
+					province = 6707
 					instant_build = yes
 				}
 				set_building_level = {
@@ -7819,58 +7818,45 @@ focus_tree = {
 				set_building_level = {
 					type = bunker
 					level = 3
-					province = {
-						id = 11680
-					}
+					province = 11680
 					instant_build = yes
 				}
 				set_building_level = {
 					type = bunker
 					level = 3
-					province = {
-						id = 11650
-					}
+					province = 11650
 					instant_build = yes
 				}
 				set_building_level = {
 					type = bunker
 					level = 3
-					province = {
-						id = 6717
-					}
+					province = 6717
 					instant_build = yes
 				}
 				set_building_level = {
 					type = bunker
 					level = 3
-					province = {
-						id = 11660
-					}
+					province = 11660
 					instant_build = yes
 				}
 				set_building_level = {
 					type = bunker
 					level = 3
-					province = {
-						id = 706
-					}
+					province = 706
 					instant_build = yes
 				}
 				set_building_level = {
 					type = bunker
 					level = 3
-					province = {
-						id = 3894
-					}
+					province = 3894
 					instant_build = yes
 				}
 				set_building_level = {
 					type = bunker
 					level = 3
-					province = {
-						id = 6911
-					}
+					province = 6911
 					instant_build = yes
+				}
 				}
 			}
 		}
@@ -7975,9 +7961,7 @@ focus_tree = {
 			set_building_level = {
 					type = bunker
 					level = 3
-					province = {
-						id = 3702
-					}
+					province = 3702
 					instant_build = yes
 				}
 			}

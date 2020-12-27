@@ -21,6 +21,95 @@ ideas = {
 			}
 			picture = tfv_can_conscription_crisis
 		}
+		
+		NGR_at_lawlessness_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NGR_at_lawlessness_idea"}
+			modifier = {
+				stability_weekly = -0.01
+			}
+			picture = tfv_can_conscription_crisis
+		}
+		
+		NGR_at_islam_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NGR_at_islam_idea"}
+			modifier = {
+				stability_weekly = 0.01
+			}
+			picture = tfv_can_conscription_crisis
+		}
+		
+		NGR_at_dissent_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NGR_at_dissent_idea"}
+			modifier = {
+				stability_weekly = 0.05
+			}
+			picture = tfv_can_conscription_crisis
+		}
+		
+		NGR_curb_brits = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NGR_curb_brits"}
+			modifier = {
+				stability_weekly = 0.01
+			}
+			picture = tfv_can_conscription_crisis
+		}
+		
+		NGR_curb_brits_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NGR_curb_brits_2"}
+			modifier = {
+				stability_weekly = 0.02
+			}
+			picture = tfv_can_conscription_crisis
+		}
+		
+		NGR_free_trade_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NGR_free_trade_idea"}
+			modifier = {
+				research_speed_factor = 0.05
+			}
+			picture = tfv_can_conscription_crisis
+		}
+		
+		NGR_Northern_Tensions = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NGR_Northern_Tensions"}
+			modifier = {
+				stability_weekly = -0.15
+				monthly_manpower = -0.05
+			}
+			picture = tfv_can_conscription_crisis
+		}
+		
+		NGR_Northern_Tensions_Soldiers = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NGR_Northern_Tensions_Soldiers"}
+			modifier = {
+				stability_weekly = -0.1
+			}
+			picture = tfv_can_conscription_crisis
+		}
+		
+		NGR_Northern_Tensions_Reich = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NGR_Northern_Tensions_Reich"}
+			modifier = {
+				stability_weekly = -0.05
+			}
+			picture = tfv_can_conscription_crisis
+		}
+		
+		NGR_Northern_Tensions_Neighbors = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NGR_Northern_Tensions_Neighbors"}
+			modifier = {
+				stability_weekly = -0.05
+			}
+			picture = tfv_can_conscription_crisis
+		}
+		
+		NGR_at_islam_ide = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NGR_at_islam_ide"}
+			modifier = {
+				stability_weekly = -0.05
+			}
+			picture = tfv_can_conscription_crisis
+		}
 
 		MAF_Legal_Chaos = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MAF_Legal_Chaos"}

@@ -443,7 +443,6 @@ ideas = {
 			picture = generic_build_infrastructure
 			modifier = {
 				industry_repair_factor = 0.5
-				production_speed_industrial_complex_factor = 0.1
 				production_speed_arms_factory_factor = 0.15
 				production_speed_industrial_complex_factor = 0.08
 				non_core_manpower = 0.05
@@ -460,6 +459,7 @@ ideas = {
 				conscription_factor = 0.05
 				non_core_manpower = 0.1
 				mobilization_speed = 0.08
+				production_speed_industrial_complex_factor = 0.1
 				war_support_weekly = 0.04
 				industrial_capacity_factory = 0.05
 				industrial_capacity_dockyard = 0.05
@@ -723,7 +723,7 @@ ideas = {
 			allowed = {	always = no	}
 			picture = social_engineering
 			modifier = {
-				market_liberal_drift -0.03
+				market_liberal_drift = -0.03
 				social_liberal_drift = -0.03
 				authoritarian_democrat_drift = -0.03
 				paternal_autocrat_drift = -0.03
@@ -731,6 +731,63 @@ ideas = {
 				social_democrat_drift = -0.03
 				radical_socialist_drift = -0.03
 				totalist_drift = -0.03
+			}
+		}
+	WCC_league_of_america_1 = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea WCC_league_of_america_1"
+				USA = { add_to_variable = { var = USA_league_members value = 1 } }
+			}
+			allowed = { always = no }
+			removal_cost = -1
+			picture = USA_fighting_for_america
+			targeted_modifier = {
+				tag = USA
+				trade_cost_for_target_factor = -0.25
+				extra_trade_to_target_factor = 0.25
+			}
+			modifier = {
+				training_time_army_factor = -0.05
+				planning_speed = 0.05
+				consumer_goods_factor = -0.05
+			}
+		}
+		WCC_league_of_america_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_league_of_america_2"}
+			allowed = { always = no }
+			removal_cost = -1
+			picture = USA_fighting_for_america
+			targeted_modifier = {
+				tag = USA
+				trade_cost_for_target_factor = -0.50
+				extra_trade_to_target_factor = 0.50
+			}
+			modifier = {
+				training_time_army_factor = -0.10
+				planning_speed = 0.10
+				consumer_goods_factor = -0.05
+				production_speed_industrial_complex_factor = 0.10
+				production_speed_infrastructure_factor = 0.10
+				guarantee_cost = -20
+			}
+		}
+		WCC_league_of_america_3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_league_of_america_3"}
+			allowed = { always = no }
+			removal_cost = -1
+			picture = USA_fighting_for_america
+			targeted_modifier = {
+				tag = USA
+				trade_cost_for_target_factor = -0.75
+				extra_trade_to_target_factor = 0.75
+			}
+			modifier = {
+				training_time_army_factor = -0.15
+				planning_speed = 0.15
+				consumer_goods_factor = -0.10
+				production_speed_industrial_complex_factor = 0.12
+				production_speed_infrastructure_factor = 0.12
+				guarantee_cost = -30
 			}
 		}
 	#####Air Force Tree Ideas########

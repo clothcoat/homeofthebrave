@@ -27,6 +27,14 @@ WCC_deal_with_terrorists_decisions = {
 	visible = { has_global_flag = WCC_civil_war_over_flag }
 }
 
+WCC_american_imperialism = {
+	icon = military_operation
+	allowed = {
+			tag = WCC
+	}
+	visible = { has_global_flag = WCC_civil_war_over_flag }
+}
+
 WCC_progressive_policy_decisions = {
 	icon = USA_congress
 	allowed = {	original_tag = WCC }

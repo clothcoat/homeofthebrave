@@ -1,0 +1,1016 @@
+ideas = {
+
+##############
+# Minister ideas
+##############
+head_of_government = {
+	ANQ_Wang_Pu_hog_pau = {
+			allowed = { original_tag = ANQ }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ANQ_Wang_Pu_hog_pau"
+			}
+			traits = {
+				head_of_government
+				paternal_autocrat
+				hog_silent_workhorse
+			}
+		}
+	AZR_Nasib_Yusifbeyli_hog_sco = {
+			allowed = { original_tag = AZR }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea AZR_Nasib_Yusifbeyli_hog_sco"
+			}
+			traits = {
+				head_of_government
+				social_conservative
+				hog_silent_workhorse
+			}
+		}
+	BHU_Jigme_Wangchuck_hog_pau = {
+			allowed = { original_tag = BHU }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea BHU_Jigme_Wangchuck_hog_pau"
+			}
+			traits = {
+				head_of_government
+				paternal_autocrat
+				hog_local_tyrant
+			}
+		}
+	BRM_U_Chit_Hlaing_hog_ade = {
+			allowed = { original_tag = BRM }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea BRM_U_Chit_Hlaing_hog_ade"
+			}
+			traits = {
+				head_of_government
+				authoritarian_democrat
+				hog_flamboyant_tough_guy
+			}
+		}
+	ETS_Sabit_Damulla_Abdulbaki_hog_pau = {
+			allowed = { original_tag = ETS }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ETS_Sabit_Damulla_Abdulbaki_hog_pau"
+			}
+			traits = {
+				head_of_government
+				paternal_autocrat
+				hog_silent_workhorse
+			}
+		}
+	FOP_Lopez_Arango_hog_syn = {
+			allowed = { original_tag = FOP }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea FOP_Lopez_Arango_hog_syn"
+			}
+			traits = {
+				head_of_government
+				syndicalist
+				hog_naive_optimist
+			}
+		}
+	LEB_Khaled_Chehab_hog_ade = {
+			allowed = { original_tag = LEB }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea LEB_Khaled_Chehab_hog_ade"
+			}
+			traits = {
+				head_of_government
+				authoritarian_democrat
+				hog_pragmatic_statesman
+			}
+		}
+	LIT_Leonas_Bistras_hog_sco = {
+			allowed = { original_tag = LIT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea LIT_Leonas_Bistras_hog_sco"
+			}
+			traits = {
+				head_of_government
+				social_conservative
+				hog_silent_workhorse
+			}
+		}
+	MLT_Paul_Boffa_hog_sde = {
+			allowed = { original_tag = MLT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea MLT_Paul_Boffa_hog_sde"
+			}
+			traits = {
+				head_of_government
+				social_democrat
+				hog_naive_optimist
+			}
+		}
+	MAL_Ibrahim_I_of_Johor_hog_ade = {
+			allowed = { original_tag = MAL }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea MAL_Ibrahim_I_of_Johor_hog_ade"
+			}
+			traits = {
+				head_of_government
+				authoritarian_democrat
+				hog_happy_amateur
+			}
+		}
+	NMB_CJ_Langenhooven_hog_ade = {
+			allowed = { original_tag = NMB }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea NMB_CJ_Langenhooven_hog_ade"
+			}
+			traits = {
+				head_of_government
+				authoritarian_democrat
+				hog_silent_workhorse
+			}
+		}
+	}
+	
+	foreign_minister = {
+	ANQ_Chen_Lu_for_sco = {
+			allowed = { original_tag = ANQ }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ANQ_Chen_Lu_for_sco"
+			}
+			traits = {
+				foreign_minister
+				social_conservative
+				for_apologetic_clerk
+			}
+		}
+	AZR_Mammad_Yusif_Jafarov_for_sco = {
+			allowed = { original_tag = AZR }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea AZR_Mammad_Yusif_Jafarov_for_sco"
+			}
+			traits = {
+				foreign_minister
+				social_conservative
+				for_apologetic_clerk
+			}
+		}
+	BRM_Maung_Gyi_for_ade = {
+			allowed = { original_tag = BRM }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea BRM_Maung_Gyi_for_ade"
+			}
+			traits = {
+				foreign_minister
+				authoritarian_democrat
+				for_the_cloak_n_dagger_schemer
+			}
+		}
+	ETS_Tawfiq_Bay_for_pau = {
+			allowed = { original_tag = ETS }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ETS_Tawfiq_Bay_for_pau"
+			}
+			traits = {
+				foreign_minister
+				paternal_autocrat
+				for_biased_intellectual
+			}
+		}
+	FOP_Jose_Fernando_Penelon_for_tot = {
+			allowed = { original_tag = FOP }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea FOP_Jose_Fernando_Penelon_for_tot"
+			}
+			traits = {
+				foreign_minister
+				totalist
+				for_the_cloak_n_dagger_schemer
+			}
+		}
+	FOP_Gregorio_Bermann_for_rso = {
+			allowed = { original_tag = FOP }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea FOP_Gregorio_Bermann_for_rso"
+			}
+			traits = {
+				foreign_minister
+				radical_socialist
+				for_biased_intellectual
+			}
+		}
+	LEB_Abdul_Hamid_Karami_for_sco = {
+			allowed = { original_tag = LEB }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea LEB_Abdul_Hamid_Karami_for_sco"
+			}
+			traits = {
+				foreign_minister
+				social_conservative
+				for_apologetic_clerk
+			}
+		}
+	LIB_George_S_Padmore_for_sco = {
+			allowed = { original_tag = LIB }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea LIB_George_S_Padmore_for_sco"
+			}
+			traits = {
+				foreign_minister
+				social_conservative
+				for_ideological_crusader
+			}
+		}
+	LOM_Stefano_Cavazzoni_for_ade = {
+			allowed = { original_tag = LOM }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea LOM_Stefano_Cavazzoni_for_ade"
+			}
+			traits = {
+				foreign_minister
+				authoritarian_democrat
+				for_apologetic_clerk
+			}
+		}
+		MLT_Enrico_Mizzi_for_ade = {
+			allowed = { original_tag = MLT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea MLT_Enrico_Mizzi_for_ade"
+			}
+			traits = {
+				foreign_minister
+				authoritarian_democrat
+				for_ideological_crusader
+			}
+		}
+		MAL_Lee_Kuan_Yew_for_ade = {
+			allowed = { original_tag = MAL }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea MAL_Lee_Kuan_Yew_for_ade"
+			}
+			traits = {
+				foreign_minister
+				authoritarian_democrat
+				for_iron_fisted_brute
+			}
+		}
+	}
+	
+	economy_minister = {
+	ANQ_Leng_Yu_eco_sco = {
+			allowed = { original_tag = ANQ }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ANQ_Leng_Yu_eco_sco"
+			}
+			traits = {
+				economy_minister
+				social_conservative
+				eco_bank_president
+			}
+		}
+	AZR_Abdulali_bey_Amirjanov_eco_sco = {
+			allowed = { original_tag = AZR }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea AZR_Abdulali_bey_Amirjanov_eco_sco"
+			}
+			traits = {
+				economy_minister
+				social_conservative
+				eco_industrialiser
+			}
+		}
+	BHU_Sonam_Topgye_Dorji_eco_ade = {
+			allowed = { original_tag = BHU }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea BHU_Sonam_Topgye_Dorji_eco_ade"
+			}
+			traits = {
+				economy_minister
+				authoritarian_democrat
+				eco_administrative_genius
+			}
+		}
+	BHU_Zamadar_Chencho_eco_pau = {
+			allowed = { original_tag = BHU }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea BHU_Zamadar_Chencho_eco_pau"
+			}
+			traits = {
+				economy_minister
+				paternal_autocrat
+				eco_infantry_proponent
+			}
+		}
+	BRM_U_May_Aung_eco_sco = {
+			allowed = { original_tag = BRM }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea BRM_U_May_Aung_eco_sco"
+			}
+			traits = {
+				economy_minister
+				social_conservative
+				eco_resource_industrialist
+			}
+		}
+	ERI_Andom_Tesfazion_eco_sco = {
+			allowed = { original_tag = ERI }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ERI_Andom_Tesfazion_eco_sco"
+			}
+			traits = {
+				economy_minister
+				social_conservative
+				eco_tank_proponent
+			}
+		}
+	ETS_Yunus_Hajji_eco_pau = {
+			allowed = { original_tag = ETS }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ETS_Yunus_Hajji_eco_pau"
+			}
+			traits = {
+				economy_minister
+				paternal_autocrat
+				eco_resource_industrialist
+			}
+		}
+	FOP_Diego_Abad_de_Santillan_eco_syn = {
+			allowed = { original_tag = FOP }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea FOP_Diego_Abad_de_Santillan_eco_syn"
+			}
+			traits = {
+				economy_minister
+				syndicalist
+				eco_industrialiser
+			}
+		}
+	LEB_Hamid_Beik_Frangieh_eco_sco = {
+			allowed = { original_tag = LEB }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea LEB_Hamid_Beik_Frangieh_eco_sco"
+			}
+			traits = {
+				economy_minister
+				social_conservative
+				eco_reformer
+			}
+		}
+	LIT_Vytautas_Zemkalnis_eco_pau = {
+			allowed = { original_tag = LIT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea LIT_Vytautas_Zemkalnis_eco_pau"
+			}
+			traits = {
+				economy_minister
+				paternal_autocrat
+				eco_construction_magnate
+			}
+		}
+	MLT_Dom_Mintoff_eco_ade = {
+			allowed = { original_tag = MLT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea MLT_Dom_Mintoff_eco_ade"
+			}
+			traits = {
+				economy_minister
+				authoritarian_democrat
+				eco_mixed_economy
+			}
+		}
+	MAL_Hassan_Yunus_eco_pau = {
+			allowed = { original_tag = MAL }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea MAL_Hassan_Yunus_eco_pau"
+			}
+			traits = {
+				economy_minister
+				paternal_autocrat
+				eco_balanced_budget_economy
+			}
+		}
+	}
+	
+	security_minister = {
+	ANQ_Xia_Chao_sec_ade = {
+			allowed = { original_tag = ANQ }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ANQ_Xia_Chao_sec_ade"
+			}
+			traits = {
+				security_minister
+				authoritarian_democrat
+				sec_secret_police_chief
+			}
+		}
+	BHU_Choekyi_Wangchuck_sec_npo = {
+			allowed = { original_tag = BHU }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea BHU_Choekyi_Wangchuck_sec_npo"
+			}
+			traits = {
+				security_minister
+				national_populist
+				sec_man_of_the_people
+			}
+		}
+	BRM_Saw_Durmay_sec_ade = {
+			allowed = { original_tag = BRM }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea BRM_Saw_Durmay_sec_ade"
+			}
+			traits = {
+				security_minister
+				authoritarian_democrat
+				sec_silent_lawyer
+			}
+		}
+	ERI_Abdulkader_Kebire_sec_sco = {
+			allowed = { original_tag = ERI }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ERI_Abdulkader_Kebire_sec_sco"
+			}
+			traits = {
+				security_minister
+				social_conservative
+				sec_man_of_the_people
+			}
+		}
+	ETS_Ismail_Khan_Khoja_sec_pau = {
+			allowed = { original_tag = ETS }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ETS_Ismail_Khan_Khoja_sec_pau"
+			}
+			traits = {
+				security_minister
+				paternal_autocrat
+				sec_man_of_the_people
+			}
+		}
+	LEB_Muhammad_Jamil_Beyhum_sec_sli = {
+			allowed = { original_tag = LEB }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea LEB_Muhammad_Jamil_Beyhum_sec_sli"
+			}
+			traits = {
+				security_minister
+				social_liberal
+				sec_compassionate_gentleman
+			}
+		}
+	MAL_Ibrahim_bin_Haji_Yaacob_sec_npo = {
+			allowed = { original_tag = MAL }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea MAL_Ibrahim_bin_Haji_Yaacob_sec_npo"
+			}
+			traits = {
+				security_minister
+				national_populist
+				sec_media_magnate
+			}
+		}
+	}
+	
+	head_of_intel = { ### Head of Intel ###
+	
+	}
+	
+	chief_of_staff = { ### Chief of Staff ###
+	ANQ_Gao_Shidu_cos = {
+			allowed = { original_tag = ANQ }
+			available = { }
+			visible = {
+				NOT = { has_country_flag = Gao_Shidu_dead }
+			}
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ANQ_Gao_Shidu_cos"
+			}
+			traits = {
+				chief_of_staff
+				cos_school_of_psychology
+			}
+			cancel_if_invalid = yes
+		}
+	AZR_Behbud_Khan_Javanshir_sec_sco = {
+			allowed = { original_tag = AZR }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea AZR_Behbud_Khan_Javanshir_sec_sco"
+			}
+			traits = {
+				security_minister
+				social_conservative
+				sec_prince_of_terror
+			}
+		}
+	LIT_Antanas_Tumenas_sec_sco = {
+			allowed = { original_tag = LIT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea LIT_Antanas_Tumenas_sec_sco"
+			}
+			traits = {
+				security_minister
+				social_conservative
+				sec_silent_lawyer
+			}
+		}
+	MLT_Censu_Tabone_sec_ade = {
+			allowed = { original_tag = MLT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea MLT_Censu_Tabone_sec_ade"
+			}
+			traits = {
+				security_minister
+				authoritarian_democrat
+				sec_crime_fighter
+			}
+		}
+	}
+	
+	chief_of_army = { ### Chief of Army ###
+
+	}
+	
+	chief_of_navy = { ### Chief of Navy ###
+
+	}
+	
+	chief_of_air_force = { ### Chief of Air Force ###
+
+	}
+
+}
+
+
+spriteTypes = {
+spriteType = {
+		name = "GFX_idea_ANQ_Wang_Pu_hog_pau"
+		texturefile = "gfx/interface/ministers/ANQ/ANQ_Wang_Pu.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_ANQ_Chen_Lu_for_sco"
+		texturefile = "gfx/interface/ministers/ANQ/ANQ_Chen_Lu.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_ANQ_Leng_Yu_eco_sco"
+		texturefile = "gfx/interface/ministers/ANQ/ANQ_Leng_Yu.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_ANQ_Xia_Chao_sec_ade"
+		texturefile = "gfx/interface/ministers/ANQ/ANQ_Xia_Chao.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_ANQ_Gao_Shidu_cos"
+		texturefile = "gfx/interface/ministers/ANQ/ANQ_Gao_Shidu.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_AZR_Nasib_Yusifbeyli_hog_sco"
+		texturefile = "gfx/interface/ministers/AZR/AZR_Nasib_Yusifbeyli.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_AZR_Mammad_Yusif_Jafarov_for_sco"
+		texturefile = "gfx/interface/ministers/AZR/AZR_Mammad_Yusif_Jafarov.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_AZR_Abdulali_bey_Amirjanov_eco_sco"
+		texturefile = "gfx/interface/ministers/AZR/AZR_Abdulali_bey_Amirjanov.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_AZR_Behbud_Khan_Javanshir_sec_sco"
+		texturefile = "gfx/interface/ministers/AZR/AZR_Behbud_Khan_Javanshir.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BHU_Jigme_Wangchuck_hog_pau"
+		texturefile = "gfx/interface/ministers/BHU/BHU_Jigme_Wangchuck.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BHU_Sonam_Topgye_Dorji_eco_ade"
+		texturefile = "gfx/interface/ministers/BHU/BHU_Sonam_Topgye_Dorji.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BHU_Choekyi_Wangchuck_sec_npo"
+		texturefile = "gfx/interface/ministers/BHU/BHU_Choekyi_Wangchuck.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BHU_Zamadar_Chencho_eco_pau"
+		texturefile = "gfx/interface/ministers/BHU/BHU_Zamadar_Chencho.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BRM_U_Chit_Hlaing_hog_ade"
+		texturefile = "gfx/interface/ministers/BRM/BRM_U_Chit_Hlaing.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BRM_Maung_Gyi_for_ade"
+		texturefile = "gfx/interface/ministers/BRM/BRM_Maung_Gyi.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BRM_U_May_Aung_eco_sco"
+		texturefile = "gfx/interface/ministers/BRM/BRM_U_May_Aung.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_ERI_Andom_Tesfazion_eco_sco"
+		texturefile = "gfx/interface/ministers/ERI/ERI_Andom_Tesfazion.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_ERI_Abdulkader_Kebire_sec_sco"
+		texturefile = "gfx/interface/ministers/ERI/ERI_Abdulkader_Kebire.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_ETS_Sabit_Damulla_Abdulbaki_hog_pau"
+		texturefile = "gfx/interface/ministers/ETS/ETS_Sabit_Damulla_Abdulbaki.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_ETS_Tawfiq_Bay_for_pau"
+		texturefile = "gfx/interface/ministers/ETS/ETS_Tawfiq_Bay.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_ETS_Yunus_Hajji_eco_pau"
+		texturefile = "gfx/interface/ministers/ETS/ETS_Yunus_Hajji.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_FOP_Lopez_Arango_hog_syn"
+		texturefile = "gfx/interface/ministers/FOP/FOP_Lopez_Arango.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_FOP_Jose_Fernando_Penelon_for_tot"
+		texturefile = "gfx/interface/ministers/FOP/FOP_Jose_Fernando_Penelon.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_FOP_Diego_Abad_de_Santillan_eco_syn"
+		texturefile = "gfx/interface/ministers/FOP/FOP_Diego_Abad_de_Santillan.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_FOP_Gregorio_Bermann_for_rso"
+		texturefile = "gfx/interface/ministers/FOP/FOP_Gregorio_Bermann.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_LEB_Khaled_Chehab_hog_ade"
+		texturefile = "gfx/interface/ministers/LEB/LEB_Khaled_Chehab.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_LEB_Hamid_Beik_Frangieh_eco_sco"
+		texturefile = "gfx/interface/ministers/LEB/LEB_Hamid_Beik_Frangieh.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_LEB_Muhammad_Jamil_Beyhum_sec_sli"
+		texturefile = "gfx/interface/ministers/LEB/LEB_Muhammad_Jamil_Beyhum.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_LIB_George_S_Padmore_for_sco"
+		texturefile = "gfx/interface/ministers/LIB/LIB_George_S_Padmore.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_LIT_Leonas_Bistras_hog_sco"
+		texturefile = "gfx/interface/ministers/LIT/LIT_Leonas_Bistras.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_LIT_Vytautas_Zemkalnis_eco_pau"
+		texturefile = "gfx/interface/ministers/LIT/LIT_Vytautas_Zemkalnis.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_LIT_Antanas_Tumenas_sec_sco"
+		texturefile = "gfx/interface/ministers/LIT/LIT_Antanas_Tumenas.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_LOM_Stefano_Cavazzoni_for_ade"
+		texturefile = "gfx/interface/ministers/LOM/LOM_Stefano_Cavazzoni.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_MLT_Paul_Boffa_hog_sde"
+		texturefile = "gfx/interface/ministers/MLT/MLT_Paul_Boffa.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_MLT_Enrico_Mizzi_for_ade"
+		texturefile = "gfx/interface/ministers/MLT/MLT_Enrico_Mizzi.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_MLT_Dom_Mintoff_eco_ade"
+		texturefile = "gfx/interface/ministers/MLT/MLT_Dom_Mintoff.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_MLT_Censu_Tabone_sec_ade"
+		texturefile = "gfx/interface/ministers/MLT/MLT_Censu_Tabone.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_MAL_Ibrahim_I_of_Johor_hog_ade"
+		texturefile = "gfx/interface/ministers/MAL/MAL_Ibrahim_I_of_Johor.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_MAL_Lee_Kuan_Yew_for_ade"
+		texturefile = "gfx/interface/ministers/MAL/MAL_Lee_Kuan_Yew.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_MAL_Hassan_Yunus_eco_pau"
+		texturefile = "gfx/interface/ministers/MAL/MAL_Hassan_Yunus.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_MAL_Ibrahim_bin_Haji_Yaacob_sec_npo"
+		texturefile = "gfx/interface/ministers/MAL/MAL_Ibrahim_bin_Haji_Yaacob.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_NMB_CJ_Langenhooven_hog_ade"
+		texturefile = "gfx/interface/ministers/NMB/NMB_CJ_Langenhooven.tga"
+	}
+}

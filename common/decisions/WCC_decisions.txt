@@ -86,7 +86,6 @@ WCC_american_imperialism = {
 
 		visible = {
 			has_completed_focus = WCC_make_mexico_friendly
-			}
 			MEX = {
 				exists = yes
 				NOT = {
@@ -97,7 +96,7 @@ WCC_american_imperialism = {
 				}
 			}
 		}
-
+		
 		fire_only_once = yes
 		cost = 10
 		ai_will_do = {
