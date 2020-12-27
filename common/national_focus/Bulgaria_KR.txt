@@ -4,7 +4,7 @@
 ###########################
 
 focus_tree = {
-	id = bulgaria_focus_tree
+	id = bulgaria_focus
 	country = {
 		factor = 0
 		modifier = {
@@ -34,7 +34,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus BUL_economic_affairs"
 			custom_effect_tooltip = BUL_black_monday_tt
 			add_tech_bonus = {
-				name = BUL_economic_affairs
+				name = BUL_economic_affair_bonus
 				bonus = 1
 				uses = 1
 				category = industry
