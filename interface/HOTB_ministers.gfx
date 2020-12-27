@@ -6386,12 +6386,20 @@ spriteTypes = {
 		texturefile = "gfx/interface/ministers/BHU/BHU_Jigme_Wangchuck.tga"
 	}
 	spriteType = {
-		name = "GFX_idea_BHU_Tshering_Penjor_hog_npo"
+		name = "GFX_idea_BHU_Tshering_Penjor_hog_pau"
 		texturefile = "gfx/interface/ministers/BHU/BHU_Tshering_Penjor.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BHU_Zhabdrung_Rinpoche_hog_npo"
+		texturefile = "gfx/interface/ministers/BHU/BHU_Zhabdrung_Rinpoche.tga"
 	}
 
 	### Person of Influence
 	# Foreign Minister
+	spriteType = {
+		name = "GFX_idea_BHU_Chhoki_Gyeltshen_for_npo"
+		texturefile = "gfx/interface/ministers/BHU/BHU_Chhoki_Gyeltshen.tga"
+	}
 
 	# Economy Minister
 	spriteType = {
@@ -6409,15 +6417,19 @@ spriteTypes = {
 
 	# Security Minister
 	spriteType = {
+		name = "GFX_idea_BHU_Pashupati_Adhikari_sec_sde"
+		texturefile = "gfx/interface/ministers/BHU/BHU_Pashupati_Adhikari.tga"
+	}
+	spriteType = {
 		name = "GFX_idea_BHU_Tashi_Namgyal_sec_ade"
 		texturefile = "gfx/interface/ministers/BHU/BHU_Tashi_Namgyal.tga"
 	}
 	spriteType = {
-		name = "GFX_idea_BHU_Choekyi_Wangchuck_sec_pau"
+		name = "GFX_idea_BHU_Choekyi_Wangchuck_sec_npo"
 		texturefile = "gfx/interface/ministers/BHU/BHU_Choekyi_Wangchuck.tga"
 	}
 	spriteType = {
-		name = "GFX_idea_BHU_Namgyal_Bahadur_sec_npo"
+		name = "GFX_idea_BHU_Namgyal_Bahadur_sec_pau"
 		texturefile = "gfx/interface/ministers/BHU/BHU_Namgyal_Bahadur.tga"
 	}
 	spriteType = {
