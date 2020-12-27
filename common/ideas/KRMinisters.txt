@@ -403,6 +403,24 @@ head_of_government = {
 				for_iron_fisted_brute
 			}
 		}
+		NMB_Bettie_Conradie_for_ade = {
+			allowed = { original_tag = NMB }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea NMB_Bettie_Conradie_for_ade"
+			}
+			traits = {
+				foreign_minister
+				authoritarian_democrat
+				for_iron_fisted_brute
+			}
+		}
 	}
 	
 	economy_minister = {
@@ -620,6 +638,24 @@ head_of_government = {
 				economy_minister
 				paternal_autocrat
 				eco_balanced_budget_economy
+			}
+		}
+		NMB_Christiaan_van_den_Heever_eco_ade = {
+			allowed = { original_tag = NMB }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea NMB_Christiaan_van_den_Heever_eco_ade"
+			}
+			traits = {
+				economy_minister
+				authoritarian_democrat
+				eco_military_entrepreneur
 			}
 		}
 	}
@@ -1012,5 +1048,9 @@ spriteType = {
 	spriteType = {
 		name = "GFX_idea_NMB_CJ_Langenhooven_hog_ade"
 		texturefile = "gfx/interface/ministers/NMB/NMB_CJ_Langenhooven.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_NMB_Bettie_Conradie_for_ade"
+		texturefile = "gfx/interface/ministers/NMB/NMB_Bettie_Conradie.tga"
 	}
 }

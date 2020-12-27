@@ -880,11 +880,11 @@ country_event = { # Separate but Equal?
 					add_idea = COR_separate_but_equal_idea_2
 				}
 			}
-		}
 		add_popularity = { ideology = authoritarian_democrat popularity = -0.02 }
 		add_popularity = { ideology = national_populist popularity = 0.02 }
 		hidden_effect = {
 			country_event = { id = constate.1103 days = 1 }
+		}
 		}
 
 	option = { # Status Quo
