@@ -202,6 +202,114 @@ head_of_government = {
 				hog_silent_workhorse
 			}
 		}
+	PUE_Blanton_C_Winship_hog_pau = {
+			allowed = { original_tag = PUE }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea PUE_Blanton_C_Winship_hog_pau"
+			}
+			traits = {
+				head_of_government
+				paternal_autocrat
+				hog_local_tyrant
+			}
+		}
+		SOV_Karl_Radek_hog_tot = {
+			allowed = { original_tag = SOV }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SOV_Karl_Radek_hog_tot"
+			}
+			traits = {
+				head_of_government
+				totalist
+				hog_silent_workhorse
+			}
+		}
+		ULS_John_Miller_Andrews_hog_sco = {
+			allowed = { original_tag = ULS }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ULS_John_Miller_Andrews_hog_sco"
+			}
+			traits = {
+				head_of_government
+				social_conservative
+				hog_corporate_suit
+			}
+		}
+		VIN_Tran_Trong_Kim_hog_sco = {
+			allowed = { original_tag = VIN }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea VIN_Tran_Trong_Kim_hog_sco"
+			}
+			traits = {
+				head_of_government
+				social_conservative
+				hog_happy_amateur
+			}
+		}
+		GBR_Robert_Vansittart_hog_sco = {
+			allowed = { original_tag = GBR }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea GBR_Robert_Vansittart_hog_sco"
+			}
+			traits = {
+				head_of_government
+				social_conservative
+				hog_political_protege
+			}
+		}
+		ROM_Virgil_Madgearu_hog_sde = {
+			allowed = { original_tag = ROM }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ROM_Virgil_Madgearu_hog_sde"
+			}
+			traits = {
+				head_of_government
+				social_democrat
+				hog_naive_optimist
+			}
+		}
 	}
 	
 	foreign_minister = {
@@ -439,6 +547,96 @@ head_of_government = {
 				for_iron_fisted_brute
 			}
 		}
+		ROM_Ion_Mota_for_npo = {
+			allowed = { original_tag = ROM }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ROM_Ion_Mota_for_npo"
+			}
+			traits = {
+				foreign_minister
+				national_populist
+				for_ideological_crusader
+			}
+		}
+		RUS_Georgiy_Vernadskiy_for_sli = {
+			allowed = { original_tag = RUS }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea RUS_Georgiy_Vernadskiy_for_sli"
+			}
+			traits = {
+				foreign_minister
+				social_liberal
+				for_great_compromiser
+			}
+		}
+		SOV_Mariya_Spiridonova_for_rso = {
+			allowed = { original_tag = SOV }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SOV_Mariya_Spiridonova_for_rso"
+			}
+			traits = {
+				foreign_minister
+				radical_socialist
+				for_biased_intellectual
+			}
+		}
+		ULS_Hugh_O'Neill_for_pau = {
+			allowed = { original_tag = ULS }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ULS_Hugh_O'Neill_for_pau"
+			}
+			traits = {
+				foreign_minister
+				paternal_autocrat
+				for_ideological_crusader
+			}
+		}
+		VIN_Tran_Van_Huu_for_sco = {
+			allowed = { original_tag = VIN }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea VIN_Tran_Van_Huu_for_sco"
+			}
+			traits = {
+				foreign_minister
+				social_conservative
+				for_great_compromiser
+			}
+		}
 	}
 	
 	economy_minister = {
@@ -550,6 +748,24 @@ head_of_government = {
 				economy_minister
 				social_conservative
 				eco_resource_industrialist
+			}
+		}
+	CUB_Jose_Irrisari_Gamio_eco_sde = {
+			allowed = { original_tag = CUB }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea CUB_Jose_Irrisari_Gamio_eco_sde"
+			}
+			traits = {
+				economy_minister
+				social_democrat
+				eco_bank_president
 			}
 		}
 	ERI_Andom_Tesfazion_eco_sco = {
@@ -696,9 +912,189 @@ head_of_government = {
 				eco_military_entrepreneur
 			}
 		}
+		ROM_Gheorghe_Clime_eco_npo = {
+			allowed = { original_tag = ROM }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ROM_Gheorghe_Clime_eco_npo"
+			}
+			traits = {
+				economy_minister
+				national_populist
+				eco_construction_magnate
+			}
+		}
+		RUS_Vladimir_Smirnov_eco_sli = {
+			allowed = { original_tag = RUS }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea RUS_Vladimir_Smirnov_eco_sli"
+			}
+			traits = {
+				economy_minister
+				social_liberal
+				eco_balanced_budget_economy
+			}
+		}
+		SOV_Mikhail_Tomskiy_eco_syn = {
+			allowed = { original_tag = SOV }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SOV_Mikhail_Tomskiy_eco_syn"
+			}
+			traits = {
+				economy_minister
+				syndicalist
+				eco_industrialiser
+			}
+		}
+		ULS_William_J_Twaddell_eco_pau = {
+			allowed = { original_tag = ULS }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ULS_William_J_Twaddell_eco_pau"
+			}
+			traits = {
+				economy_minister
+				paternal_autocrat
+				eco_infantry_proponent
+			}
+		}
 	}
 	
 	security_minister = {
+	AZR_Behbud_Khan_Javanshir_sec_sco = {
+			allowed = { original_tag = AZR }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea AZR_Behbud_Khan_Javanshir_sec_sco"
+			}
+			traits = {
+				security_minister
+				social_conservative
+				sec_prince_of_terror
+			}
+		}
+	LIT_Antanas_Tumenas_sec_sco = {
+			allowed = { original_tag = LIT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea LIT_Antanas_Tumenas_sec_sco"
+			}
+			traits = {
+				security_minister
+				social_conservative
+				sec_silent_lawyer
+			}
+		}
+	MLT_Censu_Tabone_sec_ade = {
+			allowed = { original_tag = MLT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea MLT_Censu_Tabone_sec_ade"
+			}
+			traits = {
+				security_minister
+				authoritarian_democrat
+				sec_crime_fighter
+			}
+		}
+	PUE_Santiago_Iglesias_Pantin_sec_sde = {
+			allowed = { original_tag = PUE }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea PUE_Santiago_Iglesias_Pantin_sec_sde"
+			}
+			traits = {
+				security_minister
+				social_democrat
+				sec_health_and_safety
+			}
+		}
+	PUE_Antonio_Rafael_Barcelo_sec_sli = {
+			allowed = { original_tag = PUE }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea PUE_Antonio_Rafael_Barcelo_sec_sli"
+			}
+			traits = {
+				security_minister
+				social_liberal
+				sec_silent_lawyer
+			}
+		}
+	PUE_Pedro_Albizu_Campos_sec_npo = {
+			allowed = { original_tag = PUE }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea PUE_Pedro_Albizu_Campos_sec_npo"
+			}
+			traits = {
+				security_minister
+				national_populist
+				sec_media_magnate
+			}
+		}
 	ANQ_Xia_Chao_sec_ade = {
 			allowed = { original_tag = ANQ }
 			available = {
@@ -901,6 +1297,114 @@ head_of_government = {
 				sec_media_magnate
 			}
 		}
+	ROM_Alexandru_Cantacuzino_sec_npo = {
+			allowed = { original_tag = ROM }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ROM_Alexandru_Cantacuzino_sec_npo"
+			}
+			traits = {
+				security_minister
+				national_populist
+				sec_prince_of_terror
+			}
+		}
+	RUS_Vladimir_Burtsev_sec_sde = {
+			allowed = { original_tag = RUS }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea RUS_Vladimir_Burtsev_sec_sde"
+			}
+			traits = {
+				security_minister
+				social_democrat
+				sec_crime_fighter
+			}
+		}
+	SOV_Pavel_Sudoplatov_sec_rso = {
+			allowed = { original_tag = SOV }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SOV_Pavel_Sudoplatov_sec_rso"
+			}
+			traits = {
+				security_minister
+				radical_socialist
+				sec_crime_fighter
+			}
+		}
+	ULS_Joseph_Davison_sec_ade = {
+			allowed = { original_tag = ULS }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ULS_Joseph_Davison_sec_ade"
+			}
+			traits = {
+				security_minister
+				authoritarian_democrat
+				sec_efficient_sociopath
+			}
+		}
+		VIN_Nguyen_Van_Vinh_sec_mli = {
+			allowed = { original_tag = VIN }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea VIN_Nguyen_Van_Vinh_sec_mli"
+			}
+			traits = {
+				security_minister
+				market_liberal
+				sec_media_magnate
+			}
+		}
+		GBR_Edward_Cavendish_sec_sco = {
+			allowed = { original_tag = GBR }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea GBR_Edward_Cavendish_sec_sco"
+			}
+			traits = {
+				security_minister
+				social_conservative
+				sec_prince_of_terror
+			}
+		}
 	}
 	
 	head_of_intel = { ### Head of Intel ###
@@ -923,64 +1427,39 @@ head_of_government = {
 			}
 			cancel_if_invalid = yes
 		}
-	AZR_Behbud_Khan_Javanshir_sec_sco = {
-			allowed = { original_tag = AZR }
-			available = {
-				custom_trigger_tooltip = {
-					tooltip = minister_available
-					always = no
-				}
+	QIE_Jiang_Baili_cos = {
+			allowed = { original_tag = QIE }
+			available = { }
+			visible = {
+				NOT = { has_country_flag = Jiang_Baili_dead }
 			}
-			cancel_if_invalid = no
 			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea AZR_Behbud_Khan_Javanshir_sec_sco"
+				log = "[GetDateText]: [Root.GetName]: add idea QIE_Jiang_Baili_cos"
 			}
 			traits = {
-				security_minister
-				social_conservative
-				sec_prince_of_terror
+				chief_of_staff
+				cos_school_of_defence
 			}
-		}
-	LIT_Antanas_Tumenas_sec_sco = {
-			allowed = { original_tag = LIT }
-			available = {
-				custom_trigger_tooltip = {
-					tooltip = minister_available
-					always = no
-				}
-			}
-			cancel_if_invalid = no
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea LIT_Antanas_Tumenas_sec_sco"
-			}
-			traits = {
-				security_minister
-				social_conservative
-				sec_silent_lawyer
-			}
-		}
-	MLT_Censu_Tabone_sec_ade = {
-			allowed = { original_tag = MLT }
-			available = {
-				custom_trigger_tooltip = {
-					tooltip = minister_available
-					always = no
-				}
-			}
-			cancel_if_invalid = no
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea MLT_Censu_Tabone_sec_ade"
-			}
-			traits = {
-				security_minister
-				authoritarian_democrat
-				sec_crime_fighter
-			}
+			cancel_if_invalid = yes
 		}
 	}
 	
 	chief_of_army = { ### Chief of Army ###
-
+	QIE_Wu_Peifu_carm = {
+			allowed = { original_tag = QIE }
+			available = { }
+			visible = {
+				NOT = { has_country_flag = Wu_Peifu_dead }
+			}
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea QIE_Wu_Peifu_carm"
+			}
+			traits = {
+				chief_of_army
+				carm_jade_marshal
+			}
+			cancel_if_invalid = yes
+		}
 	}
 	
 	chief_of_navy = { ### Chief of Navy ###
@@ -1058,6 +1537,10 @@ spriteType = {
 	spriteType = {
 		name = "GFX_idea_BRM_U_May_Aung_eco_sco"
 		texturefile = "gfx/interface/ministers/BRM/BRM_U_May_Aung.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_CUB_Jose_Irrisari_Gamio_eco_sde"
+		texturefile = "gfx/interface/ministers/CUB/CUB_Jose_Irrisari_Gamio.tga"
 	}
 	spriteType = {
 		name = "GFX_idea_ERI_Andom_Tesfazion_eco_sco"
@@ -1166,5 +1649,109 @@ spriteType = {
 	spriteType = {
 		name = "GFX_idea_NMB_Bettie_Conradie_for_ade"
 		texturefile = "gfx/interface/ministers/NMB/NMB_Bettie_Conradie.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_PUE_Blanton_C_Winship_hog_pau"
+		texturefile = "gfx/interface/ministers/PUE/PUE_Blanton_C_Winship.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_PUE_Santiago_Iglesias_Pantin_sec_sde"
+		texturefile = "gfx/interface/ministers/PUE/PUE_Santiago_Iglesias_Pantin.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_PUE_Antonio_Rafael_Barcelo_sec_sli"
+		texturefile = "gfx/interface/ministers/PUE/PUE_Antonio_Rafael_Barcelo.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_PUE_Pedro_Albizu_Campos_sec_npo"
+		texturefile = "gfx/interface/ministers/PUE/PUE_Pedro_Albizu_Campos.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_QIE_Jiang_Baili_cos"
+		texturefile = "gfx/interface/ministers/QIE/QIE_Jiang_Baili.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_QIE_Wu_Peifu_carm"
+		texturefile = "gfx/interface/ministers/QIE/QIE_Wu_Peifu.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_ROM_Ion_Mota_for_npo"
+		texturefile = "gfx/interface/ministers/ROM/ROM_Ion_Mota.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_ROM_Gheorghe_Clime_eco_npo"
+		texturefile = "gfx/interface/ministers/ROM/ROM_Gheorghe_Clime.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_ROM_Alexandru_Cantacuzino_sec_npo"
+		texturefile = "gfx/interface/ministers/ROM/ROM_Alexandru_Cantacuzino.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_RUS_Georgiy_Vernadskiy_for_sli"
+		texturefile = "gfx/interface/ministers/RUS/RUS_Georgiy_Vernadskiy.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_RUS_Vladimir_Smirnov_eco_sli"
+		texturefile = "gfx/interface/ministers/RUS/RUS_Vladimir_Smirnov.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_RUS_Vladimir_Burtsev_sec_sde"
+		texturefile = "gfx/interface/ministers/RUS/RUS_Vladimir_Burtsev.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SOV_Karl_Radek_hog_tot"
+		texturefile = "gfx/interface/ministers/SOV/SOV_Karl_Radek.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SOV_Mariya_Spiridonova_for_rso"
+		texturefile = "gfx/interface/ministers/SOV/SOV_Mariya_Spiridonova.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SOV_Mikhail_Tomskiy_eco_syn"
+		texturefile = "gfx/interface/ministers/SOV/SOV_Mikhail_Tomskiy.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SOV_Pavel_Sudoplatov_sec_rso"
+		texturefile = "gfx/interface/ministers/SOV/SOV_Pavel_Sudoplatov.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_ULS_John_Miller_Andrews_hog_sco"
+		texturefile = "gfx/interface/ministers/ULS/ULS_John_Miller_Andrews.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_ULS_Hugh_O'Neill_for_pau"
+		texturefile = "gfx/interface/ministers/ULS/ULS_Hugh_O'Neill.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_ULS_William_J_Twaddell_eco_pau"
+		texturefile = "gfx/interface/ministers/ULS/ULS_William_J_Twaddell.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_ULS_Joseph_Davison_sec_ade"
+		texturefile = "gfx/interface/ministers/ULS/ULS_Joseph_Davison.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_VIN_Tran_Trong_Kim_hog_sco"
+		texturefile = "gfx/interface/ministers/VIN/VIN_Tran_Trong_Kim.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_VIN_Tran_Van_Huu_for_sco"
+		texturefile = "gfx/interface/ministers/VIN/VIN_Tran_Van_Huu.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_VIN_Nguyen_Van_Vinh_sec_mli"
+		texturefile = "gfx/interface/ministers/VIN/VIN_Nguyen_Van_Vinh.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_GBR_Edward_Cavendish_sec_sco"
+		texturefile = "gfx/interface/ministers/GBR/GBR_Edward_Cavendish.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_GBR_Robert_Vansittart_hog_sco"
+		texturefile = "gfx/interface/ministers/GBR/GBR_Robert_Vansittart.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_ROM_Virgil_Madgearu_hog_sde"
+		texturefile = "gfx/interface/ministers/ROM/ROM_Virgil_Madgearu.tga"
 	}
 }
