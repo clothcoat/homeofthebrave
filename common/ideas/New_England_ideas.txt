@@ -526,7 +526,7 @@ ideas = {
 				army_speed_factor = 0.05
 				org_loss_when_moving = -0.02
 				out_of_supply_factor = -0.03
-				operation_infiltrate_cost = -0.1
+				operation_infiltrate_armed_forces_army_cost = -0.1
 			}
 		}
 
@@ -539,9 +539,6 @@ ideas = {
 				local_manpower = 0.05
 				weekly_manpower = 300
 				war_support_weekly_factor = 0.003
-				CAN = {
-				mic_to_target_factor = 0.10
-				}
 				 industrial_capacity_factory = 0.10
 				industrial_capacity_dockyard = 0.10
 			}

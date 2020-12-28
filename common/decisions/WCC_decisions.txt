@@ -164,7 +164,7 @@ WCC_american_imperialism = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision WCC_attack_mexico"
+			log = "[GetDateText]: [Root.GetName]: Decision WCC_attack_guatemala"
 			create_wargoal = {
 				type = annex_everything
 				target = GUA
@@ -215,7 +215,7 @@ WCC_american_imperialism = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision WCC_attack_mexico"
+			log = "[GetDateText]: [Root.GetName]: Decision WCC_attack_nicaragua"
 			create_wargoal = {
 				type = annex_everything
 				target = NIC
@@ -239,7 +239,6 @@ WCC_american_imperialism = {
 
 		visible = {
 			has_completed_focus = WCC_banana_republics
-			}
 			ELS = {
 				exists = yes
 				NOT = {
@@ -283,12 +282,11 @@ WCC_american_imperialism = {
 		available = {
 			is_subject = no
 			controls_all_owned_states = yes
-			can_declare_war_on = COS	
+			can_declare_war_on = COS
 		}
 
 		visible = {
 			has_completed_focus = WCC_banana_republics
-			}
 			COS = {
 				exists = yes
 				NOT = {
@@ -315,7 +313,7 @@ WCC_american_imperialism = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision WCC_attack_mexico"
+			log = "[GetDateText]: [Root.GetName]: Decision WCC_attack_costa_rica"
 			create_wargoal = {
 				type = annex_everything
 				target = COS
@@ -337,7 +335,6 @@ WCC_american_imperialism = {
 
 		visible = {
 			has_completed_focus = WCC_banana_republics
-			}
 			CUB = {
 				exists = yes
 				NOT = {
@@ -364,7 +361,7 @@ WCC_american_imperialism = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision WCC_attack_mexico"
+			log = "[GetDateText]: [Root.GetName]: Decision WCC_attack_cuba"
 			create_wargoal = {
 				type = annex_everything
 				target = CUB
@@ -386,7 +383,6 @@ WCC_american_imperialism = {
 
 		visible = {
 			has_completed_focus = WCC_banana_republics
-			}
 			HAI = {
 				exists = yes
 				NOT = {
@@ -413,7 +409,7 @@ WCC_american_imperialism = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision WCC_attack_mexico"
+			log = "[GetDateText]: [Root.GetName]: Decision WCC_attack_hai"
 			create_wargoal = {
 				type = annex_everything
 				target = HAI
@@ -435,7 +431,6 @@ WCC_american_imperialism = {
 
 		visible = {
 			has_completed_focus = WCC_banana_republics
-			}
 			DOM = {
 				exists = yes
 				NOT = {
@@ -479,12 +474,11 @@ WCC_american_imperialism = {
 		available = {
 			is_subject = no
 			controls_all_owned_states = yes
-			can_declare_war_on = COL	
+			can_declare_war_on = COL
 		}
 
 		visible = {
 			has_completed_focus = WCC_push_further
-			}
 			COL = {
 				exists = yes
 				NOT = {
@@ -533,7 +527,6 @@ WCC_american_imperialism = {
 
 		visible = {
 			has_completed_focus = WCC_push_further
-			}
 			VEN = {
 				exists = yes
 				NOT = {
@@ -582,7 +575,6 @@ WCC_american_imperialism = {
 
 		visible = {
 			has_completed_focus = WCC_push_further
-			}
 			PRU = {
 				exists = yes
 				NOT = {

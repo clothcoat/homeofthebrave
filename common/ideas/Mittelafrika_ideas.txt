@@ -74,7 +74,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NGR_Northern_Tensions"}
 			modifier = {
 				stability_weekly = -0.15
-				monthly_manpower = -0.05
+				weekly_manpower = 50
 			}
 			picture = tfv_can_conscription_crisis
 		}

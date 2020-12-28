@@ -419,8 +419,8 @@ ideas = {
 				research_speed_factor = 0.05
 			}
 		}
-	WCC_seize_rich = {#Seize Their Wealth
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea WCC_seize_rich"}
+	WCC_seize_rich_2 = {#Seize Their Wealth
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea WCC_seize_rich_2"}
 			allowed = { always = no }
 			available = {
 			has_government = national_populist
