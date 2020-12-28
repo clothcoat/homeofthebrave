@@ -1024,7 +1024,7 @@ country_event = { # 1937 Election
 					has_country_flag = PSA_1937_democratic_primary_disney
 				}
 				add_ideas = CAL_Harry_P_Cain_hog_sco
-				add_ideas = CAL_William_Averell_Harriman_for_sco
+				add_ideas = CAL_Louis_Arthur_Johnson_for_sco
 				add_ideas = CAL_Norman_Chandler_eco_sco
 				add_ideas = CAL_Henry_Fountain_Ashurst_sec_sco
 			}
@@ -1182,7 +1182,7 @@ country_event = { # 1937 Election
 		}
 		hidden_effect = {
 			add_ideas = CAL_Bourke_B_Hickenlooper_hog_sco
-			add_ideas = CAL_William_Averell_Harriman_for_sco
+			add_ideas = CAL_Louis_Arthur_Johnson_for_sco
 			add_ideas = CAL_William_Myron_Keck_eco_sco
 			add_ideas = CAL_Levi_Stewart_Udall_sec_sco
 		}
@@ -5591,8 +5591,8 @@ country_event = {# Rethinking our Tank Production
 	option = {# Let's focus on more reliable models
 		name = pacificstates.203.a
 		swap_ideas = {
-			remove_idea = CAL_Marshall_plan_idea_6
-			add_idea = CAL_Marshall_plan_idea_7
+			remove_idea = CAL_Marshall_plan_idea_4_both
+			add_idea = CAL_Marshall_plan_idea_5
 		}
 	}
 	option = {# I like it how it is
@@ -10066,7 +10066,7 @@ country_event = {# Long's Head of State
 		hidden_effect = {
 			add_ideas = CAL_Hiram_Johnson_hog_sde
 			add_ideas = CAL_Ralph_Johnson_Bunche_for_sde
-			add_ideas = CAL_Hjalmar_Peterson_eco_sde
+			add_ideas = CAL_Hjalmar_Petersen_eco_sde
 			add_ideas = CAL_Konrad_Knute_Solberg_sec_sde
 		}
 	}
@@ -10081,7 +10081,7 @@ country_event = {# Long's Head of State
 		hidden_effect = {
 			add_ideas = CAL_Huey_Long_hog_sde
 			add_ideas = CAL_Ralph_Johnson_Bunche_for_sde
-			add_ideas = CAL_Hjalmar_Peterson_eco_sde
+			add_ideas = CAL_Hjalmar_Petersen_eco_sde
 			add_ideas = CAL_Konrad_Knute_Solberg_sec_sde
 		}
 	}

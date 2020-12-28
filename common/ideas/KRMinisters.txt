@@ -40,24 +40,6 @@ head_of_government = {
 				hog_silent_workhorse
 			}
 		}
-	BHU_Jigme_Wangchuck_hog_pau = {
-			allowed = { original_tag = BHU }
-			available = {
-				custom_trigger_tooltip = {
-					tooltip = head_of_gov_available
-					always = no
-				}
-			}
-			cancel_if_invalid = no
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BHU_Jigme_Wangchuck_hog_pau"
-			}
-			traits = {
-				head_of_government
-				paternal_autocrat
-				hog_local_tyrant
-			}
-		}
 	BRM_U_Chit_Hlaing_hog_ade = {
 			allowed = { original_tag = BRM }
 			available = {
@@ -130,7 +112,121 @@ head_of_government = {
 				hog_pragmatic_statesman
 			}
 		}
-	LIT_Leonas_Bistras_hog_sco = {
+	LIT_Karolis_Pozela_hog_tot = {
+			allowed = { original_tag = LIT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea LIT_Karolis_Pozela_hog_tot"
+			}
+			traits = {
+				head_of_government
+				totalist
+				hog_backroom_backstabber
+			}
+		}
+
+		LIT_Pranas_Cepenas_hog_syn = {
+			allowed = { original_tag = LIT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea LIT_Pranas_Cepenas_hog_syn"
+			}
+			traits = {
+				head_of_government
+				syndicalist
+				hog_political_protege
+			}
+		}
+
+		LIT_Jurgis_Smolskis_hog_rso = {
+			allowed = { original_tag = LIT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea LIT_Jurgis_Smolskis_hog_rso"
+			}
+			traits = {
+				head_of_government
+				radical_socialist
+				hog_ambitious_union_boss
+			}
+		}
+
+		LIT_Steponas_Kairys_hog_sde = {
+			allowed = { original_tag = LIT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea LIT_Steponas_Kairys_hog_sde"
+			}
+			traits = {
+				head_of_government
+				social_democrat
+				hog_pragmatic_statesman
+			}
+		}
+
+		LIT_Stanislaw_Narutowicz_hog_sli = {
+			allowed = { original_tag = LIT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea LIT_Stanislaw_Narutowicz_hog_sli"
+			}
+			traits = {
+				head_of_government
+				social_liberal
+				hog_naive_optimist
+			}
+		}
+
+		LIT_Petras_Leonas_hog_mli = {
+			allowed = { original_tag = LIT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea LIT_Petras_Leonas_hog_mli"
+			}
+			traits = {
+				head_of_government
+				market_liberal
+				hog_silent_workhorse
+			}
+		}
+
+		LIT_Leonas_Bistras_hog_sco = {
 			allowed = { original_tag = LIT }
 			available = {
 				custom_trigger_tooltip = {
@@ -146,6 +242,158 @@ head_of_government = {
 				head_of_government
 				social_conservative
 				hog_silent_workhorse
+			}
+		}
+
+		LIT_Stasys_Salkauskis_hog_sco = {
+			allowed = { original_tag = LIT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea LIT_Stasys_Salkauskis_hog_sco"
+			}
+			traits = {
+				head_of_government
+				social_conservative
+				hog_naive_optimist
+			}
+		}
+
+		LIT_Antanas_Smetona_hog_ade = {
+			allowed = { original_tag = LIT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea LIT_Antanas_Smetona_hog_ade"
+			}
+			traits = {
+				head_of_government
+				authoritarian_democrat
+				hog_backroom_backstabber
+			}
+		}
+
+		LIT_Povilas_Plechavicius_hog_ade = {
+			allowed = { original_tag = LIT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea LIT_Povilas_Plechavicius_hog_ade"
+			}
+			traits = {
+				head_of_government
+				authoritarian_democrat
+				hog_old_general
+			}
+		}
+
+		LIT_Vincas_Kreve_hog_ade = {
+			allowed = { original_tag = LIT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea LIT_Vincas_Kreve_hog_ade"
+			}
+			traits = {
+				head_of_government
+				authoritarian_democrat
+				hog_pragmatic_statesman
+			}
+		}
+
+		LIT_Went_von_der_Ropp_hog_pau = {
+			allowed = { original_tag = LIT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea LIT_Went_von_der_Ropp_hog_pau"
+			}
+			traits = {
+				head_of_government
+				paternal_autocrat
+				hog_local_tyrant
+			}
+		}
+
+		LIT_Domas_Cesevicius_hog_npo = {
+			allowed = { original_tag = LIT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea LIT_Domas_Cesevicius_hog_npo"
+			}
+			traits = {
+				head_of_government
+				national_populist
+				hog_corporate_suit
+			}
+		}
+
+		LIT_Klemensas_Brunius_hog_npo = {
+			allowed = { original_tag = LIT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea LIT_Klemensas_Brunius_hog_npo"
+			}
+			traits = {
+				head_of_government
+				national_populist
+				hog_political_protege
+			}
+		}
+
+		LIT_Pranas_Dielininkaitis_hog_npo = {
+			allowed = { original_tag = LIT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea LIT_Pranas_Dielininkaitis_hog_npo"
+			}
+			traits = {
+				head_of_government
+				national_populist
+				hog_ambitious_union_boss
 			}
 		}
 	MLT_Paul_Boffa_hog_sde = {
@@ -220,6 +468,404 @@ head_of_government = {
 				hog_local_tyrant
 			}
 		}
+		SIR_Song_Noppakul_hog_tot = {
+			allowed = { original_tag = SIR }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SIR_Song_Noppakul_hog_tot"
+			}
+			traits = {
+				head_of_government
+				totalist
+				hog_ambitious_union_boss
+			}
+		}
+
+		SIR_Prasert_Eiwchai_hog_syn = {
+			allowed = { original_tag = SIR }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SIR_Prasert_Eiwchai_hog_syn"
+			}
+			traits = {
+				head_of_government
+				syndicalist
+				hog_happy_amateur
+			}
+		}
+
+		SIR_Luang_Praditmanutham_hog_rso = {
+			allowed = { original_tag = SIR }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SIR_Luang_Praditmanutham_hog_rso"
+			}
+			traits = {
+				head_of_government
+				radical_socialist
+				hog_political_protege
+			}
+		}
+
+		SIR_Thawan_Thamrongnawasawat_hog_rso = {
+			allowed = { original_tag = SIR }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SIR_Thawan_Thamrongnawasawat_hog_rso"
+			}
+			traits = {
+				head_of_government
+				radical_socialist
+				hog_old_admiral
+			}
+		}
+
+		SIR_Luang_Sinthusongkhramchai_hog_sde = {
+			allowed = { original_tag = SIR }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SIR_Luang_Sinthusongkhramchai_hog_sde"
+			}
+			traits = {
+				head_of_government
+				social_democrat
+				hog_old_admiral
+			}
+		}
+
+		SIR_Phraya_Phaholpholphayuhasena_hog_sli = {
+			allowed = { original_tag = SIR }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SIR_Phraya_Phaholpholphayuhasena_hog_sli"
+			}
+			traits = {
+				head_of_government
+				social_liberal
+				hog_old_general
+			}
+		}
+
+		SIR_Savaeng_Piampongsarn_hog_sli = {
+			allowed = { original_tag = SIR }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SIR_Savaeng_Piampongsarn_hog_sli"
+			}
+			traits = {
+				head_of_government
+				social_liberal
+				hog_political_protege
+			}
+		}
+
+		SIR_Phra_Prasartpitthayayut_hog_mli = {
+			allowed = { original_tag = SIR }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SIR_Phra_Prasartpitthayayut_hog_mli"
+			}
+			traits = {
+				head_of_government
+				market_liberal
+				hog_old_general
+			}
+		}
+
+		SIR_Phraya_Songsuradet_hog_sco = {
+			allowed = { original_tag = SIR }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SIR_Phraya_Songsuradet_hog_sco"
+			}
+			traits = {
+				head_of_government
+				social_conservative
+				hog_reformist_soldier
+			}
+		}
+
+		SIR_Seni_Pramoj_hog_sco = {
+			allowed = { original_tag = SIR }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SIR_Seni_Pramoj_hog_sco"
+			}
+			traits = {
+				head_of_government
+				social_conservative
+				hog_backroom_backstabber
+			}
+		}
+
+		SIR_King_Prajadhipok_hog_ade = {
+			allowed = { original_tag = SIR }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SIR_King_Prajadhipok_hog_ade"
+			}
+			traits = {
+				head_of_government
+				authoritarian_democrat
+				hog_silent_workhorse
+			}
+		}
+
+		SIR_Phraya_Manopakornnitithada_hog_ade = {
+			allowed = { original_tag = SIR }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SIR_Phraya_Manopakornnitithada_hog_ade"
+			}
+			traits = {
+				head_of_government
+				authoritarian_democrat
+				hog_corporate_suit
+			}
+		}
+
+		SIR_Phraya_Sri_Sitthisongkram_hog_ade = {
+			allowed = { original_tag = SIR }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SIR_Phraya_Sri_Sitthisongkram_hog_ade"
+			}
+			traits = {
+				head_of_government
+				authoritarian_democrat
+				hog_backroom_backstabber
+			}
+		}
+
+		SIR_Pin_Malakul_hog_ade = {
+			allowed = { original_tag = SIR }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SIR_Pin_Malakul_hog_ade"
+			}
+			traits = {
+				head_of_government
+				authoritarian_democrat
+				hog_silent_workhorse
+			}
+		}
+
+		SIR_Boworadet_Kritsadakorn_hog_pau = {
+			allowed = { original_tag = SIR }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SIR_Boworadet_Kritsadakorn_hog_pau"
+			}
+			traits = {
+				head_of_government
+				paternal_autocrat
+				hog_local_tyrant
+			}
+		}
+
+		SIR_Chumbhotbongs_Paribatra_hog_pau = {
+			allowed = { original_tag = SIR }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SIR_Chumbhotbongs_Paribatra_hog_pau"
+			}
+			traits = {
+				head_of_government
+				paternal_autocrat
+				hog_corporate_suit
+			}
+		}
+
+		SIR_Khun_Kongritsuksagorn_hog_pau = {
+			allowed = { original_tag = SIR }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SIR_Khun_Kongritsuksagorn_hog_pau"
+			}
+			traits = {
+				head_of_government
+				paternal_autocrat
+				hog_political_protege
+			}
+		}
+
+		SIR_Paribatra_Sukhumbhand_hog_pau = {
+			allowed = { original_tag = SIR }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SIR_Paribatra_Sukhumbhand_hog_pau"
+			}
+			traits = {
+				head_of_government
+				paternal_autocrat
+				hog_old_general
+			}
+		}
+
+		SIR_Sarit_Thanarat_hog_pau = {
+			allowed = { original_tag = SIR }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SIR_Sarit_Thanarat_hog_pau"
+			}
+			traits = {
+				head_of_government
+				paternal_autocrat
+				hog_reformist_soldier
+			}
+		}
+
+		SIR_Phao_Sriyanond_hog_npo = {
+			allowed = { original_tag = SIR }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SIR_Phao_Sriyanond_hog_npo"
+			}
+			traits = {
+				head_of_government
+				national_populist
+				hog_silent_workhorse
+			}
+		}
+
+		SIR_Plaek_Khittasangkha_hog_npo = {
+			allowed = { original_tag = SIR }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SIR_Plaek_Khittasangkha_hog_npo"
+			}
+			traits = {
+				head_of_government
+				national_populist
+				hog_reformist_soldier
+			}
+		}
 		SOV_Karl_Radek_hog_tot = {
 			allowed = { original_tag = SOV }
 			available = {
@@ -292,6 +938,25 @@ head_of_government = {
 				hog_political_protege
 			}
 		}
+		ROM_Gheorghe_Apostol_hog_syn = {
+			allowed = { original_tag = ROM }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ROM_Gheorghe_Apostol_hog_syn"
+			}
+			traits = {
+				head_of_government
+				syndicalist
+				hog_ambitious_union_boss
+			}
+		}
+
 		ROM_Virgil_Madgearu_hog_sde = {
 			allowed = { original_tag = ROM }
 			available = {
@@ -310,6 +975,7 @@ head_of_government = {
 				hog_naive_optimist
 			}
 		}
+
 		ROM_Iuliu_Maniu_hog_sli = {
 			allowed = { original_tag = ROM }
 			available = {
@@ -326,6 +992,177 @@ head_of_government = {
 				head_of_government
 				social_liberal
 				hog_silent_workhorse
+			}
+		}
+
+		ROM_Constantin_Bratianu_hog_mli = {
+			allowed = { original_tag = ROM }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ROM_Constantin_Bratianu_hog_mli"
+			}
+			traits = {
+				head_of_government
+				market_liberal
+				hog_corporate_suit
+			}
+		}
+
+		ROM_Constantin_Angelescu_hog_mli = {
+			allowed = { original_tag = ROM }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ROM_Constantin_Angelescu_hog_mli"
+			}
+			traits = {
+				head_of_government
+				market_liberal
+				hog_silent_workhorse
+			}
+		}
+
+		ROM_Alexandru_Vaida_Voevod_hog_sco = {
+			allowed = { original_tag = ROM }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ROM_Alexandru_Vaida_Voevod_hog_sco"
+			}
+			traits = {
+				head_of_government
+				social_conservative
+				hog_local_tyrant
+			}
+		}
+
+		ROM_Constantin_Sanatescu_hog_ade = {
+			allowed = { original_tag = ROM }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ROM_Constantin_Sanatescu_hog_ade"
+			}
+			traits = {
+				head_of_government
+				authoritarian_democrat
+				hog_old_general
+			}
+		}
+
+		ROM_Armand_Calinescu_hog_pau = {
+			allowed = { original_tag = ROM }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ROM_Armand_Calinescu_hog_pau"
+			}
+			traits = {
+				head_of_government
+				paternal_autocrat
+				hog_silent_workhorse
+			}
+		}
+
+		ROM_Corneliu_Codreanu_hog_npo = {
+			allowed = { original_tag = ROM }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ROM_Corneliu_Codreanu_hog_npo"
+			}
+			traits = {
+				head_of_government
+				national_populist
+				hog_flamboyant_tough_guy
+			}
+		}
+
+		ROM_Horia_Sima_hog_npo = {
+			allowed = { original_tag = ROM }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ROM_Horia_Sima_hog_npo"
+			}
+			traits = {
+				head_of_government
+				national_populist
+				hog_flamboyant_tough_guy
+			}
+		}
+
+		ROM_Ion_Mota_hog_npo = {
+			allowed = { original_tag = ROM }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ROM_Ion_Mota_hog_npo"
+			}
+			traits = {
+				head_of_government
+				national_populist
+				hog_reformist_soldier
+			}
+		}
+
+		ROM_Alexandru_Cantacuzino_hog_npo = {
+			allowed = { original_tag = ROM }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ROM_Alexandru_Cantacuzino_hog_npo"
+			}
+			traits = {
+				head_of_government
+				national_populist
+				hog_political_protege
 			}
 		}
 	}
@@ -565,6 +1402,158 @@ head_of_government = {
 				for_iron_fisted_brute
 			}
 		}
+		ROM_Ana_Pauker_for_syn = {
+			allowed = { original_tag = ROM }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ROM_Ana_Pauker_for_syn"
+			}
+			traits = {
+				foreign_minister
+				syndicalist
+				for_ideological_crusader
+			}
+		}
+
+		ROM_Grigore_Gafencu_for_sli = {
+			allowed = { original_tag = ROM }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ROM_Grigore_Gafencu_for_sli"
+			}
+			traits = {
+				foreign_minister
+				social_liberal
+				for_biased_intellectual
+			}
+		}
+
+		ROM_Gheorghe_Tatarescu_for_mli = {
+			allowed = { original_tag = ROM }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ROM_Gheorghe_Tatarescu_for_mli"
+			}
+			traits = {
+				foreign_minister
+				market_liberal
+				for_iron_fisted_brute
+			}
+		}
+
+		ROM_Savel_Radulescu_for_mli = {
+			allowed = { original_tag = ROM }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ROM_Savel_Radulescu_for_mli"
+			}
+			traits = {
+				foreign_minister
+				market_liberal
+				for_apologetic_clerk
+			}
+		}
+
+		ROM_Viorel_Tilea_for_sco = {
+			allowed = { original_tag = ROM }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ROM_Viorel_Tilea_for_sco"
+			}
+			traits = {
+				foreign_minister
+				social_conservative
+				for_apologetic_clerk
+			}
+		}
+
+		ROM_Grigore_Niculescu_Buzesti_for_ade = {
+			allowed = { original_tag = ROM }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ROM_Grigore_Niculescu_Buzesti_for_ade"
+			}
+			traits = {
+				foreign_minister
+				authoritarian_democrat
+				for_apologetic_clerk
+			}
+		}
+
+		ROM_Constantin_Papanace_for_npo = {
+			allowed = { original_tag = ROM }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ROM_Constantin_Papanace_for_npo"
+			}
+			traits = {
+				foreign_minister
+				national_populist
+				for_ideological_crusader
+			}
+		}
+
+		ROM_Mihail_Sturdza_for_npo = {
+			allowed = { original_tag = ROM }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ROM_Mihail_Sturdza_for_npo"
+			}
+			traits = {
+				foreign_minister
+				national_populist
+				for_ideological_crusader
+			}
+		}
+
 		ROM_Ion_Mota_for_npo = {
 			allowed = { original_tag = ROM }
 			available = {
@@ -583,6 +1572,25 @@ head_of_government = {
 				for_ideological_crusader
 			}
 		}
+
+		ROM_Radu_Mironovici_for_npo = {
+			allowed = { original_tag = ROM }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ROM_Radu_Mironovici_for_npo"
+			}
+			traits = {
+				foreign_minister
+				national_populist
+				for_iron_fisted_brute
+			}
+		}
 		RUS_Georgiy_Vernadskiy_for_sli = {
 			allowed = { original_tag = RUS }
 			available = {
@@ -599,6 +1607,233 @@ head_of_government = {
 				foreign_minister
 				social_liberal
 				for_great_compromiser
+			}
+		}
+		SIR_Krachang_Tularak_for_tot = {
+			allowed = { original_tag = SIR }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SIR_Krachang_Tularak_for_tot"
+			}
+			traits = {
+				foreign_minister
+				totalist
+				for_ideological_crusader
+			}
+		}
+
+		SIR_Sanguan_Tularak_for_syn = {
+			allowed = { original_tag = SIR }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SIR_Sanguan_Tularak_for_syn"
+			}
+			traits = {
+				foreign_minister
+				syndicalist
+				for_iron_fisted_brute
+			}
+		}
+
+		SIR_Luang_Praditmanutham_for_rso = {
+			allowed = { original_tag = SIR }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SIR_Luang_Praditmanutham_for_rso"
+			}
+			traits = {
+				foreign_minister
+				radical_socialist
+				for_the_cloak_n_dagger_schemer
+			}
+		}
+
+		SIR_Direk_Chainam_for_sde = {
+			allowed = { original_tag = SIR }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SIR_Direk_Chainam_for_sde"
+			}
+			traits = {
+				foreign_minister
+				social_democrat
+				for_biased_intellectual
+			}
+		}
+
+		SIR_Poj_Sarasin_for_sli = {
+			allowed = { original_tag = SIR }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SIR_Poj_Sarasin_for_sli"
+			}
+			traits = {
+				foreign_minister
+				social_liberal
+				for_biased_intellectual
+			}
+		}
+
+		SIR_Rangsiyakorn_Arparporn_for_mli = {
+			allowed = { original_tag = SIR }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SIR_Rangsiyakorn_Arparporn_for_mli"
+			}
+			traits = {
+				foreign_minister
+				market_liberal
+				for_great_compromiser
+			}
+		}
+
+		SIR_Prince_Wan_Waithayakorn_for_sco = {
+			allowed = { original_tag = SIR }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SIR_Prince_Wan_Waithayakorn_for_sco"
+			}
+			traits = {
+				foreign_minister
+				social_conservative
+				for_ideological_crusader
+			}
+		}
+
+		SIR_Seni_Pramoj_for_sco = {
+			allowed = { original_tag = SIR }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SIR_Seni_Pramoj_for_sco"
+			}
+			traits = {
+				foreign_minister
+				social_conservative
+				for_great_compromiser
+			}
+		}
+
+		SIR_Phraya_Ratchawangsan_for_ade = {
+			allowed = { original_tag = SIR }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SIR_Phraya_Ratchawangsan_for_ade"
+			}
+			traits = {
+				foreign_minister
+				authoritarian_democrat
+				for_general_staffer
+			}
+		}
+
+		SIR_Traitotphrapan_Tevakul_for_ade = {
+			allowed = { original_tag = SIR }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SIR_Traitotphrapan_Tevakul_for_ade"
+			}
+			traits = {
+				foreign_minister
+				authoritarian_democrat
+				for_apologetic_clerk
+			}
+		}
+
+		SIR_Phraya_Thephadsadin_for_pau = {
+			allowed = { original_tag = SIR }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SIR_Phraya_Thephadsadin_for_pau"
+			}
+			traits = {
+				foreign_minister
+				paternal_autocrat
+				for_general_staffer
+			}
+		}
+
+		SIR_Phraya_Srisaynah_for_npo = {
+			allowed = { original_tag = SIR }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SIR_Phraya_Srisaynah_for_npo"
+			}
+			traits = {
+				foreign_minister
+				national_populist
+				for_the_cloak_n_dagger_schemer
 			}
 		}
 		SOV_Mariya_Spiridonova_for_rso = {
@@ -637,6 +1872,176 @@ head_of_government = {
 				for_ideological_crusader
 			}
 		}
+		LIT_Vladas_Niunka_for_tot = {
+			allowed = { original_tag = LIT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea LIT_Vladas_Niunka_for_tot"
+			}
+			traits = {
+				foreign_minister
+				totalist
+				for_ideological_crusader
+			}
+		}
+
+		LIT_Salomeja_Neris_for_syn = {
+			allowed = { original_tag = LIT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea LIT_Salomeja_Neris_for_syn"
+			}
+			traits = {
+				foreign_minister
+				syndicalist
+				for_great_compromiser
+			}
+		}
+
+		LIT_Juozas_Ziugzda_for_rso = {
+			allowed = { original_tag = LIT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea LIT_Juozas_Ziugzda_for_rso"
+			}
+			traits = {
+				foreign_minister
+				radical_socialist
+				for_biased_intellectual
+			}
+		}
+
+		LIT_Petras_Klimas_for_sde = {
+			allowed = { original_tag = LIT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea LIT_Petras_Klimas_for_sde"
+			}
+			traits = {
+				foreign_minister
+				social_democrat
+				for_apologetic_clerk
+			}
+		}
+
+		LIT_Adam_Uziemblo_for_sli = {
+			allowed = { original_tag = LIT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea LIT_Adam_Uziemblo_for_sli"
+			}
+			traits = {
+				foreign_minister
+				social_liberal
+				for_ideological_crusader
+			}
+		}
+
+		LIT_Ignas_Seinius_for_mli = {
+			allowed = { original_tag = LIT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea LIT_Ignas_Seinius_for_mli"
+			}
+			traits = {
+				foreign_minister
+				market_liberal
+				for_great_compromiser
+			}
+		}
+
+		LIT_Juozas_Gabrys_for_pau = {
+			allowed = { original_tag = LIT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea LIT_Juozas_Gabrys_for_pau"
+			}
+			traits = {
+				foreign_minister
+				paternal_autocrat
+				for_the_cloak_n_dagger_schemer
+			}
+		}
+
+		LIT_Kazys_Pakstas_for_npo = {
+			allowed = { original_tag = LIT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea LIT_Kazys_Pakstas_for_npo"
+			}
+			traits = {
+				foreign_minister
+				national_populist
+				for_biased_intellectual
+			}
+		}
+
+		LIT_Zenonas_Blynas_for_npo = {
+			allowed = { original_tag = LIT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea LIT_Zenonas_Blynas_for_npo"
+			}
+			traits = {
+				foreign_minister
+				national_populist
+				for_ideological_crusader
+			}
+		}
 		VIN_Tran_Van_Huu_for_sco = {
 			allowed = { original_tag = VIN }
 			available = {
@@ -653,24 +2058,6 @@ head_of_government = {
 				foreign_minister
 				social_conservative
 				for_great_compromiser
-			}
-		}
-		ROM_Grigore_Gafencu_for_sli = {
-			allowed = { original_tag = ROM }
-			available = {
-				custom_trigger_tooltip = {
-					tooltip = minister_available
-					always = no
-				}
-			}
-			cancel_if_invalid = no
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea ROM_Grigore_Gafencu_for_sli"
-			}
-			traits = {
-				foreign_minister
-				social_liberal
-				for_biased_intellectual
 			}
 		}
 	}
@@ -876,7 +2263,179 @@ head_of_government = {
 				eco_reformer
 			}
 		}
-	LIT_Vytautas_Zemkalnis_eco_pau = {
+
+		LIT_Justas_Paleckis_eco_syn = {
+			allowed = { original_tag = LIT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea LIT_Justas_Paleckis_eco_syn"
+			}
+			traits = {
+				economy_minister
+				syndicalist
+				eco_reformer
+			}
+		}
+
+		LIT_Zigmas_Angarietis_eco_rso = {
+			allowed = { original_tag = LIT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea LIT_Zigmas_Angarietis_eco_rso"
+			}
+			traits = {
+				economy_minister
+				radical_socialist
+				eco_planned_economy_proponent
+			}
+		}
+
+		LIT_Kipras_Bielinis_eco_sde = {
+			allowed = { original_tag = LIT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea LIT_Kipras_Bielinis_eco_sde"
+			}
+			traits = {
+				economy_minister
+				social_democrat
+				eco_mixed_economy
+			}
+		}
+
+		LIT_Witold_Abramowicz_eco_sli = {
+			allowed = { original_tag = LIT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea LIT_Witold_Abramowicz_eco_sli"
+			}
+			traits = {
+				economy_minister
+				social_liberal
+				eco_railway_magnate
+			}
+		}
+
+		LIT_Vaclovas_Sidzikauskas_eco_mli = {
+			allowed = { original_tag = LIT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea LIT_Vaclovas_Sidzikauskas_eco_mli"
+			}
+			traits = {
+				economy_minister
+				market_liberal
+				eco_oil_baron
+			}
+		}
+
+		LIT_Ernestas_Galvanauskas_eco_sco = {
+			allowed = { original_tag = LIT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea LIT_Ernestas_Galvanauskas_eco_sco"
+			}
+			traits = {
+				economy_minister
+				social_conservative
+				eco_balanced_budget_economy
+			}
+		}
+
+		LIT_Fabijonas_Kemesis_eco_sco = {
+			allowed = { original_tag = LIT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea LIT_Fabijonas_Kemesis_eco_sco"
+			}
+			traits = {
+				economy_minister
+				social_conservative
+				eco_mixed_economy
+			}
+		}
+
+		LIT_Mykolas_Krupavicius_eco_sco = {
+			allowed = { original_tag = LIT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea LIT_Mykolas_Krupavicius_eco_sco"
+			}
+			traits = {
+				economy_minister
+				social_conservative
+				eco_administrative_genius
+			}
+		}
+
+		LIT_Juozas_Tubelis_eco_ade = {
+			allowed = { original_tag = LIT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea LIT_Juozas_Tubelis_eco_ade"
+			}
+			traits = {
+				economy_minister
+				authoritarian_democrat
+				eco_resource_industrialist
+			}
+		}
+
+		LIT_Vytautas_Zemkalnis_eco_pau = {
 			allowed = { original_tag = LIT }
 			available = {
 				custom_trigger_tooltip = {
@@ -892,6 +2451,63 @@ head_of_government = {
 				economy_minister
 				paternal_autocrat
 				eco_construction_magnate
+			}
+		}
+
+		LIT_Jonas_Karutis_eco_npo = {
+			allowed = { original_tag = LIT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea LIT_Jonas_Karutis_eco_npo"
+			}
+			traits = {
+				economy_minister
+				national_populist
+				eco_infantry_proponent
+			}
+		}
+
+		LIT_Juozas_Brazaitis_eco_npo = {
+			allowed = { original_tag = LIT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea LIT_Juozas_Brazaitis_eco_npo"
+			}
+			traits = {
+				economy_minister
+				national_populist
+				eco_theoretical_scientist
+			}
+		}
+
+		LIT_Leonas_Prapuolenis_eco_npo = {
+			allowed = { original_tag = LIT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea LIT_Leonas_Prapuolenis_eco_npo"
+			}
+			traits = {
+				economy_minister
+				national_populist
+				eco_military_entrepreneur
 			}
 		}
 	MLT_Dom_Mintoff_eco_ade = {
@@ -948,6 +2564,158 @@ head_of_government = {
 				eco_military_entrepreneur
 			}
 		}
+ROM_Miron_Constantinescu_eco_tot = {
+			allowed = { original_tag = ROM }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ROM_Miron_Constantinescu_eco_tot"
+			}
+			traits = {
+				economy_minister
+				totalist
+				eco_administrative_genius
+			}
+		}
+
+		ROM_Virgil_Madgearu_eco_sde = {
+			allowed = { original_tag = ROM }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ROM_Virgil_Madgearu_eco_sde"
+			}
+			traits = {
+				economy_minister
+				social_democrat
+				eco_administrative_genius
+			}
+		}
+
+		ROM_Ion_Mihalache_eco_sde = {
+			allowed = { original_tag = ROM }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ROM_Ion_Mihalache_eco_sde"
+			}
+			traits = {
+				economy_minister
+				social_democrat
+				eco_administrative_genius
+			}
+		}
+
+		ROM_Gheorghe_Tatarescu_eco_mli = {
+			allowed = { original_tag = ROM }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ROM_Gheorghe_Tatarescu_eco_mli"
+			}
+			traits = {
+				economy_minister
+				market_liberal
+				eco_laissez_faire_capitalist
+			}
+		}
+
+		ROM_Victor_Slavescu_eco_mli = {
+			allowed = { original_tag = ROM }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ROM_Victor_Slavescu_eco_mli"
+			}
+			traits = {
+				economy_minister
+				market_liberal
+				eco_industrialiser
+			}
+		}
+
+		ROM_Mitita_Constantinescu_eco_mli = {
+			allowed = { original_tag = ROM }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ROM_Mitita_Constantinescu_eco_mli"
+			}
+			traits = {
+				economy_minister
+				market_liberal
+				eco_planned_economy_proponent
+			}
+		}
+
+		ROM_Gheorghe_Mironescu_eco_sco = {
+			allowed = { original_tag = ROM }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ROM_Gheorghe_Mironescu_eco_sco"
+			}
+			traits = {
+				economy_minister
+				social_conservative
+				eco_mixed_economy
+			}
+		}
+
+		ROM_Gheorghe_Potopeanu_eco_pau = {
+			allowed = { original_tag = ROM }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ROM_Gheorghe_Potopeanu_eco_pau"
+			}
+			traits = {
+				economy_minister
+				paternal_autocrat
+				eco_military_entrepreneur
+			}
+		}
+
 		ROM_Gheorghe_Clime_eco_npo = {
 			allowed = { original_tag = ROM }
 			available = {
@@ -966,6 +2734,44 @@ head_of_government = {
 				eco_construction_magnate
 			}
 		}
+
+		ROM_Ilie_Garneata_eco_npo = {
+			allowed = { original_tag = ROM }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ROM_Ilie_Garneata_eco_npo"
+			}
+			traits = {
+				economy_minister
+				national_populist
+				eco_construction_magnate
+			}
+		}
+
+		ROM_Mihail_Manoilescu_eco_npo = {
+			allowed = { original_tag = ROM }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ROM_Mihail_Manoilescu_eco_npo"
+			}
+			traits = {
+				economy_minister
+				national_populist
+				eco_industrialiser
+			}
+		}
 		RUS_Vladimir_Smirnov_eco_sli = {
 			allowed = { original_tag = RUS }
 			available = {
@@ -982,6 +2788,290 @@ head_of_government = {
 				economy_minister
 				social_liberal
 				eco_balanced_budget_economy
+			}
+		}
+		SIR_Phra_Sarnsartpraphan_eco_tot = {
+			allowed = { original_tag = SIR }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SIR_Phra_Sarnsartpraphan_eco_tot"
+			}
+			traits = {
+				economy_minister
+				totalist
+				eco_planned_economy_proponent
+			}
+		}
+
+		SIR_Chamlong_Daorueang_eco_syn = {
+			allowed = { original_tag = SIR }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SIR_Chamlong_Daorueang_eco_syn"
+			}
+			traits = {
+				economy_minister
+				syndicalist
+				eco_planned_economy_proponent
+			}
+		}
+
+		SIR_Phraya_Sartsphonkhan_eco_syn = {
+			allowed = { original_tag = SIR }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SIR_Phraya_Sartsphonkhan_eco_syn"
+			}
+			traits = {
+				economy_minister
+				syndicalist
+				eco_tank_proponent
+			}
+		}
+
+		SIR_Phraya_Sornyutthaseni_eco_rso = {
+			allowed = { original_tag = SIR }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SIR_Phraya_Sornyutthaseni_eco_rso"
+			}
+			traits = {
+				economy_minister
+				radical_socialist
+				eco_u_boat_proponent
+			}
+		}
+
+		SIR_Tua_Lapanukrom_eco_sde = {
+			allowed = { original_tag = SIR }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SIR_Tua_Lapanukrom_eco_sde"
+			}
+			traits = {
+				economy_minister
+				social_democrat
+				eco_industrial_chemist
+			}
+		}
+
+		SIR_Wichit_Lulitanon_eco_sli = {
+			allowed = { original_tag = SIR }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SIR_Wichit_Lulitanon_eco_sli"
+			}
+			traits = {
+				economy_minister
+				social_liberal
+				eco_keynesian_economy
+			}
+		}
+
+		SIR_Luang_Promyothee_eco_mli = {
+			allowed = { original_tag = SIR }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SIR_Luang_Promyothee_eco_mli"
+			}
+			traits = {
+				economy_minister
+				market_liberal
+				eco_military_entrepreneur
+			}
+		}
+
+		SIR_Buntaeng_Thongsawat_eco_sco = {
+			allowed = { original_tag = SIR }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SIR_Buntaeng_Thongsawat_eco_sco"
+			}
+			traits = {
+				economy_minister
+				social_conservative
+				eco_the_minister_for_everything
+			}
+		}
+
+		SIR_Narisara_Nuwattiwong_eco_ade = {
+			allowed = { original_tag = SIR }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SIR_Narisara_Nuwattiwong_eco_ade"
+			}
+			traits = {
+				economy_minister
+				authoritarian_democrat
+				eco_resource_industrialist
+			}
+		}
+
+		SIR_Pin_Malakul_eco_ade = {
+			allowed = { original_tag = SIR }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SIR_Pin_Malakul_eco_ade"
+			}
+			traits = {
+				economy_minister
+				authoritarian_democrat
+				eco_theoretical_scientist
+			}
+		}
+
+		SIR_Serm_Winitchaikul_eco_ade = {
+			allowed = { original_tag = SIR }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SIR_Serm_Winitchaikul_eco_ade"
+			}
+			traits = {
+				economy_minister
+				authoritarian_democrat
+				eco_balanced_budget_economy
+			}
+		}
+
+		SIR_Khun_Kongritsuksagorn_eco_pau = {
+			allowed = { original_tag = SIR }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SIR_Khun_Kongritsuksagorn_eco_pau"
+			}
+			traits = {
+				economy_minister
+				paternal_autocrat
+				eco_industrialiser
+			}
+		}
+
+		SIR_Thawee_Chullasup_eco_pau = {
+			allowed = { original_tag = SIR }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SIR_Thawee_Chullasup_eco_pau"
+			}
+			traits = {
+				economy_minister
+				paternal_autocrat
+				eco_construction_magnate
+			}
+		}
+
+		SIR_Phraya_Tonavanikamontri_eco_npo = {
+			allowed = { original_tag = SIR }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SIR_Phraya_Tonavanikamontri_eco_npo"
+			}
+			traits = {
+				economy_minister
+				national_populist
+				eco_bank_president
+			}
+		}
+
+		SIR_Sawat_Sawatronnachai_Sawadikeat_eco_npo = {
+			allowed = { original_tag = SIR }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SIR_Sawat_Sawatronnachai_Sawadikeat_eco_npo"
+			}
+			traits = {
+				economy_minister
+				national_populist
+				eco_tank_proponent
 			}
 		}
 		SOV_Mikhail_Tomskiy_eco_syn = {
@@ -1020,24 +3110,6 @@ head_of_government = {
 				eco_infantry_proponent
 			}
 		}
-		ROM_Ion_Mihalache_eco_sde = {
-			allowed = { original_tag = ROM }
-			available = {
-				custom_trigger_tooltip = {
-					tooltip = minister_available
-					always = no
-				}
-			}
-			cancel_if_invalid = no
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea ROM_Ion_Mihalache_eco_sde"
-			}
-			traits = {
-				economy_minister
-				social_democrat
-				eco_administrative_genius
-			}
-		}
 	}
 	
 	security_minister = {
@@ -1059,7 +3131,102 @@ head_of_government = {
 				sec_prince_of_terror
 			}
 		}
-	LIT_Antanas_Tumenas_sec_sco = {
+		LIT_Kazys_Boruta_sec_syn = {
+			allowed = { original_tag = LIT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea LIT_Kazys_Boruta_sec_syn"
+			}
+			traits = {
+				security_minister
+				syndicalist
+				sec_compassionate_gentleman
+			}
+		}
+
+		LIT_Kazys_Giedrys_sec_rso = {
+			allowed = { original_tag = LIT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea LIT_Kazys_Giedrys_sec_rso"
+			}
+			traits = {
+				security_minister
+				radical_socialist
+				sec_secret_police_chief
+			}
+		}
+
+		LIT_Vladas_Pozela_sec_sde = {
+			allowed = { original_tag = LIT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea LIT_Vladas_Pozela_sec_sde"
+			}
+			traits = {
+				security_minister
+				social_democrat
+				sec_health_and_safety
+			}
+		}
+
+		LIT_Jan_Pilsudski_sec_sli = {
+			allowed = { original_tag = LIT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea LIT_Jan_Pilsudski_sec_sli"
+			}
+			traits = {
+				security_minister
+				social_liberal
+				sec_health_and_safety
+			}
+		}
+
+		LIT_Rapolas_Skipitis_sec_mli = {
+			allowed = { original_tag = LIT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea LIT_Rapolas_Skipitis_sec_mli"
+			}
+			traits = {
+				security_minister
+				market_liberal
+				sec_media_magnate
+			}
+		}
+
+		LIT_Antanas_Tumenas_sec_sco = {
 			allowed = { original_tag = LIT }
 			available = {
 				custom_trigger_tooltip = {
@@ -1075,6 +3242,101 @@ head_of_government = {
 				security_minister
 				social_conservative
 				sec_silent_lawyer
+			}
+		}
+
+		LIT_Augustinas_Voldemaras_sec_ade = {
+			allowed = { original_tag = LIT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea LIT_Augustinas_Voldemaras_sec_ade"
+			}
+			traits = {
+				security_minister
+				authoritarian_democrat
+				sec_prince_of_terror
+			}
+		}
+
+		LIT_Adrian_von_Renteln_sec_pau = {
+			allowed = { original_tag = LIT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea LIT_Adrian_von_Renteln_sec_pau"
+			}
+			traits = {
+				security_minister
+				paternal_autocrat
+				sec_secret_police_chief
+			}
+		}
+
+		LIT_Jonas_Statkus_sec_npo = {
+			allowed = { original_tag = LIT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea LIT_Jonas_Statkus_sec_npo"
+			}
+			traits = {
+				security_minister
+				national_populist
+				sec_secret_police_chief
+			}
+		}
+
+		LIT_Juozas_Keliuotis_sec_npo = {
+			allowed = { original_tag = LIT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea LIT_Juozas_Keliuotis_sec_npo"
+			}
+			traits = {
+				security_minister
+				national_populist
+				sec_media_magnate
+			}
+		}
+
+		LIT_Vytautas_Reivytis_sec_npo = {
+			allowed = { original_tag = LIT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea LIT_Vytautas_Reivytis_sec_npo"
+			}
+			traits = {
+				security_minister
+				national_populist
+				sec_efficient_sociopath
 			}
 		}
 	MLT_Censu_Tabone_sec_ade = {
@@ -1351,7 +3613,159 @@ head_of_government = {
 				sec_media_magnate
 			}
 		}
-	ROM_Alexandru_Cantacuzino_sec_npo = {
+	ROM_Teohari_Georgescu_sec_tot = {
+			allowed = { original_tag = ROM }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ROM_Teohari_Georgescu_sec_tot"
+			}
+			traits = {
+				security_minister
+				totalist
+				sec_back_stabber
+			}
+		}
+
+		ROM_Pantelimon_Halippa_sec_sde = {
+			allowed = { original_tag = ROM }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ROM_Pantelimon_Halippa_sec_sde"
+			}
+			traits = {
+				security_minister
+				social_democrat
+				sec_man_of_the_people
+			}
+		}
+
+		ROM_Victor_Iamandi_sec_mli = {
+			allowed = { original_tag = ROM }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ROM_Victor_Iamandi_sec_mli"
+			}
+			traits = {
+				security_minister
+				market_liberal
+				sec_compassionate_gentleman
+			}
+		}
+
+		ROM_Richard_Franasovici_sec_mli = {
+			allowed = { original_tag = ROM }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ROM_Richard_Franasovici_sec_mli"
+			}
+			traits = {
+				security_minister
+				market_liberal
+				sec_back_stabber
+			}
+		}
+
+		ROM_Alexandru_Vaida_Voevod_sec_sco = {
+			allowed = { original_tag = ROM }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ROM_Alexandru_Vaida_Voevod_sec_sco"
+			}
+			traits = {
+				security_minister
+				social_conservative
+				sec_efficient_sociopath
+			}
+		}
+
+		ROM_Mihail_Ghelmegeanu_sec_sco = {
+			allowed = { original_tag = ROM }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ROM_Mihail_Ghelmegeanu_sec_sco"
+			}
+			traits = {
+				security_minister
+				social_conservative
+				sec_silent_lawyer
+			}
+		}
+
+		ROM_Aurel_Aldea_sec_sco = {
+			allowed = { original_tag = ROM }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ROM_Aurel_Aldea_sec_sco"
+			}
+			traits = {
+				security_minister
+				social_conservative
+				sec_back_stabber
+			}
+		}
+
+		ROM_Horia_Sima_sec_npo = {
+			allowed = { original_tag = ROM }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ROM_Horia_Sima_sec_npo"
+			}
+			traits = {
+				security_minister
+				national_populist
+				sec_efficient_sociopath
+			}
+		}
+
+		ROM_Alexandru_Cantacuzino_sec_npo = {
 			allowed = { original_tag = ROM }
 			available = {
 				custom_trigger_tooltip = {
@@ -1367,6 +3781,25 @@ head_of_government = {
 				security_minister
 				national_populist
 				sec_prince_of_terror
+			}
+		}
+
+		ROM_Ion_Belgea_sec_npo = {
+			allowed = { original_tag = ROM }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ROM_Ion_Belgea_sec_npo"
+			}
+			traits = {
+				security_minister
+				national_populist
+				sec_efficient_sociopath
 			}
 		}
 	RUS_Vladimir_Burtsev_sec_sde = {
@@ -1385,6 +3818,271 @@ head_of_government = {
 				security_minister
 				social_democrat
 				sec_crime_fighter
+			}
+		}
+	SIR_Thongin_Phuripat_sec_syn = {
+			allowed = { original_tag = SIR }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SIR_Thongin_Phuripat_sec_syn"
+			}
+			traits = {
+				security_minister
+				syndicalist
+				sec_man_of_the_people
+			}
+		}
+
+		SIR_Thawan_Thamrongnawasawat_sec_rso = {
+			allowed = { original_tag = SIR }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SIR_Thawan_Thamrongnawasawat_sec_rso"
+			}
+			traits = {
+				security_minister
+				radical_socialist
+				sec_efficient_sociopath
+			}
+		}
+
+		SIR_Phraya_Tepvitunpahun_Saruttabodhi_sec_sde = {
+			allowed = { original_tag = SIR }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SIR_Phraya_Tepvitunpahun_Saruttabodhi_sec_sde"
+			}
+			traits = {
+				security_minister
+				social_democrat
+				sec_man_of_the_people
+			}
+		}
+
+		SIR_Phraya_Sarapaipiphat_sec_sli = {
+			allowed = { original_tag = SIR }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SIR_Phraya_Sarapaipiphat_sec_sli"
+			}
+			traits = {
+				security_minister
+				social_liberal
+				sec_media_magnate
+			}
+		}
+
+		SIR_Luang_Supachalasai_sec_mli = {
+			allowed = { original_tag = SIR }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SIR_Luang_Supachalasai_sec_mli"
+			}
+			traits = {
+				security_minister
+				market_liberal
+				sec_health_and_safety
+			}
+		}
+
+		SIR_Liang_Chaiyakarn_sec_sco = {
+			allowed = { original_tag = SIR }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SIR_Liang_Chaiyakarn_sec_sco"
+			}
+			traits = {
+				security_minister
+				social_conservative
+				sec_crooked_kleptocrat
+			}
+		}
+
+		SIR_Paribatra_Sukhumbhand_sec_ade = {
+			allowed = { original_tag = SIR }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SIR_Paribatra_Sukhumbhand_sec_ade"
+			}
+			traits = {
+				security_minister
+				authoritarian_democrat
+				sec_crime_fighter
+			}
+		}
+
+		SIR_Samaichalerm_Kritsadakorn_sec_ade = {
+			allowed = { original_tag = SIR }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SIR_Samaichalerm_Kritsadakorn_sec_ade"
+			}
+			traits = {
+				security_minister
+				authoritarian_democrat
+				sec_prince_of_terror
+			}
+		}
+
+		SIR_Paribatra_Sukhumbhand_sec_pau = {
+			allowed = { original_tag = SIR }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SIR_Paribatra_Sukhumbhand_sec_pau"
+			}
+			traits = {
+				security_minister
+				paternal_autocrat
+				sec_crime_fighter
+			}
+		}
+
+		SIR_Siri_Siriyothin_sec_pau = {
+			allowed = { original_tag = SIR }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SIR_Siri_Siriyothin_sec_pau"
+			}
+			traits = {
+				security_minister
+				paternal_autocrat
+				sec_efficient_sociopath
+			}
+		}
+
+		SIR_Chao_Phraya_Mahitorn_sec_npo = {
+			allowed = { original_tag = SIR }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SIR_Chao_Phraya_Mahitorn_sec_npo"
+			}
+			traits = {
+				security_minister
+				national_populist
+				sec_compassionate_gentleman
+			}
+		}
+
+		SIR_Luang_Adulyadejarat_sec_npo = {
+			allowed = { original_tag = SIR }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SIR_Luang_Adulyadejarat_sec_npo"
+			}
+			traits = {
+				security_minister
+				national_populist
+				sec_secret_police_chief
+			}
+		}
+
+		SIR_Luang_Wichitwathakan_sec_npo = {
+			allowed = { original_tag = SIR }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SIR_Luang_Wichitwathakan_sec_npo"
+			}
+			traits = {
+				security_minister
+				national_populist
+				sec_media_magnate
+			}
+		}
+
+		SIR_Phao_Sriyanond_sec_npo = {
+			allowed = { original_tag = SIR }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SIR_Phao_Sriyanond_sec_npo"
+			}
+			traits = {
+				security_minister
+				national_populist
+				sec_prince_of_terror
 			}
 		}
 	SOV_Pavel_Sudoplatov_sec_rso = {
@@ -1457,24 +4155,6 @@ head_of_government = {
 				security_minister
 				social_conservative
 				sec_prince_of_terror
-			}
-		}
-		ROM_Pantelimon_Halippa_sec_sde = {
-			allowed = { original_tag = ROM }
-			available = {
-				custom_trigger_tooltip = {
-					tooltip = minister_available
-					always = no
-				}
-			}
-			cancel_if_invalid = no
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea ROM_Pantelimon_Halippa_sec_sde"
-			}
-			traits = {
-				security_minister
-				social_democrat
-				sec_man_of_the_people
 			}
 		}
 	}
