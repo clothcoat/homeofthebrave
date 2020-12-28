@@ -637,6 +637,24 @@ head_of_government = {
 				for_great_compromiser
 			}
 		}
+		ROM_Grigore_Gafencu_for_sli = {
+			allowed = { original_tag = ROM }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ROM_Grigore_Gafencu_for_sli"
+			}
+			traits = {
+				foreign_minister
+				social_liberal
+				for_biased_intellectual
+			}
+		}
 	}
 	
 	economy_minister = {
@@ -982,6 +1000,24 @@ head_of_government = {
 				economy_minister
 				paternal_autocrat
 				eco_infantry_proponent
+			}
+		}
+		ROM_Ion_Mihalache_eco_sde = {
+			allowed = { original_tag = ROM }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ROM_Ion_Mihalache_eco_sde"
+			}
+			traits = {
+				economy_minister
+				social_democrat
+				eco_administrative_genius
 			}
 		}
 	}
@@ -1405,6 +1441,24 @@ head_of_government = {
 				sec_prince_of_terror
 			}
 		}
+		ROM_Pantelimon_Halippa_sec_sde = {
+			allowed = { original_tag = ROM }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ROM_Pantelimon_Halippa_sec_sde"
+			}
+			traits = {
+				security_minister
+				social_democrat
+				sec_man_of_the_people
+			}
+		}
 	}
 	
 	head_of_intel = { ### Head of Intel ###
@@ -1753,5 +1807,17 @@ spriteType = {
 	spriteType = {
 		name = "GFX_idea_ROM_Virgil_Madgearu_hog_sde"
 		texturefile = "gfx/interface/ministers/ROM/ROM_Virgil_Madgearu.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_ROM_Grigore_Gafencu_for_sli"
+		texturefile = "gfx/interface/ministers/ROM/ROM_Grigore_Gafencu.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_ROM_Ion_Mihalache_eco_sde"
+		texturefile = "gfx/interface/ministers/ROM/ROM_Ion_Mihalache.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_ROM_Pantelimon_Halippa_sec_sde"
+		texturefile = "gfx/interface/ministers/ROM/ROM_Pantelimon_Halippa.tga"
 	}
 }
