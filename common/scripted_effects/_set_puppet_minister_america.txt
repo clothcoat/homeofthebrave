@@ -2060,18 +2060,19 @@ set_puppet_minister_america = {
 		else_if = {
 			limit = { has_government = social_conservative }
 			add_ideas = {
-				add_ideas = TEX_willard_kemp_hog_sco
-				add_ideas = TEX_Orville_Roundtree_for_sco
-				add_ideas = TEX_George_Fisher_eco_sco
+				TEX_willard_kemp_hog_sco
+				TEX_Orville_Roundtree_for_sco
+				TEX_George_Fisher_eco_sco
+				TEX_alvin_o_king_sec_ade
 			}
 		}
 		else_if = {
 			limit = { has_government = social_liberal }
 			add_ideas = {
-				add_ideas = TEX_Philip_La_Follette_hog_sli
-				add_ideas = TEX_robert_la_follette_jr_for_sli
-				add_ideas = TEX_gladys_pyle_eco_sli
-				add_ideas = TEX_herman_ekern_sec_sli
+				TEX_Philip_La_Follette_hog_sli
+				TEX_robert_la_follette_jr_for_sli
+				TEX_gladys_pyle_eco_sli
+				TEX_herman_ekern_sec_sli
 			}
 		}
 	}

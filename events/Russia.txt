@@ -344,7 +344,7 @@ country_event = { #Aftermath of the assassination
 			}
 			add_ideas = {
 				RUS_Vladimir_Purishkevich_hog_pau
-				RUS_Vladimir_Paley_for_sco
+				RUS_Vladimir_P_Paley_for_sco
 				RUS_Vladimir_N_Kokovtsov_eco_ade
 				RUS_Felix_F_Yusupov_sec_ade
 			}
@@ -428,7 +428,7 @@ country_event = { #Aftermath of the assassination
 				RUS_Pyetr_Vrangel_hog_ade
 				RUS_Vladimir_Golitsyn_for_ade
 				RUS_Aleksey_P_Arkhangelskiy_eco_ade
-				RUS_Sergey_L_Markov_sec_pau
+				RUS_Sergey_L_Markov_sec_ade
 			}
 			country_event = {
 				id = russia.9
@@ -553,7 +553,7 @@ country_event = { #PM choice for Dmitriy
 		add_ideas = RUS_Pavel_Milyukov_hog_mli
 		hidden_effect = {
 			add_ideas = {
-				RUS_Aleksandr_Konovalov_for_mli
+				RUS_Aleksandr_I_Konovalov_for_mli
 				RUS_Vladimir_P_Smirnov_eco_sli
 				RUS_Vasiliy_A_Kharlamov_sec_mli
 			}
@@ -676,7 +676,7 @@ country_event = { #PM choice for the senate
 			remove_all_ministers = yes
 			add_ideas = {
 				RUS_Pavel_Milyukov_hog_mli
-				RUS_Aleksandr_Konovalov_for_mli
+				RUS_Aleksandr_I_Konovalov_for_mli
 				RUS_Vladimir_P_Smirnov_eco_sli
 				RUS_Vasiliy_A_Kharlamov_sec_mli
 			}
@@ -759,7 +759,7 @@ country_event = { #PM choice for Wrangel
 			remove_ideas_with_trait = foreign_minister
 			remove_ideas_with_trait = economy_minister
 			add_ideas = {
-				RUS_Aleksandr_Konovalov_for_mli
+				RUS_Aleksandr_I_Konovalov_for_mli
 				RUS_Vladimir_P_Smirnov_eco_sli
 			}
 		}
@@ -1135,7 +1135,7 @@ country_event = { #The Dictatorship
 			limit = {
 				has_idea = RUS_Anton_Denikin_hog_ade
 			}
-			add_ideas = RUS_Pavel_Shatilov_hog_pau
+			add_ideas = RUS_Pavel_N_Shatilov_hog_npo
 		}
 	}
 }
@@ -1216,7 +1216,7 @@ country_event = { #PM choice for Wrangel Tsar
 		}
 		name = russia.34.b
 		add_stability = -0.02
-		add_ideas = RUS_Pavel_Shatilov_hog_pau
+		add_ideas = RUS_Pavel_N_Shatilov_hog_npo
 	}
 
 	option = {
@@ -1502,7 +1502,7 @@ country_event = { #Constitutional Monarchy
 			remove_ideas_with_trait = foreign_minister
 			remove_ideas_with_trait = economy_minister
 			add_ideas = {
-				RUS_Aleksandr_Konovalov_for_mli
+				RUS_Aleksandr_I_Konovalov_for_mli
 				RUS_Vladimir_P_Smirnov_eco_sli
 			}
 		}
@@ -1526,7 +1526,7 @@ country_event = { #Constitutional Monarchy
 			remove_ideas_with_trait = economy_minister
 			add_ideas = {
 				RUS_Pyetr_Vrangel_hog_ade
-				RUS_Aleksandr_Konovalov_for_mli
+				RUS_Aleksandr_I_Konovalov_for_mli
 				RUS_Vladimir_P_Smirnov_eco_sli
 			}
 		}
@@ -1551,7 +1551,7 @@ country_event = { #Constitutional Monarchy
 			remove_ideas_with_trait = economy_minister
 			add_ideas = {
 				RUS_Anton_Denikin_hog_ade
-				RUS_Aleksandr_Konovalov_for_mli
+				RUS_Aleksandr_I_Konovalov_for_mli
 				RUS_Vladimir_P_Smirnov_eco_sli
 			}
 		}
@@ -1910,7 +1910,7 @@ country_event = { #Democratic republic
 				remove_ideas_with_trait = foreign_minister
 				remove_ideas_with_trait = economy_minister
 				add_ideas = {
-					RUS_Aleksandr_Konovalov_for_mli
+					RUS_Aleksandr_I_Konovalov_for_mli
 					RUS_Vladimir_P_Smirnov_eco_sli
 				}
 			}
@@ -2028,9 +2028,9 @@ country_event = { #Anti-Socialist Coup
 		remove_all_ministers = yes
 		add_ideas = {
 			RUS_Felix_F_Yusupov_hog_ade
-			RUS_Vladimir_Paley_for_sco
+			RUS_Vladimir_P_Paley_for_sco
 			RUS_Vladimir_N_Kokovtsov_eco_ade
-			RUS_Sergey_L_Markov_sec_pau
+			RUS_Sergey_L_Markov_sec_ade
 		}
 		hidden_effect = {
 			country_lock_all_division_template = no
@@ -4785,7 +4785,7 @@ country_event = { #Duma Elections
 		}
 		add_ideas = {
 			RUS_Pavel_Milyukov_hog_mli
-			RUS_Aleksandr_Konovalov_for_mli
+			RUS_Aleksandr_I_Konovalov_for_mli
 			RUS_Mikhail_Bernatskiy_eco_mli
 			RUS_Vasiliy_A_Kharlamov_sec_mli
 		}
@@ -4806,7 +4806,7 @@ country_event = { #Duma Elections
 		}
 		add_ideas = {
 			RUS_Nikolay_Trubetskoy_hog_sco
-			RUS_Vladimir_Paley_for_sco
+			RUS_Vladimir_P_Paley_for_sco
 			RUS_Sergey_Bulgakov_eco_sco
 			RUS_Aleksandr_D_Protopopov_sec_sco
 		}
@@ -5076,7 +5076,7 @@ country_event = { # Denikin's death
 			remove_all_ministers = yes
 			add_ideas = {
 				RUS_Georgiy_Ignatyev_hog_sco
-				RUS_Aleksandr_Konovalov_for_mli
+				RUS_Aleksandr_I_Konovalov_for_mli
 				RUS_Vladimir_P_Smirnov_eco_sli
 				RUS_Felix_F_Yusupov_sec_ade
 			}
@@ -5116,7 +5116,7 @@ country_event = { # Denikin's death
 			remove_all_ministers = yes
 			add_ideas = {
 				RUS_Georgiy_Ignatyev_hog_sco
-				RUS_Aleksandr_Konovalov_for_mli
+				RUS_Aleksandr_I_Konovalov_for_mli
 				RUS_Vladimir_P_Smirnov_eco_sli
 				RUS_Felix_F_Yusupov_sec_ade
 			}
@@ -5308,7 +5308,7 @@ country_event = {
 			factor = 40
 		}
 		add_stability = -0.02
-		add_ideas = RUS_Pavel_Shatilov_hog_pau
+		add_ideas = RUS_Pavel_N_Shatilov_hog_npo
 	}
 
 	option = {
