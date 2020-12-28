@@ -537,32 +537,6 @@ set_puppet_minister_africa = {
 		}
 	}
 
-	##
-	##	GUINEA
-	##
-	if = {
-		limit = { tag = GNA }
-		if = {
-			limit = {
-				has_socialist_government = yes
-			}
-			add_ideas = {
-				GNA_Albert_Liurette_hog_rso
-				GNA_Yacine_Diallo_for_sli
-				GNA_Diawadou_Barry_eco_rso
-				GNA_Fode_Mamadou_Toure_sec_rso
-			}
-		}
-		else = {
-			add_ideas = {
-				GNA_Mamba_Sano_hog_sli
-				GNA_Yacine_Diallo_for_sli
-				GNA_Mamba_Sano_eco_sli
-				GNA_Comigna_Sano_sec_sli
-			}
-		}
-	}
-
 #	##
 #	##	HAUSALAND (no ministers right now)
 #	##
@@ -884,40 +858,6 @@ set_puppet_minister_africa = {
 		}
 	}
 
-	##
-	##	MALI
-	##
-	if = {
-		limit = { tag = MLI }
-		if = {
-			limit = { has_socialist_government = yes }
-			add_ideas = {
-				MLI_Moktar_Ould_Daddah_hog_rso
-				MLI_Modibo_Keita_for_rso
-				MLI_Mamadou_Dia_eco_rso
-				MLI_Mamadou_Konate_sec_rso
-			}
-		}
-		else_if = {
-			limit = { has_elected_government = yes }
-			add_ideas = {
-				MLI_Christian_Laigret_hog_sli
-				MLI_Auguste_Calvel_for_sli
-				MLI_Maurice_Guillaudot_eco_sli
-				MLI_Martin_Cayla_sec_sli
-			}
-		}
-		else_if = {
-			limit = { has_authoritarian_government = yes }
-			add_ideas = {
-				MLI_Ferdinand_JL_Rougier_hog_ade
-				MLI_Jean_Louis_Beyries_for_ade
-				MLI_Christian_Laigret_eco_ade
-				MLI_Fily_Dabo_Sissoko_sec_ade
-			}
-		}
-	}
-
 #	##
 #	##	MALAWI (no ministers right now)
 #	##
@@ -929,59 +869,6 @@ set_puppet_minister_africa = {
 #			}
 #		}
 #	}
-
-	##
-	##	MOZAMBIQUE
-	##
-	if = {
-		limit = { tag = MZB }
-		if = {
-			limit = {
-				has_socialist_government = yes
-				NOT = {
-					has_government = social_democrat
-				}
-			}
-			add_ideas = {
-				MZB_Jose_Barollo_Rodrigues_hog_rso
-				MZB_Antonio_de_Navarro_for_rso
-				MZB_Antonio_de_Navarro_eco_rso
-				MZB_Roberto_Francisco_Zixaxa_sec_rso
-			}
-		}
-		else_if = {
-			limit = { has_government = social_democrat }
-			add_ideas = {
-				MZB_Jose_Zaluar_Nunes_hog_sde
-				MZB_Sebastiao_Soares_de_Resende_for_sde
-				MZB_Roberto_Ndevu_Mashaba_eco_sde
-				MZB_Luis_Pereira_Gomes_sec_sli
-			}
-		}
-		else_if = {
-			limit = {
-				OR = {
-					has_government = social_liberal
-					has_right_democratic_government = yes
-				}
-			}
-			add_ideas = {
-				MZB_Jose_Zaluar_Nunes_hog_sli
-				MZB_Joao_Reis_e_Canto_for_sli
-				MZB_Adolfo_Camaraquintinga_eco_sli
-				MZB_Luis_Pereira_Gomes_sec_sli
-			}
-		}
-		else_if = {
-			limit = { has_authoritarian_government = yes }
-			add_ideas = {
-				MZB_Jose_Nunes_de_Oliveira_hog_ade
-				MZB_Louis_de_Sousa_e_Vasconcelos_for_ade
-				MZB_Augusto_Nunes_Diaz_eco_ade
-				MZB_Joao_Tristao_de_Bettencourt_sec_ade
-			}
-		}
-	}
 
 #	##
 #	##	MAURITANIA (no ministers right now)
@@ -1191,41 +1078,6 @@ set_puppet_minister_africa = {
 				SFR_J_G_Strijdom_for_pau
 				SFR_FC_Erasmus_eco_pau
 				SFR_Hendrijk_F_Verwoerd_sec_pau
-			}
-		}
-	}
-
-	##
-	##	SIERRA LEONE
-	##
-	if = {
-		limit = { tag = SIE }
-		if = {
-			limit = { has_socialist_government = yes }
-			add_ideas = {
-				SIE_Albert_Margai_hog_rso
-				SIE_Lamina_Sankoh_for_rso
-				SIE_Kande_Bureh_eco_rso
-				SIE_Milton_Margai_sec_rso
-			}
-		}
-		else_if = {
-			limit = { has_elected_government = yes }
-			add_ideas = {
-				SIE_Herbert_Christian_Bankole_Bright_hog_sli
-				SIE_Henry_Josiah_Lightfoot_Boston_for_sli
-				SIE_John_William_Campbell_eco_sli
-				SIE_Ernest_Samuel_Beoku_Betts_sec_sli
-			}
-		}
-		else_if = {
-			limit = { has_authoritarian_government = yes }
-			add_ideas = {
-				SIE_McCormack_Charles_Farrell_Easmon_hog_ade
-				SIE_Mohammed_Sanusi_Mustapha_for_ade
-				SIE_Ali_Dausy_Wurie_eco_ade
-				SIE_Haidara_Kontorfilli_sec_ade
-
 			}
 		}
 	}
@@ -1489,36 +1341,6 @@ set_puppet_minister_africa = {
 #			}
 #		}
 #	}
-
-	##
-	##	ZAMBIA
-	##
-	if = {
-		limit = { tag = ZAM }
-		if = {
-			limit = {
-				OR = {
-					has_government = social_conservative
-					has_government = authoritarian_democrat
-				}
-			}
-			add_ideas = {
-				ZAM_Kenneth_David_Buchizya_Kaunda_hog_ade
-				ZAM_Arthur_Evelyn_St_John_Waugh_for_ade
-				ZAM_Alfred_Sharpe_eco_ade
-				ZAM_Dixon_Konkola_sec_ade
-			}
-		}
-		else_if = {
-			limit = { has_dictatorship_government = yes }
-			add_ideas = {
-				ZAM_Godwin_Mbikusita_Lewanika_hog_pau
-				ZAM_Kanyembo_Kapema_for_pau
-				ZAM_Shadreck_Chinyanta_Nankula_eco_pau
-				ZAM_Mwene_Mundu_Chilindo_sec_pau
-			}
-		}
-	}
 
 #	##
 #	##	RHODESIA (no ministers right now)
