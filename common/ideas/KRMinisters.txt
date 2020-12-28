@@ -546,6 +546,44 @@ head_of_government = {
 				hog_naive_optimist
 			}
 		}
+
+		MLT_Enrico_Mizzi_hog_sco = {
+			allowed = { original_tag = MLT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea MLT_Enrico_Mizzi_hog_sco"
+			}
+			traits = {
+				head_of_government
+				social_conservative
+				hog_flamboyant_tough_guy
+			}
+		}
+
+		MLT_Gerald_Strickland_hog_ade = {
+			allowed = { original_tag = MLT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea MLT_Gerald_Strickland_hog_ade"
+			}
+			traits = {
+				head_of_government
+				authoritarian_democrat
+				hog_local_tyrant
+			}
+		}
 	MAL_Ibrahim_I_of_Johor_hog_ade = {
 			allowed = { original_tag = MAL }
 			available = {
@@ -600,6 +638,83 @@ head_of_government = {
 				hog_local_tyrant
 			}
 		}
+
+		RUS_Irakliy_Tsereteli_hog_sde = {
+			allowed = { original_tag = RUS }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea RUS_Irakliy_Tsereteli_hog_sde"
+			}
+			traits = {
+				head_of_government
+				social_democrat
+				hog_naive_optimist
+			}
+		}
+
+		RUS_Viktor_Chernov_hog_sli = {
+			allowed = { original_tag = RUS }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea RUS_Viktor_Chernov_hog_sli"
+			}
+			traits = {
+				head_of_government
+				social_liberal
+				hog_silent_workhorse
+			}
+		}
+
+		RUS_Pyetr_Vrangel_hog_ade = {
+			allowed = { original_tag = RUS }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea RUS_Pyetr_Vrangel_hog_ade"
+			}
+			traits = {
+				head_of_government
+				authoritarian_democrat
+				hog_the_black_baron
+			}
+		}
+
+		RUS_Aleksandr_Lukomskiy_hog_pau = {
+			allowed = { original_tag = RUS }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea RUS_Aleksandr_Lukomskiy_hog_pau"
+			}
+			traits = {
+				head_of_government
+				paternal_autocrat
+				hog_old_general
+			}
+		}
+
 		SIR_Song_Noppakul_hog_tot = {
 			allowed = { original_tag = SIR }
 			available = {
@@ -1496,6 +1611,44 @@ head_of_government = {
 				for_iron_fisted_brute
 			}
 		}
+		MLT_Mikiel_Gonzi_for_sde = {
+			allowed = { original_tag = MLT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea MLT_Mikiel_Gonzi_for_sde"
+			}
+			traits = {
+				foreign_minister
+				social_democrat
+				for_great_compromiser
+			}
+		}
+
+		MLT_Giorgio_Borg_Olivier_for_sco = {
+			allowed = { original_tag = MLT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea MLT_Giorgio_Borg_Olivier_for_sco"
+			}
+			traits = {
+				foreign_minister
+				social_conservative
+				for_great_compromiser
+			}
+		}
+
 		MLT_Enrico_Mizzi_for_ade = {
 			allowed = { original_tag = MLT }
 			available = {
@@ -2693,7 +2846,45 @@ head_of_government = {
 				eco_military_entrepreneur
 			}
 		}
-	MLT_Dom_Mintoff_eco_ade = {
+	MLT_Joseph_Cassar_eco_sde = {
+			allowed = { original_tag = MLT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea MLT_Joseph_Cassar_eco_sde"
+			}
+			traits = {
+				economy_minister
+				social_democrat
+				eco_laissez_faire_capitalist
+			}
+		}
+
+		MLT_Giovanni_Felice_eco_sco = {
+			allowed = { original_tag = MLT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea MLT_Giovanni_Felice_eco_sco"
+			}
+			traits = {
+				economy_minister
+				social_conservative
+				eco_bank_president
+			}
+		}
+
+		MLT_Dom_Mintoff_eco_ade = {
 			allowed = { original_tag = MLT }
 			available = {
 				custom_trigger_tooltip = {
@@ -3503,7 +3694,45 @@ ROM_Miron_Constantinescu_eco_tot = {
 				sec_efficient_sociopath
 			}
 		}
-	MLT_Censu_Tabone_sec_ade = {
+	MLT_Anton_Buttigieg_sec_sde = {
+			allowed = { original_tag = MLT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea MLT_Anton_Buttigieg_sec_sde"
+			}
+			traits = {
+				security_minister
+				social_democrat
+				sec_compassionate_gentleman
+			}
+		}
+
+		MLT_Ugo_Pasquale_Mifsud_sec_sco = {
+			allowed = { original_tag = MLT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea MLT_Ugo_Pasquale_Mifsud_sec_sco"
+			}
+			traits = {
+				security_minister
+				social_conservative
+				sec_prince_of_terror
+			}
+		}
+
+		MLT_Censu_Tabone_sec_ade = {
 			allowed = { original_tag = MLT }
 			available = {
 				custom_trigger_tooltip = {
@@ -3518,6 +3747,24 @@ ROM_Miron_Constantinescu_eco_tot = {
 			traits = {
 				security_minister
 				authoritarian_democrat
+				sec_crime_fighter
+			}
+		}
+	NGF_Hilde_Benjamin_sec_tot = {
+			allowed = { original_tag = NGF }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea NGF_Hilde_Benjamin_sec_tot"
+			}
+			traits = {
+				security_minister
+				totalist
 				sec_crime_fighter
 			}
 		}
@@ -4489,26 +4736,6 @@ spriteType = {
 	spriteType = {
 		name = "GFX_idea_LIT_Antanas_Tumenas_sec_sco"
 		texturefile = "gfx/interface/ministers/LIT/LIT_Antanas_Tumenas.tga"
-	}
-	spriteType = {
-		name = "GFX_idea_LOM_Stefano_Cavazzoni_for_ade"
-		texturefile = "gfx/interface/ministers/LOM/LOM_Stefano_Cavazzoni.tga"
-	}
-	spriteType = {
-		name = "GFX_idea_MLT_Paul_Boffa_hog_sde"
-		texturefile = "gfx/interface/ministers/MLT/MLT_Paul_Boffa.tga"
-	}
-	spriteType = {
-		name = "GFX_idea_MLT_Enrico_Mizzi_for_ade"
-		texturefile = "gfx/interface/ministers/MLT/MLT_Enrico_Mizzi.tga"
-	}
-	spriteType = {
-		name = "GFX_idea_MLT_Dom_Mintoff_eco_ade"
-		texturefile = "gfx/interface/ministers/MLT/MLT_Dom_Mintoff.tga"
-	}
-	spriteType = {
-		name = "GFX_idea_MLT_Censu_Tabone_sec_ade"
-		texturefile = "gfx/interface/ministers/MLT/MLT_Censu_Tabone.tga"
 	}
 	spriteType = {
 		name = "GFX_idea_MAL_Ibrahim_I_of_Johor_hog_ade"

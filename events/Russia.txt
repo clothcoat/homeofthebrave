@@ -284,7 +284,7 @@ country_event = { #Aftermath of the assassination
 			add_ideas = {
 				RUS_Viktor_Chernov_hog_sli
 				RUS_Georgiy_Vernadskiy_for_sli
-				RUS_Vladimir_Smirnov_eco_sli
+				RUS_Vladimir_P_Smirnov_eco_sli
 				RUS_Nikolay_Nekrasov_sec_sli
 			}
 		}
@@ -345,8 +345,8 @@ country_event = { #Aftermath of the assassination
 			add_ideas = {
 				RUS_Vladimir_Purishkevich_hog_pau
 				RUS_Vladimir_Paley_for_sco
-				RUS_Vladimir_Kokovtsov_eco_ade
-				RUS_Felix_Yusupov_sec_ade
+				RUS_Vladimir_N_Kokovtsov_eco_ade
+				RUS_Felix_F_Yusupov_sec_ade
 			}
 			country_event = {
 				id = russia.7
@@ -427,8 +427,8 @@ country_event = { #Aftermath of the assassination
 			add_ideas = {
 				RUS_Pyetr_Vrangel_hog_ade
 				RUS_Vladimir_Golitsyn_for_ade
-				RUS_Aleksey_Arkhangelskiy_eco_ade
-				RUS_Sergey_Markov_sec_pau
+				RUS_Aleksey_P_Arkhangelskiy_eco_ade
+				RUS_Sergey_L_Markov_sec_pau
 			}
 			country_event = {
 				id = russia.9
@@ -499,7 +499,7 @@ country_event = { #Aftermath of the assassination
 			add_ideas = {
 				RUS_Aleksandr_Lukomskiy_hog_pau
 				RUS_Aleksey_Ignatyev_for_pau
-				RUS_Aleksey_Putilov_eco_pau
+				RUS_Aleksey_I_Putilov_eco_pau
 				RUS_Vladimir_Manshteyn_sec_npo
 			}
 			random_other_country = { news_event = russianews.2 }
@@ -554,8 +554,8 @@ country_event = { #PM choice for Dmitriy
 		hidden_effect = {
 			add_ideas = {
 				RUS_Aleksandr_Konovalov_for_mli
-				RUS_Vladimir_Smirnov_eco_sli
-				RUS_Vasiliy_Kharlamov_sec_mli
+				RUS_Vladimir_P_Smirnov_eco_sli
+				RUS_Vasiliy_A_Kharlamov_sec_mli
 			}
 		}
 	}
@@ -565,13 +565,13 @@ country_event = { #PM choice for Dmitriy
 		ai_chance = {
 			factor = 40
 		}
-		add_ideas =  RUS_Felix_Yusupov_hog_ade
+		add_ideas =  RUS_Felix_F_Yusupov_hog_ade
 		hidden_effect = {
 			remove_ideas_with_trait = foreign_minister
 			remove_ideas_with_trait = economy_minister
 			add_ideas = {
 				RUS_Aleksey_Ignatyev_for_pau
-				RUS_Aleksey_Putilov_eco_pau
+				RUS_Aleksey_I_Putilov_eco_pau
 			}
 		}
 	}
@@ -611,7 +611,7 @@ country_event = { #PM choice for the senate
 			add_ideas = {
 				RUS_Irakliy_Tsereteli_hog_sde
 				RUS_Mariya_Spiridonova_for_sde
-				RUS_Vladimir_Zenzinov_eco_sde
+				RUS_Vladimir_M_Zenzinov_eco_sde
 				RUS_Vladimir_Burtsev_sec_sde
 			}
 			country_event = {
@@ -644,7 +644,7 @@ country_event = { #PM choice for the senate
 			add_ideas = {
 				RUS_Viktor_Chernov_hog_sli
 				RUS_Georgiy_Vernadskiy_for_sli
-				RUS_Vladimir_Smirnov_eco_sli
+				RUS_Vladimir_P_Smirnov_eco_sli
 				RUS_Nikolay_Nekrasov_sec_sli
 			}
 			country_event = {
@@ -677,8 +677,8 @@ country_event = { #PM choice for the senate
 			add_ideas = {
 				RUS_Pavel_Milyukov_hog_mli
 				RUS_Aleksandr_Konovalov_for_mli
-				RUS_Vladimir_Smirnov_eco_sli
-				RUS_Vasiliy_Kharlamov_sec_mli
+				RUS_Vladimir_P_Smirnov_eco_sli
+				RUS_Vasiliy_A_Kharlamov_sec_mli
 			}
 			country_event = {
 				id = rusd.50
@@ -724,7 +724,7 @@ country_event = { #PM choice for the senate
 			add_ideas = {
 				RUS_Aleksandr_Shlyapnikov_hog_rso
 				RUS_Mariya_Spiridonova_for_sde
-				RUS_Vladimir_Zenzinov_eco_sde
+				RUS_Vladimir_M_Zenzinov_eco_sde
 				RUS_Nikolay_Nekrasov_sec_sli
 			}
 			country_event = {
@@ -760,7 +760,7 @@ country_event = { #PM choice for Wrangel
 			remove_ideas_with_trait = economy_minister
 			add_ideas = {
 				RUS_Aleksandr_Konovalov_for_mli
-				RUS_Vladimir_Smirnov_eco_sli
+				RUS_Vladimir_P_Smirnov_eco_sli
 			}
 		}
 	}
@@ -855,7 +855,7 @@ country_event = { #Kornilov-Savinkov Alliance
 		hidden_effect = {
 			add_ideas = {
 				RUS_Aleksandr_Kazembek_for_npo
-				RUS_Andrey_Zankevich_eco_npo
+				RUS_Andrey_I_Zankevich_eco_npo
 				RUS_Vladimir_Manshteyn_sec_npo
 			}
 			if = {
@@ -920,10 +920,10 @@ country_event = { #Kornilov's Death
 		hidden_effect = {
 			remove_unit_leader = 402
 			if = {
-				limit = { has_idea = RUS_Lavr_Kornilov_carm }
-				remove_ideas = RUS_Lavr_Kornilov_carm
+				limit = { has_idea = RUS_Lavr_G_Kornilov_carm_pau }
+				remove_ideas = RUS_Lavr_G_Kornilov_carm_pau
 				clr_country_flag = Aleksandr_Rodzyanko_dead
-				add_ideas = RUS_Aleksandr_Rodzyanko_carm
+				add_ideas = RUS_Aleksandr_Rodzyanko_carm_ade
 			}
 		}
 	}
@@ -1074,7 +1074,7 @@ country_event = { #Directive No. 1
 		name = russia.40.a #No shortage of hooks to hang the enemies of the state.
 		add_stability = 0.02
 		hidden_effect = { remove_ideas_with_trait = economy_minister }
-		add_ideas = RUS_Aleksey_Putilov_eco_pau
+		add_ideas = RUS_Aleksey_I_Putilov_eco_pau
 		add_popularity = {
 			ideology = national_populist
 			popularity = 0.05
@@ -1225,7 +1225,7 @@ country_event = { #PM choice for Wrangel Tsar
 		}
 		name = russia.19.c
 		add_stability = -0.02
-		add_ideas = RUS_Felix_Yusupov_hog_ade
+		add_ideas = RUS_Felix_F_Yusupov_hog_ade
 	}
 
 	option = {
@@ -1503,7 +1503,7 @@ country_event = { #Constitutional Monarchy
 			remove_ideas_with_trait = economy_minister
 			add_ideas = {
 				RUS_Aleksandr_Konovalov_for_mli
-				RUS_Vladimir_Smirnov_eco_sli
+				RUS_Vladimir_P_Smirnov_eco_sli
 			}
 		}
 	}
@@ -1527,7 +1527,7 @@ country_event = { #Constitutional Monarchy
 			add_ideas = {
 				RUS_Pyetr_Vrangel_hog_ade
 				RUS_Aleksandr_Konovalov_for_mli
-				RUS_Vladimir_Smirnov_eco_sli
+				RUS_Vladimir_P_Smirnov_eco_sli
 			}
 		}
 	}
@@ -1552,7 +1552,7 @@ country_event = { #Constitutional Monarchy
 			add_ideas = {
 				RUS_Anton_Denikin_hog_ade
 				RUS_Aleksandr_Konovalov_for_mli
-				RUS_Vladimir_Smirnov_eco_sli
+				RUS_Vladimir_P_Smirnov_eco_sli
 			}
 		}
 	}
@@ -1706,7 +1706,7 @@ country_event = { #PM choice for Kyril
 		}
 		name = russia.19.c
 		add_stability = -0.06
-		add_ideas = RUS_Felix_Yusupov_hog_ade
+		add_ideas = RUS_Felix_F_Yusupov_hog_ade
 	}
 
 	option = {
@@ -1748,8 +1748,8 @@ country_event = { #Tsar Dmitriy
 			remove_ideas_with_trait = security_minister
 			add_ideas = {
 				RUS_Vladimir_Golitsyn_for_ade
-				RUS_Vladimir_Kokovtsov_eco_ade
-				RUS_Felix_Yusupov_sec_ade
+				RUS_Vladimir_N_Kokovtsov_eco_ade
+				RUS_Felix_F_Yusupov_sec_ade
 			}
 			news_event = {
 				id = russianews.8
@@ -1832,7 +1832,7 @@ country_event = { #PM choice for Vladimir
 		}
 		name = russia.19.c
 		add_stability = -0.06
-		add_ideas = RUS_Felix_Yusupov_hog_ade
+		add_ideas = RUS_Felix_F_Yusupov_hog_ade
 	}
 
 	option = {
@@ -1911,7 +1911,7 @@ country_event = { #Democratic republic
 				remove_ideas_with_trait = economy_minister
 				add_ideas = {
 					RUS_Aleksandr_Konovalov_for_mli
-					RUS_Vladimir_Smirnov_eco_sli
+					RUS_Vladimir_P_Smirnov_eco_sli
 				}
 			}
 		}
@@ -2027,10 +2027,10 @@ country_event = { #Anti-Socialist Coup
 		}
 		remove_all_ministers = yes
 		add_ideas = {
-			RUS_Felix_Yusupov_hog_ade
+			RUS_Felix_F_Yusupov_hog_ade
 			RUS_Vladimir_Paley_for_sco
-			RUS_Vladimir_Kokovtsov_eco_ade
-			RUS_Sergey_Markov_sec_pau
+			RUS_Vladimir_N_Kokovtsov_eco_ade
+			RUS_Sergey_L_Markov_sec_pau
 		}
 		hidden_effect = {
 			country_lock_all_division_template = no
@@ -2088,7 +2088,7 @@ country_event = { #Anti-Socialist Coup
 		add_ideas = {
 			RUS_Aleksandr_Lukomskiy_hog_pau
 			RUS_Aleksey_Ignatyev_for_pau
-			RUS_Aleksey_Putilov_eco_pau
+			RUS_Aleksey_I_Putilov_eco_pau
 			RUS_Vladimir_Manshteyn_sec_npo
 		}
 		hidden_effect = {
@@ -3320,7 +3320,7 @@ country_event = { #Status of the Orthodox Church
 		add_ideas = {
 			RUS_Pavel_Florenskiy_for_sco
 			RUS_Sergey_Bulgakov_eco_sco
-			RUS_Sergiy_of_Nizhny_Novgorod_sec_ade
+			RUS_Sergius_of_Nizhny_Novgorod_sec_ade
 		}
 		hidden_effect = {
 			country_event = {
@@ -3692,7 +3692,7 @@ country_event = { #The Patriarch's Demands
 		add_ideas = {
 			RUS_Pavel_Florenskiy_for_sco
 			RUS_Sergey_Bulgakov_eco_sco
-			RUS_Sergiy_of_Nizhny_Novgorod_sec_ade
+			RUS_Sergius_of_Nizhny_Novgorod_sec_ade
 		}
 	}
 	option = {
@@ -4743,7 +4743,7 @@ country_event = { #Duma Elections
 		add_ideas = {
 			RUS_Irakliy_Tsereteli_hog_sde
 			RUS_Mariya_Spiridonova_for_sde
-			RUS_Vladimir_Zenzinov_eco_sde
+			RUS_Vladimir_M_Zenzinov_eco_sde
 			RUS_Vladimir_Burtsev_sec_sde
 		}
 		add_stability = -0.1
@@ -4765,7 +4765,7 @@ country_event = { #Duma Elections
 		add_ideas = {
 			RUS_Viktor_Chernov_hog_sli
 			RUS_Georgiy_Vernadskiy_for_sli
-			RUS_Vladimir_Smirnov_eco_sli
+			RUS_Vladimir_P_Smirnov_eco_sli
 			RUS_Nikolay_Nekrasov_sec_sli
 		}
 		add_popularity = {
@@ -4787,7 +4787,7 @@ country_event = { #Duma Elections
 			RUS_Pavel_Milyukov_hog_mli
 			RUS_Aleksandr_Konovalov_for_mli
 			RUS_Mikhail_Bernatskiy_eco_mli
-			RUS_Vasiliy_Kharlamov_sec_mli
+			RUS_Vasiliy_A_Kharlamov_sec_mli
 		}
 		add_popularity = {
 			ideology = market_liberal
@@ -4808,7 +4808,7 @@ country_event = { #Duma Elections
 			RUS_Nikolay_Trubetskoy_hog_sco
 			RUS_Vladimir_Paley_for_sco
 			RUS_Sergey_Bulgakov_eco_sco
-			RUS_Aleksandr_Protopopov_sec_sco
+			RUS_Aleksandr_D_Protopopov_sec_sco
 		}
 		add_popularity = {
 			ideology = social_conservative
@@ -4836,9 +4836,9 @@ country_event = { #Duma Elections
 			factor = 35
 		}
 		add_ideas = {
-			RUS_Felix_Yusupov_hog_ade
+			RUS_Felix_F_Yusupov_hog_ade
 			RUS_Vladimir_Golitsyn_for_ade
-			RUS_Aleksey_Arkhangelskiy_eco_ade
+			RUS_Aleksey_P_Arkhangelskiy_eco_ade
 			RUS_Pavel_Ignatyev_sec_ade
 		}
 		add_popularity = {
@@ -4909,7 +4909,7 @@ country_event = { # Splintering within the conservatives
 	option = {
 		trigger = {
 			OR = {
-				NOT = { has_idea = RUS_Felix_Yusupov_hog_ade }
+				NOT = { has_idea = RUS_Felix_F_Yusupov_hog_ade }
 				has_cosmetic_tag = RUS_empire
 			}
 		}
@@ -4918,7 +4918,7 @@ country_event = { # Splintering within the conservatives
 	}
 	option = {
 		trigger = {
-			has_idea = RUS_Felix_Yusupov_hog_ade
+			has_idea = RUS_Felix_F_Yusupov_hog_ade
 			NOT = { has_cosmetic_tag = RUS_empire }
 		}
 		name = rusd.66.b
@@ -5077,8 +5077,8 @@ country_event = { # Denikin's death
 			add_ideas = {
 				RUS_Georgiy_Ignatyev_hog_sco
 				RUS_Aleksandr_Konovalov_for_mli
-				RUS_Vladimir_Smirnov_eco_sli
-				RUS_Felix_Yusupov_sec_ade
+				RUS_Vladimir_P_Smirnov_eco_sli
+				RUS_Felix_F_Yusupov_sec_ade
 			}
 			ALO = {	#Tell ALO the Tsar is back
 				country_event = {
@@ -5117,8 +5117,8 @@ country_event = { # Denikin's death
 			add_ideas = {
 				RUS_Georgiy_Ignatyev_hog_sco
 				RUS_Aleksandr_Konovalov_for_mli
-				RUS_Vladimir_Smirnov_eco_sli
-				RUS_Felix_Yusupov_sec_ade
+				RUS_Vladimir_P_Smirnov_eco_sli
+				RUS_Felix_F_Yusupov_sec_ade
 			}
 			create_country_leader = {
 				name = "Pyetr Vrangel"
@@ -5269,7 +5269,7 @@ country_event = {
 			has_idea = RUS_Vladimir_Purishkevich_hog_pau
 			NOT = { has_cosmetic_tag = RUS_empire }
 		}
-		add_ideas = RUS_Felix_Yusupov_hog_ade
+		add_ideas = RUS_Felix_F_Yusupov_hog_ade
 	}
 	option = {
 		name = rusd.101.b
@@ -5321,7 +5321,7 @@ country_event = {
 			factor = 25
 		}
 		add_stability = -0.06
-		add_ideas = RUS_Felix_Yusupov_hog_ade
+		add_ideas = RUS_Felix_F_Yusupov_hog_ade
 	}
 
 	option = {
@@ -5485,9 +5485,9 @@ country_event = { ### LAVR KORNILOV DIES
 		hidden_effect = {
 			set_country_flag = Lavr_Kornilov_dead
 			if = {
-				limit = { has_idea = RUS_Lavr_Kornilov_carm }
-				remove_ideas = RUS_Lavr_Kornilov_carm
-				add_ideas = RUS_Aleksandr_Rodzyanko_carm
+				limit = { has_idea = RUS_Lavr_G_Kornilov_carm_pau }
+				remove_ideas = RUS_Lavr_G_Kornilov_carm_pau
+				add_ideas = RUS_Aleksandr_Rodzyanko_carm_ade
 			}
 			if = {
 				limit = {
