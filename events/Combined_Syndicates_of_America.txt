@@ -4564,13 +4564,14 @@ country_event = { # Prohibition
 
 	fire_only_once = yes
 
-	is_triggered_only = yes
-
 	trigger = {
 		has_government = radical_socialist
+		OR = {
+		has_completed_focus = CSA_social_ills
 		has_country_leader = {
 			ruling_only = yes
 			name = "Smedley Butler"
+			}
 		}
 	}
 
@@ -4608,8 +4609,6 @@ country_event = { # Aid for Veterans
 	picture = GFX_report_event_USA_reconstruction1
 
 	fire_only_once = yes
-
-	is_triggered_only = yes
 
 	trigger = {
 		has_government = radical_socialist
@@ -4681,8 +4680,6 @@ country_event = { # Foreign Policy
 	picture = GFX_report_event_USA_congress
 
 	fire_only_once = yes
-
-	is_triggered_only = yes
 
 	trigger = {
 		has_government = radical_socialist
