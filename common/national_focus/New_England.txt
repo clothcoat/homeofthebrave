@@ -7959,11 +7959,13 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = boston_line_2
 			hidden_effect = {
+			796 = {
 			set_building_level = {
 					type = bunker
 					level = 3
 					province = 3702
 					instant_build = yes
+				}
 				}
 			}
 		}

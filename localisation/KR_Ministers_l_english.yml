@@ -2241,6 +2241,56 @@
 	 BRI_Jean_Francois_Demozay_cair_sde:0 "Jean François Demozay"
 	 BRI_Olier_Mordrel_cair_pau:0 "Olier Mordrel"
 
+################################################################################################################################################################################################
+  ### BRM
+  ################################################################################################################################################################################################
+
+	### Head of Government ###
+	 BRM_U_Nu_hog_rso:0 "U Nu"
+	 BRM_U_Ottoma_hog_rso:0 "U Ottoma"
+	 BRM_Pe_Maung_Tin_hog_sde:0 "Pe Maung Tin"
+	 BRM_Saw_Ba_U_Gyi_hog_sli:0 "Saw Ba U Gyi"
+	 BRM_U_May_Aung_hog_sco:0 "U May Aung"
+	 BRM_U_Saw_hog_sco:0 "U Saw"
+	 BRM_U_Chit_Hlaing_hog_ade:0 "U Chit Hlaing"
+
+	### Person of Influence ###
+	## Foreign Minister
+	 BRM_Aung_San_for_rso:0 "Aung San"
+	 BRM_U_Thant_for_mli:0 "U Thant"
+	 BRM_Maung_Gyi_for_ade:0 "Maung Gyi"
+	 BRM_San_C_Po_for_ade:0 "San C. Po"
+	 BRM_U_Chit_Hlaing_for_ade:0 "U Chit Hlaing"
+	## Economy Minister
+	 BRM_Ba_Win_eco_rso:0 "Ba Win"
+	 BRM_Mahn_Ba_Khaing_eco_rso:0 "Mahn Ba Khaing"
+	 BRM_Bo_Let_Ya_eco_sde:0 "Bo Let Ya"
+	 BRM_U_May_Aung_eco_sco:0 "U May Aung"
+	 BRM_Ba_Maw_eco_ade:0 "Ba Maw"
+	 BRM_Lim_Chin_Tsong_eco_ade:0 "Lim Chin Tsong"
+	## Security Minister
+	 BRM_Thakin_Mya_sec_syn:0 "Thakin Mya"
+	 BRM_Po_Kya_sec_sli:0 "Po Kya"
+	 BRM_Saw_Hka_Nan_sec_mli:0 "Saw Hka Nan"
+	 BRM_Sao_San_Tun_sec_ade:0 "Sao San Tun"
+	 BRM_Saw_Durmay_sec_ade:0 "Saw Durmay"
+	 BRM_Thakin_Kodaw_Hmaing_sec_ade:0 "Thakin Kodaw Hmaing"
+
+	### Chief of Staff ###
+	 BRM_Thakin_Soe_cos_syn:0 "Thakin Soe"
+	 BRM_Sao_Yang_Wen_Pin_cos_ade:0 "Sao Yang Wen Pin"
+	 BRM_Saya_San_cos_ade:0 "Saya San"
+
+	### Chief of Army ###
+	 BRM_Than_Tun_carm_syn:0 "Than Tun"
+	 BRM_Sao_Kawng_Kiao_Intaleng_carm_ade:0 "Sao Kawng Kiao Intaleng"
+	 BRM_Saya_San_carm_ade:0 "Saya San"
+
+	### Chief of Navy ###
+	 BRM_Sao_Shwe_Thaik_cnav_ade:0 "Sao Shwe Thaik"
+
+	### Chief of Air Force ###
+	 BRM_Hmu_Aung_cair_ade:0 "Hmu Aung"
   ################################################################################################################################################################################################
   ### BUL
   ################################################################################################################################################################################################
@@ -14351,48 +14401,67 @@
   ################################################################################################################################################################################################
 
 	### Head of Government ###
-	 ROM_Miron_Cristea_hog_ade:0 "Miron Cristea"
-	 ROM_Alexander_Cuza_hog_pau:0 "Alexander Cuza"
+	 ROM_Gheorghe_Apostol_hog_syn:0 "Gheorghe Apostol"
+	 ROM_Virgil_Madgearu_hog_sde:0 "Virgil Madgearu"
+	 ROM_Iuliu_Maniu_hog_sli:0 "Iuliu Maniu"
+	 ROM_Constantin_Bratianu_hog_mli:0 "Constantin Bratianu"
+	 ROM_Constantin_Angelescu_hog_mli:0 "Constantin Angelescu"
+	 ROM_Alexandru_Vaida_Voevod_hog_sco:0 "Alexandru Vaida-Voevod"
+	 ROM_Constantin_Sanatescu_hog_ade:0 "Constantin Sanatescu"
+	 ROM_Armand_Calinescu_hog_pau:0 "Armand Calinescu"
 	 ROM_Corneliu_Codreanu_hog_npo:0 "Corneliu Codreanu"
 	 ROM_Horia_Sima_hog_npo:0 "Horia Sima"
-	 ROM_Ion_Antonescu_hog_npo:0 "Ion Antonescu"
+	 ROM_Ion_Mota_hog_npo:0 "Ion Mota"
+	 ROM_Alexandru_Cantacuzino_hog_npo:0 "Alexandru Cantacuzino"
 
 	### Person of Influence ###
 	## Foreign Minister
-	 ROM_Constantin_Visoianu_for_sco:0 "Constantin Visoianu"
-	 ROM_Ion_Gigurtu_for_sco:0 "Ion Gigurtu"
-	 ROM_Grigore_Niculescu_Buzesti_for_ade:0 "Grigore Niculescu Buzesti"
-	 ROM_Nicolae_Petrescu_Comnen_for_ade:0 "Nicolae Petrescu Comnen"
-	 ROM_Mihai_Antonescu_for_pau:0 "Mihai Antonescu"
-	 ROM_Mihail_Sturdza_for_pau:0 "Mihail Sturdza"
-	 ROM_Corneliu_Codreanu_for_npo:0 "Corneliu Codreanu"
-	 ROM_Ion_Antonescu_for_npo:0 "Ion Antonescu"
-	 ROM_Victor_Antonescu_for_npo:0 "Victor Antonescu"
+	 ROM_Ana_Pauker_for_syn:0 "Ana Pauker"
+	 ROM_Grigore_Gafencu_for_sli:0 "Grigore Gafencu"
+	 ROM_Gheorghe_Tatarescu_for_mli:0 "Gheorghe Tatarescu"
+	 ROM_Savel_Radulescu_for_mli:0 "Savel Radulescu"
+	 ROM_Viorel_Tilea_for_sco:0 "Viorel Tilea"
+	 ROM_Grigore_Niculescu_Buzesti_for_ade:0 "Grigore Niculescu-Buzesti"
+	 ROM_Constantin_Papanace_for_npo:0 "Constantin Papanace"
+	 ROM_Mihail_Sturdza_for_npo:0 "Mihail Sturdza"
+	 ROM_Ion_Mota_for_npo:0 "Ion Mota"
+	 ROM_Radu_Mironovici_for_npo:0 "Radu Mironovici"
 	## Economy Minister
-	 ROM_Mihail_Racovita_eco_sco:0 "Mihail Racovita"
-	 ROM_Nicolae_Stoenescu_eco_ade:0 "Nicolae Stoenescu"
-	 ROM_Gheorghe_Dobre_eco_pau:0 "Gheorghe Dobre"
+	 ROM_Miron_Constantinescu_eco_tot:0 "Miron Constantinescu"
+	 ROM_Virgil_Madgearu_eco_sde:0 "Virgil Madgearu"
+	 ROM_Ion_Mihalache_eco_sde:0 "Ion Mihalache"
+	 ROM_Gheorghe_Tatarescu_eco_mli:0 "Gheorghe Tatarescu"
+	 ROM_Victor_Slavescu_eco_mli:0 "Victor Slavescu"
+	 ROM_Mitita_Constantinescu_eco_mli:0 "Mitita Constantinescu"
+	 ROM_Gheorghe_Mironescu_eco_sco:0 "Gheorghe Mironescu"
 	 ROM_Gheorghe_Potopeanu_eco_pau:0 "Gheorghe Potopeanu"
-	 ROM_Constantin_Papanace_eco_npo:0 "Constantin Papanace"
+	 ROM_Gheorghe_Clime_eco_npo:0 "Gheorghe Clime"
+	 ROM_Ilie_Garneata_eco_npo:0 "Ilie Garneata"
+	 ROM_Mihail_Manoilescu_eco_npo:0 "Mihail Manoilescu"
 	## Security Minister
+	 ROM_Teohari_Georgescu_sec_tot:0 "Teohari Georgescu"
+	 ROM_Pantelimon_Halippa_sec_sde:0 "Pantelimon Halippa"
+	 ROM_Victor_Iamandi_sec_mli:0 "Victor Iamandi"
+	 ROM_Richard_Franasovici_sec_mli:0 "Richard Franasovici"
+	 ROM_Alexandru_Vaida_Voevod_sec_sco:0 "Alexandru Vaida-Voevod"
+	 ROM_Mihail_Ghelmegeanu_sec_sco:0 "Mihail Ghelmegeanu"
 	 ROM_Aurel_Aldea_sec_sco:0 "Aurel Aldea"
-	 ROM_Cesare_Vaida_Voievod_sec_ade:0 "Cesare Vaida Voievod"
-	 ROM_Ion_Boiteanu_sec_ade:0 "Ion Boiteanu"
-	 ROM_David_Popescu_sec_pau:0 "David Popescu"
 	 ROM_Horia_Sima_sec_npo:0 "Horia Sima"
-	 ROM_Ion_Petrovicescu_sec_npo:0 "Ion Petrovicescu"
+	 ROM_Alexandru_Cantacuzino_sec_npo:0 "Alexandru Cantacuzino"
+	 ROM_Ion_Belgea_sec_npo:0 "Ion Belgea"
+	## Marshal of the Palace
+	 ROM_Ernest_Urdarianu_mapa_pau:0 "Ernest Urdarianu"
 
 	### Chief of Staff ###
+	 ROM_Ioan_Ilcus_cos_sli:0 "Ioan Ilcus"
+	 ROM_Mihail_Racovita_cos_sli:0 "Mihail Racovita"
 	 ROM_Constantin_Pantazi_cos_sco:0 "Constantin Pantazi"
-	 ROM_Mihail_Racovita_cos_sco:0 "Mihail Racovita"
-	 ROM_Florea_Tenescu_cos_ade:0 "Florea Tenescu"
-	 ROM_Radu_Korne_cos_pau:0 "Radu Korne"
-	 ROM_Gheorghe_Argeseanu_cos_npo:0 "Gheorghe Argeseanu"
-	 ROM_Ion_Antonescu_cos_npo:0 "Ion Antonescu"
-	 ROM_Platon_Chirnoaga_cos_npo:0 "Platon Chirnoaga"
+	 ROM_Ion_Antonescu_cos_pau:0 "Ion Antonescu"
+	 ROM_Gheorghe_Argeseanu_cos_pau:0 "Gheorghe Argeseanu"
 
 	### Chief of Army ###
-	 ROM_Marin_Ceausu_carm_sco:0 "Marin Ceausu"
+	 ROM_Costin_Ionascu_carm_sli:0 "Costin Ionascu"
+	 ROM_Constantin_Sanatescu_carm_ade:0 "Constantin Sanatescu"
 	 ROM_Gheorghe_Mihail_carm_ade:0 "Gheorghe Mihail"
 	 ROM_Ilie_Steflea_carm_pau:0 "Ilie Steflea"
 	 ROM_Alexandru_Ioanitiu_carm_npo:0 "Alexandru Ioanitiu"
@@ -14403,9 +14472,9 @@
 	 ROM_Ioan_Georgescu_cnav_pau:0 "Ioan Georgescu"
 
 	### Chief of Air Force ###
-	 ROM_Dante_Vizante_cair_ade:0 "Dante Vizante"
+	 ROM_Gheorghe_Jienescu_cair_ade:0 "Gheorghe Jienescu"
 	 ROM_Paul_Teodorescu_cair_ade:0 "Paul Teodorescu"
-	 ROM_Emil_Gheorghiu_cair_pau:0 "Emil Gheorghiu"
+	 ROM_Ermil_Gheorghiu_cair_pau:0 "Ermil Gheorghiu"
 
   ################################################################################################################################################################################################
   ### RRM
@@ -15777,7 +15846,134 @@
 	 SIK_Mao_Yingchu_cair_sco:0 "Mao Yingchu"
 	 SIK_Yang_Hexiao_cair_sco:0 "Yang Hexiao"
 
+################################################################################################################################################################################################
+  ### SIR
   ################################################################################################################################################################################################
+
+	### Head of Government ###
+	 SIR_Song_Noppakul_hog_tot:0 "Song Noppakul"
+	 SIR_Prasert_Eiwchai_hog_syn:0 "Prasert Eiwchai"
+	 SIR_Luang_Praditmanutham_hog_rso:0 "Luang Praditmanutham"
+	 SIR_Thawan_Thamrongnawasawat_hog_rso:0 "Thawan Thamrongnawasawat"
+	 SIR_Luang_Sinthusongkhramchai_hog_sde:0 "Luang Sinthusongkhramchai"
+	 SIR_Phraya_Phaholpholphayuhasena_hog_sli:0 "Phraya Phaholpholphayuhasena"
+	 SIR_Savaeng_Piampongsarn_hog_sli:0 "Savaeng Piampongsarn"
+	 SIR_Phra_Prasartpitthayayut_hog_mli:0 "Phra Prasartpitthayayut"
+	 SIR_Phraya_Songsuradet_hog_sco:0 "Phraya Songsuradet"
+	 SIR_Seni_Pramoj_hog_sco:0 "Seni Pramoj"
+	 SIR_King_Prajadhipok_hog_ade:0 "King Prajadhipok"
+	 SIR_Phraya_Manopakornnitithada_hog_ade:0 "Phraya Manopakornnitithada"
+	 SIR_Phraya_Sri_Sitthisongkram_hog_ade:0 "Phraya Sri Sitthisongkram"
+	 SIR_Pin_Malakul_hog_ade:0 "Pin Malakul"
+	 SIR_Boworadet_Kritsadakorn_hog_pau:0 "Boworadet Kritsadakorn"
+	 SIR_Chumbhotbongs_Paribatra_hog_pau:0 "Chumbhotbongs Paribatra"
+	 SIR_Khun_Kongritsuksagorn_hog_pau:0 "Khun Kongritsuksagorn"
+	 SIR_Paribatra_Sukhumbhand_hog_pau:0 "Paribatra Sukhumbhand"
+	 SIR_Sarit_Thanarat_hog_pau:0 "Sarit Thanarat"
+	 SIR_Phao_Sriyanond_hog_npo:0 "Phao Sriyanond"
+	 SIR_Plaek_Khittasangkha_hog_npo:0 "Plaek Khittasangkha"
+
+	### Person of Influence ###
+	## Foreign Minister
+	 SIR_Krachang_Tularak_for_tot:0 "Krachang Tularak"
+	 SIR_Sanguan_Tularak_for_syn:0 "Sanguan Tularak"
+	 SIR_Luang_Praditmanutham_for_rso:0 "Luang Praditmanutham"
+	 SIR_Direk_Chainam_for_sde:0 "Direk Chainam"
+	 SIR_Poj_Sarasin_for_sli:0 "Poj Sarasin"
+	 SIR_Rangsiyakorn_Arparporn_for_mli:0 "Rangsiyakorn Arparporn"
+	 SIR_Prince_Wan_Waithayakorn_for_sco:0 "Prince Wan Waithayakorn"
+	 SIR_Seni_Pramoj_for_sco:0 "Seni Pramoj"
+	 SIR_Phraya_Ratchawangsan_for_ade:0 "Phraya Ratchawangsan"
+	 SIR_Traitotphrapan_Tevakul_for_ade:0 "Traitotphrapan Tevakul"
+	 SIR_Phraya_Thephadsadin_for_pau:0 "Phraya Thephadsadin"
+	 SIR_Phraya_Srisaynah_for_npo:0 "Phraya Srisaynah"
+	## Economy Minister
+	 SIR_Phra_Sarnsartpraphan_eco_tot:0 "Phra Sarnsartpraphan"
+	 SIR_Chamlong_Daorueang_eco_syn:0 "Chamlong Daorueang"
+	 SIR_Phraya_Sartsphonkhan_eco_syn:0 "Phraya Sartsphonkhan"
+	 SIR_Phraya_Sornyutthaseni_eco_rso:0 "Phraya Sornyutthaseni"
+	 SIR_Tua_Lapanukrom_eco_sde:0 "Tua Lapanukrom"
+	 SIR_Wichit_Lulitanon_eco_sli:0 "Wichit Lulitanon"
+	 SIR_Luang_Promyothee_eco_mli:0 "Luang Promyothee"
+	 SIR_Buntaeng_Thongsawat_eco_sco:0 "Buntaeng Thongsawat"
+	 SIR_Narisara_Nuwattiwong_eco_ade:0 "Narisara Nuwattiwong"
+	 SIR_Pin_Malakul_eco_ade:0 "Pin Malakul"
+	 SIR_Serm_Winitchaikul_eco_ade:0 "Serm Winitchaikul"
+	 SIR_Khun_Kongritsuksagorn_eco_pau:0 "Khun Kongritsuksagorn"
+	 SIR_Thawee_Chullasup_eco_pau:0 "Thawee Chullasup"
+	 SIR_Phraya_Tonavanikamontri_eco_npo:0 "Phraya Tonavanikamontri"
+	 SIR_Sawat_Sawatronnachai_Sawadikeat_eco_npo:0 "Sawat Sawatronnachai Sawadikeat"
+	## Security Minister
+	 SIR_Thongin_Phuripat_sec_syn:0 "Thongin Phuripat"
+	 SIR_Thawan_Thamrongnawasawat_sec_rso:0 "Thawan Thamrongnawasawat"
+	 SIR_Phraya_Tepvitunpahun_Saruttabodhi_sec_sde:0 "Phraya Tepvitunpahun Saruttabodhi"
+	 SIR_Phraya_Sarapaipiphat_sec_sli:0 "Phraya Sarapaipiphat"
+	 SIR_Luang_Supachalasai_sec_mli:0 "Luang Supachalasai"
+	 SIR_Liang_Chaiyakarn_sec_sco:0 "Liang Chaiyakarn"
+	 SIR_Paribatra_Sukhumbhand_sec_ade:0 "Paribatra Sukhumbhand"
+	 SIR_Samaichalerm_Kritsadakorn_sec_ade:0 "Samaichalerm Kritsadakorn"
+	 SIR_Paribatra_Sukhumbhand_sec_pau:0 "Paribatra Sukhumbhand"
+	 SIR_Siri_Siriyothin_sec_pau:0 "Siri Siriyothin"
+	 SIR_Chao_Phraya_Mahitorn_sec_npo:0 "Chao Phraya Mahitorn"
+	 SIR_Luang_Adulyadejarat_sec_npo:0 "Luang Adulyadejarat"
+	 SIR_Luang_Wichitwathakan_sec_npo:0 "Luang Wichitwathakan"
+	 SIR_Phao_Sriyanond_sec_npo:0 "Phao Sriyanond"
+
+	### Chief of Staff ###
+	 SIR_Phraya_Surapanthaseni_cos_sde:0 "Phraya Surapanthaseni"
+	 SIR_Luang_Seriroengrit_cos_sli:0 "Luang Seriroengrit"
+	 SIR_Phraya_Phaholpholphayuhasena_cos_sli:0 "Phraya Phaholpholphayuhasena"
+	 SIR_Phraya_Prasertsongkhram_cos_mli:0 "Phraya Prasertsongkhram"
+	 SIR_Phraya_Songsuradet_cos_sco:0 "Phraya Songsuradet"
+	 SIR_Phraya_Ratchawangsan_cos_ade:0 "Phraya Ratchawangsan"
+	 SIR_Phraya_Sri_Sitthisongkram_cos_ade:0 "Phraya Sri Sitthisongkram"
+	 SIR_Boworadet_Kritsadakorn_cos_pau:0 "Boworadet Kritsadakorn"
+	 SIR_Phraya_Ritthi_akkhaney_cos_pau:0 "Phraya Ritthi-akkhaney"
+	 SIR_Phraya_Thephadsadin_cos_pau:0 "Phraya Thephadsadin"
+	 SIR_Sarit_Thanarat_cos_pau:0 "Sarit Thanarat"
+	 SIR_Phrapart_Jarusathien_cos_npo:0 "Phrapart Jarusathien"
+	 SIR_Thanom_Kittikachorn_cos_npo:0 "Thanom Kittikachorn"
+
+	### Chief of Army ###
+	 SIR_Luang_Chumnarnyutthasart_carm_sde:0 "Luang Chumnarnyutthasart"
+	 SIR_Phraya_Surapanthaseni_carm_sde:0 "Phraya Surapanthaseni"
+	 SIR_Luang_Seriroengrit_carm_sli:0 "Luang Seriroengrit"
+	 SIR_Phraya_Phaholpholphayuhasena_carm_sli:0 "Phraya Phaholpholphayuhasena"
+	 SIR_Jira_Wichitsongkhram_carm_mli:0 "Jira Wichitsongkhram"
+	 SIR_Phra_Prasartpitthayayut_carm_mli:0 "Phra Prasartpitthayayut"
+	 SIR_Luang_Kriengsakpichit_carm_sco:0 "Luang Kriengsakpichit"
+	 SIR_Phraya_Songsuradet_carm_sco:0 "Phraya Songsuradet"
+	 SIR_Luang_Sinadyotharak_carm_ade:0 "Luang Sinadyotharak"
+	 SIR_Phraya_Sri_Sitthisongkram_carm_ade:0 "Phraya Sri Sitthisongkram"
+	 SIR_Boworadet_Kritsadakorn_carm_pau:0 "Boworadet Kritsadakorn"
+	 SIR_Luang_Chartnakrob_carm_pau:0 "Luang Chartnakrob"
+	 SIR_Phraya_Ritthi_akkhaney_carm_pau:0 "Phraya Ritthi-akkhaney"
+	 SIR_Luang_Adulyadejarat_carm_npo:0 "Luang Adulyadejarat"
+	 SIR_Luang_Phibunsongkhram_carm_npo:0 "Luang Phibunsongkhram"
+
+	### Chief of Navy ###
+	 SIR_Phraya_Wichitchollatee_cnav_tot:0 "Phraya Wichitchollatee"
+	 SIR_Thawan_Thamrongnawasawat_cnav_rso:0 "Thawan Thamrongnawasawat"
+	 SIR_Luang_Sinthusongkhramchai_cnav_sde:0 "Luang Sinthusongkhramchai"
+	 SIR_Phraya_Sornyutthaseni_cnav_sde:0 "Phraya Sornyutthaseni"
+	 SIR_Luang_Supachalasai_cnav_mli:0 "Luang Supachalasai"
+	 SIR_Phraya_Preechachollayut_cnav_sco:0 "Phraya Preechachollayut"
+	 SIR_Phraya_Wicharnchakkrit_cnav_npo:0 "Phraya Wicharnchakkrit"
+
+	### Chief of Air Force ###
+	 SIR_Luang_Thewaruekpanluek_cair_tot:0 "Luang Thewaruekpanluek"
+	 SIR_Luang_Athuekthewadet_cair_syn:0 "Luang Athuekthewadet"
+	 SIR_Bunchu_Janthalubaeksa_cair_sde:0 "Bunchu Janthalubaeksa"
+	 SIR_Burachat_Chaiyakon_cair_sde:0 "Burachat Chaiyakon"
+	 SIR_Chalermkiat_Vatthanangkun_cair_mli:0 "Chalermkiat Vatthanangkun"
+	 SIR_Fuen_Ronnaphagrad_Ritthakhanee_cair_ade:0 "Fuen Ronnaphagrad Ritthakhanee"
+	 SIR_Phra_Veharsayarnsilpasit_cair_ade:0 "Phra Veharsayarnsilpasit"
+	 SIR_Phraya_Chalerm_arkart_cair_ade:0 "Phraya Chalerm-arkart"
+	 SIR_Phraya_Tayarnpikart_cair_ade:0 "Phraya Tayarnpikart"
+	 SIR_Thawee_Chullasup_cair_pau:0 "Thawee Chullasup"
+	 SIR_Luang_Wechayanrangsarit_cair_npo:0 "Luang Wechayanrangsarit"
+
+################################################################################################################################################################################################
   ### SLO
   ################################################################################################################################################################################################
 

@@ -7784,7 +7784,157 @@ spriteTypes = {
 		texturefile = "gfx/interface/ministers/BRI/BRI_Olier_Mordrel.tga"
 	}
 
+################################################################################################################################################################################################
+  ### BRM
   ################################################################################################################################################################################################
+
+	### Head of Government
+	spriteType = {
+		name = "GFX_idea_BRM_U_Nu_hog_rso"
+		texturefile = "gfx/interface/ministers/BRM/BRM_U_Nu.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BRM_U_Ottoma_hog_rso"
+		texturefile = "gfx/interface/ministers/BRM/BRM_U_Ottoma.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BRM_Pe_Maung_Tin_hog_sde"
+		texturefile = "gfx/interface/ministers/BRM/BRM_Pe_Maung_Tin.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BRM_Saw_Ba_U_Gyi_hog_sli"
+		texturefile = "gfx/interface/ministers/BRM/BRM_Saw_Ba_U_Gyi.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BRM_U_May_Aung_hog_sco"
+		texturefile = "gfx/interface/ministers/BRM/BRM_U_May_Aung.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BRM_U_Saw_hog_sco"
+		texturefile = "gfx/interface/ministers/BRM/BRM_U_Saw.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BRM_U_Chit_Hlaing_hog_ade"
+		texturefile = "gfx/interface/ministers/BRM/BRM_U_Chit_Hlaing.tga"
+	}
+
+	### Person of Influence
+	# Foreign Minister
+	spriteType = {
+		name = "GFX_idea_BRM_Aung_San_for_rso"
+		texturefile = "gfx/interface/ministers/BRM/BRM_Aung_San.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BRM_U_Thant_for_mli"
+		texturefile = "gfx/interface/ministers/BRM/BRM_U_Thant.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BRM_Maung_Gyi_for_ade"
+		texturefile = "gfx/interface/ministers/BRM/BRM_Maung_Gyi.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BRM_San_C_Po_for_ade"
+		texturefile = "gfx/interface/ministers/BRM/BRM_San_C_Po.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BRM_U_Chit_Hlaing_for_ade"
+		texturefile = "gfx/interface/ministers/BRM/BRM_U_Chit_Hlaing.tga"
+	}
+
+	# Economy Minister
+	spriteType = {
+		name = "GFX_idea_BRM_Ba_Win_eco_rso"
+		texturefile = "gfx/interface/ministers/BRM/BRM_Ba_Win.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BRM_Mahn_Ba_Khaing_eco_rso"
+		texturefile = "gfx/interface/ministers/BRM/BRM_Mahn_Ba_Khaing.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BRM_Bo_Let_Ya_eco_sde"
+		texturefile = "gfx/interface/ministers/BRM/BRM_Bo_Let_Ya.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BRM_U_May_Aung_eco_sco"
+		texturefile = "gfx/interface/ministers/BRM/BRM_U_May_Aung.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BRM_Ba_Maw_eco_ade"
+		texturefile = "gfx/interface/ministers/BRM/BRM_Ba_Maw.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BRM_Lim_Chin_Tsong_eco_ade"
+		texturefile = "gfx/interface/ministers/BRM/BRM_Lim_Chin_Tsong.tga"
+	}
+
+	# Security Minister
+	spriteType = {
+		name = "GFX_idea_BRM_Thakin_Mya_sec_syn"
+		texturefile = "gfx/interface/ministers/BRM/BRM_Thakin_Mya.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BRM_Po_Kya_sec_sli"
+		texturefile = "gfx/interface/ministers/BRM/BRM_Po_Kya.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BRM_Saw_Hka_Nan_sec_mli"
+		texturefile = "gfx/interface/ministers/BRM/BRM_Saw_Hka_Nan.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BRM_Sao_San_Tun_sec_ade"
+		texturefile = "gfx/interface/ministers/BRM/BRM_Sao_San_Tun.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BRM_Saw_Durmay_sec_ade"
+		texturefile = "gfx/interface/ministers/BRM/BRM_Saw_Durmay.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BRM_Thakin_Kodaw_Hmaing_sec_ade"
+		texturefile = "gfx/interface/ministers/BRM/BRM_Thakin_Kodaw_Hmaing.tga"
+	}
+
+
+	### Chief of Staff
+	spriteType = {
+		name = "GFX_idea_BRM_Thakin_Soe_cos_syn"
+		texturefile = "gfx/interface/ministers/BRM/BRM_Thakin_Soe.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BRM_Sao_Yang_Wen_Pin_cos_ade"
+		texturefile = "gfx/interface/ministers/BRM/BRM_Sao_Yang_Wen_Pin.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BRM_Saya_San_cos_ade"
+		texturefile = "gfx/interface/ministers/BRM/BRM_Saya_San.tga"
+	}
+
+	### Chief of Army
+	spriteType = {
+		name = "GFX_idea_BRM_Than_Tun_carm_syn"
+		texturefile = "gfx/interface/ministers/BRM/BRM_Than_Tun.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BRM_Sao_Kawng_Kiao_Intaleng_carm_ade"
+		texturefile = "gfx/interface/ministers/BRM/BRM_Sao_Kawng_Kiao_Intaleng.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BRM_Saya_San_carm_ade"
+		texturefile = "gfx/interface/ministers/BRM/BRM_Saya_San.tga"
+	}
+
+	### Chief of Navy
+	spriteType = {
+		name = "GFX_idea_BRM_Sao_Shwe_Thaik_cnav_ade"
+		texturefile = "gfx/interface/ministers/BRM/BRM_Sao_Shwe_Thaik.tga"
+	}
+
+	### Chief of Air Force
+	spriteType = {
+		name = "GFX_idea_BRM_Hmu_Aung_cair_ade"
+		texturefile = "gfx/interface/ministers/BRM/BRM_Hmu_Aung.tga"
+	}
+  
+################################################################################################################################################################################################
   ### BUL
   ################################################################################################################################################################################################
 
@@ -50838,12 +50988,36 @@ spriteTypes = {
 
 	### Head of Government
 	spriteType = {
-		name = "GFX_idea_ROM_Miron_Cristea_hog_ade"
-		texturefile = "gfx/interface/ministers/ROM/ROM_Miron_Cristea.tga"
+		name = "GFX_idea_ROM_Gheorghe_Apostol_hog_syn"
+		texturefile = "gfx/interface/ministers/ROM/ROM_Gheorghe_Apostol.tga"
 	}
 	spriteType = {
-		name = "GFX_idea_ROM_Alexander_Cuza_hog_pau"
-		texturefile = "gfx/interface/ministers/ROM/ROM_Alexander_Cuza.tga"
+		name = "GFX_idea_ROM_Virgil_Madgearu_hog_sde"
+		texturefile = "gfx/interface/ministers/ROM/ROM_Virgil_Madgearu.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_ROM_Iuliu_Maniu_hog_sli"
+		texturefile = "gfx/interface/ministers/ROM/ROM_Iuliu_Maniu.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_ROM_Constantin_Bratianu_hog_mli"
+		texturefile = "gfx/interface/ministers/ROM/ROM_Constantin_Bratianu.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_ROM_Constantin_Angelescu_hog_mli"
+		texturefile = "gfx/interface/ministers/ROM/ROM_Constantin_Angelescu.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_ROM_Alexandru_Vaida_Voevod_hog_sco"
+		texturefile = "gfx/interface/ministers/ROM/ROM_Alexandru_Vaida_Voevod.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_ROM_Constantin_Sanatescu_hog_ade"
+		texturefile = "gfx/interface/ministers/ROM/ROM_Constantin_Sanatescu.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_ROM_Armand_Calinescu_hog_pau"
+		texturefile = "gfx/interface/ministers/ROM/ROM_Armand_Calinescu.tga"
 	}
 	spriteType = {
 		name = "GFX_idea_ROM_Corneliu_Codreanu_hog_npo"
@@ -50854,132 +51028,183 @@ spriteTypes = {
 		texturefile = "gfx/interface/ministers/ROM/ROM_Horia_Sima.tga"
 	}
 	spriteType = {
-		name = "GFX_idea_ROM_Ion_Antonescu_hog_npo"
-		texturefile = "gfx/interface/ministers/ROM/ROM_Ion_Antonescu.tga"
+		name = "GFX_idea_ROM_Ion_Mota_hog_npo"
+		texturefile = "gfx/interface/ministers/ROM/ROM_Ion_Mota.tga"
 	}
+	spriteType = {
+		name = "GFX_idea_ROM_Alexandru_Cantacuzino_hog_npo"
+		texturefile = "gfx/interface/ministers/ROM/ROM_Alexandru_Cantacuzino.tga"
+	}
+
 
 	### Person of Influence
 	# Foreign Minister
 	spriteType = {
-		name = "GFX_idea_ROM_Constantin_Visoianu_for_sco"
-		texturefile = "gfx/interface/ministers/ROM/ROM_Constantin_Visoianu.tga"
+		name = "GFX_idea_ROM_Ana_Pauker_for_syn"
+		texturefile = "gfx/interface/ministers/ROM/ROM_Ana_Pauker.tga"
 	}
 	spriteType = {
-		name = "GFX_idea_ROM_Ion_Gigurtu_for_sco"
-		texturefile = "gfx/interface/ministers/ROM/ROM_Ion_Gigurtu.tga"
+		name = "GFX_idea_ROM_Grigore_Gafencu_for_sli"
+		texturefile = "gfx/interface/ministers/ROM/ROM_Grigore_Gafencu.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_ROM_Gheorghe_Tatarescu_for_mli"
+		texturefile = "gfx/interface/ministers/ROM/ROM_Gheorghe_Tatarescu.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_ROM_Savel_Radulescu_for_mli"
+		texturefile = "gfx/interface/ministers/ROM/ROM_Savel_Radulescu.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_ROM_Viorel_Tilea_for_sco"
+		texturefile = "gfx/interface/ministers/ROM/ROM_Viorel_Tilea.tga"
 	}
 	spriteType = {
 		name = "GFX_idea_ROM_Grigore_Niculescu_Buzesti_for_ade"
 		texturefile = "gfx/interface/ministers/ROM/ROM_Grigore_Niculescu_Buzesti.tga"
 	}
 	spriteType = {
-		name = "GFX_idea_ROM_Nicolae_Petrescu_Comnen_for_ade"
-		texturefile = "gfx/interface/ministers/ROM/ROM_Nicolae_Petrescu_Comnen.tga"
+		name = "GFX_idea_ROM_Constantin_Papanace_for_npo"
+		texturefile = "gfx/interface/ministers/ROM/ROM_Constantin_Papanace.tga"
 	}
 	spriteType = {
-		name = "GFX_idea_ROM_Mihai_Antonescu_for_pau"
-		texturefile = "gfx/interface/ministers/ROM/ROM_Mihai_Antonescu.tga"
-	}
-	spriteType = {
-		name = "GFX_idea_ROM_Mihail_Sturdza_for_pau"
+		name = "GFX_idea_ROM_Mihail_Sturdza_for_npo"
 		texturefile = "gfx/interface/ministers/ROM/ROM_Mihail_Sturdza.tga"
 	}
 	spriteType = {
-		name = "GFX_idea_ROM_Corneliu_Codreanu_for_npo"
-		texturefile = "gfx/interface/ministers/ROM/ROM_Corneliu_Codreanu.tga"
+		name = "GFX_idea_ROM_Ion_Mota_for_npo"
+		texturefile = "gfx/interface/ministers/ROM/ROM_Ion_Mota.tga"
 	}
 	spriteType = {
-		name = "GFX_idea_ROM_Ion_Antonescu_for_npo"
-		texturefile = "gfx/interface/ministers/ROM/ROM_Ion_Antonescu.tga"
-	}
-	spriteType = {
-		name = "GFX_idea_ROM_Victor_Antonescu_for_npo"
-		texturefile = "gfx/interface/ministers/ROM/ROM_Victor_Antonescu.tga"
+		name = "GFX_idea_ROM_Radu_Mironovici_for_npo"
+		texturefile = "gfx/interface/ministers/ROM/ROM_Radu_Mironovici.tga"
 	}
 
 	# Economy Minister
 	spriteType = {
-		name = "GFX_idea_ROM_Mihail_Racovita_eco_sco"
-		texturefile = "gfx/interface/ministers/ROM/ROM_Mihail_Racovita.tga"
+		name = "GFX_idea_ROM_Miron_Constantinescu_eco_tot"
+		texturefile = "gfx/interface/ministers/ROM/ROM_Miron_Constantinescu.tga"
 	}
 	spriteType = {
-		name = "GFX_idea_ROM_Nicolae_Stoenescu_eco_ade"
-		texturefile = "gfx/interface/ministers/ROM/ROM_Nicolae_Stoenescu.tga"
+		name = "GFX_idea_ROM_Virgil_Madgearu_eco_sde"
+		texturefile = "gfx/interface/ministers/ROM/ROM_Virgil_Madgearu.tga"
 	}
 	spriteType = {
-		name = "GFX_idea_ROM_Gheorghe_Dobre_eco_pau"
-		texturefile = "gfx/interface/ministers/ROM/ROM_Gheorghe_Dobre.tga"
+		name = "GFX_idea_ROM_Ion_Mihalache_eco_sde"
+		texturefile = "gfx/interface/ministers/ROM/ROM_Ion_Mihalache.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_ROM_Gheorghe_Tatarescu_eco_mli"
+		texturefile = "gfx/interface/ministers/ROM/ROM_Gheorghe_Tatarescu.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_ROM_Victor_Slavescu_eco_mli"
+		texturefile = "gfx/interface/ministers/ROM/ROM_Victor_Slavescu.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_ROM_Mitita_Constantinescu_eco_mli"
+		texturefile = "gfx/interface/ministers/ROM/ROM_Mitita_Constantinescu.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_ROM_Gheorghe_Mironescu_eco_sco"
+		texturefile = "gfx/interface/ministers/ROM/ROM_Gheorghe_Mironescu.tga"
 	}
 	spriteType = {
 		name = "GFX_idea_ROM_Gheorghe_Potopeanu_eco_pau"
 		texturefile = "gfx/interface/ministers/ROM/ROM_Gheorghe_Potopeanu.tga"
 	}
 	spriteType = {
-		name = "GFX_idea_ROM_Constantin_Papanace_eco_npo"
-		texturefile = "gfx/interface/ministers/ROM/ROM_Constantin_Papanace.tga"
+		name = "GFX_idea_ROM_Gheorghe_Clime_eco_npo"
+		texturefile = "gfx/interface/ministers/ROM/ROM_Gheorghe_Clime.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_ROM_Ilie_Garneata_eco_npo"
+		texturefile = "gfx/interface/ministers/ROM/ROM_Ilie_Garneata.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_ROM_Mihail_Manoilescu_eco_npo"
+		texturefile = "gfx/interface/ministers/ROM/ROM_Mihail_Manoilescu.tga"
 	}
 
 	# Security Minister
 	spriteType = {
+		name = "GFX_idea_ROM_Teohari_Georgescu_sec_tot"
+		texturefile = "gfx/interface/ministers/ROM/ROM_Teohari_Georgescu.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_ROM_Pantelimon_Halippa_sec_sde"
+		texturefile = "gfx/interface/ministers/ROM/ROM_Pantelimon_Halippa.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_ROM_Victor_Iamandi_sec_mli"
+		texturefile = "gfx/interface/ministers/ROM/ROM_Victor_Iamandi.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_ROM_Richard_Franasovici_sec_mli"
+		texturefile = "gfx/interface/ministers/ROM/ROM_Richard_Franasovici.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_ROM_Alexandru_Vaida_Voevod_sec_sco"
+		texturefile = "gfx/interface/ministers/ROM/ROM_Alexandru_Vaida_Voevod.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_ROM_Mihail_Ghelmegeanu_sec_sco"
+		texturefile = "gfx/interface/ministers/ROM/ROM_Mihail_Ghelmegeanu.tga"
+	}
+	spriteType = {
 		name = "GFX_idea_ROM_Aurel_Aldea_sec_sco"
 		texturefile = "gfx/interface/ministers/ROM/ROM_Aurel_Aldea.tga"
-	}
-	spriteType = {
-		name = "GFX_idea_ROM_Cesare_Vaida_Voievod_sec_ade"
-		texturefile = "gfx/interface/ministers/ROM/ROM_Cesare_Vaida_Voievod.tga"
-	}
-	spriteType = {
-		name = "GFX_idea_ROM_Ion_Boiteanu_sec_ade"
-		texturefile = "gfx/interface/ministers/ROM/ROM_Ion_Boiteanu.tga"
-	}
-	spriteType = {
-		name = "GFX_idea_ROM_David_Popescu_sec_pau"
-		texturefile = "gfx/interface/ministers/ROM/ROM_David_Popescu.tga"
 	}
 	spriteType = {
 		name = "GFX_idea_ROM_Horia_Sima_sec_npo"
 		texturefile = "gfx/interface/ministers/ROM/ROM_Horia_Sima.tga"
 	}
 	spriteType = {
-		name = "GFX_idea_ROM_Ion_Petrovicescu_sec_npo"
-		texturefile = "gfx/interface/ministers/ROM/ROM_Ion_Petrovicescu.tga"
+		name = "GFX_idea_ROM_Alexandru_Cantacuzino_sec_npo"
+		texturefile = "gfx/interface/ministers/ROM/ROM_Alexandru_Cantacuzino.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_ROM_Ion_Belgea_sec_npo"
+		texturefile = "gfx/interface/ministers/ROM/ROM_Ion_Belgea.tga"
+	}
+
+	# Marhsal of the Palace
+	spriteType = {
+		name = "GFX_idea_ROM_Ernest_Urdarianu_mapa_pau"
+		texturefile = "gfx/interface/ministers/ROM/ROM_Ernest_Urdarianu.tga"
 	}
 
 
 	### Chief of Staff
 	spriteType = {
+		name = "GFX_idea_ROM_Ioan_Ilcus_cos_sli"
+		texturefile = "gfx/interface/ministers/ROM/ROM_Ioan_Ilcus.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_ROM_Mihail_Racovita_cos_sli"
+		texturefile = "gfx/interface/ministers/ROM/ROM_Mihail_Racovita.tga"
+	}
+	spriteType = {
 		name = "GFX_idea_ROM_Constantin_Pantazi_cos_sco"
 		texturefile = "gfx/interface/ministers/ROM/ROM_Constantin_Pantazi.tga"
 	}
 	spriteType = {
-		name = "GFX_idea_ROM_Mihail_Racovita_cos_sco"
-		texturefile = "gfx/interface/ministers/ROM/ROM_Mihail_Racovita.tga"
-	}
-	spriteType = {
-		name = "GFX_idea_ROM_Florea_Tenescu_cos_ade"
-		texturefile = "gfx/interface/ministers/ROM/ROM_Florea_Tenescu.tga"
-	}
-	spriteType = {
-		name = "GFX_idea_ROM_Radu_Korne_cos_pau"
-		texturefile = "gfx/interface/ministers/ROM/ROM_Radu_Korne.tga"
-	}
-	spriteType = {
-		name = "GFX_idea_ROM_Gheorghe_Argeseanu_cos_npo"
-		texturefile = "gfx/interface/ministers/ROM/ROM_Gheorghe_Argeseanu.tga"
-	}
-	spriteType = {
-		name = "GFX_idea_ROM_Ion_Antonescu_cos_npo"
+		name = "GFX_idea_ROM_Ion_Antonescu_cos_pau"
 		texturefile = "gfx/interface/ministers/ROM/ROM_Ion_Antonescu.tga"
 	}
 	spriteType = {
-		name = "GFX_idea_ROM_Platon_Chirnoaga_cos_npo"
-		texturefile = "gfx/interface/ministers/ROM/ROM_Platon_Chirnoaga.tga"
+		name = "GFX_idea_ROM_Gheorghe_Argeseanu_cos_pau"
+		texturefile = "gfx/interface/ministers/ROM/ROM_Gheorghe_Argeseanu.tga"
 	}
 
 	### Chief of Army
 	spriteType = {
-		name = "GFX_idea_ROM_Marin_Ceausu_carm_sco"
-		texturefile = "gfx/interface/ministers/ROM/ROM_Marin_Ceausu.tga"
+		name = "GFX_idea_ROM_Costin_Ionascu_carm_sli"
+		texturefile = "gfx/interface/ministers/ROM/ROM_Costin_Ionascu.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_ROM_Constantin_Sanatescu_carm_ade"
+		texturefile = "gfx/interface/ministers/ROM/ROM_Constantin_Sanatescu.tga"
 	}
 	spriteType = {
 		name = "GFX_idea_ROM_Gheorghe_Mihail_carm_ade"
@@ -51010,16 +51235,16 @@ spriteTypes = {
 
 	### Chief of Air Force
 	spriteType = {
-		name = "GFX_idea_ROM_Dante_Vizante_cair_ade"
-		texturefile = "gfx/interface/ministers/ROM/ROM_Dante_Vizante.tga"
+		name = "GFX_idea_ROM_Gheorghe_Jienescu_cair_ade"
+		texturefile = "gfx/interface/ministers/ROM/ROM_Gheorghe_Jienescu.tga"
 	}
 	spriteType = {
 		name = "GFX_idea_ROM_Paul_Teodorescu_cair_ade"
 		texturefile = "gfx/interface/ministers/ROM/ROM_Paul_Teodorescu.tga"
 	}
 	spriteType = {
-		name = "GFX_idea_ROM_Emil_Gheorghiu_cair_pau"
-		texturefile = "gfx/interface/ministers/ROM/ROM_Emil_Gheorghiu.tga"
+		name = "GFX_idea_ROM_Ermil_Gheorghiu_cair_pau"
+		texturefile = "gfx/interface/ministers/ROM/ROM_Ermil_Gheorghiu.tga"
 	}
 
   ################################################################################################################################################################################################
@@ -56114,7 +56339,461 @@ spriteTypes = {
 		texturefile = "gfx/interface/ministers/SIK/SIK_Yang_Hexiao.tga"
 	}
 
+################################################################################################################################################################################################
+  ### SIR
   ################################################################################################################################################################################################
+
+	### Head of Government
+	spriteType = {
+		name = "GFX_idea_SIR_Song_Noppakul_hog_tot"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Song_Noppakul.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Prasert_Eiwchai_hog_syn"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Prasert_Eiwchai.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Luang_Praditmanutham_hog_rso"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Luang_Praditmanutham.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Thawan_Thamrongnawasawat_hog_rso"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Thawan_Thamrongnawasawat.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Luang_Sinthusongkhramchai_hog_sde"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Luang_Sinthusongkhramchai.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Phraya_Phaholpholphayuhasena_hog_sli"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Phraya_Phaholpholphayuhasena.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Savaeng_Piampongsarn_hog_sli"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Savaeng_Piampongsarn.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Phra_Prasartpitthayayut_hog_mli"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Phra_Prasartpitthayayut.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Phraya_Songsuradet_hog_sco"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Phraya_Songsuradet.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Seni_Pramoj_hog_sco"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Seni_Pramoj.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_King_Prajadhipok_hog_ade"
+		texturefile = "gfx/interface/ministers/SIR/SIR_King_Prajadhipok.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Phraya_Manopakornnitithada_hog_ade"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Phraya_Manopakornnitithada.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Phraya_Sri_Sitthisongkram_hog_ade"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Phraya_Sri_Sitthisongkram.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Pin_Malakul_hog_ade"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Pin_Malakul.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Boworadet_Kritsadakorn_hog_pau"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Boworadet_Kritsadakorn.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Chumbhotbongs_Paribatra_hog_pau"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Chumbhotbongs_Paribatra.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Khun_Kongritsuksagorn_hog_pau"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Khun_Kongritsuksagorn.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Paribatra_Sukhumbhand_hog_pau"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Paribatra_Sukhumbhand.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Sarit_Thanarat_hog_pau"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Sarit_Thanarat.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Phao_Sriyanond_hog_npo"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Phao_Sriyanond.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Plaek_Khittasangkha_hog_npo"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Plaek_Khittasangkha.tga"
+	}
+
+	### Person of Influence
+	# Foreign Minister
+	spriteType = {
+		name = "GFX_idea_SIR_Krachang_Tularak_for_tot"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Krachang_Tularak.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Sanguan_Tularak_for_syn"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Sanguan_Tularak.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Luang_Praditmanutham_for_rso"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Luang_Praditmanutham.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Direk_Chainam_for_sde"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Direk_Chainam.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Poj_Sarasin_for_sli"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Poj_Sarasin.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Rangsiyakorn_Arparporn_for_mli"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Rangsiyakorn_Arparporn.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Prince_Wan_Waithayakorn_for_sco"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Prince_Wan_Waithayakorn.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Seni_Pramoj_for_sco"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Seni_Pramoj.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Phraya_Ratchawangsan_for_ade"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Phraya_Ratchawangsan.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Traitotphrapan_Tevakul_for_ade"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Traitotphrapan_Tevakul.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Phraya_Thephadsadin_for_pau"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Phraya_Thephadsadin.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Phraya_Srisaynah_for_npo"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Phraya_Srisaynah.tga"
+	}
+
+	# Economy Minister
+	spriteType = {
+		name = "GFX_idea_SIR_Phra_Sarnsartpraphan_eco_tot"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Phra_Sarnsartpraphan.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Chamlong_Daorueang_eco_syn"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Chamlong_Daorueang.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Phraya_Sartsphonkhan_eco_syn"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Phraya_Sartsphonkhan.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Phraya_Sornyutthaseni_eco_rso"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Phraya_Sornyutthaseni.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Tua_Lapanukrom_eco_sde"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Tua_Lapanukrom.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Wichit_Lulitanon_eco_sli"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Wichit_Lulitanon.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Luang_Promyothee_eco_mli"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Luang_Promyothee.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Buntaeng_Thongsawat_eco_sco"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Buntaeng_Thongsawat.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Narisara_Nuwattiwong_eco_ade"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Narisara_Nuwattiwong.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Pin_Malakul_eco_ade"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Pin_Malakul.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Serm_Winitchaikul_eco_ade"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Serm_Winitchaikul.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Khun_Kongritsuksagorn_eco_pau"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Khun_Kongritsuksagorn.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Thawee_Chullasup_eco_pau"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Thawee_Chullasup.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Phraya_Tonavanikamontri_eco_npo"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Phraya_Tonavanikamontri.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Sawat_Sawatronnachai_Sawadikeat_eco_npo"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Sawat_Sawatronnachai_Sawadikeat.tga"
+	}
+
+	# Security Minister
+	spriteType = {
+		name = "GFX_idea_SIR_Thongin_Phuripat_sec_syn"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Thongin_Phuripat.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Thawan_Thamrongnawasawat_sec_rso"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Thawan_Thamrongnawasawat.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Phraya_Tepvitunpahun_Saruttabodhi_sec_sde"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Phraya_Tepvitunpahun_Saruttabodhi.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Phraya_Sarapaipiphat_sec_sli"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Phraya_Sarapaipiphat.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Luang_Supachalasai_sec_mli"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Luang_Supachalasai.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Liang_Chaiyakarn_sec_sco"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Liang_Chaiyakarn.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Paribatra_Sukhumbhand_sec_ade"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Paribatra_Sukhumbhand.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Samaichalerm_Kritsadakorn_sec_ade"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Samaichalerm_Kritsadakorn.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Paribatra_Sukhumbhand_sec_pau"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Paribatra_Sukhumbhand.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Siri_Siriyothin_sec_pau"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Siri_Siriyothin.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Chao_Phraya_Mahitorn_sec_npo"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Chao_Phraya_Mahitorn.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Luang_Adulyadejarat_sec_npo"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Luang_Adulyadejarat.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Luang_Wichitwathakan_sec_npo"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Luang_Wichitwathakan.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Phao_Sriyanond_sec_npo"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Phao_Sriyanond.tga"
+	}
+
+
+	### Chief of Staff
+	spriteType = {
+		name = "GFX_idea_SIR_Phraya_Surapanthaseni_cos_sde"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Phraya_Surapanthaseni.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Luang_Seriroengrit_cos_sli"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Luang_Seriroengrit.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Phraya_Phaholpholphayuhasena_cos_sli"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Phraya_Phaholpholphayuhasena.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Phraya_Prasertsongkhram_cos_mli"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Phraya_Prasertsongkhram.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Phraya_Songsuradet_cos_sco"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Phraya_Songsuradet.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Phraya_Ratchawangsan_cos_ade"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Phraya_Ratchawangsan.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Phraya_Sri_Sitthisongkram_cos_ade"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Phraya_Sri_Sitthisongkram.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Boworadet_Kritsadakorn_cos_pau"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Boworadet_Kritsadakorn.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Phraya_Ritthi_akkhaney_cos_pau"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Phraya_Ritthi_akkhaney.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Phraya_Thephadsadin_cos_pau"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Phraya_Thephadsadin.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Sarit_Thanarat_cos_pau"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Sarit_Thanarat.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Phrapart_Jarusathien_cos_npo"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Phrapart_Jarusathien.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Thanom_Kittikachorn_cos_npo"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Thanom_Kittikachorn.tga"
+	}
+
+	### Chief of Army
+	spriteType = {
+		name = "GFX_idea_SIR_Luang_Chumnarnyutthasart_carm_sde"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Luang_Chumnarnyutthasart.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Phraya_Surapanthaseni_carm_sde"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Phraya_Surapanthaseni.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Luang_Seriroengrit_carm_sli"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Luang_Seriroengrit.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Phraya_Phaholpholphayuhasena_carm_sli"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Phraya_Phaholpholphayuhasena.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Jira_Wichitsongkhram_carm_mli"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Jira_Wichitsongkhram.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Phra_Prasartpitthayayut_carm_mli"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Phra_Prasartpitthayayut.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Luang_Kriengsakpichit_carm_sco"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Luang_Kriengsakpichit.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Phraya_Songsuradet_carm_sco"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Phraya_Songsuradet.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Luang_Sinadyotharak_carm_ade"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Luang_Sinadyotharak.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Phraya_Sri_Sitthisongkram_carm_ade"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Phraya_Sri_Sitthisongkram.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Boworadet_Kritsadakorn_carm_pau"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Boworadet_Kritsadakorn.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Luang_Chartnakrob_carm_pau"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Luang_Chartnakrob.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Phraya_Ritthi_akkhaney_carm_pau"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Phraya_Ritthi_akkhaney.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Luang_Adulyadejarat_carm_npo"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Luang_Adulyadejarat.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Luang_Phibunsongkhram_carm_npo"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Luang_Phibunsongkhram.tga"
+	}
+
+	### Chief of Navy
+	spriteType = {
+		name = "GFX_idea_SIR_Phraya_Wichitchollatee_cnav_tot"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Phraya_Wichitchollatee.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Thawan_Thamrongnawasawat_cnav_rso"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Thawan_Thamrongnawasawat.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Luang_Sinthusongkhramchai_cnav_sde"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Luang_Sinthusongkhramchai.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Phraya_Sornyutthaseni_cnav_sde"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Phraya_Sornyutthaseni.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Luang_Supachalasai_cnav_mli"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Luang_Supachalasai.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Phraya_Preechachollayut_cnav_sco"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Phraya_Preechachollayut.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Phraya_Wicharnchakkrit_cnav_npo"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Phraya_Wicharnchakkrit.tga"
+	}
+
+	### Chief of Air Force
+	spriteType = {
+		name = "GFX_idea_SIR_Luang_Thewaruekpanluek_cair_tot"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Luang_Thewaruekpanluek.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Luang_Athuekthewadet_cair_syn"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Luang_Athuekthewadet.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Bunchu_Janthalubaeksa_cair_sde"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Bunchu_Janthalubaeksa.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Burachat_Chaiyakon_cair_sde"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Burachat_Chaiyakon.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Chalermkiat_Vatthanangkun_cair_mli"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Chalermkiat_Vatthanangkun.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Fuen_Ronnaphagrad_Ritthakhanee_cair_ade"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Fuen_Ronnaphagrad_Ritthakhanee.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Phra_Veharsayarnsilpasit_cair_ade"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Phra_Veharsayarnsilpasit.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Phraya_Chalerm_arkart_cair_ade"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Phraya_Chalerm_arkart.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Phraya_Tayarnpikart_cair_ade"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Phraya_Tayarnpikart.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Thawee_Chullasup_cair_pau"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Thawee_Chullasup.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SIR_Luang_Wechayanrangsarit_cair_npo"
+		texturefile = "gfx/interface/ministers/SIR/SIR_Luang_Wechayanrangsarit.tga"
+	}
+  
+################################################################################################################################################################################################
   ### SLO
   ################################################################################################################################################################################################
 
