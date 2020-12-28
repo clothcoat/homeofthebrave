@@ -1421,7 +1421,7 @@ country_event = { # 1940 Election
 			elections_allowed = yes
 		}
 		hidden_effect = {
-			else_if = { # Joseph Kennedy
+			if = { # Joseph Kennedy
 				limit = {
 					has_country_flag = NEE_1940_democrat_primary_kennedy
 				}
@@ -1824,8 +1824,8 @@ country_event = { # 1944 election
 
 	option = { # Progressive
 		name = newengland.28.a
-		set_country_flag = NEE_had_1944_election
 		hidden_effect = {
+			set_country_flag = NEE_had_1944_election
 			set_country_flag = NEE_1944_election_liberal
 		}
 		add_popularity = {
@@ -1860,8 +1860,8 @@ country_event = { # 1944 election
 	}
 	option = { # Liberal Republican
 		name = newengland.28.b
-		set_country_flag = NEE_had_1944_election
 		hidden_effect = {
+			set_country_flag = NEE_had_1944_election
 			set_country_flag = NEE_1944_election_liberal_republican
 		}
 		add_popularity = {
@@ -1903,9 +1903,9 @@ country_event = { # 1944 election
 	}
 	option = { # Republican
 		name = newengland.28.c
-		set_country_flag = NEE_had_1944_election
 		hidden_effect = {
 			set_country_flag = NEE_1944_election_republican
+			set_country_flag = NEE_had_1944_election
 		}
 		add_popularity = {
 			ideology = market_liberal
@@ -1939,9 +1939,9 @@ country_event = { # 1944 election
 	}
 	option = { # Democrat
 		name = newengland.28.e
-		set_country_flag = NEE_had_1944_election
 		hidden_effect = {
 			set_country_flag = NEE_1944_election_democrat
+			set_country_flag = NEE_had_1944_election
 		}
 		add_popularity = {
 			ideology = social_conservative
@@ -5837,7 +5837,6 @@ country_event = { # Canada's Decision
 					}
 				}
 			}
-		}
 		name = newengland.105.a
 		add_political_power = 50
 		NEE = {

@@ -5911,7 +5911,7 @@ country_event = {# Push For America
 		add_stability = 0.05
 		add_war_support = 0.1
 		USA = {
-		all_owned_state = {
+		owns_state = {
 		limit = { is_claimed_by = CAL }
 		remove_claim_by = CAL
 			}
@@ -9151,7 +9151,7 @@ country_event = {# The Plan for Japan
 			}
 		}
 		add_political_power = -15
-		increase_ruling_party_popularity_by_2 = yes
+		add_popularity = { ideology = paternal_autocrat popularity = 0.02 }
 	}
 }
 

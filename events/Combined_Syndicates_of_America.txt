@@ -4750,8 +4750,8 @@ country_event = { # Foreign Policy
 		}
 	FRA = {
 	has_government = totalist		
+		}
 	}
-}
 
 	mean_time_to_happen = {
 		months = 1
@@ -4768,9 +4768,9 @@ country_event = { # Foreign Policy
 		country_event = {
 		id = csa.5010
 		days = 2
+			}
 		}
 	}
-}
 
 	option = { # Return the favor
 		name = csa.6805.b
@@ -4779,9 +4779,8 @@ country_event = { # Foreign Policy
 		}
 		country_event = { id = csa.500 days = 2 }
 		decrease_ruling_party_popularity_by_5 = yes
-		}
 	}
-}	
+}
 
 country_event = { #Self Determination in the Black Belt
 	id = csa.69
@@ -12207,11 +12206,9 @@ country_event = { # Time to Retreat?
 			}
 		}
 		CAN = {
-			every_owned_state = {
 				CSA = {
 					transfer_state = PREV
 				}
-			}
 		}
 		MEX = {
 			if = {

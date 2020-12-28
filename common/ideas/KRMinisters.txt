@@ -310,6 +310,24 @@ head_of_government = {
 				hog_naive_optimist
 			}
 		}
+		ROM_Iuliu_Maniu_hog_sli = {
+			allowed = { original_tag = ROM }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ROM_Iuliu_Maniu_hog_sli"
+			}
+			traits = {
+				head_of_government
+				social_liberal
+				hog_silent_workhorse
+			}
+		}
 	}
 	
 	foreign_minister = {
@@ -1819,5 +1837,9 @@ spriteType = {
 	spriteType = {
 		name = "GFX_idea_ROM_Pantelimon_Halippa_sec_sde"
 		texturefile = "gfx/interface/ministers/ROM/ROM_Pantelimon_Halippa.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_ROM_Iuliu_Maniu_hog_sli"
+		texturefile = "gfx/interface/ministers/ROM/ROM_Iuliu_Maniu.tga"
 	}
 }

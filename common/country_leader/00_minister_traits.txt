@@ -164,6 +164,15 @@ leader_traits = {
 
 		random = no
 	}
+	
+	union_man = {
+		political_power_gain = 0.03
+		production_factory_max_efficiency_factor = 0.05
+		production_speed_synthetic_refinery_factor = 0.05
+		consumer_goods_factor = 0.01
+
+		random = no
+	}
 
 	hog_spiritual_leader = {
 		stability_factor = 0.1
