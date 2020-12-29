@@ -1609,16 +1609,16 @@ set_puppet_minister_europe = {
 		if = {
 			limit = { has_government = social_democrat }
 			add_ideas = {
-				GBR_Clement_Attlee_hog_sde
-				GBR_Herbert_Morrison_for_sde
-				GBR_Hugh_Gaitskell_eco_sde
-				GBR_James_Chuter_Ede_sec_sde
+				GBR_Richard_Acland_hog_sli
+				GBR_E_H_Carr_for_sli
+				GBR_R_H_Tawney_eco_sli
+				GBR_H_G_Wells_sec_sli
 			}
 		}
 		else_if = {
 			limit = { has_government = market_liberal }
 			add_ideas = {
-				GBR_Archibald_Sinclair_hog_mli
+				GBR_Richard_Acland_hog_sli
 				GBR_Walter_Runciman_for_mli
 				GBR_Ernest_Simon_eco_mli
 				GBR_Ivor_Brown_sec_mli
@@ -1646,7 +1646,7 @@ set_puppet_minister_europe = {
 			limit = { has_government = authoritarian_democrat }
 			add_ideas = {
 				GBR_Henry_Page_Croft_hog_ade
-				GBR_Vere_Ponsonby_for_ade
+				GBR_John_Colville_for_sco
 				GBR_John_Carnegie_eco_ade
 				GBR_Maxwell_Knight_sec_ade
 			}
@@ -1655,18 +1655,18 @@ set_puppet_minister_europe = {
 			limit = { has_government = paternal_autocrat }
 			add_ideas = {
 				GBR_Louis_Mountbatten_hog_pau
-				GBR_John_Hugo_Russell_for_pau
+				GBR_John_Colville_for_sco
 				GBR_Noel_Pemberton_Billing_eco_pau
-				GBR_Jeffrey_Hamm_sec_pau
+				GBR_Maxwell_Knight_sec_ade
 			}
 		}
 		else_if = {
 			limit = { has_government = national_populist }
 			add_ideas = {
-				GBR_Archibald_Ramsay_hog_npo
-				GBR_Alexander_Raven_Thomson_for_npo
-				GBR_Rotha_Beryl_Lintorn_Orman_eco_npo
-				GBR_John_Beckett_sec_npo
+				GBR_Louis_Mountbatten_hog_pau
+				GBR_John_Colville_for_sco
+				GBR_Noel_Pemberton_Billing_eco_pau
+				GBR_Maxwell_Knight_sec_ade
 			}
 		}
 	}
@@ -2419,7 +2419,7 @@ set_puppet_minister_europe = {
 		else_if = {
 			limit = { has_government = market_liberal }
 			add_ideas = {
-				LOM_Luigi_Einaudi_hog_mli
+				LOM_Ivanoe_Bonomi_hog_sli
 				LOM_Pietro_Beretta_for_mli
 				LOM_Giuseppe_De_Capitani_d'Arzago_eco_mli
 				LOM_Cesare_Genovesi_sec_mli
@@ -2428,7 +2428,7 @@ set_puppet_minister_europe = {
 		else_if = {
 			limit = { has_government = social_conservative }
 			add_ideas = {
-				LOM_Sebastiano_Visconti_Prasca_hog_sco
+				LOM_Emilio_de_Bono_hog_ade
 				LOM_Tommaso_Gallarati_Scotti_for_sco
 				LOM_Agostino_Rocca_eco_sco
 				LOM_Febo_Borromeo_d'Adda_sec_sco
