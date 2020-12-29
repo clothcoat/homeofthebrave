@@ -834,7 +834,7 @@ country_event = { #The Kornilov Affair
 			factor = 0
 		}
 		add_stability = -0.05
-		add_ideas = RUS_Anton_Denikin_hog_ade
+		add_ideas = RUS_Anton_I_Denikin_hog_ade
 	}
 }
 country_event = { #Kornilov-Savinkov Alliance
@@ -1133,7 +1133,7 @@ country_event = { #The Dictatorship
 		name = russia.183.a
 		if = {
 			limit = {
-				has_idea = RUS_Anton_Denikin_hog_ade
+				has_idea = RUS_Anton_I_Denikin_hog_ade
 			}
 			add_ideas = RUS_Pavel_N_Shatilov_hog_npo
 		}
@@ -1550,7 +1550,7 @@ country_event = { #Constitutional Monarchy
 			remove_ideas_with_trait = foreign_minister
 			remove_ideas_with_trait = economy_minister
 			add_ideas = {
-				RUS_Anton_Denikin_hog_ade
+				RUS_Anton_I_Denikin_hog_ade
 				RUS_Aleksandr_I_Konovalov_for_mli
 				RUS_Vladimir_P_Smirnov_eco_sli
 			}
@@ -1578,7 +1578,7 @@ country_event = { #Tsar Kyril
 				limit = {
 					RUS_denikin_in_power = yes
 				}
-				add_ideas = RUS_Anton_Denikin_hog_ade
+				add_ideas = RUS_Anton_I_Denikin_hog_ade
 			}
 			else = {
 				add_ideas = RUS_Pyetr_Vrangel_hog_ade
@@ -1636,7 +1636,7 @@ country_event = { #Tsar Vladimir
 				limit = {
 					RUS_denikin_in_power = yes
 				}
-				add_ideas = RUS_Anton_Denikin_hog_ade
+				add_ideas = RUS_Anton_I_Denikin_hog_ade
 			}
 			else = {
 				add_ideas = RUS_Pyetr_Vrangel_hog_ade
@@ -1697,7 +1697,7 @@ country_event = { #PM choice for Kyril
 		}
 		name = russia.19.b
 		add_stability = -0.02
-		add_ideas = RUS_Anton_Denikin_hog_ade
+		add_ideas = RUS_Anton_I_Denikin_hog_ade
 	}
 
 	option = {
@@ -1823,7 +1823,7 @@ country_event = { #PM choice for Vladimir
 		}
 		name = russia.19.b
 		add_stability = -0.02
-		add_ideas = RUS_Anton_Denikin_hog_ade
+		add_ideas = RUS_Anton_I_Denikin_hog_ade
 	}
 
 	option = {
@@ -1878,7 +1878,7 @@ country_event = { #The new Regent of Russia? pavel II
 			factor = 25
 		}
 		name = russia.19.b
-		add_ideas = RUS_Anton_Denikin_hog_ade
+		add_ideas = RUS_Anton_I_Denikin_hog_ade
 		add_stability = -0.02
 	}
 
@@ -3709,7 +3709,7 @@ country_event = { #The Patriarch's Demands
 			add_ideas = RUS_Pavel_Milyukov_hog_mli
 		}
 		else = {
-			add_ideas = RUS_Anton_Denikin_hog_ade
+			add_ideas = RUS_Anton_I_Denikin_hog_ade
 		}
 	}
 	option = {
@@ -3726,7 +3726,7 @@ country_event = { #The Patriarch's Demands
 			add_ideas = RUS_Pavel_Milyukov_hog_mli
 		}
 		else = {
-			add_ideas = RUS_Anton_Denikin_hog_ade
+			add_ideas = RUS_Anton_I_Denikin_hog_ade
 		}
 	}
 }
@@ -4977,14 +4977,14 @@ country_event = { # Denikin's death
 	option = {
 		name = rusd.96.a
 		trigger = {
-			NOT = { has_idea = RUS_Anton_Denikin_hog_ade }
+			NOT = { has_idea = RUS_Anton_I_Denikin_hog_ade }
 			RUS_denikin_in_power = no
 		}
 	}
 	option = {
 		name = rusd.96.b
 		trigger = {
-			has_idea = RUS_Anton_Denikin_hog_ade
+			has_idea = RUS_Anton_I_Denikin_hog_ade
 			RUS_denikin_in_power = no
 		}
 		add_ideas = RUS_Abram_Dragomirov_hog_ade
@@ -5281,7 +5281,7 @@ country_event = {
 			factor = 25
 		}
 		add_stability = -0.02
-		add_ideas = RUS_Anton_Denikin_hog_ade
+		add_ideas = RUS_Anton_I_Denikin_hog_ade
 	}
 	option = {
 		name = rusd.101.c

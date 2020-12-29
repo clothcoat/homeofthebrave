@@ -11580,7 +11580,7 @@ focus_tree = {
 					has_global_flag = USA_civil_war_begun_flag
 					has_country_flag = USA_macarthur_coup
 					has_completed_focus = USA_fight_anarchists
-					has_completed_focus = USA_focus_on_long
+					has_completed_focus = USA_focus_on_odp
 				}
 			}
 		}
@@ -13499,7 +13499,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_league_of_anti_imperialism"
-			unlock_decision_category_tooltip = CAL_anti_imperialism_decisions
+			unlock_decision_category_tooltip = USA_anti_imperialism_decisions
 			add_ideas = USA_league_of_america_1
 		}
 	}

@@ -2069,6 +2069,21 @@ ideas = {
 				industry = 0.05
 			}
 		}
+
+		CAL_protect_the_commons = {#Radicalism
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_protect_the_commons"}
+			allowed = {	always = no	}
+			allowed_civil_war = { always = yes }
+			picture = national_oil
+			modifier = {
+				stability_factor = 0.03
+				consumer_goods_factor = -0.06
+				production_factory_max_efficiency_factor = -0.01
+				supply_consumption_factor = -0.05
+				out_of_supply_factor = 0.03	
+				local_resources -0.05
+			}
+		}
 		
 		CAL_national_oil_idea = {#National Oil
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_national_oil_idea"}

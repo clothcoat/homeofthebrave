@@ -358,7 +358,7 @@ NEE_entente_allies = {
 	}
 }
 
-NEE_reclaiming_america = {
+NEE_stoddard_decisions = {
 
 	NEE_become_puppet = {
 		icon = generic_prepare_civil_war
@@ -394,12 +394,114 @@ NEE_reclaiming_america = {
 
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision NEE_become_puppet"
+			set_country_flag = NEE_allow_election_flag
 			COR = {
-			puppet = NEE
+			set_autonomy = {
+				target = NEE
+				autonomy_state = kr_default_puppet
+				}
 			}
 			add_stability = 0.05
+			hidden_effect = {
+			NEE = {
+			set_politics = {
+				ruling_party = national_populist          
+			}
+			set_popularities = {
+                   			totalist = 0
+                  			radical_socialist = 0
+                    			syndicalist = 0
+                    			social_democrat = 2
+                    			social_liberal = 2
+                    			market_liberal = 4
+                    			social_conservative = 10
+                    			authoritarian_democrat = 6
+                    			paternal_autocrat = 11
+                   			national_populist = 65
+					}	
+				}
+			}
 		}
 	}
+
+	NEE_ask_canadians = {
+		icon = generic_prepare_civil_war
+
+		allowed = { 
+		original_tag = NEE }
+
+		available = {
+			has_war = no
+			has_completed_focus = NEE_war_against_chaos
+			has_global_flag = NEE_COR_Alliance_flag
+			COR = {
+				exists = yes
+				has_war = no
+				has_global_flag = USA_civil_war_over_flag
+				}
+			}
+	
+		visible = {
+			has_completed_focus = NEE_war_against_chaos
+			has_global_flag = NEE_COR_Alliance_flag
+			COR = {
+				exists = yes
+				}
+			}
+
+		fire_only_once = yes
+		cost = 1
+		ai_will_do = {
+			factor = 1
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision NEE_ask_canadians"
+			country_event = newengland.167
+		}
+	}
+
+	NEE_hold_elections = {
+		icon = generic_prepare_civil_war
+
+		allowed = { 
+		original_tag = NEE }
+
+		available = {
+			has_war = no
+			has_completed_focus = NEE_war_against_chaos
+			is_subject = yes
+			has_country_flag = NEE_allow_election_flag
+			COR = {
+				exists = yes
+				has_war = no
+				has_global_flag = USA_civil_war_over_flag
+				}
+			}
+	
+		visible = {
+			has_completed_focus = NEE_war_against_chaos
+			COR = {
+				exists = yes
+				}
+			}
+
+		fire_only_once = yes
+		cost = 1
+		ai_will_do = {
+			factor = 1
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision NEE_ask_canadians"
+			COR = {
+			country_event = newengland.183
+			}
+		}
+	}
+}
+
+NEE_reclaiming_america = {
 	
 	NEE_claim_usa_territory = {
 		icon = generic_prepare_civil_war
