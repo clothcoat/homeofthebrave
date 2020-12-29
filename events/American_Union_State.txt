@@ -872,7 +872,7 @@ country_event = { # AUS Election
 	option = { # Christian Party
 		name = unionstate.2300.c
 		add_political_power = 50
-		add_popularity = { ideology = social_liberal popularity = 0.1 }
+		add_popularity = { ideology = social_conservative popularity = 0.1 }
 		
 		set_politics = {
 		ruling_party = social_conservative

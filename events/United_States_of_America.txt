@@ -1919,7 +1919,7 @@ country_event = { # The 1936 Election - Coalition
 		set_country_flag = USA_democrats_exist
 		hidden_effect = {
 			add_ideas = USA_Alf_Landon_hog_sli
-			add_ideas = USA_Cordell_Hull_for_mli
+			add_ideas = USA_Cordell_Hull_for_sli
 			add_ideas = USA_Ray_Lyman_Wilbur_Sr_eco_mli
 			add_ideas = USA_Charles_Douglas_Jackson_sec_mli
 			create_country_leader = {
@@ -1995,7 +1995,7 @@ country_event = { # The 1936 Election - Coalition
 			add_ideas = USA_Charles_L_McNary_hog_sli
 			add_ideas = USA_Henry_Lewis_Stimson_for_sli
 			add_ideas = USA_Vannevar_Bush_eco_sli
-			add_ideas = USA_Charles_Evans_Hughes_Sr_sec_sli
+			add_ideas = USA_Charles_Evans_Hughes_Sr_sec_mli
 			create_country_leader = {
 				name = "Alf Landon"
 				desc = "POLITICS_ALF_LANDON_DESC"
@@ -2300,7 +2300,7 @@ country_event = { # The 1936 Election - Coalition
 			set_global_flag = USA_murray_is_president
 		}
 		hidden_effect = {
-			add_ideas = USA_William_Murray_hog
+			add_ideas = USA_William_H_Murray_hog_pau
 			add_ideas = USA_Robert_Rice_Reynolds_for_npo
 			add_ideas = USA_Henry_Ford_eco_pau
 			add_ideas = USA_John_Elliott_Rankin_sec_pau
@@ -2397,7 +2397,7 @@ country_event = { # The 1936 Election - Coalition
 			set_country_flag = USA_president_norris
 		}
 		hidden_effect = {
-			add_ideas = USA_Quentin_Roosevelt_hog_sli
+			add_ideas = USA_Quentin_Roosevelt_hog_sde
 			add_ideas = USA_William_Borah_for_sde
 			add_ideas = USA_George_Henry_Dern_eco_sde
 			add_ideas = USA_Bronson_Murray_Cutting_sec_sde
@@ -2484,7 +2484,7 @@ country_event = { # The 1936 Election - Coalition
 		hidden_effect = {
 			add_ideas = USA_John_Nance_Garner_hog_sco
 			add_ideas = USA_Louis_Arthur_Johnson_for_sco
-			add_ideas = USA_Alfred_Emanuel_Smith_eco_mli
+			add_ideas = USA_Alfred_Emanuel_Smith_eco_sli
 			add_ideas = USA_Kenneth_Claiborne_Royall_Sr_sec_sco
 		}
 		hidden_effect = {
@@ -7939,9 +7939,9 @@ country_event = { # Provisional President
 			factor = 25
 		}
 		hidden_effect = {
-			add_ideas = USA_Quentin_Roosevelt_hog_sli
+			add_ideas = USA_Quentin_Roosevelt_hog_sde
 			add_ideas = USA_Cordell_Hull_for_sli
-			add_ideas = USA_Robert_Porter_Patterson_Sr_eco_sli
+			add_ideas = USA_Robert_Porter_Patterson_Sr_eco_mli
 			add_ideas = USA_Charles_Evans_Hughes_Sr_sec_mli
 		}
 		set_politics = {
@@ -7985,7 +7985,7 @@ country_event = { # Provisional President
 		hidden_effect = {
 			add_ideas = USA_John_Nance_Garner_hog_sco
 			add_ideas = USA_James_Watson_Gerard_Jr_for_sco
-			add_ideas = USA_Alfred_Emanuel_Smith_eco_mli
+			add_ideas = USA_Alfred_Emanuel_Smith_eco_sli
 			add_ideas = USA_Martin_Dies_Jr_sec_sco
 		}
 		set_politics = {
@@ -9183,6 +9183,19 @@ country_event = { # The Upcoming Election
 				}
 			}
 		}
+
+	option = { # Interesting...
+		name = ustates.190.c
+		trigger = {
+			NOT = {
+			OR = {
+			has_country_flag = USA_deadlock_garner
+			has_country_flag = USA_deadlock_norris
+				}
+			}
+		}
+		add_political_power = 5
+		}
 	}
 
 country_event = { # The San Fran Conference
@@ -9816,8 +9829,7 @@ country_event = { # The St. Louis Convention, Presidential Nominee
 			has_country_flag = USA_deadlock_norris
 			}
 		}
-	picture = GFX_report_event_USA_congress
-
+	picture = GFX_event_kiel_auditorium
 	trigger = {
 		tag = USA
 		has_elected_government = yes
@@ -11455,7 +11467,7 @@ country_event = { # 1944 Election
 				}
 				add_ideas = USA_Thomas_Dewey_hog_sli
 				add_ideas = USA_John_Bassett_Moore_for_sli
-				add_ideas = USA_Robert_Porter_Patterson_Sr_eco_sli
+				add_ideas = USA_Robert_Porter_Patterson_Sr_eco_mli
 				add_ideas = USA_Charles_Evans_Hughes_Sr_sec_mli
 			}
 			if = { # Quentin Roosevelt
@@ -11465,9 +11477,9 @@ country_event = { # 1944 Election
 						has_country_flag = USA_1944_republican_primary_president
 					}
 				}
-				add_ideas = USA_Quentin_Roosevelt_hog_sli
+				add_ideas = USA_Quentin_Roosevelt_hog_sde
 				add_ideas = USA_John_Bassett_Moore_for_sli
-				add_ideas = USA_Robert_Porter_Patterson_Sr_eco_sli
+				add_ideas = USA_Robert_Porter_Patterson_Sr_eco_mli
 				add_ideas = USA_Charles_Evans_Hughes_Sr_sec_mli
 			}
 
@@ -12296,7 +12308,7 @@ country_event = { # 1948 election
 				}
 				add_ideas = USA_Thomas_Dewey_hog_sli
 				add_ideas = USA_John_Bassett_Moore_for_sli
-				add_ideas = USA_Robert_Porter_Patterson_Sr_eco_sli
+				add_ideas = USA_Robert_Porter_Patterson_Sr_eco_mli
 				add_ideas = USA_Charles_Evans_Hughes_Sr_sec_mli
 			}
 			if = {
@@ -12305,7 +12317,7 @@ country_event = { # 1948 election
 				}
 				add_ideas = USA_Quentin_Roosevelt_II_hog_sli
 				add_ideas = USA_John_Bassett_Moore_for_sli
-				add_ideas = USA_Robert_Porter_Patterson_Sr_eco_sli
+				add_ideas = USA_Robert_Porter_Patterson_Sr_eco_mli
 				add_ideas = USA_Charles_Evans_Hughes_Sr_sec_mli
 			}
 			if = { # Earl Warren
@@ -12314,7 +12326,7 @@ country_event = { # 1948 election
 				}
 				add_ideas = USA_Earl_Warren_hog_sli
 				add_ideas = USA_John_Bassett_Moore_for_sli
-				add_ideas = USA_Robert_Porter_Patterson_Sr_eco_sli
+				add_ideas = USA_Robert_Porter_Patterson_Sr_eco_mli
 				add_ideas = USA_Charles_Evans_Hughes_Sr_sec_mli
 			}
 			if = { # Charles L. McNary
@@ -12323,7 +12335,7 @@ country_event = { # 1948 election
 				}
 				add_ideas = USA_Charles_L_McNary_hog_sli
 				add_ideas = USA_John_Bassett_Moore_for_sli
-				add_ideas = USA_Robert_Porter_Patterson_Sr_eco_sli
+				add_ideas = USA_Robert_Porter_Patterson_Sr_eco_mli
 				add_ideas = USA_Charles_Evans_Hughes_Sr_sec_mli
 			}
 
@@ -13021,7 +13033,7 @@ country_event = { # 1952 election
 				}
 				add_ideas = USA_John_W_Bricker_hog_sli
 				add_ideas = USA_John_Bassett_Moore_for_sli
-				add_ideas = USA_Robert_Porter_Patterson_Sr_eco_sli
+				add_ideas = USA_Robert_Porter_Patterson_Sr_eco_mli
 				add_ideas = USA_Charles_Evans_Hughes_Sr_sec_mli
 			}
 			if = { # Harold Stassen
@@ -13030,7 +13042,7 @@ country_event = { # 1952 election
 				}
 				add_ideas = USA_Harold_Stassen_hog_sli
 				add_ideas = USA_John_Bassett_Moore_for_sli
-				add_ideas = USA_Robert_Porter_Patterson_Sr_eco_sli
+				add_ideas = USA_Robert_Porter_Patterson_Sr_eco_mli
 				add_ideas = USA_Charles_Evans_Hughes_Sr_sec_mli
 			}
 		}
@@ -13064,7 +13076,7 @@ country_event = { # 1952 election
 				limit = {
 					has_country_flag = USA_1952_liberal_primary_stevenson
 				}
-				add_ideas = USA_Adlai_Stevenson_hog_mli
+				add_ideas = USA_Adlai_Stevenson_hog_sli
 				add_ideas = USA_Henry_Morgenthau_Jr_for_mli
 				add_ideas = USA_Daniel_Calhoun_Roper_eco_sco
 				add_ideas = USA_Robert_Ferdinand_Wagner_I_sec_sde
@@ -13290,6 +13302,9 @@ country_event = { # Remove the League idea
 	picture = GFX_report_event_generic_diplomacy2
 
 	trigger = {
+		NOT = {
+			tag = USA
+		}
 		OR = {
 			has_idea = USA_league_of_america_1
 			has_idea = USA_league_of_america_2
@@ -15676,7 +15691,7 @@ country_event = { # Cincinnatus Election
 				}
 				add_ideas = USA_Harold_Stassen_hog_sli
 				add_ideas = USA_Henry_Lewis_Stimson_for_sli
-				add_ideas = USA_Robert_Porter_Patterson_Sr_eco_sli
+				add_ideas = USA_Robert_Porter_Patterson_Sr_eco_mli
 				add_ideas = USA_Fannie_Coralie_Perkins_sec_sli
 			
 			# next primaries
@@ -21609,7 +21624,7 @@ country_event = { #Everyman a Pot
 					remove_ideas = USA_great_depression
 					add_ideas = USA_Henry_Lewis_Stimson_for_sli
 					add_ideas = USA_Henry_Ford_eco_pau
-					add_ideas = USA_Charles_Evans_Hughes_Sr_sec_sli
+					add_ideas = USA_Charles_Evans_Hughes_Sr_sec_mli
 						USA = {
 							country_event = { id = ustates.4063 days = 10 }
 						}
@@ -21629,7 +21644,7 @@ country_event = { #Everyman a Pot
 			}
 				hidden_effect = {
 					remove_ideas = USA_great_depression
-					add_ideas = USA_Cordell_Hull_for_mli
+					add_ideas = USA_Cordell_Hull_for_sli
 					add_ideas = USA_Ray_Lyman_Wilbur_Sr_eco_mli
 					
 				}
@@ -21650,7 +21665,7 @@ country_event = { #Everyman a Pot
 					set_country_flag = New_Right_Republicans
 					remove_ideas = USA_great_depression
 					add_ideas = USA_Henry_Morgenthau_Jr_for_mli
-					add_ideas = USA_Alfred_Emanuel_Smith_eco_mli
+					add_ideas = USA_Alfred_Emanuel_Smith_eco_sli
 						USA = {
 							country_event = { id = ustates.4064 days = 10 }
 				}
@@ -23613,7 +23628,7 @@ country_event = { #ODP Investigation
 		}	
 		hidden_effect = {
 			remove_ideas = USA_klan_activity_idea
-			remove_ideas = USA_klan_activity_idea2
+			remove_ideas = USA_klan_activity_idea_2
 			set_country_flag = USA_ODP_Discredited_No_leaders
 		}
 	}

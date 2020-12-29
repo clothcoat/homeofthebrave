@@ -425,7 +425,7 @@ country_event = { #Aftermath of the assassination
 				national_populist = 10
 			}
 			add_ideas = {
-				RUS_Pyetr_Vrangel_hog_ade
+				RUS_Pyetr_N_Vrangel_hog_ade
 				RUS_Vladimir_Golitsyn_for_ade
 				RUS_Aleksey_P_Arkhangelskiy_eco_ade
 				RUS_Sergey_L_Markov_sec_ade
@@ -497,7 +497,7 @@ country_event = { #Aftermath of the assassination
 				national_populist = 12
 			}
 			add_ideas = {
-				RUS_Aleksandr_Lukomskiy_hog_pau
+				RUS_Aleksandr_S_Lukomskiy_hog_pau
 				RUS_Aleksey_Ignatyev_for_pau
 				RUS_Aleksey_I_Putilov_eco_pau
 				RUS_Vladimir_Manshteyn_sec_npo
@@ -609,7 +609,7 @@ country_event = { #PM choice for the senate
 			kill_ideology_leader = social_liberal
 			remove_all_ministers = yes
 			add_ideas = {
-				RUS_Irakliy_Tsereteli_hog_sde
+				RUS_Irakliy_G_Tsereteli_hog_sde
 				RUS_Mariya_Spiridonova_for_sde
 				RUS_Vladimir_M_Zenzinov_eco_sde
 				RUS_Vladimir_Burtsev_sec_sde
@@ -802,7 +802,7 @@ country_event = { #PM choice for Wrangel
 			factor = 10
 		}
 		add_stability = -0.1
-		add_ideas =  RUS_Pyetr_Vrangel_hog_ade
+		add_ideas =  RUS_Pyetr_N_Vrangel_hog_ade
 	}
 }
 
@@ -854,7 +854,7 @@ country_event = { #Kornilov-Savinkov Alliance
 		add_ideas = RUS_Boris_Savinkov_hog_npo
 		hidden_effect = {
 			add_ideas = {
-				RUS_Aleksandr_Kazembek_for_npo
+				RUS_Aleksandr_L_Kazembek_for_npo
 				RUS_Andrey_I_Zankevich_eco_npo
 				RUS_Vladimir_Manshteyn_sec_npo
 			}
@@ -1525,7 +1525,7 @@ country_event = { #Constitutional Monarchy
 			remove_ideas_with_trait = foreign_minister
 			remove_ideas_with_trait = economy_minister
 			add_ideas = {
-				RUS_Pyetr_Vrangel_hog_ade
+				RUS_Pyetr_N_Vrangel_hog_ade
 				RUS_Aleksandr_I_Konovalov_for_mli
 				RUS_Vladimir_P_Smirnov_eco_sli
 			}
@@ -1581,7 +1581,7 @@ country_event = { #Tsar Kyril
 				add_ideas = RUS_Anton_I_Denikin_hog_ade
 			}
 			else = {
-				add_ideas = RUS_Pyetr_Vrangel_hog_ade
+				add_ideas = RUS_Pyetr_N_Vrangel_hog_ade
 			}
 			news_event = {
 				id = russianews.8
@@ -1639,7 +1639,7 @@ country_event = { #Tsar Vladimir
 				add_ideas = RUS_Anton_I_Denikin_hog_ade
 			}
 			else = {
-				add_ideas = RUS_Pyetr_Vrangel_hog_ade
+				add_ideas = RUS_Pyetr_N_Vrangel_hog_ade
 			}
 			news_event = {
 				id = russianews.8
@@ -1715,7 +1715,7 @@ country_event = { #PM choice for Kyril
 		}
 		name = russia.19.e
 		add_stability = 0.02
-		add_ideas = RUS_Nikolay_Trubetskoy_hog_sco
+		add_ideas = RUS_Nikolay_S_Trubetskoy_hog_sco
 	}
 }
 
@@ -1841,7 +1841,7 @@ country_event = { #PM choice for Vladimir
 		}
 		name = russia.19.e
 		add_stability = 0.02
-		add_ideas = RUS_Nikolay_Trubetskoy_hog_sco
+		add_ideas = RUS_Nikolay_S_Trubetskoy_hog_sco
 	}
 
 	option = {
@@ -1850,7 +1850,7 @@ country_event = { #PM choice for Vladimir
 		}
 		name = russia.19.f
 		trigger = {
-			has_idea = RUS_Pyetr_Vrangel_hog_ade
+			has_idea = RUS_Pyetr_N_Vrangel_hog_ade
 		}
 		add_stability = 0.02
 	}
@@ -1887,7 +1887,7 @@ country_event = { #The new Regent of Russia? pavel II
 			factor = 25
 		}
 		name = russia.36.c
-		add_ideas = RUS_Pyetr_Vrangel_hog_ade
+		add_ideas = RUS_Pyetr_N_Vrangel_hog_ade
 		add_stability = -0.06
 	}
 }
@@ -2086,7 +2086,7 @@ country_event = { #Anti-Socialist Coup
 		}
 		remove_all_ministers = yes
 		add_ideas = {
-			RUS_Aleksandr_Lukomskiy_hog_pau
+			RUS_Aleksandr_S_Lukomskiy_hog_pau
 			RUS_Aleksey_Ignatyev_for_pau
 			RUS_Aleksey_I_Putilov_eco_pau
 			RUS_Vladimir_Manshteyn_sec_npo
@@ -3852,7 +3852,7 @@ country_event = { #Kirill Romanov dies
 		hidden_effect = {
 			unlock_national_focus = RUS_Restore_The_Monarchy
 			unlock_national_focus = RUS_Imperial_Glory
-			add_ideas = RUS_Pyetr_Vrangel_hog_ade
+			add_ideas = RUS_Pyetr_N_Vrangel_hog_ade
 			add_popularity = {
 				ideology = authoritarian_democrat
 				popularity = -0.2
@@ -4741,7 +4741,7 @@ country_event = { #Duma Elections
 			factor = 20
 		}
 		add_ideas = {
-			RUS_Irakliy_Tsereteli_hog_sde
+			RUS_Irakliy_G_Tsereteli_hog_sde
 			RUS_Mariya_Spiridonova_for_sde
 			RUS_Vladimir_M_Zenzinov_eco_sde
 			RUS_Vladimir_Burtsev_sec_sde
@@ -4805,7 +4805,7 @@ country_event = { #Duma Elections
 			factor = 30
 		}
 		add_ideas = {
-			RUS_Nikolay_Trubetskoy_hog_sco
+			RUS_Nikolay_S_Trubetskoy_hog_sco
 			RUS_Vladimir_P_Paley_for_sco
 			RUS_Sergey_Bulgakov_eco_sco
 			RUS_Aleksandr_D_Protopopov_sec_sco
@@ -4922,7 +4922,7 @@ country_event = { # Splintering within the conservatives
 			NOT = { has_cosmetic_tag = RUS_empire }
 		}
 		name = rusd.66.b
-		add_ideas = RUS_Nikolay_Trubetskoy_hog_sco
+		add_ideas = RUS_Nikolay_S_Trubetskoy_hog_sco
 		add_political_power = -60
 		set_politics = {
 			ruling_party = social_conservative
@@ -4968,8 +4968,8 @@ country_event = { # Denikin's death
 			set_country_flag = Anton_Denikin_dead
 			remove_unit_leader = 401
 			if = {
-				limit = { has_idea = RUS_Anton_Denikin_cos }
-				remove_ideas = RUS_Anton_Denikin_cos
+				limit = { has_idea = RUS_Anton_I_Denikin_cos }
+				remove_ideas = RUS_Anton_I_Denikin_cos
 			}
 		}
 	}
@@ -5149,9 +5149,9 @@ country_event = {
 			add_ideas = RUS_Vladimir_Nabokov_hog_mli
 		}
 		if = {
-			limit = { has_idea = RUS_Pavel_Milyukov_for_mli }
-			hidden_effect = { remove_ideas = RUS_Pavel_Milyukov_for_mli }
-			add_ideas = RUS_Vladimir_Nabokov_for_mli
+			limit = { has_idea = RUS_Pavel_N_Milyukov_for_mli }
+			hidden_effect = { remove_ideas = RUS_Pavel_N_Milyukov_for_mli }
+			add_ideas = RUS_Vladimir_D_Nabokov_for_sco
 		}
 		hidden_effect = {
 			kill_ideology_leader = market_liberal
@@ -5294,7 +5294,7 @@ country_event = {
 			factor = 25
 		}
 		add_stability = -0.06
-		add_ideas = RUS_Pyetr_Vrangel_hog_ade
+		add_ideas = RUS_Pyetr_N_Vrangel_hog_ade
 	}
 
 	option = {
@@ -5334,7 +5334,7 @@ country_event = {
 			factor = 25
 		}
 		add_stability = 0.02
-		add_ideas = RUS_Nikolay_Trubetskoy_hog_sco
+		add_ideas = RUS_Nikolay_S_Trubetskoy_hog_sco
 	}
 }
 

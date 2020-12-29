@@ -190,6 +190,60 @@ head_of_government = {
 				hog_flamboyant_tough_guy
 			}
 		}
+	CUB_Carlos_Prio_Soccares_hog_sco = {
+			allowed = { original_tag = CUB }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea CUB_Carlos_Prio_Soccares_hog_sco"
+			}
+			traits = {
+				head_of_government
+				social_conservative
+				hog_political_protege
+			}
+		}
+	CUB_Ramon_Grau_San_Martin_hog_ade = {
+			allowed = { original_tag = CUB }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea CUB_Ramon_Grau_San_Martin_hog_ade"
+			}
+			traits = {
+				head_of_government
+				authoritarian_democrat
+				hog_flamboyant_tough_guy
+			}
+		}
+	CUB_Alberto_Lamar_Schweyer_hog_npo = {
+			allowed = { original_tag = CUB }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea CUB_Alberto_Lamar_Schweyer_hog_npo"
+			}
+			traits = {
+				head_of_government
+				national_populist
+				hog_happy_amateur
+			}
+		}
 	ETS_Sabit_Damulla_Abdulbaki_hog_pau = {
 			allowed = { original_tag = ETS }
 			available = {
@@ -526,6 +580,42 @@ head_of_government = {
 				head_of_government
 				national_populist
 				hog_ambitious_union_boss
+			}
+		}
+	LOM_Luigi_Einaudi_hog_mli = {
+			allowed = { original_tag = LOM }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea LOM_Luigi_Einaudi_hog_mli"
+			}
+			traits = {
+				head_of_government
+				market_liberal
+				hog_political_protege
+			}
+		}
+	LOM_Sebastiano_Visconti_Prasca_hog_sco = {
+			allowed = { original_tag = LOM }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea LOM_Sebastiano_Visconti_Prasca_hog_sco"
+			}
+			traits = {
+				head_of_government
+				social_conservative
+				hog_backroom_backstabber
 			}
 		}
 	MLT_Paul_Boffa_hog_sde = {
@@ -1390,6 +1480,114 @@ head_of_government = {
 				foreign_minister
 				authoritarian_democrat
 				for_the_cloak_n_dagger_schemer
+			}
+		}
+	CUB_Pablo_de_la_Torriente_Brau_for_rso = {
+			allowed = { original_tag = CUB }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea CUB_Pablo_de_la_Torriente_Brau_for_rso"
+			}
+			traits = {
+				foreign_minister
+				radical_socialist
+				for_ideological_crusader
+			}
+		}
+	CUB_Eduardo_Chibas_Ribas_for_sde = {
+			allowed = { original_tag = CUB }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea CUB_Eduardo_Chibas_Ribas_for_sde"
+			}
+			traits = {
+				foreign_minister
+				social_democrat
+				for_ideological_crusader
+			}
+		}
+	CUB_Alberto_Inocente_Alvarez_for_sco = {
+			allowed = { original_tag = CUB }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea CUB_Alberto_Inocente_Alvarez_for_sco"
+			}
+			traits = {
+				foreign_minister
+				social_conservative
+				for_ideological_crusader
+			}
+		}
+	CUB_Gustavo_Cuervo_Rubio_for_ade = {
+			allowed = { original_tag = CUB }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea CUB_Gustavo_Cuervo_Rubio_for_ade"
+			}
+			traits = {
+				foreign_minister
+				authoritarian_democrat
+				for_apologetic_clerk
+			}
+		}
+	CUB_Guillermo_Martull_Bataille_for_pau = {
+			allowed = { original_tag = CUB }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea CUB_Guillermo_Martull_Bataille_for_pau"
+			}
+			traits = {
+				foreign_minister
+				paternal_autocrat
+				for_general_staffer
+			}
+		}
+	CUB_Jesus_Marinas_Alvarez_for_npo = {
+			allowed = { original_tag = CUB }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea CUB_Jesus_Marinas_Alvarez_for_npo"
+			}
+			traits = {
+				foreign_minister
+				national_populist
+				for_iron_fisted_brute
 			}
 		}
 	ETS_Tawfiq_Bay_for_pau = {
@@ -2488,6 +2686,42 @@ head_of_government = {
 				eco_resource_industrialist
 			}
 		}
+	CUB_Blas_Roca_Calderio_eco_tot = {
+			allowed = { original_tag = CUB }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea CUB_Blas_Roca_Calderio_eco_tot"
+			}
+			traits = {
+				economy_minister
+				totalist
+				eco_planned_economy_proponent
+			}
+		}
+	CUB_Salvador_Vilaseca_Forne_eco_syn = {
+			allowed = { original_tag = CUB }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea CUB_Salvador_Vilaseca_Forne_eco_syn"
+			}
+			traits = {
+				economy_minister
+				syndicalist
+				eco_administrative_genius
+			}
+		}
 	CUB_Jose_Irrisari_Gamio_eco_sde = {
 			allowed = { original_tag = CUB }
 			available = {
@@ -2504,6 +2738,114 @@ head_of_government = {
 				economy_minister
 				social_democrat
 				eco_bank_president
+			}
+		}
+	CUB_Joaquin_Martinez_Saenz_eco_sli = {
+			allowed = { original_tag = CUB }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea CUB_Joaquin_Martinez_Saenz_eco_sli"
+			}
+			traits = {
+				economy_minister
+				social_liberal
+				eco_keynesian_economy
+			}
+		}
+	CUB_Raul_Cardenas_Echarte_eco_sco = {
+			allowed = { original_tag = CUB }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea CUB_Raul_Cardenas_Echarte_eco_sco"
+			}
+			traits = {
+				economy_minister
+				social_conservative
+				eco_mixed_economy
+			}
+		}
+	CUB_Gustavo_Moreno_Lastres_eco_ade = {
+			allowed = { original_tag = CUB }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea CUB_Gustavo_Moreno_Lastres_eco_ade"
+			}
+			traits = {
+				economy_minister
+				authoritarian_democrat
+				eco_mixed_economy
+			}
+		}
+	CUB_Henri_Schueg_Chassin_eco_ade = {
+			allowed = { original_tag = CUB }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea CUB_Henri_Schueg_Chassin_eco_ade"
+			}
+			traits = {
+				economy_minister
+				authoritarian_democrat
+				eco_industrial_chemist
+			}
+		}
+	CUB_Ignacio_Galindez_eco_pau = {
+			allowed = { original_tag = CUB }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea CUB_Ignacio_Galindez_eco_pau"
+			}
+			traits = {
+				economy_minister
+				paternal_autocrat
+				eco_infantry_proponent
+			}
+		}
+	CUB_Alfonso_Serrano_Vilarino_eco_npo = {
+			allowed = { original_tag = CUB }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea CUB_Alfonso_Serrano_Vilarino_eco_npo"
+			}
+			traits = {
+				economy_minister
+				national_populist
+				eco_infantry_proponent
 			}
 		}
 	ERI_Andom_Tesfazion_eco_sco = {
@@ -3483,7 +3825,115 @@ ROM_Miron_Constantinescu_eco_tot = {
 				sec_prince_of_terror
 			}
 		}
-		LIT_Kazys_Boruta_sec_syn = {
+	CUB_Juan_Remos_Rubio_sec_sde = {
+			allowed = { original_tag = CUB }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea CUB_Juan_Remos_Rubio_sec_sde"
+			}
+			traits = {
+				security_minister
+				social_democrat
+				sec_silent_lawyer
+			}
+		}
+	CUB_Sergio_Carbo_Morera_sec_sli = {
+			allowed = { original_tag = CUB }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea CUB_Sergio_Carbo_Morera_sec_sli"
+			}
+			traits = {
+				security_minister
+				social_liberal
+				sec_compassionate_gentleman
+			}
+		}
+	CUB_Felix_Lancis_Sanchez_sec_ade = {
+			allowed = { original_tag = CUB }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea CUB_Felix_Lancis_Sanchez_sec_ade"
+			}
+			traits = {
+				security_minister
+				authoritarian_democrat
+				sec_crime_fighter
+			}
+		}
+	CUB_Carlos_Mendieta_Montefur_sec_ade = {
+			allowed = { original_tag = CUB }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea CUB_Carlos_Mendieta_Montefur_sec_ade"
+			}
+			traits = {
+				security_minister
+				authoritarian_democrat
+				sec_man_of_the_people
+			}
+		}
+	CUB_Conrado_Alminaque_Agudo_sec_npo = {
+			allowed = { original_tag = CUB }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea CUB_Conrado_Alminaque_Agudo_sec_npo"
+			}
+			traits = {
+				security_minister
+				national_populist
+				sec_prince_of_terror
+			}
+		}
+	CUB_Agustin_Parla_Orduna_sec_npo = {
+			allowed = { original_tag = CUB }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea CUB_Agustin_Parla_Orduna_sec_npo"
+			}
+			traits = {
+				security_minister
+				national_populist
+				sec_man_of_the_people
+			}
+		}
+	LIT_Kazys_Boruta_sec_syn = {
 			allowed = { original_tag = LIT }
 			available = {
 				custom_trigger_tooltip = {
