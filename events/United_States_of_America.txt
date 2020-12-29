@@ -9444,7 +9444,7 @@ country_event = { # The St. Louis Convention
 			has_country_flag = USA_deadlock_norris
 			}
 		}
-	picture = GFX_report_event_USA_congress
+	picture = GFX_event_kiel_auditorium
 
 	trigger = {
 		tag = USA
@@ -9460,9 +9460,9 @@ country_event = { # The St. Louis Convention
 	
 	option = { # Convention Starts
 		name = ustates.194.a
-		country_event = { id = ustates.195 hours = 6 }
-		country_event = { id = ustates.196 hours = 7 }
-		country_event = { id = ustates.197 hours = 8 }
+		country_event = { id = ustates.195 days = 1 }
+		country_event = { id = ustates.196 days = 2 }
+		country_event = { id = ustates.197 days = 3 }
 		}
 	}
 	
@@ -9482,7 +9482,7 @@ country_event = { # The St. Louis Convention
 			has_country_flag = USA_deadlock_norris
 			}
 		}
-	picture = GFX_report_event_USA_congress
+	picture = GFX_event_kiel_auditorium
 
 	trigger = {
 		tag = USA
@@ -9603,7 +9603,7 @@ country_event = { # The St. Louis Convention
 			has_country_flag = USA_deadlock_norris
 			}
 		}
-	picture = GFX_report_event_USA_congress
+	picture = GFX_event_kiel_auditorium
 
 	trigger = {
 		tag = USA
@@ -9736,7 +9736,7 @@ country_event = { # The St. Louis Convention
 			has_country_flag = USA_deadlock_norris
 			}
 		}
-	picture = GFX_report_event_USA_congress
+	picture = GFX_event_kiel_auditorium
 
 	trigger = {
 		tag = USA
