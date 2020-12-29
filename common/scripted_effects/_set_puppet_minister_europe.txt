@@ -2985,7 +2985,7 @@ set_puppet_minister_europe = {
 		if = {
 			limit = { has_government = social_democrat }
 			add_ideas = {
-				RUS_Irakliy_Tsereteli_hog_sde
+				RUS_Irakliy_G_Tsereteli_hog_sde
 				RUS_Mariya_Spiridonova_for_sde
 				RUS_Vladimir_M_Zenzinov_eco_sde
 				RUS_Vladimir_Burtsev_sec_sde
@@ -3012,10 +3012,10 @@ set_puppet_minister_europe = {
 		else_if = {
 			limit = { has_government = social_conservative }
 			add_ideas = {
-				RUS_Nikolay_Trubetskoy_hog_sco
+				RUS_Nikolay_S_Trubetskoy_hog_sco
 				RUS_Georgiy_Ignatyev_for_sco
 				RUS_Sergey_Bulgakov_eco_sco
-				RUS_Aleksandr_Protopopov_sec_sco
+				RUS_Aleksandr_D_Protopopov_sec_sco
 			}
 		}
 		else_if = {
@@ -3033,14 +3033,14 @@ set_puppet_minister_europe = {
 				RUS_Lavr_Kornilov_hog_pau
 				RUS_Aleksey_Ignatyev_for_pau
 				RUS_Aleksey_I_Putilov_eco_pau
-				RUS_Aleksandr_Balk_sec_pau
+				RUS_Aleksandr_P_Balk_sec_pau
 			}
 		}
 		else_if = {
 			limit = { has_government = national_populist }
 			add_ideas = {
 				RUS_Boris_Savinkov_hog_npo
-				RUS_Aleksandr_Kazembek_for_npo
+				RUS_Aleksandr_L_Kazembek_for_npo
 				RUS_Andrey_I_Zankevich_eco_npo
 				RUS_Vladimir_Manshteyn_sec_npo
 			}

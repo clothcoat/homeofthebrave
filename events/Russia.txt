@@ -4968,8 +4968,8 @@ country_event = { # Denikin's death
 			set_country_flag = Anton_Denikin_dead
 			remove_unit_leader = 401
 			if = {
-				limit = { has_idea = RUS_Anton_I_Denikin_cos }
-				remove_ideas = RUS_Anton_I_Denikin_cos
+				limit = { has_idea = RUS_Anton_I_Denikin_cos_ade }
+				remove_ideas = RUS_Anton_I_Denikin_cos_ade
 			}
 		}
 	}

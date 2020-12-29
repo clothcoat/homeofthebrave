@@ -58,6 +58,138 @@ head_of_government = {
 				hog_silent_workhorse
 			}
 		}
+	BAT_Julijs_Danisevskis_hog_rso = {
+			allowed = { original_tag = BAT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea BAT_Julijs_Danisevskis_hog_rso"
+			}
+			traits = {
+				head_of_government
+				radical_socialist
+				hog_ambitious_union_boss
+			}
+		}
+
+		BAT_Friedrich_von_Samson_Himmelstjerna_hog_sli = {
+			allowed = { original_tag = BAT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea BAT_Friedrich_von_Samson_Himmelstjerna_hog_sli"
+			}
+			traits = {
+				head_of_government
+				social_liberal
+				hog_political_protege
+			}
+		}
+
+		BAT_Wilhelm_Munter_hog_sli = {
+			allowed = { original_tag = BAT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea BAT_Wilhelm_Munter_hog_sli"
+			}
+			traits = {
+				head_of_government
+				social_liberal
+				hog_happy_amateur
+			}
+		}
+
+		BAT_Helmuth_Stegman_hog_sco = {
+			allowed = { original_tag = BAT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea BAT_Helmuth_Stegman_hog_sco"
+			}
+			traits = {
+				head_of_government
+				social_conservative
+				hog_pragmatic_statesman
+			}
+		}
+
+		BAT_Axel_von_Freytagh_Loringhoven_hog_pau = {
+			allowed = { original_tag = BAT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea BAT_Axel_von_Freytagh_Loringhoven_hog_pau"
+			}
+			traits = {
+				head_of_government
+				paternal_autocrat
+				hog_backroom_backstabber
+			}
+		}
+
+		BAT_Max_Erwin_von_Scheubner_Richter_hog_pau = {
+			allowed = { original_tag = BAT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea BAT_Max_Erwin_von_Scheubner_Richter_hog_pau"
+			}
+			traits = {
+				head_of_government
+				paternal_autocrat
+				hog_silent_workhorse
+			}
+		}
+
+		BAT_Otto_von_Kursell_hog_npo = {
+			allowed = { original_tag = BAT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea BAT_Otto_von_Kursell_hog_npo"
+			}
+			traits = {
+				head_of_government
+				national_populist
+				hog_flamboyant_tough_guy
+			}
+		}
 	BRM_U_Nu_hog_rso = {
 			allowed = { original_tag = BRM }
 			available = {
@@ -1446,6 +1578,119 @@ head_of_government = {
 				for_apologetic_clerk
 			}
 		}
+	BAT_Alexander_von_Stenbock_Fermor_for_syn = {
+			allowed = { original_tag = BAT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea BAT_Alexander_von_Stenbock_Fermor_for_syn"
+			}
+			traits = {
+				foreign_minister
+				syndicalist
+				for_ideological_crusader
+			}
+		}
+
+		BAT_Ewald_Ammende_for_sli = {
+			allowed = { original_tag = BAT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea BAT_Ewald_Ammende_for_sli"
+			}
+			traits = {
+				foreign_minister
+				social_liberal
+				for_great_compromiser
+			}
+		}
+
+		BAT_Edwin_Magnus_for_sco = {
+			allowed = { original_tag = BAT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea BAT_Edwin_Magnus_for_sco"
+			}
+			traits = {
+				foreign_minister
+				social_conservative
+				for_biased_intellectual
+			}
+		}
+
+		BAT_Rolf_von_Ungern_Sternberg_for_sco = {
+			allowed = { original_tag = BAT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea BAT_Rolf_von_Ungern_Sternberg_for_sco"
+			}
+			traits = {
+				foreign_minister
+				social_conservative
+				for_biased_intellectual
+			}
+		}
+
+		BAT_Heinrich_von_zur_Muehlen_for_pau = {
+			allowed = { original_tag = BAT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea BAT_Heinrich_von_zur_Muehlen_for_pau"
+			}
+			traits = {
+				foreign_minister
+				paternal_autocrat
+				for_the_cloak_n_dagger_schemer
+			}
+		}
+
+		BAT_Siegfried_von_Sivers_for_npo = {
+			allowed = { original_tag = BAT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea BAT_Siegfried_von_Sivers_for_npo"
+			}
+			traits = {
+				foreign_minister
+				national_populist
+				for_ideological_crusader
+			}
+		}
 	BRM_Aung_San_for_rso = {
 			allowed = { original_tag = BRM }
 			available = {
@@ -2592,6 +2837,119 @@ head_of_government = {
 				economy_minister
 				social_conservative
 				eco_industrialiser
+			}
+		}
+	BAT_Rudolfs_Endrups_eco_rso = {
+			allowed = { original_tag = BAT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea BAT_Rudolfs_Endrups_eco_rso"
+			}
+			traits = {
+				economy_minister
+				radical_socialist
+				eco_planned_economy_proponent
+			}
+		}
+
+		BAT_Heinrich_von_Stackelberg_eco_sli = {
+			allowed = { original_tag = BAT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea BAT_Heinrich_von_Stackelberg_eco_sli"
+			}
+			traits = {
+				economy_minister
+				social_liberal
+				eco_keynesian_economy
+			}
+		}
+
+		BAT_Bernhard_Bielenstein_eco_sco = {
+			allowed = { original_tag = BAT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea BAT_Bernhard_Bielenstein_eco_sco"
+			}
+			traits = {
+				economy_minister
+				social_conservative
+				eco_construction_magnate
+			}
+		}
+
+		BAT_Wilhelm_Robert_von_Bulmerincq_eco_ade = {
+			allowed = { original_tag = BAT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea BAT_Wilhelm_Robert_von_Bulmerincq_eco_ade"
+			}
+			traits = {
+				economy_minister
+				authoritarian_democrat
+				eco_resource_industrialist
+			}
+		}
+
+		BAT_Arno_Schickedanz_eco_pau = {
+			allowed = { original_tag = BAT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea BAT_Arno_Schickedanz_eco_pau"
+			}
+			traits = {
+				economy_minister
+				paternal_autocrat
+				eco_industrialiser
+			}
+		}
+
+		BAT_Friedrich_von_der_Ropp_eco_npo = {
+			allowed = { original_tag = BAT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea BAT_Friedrich_von_der_Ropp_eco_npo"
+			}
+			traits = {
+				economy_minister
+				national_populist
+				eco_infantry_proponent
 			}
 		}
 	BHU_Shingkhar_Lam_eco_ade = {
@@ -3823,6 +4181,119 @@ ROM_Miron_Constantinescu_eco_tot = {
 				security_minister
 				social_conservative
 				sec_prince_of_terror
+			}
+		}
+	BAT_Janis_Lencmanis_sec_rso = {
+			allowed = { original_tag = BAT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea BAT_Janis_Lencmanis_sec_rso"
+			}
+			traits = {
+				security_minister
+				radical_socialist
+				sec_efficient_sociopath
+			}
+		}
+
+		BAT_Axel_de_Vries_sec_sli = {
+			allowed = { original_tag = BAT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea BAT_Axel_de_Vries_sec_sli"
+			}
+			traits = {
+				security_minister
+				social_liberal
+				sec_compassionate_gentleman
+			}
+		}
+
+		BAT_Wilhelm_von_Ruediger_sec_sco = {
+			allowed = { original_tag = BAT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea BAT_Wilhelm_von_Ruediger_sec_sco"
+			}
+			traits = {
+				security_minister
+				social_conservative
+				sec_crime_fighter
+			}
+		}
+
+		BAT_Alexander_Riesenkampff_sec_ade = {
+			allowed = { original_tag = BAT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea BAT_Alexander_Riesenkampff_sec_ade"
+			}
+			traits = {
+				security_minister
+				authoritarian_democrat
+				sec_media_magnate
+			}
+		}
+
+		BAT_Hugo_Wittrock_sec_pau = {
+			allowed = { original_tag = BAT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea BAT_Hugo_Wittrock_sec_pau"
+			}
+			traits = {
+				security_minister
+				paternal_autocrat
+				sec_secret_police_chief
+			}
+		}
+
+		BAT_Max_Hildebert_Boehm_sec_npo = {
+			allowed = { original_tag = BAT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea BAT_Max_Hildebert_Boehm_sec_npo"
+			}
+			traits = {
+				security_minister
+				national_populist
+				sec_silent_lawyer
 			}
 		}
 	CUB_Juan_Remos_Rubio_sec_sde = {
@@ -5099,6 +5570,106 @@ spriteType = {
 	spriteType = {
 		name = "GFX_idea_AZR_Behbud_Khan_Javanshir_sec_sco"
 		texturefile = "gfx/interface/ministers/AZR/AZR_Behbud_Khan_Javanshir.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BAT_Julijs_Danisevskis_hog_rso"
+		texturefile = "gfx/interface/ministers/BAT/BAT_Julijs_Danisevskis.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BAT_Friedrich_von_Samson_Himmelstjerna_hog_sli"
+		texturefile = "gfx/interface/ministers/BAT/BAT_Friedrich_von_Samson_Himmelstjerna.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BAT_Wilhelm_Munter_hog_sli"
+		texturefile = "gfx/interface/ministers/BAT/BAT_Wilhelm_Munter.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BAT_Helmuth_Stegman_hog_sco"
+		texturefile = "gfx/interface/ministers/BAT/BAT_Helmuth_Stegman.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BAT_Axel_von_Freytagh_Loringhoven_hog_pau"
+		texturefile = "gfx/interface/ministers/BAT/BAT_Axel_von_Freytagh_Loringhoven.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BAT_Max_Erwin_von_Scheubner_Richter_hog_pau"
+		texturefile = "gfx/interface/ministers/BAT/BAT_Max_Erwin_von_Scheubner_Richter.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BAT_Otto_von_Kursell_hog_npo"
+		texturefile = "gfx/interface/ministers/BAT/BAT_Otto_von_Kursell.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BAT_Alexander_von_Stenbock_Fermor_for_syn"
+		texturefile = "gfx/interface/ministers/BAT/BAT_Alexander_von_Stenbock_Fermor.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BAT_Ewald_Ammende_for_sli"
+		texturefile = "gfx/interface/ministers/BAT/BAT_Ewald_Ammende.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BAT_Edwin_Magnus_for_sco"
+		texturefile = "gfx/interface/ministers/BAT/BAT_Edwin_Magnus.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BAT_Rolf_von_Ungern_Sternberg_for_sco"
+		texturefile = "gfx/interface/ministers/BAT/BAT_Rolf_von_Ungern_Sternberg.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BAT_Heinrich_von_zur_Muehlen_for_pau"
+		texturefile = "gfx/interface/ministers/BAT/BAT_Heinrich_von_zur_Muehlen.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BAT_Siegfried_von_Sivers_for_npo"
+		texturefile = "gfx/interface/ministers/BAT/BAT_Siegfried_von_Sivers.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BAT_Rudolfs_Endrups_eco_rso"
+		texturefile = "gfx/interface/ministers/BAT/BAT_Rudolfs_Endrups.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BAT_Heinrich_von_Stackelberg_eco_sli"
+		texturefile = "gfx/interface/ministers/BAT/BAT_Heinrich_von_Stackelberg.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BAT_Bernhard_Bielenstein_eco_sco"
+		texturefile = "gfx/interface/ministers/BAT/BAT_Bernhard_Bielenstein.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BAT_Wilhelm_Robert_von_Bulmerincq_eco_ade"
+		texturefile = "gfx/interface/ministers/BAT/BAT_Wilhelm_Robert_von_Bulmerincq.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BAT_Arno_Schickedanz_eco_pau"
+		texturefile = "gfx/interface/ministers/BAT/BAT_Arno_Schickedanz.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BAT_Friedrich_von_der_Ropp_eco_npo"
+		texturefile = "gfx/interface/ministers/BAT/BAT_Friedrich_von_der_Ropp.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BAT_Janis_Lencmanis_sec_rso"
+		texturefile = "gfx/interface/ministers/BAT/BAT_Janis_Lencmanis.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BAT_Axel_de_Vries_sec_sli"
+		texturefile = "gfx/interface/ministers/BAT/BAT_Axel_de_Vries.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BAT_Wilhelm_von_Ruediger_sec_sco"
+		texturefile = "gfx/interface/ministers/BAT/BAT_Wilhelm_von_Ruediger.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BAT_Alexander_Riesenkampff_sec_ade"
+		texturefile = "gfx/interface/ministers/BAT/BAT_Alexander_Riesenkampff.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BAT_Hugo_Wittrock_sec_pau"
+		texturefile = "gfx/interface/ministers/BAT/BAT_Hugo_Wittrock.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_BAT_Max_Hildebert_Boehm_sec_npo"
+		texturefile = "gfx/interface/ministers/BAT/BAT_Max_Hildebert_Boehm.tga"
 	}
 	spriteType = {
 		name = "GFX_idea_BHU_Jigme_Wangchuck_hog_pau"
