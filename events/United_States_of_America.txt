@@ -9364,6 +9364,15 @@ country_event = { # The Omaha Conference
 					ideology = social_conservative
 					long_name = NPP_social_conservative_coalition_long
 					name = NPP_social_conservative_coalition
+					
+				}
+				create_country_leader = { 
+					name = "William Dudley Pelley"
+					desc = "POLITICS_WILLIAM_DUDLEY_PELLEY_DESC"
+					picture = "Portrait_TEX_William_Dudley_Pelley.tga"
+					expire = "1965.1.1"
+					ideology = authoritarian_democrat_subtype
+					traits = { authoritarian_tendencies }
 				}
 			}
 		}
@@ -9376,6 +9385,7 @@ country_event = { # The Omaha Conference
 		add_popularity = { ideology = social_conservative popularity = -0.05 }
 		hidden_effect = {
 				set_country_flag = Pelley_does_not_endorse_NPP
+				
 			}
 		}
 	}
@@ -10227,9 +10237,9 @@ country_event = { # Choosing the NPP Unity Candidate
 	option = { # Richard Russel Jr.
 		name = ustates.1992.a
 		hidden_effect = {
-			set_country_flag = USA_1940_NPP_primary_russel
+			set_country_flag = USA_1940_NPP_primary_russell
 			create_country_leader = { 
-				name = "Richard Russel Jr."
+				name = "Richard Russell Jr."
 				desc = "POLITICS_RICHARD_RUSSELL_DESC"
 				picture = "gfx/leaders/COR/COR_Richard_Russell.tga"
 				expire = "1965.1.1"
@@ -10257,7 +10267,7 @@ country_event = { # Choosing the NPP Unity Candidate
 	option = { # Bibb Graves
 		name = ustates.1992.c
 		hidden_effect = {
-			set_country_flag = USA_1940_PP_primary_graves
+			set_country_flag = USA_1940_NPP_primary_graves
 			create_country_leader = { 
 				name = "David Bibb Graves"
 				desc = "POLITICS_DAVID_BIBB_GRAVES_DESC"
@@ -10891,57 +10901,57 @@ country_event = { # 1940 Election
 		name = ustates.203.c
 		set_country_flag = USA_had_1940_election
 		if = {
-		limit = {
-		OR = { 
-		has_country_flag = USA_1940_democratic_primary_smith
-		has_country_flag = USA_1940_democratic_primary_willkie
+			limit = {
+				OR = { 
+					has_country_flag = USA_1940_democratic_primary_smith
+					has_country_flag = USA_1940_democratic_primary_willkie
 				}
 			}
-		set_politics = {
-			ruling_party = social_liberal
-			election_frequency = 48
-			elections_allowed = yes
+			set_politics = {
+				ruling_party = social_liberal
+				election_frequency = 48
+				elections_allowed = yes
 			}
-		hidden_effect = {
-			set_country_flag = USA_1940_election_lib_democrat
-		}
-		add_popularity = {
-			ideology = social_liberal
-			popularity = 0.12
+			hidden_effect = {
+				set_country_flag = USA_1940_election_lib_democrat
 			}
-		hidden_effect = {
-			country_event = {
+			add_popularity = {
+				ideology = social_liberal
+				popularity = 0.12
+			}
+			hidden_effect = {
+				country_event = {
 				id = ustates.3158
 				days = 40
-			}
-		}
-		}
-		if = {
-		limit = {
-		OR = { 
-		has_country_flag = USA_1940_democratic_primary_byrd
-		has_country_flag = USA_1940_democratic_primary_garner
-		has_country_flag = USA_1940_democratic_primary_macarthur
 				}
 			}
-		set_politics = {
-			ruling_party = social_conservative
-			election_frequency = 48
-			elections_allowed = yes
-			}
-		hidden_effect = {
-			set_country_flag = USA_1940_election_con_democrat
 		}
-		add_popularity = {
-			ideology = social_conservative
-			popularity = 0.12
+		if = {
+			limit = {
+				OR = { 
+					has_country_flag = USA_1940_democratic_primary_byrd
+					has_country_flag = USA_1940_democratic_primary_garner
+					has_country_flag = USA_1940_democratic_primary_macarthur
+				}
 			}
-		hidden_effect = {
-			country_event = {
-				id = ustates.3159
-				days = 40
+			set_politics = {
+				ruling_party = social_conservative
+				election_frequency = 48
+				elections_allowed = yes
 			}
-		}
+			hidden_effect = {
+				set_country_flag = USA_1940_election_con_democrat
+			}
+			add_popularity = {
+				ideology = social_conservative
+				popularity = 0.12
+			}
+			hidden_effect = {
+				country_event = {
+					id = ustates.3159
+					days = 40
+				}
+			}
 		}
 		hidden_effect = {
 			if = { # Al Smith
@@ -10992,6 +11002,255 @@ country_event = { # 1940 Election
 				add_ideas = USA_Cordell_Hull_for_sli
 				add_ideas = USA_Jesse_Holman_Jones_eco_sli
 				add_ideas = USA_Robert_Ferdinand_Wagner_I_sec_sde
+			}
+
+			# next primaries
+			country_event = {
+				id = ustates.204
+				days = 1283
+			}
+			country_event = {
+				id = ustates.205
+				days = 1290
+			}
+			country_event = {
+				id = ustates.206
+				days = 1297
+			}
+		}
+	}
+	option = { # Populist Party
+		name = ustates.203.d
+		trigger = {
+			has_country_flag = USA_deadlock_garner
+		}
+		set_country_flag = USA_had_1940_election
+		if = {
+			limit = {
+				OR = { 
+					has_country_flag = USA_1940_PP_primary_huey
+					has_country_flag = USA_1940_PP_primary_maloney
+					has_country_flag = USA_1940_PP_primary_folsom
+				}
+			}
+			set_politics = {
+				ruling_party = social_democrat
+				election_frequency = 48
+				elections_allowed = yes
+			}
+			hidden_effect = {
+				set_country_flag = USA_1940_election_soc_dem_PP
+			}
+			add_popularity = {
+				ideology = social_democrat
+				popularity = 0.12
+			}
+			hidden_effect = {
+				country_event = {
+					id = ustates.3161
+					days = 40
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = { 
+					has_country_flag = USA_1940_PP_primary_reed
+					has_country_flag = USA_1940_PP_primary_thomas
+					has_country_flag = USA_1940_PP_primary_browder
+				}
+			}
+			set_politics = {
+				ruling_party = radical_socialist
+				election_frequency = 48
+				elections_allowed = yes
+				}
+			hidden_effect = {
+				set_country_flag = USA_1940_election_rad_soc_PP
+			}
+			add_popularity = {
+				ideology = radical_socialist
+				popularity = 0.12
+			}
+			hidden_effect = {
+				country_event = {
+					id = ustates.3161
+					days = 40
+				}
+			}
+		}
+		hidden_effect = {
+			if = { # Huey Long
+				limit = {
+					has_country_flag = USA_1940_PP_primary_huey
+				}
+				add_ideas = USA_Huey_Long_hog_ade
+				add_ideas = TEX_robert_la_follette_jr_for_sli
+				add_ideas = TEX_Joseph_C_O_Mahoney_eco_sde
+				add_ideas = USA_Konrad_Knute_Solberg_sec_sde
+			}
+			if = { # Paul Maloney
+				limit = {
+					has_country_flag = USA_1940_PP_primary_maloney
+				}
+				add_ideas = TEX_Rush_Limbaugh_sr_hog_sde
+				add_ideas = USA_Adolf_Augustus_Berle_Jr_for_sde
+				add_ideas = TEX_Joseph_C_O_Mahoney_eco_sde
+				add_ideas = USA_Konrad_Knute_Solberg_sec_sde
+			}
+			if = { # Jim Folsom
+				limit = {
+					has_country_flag = USA_1940_PP_primary_folsom
+				}
+				add_ideas = TEX_Rush_Limbaugh_sr_hog_sde
+				add_ideas = USA_Adolf_Augustus_Berle_Jr_for_sde
+				add_ideas = USA_Harry_Lloyd_Hopkins_eco_sde
+				add_ideas = USA_Harold_LeClair_Ickes_sec_sde
+			}
+			if = { # Jack Reed
+				limit = {
+					has_country_flag = USA_1940_PP_primary_reed
+				}
+				add_ideas = USA_Jack_Reed_hog_syn
+				add_ideas = USA_Eugene_Dennis_for_syn
+				add_ideas = USA_Paul_Mattick_eco_syn
+				add_ideas = USA_John_Abt_sec_syn
+			}
+			if = { # Norman Thomas
+				limit = {
+					has_country_flag = USA_1940_PP_primary_thomas
+				}
+				add_ideas = CAL_Upton_Sinclair_hog_rso
+				add_ideas = CSA_Max_Eastman_for_rso
+				add_ideas = CSA_John_Gates_eco_rso
+				add_ideas = CSA_Lee_Pressman_sec_syn
+			}
+			if = { # Earl Browder
+				limit = {
+					has_country_flag = USA_1940_PP_primary_browder
+				}
+				add_ideas = CSA_Gus_Hall_hog_tot
+				add_ideas = CSA_Anna_Louise_Strong_for_tot
+				add_ideas = CSA_Gus_Hall_eco_tot
+				add_ideas = CSA_Eugene_Dennis_sec_syn
+			}
+		}
+	}		
+	option = { # National People's Party
+		name = ustates.203.e
+		trigger = {
+			has_country_flag = USA_deadlock_norris
+		}
+		set_country_flag = USA_had_1940_election
+		if = {
+			limit = {
+				OR = { 
+					has_country_flag = USA_1940_NPP_primary_murray
+					has_country_flag = USA_1940_NPP_primary_pelley
+					has_country_flag = USA_1940_NPP_primary_russell
+				}
+			}
+			set_politics = {
+				ruling_party = authoritarian_democrat
+				election_frequency = 48
+				elections_allowed = yes
+			}
+			hidden_effect = {
+				set_country_flag = USA_1940_election_auth_dem_NPP
+			}
+			add_popularity = {
+				ideology = authoritarian_democrat
+				popularity = 0.12
+			}
+			hidden_effect = {
+				country_event = {
+					id = ustates.3162
+					days = 40
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = { 
+					has_country_flag = USA_1940_NPP_primary_lindbergh
+					has_country_flag = USA_1940_NPP_primary_talmadge
+					has_country_flag = USA_1940_NPP_primary_graves
+				}
+			}
+			set_politics = {
+				ruling_party = paternal_autocrat
+				election_frequency = 48
+				elections_allowed = yes
+			}
+			hidden_effect = {
+				set_country_flag = USA_1940_election_pat_aut_NPP
+			}
+			add_popularity = {
+				ideology = paternal_autocrat
+				popularity = 0.12
+			}
+			hidden_effect = {
+				country_event = {
+					id = ustates.3162
+					days = 40
+				}
+			}
+		}
+		
+		hidden_effect = {
+			if = { # William H. Murray
+				limit = {
+					has_country_flag = USA_1940_NPP_primary_murray
+				}
+				add_ideas = COR_John_Elliott_Rankin_hog_pau
+				add_ideas = COR_William_Bell_Riley_for_pau
+				add_ideas = COR_Ellison_DuRant_'Cotton_Ed'_Smith_eco_pau
+				add_ideas = COR_Eugene_Talmadge_sec_pau
+			}
+			if = { # Richard Russell
+				limit = {
+					has_country_flag = USA_1940_NPP_primary_russell
+				}
+				add_ideas = COR_Richard_Russell_Jr_hog_sco
+				add_ideas = TEX_Rev_Frank_Buchman_for_ade
+				add_ideas = TEX_Gerald_Prentice_Nye_eco_ade
+				add_ideas = TEX_alvin_o_king_sec_ade
+			}
+			if = { # William Dudley Pelley
+				limit = {
+					has_country_flag = USA_1940_NPP_primary_pelley
+				}
+				add_ideas = TEX_Gerald_L_K_Smith_hog_pau
+				add_ideas = TEX_Rev_Frank_Buchman_for_ade
+				add_ideas = TEX_Gerald_Prentice_Nye_eco_ade
+				add_ideas = TEX_Thompson_Roy_Zachary_eco_ade
+			}
+			if = { # Charles Lindbergh
+				limit = {
+					has_country_flag = USA_1940_NPP_primary_lindbergh
+				}
+				add_ideas = COR_Henry_Ford_hog_pau
+				add_ideas = COR_George_Sylvester_Viereck_for_pau
+				add_ideas = COR_Fred_Chase_Koch_eco_ade
+				add_ideas = COR_D_W_Griffith_sec_pau
+			}
+			if = { # Eugen Talmadge
+				limit = {
+					has_country_flag = USA_1940_NPP_primary_talmadge
+				}
+				add_ideas = COR_John_Elliott_Rankin_hog_pau
+				add_ideas = COR_George_Sylvester_Viereck_for_pau
+				add_ideas = COR_Ellison_DuRant_'Cotton_Ed'_Smith_eco_pau
+				add_ideas = COR_Eugene_Talmadge_sec_pau
+			}
+			if = { # David Bibb Graves
+				limit = {
+					has_country_flag = USA_1940_NPP_primary_graves
+				}
+				add_ideas = COR_John_Elliott_Rankin_hog_pau
+				add_ideas = TEX_Rev_Frank_Buchman_for_ade
+				add_ideas = TEX_Gerald_Prentice_Nye_eco_ade
+				add_ideas = COR_Clare_Eugene_Hoffman_sec_pau
 			}
 
 			# next primaries
@@ -17490,6 +17749,153 @@ country_event = {# FOPC
 		add_ideas = USA_fopc_idea
 		add_popularity = { ideology = market_liberal popularity = 0.25}
 		add_popularity = { ideology = social_conservative popularity = 0.25}
+	}
+}
+
+
+country_event = { # Fifth Political System-Deadlock, PP formed
+	id = ustates.3161
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.3161"}
+	title = ustates.3161.t
+	picture = GFX_report_event_USA_congress
+
+	is_triggered_only = yes
+	
+	desc = {
+	text = ustates.3161.d.demlibs
+	trigger = {
+			OR = {
+				has_country_flag = USA_1940_election_soc_dem_PP
+				has_country_flag = USA_1940_election_rad_soc_PP
+			}
+		}
+	}
+	option = { # Very Well
+		name = ustates.3161.a
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = USA_1940_election_soc_dem_PP
+					has_country_flag = USA_1940_election_rad_soc_PP
+				}
+			}
+		add_popularity = { ideology = radical_socialist popularity = 0.05 }
+		add_popularity = { ideology = social_democrat popularity = 0.05 }
+		set_party_name = {
+			ideology = totalist
+			long_name = PP_totalist_coalition_long
+			name = PP_totalist_coalition }
+		set_party_name = {
+			ideology = syndicalist
+			long_name = PP_syndicalist_coalition_long
+			name = PP_syndicalist_coalition }
+		set_party_name = {
+			ideology = radical_socialist
+			long_name = PP_radical_socialist_coalition_long
+			name = PP_radical_socialist_coalition }	
+		set_party_name = {
+			ideology = social_democrat
+			long_name = PP_social_democrat_coalition_long
+			name = PP_social_democrat_coalition }
+		set_party_name = {
+			ideology = social_liberal
+			long_name = PP_social_liberal_coalition_long
+			name = PP_social_liberal_coalition }		
+		set_party_name = {
+			ideology = market_liberal
+			long_name = PP_opponent_market_liberal_coalition_long
+			name = PP_opponent_market_liberal_coalition }
+		set_party_name = {
+			ideology = social_conservative
+			long_name = PP_opponent_social_conservative_coalition_long
+			name = PP_opponent_social_conservative_coalition }
+		set_party_name = {
+			ideology = authoritarian_democrat
+			long_name = PP_opponent_authoritarian_democrat_coalition_long
+			name = PP_opponent_authoritarian_democrat_coalition }
+		set_party_name = {
+			ideology = paternal_autocrat
+			long_name = PP_opponent_paternal_autocrat_coalition_long
+			name = PP_opponent_paternal_autocrat_coalition }
+		set_party_name = {
+			ideology = national_populist
+			long_name = PP_opponent_national_populist_coalition_long
+			name = PP_opponent_national_populist_coalition }
+		set_country_flag = USA_PP_dominance
+		}
+	}
+}
+
+country_event = { # Fifth Political System-Deadlock, NPP formed
+	id = ustates.3162
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.3162"}
+	title = ustates.3162.t
+	picture = GFX_report_event_USA_congress
+
+	is_triggered_only = yes
+	
+	desc = {
+	text = ustates.3162.d.NPP
+	trigger = {
+			OR = {
+				has_country_flag = USA_1940_election_auth_dem_NPP
+				has_country_flag = USA_1940_election_pat_aut_NPP
+			}
+		}
+	}
+	option = { # Very Well
+		name = ustates.3162.a
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = USA_1940_election_auth_dem_NPP
+					has_country_flag = USA_1940_election_pat_aut_NPP
+				}
+			}
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.05 }
+		add_popularity = { ideology = paternal_autocrat popularity = 0.05 }
+		set_party_name = {
+			ideology = totalist
+			long_name = NNP_opponent_totalist_coalition_long
+			name = NNP_opponent_totalist_coalition }
+		set_party_name = {
+			ideology = syndicalist
+			long_name = NNP_opponent_syndicalist_coalition_long
+			name = NNP_opponent_syndicalist_coalition }
+		set_party_name = {
+			ideology = radical_socialist
+			long_name = NPP_opponent_radical_socialist_coalition_long
+			name = NPP_opponent_radical_socialist_coalition }	
+		set_party_name = {
+			ideology = social_democrat
+			long_name = NPP_opponent_social_democrat_coalition_long
+			name = NPP_opponent_social_democrat_coalition }
+		set_party_name = {
+			ideology = social_liberal
+			long_name = NPP_opponent_social_liberal_coalition_long
+			name = NPP_opponent_social_liberal_coalition }	
+		set_party_name = {
+			ideology = market_liberal
+			long_name = NPP_opponent_market_liberal_coalition_long
+			name = NPP_opponent_market_liberal_coalition }
+		set_party_name = {
+			ideology = social_conservative
+			long_name = NPP_social_conservative_coalition_long
+			name = NPP_social_conservative_coalition }
+		set_party_name = {
+			ideology = authoritarian_democrat
+			long_name = NPP_authoritarian_democrat_coalition
+			name = NPP_authoritarian_democrat_coalition }
+		set_party_name = {
+			ideology = paternal_autocrat
+			long_name = NPP_paternal_autocrat_coalition_long
+			name = NPP_paternal_autocrat_coalition }
+		set_party_name = {
+			ideology = national_populist
+			long_name = NPP_national_populist_coalition_long
+			name = NPP_national_populist_coalition }
+		set_country_flag = USA_NPP_dominance
+		}
 	}
 }
 
