@@ -330,24 +330,6 @@ set_puppet_minister_africa = {
 			}
 		}
 		else_if = {
-			limit = { has_government = social_liberal }
-			add_ideas = {
-				ERI_Ras_Tesemma_Asberom_hog_sli
-				ERI_Gebremeskel_Berakhi_for_sli
-				ERI_Mogos_Asgedom_eco_sli
-				ERI_Suliman_Hohammed_Abdella_sec_sli
-			}
-		}
-		else_if = {
-			limit = { has_government = market_liberal }
-			add_ideas = {
-				ERI_Yassin_Ahmed_Batouq_hog_mli
-				ERI_Blatta_Mohamed_Abdella_for_mli
-				ERI_Raoul_Magrin_Vernerey_eco_mli
-				ERI_Ali_Radadi_sec_mli
-			}
-		}
-		else_if = {
 			limit = { has_government = social_conservative }
 			add_ideas = {
 				ERI_Biene_Baraki_hog_sco
@@ -357,21 +339,12 @@ set_puppet_minister_africa = {
 			}
 		}
 		else_if = {
-			limit = { has_government = authoritarian_democrat }
-			add_ideas = {
-				ERI_Degiyat_Hassan_Ali_hog_ade
-				ERI_Mohammed_Osman_Hayuti_for_ade
-				ERI_Ghebresgh_Andichiel_eco_ade
-				ERI_Tedla_Ogbit_sec_ade
-			}
-		}
-		else_if = {
 			limit = { has_government = paternal_autocrat }
 			add_ideas = {
 				ERI_Negga_Haile_Selassie_hog_pau
 				ERI_Theabun_Marksos_for_pau
-				ERI_Kater_Deemedan_eco_pau
-				ERI_Goitom_Gebrezgh_sec_pau
+				ERI_Andom_Tesfazion_eco_sco
+				ERI_Bruno_De_Martinez_La_Restia_sec_npo
 			}
 		}
 		else_if = {
@@ -379,7 +352,7 @@ set_puppet_minister_africa = {
 			add_ideas = {
 				ERI_Zerai_Deres_hog_npo
 				ERI_Zerom_Kifle_for_npo
-				ERI_Buluk_Basra_Brahan_eco_npo
+				ERI_Andom_Tesfazion_eco_sco
 				ERI_Bruno_De_Martinez_La_Restia_sec_npo
 			}
 		}

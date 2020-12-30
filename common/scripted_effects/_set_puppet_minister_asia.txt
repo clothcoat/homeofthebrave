@@ -859,31 +859,6 @@ set_puppet_minister_asia = {
 	}
 
 	##
-	##	KACHIN
-	##
-	if = {
-		limit = { tag = KAC }
-		if = {
-			limit = { has_elected_government = yes }
-			add_ideas = {
-				KAC_Duwa_Zau_Lawn_hog_sco
-				KAC_Sara_Gun_Gam_for_sco
-				KAC_Duwa_Shawng_Gyung_eco_sco
-				KAC_Zan_Hta_Sin_sec_sco
-			}
-		}
-		else_if = {
-			limit = { has_authoritarian_government = yes }
-			add_ideas = {
-				KAC_Sama_Duwa_Sinwa_Nawng_hog_ade
-				KAC_U_Ba_Sein_for_ade
-				KAC_Bo_Aung_Kho_eco_ade
-				KAC_Duwa_Padip_La_Tawng_sec_ade
-			}
-		}
-	}
-
-	##
 	##	KOREA
 	##
 	if = {
@@ -992,15 +967,6 @@ set_puppet_minister_asia = {
 	if = {
 		limit = { tag = MAL }
 		if = {
-			limit = { has_socialist_government = yes }
-			add_ideas = {
-				MAL_Chin_Peng_hog_rso
-				MAL_Ishak_Haji_Muhammad_for_rso
-				MAL_Mokhtarrudin_Lasso_eco_syn
-				MAL_Lai_Teck_sec_tot
-			}
-		}
-		else_if = {
 			limit = { has_elected_government = yes }
 			add_ideas = {
 				MAL_Tun_Abdul_Rahman_hog_sco
@@ -1514,27 +1480,6 @@ set_puppet_minister_asia = {
 				SAR_Charles_John_Piper_for_ade
 				#no eco minister
 				SAR_Daniel_Grainger_sec_ade
-			}
-		}
-	}
-
-	##
-	##	SHAN
-	##
-	if = {
-		limit = { tag = SHA }
-		if = {
-			limit = {
-				OR = {
-					has_right_democratic_government = yes
-					has_government = authoritarian_democrat
-				}
-			}
-			add_ideas = {
-				SHA_Sao_Shwe_Thaik_hog_sco
-				SHA_U_Tun_Myint_for_sco
-				SHA_Sao_Hom_Hpa_eco_sco
-				SHA_Sao_Yang_Wen_Pin_sec_sco
 			}
 		}
 	}
