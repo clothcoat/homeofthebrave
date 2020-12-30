@@ -4737,8 +4737,6 @@ country_event = { # Foreign Policy
 
 	fire_only_once = yes
 
-	is_triggered_only = yes
-
 	trigger = {
 		has_government = radical_socialist
 		has_country_leader = {
@@ -12285,9 +12283,6 @@ country_event = { # Time to Retreat?
 			white_peace_with_TARGET = yes
 			}
 		CAF = {
-			limit = { 
-				is_valid_peace_target = yes 
-			}
 			white_peace_with_TARGET = yes
 			}
 		}

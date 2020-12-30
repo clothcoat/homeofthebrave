@@ -3436,8 +3436,8 @@ country_event = { # Time to Retreat?
 				}
 			}
 		}
+		if = {
 		MEX = {
-			if = {
 			trigger = { 
 				MEX = { is_in_faction_with = NFA }
 				}
