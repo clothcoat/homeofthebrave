@@ -523,7 +523,7 @@ set_puppet_minister_europe = {
 			limit = { has_government = social_democrat }
 			add_ideas = {
 				CAR_Jose_Giral_Pereira_hog_sde
-				CAR_Anxel_Casal_for_sde
+				CAR_Fernando_de_los_Rios_Urruti_for_rso
 				CAR_Bibiano_Fernandez_Ossorio_eco_sde
 				CAR_Amos_Salvador_Carreras_sec_sde
 			}
@@ -531,8 +531,8 @@ set_puppet_minister_europe = {
 		else_if = {
 			limit = { has_government = social_liberal }
 			add_ideas = {
-				CAR_Diego_Martinez_Barrio_hog_sli
-				CAR_Anton_Vilar_Ponte_for_sli
+				CAR_Jose_Giral_Pereira_hog_sde
+				CAR_Alvaro_Cunqueiro_Mora_for_mli
 				CAR_Emilio_Herrera_eco_sli
 				CAR_Federico_Escofet_Alsina_sec_sli
 			}
@@ -558,7 +558,7 @@ set_puppet_minister_europe = {
 		else_if = {
 			limit = { has_government = authoritarian_democrat }
 			add_ideas = {
-				CAR_JM_Gil_Robles_Quinones_hog_ade
+				CAR_Manuel_Fal_Conde_hog_pau
 				CAR_Alberto_M_Artejo_Alvarez_for_ade
 				CAR_Jose_Calvo_Sotelo_eco_ade
 				CAR_Blas_Perez_Gonzalez_sec_ade
@@ -623,7 +623,7 @@ set_puppet_minister_europe = {
 			limit = { has_government = social_democrat }
 			add_ideas = {
 				CNT_Jose_Giral_Pereira_hog_sde
-				CNT_Anxel_Casal_for_sde
+				CNT_Angel_Pestana_for_rso
 				CNT_Bibiano_Fernandez_Ossorio_eco_sde
 				CNT_Marcelino_Domingo_Sanjuan_sec_sde
 			}
@@ -637,7 +637,7 @@ set_puppet_minister_europe = {
 			}
 			add_ideas = {
 				CNT_Anton_Vilar_Ponte_for_sli
-				CNT_Jose_Martinez_de_Velasco_for_mli
+				CNT_Alexandre_Boveda_Iglesias_for_sco
 				CNT_Bernardo_Giner_de_los_Rios_Garcia_eco_sli
 				CNT_Miguel_Maura_Gamazo_sec_mli
 			}
@@ -649,24 +649,6 @@ set_puppet_minister_europe = {
 				CNT_Alexandre_Boveda_Iglesias_for_sco
 				CNT_Diego_Hidalgo_Duran_eco_sco
 				CNT_Antonio_Roson_sec_sco
-			}
-		}
-		else_if = {
-			limit = { has_government = authoritarian_democrat }
-			add_ideas = {
-				CNT_Jose_Sanjurjo_Sacanell_hog_ade
-				CNT_Alberto_M_Artejo_Alvarez_for_ade
-				CNT_Jose_Calvo_Sotelo_eco_ade
-				CNT_Dionisio_Ridruejo_sec_ade
-			}
-		}
-		else_if = {
-			limit = { has_dictatorship_government = yes }
-			add_ideas = {
-				CNT_Manuel_Fal_Conde_hog_pau
-				CNT_Francisco_de_Asis_Serrat_y_Bonastre_for_pau
-				CNT_Jose_Luis_Arrese_Magra_eco_pau
-				CNT_Gonzalo_Queipo_de_Llano_sec_pau
 			}
 		}
 	}
@@ -1366,7 +1348,7 @@ set_puppet_minister_europe = {
 			limit = { has_government = radical_socialist }
 			add_ideas = {
 				FLN_War_van_Overstraeten_hog_rso
-				FLN_Jef_van_Extergem_for_rso
+				FLN_August_Vermeylen_for_syn
 				FLN_Felix_Van_den_Bergh_eco_rso
 				FLN_Ferdinand_Minnaert_sec_rso
 			}
@@ -3101,40 +3083,6 @@ set_puppet_minister_europe = {
 	}
 
 	##
-	##	SCOTLAND
-	##
-	if = {
-		limit = { tag = SCO }
-		if = {
-			limit = { has_socialist_government = yes }
-			add_ideas = {
-				SCO_Ignatius_R_Dunnachie_hog_rso
-				SCO_Donald_Cardross_Erskine_for_rso
-				SCO_Peter_Drummond_MacDonald_eco_rso
-				SCO_Malcolm_MacDonald_sec_rso
-			}
-		}
-		else_if = {
-			limit = { has_elected_government = yes }
-			add_ideas = {
-				SCO_John_Stuart_Lord_Borthwick_hog_mli
-				SCO_Lucius_Plantagenet_Falkland_for_mli
-				SCO_James_Fitzwarenne_DeSpencer_eco_mli
-				SCO_David_Maxwell_Fyfe_sec_mli
-			}
-		}
-		else_if = {
-			limit = { has_authoritarian_government = yes }
-			add_ideas = {
-				SCO_James_Duke_of_Abercorn_hog_ade
-				SCO_Ian_Campbell_Gray_hog_ade
-				SCO_Ian_Campbell_Gray_eco_ade
-				SCO_Charles_Earl_Breadalbane_sec_ade
-			}
-		}
-	}
-
-	##
 	##	SERBIA
 	##
 	if = {
@@ -3151,9 +3099,9 @@ set_puppet_minister_europe = {
 		else_if = {
 			limit = { has_left_democratic_government = yes }
 			add_ideas = {
-				SER_Zivko_Topalovic_hog_sde
+				SER_Milos_Trifunovic_hog_sco
 				SER_Bozidar_Puric_for_sli
-				SER_Milutin_Milankovic_eco_sli
+				SER_Ninko_Peric_eco_sco
 				SER_Dragoljub_Jovanovic_sec_sde
 			}
 		}
@@ -3262,17 +3210,17 @@ set_puppet_minister_europe = {
 			add_ideas = {
 				SOV_Karl_Radek_hog_tot
 				SOV_Vyacheslav_Molotov_for_tot
-				SOV_Sergey_Kirov_eco_tot
+				SOV_Mikhail_Tomskiy_eco_syn
 				SOV_Genrikh_Yagoda_sec_tot
 			}
 		}
 		else_if = {
 			limit = { has_government = syndicalist }
 			add_ideas = {
-				SOV_Aleksandra_Kollontay_hog_syn
+				SOV_Nikolay_Bukharin_hog_rso
 				SOV_Georgiy_Malenkov_for_syn
 				SOV_Mikhail_Tomskiy_eco_syn
-				SOV_Pyetr_Popkov_sec_syn
+				SOV_Pavel_Sudoplatov_sec_rso
 			}
 		}
 		else_if = {
@@ -3280,7 +3228,7 @@ set_puppet_minister_europe = {
 			add_ideas = {
 				SOV_Nikolay_Bukharin_hog_rso
 				SOV_Mariya_Spiridonova_for_rso
-				SOV_Matvey_Skobelev_eco_rso
+				SOV_Mikhail_Tomskiy_eco_syn
 				SOV_Pavel_Sudoplatov_sec_rso
 			}
 		}
