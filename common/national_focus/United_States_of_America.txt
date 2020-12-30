@@ -11553,13 +11553,6 @@ focus_tree = {
 		x = 64
 		y = 8
 		
-		offset = {
-			x = -9
-			y = 0
-			trigger = {
-				has_global_flag = USA_civil_war_avoided_flag
-			}
-		}
 		
 		ai_will_do = {
 			factor = 1

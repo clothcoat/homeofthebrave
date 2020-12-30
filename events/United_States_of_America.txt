@@ -168,7 +168,7 @@ country_event = { # Republican Nomination
 	immediate = { log = "[GetDateText]: [Root.GetName]: event ustates.3001" }
 	title = ustates.3001.t
 	desc = ustates.3001.d
-	picture = diplomacy4
+	picture = GFX_republican_nomination
 
 	fire_only_once = yes
 
@@ -347,7 +347,7 @@ country_event = { # Progressive Nomination
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.5001"}
 	title = ustates.5001.t
 	desc = ustates.5001.d
-	picture = GFX_USA_norris
+	picture = GFX_USA_norris_nomination
 
 	fire_only_once = yes
 	
@@ -739,7 +739,7 @@ country_event = { # The Battle of the Overpass
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.15"}
 	title = ustates.15.t
 	desc = ustates.15.d
-	picture = GFX_report_event_generic_GFX_report_event_generic_workers
+	picture = GFX_report_event_generic_workers
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -2849,7 +2849,7 @@ country_event = { # The 1936 Election - You're Fucked (Or are you...)
 			popularity = 0.03
 			}
 		add_popularity = {
-			ideology = social_democrat
+			ideology = social_conservative
 			popularity = 0.03
 			}
 		}
