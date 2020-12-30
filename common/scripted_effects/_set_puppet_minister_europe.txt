@@ -2804,17 +2804,6 @@ set_puppet_minister_europe = {
 	if = {
 		limit = { tag = POL }
 		if = {
-			limit = {
-				has_government = totalist
-			}
-			add_ideas = {
-				POL_Alfred_Lampe_hog_tot
-				POL_Henryk_Walecki_for_tot
-				POL_Hilary_Minc_eco_tot
-				POL_Boleslaw_Bierut_sec_tot
-			}
-		}
-		else_if = {
 			limit = { has_government = syndicalist }
 			add_ideas = {
 				POL_Stanislaw_Lancucki_hog_rso
@@ -2857,15 +2846,6 @@ set_puppet_minister_europe = {
 				POL_Aleksander_Lednicki_for_mli
 				POL_Eugeniusz_Czarnowski_eco_mli
 				POL_Leon_Supinski_sec_mli
-			}
-		}
-		else_if = {
-			limit = { has_government = social_conservative }
-			add_ideas = {
-				POL_Jan_Stanislaw_Jankowski_hog_sco
-				POL_Konstanty_Skirmunt_for_sco
-				POL_Eugeniusz_Czarnowski_eco_mli
-				POL_Karol_Popiel_sec_sco
 			}
 		}
 		else_if = {

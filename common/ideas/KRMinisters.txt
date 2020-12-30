@@ -1653,6 +1653,81 @@ head_of_government = {
 				hog_political_protege
 			}
 		}
+		PUE_Antonio_Rafael_Barcelo_hog_sli = {
+			allowed = { original_tag = PUE }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea PUE_Antonio_Rafael_Barcelo_hog_sli"
+			}
+			traits = {
+				head_of_government
+				social_liberal
+				hog_political_protege
+			}
+		}
+
+		PUE_Ernesto_Ramos_Antonini_hog_sli = {
+			allowed = { original_tag = PUE }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea PUE_Ernesto_Ramos_Antonini_hog_sli"
+			}
+			traits = {
+				head_of_government
+				social_liberal
+				hog_political_protege
+			}
+		}
+
+		PUE_Luis_Munoz_Marin_hog_sli = {
+			allowed = { original_tag = PUE }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea PUE_Luis_Munoz_Marin_hog_sli"
+			}
+			traits = {
+				head_of_government
+				social_liberal
+				hog_political_protege
+			}
+		}
+
+		PUE_Jose_Coll_y_Cuchi_hog_ade = {
+			allowed = { original_tag = PUE }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea PUE_Jose_Coll_y_Cuchi_hog_ade"
+			}
+			traits = {
+				head_of_government
+				authoritarian_democrat
+				hog_political_protege
+			}
+		}
 	}
 	
 	foreign_minister = {
@@ -6189,5 +6264,33 @@ spriteType = {
 	spriteType = {
 		name = "GFX_idea_GBR_Robert_Vansittart_hog_sco"
 		texturefile = "gfx/interface/ministers/GBR/GBR_Robert_Vansittart.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_PUE_Bolivar_Pagan_Lucca_hog_sde"
+		texturefile = "gfx/interface/ministers/PUE/PUE_Bolivar_Pagan_Lucca.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_PUE_Antonio_Rafael_Barcelo_hog_sli"
+		texturefile = "gfx/interface/ministers/PUE/PUE_Antonio_Rafael_Barcelo.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_PUE_Ernesto_Ramos_Antonini_hog_sli"
+		texturefile = "gfx/interface/ministers/PUE/PUE_Ernesto_Ramos_Antonini.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_PUE_Luis_Munoz_Marin_hog_sli"
+		texturefile = "gfx/interface/ministers/PUE/PUE_Luis_Munoz_Marin.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_PUE_Jose_Coll_y_Cuchi_hog_ade"
+		texturefile = "gfx/interface/ministers/PUE/PUE_Jose_Coll_y_Cuchi.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_PUE_Blanton_C_Winship_hog_pau"
+		texturefile = "gfx/interface/ministers/PUE/PUE_Blanton_C_Winship.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_PUE_Pedro_Albizu_Campos_hog_npo"
+		texturefile = "gfx/interface/ministers/PUE/PUE_Pedro_Albizu_Campos.tga"
 	}
 }

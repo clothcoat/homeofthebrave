@@ -18,8 +18,8 @@ set_puppet_minister_america = {
 				}
 			}
 			add_ideas = {
-				ARG_Anibal_Ponce_hog_tot
-				ARG_Angel_Borlenghi_for_syn
+				ARG_Domingo_Mercante_hog_rso
+				ARG_Juan_Isaac_Cooke_for_sde
 				ARG_Anibal_Ponce_eco_tot
 				ARG_Jose_Peter_sec_tot
 			}
@@ -38,7 +38,7 @@ set_puppet_minister_america = {
 			add_ideas = {
 				ARG_Lisandro_de_la_Torre_hog_sde
 				ARG_Juan_Isaac_Cooke_for_sde
-				ARG_Carlos_Sanchez_Viamonte_eco_sde
+				ARG_Oscar_Alende_eco_rso
 				ARG_Enzo_Bordabehere_sec_sde
 			}
 		}
@@ -622,7 +622,7 @@ set_puppet_minister_america = {
 			limit = { has_government = totalist }
 			add_ideas = {
 				CHL_Carlos_Labarca_hog_tot
-				CHL_Carlos_Diaz_Loyola_for_tot
+				CHL_Bernardo_Ibanez_Aguila_for_syn
 				CHL_Victor_Contreras_Tapia_eco_tot
 				CHL_Carlos_Labarca_sec_tot
 			}
@@ -1052,40 +1052,6 @@ set_puppet_minister_america = {
 			}
 		}
 	}
-
-	##
-	##	PATAGONIA
-	##
-	#if = {
-	#	limit = { tag = FOP }
-	#	if = {
-	#		limit = { has_government = totalist }
-	#		add_ideas = {
-	#			FOP_Paulina_Mansurova_hog_tot
-	#			FOP_Buenaventura_Durruri_for_tot
-	#			FOP_Virginia_Bolten_eco_tot
-	#			FOP_Severino_Di_Giovanni_sec_tot
-	#		}
-	#	}
-	#	else_if = {
-	#		limit = { has_government = syndicalist }
-	#		add_ideas = {
-	#			FOP_Rodolfo_Ghioldi_hog_syn
-	#			FOP_Jose_Descoubiere_for_syn
-	#			FOP_Benigno_Mochkofski_eco_syn
-	#			FOP_Elvira_Rawson_sec_syn
-	#		}
-	#	}
-	#	else_if = {
-	#		limit = { has_government = radical_socialist }
-	#		add_ideas = {
-	#			FOP_Rodolfo_Gonzalez_Pacheco_hog_rso
-	#			FOP_Leonidas_Barletta_for_rso
-	#			FOP_German_Boris_Wladimirovich_eco_rso
-	#			FOP_Gregorio_Bremann_sec_rso
-	#		}
-	#	}
-	#}
 
 	##
 	##	GUATEMALA

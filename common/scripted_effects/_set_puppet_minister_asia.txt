@@ -962,31 +962,6 @@ set_puppet_minister_asia = {
 	}
 
 	##
-	##	MALAYSIA
-	##
-	if = {
-		limit = { tag = MAL }
-		if = {
-			limit = { has_elected_government = yes }
-			add_ideas = {
-				MAL_Tun_Abdul_Rahman_hog_sco
-				MAL_Onn_bin_Jaafar_for_sli
-				MAL_Henry_Lee_Hau_Shik_eco_mli
-				MAL_Leong_Yew_Koh_sec_sco
-			}
-		}
-		else_if = {
-			limit = { has_authoritarian_government = yes }
-			add_ideas = {
-				MAL_Ibrahim_I_of_Johor_hog_ade
-				MAL_Lee_Kuan_Yew_for_ade
-				MAL_Hassan_Yunus_eco_pau
-				MAL_Ibrahim_bin_Haji_Yaacob_sec_npo
-			}
-		}
-	}
-
-	##
 	##	MONGOLIA
 	##
 	if = {
@@ -1066,7 +1041,7 @@ set_puppet_minister_asia = {
 		else_if = {
 			limit = { has_government = national_populist }
 			add_ideas = {
-				MON_Buddhist_Council_hog_npo
+				MON_Boris_Rezukhin_hog_pau
 				MON_Zhamsranzhavyn_Galsandash_for_npo
 				MON_Rinchen_Sengge_eco_ade
 				MON_Sambadondogiin_Tserendorj_sec_npo
@@ -1539,7 +1514,7 @@ set_puppet_minister_asia = {
 				SIA_Luang_Praditmanutham_hog_rso
 				SIA_Direk_Chainam_for_sde
 				SIA_Tua_Lapanukrom_eco_sde
-				SIA_Phraya_Tepvitunpahun_Saruttabodhi_sec_sde
+				SIA_Thawan_Thamrongnawasawat_sec_rso
 			}
 		}
 		else_if = {
@@ -1563,7 +1538,7 @@ set_puppet_minister_asia = {
 		else_if = {
 			limit = { has_government = authoritarian_democrat }
 			add_ideas = {
-				SIA_Phraya_Manopakornnitithada_hog_ade
+				SIA_Seni_Pramoj_hog_sco
 				SIA_Seni_Pramoj_for_sco
 				SIA_Pin_Malakul_hog_ade
 				SIA_Phraya_Tepvitunpahun_Saruttabodhi_sec_sde
@@ -1595,7 +1570,7 @@ set_puppet_minister_asia = {
 				if = {
 					limit = { has_government = paternal_autocrat }
 					add_ideas = {
-						SIA_Sarit_Thanarat_hog_pau
+						SIA_Boworadet_Kritsadakorn_hog_pau
 						SIA_Phraya_Thephadsadin_for_pau
 						SIA_Thawee_Chullasup_eco_pau
 						SIA_Siri_Siriyothin_sec_pau
@@ -1606,7 +1581,7 @@ set_puppet_minister_asia = {
 					add_ideas = {
 						SIA_Phao_Sriyanond_hog_npo
 						SIA_Phraya_Srisaynah_for_npo
-						SIA_Sawat_Sawatronnachai_Sawadikeat_eco_npo
+						SIA_Thawee_Chullasup_eco_pau
 						SIA_Luang_Wichitwathakan_sec_npo
 					}
 				}
