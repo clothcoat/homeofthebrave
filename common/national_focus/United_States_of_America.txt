@@ -13946,6 +13946,15 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_western_alliance"
 			add_war_support = 0.03
 			add_political_power = 20
+			if = {
+			limit = {
+			has_idea = isolation 
+			}
+			swap_ideas = {
+			remove_idea = isolation
+			add_idea = civilian_economy
+			}
+			}
 			add_ideas = CAL_new_interventionism_idea
 		}
 	}
