@@ -522,7 +522,7 @@ set_puppet_minister_europe = {
 		else_if = {
 			limit = { has_government = social_democrat }
 			add_ideas = {
-				CAR_Jose_Giral_Pereira_hog_sde
+				CAR_Indalencio_Prieto_Tuero_hog_sde
 				CAR_Fernando_de_los_Rios_Urruti_for_rso
 				CAR_Bibiano_Fernandez_Ossorio_eco_sde
 				CAR_Amos_Salvador_Carreras_sec_sde
@@ -560,7 +560,7 @@ set_puppet_minister_europe = {
 			add_ideas = {
 				CAR_Manuel_Fal_Conde_hog_pau
 				CAR_Alberto_M_Artejo_Alvarez_for_ade
-				CAR_Jose_Calvo_Sotelo_eco_ade
+				CAR_Alejandro_Goicoechea_eco_ade
 				CAR_Blas_Perez_Gonzalez_sec_ade
 			}
 		}
@@ -636,19 +636,19 @@ set_puppet_minister_europe = {
 				}
 			}
 			add_ideas = {
-				CNT_Anton_Vilar_Ponte_for_sli
-				CNT_Alexandre_Boveda_Iglesias_for_sco
-				CNT_Bernardo_Giner_de_los_Rios_Garcia_eco_sli
-				CNT_Miguel_Maura_Gamazo_sec_mli
+				CAR_Anton_Vilar_Ponte_for_sli
+				CAR_Alexandre_Boveda_Iglesias_for_sco
+				CAR_Bernardo_Giner_de_los_Rios_Garcia_eco_sli
+				CAR_Miguel_Maura_Gamazo_sec_mli
 			}
 		}
 		else_if = {
 			limit = { has_government = social_conservative }
 			add_ideas = {
 				CNT_Claudio_Sanchez_Albornoz_hog_sco
-				CNT_Alexandre_Boveda_Iglesias_for_sco
-				CNT_Diego_Hidalgo_Duran_eco_sco
-				CNT_Antonio_Roson_sec_sco
+				CAR_Alexandre_Boveda_Iglesias_for_sco
+				CAR_Diego_Hidalgo_Duran_eco_sco
+				CAR_Antonio_Roson_sec_sco
 			}
 		}
 	}

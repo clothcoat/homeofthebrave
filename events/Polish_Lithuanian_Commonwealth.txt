@@ -100,8 +100,8 @@ country_event = { # Prime Minister
 		remove_all_ministers = yes
 		add_ideas = {
 			POL_Stanislaw_Narutowicz_hog_sco
-			POL_Aleksandras_Stulginskis_for_sco
-			POL_Leonas_Bistras_eco_sco
+			PLC_Aleksandras_Stulginskis_for_sco
+			PLC_Leonas_Bistras_eco_sco
 			POL_Karol_Popiel_sec_sco
 		}
 	}
@@ -146,8 +146,8 @@ country_event = { # Prime Minister
 		remove_all_ministers = yes
 		add_ideas = {
 			POL_Juozas_Ambrazevicius_hog_sco
-			POL_Aleksandras_Stulginskis_for_sco
-			POL_Leonas_Bistras_eco_sco
+			PLC_Aleksandras_Stulginskis_for_sco
+			PLC_Leonas_Bistras_eco_sco
 			POL_Karol_Popiel_sec_sco
 		}
 	}
@@ -210,8 +210,8 @@ country_event = { # The head of the Army
 		name = plcommon.3.b
 		ai_chance = { factor = 20 }
 		add_ideas = {
-			POL_Stasys_Rastikis_cos_ade
-			POL_Stasys_Rastikis_carm_pau
+			PLC_Stasys_Rastikis_cos_ade
+			PLC_Stasys_Rastikis_carm_pau
 		}
 		add_manpower = 326000
 		hidden_effect = {
@@ -536,8 +536,8 @@ country_event = { # Appointing a Prime Minister
 		remove_all_ministers = yes
 		add_ideas = {
 			POL_Stanislaw_Narutowicz_hog_sco
-			POL_Aleksandras_Stulginskis_for_sco
-			POL_Leonas_Bistras_eco_sco
+			PLC_Aleksandras_Stulginskis_for_sco
+			PLC_Leonas_Bistras_eco_sco
 			POL_Karol_Popiel_sec_sco
 		}
 	}
@@ -594,7 +594,7 @@ country_event = { # Appointing a Prime Minister
 			POL_Stanislaw_Mikolajczyk_hog_sli
 			POL_Gabriel_Narutowicz_for_sli
 			POL_Marian_Zyndram_Koscialkowski_eco_sli
-			POL_Mykolas_Slezevieius_sec_sli
+			PLC_Mykolas_Slezevieius_sec_sli
 		}
 	}
 
@@ -694,7 +694,7 @@ country_event = { # Appointing a Prime Minister
 		add_ideas = {
 			POL_Vincas_Kreve_Mickevicius_hog_tot
 			POL_Henryk_Walecki_for_tot
-			POL_Icikas_Meskupas_Adomas_eco_tot
+			PLC_Icikas_Meskupas_Adomas_eco_tot
 			POL_Boleslaw_Bierut_sec_tot
 		}
 		GER = {
@@ -809,7 +809,7 @@ country_event = { # The Sejim Elections
 		remove_all_ministers = yes
 		add_ideas = {
 			POL_Janusz_Radziwill_hog_ade
-			POL_Juozas_Urbsys_for_ade
+			PLC_Juozas_Urbsys_for_ade
 			POL_Andrzej_Wierzbicki_eco_ade
 			POL_Zdzislaw_Lubomirski_sec_ade
 		}
@@ -835,8 +835,8 @@ country_event = { # The Sejim Elections
 		add_ideas = {
 			POL_Stanislaw_Narutowicz_hog_sco
 			POL_Konstanty_Skirmunt_for_sco
-			POL_Leonas_Bistras_eco_sco
-			POL_Pranas_Dovydaitis_sec_sco
+			PLC_Leonas_Bistras_eco_sco
+			PLC_Pranas_Dovydaitis_sec_sco
 		}
 	}
 
@@ -860,7 +860,7 @@ country_event = { # The Sejim Elections
 		add_ideas = {
 			POL_Mikolaj_Kwasniewski_hog_mli
 			POL_Aleksander_Lednicki_for_mli
-			POL_Jonas_Vailokaitis_eco_mli
+			PLC_Jonas_Vailokaitis_eco_mli
 			POL_Mieczyslaw_Bilek_sec_mli
 		}
 	}
@@ -884,9 +884,9 @@ country_event = { # The Sejim Elections
 		remove_all_ministers = yes
 		add_ideas = {
 			POL_Stanislaw_Mikolajczyk_hog_sli
-			POL_Ernestas_Galvanauskas_for_sli
+			PLC_Ernestas_Galvanauskas_for_sli
 			POL_Jan_Piekalkiewicz_eco_sli
-			POL_Mykolas_Slezevieius_sec_sli
+			PLC_Mykolas_Slezevieius_sec_sli
 		}
 	}
 }
