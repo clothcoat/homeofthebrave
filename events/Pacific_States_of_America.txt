@@ -5906,18 +5906,19 @@ country_event = {# Push For America
 		ai_chance = {
 		factor = 0
 		}
+		set_global_flag = CAL_Hearst_Deal
 		white_peace = USA
 		add_political_power = 50
 		add_stability = 0.05
 		add_war_support = 0.1
 		USA = {
-		owns_state = {
+		every_owned_state = {
 		limit = { is_claimed_by = CAL }
+		}
 		remove_claim_by = CAL
 			}
 		}
 	}
-}
 
 country_event = {# Hearst Requests our Annexation
 	id = pacificstates.216
@@ -5930,8 +5931,30 @@ country_event = {# Hearst Requests our Annexation
 	
 	fire_only_once = yes
 	
+	trigger = {
+	tag = USA
+	has_global_flag = CAL_Hearst_Deal
+	has_country_leader = { ruling_only = yes name = "Douglas MacArthur"}
+	CAL = {
+		exists = yes
+		has_country_leader = { ruling_only = yes name = "William Randolph Hearst"}
+		}
+	WCC = {
+		exists = no
+		}
+	CSA = {
+		exists = no
+		}
+	COR = {
+		exists = no
+		}
+	TEX = {
+		exists = no
+		}
+	}
+	
 	mean_time_to_happen = {
-	days = 14
+	days = 1
 	}
 
 	option = {# Accept
@@ -5951,7 +5974,7 @@ country_event = {# Hearst Requests our Annexation
 		if = {
 			limit = { country_exists = USA 	}
 			USA = { declare_war_on = { target = CAL type = annex_everything
-} }
+		} }
 		add_stability = -0.1
 		add_popularity = { ideology = paternal_autocrat popularity = -0.05 }
 		add_manpower = -5000
@@ -5972,8 +5995,29 @@ country_event = {# Mac Accepts
 	
 	fire_only_once = yes
 	
+	trigger = {
+	tag = CAL
+	has_country_leader = { ruling_only = yes name = "William Randolph Hearst"}
+	USA = {
+		exists = yes
+		has_country_leader = { ruling_only = yes name = "Douglas MacArthur"}
+		}
+	WCC = {
+		exists = no
+		}
+	CSA = {
+		exists = no
+		}
+	COR = {
+		exists = no
+		}
+	TEX = {
+		exists = no
+		}
+	}
+	
 	mean_time_to_happen = {
-	days = 14
+	days = 1
 	}
 
 	option = {# Accept
@@ -6755,8 +6799,6 @@ country_event = {# Debt under control
 	title = pacificstates.244.t
 	desc = pacificstates.244.d
 	picture = GFX_report_event_generic_run_on_the_banks
-	
-	is_triggered_only = yes
 
 	fire_only_once = yes
 	
@@ -9581,9 +9623,9 @@ country_event = {# Japanese Aid
 			amount > 10
 			}
 		}
-		destroy_resource = {
+		add_resource = {
 			type = oil
-			amount = 5
+			amount = -5
 			}
 		}
 		add_opinion_modifier = { target = JAP modifier = small_increase }

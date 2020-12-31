@@ -7003,10 +7003,6 @@ focus_tree = {
 				uses = 2
 				category = land_doctrine
 			}
-			if = {
-				limit = { has_idea = CSA_war_measures }
-				remove_ideas = CSA_war_measures
-			}
 			add_stability = 0.15
 			add_political_power = 100
 		}

@@ -12165,14 +12165,10 @@ country_event = { # USA Surrenders
 			}
 			remove_ideas = amcivwar_idea
 		}
-		else = {
-			ACW_surrender_effect = yes
-		}
-		else = {
-			custom_effect_tooltip = amcivwar_surrender_tooltip
-			hidden_effect = {
-				add_ideas = amcviwar_ready_to_surrender
-			}
+		ACW_surrender_effect = yes
+		custom_effect_tooltip = amcivwar_surrender_tooltip
+		hidden_effect = {
+			add_ideas = amcviwar_ready_to_surrender
 		}
 		hidden_effect = {
 			event_target:annex_to = {
@@ -15594,7 +15590,7 @@ country_event = { # Black Nationalist Resistance #1-2
 	option = { # Level 2 resistance
 		name = amcivwar.672.a
 		if = {
-		 limit = { has_idea = ACW_black_nationalist_resistance }
+		 limit = { has_idea = ACW_black_nationalist_resistance_1 }
 		swap_ideas = {
 		remove_idea = ACW_black_nationalist_resistance_1
 		add_idea = ACW_black_nationalist_resistance_2
