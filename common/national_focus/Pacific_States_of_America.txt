@@ -9776,8 +9776,8 @@ focus_tree = {
 					is_core_of = CAL
 					is_controlled_by = CAL
 				}
-				random_owned_controlled_state = {
 				add_state_modifier = {
+					modifier = {
 					local_resources = 0.05
 					}
 				}

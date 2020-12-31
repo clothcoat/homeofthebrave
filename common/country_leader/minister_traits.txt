@@ -1071,6 +1071,14 @@ leader_traits = {
 	## CHIEF of ARMY
 	########################################
 
+	carm_jade_marshal = {
+		army_attack_factor = 0.10
+		political_power_gain = 0.10
+		supply_consumption_factor = 0.05
+
+		random = no
+	}
+
 	carm_elastic_defence_doctrine = {
 		army_defence_factor = 0.1
 		supply_consumption_factor = -0.1
