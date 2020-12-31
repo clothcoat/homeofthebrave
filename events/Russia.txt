@@ -10922,9 +10922,9 @@ country_event = { #Political Path Choices
 		remove_all_ministers = yes
 		hidden_effect = {
 			add_ideas = {
-				SOV_Nikolay_Bukharin_hog_rso
+				SOV_Nikolay_Bukharin_hog_syn
 				SOV_Mariya_Spiridonova_for_rso
-				SOV_Matvey_Skobelev_eco_rso
+				RUS_Matvey_Skobelev_eco_rso
 				SOV_Pavel_Sudoplatov_sec_rso
 			}
 			country_event = {
@@ -10948,9 +10948,9 @@ country_event = { #Political Path Choices
 		hidden_effect = {
 			add_ideas = {
 				SOV_Aleksandra_Kollontay_hog_syn
-				SOV_Georgiy_Malenkov_for_syn
+				RUS_Georgiy_M_Malenkov_for_rso
 				SOV_Mikhail_Tomskiy_eco_syn
-				SOV_Pyetr_Popkov_sec_syn
+				SOV_Pyetr_Popkov_sec_tot
 			}
 			country_event = {
 				id = russoc.105
@@ -10974,7 +10974,7 @@ country_event = { #Political Path Choices
 			add_ideas = {
 				SOV_Karl_Radek_hog_tot
 				SOV_Vyacheslav_Molotov_for_tot
-				SOV_Sergey_Kirov_eco_tot
+				RUS_Sergey_M_Kirov_eco_tot
 				SOV_Genrikh_Yagoda_sec_tot
 			}
 			country_event = {
