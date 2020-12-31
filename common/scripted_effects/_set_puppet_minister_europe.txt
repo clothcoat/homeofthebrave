@@ -622,7 +622,7 @@ set_puppet_minister_europe = {
 		else_if = {
 			limit = { has_government = social_democrat }
 			add_ideas = {
-				CNT_Jose_Giral_Pereira_hog_sde
+				CAR_Jose_Giral_Pereira_hog_sde
 				CNT_Angel_Pestana_for_rso
 				CNT_Bibiano_Fernandez_Ossorio_eco_sde
 				CNT_Marcelino_Domingo_Sanjuan_sec_sde
@@ -3197,8 +3197,8 @@ set_puppet_minister_europe = {
 		else_if = {
 			limit = { has_government = syndicalist }
 			add_ideas = {
-				SOV_Nikolay_Bukharin_hog_rso
-				SOV_Georgiy_Malenkov_for_syn
+				SOV_Nikolay_Bukharin_hog_syn
+				RUS_Georgiy_M_Malenkov_for_rso
 				SOV_Mikhail_Tomskiy_eco_syn
 				SOV_Pavel_Sudoplatov_sec_rso
 			}
@@ -3206,7 +3206,7 @@ set_puppet_minister_europe = {
 		else_if = {
 			limit = { has_government = radical_socialist }
 			add_ideas = {
-				SOV_Nikolay_Bukharin_hog_rso
+				SOV_Nikolay_Bukharin_hog_syn
 				SOV_Mariya_Spiridonova_for_rso
 				SOV_Mikhail_Tomskiy_eco_syn
 				SOV_Pavel_Sudoplatov_sec_rso

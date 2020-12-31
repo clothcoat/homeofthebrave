@@ -524,9 +524,9 @@ country_event = { #Birth of the Serbian Republic
 		hidden_effect = {
 			remove_all_ministers = yes
 			add_ideas = {
-				SER_Milan_Grol_hog_mli
+				SER_Milan_Grol_hog_sli
 				SER_Zivko_Topalovic_for_sde
-				SER_Milutin_Milankovic_eco_sli
+				SER_Milutin_Milankovic_eco_mli
 				SER_Bozidar_Maksimovic_sec_sco
 			}
 		}
@@ -670,10 +670,10 @@ country_event = { #First Elections of the Republic
 			}
 			remove_all_ministers = yes
 			add_ideas = {
-				SER_Ljubomir_Davidovic_hog_mli
-				SER_Milan_Grol_for_mli
+				SER_Ljubomir_Davidovic_hog_sli
+				SER_Milan_Grol_for_sli
 				SER_Kosta_Kumanudi_eco_mli
-				SER_Milorad_Draskovic_sec_mli
+				SER_Milorad_Draskovic_sec_sli
 			}
 		}
 	}
@@ -767,10 +767,10 @@ country_event = { #Elections of [GetYear]
 		remove_all_ministers = yes
 		hidden_effect = {
 			add_ideas = {
-				SER_Ljubomir_Davidovic_hog_mli
-				SER_Milan_Grol_for_mli
+				SER_Ljubomir_Davidovic_hog_sli
+				SER_Milan_Grol_for_sli
 				SER_Kosta_Kumanudi_eco_mli
-				SER_Milorad_Draskovic_sec_mli
+				SER_Milorad_Draskovic_sec_sli
 			}
 		}
 	}
