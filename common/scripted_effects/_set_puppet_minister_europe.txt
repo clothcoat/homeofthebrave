@@ -531,7 +531,7 @@ set_puppet_minister_europe = {
 		else_if = {
 			limit = { has_government = social_liberal }
 			add_ideas = {
-				CAR_Jose_Giral_Pereira_hog_sde
+				CAR_Indalencio_Prieto_Tuero_hog_sde
 				CAR_Alvaro_Cunqueiro_Mora_for_mli
 				CAR_Emilio_Herrera_eco_sli
 				CAR_Federico_Escofet_Alsina_sec_sli
@@ -622,7 +622,7 @@ set_puppet_minister_europe = {
 		else_if = {
 			limit = { has_government = social_democrat }
 			add_ideas = {
-				CAR_Jose_Giral_Pereira_hog_sde
+				CAR_Anton_Vilar_Ponte_for_sli
 				CNT_Angel_Pestana_for_rso
 				CNT_Bibiano_Fernandez_Ossorio_eco_sde
 				CNT_Marcelino_Domingo_Sanjuan_sec_sde
@@ -897,7 +897,7 @@ set_puppet_minister_europe = {
 				DDR_Ernst_Goldenbaum_hog_tot
 				DDR_Ruth_Fischer_for_tot
 				DDR_Jakob_Kaiser_eco_syn
-				DDR_Willi_Muenzenberg_sec_tot
+				DDR_Margarette_Neumann_sec_rso
 			}
 		}
 		else_if = {
@@ -923,7 +923,7 @@ set_puppet_minister_europe = {
 				DDR_Hugo_Bose_hog_sco
 				DDR_Andreas_Blunck_for_mli
 				DDR_Gerhard_Danelius_eco_sde
-				DDR_Hans_Oster_sec_sco
+				DDR_Walter_von_Unruh_sec_ade
 			}
 		}
 		else_if = {
@@ -1636,7 +1636,7 @@ set_puppet_minister_europe = {
 		else_if = {
 			limit = { has_government = paternal_autocrat }
 			add_ideas = {
-				GBR_Louis_Mountbatten_hog_pau
+				GBR_Henry_Page_Croft_hog_ade
 				GBR_John_Colville_for_sco
 				GBR_Noel_Pemberton_Billing_eco_pau
 				GBR_Maxwell_Knight_sec_ade
@@ -1645,7 +1645,7 @@ set_puppet_minister_europe = {
 		else_if = {
 			limit = { has_government = national_populist }
 			add_ideas = {
-				GBR_Louis_Mountbatten_hog_pau
+				GBR_Henry_Page_Croft_hog_ade
 				GBR_John_Colville_for_sco
 				GBR_Noel_Pemberton_Billing_eco_pau
 				GBR_Maxwell_Knight_sec_ade
@@ -3091,7 +3091,7 @@ set_puppet_minister_europe = {
 				SER_Milos_Trifunovic_hog_sco
 				SER_Momcilo_Nincic_for_sco
 				SER_Ninko_Peric_eco_sco
-				SER_Bozidar_Maksimovic_sec_sco
+				SER_Dragisa_Cvetkovic_sec_ade
 			}
 		}
 		else_if = {
@@ -3165,7 +3165,7 @@ set_puppet_minister_europe = {
 			add_ideas = {
 				SIC_Giovanni_Gentile_hog_ade
 				SIC_Bernardo_Attolico_for_ade
-				SIC_Giovanni_Niutta_di_Marescotti_eco_pau
+				SIC_Vincenzo_Azzolini_eco_npo
 				SIC_Lorenzo_La_Via_di_Sant'Agrippina_sec_pau
 			}
 		}
@@ -3597,15 +3597,6 @@ set_puppet_minister_europe = {
 	if = {
 		limit = { tag = UKR }
 		if = {
-			limit = { has_socialist_government = yes }
-			add_ideas = {
-				UKR_Oleksander_Shumsky_hog_tot
-				UKR_Stanislav_Kosior_for_tot
-				UKR_Grigorij_Petrovsky_eco_syn
-				UKR_Vladimir_Antonov_Ovseyenko_sec_syn
-			}
-		}
-		else_if = {
 			limit = { has_elected_government = yes }
 			add_ideas = {
 				UKR_Vladimir_Vynnychenko_hog_sco
@@ -3744,7 +3735,7 @@ set_puppet_minister_europe = {
 				WLL_Charles_Plisnier_hog_syn
 				WLL_Lucie_Dejardin_for_syn
 				WLL_Abraham_Leon_eco_syn
-				WLL_Walter_Dauge_sec_syn
+				WLL_Andre_Renard_sec_rso
 			}
 		}
 		else_if = {
