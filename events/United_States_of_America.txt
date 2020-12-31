@@ -16720,7 +16720,6 @@ country_event = { # Easing Restrictions
 					state = 1099 #Cinn
 					}	
 				}
-			}
 			add_state_modifier = {
 					modifier = {
 					resistance_target = -0.05
@@ -16731,6 +16730,7 @@ country_event = { # Easing Restrictions
 					local_resources = 0.05
 					}
 				}
+			}
 		}
 }
 
@@ -16831,8 +16831,7 @@ country_event = { # Removing Restrictions
 					state = 1099 #Cinn
 					}
 				}
-			}
-			add_state_modifier = {
+				add_state_modifier = {
 					modifier = {
 					resistance_target = -0.05
 					compliance_gain = 0.08
@@ -16842,6 +16841,8 @@ country_event = { # Removing Restrictions
 					local_resources = 0.05
 					}
 				}
+				
+			}
 		}
 }
 

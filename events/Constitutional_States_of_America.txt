@@ -3438,7 +3438,7 @@ country_event = { # Time to Retreat?
 		}
 		if = {
 		MEX = {
-			trigger = { 
+			limit = { 
 				MEX = { is_in_faction_with = NFA }
 				}
 			every_owned_state = {
@@ -3485,9 +3485,11 @@ country_event = { # Time to Retreat?
 			}
 			white_peace_with_TARGET = yes
 		}
-		CAF = {
-			limit = { 
+		if = {
+			limit = {
+				CAF = {
 				is_valid_peace_target = yes 
+				}
 			}
 			white_peace_with_TARGET = yes
 		}
