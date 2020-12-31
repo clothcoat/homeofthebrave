@@ -9776,8 +9776,10 @@ focus_tree = {
 					is_core_of = CAL
 					is_controlled_by = CAL
 				}
+				random_owned_controlled_state = {
 				add_state_modifier = {
 					local_resources = 0.05
+					}
 				}
 			}
 			swap_ideas = {
@@ -9785,7 +9787,7 @@ focus_tree = {
 				add_idea = CAL_new_freedom_6
 			}
 		}
-	}  
+	}
 	
 	focus = {# Glass-Steagall
 		id = CAL_glass_steagall
