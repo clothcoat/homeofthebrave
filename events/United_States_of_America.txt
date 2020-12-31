@@ -22772,7 +22772,6 @@ country_event = { #MacArthur Coup
 	picture = macarthur_authorized_to_restore_order-21603
 	is_triggered_only = yes
 	fire_only_once = yes
-	has_country_flag = Hoover_death
 	option = { #Big Mac + Senate Remove Hoover for X Reason
 		name = ustates.4099.a
 		trigger = {
@@ -23485,7 +23484,7 @@ country_event = { #The Future of the GoP;Hoover's Coalition
 				desc = "POLITICS_RNC_DESC"
 				picture = "gfx/leaders/USA/RNC.tga"
 				expire = "1965.1.1"
-				ideology = radical_socialist
+				ideology = radical_socialist_subtype
 				traits = {
 					}
 				}
