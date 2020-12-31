@@ -11557,10 +11557,6 @@ focus_tree = {
 		relative_position_id = CSA_final_revolution
 		completion_reward = {	
 		383 = {
-				limit = {
-					is_mainland_america = yes
-					is_controlled_by = CSA
-				}
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
@@ -11569,10 +11565,6 @@ focus_tree = {
 				}
 			}
 		384 = {
-				limit = {
-					is_mainland_america = yes
-					is_controlled_by = CSA
-				}
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
@@ -11581,10 +11573,6 @@ focus_tree = {
 				}
 			}
 		381 = {
-				limit = {
-					is_mainland_america = yes
-					is_controlled_by = CSA
-				}
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
@@ -11593,10 +11581,6 @@ focus_tree = {
 				}
 			}
 		389 = {
-				limit = {
-					is_mainland_america = yes
-					is_controlled_by = CSA
-				}
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
@@ -11605,10 +11589,6 @@ focus_tree = {
 				}
 			}
 		390 = {
-				limit = {
-					is_mainland_america = yes
-					is_controlled_by = CSA
-				}
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
@@ -11617,10 +11597,6 @@ focus_tree = {
 				}
 			}
 		388 = {
-				limit = {
-					is_mainland_america = yes
-					is_controlled_by = CSA
-				}
 				add_extra_state_shared_building_slots = 1
 			}
 		}
@@ -11647,10 +11623,6 @@ focus_tree = {
 			category = industry
 		}
 		395 = {
-				limit = {
-					is_mainland_america = yes
-					is_controlled_by = CSA
-				}
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
@@ -11658,6 +11630,16 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+		if = {
+		random_owned_controlled_state = {
+				limit = {
+					is_mainland_america = yes
+					free_building_slots = { building = arms_factory size > 0 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 1
+				}
+			}
+		if = {
 		random_owned_controlled_state = {
 				limit = {
 					is_mainland_america = yes
@@ -11665,6 +11647,8 @@ focus_tree = {
 				}
 				add_extra_state_shared_building_slots = 1
 			}
+		}
+		if = {
 		random_owned_controlled_state = {
 				limit = {
 					is_mainland_america = yes
@@ -11672,19 +11656,15 @@ focus_tree = {
 				}
 				add_extra_state_shared_building_slots = 1
 			}
+		}
+		if = {
 		random_owned_controlled_state = {
 				limit = {
 					is_mainland_america = yes
 					free_building_slots = { building = arms_factory size > 0 include_locked = yes }
 				}
 				add_extra_state_shared_building_slots = 1
-			}
-		random_owned_controlled_state = {
-				limit = {
-					is_mainland_america = yes
-					free_building_slots = { building = arms_factory size > 0 include_locked = yes }
 				}
-				add_extra_state_shared_building_slots = 1
 			}
 		}
 	}

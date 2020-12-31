@@ -1291,8 +1291,10 @@ focus_tree = {
 			}
 			hidden_effect = {
 			if = {
+				limit = {
 				NOT = { 
 				has_global_flag = USA_PSA_peace
+					}
 				}
 				#country_event = { id = ustates.627 days = 70 }#Pentagon Construction
 				country_event = { id = ustates.651 days = 35 }#AUS Trials
