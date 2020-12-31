@@ -5885,9 +5885,6 @@ country_event = { # Canada's Decision
 			}
 		}
 		name = newengland.105.c
-		ai_will_do = {
-			factor = 0
-		}
 		add_stability = 0.05
 		NEE = {
 		add_political_power = 20
@@ -6986,7 +6983,7 @@ country_event = { # New English-Canadian Defense Pact?
 		}
 		give_guarantee = NEE
 		NEE = {
-			give_guarrantee = CAN
+			give_guarantee = CAN
 		}
 	}
 	option = { # No, being in the same alliance is good enough
@@ -8511,7 +8508,7 @@ country_event = { # Stoddard makes an offer
 			}
 		}
 		}
-		if = {
+		else_if = {
 		limit = { tag = COR
 		NEE = {
 		exists = yes
@@ -8543,7 +8540,7 @@ country_event = { # Stoddard makes an offer
 		type = annex_everything
 		}
 		}
-		if = {
+		else_if = {
 		limit = { tag = COR }
 		declare_war_on = {
 		target = NEE

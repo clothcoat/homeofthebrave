@@ -3437,10 +3437,10 @@ country_event = { # Time to Retreat?
 			}
 		}
 		if = {
-		MEX = {
-			limit = { 
+		limit = { 
 				MEX = { is_in_faction_with = NFA }
 				}
+		MEX = {
 			every_owned_state = {
 				COR = {
 					transfer_state = PREV
