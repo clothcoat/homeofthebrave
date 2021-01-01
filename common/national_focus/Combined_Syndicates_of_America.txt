@@ -11223,7 +11223,10 @@ focus_tree = {
 		id = CSA_final_revolution
 		icon = GFX_goal_CSA_final_revolution
 		cost = 2
-		available = { has_government = totalist }
+		available = { 
+		has_government = totalist 
+		has_country_leader = { ruling_only = yes name = "Jay Lovestone" }
+		}
 		cancel_if_invalid = yes
 		x = 8
 		y = 9
