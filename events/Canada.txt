@@ -474,7 +474,7 @@ country_event = {
 			}
 		}
 		decrease_ruling_party_popularity_by_5 = yes
-		add_ideas = CAN_Sir_Roger_Backhouse_cnav_pau
+		add_ideas = CAN_Sir_Roger_Backhouse_cnav_sco
 		if = {
 			limit = { check_variable = { king_influence < 5 } }
 			custom_effect_tooltip = CAN_exile_influence_increase
@@ -565,7 +565,7 @@ country_event = {
 				has_government = social_conservative
 			}
 		}
-		add_ideas = CAN_Sir_Edmund_Ironside_cos_pau
+		add_ideas = CAN_Sir_Edmund_Ironside_cos_sco
 		add_political_power = 50
 	}
 	option = {
@@ -577,7 +577,7 @@ country_event = {
 				has_government = social_conservative
 			}
 		}
-		add_ideas = CAN_Archibald_Montgomery_Massingberd_cos_pau
+		add_ideas = CAN_Archibald_Montgomery_Massingberd_cos_sco
 		add_political_power = 50
 	}
 	option = {
@@ -2797,7 +2797,7 @@ country_event = {
 				CAN_add_british_pm_in_exile = yes
 			}
 			else = {
-				add_ideas = CAN_Vincent_Massey_for_mli
+				add_ideas = CAN_Charles_Vincent_Massey_for_mli
 			}
 			add_ideas = CAN_CD_Howe_eco_mli
 			add_ideas = CAN_Ernest_Lapointe_sec_mli
@@ -2846,7 +2846,7 @@ country_event = {
 			else = {
 				add_ideas = CAN_Sidney_Earle_Smith_for_sco
 			}
-			add_ideas = CAN_Stephen_Leacock_eco_sco
+			add_ideas = CAN_Sir_Stephen_Leacock_eco_sco
 			add_ideas = CAN_John_Diefenbaker_sec_sco
 			country_event = { id = canada.69 days = 10 }
 		}
@@ -3023,7 +3023,7 @@ country_event = {
 			}
 			hidden_effect = {
 				remove_all_ministers = yes
-				add_ideas = CAN_Louis_St_Laurent_hog_sli
+				add_ideas = CAN_Louis_St_Laurent_hog_mli
 				if = {
 					limit = { has_country_flag = KR_british_king_base }
 					CAN_add_british_pm_in_exile = yes
@@ -3242,7 +3242,7 @@ country_event = {
 		}
 		GBR_returning_king_check = yes
 		hidden_effect = {
-			add_ideas = CAN_Louis_St_Laurent_hog_sli
+			add_ideas = CAN_Louis_St_Laurent_hog_mli
 			if = {
 				limit = { has_country_flag = KR_british_king_base }
 				CAN_add_british_pm_in_exile = yes
@@ -3309,7 +3309,7 @@ country_event = {
 			}
 			if = {
 				limit = { has_country_flag = CAN_cons_leader_bracken }
-				add_ideas = CAN_Stephen_Leacock_eco_sco
+				add_ideas = CAN_Sir_Stephen_Leacock_eco_sco
 			}
 			else = {
 				add_ideas = CAN_John_Bracken_eco_sco
@@ -3455,7 +3455,7 @@ country_event = {
 		if = {
 			limit = { has_idea = CAN_John_Bracken_eco_sco }
 			remove_ideas = CAN_John_Bracken_eco_sco
-			add_ideas = CAN_Stephen_Leacock_eco_sco
+			add_ideas = CAN_Sir_Stephen_Leacock_eco_sco
 		}
 		if = {
 			limit = { has_country_flag = CAN_is_republic }
@@ -7183,7 +7183,7 @@ country_event = {
 			}
 			if = {
 				limit = { has_country_flag = CAN_cons_leader_bracken }
-				add_ideas = CAN_Stephen_Leacock_eco_sco
+				add_ideas = CAN_Sir_Stephen_Leacock_eco_sco
 			}
 			else = {
 				add_ideas = CAN_John_Bracken_eco_sco

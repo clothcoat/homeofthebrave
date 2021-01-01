@@ -22,6 +22,24 @@ head_of_government = {
 				hog_local_tyrant
 			}
 		}
+	ANQ_Shangguan_Yunxiang_hog_pau = {
+			allowed = { original_tag = ANQ }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ANQ_Shangguan_Yunxiang_hog_pau"
+			}
+			traits = {
+				head_of_government
+				paternal_autocrat
+				hog_flamboyant_tough_guy
+			}
+		}
 	ANQ_Wang_Pu_hog_pau = {
 			allowed = { original_tag = ANQ }
 			available = {
@@ -2689,6 +2707,24 @@ head_of_government = {
 				foreign_minister
 				authoritarian_democrat
 				for_iron_fisted_brute
+			}
+		}
+	OTT_Hueseyin_Numan_Pasa_for_ade = {
+			allowed = { original_tag = OTT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea OTT_Hueseyin_Numan_Pasa_for_ade"
+			}
+			traits = {
+				foreign_minister
+				authoritarian_democrat
+				for_ideological_crusader
 			}
 		}
 	PAR_Juan_Stefanich_for_tot = {
