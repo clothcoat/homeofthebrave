@@ -5914,11 +5914,11 @@ country_event = {# Push For America
 		USA = {
 		every_owned_state = {
 		limit = { is_claimed_by = CAL }
-		}
 		remove_claim_by = CAL
 			}
 		}
 	}
+}
 
 country_event = {# Hearst Requests our Annexation
 	id = pacificstates.216
