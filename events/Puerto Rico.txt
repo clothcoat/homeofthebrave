@@ -1764,7 +1764,7 @@ country_event = { #Esteves Resigns
 		PRI = {
 			every_unit_leader = {
 				limit = {
-					has_id = 00000100
+					has_id = 164100
 				}
 				set_nationality = USA
 			}
@@ -1781,7 +1781,7 @@ country_event = { #Esteves Resigns
 			defense_skill = 1
 			planning_skill = 1
 			logistics_skill = 1
-			id = 00000103
+			id = 164103
 		}
 		hidden_effect = {
 			USA = {

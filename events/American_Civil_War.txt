@@ -9010,9 +9010,6 @@ country_event = { # Canadian Intervention
 			}
 		}
 		set_country_flag = CAN_acw_intervention
-		unlock_decision_tooltip = CAN_recognize_the_USA
-		unlock_decision_tooltip = CAN_recognize_the_PSA
-		unlock_decision_tooltip = CAN_recognize_the_AUS
 		hidden_effect = {
 			USA = {
 				country_event = newengland.3
