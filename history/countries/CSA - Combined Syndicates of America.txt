@@ -162,6 +162,14 @@ create_country_leader = {
 	ideology = radical_socialist_subtype
 	traits = { our_right_to_survive }
 }
+create_country_leader = {
+	name = "Jack Reed"
+	desc = "POLITICS_JACK_REED_DESC"
+	picture = "Portrait_CSA_Jack_Reed.tga"
+	expire = "1965.1.1"
+	ideology = social_democrat_subtype
+	traits = { our_right_to_survive }
+}
 
 add_ideas = {
 	CSA_Elizabeth_Gurly_Flynn_hog_syn
