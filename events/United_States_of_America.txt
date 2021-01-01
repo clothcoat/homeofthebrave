@@ -5319,6 +5319,8 @@ country_event = { # March on Detroit
 	days = 5
 	}
 
+	fire_only_once = yes
+
 	option = {
 		name = ustates.85.a
 		add_stability = -0.03
@@ -19427,7 +19429,7 @@ country_event = {# Release of the Joint Army/Navy Phonetic Alphabet
 				tag = CAL
 			}
 			AND = {
-				has_completed_focus = TEX_take_the_fight_abroad
+				has_completed_focus = TEX_protecting_Columbia
 				tag = TEX
 			}
 		}
@@ -22608,7 +22610,7 @@ country_event = { #Hoovers Death by ODP
 	picture = hoover_lincoln_death-200772
 	trigger = {
 		tag = USA
-		date = 1937.4.29
+		date > 1937.4.29
 		has_country_leader = {
 			name = "Herbert Hoover"
 			ruling_only = yes

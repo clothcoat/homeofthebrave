@@ -12216,7 +12216,7 @@ country_event = { # Time to Retreat?
 			limit = { 
 				MEX = { is_in_faction_with = NFA }
 			}
-			all_owned_state = {
+			every_owned_state = {
 				CSA = {
 					transfer_state = PREV
 					}
@@ -12228,7 +12228,7 @@ country_event = { # Time to Retreat?
 			limit = { 
 				MEX = { is_in_faction_with = NFA }
 			}
-			all_owned_state = {
+			every_owned_state = {
 				CSA = {
 					transfer_state = PREV
 					}
@@ -12522,8 +12522,8 @@ country_event = { #James Burnham dead
 		remove_ideas = CSA_proletariat_commander_idea
 		}
 		else_if = {
-		limit = { has_idea = CSA_proletariat_commander_idea2 }
-		remove_ideas = CSA_proletariat_commander_idea2
+		limit = { has_idea = CSA_proletariat_commander_idea_2 }
+		remove_ideas = CSA_proletariat_commander_idea_2
 		}
 		add_political_power = -75
 		add_stability = -0.1

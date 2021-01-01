@@ -761,9 +761,15 @@ country_event = { # The Provisional Government
 			factor = 25
 			modifier = {
 				factor = 0
-				has_game_rule = {
+				OR = {
+					has_game_rule = {
 					rule = NEE_start_path
-					option = NEE_START_PATH_LIBERAL
+					option = NEE_START_PATH_DEMOCRAT
+					}
+					has_game_rule = {
+					rule = NEE_start_path
+					option = NEE_START_PATH_REPUBLICAN
+					}					
 				}
 			}
 		}
@@ -782,7 +788,7 @@ country_event = { # The Provisional Government
 					ideology = social_democrat_subtype
 					traits = {
 						captain_of_industry
-		}
+					}
 		}
 		set_politics = {
 			ruling_party = social_democrat
@@ -7453,14 +7459,12 @@ country_event = { # Tammany Hall
 	picture = GFX_event_NEE_Tammany_Hall
 
 	fire_only_once = yes
-	is_triggered_only = yes
 
 	trigger = {
 		tag = NEE
 		has_full_control_of_state = 358
+		has_government = social_conservative
 		NOT = {
-			has_government = paternal_autocrat
-			has_government = national_populist
 			OR = {
 				has_war_with = CSA
 				has_war_with = TEX

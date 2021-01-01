@@ -4549,7 +4549,7 @@ country_event = { # Pacific Movement of the Eastern World Uncovered
 
 	trigger = {
 		tag = CAL
-		has_completed_focus = CAL_joint_chiefs_of_staff
+		has_completed_focus = CAL_supreme_commander
 		date > 1937.11.23
 		NOT = {
 		has_government = national_populist
