@@ -4133,6 +4133,14 @@ ideas = {
 			traits = { small_ship_producer_defense_1 }
 			research_bonus = { naval_equipment = 0.1 }
 		}
+		kr_electric_boat_nee = { #Electric Boat Placeholder 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea kr_electric_boat_nee"}
+			allowed = { is_american_tag = yes }
+			available = { owns_state = 931 }
+			visible = { tag = NEE }
+			traits = { small_ship_producer_defense_1 }
+			research_bonus = { naval_equipment = 0.1 }
+		}
 		kr_higgins = { #Higgins
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea kr_higgins"}
 			allowed = { is_american_tag = yes }

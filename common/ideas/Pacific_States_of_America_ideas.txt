@@ -1,4 +1,4 @@
-### Californian Ideas
+ ### Californian Ideas
 
 ideas = {
 	### Country ideas ###
@@ -2067,6 +2067,20 @@ ideas = {
 			}
 			research_bonus = {
 				industry = 0.05
+			}
+		}
+
+		CAL_pensions_idea = {#Pensions
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_pensions_idea"}
+			allowed = {	always = no	}
+			allowed_civil_war = { always = yes }
+			picture = BBR_veteran_support
+			modifier = {
+				consumer_goods_factor = 0.02
+				production_factory_max_efficiency_factor = -0.2
+				industrial_capacity_factory = 0.03
+				monthly_population = 0.05
+				stability_factor = 0.03
 			}
 		}
 
