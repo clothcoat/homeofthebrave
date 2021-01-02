@@ -12311,10 +12311,12 @@ country_event = { #CSS Report: Jay Lovestone
 			factor = 80
 		}
 		add_political_power = -10
+		hidden_effect = {
 		CSA = {
 			country_event = {
 				id = csa.511
 				days = 6
+				}
 			}
 		}
 	}
@@ -12330,11 +12332,13 @@ country_event = { #CSS Report: Jay Lovestone
 		ai_chance = {
 			factor = 20
 		}
-
+		
+		hidden_effect = {
 		CSA = {
 			country_event = {
 				id = csa.515
 				days = 30
+				}
 			}
 		}
 	}
@@ -12357,19 +12361,23 @@ country_event = { #Lovestone Plots Against the CSS
 		}
 		add_political_power = -30
 		add_stability = -0.03
+		hidden_effect = {
 		CSA = {
 			country_event = {
 				id = csa.512
 				days = 7
+				}
 			}
 		}
 	}
 	option = { #I doubt this is my problem
 		name = csa.511.b
+		hidden_effect = {
 		CSA = {
 			country_event = {
 				id = csa.515
 				days = 25
+				}
 			}
 		}
 	}
@@ -12392,10 +12400,12 @@ country_event = { #Lovestone Coup Ended
 		}
 		add_political_power = 10
 		add_stability = 0.02
+		hidden_effect = {
 		CSA = {
 			country_event = {
 				id = csa.514
 				days = 4
+				}
 			}
 		}
 	}
@@ -12407,12 +12417,14 @@ country_event = { #Lovestone Coup Ended
 		add_political_power = -10
 		add_stability = -0.02
 		add_command_power = 5
+		hidden_effect = {
 		CSA = {
 			country_event = {
 				id = csa.513
 				days = 4
+				}
 			}
-		}
+		}	
 	}
 }
 
@@ -12460,10 +12472,12 @@ country_event = { #Lovestone Found Guilty
 		add_stability = 0.01
 		add_manpower = 1
 		add_political_power = -5
+		hidden_effect = {
 		CSA = {
 			country_event = {
 				id = csa.514
 				days = 3
+				}
 			}
 		}
 	}
@@ -12496,6 +12510,7 @@ country_event = { #James Burnham dead
 	immediate = { log = "[GetDateText]: [Root.GetName]: event csa.515" }
 	title = csa.515.t
 	desc = csa.515.d
+	picture = GFX_report_event_usa_funeral
 
 	is_triggered_only = yes
 	
@@ -12563,14 +12578,6 @@ country_event = { #Fate of Lawrence Dennis
 		add_command_power = 5
 		add_political_power = -15
 		add_stability = -0.02
-		hidden_effect = {
-		CSA = {
-			country_event = {
-				id = csa.516
-				days = 6
-				}
-			}
-		}
 	}
 }
 

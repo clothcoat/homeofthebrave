@@ -11014,11 +11014,11 @@ focus_tree = {
 		id = CSA_peoples_senate
 		icon = GFX_CSA_red_senate
 		cost = 5
-		prerequisite = {focus = CSA_proletariat_commander}
 		available = { has_government = totalist }
 		cancel_if_invalid = yes
 		x = -2
 		y = 8
+		prerequisite = {focus = CSA_proletariat_commander}
 		ai_will_do = {
 			factor = 50
 		}
@@ -11027,7 +11027,7 @@ focus_tree = {
 			add_popularity = { ideology = totalist popularity = 0.1 }
 			add_stability = 0.05
 			hidden_effect = {
-			country_event = { id = csa.510 days = 2 }
+			country_event = { id = csa.510 days = 230 }
 			}
 		}
 	}
