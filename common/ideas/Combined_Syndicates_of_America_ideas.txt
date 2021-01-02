@@ -318,15 +318,21 @@ ideas = {
 			political_power_gain = 0.05
 			command_power_gain_mult = 0.05
 			stability_weekly = 0.01	
+			consumer_goods_factor = -0.05
+			mobilization_speed = 0.10
+			out_of_supply_factor = -0.05
 			}
 		}
 		CSA_proletariat_commander_idea_2 = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CSA_proletariat_commander_idea_2"}
 			picture = CSA_proletariat_commander
 			modifier = {
-			political_power_gain = 0.03
-			command_power_gain_mult = 0.05
+			political_power_gain = 0.07
+			command_power_gain_mult = 0.07
 			stability_weekly = 0.01	
+			consumer_goods_factor = -0.08
+			mobilization_speed = 0.12
+			out_of_supply_factor = -0.05
 			encryption_factor = 0.03
 			}
 		}

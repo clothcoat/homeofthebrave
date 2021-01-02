@@ -2075,6 +2075,90 @@ country_event = { # 'I Married a Syndicalist'
 		}
 	}
 
+country_event = {# Chemurgy
+	id = constate.1135 
+	title = constate.1135.t 
+	desc = constate.1135.d
+	picture =  GFX_report_event_generic_diplomacy1
+      	is_triggered_only = no
+
+	fire_only_once = yes
+
+	trigger = {
+	tag = COR
+	has_completed_focus = COR_agriculture_research
+	}
+
+	mean_time_to_happen = {
+	days = 25
+	}
+
+       	option = {#YES
+		name = constate.1135.a 
+		ai_chance = {	
+		factor = 50 	
+		}
+                		add_political_power = -75
+                		add_stability = 0.03
+		add_popularity = { ideology = paternal_autocrat popularity = 0.05 }
+		add_popularity = { ideology = national_populist popularity = 0.07 }  
+	}
+     	option = {#No
+		name = constate.1135.b
+		ai_chance = {	
+		factor = 50 
+		}	 
+		add_stability = -0.05
+		add_popularity = { ideology = social_conservative popularity = -0.01	}
+		add_popularity = { ideology = authoritarian_democrat popularity = -0.01 }	
+		add_popularity = { ideology = paternal_autocrat popularity = -0.01 }
+		add_popularity = { ideology = national_populist popularity = -0.01 }   
+		}
+	}
+
+country_event = {#Blood
+	id = constate.1136 
+	title = constate.1136.t 
+	desc = constate.1136.d
+	picture =  GFX_report_event_generic_diplomacy1
+        	is_triggered_only = no
+
+	fire_only_once = yes
+
+	trigger = {
+	tag = COR
+	has_completed_focus =  COR_white_crosses
+	}
+
+	mean_time_to_happen = {
+	days = 25
+	}
+
+       	option = {#YES
+		name = constate.1136.a 
+		ai_chance = {	
+		factor = 50 	
+		}
+		add_manpower = 1000
+		add_political_power = -25
+		add_stability = -0.05
+		add_popularity = { ideology = paternal_autocrat popularity = -0.05 }
+		add_popularity = { ideology = national_populist popularity = -0.07 }  
+	}
+       	option = {#No
+		name = constate.1136.b 
+		ai_chance = {	
+		factor = 50 	
+		}	 
+		add_manpower = -1000 #some people die 
+		add_stability = 0.05
+		add_popularity = { ideology = social_conservative popularity = 0.03	}
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.03 }	
+		add_popularity = { ideology = paternal_autocrat popularity = 0.05 }
+		add_popularity = { ideology = national_populist popularity = 0.05 }   
+		}
+	}
+
 country_event = { # Simmons Death
 	id = constate.12
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.12"}

@@ -7256,8 +7256,8 @@ country_event = {
 		}
 		add_political_power = 30
 		if = {
-			limit = { has_unit_leader = 938 }
-			remove_unit_leader = 938
+			limit = { has_unit_leader = 93811 }
+			remove_unit_leader = 93811
 		}
 		set_country_flag = John_Vereker_dead
 		CAN = {
@@ -7439,8 +7439,8 @@ country_event = {
 			limit = { has_country_flag = CAN_gov_gen_mcnaughton }
 			add_political_power = 50
 			if = {
-				limit = { has_unit_leader = 938 }
-				remove_unit_leader = 938
+				limit = { has_unit_leader = 93811 }
+				remove_unit_leader = 93811
 			}
 			create_country_leader = {
 				name = "Andrew McNaughton"
