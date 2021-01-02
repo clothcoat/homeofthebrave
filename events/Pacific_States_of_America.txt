@@ -6700,7 +6700,7 @@ country_event = {# Canadian Demands Met
 		add_political_power = 30
 		increase_ruling_party_popularity_by_5 = yes
 		modify_country_flag = {
-				flag = SIC_Hearst_debt
+				flag = CAL_Hearst_debt
 				value = -1
 		}
 	}
@@ -6814,7 +6814,7 @@ country_event = {# Debt under control
 
 	option = {# Let's focus on more reliable models
 		name = pacificstates.244.a
-		remove_ideas = CAL_hearst_debt_idea
+		remove_ideas = CAL_hearst_debt
 		add_stability = 0.08
 		increase_ruling_party_popularity_by_5 = yes
 	}

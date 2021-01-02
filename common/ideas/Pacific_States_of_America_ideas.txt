@@ -49,6 +49,25 @@ ideas = {
 			}
 		}
 		
+		CAL_pacific_restructuring = {#Pacific Restructuring
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_pacific_restructuring"}
+			allowed = { always = no }
+			available = { 
+			OR = {
+			has_government = paternal_autocrat 
+			has_government = national_populist
+				}
+			}
+			removal_cost = -1
+			picture = socialist_purge
+			modifier = {
+				stability_weekly = -0.02
+				stability_factor = -0.05
+				political_power_gain = 0.02
+				monthly_population = -0.02
+			}
+		}
+		
 		CAL_jap_close_relations = {#Close relations
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_jap_close_relations"}
 			allowed = { always = no }
@@ -3131,6 +3150,30 @@ ideas = {
 				conscription_factor	= 0.02
 				mobilization_speed = 0.15
 				max_commander_army_size	= 6
+				max_command_power = 75
+				command_power_gain_mult = 0.06
+			}
+		}
+		CAL_Marshall_plan_idea_6 = {# Unified Front
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_Marshall_plan_idea_6"}
+			picture = CZE_planning_bonus
+			equipment_bonus = {
+				motorized_equipment = {
+					build_cost_ic = -0.05 instant = yes
+				}
+				armor = {
+					build_cost_ic = -0.03
+					instant = yes
+				}
+			}
+			modifier = {
+				army_org_Factor = 0.8
+				max_planning = 0.35
+				army_infantry_attack_factor = 0.05
+				planning_speed = 0.4
+				conscription_factor	= 0.03
+				mobilization_speed = 0.2
+				max_commander_army_size	= 8
 				max_command_power = 75
 				command_power_gain_mult = 0.06
 			}
