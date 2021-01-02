@@ -231,21 +231,6 @@ create_corps_commander = {# Leslie McNair
 }
 
 ### Corps Commander
-create_corps_commander = {# Alexander Patch
-	name = "Alexander Patch"
-	desc = "CAL_ALEXANDER_PATCH_ARMY_DESC"
-	portrait_path = "gfx/leaders/CAL/Portrait_CAL_Alexander_Patch.tga"
-	traits = {
-		commando
-		infantry_officer
-	}
-	skill = 3
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 3
-	id = 980
-}
 create_corps_commander = {# Walter Krueger
 	name = "Walter Krueger"
 	desc = "USA_WALTER_KRUEGER_ARMY_DESC"
@@ -261,7 +246,22 @@ create_corps_commander = {# Walter Krueger
 	defense_skill = 3
 	planning_skill = 2
 	logistics_skill = 2
-	id = 84
+	id = 979
+}
+create_corps_commander = {# Alexander Patch
+	name = "Alexander Patch"
+	desc = "CAL_ALEXANDER_PATCH_ARMY_DESC"
+	portrait_path = "gfx/leaders/CAL/Portrait_CAL_Alexander_Patch.tga"
+	traits = {
+		commando
+		infantry_officer
+	}
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 3
+	id = 980
 }
 create_corps_commander = {# Lewis H. Brereton
 	name = "Lewis H. Brereton"
@@ -464,6 +464,7 @@ create_navy_leader = {# Chester W. Nimitz
 	defense_skill = 4
 	maneuvering_skill = 4
 	coordination_skill = 5
+	id = 990
 }
 create_navy_leader = {# Felix Stump
 	name = "Felix Stump"
