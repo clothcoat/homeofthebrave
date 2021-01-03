@@ -1,28 +1,4 @@
 annexation_decisions = {
-	# Acre
-	annexation_ACRE_CONQ = {
-		icon = generic_form_nation
-		selectable_mission = yes
-		days_mission_timeout = 60
-		is_good = no
-		cost = 0
-		fire_only_once = no
-		cancel_trigger = {
-			855 = { is_valid_annexation_state = no }
-		}
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision annexation_ACRE_CONQ"
-			country_event = annex.349
-		}
-		timeout_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_ACRE_CONQ"
-			set_country_flag = ACRE_CONQ
-			occupy_small_country = yes
-		}
-		ai_will_do = {
-			factor = 100
-		}
-	}
 
 	# Afghanistan
 	annexation_AFG_CONQ = {
@@ -33,11 +9,21 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			267 = { is_valid_annexation_state = no }
+			NOT = {
+				267 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_AFG_CONQ"
-			country_event = annex.116
+			if = {
+				limit = { tag = PER }
+				country_event = pers.95
+			}
+			else = {
+				country_event = annex.116
+			}
 		}
 		timeout_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_AFG_CONQ"
@@ -48,9 +34,9 @@ annexation_decisions = {
 			factor = 100
 		}
 	}
-	
-	# Aland
-	annexation_ALAND_CONQ = {
+
+	# Alaska
+	annexation_ALA_CONQ = {
 		icon = generic_form_nation
 		selectable_mission = yes
 		days_mission_timeout = 60
@@ -58,15 +44,20 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			145 = { is_valid_annexation_state = no } #Aland
+			NOT = {
+				463 = {
+					is_owned_and_controlled_by = ROOT
+					is_claim_or_core_of_ROOT = no
+				}
+			}
 		}
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision annexation_ALAND_CONQ"
-			country_event = annex.373
+			log = "[GetDateText]: [Root.GetName]: Decision annexation_ALA_CONQ"
+			country_event = annex.338
 		}
 		timeout_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_ALAND_CONQ"
-			set_country_flag = ALAND_CONQ
+			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_ALA_CONQ"
+			set_country_flag = ALA_CONQ
 			occupy_small_country = yes
 		}
 		ai_will_do = {
@@ -74,30 +65,6 @@ annexation_decisions = {
 		}
 	}
 
-	# Alaska
-	annexation_ALASKA_CONQ = {
-		icon = generic_form_nation
-		selectable_mission = yes
-		days_mission_timeout = 60
-		is_good = no
-		cost = 0
-		fire_only_once = no
-		cancel_trigger = {
-			463 = { is_valid_annexation_state = no } #Alaska
-		}
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision annexation_ALASKA_CONQ"
-			country_event = annex.371
-		}
-		timeout_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_ALASKA_CONQ"
-			set_country_flag = ALASKA_CONQ
-			occupy_small_country = yes
-		}
-		ai_will_do = {
-			factor = 100
-		}
-	}
 
 	# Albania
 	annexation_ALB_CONQ = {
@@ -108,7 +75,12 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			44 = { is_valid_annexation_state = no }
+			NOT = {
+				44 = {
+					is_owned_and_controlled_by = ROOT
+					is_claim_or_core_of_ROOT = no
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_ALB_CONQ"
@@ -133,7 +105,11 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			459 = { is_valid_annexation_state = no }
+			NOT = {
+				459 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_ALG_CONQ"
@@ -158,9 +134,24 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			NOT = {
-				28 = { is_valid_annexation_state = yes }
-				779 = { is_valid_annexation_state = yes }
+			OR = {
+				NOT = {
+					28 = {
+						is_owned_and_controlled_by = ROOT
+					}
+				}
+				16 = {
+					is_owned_and_controlled_by = ROOT
+				}
+				64 = {
+					is_owned_and_controlled_by = ROOT
+				}
+				51 = {
+					is_owned_and_controlled_by = ROOT
+				}
+				52 = {
+					is_owned_and_controlled_by = ROOT
+				}
 			}
 		}
 		complete_effect = {
@@ -186,7 +177,11 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			540 = { is_valid_annexation_state = no }
+			NOT = {
+				540 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_ANG_CONQ"
@@ -196,34 +191,6 @@ annexation_decisions = {
 			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_ANG_CONQ"
 			set_country_flag = ANG_CONQ
 			occupy_medium_country = yes
-		}
-		ai_will_do = {
-			factor = 100
-		}
-	}
-
-	# Aosta 
-	annexation_AOSTA_CONQ = {
-		icon = generic_form_nation
-		selectable_mission = yes
-		days_mission_timeout = 60
-		is_good = no
-		cost = 0
-		fire_only_once = no
-		cancel_trigger = {
-			1003 = { is_valid_annexation_state = no }
-		}
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision annexation_AOSTA_CONQ"
-			country_event = annex.376
-		}
-		timeout_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_AOSTA_CONQ"
-			set_country_flag = AOSTA_CONQ
-			occupy_small_country = yes
-		}
-		ai_will_do = {
-			factor = 100
 		}
 	}
 
@@ -262,7 +229,12 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			278 = { is_valid_annexation_state = no }
+			NOT = {
+				278 = {
+					is_owned_and_controlled_by = ROOT
+					is_claim_or_core_of_ROOT = no
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_ARG_CONQ"
@@ -277,7 +249,7 @@ annexation_decisions = {
 			factor = 100
 		}
 	}
-
+	
 	# Argentina - Corrientes
 	annexation_ARG_CORRIENTES_CONQ = {
 		icon = generic_form_nation
@@ -287,7 +259,12 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			1074 = { is_valid_annexation_state = no }
+			NOT = {
+				1074 = {
+					is_owned_and_controlled_by = ROOT
+					is_claim_or_core_of_ROOT = no
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_ARG_CORRIENTES_CONQ"
@@ -312,7 +289,12 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			901 = { is_valid_annexation_state = no }
+			NOT = {
+				901 = {
+					is_owned_and_controlled_by = ROOT
+					is_claim_or_core_of_ROOT = no
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_ARG_CHACO_CONQ"
@@ -337,7 +319,11 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			230 = { is_valid_annexation_state = no }
+			NOT = {
+				230 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_ARM_CONQ"
@@ -387,12 +373,10 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			if = {
-				limit = { has_country_flag = AST_restoring_australasia }
-				NOT = { 285 = { is_owned_and_controlled_by = ROOT } }
-			}
-			else = {
-				285 = { is_valid_annexation_state = no }
+			NOT = {
+				285 = {
+					is_owned_and_controlled_by = ROOT
+				}
 			}
 		}
 		complete_effect = {
@@ -424,7 +408,12 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			4 = { is_valid_annexation_state = no }
+			NOT = {
+				1137 = {
+					is_owned_and_controlled_by = ROOT
+					is_claim_or_core_of_ROOT = no
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_AUS_CONQ"
@@ -461,7 +450,12 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			736 = { is_valid_annexation_state = no } #Austrian Littoral
+			NOT = {
+				1100 = { #Austrian Littoral
+					is_owned_and_controlled_by = ROOT
+					is_claim_or_core_of_ROOT = no
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_AUS_LIT_CONQ"
@@ -487,8 +481,12 @@ annexation_decisions = {
 		fire_only_once = no
 		cancel_trigger = {
 			NOT = {
-				783 = { is_valid_annexation_state = yes } #Trentino
-				39 = { is_valid_annexation_state = yes } #South Tyrol
+				783 = { #Trentino
+					is_owned_and_controlled_by = ROOT
+				}
+				39 = { #South Tyrol
+					is_owned_and_controlled_by = ROOT
+				}
 			}
 		}
 		complete_effect = {
@@ -506,7 +504,7 @@ annexation_decisions = {
 	}
 
 	# Azerbaijan
-	annexation_AZR_CONQ = {
+	annexation_AZE_CONQ = {
 		icon = generic_form_nation
 		selectable_mission = yes
 		days_mission_timeout = 60
@@ -514,15 +512,25 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			990 = { is_valid_annexation_state = no }
+			NOT = {
+				990 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision annexation_AZR_CONQ"
-			country_event = annex.114
+			log = "[GetDateText]: [Root.GetName]: Decision annexation_AZE_CONQ"
+			if = {
+				limit = { tag = PER }
+				country_event = pers.73
+			}
+			else = {
+				country_event = annex.114
+			}
 		}
 		timeout_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_AZR_CONQ"
-			set_country_flag = AZR_CONQ
+			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_AZE_CONQ"
+			set_country_flag = AZE_CONQ
 			occupy_medium_country = yes
 		}
 		ai_will_do = {
@@ -539,7 +547,11 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			172 = { is_valid_annexation_state = no }
+			NOT = {
+				172 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_BAS_CONQ"
@@ -564,7 +576,12 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			52 = { is_valid_annexation_state = no }
+			NOT = {
+				52 = {
+					is_owned_and_controlled_by = ROOT
+					is_claim_or_core_of_ROOT = no
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_BAY_CONQ"
@@ -576,7 +593,7 @@ annexation_decisions = {
 			set_country_flag = BAY_CONQ
 		}
 		ai_will_do = {
-			factor = 20
+			factor = 1
 		}
 	}
 
@@ -589,7 +606,11 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			6 = { is_valid_annexation_state = no }
+			NOT = {
+				6 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_BEL_CONQ"
@@ -614,7 +635,11 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			808 = { is_valid_annexation_state = no }
+			NOT = {
+				808 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_BFA_CONQ"
@@ -639,7 +664,11 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			324 = { is_valid_annexation_state = no }
+			NOT = {
+				324 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_BHU_CONQ"
@@ -664,7 +693,11 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			302 = { is_valid_annexation_state = no }
+			NOT = {
+				302 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_BOL_CONQ"
@@ -689,7 +722,12 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			104 = { is_valid_annexation_state = no }
+			NOT = {
+				104 = {
+					is_owned_and_controlled_by = ROOT
+					is_claim_or_core_of_ROOT = no
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_BOS_CONQ"
@@ -714,7 +752,14 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			542 = { is_valid_annexation_state = no }
+			OR = {
+				NOT = {
+					542 = {
+						is_owned_and_controlled_by = ROOT
+					}
+				}
+				controls_state = 681
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_BOT_CONQ"
@@ -740,15 +785,19 @@ annexation_decisions = {
 		fire_only_once = no
 		cancel_trigger = {
 			OR = {
-				500 = { is_valid_annexation_state = no } #Rio de Janeiro
-				count_triggers = {
-					amount = 3
-					498 = { is_valid_annexation_state = no } #Northeastern Brazil
-					499 = { is_valid_annexation_state = no } #Bahia
-					501 = { is_valid_annexation_state = no } #São Paulo
-					505 = { is_valid_annexation_state = no } #Goyaz
-					502 = { is_valid_annexation_state = no } #Rio Grande do Sul
-					898 = { is_valid_annexation_state = no } #Pará
+				NOT = {
+					500 = { is_owned_and_controlled_by = ROOT } #Rio de Janeiro
+				}
+				NOT = {
+					count_triggers = {
+						amount = 3
+						498 = { is_owned_and_controlled_by = ROOT } #Northeastern Brazil
+						499 = { is_owned_and_controlled_by = ROOT } #Bahia
+						501 = { is_owned_and_controlled_by = ROOT } #São Paulo
+						505 = { is_owned_and_controlled_by = ROOT } #Goyaz
+						502 = { is_owned_and_controlled_by = ROOT } #Rio Grande do Sul
+						898 = { is_owned_and_controlled_by = ROOT } #Pará
+					}
 				}
 			}
 		}
@@ -775,7 +824,23 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			502 = { is_valid_annexation_state = no }
+			OR = {
+				NOT = {
+					502 = { is_owned_and_controlled_by = ROOT } #Rio Grande do Sul
+				}
+				AND = {
+					500 = { is_owned_and_controlled_by = ROOT } #Rio de Janeiro
+					count_triggers = {
+						amount = 3
+						498 = { is_owned_and_controlled_by = ROOT } #Northeastern Brazil
+						499 = { is_owned_and_controlled_by = ROOT } #Bahia
+						501 = { is_owned_and_controlled_by = ROOT } #São Paulo
+						505 = { is_owned_and_controlled_by = ROOT } #Goyaz
+						502 = { is_owned_and_controlled_by = ROOT } #Rio Grande do Sul
+						898 = { is_owned_and_controlled_by = ROOT } #Pará
+					}
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_PIR_CONQ"
@@ -800,7 +865,23 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			501 = { is_valid_annexation_state = no }
+			OR = {
+				NOT = {
+					501 = { is_owned_and_controlled_by = ROOT } #São Paulo
+				}
+				AND = {
+					500 = { is_owned_and_controlled_by = ROOT } #Rio de Janeiro
+					count_triggers = {
+						amount = 3
+						498 = { is_owned_and_controlled_by = ROOT } #Northeastern Brazil
+						499 = { is_owned_and_controlled_by = ROOT } #Bahia
+						501 = { is_owned_and_controlled_by = ROOT } #São Paulo
+						505 = { is_owned_and_controlled_by = ROOT } #Goyaz
+						502 = { is_owned_and_controlled_by = ROOT } #Rio Grande do Sul
+						898 = { is_owned_and_controlled_by = ROOT } #Pará
+					}
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_SPO_CONQ"
@@ -825,7 +906,20 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			500 = { is_valid_annexation_state = no }
+			OR = {
+				NOT = {
+					500 = { is_owned_and_controlled_by = ROOT } #Rio de Janeiro
+				}
+				count_triggers = {
+					amount = 3
+					498 = { is_owned_and_controlled_by = ROOT } #Northeastern Brazil
+					499 = { is_owned_and_controlled_by = ROOT } #Bahia
+					501 = { is_owned_and_controlled_by = ROOT } #São Paulo
+					505 = { is_owned_and_controlled_by = ROOT } #Goyaz
+					502 = { is_owned_and_controlled_by = ROOT } #Rio Grande do Sul
+					898 = { is_owned_and_controlled_by = ROOT } #Pará
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_RJM_CONQ"
@@ -850,7 +944,23 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			505 = { is_valid_annexation_state = no }
+			OR = {
+				NOT = {
+					505 = { is_owned_and_controlled_by = ROOT } #Goyaz
+				}
+				AND = {
+					500 = { is_owned_and_controlled_by = ROOT } #Rio de Janeiro
+					count_triggers = {
+						amount = 3
+						498 = { is_owned_and_controlled_by = ROOT } #Northeastern Brazil
+						499 = { is_owned_and_controlled_by = ROOT } #Bahia
+						501 = { is_owned_and_controlled_by = ROOT } #São Paulo
+						505 = { is_owned_and_controlled_by = ROOT } #Goyaz
+						502 = { is_owned_and_controlled_by = ROOT } #Rio Grande do Sul
+						898 = { is_owned_and_controlled_by = ROOT } #Pará
+					}
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_GOY_CONQ"
@@ -875,7 +985,23 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			499 = { is_valid_annexation_state = no }
+			OR = {
+				NOT = {
+					499 = { is_owned_and_controlled_by = ROOT } #Bahia
+				}
+				AND = {
+					500 = { is_owned_and_controlled_by = ROOT } #Rio de Janeiro
+					count_triggers = {
+						amount = 3
+						498 = { is_owned_and_controlled_by = ROOT } #Northeastern Brazil
+						499 = { is_owned_and_controlled_by = ROOT } #Bahia
+						501 = { is_owned_and_controlled_by = ROOT } #São Paulo
+						505 = { is_owned_and_controlled_by = ROOT } #Goyaz
+						502 = { is_owned_and_controlled_by = ROOT } #Rio Grande do Sul
+						898 = { is_owned_and_controlled_by = ROOT } #Pará
+					}
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_BAH_CONQ"
@@ -900,7 +1026,23 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			498 = { is_valid_annexation_state = no }
+			OR = {
+				NOT = {
+					498 = { is_owned_and_controlled_by = ROOT } #Northeastern Brazil
+				}
+				AND = {
+					500 = { is_owned_and_controlled_by = ROOT } #Rio de Janeiro
+					count_triggers = {
+						amount = 3
+						498 = { is_owned_and_controlled_by = ROOT } #Northeastern Brazil
+						499 = { is_owned_and_controlled_by = ROOT } #Bahia
+						501 = { is_owned_and_controlled_by = ROOT } #São Paulo
+						505 = { is_owned_and_controlled_by = ROOT } #Goyaz
+						502 = { is_owned_and_controlled_by = ROOT } #Rio Grande do Sul
+						898 = { is_owned_and_controlled_by = ROOT } #Pará
+					}
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_GRP_CONQ"
@@ -925,7 +1067,23 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			898 = { is_valid_annexation_state = no }
+			OR = {
+				NOT = {
+					898 = { is_owned_and_controlled_by = ROOT } #Pará
+				}
+				AND = {
+					500 = { is_owned_and_controlled_by = ROOT } #Rio de Janeiro
+					count_triggers = {
+						amount = 3
+						498 = { is_owned_and_controlled_by = ROOT } #Northeastern Brazil
+						499 = { is_owned_and_controlled_by = ROOT } #Bahia
+						501 = { is_owned_and_controlled_by = ROOT } #São Paulo
+						505 = { is_owned_and_controlled_by = ROOT } #Goyaz
+						502 = { is_owned_and_controlled_by = ROOT } #Rio Grande do Sul
+						898 = { is_owned_and_controlled_by = ROOT } #Pará
+					}
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_AMA_CONQ"
@@ -941,56 +1099,6 @@ annexation_decisions = {
 		}
 	}
 
-	# Brest
-	annexation_BREST_CONQ = {
-		icon = generic_form_nation
-		selectable_mission = yes
-		days_mission_timeout = 60
-		is_good = no
-		cost = 0
-		fire_only_once = no
-		cancel_trigger = {
-			93 = { is_valid_annexation_state = no } #Brest
-		}
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision annexation_BREST_CONQ"
-			country_event = annex.363
-		}
-		timeout_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_BREST_CONQ"
-			set_country_flag = BREST_CONQ
-			occupy_small_country = yes
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
-	# Brittany
-	annexation_BRI_CONQ = {
-		icon = generic_form_nation
-		selectable_mission = yes
-		days_mission_timeout = 60
-		is_good = no
-		cost = 0
-		fire_only_once = no
-		cancel_trigger = {
-			14 = { is_valid_annexation_state = no } #Upper Brittany
-		}
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision annexation_BRI_CONQ"
-			country_event = annex.360
-		}
-		timeout_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_BRI_CONQ"
-			set_country_flag = BRI_CONQ
-			occupy_medium_country = yes
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
 	# Burundi
 	annexation_BRD_CONQ = {
 		icon = generic_form_nation
@@ -1000,7 +1108,15 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			870 = { is_valid_annexation_state = no }
+			OR = {
+				965 = {
+					is_owned_and_controlled_by = ROOT
+					is_claim_or_core_of_ROOT = no
+				}
+				NOT = {
+					869 = { is_owned_and_controlled_by = ROOT }
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_BRD_CONQ"
@@ -1025,7 +1141,12 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			48 = { is_valid_annexation_state = no }
+			NOT = {
+				48 = {
+					is_owned_and_controlled_by = ROOT
+					is_claim_or_core_of_ROOT = no
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_BUL_CONQ"
@@ -1051,8 +1172,14 @@ annexation_decisions = {
 		fire_only_once = no
 		cancel_trigger = {
 			NOT = {
-				772 = { is_valid_annexation_state = yes }
-				77 = { is_valid_annexation_state = yes }
+				772 = {
+					is_owned_and_controlled_by = ROOT
+					is_claim_or_core_of_ROOT = no
+				}
+				77 = {
+					is_owned_and_controlled_by = ROOT
+					is_claim_or_core_of_ROOT = no
+				}
 			}
 		}
 		complete_effect = {
@@ -1078,7 +1205,11 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			288 = { is_valid_annexation_state = no }
+			NOT = {
+				288 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_BRM_CONQ"
@@ -1115,11 +1246,11 @@ annexation_decisions = {
 		fire_only_once = no
 		cancel_trigger = {
 			OR = {
-				405 = { is_valid_annexation_state = no } #Bukhara
-				584 = { is_valid_annexation_state = no } #Karakum
-				586 = { is_valid_annexation_state = no } #Pishpek
-				589 = { is_valid_annexation_state = no } #Semirechye
-				732 = { is_valid_annexation_state = no } #Pamir
+				NOT = { 405 = { is_owned_and_controlled_by = ROOT } } #Bukhara
+				NOT = { 584 = { is_owned_and_controlled_by = ROOT } } #Karakum
+				NOT = { 586 = { is_owned_and_controlled_by = ROOT } } #Pishpek
+				NOT = { 589 = { is_owned_and_controlled_by = ROOT } } #Semirechye
+				NOT = { 732 = { is_owned_and_controlled_by = ROOT } } #Pamir
 			}
 		}
 		complete_effect = {
@@ -1145,7 +1276,9 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			589 = { is_valid_annexation_state = no } #Semirechye
+			NOT = {
+				589 = { is_owned_and_controlled_by = ROOT } #Semirechye
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_ALO_CONQ"
@@ -1170,7 +1303,9 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			586 = { is_valid_annexation_state = no } #Pishpek
+			NOT = {
+				586 = { is_owned_and_controlled_by = ROOT } #Pishpek
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_KYR_CONQ"
@@ -1195,7 +1330,9 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			732 = { is_valid_annexation_state = no } #Pamir
+			NOT = {
+				732 = { is_owned_and_controlled_by = ROOT } #Pamir
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_TAJ_CONQ"
@@ -1221,14 +1358,35 @@ annexation_decisions = {
 		fire_only_once = no
 		cancel_trigger = {
 			OR = {
-				405 = { is_valid_annexation_state = no } #Bukhara
-				584 = { is_valid_annexation_state = no } #Karakum
-				732 = { is_valid_annexation_state = no } #Pamir
+				NOT = {
+					405 = { #Bukhara
+						is_owned_and_controlled_by = ROOT
+						is_claim_or_core_of_ROOT = no
+					}
+				}
+				NOT = {
+					584 = { #Karakum
+						is_owned_and_controlled_by = ROOT
+						is_claim_or_core_of_ROOT = no
+					}
+				}
+				NOT = {
+					732 = { #Pamir
+						is_owned_and_controlled_by = ROOT
+						is_claim_or_core_of_ROOT = no
+					}
+				}
 			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_TRK_CONQ"
-			country_event = annex.79
+			if = {
+				limit = { tag = PER }
+				country_event = pers.74
+			}
+			else = {
+				country_event = annex.79
+			}
 		}
 		timeout_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_TRK_CONQ"
@@ -1249,7 +1407,9 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			584 = { is_valid_annexation_state = no } #Karakum
+			NOT = {
+				584 = { is_owned_and_controlled_by = ROOT } #Karakum
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_TKM_CONQ"
@@ -1274,7 +1434,9 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			407 = { is_valid_annexation_state = no } #Tashkent
+			NOT = {
+				407 = { is_owned_and_controlled_by = ROOT } #Tashkent
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_UZB_CONQ"
@@ -1299,7 +1461,16 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			750 = { is_valid_annexation_state = no }
+			OR = {
+				NOT = {
+					750 = {
+						is_owned_and_controlled_by = ROOT
+					}
+				}
+				286 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_CAM_CONQ"
@@ -1324,7 +1495,11 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			739 = { is_valid_annexation_state = no }
+			NOT = {
+				739 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_CAN_CONQ"
@@ -1364,44 +1539,6 @@ annexation_decisions = {
 		}
 	}
 
-	# West Indies Federation
-	annexation_CARIBBEAN_CONQ = {
-		icon = generic_form_nation
-		selectable_mission = yes
-		days_mission_timeout = 60
-		is_good = no
-		cost = 0
-		fire_only_once = no
-		cancel_trigger = {
-			NOT = {
-				308 = { is_valid_annexation_state = yes } #Leeward Islands
-				690 = { is_valid_annexation_state = yes } #Bahamas
-				692 = { is_valid_annexation_state = yes } #Windward Islands
-				694 = { is_valid_annexation_state = yes } #French Caribbean
-				696 = { is_valid_annexation_state = yes } #Bermuda
-				if = {
-					limit = {
-						NOT = { tag = HOL }
-					}
-					695 = { is_valid_annexation_state = yes } #Curaçao
-					1077 = { is_valid_annexation_state = yes } #Saint Martin
-				}
-			}
-		}
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision annexation_CARIBBEAN_CONQ"
-			country_event = annex.357
-		}
-		timeout_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_CARIBBEAN_CONQ"
-			set_country_flag = CARIBBEAN_CONQ
-			occupy_small_country = yes
-		}
-		ai_will_do = {
-			factor = 100
-		}
-	}
-
 	# Catalonia
 	annexation_CAT_CONQ = {
 		icon = generic_form_nation
@@ -1411,7 +1548,11 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			165 = { is_valid_annexation_state = no }
+			NOT = {
+				165 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_CAT_CONQ"
@@ -1428,7 +1569,7 @@ annexation_decisions = {
 	}
 
 	# Ubangi-Shari
-	annexation_CAR_CONQ = {
+	annexation_CEA_CONQ = {
 		icon = generic_form_nation
 		selectable_mission = yes
 		days_mission_timeout = 60
@@ -1436,15 +1577,19 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			660 = { is_valid_annexation_state = no }
+			NOT = {
+				660 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision annexation_CAR_CONQ"
+			log = "[GetDateText]: [Root.GetName]: Decision annexation_CEA_CONQ"
 			country_event = annex.204
 		}
 		timeout_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_CAR_CONQ"
-			set_country_flag = CAR_CONQ
+			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_CEA_CONQ"
+			set_country_flag = CEA_CONQ
 			occupy_small_country = yes
 		}
 		ai_will_do = {
@@ -1461,7 +1606,11 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			422 = { is_valid_annexation_state = no }
+			NOT = {
+				422 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_CEY_CONQ"
@@ -1486,7 +1635,11 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			279 = { is_valid_annexation_state = no }
+			NOT = {
+				279 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_CHL_CONQ"
@@ -1502,35 +1655,6 @@ annexation_decisions = {
 		}
 	}
 
-	# Northern Chile
-	annexation_NORTHERN_CHILE_CONQ = {
-		icon = generic_form_nation
-		selectable_mission = yes
-		days_mission_timeout = 60
-		is_good = no
-		cost = 0
-		fire_only_once = no
-		cancel_trigger = {
-			NOT = {
-				506 = { is_valid_annexation_state = yes } #Antofagasta
-				872 = { is_valid_annexation_state = yes } #Tacna
-				873 = { is_valid_annexation_state = yes } #Tarapaca
-			}
-		}
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision annexation_NORTHERN_CHILE_CONQ"
-			country_event = annex.359
-		}
-		timeout_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_NORTHERN_CHILE_CONQ"
-			set_country_flag = NORTHERN_CHILE_CONQ
-			occupy_small_country = yes
-		}
-		ai_will_do = {
-			factor = 100
-		}
-	}
-
 	# Ivory Coast
 	annexation_IVO_CONQ = {
 		icon = generic_form_nation
@@ -1540,7 +1664,11 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			807 = { is_valid_annexation_state = no }
+			NOT = {
+				807 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_IVO_CONQ"
@@ -1565,7 +1693,11 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			295 = { is_valid_annexation_state = no }
+			NOT = {
+				295 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_COG_CONQ"
@@ -1590,7 +1722,11 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			306 = { is_valid_annexation_state = no }
+			NOT = {
+				306 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_COL_CONQ"
@@ -1616,7 +1752,11 @@ annexation_decisions = {
 		fire_only_once = no
 		cancel_trigger = {
 			OR = {
-				316 = { is_valid_annexation_state = no }
+				NOT = {
+					316 = {
+						is_owned_and_controlled_by = ROOT
+					}
+				}
 				owns_ca_trigger = yes
 			}
 		}
@@ -1643,7 +1783,12 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			109 = { is_valid_annexation_state = no }
+			NOT = {
+				109 = {
+					is_owned_and_controlled_by = ROOT
+					is_claim_or_core_of_ROOT = no
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_CRO_CONQ"
@@ -1668,7 +1813,12 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			163 = { is_valid_annexation_state = no }
+			NOT = {
+				163 = {
+					is_owned_and_controlled_by = ROOT
+					is_claim_or_core_of_ROOT = no
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_CRO_DALMATIA_CONQ"
@@ -1693,10 +1843,15 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			OR = {
-				109 = { is_valid_annexation_state = no }
-				NOT = { 109 = { is_owned_and_controlled_by = HUN } }
-				NOT = { has_subject = HUN }
+			NOT = {
+				109 = {
+					is_owned_and_controlled_by = ROOT
+					is_claim_or_core_of_ROOT = no
+				}
+				AND = {
+					HUN = { is_subject_of = AUS }
+					109 = { is_owned_and_controlled_by = HUN }
+				}
 			}
 		}
 		complete_effect = {
@@ -1725,7 +1880,11 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			315 = { is_valid_annexation_state = no }
+			NOT = {
+				315 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_CUB_CONQ"
@@ -1750,7 +1909,11 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			296 = { is_valid_annexation_state = no }
+			NOT = {
+				296 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_CVG_CONQ"
@@ -1775,7 +1938,11 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			183 = { is_valid_annexation_state = no }
+			NOT = {
+				183 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_CYP_CONQ"
@@ -1879,7 +2046,12 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			9 = { is_valid_annexation_state = no }
+			NOT = {
+				9 = {
+					is_owned_and_controlled_by = ROOT
+					is_claim_or_core_of_ROOT = no
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_CZE_CONQ"
@@ -1904,7 +2076,11 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			876 = { is_valid_annexation_state = no }
+			NOT = {
+				876 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_DAH_CONQ"
@@ -1920,7 +2096,7 @@ annexation_decisions = {
 		}
 	}
 
-	# Iceland
+	# Danish Northern Atlantic (Greenland and Iceland)
 	annexation_ICE_CONQ = {
 		icon = generic_form_nation
 		selectable_mission = yes
@@ -1929,7 +2105,11 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			100 = { is_valid_annexation_state = no }
+			NOT = {
+				100 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_ICE_CONQ"
@@ -1938,30 +2118,6 @@ annexation_decisions = {
 		timeout_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_ICE_CONQ"
 			set_country_flag = ICE_CONQ
-		}
-		ai_will_do = {
-			factor = 100
-		}
-	}
-
-	# Greenland
-	annexation_GRN_CONQ = {
-		icon = generic_form_nation
-		selectable_mission = yes
-		days_mission_timeout = 60
-		is_good = no
-		cost = 0
-		fire_only_once = no
-		cancel_trigger = {
-			101 = { is_valid_annexation_state = no }
-		}
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision annexation_GRN_CONQ"
-			country_event = annex.372
-		}
-		timeout_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_GRN_CONQ"
-			set_country_flag = GRN_CONQ
 		}
 		ai_will_do = {
 			factor = 100
@@ -1977,7 +2133,11 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			37 = { is_valid_annexation_state = no }
+			NOT = {
+				37 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_DEN_CONQ"
@@ -2002,7 +2162,11 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			234 = { is_valid_annexation_state = no }
+			NOT = {
+				234 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_DKB_CONQ"
@@ -2027,7 +2191,11 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			319 = { is_valid_annexation_state = no }
+			NOT = {
+				319 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_DOM_CONQ"
@@ -2052,7 +2220,11 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			305 = { is_valid_annexation_state = no }
+			NOT = {
+				305 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_ECU_CONQ"
@@ -2130,7 +2302,11 @@ annexation_decisions = {
 		fire_only_once = no
 		cancel_trigger = {
 			OR = {
-				314 = { is_valid_annexation_state = no }
+				NOT = {
+					314 = {
+						is_owned_and_controlled_by = ROOT
+					}
+				}
 				owns_ca_trigger = yes
 			}
 		}
@@ -2157,7 +2333,12 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			1004 = { is_valid_annexation_state = no }
+			1004 = {
+				OR = {
+					NOT = { is_owned_and_controlled_by = ROOT }
+					is_claim_or_core_of_ROOT = yes
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_EMI_CONQ"
@@ -2182,7 +2363,12 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			126 = { is_valid_annexation_state = no }
+			NOT = {
+				126 = {
+					is_owned_and_controlled_by = ROOT
+					is_claim_or_core_of_ROOT = no
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_ENG_CONQ"
@@ -2213,7 +2399,11 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			550 = { is_valid_annexation_state = no }
+			NOT = {
+				550 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_ERI_CONQ"
@@ -2238,7 +2428,12 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			13 = { is_valid_annexation_state = no }
+			NOT = {
+				13 = {
+					is_owned_and_controlled_by = ROOT
+					is_claim_or_core_of_ROOT = no
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_EST_CONQ"
@@ -2263,7 +2458,11 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			271 = { is_valid_annexation_state = no }
+			NOT = {
+				271 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_ETH_CONQ"
@@ -2304,36 +2503,6 @@ annexation_decisions = {
 		}
 	}
 
-	# Aegean Coast
-	annexation_AEGEAN_CONQ = {
-		icon = generic_form_nation
-		selectable_mission = yes
-		days_mission_timeout = 60
-		is_good = no
-		cost = 0
-		fire_only_once = no
-		cancel_trigger = {
-			NOT = {
-				164 = { is_valid_annexation_state = yes } #Dodecanese
-				187 = { is_valid_annexation_state = yes } #Aegean Islands
-				339 = { is_valid_annexation_state = yes } #Smyrna
-				340 = { is_valid_annexation_state = yes } #Bursa
-				342 = { is_valid_annexation_state = yes } #Mugla
-			}
-		}
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision annexation_AEGEAN_CONQ"
-			country_event = annex.353
-		}
-		timeout_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_AEGEAN_CONQ"
-			set_country_flag = AEGEAN_CONQ
-			occupy_medium_country = yes
-		}
-		ai_will_do = {
-			factor = 10
-		}
-	}
 
 	# Lazistan
 	annexation_LAZISTAN_CONQ = {
@@ -2419,7 +2588,11 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			840 = { is_valid_annexation_state = no }
+			NOT = {
+				840 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_FIN_CONQ"
@@ -2444,7 +2617,11 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			171 = { is_valid_annexation_state = no }
+			NOT = {
+				171 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_GLC_CONQ"
@@ -2469,7 +2646,11 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			16 = { is_valid_annexation_state = no }
+			NOT = {
+				16 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_FRA_CONQ"
@@ -2493,35 +2674,6 @@ annexation_decisions = {
 		}
 	}
 
-	# Pas de Calais
-	annexation_PASDECALAIS_CONQ = {
-		icon = generic_form_nation
-		selectable_mission = yes
-		days_mission_timeout = 60
-		is_good = no
-		cost = 0
-		fire_only_once = no
-		cancel_trigger = {
-			NOT = {
-				17 = { is_valid_annexation_state = yes } #Pas-de-Calais
-				29 = { is_valid_annexation_state = yes } #Maritime Flanders
-				980 = { is_valid_annexation_state = yes } #French Hainaut
-			}
-		}
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision annexation_PASDECALAIS_CONQ"
-			country_event = annex.361
-		}
-		timeout_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_PASDECALAIS_CONQ"
-			set_country_flag = PASDECALAIS_CONQ
-			occupy_medium_country = yes
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
 	# Gabon
 	annexation_GAB_CONQ = {
 		icon = generic_form_nation
@@ -2531,7 +2683,11 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			539 = { is_valid_annexation_state = no }
+			NOT = {
+				539 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_GAB_CONQ"
@@ -2557,8 +2713,14 @@ annexation_decisions = {
 		fire_only_once = no
 		cancel_trigger = {
 			NOT = {
-				91 = { is_valid_annexation_state = yes } #Lemberg
-				88 = { is_valid_annexation_state = yes } #Krakow
+				91 = { #Lemberg
+					is_owned_and_controlled_by = ROOT
+					is_claim_or_core_of_ROOT = no
+				}
+				88 = { #Krakow
+					is_owned_and_controlled_by = ROOT
+					is_claim_or_core_of_ROOT = no
+				}
 			}
 		}
 		complete_effect = {
@@ -2585,8 +2747,14 @@ annexation_decisions = {
 		fire_only_once = no
 		cancel_trigger = {
 			NOT = {
-				713 = { is_valid_annexation_state = yes }
-				80 = { is_valid_annexation_state = yes }
+				713 = {
+					is_owned_and_controlled_by = ROOT
+					is_claim_or_core_of_ROOT = no
+				}
+				80 = {
+					is_owned_and_controlled_by = ROOT
+					is_claim_or_core_of_ROOT = no
+				}
 			}
 		}
 		complete_effect = {
@@ -2612,7 +2780,11 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			231 = { is_valid_annexation_state = no }
+			NOT = {
+				231 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_GEO_CONQ"
@@ -2638,11 +2810,9 @@ annexation_decisions = {
 		fire_only_once = no
 		cancel_trigger = {
 			NOT = {
-				AND = {
-					64 = { is_valid_annexation_state = yes }
-					51 = { is_valid_annexation_state = yes }
-					52 = { is_valid_annexation_state = yes }
-					59 = { is_valid_annexation_state = yes }
+				64 = {
+					is_owned_and_controlled_by = ROOT
+					is_claim_or_core_of_ROOT = no
 				}
 			}
 		}
@@ -2669,7 +2839,12 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			268 = { is_valid_annexation_state = no }
+			NOT = {
+				268 = {
+					is_owned_and_controlled_by = ROOT
+					is_claim_or_core_of_ROOT = no
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_GERSOM_CONQ"
@@ -2694,7 +2869,11 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			274 = { is_valid_annexation_state = no }
+			NOT = {
+				274 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_GHA_CONQ"
@@ -2719,7 +2898,11 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			806 = { is_valid_annexation_state = no }
+			NOT = {
+				806 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_GNA_CONQ"
@@ -2744,7 +2927,12 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			47 = { is_valid_annexation_state = no }
+			NOT = {
+				47 = {
+					is_owned_and_controlled_by = ROOT
+					is_claim_or_core_of_ROOT = no
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_GRE_CONQ"
@@ -2770,8 +2958,14 @@ annexation_decisions = {
 		fire_only_once = no
 		cancel_trigger = {
 			NOT = {
-				731 = { is_valid_annexation_state = yes }
-				769 = { is_valid_annexation_state = yes }
+				731 = {
+					is_owned_and_controlled_by = ROOT
+					is_claim_or_core_of_ROOT = no
+				}
+				769 = {
+					is_owned_and_controlled_by = ROOT
+					is_claim_or_core_of_ROOT = no
+				}
 			}
 		}
 		complete_effect = {
@@ -2797,7 +2991,12 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			766 = { is_valid_annexation_state = no }
+			NOT = {
+				766 = {
+					is_owned_and_controlled_by = ROOT
+					is_claim_or_core_of_ROOT = no
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_GRE_EPIRUS_CONQ"
@@ -2823,8 +3022,14 @@ annexation_decisions = {
 		fire_only_once = no
 		cancel_trigger = {
 			NOT = {
-				1089 = { is_valid_annexation_state = yes }
-				184 = { is_valid_annexation_state = yes }
+				1089 = {
+					is_owned_and_controlled_by = ROOT
+					is_claim_or_core_of_ROOT = no
+				}
+				184 = {
+					is_owned_and_controlled_by = ROOT
+					is_claim_or_core_of_ROOT = no
+				}
 			}
 		}
 		complete_effect = {
@@ -2850,7 +3055,12 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			687 = { is_valid_annexation_state = no }
+			NOT = {
+				687 = {
+					is_owned_and_controlled_by = ROOT
+					is_claim_or_core_of_ROOT = no
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_GYA_CONQ"
@@ -2876,7 +3086,11 @@ annexation_decisions = {
 		fire_only_once = no
 		cancel_trigger = {
 			OR = {
-				313 = { is_valid_annexation_state = no }
+				NOT = {
+					313 = {
+						is_owned_and_controlled_by = ROOT
+					}
+				}
 				owns_ca_trigger = yes
 			}
 		}
@@ -2903,7 +3117,11 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			318 = { is_valid_annexation_state = no }
+			NOT = {
+				318 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_HAI_CONQ"
@@ -2928,7 +3146,9 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			629 = { is_valid_annexation_state = no } #Hawaii
+			NOT = {
+				629 = { is_owned_and_controlled_by = ROOT } #Hawaii
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_HAW_CONQ"
@@ -2979,7 +3199,11 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			7 = { is_valid_annexation_state = no }
+			NOT = {
+				7 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_HOL_CONQ"
@@ -3005,7 +3229,11 @@ annexation_decisions = {
 		fire_only_once = no
 		cancel_trigger = {
 			OR = {
-				842 = { is_valid_annexation_state = no }
+				NOT = {
+					842 = {
+						is_owned_and_controlled_by = ROOT
+					}
+				}
 				owns_ca_trigger = yes
 			}
 		}
@@ -3032,7 +3260,11 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			43 = { is_valid_annexation_state = no }
+			NOT = {
+				43 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_HUN_CONQ"
@@ -3057,7 +3289,12 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			43 = { is_valid_annexation_state = no }
+			NOT = {
+				43 = {
+					is_owned_and_controlled_by = ROOT
+					is_claim_or_core_of_ROOT = no
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_HUN_AUS_CONQ"
@@ -3082,7 +3319,16 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			45 = { is_valid_annexation_state = no }
+			NOT = {
+				875 = {
+					is_owned_and_controlled_by = ROOT
+					is_claim_or_core_of_ROOT = no
+				}
+				45 = {
+					is_owned_and_controlled_by = ROOT
+					is_claim_or_core_of_ROOT = no
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_VOJVODINA_CONQ"
@@ -3098,56 +3344,6 @@ annexation_decisions = {
 		}
 	}
 
-	# Hungary - West Banat
-	annexation_WESTBANAT_CONQ = {
-		icon = generic_form_nation
-		selectable_mission = yes
-		days_mission_timeout = 60
-		is_good = no
-		cost = 0
-		fire_only_once = no
-		cancel_trigger = {
-			875 = { is_valid_annexation_state = no }
-		}
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision annexation_WESTBANAT_CONQ"
-			country_event = annex.364
-		}
-		timeout_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_WESTBANAT_CONQ"
-			set_country_flag = WESTBANAT_CONQ
-			occupy_small_country = yes
-		}
-		ai_will_do = {
-			factor = 10
-		}
-	}
-
-	# Iguassu
-	annexation_IGUASSU_CONQ = {
-		icon = generic_form_nation
-		selectable_mission = yes
-		days_mission_timeout = 60
-		is_good = no
-		cost = 0
-		fire_only_once = no
-		cancel_trigger = {
-			1041 = { is_valid_annexation_state = no }
-		}
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision annexation_IGUASSU_CONQ"
-			country_event = annex.351
-		}
-		timeout_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_IGUASSU_CONQ"
-			set_country_flag = IGUASSU_CONQ
-			occupy_small_country = yes
-		}
-		ai_will_do = {
-			factor = 100
-		}
-	}
-
 	# Indochina
 	annexation_INC_CONQ = {
 		icon = generic_form_nation
@@ -3157,12 +3353,10 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			if = {
-				limit = { tag = JAP }
-				NOT = { 286 = { is_owned_and_controlled_by = ROOT } }
-			}
-			else = {
-				286 = { is_valid_annexation_state = no }
+			NOT = {
+				286 = {
+					is_owned_and_controlled_by = ROOT
+				}
 			}
 		}
 		complete_effect = {
@@ -3188,9 +3382,17 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			439 = { is_valid_annexation_state = no }
-			431 = { is_valid_annexation_state = no }
-			427 = { is_valid_annexation_state = no }
+			NOT = {
+				439 = {
+					is_owned_and_controlled_by = ROOT
+				}
+				431 = {
+					is_owned_and_controlled_by = ROOT
+				}
+				427 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_IND_CONQ"
@@ -3215,12 +3417,10 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			if = {
-				limit = { tag = JAP }
-				NOT = { 335 = { is_owned_and_controlled_by = ROOT } }
-			}
-			else = {
-				335 = { is_valid_annexation_state = no }
+			NOT = {
+				335 = {
+					is_owned_and_controlled_by = ROOT
+				}
 			}
 		}
 		complete_effect = {
@@ -3246,21 +3446,28 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			113 = { is_valid_annexation_state = no }
+			NOT = {
+				113 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_IRE_CONQ"
-			country_event = annex.68
+			if = {
+				limit = { tag = GBR }
+				country_event = uk.110
+			}
+			else = {
+				country_event = annex.68
+			}
 		}
 		timeout_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_IRE_CONQ"
 			set_country_flag = IRE_CONQ
 			if = {
-				limit = { is_british_tag = yes }
+				limit = { tag = GBR }
 				occupy_huge_country = yes
-				set_country_flag = ENG_IRA
-				add_ideas = ENG_IRA
-				irish_republican_army_events = yes
 			}
 			else = {
 				occupy_medium_country = yes
@@ -3280,7 +3487,11 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			291 = { is_valid_annexation_state = no }
+			NOT = {
+				291 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_IRQ_CONQ"
@@ -3330,7 +3541,12 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			689 = { is_valid_annexation_state = no }
+			NOT = {
+				689 = {
+					is_owned_and_controlled_by = ROOT
+					is_claim_or_core_of_ROOT = no
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_JAM_CONQ"
@@ -3356,8 +3572,14 @@ annexation_decisions = {
 		fire_only_once = no
 		cancel_trigger = {
 			OR = {
-				282 = { is_valid_annexation_state = no }
-				531 = { is_valid_annexation_state = no }
+				NOT = {
+					282 = {
+						is_owned_and_controlled_by = ROOT
+					}
+					531 = {
+						is_owned_and_controlled_by = ROOT
+					}
+				}
 			}
 		}
 		complete_effect = {
@@ -3383,7 +3605,16 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			701 = { is_valid_annexation_state = no }
+			OR = {
+				NOT = {
+					701 = {
+						is_owned_and_controlled_by = ROOT
+					}
+				}
+				288 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_KAC_CONQ"
@@ -3408,7 +3639,11 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			927 = { is_valid_annexation_state = no }
+			NOT = {
+				927 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_CMR_CONQ"
@@ -3424,31 +3659,6 @@ annexation_decisions = {
 		}
 	}
 
-	# Karabakh
-	annexation_KARABAKH_CONQ = {
-		icon = generic_form_nation
-		selectable_mission = yes
-		days_mission_timeout = 60
-		is_good = no
-		cost = 0
-		fire_only_once = no
-		cancel_trigger = {
-			998 = { is_valid_annexation_state = no }
-		}
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision annexation_KARABAKH_CONQ"
-			country_event = annex.352
-		}
-		timeout_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_KARABAKH_CONQ"
-			set_country_flag = KARABAKH_CONQ
-			occupy_small_country = yes
-		}
-		ai_will_do = {
-			factor = 100
-		}
-	}
-
 	# Kikuyuland
 	annexation_KEN_CONQ = {
 		icon = generic_form_nation
@@ -3458,7 +3668,11 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			547 = { is_valid_annexation_state = no }
+			NOT = {
+				547 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_KEN_CONQ"
@@ -3483,7 +3697,12 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			1076 = { is_valid_annexation_state = no }
+			NOT = {
+				1076 = {
+					is_owned_and_controlled_by = ROOT
+					is_claim_or_core_of_ROOT = no
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_KERAF_CONQ"
@@ -3508,8 +3727,14 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			525 = { is_valid_annexation_state = no }
-			527 = { is_valid_annexation_state = no }
+			NOT = {
+				527 = {
+					is_owned_and_controlled_by = ROOT
+				}
+				525 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_KOR_CONQ"
@@ -3565,7 +3790,16 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			670 = { is_valid_annexation_state = no }
+			OR = {
+				NOT = {
+					670 = {
+						is_owned_and_controlled_by = ROOT
+					}
+				}
+				286 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_LAO_CONQ"
@@ -3591,8 +3825,14 @@ annexation_decisions = {
 		fire_only_once = no
 		cancel_trigger = {
 			NOT = {
-				190 = { is_valid_annexation_state = yes }
-				1091 = { is_valid_annexation_state = yes }
+				190 = {
+					is_owned_and_controlled_by = ROOT
+					is_claim_or_core_of_ROOT = no
+				}
+				1091 = {
+					is_owned_and_controlled_by = ROOT
+					is_claim_or_core_of_ROOT = no
+				}
 			}
 		}
 		complete_effect = {
@@ -3724,7 +3964,11 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			298 = { is_valid_annexation_state = no }
+			NOT = {
+				298 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_LIB_CONQ"
@@ -3751,10 +3995,15 @@ annexation_decisions = {
 		cancel_trigger = {
 			OR = {
 				NOT = {
-					96 = { is_valid_annexation_state = yes }
-					11 = { is_valid_annexation_state = yes }
+					96 = {
+						is_owned_and_controlled_by = ROOT
+						is_claim_or_core_of_ROOT = no
+					}
 				}
-				1091 = { is_valid_annexation_state = yes }
+				1091 = {
+					is_owned_and_controlled_by = ROOT
+					is_claim_or_core_of_ROOT = no
+				}
 			}
 		}
 		complete_effect = {
@@ -3771,31 +4020,6 @@ annexation_decisions = {
 		}
 	}
 
-	# Lithuania - Gumbinnen
-	annexation_GUMBINNEN_CONQ = {
-		icon = generic_form_nation
-		selectable_mission = yes
-		days_mission_timeout = 60
-		is_good = no
-		cost = 0
-		fire_only_once = no
-		cancel_trigger = {
-			188 = { is_valid_annexation_state = no }
-		}
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision annexation_GUMBINNEN_CONQ"
-			country_event = annex.344
-		}
-		timeout_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_GUMBINNEN_CONQ"
-			set_country_flag = GUMBINNEN_CONQ
-			occupy_small_country = yes
-		}
-		ai_will_do = {
-			factor = 100
-		}
-	}
-
 	# Lombardy
 	annexation_LOM_CONQ = {
 		icon = generic_form_nation
@@ -3805,7 +4029,12 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			159 = { is_valid_annexation_state = no }
+			159 = {
+				OR = {
+					NOT = { is_owned_and_controlled_by = ROOT }
+					is_claim_or_core_of_ROOT = yes
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_LOM_CONQ"
@@ -3830,7 +4059,16 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			8 = { is_valid_annexation_state = no }
+			OR = {
+				NOT = {
+					8 = {
+						is_owned_and_controlled_by = ROOT
+					}
+				}
+				64 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_LUX_CONQ"
@@ -3847,7 +4085,7 @@ annexation_decisions = {
 	}
 
 	# Madagascar
-	annexation_MAD_CONQ = {
+	annexation_MAG_CONQ = {
 		icon = generic_form_nation
 		selectable_mission = yes
 		days_mission_timeout = 60
@@ -3855,15 +4093,19 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			543 = { is_valid_annexation_state = no }
+			NOT = {
+				543 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision annexation_MAD_CONQ"
+			log = "[GetDateText]: [Root.GetName]: Decision annexation_MAG_CONQ"
 			country_event = annex.223
 		}
 		timeout_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_MAD_CONQ"
-			set_country_flag = MAD_CONQ
+			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_MAG_CONQ"
+			set_country_flag = MAG_CONQ
 			occupy_small_country = yes
 		}
 		ai_will_do = {
@@ -3872,7 +4114,7 @@ annexation_decisions = {
 	}
 
 	# Mali
-	annexation_MLI_CONQ = {
+	annexation_MAL_CONQ = {
 		icon = generic_form_nation
 		selectable_mission = yes
 		days_mission_timeout = 60
@@ -3880,15 +4122,19 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			556 = { is_valid_annexation_state = no }
+			NOT = {
+				556 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision annexation_MLI_CONQ"
+			log = "[GetDateText]: [Root.GetName]: Decision annexation_MAL_CONQ"
 			country_event = annex.214
 		}
 		timeout_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_MLI_CONQ"
-			set_country_flag = MLI_CONQ
+			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_MAL_CONQ"
+			set_country_flag = MAL_CONQ
 			occupy_medium_country = yes
 		}
 		ai_will_do = {
@@ -3906,7 +4152,11 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			116 = { is_valid_annexation_state = no }
+			NOT = {
+				116 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_MLT_CONQ"
@@ -3931,7 +4181,11 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			277 = { is_valid_annexation_state = no }
+			NOT = {
+				277 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_MEX_CONQ"
@@ -3969,7 +4223,11 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			871 = { is_valid_annexation_state = no }
+			NOT = {
+				871 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_MLW_CONQ"
@@ -3986,7 +4244,7 @@ annexation_decisions = {
 	}
 
 	# Malaysia
-	annexation_MAL_CONQ = {
+	annexation_MLY_CONQ = {
 		icon = generic_form_nation
 		selectable_mission = yes
 		days_mission_timeout = 60
@@ -3994,22 +4252,20 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			if = {
-				limit = { tag = JAP }
-				NOT = { 846 = { is_owned_and_controlled_by = ROOT } }
-			}
-			else = {
-				846 = { is_valid_annexation_state = no }
+			NOT = {
+				846 = {
+					is_owned_and_controlled_by = ROOT
+				}
 			}
 		}
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision annexation_MAL_CONQ"
+			log = "[GetDateText]: [Root.GetName]: Decision annexation_MLY_CONQ"
 			country_event = annex.227
 		}
 		timeout_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_MAL_CONQ"
+			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_MLY_CONQ"
 			occupy_medium_country = yes
-			set_country_flag = MAL_CONQ
+			set_country_flag = MLY_CONQ
 		}
 		ai_will_do = {
 			factor = 100
@@ -4025,7 +4281,12 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			105 = { is_valid_annexation_state = no }
+			NOT = {
+				105 = {
+					is_owned_and_controlled_by = ROOT
+					is_claim_or_core_of_ROOT = no
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_MNT_CONQ"
@@ -4050,11 +4311,23 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			461 = { is_valid_annexation_state = no }
+			NOT = {
+				461 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_MOR_CONQ"
-			country_event = annex.60
+			if = {
+				limit = {
+					has_socialist_government = yes
+				}
+				country_event = annex.60
+				else = {
+					country_event = annex.167
+				}
+			}
 		}
 		timeout_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_MOR_CONQ"
@@ -4075,7 +4348,11 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			544 = { is_valid_annexation_state = no }
+			NOT = {
+				950 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_MZB_CONQ"
@@ -4100,7 +4377,11 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			557 = { is_valid_annexation_state = no }
+			NOT = {
+				557 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_MRT_CONQ"
@@ -4125,7 +4406,11 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			541 = { is_valid_annexation_state = no }
+			NOT = {
+				541 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_NMB_CONQ"
@@ -4141,31 +4426,6 @@ annexation_decisions = {
 		}
 	}
 
-	# New England
-	annexation_NEE_CONQ = {
-		icon = generic_form_nation
-		selectable_mission = yes
-		days_mission_timeout = 60
-		is_good = no
-		cost = 0
-		fire_only_once = no
-		cancel_trigger = {
-			932 = { is_valid_annexation_state = no } #Massachusetts
-		}
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision annexation_NEE_CONQ"
-			country_event = annex.370
-		}
-		timeout_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_NEE_CONQ"
-			set_country_flag = NEE_CONQ
-			occupy_large_country = yes
-		}
-		ai_will_do = {
-			factor = 100
-		}
-	}
-
 	# Nepal
 	annexation_NEP_CONQ = {
 		icon = generic_form_nation
@@ -4175,7 +4435,11 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			323 = { is_valid_annexation_state = no }
+			NOT = {
+				323 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_NEP_CONQ"
@@ -4206,7 +4470,11 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			284 = { is_valid_annexation_state = no }
+			NOT = {
+				284 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_NZL_CONQ"
@@ -4223,7 +4491,7 @@ annexation_decisions = {
 	}
 
 	# Niger
-	annexation_NGR_CONQ = {
+	annexation_NER_CONQ = {
 		icon = generic_form_nation
 		selectable_mission = yes
 		days_mission_timeout = 60
@@ -4231,15 +4499,19 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			809 = { is_valid_annexation_state = no }
+			NOT = {
+				809 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision annexation_NGR_CONQ"
+			log = "[GetDateText]: [Root.GetName]: Decision annexation_NER_CONQ"
 			country_event = annex.216
 		}
 		timeout_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_NGR_CONQ"
-			set_country_flag = NGR_CONQ
+			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_NER_CONQ"
+			set_country_flag = NER_CONQ
 			occupy_medium_country = yes
 		}
 		ai_will_do = {
@@ -4247,7 +4519,7 @@ annexation_decisions = {
 		}
 	}
 
-	# North German Federation
+	# Hanover
 	annexation_NGF_CONQ = {
 		icon = generic_form_nation
 		selectable_mission = yes
@@ -4256,7 +4528,12 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			59 = { is_valid_annexation_state = no }
+			NOT = {
+				59 = {
+					is_owned_and_controlled_by = ROOT
+					is_claim_or_core_of_ROOT = no
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_NGF_CONQ"
@@ -4268,12 +4545,12 @@ annexation_decisions = {
 			set_country_flag = NGF_CONQ
 		}
 		ai_will_do = {
-			factor = 20
+			factor = 1
 		}
 	}
 
 	# Nigeria
-	annexation_NGA_CONQ = {
+	annexation_NGR_CONQ = {
 		icon = generic_form_nation
 		selectable_mission = yes
 		days_mission_timeout = 60
@@ -4281,15 +4558,17 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			973 = { is_valid_annexation_state = no } #Lagos
+			NOT = {
+				973 = { is_owned_and_controlled_by = ROOT } #Lagos
+			}
 		}
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision annexation_NGA_CONQ"
+			log = "[GetDateText]: [Root.GetName]: Decision annexation_NGR_CONQ"
 			country_event = annex.205
 		}
 		timeout_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_NGA_CONQ"
-			set_country_flag = NGA_CONQ
+			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_NGR_CONQ"
+			set_country_flag = NGR_CONQ
 			occupy_medium_country = yes
 		}
 		ai_will_do = {
@@ -4307,7 +4586,11 @@ annexation_decisions = {
 		fire_only_once = no
 		cancel_trigger = {
 			OR = {
-				317 = { is_valid_annexation_state = no }
+				NOT = {
+					317 = {
+						is_owned_and_controlled_by = ROOT
+					}
+				}
 				owns_ca_trigger = yes
 			}
 		}
@@ -4334,7 +4617,12 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			767 = { is_valid_annexation_state = no }
+			NOT = {
+				767 = {
+					is_owned_and_controlled_by = ROOT
+					is_claim_or_core_of_ROOT = no
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_NIIS_CONQ"
@@ -4359,7 +4647,11 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			110 = { is_valid_annexation_state = no }
+			NOT = {
+				110 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_NOR_CONQ"
@@ -4376,7 +4668,7 @@ annexation_decisions = {
 	}
 
 	# Southern France
-	annexation_SOUTHFRANCE_CONQ = {
+	annexation_OCC_CONQ = {
 		icon = generic_form_nation
 		selectable_mission = yes
 		days_mission_timeout = 60
@@ -4384,16 +4676,34 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			21 = { is_valid_annexation_state = no }
+			OR = {
+				NOT = {
+					21 = {
+						is_owned_and_controlled_by = ROOT
+					}
+				}
+				16 = {
+					is_owned_and_controlled_by = ROOT
+				}
+				controls_state = 16
+				16 = {
+					controller = {
+						OR = {
+							is_in_faction_with = ROOT
+							is_subject_of = ROOT
+						}
+					}
+				}
+			}
 		}
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision annexation_SOUTHFRANCE_CONQ"
+			log = "[GetDateText]: [Root.GetName]: Decision annexation_OCC_CONQ"
 			country_event = annex.158
 		}
 		timeout_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_SOUTHFRANCE_CONQ"
+			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_OCC_CONQ"
 			occupy_medium_country = yes
-			set_country_flag = SOUTHFRANCE_CONQ
+			set_country_flag = OCC_CONQ
 		}
 		ai_will_do = {
 			factor = 100
@@ -4409,7 +4719,11 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			294 = { is_valid_annexation_state = no }
+			NOT = {
+				294 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_OMA_CONQ"
@@ -4434,7 +4748,11 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			304 = { is_valid_annexation_state = no }
+			NOT = {
+				304 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_PAN_CONQ"
@@ -4461,8 +4779,14 @@ annexation_decisions = {
 		fire_only_once = no
 		cancel_trigger = {
 			NOT = {
-				523 = { is_valid_annexation_state = yes }
-				757 = { is_valid_annexation_state = yes }
+				523 = {
+					is_owned_and_controlled_by = ROOT
+					is_claim_or_core_of_ROOT = no
+				}
+				757 = {
+					is_owned_and_controlled_by = ROOT
+					is_claim_or_core_of_ROOT = no
+				}
 			}
 		}
 		complete_effect = {
@@ -4479,31 +4803,6 @@ annexation_decisions = {
 		}
 	}
 
-	# Pastaza
-	annexation_PASTAZA_CONQ = {
-		icon = generic_form_nation
-		selectable_mission = yes
-		days_mission_timeout = 60
-		is_good = no
-		cost = 0
-		fire_only_once = no
-		cancel_trigger = {
-			490 = { is_valid_annexation_state = no }
-		}
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision annexation_PASTAZA_CONQ"
-			country_event = annex.358
-		}
-		timeout_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_PASTAZA_CONQ"
-			set_country_flag = PASTAZA_CONQ
-			occupy_small_country = yes
-		}
-		ai_will_do = {
-			factor = 100
-		}
-	}
-
 	# Rome
 	annexation_PAP_CONQ = {
 		icon = generic_form_nation
@@ -4513,7 +4812,12 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			1004 = { is_valid_annexation_state = no }
+			1004 = {
+				OR = {
+					NOT = { is_owned_and_controlled_by = ROOT }
+					is_claim_or_core_of_ROOT = yes
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_PAP_CONQ"
@@ -4540,10 +4844,22 @@ annexation_decisions = {
 		cancel_trigger = {
 			OR = {
 				NOT = {
-					764 = { is_valid_annexation_state = yes } #Viterbo
-					1005 = { is_valid_annexation_state = yes } #Umbria
-					157 = { is_valid_annexation_state = yes } #Marche
-					161 = { is_valid_annexation_state = yes } #Romagna
+					764 = { #Viterbo
+						is_owned_and_controlled_by = ROOT
+						is_claim_or_core_of_ROOT = no
+					}
+					1005 = { #Umbria
+						is_owned_and_controlled_by = ROOT
+						is_claim_or_core_of_ROOT = no
+					}
+					157 = { #Marche
+						is_owned_and_controlled_by = ROOT
+						is_claim_or_core_of_ROOT = no
+					}
+					161 = { #Romagna
+						is_owned_and_controlled_by = ROOT
+						is_claim_or_core_of_ROOT = no
+					}
 				}
 				NOT = {
 					PAP = { is_ally_of_ROOT = yes }
@@ -4557,10 +4873,22 @@ annexation_decisions = {
 						has_socialist_government = no
 						count_triggers = {
 							amount = 3
-							764 = { is_valid_annexation_state = yes } #Viterbo
-							1005 = { is_valid_annexation_state = yes } #Umbria
-							157 = { is_valid_annexation_state = yes } #Marche
-							161 = { is_valid_annexation_state = yes } #Romagna
+							764 = { #Viterbo
+								is_owned_and_controlled_by = ROOT
+								is_claim_or_core_of_ROOT = no
+							}
+							1005 = { #Umbria
+								is_owned_and_controlled_by = ROOT
+								is_claim_or_core_of_ROOT = no
+							}
+							157 = { #Marche
+								is_owned_and_controlled_by = ROOT
+								is_claim_or_core_of_ROOT = no
+							}
+							161 = { #Romagna
+								is_owned_and_controlled_by = ROOT
+								is_claim_or_core_of_ROOT = no
+							}
 						}
 						PAP = {
 							exists = yes
@@ -4578,10 +4906,22 @@ annexation_decisions = {
 						has_socialist_government = no
 						count_triggers = {
 							amount = 3
-							764 = { is_valid_annexation_state = yes } #Viterbo
-							1005 = { is_valid_annexation_state = yes } #Umbria
-							157 = { is_valid_annexation_state = yes } #Marche
-							161 = { is_valid_annexation_state = yes } #Romagna
+							764 = { #Viterbo
+								is_owned_and_controlled_by = ROOT
+								is_claim_or_core_of_ROOT = no
+							}
+							1005 = { #Umbria
+								is_owned_and_controlled_by = ROOT
+								is_claim_or_core_of_ROOT = no
+							}
+							157 = { #Marche
+								is_owned_and_controlled_by = ROOT
+								is_claim_or_core_of_ROOT = no
+							}
+							161 = { #Romagna
+								is_owned_and_controlled_by = ROOT
+								is_claim_or_core_of_ROOT = no
+							}
 						}
 						SIC = {
 							exists = yes
@@ -4619,7 +4959,12 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			301 = { is_valid_annexation_state = no }
+			NOT = {
+				301 = {
+					is_owned_and_controlled_by = ROOT
+					is_not_claim_or_core_of_ROOT = yes
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_PAR_CONQ"
@@ -4634,7 +4979,7 @@ annexation_decisions = {
 			factor = 100
 		}
 	}
-
+	
 	# Paraguay - Chaco
 	annexation_PAR_CHACO_CONQ = {
 		icon = generic_form_nation
@@ -4644,8 +4989,16 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			688 = { is_valid_annexation_state = no }
-			1027 = { is_valid_annexation_state = no }
+			NOT = {
+				688 = {
+					is_owned_and_controlled_by = ROOT
+					is_not_claim_or_core_of_ROOT = yes
+				}
+				1027 = {
+					is_owned_and_controlled_by = ROOT
+					is_not_claim_or_core_of_ROOT = yes
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_PAR_CHACO_CONQ"
@@ -4670,7 +5023,11 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			266 = { is_valid_annexation_state = no }
+			NOT = {
+				266 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_PER_CONQ"
@@ -4695,12 +5052,10 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			if = {
-				limit = { tag = JAP }
-				NOT = { 327 = { is_owned_and_controlled_by = ROOT } }
-			}
-			else = {
-				327 = { is_valid_annexation_state = no }
+			NOT = {
+				327 = {
+					is_owned_and_controlled_by = ROOT
+				}
 			}
 		}
 		complete_effect = {
@@ -4727,7 +5082,12 @@ annexation_decisions = {
 		fire_only_once = no
 		cancel_trigger = {
 			OR = {
-				158 = { is_valid_annexation_state = no }
+				158 = {
+					NOT = { is_owned_and_controlled_by = ROOT }
+				}
+				158 = {
+					is_claim_or_core_of_ROOT = yes
+				}
 				NOT = {
 					ITA = { is_ally_of_ROOT = yes }
 					SRI = { is_ally_of_ROOT = yes }
@@ -4747,7 +5107,10 @@ annexation_decisions = {
 						tooltip = can_offer_land_to_SRD
 						is_faction_leader = yes
 						has_socialist_government = no
-						838 = { is_valid_annexation_state = yes }
+						838 = {
+							is_owned_and_controlled_by = ROOT
+							is_claim_or_core_of_ROOT = no
+						}
 						SRD = {
 							exists = yes
 							is_subject = no
@@ -4796,7 +5159,12 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			10 = { is_valid_annexation_state = no }
+			NOT = {
+				10 = {
+					is_owned_and_controlled_by = ROOT
+					is_claim_or_core_of_ROOT = no
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_POL_CONQ"
@@ -4812,156 +5180,6 @@ annexation_decisions = {
 		}
 	}
 
-	# Poland - Posen
-	annexation_POSEN_CONQ = {
-		icon = generic_form_nation
-		selectable_mission = yes
-		days_mission_timeout = 60
-		is_good = no
-		cost = 0
-		fire_only_once = no
-		cancel_trigger = {
-			86 = { is_valid_annexation_state = no }
-		}
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision annexation_POSEN_CONQ"
-			country_event = annex.339
-		}
-		timeout_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_POSEN_CONQ"
-			set_country_flag = POSEN_CONQ
-			occupy_small_country = yes
-		}
-		ai_will_do = {
-			factor = 100
-		}
-	}
-
-	# Poland - Upper Silesia
-	annexation_UPPERSILESIA_CONQ = {
-		icon = generic_form_nation
-		selectable_mission = yes
-		days_mission_timeout = 60
-		is_good = no
-		cost = 0
-		fire_only_once = no
-		cancel_trigger = {
-			67 = { is_valid_annexation_state = no }
-		}
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision annexation_UPPERSILESIA_CONQ"
-			country_event = annex.340
-		}
-		timeout_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_UPPERSILESIA_CONQ"
-			set_country_flag = UPPERSILESIA_CONQ
-			occupy_small_country = yes
-		}
-		ai_will_do = {
-			factor = 100
-		}
-	}
-
-	# Poland - West Prussia
-	annexation_WESTPRUSSIA_CONQ = {
-		icon = generic_form_nation
-		selectable_mission = yes
-		days_mission_timeout = 60
-		is_good = no
-		cost = 0
-		fire_only_once = no
-		cancel_trigger = {
-			776 = { is_valid_annexation_state = no }
-		}
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision annexation_WESTPRUSSIA_CONQ"
-			country_event = annex.341
-		}
-		timeout_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_WESTPRUSSIA_CONQ"
-			set_country_flag = WESTPRUSSIA_CONQ
-			occupy_small_country = yes
-		}
-		ai_will_do = {
-			factor = 100
-		}
-	}
-
-	# Poland - East Prussia
-	annexation_EASTPRUSSIA_CONQ = {
-		icon = generic_form_nation
-		selectable_mission = yes
-		days_mission_timeout = 60
-		is_good = no
-		cost = 0
-		fire_only_once = no
-		cancel_trigger = {
-			5 = { is_valid_annexation_state = no }
-		}
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision annexation_EASTPRUSSIA_CONQ"
-			country_event = annex.342
-		}
-		timeout_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_EASTPRUSSIA_CONQ"
-			set_country_flag = EASTPRUSSIA_CONQ
-			occupy_small_country = yes
-		}
-		ai_will_do = {
-			factor = 100
-		}
-	}
-
-	# Poland - Masuria
-	annexation_MASURIA_CONQ = {
-		icon = generic_form_nation
-		selectable_mission = yes
-		days_mission_timeout = 60
-		is_good = no
-		cost = 0
-		fire_only_once = no
-		cancel_trigger = {
-			777 = { is_valid_annexation_state = no }
-		}
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision annexation_MASURIA_CONQ"
-			country_event = annex.343
-		}
-		timeout_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_MASURIA_CONQ"
-			set_country_flag = MASURIA_CONQ
-			occupy_small_country = yes
-		}
-		ai_will_do = {
-			factor = 100
-		}
-	}
-
-	# Ponta Pora
-	annexation_PONTAPORA_CONQ = {
-		icon = generic_form_nation
-		selectable_mission = yes
-		days_mission_timeout = 60
-		is_good = no
-		cost = 0
-		fire_only_once = no
-		cancel_trigger = {
-			1043 = { is_valid_annexation_state = no }
-		}
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision annexation_PONTAPORA_CONQ"
-			country_event = annex.350
-		}
-		timeout_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_PONTAPORA_CONQ"
-			set_country_flag = PONTAPORA_CONQ
-			occupy_small_country = yes
-		}
-		ai_will_do = {
-			factor = 100
-		}
-	}
-
 	# Portugal
 	annexation_POR_CONQ = {
 		icon = generic_form_nation
@@ -4971,7 +5189,11 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			112 = { is_valid_annexation_state = no }
+			NOT = {
+				112 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_POR_CONQ"
@@ -4986,7 +5208,7 @@ annexation_decisions = {
 			factor = 100
 		}
 	}
-
+	
 	# Prussia
 	annexation_DDR_CONQ = {
 		icon = generic_form_nation
@@ -4997,8 +5219,14 @@ annexation_decisions = {
 		fire_only_once = no
 		cancel_trigger = {
 			NOT = {
-				5 = { is_valid_annexation_state = yes }
-				64 = { is_valid_annexation_state = yes }
+				5 = {
+					is_owned_and_controlled_by = ROOT
+					is_claim_or_core_of_ROOT = no
+				}
+				64 = {
+					is_owned_and_controlled_by = ROOT
+					is_claim_or_core_of_ROOT = no
+				}
 			}
 		}
 		complete_effect = {
@@ -5011,12 +5239,12 @@ annexation_decisions = {
 			set_country_flag = DDR_CONQ
 		}
 		ai_will_do = {
-			factor = 20
+			factor = 1
 		}
 	}
 
 	# Puerto Rico
-	annexation_PUE_CONQ = {
+	annexation_PRI_CONQ = {
 		icon = generic_form_nation
 		selectable_mission = yes
 		days_mission_timeout = 60
@@ -5024,15 +5252,20 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			686 = { is_valid_annexation_state = no }
+			NOT = {
+				686 = {
+					is_owned_and_controlled_by = ROOT
+					is_claim_or_core_of_ROOT = no
+				}
+			}
 		}
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision annexation_PUE_CONQ"
+			log = "[GetDateText]: [Root.GetName]: Decision annexation_PRI_CONQ"
 			country_event = annex.271
 		}
 		timeout_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_PUE_CONQ"
-			set_country_flag = PUE_CONQ
+			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_PRI_CONQ"
+			set_country_flag = PRI_CONQ
 			occupy_small_country = yes
 		}
 		ai_will_do = {
@@ -5049,7 +5282,11 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			303 = { is_valid_annexation_state = no }
+			NOT = {
+				303 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_PRU_CONQ"
@@ -5074,7 +5311,12 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			46 = { is_valid_annexation_state = no }
+			NOT = {
+				46 = {
+					is_owned_and_controlled_by = ROOT
+					is_claim_or_core_of_ROOT = no
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_ROM_CONQ"
@@ -5099,7 +5341,11 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			219 = { is_valid_annexation_state = no }
+			NOT = {
+				219 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_RUS_CONQ"
@@ -5115,109 +5361,6 @@ annexation_decisions = {
 		}
 	}
 
-	# Russia - Dvinsk
-	annexation_DVINSK_CONQ = {
-		icon = generic_form_nation
-		selectable_mission = yes
-		days_mission_timeout = 60
-		is_good = no
-		cost = 0
-		fire_only_once = no
-		cancel_trigger = {
-			880 = { is_valid_annexation_state = no }
-		}
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision annexation_DVINSK_CONQ"
-			country_event = annex.345
-		}
-		timeout_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_DVINSK_CONQ"
-			set_country_flag = DVINSK_CONQ
-			occupy_small_country = yes
-		}
-		ai_will_do = {
-			factor = 100
-		}
-	}
-
-	# Russia - Karelia
-	annexation_KARELIA_CONQ = {
-		icon = generic_form_nation
-		selectable_mission = yes
-		days_mission_timeout = 60
-		is_good = no
-		cost = 0
-		fire_only_once = no
-		cancel_trigger = {
-			NOT = {
-				146 = { is_valid_annexation_state = yes }
-				213 = { is_valid_annexation_state = yes }
-			}
-		}
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision annexation_KARELIA_CONQ"
-			country_event = annex.346
-		}
-		timeout_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_KARELIA_CONQ"
-			set_country_flag = KARELIA_CONQ
-			occupy_medium_country = yes
-		}
-		ai_will_do = {
-			factor = 100
-		}
-	}
-
-	# Russia - Sakhalin
-	annexation_SAKHALIN_CONQ = {
-		icon = generic_form_nation
-		selectable_mission = yes
-		days_mission_timeout = 60
-		is_good = no
-		cost = 0
-		fire_only_once = no
-		cancel_trigger = {
-			537 = { is_valid_annexation_state = no }
-		}
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision annexation_SAKHALIN_CONQ"
-			country_event = annex.347
-		}
-		timeout_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_SAKHALIN_CONQ"
-			set_country_flag = SAKHALIN_CONQ
-			occupy_small_country = yes
-		}
-		ai_will_do = {
-			factor = 100
-		}
-	}
-
-	# Russia - Tuva
-	annexation_TUVA_CONQ = {
-		icon = generic_form_nation
-		selectable_mission = yes
-		days_mission_timeout = 60
-		is_good = no
-		cost = 0
-		fire_only_once = no
-		cancel_trigger = {
-			329 = { is_valid_annexation_state = no }
-		}
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision annexation_TUVA_CONQ"
-			country_event = annex.348
-		}
-		timeout_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_TUVA_CONQ"
-			set_country_flag = TUVA_CONQ
-			occupy_small_country = yes
-		}
-		ai_will_do = {
-			factor = 100
-		}
-	}
-
 	# Rwanda
 	annexation_RWA_CONQ = {
 		icon = generic_form_nation
@@ -5227,7 +5370,15 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			869 = { is_valid_annexation_state = no }
+			OR = {
+				965 = {
+					is_owned_and_controlled_by = ROOT
+					is_claim_or_core_of_ROOT = no
+				}
+				NOT = {
+					869 = { is_owned_and_controlled_by = ROOT }
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_RWA_CONQ"
@@ -5252,7 +5403,11 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			681 = { is_valid_annexation_state = no }
+			NOT = {
+				681 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_SAF_CONQ"
@@ -5277,12 +5432,10 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			if = {
-				limit = { tag = JAP }
-				NOT = { 333 = { is_owned_and_controlled_by = ROOT } }
-			}
-			else = {
-				333 = { is_valid_annexation_state = no }
+			NOT = {
+				333 = {
+					is_owned_and_controlled_by = ROOT
+				}
 			}
 		}
 		complete_effect = {
@@ -5299,8 +5452,8 @@ annexation_decisions = {
 		}
 	}
 
-	# Northern Schleswig
-	annexation_SCHLESWIG_CONQ = {
+	# Nejd
+	annexation_SAU_CONQ = {
 		icon = generic_form_nation
 		selectable_mission = yes
 		days_mission_timeout = 60
@@ -5308,16 +5461,23 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			782 = { is_valid_annexation_state = no }
+			NOT = {
+				915 = {
+					is_owned_and_controlled_by = ROOT
+				}
+				292 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision annexation_SCHLESWIG_CONQ"
-			country_event = annex.338
+			log = "[GetDateText]: [Root.GetName]: Decision annexation_SAU_CONQ"
+			country_event = annex.106
 		}
 		timeout_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_SCHLESWIG_CONQ"
-			set_country_flag = SCHLESWIG_CONQ
-			occupy_small_country = yes
+			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_SAU_CONQ"
+			occupy_medium_country = yes
+			set_country_flag = SAU_CONQ
 		}
 		ai_will_do = {
 			factor = 100
@@ -5325,7 +5485,7 @@ annexation_decisions = {
 	}
 
 	# Scotland
-	annexation_SCO_CONQ = {
+	annexation_SCT_CONQ = {
 		icon = generic_form_nation
 		selectable_mission = yes
 		days_mission_timeout = 60
@@ -5333,15 +5493,20 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			121 = { is_valid_annexation_state = no }
+			NOT = {
+				121 = {
+					is_owned_and_controlled_by = ROOT
+					is_claim_or_core_of_ROOT = no
+				}
+			}
 		}
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision annexation_SCO_CONQ"
+			log = "[GetDateText]: [Root.GetName]: Decision annexation_SCT_CONQ"
 			country_event = annex.301
 		}
 		timeout_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_SCO_CONQ"
-			set_country_flag = SCO_CONQ
+			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_SCT_CONQ"
+			set_country_flag = SCT_CONQ
 			occupy_medium_country = yes
 		}
 		ai_will_do = {
@@ -5358,7 +5523,11 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			272 = { is_valid_annexation_state = no }
+			NOT = {
+				272 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_SEN_CONQ"
@@ -5383,7 +5552,12 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			107 = { is_valid_annexation_state = no }
+			NOT = {
+				107 = {
+					is_owned_and_controlled_by = ROOT
+					is_claim_or_core_of_ROOT = no
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_SER_CONQ"
@@ -5408,7 +5582,12 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			841 = { is_valid_annexation_state = no }
+			NOT = {
+				841 = {
+					is_owned_and_controlled_by = ROOT
+					is_claim_or_core_of_ROOT = no
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_SER_PIROT_CONQ"
@@ -5433,7 +5612,12 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			106 = { is_valid_annexation_state = no }
+			NOT = {
+				106 = {
+					is_owned_and_controlled_by = ROOT
+					is_claim_or_core_of_ROOT = no
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_SER_MACED_CONQ"
@@ -5458,7 +5642,12 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			765 = { is_valid_annexation_state = no }
+			NOT = {
+				765 = {
+					is_owned_and_controlled_by = ROOT
+					is_claim_or_core_of_ROOT = no
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_SER_KOSOVO_CONQ"
@@ -5483,7 +5672,16 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			72 = { is_valid_annexation_state = no }
+			OR = {
+				NOT = {
+					72 = {
+						is_owned_and_controlled_by = ROOT
+					}
+				}
+				288 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_SHA_CONQ"
@@ -5508,7 +5706,11 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			289 = { is_valid_annexation_state = no }
+			NOT = {
+				289 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_SIA_CONQ"
@@ -5533,7 +5735,11 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			570 = { is_valid_annexation_state = no }
+			NOT = {
+				570 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_SIB_CONQ"
@@ -5558,7 +5764,14 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			117 = { is_valid_annexation_state = no }
+			OR = {
+				117 = {
+					NOT = { is_owned_and_controlled_by = ROOT }
+				}
+				117 = {
+					is_claim_or_core_of_ROOT = yes
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_SIC_CONQ"
@@ -5583,7 +5796,11 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			700 = { is_valid_annexation_state = no }
+			NOT = {
+				700 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_SIE_CONQ"
@@ -5625,7 +5842,7 @@ annexation_decisions = {
 	}
 
 	# Slovenia
-	annexation_SLV_CONQ = {
+	annexation_SLO_CONQ = {
 		icon = generic_form_nation
 		selectable_mission = yes
 		days_mission_timeout = 60
@@ -5633,15 +5850,35 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			102 = { is_valid_annexation_state = no }
+			NOT = {
+				102 = {
+					is_owned_and_controlled_by = ROOT
+					is_claim_or_core_of_ROOT = no
+				}
+				
+				1103 = {
+					is_owned_and_controlled_by = ROOT
+					is_claim_or_core_of_ROOT = no
+				}
+				
+				1101 = {
+					is_owned_and_controlled_by = ROOT
+					is_claim_or_core_of_ROOT = no
+				}
+				
+				1104 = {
+					is_owned_and_controlled_by = ROOT
+					is_claim_or_core_of_ROOT = no
+				}
+			}
 		}
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision annexation_SLV_CONQ"
+			log = "[GetDateText]: [Root.GetName]: Decision annexation_SLO_CONQ"
 			country_event = annex.21
 		}
 		timeout_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_SLV_CONQ"
-			set_country_flag = SLV_CONQ
+			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_SLO_CONQ"
+			set_country_flag = SLO_CONQ
 			occupy_small_country = yes
 		}
 		ai_will_do = {
@@ -5658,7 +5895,11 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			559 = { is_valid_annexation_state = no }
+			NOT = {
+				559 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_SOM_CONQ"
@@ -5683,41 +5924,28 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			41 = { is_valid_annexation_state = no }
+			NOT = {
+				41 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_SPA_CONQ"
-			country_event = annex.73
+			if = {
+				limit = {
+					tag = POR
+				}
+				country_event = annex.66
+				else = {
+					country_event = annex.73
+				}
+			}
 		}
 		timeout_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_SPA_CONQ"
-			occupy_large_country = yes
+			occupy_medium_country = yes
 			set_country_flag = SPA_CONQ
-		}
-		ai_will_do = {
-			factor = 100
-		}
-	}
-
-	# Spain - Centre
-	annexation_CENTRAL_SPAIN_CONQ = {
-		icon = generic_form_nation
-		selectable_mission = yes
-		days_mission_timeout = 60
-		is_good = no
-		cost = 0
-		fire_only_once = no
-		cancel_trigger = {
-			41 = { is_valid_annexation_state = no }
-		}
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision annexation_CENTRAL_SPAIN_CONQ"
-			country_event = annex.66
-		}
-		timeout_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_CENTRAL_SPAIN_CONQ"
-			occupy_large_country = yes
-			set_country_flag = CENTRAL_SPAIN_CONQ
 		}
 		ai_will_do = {
 			factor = 100
@@ -5734,7 +5962,11 @@ annexation_decisions = {
 		fire_only_once = no
 		cancel_trigger = {
 			OR = {
-				290 = { is_valid_annexation_state = no }
+				NOT = {
+					290 = {
+						is_owned_and_controlled_by = ROOT
+					}
+				}
 				controls_state = 461
 			}
 		}
@@ -5761,7 +5993,12 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			114 = { is_valid_annexation_state = no }
+			114 = {
+				OR = {
+					NOT = { is_owned_and_controlled_by = ROOT }
+					is_claim_or_core_of_ROOT = yes
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_SRD_CONQ"
@@ -5811,7 +6048,11 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			309 = { is_valid_annexation_state = no }
+			NOT = {
+				309 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_SUR_CONQ"
@@ -5828,7 +6069,7 @@ annexation_decisions = {
 	}
 
 	# Slovakia
-	annexation_SLO_CONQ = {
+	annexation_SVK_CONQ = {
 		icon = generic_form_nation
 		selectable_mission = yes
 		days_mission_timeout = 60
@@ -5836,15 +6077,20 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			70 = { is_valid_annexation_state = no } #Western Slovakia
+			NOT = {
+				70 = { #Western Slovakia
+					is_owned_and_controlled_by = ROOT
+					is_claim_or_core_of_ROOT = no
+				}
+			}
 		}
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision annexation_SLO_CONQ"
+			log = "[GetDateText]: [Root.GetName]: Decision annexation_SVK_CONQ"
 			country_event = annex.148
 		}
 		timeout_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_SLO_CONQ"
-			set_country_flag = SLO_CONQ
+			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_SVK_CONQ"
+			set_country_flag = SVK_CONQ
 			occupy_small_country = yes
 		}
 		ai_will_do = {
@@ -5853,7 +6099,7 @@ annexation_decisions = {
 	}
 
 	# Slovakia for Austria
-	annexation_SLO_AUS_CONQ = {
+	annexation_SVK_AUS_CONQ = {
 		icon = generic_form_nation
 		selectable_mission = yes
 		days_mission_timeout = 60
@@ -5861,24 +6107,29 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			70 = { is_valid_annexation_state = no }
+			NOT = {
+				70 = {
+					is_owned_and_controlled_by = ROOT
+					is_claim_or_core_of_ROOT = no
+				}
+			}
 		}
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision annexation_SLO_AUS_CONQ"
+			log = "[GetDateText]: [Root.GetName]: Decision annexation_SVK_AUS_CONQ"
 			country_event = ausgleich.new.345
 		}
 		timeout_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_SLO_AUS_CONQ"
+			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_SVK_AUS_CONQ"
 			set_country_flag = AUS_slovakia_occupied
 			occupy_small_country = yes
 		}
 		ai_will_do = {
-			factor = 10
+			factor = 100
 		}
 	}
 
 	# Slovakia - Transcarpathia
-	annexation_SLO_TRCARP_CONQ = {
+	annexation_SVK_TRCARP_CONQ = {
 		icon = generic_form_nation
 		selectable_mission = yes
 		days_mission_timeout = 60
@@ -5886,15 +6137,20 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			73 = { is_valid_annexation_state = no }
+			NOT = {
+				73 = {
+					is_owned_and_controlled_by = ROOT
+					is_claim_or_core_of_ROOT = no
+				}
+			}
 		}
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision annexation_SLO_TRCARP_CONQ"
+			log = "[GetDateText]: [Root.GetName]: Decision annexation_SVK_TRCARP_CONQ"
 			country_event = annex.42
 		}
 		timeout_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_SLO_TRCARP_CONQ"
-			set_country_flag = SLO_TRCARP_CONQ
+			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_SVK_TRCARP_CONQ"
+			set_country_flag = SVK_TRCARP_CONQ
 			occupy_small_country = yes
 		}
 		ai_will_do = {
@@ -5911,7 +6167,11 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			38 = { is_valid_annexation_state = no }
+			NOT = {
+				38 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_SWE_CONQ"
@@ -5936,7 +6196,11 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			3 = { is_valid_annexation_state = no }
+			NOT = {
+				3 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_SWI_CONQ"
@@ -5975,56 +6239,6 @@ annexation_decisions = {
 			factor = 100
 		}
 	}
-	
-	# Switzerland - Romandie
-	annexation_ROMANDIE_CONQ = {
-		icon = generic_form_nation
-		selectable_mission = yes
-		days_mission_timeout = 60
-		is_good = no
-		cost = 0
-		fire_only_once = no
-		cancel_trigger = {
-			760 = { is_valid_annexation_state = no }
-		}
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision annexation_ROMANDIE_CONQ"
-			country_event = annex.368
-		}
-		timeout_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_ROMANDIE_CONQ"
-			set_country_flag = ROMANDIE_CONQ
-			occupy_small_country = yes
-		}
-		ai_will_do = {
-			factor = 100
-		}
-	}
-	
-	# Switzerland - TICINO
-	annexation_TICINO_CONQ = {
-		icon = generic_form_nation
-		selectable_mission = yes
-		days_mission_timeout = 60
-		is_good = no
-		cost = 0
-		fire_only_once = no
-		cancel_trigger = {
-			761 = { is_valid_annexation_state = no }
-		}
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision annexation_TICINO_CONQ"
-			country_event = annex.369
-		}
-		timeout_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_TICINO_CONQ"
-			set_country_flag = TICINO_CONQ
-			occupy_small_country = yes
-		}
-		ai_will_do = {
-			factor = 100
-		}
-	}
 
 	# Thessaloniki
 	annexation_THESS_CONQ = {
@@ -6035,7 +6249,12 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			989 = { is_valid_annexation_state = no }
+			NOT = {
+				989 = {
+					is_owned_and_controlled_by = ROOT
+					is_claim_or_core_of_ROOT = no
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_THESS_CONQ"
@@ -6060,7 +6279,12 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			84 = { is_valid_annexation_state = no } #Transylvania
+			NOT = {
+				84 = { #Transylvania
+					is_owned_and_controlled_by = ROOT
+					is_claim_or_core_of_ROOT = no
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_TRS_CONQ"
@@ -6085,7 +6309,13 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			84 = { is_valid_annexation_state = no }
+			NOT = {
+				84 = {
+					is_owned_and_controlled_by = ROOT
+					is_claim_or_core_of_ROOT = no
+					is_core_of = TRS
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_TRS_AUS_CONQ"
@@ -6110,10 +6340,12 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			524 = { is_valid_annexation_state = no } #Taiwan
+			NOT = {
+				524 = { is_owned_and_controlled_by = ROOT } #Taiwan
+			}
 		}
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision annexation_TAI_CONQ"
+			log = "[GetDateText]: [Root.GetName]: Decision annexation_TAI_CCONQ"
 			country_event = annex.336
 		}
 		timeout_effect = {
@@ -6135,7 +6367,11 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			965 = { is_valid_annexation_state = no }
+			NOT = {
+				965 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_TZN_CONQ"
@@ -6160,7 +6396,11 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			877 = { is_valid_annexation_state = no }
+			NOT = {
+				877 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_TOG_CONQ"
@@ -6185,7 +6425,11 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			408 = { is_valid_annexation_state = no }
+			NOT = {
+				408 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_TRM_CONQ"
@@ -6210,7 +6454,12 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			691 = { is_valid_annexation_state = no }
+			NOT = {
+				691 = {
+					is_owned_and_controlled_by = ROOT
+					is_claim_or_core_of_ROOT = no
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_TRI_CONQ"
@@ -6235,7 +6484,11 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			458 = { is_valid_annexation_state = no }
+			NOT = {
+				458 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_TUN_CONQ"
@@ -6286,7 +6539,11 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			49 = { is_valid_annexation_state = no }
+			NOT = {
+				49 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_TUR_CONQ"
@@ -6311,7 +6568,12 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			162 = { is_valid_annexation_state = no }
+			162 = {
+				OR = {
+					NOT = { is_owned_and_controlled_by = ROOT }
+					is_claim_or_core_of_ROOT = yes
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_TUS_CONQ"
@@ -6336,7 +6598,11 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			548 = { is_valid_annexation_state = no }
+			NOT = {
+				548 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_UGA_CONQ"
@@ -6361,7 +6627,11 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			202 = { is_valid_annexation_state = no }
+			NOT = {
+				202 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_UKR_CONQ"
@@ -6386,7 +6656,11 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			300 = { is_valid_annexation_state = no }
+			NOT = {
+				300 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_URG_CONQ"
@@ -6438,9 +6712,15 @@ annexation_decisions = {
 			}
 			else = {
 				OR = {
-					371 = { is_valid_annexation_state = no }
-					395 = { is_valid_annexation_state = no }
-					361 = { is_valid_annexation_state = no }
+					371 = {
+						NOT = { is_owned_and_controlled_by = ROOT }
+					}
+					395 = {
+						NOT = { is_owned_and_controlled_by = ROOT }
+					}
+					361 = {
+						NOT = { is_owned_and_controlled_by = ROOT }
+					}
 				}
 			}
 		}
@@ -6473,7 +6753,11 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			849 = { is_valid_annexation_state = no }
+			NOT = {
+				849 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_VEN_CONQ"
@@ -6489,31 +6773,6 @@ annexation_decisions = {
 		}
 	}
 
-	# Venice
-	annexation_VNC_CONQ = {
-		icon = generic_form_nation
-		selectable_mission = yes
-		days_mission_timeout = 60
-		is_good = no
-		cost = 0
-		fire_only_once = no
-		cancel_trigger = {
-			160 = { is_valid_annexation_state = no }
-		}
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision annexation_VNC_CONQ"
-			country_event = annex.286
-		}
-		timeout_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_VNC_CONQ"
-			occupy_medium_country = yes
-			set_country_flag = VNC_CONQ
-		}
-		ai_will_do = {
-			factor = 100
-		}
-	}
-
 	# Vietnam
 	annexation_VIN_CONQ = {
 		icon = generic_form_nation
@@ -6523,12 +6782,15 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			if = {
-				limit = { tag = JAP }
-				NOT = { 827 = { is_owned_and_controlled_by = ROOT } }
-			}
-			else = {
-				827 = { is_valid_annexation_state = no }
+			OR = {
+				NOT = {
+					827 = {
+						is_owned_and_controlled_by = ROOT
+					}
+				}
+				286 = {
+					is_owned_and_controlled_by = ROOT
+				}
 			}
 		}
 		complete_effect = {
@@ -6545,8 +6807,8 @@ annexation_decisions = {
 		}
 	}
 
-	# Vilnius
-	annexation_VILNIUS_CONQ = {
+	# Venice
+	annexation_VNC_CONQ = {
 		icon = generic_form_nation
 		selectable_mission = yes
 		days_mission_timeout = 60
@@ -6554,23 +6816,28 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			96 = { is_valid_annexation_state = no }
+			160 = {
+				OR = {
+					NOT = { is_owned_and_controlled_by = ROOT }
+					is_claim_or_core_of_ROOT = yes
+				}
+			}
 		}
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision annexation_VILNIUS_CONQ"
-			country_event = annex.362
+			log = "[GetDateText]: [Root.GetName]: Decision annexation_VNC_CONQ"
+			country_event = annex.286
 		}
 		timeout_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_VILNIUS_CONQ"
-			occupy_small_country = yes
-			set_country_flag = VILNIUS_CONQ
+			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_VNC_CONQ"
+			occupy_medium_country = yes
+			set_country_flag = VNC_CONQ
 		}
 		ai_will_do = {
 			factor = 100
 		}
 	}
 
-	# Wadai
+	# Chad
 	annexation_WAD_CONQ = {
 		icon = generic_form_nation
 		selectable_mission = yes
@@ -6579,7 +6846,11 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			515 = { is_valid_annexation_state = no }
+			NOT = {
+				515 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_WAD_CONQ"
@@ -6596,7 +6867,7 @@ annexation_decisions = {
 	}
 
 	# Wales
-	annexation_WLS_CONQ = {
+	annexation_WAL_CONQ = {
 		icon = generic_form_nation
 		selectable_mission = yes
 		days_mission_timeout = 60
@@ -6604,15 +6875,20 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			122 = { is_valid_annexation_state = no }
+			NOT = {
+				122 = {
+					is_owned_and_controlled_by = ROOT
+					is_claim_or_core_of_ROOT = no
+				}
+			}
 		}
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision annexation_WLS_CONQ"
+			log = "[GetDateText]: [Root.GetName]: Decision annexation_WAL_CONQ"
 			country_event = annex.302
 		}
 		timeout_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_WLS_CONQ"
-			set_country_flag = WLS_CONQ
+			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_WAL_CONQ"
+			set_country_flag = WAL_CONQ
 			occupy_small_country = yes
 		}
 		ai_will_do = {
@@ -6629,7 +6905,12 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			51 = { is_valid_annexation_state = no }
+			NOT = {
+				51 = {
+					is_owned_and_controlled_by = ROOT
+					is_claim_or_core_of_ROOT = no
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_WGR_CONQ"
@@ -6641,11 +6922,11 @@ annexation_decisions = {
 			set_country_flag = WGR_CONQ
 		}
 		ai_will_do = {
-			factor = 20
+			factor = 1
 		}
 	}
 
-	# White Ruthenia
+	# Belarus
 	annexation_WHR_CONQ = {
 		icon = generic_form_nation
 		selectable_mission = yes
@@ -6654,7 +6935,11 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			206 = { is_valid_annexation_state = no }
+			NOT = {
+				206 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_WHR_CONQ"
@@ -6679,7 +6964,12 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			34 = { is_valid_annexation_state = no }
+			OR = {
+				6 = { is_owned_and_controlled_by = ROOT }
+				NOT = {
+					34 = { is_owned_and_controlled_by = ROOT }
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_WLL_CONQ"
@@ -6704,7 +6994,11 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			293 = { is_valid_annexation_state = no }
+			NOT = {
+				293 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_YEM_CONQ"
@@ -6732,11 +7026,26 @@ annexation_decisions = {
 			NOT = {
 				count_triggers = {
 					amount = 3
-					309 = { is_valid_annexation_state = yes } #Suriname
-					686 = { is_valid_annexation_state = yes } #Puerto Rico
-					687 = { is_valid_annexation_state = yes } #Guyana
-					689 = { is_valid_annexation_state = yes } #Jamaica
-					691 = { is_valid_annexation_state = yes } #Trinidad
+					309 = { #Suriname
+						is_owned_and_controlled_by = ROOT
+						is_claim_or_core_of_ROOT = no
+					}
+					686 = { #Puerto Rico
+						is_owned_and_controlled_by = ROOT
+						is_claim_or_core_of_ROOT = no
+					}
+					687 = { #Guyana
+						is_owned_and_controlled_by = ROOT
+						is_claim_or_core_of_ROOT = no
+					}
+					689 = { #Jamaica
+						is_owned_and_controlled_by = ROOT
+						is_claim_or_core_of_ROOT = no
+					}
+					691 = { #Trinidad
+						is_owned_and_controlled_by = ROOT
+						is_claim_or_core_of_ROOT = no
+					}
 				}
 			}
 		}
@@ -6747,7 +7056,7 @@ annexation_decisions = {
 		timeout_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_CAF_CONQ"
 			set_country_flag = CAF_CONQ
-			occupy_medium_country = yes
+			occupy_small_country = yes
 		}
 		ai_will_do = {
 			factor = 100
@@ -6763,7 +7072,11 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			813 = { is_valid_annexation_state = no }
+			NOT = {
+				813 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_ZAM_CONQ"
@@ -6788,7 +7101,14 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			545 = { is_valid_annexation_state = no }
+			OR = {
+				NOT = {
+					545 = {
+						is_owned_and_controlled_by = ROOT
+					}
+				}
+				controls_state = 681
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_ZIM_CONQ"
@@ -6813,7 +7133,11 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			1 = { is_valid_annexation_state = no } # Corsica
+			NOT = {
+				1 = { # Corsica
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_CORSICA_CONQ"
@@ -6838,7 +7162,11 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			330 = { is_valid_annexation_state = no } #Urga
+			NOT = {
+				330 = { #Urga
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_MON_CONQ"
@@ -6863,7 +7191,11 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			322 = { is_valid_annexation_state = no } #Lhasa
+			NOT = {
+				322 = { #Lhasa
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_TIB_CONQ"
@@ -6879,7 +7211,36 @@ annexation_decisions = {
 		}
 	}
 
-	# China
+	# Ma Clique
+	annexation_XSM_CONQ = {
+		icon = generic_form_nation
+		selectable_mission = yes
+		days_mission_timeout = 60
+		is_good = no
+		cost = 0
+		fire_only_once = no
+		cancel_trigger = {
+			NOT = {
+				604 = { #Xining
+					is_owned_and_controlled_by = ROOT
+				}
+			}
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision annexation_XSM_CONQ"
+			country_event = annex.177
+		}
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_XSM_CONQ"
+			occupy_medium_country = yes
+			set_country_flag = XSM_CONQ
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	# China Proper
 	annexation_CHI_CONQ = {
 		icon = generic_form_nation
 		selectable_mission = yes
@@ -6888,19 +7249,19 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			if = {
-				limit = { tag = JAP }
-				NOT = {
-					any_owned_state = {
-						is_china_proper = yes
-						NOT = { has_variable = ambition_area_@ROOT }
-					}
+			NOT = {
+				608 = { #Beijing
+					is_owned_and_controlled_by = ROOT
+					is_claim_or_core_of_ROOT = no
 				}
-			}
-			else = {
-				608 = { is_valid_annexation_state = no } #Beijing
-				613 = { is_valid_annexation_state = no } #Nanjing
-				592 = { is_valid_annexation_state = no } #Guangzhou
+				613 = { #Nanjing
+					is_owned_and_controlled_by = ROOT
+					is_claim_or_core_of_ROOT = no
+				}
+				592 = { #Guangzhou
+					is_owned_and_controlled_by = ROOT
+					is_claim_or_core_of_ROOT = no
+				}
 			}
 		}
 		complete_effect = {
@@ -6926,7 +7287,12 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			617 = { is_valid_annexation_state = no } #Dihua
+			NOT = {
+				617 = { #Dihua
+					is_owned_and_controlled_by = ROOT
+					is_claim_or_core_of_ROOT = no
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_SIK_CONQ"
@@ -6951,7 +7317,12 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			743 = { is_valid_annexation_state = no } #Shanghai
+			NOT = {
+				743 = { #Shanghai
+					is_owned_and_controlled_by = ROOT
+					is_claim_or_core_of_ROOT = no
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_LEC_CONQ"
@@ -6976,7 +7347,12 @@ annexation_decisions = {
 		cost = 0
 		fire_only_once = no
 		cancel_trigger = {
-			716 = { is_valid_annexation_state = no } #Shenyang
+			NOT = {
+				716 = { #Shenyang
+					is_owned_and_controlled_by = ROOT
+					is_claim_or_core_of_ROOT = no
+				}
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision annexation_MAN_CONQ"
