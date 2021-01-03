@@ -278,6 +278,11 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/North_America/Constitutional_American_Republic/COR_dc_killed.dds"
 	}
 	
+	spriteType = {
+		name = "GFX_COR_Lindbergh"
+		texturefile = "gfx/event_pictures/North_America/Constitutional_American_Republic/COR_Lindbergh.dds"
+	}
+	
 	#CSA
 	
 	spriteType = {
@@ -298,6 +303,11 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_event_CSA_Scott"
 		texturefile = "gfx/event_pictures/North_America/Combined_Syndicates_America/Scott.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_event_CSA_Browder"
+		texturefile = "gfx/event_pictures/North_America/Combined_Syndicates_America/event_CSA_Browder.dds"
 	}
 	
 	#USA
@@ -835,6 +845,6 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_event_kiel_auditorium"
 		texturefile = "gfx/event_pictures/North_America/United_States/event_kiel_auditorium.dds"
-	}
+	}	
 }
 
