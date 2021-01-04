@@ -7512,9 +7512,12 @@ country_event = {# The Hollywood Ten
 	picture = GFX_hollywood_event
 
 	trigger = {
-	OR = {
-	has_completed_focus = CAL_anti_unionism
-	has_war_with = CSA
+		OR = {
+		has_completed_focus = CAL_anti_unionism
+		AND = {
+		owns_state = 798
+		has_global_flag = USA_civil_war_over_flag
+		}
 		}
 	}
 
