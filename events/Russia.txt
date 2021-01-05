@@ -550,7 +550,7 @@ country_event = { #PM choice for Dmitriy
 			factor = 20
 		}
 		remove_all_ministers = yes
-		add_ideas = RUS_Pavel_Milyukov_hog_mli
+		add_ideas = RUS_Pavel_N_Milyukov_hog_mli
 		hidden_effect = {
 			add_ideas = {
 				RUS_Aleksandr_I_Konovalov_for_mli
@@ -675,7 +675,7 @@ country_event = { #PM choice for the senate
 			kill_ideology_leader = social_liberal
 			remove_all_ministers = yes
 			add_ideas = {
-				RUS_Pavel_Milyukov_hog_mli
+				RUS_Pavel_N_Milyukov_hog_mli
 				RUS_Aleksandr_I_Konovalov_for_mli
 				RUS_Vladimir_P_Smirnov_eco_sli
 				RUS_Vasiliy_A_Kharlamov_sec_mli
@@ -754,7 +754,7 @@ country_event = { #PM choice for Wrangel
 			factor = 40
 		}
 		add_stability = 0.04
-		add_ideas = RUS_Pavel_Milyukov_hog_mli
+		add_ideas = RUS_Pavel_N_Milyukov_hog_mli
 		hidden_effect = {
 			remove_ideas_with_trait = foreign_minister
 			remove_ideas_with_trait = economy_minister
@@ -1028,7 +1028,7 @@ country_event = { #Kornilov's Death
 				}
 			}
 		}
-		add_ideas = RUS_Vladimir_Nabokov_hog_mli
+		add_ideas = RUS_Vladimir_D_Nabokov_hog_mli
 		country_event = {
 			id = russia.42
 			days = 5
@@ -3706,7 +3706,7 @@ country_event = { #The Patriarch's Demands
 		add_stability = -0.3
 		if = {
 			limit = { has_elected_government = yes }
-			add_ideas = RUS_Pavel_Milyukov_hog_mli
+			add_ideas = RUS_Pavel_N_Milyukov_hog_mli
 		}
 		else = {
 			add_ideas = RUS_Anton_I_Denikin_hog_ade
@@ -3723,7 +3723,7 @@ country_event = { #The Patriarch's Demands
 		add_stability = -0.5
 		if = {
 			limit = { has_elected_government = yes }
-			add_ideas = RUS_Pavel_Milyukov_hog_mli
+			add_ideas = RUS_Pavel_N_Milyukov_hog_mli
 		}
 		else = {
 			add_ideas = RUS_Anton_I_Denikin_hog_ade
@@ -4784,9 +4784,9 @@ country_event = { #Duma Elections
 			factor = 30
 		}
 		add_ideas = {
-			RUS_Pavel_Milyukov_hog_mli
+			RUS_Pavel_N_Milyukov_hog_mli
 			RUS_Aleksandr_I_Konovalov_for_mli
-			RUS_Mikhail_Bernatskiy_eco_mli
+			RUS_Mikhail_V_Bernacki_eco_mli
 			RUS_Vasiliy_A_Kharlamov_sec_mli
 		}
 		add_popularity = {
@@ -5145,8 +5145,8 @@ country_event = {
 	option = {
 		name = rusd.100.a
 		if = {
-			limit = { has_idea = RUS_Pavel_Milyukov_hog_mli }
-			add_ideas = RUS_Vladimir_Nabokov_hog_mli
+			limit = { has_idea = RUS_Pavel_N_Milyukov_hog_mli }
+			add_ideas = RUS_Vladimir_D_Nabokov_hog_mli
 		}
 		if = {
 			limit = { has_idea = RUS_Pavel_N_Milyukov_for_mli }
