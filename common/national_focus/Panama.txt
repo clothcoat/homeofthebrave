@@ -549,7 +549,8 @@ shared_focus = {
 	cost = 0
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus PAN_canal_in_crisis"
-		unlock_decision_tooltip = PAN_seize_canal
+		custom_effect_tooltip = PAN_canal_tooltip
+		add_political_power = 20
 	}
 }
 shared_focus = {
