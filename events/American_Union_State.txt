@@ -1450,7 +1450,7 @@ country_event = { #Second Great Migration
 	option = { #Let them in
 		name = unionstate.3001.a
 		add_manpower = 13000
-		add_popularity = { ideology = authoritarian_democrat popularity = 0.03 }
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.01 }
 		add_war_support = -0.05
 		add_stability = -0.04
 		add_political_power = -20
@@ -1482,8 +1482,7 @@ country_event = { #Second Great Migration
 	option = { #Announce we won't be taking in anymore
 		name = unionstate.3001.c
 		add_stability = 0.05
-		add_popularity = { ideology = authoritarian_democrat popularity = -0.03 }
-		custom_effect_tooltip = TEX_leftism_tooltip
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.01 }
 		add_political_power = 20
 		add_war_support = 0.05
 		hidden_effect = {
