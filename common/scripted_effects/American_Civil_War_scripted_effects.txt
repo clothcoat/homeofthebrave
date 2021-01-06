@@ -1783,8 +1783,8 @@ USA_civil_war_begins = {
 			diplomatic_relation = { country = COS relation = guarantee active = no }
 		}
 		if = {
-			limit = { "PAN" = { is_guaranteed_by = USA } }
-			diplomatic_relation = { country = "PAN" relation = guarantee active = no }
+			limit = { PAN = { is_guaranteed_by = USA } }
+			diplomatic_relation = { country = PAN relation = guarantee active = no }
 		}
 		if = {
 			limit = { LEC = { is_guaranteed_by = USA } }
