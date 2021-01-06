@@ -3254,7 +3254,648 @@ focus_tree = {
 			add_stability = 0.1
 		}
 	}
+		
+	###Texas-Influenced AUS###
+	focus = {# Pappy O'Daniel
+		id = TEX_pappy_odaniel
+		icon = 
+		cost = 7.25
+		available = {
+			has_global_flag = USA_civil_war_over_flag
+			has_country_flag = AUS_election_occured
+			has_government = social_conservative
+			has_country_flag = TEX_texas_takeover_flag
+		}
+		bypass = {
+			has_global_flag = USA_civil_war_over_flag
+			has_government = social_conservative
+			has_country_flag = TEX_texas_takeover_flag
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		x = 12
+		y = 9
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_pappy_odaniel"
+			custom_effect_tooltip = unlock_focuses
+			add_popularity = { ideology = social_conservative popularity = 0.02 }
+		}
+	}
 
+	focus = {#The Five-Point Plan
+		id = TEX_five_point_plan
+		icon = 
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_pappy_odaniel
+		}
+		available = {
+			has_government = social_conservative
+		}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TEX_pappy_odaniel
+		x = -1
+		y = 1
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_five_point_plan"
+			add_stability = 0.05
+			add_popularity = { ideology = social_conservative popularity = 0.05 }
+			add_political_power = 30
+			add_war_support = 0.03
+			hidden_effect = {
+			country_event = {
+			id = unionstate.5901
+			days = 20
+				}
+			}
+		}
+	}
+
+	focus = {#Texas Values
+		id = TEX_texas_values
+		icon = 
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_pappy_odaniel
+		}
+		available = {
+			has_government = social_conservative
+		}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TEX_pappy_odaniel
+		x = 1
+		y = 1
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_texas_values"
+			add_stability = 0.05
+			add_popularity = { ideology = social_conservative popularity = 0.05 }
+			add_political_power = 30
+			add_war_support = 0.03
+			hidden_effect = {
+			country_event = {
+			id = unionstate.5901
+			days = 20
+				}
+			}
+		}
+	}
+
+	focus = {#Old-Age Pensions
+		id = TEX_old_age_pensions
+		icon = 
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_five_point_plan
+		}
+		available = {
+			has_government = social_conservative
+		}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TEX_pappy_odaniel
+		x = -4
+		y = 2
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_old_age_pensions"
+			add_stability = 0.05
+			add_popularity = { ideology = social_conservative popularity = 0.05 }
+			add_political_power = 30
+			add_war_support = 0.03
+			hidden_effect = {
+			country_event = {
+			id = unionstate.5901
+			days = 20
+				}
+			}
+		}
+	}
+
+	focus = {#Radio Showmanship
+		id = TEX_radio_showmanship
+		icon = 
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_five_point_plan
+		}
+		prerequisite = {
+			focus = TEX_texas_values
+		}
+		available = {
+			has_government = social_conservative
+		}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TEX_pappy_odaniel
+		x = 0
+		y = 2
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_radio_showmanship"
+			add_stability = 0.05
+			add_popularity = { ideology = social_conservative popularity = 0.05 }
+			add_political_power = 30
+			add_war_support = 0.03
+			hidden_effect = {
+			country_event = {
+			id = unionstate.5901
+			days = 20
+				}
+			}
+		}
+	}
+
+	focus = {#The Ten Commandments
+		id = TEX_ten_commandments
+		icon = 
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_five_point_plan
+		}
+		prerequisite = {
+			focus = TEX_texas_values
+		}
+		available = {
+			has_government = social_conservative
+		}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TEX_pappy_odaniel
+		x = 4
+		y = 2
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_ten_commandments"
+			add_stability = 0.05
+			add_popularity = { ideology = social_conservative popularity = 0.05 }
+			add_political_power = 30
+			add_war_support = 0.03
+			hidden_effect = {
+			country_event = {
+			id = unionstate.5901
+			days = 20
+				}
+			}
+		}
+	}
+
+	focus = {#Slice Taxes
+		id = TEX_slice_taxes
+		icon = 
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_fight_wasteful_spending
+		}
+		available = {
+			has_government = social_conservative
+		}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TEX_pappy_odaniel
+		x = -3
+		y = 4
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_slice_taxes"
+			add_stability = 0.05
+			add_popularity = { ideology = social_conservative popularity = 0.05 }
+			add_political_power = 30
+			add_war_support = 0.03
+			hidden_effect = {
+			country_event = {
+			id = unionstate.5901
+			days = 20
+				}
+			}
+		}
+	}
+
+	focus = {#Oil Boom
+		id = TEX_oil_boom
+		icon = 
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_slice_taxes
+		}
+		prerequisite = {
+			focus = TEX_sunday_broadcasts
+		}
+		available = {
+			has_government = social_conservative
+		}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TEX_pappy_odaniel
+		x = -1
+		y = 5
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_oil_boom"
+			add_stability = 0.05
+			add_popularity = { ideology = social_conservative popularity = 0.05 }
+			add_political_power = 30
+			add_war_support = 0.03
+			hidden_effect = {
+			country_event = {
+			id = unionstate.5901
+			days = 20
+				}
+			}
+		}
+	}
+
+	focus = {#Sunday Broadcasts
+		id = TEX_sunday_broadcasts
+		icon = 
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_reconcile_big_business
+		}
+		prerequisite = {
+			focus = TEX_labor_agitators
+		}
+		available = {
+			has_government = social_conservative
+		}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TEX_pappy_odaniel
+		x = 0
+		y = 4
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_sunday_broadcasts"
+			add_stability = 0.05
+			add_popularity = { ideology = social_conservative popularity = 0.05 }
+			add_political_power = 30
+			add_war_support = 0.03
+			hidden_effect = {
+			country_event = {
+			id = unionstate.5901
+			days = 20
+				}
+			}
+		}
+	}
+
+	focus = {#Fight Labor Agitators
+		id = TEX_labor_agitators
+		icon = 
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_radio_showmanship
+		}
+		available = {
+			has_government = social_conservative
+		}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TEX_pappy_odaniel
+		x = 1
+		y = 3
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_labor_agitators"
+			add_stability = 0.05
+			add_popularity = { ideology = social_conservative popularity = 0.05 }
+			add_political_power = 30
+			add_war_support = 0.03
+			hidden_effect = {
+			country_event = {
+			id = unionstate.5901
+			days = 20
+				}
+			}
+		}
+	}
+
+	focus = {#The Hillbilly Boys
+		id = TEX_hillbilly_boys
+		icon = 
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_texas_values
+		}
+		available = {
+			has_government = social_conservative
+		}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TEX_pappy_odaniel
+		x = 4
+		y = 3
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_hillbilly_boys"
+			add_stability = 0.05
+			add_popularity = { ideology = social_conservative popularity = 0.05 }
+			add_political_power = 30
+			add_war_support = 0.03
+			hidden_effect = {
+			country_event = {
+			id = unionstate.5901
+			days = 20
+				}
+			}
+		}
+	}
+
+	focus = {#Industrialization Committee
+		id = TEX_industrialization_committee
+		icon = 
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_old_age_pensions
+		}
+		available = {
+			has_government = social_conservative
+		}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TEX_pappy_odaniel
+		x = -5
+		y = 3
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_industrialization_committee"
+			add_stability = 0.05
+			add_popularity = { ideology = social_conservative popularity = 0.05 }
+			add_political_power = 30
+			add_war_support = 0.03
+			hidden_effect = {
+			country_event = {
+			id = unionstate.5901
+			days = 20
+				}
+			}
+		}
+	}
+
+	focus = {#Reconcile with Big Business
+		id = TEX_reconcile_big_business
+		icon = 
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_radio_showmanship
+		}
+		available = {
+			has_government = social_conservative
+		}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TEX_pappy_odaniel
+		x = -1
+		y = 3
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_reconcile_big_business"
+			add_stability = 0.05
+			add_popularity = { ideology = social_conservative popularity = 0.05 }
+			add_political_power = 30
+			add_war_support = 0.03
+			hidden_effect = {
+			country_event = {
+			id = unionstate.5901
+			days = 20
+				}
+			}
+		}
+	}
+
+	focus = {#Soil Conservation Act
+		id = TEX_soil_conservation_act
+		icon = 
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_industrialization_committee
+		}
+		available = {
+			has_government = social_conservative
+		}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TEX_pappy_odaniel
+		x = -5
+		y = 4
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_soil_conservation_act"
+			add_stability = 0.05
+			add_popularity = { ideology = social_conservative popularity = 0.05 }
+			add_political_power = 30
+			add_war_support = 0.03
+			hidden_effect = {
+			country_event = {
+			id = unionstate.5901
+			days = 20
+				}
+			}
+		}
+	}
+
+	focus = {#Power to the Farmer
+		id = TEX_power_to_farmers
+		icon = 
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_hillbilly_boys
+		}
+		available = {
+			has_government = social_conservative
+		}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TEX_pappy_odaniel
+		x = 3
+		y = 4
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_power_to_farmers"
+			add_stability = 0.05
+			add_popularity = { ideology = social_conservative popularity = 0.05 }
+			add_political_power = 30
+			add_war_support = 0.03
+			hidden_effect = {
+			country_event = {
+			id = unionstate.5901
+			days = 20
+				}
+			}
+		}
+	}
+
+	focus = {#Protect Poor Whites
+		id = TEX_protect_poor_whites
+		icon = 
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_sunday_broadcasts
+		}
+		prerequisite = {
+			focus = TEX_power_to_farmers
+		}
+		available = {
+			has_government = social_conservative
+		}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TEX_pappy_odaniel
+		x = 1
+		y = 5
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_protect_poor_whites"
+			add_stability = 0.05
+			add_popularity = { ideology = social_conservative popularity = 0.05 }
+			add_political_power = 30
+			add_war_support = 0.03
+			hidden_effect = {
+			country_event = {
+			id = unionstate.5901
+			days = 20
+				}
+			}
+		}
+	}
+
+	focus = {#Obligations to Our Children
+		id = TEX_obligations_to_our_children
+		icon = 
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_hillbilly_boys
+		}
+		available = {
+			has_government = social_conservative
+		}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TEX_pappy_odaniel
+		x = 5
+		y = 4
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_obligations_to_our_children"
+			add_stability = 0.05
+			add_popularity = { ideology = social_conservative popularity = 0.05 }
+			add_political_power = 30
+			add_war_support = 0.03
+			hidden_effect = {
+			country_event = {
+			id = unionstate.5901
+			days = 20
+				}
+			}
+		}
+	}
+
+	focus = {#Fight Wasteful Spending
+		id = TEX_fight_wasteful_spending
+		icon = 
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_old_age_pensions
+		}
+		available = {
+			has_government = social_conservative
+		}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TEX_pappy_odaniel
+		x = -3
+		y = 3
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_fight_wasteful_spending"
+			add_stability = 0.05
+			add_popularity = { ideology = social_conservative popularity = 0.05 }
+			add_political_power = 30
+			add_war_support = 0.03
+			hidden_effect = {
+			country_event = {
+			id = unionstate.5901
+			days = 20
+				}
+			}
+		}
+	}
+
+	focus = {#Beautiful America
+		id = TEX_beautiful_america
+		icon = 
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_oil_boom
+		}
+		prerequisite = {
+			focus = TEX_protect_poor_whites
+		}
+		available = {
+			has_government = social_conservative
+		}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TEX_pappy_odaniel
+		x = 0
+		y = 6
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_beautiful_america"
+			add_stability = 0.05
+			add_popularity = { ideology = social_conservative popularity = 0.05 }
+			add_political_power = 30
+			add_war_support = 0.03
+			hidden_effect = {
+			country_event = {
+			id = unionstate.5901
+			days = 20
+				}
+			}
+		}
+	}
 
 	### Economic Path ###
 	focus = {# rebuilding the country
