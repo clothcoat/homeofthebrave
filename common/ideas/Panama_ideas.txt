@@ -18,6 +18,26 @@ ideas = {
 				war_support_factor = 0.2
 			}
 		}
+		PAN_american_concessions_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea PAN_american_concessions_idea"}
+			picture = generic_agrarian_reform
+			modifier = {
+				stability_factor = -0.02
+				industrial_capacity_factory = -0.02
+				industrial_capacity_dockyard = -0.02
+				political_power_gain = 0.01
+			}
+		}
+		PAN_american_canadian_concessions_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea PAN_american_concessions_idea"}
+			picture = generic_agrarian_reform
+			modifier = {
+				stability_factor = -0.03
+				industrial_capacity_factory = -0.05
+				industrial_capacity_dockyard = -0.05
+				political_power_gain = 0.03
+			}
+		}
 		PAN_farming_encouraged = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea PAN_farming_encouraged"}
 			picture = generic_agrarian_reform
