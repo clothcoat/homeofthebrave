@@ -4566,7 +4566,7 @@ country_event = { # Prohibition
 
 	trigger = {
 		has_government = radical_socialist
-		OR = {
+		AND = {
 		has_completed_focus = CSA_social_ills
 		has_country_leader = {
 			ruling_only = yes
