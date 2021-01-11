@@ -2566,7 +2566,16 @@ country_event = { # The 1936 Election - Coalition
 	}
 	option = { # Deadlock
 		name = ustates.34.h
-		
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 100
+				has_game_rule = {
+					rule = USA_civil_war
+					option = USA_CIVIL_WAR_1936
+				}		
+			}
+		}
 		country_event = { id = ustates.35 hours = 6 }
 	}
 }
