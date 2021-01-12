@@ -14950,6 +14950,7 @@ country_event = { # Remove the League idea
 	trigger = {
 		NOT = {
 			tag = USA
+			tag = WCC
 		}
 		OR = {
 			has_idea = USA_league_of_america_1
