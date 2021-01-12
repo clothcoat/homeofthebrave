@@ -236,6 +236,7 @@ country_event = { # Canada Releases New England
 		}
 		puppet = NEE
 		add_to_faction = NEE
+		set_country_flag = CAN_new_england_decision
 		hidden_effect = {
 			CAN = {
 				NEE = {
@@ -313,6 +314,7 @@ country_event = { # Canada Releases New England
 		}
 		puppet = NEE
 		add_to_faction = NEE
+		set_country_flag = CAN_new_england_decision
 		hidden_effect = {
 			CAN = {
 				NEE = {
@@ -401,6 +403,7 @@ country_event = { # Canada Releases New England
 		add_stability = -0.05
 		add_war_support = -0.05
 		set_country_flag = CAN_no_puppet_state
+		set_country_flag = CAN_new_england_decision
 		hidden_effect = {
 			set_variable = {
 				CAN_yankee_rebellion = 0
