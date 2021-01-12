@@ -2352,10 +2352,6 @@ focus_tree = {
 		available_if_capitulated = no
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NEE_radical_victory"			
-			country_event = {
-			id = newengland.120
-			days = 2
-			}
 			add_political_power = -20
 			add_war_support = 0.1
 		}
