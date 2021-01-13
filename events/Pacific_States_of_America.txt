@@ -7512,6 +7512,9 @@ country_event = {# The Hollywood Ten
 	picture = GFX_hollywood_event
 
 	trigger = {
+		NOT = {
+		tag = CSA
+		}
 		OR = {
 		has_completed_focus = CAL_anti_unionism
 		AND = {
