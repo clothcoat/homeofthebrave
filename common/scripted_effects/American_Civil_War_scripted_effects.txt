@@ -2006,6 +2006,34 @@ USA_demobilize_forces = {
 			limit = { has_template = "Revolutionary Union Militia" }
 			delete_unit_template_and_units = { division_template = "Revolutionary Union Militia" }
 		}
+		if = {
+			limit = { has_template = "Red Guard" }
+			delete_unit_template_and_units = { division_template = "Red Guard" }
+		}
+		if = {
+			limit = { has_template = "Revolutionary Militia" }
+			delete_unit_template_and_units = { division_template = "Revolutionary Militia" }
+		}
+		if = {
+			limit = { has_template = "Mounted Revolutionary Militia" }
+			delete_unit_template_and_units = { division_template = "Mounted Revolutionary Militia" }
+		}
+		if = {
+			limit = { has_template = "Revolutionary Garrison" }
+			delete_unit_template_and_units = { division_template = "Revolutionary Garrison" }
+		}
+		if = {
+			limit = { has_template = "Amerikavrijwilligers" }
+			delete_unit_template_and_units = { division_template = "Amerikavrijwilligers" disband = yes }
+		}
+		if = {
+			limit = { has_template = "German Militia Division" }
+			delete_unit_template_and_units = { division_template = "German Militia Division" disband = yes }
+		}
+		if = {
+			limit = { has_template = "Irish Volunteers" }
+			delete_unit_template_and_units = { division_template = "Irish Volunteers" disband = yes }
+		}
 	}
 	TEX = {
 		if = {
