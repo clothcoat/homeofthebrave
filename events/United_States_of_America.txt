@@ -10475,22 +10475,72 @@ country_event = { # 1940 Republican Primary
 		text = ustates.201.d.nopresidency
 		trigger = {
 			NOT = {
+				OR = {
 				has_country_leader = {
 					ruling_only = yes
 					name = "Alf Landon"
 				}
+				has_country_leader = {
+					ruling_only = yes
+					name = "Charles Curtis"
+				}
+				}
 			}
-			has_government = social_liberal
+			NOT = {
+				has_government = social_liberal
+				has_government = market_liberal
+			}
+			NOT = {
+				has_country_leader = {
+					ruling_only = yes
+					name = "Herbert Hoover"
+				}
+			}
 		}
 	}
 	desc = {
 		text = ustates.201.d.presidency
 		trigger = {
+			OR = {
+				has_country_leader = {
+					ruling_only = yes
+					name = "Alf Landon"
+				}
+				has_country_leader = {
+					ruling_only = yes
+					name = "Charles Curtis"
+				}
+			}
+			OR = {
+				has_government = social_liberal
+				has_government = market_liberal
+			}
+			NOT = {
+				has_country_leader = {
+					ruling_only = yes
+					name = "Herbert Hoover"
+				}
+			}
+		}
+	}
+	desc = { # Hoover has the Presidency
+		text = ustates.201.d.hoover
+		trigger = {
 			has_country_leader = {
 				ruling_only = yes
-				name = "Alf Landon"
+				name = "Herbert Hoover"
 			}
-			has_government = social_liberal
+			has_country_flag = USA_More_terms_for_herb
+		}
+	}
+	desc = { # Hoover steps down
+		text = ustates.201.d.hoover_steps_down
+		trigger = {
+			has_country_leader = {
+				ruling_only = yes
+				name = "Herbert Hoover"
+			}
+			NOT = { has_country_flag = USA_More_terms_for_herb }
 		}
 	}
 
@@ -10528,13 +10578,37 @@ country_event = { # 1940 Republican Primary
 			}
 		}
 	}
-	option = { # re-nominate Alf Landon
+	option = { # re-nominate President
 		name = ustates.201.b
 		trigger = {
-			has_country_leader = {
-				ruling_only = yes
-				name = "Alf Landon"
+			OR = {
+				has_country_leader = {
+					ruling_only = yes
+					name = "Alf Landon"
+				}
+				has_country_leader = {
+					ruling_only = yes
+					name = "Charles Curtis"
+				}
 			}
+		}
+		if = { # Alf Landon
+				limit = {
+					has_country_leader = {
+					ruling_only = yes
+					name = "Alf Landon"
+					}
+				}
+			set_country_flag = USA_1940_republican_primary_landon
+		}
+		if = { # Charles Curtis
+				limit = {
+					has_country_leader = {
+					ruling_only = yes
+					name = "Charles Curtis"
+					}
+				}
+			set_country_flag = USA_1940_republican_primary_curtis
 		}
 	}
 	option = { # nominate John Bricker
@@ -10822,6 +10896,7 @@ country_event = { # 1940 Election
 		OR = { 
 		has_country_flag = USA_1940_republican_primary_willkie
 		has_country_flag = USA_1940_republican_primary_dewey
+		has_country_flag = USA_1940_republican_primary_landon
 				}
 			}
 		set_politics = {
@@ -10848,6 +10923,8 @@ country_event = { # 1940 Election
 		OR = { 
 		has_country_flag = USA_1940_republican_primary_bricker
 		has_country_flag = USA_1940_republican_primary_taft
+		has_country_flag = USA_1940_republican_primary_hoover
+		has_country_flag = USA_1940_republican_primary_curtis
 				}
 			}
 		set_politics = {
@@ -10875,6 +10952,7 @@ country_event = { # 1940 Election
 					OR = {
 					has_country_flag = USA_1940_republican_primary_willkie
 					has_country_flag = USA_1940_republican_primary_dewey
+					has_country_flag = USA_1940_republican_primary_landon
 					}
 				}
 				add_ideas = USA_Charles_L_McNary_hog_sli
@@ -10887,6 +10965,8 @@ country_event = { # 1940 Election
 					OR = {
 						has_country_flag = USA_1940_republican_primary_bricker
 						has_country_flag = USA_1940_republican_primary_taft
+						has_country_flag = USA_1940_republican_primary_hoover
+						has_country_flag = USA_1940_republican_primary_curtis
 					}
 				}
 				add_ideas = USA_John_W_Bricker_hog_sli
@@ -10907,6 +10987,13 @@ country_event = { # 1940 Election
 			country_event = {
 				id = ustates.206
 				days = 1297
+			}
+			if = {
+				limit = { has_country_flag = USA_More_terms_for_herb }
+				country_event = {
+					id = ustates.4106
+					days = 1270
+				}
 			}
 		}
 	}
