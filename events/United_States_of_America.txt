@@ -10387,14 +10387,6 @@ country_event = { # 1940 Progressive Primary
 		}
 		hidden_effect = {
 			set_country_flag = USA_1940_progressive_primary_wallace
-			create_country_leader = { # Henry Wallace
-				name = "Henry Wallace"
-				desc = "POLITICS_HENRY_WALLLACE_DESC"
-				picture = "Portrait_USA_Henry_Wallace.tga"
-				expire = "1965.1.1"
-				ideology = social_democrat_subtype
-				traits = { tenacious_negotiator }
-			}
 		}
 	}
 	option = { # Philip La Follete
@@ -10406,14 +10398,6 @@ country_event = { # 1940 Progressive Primary
 		}
 		hidden_effect = {
 			set_country_flag = USA_1940_progressive_primary_la_follete
-			create_country_leader = {
-					name = "Philip La Follette"
-					desc = "POLITICS_PHILIP_FOLLETTE_DESC"
-					picture = "Portrait_USA_Philip_La_Follette.tga"
-					expire = "1965.1.1"
-					ideology = social_democrat_subtype
-					traits = { spirit_of_fighting_bob }
-				}
 		}
 	}
 	option = { # George Norris
@@ -10434,14 +10418,6 @@ country_event = { # 1940 Progressive Primary
 		}
 		hidden_effect = {
 			set_country_flag = USA_1940_progressive_primary_mcnary
-			create_country_leader = {
-					name = "Charles L. McNary"
-					desc = "POLITICS_CHARLES_MCNARY_DESC"
-					picture = "Portrait_USA_Charles_L_McNary.tga"
-					expire = "1965.1.1"
-					ideology = social_democrat_subtype
-					traits = { reluctant_interventionist }
-				}
 		}
 	}
 	option = { # Quentin Roosevelt
@@ -10453,14 +10429,6 @@ country_event = { # 1940 Progressive Primary
 		}
 		hidden_effect = {
 			set_country_flag = USA_1940_progressive_primary_roosevelt
-			create_country_leader = {
-					name = "Quentin Roosevelt"
-					desc = "POLITICS_QUENTIN_ROOSEVELT_DESC"
-					picture = "Portrait_USA_quentin_roosevelt.tga"
-					expire = "1965.1.1"
-					ideology = social_democrat_subtype
-					traits = { tenacious_negotiator }
-				}
 		}
 	}
 }
@@ -10568,14 +10536,6 @@ country_event = { # 1940 Republican Primary
 		}
 		hidden_effect = {
 			set_country_flag = USA_1940_republican_primary_taft
-			create_country_leader = {
-					name = "Robert Taft"
-					desc = "POLITICS_Robert_Taft_DESC"
-					picture = "gfx/leaders/USA/R_A_Taft.tga"
-					expire = "1965.1.1"
-					ideology = market_liberal_subtype
-					traits = { staunch_constitutionalist }
-			}
 		}
 	}
 	option = { # re-nominate President
@@ -10623,14 +10583,6 @@ country_event = { # 1940 Republican Primary
 		}
 		hidden_effect = {
 			set_country_flag = USA_1940_republican_primary_bricker
-			create_country_leader = {
-					name = "John Bricker"
-					desc = "POLITICS_JOHN_BRICKER_DESC"
-					picture = "gfx/leaders/USA/Portrait_USA_John_Bricker.tga"
-					expire = "1965.1.1"
-					ideology = market_liberal_subtype
-					traits = { staunch_constitutionalist }
-			}
 		}
 	}
 	option = { # nominate Thomas Dewey
@@ -10645,17 +10597,21 @@ country_event = { # 1940 Republican Primary
 		}
 		hidden_effect = {
 			set_country_flag = USA_1940_republican_primary_dewey
-			create_country_leader = {
-				name = "Thomas Dewey"
-				desc = "POLITICS_THOMAS_DEWEY_DESC"
-				picture = "Portrait_USA_Thomas_Dewey_KR.tga"
-				expire = "1965.1.1"
-				ideology = social_liberal_subtype
-				traits = { great_survivor }
+		}
+	}
+	option = { # nominate Hoover again
+		name = ustates.201.f
+		trigger = {
+				has_country_leader = {
+					ruling_only = yes
+					name = "Herbert Hoover"
+				}
+			}
+		hidden_effect = {
+			set_country_flag = USA_1940_republican_primary_hoover
 			}
 		}
 	}
-}
 
 country_event = { # 1940 Democrat Primary
 	id = ustates.202
@@ -10701,14 +10657,6 @@ country_event = { # 1940 Democrat Primary
 		}
 		hidden_effect = {
 		set_country_flag = USA_1940_democratic_primary_smith
-		create_country_leader = {
-			name = "Al Smith"
-			desc = "POLITICS_AL_SMITH_DESC"
-			picture = "gfx/leaders/NEE/Al_Smith.tga"
-			expire = "1965.1.1"
-			ideology = social_liberal_subtype
-			traits = { political_boss }
-			}
 		}
 	}
 	option = { # John Nance Garner
@@ -10735,14 +10683,6 @@ country_event = { # 1940 Democrat Primary
 		}
 		hidden_effect = {
 		set_country_flag = USA_1940_democratic_primary_byrd
-		create_country_leader = {
-			name = "Harry F. Byrd"
-			desc = "POLITICS_HARRY_BYRD_DESC"
-			picture = "Portrait_USA_Harry_F_Byrd.tga"
-			expire = "1965.1.1"
-			ideology = social_conservative_subtype
-			traits = { backroom_backstabber }
-			}
 		}
 	}
 	option = { # Douglas Macarthur
@@ -10757,14 +10697,6 @@ country_event = { # 1940 Democrat Primary
 		}
 		hidden_effect = {
 		set_country_flag = USA_1940_democratic_primary_macarthur
-		create_country_leader = {
-			name = "Douglas MacArthur"
-			desc = "POLITICS_DOUGLAS_MACARTHUR_DESC"
-			picture = "Portrait_USA_cooler_douglas_macarthur.tga"
-			expire = "1965.1.1"
-			ideology = social_conservative_subtype
-			traits = { war_industrialist }
-			}
 		}
 	}
 	option = { # nominate Wendell Willkie
@@ -10779,14 +10711,6 @@ country_event = { # 1940 Democrat Primary
 		}
 		hidden_effect = {
 			set_country_flag = USA_1940_democratic_primary_willkie
-			create_country_leader = {
-				name = "Wendell Willkie"
-				desc = "POLITICS_WENDELL_WILLKIE_DESC"
-				picture = "Portrait_USA_Wendell_Willkie_KR.tga"
-				expire = "1965.1.1"
-				ideology = social_liberal_subtype
-				traits = { smooth_talking_charmer }
-			}
 		}
 	}
 }
@@ -10850,13 +10774,51 @@ country_event = { # 1940 Election
 		}
 		
 		hidden_effect = {
-		if = { # Not Wallace
+		if = { # La Follette
 				limit = {
-					OR = {
 					has_country_flag = USA_1940_progressive_primary_la_follete
+				}
+			create_country_leader = {
+					name = "Philip La Follette"
+					desc = "POLITICS_PHILIP_FOLLETTE_DESC"
+					picture = "Portrait_USA_Philip_La_Follette.tga"
+					expire = "1965.1.1"
+					ideology = social_democrat_subtype
+					traits = { spirit_of_fighting_bob }
+				}
+			add_ideas = USA_Henry_Wallace_hog_sde
+			add_ideas = USA_Hugh_Simons_Gibson_for_sli
+			add_ideas = USA_Hjalmar_Petersen_eco_sde
+			add_ideas = USA_Konrad_Knute_Solberg_sec_sde
+			}
+		if = { # McNary
+				limit = {
 					has_country_flag = USA_1940_progressive_primary_mcnary
+				}
+			create_country_leader = {
+					name = "Charles L. McNary"
+					desc = "POLITICS_CHARLES_MCNARY_DESC"
+					picture = "Portrait_USA_Charles_L_McNary.tga"
+					expire = "1965.1.1"
+					ideology = social_democrat_subtype
+					traits = { reluctant_interventionist }
+				}
+			add_ideas = USA_Henry_Wallace_hog_sde
+			add_ideas = USA_Hugh_Simons_Gibson_for_sli
+			add_ideas = USA_Hjalmar_Petersen_eco_sde
+			add_ideas = USA_Konrad_Knute_Solberg_sec_sde
+			}
+		if = { # Roosevelt
+				limit = {
 					has_country_flag = USA_1940_progressive_primary_roosevelt
-					}
+				}
+			create_country_leader = {
+					name = "Quentin Roosevelt"
+					desc = "POLITICS_QUENTIN_ROOSEVELT_DESC"
+					picture = "Portrait_USA_quentin_roosevelt.tga"
+					expire = "1965.1.1"
+					ideology = social_democrat_subtype
+					traits = { tenacious_negotiator }
 				}
 			add_ideas = USA_Henry_Wallace_hog_sde
 			add_ideas = USA_Hugh_Simons_Gibson_for_sli
@@ -10867,6 +10829,14 @@ country_event = { # 1940 Election
 				limit = {
 					has_country_flag = USA_1940_progressive_primary_wallace
 				}
+			create_country_leader = { # Henry Wallace
+				name = "Henry Wallace"
+				desc = "POLITICS_HENRY_WALLLACE_DESC"
+				picture = "Portrait_USA_Henry_Wallace.tga"
+				expire = "1965.1.1"
+				ideology = social_democrat_subtype
+				traits = { tenacious_negotiator }
+			}
 			add_ideas = USA_Quentin_Roosevelt_hog_sde
 			add_ideas = USA_George_Catlett_Marshall_Jr_for_sde
 			add_ideas = USA_George_Henry_Dern_eco_sde
@@ -10894,7 +10864,6 @@ country_event = { # 1940 Election
 		if = {
 		limit = {
 		OR = { 
-		has_country_flag = USA_1940_republican_primary_willkie
 		has_country_flag = USA_1940_republican_primary_dewey
 		has_country_flag = USA_1940_republican_primary_landon
 				}
@@ -10947,27 +10916,60 @@ country_event = { # 1940 Election
 			}
 		}
 		hidden_effect = {
-			if = { # Alf Landon Wing
+			if = { # Dewey
 				limit = {
-					OR = {
-					has_country_flag = USA_1940_republican_primary_willkie
 					has_country_flag = USA_1940_republican_primary_dewey
-					has_country_flag = USA_1940_republican_primary_landon
-					}
+				}
+				create_country_leader = {
+				name = "Thomas Dewey"
+				desc = "POLITICS_THOMAS_DEWEY_DESC"
+				picture = "Portrait_USA_Thomas_Dewey_KR.tga"
+				expire = "1965.1.1"
+				ideology = social_liberal_subtype
+				traits = { great_survivor }
 				}
 				add_ideas = USA_Charles_L_McNary_hog_sli
 				add_ideas = USA_John_Bassett_Moore_for_sli
 				add_ideas = USA_Vannevar_Bush_eco_sli
 				add_ideas = USA_Charles_Evans_Hughes_Sr_sec_mli
 			}
-			if = { # Charles Curtis Wing
+			if = { # Bricker
 				limit = {
-					OR = {
 						has_country_flag = USA_1940_republican_primary_bricker
+				}
+				create_country_leader = {
+					name = "John Bricker"
+					desc = "POLITICS_JOHN_BRICKER_DESC"
+					picture = "gfx/leaders/USA/Portrait_USA_John_Bricker.tga"
+					expire = "1965.1.1"
+					ideology = market_liberal_subtype
+					traits = { staunch_constitutionalist }
+				}
+				add_ideas = USA_John_W_Bricker_hog_sli
+				add_ideas = USA_Norman_H_Davis_for_mli
+				add_ideas = USA_Ray_Lyman_Wilbur_Sr_eco_mli
+				add_ideas = USA_John_Jay_McCloy_sec_mli
+			}
+			if = { # Taft
+				limit = {						
 						has_country_flag = USA_1940_republican_primary_taft
+				}
+				create_country_leader = {
+					name = "Robert Taft"
+					desc = "POLITICS_Robert_Taft_DESC"
+					picture = "gfx/leaders/USA/R_A_Taft.tga"
+					expire = "1965.1.1"
+					ideology = market_liberal_subtype
+					traits = { staunch_constitutionalist }
+				}
+				add_ideas = USA_John_W_Bricker_hog_sli
+				add_ideas = USA_Norman_H_Davis_for_mli
+				add_ideas = USA_Ray_Lyman_Wilbur_Sr_eco_mli
+				add_ideas = USA_John_Jay_McCloy_sec_mli
+			}
+			if = { # Hoover
+				limit = {
 						has_country_flag = USA_1940_republican_primary_hoover
-						has_country_flag = USA_1940_republican_primary_curtis
-					}
 				}
 				add_ideas = USA_John_W_Bricker_hog_sli
 				add_ideas = USA_Norman_H_Davis_for_mli
@@ -11058,6 +11060,14 @@ country_event = { # 1940 Election
 				limit = {
 					has_country_flag = USA_1940_democratic_primary_smith
 				}
+				create_country_leader = {
+					name = "Al Smith"
+					desc = "POLITICS_AL_SMITH_DESC"
+					picture = "gfx/leaders/NEE/Al_Smith.tga"
+					expire = "1965.1.1"
+					ideology = social_liberal_subtype
+					traits = { political_boss }
+				}
 				add_ideas = USA_Wendell_Willkie_hog_sli
 				add_ideas = USA_Cordell_Hull_for_sli
 				add_ideas = USA_Jesse_Holman_Jones_eco_sli
@@ -11067,6 +11077,14 @@ country_event = { # 1940 Election
 				limit = {
 					has_country_flag = USA_1940_democratic_primary_byrd
 				}
+				create_country_leader = {
+					name = "Harry F. Byrd"
+					desc = "POLITICS_HARRY_BYRD_DESC"
+					picture = "Portrait_USA_Harry_F_Byrd.tga"
+					expire = "1965.1.1"
+					ideology = social_conservative_subtype
+					traits = { backroom_backstabber }
+				}
 				add_ideas = USA_Harry_F_Byrd_hog_sco
 				add_ideas = USA_Louis_Arthur_Johnson_for_sco
 				add_ideas = USA_William_Daniel_Leahy_eco_sco
@@ -11075,6 +11093,14 @@ country_event = { # 1940 Election
 			if = { # Douglas MacArthur
 				limit = {
 					has_country_flag = USA_1940_democratic_primary_macarthur
+				}
+				create_country_leader = {
+					name = "Douglas MacArthur"
+					desc = "POLITICS_DOUGLAS_MACARTHUR_DESC"
+					picture = "Portrait_USA_cooler_douglas_macarthur.tga"
+					expire = "1965.1.1"
+					ideology = social_conservative_subtype
+					traits = { war_industrialist }
 				}
 				add_ideas = USA_James_Eastland_hog_sco
 				add_ideas = USA_Louis_Arthur_Johnson_for_sco
@@ -11097,6 +11123,14 @@ country_event = { # 1940 Election
 			if = { # Wendell Willkie
 				limit = {
 					has_country_flag = USA_1940_democratic_primary_willkie
+				}
+				create_country_leader = {
+					name = "Wendell Willkie"
+					desc = "POLITICS_WENDELL_WILLKIE_DESC"
+					picture = "Portrait_USA_Wendell_Willkie_KR.tga"
+					expire = "1965.1.1"
+					ideology = social_liberal_subtype
+					traits = { smooth_talking_charmer }
 				}
 				add_ideas = USA_Adlai_Stevenson_hog_sli
 				add_ideas = USA_Cordell_Hull_for_sli
