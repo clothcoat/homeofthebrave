@@ -10680,7 +10680,15 @@ country_event = { #Partition for Stability
 	
 	trigger = { 
 	tag = USA
-	has_global_flag = WCC_annexation
+	OR = {
+		has_global_flag = WCC_annexation
+		WCC = {
+		has_capitulated = yes
+		}
+		WCC = {
+		exists = no
+		}
+	}
 	has_global_flag = USA_civil_war_over_flag
 	376 = { is_owned_and_controlled_by = USA }
 	377 = { is_owned_and_controlled_by = USA }
@@ -10691,9 +10699,6 @@ country_event = { #Partition for Stability
 	1103 = { is_owned_and_controlled_by = USA }
 	1110 = { is_owned_and_controlled_by = USA }
 	1112 = { is_owned_and_controlled_by = USA }
-	WCC = {
-	exists = no
-	}
 	}
 	
 	mean_time_to_happen = {
