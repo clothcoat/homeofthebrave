@@ -750,6 +750,12 @@ USA_republican_policies:0 "Republican Policies"
 USA_republican_policies_desc:0 "The Republican Party's platform has a number of laws and policies it will strive to pass."
 USA_republican_desegregate_the_military:0 "Desegregate The Military"
 
+USA_republican_anti_lynching_law:0 "Anti-Lynching Laws"
+
+USA_republican_energy_companies:0 "Promote Energy Companies"
+
+USA_republican_highway:0 "Infrastructure Programs"
+
 USA_reunite_with_PSA:0 "Re-unite with [From.GetNameDef]"
 USA_reunite_with_PSA_desc:0 "MacArthur has stepped down from power and we are restored to a proper democracy. Thus we should approach [From.GetNameDef] and ask them to rejoin us - after all, was their goal not already accomplished? Democracy in America?"
 
@@ -2836,7 +2842,7 @@ ustates.201.t:0 "The [GetYear] Republican Primary"
 ustates.201.d.presidency:0 "It is because of Alf Landon's leadership that the country has been guided the through a difficult time. He has been re-nominated as the presidential candidate for the Republican Party."
 ustates.201.d.nopresidency:0 "The Republican Party primary is here for [GetYear]. Robert Taft and John Bricker have been nominated from the parties right-wing while Thomas Dewey is running on the parties left."
 ustates.201.a:0 "Robert Taft is nominated."
-ustates.201.b:0 "Well done, Mr. Landon."
+ustates.201.b:0 "Well done, [USA.GetLeader]."
 ustates.201.c:0 "John Bricker is nominated."
 ustates.201.e:0 "Thomas Dewey is nominated."
 
