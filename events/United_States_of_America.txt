@@ -10348,7 +10348,7 @@ country_event = { # 1940 Progressive Primary
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.200"}
 	title = ustates.200.t
 	picture = GFX_report_event_USA_congress
-
+	
 	desc = {
 	text = ustates.200.desc.nopresidency
 	trigger = {
@@ -10372,6 +10372,9 @@ country_event = { # 1940 Progressive Primary
 		has_country_flag = USA_had_1936_election
 		NOT = {
 			has_country_flag = USA_had_1940_election
+		}
+		NOT  = {
+			has_country_flag = USA_deadlock_garner
 		}
 	}
 
@@ -10438,7 +10441,7 @@ country_event = { # 1940 Republican Primary
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.201"}
 	title = ustates.201.t
 	picture = GFX_report_event_USA_congress
-
+		
 	desc = {
 		text = ustates.201.d.nopresidency
 		trigger = {
@@ -10518,6 +10521,12 @@ country_event = { # 1940 Republican Primary
 		has_country_flag = USA_had_1936_election
 		NOT = {
 			has_country_flag = USA_had_1940_election
+		}
+		NOT  = {
+			has_country_flag = USA_deadlock_garner
+		}
+		NOT  = {
+			has_country_flag = USA_deadlock_norris
 		}
 	}
 
@@ -10617,6 +10626,7 @@ country_event = { # 1940 Democrat Primary
 	id = ustates.202
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.202"}
 	title = ustates.202.t
+	
 	desc = { # Democratic Party has the Presidency
 		text = ustates.202.d.president
 		trigger = {
@@ -10639,6 +10649,9 @@ country_event = { # 1940 Democrat Primary
 		has_country_flag = USA_had_1936_election
 		NOT = {
 			has_country_flag = USA_had_1940_election
+		}
+		NOT  = {
+			has_country_flag = USA_deadlock_norris
 		}
 	}
 
@@ -10752,6 +10765,9 @@ country_event = { # 1940 Election
 		name = ustates.203.a
 		trigger = {
 			has_country_flag = USA_progressives_exist
+			NOT  = {
+				has_country_flag = USA_deadlock_garner
+			}
 		}
 		set_country_flag = USA_had_1940_election
 		hidden_effect = {
@@ -10762,10 +10778,28 @@ country_event = { # 1940 Election
 			election_frequency = 48
 			elections_allowed = yes
 		}
-		hidden_effect = {
-			country_event = {
-				id = ustates.3155
-				days = 40
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = USA_deadlock_norris
+				}
+			}
+			hidden_effect = {
+				country_event = {
+					id = ustates.3155
+					days = 40
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = USA_deadlock_norris
+			}
+			hidden_effect = {
+				country_event = {
+					id = ustates.3164
+					days = 40
+				}
 			}
 		}
 		add_popularity = {
@@ -10860,6 +10894,14 @@ country_event = { # 1940 Election
 	}
 	option = { # Republican
 		name = ustates.203.b
+		trigger = {
+			NOT  = {
+			has_country_flag = USA_deadlock_garner
+			}
+			NOT  = {
+			has_country_flag = USA_deadlock_norris
+			}
+		}
 		set_country_flag = USA_had_1940_election
 		if = {
 		limit = {
@@ -10888,19 +10930,19 @@ country_event = { # 1940 Election
 			}
 		}
 		if = {
-		limit = {
-		OR = { 
-		has_country_flag = USA_1940_republican_primary_bricker
-		has_country_flag = USA_1940_republican_primary_taft
-		has_country_flag = USA_1940_republican_primary_hoover
-		has_country_flag = USA_1940_republican_primary_curtis
+			limit = {
+					OR = { 
+						has_country_flag = USA_1940_republican_primary_bricker
+						has_country_flag = USA_1940_republican_primary_taft
+						has_country_flag = USA_1940_republican_primary_hoover
+						has_country_flag = USA_1940_republican_primary_curtis
 				}
 			}
 		set_politics = {
 			ruling_party = market_liberal
 			election_frequency = 48
 			elections_allowed = yes
-			}
+		}
 		hidden_effect = {
 			set_country_flag = USA_1940_election_con_republican
 		}
@@ -11001,6 +11043,13 @@ country_event = { # 1940 Election
 	}
 	option = { # Democrat
 		name = ustates.203.c
+		trigger = {
+			NOT  = {
+			has_country_flag = USA_deadlock_norris
+			}
+		}
+		trigger = {
+		}
 		set_country_flag = USA_had_1940_election
 		if = {
 			limit = {
@@ -11048,9 +11097,27 @@ country_event = { # 1940 Election
 				ideology = social_conservative
 				popularity = 0.12
 			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = USA_deadlock_garner
+				}
+			}
 			hidden_effect = {
 				country_event = {
 					id = ustates.3159
+					days = 40
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = USA_deadlock_garner
+			}
+			hidden_effect = {
+				country_event = {
+					id = ustates.3163
 					days = 40
 				}
 			}
@@ -11281,6 +11348,19 @@ country_event = { # 1940 Election
 				add_ideas = CSA_Gus_Hall_eco_tot
 				add_ideas = CSA_Eugene_Dennis_sec_syn
 				set_country_flag = USA_1940_election_PP_browder
+			}
+			# next primaries
+			country_event = {
+				id = ustates.204
+				days = 1283
+			}
+			country_event = {
+				id = ustates.205
+				days = 1290
+			}
+			country_event = {
+				id = ustates.206
+				days = 1297
 			}
 		}
 	}		
@@ -11804,6 +11884,9 @@ country_event = { # 1944 Progressive Primary
 		NOT = {
 			has_country_flag = USA_had_1944_election
 		}
+		NOT  = {
+			has_country_flag = USA_deadlock_garner
+		}
 	}
 
 	fire_only_once = yes
@@ -11845,6 +11928,12 @@ country_event = { # 1944 Republican Primary
 		trigger = {
 			NOT = {
 				has_government = social_liberal
+			}
+			NOT  = {
+			has_country_flag = USA_deadlock_garner
+			}
+			NOT  = {
+			has_country_flag = USA_deadlock_norris
 			}
 		}
 	}
@@ -11927,6 +12016,9 @@ country_event = { # 1944 Democrat Primary
 		has_country_flag = USA_had_1940_election
 		NOT = {
 			has_country_flag = USA_had_1944_election
+		}
+		NOT  = {
+			has_country_flag = USA_deadlock_norris
 		}
 	}
 
@@ -12167,6 +12259,9 @@ country_event = { # 1944 Election
 		name = ustates.207.a
 		trigger = {
 			has_country_flag = USA_progressives_exist
+			NOT  = {
+				has_country_flag = USA_deadlock_garner
+			}
 		}
 		set_country_flag = USA_had_1944_election
 		hidden_effect = {
@@ -12225,6 +12320,14 @@ country_event = { # 1944 Election
 	option = { # Republican
 		name = ustates.207.b
 		set_country_flag = USA_had_1944_election
+		trigger = {
+			NOT  = {
+				has_country_flag = USA_deadlock_norris
+			}
+			NOT  = {
+				has_country_flag = USA_deadlock_garner
+			}
+		}
 		hidden_effect = {
 			set_country_flag = USA_1944_election_republican
 		}
@@ -12281,6 +12384,11 @@ country_event = { # 1944 Election
 	}
 	option = { # Democrat
 		name = ustates.207.c
+		trigger = {
+			NOT  = {
+				has_country_flag = USA_deadlock_norris
+			}
+		}
 		set_country_flag = USA_had_1944_election
 		hidden_effect = {
 			set_country_flag = USA_1944_election_democrat
@@ -12495,6 +12603,23 @@ country_event = { # 1944 Election
 				add_ideas = CSA_Eugene_Dennis_sec_syn
 				set_country_flag = USA_1944_election_PP_browder
 			}
+			# next primaries
+			country_event = {
+				id = ustates.209
+				days = 1283
+			}
+			country_event = {
+				id = ustates.210
+				days = 1290
+			}
+			country_event = {
+				id = ustates.211
+				days = 1297
+			}
+			country_event = {
+				id = ustates.212
+				days = 1304
+			}
 		}
 	}		
 	option = { # National People's Party
@@ -12654,7 +12779,6 @@ country_event = { # 1944 Election
 				add_ideas = COR_Clare_Eugene_Hoffman_sec_pau
 				set_country_flag = USA_1944_election_NPP_thurmond
 			}
-		
 			# next primaries
 			country_event = {
 				id = ustates.209
@@ -12831,7 +12955,7 @@ country_event = { # Choosing the PP Candidate
 			create_country_leader = { 
 				name = "Sam DeWitt"
 				desc = "POLITICS_SAM_DEWITT_DESC"
-				picture = "Portrait_CAL_Upton_Sinclair.tga"
+				picture = "Portrait_CSA_Sam_DeWitt.tga"
 				expire = "1965.1.1"
 				ideology = radical_socialist_subtype
 				traits = { author }
@@ -12978,6 +13102,12 @@ country_event = { # Choosing the NPP Candidate
 			}
 			set_country_flag = USA_1948_NPP_primary_lindbergh
 		}
+		if = {
+			limit = {
+				has_country_flag = USA_1944_election_NPP_russell
+			}
+			set_country_flag = USA_1948_NPP_primary_russell
+		}
 	}
 	option = { # Richard Russel Jr.
 	trigger = {
@@ -13006,7 +13136,7 @@ country_event = { # Choosing the NPP Candidate
 			create_country_leader = { 
 				name = "Samuel Green"
 				desc = "POLITICS_SAMUEL_GREEN"
-				picture = "gfx/leaders/COR/COR_Eugene_Talmadge.tga"
+				picture = "gfx/leaders/USA/USA_Samuel_Green.tga"
 				expire = "1965.1.1"
 				ideology = national_populist_subtype
 				traits = { }
@@ -13086,6 +13216,9 @@ country_event = { # 1948 Progressive Party
 		has_country_flag = USA_had_1944_election
 		NOT = {
 			has_country_flag = USA_had_1948_election
+		}
+		NOT  = {
+				has_country_flag = USA_deadlock_garner
 		}
 	}
 
@@ -13179,6 +13312,12 @@ country_event = { # 1948 Republican Primary
 		has_country_flag = USA_had_1944_election
 		NOT = {
 			has_country_flag = USA_had_1948_election
+		}
+		NOT  = {
+				has_country_flag = USA_deadlock_garner
+		}
+		NOT  = {
+				has_country_flag = USA_deadlock_norris
 		}
 	}
 
@@ -13340,6 +13479,9 @@ country_event = { # 1948 Liberal Democrat Primary
 		NOT = {
 			has_country_flag = USA_had_1948_election
 		}
+		NOT  = {
+				has_country_flag = USA_deadlock_norris
+		}
 	}
 
 	fire_only_once = yes
@@ -13459,6 +13601,9 @@ country_event = { # 1948 Conservative Democrat Primary
 		has_country_flag = USA_had_1944_election
 		NOT = {
 			has_country_flag = USA_had_1948_election
+		}
+		NOT  = {
+				has_country_flag = USA_deadlock_norris
 		}
 	}
 
@@ -13675,6 +13820,9 @@ country_event = { # 1948 election
 		name = ustates.213.a
 		trigger = {
 			has_country_flag = USA_progressives_exist
+			NOT  = {
+				has_country_flag = USA_deadlock_garner
+			}
 		}
 		set_country_flag = USA_had_1948_election
 		hidden_effect = {
@@ -13730,6 +13878,14 @@ country_event = { # 1948 election
 	}
 	option = { # Republican
 		name = ustates.213.b
+		trigger = {
+			NOT  = {
+				has_country_flag = USA_deadlock_norris
+			}
+			NOT  = {
+				has_country_flag = USA_deadlock_garner
+			}
+		}
 		set_country_flag = USA_had_1948_election
 		hidden_effect = {
 			set_country_flag = USA_1948_election_republican
@@ -13802,6 +13958,11 @@ country_event = { # 1948 election
 	}
 	option = { # Liberal Democrat
 		name = ustates.213.c
+		trigger = {
+			NOT  = {
+				has_country_flag = USA_deadlock_norris
+			}
+		}
 		set_country_flag = USA_had_1948_election
 		hidden_effect = {
 			set_country_flag = USA_1948_election_liberal
@@ -13856,6 +14017,11 @@ country_event = { # 1948 election
 	}
 	option = { # Conservative Democrat
 		name = ustates.213.e
+		trigger = {
+			NOT  = {
+				has_country_flag = USA_deadlock_norris
+			}
+		}
 		set_country_flag = USA_had_1948_election
 		hidden_effect = {
 			set_country_flag = USA_1948_election_conservative
@@ -13982,7 +14148,7 @@ country_event = { # 1948 election
 			}
 			if = { # Robert M. La Follette Jr.
 				limit = {
-					has_country_flag = USA_1944_PP_primary_bob
+					has_country_flag = USA_1948_PP_primary_bob
 				}
 				add_ideas = TEX_Philip_La_Follette_hog_sli
 				add_ideas = USA_Adolf_Augustus_Berle_Jr_for_sde
@@ -14039,6 +14205,23 @@ country_event = { # 1948 election
 				add_ideas = CSA_Gus_Hall_eco_tot
 				add_ideas = CSA_Eugene_Dennis_sec_syn
 				set_country_flag = USA_1948_election_PP_browder
+			}
+			# next primaries
+			country_event = {
+				id = ustates.214
+				days = 1283
+			}
+			country_event = {
+				id = ustates.215
+				days = 1290
+			}
+			country_event = {
+				id = ustates.216
+				days = 1297
+			}
+			country_event = {
+				id = ustates.217
+				days = 1304
 			}
 		}
 	}		
@@ -14107,7 +14290,7 @@ country_event = { # 1948 election
 				elections_allowed = yes
 			}
 			hidden_effect = {
-				set_country_flag = USA_1944_election_pat_aut_NPP
+				set_country_flag = USA_1948_election_pat_aut_NPP
 			}
 			add_popularity = {
 				ideology = paternal_autocrat
@@ -14130,7 +14313,7 @@ country_event = { # 1948 election
 				elections_allowed = yes
 			}
 			hidden_effect = {
-				set_country_flag = USA_1944_election_nat_pop_NPP
+				set_country_flag = USA_1948_election_nat_pop_NPP
 			}
 			add_popularity = {
 				ideology = national_populist
@@ -14207,13 +14390,12 @@ country_event = { # 1948 election
 				limit = {
 					has_country_flag = USA_1948_NPP_primary_green
 				}
-				add_ideas = COR_Edward_L_Jackson_hog_npo
+				add_ideas = COR_Samuel_Green_hog_npo
 				add_ideas = COR_Revilio_P_Oliver_for_npo
 				add_ideas = COR_Gerald_Burton_Winrod_eco_npo
-				add_ideas = COR_Elizabeth_Eloise_Kirkpatrick_Dilling_sec_npo
+				add_ideas = COR_Samuel_Green_sec_npo
 				set_country_flag = USA_1948_election_NPP_green
 			}
-		
 			# next primaries
 			country_event = {
 				id = ustates.214
@@ -14237,6 +14419,368 @@ country_event = { # 1948 election
 
 
 ### 1952 Elections and Primaries ###
+country_event = { # Choosing the PP Candidate
+	id = ustates.1999
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.1999"}
+	title = ustates.1999.t
+	desc = { # President, two terms
+		text = ustates.1999.d.president_two_terms
+		trigger = {
+			OR = {
+				has_country_flag = USA_1948_election_PP_sinclair
+				has_country_flag = USA_1948_election_PP_bob
+				has_country_flag = USA_1948_election_PP_browder
+				has_country_flag = USA_1948_election_PP_earl
+			}
+		}
+	}
+	desc = { # President, one term
+		text = ustates.1999.d.president_one_term
+		trigger = {
+			OR = {
+				has_country_flag = USA_1948_election_PP_philip
+				has_country_flag = USA_1948_election_PP_dewitt
+				has_country_flag = USA_1948_election_PP_wallace
+			}
+		}
+	}
+	desc = { # Browder's Fourth Term
+		text = ustates.1999.d.president_browder
+		trigger = {
+			AND = {
+				has_country_flag = USA_1940_election_PP_browder
+				has_country_flag = USA_1944_election_PP_browder
+				has_country_flag = USA_1948_election_PP_browder
+			}
+		}
+	}
+	desc = { # Browder's Third Term
+		text = ustates.1999.d.president_browder
+		trigger = {
+			AND = {
+				has_country_flag = USA_1944_election_PP_browder
+				has_country_flag = USA_1948_election_PP_browder
+			}
+		}
+	}
+	desc = { # No Presidency
+		text = ustates.1999.d.nopresidency
+		trigger = {
+			NOT = {
+				OR = {
+					has_government = social_democrat
+					has_government = radical_socialist
+				}
+			}
+		}
+	}
+	picture = GFX_report_event_USA_congress
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { # Re-Nominate PP Candidate
+		name = ustates.1999.a
+		trigger = {
+			OR = { 
+					has_country_flag = USA_1948_PP_primary_dewitt
+					has_country_flag = USA_1948_PP_primary_philip
+					has_country_flag = USA_1948_PP_primary_wallace
+					has_country_flag = USA_1948_PP_primary_browder
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = USA_1948_election_soc_dem_PP
+			}
+			add_popularity = {
+				ideology = social_democrat
+				popularity = 0.02
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = USA_1948_election_rad_soc_PP
+			}
+			add_popularity = {
+				ideology = radical_socialist
+				popularity = 0.02
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = USA_1948_election_PP_browder
+			}
+			set_country_flag = USA_1952_PP_primary_browder
+		}
+		if = {
+			limit = {
+				has_country_flag = USA_1948_election_PP_wallace
+			}
+			set_country_flag = USA_1952_PP_primary_wallace
+		}
+		if = {
+			limit = {
+				has_country_flag = USA_1948_election_PP_dewitt
+			}
+			set_country_flag = USA_1952_PP_primary_dewitt
+		}
+		if = {
+			limit = {
+				has_country_flag = USA_1948_election_PP_philip
+			}
+			set_country_flag = USA_1952_PP_primary_philip
+		}
+	}
+	
+	option = { # Gus Hall
+		name = ustates.1999.b
+		hidden_effect = {
+			set_country_flag = USA_1952_PP_primary_hall
+			create_country_leader = { 
+				name = "Gus Hall"
+				desc = "POLITICS_GUS_HALL_DESC"
+				picture = "Portrait_CSA_Gus_Hall.tga"
+				expire = "1965.1.1"
+				ideology = radical_socialist_subtype
+				traits = { }
+			}
+		}
+	}
+	
+	option = { # Darlington Hoopes
+		name = ustates.1999.c
+		hidden_effect = {
+			set_country_flag = USA_1952_PP_primary_hoopes
+			create_country_leader = { 
+				name = "Darlington Hoopes"
+				desc = "POLITICS_DARLINGTON_HOOPES_DESC"
+				picture = "Portrait_CSA_Darlington_Hoopes.tga"
+				expire = "1965.1.1"
+				ideology = radical_socialist_subtype
+				traits = { }
+			}
+		}
+	}
+	
+	option = { # Glen H. Taylor
+		name = ustates.1999.e
+		hidden_effect = {
+			set_country_flag = USA_1952_PP_primary_taylor
+			create_country_leader = { 
+				name = "Glen Taylor"
+				desc = "POLITICS_GLEN_TAYLOR_DESC"
+				picture = "Portrait_USA_Glen_Taylor.tga"
+				expire = "1965.1.1"
+				ideology = social_democrat_subtype
+				traits = { }
+			}
+		}
+	}
+	
+	option = { # Big Jim Folsom
+		name = ustates.1999.f
+		hidden_effect = {
+			set_country_flag = USA_1952_PP_primary_folsom
+			create_country_leader = { 
+				name = "Jim Folsom"
+				desc = "POLITICS_JIM_FOLSOM_DESC"
+				picture = "TEX_Big_Jim_Folsom.tga"
+				expire = "1965.1.1"
+				ideology = social_democrat_subtype
+				traits = { big_jim }
+			}
+		}
+	}
+}
+
+country_event = { # Choosing the NPP Candidate
+	id = ustates.1990
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.1990"}
+	title = ustates.1990.t
+	desc = { # President, one term
+		text = ustates.1990.d.president_one_term
+		trigger = {
+			has_country_flag = USA_1948_election_NPP_green
+		}
+	}
+	desc = { # Lindbergh's Third Term
+		text = ustates.1990.d.president_lindbergh
+		trigger = {
+			AND = {
+				has_country_flag = USA_1944_election_NPP_lindbergh
+				has_country_flag = USA_1948_election_NPP_lindbergh
+			}
+		}
+	}
+	desc = { # Lindbergh's Fourth Term
+		text = ustates.1990.d.president_lindbergh
+		trigger = {
+			AND = {
+				has_country_flag = USA_1940_election_NPP_lindbergh
+				has_country_flag = USA_1944_election_NPP_lindbergh
+				has_country_flag = USA_1948_election_NPP_lindbergh
+			}
+		}
+	}
+	desc = { # Russell Steps Down
+		text = ustates.1990.d.two_term_russell
+		trigger = {
+			AND = {
+				has_country_flag = USA_1944_election_NPP_russell
+				has_country_flag = USA_1948_election_NPP_russell
+			}
+		}
+	}
+	desc = { # Thurmond Steps Down
+		text = ustates.1990.d.two_term_russell
+		trigger = {
+			AND = {
+				has_country_flag = USA_1944_election_NPP_thurmond
+				has_country_flag = USA_1948_election_NPP_thurmond
+			}
+		}
+	}
+	desc = { # No Presidency
+		text = ustates.1990.d.nopresidency
+		trigger = {
+			NOT = {
+				OR = {
+					has_country_flag = USA_1944_election_NPP_russell
+					has_government = authoritarian_democrat
+					has_government = paternal_autocrat
+				}
+			}
+		}
+	}
+	picture = GFX_report_event_USA_congress
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { # Re-Nominate PP Candidate
+		name = ustates.1990.a
+		trigger = {
+			OR = { 
+					has_country_flag = USA_1948_election_NPP_thurmond
+					has_country_flag = USA_1948_election_NPP_lindbergh
+					has_country_flag = USA_1948_election_NPP_russell
+					has_country_flag = USA_1948_election_NPP_green
+			}
+			NOT = { 
+					has_country_flag = USA_NPP_thurmond_two_terms_1948
+					has_country_flag = USA_NPP_russell_two_terms_1948
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = USA_1948_election_auth_dem_NPP
+			}
+			add_popularity = {
+				ideology = authoritarian_democrat
+				popularity = 0.02
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = USA_1948_election_pat_aut_NPP
+			}
+			add_popularity = {
+				ideology = paternal_autocrat
+				popularity = 0.02
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = USA_1948_election_NPP_green
+			}
+			set_country_flag = USA_1952_NPP_primary_green
+		}
+		if = {
+			limit = {
+				has_country_flag = USA_1948_election_NPP_lindbergh
+			}
+			set_country_flag = USA_1952_NPP_primary_lindbergh
+		}
+		if = {
+			limit = {
+				has_country_flag = USA_1948_election_NPP_russell
+			}
+			set_country_flag = USA_1952_NPP_primary_russell
+		}
+		if = {
+			limit = {
+				has_country_flag = USA_1948_election_NPP_thurmond
+			}
+			set_country_flag = USA_1952_NPP_primary_thurmond
+		}
+	}
+	option = { # Richard Russel Jr.
+	trigger = {
+			NOT = { 
+				has_country_flag = USA_NPP_russell_two_terms_1948
+			}
+		}
+		name = ustates.1990.b
+		hidden_effect = {
+			set_country_flag = USA_1952_NPP_primary_russell
+			create_country_leader = { 
+				name = "Richard Russell Jr."
+				desc = "POLITICS_RICHARD_RUSSELL_DESC"
+				picture = "gfx/leaders/COR/COR_Richard_Russell.tga"
+				expire = "1965.1.1"
+				ideology = social_conservative_subtype
+				traits = { clever_aristocrat }
+			}
+		}
+	}
+	
+	option = { # Francis Parker Yockey
+		name = ustates.1990.c
+		hidden_effect = {
+			set_country_flag = USA_1952_NPP_primary_yockey
+			create_country_leader = { 
+				name = "Francis Parker Yockey"
+				desc = "POLITICS_FRANCIS_PARKER_YOCKEY"
+				picture = "gfx/leaders/COR/COR_Yockey.tga"
+				expire = "1965.1.1"
+				ideology = national_populist_subtype
+				traits = { }
+			}
+		}
+	}
+	
+	option = { # Strom Thurmond
+		name = ustates.1990.e
+		hidden_effect = {
+			set_country_flag = USA_1952_NPP_primary_thurmond
+			create_country_leader = { 
+				name = "Strom Thurmond"
+				desc = "POLITICS_STROM_THURMOND_DESC"
+				picture = "gfx/leaders/USA/Portrait_USA_Strom_Thurmond.tga"
+				expire = "1965.1.1"
+				ideology = authoritarian_democrat_subtype
+				traits = { }
+			}
+		}
+	}
+	
+	option = { # Charles Lindbergh
+		name = ustates.1990.f
+		hidden_effect = {
+			set_country_flag = USA_1952_NPP_primary_lindbergh
+			create_country_leader = { 
+				name = "Charles Lindbergh"
+				desc = "POLITICS_CHARLES_LINDBERGH_DESC"
+				picture = "gfx/leaders/COR/COR_lindberg.tga"
+				expire = "1965.1.1"
+				ideology = paternal_autocrat_subtype
+				traits = { the_lone_eagle }
+			}
+		}
+	}
+}
+
 country_event = { # 1952 Progressive Primary
 	id = ustates.214
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.214"}
@@ -14883,6 +15427,288 @@ country_event = { # 1952 election
 				add_ideas = USA_James_Watson_Gerard_Jr_for_sco
 				add_ideas = USA_Dean_Gooderham_Acheson_for_sco
 				add_ideas = USA_Martin_Dies_Jr_sec_sco
+			}
+		}
+	}
+	option = { # Populist Party
+		name = ustates.213.d
+		trigger = {
+			has_country_flag = USA_deadlock_garner
+		}
+		set_country_flag = USA_had_1952_election
+		if = {
+			limit = {
+				OR = { 
+					has_country_flag = USA_1952_PP_primary_wallace
+					has_country_flag = USA_1952_PP_primary_philip
+					has_country_flag = USA_1952_PP_primary_taylor
+					has_country_flag = USA_1952_PP_primary_folsom
+				}
+			}
+			set_politics = {
+				ruling_party = social_democrat
+				election_frequency = 48
+				elections_allowed = yes
+			}
+			hidden_effect = {
+				set_country_flag = USA_1952_election_soc_dem_PP
+			}
+			add_popularity = {
+				ideology = social_democrat
+				popularity = 0.12
+			}
+		}
+		if = {
+			limit = {
+				OR = { 
+					has_country_flag = USA_1952_PP_primary_hoopes
+					has_country_flag = USA_1952_PP_primary_dewitt
+					has_country_flag = USA_1952_PP_primary_browder
+					has_country_flag = USA_1952_PP_primary_hall
+				}
+			}
+			set_politics = {
+				ruling_party = radical_socialist
+				election_frequency = 48
+				elections_allowed = yes
+				}
+			hidden_effect = {
+				set_country_flag = USA_1952_election_rad_soc_PP
+			}
+			add_popularity = {
+				ideology = radical_socialist
+				popularity = 0.12
+			}
+		}
+		hidden_effect = {
+			if = { # Philipp La Follette
+				limit = {
+					has_country_flag = USA_1952_PP_primary_philip
+				}
+				add_ideas = TEX_Philip_La_Follette_hog_sli
+				add_ideas = USA_Adolf_Augustus_Berle_Jr_for_sde
+				add_ideas = USA_Harry_Lloyd_Hopkins_eco_sde
+				add_ideas = USA_Harold_LeClair_Ickes_sec_sde
+				set_country_flag = USA_1952_election_PP_philip
+			}
+			if = { # Henry Wallace
+				limit = {
+					has_country_flag = USA_1952_PP_primary_wallace
+				}
+				add_ideas = USA_Henry_Wallace_hog_sde
+				add_ideas = USA_Adolf_Augustus_Berle_Jr_for_sde
+				add_ideas = USA_Harry_Lloyd_Hopkins_eco_sde
+				add_ideas = USA_Harold_LeClair_Ickes_sec_sde
+				set_country_flag = USA_1952_election_PP_wallace
+			}
+			if = { # Glen H. Taylor
+				limit = {
+					has_country_flag = USA_1952_PP_primary_taylor
+				}
+				add_ideas = USA_Glen_H_Taylor_hog_sde
+				add_ideas = USA_Adolf_Augustus_Berle_Jr_for_sde
+				add_ideas = USA_Hjalmar_Petersen_eco_sde
+				add_ideas = USA_Harold_LeClair_Ickes_sec_sde
+				set_country_flag = USA_1952_election_PP_wallace
+			}
+			if = { # Jim Folsom
+				limit = {
+					has_country_flag = USA_1952_PP_primary_folsom
+				}
+				add_ideas = TEX_Rush_Limbaugh_sr_hog_sde
+				add_ideas = USA_Adolf_Augustus_Berle_Jr_for_sde
+				add_ideas = USA_Harry_Lloyd_Hopkins_eco_sde
+				add_ideas = USA_Harold_LeClair_Ickes_sec_sde
+				set_country_flag = USA_1952_election_PP_folsom
+			}
+			if = { # Sam DeWitt
+				limit = {
+					has_country_flag = USA_1952_PP_primary_dewitt
+				}
+				add_ideas = CSA_Daniel_Hoan_hog_rso
+				add_ideas = CSA_Max_Eastman_for_rso
+				add_ideas = CSA_John_Gates_eco_rso
+				add_ideas = CSA_Lee_Pressman_sec_syn
+				set_country_flag = USA_1952_election_PP_dewitt
+			}
+			if = { # Darlington Hoopes
+				limit = {
+					has_country_flag = USA_1952_PP_primary_hoopes
+				}
+				add_ideas = CSA_Darlington_Hoopes_hog_rso
+				add_ideas = CSA_Max_Eastman_for_rso
+				add_ideas = CSA_John_Gates_eco_rso
+				add_ideas = CSA_Lee_Pressman_sec_syn
+				set_country_flag = USA_1952_election_PP_dewitt
+			}
+			if = { # Earl Browder
+				limit = {
+					has_country_flag = USA_1952_PP_primary_browder
+				}
+				add_ideas = CSA_Gus_Hall_hog_tot
+				add_ideas = CSA_Anna_Louise_Strong_for_tot
+				add_ideas = CSA_Gus_Hall_eco_tot
+				add_ideas = CSA_Eugene_Dennis_sec_syn
+				set_country_flag = USA_1952_election_PP_browder
+			}
+			if = { # Gus Hall
+				limit = {
+					has_country_flag = USA_1952_PP_primary_hall
+				}
+				add_ideas = CSA_Gus_Hall_hog_tot
+				add_ideas = CSA_Anna_Louise_Strong_for_tot
+				add_ideas = CSA_Gus_Hall_eco_tot
+				add_ideas = CSA_Eugene_Dennis_sec_syn
+				set_country_flag = USA_1952_election_PP_browder
+			}
+		}
+	}		
+	option = { # National People's Party
+		name = ustates.213.e
+		trigger = {
+			has_country_flag = USA_deadlock_norris
+		}
+		set_country_flag = USA_had_1952_election
+		if = {
+			limit = {
+				has_country_flag = USA_1952_NPP_primary_russell
+			}
+			set_politics = {
+				ruling_party = social_conservative
+				election_frequency = 48
+				elections_allowed = yes
+			}
+			hidden_effect = {
+				set_country_flag = USA_1952_election_soc_con_NPP
+			}
+			add_popularity = {
+				ideology = social_conservative
+				popularity = 0.12
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = USA_1952_NPP_primary_thurmond
+			}
+			set_politics = {
+				ruling_party = authoritarian_democrat
+				election_frequency = 48
+				elections_allowed = yes
+			}
+			hidden_effect = {
+				set_country_flag = USA_1952_election_auth_dem_NPP
+			}
+			add_popularity = {
+				ideology = authoritarian_democrat
+				popularity = 0.12
+			}
+			hidden_effect = {
+				country_event = {
+				id = ustates.1990
+				days = 1276
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = { 
+					has_country_flag = USA_1952_NPP_primary_lindbergh
+				}
+			}
+			set_politics = {
+				ruling_party = paternal_autocrat
+				election_frequency = 48
+				elections_allowed = yes
+			}
+			hidden_effect = {
+				set_country_flag = USA_1952_election_pat_aut_NPP
+			}
+			add_popularity = {
+				ideology = paternal_autocrat
+				popularity = 0.12
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = USA_1952_NPP_primary_green
+				has_country_flag = USA_1952_NPP_primary_yockey
+			}
+			set_politics = {
+				ruling_party = national_populist
+				election_frequency = 48
+				elections_allowed = yes
+			}
+			hidden_effect = {
+				set_country_flag = USA_1952_election_nat_pop_NPP
+			}
+			add_popularity = {
+				ideology = national_populist
+				popularity = 0.12
+			}
+		}
+		
+		hidden_effect = {
+			if = { # Richard Russell
+				limit = {
+					has_country_flag = USA_1952_NPP_primary_russell
+				}
+				add_ideas = COR_Richard_Russell_Jr_hog_sco
+				add_ideas = TEX_Rev_Frank_Buchman_for_ade
+				add_ideas = TEX_Gerald_Prentice_Nye_eco_ade
+				add_ideas = TEX_alvin_o_king_sec_ade
+				set_country_flag = USA_1948_election_NPP_russell
+				if = { # Eugen Talmadge
+						limit = {
+							has_country_flag = USA_1948_election_NPP_russell
+						}
+						set_country_flag = USA_NPP_russell_two_terms_1952
+					}
+			}
+			if = { # Charles Lindbergh
+				limit = {
+					has_country_flag = USA_1952_NPP_primary_lindbergh
+				}
+				add_ideas = COR_Charles_Augustus_Lindbergh_hog_pau
+				add_ideas = COR_James_D_Mooney_for_pau
+				add_ideas = COR_Fred_Chase_Koch_eco_ade
+				add_ideas = COR_D_W_Griffith_sec_pau
+				set_country_flag = USA_1952_election_NPP_lindbergh
+			}
+			if = { # Strom Thurmond
+				limit = {
+					has_country_flag = USA_1952_NPP_primary_thurmond
+				}
+				add_ideas = COR_Strom_Thurmond_hog_sco
+				add_ideas = TEX_Rev_Frank_Buchman_for_ade
+				add_ideas = TEX_Gerald_Prentice_Nye_eco_ade
+				add_ideas = COR_Clare_Eugene_Hoffman_sec_pau
+				set_country_flag = USA_1948_election_NPP_thurmond
+				if = { # Eugen Talmadge
+						limit = {
+							has_country_flag = USA_1948_election_NPP_thurmond
+						}
+						set_country_flag = USA_NPP_thurmond_two_terms_1952
+					}
+			}
+			if = { # Samuel Green
+				limit = {
+					has_country_flag = USA_1952_NPP_primary_green
+				}
+				add_ideas = COR_Samuel_Green_hog_npo
+				add_ideas = COR_Revilio_P_Oliver_for_npo
+				add_ideas = COR_Gerald_Burton_Winrod_eco_npo
+				add_ideas = COR_Samuel_Green_sec_npo
+				set_country_flag = USA_1952_election_NPP_green
+			}
+			if = { # Francis Parker Yockey
+				limit = {
+					has_country_flag = USA_1952_NPP_primary_yockey
+				}
+				add_ideas = COR_Samuel_Green_hog_npo
+				add_ideas = COR_Revilio_P_Oliver_for_npo
+				add_ideas = COR_Gerald_Burton_Winrod_eco_npo
+				add_ideas = COR_Elizabeth_Eloise_Kirkpatrick_Dilling_sec_npo
+				set_country_flag = USA_1952_election_NPP_yockey
 			}
 		}
 	}
@@ -19255,7 +20081,7 @@ country_event = { # Fifth Political System-Deadlock, PP formed
 	is_triggered_only = yes
 	
 	desc = {
-	text = ustates.3161.d.demlibs
+	text = ustates.3161.d.PP
 	trigger = {
 			OR = {
 				has_country_flag = USA_1940_election_soc_dem_PP
@@ -19319,6 +20145,7 @@ country_event = { # Fifth Political System-Deadlock, PP formed
 	}
 }
 
+
 country_event = { # Fifth Political System-Deadlock, NPP formed
 	id = ustates.3162
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.3162"}
@@ -19348,6 +20175,152 @@ country_event = { # Fifth Political System-Deadlock, NPP formed
 		add_popularity = { ideology = social_conservative popularity = 0.03 }
 		add_popularity = { ideology = authoritarian_democrat popularity = 0.04 }
 		add_popularity = { ideology = paternal_autocrat popularity = 0.03 }
+		set_party_name = {
+			ideology = totalist
+			long_name = NNP_opponent_totalist_coalition_long
+			name = NNP_opponent_totalist_coalition }
+		set_party_name = {
+			ideology = syndicalist
+			long_name = NNP_opponent_syndicalist_coalition_long
+			name = NNP_opponent_syndicalist_coalition }
+		set_party_name = {
+			ideology = radical_socialist
+			long_name = NPP_opponent_radical_socialist_coalition_long
+			name = NPP_opponent_radical_socialist_coalition }	
+		set_party_name = {
+			ideology = social_democrat
+			long_name = NPP_opponent_social_democrat_coalition_long
+			name = NPP_opponent_social_democrat_coalition }
+		set_party_name = {
+			ideology = social_liberal
+			long_name = NPP_opponent_social_liberal_coalition_long
+			name = NPP_opponent_social_liberal_coalition }	
+		set_party_name = {
+			ideology = market_liberal
+			long_name = NPP_opponent_market_liberal_coalition_long
+			name = NPP_opponent_market_liberal_coalition }
+		set_party_name = {
+			ideology = social_conservative
+			long_name = NPP_social_conservative_coalition_long
+			name = NPP_social_conservative_coalition }
+		set_party_name = {
+			ideology = authoritarian_democrat
+			long_name = NPP_authoritarian_democrat_coalition
+			name = NPP_authoritarian_democrat_coalition }
+		set_party_name = {
+			ideology = paternal_autocrat
+			long_name = NPP_paternal_autocrat_coalition_long
+			name = NPP_paternal_autocrat_coalition }
+		set_party_name = {
+			ideology = national_populist
+			long_name = NPP_national_populist_coalition_long
+			name = NPP_national_populist_coalition }
+		set_country_flag = USA_NPP_dominance
+		}
+	}
+}
+
+country_event = { # Fifth Political System-Deadlock, PP formed but lost
+	id = ustates.3163
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.3163"}
+	title = ustates.3163.t
+	picture = GFX_report_event_USA_congress
+
+	is_triggered_only = yes
+	
+	desc = {
+	text = ustates.3163.d.PP
+	trigger = {
+			NOT = {
+				has_country_flag = USA_1940_election_soc_dem_PP
+				has_country_flag = USA_1940_election_rad_soc_PP
+			}
+		}
+	}
+	option = { # Very Well
+		name = ustates.3163.a
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = USA_1940_election_soc_dem_PP
+					has_country_flag = USA_1940_election_rad_soc_PP
+				}
+			}
+		add_popularity = { ideology = social_conservative popularity = 0.05 }
+		add_popularity = { ideology = market_liberal popularity = 0.05 }
+		set_party_name = {
+			ideology = totalist
+			long_name = PP_totalist_coalition_long
+			name = PP_totalist_coalition }
+		set_party_name = {
+			ideology = syndicalist
+			long_name = PP_syndicalist_coalition_long
+			name = PP_syndicalist_coalition }
+		set_party_name = {
+			ideology = radical_socialist
+			long_name = PP_radical_socialist_coalition_long
+			name = PP_radical_socialist_coalition }	
+		set_party_name = {
+			ideology = social_democrat
+			long_name = PP_social_democrat_coalition_long
+			name = PP_social_democrat_coalition }
+		set_party_name = {
+			ideology = social_liberal
+			long_name = PP_social_liberal_coalition_long
+			name = PP_social_liberal_coalition }		
+		set_party_name = {
+			ideology = market_liberal
+			long_name = PP_opponent_market_liberal_coalition_long
+			name = PP_opponent_market_liberal_coalition }
+		set_party_name = {
+			ideology = social_conservative
+			long_name = PP_opponent_social_conservative_coalition_long
+			name = PP_opponent_social_conservative_coalition }
+		set_party_name = {
+			ideology = authoritarian_democrat
+			long_name = PP_opponent_authoritarian_democrat_coalition_long
+			name = PP_opponent_authoritarian_democrat_coalition }
+		set_party_name = {
+			ideology = paternal_autocrat
+			long_name = PP_opponent_paternal_autocrat_coalition_long
+			name = PP_opponent_paternal_autocrat_coalition }
+		set_party_name = {
+			ideology = national_populist
+			long_name = PP_opponent_national_populist_coalition_long
+			name = PP_opponent_national_populist_coalition }
+		set_country_flag = USA_PP_dominance
+		}
+	}
+}
+
+country_event = { # Fifth Political System-Deadlock, NPP formed but lost
+	id = ustates.3164
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.3164"}
+	title = ustates.3164.t
+	picture = GFX_report_event_USA_congress
+
+	is_triggered_only = yes
+	
+	desc = {
+	text = ustates.3164.d.NPP
+	trigger = {
+			NOT = {
+				has_country_flag = USA_1940_election_auth_dem_NPP
+				has_country_flag = USA_1940_election_pat_aut_NPP
+			}
+		}
+	}
+	option = { # Very Well
+		name = ustates.3164.a
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = USA_1940_election_auth_dem_NPP
+					has_country_flag = USA_1940_election_pat_aut_NPP
+				}
+			}
+		add_popularity = { ideology = social_democrat popularity = 0.05 }
+		add_popularity = { ideology = social_liberal popularity = 0.05 }
 		set_party_name = {
 			ideology = totalist
 			long_name = NNP_opponent_totalist_coalition_long
