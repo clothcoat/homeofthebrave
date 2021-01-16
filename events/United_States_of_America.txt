@@ -10896,25 +10896,25 @@ country_event = { # 1940 Election
 		name = ustates.203.b
 		trigger = {
 			NOT  = {
-			has_country_flag = USA_deadlock_garner
+				has_country_flag = USA_deadlock_garner
 			}
 			NOT  = {
-			has_country_flag = USA_deadlock_norris
+				has_country_flag = USA_deadlock_norris
 			}
 		}
 		set_country_flag = USA_had_1940_election
 		if = {
-		limit = {
-		OR = { 
-		has_country_flag = USA_1940_republican_primary_dewey
-		has_country_flag = USA_1940_republican_primary_landon
+			limit = {
+				OR = { 
+					has_country_flag = USA_1940_republican_primary_dewey
+					has_country_flag = USA_1940_republican_primary_landon
 				}
 			}
 		set_politics = {
 			ruling_party = social_liberal
 			election_frequency = 48
 			elections_allowed = yes
-			}
+		}
 		hidden_effect = {
 			set_country_flag = USA_1940_election_lib_republican
 		}
@@ -10938,23 +10938,23 @@ country_event = { # 1940 Election
 						has_country_flag = USA_1940_republican_primary_curtis
 				}
 			}
-		set_politics = {
-			ruling_party = market_liberal
-			election_frequency = 48
-			elections_allowed = yes
-		}
-		hidden_effect = {
-			set_country_flag = USA_1940_election_con_republican
-		}
-		hidden_effect = {
-			country_event = {
-				id = ustates.3157
-				days = 40
+			set_politics = {
+				ruling_party = market_liberal
+				election_frequency = 48
+				elections_allowed = yes
 			}
-		}
-		add_popularity = {
-			ideology = market_liberal
-			popularity = 0.12
+			hidden_effect = {
+				set_country_flag = USA_1940_election_con_republican
+			}
+			hidden_effect = {
+				country_event = {
+					id = ustates.3157
+					days = 40
+				}
+			}
+			add_popularity = {
+				ideology = market_liberal
+				popularity = 0.12
 			}
 		}
 		hidden_effect = {
@@ -11045,10 +11045,8 @@ country_event = { # 1940 Election
 		name = ustates.203.c
 		trigger = {
 			NOT  = {
-			has_country_flag = USA_deadlock_norris
+				has_country_flag = USA_deadlock_norris
 			}
-		}
-		trigger = {
 		}
 		set_country_flag = USA_had_1940_election
 		if = {
@@ -11221,7 +11219,7 @@ country_event = { # 1940 Election
 		}
 	}
 	option = { # Populist Party
-		name = ustates.203.d
+		name = ustates.203.e
 		trigger = {
 			has_country_flag = USA_deadlock_garner
 		}
@@ -11365,7 +11363,7 @@ country_event = { # 1940 Election
 		}
 	}		
 	option = { # National People's Party
-		name = ustates.203.e
+		name = ustates.203.f
 		trigger = {
 			has_country_flag = USA_deadlock_norris
 		}
@@ -12450,7 +12448,7 @@ country_event = { # 1944 Election
 		}
 	}
 	option = { # Populist Party
-		name = ustates.207.d
+		name = ustates.207.e
 		trigger = {
 			has_country_flag = USA_deadlock_garner
 		}
@@ -12623,7 +12621,7 @@ country_event = { # 1944 Election
 		}
 	}		
 	option = { # National People's Party
-		name = ustates.207.e
+		name = ustates.207.f
 		trigger = {
 			has_country_flag = USA_deadlock_norris
 		}
@@ -14075,7 +14073,7 @@ country_event = { # 1948 election
 		}
 	}
 	option = { # Populist Party
-		name = ustates.213.d
+		name = ustates.213.f
 		trigger = {
 			has_country_flag = USA_deadlock_garner
 		}
@@ -14226,7 +14224,7 @@ country_event = { # 1948 election
 		}
 	}		
 	option = { # National People's Party
-		name = ustates.213.e
+		name = ustates.213.g
 		trigger = {
 			has_country_flag = USA_deadlock_norris
 		}
@@ -15431,7 +15429,7 @@ country_event = { # 1952 election
 		}
 	}
 	option = { # Populist Party
-		name = ustates.213.d
+		name = ustates.218.f
 		trigger = {
 			has_country_flag = USA_deadlock_garner
 		}
@@ -15564,7 +15562,7 @@ country_event = { # 1952 election
 		}
 	}		
 	option = { # National People's Party
-		name = ustates.213.e
+		name = ustates.218.g
 		trigger = {
 			has_country_flag = USA_deadlock_norris
 		}
@@ -15704,7 +15702,7 @@ country_event = { # 1952 election
 				limit = {
 					has_country_flag = USA_1952_NPP_primary_yockey
 				}
-				add_ideas = COR_Samuel_Green_hog_npo
+				add_ideas = COR_Francis_Parker_Yockey_hog_npo
 				add_ideas = COR_Revilio_P_Oliver_for_npo
 				add_ideas = COR_Gerald_Burton_Winrod_eco_npo
 				add_ideas = COR_Elizabeth_Eloise_Kirkpatrick_Dilling_sec_npo
