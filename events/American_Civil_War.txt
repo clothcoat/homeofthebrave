@@ -9163,6 +9163,7 @@ country_event = { # Canada Returning land to America ###
 							country_exists = CAL
 							country_exists = CSA
 							country_exists = TEX
+							country_exists = COR
 						}
 					}
 				}
@@ -9183,6 +9184,7 @@ country_event = { # Canada Returning land to America ###
 							country_exists = USA
 							country_exists = CSA
 							country_exists = TEX
+							country_exists = COR
 						}
 					}
 				}
@@ -9203,6 +9205,7 @@ country_event = { # Canada Returning land to America ###
 							country_exists = USA
 							country_exists = CSA
 							country_exists = CAL
+							country_exists = COR
 						}
 					}
 				}
@@ -10321,6 +10324,9 @@ country_event = {
 	trigger = {
 		is_acw_tag = yes
 		has_global_flag = USA_civil_war_begun_flag
+		NOT = {
+		has_global_flag = USA_civil_war_over_flag
+		}
 		WCC = {
 		surrender_progress > 0.80
 		}
