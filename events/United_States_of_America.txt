@@ -16626,6 +16626,17 @@ country_event = { # New England has been returned to us
 
 	is_triggered_only = yes
 
+	trigger = {
+	NOT = {
+	has_global_flag =USA_civil_war_avoided_flag
+	}
+	NOT = {
+		NEE = {
+		is_ai = no
+		}
+	}
+	}
+
 	option = {
 		name = ustates.271.a
 		if = {
