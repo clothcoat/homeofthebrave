@@ -1389,7 +1389,8 @@ country_event = { # Farmer Support
 					remove_idea = COR_political_rival_farmer
 					add_idea = COR_political_rival_trap
 				}
-		}	
+		}
+		set_country_flag = COR_talmadge_coup	
 		add_popularity = { ideology = paternal_autocrat popularity = 0.06 }
 		add_manpower = 100
 		}
@@ -2158,6 +2159,44 @@ country_event = {#Blood
 		add_popularity = { ideology = national_populist popularity = 0.05 }   
 		}
 	}
+
+country_event = { # Talmadge Coups
+	id = constate.1137
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.1137"}
+	title = constate.1137.t
+	desc = constate.1137.d
+	picture = GFX_report_event_USA_military_trial
+
+	trigger = {
+	tag = COR
+	has_country_flag = COR_talmadge_coup
+	}
+
+	mean_time_to_happen = {
+	days = 20
+	}
+
+	fire_only_once = yes
+
+	option = {#Damn!
+		name = constate.1137.a
+		add_popularity = { ideology = paternal_autocrat popularity = 0.10 }
+		hidden_effect = {
+			create_country_leader = {
+				name = "Eugene Talmadge"
+				desc = "POLITICS_EUGENE_TALMADGE_DESC"
+				picture = "gfx/leaders/COR/COR_Eugene_Talmadge.tga"
+				expire = "1965.1.1"
+				ideology = paternal_autocrat_subtype
+				traits = { }
+			}
+		}
+		set_politics = {
+			ruling_party = paternal_autocrat
+			elections_allowed = no
+		}
+	}
+}
 
 country_event = { # Simmons Death
 	id = constate.12
