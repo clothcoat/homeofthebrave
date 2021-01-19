@@ -3264,12 +3264,12 @@ focus_tree = {
 			has_global_flag = USA_civil_war_over_flag
 			has_country_flag = AUS_election_occured
 			has_government = social_conservative
-			has_country_flag = TEX_texas_takeover_flag
+			has_country_leader = { ruling_only = yes name = "W. Lee O'Daniel" }
 		}
 		bypass = {
 			has_global_flag = USA_civil_war_over_flag
 			has_government = social_conservative
-			has_country_flag = TEX_texas_takeover_flag
+			has_country_leader = { ruling_only = yes name = "W. Lee O'Daniel" }
 		}
 		ai_will_do = {
 			factor = 5
