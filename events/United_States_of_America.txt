@@ -1774,23 +1774,30 @@ country_event = { # The 1936 Election - Coalition
 		}
 	}
 	option = { # HOOOOOOOVER!
-        name = ustates.34.i
-		trigger = { has_country_flag = USA_hoover_nominated }
-        ai_chance = {
-            factor = 5
-        }
-        set_country_flag = USA_had_1936_election
-		set_country_flag = USA_democrats_exist
-		set_country_flag = USA_progressives_exist
-        hidden_effect = {
-            set_country_flag = USA_Herb_36_Victory
-        }
-		set_politics = {
-			ruling_party = market_liberal
-			election_frequency = 48
-			elections_allowed = yes
+       	name = ustates.34.i
+	trigger = { has_country_flag = USA_hoover_nominated }
+        	ai_chance = {
+            	factor = 5
+	modifier = {
+		factor = 0
+			has_game_rule = {
+			rule = USA_civil_war
+			option = USA_CIVIL_WAR_1936
+			}		
 		}
-        hidden_effect = {
+      	}
+      	set_country_flag = USA_had_1936_election
+	set_country_flag = USA_democrats_exist
+	set_country_flag = USA_progressives_exist
+       	 hidden_effect = {
+            	set_country_flag = USA_Herb_36_Victory
+        	}
+	set_politics = {
+		ruling_party = market_liberal
+		election_frequency = 48
+		elections_allowed = yes
+	}
+        	hidden_effect = {
 			add_ideas = USA_Douglas_MacArthur_hog_sco
 			add_ideas = USA_John_Davison_Rockefeller_Jr_for_pau
 			add_ideas = USA_Henry_Ford_eco_pau
@@ -1811,7 +1818,7 @@ country_event = { # The 1936 Election - Coalition
 				}
 			}
         }
-        hidden_effect = {
+        	hidden_effect = {
 			random_other_country = {
 				news_event = { id = worldnews.1017 days = 1 }
 			}
@@ -1913,6 +1920,13 @@ country_event = { # The 1936 Election - Coalition
 		trigger = { has_country_flag = USA_curtis_nominated }
 		ai_chance = {
 			factor = 80
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = USA_civil_war
+					option = USA_CIVIL_WAR_1936
+				}		
+			}
 		}
 		set_country_flag = USA_had_1936_election
 		set_country_flag = USA_progressives_exist
@@ -1987,6 +2001,13 @@ country_event = { # The 1936 Election - Coalition
 		trigger = { has_country_flag = USA_landon_nominated }
 		ai_chance = {
 			factor = 80
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = USA_civil_war
+					option = USA_CIVIL_WAR_1936
+				}		
+			}
 		}
 		set_country_flag = USA_had_1936_election
 		set_country_flag = USA_progressives_exist
@@ -2071,6 +2092,13 @@ country_event = { # The 1936 Election - Coalition
 			modifier = {
 				factor = 3
 				check_variable = { SPA_strength > 4 }
+			}
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = USA_civil_war
+					option = USA_CIVIL_WAR_1936
+				}		
 			}
 		}
 		set_country_flag = USA_had_1936_election
@@ -2169,6 +2197,13 @@ country_event = { # The 1936 Election - Coalition
 			modifier = {
 				factor = 2
 				check_variable = { AFP_strength > 4 }
+			}
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = USA_civil_war
+					option = USA_CIVIL_WAR_1936
+				}		
 			}
 		}
 		set_country_flag = USA_had_1936_election
@@ -2279,6 +2314,13 @@ country_event = { # The 1936 Election - Coalition
 				factor = 2
 				check_variable = { ODP_strength > 4 }
 			}
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = USA_civil_war
+					option = USA_CIVIL_WAR_1936
+				}		
+			}
 		}
 		set_country_flag = USA_had_1936_election
 		hidden_effect = {
@@ -2375,6 +2417,13 @@ country_event = { # The 1936 Election - Coalition
 		name = ustates.34.f
 		ai_chance = {
 			factor = 10
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = USA_civil_war
+					option = USA_CIVIL_WAR_1936
+				}		
+			}
 		}
 		set_country_flag = USA_had_1936_election
 		set_country_flag = USA_progressives_exist
@@ -2471,6 +2520,13 @@ country_event = { # The 1936 Election - Coalition
 		name = ustates.34.g
 		ai_chance = {
 			factor = 10
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = USA_civil_war
+					option = USA_CIVIL_WAR_1936
+				}		
+			}
 		}
 		set_country_flag = USA_had_1936_election
 		set_politics = {
