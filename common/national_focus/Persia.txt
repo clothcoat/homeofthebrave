@@ -736,6 +736,109 @@ focus_tree = {
 
 	focus = {
 		id = PER_acerbaican
+		icon = GFX_goal_flag_azerbaijan
+		x = 1
+		y = 8
+		relative_position_id = PER_shah_is_dead_press_f
+		cost = 5
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+			modifier = {
+				factor = 0
+				strength_ratio = { tag = AZE ratio < 1.0 }
+			}
+			modifier = {
+				factor = 0
+				AZE = {
+					is_subject = yes
+					overlord = {
+						strength_ratio = { tag = ROOT ratio > 1.0 }
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				AZE = {
+					is_in_faction = yes
+					faction_leader = {
+						strength_ratio = { tag = ROOT ratio > 1.0 }
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				country_exists = OTT #don't attack before the Cairo Pact war
+			}
+		}
+		will_lead_to_war_with = AZE
+		available = {
+			has_country_flag = monarchy_persia
+			is_subject = no
+			can_declare_war_on = 990.owner
+			if = {
+				limit = { var:990.owner = { tag = AZE } }
+				OR = {
+					INT = { has_war_with = GER }
+					RUS = { has_war_with = GER }
+					SOV = { has_war_with = GER }
+					NOT = { country_exists = GER }
+				}
+			}
+		}
+		bypass = {
+			NOT = { can_declare_war_on = 990.owner }
+		}
+		prerequisite = {
+			focus = PER_agha_khan_legacy
+			focus = PER_mideast_communism
+			focus = PER_mideast_democracy
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PER_acerbaican"
+			if = {
+				limit = {
+					can_declare_war_on = AZE
+					country_exists = ARM
+					ARM = {
+						is_subject = no
+						is_in_faction = no
+						NOT = { has_war_with = ROOT }
+					}
+					country_exists = GER
+					GER = { NOT = { has_war_with = AZE } }
+				}
+				country_event = pers.44
+			}
+			else_if = {
+				limit = {
+					can_declare_war_on = AZE
+					country_exists = GER
+					GER = { NOT = { has_war_with = AZE } }
+				}
+				country_event = pers.84
+			}
+			else = {
+				add_state_claim = 229
+				add_state_claim = 990
+				add_state_claim = 998
+				add_state_claim = 1081
+				if = {
+					limit = { can_declare_war_on = AZE }
+					declare_war_on = {
+						type = annex_everything
+						target = AZE
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = PER_baharain
 		icon = GFX_goal_PER_Flag_Bahrain
 		x = -1
 		y = 8
@@ -766,7 +869,7 @@ focus_tree = {
 				factor = 0
 				var:907.owner = {
 					is_in_faction = yes
-					var:faction_leader = {
+					faction_leader = {
 						strength_ratio = { tag = ROOT ratio > 1.0 }
 					}
 				}
@@ -777,107 +880,16 @@ focus_tree = {
 			}
 		}
 		available = {
-			has_country_flag = monarchy_persia
-			has_global_flag = OTT_Surrender
 			is_subject = no
+			NOT = { country_exists = OTT }
 			can_declare_war_on = 907.owner
 		}
 		prerequisite = {
 			focus = PER_agha_khan_legacy
 		}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus PER_acerbaican"
-			var:907.owner = { country_event = pers.67 }
-		}
-	}
-
-	focus = {
-		id = PER_baharain
-		icon = GFX_goal_flag_azerbaijan
-		x = 1
-		y = 8
-		relative_position_id = PER_shah_is_dead_press_f
-		cost = 5
-		ai_will_do = {
-			factor = 10
-			modifier = {
-				factor = 0
-				has_war = yes
-			}
-			modifier = {
-				factor = 0
-				strength_ratio = { tag = AZE ratio < 1.0 }
-			}
-			modifier = {
-				factor = 0
-				AZE = {
-					is_subject = yes
-					overlord = {
-						strength_ratio = { tag = ROOT ratio > 1.0 }
-					}
-				}
-			}
-			modifier = {
-				factor = 0
-				AZE = {
-					is_in_faction = yes
-					var:faction_leader = {
-						strength_ratio = { tag = ROOT ratio > 1.0 }
-					}
-				}
-			}
-			modifier = {
-				factor = 0
-				country_exists = OTT #don't attack before the Cairo Pact war
-			}
-		}
-		will_lead_to_war_with = AZE
-		available = {
-			OR = {
-				INT = { has_war_with = GER }
-				RUS = { has_war_with = GER }
-				SOV = { has_war_with = GER }
-				NOT = { country_exists = GER }
-			}
-			is_subject = no
-			can_declare_war_on = AZE
-		}
-		bypass = {
-			NOT = { can_declare_war_on = AZE }
-		}
-		prerequisite = {
-			focus = PER_agha_khan_legacy
-			focus = PER_mideast_communism
-			focus = PER_mideast_democracy
-		}
-		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus PER_baharain"
-			if = {
-				limit = {
-					country_exists = ARM
-					AZE = {
-						NOT = { has_war_with = GER }
-					}
-				}
-				country_event = pers.44
-			}
-			if = {
-				limit = {
-					NOT = { country_exists = ARM }
-					AZE = {
-						NOT = { has_war_with = GER }
-					}
-				}
-				country_event = pers.84
-			}
-			if = {
-				limit = {
-					AZE = {
-						has_war_with = GER
-					}
-				}
-				country_event = pers.56
-			}
+			var:907.owner = { country_event = pers.67 }
 		}
 	}
 
