@@ -5857,6 +5857,23 @@ country_event = { # Canada's Decision
 	option = { # Governor-General appointed
 		ai_chance = {
 			factor = 33
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = NEE_start_path
+						option = NEE_START_PATH_FEDERALIST
+					}	
+					has_game_rule = {
+						rule = NEE_start_path
+						option = NEE_START_PATH_SENTINEL
+					}	
+					has_game_rule = {
+						rule = NEE_start_path
+						option = NEE_START_PATH_REMNANT
+					}					
+				}
+			}
 		}
 		name = newengland.105.b
 		set_country_flag = NEE_convention_dissolved
