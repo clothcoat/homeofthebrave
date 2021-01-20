@@ -4322,6 +4322,129 @@ country_event = {###Our Flag
 	}
 }
 
+country_event = {# R E H
+	id = unionstate.5912 
+	title = unionstate.5912.t 
+	desc = unionstate.5912.d
+	picture =  GFX_report_event_generic_diplomacy1
+
+	trigger = {
+	tag = TEX
+	has_completed_focus = TEX_texas_values
+	}
+
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+	days = 10
+	}
+
+       	option = {# Yes 
+		name = unionstate.5912.a 
+		add_political_power = 15
+		add_popularity = { ideology = social_conservative popularity = 0.03 }
+		}
+	}
+
+country_event = {# Unions 
+	id = unionstate.5913 
+	title = unionstate.5913.t 
+	desc = unionstate.5913.d
+	picture =  GFX_report_event_generic_diplomacy1
+
+	trigger = {
+	tag = TEX
+	has_completed_focus = TEX_labor_agitators
+	}
+
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+	days = 10
+	}
+
+       	option = {#Compulsory racial segregation 
+		name = unionstate.5913.a 
+		ai_chance = {	
+		factor = 90 	
+		}
+		add_political_power = -15
+		add_manpower = -250
+		add_stability = 0.05
+		add_popularity = { ideology = social_conservative popularity = 0.05	}
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.05 }
+		add_popularity = { ideology = totalist popularity = -0.05 }  
+		add_popularity = { ideology = syndicalist popularity = -0.05 }
+		add_popularity = { ideology = radical_socialist popularity = -0.05 }
+		add_popularity = { ideology = social_democrat popularity = -0.03 } 
+	}
+      	option = {#No racial segregation in Trade Unions 
+		name = unionstate.5913.b 
+		ai_chance = {	
+		factor = 10 	
+		}
+		add_stability = -0.01
+		add_manpower = 100
+		add_popularity = { ideology = social_conservative popularity = -0.05 }
+		add_popularity = { ideology = authoritarian_democrat popularity = -0.05 }
+		add_popularity = { ideology = totalist popularity = 0.01 }  
+		add_popularity = { ideology = syndicalist popularity = 0.03 }
+		add_popularity = { ideology = radical_socialist popularity = 0.05 }
+		add_popularity = { ideology = social_democrat popularity = 0.05 } 
+		}
+	}
+
+country_event = {# University 
+	id = unionstate.5914 
+	title = unionstate.5914.t 
+	desc = unionstate.5914.d
+	picture =  GFX_report_event_generic_diplomacy1
+
+	trigger = {
+	tag = TEX
+	has_completed_focus = TEX_obligations_to_our_children
+	}
+
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+	days = 10
+	}
+
+       	option = {#C
+		name = unionstate.5914.a  
+		ai_chance = {	
+		factor = 90 	
+		}
+		add_political_power = -15
+		add_popularity = { ideology = social_conservative popularity = 0.05	}
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.03 }
+		add_popularity = { ideology = totalist popularity = -0.05 }  
+		add_popularity = { ideology = syndicalist popularity = -0.05 }
+		add_popularity = { ideology = radical_socialist popularity = -0.05 }
+		add_popularity = { ideology = social_democrat popularity = -0.03 }
+		add_popularity = { ideology = paternal_autocrat popularity = -0.05 }
+		add_popularity = { ideology = national_populist popularity = -0.05 }    
+	}
+       	option = {#no racial segregation in Trade Unions 
+		name = unionstate.5914.b 
+		ai_chance = {	
+		factor = 10 	
+		}
+		add_stability = 0.03
+		add_popularity = { ideology = social_conservative popularity = -0.01 }
+		add_popularity = { ideology = authoritarian_democrat popularity = -0.05 }
+		add_popularity = { ideology = totalist popularity = 0.01 }  
+		add_popularity = { ideology = syndicalist popularity = 0.03 }
+		add_popularity = { ideology = radical_socialist popularity = 0.05 }
+		add_popularity = { ideology = social_democrat popularity = 0.05 } 
+		add_popularity = { ideology = market_liberal popularity = 0.2 }
+		add_popularity = { ideology = social_conservative popularity = 0.05 }
+		add_popularity = { ideology = paternal_autocrat popularity = 0.03 }
+		add_popularity = { ideology = national_populist popularity = 0.01 }  
+		}
+	}
+
 country_event = { #Effinger Captured
 	id = unionstate.60
 	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.60"}
