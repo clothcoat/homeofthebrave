@@ -872,6 +872,15 @@ country_event = { # Reintegration demand
 	    COR = {
 	        exists = no
 		}
+		CAL = {
+			OR = {
+	        		exists = no
+			has_global_flag = PSA_rockies_ceasefire
+			}
+		}
+		USA = {
+	        exists = yes
+		}
 	}
     }
 	desc = { ###PSA demands###
@@ -889,10 +898,13 @@ country_event = { # Reintegration demand
 	    COR = {
 	        exists = no
 		}
+		CAL = {
+	        exists = yes
+		}
 	}
     }
 	desc = { ###AUS demands###
-	text = amcivwar.3004.d.AUS
+	text = amcivwar.3004.d.TEX
 	trigger = {
 	    USA = {
 	        exists = no
@@ -903,25 +915,47 @@ country_event = { # Reintegration demand
 	    COR = {
 	        exists = no
 		}
+		CAL = {
+			OR = {
+	        		exists = no
+			has_global_flag = PSA_rockies_ceasefire
+			}
+		}
+		TEX = {
+	        exists = yes
+		}
 	}
     }	
 
 	option = {  #Accept
 		name = amcivwar.3004.a
+		ai_chance = {
+			factor = 60
+			modifier = {
+				factor = 0.5
+				has_authoritarian_government = yes
+			}
+		}
 		if = {
 		limit = { 	    
-        TEX = {
-	        exists = no
-		}
-	    CSA = {
-	        exists = no
-		}
-	    COR = {
-	        exists = no
-		} 
+      	  		TEX = {
+	        		exists = no
+			}
+	   		CSA = {
+	        		exists = no
+			}
+	    		COR = {
+	       		exists = no
+			}
+				CAL = {
+				OR = {
+	        	exists = no
+				has_global_flag = PSA_rockies_ceasefire
+				}
+			}
         }
 		hidden_effect = {
-		USA = {
+		ÙSA = {
 		country_event = {
 		id = amcivwar.3006
 		hours = 3
@@ -932,16 +966,22 @@ country_event = { # Reintegration demand
 
 		if = {
 		limit = { 	    
-        USA = {
-	        exists = no
-		}
-	    CSA = {
-	        exists = no
-		}
-	    COR = {
-	        exists = no
-		} 
-        }
+        			USA = {
+	        		exists = no
+			}
+	    		CSA = {
+	        		exists = no
+			}
+	    		COR = {
+	        		exists = no
+			}
+				CAL = {
+				OR = {
+	        	exists = no
+				has_global_flag = PSA_rockies_ceasefire
+				}
+			}
+       	}
 		hidden_effect = {
 		TEX = {
 		country_event = {
@@ -954,19 +994,19 @@ country_event = { # Reintegration demand
 
 		if = {
 		limit = { 	    
-        USA = {
-	        exists = no
-		}
-        TEX = {
-	        exists = no
-		}
-	    CSA = {
-	        exists = no
-		}
-	    COR = {
-	        exists = no
-		} 
-        }
+        			USA = {
+	        		exists = no
+			}
+        			TEX = {
+	        		exists = no
+			}
+	    		CSA = {
+	        		exists = no
+			}
+	   		COR = {
+	        		exists = no
+			} 
+        		}
 		hidden_effect = {
 		CAL = {
 		country_event = {
@@ -978,6 +1018,21 @@ country_event = { # Reintegration demand
 		}
 	}
 	option = {
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 0
+				COR = { exists = no }
+				OR = {
+					has_democratic_government = yes
+					has_government = authoritarian_democrat
+					AND = {
+						country_exists = CSA
+						has_socialist_government = yes
+					}
+				}
+			}
+		}
 		name = amcivwar.3004.b
 		if = {
 		limit = { 	    
@@ -1085,71 +1140,12 @@ country_event = { # Reintegration accepted
 
 	option = {  #Godammit
 		name = amcivwar.3006.a
-		if = {
-		limit = { 	    
-        TEX = {
-	        exists = no
-		}
-	    CSA = {
-	        exists = no
-		}
-	    COR = {
-	        exists = no
-		} 
-        }
-	    USA = {
-	    annex_country = {
-	    target = BBR
-	    transfer_troops = no
-	    }
-		}
-		}
-
-		if = {
-		limit = { 	    
-        USA = {
-	        exists = no
-		}
-	    CSA = {
-	        exists = no
-		}
-	    COR = {
-	        exists = no
-		} 
-        }
-	    TEX = {
-	    annex_country = {
-	    target = BBR
-	    transfer_troops = no
-	    }
-		}
-		}
-
-		if = {
-		limit = { 	    
-        USA = {
-	        exists = no
-		}
-        TEX = {
-	        exists = no
-		}
-	    CSA = {
-	        exists = no
-		}
-	    COR = {
-	        exists = no
-		} 
-        }
-	    CAL = {
-	    annex_country = {
-	    target = BBR
-	    transfer_troops = no
-	    }
-		}
+	   	annex_country = {
+	    	target = BBR
+	    	transfer_troops = no
+	    	}
 		}
 	}
-}
-
 
 country_event = { # Demand BBR stand down (CSA)
 	id = amcivwar.3007
