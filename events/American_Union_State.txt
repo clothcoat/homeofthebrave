@@ -4191,7 +4191,7 @@ country_event = { #Slicing Taxes
 	option = { #Business Tax
 		name = unionstate.5909.b
 		add_popularity = { ideology = social_conservative popularity = 0.03 }
-		375 = {
+		random_owned_state = {
 				limit = {
 					is_core_of = TEX
 					is_controlled_by = TEX
