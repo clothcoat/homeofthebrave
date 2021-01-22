@@ -10359,6 +10359,9 @@ country_event = {
 			white_peace_with_ROOT = yes
 		}
 		if = {
+			CAL = {
+			exists = yes
+			}
 			every_state = {
 			limit = {
 				state = 1111
@@ -10386,6 +10389,9 @@ country_event = {
 			}
 			}
 		if = {
+			TEX = {
+			exists = yes
+			}
 			every_state = {
 			limit = {
 				OR = {
@@ -10421,6 +10427,9 @@ country_event = {
 			}
 			}
 		else_if = {
+			CAL = {
+			exists = yes
+			}
 			every_state = {
 			limit = {
 				OR = {
@@ -10455,7 +10464,10 @@ country_event = {
 				}
 			}
 			}
-		else_if = {
+		else_if = {		
+			COR = {
+			exists = yes
+			}
 			every_state = {
 			limit = {
 				OR = {
@@ -10491,6 +10503,9 @@ country_event = {
 			}
 			}
 		else_if = {
+			USA = {
+			exists = yes
+			}
 			every_state = {
 			limit = {
 				OR = {
@@ -10515,7 +10530,10 @@ country_event = {
 				}
 			}
 			}
-		else_if = {
+		else_if = {			
+			CSA = {
+			exists = yes
+			}
 			every_state = {
 			limit = {
 				OR = {
@@ -10551,6 +10569,9 @@ country_event = {
 			}
 			}
 		else_if = {
+			BBR = {
+			exists = yes
+			}
 			every_state = {
 			limit = {
 				OR = {
@@ -10586,6 +10607,9 @@ country_event = {
 			}
 			}
 		else_if = {
+			NEE = {
+			exists = yes
+			}
 			every_state = {
 			limit = {
 				OR = {
