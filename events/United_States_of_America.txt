@@ -19458,6 +19458,15 @@ country_event = { # Fifth Political System
 	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
+
+	trigger = {
+	NOT = {
+		OR = {
+		has_idea = USA_REP_NAZBOL
+		has_idea = USA_Mckinley
+		}
+	}
+	}
 	
 	desc = {
 	text = ustates.3150.d.progs
@@ -19525,6 +19534,15 @@ country_event = { # Fifth Political System
 	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
+
+	trigger = {
+	NOT = {
+		OR = {
+		has_idea = USA_REP_NAZBOL
+		has_idea = USA_Mckinley
+		}
+	}
+	}
 	
 	desc = {
 	text = ustates.3151.d.replibs
@@ -19592,6 +19610,15 @@ country_event = { # Fifth Political System
 	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
+
+	trigger = {
+	NOT = {
+		OR = {
+		has_idea = USA_REP_NAZBOL
+		has_idea = USA_Mckinley
+		}
+	}
+	}
 	
 	desc = {
 	text = ustates.3152.d.repcons
@@ -19659,6 +19686,15 @@ country_event = { # Fifth Political System
 	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
+
+	trigger = {
+	NOT = {
+		OR = {
+		has_idea = USA_REP_NAZBOL
+		has_idea = USA_Mckinley
+		}
+	}
+	}
 	
 	desc = {
 	text = ustates.3153.d.demlibs
@@ -19726,6 +19762,15 @@ country_event = { # Fifth Political System
 	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
+
+	trigger = {
+	NOT = {
+		OR = {
+		has_idea = USA_REP_NAZBOL
+		has_idea = USA_Mckinley
+		}
+	}
+	}
 	
 	desc = {
 	text = ustates.3154.d.demcons
@@ -19793,6 +19838,15 @@ country_event = { # Fifth Political System
 	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
+
+	trigger = {
+	NOT = {
+		OR = {
+		has_idea = USA_REP_NAZBOL
+		has_idea = USA_Mckinley
+		}
+	}
+	}
 	
 	desc = {
 	text = ustates.3155.d.progs
@@ -19860,6 +19914,15 @@ country_event = { # Fifth Political System
 	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
+
+	trigger = {
+	NOT = {
+		OR = {
+		has_idea = USA_REP_NAZBOL
+		has_idea = USA_Mckinley
+		}
+	}
+	}
 	
 	desc = {
 	text = ustates.3156.d.replibs
@@ -19927,6 +19990,15 @@ country_event = { # Fifth Political System
 	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
+
+	trigger = {
+	NOT = {
+		OR = {
+		has_idea = USA_REP_NAZBOL
+		has_idea = USA_Mckinley
+		}
+	}
+	}
 	
 	desc = {
 	text = ustates.3157.d.repcons
@@ -19994,6 +20066,15 @@ country_event = { # Fifth Political System
 	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
+
+	trigger = {
+	NOT = {
+		OR = {
+		has_idea = USA_REP_NAZBOL
+		has_idea = USA_Mckinley
+		}
+	}
+	}
 	
 	desc = {
 	text = ustates.3158.d.demlibs
@@ -20061,6 +20142,15 @@ country_event = { # Fifth Political System
 	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
+
+	trigger = {
+	NOT = {
+		OR = {
+		has_idea = USA_REP_NAZBOL
+		has_idea = USA_Mckinley
+		}
+	}
+	}
 	
 	desc = {
 	text = ustates.3159.d.demcons
