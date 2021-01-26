@@ -6440,6 +6440,229 @@ focus_tree = {
 			add_stability = 0.03
 		}
 	}
+
+	### Navy with a State ###
+	focus = {# Navy-in-Command
+		id = USA_navy_in_command
+		icon = GFX_goal_USA_navy
+		cost = 0.00
+		available = {
+			has_country_flag = USA_navy_flag
+		}
+		bypass = {
+			has_country_flag = USA_navy_flag
+		}
+		x = 12
+		y = 18
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_navy_in_command"
+			custom_effect_tooltip = unlock_focuses
+		}
+	}
+
+	focus = {# Chief Admiral Leahy
+		id = USA_admiral_leahy
+		icon = GFX_goal_USA_navy
+		cost = 6.00
+		available = {
+			has_government = social_democrat
+			has_country_leader = { ruling_only = yes name = "George Norris" } 
+		}
+		prerequisite = {
+			focus = USA_navy_in_command
+		}
+		relative_position_id = USA_navy_in_command
+		x = -6
+		y = 1
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_admiral_leahy"
+			add_political_power = 50
+			add_stability = 0.03
+		}
+	}
+
+	focus = {# Pacific Reconciliation
+		id = USA_pacific_reconciliation
+		icon = GFX_goal_USA_navy
+		cost = 6.00
+		available = {
+			has_government = social_democrat
+			has_country_leader = { ruling_only = yes name = "George Norris" } 
+		}
+		prerequisite = {
+			focus = USA_admiral_leahy
+		}
+		relative_position_id = USA_navy_in_command
+		x = -8
+		y = 2
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_pacific_reconciliation"
+			add_political_power = 50
+			add_stability = 0.03
+		}
+	}
+
+	focus = {# Naval Investments
+		id = USA_naval_investments
+		icon = GFX_goal_USA_navy
+		cost = 6.00
+		available = {
+			has_government = social_democrat
+			has_country_leader = { ruling_only = yes name = "George Norris" } 
+		}
+		prerequisite = {
+			focus = USA_admiral_leahy
+		}
+		relative_position_id = USA_navy_in_command
+		x = -6
+		y = 2
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_naval_investments"
+			add_political_power = 50
+			add_stability = 0.03
+		}
+	}
+
+	focus = {# Court the Rockies
+		id = USA_court_the_rockies
+		icon = GFX_goal_USA_navy
+		cost = 6.00
+		available = {
+			has_government = social_democrat
+			has_country_leader = { ruling_only = yes name = "George Norris" } 
+		}
+		prerequisite = {
+			focus = USA_admiral_leahy
+		}
+		relative_position_id = USA_navy_in_command
+		x = -4
+		y = 2
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_court_the_rockies"
+			add_political_power = 50
+			add_stability = 0.03
+		}
+	}
+
+	focus = {# Supreme Court Trial
+		id = USA_supreme_court_trial
+		icon = GFX_goal_USA_navy
+		cost = 6.00
+		available = {
+			has_government = social_democrat
+			has_country_leader = { ruling_only = yes name = "George Norris" } 
+		}
+		prerequisite = {
+			focus = USA_pacific_reconciliation
+		}
+		prerequisite = {
+			focus = USA_naval_investments
+		}
+		relative_position_id = USA_navy_in_command
+		x = -7
+		y = 3
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_supreme_court_trial"
+			add_political_power = 50
+			add_stability = 0.03
+		}
+	}
+
+	focus = {# Supreme Court Trial
+		id = USA_decision_of_congress
+		icon = GFX_goal_USA_navy
+		cost = 6.00
+		available = {
+			has_government = social_democrat
+			has_country_leader = { ruling_only = yes name = "George Norris" } 
+		}
+		prerequisite = {
+			focus = USA_court_the_rockies
+		}
+		prerequisite = {
+			focus = USA_naval_investments
+		}
+		relative_position_id = USA_navy_in_command
+		x = -5
+		y = 3
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_decision_of_congress"
+			add_political_power = 50
+			add_stability = 0.03
+		}
+	}
+
+	focus = {# Savior of Democracy
+		id = USA_savior_of_democracy
+		icon = GFX_goal_USA_navy
+		cost = 6.00
+		available = {
+			has_government = social_democrat
+			has_country_leader = { ruling_only = yes name = "George Norris" } 
+		}
+		prerequisite = {
+			focus = USA_supreme_court_trial
+		}
+		prerequisite = {
+			focus = USA_decision_of_congress
+		}
+		relative_position_id = USA_navy_in_command
+		x = -6
+		y = 4
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_savior_of_democracy"
+			add_political_power = 50
+			add_stability = 0.03
+		}
+	}
+
+	focus = {# Chief Admiral Leahy
+		id = USA_admiral_king
+		icon = GFX_goal_USA_navy
+		cost = 6.00
+		available = {
+			has_government = social_democrat
+			has_country_leader = { ruling_only = yes name = "George Norris" } 
+		}
+		prerequisite = {
+			focus = USA_navy_in_command
+		}
+		relative_position_id = USA_navy_in_command
+		x = 6
+		y = 1
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_admiral_king"
+			add_political_power = 50
+			add_stability = 0.03
+		}
+	}
 	
 	### Post Civil War ###	
 	focus = {# Victory in the Civil War
