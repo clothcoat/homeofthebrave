@@ -20576,6 +20576,7 @@ country_event = {
 		set_country_flag = USA_establishment_supported
 		hidden_effect = {
 			country_event = { id = ustates.503 days = 5 }
+			country_event = { id = ustates.508 days = 10 }
 		}
 	}
 	option = {
@@ -20583,6 +20584,7 @@ country_event = {
 		set_country_flag = USA_longists_supported
 		hidden_effect = {
 			country_event = { id = ustates.504 days = 5 }
+			country_event = { id = ustates.507 days = 10 }
 		}
 	}
 	option = {
@@ -20590,6 +20592,7 @@ country_event = {
 		set_country_flag = USA_socialists_supported
 		hidden_effect = {
 			country_event = { id = ustates.505 days = 5 }
+			country_event = { id = ustates.507 days = 10 }
 		}
 	}
 }
@@ -20679,6 +20682,16 @@ country_event = {
 			country_event = { id = ustates.507 hours = 3 }
 		}
 	}
+}
+
+# Voting on the bill
+country_event = {
+	id = ustates.5060
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.5060"}
+
+	is_triggered_only = yes
+	hidden = yes
+
 	option = {
 		name = BILL_FAILS
 		trigger = {
