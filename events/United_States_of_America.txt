@@ -5372,18 +5372,20 @@ country_event = { # March on Detroit
 
 	trigger = {
 		tag = USA
+		has_country_flag = USA_had_1936_election
 		OR = {
 		NOT = { has_country_flag = USA_macarthur_coup } 
 		NOT = { has_country_flag = USA_negotiations_begun }
 		NOT = { has_country_flag = USA_compromise_failed }
 		NOT = { has_country_flag = USA_compromise_reached }
-		}
 		date > 1937.3.15
+		}
 	}
 	
 	mean_time_to_happen = {
-	days = 5
+	days = 60
 	}
+
 
 	fire_only_once = yes
 
@@ -5411,7 +5413,7 @@ country_event = { # Counter Protest Organized
 		name = ustates.86.a
 		add_stability = -0.02
 		hidden_effect = {
-			country_event = { id = ustates.86 days = 2 }
+			country_event = { id = ustates.87 days = 2 }
 		}
 	}
 }
