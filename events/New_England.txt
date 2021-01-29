@@ -8000,13 +8000,6 @@ country_event = {# Intervene in the South
 		add_war_support = -0.05
 		add_manpower = -50
 	}
-
-	option = {# A Third Option...
-		name = newengland.168.c
-		add_political_power = -25
-		add_war_support = -0.05
-		add_manpower = -50
-	}
 }
 
 country_event = {# Last Bastion of America
@@ -8576,3 +8569,137 @@ country_event = { # Stoddard makes an offer
 		}
 	}
 }
+
+country_event = {
+	id = newengland.184 # "Human Betterment Foundation
+	title = newengland.184.t 
+	desc = newengland.184.d
+	picture =  GFX_report_event_generic_diplomacy1
+        	is_triggered_only = no
+
+	fire_only_once = yes
+
+	trigger = {
+	tag = NEE
+	has_completed_focus =  NEE_racial_catalogues_idea
+	owns_state = 797
+	CAL = { exists = no }
+
+	mean_time_to_happen = {
+	days = 100
+	}
+
+       	option = {  #Let us congratulate the activists on their efforts
+	name = newengland.184.a
+	ai_chance = {	
+	factor = 50	
+	}
+	add_stability = 0.02
+	add_popularity = { ideology = paternal_autocrat popularity = 0.03 }
+	add_popularity = { ideology = social_conservative popularity = 0.05	}
+	add_manpower = -50
+	}
+
+       	option = { #Full 
+	name = newengland.184.b 
+	ai_chance = {	
+	factor = 50 	
+	}
+	add_political_power = -15
+	add_manpower = -250
+	add_popularity = { ideology = national_populist popularity = 0.05 }	   
+		}
+	}
+
+
+country_event = {
+	id = newengland.185 # Eugenic in Dixie 
+	title = newengland.185.t 
+	desc = newengland.185.d
+	picture =  GFX_report_event_generic_diplomacy1
+     	is_triggered_only = no
+
+	fire_only_once = yes
+
+	trigger = {
+	tag = NEE
+	has_completed_focus =  NEE_block_foreign_hordes
+	owns_state = 365
+	COR = { exists = no }
+
+	mean_time_to_happen = {
+	days = 100
+	}
+
+       	option = {
+	name = newengland.185.a  #'moderate'
+	ai_chance = {	
+	factor = 50	
+	}
+	add_political_power = -50
+	add_stability = 0.03
+	add_popularity = { ideology = paternal_autocrat popularity = 0.05 }
+	add_manpower = -750
+	}
+      	option = {
+	name = newengland.185.b #full 
+	ai_chance = {	
+	factor = 50 	
+	}
+	add_political_power = -150
+	add_manpower = -2500
+	add_popularity = { ideology = national_populist popularity = 0.05 }	   
+		}
+	}
+
+
+
+
+country_event = {
+	id = newengland.186 # Eugenic in Utah
+	title = newengland.186.t 
+	desc = newengland.186.d
+	picture =  GFX_report_event_generic_diplomacy1
+        	is_triggered_only = no
+
+	fire_only_once = yes
+
+	trigger = {
+	tag = NEE
+	has_completed_focus = NEE_neo_aristocracy
+	owns_state = 380
+	WCC = { exists = no }
+
+	mean_time_to_happen = {
+	days = 100
+	}
+
+       	option = {  #Wacky Acceleration mode on!
+	name = newengland.186.a 
+	ai_chance = {	
+	factor = 50	
+	}
+	add_political_power = -25
+	add_popularity = { ideology = paternal_autocrat popularity = 0.05 }
+	add_popularity = { ideology = national_populist popularity = 0.05 }
+	add_manpower = 100
+	}
+      	option = { #Other stuff
+	name = newengland.186.b 
+	ai_chance = {	
+	factor = 25 	
+	}
+	add_political_power = -50
+	add_stability = 0.03
+	add_popularity = { ideology = paternal_autocrat popularity = 0.05 }
+	add_popularity = { ideology = national_populist popularity = 0.05 }   
+	}
+         	option = { #Just natpops
+	name = newengland.186.c 
+	ai_chance = {	
+	factor = 25 	
+	}
+	add_political_power = -50
+	add_popularity = { ideology = national_populist popularity = 0.07 }   
+		} 
+	}

@@ -42,12 +42,6 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = USA_gwbill_vote_occurs
-			hidden_effect = {
-				random_other_country = {
-					limit = { is_ai = yes }
-					country_event = ustates.506
-				}
-			}
 		}
 	}
 
