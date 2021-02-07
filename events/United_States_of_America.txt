@@ -5193,10 +5193,10 @@ country_event = { # MacArthur and the Army Remove Republicans
 				ideology = paternal_autocrat_subtype
 				traits = { american_caesar }
 			}
-		}
 		add_popularity = {
 		ideology = paternal_autocrat
 		popularity = 0.2
+		}
 		}
 	}
 
@@ -5383,7 +5383,8 @@ country_event = { # March on Detroit
 	mean_time_to_happen = {
 	days = 5
 	}
-
+	
+	is_triggered_only = yes
 
 	fire_only_once = yes
 
@@ -5463,7 +5464,7 @@ country_event = { # Compromise Fails
 	fire_only_once = yes
 
 	option = {
-		name = ustates.87.a
+		name = ustates.88.a
 		add_stability = -0.08
 		add_political_power = -15
 		set_country_flag = USA_compromise_failed
