@@ -5367,6 +5367,13 @@ country_event = {
 					option = CAN_ACW_SUPPORT_TEX
 				}
 			}
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = CAN_acw_support
+					option = CAN_ACW_SUPPORT_COR
+				}
+			}
 		}
 		add_stability = 0.05
 		add_political_power = 50
@@ -5445,6 +5452,13 @@ country_event = {
 				factor = 0
 				has_game_rule = {
 					rule = CAN_acw_support
+					option = CAN_ACW_SUPPORT_COR
+				}
+			}
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = CAN_acw_support
 					option = CAN_ACW_SUPPORT_NONE
 				}
 			}
@@ -5498,6 +5512,13 @@ country_event = {
 				has_game_rule = {
 					rule = CAN_acw_support
 					option = CAN_ACW_SUPPORT_TEX
+				}
+			}
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = CAN_acw_support
+					option = CAN_ACW_SUPPORT_COR
 				}
 			}
 			modifier = {
@@ -5571,6 +5592,13 @@ country_event = {
 				has_game_rule = {
 					rule = CAN_acw_support
 					option = CAN_ACW_SUPPORT_USA
+				}
+			}
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = CAN_acw_support
+					option = CAN_ACW_SUPPORT_COR
 				}
 			}
 			modifier = {
