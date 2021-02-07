@@ -5596,6 +5596,80 @@ country_event = {
 			country_event = canada.220
 		}
 	}
+	option = {
+		name = canada.201.f #We support COR
+		trigger = {
+			country_exists = COR
+			OR = {
+				has_authoritarian_government = yes
+				COR = {
+					OR = {
+					has_country_leader = { ruling_only = yes name = "William H. Murray" }
+					has_country_leader = { ruling_only = yes name = "Hiram Wesley Evans" }
+					has_government = authoritarian_democrat
+					has_government = social_conservative
+					}
+				}
+			}
+		}
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 5
+				USA = { has_country_flag = USA_assassinated_reed }
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					check_variable = { COR.num_controlled_states < 5 }
+					COR = { surrender_progress > 0.50 }
+				}
+			}
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = CAN_acw_support
+					option = CAN_ACW_SUPPORT_TEX
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = CAN_acw_support
+					option = CAN_ACW_SUPPORT_PSA
+				}
+			}
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = CAN_acw_support
+					option = CAN_ACW_SUPPORT_USA
+				}
+			}
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = CAN_acw_support
+					option = CAN_ACW_SUPPORT_NONE
+				}
+			}
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = CAN_acw_support
+					option = CAN_ACW_SUPPORT_NO_INTERVENE
+				}
+			}
+		}
+		add_war_support = 0.05
+		set_country_flag = CAN_supports_COR
+		add_ideas = ACW_support_cor
+		COR = {
+			add_opinion_modifier = { target = CAN modifier = ACW_help_from_entente }
+			country_event = canada.220
+		}
+	}
 }
 
 # American refugees flood into state (repeating event)
