@@ -4016,7 +4016,7 @@ CAN_american_civil_war_decisions = {
 		}
 
 		ai_will_do = {
-			factor = 20
+			factor = 10
 			modifier = {
 				factor = 0
 				OR = {
@@ -4024,6 +4024,7 @@ CAN_american_civil_war_decisions = {
 					has_war_with = ENG
 					has_war_with = FRA
 					has_war_with = GER
+					date < 1938.12.30
 				}
 			}
 			#USA needs to be strong enough
