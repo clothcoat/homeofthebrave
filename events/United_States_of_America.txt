@@ -20577,7 +20577,7 @@ country_event = {
 		set_country_flag = USA_establishment_supported
 		hidden_effect = {
 			country_event = { id = ustates.503 days = 5 }
-			country_event = { id = ustates.508 days = 10 }
+			set_global_flag = USA_the_bill_failed
 		}
 	}
 	option = {
@@ -20585,7 +20585,7 @@ country_event = {
 		set_country_flag = USA_longists_supported
 		hidden_effect = {
 			country_event = { id = ustates.504 days = 5 }
-			country_event = { id = ustates.507 days = 10 }
+			set_global_flag = USA_the_bill_passed
 		}
 	}
 	option = {
@@ -20593,7 +20593,7 @@ country_event = {
 		set_country_flag = USA_socialists_supported
 		hidden_effect = {
 			country_event = { id = ustates.505 days = 5 }
-			country_event = { id = ustates.507 days = 10 }
+			set_global_flag = USA_the_bill_passed
 		}
 	}
 }
@@ -20684,7 +20684,7 @@ country_event = {
 		}
 		}
 		USA = {
-			country_event = { id = ustates.507 days = 15 }
+			country_event = { id = ustates.507 days = 3 }
 		}
 	}
 }
@@ -20712,7 +20712,7 @@ country_event = {
 			}
 		}
 		USA = {
-			country_event = { id = ustates.508 days = 15 }
+			country_event = { id = ustates.508 days = 3 }
 		}
 	}
 }
@@ -20736,9 +20736,6 @@ country_event = {
 			remove_idea = USA_black_monday
 			add_idea = USA_black_monday2
 		}
-		hidden_effect = {
-		 set_country_flag = USA_Relief_Bill_Passed
-		}
 	}
 }
 
@@ -20751,6 +20748,10 @@ country_event = {
 	picture = GFX_report_event_USA_Riots
 
 	is_triggered_only = yes
+
+	trigger = {
+	has_completed_focus = USA_reintroduce_gwbill
+	}
 
 	option = {
 		name = ustates.508.a
