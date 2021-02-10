@@ -10241,10 +10241,6 @@ country_event = { #Anger over TUUL Expansion
 	is_triggered_only = yes
 	
 	fire_only_once = yes
-	
-	immediate = {
-	set_country_flag = CAL_fosters_farms
-	}
 
 	option = { #Export it
 	name = csa.403.a
@@ -10257,10 +10253,6 @@ country_event = { #Anger over TUUL Expansion
 	add_political_power = 50
 	add_command_power = 20
 	add_stability = 0.03
-	modify_country_flag = {
-	flag = CAL_fosters_farms
-	value = 1
-		}
 	add_popularity = { ideology = totalist popularity = 0.02 }
 	}
 }
@@ -10342,7 +10334,7 @@ country_event = { #American Famine
 	trigger = {
 	has_country_flag = {
 	flag = CAL_fosters_farms
-	value = 2
+	value = 3
 	}
 	has_completed_focus = CSA_state_farms
 	}
