@@ -2099,7 +2099,7 @@ country_event = { #CAR treaty
 		}
 		COR = {
 		country_event = {
-		id = amcivwar.4021 days = 200 
+		id = amcivwar.4021 days = 200
 				}
 			}
 		}
@@ -10371,7 +10371,13 @@ country_event = { #Post-WCC Treaty Collapsing
 	fire_only_once = yes
 	
 	trigger = { 
-	NOT = { tag = CAL } 
+	NOT = { tag = CAL }
+	NOT = { 
+		OR = {
+		has_global_flag = PSA_AUS_TREATY
+		has_global_flag = PSA_CSA_TREATY 
+		}
+	}
 	has_country_flag = WCC_annexation
 	CAL = {
 	exists = yes
@@ -10402,6 +10408,12 @@ country_event = { #Post-WCC Treaty Collapsing
 	
 	trigger = { 
 	tag = CAL 
+	NOT = { 
+		OR = {
+		has_global_flag = PSA_AUS_TREATY
+		has_global_flag = PSA_CSA_TREATY 
+		}
+	}
 	has_global_flag = WCC_annexation
 	CAL = {
 	exists = yes
