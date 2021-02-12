@@ -1324,6 +1324,12 @@ country_event = { # Texas Devils
 			days = 12
 			}
 		}
+		hidden_effect = {
+		country_event = {
+			id = unionstate.28
+			days = 7
+			}
+		}
 	}
 	option = { #Target generic robbers instead
 		name = unionstate.26.b
@@ -1339,6 +1345,12 @@ country_event = { # Texas Devils
 		country_event = {
 			id = unionstate.27
 			days = 12
+			}
+		}
+		hidden_effect = {
+		country_event = {
+			id = unionstate.28
+			days = 7
 			}
 		}
 	}
