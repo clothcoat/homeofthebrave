@@ -2588,6 +2588,9 @@ focus_tree = {
 		prerequisite = {
 			focus = TEX_organize_new_elections
 		}
+		prerequisite = {
+			focus = TEX_fight_the_terrorists
+		}
 		available = {
 			has_government = social_conservative
 		}
@@ -3138,6 +3141,9 @@ focus_tree = {
 		cost = 7.25
 		prerequisite = {
 			focus = TEX_christian_commonwealth
+		}
+		prerequisite = {
+			focus = TEX_annual_dividends
 		}
 		available = {
 			has_government = social_conservative
