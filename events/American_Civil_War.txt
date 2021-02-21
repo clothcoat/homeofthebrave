@@ -4062,7 +4062,7 @@ country_event = { # New Party Head
 	option = {
 		name = amcivwar.1019.a
 		ai_chance {
-		factor = 80
+		factor = 40
 		}
 		add_political_power = 40
 		add_popularity = { ideology = paternal_autocrat popularity = 0.02 }
@@ -4075,6 +4075,9 @@ country_event = { # New Party Head
 	}
 	option = {
 		name = amcivwar.1019.b
+		ai_chance {
+		factor = 30
+		}
 		set_country_flag = COR_simmons_takeover
 		add_popularity = { ideology = national_populist popularity = 0.03 }
 		hidden_effect = {
@@ -4086,6 +4089,9 @@ country_event = { # New Party Head
 	}
 	option = {
 		name = amcivwar.1019.c
+		ai_chance {
+		factor = 30
+		}
 		add_popularity = { ideology = authoritarian_democrat popularity = 0.03 }
 		hidden_effect = {
 			create_country_leader = {
