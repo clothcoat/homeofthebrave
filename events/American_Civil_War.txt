@@ -3990,7 +3990,7 @@ country_event = { # Old Democrats Revolt
 	option = {
 		name = amcivwar.1018.a
 		ai_chance {
-		factor = 80
+		factor = 50
 		}
 		add_stability = -0.08
 		add_political_power = -40
@@ -4006,6 +4006,9 @@ country_event = { # Old Democrats Revolt
 	}
 	option = {
 		name = amcivwar.1018.b
+		ai_chance {
+		factor = 20
+		}
 		add_popularity = { ideology = paternal_autocrat popularity = -0.03 }
 		CAL = {
 		country_event = {
@@ -4016,6 +4019,9 @@ country_event = { # Old Democrats Revolt
 	}
 	option = {
 		name = amcivwar.1018.c
+		ai_chance {
+		factor = 30
+		}
 		add_popularity = { ideology = social_conservative popularity = 0.03 }
 		hidden_effect = {
 			create_country_leader = {
