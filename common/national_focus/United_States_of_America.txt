@@ -2099,7 +2099,7 @@ focus_tree = {
 			}
 		}
 		x = 80
-		y = 15
+		y = 16
 		ai_will_do = {
 			factor = 100
 		}
@@ -15723,6 +15723,630 @@ focus_tree = {
 			type = puppet_wargoal_focus
 			target = JAP
 			}
+		}
+	}
+	
+	### Gamer PP and NPP Stuff ###
+	
+	focus = {#Ford and Dixie, brothas 4ever
+		id = USA_return_to_true_americanism
+		icon = GFX_america_goal_eagle_deal
+		cost = 5.00
+		available = {
+			has_country_flag = USA_1940_election_NPP_victory
+		}
+		x = 88
+		y = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available_if_capitulated = no
+		cancel_if_invalid = yes
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_return_to_true_americanism"
+		}
+	}
+	focus = {#Stop taking Norris' bribe
+		id = USA_end_federal_largesse
+		icon = GFX_USA_austerity_measures
+		cost = 5.00
+		prerequisite = {
+			focus = USA_return_to_true_americanism
+		}
+		available = {
+			has_country_flag = USA_1940_election_NPP_victory
+		}
+		relative_position_id = USA_return_to_true_americanism
+		x = -2
+		y = 1
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = no
+		cancel_if_invalid = yes
+
+		completion_reward = {
+			add_stability = -0.1
+			add_political_power = 30
+			swap_ideas = {
+				remove_idea = USA_the_fair_deal_3
+				add_idea = CAL_social_gospel_idea1
+			}
+			log = "[GetDateText]: [Root.GetName]: Focus USA_end_federal_largesse"
+		}
+	}
+	focus = {#No More Planned Economy
+		id = USA_corporatism_not_councilism
+		icon = GFX_goal_COR_captains_of_industry
+		cost = 5.00
+		prerequisite = {
+			focus = USA_end_federal_largesse
+		}
+		available = {
+			has_country_flag = USA_1940_election_NPP_victory
+		}
+		relative_position_id = USA_return_to_true_americanism
+		x = -3
+		y = 2
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = no
+		cancel_if_invalid = yes
+
+		completion_reward = {
+			add_stability = -0.05
+			add_political_power = 30
+			add_ideas = CAL_deregulated_economy
+			log = "[GetDateText]: [Root.GetName]: Focus USA_corporatism_not_councilism"
+		}
+	}
+	focus = {#Deregulation Time
+		id = USA_unchain_capitalism
+		icon = GFX_USA_a_pile_of_fucking_cash
+		cost = 5.00
+		prerequisite = {
+			focus = USA_corporatism_not_councilism
+		}
+		available = {
+			has_country_flag = USA_1940_election_NPP_victory
+		}
+		relative_position_id = USA_return_to_true_americanism
+		x = -3
+		y = 3
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = no
+		cancel_if_invalid = yes
+
+		completion_reward = {
+			add_stability = -0.05
+			swap_ideas = {
+				remove_idea = CAL_deregulated_economy
+				add_idea = CAL_deregulated_economy_2
+			}
+			add_ideas = free_trade
+			log = "[GetDateText]: [Root.GetName]: Focus USA_unchain_capitalism"
+		}
+	}
+	focus = {#No Land Tax, No Price Controls
+		id = USA_restore_agrarian_autonomy
+		icon = GFX_goal_COR_south_agrarian
+		cost = 5.00
+		prerequisite = {
+			focus = USA_end_federal_largesse
+		}
+		available = {
+			has_country_flag = USA_1940_election_NPP_victory
+		}
+		relative_position_id = USA_return_to_true_americanism
+		x = -1
+		y = 2
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = no
+		cancel_if_invalid = yes
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_restore_agrarian_autonomy"
+			add_stability = -0.05
+			add_political_power = 50
+			swap_ideas = {
+				remove_idea = CAL_social_gospel_idea1
+				add_idea = CAL_social_gospel_idea2
+			}
+		}
+	}
+	focus = {#Send Those Carpetbaggers North
+		id = USA_enshrine_states_rights
+		icon = GFX_goal_COR_states_rights
+		cost = 5.00
+		prerequisite = {
+			focus = USA_restore_agrarian_autonomy
+		}
+		available = {
+			has_country_flag = USA_1940_election_NPP_victory
+		}
+		relative_position_id = USA_return_to_true_americanism
+		x = -1
+		y = 3
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = no
+		cancel_if_invalid = yes
+
+		completion_reward = {
+			add_popularity = { ideology = authoritarian_democrat popularity = 0.05 }
+			add_ideas = CAL_states_autonomy_idea
+			log = "[GetDateText]: [Root.GetName]: Focus USA_enshrine_states_rights"
+		}
+	}
+	focus = {#Small Government Time
+		id = USA_whittle_down_washington
+		icon = GFX_USA_congress_released
+		cost = 6.00
+		prerequisite = {
+			focus = USA_unchain_capitalism
+			focus = USA_enshrine_states_rights
+		}
+		available = {
+			has_country_flag = USA_1940_election_NPP_victory
+		}
+		relative_position_id = USA_return_to_true_americanism
+		x = -2
+		y = 4
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available_if_capitulated = no
+		cancel_if_invalid = yes
+
+		completion_reward = {
+			add_popularity = { ideology = paternal_autocrat popularity = 0.04 }
+			add_popularity = { ideology = authoritarian_democrat popularity = 0.02 }
+			swap_ideas = {
+				remove_idea = CAL_deregulated_economy_2
+				add_idea = CAL_deregulated_economy_3
+			}
+			swap_ideas = {
+				remove_idea = CAL_social_gospel_idea2
+				add_idea = CAL_social_gospel_idea3
+			}
+			log = "[GetDateText]: [Root.GetName]: Focus USA_whittle_down_washington"
+		}
+	}
+	focus = {#Nativism Time
+		id = USA_defend_fair_columbia
+		icon = GFX_NEE_block_foreign_hordes
+		cost = 5.00
+		prerequisite = {
+			focus = USA_return_to_true_americanism
+		}
+		available = {
+			has_country_flag = USA_1940_election_NPP_victory
+		}
+		relative_position_id = USA_return_to_true_americanism
+		x = 2
+		y = 1
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = no
+		cancel_if_invalid = yes
+
+		completion_reward = {
+			add_stability = 0.1
+			add_ideas = COR_immigration_limit_idea
+			log = "[GetDateText]: [Root.GetName]: Focus USA_defend_fair_columbia"
+		}
+	}
+	focus = {#Close the Filipino Loophole, consider repatriation
+		id = USA_enforce_asiatic_exclusion
+		icon = GFX_CAL_yellow_peril
+		cost = 5.00
+		prerequisite = {
+			focus = USA_defend_fair_columbia
+		}
+		available = {
+			has_country_flag = USA_1940_election_NPP_victory
+		}
+		relative_position_id = USA_return_to_true_americanism
+		x = 3
+		y = 2
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = no
+		cancel_if_invalid = yes
+
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 20
+			PHI = {
+				add_opinion_modifier = { target = USA modifier = USA_asian_exclusion }
+			}
+			JAP = {
+				add_opinion_modifier = { target = USA modifier = USA_asian_exclusion }
+			}
+			log = "[GetDateText]: [Root.GetName]: Focus USA_enforce_asiatic_exclusion"
+		}
+	}
+	focus = {#Bomb-chuckers begone
+		id = USA_expel_foreign_anarchists
+		icon = GFX_goal_TEX_fight_the_terrorists
+		cost = 5.00
+		prerequisite = {
+			focus = USA_enforce_asiatic_exclusion
+		}
+		available = {
+			has_country_flag = USA_1940_election_NPP_victory
+		}
+		relative_position_id = USA_return_to_true_americanism
+		x = 3
+		y = 3
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = no
+		cancel_if_invalid = yes
+
+		completion_reward = {
+			add_stability = 0.05
+			add_popularity = { ideology = radical_socialist popularity = -0.02 }
+			add_popularity = { ideology = syndicalist popularity = -0.02 }
+			log = "[GetDateText]: [Root.GetName]: Focus USA_expel_foreign_anarchists"
+		}
+	}
+	focus = {#Convene the Critical Race Council
+		id = USA_promulgate_national_racial_laws
+		icon = GFX_NEE_racial_catalogues
+		cost = 6.00
+		prerequisite = {
+			focus = USA_defend_fair_columbia
+		}
+		available = {
+			has_country_flag = USA_1940_election_NPP_victory
+		}
+		relative_position_id = USA_return_to_true_americanism
+		x = 1
+		y = 2
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = no
+		cancel_if_invalid = yes
+
+		completion_reward = {
+			country_event = ustates.5002
+			add_political_power = 20
+			add_popularity = { ideology = national_populist popularity = -0.02 }
+			log = "[GetDateText]: [Root.GetName]: Focus USA_promulgate_national_racial_laws"
+		}
+	}
+	focus = {#If in doubt, deport it out
+		id = USA_drive_out_seditious_elements
+		icon = GFX_goal_USA_antileftist_action
+		cost = 5.00
+		prerequisite = {
+			focus = USA_promulgate_national_racial_laws
+		}
+		available = {
+			has_country_flag = USA_1940_election_NPP_victory
+		}
+		relative_position_id = USA_return_to_true_americanism
+		x = 1
+		y = 3
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = no
+		cancel_if_invalid = yes
+
+		completion_reward = {
+			add_stability = 0.05
+			add_popularity = { ideology = totalist popularity = -0.05 }
+			add_popularity = { ideology = syndicalist popularity = -0.02 }
+			add_ideas = CAL_family_law_idea
+			log = "[GetDateText]: [Root.GetName]: Focus USA_drive_out_seditious_elements"
+		}
+	}
+	focus = {#Beat-up Reed
+		id = USA_break_syndicalist_agitation
+		icon = GFX_HOL_red_scare
+		cost = 5.00
+		prerequisite = {
+			focus = USA_expel_foreign_anarchists
+		}
+		prerequisite = {
+			focus = USA_drive_out_seditious_elements
+		}
+		available = {
+			has_country_flag = USA_1940_election_NPP_victory
+		}
+		relative_position_id = USA_return_to_true_americanism
+		x = 2
+		y = 4
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available_if_capitulated = no
+		cancel_if_invalid = yes
+
+		completion_reward = {
+			add_stability = 0.05
+			add_popularity = { ideology = radical_socialist popularity = -0.05 }
+			add_popularity = { ideology = syndicalist popularity = -0.05 }
+			swap_ideas = {
+				remove_idea = CAL_family_law_idea
+				add_idea = CAL_family_law_idea_2
+			}
+			log = "[GetDateText]: [Root.GetName]: Focus USA_break_syndicalist_agitation"
+		}
+	}
+	focus = {#Bootstrap Americanism
+		id = USA_liberty_not_legalism
+		icon = GFX_goal_USA_american_industry
+		cost = 4.00
+		prerequisite = {
+			focus = USA_break_syndicalist_agitation
+		}
+		prerequisite = {
+			focus = USA_whittle_down_washington
+		}
+		available = {
+			has_country_flag = USA_1940_election_NPP_victory
+		}
+		relative_position_id = USA_return_to_true_americanism
+		x = 0
+		y = 5
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available_if_capitulated = no
+		cancel_if_invalid = yes
+
+		completion_reward = {
+			add_political_power = 100
+			swap_ideas = {
+				remove_idea = CAL_deregulated_economy_3
+				add_idea = CAL_deregulated_economy_4
+			}
+			log = "[GetDateText]: [Root.GetName]: Focus USA_liberty_not_legalism"
+		}
+	}
+	focus = {#Private Toll Roads do not Ancapistan make
+		id = USA_privatized_progress
+		icon = GFX_CAL_executive_construction_projects
+		cost = 5.00
+		prerequisite = {
+			focus = USA_liberty_not_legalism
+		}
+		mutually_exclusive = {
+			focus = USA_localized_development
+		}
+		available = {
+			has_country_flag = USA_1940_election_NPP_victory
+		}
+		relative_position_id = USA_return_to_true_americanism
+		x = -3
+		y = 6
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available_if_capitulated = no
+		cancel_if_invalid = yes
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_privatized_progress"
+			every_owned_state = {
+				limit = {
+					is_controlled_by = USA
+					OR = {
+						state = 393
+						state = 395
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			every_owned_state = {
+				limit = {
+					is_controlled_by = USA
+					OR = {
+						state = 360
+						state = 385
+						state = 373
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {#The states will figure it out
+		id = USA_localized_development
+		icon = GFX_goal_Schelle
+		cost = 5.00
+		prerequisite = {
+			focus = USA_liberty_not_legalism
+		}
+		mutually_exclusive = {
+			focus = USA_privatized_progress
+		}
+		available = {
+			has_country_flag = USA_1940_election_NPP_victory
+		}
+		relative_position_id = USA_return_to_true_americanism
+		x = -1
+		y = 6
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available_if_capitulated = no
+		cancel_if_invalid = yes
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_mainland_america = yes
+					free_building_slots = { building = infrastructure size > 0 }
+				}
+				add_building_construction = { type = infrastructure	level = 1 instant_build = yes }
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_mainland_america = yes
+					free_building_slots = { building = infrastructure size > 0 }
+				}
+				add_building_construction = { type = infrastructure	level = 1 instant_build = yes }
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_mainland_america = yes
+					free_building_slots = { building = infrastructure size > 0 }
+				}
+				add_building_construction = { type = infrastructure	level = 1 instant_build = yes }
+			}
+			add_ideas = CAL_local_budgeting
+			log = "[GetDateText]: [Root.GetName]: Focus USA_localized_development"
+		}
+	}
+	focus = {#Police ServiceTM, open up!
+		id = USA_power_to_the_pinkertons
+		icon = GFX_goal_COR_pinkertons
+		cost = 5.00
+		prerequisite = {
+			focus = USA_liberty_not_legalism
+		}
+		mutually_exclusive = {
+			focus = USA_parochial_policing
+		}
+		available = {
+			has_country_flag = USA_1940_election_NPP_victory
+		}
+		relative_position_id = USA_return_to_true_americanism
+		x = 1
+		y = 6
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available_if_capitulated = no
+		cancel_if_invalid = yes
+
+		completion_reward = {
+			add_political_power = -50
+			add_popularity = { ideology = paternal_autocrat popularity = 0.02 }
+			add_ideas = COR_pinkerton
+			log = "[GetDateText]: [Root.GetName]: Focus USA_power_to_the_pinkertons"
+		}
+	}
+	focus = {#Sheriffs, Deputies and probably Klansmen
+		id = USA_parochial_policing
+		icon = GFX_turn_blind_eye
+		cost = 5.00
+		prerequisite = {
+			focus = USA_liberty_not_legalism
+		}
+		mutually_exclusive = {
+			focus = USA_power_to_the_pinkertons
+		}
+		available = {
+			has_country_flag = USA_1940_election_NPP_victory
+		}
+		relative_position_id = USA_return_to_true_americanism
+		x = 3
+		y = 6
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available_if_capitulated = no
+		cancel_if_invalid = yes
+
+		completion_reward = {
+			add_political_power = 50
+			add_popularity = { ideology = national_populist popularity = 0.02 }
+			add_ideas = COR_controlled_klan
+			log = "[GetDateText]: [Root.GetName]: Focus USA_parochial_policing"
+		}
+	}
+	focus = {# Nativist Capitalism Time
+		id = USA_protestant_prosperous_pure
+		icon = GFX_CAL_american_festivals
+		cost = 5.00
+		prerequisite = {
+			focus = USA_parochial_policing
+			focus = USA_power_to_the_pinkertons
+		}
+		prerequisite = {
+			focus = USA_privatized_progress
+			focus = USA_localized_development
+		}
+		available = {
+			has_country_flag = USA_1940_election_NPP_victory
+		}
+		relative_position_id = USA_return_to_true_americanism
+		x = 0
+		y = 7
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available_if_capitulated = no
+		cancel_if_invalid = yes
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_prosperous_protestant_pure"
+			add_political_power = 50
+			add_war_support = 0.1
 		}
 	}
 }
