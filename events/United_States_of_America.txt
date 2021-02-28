@@ -21891,6 +21891,7 @@ country_event = { # Last Men Standing
 	has_global_flag = PSA_NAVY_TREATY
 	has_global_flag = PSA_NAVY_MARSHALL_TREATY
 	}
+	has_completed_focus = USA_savior_of_democracy
 	CAL = {
 	exists = yes
 	}
@@ -22156,6 +22157,10 @@ country_event = { ### Leahy Accepts ###
 	country_event = {
 	id = ustates.3128
 	days = 21
+	}
+	country_event = {
+	id = ustates.3125
+	days = 24
 	}
 	country_event = {
 	id = ustates.3197

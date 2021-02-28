@@ -6455,7 +6455,7 @@ focus_tree = {
 	focus = {# Navy-in-Command
 		id = USA_navy_in_command
 		icon = GFX_goal_USA_navy
-		cost = 0.00
+		cost = 2.00
 		available = {
 			has_country_flag = USA_navy_flag
 		}
@@ -6653,9 +6653,10 @@ focus_tree = {
 	focus = {# Savior of Democracy
 		id = USA_savior_of_democracy
 		icon = GFX_goal_liberty
-		cost = 6.00
+		cost = 2.00
 		available = {
 			has_government = authoritarian_democrat 
+			has_global_flag = USA_civil_war_over_flag
 		}
 		prerequisite = {
 			focus = USA_supreme_court_trial
@@ -6673,10 +6674,34 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_savior_of_democracy"
 			add_ideas = USA_the_savior_idea
 			set_country_flag = USA_leahy_gave_up_power_flag 
+			if = {
+			limit = {
+			OR = {
+			has_global_flag = PSA_NAVY_TREATY
+			has_global_flag = PSA_NAVY_MARSHALL_TREATY
+			}
+			}
 			hidden_effect = {
-			country_event = { id = ustates.3126 days = 1 }
-			country_event = { id = ustates.3127 days = 2 }	
-			country_event = { id = ustates.3128 days = 3 }	
+			country_event = { id = ustates.3126 days = 3 }
+			country_event = { id = ustates.3127 days = 6 }	
+			country_event = { id = ustates.3128 days = 9 }	
+			}
+			}
+			else_if = {
+			limit = {
+				NOT = {
+				OR = {
+				has_global_flag = PSA_NAVY_TREATY
+				has_global_flag = PSA_NAVY_MARSHALL_TREATY
+				}
+				}
+			}
+			hidden_effect = {
+			country_event = { id = ustates.3126 days = 3 }
+			country_event = { id = ustates.3127 days = 6 }	
+			country_event = { id = ustates.3128 days = 9 }	
+			country_event = { id = ustates.3125 days = 12 }	
+			}
 			}
 			add_popularity = { ideology = social_conservative popularity = 0.02 }
 			add_popularity = { ideology = market_liberal popularity = 0.02 }
