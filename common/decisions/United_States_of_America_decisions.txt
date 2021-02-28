@@ -3986,3 +3986,1070 @@ USA_MacArthur_policies = {
 	}
 }
 
+USA_postwar_military_policies = {
+	USA_military_research = {
+		icon = generic_political_discourse
+		allowed = {
+			OR = {
+				tag = USA
+				tag = CAL
+				tag = WCC
+			}
+		}
+		available = {
+			is_subject = no
+			controls_all_owned_states = yes
+			has_global_flag = USA_civil_war_over_flag
+		}
+		visible = {
+			is_subject = no
+			controls_all_owned_states = yes
+			has_global_flag = USA_civil_war_over_flag
+		}
+
+		fire_only_once = yes
+		cost = 30
+
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+			modifier = {
+				factor = 0
+				has_army_manpower = { size < 250000 }
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision USA_military_research"
+			country_event = {
+				id = ustates.300
+				days = 1
+			}
+		}
+	}
+
+	USA_woman_army_corps = {
+		icon = generic_political_discourse
+		allowed = {
+			OR = {
+				tag = USA
+				tag = CAL
+				tag = WCC
+			}
+		}
+		available = {
+			is_subject = no
+			controls_all_owned_states = yes
+			has_global_flag = USA_civil_war_over_flag
+		}
+		visible = {
+			is_subject = no
+			controls_all_owned_states = yes
+			has_global_flag = USA_civil_war_over_flag
+		}
+
+		fire_only_once = yes
+		cost = 30
+
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+			modifier = {
+				factor = 0
+				has_army_manpower = { size < 250000 }
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision USA_woman_army_corps"
+			add_ideas = USA_womens_army_corps_idea
+		}
+	}	
+	
+	USA_new_rifle_developments = {
+		icon = generic_political_discourse
+		allowed = {
+			OR = {
+				tag = USA
+				tag = CAL
+				tag = WCC
+			}
+		}
+		available = {
+			is_subject = no
+			controls_all_owned_states = yes
+			has_global_flag = USA_civil_war_over_flag
+		}
+		visible = {
+			is_subject = no
+			controls_all_owned_states = yes
+			has_global_flag = USA_civil_war_over_flag
+		}
+
+		fire_only_once = yes
+		cost = 30
+
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+			modifier = {
+				factor = 0
+				has_army_manpower = { size < 250000 }
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision USA_new_rifle_developments"
+			add_tech_bonus = {
+				name = infantry_bonus
+				bonus = 1
+				uses = 2
+				category = infantry_weapons
+			}
+		}
+	}
+	
+	USA_more_spending = {
+		icon = generic_political_discourse
+		allowed = {
+			OR = {
+				tag = USA
+				tag = CAL
+				tag = WCC
+			}
+		}
+		available = {
+			is_subject = no
+			controls_all_owned_states = yes
+			has_global_flag = USA_civil_war_over_flag
+		}
+		visible = {
+			is_subject = no
+			controls_all_owned_states = yes
+			has_global_flag = USA_civil_war_over_flag
+		}
+
+		fire_only_once = yes
+		cost = 30
+
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+			modifier = {
+				factor = 0
+				has_army_manpower = { size < 250000 }
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision USA_more_spending"
+			add_ideas = USA_increased_military_spending
+		}
+	}
+	
+	USA_new_arms_factories = {
+		icon = generic_political_discourse
+		allowed = {
+			OR = {
+				tag = USA
+				tag = CAL
+				tag = WCC
+			}
+		}
+		available = {
+			is_subject = no
+			controls_all_owned_states = yes
+			has_global_flag = USA_civil_war_over_flag
+		}
+		visible = {
+			is_subject = no
+			controls_all_owned_states = yes
+			has_global_flag = USA_civil_war_over_flag
+		}
+
+		fire_only_once = yes
+		cost = 30
+
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+			modifier = {
+				factor = 0
+				has_army_manpower = { size < 250000 }
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision USA_new_arms_factories"
+			add_ideas = USA_increased_military_spending
+		}
+	}
+	
+	USA_liberty_bonds = {
+		icon = generic_political_discourse
+		allowed = {
+			OR = {
+				tag = USA
+				tag = CAL
+				tag = WCC
+			}
+		}
+		available = {
+			is_subject = no
+			controls_all_owned_states = yes
+			has_global_flag = USA_civil_war_over_flag
+		}
+		visible = {
+			is_subject = no
+			controls_all_owned_states = yes
+			has_global_flag = USA_civil_war_over_flag
+		}
+
+		fire_only_once = yes
+		cost = 30
+
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+			modifier = {
+				factor = 0
+				has_army_manpower = { size < 250000 }
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision USA_liberty_bonds"
+			add_war_support = 0.05
+			add_offsite_building = {
+				type = arms_factory
+				level = 1
+			}
+		}
+	}
+	
+	USA_new_tank_assemblies = {
+		icon = generic_political_discourse
+		allowed = {
+			OR = {
+				tag = USA
+				tag = CAL
+				tag = WCC
+			}
+		}
+		available = {
+			is_subject = no
+			controls_all_owned_states = yes
+			has_global_flag = USA_civil_war_over_flag
+		}
+		visible = {
+			is_subject = no
+			controls_all_owned_states = yes
+			has_global_flag = USA_civil_war_over_flag
+		}
+
+		fire_only_once = yes
+		cost = 30
+
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+			modifier = {
+				factor = 0
+				has_army_manpower = { size < 250000 }
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision USA_new_tank_assemblies"
+			random_owned_controlled_state = {
+				limit = {
+					is_mainland_america = yes
+					free_building_slots = { building = arms_factory size > 0 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	USA_lessons_of_the_war = {
+		icon = generic_political_discourse
+		allowed = {
+			OR = {
+				tag = USA
+				tag = CAL
+				tag = WCC
+			}
+		}
+		available = {
+			is_subject = no
+			controls_all_owned_states = yes
+			has_global_flag = USA_civil_war_over_flag
+		}
+		visible = {
+			is_subject = no
+			controls_all_owned_states = yes
+			has_global_flag = USA_civil_war_over_flag
+		}
+
+		fire_only_once = yes
+		cost = 30
+
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+			modifier = {
+				factor = 0
+				has_army_manpower = { size < 250000 }
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision USA_lessons_of_the_war"
+			add_tech_bonus = {
+			name = doctrine_bonus
+			bonus = 1
+			uses = 2
+			category = land_doctrine
+			}
+		}
+	}
+	
+	USA_this_we_will_defend = {
+		icon = generic_political_discourse
+		allowed = {
+			OR = {
+				tag = USA
+				tag = CAL
+				tag = WCC
+			}
+		}
+		available = {
+			is_subject = no
+			controls_all_owned_states = yes
+			has_global_flag = USA_civil_war_over_flag
+		}
+		visible = {
+			is_subject = no
+			controls_all_owned_states = yes
+			has_global_flag = USA_civil_war_over_flag
+		}
+
+		fire_only_once = yes
+		cost = 30
+
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+			modifier = {
+				factor = 0
+				has_army_manpower = { size < 250000 }
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision USA_this_we_will_defend"
+			add_tech_bonus = {
+			name = doctrine_bonus
+			bonus = 2
+			uses = 1
+			category = land_doctrine
+			}
+		}
+	}
+}
+
+USA_navy_junta_decisions = {
+	USA_navy_economic_reconstruction = {
+		icon = generic_prepare_civil_war
+		allowed = { 
+		original_tag = USA }
+
+		available = {
+			is_subject = no
+			controls_all_owned_states = yes
+			has_global_flag = USA_civil_war_over_flag
+			NOT = {
+			country_exists = WCC
+			}
+			OR = {
+			has_country_leader = { ruling_only = yes name = "Ernest J. King" } 
+			has_country_flag = USA_leahy_gave_up_power_flag 
+			}
+		}
+
+		visible = {
+			is_subject = no
+			controls_all_owned_states = yes
+			has_global_flag = USA_civil_war_over_flag
+			NOT = {
+			country_exists = WCC
+			}
+			OR = {
+			has_country_leader = { ruling_only = yes name = "Ernest J. King" } 
+			has_country_flag = USA_leahy_gave_up_power_flag 
+			}
+		}
+
+		fire_only_once = yes
+		cost = 20
+		days_remove = 42
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision USA_navy_economic_reconstruction"
+			complete_national_focus = USA_begin_reconstruction
+			add_stability = 0.05
+		}
+	}
+	
+	USA_navy_political_reconstruction = {
+		icon = generic_prepare_civil_war
+		allowed = { 
+		original_tag = USA }
+
+		available = {
+			is_subject = no
+			controls_all_owned_states = yes
+			has_global_flag = USA_civil_war_over_flag
+			NOT = {
+			country_exists = WCC
+			}
+			OR = {
+			has_country_leader = { ruling_only = yes name = "Ernest J. King" } 
+			has_country_flag = USA_leahy_gave_up_power_flag 
+			}
+		}
+
+		visible = {
+			is_subject = no
+			controls_all_owned_states = yes
+			has_global_flag = USA_civil_war_over_flag
+			NOT = {
+			country_exists = WCC
+			}
+			OR = {
+			has_country_leader = { ruling_only = yes name = "Ernest J. King" } 
+			has_country_flag = USA_leahy_gave_up_power_flag 
+			}
+		}
+
+		fire_only_once = yes
+		cost = 20
+		days_remove = 42
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision USA_navy_political_reconstruction"
+			if = {
+				limit = {
+				has_country_leader = { ruling_only = yes name = "Ernest J. King" } 
+				}
+				add_ideas = USA_liberty_ships_idea
+			}
+			else_if = {
+				limit = {
+				has_country_flag = USA_leahy_gave_up_power_flag 
+				}
+				add_ideas = USA_liberty_ships_idea
+			}
+			add_stability = 0.03
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision USA_navy_political_reconstruction"
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			USA_political_recovery = yes
+			increase_ruling_party_popularity_by_5 = yes
+		}
+	}
+	
+	USA_navy_political_reconstruction_two = {
+		icon = generic_prepare_civil_war
+		allowed = { 
+		original_tag = USA }
+
+		available = {
+			is_subject = no
+			controls_all_owned_states = yes
+			has_global_flag = USA_civil_war_over_flag
+			NOT = {
+			country_exists = WCC
+			}
+			OR = {
+			has_country_leader = { ruling_only = yes name = "Ernest J. King" } 
+			has_country_flag = USA_leahy_gave_up_power_flag 
+			}
+		}
+
+		visible = {
+			is_subject = no
+			controls_all_owned_states = yes
+			has_global_flag = USA_civil_war_over_flag
+			NOT = {
+			country_exists = WCC
+			}
+			OR = {
+			has_country_leader = { ruling_only = yes name = "Ernest J. King" } 
+			has_country_flag = USA_leahy_gave_up_power_flag 
+			}
+		}
+
+		fire_only_once = yes
+		cost = 20
+		days_remove = 42
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision USA_navy_political_reconstruction_two"
+			if = {
+				limit = {
+				has_country_leader = { ruling_only = yes name = "Ernest J. King" } 
+				}
+				add_tech_bonus = {
+				name = industrial_bonus_king
+				bonus = 1
+				uses = 2
+				category = industry
+				}
+			}
+			else_if = {
+				limit = {
+				has_country_flag = USA_leahy_gave_up_power_flag 
+				}
+				random_owned_controlled_state = {
+				limit = {
+					is_mainland_america = yes
+					free_building_slots = { building = infrastructure size > 0 }
+				}
+				add_building_construction = { type = infrastructure	level = 1 instant_build = yes }
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_mainland_america = yes
+					free_building_slots = { building = infrastructure size > 0 }
+				}
+				add_building_construction = { type = infrastructure	level = 1 instant_build = yes }
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_mainland_america = yes
+					free_building_slots = { building = infrastructure size > 0 }
+				}
+				add_building_construction = { type = infrastructure	level = 1 instant_build = yes }
+				}
+			}
+			add_stability = 0.03
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision USA_navy_political_reconstruction_two"
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			USA_political_recovery = yes
+			increase_ruling_party_popularity_by_5 = yes
+		}
+	}
+	
+	USA_navy_political_reconstruction_three = {
+		icon = generic_prepare_civil_war
+		allowed = { 
+		original_tag = USA }
+
+		available = {
+			is_subject = no
+			controls_all_owned_states = yes
+			has_global_flag = USA_civil_war_over_flag
+			NOT = {
+			country_exists = WCC
+			}
+			OR = {
+			has_country_leader = { ruling_only = yes name = "Ernest J. King" } 
+			has_country_flag = USA_leahy_gave_up_power_flag 
+			}
+		}
+
+		visible = {
+			is_subject = no
+			controls_all_owned_states = yes
+			has_global_flag = USA_civil_war_over_flag
+			NOT = {
+			country_exists = WCC
+			}
+			OR = {
+			has_country_leader = { ruling_only = yes name = "Ernest J. King" } 
+			has_country_flag = USA_leahy_gave_up_power_flag 
+			}
+		}
+
+		fire_only_once = yes
+		cost = 20
+		days_remove = 42
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision USA_navy_political_reconstruction_three"
+			if = {
+				limit = {
+				has_country_leader = { ruling_only = yes name = "Ernest J. King" } 
+				}
+			362 = {
+				if = {
+					limit = { is_owned_and_controlled_by = USA }
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			359 = {
+				if = {
+					limit = { is_owned_and_controlled_by = USA }
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			}
+			else_if = {
+				limit = {
+				has_country_flag = USA_leahy_gave_up_power_flag 
+				}
+				add_ideas = USA_industry_leahy_idea
+			}
+			add_stability = 0.03
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision USA_navy_political_reconstruction_three"
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			USA_political_recovery = yes
+			increase_ruling_party_popularity_by_5 = yes
+		}
+	}
+	
+	USA_navy_political_reconstruction_four = {
+		icon = generic_prepare_civil_war
+		allowed = { 
+		original_tag = USA }
+
+		available = {
+			is_subject = no
+			controls_all_owned_states = yes
+			has_global_flag = USA_civil_war_over_flag
+			NOT = {
+			country_exists = WCC
+			}
+			OR = {
+			has_country_leader = { ruling_only = yes name = "Ernest J. King" } 
+			has_country_flag = USA_leahy_gave_up_power_flag 
+			}
+		}
+
+		visible = {
+			is_subject = no
+			controls_all_owned_states = yes
+			has_global_flag = USA_civil_war_over_flag
+			NOT = {
+			country_exists = WCC
+			}
+			OR = {
+			has_country_leader = { ruling_only = yes name = "Ernest J. King" } 
+			has_country_flag = USA_leahy_gave_up_power_flag 
+			}
+		}
+
+		fire_only_once = yes
+		cost = 20
+		days_remove = 42
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision USA_navy_political_reconstruction_four"
+			if = {
+				limit = {
+				has_country_leader = { ruling_only = yes name = "Ernest J. King" } 
+				}
+				add_command_power = 20
+				add_manpower = 5000
+			}
+			else_if = {
+				limit = {
+				has_country_flag = USA_leahy_gave_up_power_flag 
+				}
+				add_command_power = 20
+				add_manpower = 5000
+			}
+			add_stability = 0.03
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision USA_navy_political_reconstruction_four"
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			USA_political_recovery = yes
+			increase_ruling_party_popularity_by_5 = yes
+		}
+	}
+	
+	USA_navy_political_reconstruction_five = {
+		icon = generic_prepare_civil_war
+		allowed = { 
+		original_tag = USA }
+
+		available = {
+			is_subject = no
+			controls_all_owned_states = yes
+			has_global_flag = USA_civil_war_over_flag
+			NOT = {
+			country_exists = WCC
+			}
+			OR = {
+			has_country_leader = { ruling_only = yes name = "Ernest J. King" } 
+			has_country_flag = USA_leahy_gave_up_power_flag 
+			}
+		}
+
+		visible = {
+			is_subject = no
+			controls_all_owned_states = yes
+			has_global_flag = USA_civil_war_over_flag
+			NOT = {
+			country_exists = WCC
+			}
+			OR = {
+			has_country_leader = { ruling_only = yes name = "Ernest J. King" } 
+			has_country_flag = USA_leahy_gave_up_power_flag 
+			}
+		}
+
+		fire_only_once = yes
+		cost = 20
+		days_remove = 42
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision USA_navy_political_reconstruction_five"
+			if = {
+				limit = {
+				has_country_leader = { ruling_only = yes name = "Ernest J. King" } 
+				}
+				add_ideas = USA_navy_and_agriculture_idea
+			}
+			else_if = {
+				limit = {
+				has_country_flag = USA_leahy_gave_up_power_flag 
+				}
+				add_ideas = USA_navy_and_agriculture_idea
+			}
+			add_stability = 0.03
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision USA_navy_political_reconstruction_five"
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			USA_political_recovery = yes
+			increase_ruling_party_popularity_by_5 = yes
+		}
+	}
+	
+	USA_navy_political_reconstruction_six = {
+		icon = generic_prepare_civil_war
+		allowed = { 
+		original_tag = USA }
+
+		available = {
+			is_subject = no
+			controls_all_owned_states = yes
+			has_global_flag = USA_civil_war_over_flag
+			NOT = {
+			country_exists = WCC
+			}
+			OR = {
+			has_country_leader = { ruling_only = yes name = "Ernest J. King" } 
+			has_country_flag = USA_leahy_gave_up_power_flag 
+			}
+		}
+
+		visible = {
+			is_subject = no
+			controls_all_owned_states = yes
+			has_global_flag = USA_civil_war_over_flag
+			NOT = {
+			country_exists = WCC
+			}
+			OR = {
+			has_country_leader = { ruling_only = yes name = "Ernest J. King" } 
+			has_country_flag = USA_leahy_gave_up_power_flag 
+			}
+		}
+
+		fire_only_once = yes
+		cost = 20
+		days_remove = 42
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision USA_navy_political_reconstruction_six"
+			if = {
+				limit = {
+				has_country_leader = { ruling_only = yes name = "Ernest J. King" } 
+				}
+				add_political_power = 20
+				add_research_slot = 1
+			}
+			else_if = {
+				limit = {
+				has_country_flag = USA_leahy_gave_up_power_flag 
+				}
+				add_command_power = 10
+				add_research_slot = 1
+			}
+			add_stability = 0.03
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision USA_navy_political_reconstruction_six"
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			USA_political_recovery = yes
+			increase_ruling_party_popularity_by_5 = yes
+		}
+	}
+	
+	USA_protection_targets = {
+		icon = ger_military_buildup
+		
+		available = {
+			has_country_flag = USA_chose_to_pirate
+		}
+		
+		visible = {
+			has_country_flag = USA_chose_to_pirate
+		}
+		targets = { LIB MOR POR SPR IRE DEN MEX CUB HAI DOM PRI CAF GUA HON NIC ELS COS PAN COL ECU PRU BOL CHI ARG PAR URG BRA VEN MAF NOR }
+		target_trigger = {
+			FROM = { exists = yes }
+		}
+		days_remove = 7
+		days_re_enable = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 30
+			modifier = {
+				factor = 0
+				has_equipment = { infantry_equipment < 4000 }
+			}
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision USA_protection_targets"
+			FROM = {
+			country_event = ustates.3167
+			}
+		}
+	}
+	
+	USA_protection_targets_majors = {
+		icon = ger_military_buildup
+		
+		available = {
+			has_country_flag = USA_chose_to_pirate
+		}
+		
+		visible = {
+			has_country_flag = USA_chose_to_pirate
+		}
+		targets = { CAN NFA ENG FRA GER JAP RUS AUS }
+		target_trigger = {
+			FROM = { exists = yes }
+		}
+		days_remove = 28
+		days_re_enable = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 30
+			modifier = {
+				factor = 0
+				has_equipment = { infantry_equipment < 4000 }
+			}
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision USA_protection_targets_majors"
+			FROM = {
+			country_event = ustates.3168
+			}
+		}
+	}
+
+	USA_blank_check_buildup = {
+		icon = ger_military_buildup
+		
+		available = {
+			has_country_flag = USA_blank_industrial_checks
+		}
+		
+		visible = {
+			has_country_flag = USA_blank_industrial_checks
+		}
+
+		days_remove = 25
+		days_re_enable = 25
+		fire_only_once = no
+		ai_will_do = {
+			factor = 30
+			modifier = {
+				factor = 0
+				has_equipment = { infantry_equipment < 4000 }
+			}
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision USA_blank_check_buildup"
+			random_owned_controlled_state = {
+			limit = { is_in_home_area = yes	}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = dockyard
+				level = 1
+				instant_build = yes
+				}
+			}
+		}
+	}
+	
+	USA_king_ends_canada = {
+		icon = generic_prepare_civil_war
+
+		allowed = { 
+		original_tag = USA }
+
+		available = {
+			is_subject = no
+			controls_all_owned_states = yes
+			can_declare_war_on = CAN
+			has_completed_focus = USA_end_the_anglo_empire
+		}
+
+		visible = {
+			has_completed_focus = USA_end_the_anglo_empire
+			CAN = {
+				exists = yes
+				NOT = {
+					has_war_with = ROOT
+					has_war_together_with = ROOT
+					is_in_faction_with = ROOT
+					is_subject_of = ROOT
+				}
+			}
+		}
+
+		fire_only_once = yes
+		cost = 15
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+			modifier = {
+				factor = 0
+				strength_ratio = { tag = CAN ratio < 3.0 }
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision USA_king_ends_canada"
+			add_war_support = 0.10
+			declare_war_on = {
+				target = CAN
+				type = annex_everything
+			}
+		}
+	}
+}

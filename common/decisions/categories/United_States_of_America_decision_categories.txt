@@ -76,4 +76,18 @@ USA_conservative_democratic_policies = {
 }
 
 
+USA_postwar_military_policies = {
+	icon = military_operation
+	allowed = {	original_tag = USA }
+	visible = {
+			has_global_flag = USA_civil_war_over_flag 
+	}
+}
 
+USA_navy_junta_decisions = {
+	icon = military_operation
+	allowed = {	original_tag = USA }
+	visible = {
+		original_tag = USA
+	}
+}

@@ -6450,7 +6450,571 @@ focus_tree = {
 			add_stability = 0.03
 		}
 	}
-	
+
+	### Navy with a State ###
+	focus = {# Navy-in-Command
+		id = USA_navy_in_command
+		icon = GFX_goal_USA_navy
+		cost = 0.00
+		available = {
+			has_country_flag = USA_navy_flag
+		}
+		bypass = {
+			has_country_flag = USA_navy_flag
+		}
+		x = 12
+		y = 18
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_navy_in_command"
+			custom_effect_tooltip = unlock_focuses
+		}
+	}
+
+	focus = {# Chief Admiral Leahy
+		id = USA_admiral_leahy
+		icon = GFX_USA_leahy
+		cost = 6.00
+		available = {
+			has_government = authoritarian_democrat
+		}
+		prerequisite = {
+			focus = USA_navy_in_command
+		}
+		relative_position_id = USA_navy_in_command
+		x = -4
+		y = 1
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_admiral_leahy"
+			add_popularity = { ideology = authoritarian_democrat popularity = 0.05 }
+			add_stability = 0.05
+		}
+	}
+
+	focus = {# Pacific Reconciliation
+		id = USA_pacific_reconciliation
+		icon = GFX_USA_pacific_reconsiliation
+		cost = 6.00
+		available = {
+			has_government = authoritarian_democrat
+		}
+		prerequisite = {
+			focus = USA_admiral_leahy
+		}
+		relative_position_id = USA_navy_in_command
+		x = -6
+		y = 2
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_pacific_reconciliation"
+			country_event = ustates.3185
+			add_political_power  = 30
+		}
+	}
+
+	focus = {# Naval Investments
+		id = USA_naval_investments
+		icon = GFX_goal_navy_decision
+		cost = 6.00
+		available = {
+			has_government = authoritarian_democrat 
+		}
+		prerequisite = {
+			focus = USA_admiral_leahy
+		}
+		relative_position_id = USA_navy_in_command
+		x = -4
+		y = 2
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_naval_investments"
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = USA
+					is_controlled_by = USA
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+			}
+			362 = {
+				if = {
+					limit = { is_owned_and_controlled_by = USA }
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			361 = {
+				if = {
+					limit = { is_owned_and_controlled_by = USA }
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+
+	focus = {# Court the Rockies
+		id = USA_court_the_rockies
+		icon = GFX_goal_wcc_child_soldiers
+		cost = 6.00
+		available = {
+			has_government = authoritarian_democrat 
+		}
+		prerequisite = {
+			focus = USA_admiral_leahy
+		}
+		relative_position_id = USA_navy_in_command
+		x = -2
+		y = 2
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_court_the_rockies"
+			country_event = ustates.3186
+			add_stability = 0.05
+		}
+	}
+
+	focus = {# Supreme Court Trial
+		id = USA_supreme_court_trial
+		icon = GFX_USA_supreme_court_trial_icon
+		cost = 6.00
+		available = {
+			has_government = authoritarian_democrat 
+		}
+		prerequisite = {
+			focus = USA_pacific_reconciliation
+		}
+		prerequisite = {
+			focus = USA_naval_investments
+		}
+		relative_position_id = USA_navy_in_command
+		x = -5
+		y = 3
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_supreme_court_trial"
+			custom_effect_tooltip = USA_mac_navy_trial_tooltip
+			country_event = ustates.3191		
+		}
+	}
+
+	focus = {# Decision of Congress
+		id = USA_decision_of_congress
+		icon = GFX_USA_decision_congress
+		cost = 6.00
+		available = {
+			has_government = authoritarian_democrat 
+		}
+		prerequisite = {
+			focus = USA_court_the_rockies
+		}
+		prerequisite = {
+			focus = USA_naval_investments
+		}
+		relative_position_id = USA_navy_in_command
+		x = -3
+		y = 3
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_decision_of_congress"
+			custom_effect_tooltip = USA_decision_congress_tooltip
+			country_event = ustates.3199
+		}
+	}
+
+	focus = {# Savior of Democracy
+		id = USA_savior_of_democracy
+		icon = GFX_goal_liberty
+		cost = 6.00
+		available = {
+			has_government = authoritarian_democrat 
+		}
+		prerequisite = {
+			focus = USA_supreme_court_trial
+		}
+		prerequisite = {
+			focus = USA_decision_of_congress
+		}
+		relative_position_id = USA_navy_in_command
+		x = -4
+		y = 4
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_savior_of_democracy"
+			add_ideas = USA_the_savior_idea
+			set_country_flag = USA_leahy_gave_up_power_flag 
+			hidden_effect = {
+			country_event = { id = ustates.3126 days = 1 }
+			country_event = { id = ustates.3127 days = 2 }	
+			country_event = { id = ustates.3128 days = 3 }	
+			}
+			add_popularity = { ideology = social_conservative popularity = 0.02 }
+			add_popularity = { ideology = market_liberal popularity = 0.02 }
+			add_popularity = { ideology = social_liberal popularity = 0.02 }
+			add_popularity = { ideology = social_democrat popularity = 0.02 }
+		}
+	}
+
+	focus = {# Chief Admiral King
+		id = USA_admiral_king
+		icon = GFX_USA_king
+		cost = 6.00
+		available = {
+			has_government = paternal_autocrat
+		}
+		prerequisite = {
+			focus = USA_navy_in_command
+		}
+		relative_position_id = USA_navy_in_command
+		x = 4
+		y = 1
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_admiral_king"
+			add_popularity = { ideology = paternal_autocrat popularity = 0.05 }
+			add_political_power = 25
+		}
+	}
+
+	focus = {# Blank Check
+		id = USA_the_blank_check
+		icon = GFX_USA_the_blank_check
+		cost = 6.00
+		available = {
+			has_government = paternal_autocrat
+		}
+		prerequisite = {
+			focus = USA_admiral_king
+		}
+		relative_position_id = USA_navy_in_command
+		x = 2
+		y = 2
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_the_blank_check"
+			country_event = ustates.3169
+			add_command_power = 15
+		}
+	}
+
+	focus = {# P4P
+		id = USA_protection_for_payment
+		icon = GFX_USA_payment_protection
+		cost = 6.00
+		available = {
+			has_government = paternal_autocrat
+		}
+		prerequisite = {
+			focus = USA_admiral_king
+		}
+		relative_position_id = USA_navy_in_command
+		x = 4
+		y = 2
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_protection_for_payment"
+			custom_effect_tooltip = USA_protection_tooltip
+			add_political_power = 20
+		}
+	}
+
+	focus = {# Subordination
+		id = USA_congressional_subordination
+		icon = GFX_goal_USA_congress_subordination
+		cost = 6.00
+		available = {
+			has_government = paternal_autocrat
+		}
+		prerequisite = {
+			focus = USA_admiral_king
+		}
+		relative_position_id = USA_navy_in_command
+		x = 6
+		y = 2
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_congressional_subordination"
+			country_event = ustates.3165
+			add_stability = 0.03
+		}
+	}
+
+	focus = {# Secure Coastline
+		id = USA_secure_the_coastline
+		icon = GFX_USA_secure_coastline
+		cost = 6.00
+		available = {
+			has_government = paternal_autocrat
+		}
+		prerequisite = {
+			focus = USA_the_blank_check
+		}
+		prerequisite = {
+			focus = USA_protection_for_payment
+		}
+		relative_position_id = USA_navy_in_command
+		x = 3
+		y = 3
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_secure_the_coastline"
+			add_ideas = USA_secure_coastlines_idea
+			add_popularity = { ideology = paternal_autocrat popularity = 0.05 }
+		}
+	}
+
+	focus = {# Navy First
+		id = USA_navy_first
+		icon = GFX_USA_navy_top
+		cost = 6.00
+		available = {
+			has_government = paternal_autocrat 
+		}
+		prerequisite = {
+			focus = USA_congressional_subordination
+		}
+		prerequisite = {
+			focus = USA_protection_for_payment
+		}
+		relative_position_id = USA_navy_in_command
+		x = 5
+		y = 3
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_navy_first"
+			add_ideas = USA_maritime_industry_idea
+		}
+	}
+
+	focus = {# Admiral of the Navy
+		id = USA_admiral_of_navy
+		icon = GFX_USA_kingnavy
+		cost = 6.00
+		available = {
+			has_government = paternal_autocrat
+		}
+		prerequisite = {
+			focus = USA_secure_the_coastline
+		}
+		prerequisite = {
+			focus = USA_navy_first
+		}
+		relative_position_id = USA_navy_in_command
+		x = 4
+		y = 4
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_admiral_of_navy"
+			add_ideas = USA_the_admiral_idea
+			hidden_effect = {
+			remove_ideas = USA_army_navy_tensions_idea
+			}
+			add_popularity = { ideology = paternal_autocrat popularity = 0.05 }
+		}
+	}
+
+	focus = {# American Dockyards
+		id = USA_american_dockyards
+		icon = GFX_goal_USA_american_dockyards
+		cost = 6.00
+		available = {
+			has_government = paternal_autocrat 
+			has_global_flag = USA_civil_war_over_flag
+		}
+		prerequisite = {
+			focus = USA_admiral_of_navy
+		}
+		relative_position_id = USA_navy_in_command
+		x = 3
+		y = 5
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_american_dockyards"
+			362 = {
+				if = {
+					limit = { is_owned_and_controlled_by = USA }
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			359 = {
+				if = {
+					limit = { is_owned_and_controlled_by = USA }
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+
+	focus = {# The Canal We Built
+		id = USA_the_canal_we_built
+		icon = GFX_goal_USA_panama_control
+		cost = 6.00
+		available = {
+			has_government = paternal_autocrat 
+			has_global_flag = USA_civil_war_over_flag
+		}
+		prerequisite = {
+			focus = USA_admiral_of_navy
+		}
+		relative_position_id = USA_navy_in_command
+		x = 5
+		y = 5
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_the_canal_we_built"
+			if = {
+				limit = {
+				owns_state = 685
+				}
+				add_ideas = USA_king_in_the_canal
+			}
+			else = {
+			country_event = ustates.3170
+			}
+			add_war_support = 0.05
+		}
+	}
+
+	focus = {# Ports of the Atlantic
+		id = USA_ports_of_the_atlantic
+		icon = GFX_goal_CUB_regional_diplomacy
+		cost = 6.00
+		available = {
+			has_government = paternal_autocrat 
+			has_global_flag = USA_civil_war_over_flag
+		}
+		prerequisite = {
+			focus = USA_admiral_of_navy
+		}
+		relative_position_id = USA_navy_in_command
+		x = 4
+		y = 6
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_ports_of_the_atlantic"
+			country_event = ustates.3181
+			navy_experience = 50
+		}
+	}
+
+	focus = {# End the Anglo Empire
+		id = USA_end_the_anglo_empire
+		icon = GFX_goal_USA_break_windsor
+		cost = 6.00
+		available = {
+			has_government = paternal_autocrat
+			NOT = {
+			has_country_flag = USA_access_to_entente_ports
+			}
+			country_exists = CAN
+		}
+		prerequisite = {
+			focus = USA_ports_of_the_atlantic
+		}
+		relative_position_id = USA_navy_in_command
+		x = 5
+		y = 7
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_end_the_anglo_empire"
+			unlock_decision_tooltip = USA_king_ends_canada
+			add_manpower = 500
+		}
+	}
+
+	focus = {# The Beautiful Pacific
+		id = USA_the_beautiful_pacific
+		icon = GFX_USA_beautiful_pacific
+		cost = 6.00
+		available = {
+			has_government = paternal_autocrat 
+		}
+		prerequisite = {
+			focus = USA_ports_of_the_atlantic
+		}
+		relative_position_id = USA_navy_in_command
+		x = 3
+		y = 7
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_the_beautiful_pacific"
+			if = {
+				limit = {
+				owns_state = 645
+				}
+				add_ideas = USA_king_in_guam
+			}
+			else = {
+			country_event = ustates.3182
+			}
+			add_political_power = 5
+		}
+	}
+			
 	### Post Civil War ###	
 	focus = {# Victory in the Civil War
 		id = USA_mac_victory
@@ -9491,12 +10055,6 @@ focus_tree = {
 		relative_position_id = USA_shock_and_awe
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_take_the_fight_abroad"
-			add_tech_bonus = {
-				name = doctrine_bonus
-				bonus = 1
-				uses = 2
-				category = land_doctrine
-			}
 			hidden_effect = {
 				country_event = { id = ustates.627 days = 70 }#Pentagon Construction
 				country_event = { id = ustates.651 days = 35 }#AUS Trials
@@ -9504,80 +10062,6 @@ focus_tree = {
 				country_event = { id = ustates.6520 days = 55 }#CAR Trials
 			}
 			custom_effect_tooltip = USA_trials_will_begin
-		}
-	}
-	focus = {
-		id = USA_military_research
-		icon = GFX_focus_generic_combined_arms
-		cost = 5.00
-		prerequisite = {
-			focus = USA_take_the_fight_abroad
-		}
-		x = -2
-		y = 1
-		relative_position_id = USA_take_the_fight_abroad
-		ai_will_do = {
-			factor = 2
-			modifier = {
-				factor = 1.5
-				has_war = yes
-			}
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus USA_military_research"
-			country_event = {
-				id = ustates.300
-				days = 1
-			}
-		}
-
-	}
-	focus = {
-		id = USA_increase_military_spending
-		icon = GFX_focus_mex_privatisation
-		cost = 5.00
-		prerequisite = {
-			focus = USA_take_the_fight_abroad
-		}
-		x = 2
-		y = 1
-		ai_will_do = {
-			factor = 1.5
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-		}
-		relative_position_id = USA_take_the_fight_abroad
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus USA_increase_military_spending"
-			add_ideas = USA_increased_military_spending
-		}
-	}
-	focus = {
-		id = USA_liberty_bonds
-		icon = GFX_goal_ideology_market_liberal
-		cost = 5.00
-		prerequisite = {
-			focus = USA_increase_military_spending
-		}
-		x = 1
-		y = 1
-		relative_position_id = USA_increase_military_spending
-		ai_will_do = {
-			factor = 2
-			modifier = {
-				factor = 1.5
-				has_war = yes
-			}
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus USA_liberty_bonds"
-			add_war_support = 0.05
-			add_offsite_building = {
-				type = arms_factory
-				level = 1
-			}
 		}
 	}
 	focus = {
@@ -10405,146 +10889,6 @@ focus_tree = {
 			swap_ideas = {
 				remove_idea = USA_Expanded_USAAC1
 				add_idea = USA_Expanded_USAAC2
-			}
-		}
-	}
-	focus = {
-		id = USA_new_arms_factories
-		icon = GFX_goal_national_arsenal
-		cost = 5.00
-		prerequisite = {
-			focus = USA_increase_military_spending
-		}
-		x = -1
-		y = 1
-		ai_will_do = {
-			factor = 1.5
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-		}
-		relative_position_id = USA_increase_military_spending
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus USA_new_arms_factories"
-			swap_ideas = {
-				remove_idea = USA_increased_military_spending
-				add_idea = USA_increased_military_spending2
-			}
-		}
-	}
-	focus = {
-		id = USA_new_tank_assemblies
-		icon = GFX_goal_Focus_Military_Mobilisation
-		cost = 5.00
-		prerequisite = {
-			focus = USA_new_arms_factories
-		}
-		prerequisite = {
-			focus = USA_liberty_bonds
-		}
-		x = 0
-		y = 2
-		ai_will_do = {
-			factor = 1.5
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-		}
-		relative_position_id = USA_increase_military_spending
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus USA_new_tank_assemblies"
-			random_owned_controlled_state = {
-				limit = {
-					is_mainland_america = yes
-					free_building_slots = { building = arms_factory size > 0 include_locked = yes }
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-	}
-	focus = {
-		id = USA_woman_army_corps
-		icon = GFX_goal_continuous_reduce_training_time
-		cost = 5.00
-		prerequisite = {
-			focus = USA_military_research
-		}
-		x = 0
-		y = 1
-		ai_will_do = {
-			factor = 1.5
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-		}
-		relative_position_id = USA_military_research
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus USA_woman_army_corps"
-			add_ideas = USA_womens_army_corps_idea
-		}
-	}
-	focus = {
-		id = USA_new_rifle_development
-		icon = GFX_goal_generic_small_arms
-		cost = 5.00
-		prerequisite = {
-			focus = USA_woman_army_corps
-		}
-		x = 0
-		y = 2
-		ai_will_do = {
-			factor = 1.5
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-		}
-		relative_position_id = USA_military_research
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus USA_new_rifle_development"
-			add_tech_bonus = {
-				name = infantry_bonus
-				bonus = 1
-				uses = 2
-				category = infantry_weapons
-			}
-		}
-	}
-	focus = {
-		id = USA_tis_ill_defend
-		icon = GFX_goal_COS_American_Staff
-		cost = 5.00
-		prerequisite = {
-			focus = USA_new_rifle_development
-		}
-		prerequisite = {
-			focus = USA_new_tank_assemblies
-		}
-		x = 0
-		y = 4
-		ai_will_do = {
-			factor = 1.5
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-		}
-		relative_position_id = USA_take_the_fight_abroad
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus USA_tis_ill_defend"
-			add_tech_bonus = {
-				name = doctrine_bonus
-				bonus = 1
-				uses = 2
-				category = land_doctrine
 			}
 		}
 	}
