@@ -7797,7 +7797,23 @@ country_event = { # WCC Stuff
 	id = ustates.1295
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.1293"}
 	title = ustates.1295.t
-	desc = ustates.1295.d
+	desc = {
+	text = ustates.1295.d.king
+	trigger = {
+			USA = {
+			has_country_leader = { ruling_only = yes name = "Ernest J. King" } 
+			}
+		}
+	}
+	
+	desc = {
+	text = ustates.1295.d.leahy
+	trigger = {
+			USA = {
+			has_country_leader = { ruling_only = yes name = "William D. Leahy" } 
+			}
+		}
+	}
 	picture = GFX_event_wcc_3
 
 	trigger = {
@@ -7843,6 +7859,11 @@ country_event = { # WCC Stuff
 
 	option = { # War
 		name = ustates.1295.a
+		trigger = {
+			USA = {
+			has_country_leader = { ruling_only = yes name = "Ernest J. King" } 
+			}
+		}
 		ai_chance = {
 			factor = 80
 		}
@@ -7866,17 +7887,50 @@ country_event = { # WCC Stuff
 		end_puppet = WCC
 		}
 		hidden_effect = {
+			USA = {
 			country_event = {
 			id = ustates.1296
 			days = 3
+			}
 			}
 		}
 	}
 	
 	option = { # Damn
 		name = ustates.1295.b
+		trigger = {
+			USA = {
+			has_country_leader = { ruling_only = yes name = "Ernest J. King" } 
+			}
+		}
 		ai_chance = {
 			factor = 20
+		}
+		USA = {
+			annex_country = {
+				target = WCC
+				transfer_troops = yes
+			}
+		}
+		WCC = {
+			every_unit_leader = {
+				set_nationality = USA
+			}
+		}	
+		USA = {
+			change_tag_from = WCC
+		}
+	}
+	
+	option = { # Damn
+		name = ustates.1295.c
+		trigger = {
+			USA = {
+			has_country_leader = { ruling_only = yes name = "William D. Leahy" } 
+			}
+		}
+		ai_chance = {
+			factor = 100
 		}
 		USA = {
 			annex_country = {
@@ -22386,7 +22440,7 @@ country_event = { # Congressional Decision
 	id = ustates.3199
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.3199"}
 	title = ustates.3199.t
-	desc = ustates.3199
+	desc = ustates.3199.d
 	picture = GFX_report_event_USA_military_trial
 
 	is_triggered_only = yes

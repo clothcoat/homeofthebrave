@@ -6682,7 +6682,7 @@ focus_tree = {
 			}
 			}
 			hidden_effect = {
-				USA = {
+			USA = {
 					annex_country = {
 					target = WCC
 					transfer_troops = yes
@@ -6703,7 +6703,7 @@ focus_tree = {
 				}
 			}
 			hidden_effect = {
-				USA = {
+			USA = {
 					annex_country = {
 					target = WCC
 					transfer_troops = yes
@@ -6719,121 +6719,6 @@ focus_tree = {
 			add_popularity = { ideology = market_liberal popularity = 0.02 }
 			add_popularity = { ideology = social_liberal popularity = 0.02 }
 			add_popularity = { ideology = social_democrat popularity = 0.02 }
-		}
-	}
-
-	focus = {# National Highway System
-		id = USA_national_highway_system
-		icon = GFX_goal_liberty
-		cost = 6.00
-		available = {
-			has_global_flag = USA_civil_war_over_flag
-		}
-		prerequisite = {
-			focus = USA_savior_of_democracy
-		}
-		relative_position_id = USA_navy_in_command
-		x = -5
-		y = 5
-		ai_will_do = {
-			factor = 50
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus USA_national_highway_system"
-			add_ideas = USA_the_savior_idea
-			set_country_flag = USA_leahy_gave_up_power_flag 
-		}
-	}
-
-	focus = {# Military Base Investment
-		id = USA_military_base_investment
-		icon = GFX_goal_liberty
-		cost = 6.00
-		available = {
-			has_global_flag = USA_civil_war_over_flag
-		}
-		prerequisite = {
-			focus = USA_savior_of_democracy
-		}
-		relative_position_id = USA_navy_in_command
-		x = -3
-		y = 5
-		ai_will_do = {
-			factor = 50
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus USA_military_base_investment"
-			add_ideas = USA_the_savior_idea
-			set_country_flag = USA_leahy_gave_up_power_flag 
-		}
-	}
-
-	focus = {# The Chief of Staff
-		id = USA_chief_of_staff
-		icon = GFX_goal_liberty
-		cost = 6.00
-		available = {
-			has_global_flag = USA_civil_war_over_flag
-		}
-		prerequisite = {
-			focus = USA_savior_of_democracy
-		}
-		relative_position_id = USA_navy_in_command
-		x = -4
-		y = 6
-		ai_will_do = {
-			factor = 50
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus USA_chief_of_staff"
-			add_ideas = USA_the_savior_idea
-			set_country_flag = USA_leahy_gave_up_power_flag 
-		}
-	}
-
-	focus = {# Destroyer Investment
-		id = USA_destroyer_investment
-		icon = GFX_goal_liberty
-		cost = 6.00
-		available = {
-			has_global_flag = USA_civil_war_over_flag
-		}
-		prerequisite = {
-			focus = USA_chief_of_staff
-		}
-		relative_position_id = USA_navy_in_command
-		x = -5
-		y = 7
-		ai_will_do = {
-			factor = 50
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus USA_destroyer_investment"
-			add_ideas = USA_halsey_plan_idea
-			set_country_flag = USA_leahy_gave_up_power_flag 
-		}
-	}
-
-	focus = {# Submarine Investment
-		id = USA_submarine_investment
-		icon = GFX_goal_liberty
-		cost = 6.00
-		available = 
-			has_global_flag = USA_civil_war_over_flag
-		}
-		prerequisite = {
-			focus = USA_chief_of_staff
-		}
-		relative_position_id = USA_navy_in_command
-		x = -3
-		y = 7
-		ai_will_do = {
-			factor = 50
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus USA_submarine_investment"
-			add_ideas = USA_halsey_plan_idea
-			set_country_flag = USA_leahy_gave_up_power_flag 
 		}
 	}
 
@@ -9200,12 +9085,6 @@ focus_tree = {
 			add_stability = 0.05
 			add_political_power = 50
 			add_command_power = 15
-			hidden_effect = {
-			country_event = {
-				id = ustates.1281
-				days = 5
-				}
-			}
 		}
 	}
 

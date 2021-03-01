@@ -10525,6 +10525,12 @@ country_event = { #Partition for Stability
 	
 	trigger = { 
 	tag = USA
+	NOT = {
+		OR = {
+		has_country_leader = { ruling_only = yes name = "Ernest J. King" } 
+		has_country_leader = { ruling_only = yes name = "William D. Leahy" } 
+		}
+	}
 	OR = {
 		has_global_flag = WCC_annexation
 		WCC = {
