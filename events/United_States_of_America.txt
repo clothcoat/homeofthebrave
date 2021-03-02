@@ -7359,6 +7359,7 @@ country_event = { # Navy Demands
 	picture = GFX_event_USA_admiral_offer
 	
 	trigger = { 
+	tag = USA
 	OR = {
 	has_country_leader = {
 		name = "Douglas MacArthur"
