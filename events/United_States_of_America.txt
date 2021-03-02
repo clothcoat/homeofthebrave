@@ -7359,7 +7359,14 @@ country_event = { # Navy Demands
 	picture = GFX_event_USA_admiral_offer
 	
 	trigger = { 
+	OR = {
+	has_country_leader = {
+		name = "Douglas MacArthur"
+		ruling_only = yes
+	}
+	has_government = paternal_autocrat
 	has_country_flag = USA_macarthur_coup 
+	}
 	NOT = {
 		OR = {
 			has_global_flag = USA_civil_war_over_flag
@@ -7371,7 +7378,7 @@ country_event = { # Navy Demands
 	fire_only_once = yes
 	
 	mean_time_to_happen = {
-	days = 30
+	days = 10
 	}
 
 	option = { # Agree... for now
@@ -7682,10 +7689,12 @@ country_event = { # Leahy Coup
 			expire = "1965.1.1"
 			ideology = authoritarian_democrat_subtype
 		}
-		add_ideas = USA_Ernest_King_hog_ade
+		hidden_effect = {
+		add_ideas = USA_Ernest_King_hog_pau
 		add_ideas = USA_Raymond_Spruance_for_ade
 		add_ideas = USA_William_Harrison_Standley_eco_pau
 		add_ideas = USA_William_Moffett_sec_ade
+		}
 		set_politics = {
 			ruling_party = authoritarian_democrat
 			elections_allowed = no
@@ -7713,17 +7722,24 @@ country_event = { # King Coup
 		set_country_flag = USA_navy_flag
 		set_country_flag = Douglas_MacArthur_dead
 		remove_unit_leader = 56 #MacArthur
-		create_country_leader = {#Ernest King
+		create_country_leader = { #Ernest King
 			name = "Ernest J. King"
 			desc = "POLITICS_ERNEST_J_KING_DESC"
 			picture = "gfx/leaders/USA/Portrait_USA_Ernest_King_KR.tga"
 			expire = "1965.1.1"
-			ideology = authoritarian_democrat_subtype
+			ideology = paternal_autocrat_subtype
 		}
+		set_party_name = {
+				ideology = paternal_autocrat
+				long_name = USA_navy_king_party_long
+				name = USA_navy_king_party
+			}
+		hidden_effect = {
 		add_ideas = USA_William_Leahy_hog_ade
-		add_ideas = USA_Robert_Heinlein_for_ade
-		add_ideas = USA_Harold_Rainsford_Stark_eco_pau
+		add_ideas = USA_Robert_Heinlein_for_pau
+		add_ideas = USA_Thomas_Kinkaid_eco_pau
 		add_ideas = USA_William_Moffett_sec_ade
+		}
 		add_ideas = USA_army_navy_tensions_idea
 		hidden_effect = {
 			country_event = {
