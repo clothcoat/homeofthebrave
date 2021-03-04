@@ -22042,7 +22042,7 @@ country_event = { # Trial of the Century
 	id = ustates.3191
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.3191"}
 	title = ustates.3191.t
-	desc = ustates.3191
+	desc = ustates.3191.d
 	picture = GFX_report_event_USA_military_trial
 
 	is_triggered_only = yes
@@ -22062,7 +22062,7 @@ country_event = { # Trial of the Century
 	id = ustates.3192
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.3192"}
 	title = ustates.3192.t
-	desc = ustates.3192
+	desc = ustates.3192.d
 	picture = GFX_report_event_USA_military_trial
 
 	is_triggered_only = yes
