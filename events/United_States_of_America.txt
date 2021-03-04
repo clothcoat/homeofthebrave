@@ -2689,6 +2689,7 @@ country_event = { # The 1936 Election - You're Fucked (Or are you...)
 			country_event = { id = amcivwar.2 days = 7 }
 			country_event = { id = amcivwar.3 days = 8 }
 			country_event = { id = amcivwar.3000 days = 9 }
+			country_event = { id = amcivwar.1281 days = 20 }
 			}
 		}
 		set_politics = {
@@ -2736,6 +2737,7 @@ country_event = { # The 1936 Election - You're Fucked (Or are you...)
 			country_event = { id = amcivwar.2 days = 7 }
 			country_event = { id = amcivwar.3 days = 8 }
 			country_event = { id = amcivwar.3000 days = 9 }
+			country_event = { id = amcivwar.1281 days = 20 }
 			}
 		}
 		set_politics = {
@@ -7390,13 +7392,7 @@ country_event = { # Navy Demands
 	
 	trigger = { 
 	tag = USA
-	OR = {
-	has_country_leader = {
-		name = "Douglas MacArthur"
-		ruling_only = yes
-	}
 	has_government = paternal_autocrat
-	has_country_flag = USA_macarthur_coup 
 	}
 	NOT = {
 		OR = {
@@ -7407,6 +7403,8 @@ country_event = { # Navy Demands
 	}
 
 	fire_only_once = yes
+
+	is_triggered_only = yes
 	
 	mean_time_to_happen = {
 	days = 10
