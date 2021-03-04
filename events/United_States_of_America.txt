@@ -3758,6 +3758,12 @@ country_event = { # MacArthur Marches onto Washington
 			add_ideas = USA_William_Harrison_Standley_eco_pau
 			add_ideas = USA_John_Edgar_Hoover_sec_pau
 		}
+		hidden_effect = {
+			country_event = {
+			id = ustates.1281
+			days = 10
+			}
+		}	
 	}
 }
 
@@ -4224,6 +4230,12 @@ country_event = { # MacArthur and the Army Removes Long
 			add_ideas = USA_William_Harrison_Standley_eco_pau
 			add_ideas = USA_John_Edgar_Hoover_sec_pau
 		}
+		hidden_effect = {
+			country_event = {
+			id = ustates.1281
+			days = 10
+			}
+		}
 	}
 }
 
@@ -4438,6 +4450,12 @@ country_event = { # MacArthur forces out Murray
 		add_popularity = {
 		ideology = paternal_autocrat
 		popularity = 0.2
+		}
+		hidden_effect = {
+			country_event = {
+			id = ustates.1281
+			days = 10
+			}
 		}
 	}
 }
@@ -5220,6 +5238,12 @@ country_event = { # MacArthur and the Army Remove Republicans
 			add_ideas = USA_John_William_Davis_for_pau
 			add_ideas = USA_William_Harrison_Standley_eco_pau
 			add_ideas = USA_John_Edgar_Hoover_sec_pau
+		}
+		hidden_effect = {
+			country_event = {
+			id = ustates.1281
+			days = 10
+			}
 		}
 		set_country_flag = PSA_Curtis_Exile
 	}
@@ -6277,6 +6301,12 @@ country_event = { # MacArthur and the Army Remove Garner
 		hidden_effect = {
 			country_event = { id = amcivwar.15 days = 1 }
 			set_global_flag = USA_Garner_Flees
+		}
+		hidden_effect = {
+			country_event = {
+			id = ustates.1281
+			days = 10
+			}
 		}
 	}
 }
@@ -23344,6 +23374,12 @@ country_event = {
 			add_ideas = USA_William_Harrison_Standley_eco_pau
 			add_ideas = USA_John_Edgar_Hoover_sec_pau
 			country_event = { id = amcivwar.135 days = 1 }
+		}
+		hidden_effect = {
+			country_event = {
+			id = ustates.1281
+			days = 10
+			}
 		}
 	}
 }
