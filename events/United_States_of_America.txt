@@ -21941,8 +21941,10 @@ country_event = { # Accepted
 		hidden_effect = {
 		set_global_flag = PSA_NAVY_TREATY
 		}
+		CAL = {
 		white_peace = USA
 		white_peace = WCC
+		}
 		add_political_power = 10
 		add_popularity = { ideology = authoritarian_democrat popularity = 0.05 }
 	}
@@ -21955,8 +21957,10 @@ country_event = { # Accepted
 		hidden_effect = {
 		set_global_flag = PSA_NAVY_MARSHALL_TREATY
 		}
+		CAL = {
 		white_peace = USA
 		white_peace = WCC
+		}
 		add_political_power = 10
 		add_popularity = { ideology = authoritarian_democrat popularity = 0.05 }
 	}
