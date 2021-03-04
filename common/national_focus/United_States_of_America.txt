@@ -7062,6 +7062,9 @@ focus_tree = {
 		}
 		bypass = {
 			has_global_flag = USA_civil_war_over_flag
+			NOT = {
+			has_country_flag = USA_navy_flag
+			}
 		}
 		x = 34
 		y = 10
