@@ -1,6 +1,7 @@
 on_actions = {
 	on_capitulation = {
 		effect = {
+		if = {
 		limit = {
 				is_american_tag = yes
 				FROM = { tag = WCC }
@@ -411,5 +412,6 @@ on_actions = {
 			}
 		}
 	}
+}
 }
 }

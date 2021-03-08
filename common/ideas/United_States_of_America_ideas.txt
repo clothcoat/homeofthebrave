@@ -2827,7 +2827,7 @@ ideas = {
 			}
 		}
 		USA_the_admiral_idea = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_naval_training_idea"}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_the_admiral_idea"}
 			modifier = { 
 				amphibious_invasion = 0.15 
 				navy_leader_start_coordination_level = 1	
@@ -2838,7 +2838,7 @@ ideas = {
 			picture = USA_king_spirit
 		}
 		USA_the_savior_idea = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_naval_training_idea"}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_the_savior_idea"}
 			modifier = { 
 				amphibious_invasion = 0.15 
 				navy_leader_start_maneuvering_level = 1	
@@ -2969,6 +2969,11 @@ ideas = {
 				naval_speed_factor = 0.02
 			}
 			picture = ast_oversized_fleet
+		}
+		USA_naval_training_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_naval_training_idea"}
+			modifier = { amphibious_invasion = 0.15 }
+			picture = ast_volunteer_defence_corps
 		}
 		USA_large_marine_corps = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_large_marine_corps"}
