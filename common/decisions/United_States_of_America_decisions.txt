@@ -4504,6 +4504,7 @@ USA_navy_junta_decisions = {
 			custom_effect_tooltip = USA_political_recovery_tooltip
 			USA_political_recovery = yes
 			increase_ruling_party_popularity_by_5 = yes
+			set_country_flag = USA_first_reconstruction_flag
 		}
 	}
 	
@@ -4536,6 +4537,7 @@ USA_navy_junta_decisions = {
 			has_country_leader = { ruling_only = yes name = "Ernest J. King" } 
 			has_country_flag = USA_leahy_gave_up_power_flag 
 			}
+			has_country_flag = USA_first_reconstruction_flag 
 		}
 
 		fire_only_once = yes
@@ -4596,6 +4598,7 @@ USA_navy_junta_decisions = {
 			custom_effect_tooltip = USA_political_recovery_tooltip
 			USA_political_recovery = yes
 			increase_ruling_party_popularity_by_5 = yes
+			set_country_flag = USA_second_reconstruction_flag
 		}
 	}
 	
@@ -4628,6 +4631,8 @@ USA_navy_junta_decisions = {
 			has_country_leader = { ruling_only = yes name = "Ernest J. King" } 
 			has_country_flag = USA_leahy_gave_up_power_flag 
 			}
+			has_country_flag = USA_first_reconstruction_flag
+			has_country_flag = USA_second_reconstruction_flag
 		}
 
 		fire_only_once = yes
@@ -4684,6 +4689,7 @@ USA_navy_junta_decisions = {
 			custom_effect_tooltip = USA_political_recovery_tooltip
 			USA_political_recovery = yes
 			increase_ruling_party_popularity_by_5 = yes
+			set_country_flag = USA_third_reconstruction_flag
 		}
 	}
 	
@@ -4716,6 +4722,9 @@ USA_navy_junta_decisions = {
 			has_country_leader = { ruling_only = yes name = "Ernest J. King" } 
 			has_country_flag = USA_leahy_gave_up_power_flag 
 			}
+			has_country_flag = USA_first_reconstruction_flag
+			has_country_flag = USA_second_reconstruction_flag
+			has_country_flag = USA_third_reconstruction_flag
 		}
 
 		fire_only_once = yes
@@ -4753,6 +4762,7 @@ USA_navy_junta_decisions = {
 			custom_effect_tooltip = USA_political_recovery_tooltip
 			USA_political_recovery = yes
 			increase_ruling_party_popularity_by_5 = yes
+			set_country_flag = USA_four_reconstruction_flag
 		}
 	}
 	
@@ -4785,6 +4795,10 @@ USA_navy_junta_decisions = {
 			has_country_leader = { ruling_only = yes name = "Ernest J. King" } 
 			has_country_flag = USA_leahy_gave_up_power_flag 
 			}
+			has_country_flag = USA_first_reconstruction_flag
+			has_country_flag = USA_second_reconstruction_flag
+			has_country_flag = USA_third_reconstruction_flag
+			has_country_flag = USA_fourth_reconstruction_flag
 		}
 
 		fire_only_once = yes
@@ -4820,6 +4834,7 @@ USA_navy_junta_decisions = {
 			custom_effect_tooltip = USA_political_recovery_tooltip
 			USA_political_recovery = yes
 			increase_ruling_party_popularity_by_5 = yes
+			set_country_flag = USA_fifth_reconstruction_flag
 		}
 	}
 	
@@ -4852,6 +4867,11 @@ USA_navy_junta_decisions = {
 			has_country_leader = { ruling_only = yes name = "Ernest J. King" } 
 			has_country_flag = USA_leahy_gave_up_power_flag 
 			}
+			has_country_flag = USA_first_reconstruction_flag
+			has_country_flag = USA_second_reconstruction_flag
+			has_country_flag = USA_third_reconstruction_flag
+			has_country_flag = USA_fourth_reconstruction_flag
+			has_country_flag = USA_fifth_reconstruction_flag
 		}
 
 		fire_only_once = yes
