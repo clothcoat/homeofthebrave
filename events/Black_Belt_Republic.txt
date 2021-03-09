@@ -2300,6 +2300,12 @@ country_event = { # The Liberal Election
 			elections_allowed = yes
 		}
 	}
+	hidden_effect = {
+		add_ideas = BBR_WEB_Du_Bois_hog_rso
+		add_ideas = BBR_Theophilus_Lewis_for_rso
+		add_ideas = BBR_Howard_Thurman_eco_rso
+		add_ideas = BBR_George_Williamson_Crawford_sec_rso
+	}
 	}
 	option = { # Soc Lib
 	ai_chance = {
