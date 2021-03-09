@@ -5267,6 +5267,12 @@ country_event = { # MacArthur and the Army Remove Republicans
 			add_ideas = USA_William_Harrison_Standley_eco_pau
 			add_ideas = USA_John_Edgar_Hoover_sec_pau
 		}
+		hidden_effect = {
+			country_event = {
+			id = ustates.1281
+			days = 10
+			}
+		}
 	}
 }
 
@@ -7409,10 +7415,6 @@ country_event = { # Navy Demands
 	fire_only_once = yes
 
 	is_triggered_only = yes
-	
-	mean_time_to_happen = {
-	days = 10
-	}
 
 	option = { # Agree... for now
 		name = ustates.1281.a
