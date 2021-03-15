@@ -8762,6 +8762,45 @@ news_event = { #The birth of the democratic CSA
 	}
 }
 
+news_event = { #Leftists seize New England
+	id = worldnews.2050
+	immediate = { log = "[GetDateText]: [Root.GetName]: event worldnews.2050" }
+	title = worldnews.2050.t
+	desc = worldnews.2050.d
+	picture = GFX_news_event_CSA_triumph
+	major = yes
+	is_triggered_only = yes
+	trigger = {
+		wants_world_news = yes
+		NOT = {
+			tag = NEE
+		}
+	}
+	show_major = {
+		OR = {
+			regional_europe_news = yes
+			regional_north_america_news = yes
+			regional_south_america_news = yes
+		}
+	}
+	option = {
+		name = worldnews.2050.a
+		trigger = {
+			NEE = {
+			has_government = radical_socialist
+			}
+		}
+	}
+	option = {
+		name = worldnews.2050.b
+		trigger = {
+			NOT = {
+			country_exists = NEE
+			}
+		}
+	}
+}
+
 news_event = { #William Zebulon Foster is NMBed President
 	id = worldnews.206
 	immediate = { log = "[GetDateText]: [Root.GetName]: event worldnews.206" }
