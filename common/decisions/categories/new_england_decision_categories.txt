@@ -7,6 +7,13 @@ NEE_reclaiming_america = {
 	icon = GFX_decision_category_generic_democracy
 	allowed = {	original_tag = NEE }
 }
+NEE_leftist_decisions = {
+	icon = GFX_decision_category_generic_democracy
+	allowed = {	original_tag = NEE }
+	visible = {
+		has_government = radical_socialist
+	}
+}
 NEE_stoddard_decisions = {
 	icon = GFX_decision_category_generic_democracy
 	allowed = {	original_tag = NEE }
@@ -73,4 +80,12 @@ NEE_Dropping_Propaganda = {
 NEE_power_of_business = {
 	icon = GFX_decision_category_generic_industry
 	allowed = {	original_tag = NEE }
+}
+NEE_sentinel_decisions = {
+	icon = GFX_decision_category_army_reform
+	allowed = {	original_tag = NEE }
+	visible = {
+		has_country_flag = NEE_sentinels
+		has_government = national_populist
+	}
 }

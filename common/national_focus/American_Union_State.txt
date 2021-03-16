@@ -32,7 +32,7 @@ focus_tree = {
 		y = 0
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TEX_new_washington"
-			custom_effect_tooltip = unlock_focuses
+			custom_effect_tooltip = TEX_afp_takeover_tooltip
 		}
 	}
 
@@ -1674,7 +1674,7 @@ focus_tree = {
 		y = 0
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TEX_progressive_party"
-			custom_effect_tooltip = unlock_focuses
+			custom_effect_tooltip = TEX_npp_takeover_tooltip
 			add_popularity = { ideology = social_liberal popularity = 0.02 }
 		}
 	}
@@ -2497,8 +2497,8 @@ focus_tree = {
 		y = 0
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TEX_christian_party_victory"
+			custom_effect_tooltip = TEX_cp_takeover_tooltip
 			add_popularity = { ideology = social_conservative popularity = 0.02 }
-			custom_effect_tooltip = unlock_focuses
 		}
 	}
 
@@ -3295,7 +3295,7 @@ focus_tree = {
 		y = 9
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TEX_pappy_odaniel"
-			custom_effect_tooltip = unlock_focuses
+			custom_effect_tooltip = TEX_dem_takeover_tooltip
 			add_popularity = { ideology = social_conservative popularity = 0.02 }
 		}
 	}

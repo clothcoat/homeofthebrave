@@ -358,6 +358,233 @@ NEE_entente_allies = {
 	}
 }
 
+NEE_leftist_decisions = {
+	NEE_towards_greater_nee = {
+		icon = generic_prepare_civil_war
+		allowed = {	original_tag = NEE	}
+		available = {
+			ROOT = {
+				is_subject = no
+				controls_all_owned_states = yes
+				has_completed_focus = NEE_go_our_own_way
+			}
+		}
+
+		visible = {
+			has_global_flag = USA_civil_war_begun_flag
+			has_government = radical_socialist
+			has_completed_focus = NEE_go_our_own_way
+		}
+
+		fire_only_once = yes
+		cost = 100
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision NEE_towards_greater_nee"
+			add_war_support = 0.05
+			464 = {
+				add_claim_by = NEE
+			}
+			465 = {
+				add_claim_by = NEE
+			}
+		}
+	}
+	
+	NEE_leftist_declare_independence_from_CAN = {
+		icon = generic_prepare_civil_war
+		allowed = { original_tag = NEE }
+		available = {
+		has_government = radical_socialist
+		}
+		visible = {
+			is_subject_of = CAN
+			has_government = radical_socialist
+		}
+
+		cost = freedec?0
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				add = 100
+				OR = {
+					strength_ratio = { tag = CAN ratio > 1.0 }
+					CAN = { surrender_progress > 0.20 }
+					CAN = { NOT = { is_faction_leader = yes } }
+					AND = {
+						strength_ratio = { tag = CAN ratio > 0.5 }
+						has_army_manpower = { size > 200000 }
+						has_global_flag = USA_civil_war_over_flag
+						has_war = no
+					}
+				}
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision NEE_leftist_declare_independence_from_CAN"
+			add_political_power = 100
+			add_war_support = 0.10
+			CAN = {
+				set_autonomy = { target = NEE autonomy_state = autonomy_free }
+			}
+			random_other_country = {
+				limit = {
+					is_faction_leader = yes
+					is_in_faction_with = NEE
+				}
+				remove_from_faction = NEE
+				add_opinion_modifier = { target = NEE modifier = KR_outraged }
+			}
+			if = {
+				limit = { has_war = yes }
+				separate_peace_all_wars = yes
+			}
+			CAN = {
+				country_event = { id = newengland.15 hours = 8 }
+			}
+		}
+	}
+}
+
+	NEE_lermond_claim_usa_territory = {
+		icon = generic_prepare_civil_war
+		allowed = {	original_tag = NEE	}
+		available = {
+			ROOT = {
+				is_subject = no
+				controls_all_owned_states = yes
+				CSA = {
+					OR = {
+					exists = no
+					NOT = {
+					has_government = radical_socialist
+					}
+					}
+				}
+			}
+		}
+
+		visible = {
+			has_global_flag = USA_civil_war_begun_flag
+			has_government = radical_socialist
+		}
+
+		fire_only_once = yes
+		cost = 100
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision NEE_lermond_claim_usa_territory"
+			set_country_flag = NEE_claimed_america
+			add_war_support = 0.20
+			every_state = {
+				limit = {
+					NOT = { is_claim_or_core_of_ROOT = yes }
+					OR = {
+						is_mainland_america = yes
+						region = 33 #Alaska
+					}
+				}
+				add_claim_by = NEE
+			}
+		}
+	}
+
+	NEE_lermond_liberate_states = {
+		icon = generic_prepare_civil_war
+		allowed = {	original_tag = NEE	}
+		available = {
+			ROOT = {
+				is_subject = no
+				controls_all_owned_states = yes
+				CSA = {
+					OR = {
+					exists = no
+					NOT = {
+					has_government = radical_socialist
+					}
+					}
+				}
+			}
+		}
+
+		visible = {
+			has_government = radical_socialist
+		}
+
+		target_root_trigger = {
+			has_government = radical_socialist
+		}
+
+		targets = { CAL USA CSA TEX COR BBR WCC }
+
+		fire_only_once = yes
+
+		cost = freedec?0
+
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 0
+				OR = {
+					has_war = yes
+					has_army_manpower = { size < 200000 }
+					NOT = { is_neighbor_of = FROM }
+				}
+			}
+			modifier = {
+				factor = 0.1
+				FROM = { same_government_type_as_ROOT = yes }
+			}
+			modifier = {
+				factor = 0
+				NOT = {
+					AND = {
+						is_in_faction = no
+						strength_ratio = { tag = FROM ratio = 1.0 }
+					}
+					CAN = {
+						is_in_faction_with = NEE
+						strength_ratio = { tag = FROM ratio = 0.50 }
+					}
+					AND = {
+						is_in_faction = yes
+						NOT = { is_in_faction_with = CAN }
+						any_allied_country = {
+							is_faction_leader = yes
+							strength_ratio = { tag = FROM ratio = 1.0 }
+						}
+					}
+				}
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision NEE_lermond_liberate_states target: [From.GetName]"
+			declare_war_on = {	type = annex_everything	target = FROM }
+		}
+	}
+}
+
 NEE_stoddard_decisions = {
 
 	NEE_become_puppet = {
@@ -553,56 +780,6 @@ NEE_reclaiming_america = {
 		}
 	}
 
-	NEE_claim_usa_territory = {
-		icon = generic_prepare_civil_war
-		allowed = {	original_tag = NEE	}
-		available = {
-			ROOT = {
-				is_subject = no
-				controls_all_owned_states = yes
-				custom_trigger_tooltip = {
-					tooltip = "Legitimacy greater than 40"
-					check_variable = { NEE_legitimacy > 40 }
-				}
-			}
-			NOT = { country_exists = CAL }
-			OR = {
-				NOT = { country_exists = USA }
-			}
-		}
-
-		visible = {
-			has_global_flag = USA_civil_war_begun_flag
-		}
-
-		fire_only_once = yes
-		cost = 100
-
-		ai_will_do = {
-			factor = 100
-			modifier = {
-				factor = 0
-				has_war = yes
-			}
-		}
-
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision NEE_claim_usa_territory"
-			set_country_flag = NEE_claimed_america
-			add_war_support = 0.20
-			every_state = {
-				limit = {
-					NOT = { is_claim_or_core_of_ROOT = yes }
-					OR = {
-						is_mainland_america = yes
-						region = 33 #Alaska
-					}
-				}
-				add_claim_by = NEE
-			}
-		}
-	}
-
 	NEE_liberate_states = {
 		icon = generic_prepare_civil_war
 		allowed = {	original_tag = NEE	}
@@ -623,7 +800,7 @@ NEE_reclaiming_america = {
 			has_country_flag = NEE_claimed_america
 		}
 
-		targets = { CAL USA CSA TEX }
+		targets = { CAL USA CSA TEX COR BBR WCC }
 
 		fire_only_once = yes
 
@@ -1781,3 +1958,183 @@ NEE_Dropping_Propaganda = {
 	}
 }
 
+NEE_sentinel_decisions = {
+	NEE_recruit_mercenaries = {
+		icon = GFX_decision_generic_army_support
+		allowed = { original_tag = NEE }
+		available = {
+			has_capitulated = no
+			has_country_flag = NEE_sentinels
+			has_government = national_populist
+			num_of_civilian_factories_available_for_projects > 1
+		}
+		visible = {
+		has_country_flag = NEE_sentinels
+		has_government = national_populist
+		}
+		
+		cost = 100
+		days_remove = 30
+		
+		modifier = {
+			civilian_factory_use = 1
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision NEE_recruit_mercenaries"
+			custom_effect_tooltip = NEE_sentinel_mercenary_tooltip
+			hidden_effect = {
+				if = {
+				limit = {
+					NOT = { has_template = "Sentinel Mercenaries (Low)" }
+				}
+				division_template = {
+					name = "Sentinel Mercenaries (Low)"
+					division_names_group = "USA_INF_01"
+					is_locked = yes
+					regiments = {
+					militia = { x = 0 y = 0 }
+					militia = { x = 0 y = 1 }
+					militia = { x = 0 y = 2 }
+					militia = { x = 1 y = 0 }
+					militia = { x = 1 y = 1 }
+					militia = { x = 1 y = 2 }
+					}
+				}
+				}
+				random_owned_state = {
+					create_unit = {
+						division = "division_template = \"Sentinel Mercenaries (Low)\" start_experience_factor = 0.3 start_equipment_factor = 1.0"
+						owner = ROOT
+					}
+				}
+			}
+		}
+	}
+	NEE_recruit_mercenaries_two = {
+		icon = GFX_decision_generic_army_support
+		allowed = { original_tag = NEE }
+		available = {
+			has_capitulated = no
+			has_country_flag = NEE_sentinels
+			has_government = national_populist
+			num_of_civilian_factories_available_for_projects > 1
+		}
+		visible = {
+		has_country_flag = NEE_sentinels
+		has_government = national_populist
+		}
+		
+		cost = 200
+		days_remove = 30
+		
+		modifier = {
+			civilian_factory_use = 2
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision NEE_recruit_mercenaries_two"
+			custom_effect_tooltip = NEE_sentinel_mercenary_tooltip
+			hidden_effect = {
+				if = {
+				limit = {
+					NOT = { has_template = "Sentinel Mercenaries (Average)" }
+				}
+				division_template = {
+					name = "Sentinel Mercenaries (Average)"
+					division_names_group = "USA_INF_01"
+					is_locked = yes
+					regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+					infantry = { x = 2 y = 0 }
+					infantry = { x = 2 y = 1 }
+					infantry = { x = 2 y = 2 }
+					}
+				}
+				}
+				random_owned_state = {
+					create_unit = {
+						division = "division_template = \"Sentinel Mercenaries (Average)\" start_experience_factor = 0.4 start_equipment_factor = 1.0"
+						owner = ROOT
+					}
+				}
+			}
+		}
+	}
+	NEE_recruit_mercenaries_three = {
+		icon = GFX_decision_generic_army_support
+		allowed = { original_tag = NEE }
+		available = {
+			has_capitulated = no
+			has_country_flag = NEE_sentinels
+			has_government = national_populist
+			num_of_civilian_factories_available_for_projects > 1
+		}
+		visible = {
+		has_country_flag = NEE_sentinels
+		has_government = national_populist
+		}
+		
+		cost = 300
+		days_remove = 30
+		
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision NEE_recruit_mercenaries_three"
+			custom_effect_tooltip = NEE_sentinel_mercenary_tooltip
+			hidden_effect = {
+				if = {
+				limit = {
+					NOT = { has_template = "Sentinel Mercenaries (High)" }
+				}
+				division_template = {
+					name = "Sentinel Mercenaries (High)"
+					division_names_group = "USA_INF_01"
+					is_locked = yes
+					regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+					infantry = { x = 2 y = 0 }
+					infantry = { x = 2 y = 1 }
+					infantry = { x = 2 y = 2 }
+					}
+					support = {
+					signal_company = { x = 0 y = 0 }
+					recon = { x = 0 y = 1 }
+					}
+				}
+				}
+				random_owned_state = {
+					create_unit = {
+						division = "division_template = \"Sentinel Mercenaries (High)\" start_experience_factor = 0.5 start_equipment_factor = 1.0"
+						owner = ROOT
+					}
+				}
+			}
+		}
+	}
+}
