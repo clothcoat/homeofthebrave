@@ -215,6 +215,9 @@ focus_tree = {
 		}
 		available = {
 			has_government = authoritarian_democrat
+			NOT = {
+			has_country_flag = AUS_CSA_RECONCILIATION
+			}
 		}
 		cancel_if_invalid = yes
 		available_if_capitulated = yes
@@ -1518,6 +1521,9 @@ focus_tree = {
 		}
 		available = {
 			has_government = authoritarian_democrat
+			NOT = {
+			has_country_flag = AUS_PSA_RECONCILIATION
+			}
 		}
 		cancel_if_invalid = yes
 		available_if_capitulated = yes

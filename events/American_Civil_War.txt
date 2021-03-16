@@ -2945,6 +2945,7 @@ country_event = { # Results are in
 	target = CAL
 	transfer_troops = no
 			}
+	set_country_flag = AUS_PSA_RECONCILIATION
 		}
 		hidden_effect = {
 		TEX = {
@@ -2963,6 +2964,7 @@ country_event = { # Results are in
 	target = CSA
 	transfer_troops = no
 			}
+	set_country_flag = AUS_CSA_RECONCILIATION
 		}
 		hidden_effect = {
 		TEX = {
@@ -3233,6 +3235,7 @@ country_event = { # Results
 		}
 	}
 		add_political_power = 50
+		set_country_flag = AUS_CSA_RECONCILIATION
 	}
 }
 
