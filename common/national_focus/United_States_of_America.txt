@@ -1053,7 +1053,7 @@ focus_tree = {
 	#Focus for Appoint new Judges
 	focus = {
 		id = USA_appoint_new_judges
-		icon = GFX_USA_appoint_new_judges-57756
+		icon = GFX_goal_NFA_GFX_USA_appoint_new_judges57756
 		x = 0
 		y = 1
 		cost = 4
@@ -9696,8 +9696,8 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_the_triumverant"
 			swap_ideas = {
-			remove_idea = USA_empowered_army_idea
-			add_idea = USA_empowered_army_idea_2Junta
+			remove_idea = USA_the_triumvirate
+			add_idea = USA_the_triumvirate2
 			}
 			add_stability = 0.05
 			add_political_power = 50
