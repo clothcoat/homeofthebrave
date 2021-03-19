@@ -396,12 +396,10 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			hidden_effect = {
 			country_event = {
 			id = newengland.111
-			days = 1
+			days = 2
 			}	
-			}
 		}
 	}
 	
@@ -3563,7 +3561,7 @@ focus_tree = {
 		available_if_capitulated = no
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NEE_Declare_Independence"
-			add_stability = 0.05
+			add_stability = 0.08
 			modify_country_flag = {
 				flag = SIC_ancap_power
 				value = 1
@@ -3595,6 +3593,7 @@ focus_tree = {
 			CAN = {
 				country_event = newengland.101
 			}
+			add_political_power = 20
 		}
 	}
 	
@@ -3629,6 +3628,14 @@ focus_tree = {
 			id = newengland.136
 			days = 50
 				}
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = NEE
+					is_controlled_by = NEE
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
 			}
 		}
 	}
