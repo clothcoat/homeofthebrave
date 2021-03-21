@@ -3595,6 +3595,7 @@ focus_tree = {
 			CAN = {
 				country_event = newengland.101
 			}
+			add_political_power = 20
 		}
 	}
 	
@@ -3629,6 +3630,14 @@ focus_tree = {
 			id = newengland.136
 			days = 50
 				}
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = NEE
+					is_controlled_by = NEE
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
 			}
 		}
 	}
