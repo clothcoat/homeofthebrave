@@ -396,10 +396,12 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			hidden_effect = {
 			country_event = {
 			id = newengland.111
-			days = 2
+			days = 1
 			}	
+			}
 		}
 	}
 	
@@ -2881,7 +2883,7 @@ focus_tree = {
 		prerequisite = {
 			focus = NEE_Legitimate_America
 		}
-		x = 35
+		x = 38
 		y = 1
 		relative_position_id = NEE_Legitimate_America
 		ai_will_do = {
@@ -2907,7 +2909,7 @@ focus_tree = {
 		prerequisite = {
 			focus = NEE_radical_victory
 		}
-		x = -3
+		x = -6
 		y = 1
 		relative_position_id = NEE_radical_victory
 		ai_will_do = {
@@ -2933,7 +2935,7 @@ focus_tree = {
 		prerequisite = {
 			focus = NEE_the_remnant
 		}
-		x = -4
+		x = -7
 		y = 2
 		relative_position_id = NEE_radical_victory
 		ai_will_do = {
@@ -2972,7 +2974,7 @@ focus_tree = {
 		prerequisite = {
 			focus = NEE_the_remnant
 		}
-		x = -2
+		x = -5
 		y = 2
 		relative_position_id = NEE_radical_victory
 		ai_will_do = {
@@ -3013,7 +3015,7 @@ focus_tree = {
 		prerequisite = {
 			focus = NEE_nightwatchman_state
 		}
-		x = -3
+		x = -6
 		y = 3
 		relative_position_id = NEE_radical_victory
 		ai_will_do = {
@@ -3039,7 +3041,7 @@ focus_tree = {
 		prerequisite = {
 			focus = NEE_protect_liberty_from_democracy
 		}
-		x = -4
+		x = -7
 		y = 4
 		relative_position_id = NEE_radical_victory
 		ai_will_do = {
@@ -3075,7 +3077,7 @@ focus_tree = {
 		prerequisite = {
 			focus = NEE_decentralized_currency
 		}
-		x = -4
+		x = -7
 		y = 5
 		relative_position_id = NEE_radical_victory
 		ai_will_do = {
@@ -3102,7 +3104,7 @@ focus_tree = {
 		prerequisite = {
 			focus = NEE_protect_liberty_from_democracy
 		}
-		x = -2
+		x = -5
 		y = 4
 		relative_position_id = NEE_radical_victory
 		ai_will_do = {
@@ -3141,7 +3143,7 @@ focus_tree = {
 		prerequisite = {
 			focus = NEE_private_initative
 		}
-		x = -2
+		x = -5
 		y = 5
 		relative_position_id = NEE_radical_victory
 		ai_will_do = {
@@ -3176,7 +3178,7 @@ focus_tree = {
 		prerequisite = {
 			focus = NEE_state_militias
 		}
-		x = -3
+		x = -6
 		y = 6
 		relative_position_id = NEE_radical_victory
 		ai_will_do = {
@@ -3203,7 +3205,7 @@ focus_tree = {
 		prerequisite = {
 			focus = NEE_jeffersonian_confederacy
 		}
-		x = -3
+		x = -6
 		y = 7
 		relative_position_id = NEE_radical_victory
 		ai_will_do = {
@@ -3230,7 +3232,7 @@ focus_tree = {
 		prerequisite = {
 			focus = NEE_radical_victory
 		}
-		x = 3
+		x = 0
 		y = 1
 		relative_position_id = NEE_radical_victory
 		ai_will_do = {
@@ -3255,7 +3257,7 @@ focus_tree = {
 		prerequisite = {
 			focus = NEE_the_sentinels_of_the_republic
 		}
-		x = 3
+		x = 0
 		y = 2
 		relative_position_id = NEE_radical_victory
 		ai_will_do = {
@@ -3281,7 +3283,7 @@ focus_tree = {
 		prerequisite = {
 			focus = NEE_the_sentinels_of_the_republic
 		}
-		x = 1
+		x = -2
 		y = 2
 		relative_position_id = NEE_radical_victory
 		ai_will_do = {
@@ -3318,7 +3320,7 @@ focus_tree = {
 		prerequisite = {
 			focus = NEE_the_sentinels_of_the_republic
 		}
-		x = 5
+		x = 2
 		y = 2
 		relative_position_id = NEE_radical_victory
 		ai_will_do = {
@@ -3389,7 +3391,7 @@ focus_tree = {
 				}
 			}
 		}
-		x = 3
+		x = 0
 		y = 3
 		relative_position_id = NEE_radical_victory
 		ai_will_do = {
@@ -3425,7 +3427,7 @@ focus_tree = {
 		prerequisite = {
 			focus = NEE_dissolving_the_state
 		}
-		x = 2
+		x = -1
 		y = 4
 		relative_position_id = NEE_radical_victory
 		ai_will_do = {
@@ -3460,7 +3462,7 @@ focus_tree = {
 		prerequisite = {
 			focus = NEE_might_makes_right
 		}
-		x = 2
+		x = -1
 		y = 5
 		relative_position_id = NEE_radical_victory
 		ai_will_do = {
@@ -3501,7 +3503,7 @@ focus_tree = {
 		prerequisite = {
 			focus = NEE_might_makes_right
 		}
-		x = 0
+		x = -3
 		y = 5
 		relative_position_id = NEE_radical_victory
 		ai_will_do = {
@@ -3547,7 +3549,7 @@ focus_tree = {
 		prerequisite = {
 			focus = NEE_dissolving_the_state
 		}
-		x = 4
+		x = 1
 		y = 4
 		relative_position_id = NEE_radical_victory
 		ai_will_do = {
@@ -3561,7 +3563,7 @@ focus_tree = {
 		available_if_capitulated = no
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NEE_Declare_Independence"
-			add_stability = 0.08
+			add_stability = 0.05
 			modify_country_flag = {
 				flag = SIC_ancap_power
 				value = 1
@@ -3576,7 +3578,7 @@ focus_tree = {
 		prerequisite = {
 			focus = NEE_right_of_contract
 		}
-		x = 4
+		x = 1
 		y = 5
 		relative_position_id = NEE_radical_victory
 		ai_will_do = {
@@ -3593,7 +3595,6 @@ focus_tree = {
 			CAN = {
 				country_event = newengland.101
 			}
-			add_political_power = 20
 		}
 	}
 	
@@ -3604,7 +3605,7 @@ focus_tree = {
 		prerequisite = {
 			focus = NEE_right_of_contract
 		}
-		x = 6
+		x = 3
 		y = 5
 		relative_position_id = NEE_radical_victory
 		ai_will_do = {
@@ -3628,14 +3629,6 @@ focus_tree = {
 			id = newengland.136
 			days = 50
 				}
-			}
-			random_owned_state = {
-				limit = {
-					is_core_of = NEE
-					is_controlled_by = NEE
-					industrial_complex > 0
-				}
-				add_extra_state_shared_building_slots = 1
 			}
 		}
 	}
@@ -4366,8 +4359,12 @@ focus_tree = {
 		id = NEE_lothrop_stoddard
 		icon = GFX_NEE_stoddard_regime
 		cost = 5
-		x = 40
-		y = 10
+		prerequisite = {
+			focus = NEE_radical_victory
+		}
+		x = 8
+		y = 1
+		relative_position_id = NEE_radical_victory
 		ai_will_do = {
 			factor = 10
 		}
@@ -4811,7 +4808,7 @@ focus_tree = {
 		id = NEE_US_Airforce
 		icon = GFX_goal_NEE_Air_Force
 		cost = 6
-		x = 52
+		x = 54
 		y = 1
 		relative_position_id = NEE_Legitimate_America
 		ai_will_do = {
@@ -5177,7 +5174,7 @@ focus_tree = {
 		id = NEE_US_Navy
 		icon = GFX_goal_NEE_Navy2
 		cost = 6
-		x = 56
+		x = 58
 		y = 1
 		relative_position_id = NEE_Legitimate_America
 		ai_will_do = {
@@ -5402,7 +5399,7 @@ focus_tree = {
 		id = NEE_Infrastructure_Act
 		icon = GFX_goal_generic_construct_infrastructure
 		cost = 6
-		x = 60
+		x = 62
 		y = 0
 		relative_position_id = NEE_Legitimate_America
 		ai_will_do = {
@@ -5799,7 +5796,7 @@ focus_tree = {
 		id = NEE_Reestablish_Minutemen
 		icon = GFX_goal_national_mobilization
 		cost = 6
-		x = 66
+		x = 68
 		y = 0
 		relative_position_id = NEE_Legitimate_America
 		available = {
@@ -6360,7 +6357,7 @@ focus_tree = {
 		id = NEE_the_future_of_new_england_army
 		icon = GFX_goal_NEE_army
 		cost = 5
-		x = 82
+		x = 84
 		y = 0
 		relative_position_id = NEE_Legitimate_America
 		ai_will_do = {
@@ -6703,7 +6700,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		complete_tooltip = {}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus NEE_Reestablish_Minutemen"
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_tank_deployment"
 			add_equipment_to_stockpile = {
 			type = light_tank_equipment
 			amount = 160
@@ -6738,7 +6735,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		complete_tooltip = {}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus NEE_Reestablish_Minutemen"
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_research_grants"
 			add_tech_bonus = {
 				name = NEE_Spearhead_Doctrine
 				bonus = 2
@@ -6775,7 +6772,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		complete_tooltip = {}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus NEE_Reestablish_Minutemen"
+			log = "[GetDateText]: [Root.GetName]: Focus NEE_industrial_grants"
 			add_tech_bonus = {
 				name = NEE_industry_bonus
 				bonus = 1.5
@@ -7923,7 +7920,7 @@ focus_tree = {
 		id = NEE_new_england_future
 		icon = GFX_goal_NEE_new_england_future
 		cost = 6
-		x = 112
+		x = 114
 		y = 0
 		available = {
 		OR = {
