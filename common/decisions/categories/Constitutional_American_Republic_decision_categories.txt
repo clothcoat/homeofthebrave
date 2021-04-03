@@ -8,3 +8,14 @@ COR_peaceout_decisions = {
 			surrender_progress < 0.20
 		}
 }
+
+COR_imperium_decisions = {
+	icon = generic_foreign_policy
+	allowed = {	 tag = COR }
+	visible = {
+		has_country_leader = { ruling_only = yes name = "Francis Parker Yockey" }
+		has_completed_focus = COR_imperium
+		has_government = national_populist
+		is_subject = no
+	}
+}
