@@ -3832,10 +3832,7 @@ focus_tree = {
 		cost = 2.00
 		available = {
 			has_government = national_populist
-			OR = {
-			has_country_flag = young_klan_victory
 			has_country_leader = { ruling_only = yes name = "Hiram Wesley Evans" }
-			}
 		}
 		cancel_if_invalid = yes
 		available_if_capitulated = yes
@@ -6327,12 +6324,6 @@ focus_tree = {
 			add_political_power = 65
 			add_command_power = 30
 			add_popularity = { ideology = national_populist popularity = 0.03 }
-			hidden_effect = {
-			country_event = {
-				id = constate.51
-				days = 10
-				}
-			}
 		}
 	}
 	
@@ -6454,9 +6445,9 @@ focus_tree = {
 		select_effect = {
 		hidden_effect = {
 			country_event = {
-			id = constate.56
-			days = 20
-			}
+				id = constate.56
+				days = 20
+				}
 			}
 		}
 		cancel_if_invalid = yes
@@ -6479,6 +6470,12 @@ focus_tree = {
 			add_political_power = 50
 			add_popularity = { ideology = national_populist popularity = 0.1 }
 			add_manpower = -4000
+			hidden_effect = {
+			country_event = {
+				id = constate.51
+				days = 10
+				}
+			}
 		}
 	}
 	
