@@ -4322,6 +4322,7 @@ country_event = { # Restoring Democracy
 	option = { #Democracy
 		name = csa.68.a
 		hidden_effect = {
+			set_country_flag = CSA_butler_democracy
 			set_country_flag = CSA_had_1940_election
 			clr_country_flag = CSA_had_1944_election
 			clr_country_flag = CSA_had_1948_election
@@ -6735,8 +6736,10 @@ country_event = { # Social Units
 	
 	trigger = {
 	has_country_leader = {
-	ruling_only = yes
-	name = "James Burnham" } }
+		ruling_only = yes
+		name = "James Burnham"
+		}
+	}
 	
 	is_triggered_only = yes
 	
