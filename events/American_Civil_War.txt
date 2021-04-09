@@ -2164,6 +2164,10 @@ country_event = { #Treaty Comes to an end
 		target = USA
 		type = annex_everything
 		}
+		declare_war_on = {
+		target = WCC
+		type = annex_everything
+		}
 	}
 }
 
