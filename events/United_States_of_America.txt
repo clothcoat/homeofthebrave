@@ -2351,7 +2351,7 @@ country_event = { # The 1936 Election - Coalition
 		hidden_effect = {
 			random_other_country = {
 				news_event = {
-					id = worldnews.21
+					id = worldnews.2200
 					days = 1
 				}
 			}
@@ -2454,7 +2454,7 @@ country_event = { # The 1936 Election - Coalition
 		hidden_effect = {
 			random_other_country = {
 				news_event = {
-					id = worldnews.21
+					id = worldnews.2100
 					days = 1
 				}
 			}
@@ -2546,7 +2546,7 @@ country_event = { # The 1936 Election - Coalition
 		hidden_effect = {
 			random_other_country = {
 				news_event = {
-					id = worldnews.21
+					id = worldnews.97
 					days = 1
 				}
 			}
@@ -25814,6 +25814,74 @@ country_event = {#MAF investigation
 	}
 }
 
+country_event = {# Liberia South Africa Decision
+	id = ustates.677
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.677"}
+	title = ustates.677.t
+	desc = ustates.677.d
+	picture = GFX_report_event_USA_DOD_interior
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {#Declare War Now
+		name = ustates.677.a
+		ai_chance = { factor = 0 }
+		add_stability = 0.03
+		add_manpower = 20000
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = LIB
+		}
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = SAF
+		}
+	}
+	option = {#Trade Deal
+		name = ustates.677.b
+		ai_chance = { factor = 100 }
+		set_global_flag = SAF_USA_ties
+		add_ideas = COR_south_african_trade_idea
+		add_stability = 0.08
+		give_guarantee = SAF
+		give_guarantee = LIB
+		SAF = {
+			army_experience = 15
+			add_political_power = 30
+			add_equipment_to_stockpile = {
+			type = infantry_equipment_1
+			amount = 80
+			producer = USA
+			}
+			give_guarantee = USA
+			add_ideas = COR_south_african_trade_idea
+		}
+		LIB = {
+			army_experience = 15
+			add_political_power = 30
+			add_equipment_to_stockpile = {
+			type = infantry_equipment_1
+			amount = 80
+			producer = USA
+			}
+			give_guarantee = USA
+			add_ideas = COR_south_african_trade_idea
+		}
+	}
+	option = {#Faction
+		name = ustates.677.c
+		ai_chance = { factor = 0 }
+		add_stability = 0.05
+		add_political_power = 50
+		USA = {
+		add_to_faction = SAF
+		}
+		USA = {
+		add_to_faction = LIB
+		}
+	}
+}
+
 country_event = { #Plez Riot
 	id = ustates.4002
 	title = ustates.4002.title
@@ -25831,7 +25899,7 @@ country_event = { #Plez Riot
 
 	option = {
 		name = ustates.4002.a
-		ai_chance = { factor = 100}
+		ai_chance = { factor = 100 }
 		add_stability = -0.10
 		add_political_power = -25
 		add_popularity = {
@@ -25872,7 +25940,7 @@ country_event = {
 	fire_only_once = yes
 	option = {
 		name = ustates.4003.a
-		ai_chance = { factor = 100}
+		ai_chance = { factor = 100 }
 		add_stability = -0.025
 		add_ideas = USA_Hoovervilles
 	}
@@ -25887,7 +25955,7 @@ country_event = {
 	fire_only_once = yes
 	option = {
 		name = ustates.4004.a
-		ai_chance = { factor = 100}
+		ai_chance = { factor = 100 }
 		add_stability = -0.025
 		add_ideas = USA_Dustbowl_Intense
 		hidden_effect = {
