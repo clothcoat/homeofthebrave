@@ -547,14 +547,14 @@ focus_tree = {
 		continue_if_invalid = no
 		select_effect = {
 		hidden_effect = {
-			country_event = { id = ustates.48 days = 4 }
+			country_event = { id = ustates.47 days = 4 }
 		}
 		}
 		bypass = {
 			has_country_flag = USA_macarthur_coup
 		}
 		completion_reward = {
-			country_event = ustates.47
+			country_event = ustates.48
 		}
 	}
 	
@@ -1053,7 +1053,7 @@ focus_tree = {
 	#Focus for Appoint new Judges
 	focus = {
 		id = USA_appoint_new_judges
-		icon = GFX_USA_appoint_new_judges-57756
+		icon = GFX_goal_NFA_GFX_USA_appoint_new_judges57756
 		x = 0
 		y = 1
 		cost = 4
@@ -15593,16 +15593,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_giant_of_the_west"
-			add_stability = 0.08
-			add_manpower = 20000
-			create_wargoal = {
-			type = puppet_wargoal_focus
-			target = LIB
-			}
-			create_wargoal = {
-			type = puppet_wargoal_focus
-			target = SAF
-			}
+			country_event = ustates.677
 		}
 	}
 	
