@@ -12795,15 +12795,13 @@ country_event = { #Fate of Haiti
 					has_country_leader = { name = "John Russell" ruling_only = yes }
 				}
 			}
-			HAI = {
 			create_country_leader = {
 				name = "Franck Lavaud"
 				desc = "POLITICS_FRANCK_LAVAUD_DESC"
 				picture = "Portrait_Haiti_Frank_Lavaud.tga"
 				expire = "1965.1.1"
-				ideology = authoritarian_democrat_subtype
-				traits = { disciplined_soldier head_of_the_garde the_dynamic_duo }
-				}
+				ideology = paternal_autocrat_subtype
+				traits = {}
 			}
 		}
 		else_if = {
@@ -12821,15 +12819,12 @@ country_event = { #Fate of Haiti
 					}
 				}
 			}
-			HAI = {
 			create_country_leader = {
-				name = "Paul Magloire"
-				desc = "POLITICS_PAUL_MAGLOIRE_DESC"
-				picture = "Portrait_Haiti_Paul_Magloire.tga"
+				name = "John Russell"
+				desc = "POLITICS_JOHN_RUSSELL_DESC"
+				picture = "Portrait_Haiti_John_Russell.tga"
 				expire = "1965.1.1"
-				ideology = authoritarian_democrat_subtype
-				traits = { guiding_hand_of_haiti military_backing the_dynamic_duo }
-				}
+				ideology = paternal_autocrat_subtype
 			}
 		}
 	}
