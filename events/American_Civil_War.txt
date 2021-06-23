@@ -497,6 +497,13 @@ country_event = { # BBR released
 		}
 		}
 		OR = {
+			1116 = { is_owned_and_controlled_by = COR }
+			1115 = { is_owned_and_controlled_by = COR }
+			1117 = { is_owned_and_controlled_by = COR }
+			1113 = { is_owned_and_controlled_by = COR }
+			1114 = { is_owned_and_controlled_by = COR }
+		}
+		OR = {
 		has_country_flag = {
 			flag = ACW_black_nationalist_resistance
 			value > 15
@@ -5653,6 +5660,7 @@ country_event = { # WCC wins the civil war
 			}
 		}
 		hidden_effect = {
+			set_country_flag = WCC_epic_fix_bro_flag
 			add_ideas = {
 				civilian_economy
 				volunteer_only
