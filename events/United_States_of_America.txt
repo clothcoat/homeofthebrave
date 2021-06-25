@@ -22196,7 +22196,7 @@ country_event = { # Last Men Standing
 	option = { ###Send the Offer
 	name = ustates.3190.a
 	ai_chance = {
-			factor = 80
+			factor = 1000
 	}
 	USA = {
 	country_event = {
@@ -22209,7 +22209,7 @@ country_event = { # Last Men Standing
 	option = { #Federal Troops must stand down
 	name = ustates.3190.b
 	ai_chance = {
-		factor = 20
+		factor = 0
 	}
 	USA = {
 	country_event = {
