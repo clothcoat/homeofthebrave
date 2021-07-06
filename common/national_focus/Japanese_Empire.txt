@@ -1382,10 +1382,7 @@ focus_tree = {
 		id = JAP_BUR_CAR_1
 		icon = GFX_goal_JAP_industry
 		available = {
-			OR = {
-				has_global_flag = USA_civil_war_avoided_flag
-				has_global_flag = USA_civil_war_begun_flag
-			}
+			has_global_flag = USA_civil_war_begun_flag
 			OR = {
 				282 = { is_owned_and_controlled_by = JAP }
 				531 = { is_owned_and_controlled_by = JAP }
