@@ -674,11 +674,10 @@ country_event = { # Demand BBR stand down
     OR = {
         AND = {
 	    tag = USA
-	    OR = {
-	        NOT = {
-	            BBR = {
-	            has_war_with = USA
-			    }
+	     NOT = {
+            BBR = {
+            has_war_with = USA
+		
 		    }
 	    }
 	    TEX = {
@@ -704,11 +703,10 @@ country_event = { # Demand BBR stand down
 		has_government = paternal_autocrat
 		} 
 		}
-	    OR = {
-	        NOT = {
-	            BBR = {
-	            has_war_with = CAL
-			    }
+	    NOT = {
+            BBR = {
+            has_war_with = CAL
+		
 		    }
 	    }
 	    TEX = {
@@ -730,11 +728,10 @@ country_event = { # Demand BBR stand down
 		NOT = {
 			BBR = { has_government = authoritarian_democrat }
 		}
-	    OR = {
-	        NOT = {
-	            BBR = {
-	            has_war_with = TEX
-			    }
+	    NOT = {
+            BBR = {
+            has_war_with = TEX
+		
 		    }
 	    }
 	    CSA = {
@@ -1481,6 +1478,7 @@ news_event = { #Standoff in America
 
 	major = yes
 	is_triggered_only = yes
+	fire_only_once = yes				 
 
 	trigger = {
 		wants_world_news = yes
@@ -2807,6 +2805,10 @@ country_event = { ### Voting Begins ###
 	increase_ruling_party_popularity_by_5 = yes
 	hidden_effect = { 
 	set_country_flag = ACW_voting_starts
+	country_event = {
+		id = amcivwar.5006
+		days = 30
+		}
 	}
 	}
 }
@@ -2884,10 +2886,7 @@ country_event = { # Results are in
 		}
 	}
 	}
-	
-	mean_time_to_happen = {
-	days = 30
-	}
+	is_triggered_only = yes
 	
 	fire_only_once = yes 
 	option = {
@@ -9653,6 +9652,9 @@ country_event = {
 		}
 	option = {
 		name = amcivwar.163.b
+		trigger = {
+			controls_state = 386
+			}
 		CAN = {
 			country_event = {
 				id = amcivwar.1641
@@ -9665,8 +9667,29 @@ country_event = {
 		}
 	option = {
 		name = amcivwar.163.c
+		trigger = {
+			NEE = {
+				exists = yes
+				is_ai = yes
+				is_subject_of = CAN
+				}
+			controls_state = 380
+			}
+		CAN = {
+			country_event = {
+				id = amcivwar.1642
+				days = 3
+					}
+			}
+		hidden_effect = {
+		set_country_flag = USA_asked_CAN_for_peace_plus2
+				}
+		}
+	option = {
+		name = amcivwar.163.e
 		add_stability = -0.1
 		}
+	
 
 }
 
@@ -9688,7 +9711,8 @@ country_event = {
 						has_war_with = CAN 
 						NOT = { 
 							has_country_flag = USA_asked_CAN_for_peace
-							has_country_flag = USA_asked_CAN_for_peace_plus }
+							has_country_flag = USA_asked_CAN_for_peace_plus
+							has_country_flag = USA_asked_CAN_for_peace_plus2 }
 						}
 				country_event = amcivwar.165
 				else_if	= {
@@ -9706,7 +9730,8 @@ country_event = {
 						has_war_with = CAN 
 						NOT = { 
 							has_country_flag = USA_asked_CAN_for_peace
-							has_country_flag = USA_asked_CAN_for_peace_plus }
+							has_country_flag = USA_asked_CAN_for_peace_plus
+							has_country_flag = USA_asked_CAN_for_peace_plus2 }
 						}
 				country_event = amcivwar.165
 				else_if	= {
@@ -9724,7 +9749,8 @@ country_event = {
 						has_war_with = CAN 
 						NOT = { 
 							has_country_flag = USA_asked_CAN_for_peace
-							has_country_flag = USA_asked_CAN_for_peace_plus }
+							has_country_flag = USA_asked_CAN_for_peace_plus
+							has_country_flag = USA_asked_CAN_for_peace_plus2 }
 						}
 				country_event = amcivwar.165
 				else_if	= {
@@ -9742,7 +9768,8 @@ country_event = {
 						has_war_with = CAN 
 						NOT = { 
 							has_country_flag = USA_asked_CAN_for_peace
-							has_country_flag = USA_asked_CAN_for_peace_plus }
+							has_country_flag = USA_asked_CAN_for_peace_plus
+							has_country_flag = USA_asked_CAN_for_peace_plus2 }
 						}
 				country_event = amcivwar.165
 				else_if	= {
@@ -9760,7 +9787,8 @@ country_event = {
 						has_war_with = CAN 
 						NOT = { 
 							has_country_flag = USA_asked_CAN_for_peace
-							has_country_flag = USA_asked_CAN_for_peace_plus }
+							has_country_flag = USA_asked_CAN_for_peace_plus
+							has_country_flag = USA_asked_CAN_for_peace_plus2 }
 						}
 				country_event = amcivwar.165
 				else_if	= {
@@ -9778,7 +9806,8 @@ country_event = {
 						has_war_with = CAN 
 						NOT = { 
 							has_country_flag = USA_asked_CAN_for_peace
-							has_country_flag = USA_asked_CAN_for_peace_plus }
+							has_country_flag = USA_asked_CAN_for_peace_plus
+							has_country_flag = USA_asked_CAN_for_peace_plus2 }
 						}
 				country_event = amcivwar.165
 				else_if	= {
@@ -9796,7 +9825,8 @@ country_event = {
 						has_war_with = CAN 
 						NOT = { 
 							has_country_flag = USA_asked_CAN_for_peace
-							has_country_flag = USA_asked_CAN_for_peace_plus }
+							has_country_flag = USA_asked_CAN_for_peace_plus
+							has_country_flag = USA_asked_CAN_for_peace_plus2 }
 						}
 				country_event = amcivwar.165
 				else_if	= {
@@ -9814,7 +9844,8 @@ country_event = {
 						has_war_with = CAN 
 						NOT = { 
 							has_country_flag = USA_asked_CAN_for_peace
-							has_country_flag = USA_asked_CAN_for_peace_plus }
+							has_country_flag = USA_asked_CAN_for_peace_plus
+							has_country_flag = USA_asked_CAN_for_peace_plus2 }
 						}
 				country_event = amcivwar.165
 				else_if	= {
@@ -9832,7 +9863,8 @@ country_event = {
 						has_war_with = CAN 
 						NOT = { 
 							has_country_flag = USA_asked_CAN_for_peace
-							has_country_flag = USA_asked_CAN_for_peace_plus }
+							has_country_flag = USA_asked_CAN_for_peace_plus
+							has_country_flag = USA_asked_CAN_for_peace_plus2 }
 						}
 				country_event = amcivwar.165
 				else_if	= {
@@ -10081,6 +10113,217 @@ country_event = {
 		}
 	
 }
+
+# Peace with (US tag) + New England?
+country_event = {
+	id = amcivwar.1642
+	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.1642"}
+	title = amcivwar.1642.t
+	desc = amcivwar.1642.d
+	picture = GFX_report_event_USA_civil_war
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = amcivwar.1642.a
+		USA = { 
+				if = {
+					limit = { 
+						has_war_with = CAN 
+						NOT = { 
+							has_country_flag = USA_asked_CAN_for_peace_plus2 }
+						}
+				country_event = amcivwar.165
+				
+				else_if	= {
+					limit = { 
+						has_war_with = CAN 
+						has_country_flag = USA_asked_CAN_for_peace_plus2
+						}
+				white_peace_with_ROOT = yes
+				USA = {
+					annex_country = {
+	    					target = NEE
+							}
+					}
+				}
+			}
+		}
+	
+		CSA = { 
+				if = {
+					limit = { 
+						has_war_with = CAN 
+						NOT = { 
+							has_country_flag = USA_asked_CAN_for_peace_plus2 }
+						}
+				country_event = amcivwar.165
+				
+				else_if	= {
+					limit = { 
+						has_war_with = CAN 
+						has_country_flag = USA_asked_CAN_for_peace_plus2
+						}
+				white_peace_with_ROOT = yes
+				CSA = {
+					annex_country = {
+	    					target = NEE
+							}
+					}
+				}
+			}
+		}
+	
+		TEX = { 
+				if = {
+					limit = { 
+						has_war_with = CAN 
+						NOT = { 
+							has_country_flag = USA_asked_CAN_for_peace_plus2 }
+						}
+				country_event = amcivwar.165
+				
+				else_if	= {
+					limit = { 
+						has_war_with = CAN 
+						has_country_flag = USA_asked_CAN_for_peace_plus2
+						}
+				white_peace_with_ROOT = yes
+				TEX = {
+					annex_country = {
+	    					target = NEE
+							}
+					}
+				}
+			}
+		}
+	
+		CAL = { 
+				if = {
+					limit = { 
+						has_war_with = CAN 
+						NOT = { 
+							has_country_flag = USA_asked_CAN_for_peace_plus2 }
+						}
+				country_event = amcivwar.165
+				
+				else_if	= {
+					limit = { 
+						has_war_with = CAN 
+						has_country_flag = USA_asked_CAN_for_peace_plus2
+						}
+				white_peace_with_ROOT = yes
+				CAL = {
+					annex_country = {
+	    					target = NEE
+							}
+					}
+				}
+			}
+		}
+	
+		COR = { 
+				if = {
+					limit = { 
+						has_war_with = CAN 
+						NOT = { 
+							has_country_flag = USA_asked_CAN_for_peace_plus2 }
+						}
+				country_event = amcivwar.165
+				
+				else_if	= {
+					limit = { 
+						has_war_with = CAN 
+						has_country_flag = USA_asked_CAN_for_peace_plus2
+						}
+				white_peace_with_ROOT = yes
+				COR = {
+					annex_country = {
+	    					target = NEE
+							}
+					}
+				}
+			}
+		}
+		HAW = { 
+				if = {
+					limit = { 
+						has_war_with = CAN 
+						NOT = { 
+							has_country_flag = USA_asked_CAN_for_peace_plus2 }
+						}
+				country_event = amcivwar.165
+				
+				else_if	= {
+					limit = { 
+						has_war_with = CAN 
+						has_country_flag = USA_asked_CAN_for_peace_plus2
+						}
+				white_peace_with_ROOT = yes
+				HAW = {
+					annex_country = {
+	    					target = NEE
+							}
+					}
+				}
+			}
+		}
+	
+		BBR = { 
+				if = {
+					limit = { 
+						has_war_with = CAN 
+						NOT = { 
+							has_country_flag = USA_asked_CAN_for_peace_plus2 }
+						}
+				country_event = amcivwar.165
+				
+				else_if	= {
+					limit = { 
+						has_war_with = CAN 
+						has_country_flag = USA_asked_CAN_for_peace_plus2
+						}
+				white_peace_with_ROOT = yes
+				BBR = {
+					annex_country = {
+	    					target = NEE
+							}
+					}
+				}
+			}
+		}
+	
+		WCC = { 
+				if = {
+					limit = { 
+						has_war_with = CAN 
+						NOT = { 
+							has_country_flag = USA_asked_CAN_for_peace_plus2 }
+						}
+				country_event = amcivwar.165
+				
+				else_if	= {
+					limit = { 
+						has_war_with = CAN 
+						has_country_flag = USA_asked_CAN_for_peace_plus2
+						}
+				white_peace_with_ROOT = yes
+				WCC = {
+					annex_country = {
+	    					target = NEE
+							}
+					}
+				}
+			}
+		}
+	
+	}
+	option = {
+		name = amcivwar.1642.b
+		add_stability = -0.05
+		}
+	
+}
 				
 # Canada asks for peace
 country_event = {
@@ -10094,11 +10337,17 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = amcivwar.165.a
+		ai_chance = {
+			factor = 9
+				}
 		CAN = {
 			white_peace_with_ROOT = yes
 			}
 		}
 	option = {
+		ai_chance = {
+			factor = 1
+			}
 		name = amcivwar.165.b
 		add_stability = -0.1
 		}
