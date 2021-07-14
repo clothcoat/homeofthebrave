@@ -94,7 +94,7 @@ country_event = { # The economy fails!
 		create_country_leader = {
 			name = "The Sejm"
 			desc = "POLITICS_POL_SEJM_DESC"
-			picture = "Portrait_Poland_Sejm.tga"
+			picture = "Portrait_Poland_Sejm.png"
 			expire = "1965.1.1"
 			ideology = social_conservative_subtype
 		}
@@ -1479,42 +1479,42 @@ country_event = { # The decision of Mendog
 			create_country_leader = {
 				name = "Mendog III"
 				desc = "POLITICS_MENDOG_III_PLC_DESC"
-				picture = "gfx/leaders/LIT/Portrait_LIT_Mindaugas_III.tga"
+				picture = "gfx/leaders/LIT/Portrait_LIT_Mindaugas_III.png"
 				expire = "1965.1.1"
 				ideology = social_democrat_subtype
 			}
 			create_country_leader = {
 				name = "Mendog III"
 				desc = "POLITICS_MENDOG_III_PLC_DESC"
-				picture = "gfx/leaders/LIT/Portrait_LIT_Mindaugas_III.tga"
+				picture = "gfx/leaders/LIT/Portrait_LIT_Mindaugas_III.png"
 				expire = "1965.1.1"
 				ideology = social_liberal_subtype
 			}
 			create_country_leader = {
 				name = "Mendog III"
 				desc = "POLITICS_MENDOG_III_PLC_DESC"
-				picture = "gfx/leaders/LIT/Portrait_LIT_Mindaugas_III.tga"
+				picture = "gfx/leaders/LIT/Portrait_LIT_Mindaugas_III.png"
 				expire = "1965.1.1"
 				ideology = market_liberal_subtype
 			}
 			create_country_leader = {
 				name = "Mendog III"
 				desc = "POLITICS_MENDOG_III_PLC_DESC"
-				picture = "gfx/leaders/LIT/Portrait_LIT_Mindaugas_III.tga"
+				picture = "gfx/leaders/LIT/Portrait_LIT_Mindaugas_III.png"
 				expire = "1965.1.1"
 				ideology = social_conservative_subtype
 			}
 			create_country_leader = {
 				name = "Mendog III"
 				desc = "POLITICS_MENDOG_III_PLC_DESC"
-				picture = "gfx/leaders/LIT/Portrait_LIT_Mindaugas_III.tga"
+				picture = "gfx/leaders/LIT/Portrait_LIT_Mindaugas_III.png"
 				expire = "1965.1.1"
 				ideology = authoritarian_democrat_subtype
 			}
 			create_country_leader = {
 				name = "Mendog III"
 				desc = "POLITICS_MENDOG_III_PLC_DESC"
-				picture = "gfx/leaders/LIT/Portrait_LIT_Mindaugas_III.tga"
+				picture = "gfx/leaders/LIT/Portrait_LIT_Mindaugas_III.png"
 				expire = "1965.1.1"
 				ideology = paternal_autocrat_subtype
 			}
@@ -1977,7 +1977,7 @@ country_event = { #Sejm Elections 1941+
 			create_country_leader = {
 				name = "Eustachy Sapieha"
 				desc = "POLITICS_EUSTACHY_SAPIEHA_DESC"
-				picture = "Portrait_POL_Eustachy_Sapieha.tga"
+				picture = "Portrait_POL_Eustachy_Sapieha.png"
 				expire = "1965.1.1"
 				ideology = authoritarian_democrat_subtype
 			}
@@ -2019,7 +2019,7 @@ country_event = { #Sejm Elections 1941+
 			create_country_leader = {
 				name = "Mieczyslaw Michalowicz"
 				desc = "POLITICS_MIECZYSLAW_MICHALOWICZ_DESC"
-				picture = "Portrait_POL_Mieczyslaw_Michalowicz.tga"
+				picture = "Portrait_POL_Mieczyslaw_Michalowicz.png"
 				expire = "1965.1.1"
 				ideology = market_liberal_subtype
 			}
@@ -2060,7 +2060,7 @@ country_event = { #Sejm Elections 1941+
 			hidden_effect = { kill_ideology_leader = social_liberal }
 			create_country_leader = {
 				name = "Stanislaw Mikolajczyk"
-				picture = "Portrait_Poland_Stanislaw_Mikolajczyk.tga"
+				picture = "Portrait_Poland_Stanislaw_Mikolajczyk.png"
 				expire = "1965.1.1"
 				ideology = social_liberal_subtype
 			}

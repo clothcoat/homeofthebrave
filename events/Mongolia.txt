@@ -1497,7 +1497,7 @@ country_event = { # MON_status_of_prince_de event
 		create_country_leader = {
 			name = "Demchugdongrub"
 			desc = "POLITICS_DEMCHUGDONGRUB_DEMOCRATIC_DESC"
-			picture = "Portrait_MON_Demchugdongrub.tga"
+			picture = "Portrait_MON_Demchugdongrub.png"
 			expire = "1965.1.1"
 			ideology = social_conservative_subtype
 			traits = {
@@ -2204,7 +2204,7 @@ country_event = { # event for Transamaur
 		create_corps_commander = {
 			name = "Mikhail Tornovsky"
 			desc = "POLITICS_MIKHAIL_TORNOVSKY_DESC"
-			portrait_path = "gfx/leaders/MON/Portrait_MON_Mikhail_Tornovsky.tga"
+			portrait_path = "gfx/leaders/MON/Portrait_MON_Mikhail_Tornovsky.png"
 			traits = {
 				politically_connected
 			}
@@ -2218,7 +2218,7 @@ country_event = { # event for Transamaur
 		create_corps_commander = {
 			name = "Nikolay Kazagrandi"
 			desc = "POLITICS_NIKOLAY_KAZAGRANDI_DESC"
-			portrait_path = "gfx/leaders/MON/Portrait_MON_Nikolay_Kazagrandi.tga"
+			portrait_path = "gfx/leaders/MON/Portrait_MON_Nikolay_Kazagrandi.png"
 			traits = {
 				infantry_officer
 			}
@@ -2277,7 +2277,7 @@ country_event = { # event for Transamaur
 #		create_country_leader = {
 #			name = "Boris Rezukhin"
 #			desc = "POLITICS_REZUKHIN_LEADER_DESC"
-#			picture = "Portrait_MON_Boris_Rezukhin.tga"
+#			picture = "Portrait_MON_Boris_Rezukhin.png"
 #			expire = "1965.1.1"
 #			ideology = paternal_autocrat_subtype
 #		}
@@ -2403,7 +2403,7 @@ country_event = { # Ünenbayan creates right-wing party
 #		create_country_leader = {
 #			name = "Dansranbilegiin Dogsom"
 #			desc = "POLITICS_DOGSOM_DESC"
-#			picture = "Portrait_MON_Dansranbilegiin_Dogsom.tga"
+#			picture = "Portrait_MON_Dansranbilegiin_Dogsom.png"
 #			expire = "1965.1.1"
 #			ideology = social_democrat_subtype
 #			traits = {
@@ -2815,7 +2815,7 @@ country_event = { # Anandyn Amar and Elbegdorj move to remove Danzan from power
 		kill_country_leader = yes
 		create_country_leader = {
 			name = "Anandyn Amar"
-			picture = "Portrait_Anandyn_Amar.tga"
+			picture = "Portrait_Anandyn_Amar.png"
 			expire = "1965.1.1"
 			ideology = social_democrat_subtype
 		}
@@ -3177,7 +3177,7 @@ country_event = { # Unenbayen takes power under Soccon and soclib coalition
 		hidden_effect = {
 			create_country_leader = {
 				name = "Dansranbilegiin Dogsom"
-				picture = "Portrait_MON_Dansranbilegiin_Dogsom.tga"
+				picture = "Portrait_MON_Dansranbilegiin_Dogsom.png"
 				expire = "1965.1.1"
 				ideology = social_democrat_subtype
 			}
@@ -3446,7 +3446,7 @@ country_event = { # Tseveen takes power
 		hidden_effect = {
 			create_country_leader = {
 				name = "Dansranbilegiin Dogsom"
-				picture = "Portrait_MON_Dansranbilegiin_Dogsom.tga"
+				picture = "Portrait_MON_Dansranbilegiin_Dogsom.png"
 				expire = "1965.1.1"
 				ideology = social_democrat_subtype
 			}
@@ -3489,7 +3489,7 @@ country_event = { # Rebels demand elections and many MAN members to be trailed f
 		name = mon.166.c
 		create_country_leader = {
 			name = "Dansranbilegiin Dogsom"
-			picture = "Portrait_MON_Dansranbilegiin_Dogsom.tga"
+			picture = "Portrait_MON_Dansranbilegiin_Dogsom.png"
 			expire = "1965.1.1"
 			ideology = social_democrat_subtype
 		}
@@ -3538,7 +3538,7 @@ country_event = { # Tseveen says MAN trials are key for democracy
 		name = mon.168.b
 		create_country_leader = {
 			name = "Dansranbilegiin Dogsom"
-			picture = "Portrait_MON_Dansranbilegiin_Dogsom.tga"
+			picture = "Portrait_MON_Dansranbilegiin_Dogsom.png"
 			expire = "1965.1.1"
 			ideology = social_democrat_subtype
 		}
