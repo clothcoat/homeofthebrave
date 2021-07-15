@@ -370,7 +370,7 @@ country_event = { # we got Hannaford out alive!
 		add_war_support = 0.05
 		create_corps_commander = {
 			name = "Guillermo Mac Hannaford"
-			picture = "Portrait_FOP_Guillermo_Mac_Hannaford.png"
+			picture = "Portrait_FOP_Guillermo_Mac_Hannaford.tga"
 			traits = {
 				career_officer
 				trait_engineer
@@ -478,7 +478,7 @@ country_event = { # he accepted the bribe
 		name = fop.11.a
 		create_corps_commander = {
 			name = "Guillermo Mac Hannaford"
-			picture = "Portrait_FOP_Guillermo_Mac_Hannaford.png"
+			picture = "Portrait_FOP_Guillermo_Mac_Hannaford.tga"
 			traits = {
 				career_officer
 				trait_engineer
@@ -1933,7 +1933,7 @@ country_event = { #9th FORA Congress Trade Union
 		}
 		create_country_leader = {
 			name = "Alfredo Palacios"
-			picture = "gfx/leaders/FOP/Portrait_FOP_Alfredo_Palacios.png"
+			picture = "gfx/leaders/FOP/Portrait_FOP_Alfredo_Palacios.tga"
 			desc = "POLITICS_ALFREDO_PALACIOS_DESC"
 			expire = "1965.1.1"
 			ideology = radical_socialist_subtype
@@ -2728,7 +2728,7 @@ country_event = { #TUC USA victory
 				clr_country_flag = FOP_Di_Giovanni_leads
 				create_country_leader = {
 					name = "Severino di Giovanni"
-					picture = "gfx/leaders/FOP/Portrait_FOP_Severino_di_Giovanni.png"
+					picture = "gfx/leaders/FOP/Portrait_FOP_Severino_di_Giovanni.tga"
 					desc = "POLITICS_SEVERINO_DI_GIOVANNI_DESC"
 					expire = "1965.1.1"
 					ideology = syndicalist_subtype
@@ -3270,7 +3270,7 @@ country_event = {#Negotiations with the GOU
 			create_corps_commander = {
 				name = "Bernardo Alberte"
 				desc = "ARG_Bernardo_Alberte_desc"
-				portrait_path = "gfx/leaders/ARG/Portrait_ARG_Alberte.png"
+				portrait_path = "gfx/leaders/ARG/Portrait_ARG_Alberte.tga"
 				traits = {
 					infantry_officer
 					politically_connected
@@ -3307,7 +3307,7 @@ country_event = {#Negotiations with the GOU
 			create_corps_commander = {
 				name = "Bernardo Alberte"
 				desc = "ARG_Bernardo_Alberte_desc"
-				portrait_path = "gfx/leaders/ARG/Portrait_ARG_Alberte.png"
+				portrait_path = "gfx/leaders/ARG/Portrait_ARG_Alberte.tga"
 				traits = {
 					infantry_officer
 					politically_connected
@@ -3626,7 +3626,7 @@ country_event = {#First Socialist Party Elections
 		create_country_leader = {
 			name = "Alicia Moreau de Justo"
 			desc = "POLITICS_ALICIA_JUSTO_DESC"
-			picture = "gfx/leaders/ARG/Portrait_Argentine_Alicia_Justo.png"
+			picture = "gfx/leaders/ARG/Portrait_Argentine_Alicia_Justo.tga"
 			expire = "1965.1.1"
 			ideology = radical_socialist_subtype
 			female = yes
@@ -3642,7 +3642,7 @@ country_event = {#First Socialist Party Elections
 		create_country_leader = {
 			name = "Nicolas Repetto"
 			desc = "POLITICS_NICOLAS_REPETTO_DESC"
-			picture = "gfx/leaders/ARG/Portrait_Argentine_Nicolas_Repetto.png"
+			picture = "gfx/leaders/ARG/Portrait_Argentine_Nicolas_Repetto.tga"
 			expire = "1965.1.1"
 			ideology = radical_socialist_subtype
 		}
@@ -3676,7 +3676,7 @@ country_event = {#Second Socialist Party Elections
 			}
 			create_country_leader = {
 				name = "Alfredo Palacios"
-				picture = "gfx/leaders/FOP/Portrait_FOP_Alfredo_Palacios.png"
+				picture = "gfx/leaders/FOP/Portrait_FOP_Alfredo_Palacios.tga"
 				desc = "POLITICS_ALFREDO_PALACIOS_DESC"
 				expire = "1965.1.1"
 				ideology = radical_socialist_subtype
@@ -3702,7 +3702,7 @@ country_event = {#Second Socialist Party Elections
 			create_country_leader = {
 				name = "Alicia Moreau de Justo"
 				desc = "POLITICS_ALICIA_JUSTO_DESC"
-				picture = "gfx/leaders/ARG/Portrait_Argentine_Alicia_Justo.png"
+				picture = "gfx/leaders/ARG/Portrait_Argentine_Alicia_Justo.tga"
 				expire = "1965.1.1"
 				ideology = radical_socialist_subtype
 				female = yes
@@ -3729,7 +3729,7 @@ country_event = {#Second Socialist Party Elections
 			create_country_leader = {
 				name = "Nicolas Repetto"
 				desc = "POLITICS_NICOLAS_REPETTO_DESC"
-				picture = "gfx/leaders/ARG/Portrait_Argentine_Nicolas_Repetto.png"
+				picture = "gfx/leaders/ARG/Portrait_Argentine_Nicolas_Repetto.tga"
 				expire = "1965.1.1"
 				ideology = radical_socialist_subtype
 			}
@@ -3756,7 +3756,7 @@ country_event = {#Aftermath of the Andesia Collapse
 		}
 		create_country_leader = {
 			name = "Rodolfo Ghioldi"
-			picture = "Portrait_FOP_Rodolfo_Ghioldi.png"
+			picture = "Portrait_FOP_Rodolfo_Ghioldi.tga"
 			desc = "POLITICS_RODOLFO_GHIOLDI_DESC"
 			expire = "1965.1.1"
 			ideology = totalist_subtype
@@ -3800,7 +3800,7 @@ country_event = {#First Socialist Republic Elections
 		}
 		create_country_leader = {
 			name = "Elpidio Gonzalez"
-			picture = "gfx/leaders/ARG/Portrait_ARG_Elpidio_Gonzales.png"
+			picture = "gfx/leaders/ARG/Portrait_ARG_Elpidio_Gonzales.tga"
 			expire = "1965.1.1"
 			ideology = social_liberal_subtype
 		}
@@ -3820,7 +3820,7 @@ country_event = {#First Socialist Republic Elections
 		create_country_leader = {
 			name = "Robustiano Patrón Costas"
 			desc = "POLITICS_ROBUSTIANO_COSTAS_DESC"
-			picture = "gfx/leaders/ARG/Portrait_Argentine_Robustiano_Costas.png"
+			picture = "gfx/leaders/ARG/Portrait_Argentine_Robustiano_Costas.tga"
 			expire = "1965.1.1"
 			ideology = market_liberal_subtype
 		}
@@ -3851,7 +3851,7 @@ country_event = {#Second Socialist Republic Elections
 			create_country_leader = {
 				name = "Alicia Moreau de Justo"
 				desc = "POLITICS_ALICIA_JUSTO_DESC"
-				picture = "gfx/leaders/ARG/Portrait_Argentine_Alicia_Justo.png"
+				picture = "gfx/leaders/ARG/Portrait_Argentine_Alicia_Justo.tga"
 				expire = "1965.1.1"
 				ideology = radical_socialist_subtype
 				female = yes
@@ -3865,7 +3865,7 @@ country_event = {#Second Socialist Republic Elections
 			create_country_leader = {
 				name = "Nicolas Repetto"
 				desc = "POLITICS_NICOLAS_REPETTO_DESC"
-				picture = "gfx/leaders/ARG/Portrait_Argentine_Nicolas_Repetto.png"
+				picture = "gfx/leaders/ARG/Portrait_Argentine_Nicolas_Repetto.tga"
 				expire = "1965.1.1"
 				ideology = radical_socialist_subtype
 			}
@@ -3885,7 +3885,7 @@ country_event = {#Second Socialist Republic Elections
 		create_country_leader = {
 			name = "Arturo Frondizi"
 			desc = "POLITICS_ARTURO_FRONDIZI_DESC"
-			picture = "gfx/leaders/ARG/Portrait_ARG_Frondizi.png"
+			picture = "gfx/leaders/ARG/Portrait_ARG_Frondizi.tga"
 			expire = "1965.1.1"
 			ideology = social_liberal_subtype
 		}
@@ -3904,7 +3904,7 @@ country_event = {#Second Socialist Republic Elections
 		create_country_leader = {
 			name = "Ricardo Balbin"
 			desc = "POLITICS_RICARDO_BALBIN_DESC"
-			picture = "gfx/leaders/ARG/Portrait_ARG_Ricardo_Balbin.png"
+			picture = "gfx/leaders/ARG/Portrait_ARG_Ricardo_Balbin.tga"
 			expire = "1965.1.1"
 			ideology = market_liberal_subtype
 		}
@@ -4366,7 +4366,7 @@ country_event = { #Power secured
 		set_country_flag = FOP_power_secured
 		create_country_leader = {
 			name = "Liborio Justo"
-			picture = "gfx/leaders/FOP/Portrait_FOP_Liborio_Justo.png"
+			picture = "gfx/leaders/FOP/Portrait_FOP_Liborio_Justo.tga"
 			desc = "POLITICS_LIBORIO_JUSTO_DESC"
 			expire = "1965.1.1"
 			ideology = totalist_subtype
@@ -4543,7 +4543,7 @@ country_event = { #Communist coup against RadAns
 		name = fopcoup.101.a
 		create_country_leader = {
 			name = "Liborio Justo"
-			picture = "gfx/leaders/FOP/Portrait_FOP_Liborio_Justo.png"
+			picture = "gfx/leaders/FOP/Portrait_FOP_Liborio_Justo.tga"
 			desc = "POLITICS_LIBORIO_JUSTO_DESC"
 			expire = "1965.1.1"
 			ideology = totalist_subtype
@@ -4635,7 +4635,7 @@ country_event = { #Radical Anarchist Coup against Commies
 		name = fopcoup.103.a
 		create_country_leader = {
 			name = "Severino di Giovanni"
-			picture = "gfx/leaders/FOP/Portrait_FOP_Severino_di_Giovanni.png"
+			picture = "gfx/leaders/FOP/Portrait_FOP_Severino_di_Giovanni.tga"
 			desc = "POLITICS_SEVERINO_DI_GIOVANNI_DESC"
 			expire = "1965.1.1"
 			ideology = syndicalist_subtype
@@ -5671,7 +5671,7 @@ country_event = { #Talks with Giovanni
 		army_experience = 5
 		create_country_leader = {
 			name = "Severino di Giovanni"
-			picture = "gfx/leaders/FOP/Portrait_FOP_Severino_di_Giovanni.png"
+			picture = "gfx/leaders/FOP/Portrait_FOP_Severino_di_Giovanni.tga"
 			desc = "POLITICS_SEVERINO_DI_GIOVANNI_DESC"
 			expire = "1965.1.1"
 			ideology = syndicalist_subtype

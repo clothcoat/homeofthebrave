@@ -1635,7 +1635,7 @@ country_event = {
 		add_stability = 0.20
 		create_country_leader = {
 			name = "Abdülmecid II"
-			picture = "Portrait_Ottoman_Abdulmecid.png"
+			picture = "Portrait_Ottoman_Abdulmecid.tga"
 			expire = "1965.1.1"
 			ideology = authoritarian_democrat_subtype
 		}
@@ -2659,7 +2659,7 @@ country_event = {
 			kill_country_leader = yes
 			create_country_leader = {
 				name = "Ömer I"
-				picture = "Portrait_Ottoman_OmerFaruk.png"
+				picture = "Portrait_Ottoman_OmerFaruk.tga"
 				expire = "1965.1.1"
 				ideology = authoritarian_democrat_subtype
 			}
@@ -2668,7 +2668,7 @@ country_event = {
 				kill_country_leader = yes
 				create_country_leader = {
 					name = "Ahmed IV"
-					picture = "Portrait_Ottoman_AhmedNihad.png"
+					picture = "Portrait_Ottoman_AhmedNihad.tga"
 					expire = "1965.1.1"
 					ideology = authoritarian_democrat_subtype
 				}
@@ -2711,7 +2711,7 @@ country_event = {
 				kill_country_leader = yes
 				create_country_leader = {
 					name = "Ömer Faruk Efendi"
-					picture = "Portrait_Ottoman_OmerFaruk.png"
+					picture = "Portrait_Ottoman_OmerFaruk.tga"
 					expire = "1965.1.1"
 					ideology = paternal_autocrat_subtype
 				}
@@ -2720,7 +2720,7 @@ country_event = {
 					kill_country_leader = yes
 					create_country_leader = {
 						name = "Ahmed Nihad Efendi"
-						picture = "Portrait_Ottoman_AhmedNihad.png"
+						picture = "Portrait_Ottoman_AhmedNihad.tga"
 						expire = "1965.1.1"
 						ideology = paternal_autocrat_subtype
 					}
@@ -3056,7 +3056,7 @@ country_event = {
 			TUR = {
 				create_country_leader = {
 					name = "Mehmed Cavid Gerçel"
-					picture = "Portrait_Mehmed_Cavid.png"
+					picture = "Portrait_Mehmed_Cavid.tga"
 					expire = "1965.1.1"
 					ideology = authoritarian_democrat_subtype
 				}
@@ -3319,7 +3319,7 @@ country_event = {
 		hidden_effect = {
 			create_country_leader = {
 				name = "Mustafa İsmet Paşa"
-				picture = "Portrait_OTT_Mustafa_Ismet.png"
+				picture = "Portrait_OTT_Mustafa_Ismet.tga"
 				expire = "1965.1.1"
 				ideology = authoritarian_democrat_subtype
 			}
@@ -3359,7 +3359,7 @@ country_event = {
 		hidden_effect = {
 			create_country_leader = {
 				name = "Mustafa İsmet Paşa"
-				picture = "Portrait_OTT_Mustafa_Ismet.png"
+				picture = "Portrait_OTT_Mustafa_Ismet.tga"
 				expire = "1965.1.1"
 				ideology = authoritarian_democrat_subtype
 			}
@@ -3399,7 +3399,7 @@ news_event = {
 		retire_country_leader = yes
 		create_country_leader = {
 			name = "Osman IV"
-			picture = "Portrait_Ottoman_OsmanFuad.png"
+			picture = "Portrait_Ottoman_OsmanFuad.tga"
 			expire = "1965.1.1"
 			ideology = paternal_autocrat_subtype
 			traits = {

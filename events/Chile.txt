@@ -84,7 +84,7 @@ country_event = { #The Third Chairman!
 		add_political_power = 40
 		create_country_leader = {
 			name = "Clotario Leopoldo Blest Riffo"
-			picture = "Portrait_Chile_Blest_Riffo.png"
+			picture = "Portrait_Chile_Blest_Riffo.tga"
 			expire = "1965.1.1"
 			ideology = syndicalist_subtype
 		}
@@ -122,7 +122,7 @@ country_event = { #The Third Chairman!
 			kill_ideology_leader = syndicalist
 			create_country_leader = {
 				name = "Clotario Leopoldo Blest Riffo"
-				picture = "Portrait_Chile_Blest_Riffo.png"
+				picture = "Portrait_Chile_Blest_Riffo.tga"
 				expire = "1965.1.1"
 				ideology = syndicalist_subtype
 			}
@@ -180,7 +180,7 @@ country_event = { #The Third Chairman!
 			kill_ideology_leader = syndicalist
 			create_country_leader = {
 				name = "Clotario Leopoldo Blest Riffo"
-				picture = "Portrait_Chile_Blest_Riffo.png"
+				picture = "Portrait_Chile_Blest_Riffo.tga"
 				expire = "1965.1.1"
 				ideology = syndicalist_subtype
 			}
@@ -266,7 +266,7 @@ country_event = { #The Fourth Chairman!
 			kill_ideology_leader = syndicalist
 			create_country_leader = {
 				name = "Ricardo Eliécer Neftalí Reyes Basoalto"
-				picture = "Portrait_Chile_Neruda.png"
+				picture = "Portrait_Chile_Neruda.tga"
 				expire = "1965.1.1"
 				ideology = syndicalist_subtype
 			}
@@ -290,7 +290,7 @@ country_event = { #The Fourth Chairman!
 		add_political_power = 40
 		create_country_leader = {
 			name = "Lucila Godoy y Alcayaga"
-			picture = "Portrait_Chile_Gabriela.png"
+			picture = "Portrait_Chile_Gabriela.tga"
 			expire = "1965.1.1"
 			ideology = radical_socialist_subtype
 			female = yes
@@ -318,14 +318,14 @@ country_event = { #The Fourth Chairman!
 			kill_ideology_leader = syndicalist
 			create_country_leader = {
 				name = "Lucila Godoy y Alcayaga"
-				picture = "Portrait_Chile_Gabriela.png"
+				picture = "Portrait_Chile_Gabriela.tga"
 				expire = "1965.1.1"
 				ideology = radical_socialist_subtype
 				female = yes
 			}
 			create_country_leader = {
 				name = "Ricardo Eliécer Neftalí Reyes Basoalto"
-				picture = "Portrait_Chile_Neruda.png"
+				picture = "Portrait_Chile_Neruda.tga"
 				expire = "1965.1.1"
 				ideology = syndicalist_subtype
 			}
@@ -377,7 +377,7 @@ country_event = { #The Fourth Chairman!
 			kill_ideology_leader = syndicalist
 			create_country_leader = {
 				name = "Lucila Godoy y Alcayaga"
-				picture = "Portrait_Chile_Gabriela.png"
+				picture = "Portrait_Chile_Gabriela.tga"
 				expire = "1965.1.1"
 				ideology = radical_socialist_subtype
 				female = yes
@@ -402,7 +402,7 @@ country_event = { #The Fourth Chairman!
 		add_political_power = 40
 		create_country_leader = {
 			name = "Ricardo Eliécer Neftalí Reyes Basoalto"
-			picture = "Portrait_Chile_Neruda.png"
+			picture = "Portrait_Chile_Neruda.tga"
 			expire = "1965.1.1"
 			ideology = syndicalist_subtype
 		}
@@ -446,7 +446,7 @@ country_event = { #The Fifth Chairman!
 			kill_ideology_leader = totalist
 			create_country_leader = {
 				name = "Carlos Díaz Loyola"
-				picture = "Portrait_Chile_Pablo_Rokha.png"
+				picture = "Portrait_Chile_Pablo_Rokha.tga"
 				expire = "1965.1.1"
 				ideology = totalist_subtype
 			}
@@ -470,7 +470,7 @@ country_event = { #The Fifth Chairman!
 		add_stability = 0.1
 		create_country_leader = {
 			name = "Aurelio Celedon Palma"
-			picture = "Portrait_Chile_Aurelio_Palma.png"
+			picture = "Portrait_Chile_Aurelio_Palma.tga"
 			expire = "1965.1.1"
 			ideology = radical_socialist_subtype
 		}
@@ -497,7 +497,7 @@ country_event = { #The Fifth Chairman!
 			kill_ideology_leader = totalist
 			create_country_leader = {
 				name = "Aurelio Celedon Palma"
-				picture = "Portrait_Chile_Aurelio_Palma.png"
+				picture = "Portrait_Chile_Aurelio_Palma.tga"
 				expire = "1965.1.1"
 				ideology = radical_socialist_subtype
 			}
@@ -530,7 +530,7 @@ country_event = { #The Fifth Chairman!
 		add_stability = -0.1
 		create_country_leader = {
 			name = "Carlos Díaz Loyola"
-			picture = "Portrait_Chile_Pablo_Rokha.png"
+			picture = "Portrait_Chile_Pablo_Rokha.tga"
 			expire = "1965.1.1"
 			ideology = totalist_subtype
 		}
@@ -556,13 +556,13 @@ country_event = { #The Fifth Chairman!
 			kill_ideology_leader = totalist
 			create_country_leader = {
 				name = "Aurelio Celedon Palma"
-				picture = "Portrait_Chile_Aurelio_Palma.png"
+				picture = "Portrait_Chile_Aurelio_Palma.tga"
 				expire = "1965.1.1"
 				ideology = radical_socialist_subtype
 			}
 			create_country_leader = {
 				name = "Carlos Díaz Loyola"
-				picture = "Portrait_Chile_Pablo_Rokha.png"
+				picture = "Portrait_Chile_Pablo_Rokha.tga"
 				expire = "1965.1.1"
 				ideology = totalist_subtype
 			}
@@ -997,7 +997,7 @@ country_event = { #The Coup Succeeds!
 		complete_national_focus = CHL_counter_revolution
 		create_country_leader = {
 			name = "Francisco Díaz Valderrama"
-			picture = "Portrait_CHL_Fransico_Javier_Dias_Valderrama.png"
+			picture = "Portrait_CHL_Fransico_Javier_Dias_Valderrama.tga"
 			expire = "1965.1.1"
 			ideology = national_populist_subtype
 		}
@@ -1711,7 +1711,7 @@ country_event = { #1941 Democratic Elections
 			kill_ideology_leader = social_democrat
 			create_country_leader = {
 				name = "Juan Esteban Montero"
-				picture = "Portrait_CHL_Juan_Esteban_Montero.png"
+				picture = "Portrait_CHL_Juan_Esteban_Montero.tga"
 				expire = "1965.1.1"
 				ideology = social_democrat_subtype
 			}
@@ -1782,7 +1782,7 @@ country_event = { #1941 Democratic Elections
 		}
 		create_country_leader = {
 			name = "Juan Esteban Montero"
-			picture = "Portrait_CHL_Juan_Esteban_Montero.png"
+			picture = "Portrait_CHL_Juan_Esteban_Montero.tga"
 			expire = "1965.1.1"
 			ideology = social_democrat_subtype
 		}
@@ -1825,7 +1825,7 @@ country_event = { #1941 Democratic Elections
 			kill_ideology_leader = social_democrat
 			create_country_leader = {
 				name = "Juan Esteban Montero"
-				picture = "Portrait_CHL_Juan_Esteban_Montero.png"
+				picture = "Portrait_CHL_Juan_Esteban_Montero.tga"
 				expire = "1965.1.1"
 				ideology = social_democrat_subtype
 			}
@@ -1882,7 +1882,7 @@ country_event = { #1941 Democratic Elections
 			kill_ideology_leader = social_democrat
 			create_country_leader = {
 				name = "Juan Esteban Montero"
-				picture = "Portrait_CHL_Juan_Esteban_Montero.png"
+				picture = "Portrait_CHL_Juan_Esteban_Montero.tga"
 				expire = "1965.1.1"
 				ideology = social_democrat_subtype
 			}
@@ -1937,13 +1937,13 @@ country_event = { #1947 Democratic Elections
 			kill_ideology_leader = social_liberal
 			create_country_leader = {
 				name = "Eduardo Alessandri"
-				picture = "Portrait_CHL_Eduardo_Alessandri.png"
+				picture = "Portrait_CHL_Eduardo_Alessandri.tga"
 				expire = "1965.1.1"
 				ideology = social_liberal_subtype
 			}
 			create_country_leader = {
 				name = "Gabriel González Videla"
-				picture = "Portrait_CHL_Gabriel_Videla.png"
+				picture = "Portrait_CHL_Gabriel_Videla.tga"
 				expire = "1965.1.1"
 				ideology = social_democrat_subtype
 			}
@@ -1964,7 +1964,7 @@ country_event = { #1947 Democratic Elections
 		add_stability = 0.02
 		create_country_leader = {
 			name = "Juan Pablo Bennett"
-			picture = "Portrait_CHL_Bennett.png"
+			picture = "Portrait_CHL_Bennett.tga"
 			expire = "1965.1.1"
 			ideology = social_conservative_subtype
 		}
@@ -1989,13 +1989,13 @@ country_event = { #1947 Democratic Elections
 			kill_ideology_leader = social_liberal
 			create_country_leader = {
 				name = "Juan Pablo Bennett"
-				picture = "Portrait_CHL_Bennett.png"
+				picture = "Portrait_CHL_Bennett.tga"
 				expire = "1965.1.1"
 				ideology = social_conservative_subtype
 			}
 			create_country_leader = {
 				name = "Eduardo Alessandri"
-				picture = "Portrait_CHL_Eduardo_Alessandri.png"
+				picture = "Portrait_CHL_Eduardo_Alessandri.tga"
 				expire = "1965.1.1"
 				ideology = social_liberal_subtype
 			}
@@ -2015,7 +2015,7 @@ country_event = { #1947 Democratic Elections
 		add_stability = 0.05
 		create_country_leader = {
 			name = "Gabriel González Videla"
-			picture = "Portrait_CHL_Gabriel_Videla.png"
+			picture = "Portrait_CHL_Gabriel_Videla.tga"
 			expire = "1965.1.1"
 			ideology = social_democrat_subtype
 		}
@@ -2041,13 +2041,13 @@ country_event = { #1947 Democratic Elections
 			kill_ideology_leader = social_liberal
 			create_country_leader = {
 				name = "Juan Pablo Bennett"
-				picture = "Portrait_CHL_Bennett.png"
+				picture = "Portrait_CHL_Bennett.tga"
 				expire = "1965.1.1"
 				ideology = social_conservative_subtype
 			}
 			create_country_leader = {
 				name = "Gabriel González Videla"
-				picture = "Portrait_CHL_Gabriel_Videla.png"
+				picture = "Portrait_CHL_Gabriel_Videla.tga"
 				expire = "1965.1.1"
 				ideology = social_democrat_subtype
 			}
@@ -2067,7 +2067,7 @@ country_event = { #1947 Democratic Elections
 		add_political_power = 40
 		create_country_leader = {
 			name = "Eduardo Alessandri"
-			picture = "Portrait_CHL_Eduardo_Alessandri.png"
+			picture = "Portrait_CHL_Eduardo_Alessandri.tga"
 			expire = "1965.1.1"
 			ideology = social_liberal_subtype
 		}
@@ -2093,19 +2093,19 @@ country_event = { #1947 Democratic Elections
 			kill_ideology_leader = social_liberal
 			create_country_leader = {
 				name = "Juan Pablo Bennett"
-				picture = "Portrait_CHL_Bennett.png"
+				picture = "Portrait_CHL_Bennett.tga"
 				expire = "1965.1.1"
 				ideology = social_conservative_subtype
 			}
 			create_country_leader = {
 				name = "Eduardo Alessandri"
-				picture = "Portrait_CHL_Eduardo_Alessandri.png"
+				picture = "Portrait_CHL_Eduardo_Alessandri.tga"
 				expire = "1965.1.1"
 				ideology = social_liberal_subtype
 			}
 			create_country_leader = {
 				name = "Gabriel González Videla"
-				picture = "Portrait_CHL_Gabriel_Videla.png"
+				picture = "Portrait_CHL_Gabriel_Videla.tga"
 				expire = "1965.1.1"
 				ideology = social_democrat_subtype
 			}

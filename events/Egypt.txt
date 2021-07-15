@@ -33,37 +33,37 @@ country_event = { # Death of Fuad I
 		hidden_effect = {
 			create_country_leader = {
 				name = "Farouk I"
-				picture = "Portrait_Egypt_Farouk.png"
+				picture = "Portrait_Egypt_Farouk.tga"
 				expire = "1965.1.1"
 				ideology = social_democrat_subtype
 			}
 			create_country_leader = {
 				name = "Farouk I"
-				picture = "Portrait_Egypt_Farouk.png"
+				picture = "Portrait_Egypt_Farouk.tga"
 				expire = "1965.1.1"
 				ideology = social_liberal_subtype
 			}
 			create_country_leader = {
 				name = "Farouk I"
-				picture = "Portrait_Egypt_Farouk.png"
+				picture = "Portrait_Egypt_Farouk.tga"
 				expire = "1965.1.1"
 				ideology = market_liberal_subtype
 			}
 			create_country_leader = {
 				name = "Farouk I"
-				picture = "Portrait_Egypt_Farouk.png"
+				picture = "Portrait_Egypt_Farouk.tga"
 				expire = "1965.1.1"
 				ideology = social_conservative_subtype
 			}
 			create_country_leader = {
 				name = "Farouk I"
-				picture = "Portrait_Egypt_Farouk.png"
+				picture = "Portrait_Egypt_Farouk.tga"
 				expire = "1965.1.1"
 				ideology = authoritarian_democrat_subtype
 			}
 			create_country_leader = {
 				name = "Farouk I"
-				picture = "Portrait_Egypt_Farouk.png"
+				picture = "Portrait_Egypt_Farouk.tga"
 				expire = "1965.1.1"
 				ideology = paternal_autocrat_subtype
 			}
@@ -1200,7 +1200,7 @@ country_event = { # New Officers
 		name = egy.27.a
 		create_corps_commander = { # Gamel Abdel Nasser
 			name = "Gamel Abdel Nasser"
-			portrait_path = "gfx/leaders/EGY/Portrait_EGY_Gamel_Abdel_Nasser.png"
+			portrait_path = "gfx/leaders/EGY/Portrait_EGY_Gamel_Abdel_Nasser.tga"
 			traits = {
 				career_officer
 				war_hero
@@ -1216,7 +1216,7 @@ country_event = { # New Officers
 		}
 		create_corps_commander = { # Hussein el-Shafei
 			name = " Hussein el-Shafei"
-			portrait_path = "gfx/leaders/EGY/Portrait_EGY_Hussein_Al_Shafei.png"
+			portrait_path = "gfx/leaders/EGY/Portrait_EGY_Hussein_Al_Shafei.tga"
 			traits = {
 				career_officer
 				war_hero
@@ -1232,7 +1232,7 @@ country_event = { # New Officers
 		}
 		create_corps_commander = { # Abdel Hakim Amer
 			name = "Abdel Hakim Amer"
-			portrait_path = "gfx/leaders/EGY/Portrait_EGY_abdel_hakim_amer.png"
+			portrait_path = "gfx/leaders/EGY/Portrait_EGY_abdel_hakim_amer.tga"
 			traits = {
 				career_officer
 				armor_officer
@@ -3560,44 +3560,44 @@ country_event = { # King Idris is restored to the throne
 			}
 			create_country_leader = {
 				name = "Idris I"
-				picture = "Portrait_LBA_Idris.png"
+				picture = "Portrait_LBA_Idris.tga"
 				expire = "1965.1.1"
 				ideology = social_democrat_subtype
 			}
 			create_country_leader = {
 				name = "Idris I"
-				picture = "Portrait_LBA_Idris.png"
+				picture = "Portrait_LBA_Idris.tga"
 				expire = "1965.1.1"
 				ideology = social_liberal_subtype
 			}
 			create_country_leader = {
 				name = "Idris I"
-				picture = "Portrait_LBA_Idris.png"
+				picture = "Portrait_LBA_Idris.tga"
 				expire = "1965.1.1"
 				ideology = market_liberal_subtype
 			}
 			create_country_leader = {
 				name = "Idris I"
-				picture = "Portrait_LBA_Idris.png"
+				picture = "Portrait_LBA_Idris.tga"
 				expire = "1965.1.1"
 				ideology = social_conservative_subtype
 			}
 			kill_ideology_leader = authoritarian_democrat
 			create_country_leader = {
 				name = "Idris I"
-				picture = "Portrait_LBA_Idris.png"
+				picture = "Portrait_LBA_Idris.tga"
 				expire = "1965.1.1"
 				ideology = authoritarian_democrat_subtype
 			}
 			create_country_leader = {
 				name = "Idris I"
-				picture = "Portrait_LBA_Idris.png"
+				picture = "Portrait_LBA_Idris.tga"
 				expire = "1965.1.1"
 				ideology = national_populist_subtype
 			}
 			create_field_marshal = {
 				name = "Idris I"
-				portrait_path = "gfx/leaders/LBA/Portrait_LBA_Idris.png"
+				portrait_path = "gfx/leaders/LBA/Portrait_LBA_Idris.tga"
 				traits = {
 					old_guard
 				}
