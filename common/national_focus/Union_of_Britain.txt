@@ -1039,7 +1039,7 @@ focus_tree = {
 			army_experience = 25
 			create_corps_commander = {
 				name = "Thomas Jacomb Hutton"
-				portrait_path = "gfx/leaders/ENG/Portrait_England_Thomas_Jacomb_Hutton.tga"
+				portrait_path = "gfx/leaders/ENG/Portrait_England_Thomas_Jacomb_Hutton.png"
 				traits = { old_guard }
 				skill = 2
 				attack_skill = 2
@@ -1049,7 +1049,7 @@ focus_tree = {
 			}
 			create_navy_leader = {
 				name = "Algernon Willis"
-				portrait_path = "gfx/leaders/ENG/Portrait_England_Algernon_Willis.tga"
+				portrait_path = "gfx/leaders/ENG/Portrait_England_Algernon_Willis.png"
 				traits = { spotter }
 				skill = 3
 				attack_skill = 3
@@ -1550,7 +1550,7 @@ focus_tree = {
 			add_ideas = ENG_women_soldiers_idea
 			create_corps_commander = {# Felicia Browne
 				name = "Felicia Browne"
-				portrait_path = "gfx/leaders/ENG/Portrait_England_Felicia_Browne.tga"
+				portrait_path = "gfx/leaders/ENG/Portrait_England_Felicia_Browne.png"
 				traits = {
 					infantry_officer
 				}
