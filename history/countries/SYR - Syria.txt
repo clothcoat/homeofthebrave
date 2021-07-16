@@ -64,56 +64,56 @@ set_popularities = {
 create_country_leader = {
 	name = "Antoun Sadeh"
 	desc = "POLITICS_ANTOUN_SADEH_DESC"
-	picture = "Portrait_SYR_Antoun_Sadeh.tga"
+	picture = "Portrait_SYR_Antoun_Sadeh.png"
 	expire = "1965.1.1"
 	ideology = national_populist_subtype
 }
 create_country_leader = {
 	name = "Fawzi al-Qawuqji"
 	desc = "POLITICS_FAWZI_QUWU_DESC"
-	picture = "gfx/leaders/Generic/Portrait_Arabia_Generic_land_new_1.tga"
+	picture = "gfx/leaders/Generic/Portrait_Arabia_Generic_land_new_1.png"
 	expire = "1965.1.1"
 	ideology = paternal_autocrat_subtype
 }
 create_country_leader = {
 	name = "Sami Al-Hinawi"
 	desc = "POLITICS_ADIB_BIN_HASSAN_SYR_DESC"
-	picture = "Portrait_SYR_Sami_Al_Hinawi.tga"
+	picture = "Portrait_SYR_Sami_Al_Hinawi.png"
 	expire = "1965.1.1"
 	ideology = authoritarian_democrat_subtype
 }
 create_country_leader = {
 	name = "Shukri al-Quwatli"
 	desc = "POLITICS_SHUKRI_QUWATILI_DESC"
-	picture = "Portrait_SYR_Shukri.tga"
+	picture = "Portrait_SYR_Shukri.png"
 	expire = "1965.1.1"
 	ideology = social_conservative_subtype
 }
 create_country_leader = {
 	name = "Sabri Al-Asali"
 	desc = "POLITICS_SABRI_ASALI_DESC"
-	picture = "Portrait_SYR_Sabri.tga"
+	picture = "Portrait_SYR_Sabri.png"
 	expire = "1965.1.1"
 	ideology = market_liberal_subtype
 }
 create_country_leader = {
 	name = "Sultan al-Atrash"
 	desc = "POLITICS_SULTAN_ATRASH_DESC"
-	picture = "Portrait_SYR_Atrash.tga"
+	picture = "Portrait_SYR_Atrash.png"
 	expire = "1965.1.1"
 	ideology = social_liberal_subtype
 }
 create_country_leader = {
 	name = "Nazik al-Abid"
 	desc = "POLITICS_NAZIK_AL_ABID_DESC"
-	picture = "Portrait_SYR_Nazik_Abid.tga"
+	picture = "Portrait_SYR_Nazik_Abid.png"
 	expire = "1965.1.1"
 	ideology = social_democrat_subtype
 }
 create_country_leader = {
 	name = "Michel Aflaq"
 	desc = "POLITICS_MICHEAL_AFLAQ_DESC"
-	picture = "Portrait_SYR_Aflaq.tga"
+	picture = "Portrait_SYR_Aflaq.png"
 	expire = "1965.1.1"
 	ideology = radical_socialist_subtype
 }
@@ -121,7 +121,7 @@ create_country_leader = {
 ### Field Marshals ###
 create_field_marshal = {#
 	name = "Sultan Al-Atrash"
-	portrait_path = "gfx/leaders/SYR/Portrait_SYR_Atrash.tga"
+	portrait_path = "gfx/leaders/SYR/Portrait_SYR_Atrash.png"
 	traits = {
 		inflexible_strategist
 		trait_cautious
@@ -139,7 +139,7 @@ create_field_marshal = {#
 
 create_corps_commander = {
 	name = "Fawzi al-Qawuqji"
-	portrait_path = "gfx/leaders/Generic/Portrait_Arabia_Generic_land_new_1.tga"
+	portrait_path = "gfx/leaders/Generic/Portrait_Arabia_Generic_land_new_1.png"
 	traits = {
 		brilliant_strategist
 		cavalry_officer
@@ -152,7 +152,7 @@ create_corps_commander = {
 }
 create_corps_commander = {
 	name = "Sami Al-Hinawi"
-	portrait_path = "gfx/leaders/SYR/Portrait_SYR_Sami_Al_Hinawi.tga"
+	portrait_path = "gfx/leaders/SYR/Portrait_SYR_Sami_Al_Hinawi.png"
 	traits = {
 		career_officer
 		politically_connected
@@ -166,7 +166,7 @@ create_corps_commander = {
 
 create_corps_commander = {
 	name = "Adib Bin Hassan Al-Shishakli"
-	portrait_path = "gfx/leaders/SYR/Portrait_SYR_Adib_bin_Hassan.tga"
+	portrait_path = "gfx/leaders/SYR/Portrait_SYR_Adib_bin_Hassan.png"
 	traits = {
 		career_officer
 		infantry_officer
@@ -181,7 +181,7 @@ create_corps_commander = {
 ### Admirals ###
 create_navy_leader = {
 	name = "Ibrahim Hananu"
-	portrait_path = "gfx/leaders/SYR/Portrait_SYR_al_Gawzi.tga"
+	portrait_path = "gfx/leaders/SYR/Portrait_SYR_al_Gawzi.png"
 	traits = {
 		old_guard_navy
 		spotter

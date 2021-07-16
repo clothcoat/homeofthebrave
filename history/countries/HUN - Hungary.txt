@@ -60,14 +60,14 @@ add_ideas = {
 
 create_country_leader = {
 	name = "István Bethlen"
-	picture = "Portrait_HUN_Istvan_Bethlen.tga"
+	picture = "Portrait_HUN_Istvan_Bethlen.png"
 	expire = "1965.1.1"
 	ideology = social_conservative_subtype
 }
 
 create_country_leader = {
 	name = "István Bethlen"
-	picture = "Portrait_HUN_Istvan_Bethlen.tga"
+	picture = "Portrait_HUN_Istvan_Bethlen.png"
 	expire = "1965.1.1"
 	ideology = authoritarian_democrat_subtype
 }
@@ -75,14 +75,14 @@ create_country_leader = {
 create_country_leader = {
 	name = "IV. Károly"
 	desc = "POLITICS_KARL_DESC"
-	picture = "gfx/leaders/AUS/Portrait_AUS_Karl_I.tga"
+	picture = "gfx/leaders/AUS/Portrait_AUS_Karl_I.png"
 	expire = "1965.1.1"
 	ideology = paternal_autocrat_subtype
 }
 
 create_country_leader = {
 	name = "László Bárdossy"
-	picture = "Portrait_HUN_Laszlo_Bardossy.tga"
+	picture = "Portrait_HUN_Laszlo_Bardossy.png"
 	expire = "1965.1.1"
 	ideology = national_populist_subtype
 }
@@ -94,7 +94,7 @@ create_country_leader = {
 ### Field Marshals ###
 create_field_marshal = {
 	name = "Hugó Sónyi"
-	portrait_path = "gfx/leaders/HUN/Portrait_HUN_Hugo_Sonyi.tga"
+	portrait_path = "gfx/leaders/HUN/Portrait_HUN_Hugo_Sonyi.png"
 	traits = {
 		defensive_doctrine
 		old_guard
@@ -109,7 +109,7 @@ create_field_marshal = {
 ### Corps Commanders ###
 create_corps_commander = {
 	name = "Károly Beregfy"
-	portrait_path = "gfx/leaders/HUN/Portrait_HUN_Karoly_Beregfy.tga"
+	portrait_path = "gfx/leaders/HUN/Portrait_HUN_Karoly_Beregfy.png"
 	traits = { }
 	skill = 2
 	attack_skill = 2
@@ -120,7 +120,7 @@ create_corps_commander = {
 
 create_corps_commander = {
 	name = "Vilmos Nagy de Nagybaczon"
-	portrait_path = "gfx/leaders/HUN/Portrait_HUN_Vilmos_Nagy_de_Nagybaczon.tga"
+	portrait_path = "gfx/leaders/HUN/Portrait_HUN_Vilmos_Nagy_de_Nagybaczon.png"
 	traits = {
 		old_guard
 		fortress_buster
@@ -134,7 +134,7 @@ create_corps_commander = {
 
 create_corps_commander = {
 	name = "Kocsárd Janky"
-	portrait_path = "gfx/leaders/HUN/Portrait_HUN_Janky_Kocsard.tga"
+	portrait_path = "gfx/leaders/HUN/Portrait_HUN_Janky_Kocsard.png"
 	traits = {
 		old_guard
 		cavalry_leader
@@ -148,7 +148,7 @@ create_corps_commander = {
 
 create_corps_commander = {
 	name = "Béla Miklós"
-	portrait_path = "gfx/leaders/HUN/Portrait_HUN_Bela_Miklos.tga"
+	portrait_path = "gfx/leaders/HUN/Portrait_HUN_Bela_Miklos.png"
 	traits = {
 		panzer_leader
 		trait_engineer
@@ -162,7 +162,7 @@ create_corps_commander = {
 
 create_corps_commander = {
 	name = "Géza Lakatos"
-	portrait_path = "gfx/leaders/HUN/Portrait_HUN_Geza_Lakatos.tga"
+	portrait_path = "gfx/leaders/HUN/Portrait_HUN_Geza_Lakatos.png"
 	traits = {
 		infantry_leader
 		ambusher
@@ -177,7 +177,7 @@ create_corps_commander = {
 
 create_corps_commander = {
 	name = "Dezső László"
-	portrait_path = "gfx/leaders/HUN/Portrait_HUN_Dezso_Laszlo.tga"
+	portrait_path = "gfx/leaders/HUN/Portrait_HUN_Dezso_Laszlo.png"
 	traits = { }
 	skill = 1
 	attack_skill = 1
@@ -188,7 +188,7 @@ create_corps_commander = {
 
 create_corps_commander = {
 	name = "Gusztáv Jány"
-	portrait_path = "gfx/leaders/HUN/Portrait_HUN_Jany_Gusztav.tga"
+	portrait_path = "gfx/leaders/HUN/Portrait_HUN_Jany_Gusztav.png"
 	traits = {
 		old_guard
 		trait_engineer
@@ -203,7 +203,7 @@ create_corps_commander = {
 
 create_corps_commander = {
 	name = "Lajos Veress"
-	portrait_path = "gfx/leaders/HUN/Portrait_HUN_Lajos_Veress.tga"
+	portrait_path = "gfx/leaders/HUN/Portrait_HUN_Lajos_Veress.png"
 	traits = {
 		armor_officer
 	}
@@ -216,7 +216,7 @@ create_corps_commander = {
 
 create_corps_commander = {
 	name = "Vilmos Rőder"
-	portrait_path = "gfx/leaders/HUN/Portrait_HUN_Vilmos_Roder.tga"
+	portrait_path = "gfx/leaders/HUN/Portrait_HUN_Vilmos_Roder.png"
 	traits = {
 		old_guard
 		infantry_leader
@@ -230,7 +230,7 @@ create_corps_commander = {
 
 create_corps_commander = {
 	name = "Gusztáv Denk"
-	portrait_path = "gfx/leaders/HUN/Portrait_HUN_Gusztav_Denk.tga"
+	portrait_path = "gfx/leaders/HUN/Portrait_HUN_Gusztav_Denk.png"
 	traits = {
 		old_guard
 		cavalry_leader
@@ -244,7 +244,7 @@ create_corps_commander = {
 
 create_corps_commander = {
 	name = "Döme Sztójay"
-	portrait_path = "gfx/leaders/HUN/Portrait_HUN_Dome_Sztojay.tga"
+	portrait_path = "gfx/leaders/HUN/Portrait_HUN_Dome_Sztojay.png"
 	traits = {
 		old_guard
 		commando
@@ -259,7 +259,7 @@ create_corps_commander = {
 
 create_corps_commander = {
 	name = "Szilárd Bakay"
-	portrait_path = "gfx/leaders/HUN/Portrait_HUN_Szilard_Bakay.tga"
+	portrait_path = "gfx/leaders/HUN/Portrait_HUN_Szilard_Bakay.png"
 	traits = {
 		brilliant_strategist
 		skilled_staffer
@@ -274,7 +274,7 @@ create_corps_commander = {
 
 create_corps_commander = {
 	name = "Károly Bartha"
-	portrait_path = "gfx/leaders/HUN/Portrait_HUN_Karoly_Bartha.tga"
+	portrait_path = "gfx/leaders/HUN/Portrait_HUN_Karoly_Bartha.png"
 	traits = {
 		old_guard
 		trait_engineer
@@ -289,7 +289,7 @@ create_corps_commander = {
 ### Admirals ###
 create_navy_leader = {
 	name = "Miklós Horthy"
-	portrait_path = "gfx/leaders/HUN/Portrait_HUN_Miklos_Horthy.tga"
+	portrait_path = "gfx/leaders/HUN/Portrait_HUN_Miklos_Horthy.png"
 	traits = {
 		old_guard_navy
 	}

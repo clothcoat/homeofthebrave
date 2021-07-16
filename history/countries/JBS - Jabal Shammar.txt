@@ -44,14 +44,14 @@ set_popularities = {
 create_country_leader = {# Saūd bin Abd al-Azīz
 	name = "Abdulaziz bin Saud Al Rashid"
 	desc = "POLITICS_ABDULAZIZ_JBS_DESC"
-	picture = "Portrait_JBS_Abdulaziz_bin_Saud_bin_Abdulaziz.tga"
+	picture = "Portrait_JBS_Abdulaziz_bin_Saud_bin_Abdulaziz.png"
 	expire = "1965.1.1"
 	ideology = national_populist_subtype
 }
 create_country_leader = {# Saūd bin Abd al-Azīz
 	name = "Saūd bin Abd al-Azīz"
 	desc = "POLITICS_AZIZ_JBS_DESC"
-	picture = "Portrait_JBS_Aziz_Emir.tga"
+	picture = "Portrait_JBS_Aziz_Emir.png"
 	expire = "1965.1.1"
 	ideology = paternal_autocrat_subtype
 	traits = { warmonger }
@@ -59,35 +59,35 @@ create_country_leader = {# Saūd bin Abd al-Azīz
 create_country_leader = {# Saūd bin Abd al-Azīz
 	name = "Saūd bin Abd al-Azīz"
 	desc = "POLITICS_AZIZ_JBS_DESC"
-	picture = "Portrait_JBS_Aziz_Emir.tga"
+	picture = "Portrait_JBS_Aziz_Emir.png"
 	expire = "1965.1.1"
 	ideology = authoritarian_democrat_subtype
 }
 create_country_leader = {# Saūd bin Abd al-Azīz
 	name = "Saūd bin Abd al-Azīz"
 	desc = "POLITICS_AZIZ_JBS_DESC"
-	picture = "Portrait_JBS_Aziz_Emir.tga"
+	picture = "Portrait_JBS_Aziz_Emir.png"
 	expire = "1965.1.1"
 	ideology = social_conservative_subtype
 }
 create_country_leader = {# Saūd bin Abd al-Azīz
 	name = "Saūd bin Abd al-Azīz"
 	desc = "POLITICS_AZIZ_JBS_DESC"
-	picture = "Portrait_JBS_Aziz_Emir.tga"
+	picture = "Portrait_JBS_Aziz_Emir.png"
 	expire = "1965.1.1"
 	ideology = market_liberal_subtype
 }
 create_country_leader = {# Saūd bin Abd al-Azīz
 	name = "Saūd bin Abd al-Azīz"
 	desc = "POLITICS_AZIZ_JBS_DESC"
-	picture = "Portrait_JBS_Aziz_Emir.tga"
+	picture = "Portrait_JBS_Aziz_Emir.png"
 	expire = "1965.1.1"
 	ideology = social_liberal_subtype
 }
 create_country_leader = {# Saūd bin Abd al-Azīz
 	name = "Saūd bin Abd al-Azīz"
 	desc = "POLITICS_AZIZ_JBS_DESC"
-	picture = "Portrait_JBS_Aziz_Emir.tga"
+	picture = "Portrait_JBS_Aziz_Emir.png"
 	expire = "1965.1.1"
 	ideology = social_democrat_subtype
 }
@@ -111,7 +111,7 @@ add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 2500 produce
 ### Generals
 create_field_marshal = {# Saūd bin Abd al-Azīz
 	name = "Saūd bin Abd al-Azīz"
-	portrait_path = "gfx/leaders/JBS/Portrait_JBS_Aziz_Emir.tga"
+	portrait_path = "gfx/leaders/JBS/Portrait_JBS_Aziz_Emir.png"
 	traits = {
 		offensive_doctrine
 		politically_connected
@@ -125,7 +125,7 @@ create_field_marshal = {# Saūd bin Abd al-Azīz
 }
 create_corps_commander = {# Auda Abu Tayeh
 	name = "Auda Abu Tayeh"
-	portrait_path = "gfx/leaders/JBS/Portrait_JBS_Auda_Abu_Tayeh.tga"
+	portrait_path = "gfx/leaders/JBS/Portrait_JBS_Auda_Abu_Tayeh.png"
 	traits = {
 		war_hero
 		desert_fox
@@ -139,7 +139,7 @@ create_corps_commander = {# Auda Abu Tayeh
 }
 create_corps_commander = {# Abdulaziz bin Saud Al Rashid
 	name = "Abdulaziz bin Saud Al Rashid"
-	portrait_path = "gfx/leaders/JBS/Portrait_JBS_Abdulaziz_bin_Saud_bin_Abdulaziz.tga"
+	portrait_path = "gfx/leaders/JBS/Portrait_JBS_Abdulaziz_bin_Saud_bin_Abdulaziz.png"
 	traits = {
 		politically_connected
 		media_personality
@@ -155,7 +155,7 @@ create_corps_commander = {# Abdulaziz bin Saud Al Rashid
 ### Admirals ###
 create_navy_leader = {# Ahmad Al-Jaber Al-Sabah
 	name = "Ahmad Al-Jaber Al-Sabah"
-	portrait_path = "gfx/leaders/JBS/Portrait_JBS_Al_Jaber.tga"
+	portrait_path = "gfx/leaders/JBS/Portrait_JBS_Al_Jaber.png"
 	traits = {
 		spotter
 		old_guard_navy

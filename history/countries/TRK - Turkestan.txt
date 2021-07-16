@@ -39,7 +39,7 @@ set_popularities = {
 create_country_leader = {
 	name = "Mohammed Alim Khan"
 	desc = "POLITICS_MOHAMMED_ALIM_DESC"
-	picture = "Portrait_Turkestan_Mohammed_Alim.tga"
+	picture = "Portrait_Turkestan_Mohammed_Alim.png"
 	expire = "1965.1.1"
 	ideology = paternal_autocrat_subtype
 }
@@ -70,7 +70,7 @@ create_field_marshal = {
 
 create_field_marshal = {
 	name = "Mohammed Khan"
-	portrait_path = "gfx/leaders/TRK/Portrait_Turkestan_Mohammed_Alim.tga"
+	portrait_path = "gfx/leaders/TRK/Portrait_Turkestan_Mohammed_Alim.png"
 	traits = {
 		harsh_leader
 		organizer

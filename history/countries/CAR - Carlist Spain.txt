@@ -92,42 +92,42 @@ set_popularities = {
 
 create_country_leader = {
 	name = "Javier I"
-	picture = "Portrait_Javier_I.tga"
+	picture = "Portrait_Javier_I.png"
 	expire = "1965.1.1"
 	ideology = paternal_autocrat_subtype
 }
 
 create_country_leader = {
 	name = "Javier I"
-	picture = "Portrait_Javier_I.tga"
+	picture = "Portrait_Javier_I.png"
 	expire = "1965.1.1"
 	ideology = authoritarian_democrat_subtype
 }
 
 create_country_leader = {
 	name = "Jesús María de Leizaola"
-	picture = "Portrait_CAR_Jesus_Maria_de_Leizaola.tga"
+	picture = "Portrait_CAR_Jesus_Maria_de_Leizaola.png"
 	expire = "1965.1.1"
 	ideology = social_conservative_subtype
 }
 
 create_country_leader = {
 	name = "Ramón Otero Pedrayo"
-	picture = "Portrait_CAR_Ramon_Otero_Pedrayo.tga"
+	picture = "Portrait_CAR_Ramon_Otero_Pedrayo.png"
 	expire = "1965.1.1"
 	ideology = market_liberal_subtype
 }
 
 create_country_leader = {
 	name = "Antón Vilar Ponte"
-	picture = "Portrait_CAR_Anton_Vilar_Ponte.tga"
+	picture = "Portrait_CAR_Anton_Vilar_Ponte.png"
 	expire = "1965.1.1"
 	ideology = social_liberal_subtype
 }
 
 create_country_leader = {
 	name = "Anacleto Ortueta"
-	picture = "Portrait_CAR_Anacleto_Ortueta.tga"
+	picture = "Portrait_CAR_Anacleto_Ortueta.png"
 	expire = "1965.1.1"
 	ideology = radical_socialist_subtype
 }
@@ -145,7 +145,7 @@ add_ideas = {
 ### Field Marshals ###
 create_field_marshal = {
 	name = "Francisco Javier de Borbon-Parma"
-	portrait_path = "gfx/leaders/CAR/Portrait_Javier_I.tga"
+	portrait_path = "gfx/leaders/CAR/Portrait_Javier_I.png"
 	traits = {
 		inspirational_leader
 		inflexible_strategist
@@ -160,7 +160,7 @@ create_field_marshal = {
 
 create_field_marshal = {
 	name = "Emilio Mola Vidal"
-	portrait_path = "gfx/leaders/CAR/Portrait_CAR_Mola_Vidal.tga"
+	portrait_path = "gfx/leaders/CAR/Portrait_CAR_Mola_Vidal.png"
 	traits = {
 		old_guard
 		harsh_leader
@@ -177,7 +177,7 @@ create_field_marshal = {
 ### Corps Commanders ###
 create_corps_commander = {
 	name = "Gonzalo Queipo de Llano"
-	portrait_path = "gfx/leaders/CAR/Portrait_CAR_Queipo_de_Llano_y_Sierra.tga"
+	portrait_path = "gfx/leaders/CAR/Portrait_CAR_Queipo_de_Llano_y_Sierra.png"
 	traits = {
 		trickster
 	}
@@ -191,7 +191,7 @@ create_corps_commander = {
 
 create_corps_commander = {
 	name = "Mariano Gámir Ulíbarri"
-	portrait_path = "gfx/leaders/CAR/Portrait_CAR_Mariano_Gamir_Ulibarri.tga"
+	portrait_path = "gfx/leaders/CAR/Portrait_CAR_Mariano_Gamir_Ulibarri.png"
 	traits = {
 		trickster
 		commando
@@ -206,7 +206,7 @@ create_corps_commander = {
 
 create_corps_commander = {
 	name = "José Moscardó Ituarte"
-	portrait_path = "gfx/leaders/CAR/Portrait_CAR_Jose_Moscardo_Ituarte.tga"
+	portrait_path = "gfx/leaders/CAR/Portrait_CAR_Jose_Moscardo_Ituarte.png"
 	traits = {
 		trait_cautious
 		skilled_staffer
@@ -221,7 +221,7 @@ create_corps_commander = {
 
 create_corps_commander = {
 	name = "Ricardo de Rada y Peral"
-	portrait_path = "gfx/leaders/CAR/Portrait_CAR_Ricardo_de_Rada_Peral.tga"
+	portrait_path = "gfx/leaders/CAR/Portrait_CAR_Ricardo_de_Rada_Peral.png"
 	traits = {
 		old_guard
 	}
@@ -237,7 +237,7 @@ create_corps_commander = {
 ### Admirals ###
 create_navy_leader = {
 	name = "Antonio Ortega"
-	portrait_path = "gfx/leaders/CAR/Portrait_CAR_Antonio_Ortega.tga"
+	portrait_path = "gfx/leaders/CAR/Portrait_CAR_Antonio_Ortega.png"
 	traits = {
 		blockade_runner
 	}
@@ -251,7 +251,7 @@ create_navy_leader = {
 
 create_navy_leader = {
 	name = "Enrique Líster Forján"
-	portrait_path = "gfx/leaders/CAR/Portrait_CAR_Enrique_Lister.tga"
+	portrait_path = "gfx/leaders/CAR/Portrait_CAR_Enrique_Lister.png"
 	traits = { }
 	skill = 1
 	maneuvering_skill = 1

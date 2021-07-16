@@ -56,7 +56,7 @@ add_ideas = {
 create_country_leader = {
 	name = "Alikhan Bukeikhanov"
 	desc = "POLITICS_ALIKHAN_BUKEIKHANOV_DESC"
-	picture = "Portrait_ALO_Alikhan_Bukeikhanov.tga"
+	picture = "Portrait_ALO_Alikhan_Bukeikhanov.png"
 	expire = "1965.1.1"
 	ideology = authoritarian_democrat_subtype
 }
@@ -64,7 +64,7 @@ create_country_leader = {
 ### Field Marshals
 create_field_marshal = {
 	name = "Ivan Susaikov"
-	portrait_path = "gfx/leaders/Generic/Portrait_Europe_Generic_land_new_2.tga"
+	portrait_path = "gfx/leaders/Generic/Portrait_Europe_Generic_land_new_2.png"
 	traits = {
 		fast_planner
 	}
@@ -78,7 +78,7 @@ create_field_marshal = {
 ### Corps Commanders ###
 create_corps_commander = {
 	name = "Bauyrzhan Momyshuly"
-	portrait_path = "gfx/leaders/ALO/Portrait_ALO_Bauyrzhan_Momyshuly.tga"
+	portrait_path = "gfx/leaders/ALO/Portrait_ALO_Bauyrzhan_Momyshuly.png"
 	traits = {
 		cavalry_officer
 		trickster

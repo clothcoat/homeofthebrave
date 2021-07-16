@@ -165,7 +165,7 @@ if = {
 create_country_leader = {
 	name = "Hermann von Göring"
 	desc = "POLITICS_GOERING_DESC"
-	picture = "Portrait_Mittelafrika_Hermann_Goering.tga"
+	picture = "Portrait_Mittelafrika_Hermann_Goering.png"
 	expire = "1965.1.1"
 	ideology = national_populist_subtype
 }
@@ -173,42 +173,42 @@ create_country_leader = {
 create_country_leader = {
 	name = "Hermann von Göring"
 	desc = "POLITICS_GOERING_DESC"
-	picture = "Portrait_Mittelafrika_Hermann_Goering.tga"
+	picture = "Portrait_Mittelafrika_Hermann_Goering.png"
 	expire = "1965.1.1"
 	ideology = paternal_autocrat_subtype
 }
 
 create_country_leader = {
 	name = "Georg Kraut"
-	picture = "Portrait_Mittelafrika_Georg_Kraut.tga"
+	picture = "Portrait_Mittelafrika_Georg_Kraut.png"
 	expire = "1965.1.1"
 	ideology = authoritarian_democrat_subtype
 }
 
 create_country_leader = {
 	name = "Theodor von Hassel"
-	picture = "Portrait_Mittelafrika_Theodor_von_Hassel.tga"
+	picture = "Portrait_Mittelafrika_Theodor_von_Hassel.png"
 	expire = "1965.1.1"
 	ideology = social_conservative_subtype
 }
 
 create_country_leader = {
 	name = "Rea Leakey"
-	picture = "Portrait_Mittelafrika_Rea_Leakey.tga"
+	picture = "Portrait_Mittelafrika_Rea_Leakey.png"
 	expire = "1965.1.1"
 	ideology = market_liberal_subtype
 }
 
 create_country_leader = {
 	name = "Jules Cousin"
-	picture = "Portrait_Mittelafrika_Jules_Cousin.tga"
+	picture = "Portrait_Mittelafrika_Jules_Cousin.png"
 	expire = "1965.1.1"
 	ideology = social_liberal_subtype
 }
 
 create_country_leader = {
 	name = "Albert von Göring"
-	picture = "Portrait_Mittelafrika_Albert_Goering.tga"
+	picture = "Portrait_Mittelafrika_Albert_Goering.png"
 	expire = "1965.1.1"
 	ideology = social_democrat_subtype
 }
@@ -216,7 +216,7 @@ create_country_leader = {
 ### Field Marshals ###
 create_field_marshal = {
 	name = "Hermann von Göring"
-	picture = "Portrait_Mittelafrika_Hermann_Goering.tga"
+	picture = "Portrait_Mittelafrika_Hermann_Goering.png"
 	traits = {
 		trait_reckless
 		politically_connected
@@ -235,7 +235,7 @@ create_field_marshal = {
 
 create_corps_commander = {
 	name = "Theodor von Hippel"
-	picture = "Portrait_Mittelafrika_Theodor_von_Hippel.tga"
+	picture = "Portrait_Mittelafrika_Theodor_von_Hippel.png"
 	traits = {
 		brilliant_strategist
 		war_hero
@@ -253,7 +253,7 @@ create_corps_commander = {
 
 create_corps_commander = {
 	name = "Georg Kraut"
-	picture = "Portrait_Mittelafrika_Georg_Kraut.tga"
+	picture = "Portrait_Mittelafrika_Georg_Kraut.png"
 	traits = {
 		war_hero
 		media_personality
@@ -268,7 +268,7 @@ create_corps_commander = {
 
 create_corps_commander = {
 	name = "Ernst Jünger"
-	picture = "Portrait_Mittelafrika_Ernst_Junger.tga"
+	picture = "Portrait_Mittelafrika_Ernst_Junger.png"
 	traits = {
 		war_hero
 		infantry_officer
@@ -283,7 +283,7 @@ create_corps_commander = {
 
 create_corps_commander = {
 	name = "Alfred von Randow"
-	picture = "Portrait_Mittelafrika_Alfred_von_Randow.tga"
+	picture = "Portrait_Mittelafrika_Alfred_von_Randow.png"
 	traits = {
 		harsh_leader
 		trickster
@@ -297,7 +297,7 @@ create_corps_commander = {
 
 create_corps_commander = {
 	name = "Hermann Detzner"
-	portrait_path = "gfx/leaders/MAF/Portrait_Mittelafrika_Hermann_Detzner.tga"
+	portrait_path = "gfx/leaders/MAF/Portrait_Mittelafrika_Hermann_Detzner.png"
 	traits = {
 		war_hero
 		jungle_rat
@@ -313,7 +313,7 @@ create_corps_commander = {
 
 create_corps_commander = {
 	name = "Ferdinand Schörner"
-	picture = "Portrait_Mittelafrika_Ferdinand_Schorner.tga"
+	picture = "Portrait_Mittelafrika_Ferdinand_Schorner.png"
 	traits = {
 		harsh_leader
 	}
@@ -326,7 +326,7 @@ create_corps_commander = {
 
 create_corps_commander = {
 	name = "Alexander Duala-Bell"
-	picture = "Portrait_Mittelafrika_Alexandre_Douala_Bell.tga"
+	picture = "Portrait_Mittelafrika_Alexandre_Douala_Bell.png"
 	traits = {
 		career_officer
 		war_hero
@@ -341,7 +341,7 @@ create_corps_commander = {
 ### Navy Commanders ###
 create_navy_leader = {
 	name = "Max von Looff"
-	picture = "Portrait_Mittelafrika_Max_Looff.tga"
+	picture = "Portrait_Mittelafrika_Max_Looff.png"
 	traits = {
 		spotter
 	}
@@ -355,7 +355,7 @@ create_navy_leader = {
 
 create_navy_leader = {
 	name = "Reinhard Heydrich"
-	picture = "Portrait_Mittelafrika_Reinhard_Heydrich.tga"
+	picture = "Portrait_Mittelafrika_Reinhard_Heydrich.png"
 	traits = { }
 	skill = 2
 	attack_skill = 1

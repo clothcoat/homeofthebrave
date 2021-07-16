@@ -181,77 +181,77 @@ YEM = {
 
 create_country_leader = {
 	name = "Reşad Fuad Bey"
-	picture = "Picture_Ottoman_Resad_Fuad.tga"
+	picture = "Picture_Ottoman_Resad_Fuad.png"
 	expire = "1965.1.1"
 	ideology = totalist_subtype
 }
 
 create_country_leader = {
 	name = "Şefik Hüsnü Bey"
-	picture = "Picture_Ottoman_Sefik_Husnu.tga"
+	picture = "Picture_Ottoman_Sefik_Husnu.png"
 	expire = "1965.1.1"
 	ideology = syndicalist_subtype
 }
 
 create_country_leader = {
 	name = "Ethem Nejat"
-	picture = "Picture_Ottoman_Ethem_Nejat.tga"
+	picture = "Picture_Ottoman_Ethem_Nejat.png"
 	expire = "1965.1.1"
 	ideology = radical_socialist_subtype
 }
 
 create_country_leader = {
 	name = "Hasan Âli Paşa"
-	picture = "Picture_Ottoman_Hasan_Ali.tga"
+	picture = "Picture_Ottoman_Hasan_Ali.png"
 	expire = "1965.1.1"
 	ideology = social_democrat_subtype
 }
 
 create_country_leader = {
 	name = "Prens Sabâhaddin Efendi"
-	picture = "Picture_Ottoman_Sabahaddin.tga"
+	picture = "Picture_Ottoman_Sabahaddin.png"
 	expire = "1965.1.1"
 	ideology = social_liberal_subtype
 }
 
 create_country_leader = {
 	name = "Ali Adnan Bey"
-	picture = "Portrait_Ottoman_Ali_Adnan_Bey.tga"
+	picture = "Portrait_Ottoman_Ali_Adnan_Bey.png"
 	expire = "1965.1.1"
 	ideology = market_liberal_subtype
 }
 
 create_country_leader = {
 	name = "Ali Şükrü Paşa"
-	picture = "Portrait_Ottoman_Ali_Sukru_Pasa.tga"
+	picture = "Portrait_Ottoman_Ali_Sukru_Pasa.png"
 	expire = "1965.1.1"
 	ideology = social_conservative_subtype
 }
 
 create_country_leader = {
 	name = "Mehmed Cavid Bey"
-	picture = "Portrait_Mehmed_Cavid.tga"
+	picture = "Portrait_Mehmed_Cavid.png"
 	expire = "1965.1.1"
 	ideology = authoritarian_democrat_subtype
 }
 
 create_country_leader = {
 	name = "Hüseyin Selahattin Paşa"
-	picture = "Picture_Ottoman_Huseyin_Selahattin_Pasa.tga"
+	picture = "Picture_Ottoman_Huseyin_Selahattin_Pasa.png"
 	expire = "1965.1.1"
 	ideology = paternal_autocrat_subtype
 }
 
 create_country_leader = {
 	name = "Abdülmecid II"
-	picture = "Portrait_Ottoman_Abdulmecid.tga"
+	picture = "Portrait_Ottoman_Abdulmecid.png"
 	expire = "1965.1.1"
 	ideology = paternal_autocrat_subtype
 }
 
 create_country_leader = {
 	name = "Hüseyin Nihâl Paşa"
-	picture = "Portrait_Nihal_Atsiz.tga"
+	picture = "Portrait_Nihal_Atsiz.png"
 	expire = "1965.1.1"
 	ideology = national_populist_subtype
 }
@@ -259,7 +259,7 @@ create_country_leader = {
 ### Field Marshals ###
 create_field_marshal = {
 	name = "Osman Fuad Efendi"
-	portrait_path = "gfx/leaders/OTT/Portrait_OTT_Osman_Fuad.tga"
+	portrait_path = "gfx/leaders/OTT/Portrait_OTT_Osman_Fuad.png"
 	id = 680
 	traits = {
 		politically_connected
@@ -277,7 +277,7 @@ create_field_marshal = {
 create_field_marshal = {
 	name = "Mustafa Kemal Paşa"
 	id = 670
-	portrait_path = "gfx/leaders/OTT/Portrait_OTT_Mustafa_Kemal.tga"
+	portrait_path = "gfx/leaders/OTT/Portrait_OTT_Mustafa_Kemal.png"
 	traits = {
 		war_hero
 		defensive_doctrine
@@ -295,7 +295,7 @@ create_field_marshal = {
 # Retired from the army after serving 44 years in 1935 followed by his death in 1938
 # create_field_marshal = {
 	# name = "Cevat Paşa"
-	# portrait_path = "gfx/leaders/OTT/Portrait_OTT_Ismail_Cevat.tga"
+	# portrait_path = "gfx/leaders/OTT/Portrait_OTT_Ismail_Cevat.png"
 	# traits = {
 		# old_guard
 		# war_hero
@@ -313,7 +313,7 @@ create_field_marshal = {
 
 create_corps_commander = {
 	name = "Ömer Fahrettin Paşa"
-	portrait_path = "gfx/leaders/OTT/Portrait_OTT_Omer_Fahrettin.tga"
+	portrait_path = "gfx/leaders/OTT/Portrait_OTT_Omer_Fahrettin.png"
 	traits = {
 		old_guard
 		war_hero
@@ -329,7 +329,7 @@ create_corps_commander = {
 
 create_corps_commander = {
 	name = "Süleyman Şefik Paşa"
-	portrait_path = "gfx/leaders/OTT/Portrait_OTT_Suleyman_Sefik.tga"
+	portrait_path = "gfx/leaders/OTT/Portrait_OTT_Suleyman_Sefik.png"
 	traits = {
 		old_guard
 		career_officer
@@ -344,7 +344,7 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Fevzi Paşa"
 	id = 679
-	portrait_path = "gfx/leaders/OTT/Portrait_OTT_Mustafa_Fevzi.tga"
+	portrait_path = "gfx/leaders/OTT/Portrait_OTT_Mustafa_Fevzi.png"
 	traits = {
 		career_officer
 		skilled_staffer
@@ -359,7 +359,7 @@ create_corps_commander = {
 # Withdrew from the Army in 1928 after serving his time
 # create_corps_commander = {
 	# name = "Cafer Tayyar Paşa"
-	# portrait_path = "gfx/leaders/OTT/Portrait_OTT_Cafer_Tayyar.tga"
+	# portrait_path = "gfx/leaders/OTT/Portrait_OTT_Cafer_Tayyar.png"
 	# traits = {
 		# career_officer
 	# }
@@ -373,7 +373,7 @@ create_corps_commander = {
 # Tenure in the army was over by this point
 # create_corps_commander = {
 	# name = "Kâzım Paşa"
-	# portrait_path = "gfx/leaders/OTT/Portrait_OTT_Musa_Kazim.tga"
+	# portrait_path = "gfx/leaders/OTT/Portrait_OTT_Musa_Kazim.png"
 	# traits = {
 		# career_officer
 		# winter_specialist
@@ -389,7 +389,7 @@ create_corps_commander = {
 #He is in twice :thinbing:
 create_corps_commander = {
 	name = "Fahrettin Paşa"
-	portrait_path = "gfx/leaders/OTT/Portrait_OTT_Fahrettin.tga"
+	portrait_path = "gfx/leaders/OTT/Portrait_OTT_Fahrettin.png"
 	traits = {
 		career_officer
 		trickster
@@ -405,7 +405,7 @@ create_corps_commander = {
 #Dies in 1940 but I suppose we can keep him for 4 years
 create_corps_commander = {
 	name = "Mehmed Vehip Paşa"
-	portrait_path = "gfx/leaders/OTT/Portrait_OTT_Mehmed_Vehip.tga"
+	portrait_path = "gfx/leaders/OTT/Portrait_OTT_Mehmed_Vehip.png"
 	traits = {
 		old_guard
 	}
@@ -419,7 +419,7 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Ahmed Kemal Paşa"
 	id = 671
-	portrait_path = "gfx/leaders/OTT/Portrait_OTT_Ahmed_Kemal.tga"
+	portrait_path = "gfx/leaders/OTT/Portrait_OTT_Ahmed_Kemal.png"
 	traits = { }
 	skill = 1
 	attack_skill = 1
@@ -431,7 +431,7 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "İsmet Paşa"
 	id = 675
-	portrait_path = "gfx/leaders/OTT/Portrait_OTT_Mustafa_Ismet.tga"
+	portrait_path = "gfx/leaders/OTT/Portrait_OTT_Mustafa_Ismet.png"
 	traits = {
 		harsh_leader
 		commando
@@ -446,7 +446,7 @@ create_corps_commander = {
 
 create_corps_commander = {
 	name = "Selahattin Paşa"
-	portrait_path = "gfx/leaders/OTT/Portrait_OTT_Selahattin.tga"
+	portrait_path = "gfx/leaders/OTT/Portrait_OTT_Selahattin.png"
 	traits = {
 		old_guard
 		career_officer
@@ -463,7 +463,7 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Ali İhsan Paşa"
 	id = 672
-	portrait_path = "gfx/leaders/OTT/Generic/OTTLeader03.tga"
+	portrait_path = "gfx/leaders/OTT/Generic/OTTLeader03.png"
 	traits = {
 		trait_reckless
 		trait_engineer
@@ -480,7 +480,7 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Naci Paşa"
 	id = 676
-	portrait_path = "gfx/leaders/OTT/Portrait_OTT_Abdullatif_Naci.tga"
+	portrait_path = "gfx/leaders/OTT/Portrait_OTT_Abdullatif_Naci.png"
 	traits = {
 		career_officer
 		skilled_staffer
@@ -497,7 +497,7 @@ create_corps_commander = {
 #woke as shit German but served in ww2 as well. Needs a better portrait though
 create_corps_commander = {
 	name = "Harun Reşid Hintersatz Paşa"
-	portrait_path = "gfx/leaders/OTT/Portrait_OTT_el_Raschid_Hintersatz.tga"
+	portrait_path = "gfx/leaders/OTT/Portrait_OTT_el_Raschid_Hintersatz.png"
 	traits = {
 		career_officer
 		panzer_leader
@@ -512,7 +512,7 @@ create_corps_commander = {
 
 create_corps_commander = {
 	name = "İsmail Hakkı Paşa"
-	portrait_path = "gfx/leaders/OTT/Portrait_OTT_Ismail_Hakki.tga"
+	portrait_path = "gfx/leaders/OTT/Portrait_OTT_Ismail_Hakki.png"
 	traits = {
 		career_officer
 		commando
@@ -527,7 +527,7 @@ create_corps_commander = {
 #son of the sultan and pretty cool lad, also big footbal fan
 create_corps_commander = {
 	name = "Ömer Faruk Efendi"
-	portrait_path = "gfx/leaders/OTT/Portrait_Ottoman_OmerFaruk.tga"
+	portrait_path = "gfx/leaders/OTT/Portrait_Ottoman_OmerFaruk.png"
 	traits = {
 		politically_connected
 	}
@@ -541,7 +541,7 @@ create_corps_commander = {
 ### Admirals ###
 create_navy_leader = {
 	name = "Necip Fazıl Paşa"
-	portrait_path = "gfx/leaders/OTT/Portrait_OTT_NAV_Necip_Fazil.tga"
+	portrait_path = "gfx/leaders/OTT/Portrait_OTT_NAV_Necip_Fazil.png"
 	traits = { }
 	skill = 2
 	coordination_skill = 2
@@ -552,7 +552,7 @@ create_navy_leader = {
 
 create_navy_leader = {
 	name = "Nâzım Hikmet Paşa"
-	portrait_path = "gfx/leaders/OTT/Portrait_OTT_NAV_Nazim_Hikmet.tga"
+	portrait_path = "gfx/leaders/OTT/Portrait_OTT_NAV_Nazim_Hikmet.png"
 	traits = { }
 	skill = 2
 	coordination_skill = 1
@@ -563,7 +563,7 @@ create_navy_leader = {
 
 create_navy_leader = {
 	name = "Hüseyin Rauf Paşa"
-	portrait_path = "gfx/leaders/OTT/Portrait_OTT_NAV_Huseyin_Rauf.tga"
+	portrait_path = "gfx/leaders/OTT/Portrait_OTT_NAV_Huseyin_Rauf.png"
 	traits = {
 		superior_tactician
 	}
@@ -577,7 +577,7 @@ create_navy_leader = {
 create_navy_leader = {
 	name = "İbrahim Paşa"
 	id = 674
-	portrait_path = "gfx/leaders/OTT/Portrait_OTT_NAV_Ibrahim_Aski.tga"
+	portrait_path = "gfx/leaders/OTT/Portrait_OTT_NAV_Ibrahim_Aski.png"
 	traits = {
 		spotter
 		old_guard_navy
@@ -591,7 +591,7 @@ create_navy_leader = {
 
 create_navy_leader = {
 	name = "Mahmud Muhtar Paşa"
-	portrait_path = "gfx/leaders/OTT/Portrait_OTT_NAV_Mahmud_Muhtar.tga"
+	portrait_path = "gfx/leaders/OTT/Portrait_OTT_NAV_Mahmud_Muhtar.png"
 	traits = {
 		seawolf
 	}

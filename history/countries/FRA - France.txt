@@ -194,7 +194,7 @@ add_ai_strategy = {
 create_country_leader = {
 	name = "Sébastien Faure"
 	desc = "POLITICS_SEBASTIEN_FAURE_DESC"
-	picture = "Portrait_France_Sebastien_Faure.tga"
+	picture = "Portrait_France_Sebastien_Faure.png"
 	expire = "1965.1.1"
 	ideology = syndicalist_subtype
 }
@@ -202,7 +202,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Sébastien Faure"
 	desc = "POLITICS_SEBASTIEN_FAURE_DESC"
-	picture = "Portrait_France_Sebastien_Faure.tga"
+	picture = "Portrait_France_Sebastien_Faure.png"
 	expire = "1965.1.1"
 	ideology = totalist_subtype
 }
@@ -210,14 +210,14 @@ create_country_leader = {
 create_country_leader = {
 	name = "Sébastien Faure"
 	desc = "POLITICS_SEBASTIEN_FAURE_DESC"
-	picture = "Portrait_France_Sebastien_Faure.tga"
+	picture = "Portrait_France_Sebastien_Faure.png"
 	expire = "1965.1.1"
 	ideology = radical_socialist_subtype
 }
 
 create_country_leader = {
 	name = "Felix Gouin"
-	picture = "gfx/leaders/Generic/Portrait_Europe_Generic_land_new_8.tga"
+	picture = "gfx/leaders/Generic/Portrait_Europe_Generic_land_new_8.png"
 	expire = "1965.1.1"
 	ideology = social_democrat_subtype
 }
@@ -225,7 +225,7 @@ create_country_leader = {
 ### Field Marshals ###
 create_field_marshal = {
 	name = "Jacques Duclos"
-	portrait_path = "gfx/leaders/FRA/Portrait_France_Jacques_Duclos.tga"
+	portrait_path = "gfx/leaders/FRA/Portrait_France_Jacques_Duclos.png"
 	traits = {
 		politically_connected
 		inspirational_leader
@@ -241,7 +241,7 @@ create_field_marshal = {
 
 create_field_marshal = {
 	name = "Maurice Gamelin"
-	portrait_path = "gfx/leaders/FRA/Portrait_France_Maurice_Gamelin_KR.tga"
+	portrait_path = "gfx/leaders/FRA/Portrait_France_Maurice_Gamelin_KR.png"
 	traits = {
 		brilliant_strategist
 		defensive_doctrine
@@ -259,7 +259,7 @@ create_field_marshal = {
 ### Generals ###
 create_corps_commander = {
 	name = "Jacques Doriot"
-	portrait_path = "gfx/leaders/FRA/Portrait_France_Jacques_Doriot.tga"
+	portrait_path = "gfx/leaders/FRA/Portrait_France_Jacques_Doriot.png"
 	traits = {
 		politically_connected
 		trait_reckless
@@ -275,7 +275,7 @@ create_corps_commander = {
 
 create_corps_commander = {
 	name = "Henri Tanguy"
-	portrait_path = "gfx/leaders/FRA/Portrait_France_Henri_Tanguy.tga"
+	portrait_path = "gfx/leaders/FRA/Portrait_France_Henri_Tanguy.png"
 	traits = {
 		infantry_officer
 		organizer
@@ -290,7 +290,7 @@ create_corps_commander = {
 
 create_corps_commander = {
 	name = "Alphonse Georges"
-	portrait_path = "gfx/leaders/FRA/Portrait_France_Alphonse_Georges.tga"
+	portrait_path = "gfx/leaders/FRA/Portrait_France_Alphonse_Georges.png"
 	traits = {
 		career_officer
 		old_guard
@@ -306,7 +306,7 @@ create_corps_commander = {
 
 create_corps_commander = {
 	name = "Joseph Epstein"
-	portrait_path = "gfx/leaders/FRA/Portrait_France_Joseph_Epstein.tga"
+	portrait_path = "gfx/leaders/FRA/Portrait_France_Joseph_Epstein.png"
 	traits = {
 		artillery_officer
 		naval_invader
@@ -320,7 +320,7 @@ create_corps_commander = {
 
 create_corps_commander = {
 	name = "May Picqueray"
-	portrait_path = "gfx/leaders/FRA/Portrait_France_May_Picqueray.tga"
+	portrait_path = "gfx/leaders/FRA/Portrait_France_May_Picqueray.png"
 	traits = {
 		politically_connected
 		trait_cautious
@@ -336,7 +336,7 @@ create_corps_commander = {
 
 create_corps_commander = {
 	name = "Missak Manouchian"
-	portrait_path = "gfx/leaders/FRA/Portrait_France_Missak_Manouchian.tga"
+	portrait_path = "gfx/leaders/FRA/Portrait_France_Missak_Manouchian.png"
 	traits = {
 		infantry_officer
 		trickster
@@ -351,7 +351,7 @@ create_corps_commander = {
 
 create_corps_commander = {
 	name = "Nestor Makhno"
-	portrait_path = "gfx/leaders/FRA/Portrait_France_Nestor_Makhno.tga"
+	portrait_path = "gfx/leaders/FRA/Portrait_France_Nestor_Makhno.png"
 	traits = {
 		war_hero
 		media_personality
@@ -368,7 +368,7 @@ create_corps_commander = {
 
 create_corps_commander = {
 	name = "Paul Le Gentilhomme"
-	portrait_path = "gfx/leaders/FRA/Portrait_France_Paul_Legentilhomme.tga"
+	portrait_path = "gfx/leaders/FRA/Portrait_France_Paul_Legentilhomme.png"
 	traits = {
 		trait_reckless
 		infantry_officer
@@ -384,7 +384,7 @@ create_corps_commander = {
 
 create_corps_commander = {
 	name = "Jean Flavigny"
-	portrait_path = "gfx/leaders/FRA/Portrait_France_Jean_Flavigny.tga"
+	portrait_path = "gfx/leaders/FRA/Portrait_France_Jean_Flavigny.png"
 	traits = {
 		career_officer
 		armor_officer
@@ -399,7 +399,7 @@ create_corps_commander = {
 
 create_corps_commander = {
 	name = "Marcel Bucard"
-	portrait_path = "gfx/leaders/FRA/Portrait_France_Marcel_Bucard.tga"
+	portrait_path = "gfx/leaders/FRA/Portrait_France_Marcel_Bucard.png"
 	traits = {
 		politically_connected
 		harsh_leader
@@ -413,7 +413,7 @@ create_corps_commander = {
 
 create_corps_commander = {
 	name = "Marcel Garchery"
-	portrait_path = "gfx/leaders/FRA/Portrait_France_Marcel_Garchery.tga"
+	portrait_path = "gfx/leaders/FRA/Portrait_France_Marcel_Garchery.png"
 	traits = {
 		old_guard
 		trait_cautious
@@ -429,7 +429,7 @@ create_corps_commander = {
 ### Admirals ###
 create_navy_leader = {
 	name = "Marcel Déat"
-	portrait_path = "gfx/leaders/FRA/Portrait_France_Marcel_Deat.tga"
+	portrait_path = "gfx/leaders/FRA/Portrait_France_Marcel_Deat.png"
 	traits = {
 		seawolf
 	}
@@ -443,7 +443,7 @@ create_navy_leader = {
 
 create_navy_leader = {
 	name = "André Marty"
-	portrait_path = "gfx/leaders/FRA/Portrait_France_Andre_Marty.tga"
+	portrait_path = "gfx/leaders/FRA/Portrait_France_Andre_Marty.png"
 	traits = { }
 	skill = 3
 	attack_skill = 3
@@ -454,7 +454,7 @@ create_navy_leader = {
 
 create_navy_leader = {
 	name = "Emile Muselier"
-	portrait_path = "gfx/leaders/FRA/Portrait_France_Emile_Muselier.tga"
+	portrait_path = "gfx/leaders/FRA/Portrait_France_Emile_Muselier.png"
 	traits = { }
 	skill = 2
 	attack_skill = 2

@@ -160,7 +160,7 @@ country_event = { id = uob.1035 days = 60 }
 create_country_leader = {
 	name = "Oswald Mosley"
 	desc = "POLITICS_OSWALD_MOSLEY_DESC"
-	picture = "Portrait_England_Oswald_Mosley.tga"
+	picture = "Portrait_England_Oswald_Mosley.png"
 	expire = "1965.1.1"
 	ideology = totalist_subtype
 }
@@ -168,7 +168,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Philip Snowden"
 	desc = "POLITICS_PHILIP_SNOWDEN_DESC"
-	picture = "Portrait_England_Philip_Snowden.tga"
+	picture = "Portrait_England_Philip_Snowden.png"
 	expire = "1965.1.1"
 	ideology = syndicalist_subtype
 }
@@ -176,7 +176,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Niclas y Glais"
 	desc = "POLITICS_NICLAS_GLAIS_DESC"
-	picture = "Portrait_England_Niclas_y_Glais.tga"
+	picture = "Portrait_England_Niclas_y_Glais.png"
 	expire = "1965.1.1"
 	ideology = radical_socialist_subtype
 }
@@ -184,7 +184,7 @@ create_country_leader = {
 ### Field Marshals ###
 create_field_marshal = {
 	name = "Bill Alexander"
-	picture = "Portrait_England_Bill_Alexander.tga"
+	picture = "Portrait_England_Bill_Alexander.png"
 	traits = {
 		career_officer
 		war_hero
@@ -200,7 +200,7 @@ create_field_marshal = {
 }
 create_field_marshal = {
 	name = "Ronald Forbes Adam"
-	picture = "Portrait_ENG_Ronald_Forbes_Adam.tga"
+	picture = "Portrait_ENG_Ronald_Forbes_Adam.png"
 	traits = {
 		artillery_officer
 		defensive_doctrine
@@ -216,7 +216,7 @@ create_field_marshal = {
 ### Generals ###
 create_corps_commander = {
 	name = "Percy Hobart"
-	picture = "Portrait_England_Percy_Hobart.tga"
+	picture = "Portrait_England_Percy_Hobart.png"
 	traits = {
 		armor_officer
 		panzer_leader
@@ -230,7 +230,7 @@ create_corps_commander = {
 }
 create_corps_commander = {
 	name = "Thomas Wintringham"
-	picture = "Portrait_England_Thomas_Wintringham.tga"
+	picture = "Portrait_England_Thomas_Wintringham.png"
 	traits = {
 		politically_connected
 		hill_fighter
@@ -244,7 +244,7 @@ create_corps_commander = {
 }
 create_corps_commander = {
 	name = "Raymond Briggs"
-	picture = "Portrait_England_Raymond_Briggs.tga"
+	picture = "Portrait_England_Raymond_Briggs.png"
 	traits = {
 		panzer_leader
 		career_officer
@@ -259,7 +259,7 @@ create_corps_commander = {
 }
 create_corps_commander = {
 	name = "David Stirling"
-	picture = "Portrait_England_David_Stirling.tga"
+	picture = "Portrait_England_David_Stirling.png"
 	traits = {
 		infantry_officer
 		commando
@@ -273,7 +273,7 @@ create_corps_commander = {
 }
 create_corps_commander = {
 	name = "Bernard Paget"
-	picture = "Portrait_England_Bernard_Paget.tga"
+	picture = "Portrait_England_Bernard_Paget.png"
 	traits = { }
 	skill = 3
 	attack_skill = 2
@@ -284,7 +284,7 @@ create_corps_commander = {
 }
 create_corps_commander = {
 	name = "George Sutherland Aitken"
-	picture = "Portrait_England_George_Aitken.tga"
+	picture = "Portrait_England_George_Aitken.png"
 	traits = {
 		infantry_officer
 		urban_assault_specialist
@@ -298,7 +298,7 @@ create_corps_commander = {
 }
 create_corps_commander = {
 	name = "Lewis Pugh Evans"
-	picture = "Portrait_England_Lewis_Evans.tga"
+	picture = "Portrait_England_Lewis_Evans.png"
 	traits = {
 		politically_connected
 		hill_fighter
@@ -312,7 +312,7 @@ create_corps_commander = {
 }
 create_corps_commander = {
 	name = "William Gott"
-	picture = "Portrait_England_William_Gott.tga"
+	picture = "Portrait_England_William_Gott.png"
 	traits = {
 		armor_officer
 		war_hero
@@ -328,7 +328,7 @@ create_corps_commander = {
 }
 create_corps_commander = {
 	name = "James Francis Brewer"
-	picture = "Portrait_England_James_Brewer.tga"
+	picture = "Portrait_England_James_Brewer.png"
 	traits = { }
 	skill = 2
 	attack_skill = 1
@@ -341,7 +341,7 @@ create_corps_commander = {
 ### Admirals ###
 create_navy_leader = {
 	name = "Edmund Anstice"
-	picture = "Portrait_England_Edmund_Anstice.tga"
+	picture = "Portrait_England_Edmund_Anstice.png"
 	traits = { air_controller }
 	skill = 3
 	attack_skill = 3
@@ -352,7 +352,7 @@ create_navy_leader = {
 }
 create_navy_leader = {
 	name = "Richard Cayley"
-	picture = "Portrait_England_Richard_Cayley.tga"
+	picture = "Portrait_England_Richard_Cayley.png"
 	traits = { seawolf }
 	skill = 4
 	attack_skill = 3
@@ -363,7 +363,7 @@ create_navy_leader = {
 }
 create_navy_leader = {
 	name = "Geoffrey Barnard"
-	picture = "Portrait_England_Geoffrey_Barnard.tga"
+	picture = "Portrait_England_Geoffrey_Barnard.png"
 	traits = { superior_tactician }
 	skill = 3
 	attack_skill = 3
@@ -374,7 +374,7 @@ create_navy_leader = {
 }
 create_navy_leader = {
 	name = "Anthony Follett Pugsley"
-	picture = "Portrait_England_Anthony_Pugsley.tga"
+	picture = "Portrait_England_Anthony_Pugsley.png"
 	traits = { spotter blockade_runner }
 	skill = 4
 	attack_skill = 3
@@ -385,7 +385,7 @@ create_navy_leader = {
 }
 create_navy_leader = {
 	name = "Frank Pegram"
-	picture = "Portrait_England_Frank_Pegram.tga"
+	picture = "Portrait_England_Frank_Pegram.png"
 	traits = { spotter }
 	skill = 2
 	attack_skill = 2
@@ -396,7 +396,7 @@ create_navy_leader = {
 }
 create_navy_leader = {
 	name = "Robert Don Oliver"
-	picture = "Portrait_England_Robert_Oliver.tga"
+	picture = "Portrait_England_Robert_Oliver.png"
 	traits = { blockade_runner }
 	skill = 2
 	attack_skill = 2
@@ -407,7 +407,7 @@ create_navy_leader = {
 }
 create_navy_leader = {
 	name = "Gerard Broadmead Roope"
-	picture = "Portrait_England_Gerard_Roope.tga"
+	picture = "Portrait_England_Gerard_Roope.png"
 	traits = { blockade_runner }
 	skill = 4
 	attack_skill = 3
@@ -418,7 +418,7 @@ create_navy_leader = {
 }
 create_navy_leader = {
 	name = "Bernard Warburton-Lee"
-	picture = "Portrait_England_Bernard_Warburton.tga"
+	picture = "Portrait_England_Bernard_Warburton.png"
 	traits = { ironside }
 	skill = 3
 	attack_skill = 3
@@ -429,7 +429,7 @@ create_navy_leader = {
 }
 create_navy_leader = {
 	name = "Norman Douglas Holbrook"
-	picture = "Portrait_England_Norman_Holbrook.tga"
+	picture = "Portrait_England_Norman_Holbrook.png"
 	traits = { seawolf }
 	skill = 4
 	attack_skill = 3
@@ -440,7 +440,7 @@ create_navy_leader = {
 }
 create_navy_leader = {
 	name = "Frederic John Walker"
-	picture = "Portrait_England_Frederic_Walker.tga"
+	picture = "Portrait_England_Frederic_Walker.png"
 	traits = { spotter blockade_runner }
 	skill = 4
 	attack_skill = 3
@@ -451,7 +451,7 @@ create_navy_leader = {
 }
 create_navy_leader = {
 	name = "Jack Kenneth Highton"
-	picture = "Portrait_England_Jack_Highton.tga"
+	picture = "Portrait_England_Jack_Highton.png"
 	traits = { seawolf }
 	skill = 2
 	attack_skill = 2
@@ -462,7 +462,7 @@ create_navy_leader = {
 }
 create_navy_leader = {
 	name = "Peter Gerald Dickens"
-	picture = "Portrait_England_Peter_Dickens.tga"
+	picture = "Portrait_England_Peter_Dickens.png"
 	traits = { ironside blockade_runner }
 	skill = 3
 	attack_skill = 3
@@ -473,7 +473,7 @@ create_navy_leader = {
 }
 create_navy_leader = {
 	name = "Stephen Beattie"
-	picture = "Portrait_England_Stephen_Beattie.tga"
+	picture = "Portrait_England_Stephen_Beattie.png"
 	traits = { superior_tactician }
 	skill = 3
 	attack_skill = 2
@@ -484,7 +484,7 @@ create_navy_leader = {
 }
 create_navy_leader = {
 	name = "Donald Macintyre"
-	picture = "Portrait_England_Donald_Macintyre.tga"
+	picture = "Portrait_England_Donald_Macintyre.png"
 	traits = { blockade_runner superior_tactician }
 	skill = 3
 	attack_skill = 3

@@ -58,14 +58,14 @@ country_lock_all_division_template = yes
 create_country_leader = {# Abdulaziz Ibn Saud
 	name = "Abdulaziz Ibn Saud"
 	desc = "POLITICS_SAUDI_DESC"
-	picture = "Portrait_Saudi_Arabia_Abdulazis_Ibn_Saud.dds"
+	picture = "Portrait_Saudi_Arabia_Abdulazis_Ibn_Saud.png"
 	expire = "1965.1.1"
 	ideology = authoritarian_democrat_subtype
 }
 create_country_leader = {# Abdulaziz Ibn Saud
 	name = "Abdulaziz Ibn Saud"
 	desc = "POLITICS_SAUDI_DESC"
-	picture = "Portrait_Saudi_Arabia_Abdulazis_Ibn_Saud.dds"
+	picture = "Portrait_Saudi_Arabia_Abdulazis_Ibn_Saud.png"
 	expire = "1965.1.1"
 	ideology = paternal_autocrat_subtype
 	traits = { warmonger }
@@ -73,35 +73,35 @@ create_country_leader = {# Abdulaziz Ibn Saud
 create_country_leader = {# Abdulaziz Ibn Saud
 	name = "Abdulaziz Ibn Saud"
 	desc = "POLITICS_SAUDI_DESC"
-	picture = "Portrait_Saudi_Arabia_Abdulazis_Ibn_Saud.dds"
+	picture = "Portrait_Saudi_Arabia_Abdulazis_Ibn_Saud.png"
 	expire = "1965.1.1"
 	ideology = market_liberal_subtype
 }
 create_country_leader = {# Abdulaziz Ibn Saud
 	name = "Abdulaziz Ibn Saud"
 	desc = "POLITICS_SAUDI_DESC"
-	picture = "Portrait_Saudi_Arabia_Abdulazis_Ibn_Saud.dds"
+	picture = "Portrait_Saudi_Arabia_Abdulazis_Ibn_Saud.png"
 	expire = "1965.1.1"
 	ideology = social_conservative_subtype
 }
 create_country_leader = {# Abdulaziz Ibn Saud
 	name = "Abdulaziz Ibn Saud"
 	desc = "POLITICS_SAUDI_DESC"
-	picture = "Portrait_Saudi_Arabia_Abdulazis_Ibn_Saud.dds"
+	picture = "Portrait_Saudi_Arabia_Abdulazis_Ibn_Saud.png"
 	expire = "1965.1.1"
 	ideology = social_democrat_subtype
 }
 create_country_leader = {# Abdulaziz Ibn Saud
 	name = "Abdulaziz Ibn Saud"
 	desc = "POLITICS_SAUDI_DESC"
-	picture = "Portrait_Saudi_Arabia_Abdulazis_Ibn_Saud.dds"
+	picture = "Portrait_Saudi_Arabia_Abdulazis_Ibn_Saud.png"
 	expire = "1965.1.1"
 	ideology = social_liberal_subtype
 }
 create_country_leader = {# Abdulaziz Ibn Saud
 	name = "Abdulaziz Ibn Saud"
 	desc = "POLITICS_SAUDI_DESC"
-	picture = "Portrait_Saudi_Arabia_Abdulazis_Ibn_Saud.dds"
+	picture = "Portrait_Saudi_Arabia_Abdulazis_Ibn_Saud.png"
 	expire = "1965.1.1"
 	ideology = national_populist_subtype
 }
@@ -111,7 +111,7 @@ add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 500 producer
 ### Field Marshals ###
 create_field_marshal = {# Abdulaziz Ibn Saud
 	name = "Abdulaziz Ibn Saud"
-	portrait_path = "gfx/leaders/SAU/Portrait_Saudi_Arabia_Abdulazis_Ibn_Saud.dds"
+	portrait_path = "gfx/leaders/SAU/Portrait_Saudi_Arabia_Abdulazis_Ibn_Saud.png"
 	traits = {
 		politically_connected
 		trait_reckless
@@ -127,7 +127,7 @@ create_field_marshal = {# Abdulaziz Ibn Saud
 ### Corps Commanders ###
 create_corps_commander = {# Faisal al-Duuwaish
 	name = "Faisal al-Duuwaish"
-	portrait_path = "gfx/leaders/SAU/Portrait_Saudi_Arabia_Faisal_al-Duwaish.tga"
+	portrait_path = "gfx/leaders/SAU/Portrait_Saudi_Arabia_Faisal_al-Duwaish.png"
 	traits = {
 		desert_fox
 		inflexible_strategist
@@ -143,7 +143,7 @@ create_corps_commander = {# Faisal al-Duuwaish
 
 create_corps_commander = {# Abdallah bin Abdul Rahman Al Saud
 	name = "Abdallah bin Abdul Rahman Al Saud"
-	portrait_path = "gfx/leaders/SAU/Portrait_Saudi_Arabia_Abdallah_bin_Abdul_Rahman_Al_Saud.tga"
+	portrait_path = "gfx/leaders/SAU/Portrait_Saudi_Arabia_Abdallah_bin_Abdul_Rahman_Al_Saud.png"
 	traits = {
 		politically_connected
 		old_guard
@@ -156,7 +156,7 @@ create_corps_commander = {# Abdallah bin Abdul Rahman Al Saud
 }
 create_corps_commander = {# Saad bin Abuldaziz Al Saud
 	name = "Saad bin Abuldaziz Al Saud"
-	portrait_path = "gfx/leaders/SAU/Portrait_Saudi_Arabia_Saad_bin_Abdulaziz_Al_Saud.tga"
+	portrait_path = "gfx/leaders/SAU/Portrait_Saudi_Arabia_Saad_bin_Abdulaziz_Al_Saud.png"
 	traits = {
 		trait_cautious
 		cavalry_officer
@@ -170,7 +170,7 @@ create_corps_commander = {# Saad bin Abuldaziz Al Saud
 ### Admirals ###
 create_navy_leader = {# Khalid bin Abdulaziz Al Saud
 	name = "Khalid bin Abdulaziz Al Saud"
-	portrait_path = "gfx/leaders/SAU/Portrait_Saudi_Arabia_Khalid_bin_Abdulaziz_Al_Saud.tga"
+	portrait_path = "gfx/leaders/SAU/Portrait_Saudi_Arabia_Khalid_bin_Abdulaziz_Al_Saud.png"
 	traits = {
 		spotter
 	}

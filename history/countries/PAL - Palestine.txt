@@ -29,14 +29,14 @@ set_popularities = {
 create_country_leader = {
 	name = "Raghib al-Nashashibi"
 	desc = "POLITICS_RAGHIB_DESC"
-	picture = "Portrait_PAL_Nashashibi.tga"
+	picture = "Portrait_PAL_Nashashibi.png"
 	expire = "1965.1.1"
 	ideology = social_conservative_subtype
 }
 create_country_leader = {
 	name = "Awni Abd al-Hadi"
 	desc = "POLITICS_AWNI_DESC"
-	picture = "gfx/leaders/Generic/Portrait_Arabia_Generic_new_4.tga"
+	picture = "gfx/leaders/Generic/Portrait_Arabia_Generic_new_4.png"
 	expire = "1965.1.1"
 	ideology = social_liberal_subtype
 }
@@ -44,7 +44,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Musa Al-Alami"
 	desc = "POLITICS_MUSA_AL_ALAMI_DESC"
-	picture = "Portrait_PAL_Alami.tga"
+	picture = "Portrait_PAL_Alami.png"
 	expire = "1965.1.1"
 	ideology = market_liberal_subtype
 }
@@ -52,7 +52,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Amin al-Husseini"
 	desc = "POLITICS_MUFTI_DESC"
-	picture = "Portrait_PAL_The_Mufti.tga"
+	picture = "Portrait_PAL_The_Mufti.png"
 	expire = "1965.1.1"
 	ideology = authoritarian_democrat_subtype
 }
@@ -60,7 +60,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Abraham Antébi"
 	desc = "POLITICS_ANTEBI_DESC"
-	picture = "Portrait_PAL_Abraham.tga"
+	picture = "Portrait_PAL_Abraham.png"
 	expire = "1965.1.1"
 	ideology = paternal_autocrat_subtype
 }
@@ -68,7 +68,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Radwan al-Hilu"
 	desc = "POLITICS_HILUPAL_DESC"
-	picture = "Portrait_PAL_Radwan.tga"
+	picture = "Portrait_PAL_Radwan.png"
 	expire = "1965.1.1"
 	ideology = syndicalist_subtype
 }
@@ -76,7 +76,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Radwan al-Hilu"
 	desc = "POLITICS_HILUPAL_DESC"
-	picture = "Portrait_PAL_Radwan.tga"
+	picture = "Portrait_PAL_Radwan.png"
 	expire = "1965.1.1"
 	ideology = radical_socialist_subtype
 }
@@ -84,14 +84,14 @@ create_country_leader = {
 create_country_leader = {
 	name = "Radwan al-Hilu"
 	desc = "POLITICS_HILUPAL_DESC"
-	picture = "Portrait_PAL_Radwan.tga"
+	picture = "Portrait_PAL_Radwan.png"
 	expire = "1965.1.1"
 	ideology = totalist_subtype
 }
 
 create_country_leader = {
 	name = "Abd al-Qadir al-Husayni"
-	picture = "gfx/leaders/PAL/Portrait_PAL_al_Husayni.tga"
+	picture = "gfx/leaders/PAL/Portrait_PAL_al_Husayni.png"
 	expire = "1965.1.1"
 	ideology = national_populist_subtype
 }
@@ -99,7 +99,7 @@ create_country_leader = {
 ### Corps Commanders ###
 create_corps_commander = {
 	name = "Abd al-Qadir al-Husayni"
-	portrait_path = "gfx/leaders/PAL/Portrait_PAL_al_Husayni.tga"
+	portrait_path = "gfx/leaders/PAL/Portrait_PAL_al_Husayni.png"
 	traits = {
 		politically_connected
 		old_guard
@@ -115,7 +115,7 @@ create_corps_commander = {
 
 create_corps_commander = {
 	name = "Hasan Salama"
-	portrait_path = "gfx/leaders/PAL/Portrait_PAL_Hasan_Salama.tga"
+	portrait_path = "gfx/leaders/PAL/Portrait_PAL_Hasan_Salama.png"
 	traits = {
 		inflexible_strategist
 		career_officer

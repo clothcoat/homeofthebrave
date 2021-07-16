@@ -136,70 +136,70 @@ set_popularities = {
 create_country_leader = {
 	name = "Adolf Friedrich"
 	desc = "POLITICS_ADOLF_FRIEDRICH_DESC"
-	picture = "gfx/leaders/BAT/Portrait_BAT_Adolf_Friedrich.tga"
+	picture = "gfx/leaders/BAT/Portrait_BAT_Adolf_Friedrich.png"
 	expire = "1965.1.1"
 	ideology = paternal_autocrat_subtype
 }
 
 create_country_leader = {
 	name = "Hans von Manteuffel-Szoege"
-	picture = "gfx/leaders/BAT/Portrait_BAT_Hans_Joachim_von_Manteuffel_Szoege.tga"
+	picture = "gfx/leaders/BAT/Portrait_BAT_Hans_Joachim_von_Manteuffel_Szoege.png"
 	expire = "1965.1.1"
 	ideology = authoritarian_democrat_subtype
 }
 
 create_country_leader = {
 	name = "Kārlis Ulmanis"
-	picture = "gfx/leaders/LAT/Portrait_LAT_Karlis_Ulmanis_KR.tga"
+	picture = "gfx/leaders/LAT/Portrait_LAT_Karlis_Ulmanis_KR.png"
 	expire = "1965.1.1"
 	ideology = social_conservative_subtype
 }
 
 create_country_leader = {
 	name = "Jaan Tõnisson"
-	picture = "gfx/leaders/EST/Portrait_EST_Jaan_Tonisson.tga"
+	picture = "gfx/leaders/EST/Portrait_EST_Jaan_Tonisson.png"
 	expire = "1965.1.1"
 	ideology = market_liberal_subtype
 }
 
 create_country_leader = {
 	name = "August Rei"
-	picture = "gfx/leaders/EST/Portrait_EST_August_Rei.tga"
+	picture = "gfx/leaders/EST/Portrait_EST_August_Rei.png"
 	expire = "1965.1.1"
 	ideology = social_liberal_subtype
 }
 
 create_country_leader = {
 	name = "Pauls Kalniņš"
-	picture = "gfx/leaders/LAT/Portrait_LAT_Pauls_Kalnins.tga"
+	picture = "gfx/leaders/LAT/Portrait_LAT_Pauls_Kalnins.png"
 	expire = "1965.1.1"
 	ideology = social_democrat_subtype
 }
 
 create_country_leader = {
 	name = "Jēkabs Peterss"
-	picture = "gfx/leaders/LAT/Portrait_LAT_Jekabs_Peterss.tga"
+	picture = "gfx/leaders/LAT/Portrait_LAT_Jekabs_Peterss.png"
 	expire = "1965.1.1"
 	ideology = radical_socialist_subtype
 }
 
 create_country_leader = {
 	name = "Ernests Morics"
-	picture = "gfx/leaders/LAT/Portrait_LAT_Ernests_Morics.tga"
+	picture = "gfx/leaders/LAT/Portrait_LAT_Ernests_Morics.png"
 	expire = "1965.1.1"
 	ideology = syndicalist_subtype
 }
 
 create_country_leader = {
 	name = "Jēkabs Peterss"
-	picture = "gfx/leaders/LAT/Portrait_LAT_Jekabs_Peterss.tga"
+	picture = "gfx/leaders/LAT/Portrait_LAT_Jekabs_Peterss.png"
 	expire = "1965.1.1"
 	ideology = totalist_subtype
 }
 
 create_field_marshal = {
 	name = "Rüdiger von der Goltz"
-	portrait_path = "gfx/leaders/BAT/Portrait_BAT_Rudiger_von_der_Goltz.tga"
+	portrait_path = "gfx/leaders/BAT/Portrait_BAT_Rudiger_von_der_Goltz.png"
 	traits = { old_guard offensive_doctrine media_personality }
 	skill = 3
 	attack_skill = 3
@@ -211,7 +211,7 @@ create_field_marshal = {
 
 create_corps_commander = {
 	name = "Wessel von Freytagh-Loringhoven"
-	portrait_path = "gfx/leaders/BAT/Portrait_BAT_Wessel_von_Freytagh_Loringhoven.tga"
+	portrait_path = "gfx/leaders/BAT/Portrait_BAT_Wessel_von_Freytagh_Loringhoven.png"
 	traits = { trickster }
 	skill = 3
 	attack_skill = 3
@@ -223,7 +223,7 @@ create_corps_commander = {
 
 create_corps_commander = {
 	name = "Ernst Gustav Heimert von Nolcken"
-	portrait_path = "gfx/leaders/BAT/Portrait_BAT_Ernst_Gustav_Heimert_von_Nolcken.tga"
+	portrait_path = "gfx/leaders/BAT/Portrait_BAT_Ernst_Gustav_Heimert_von_Nolcken.png"
 	traits = { cavalry_officer cavalry_leader }
 	skill = 3
 	attack_skill = 2
@@ -235,7 +235,7 @@ create_corps_commander = {
 
 create_corps_commander = {
 	name = "Heinrich von Behr"
-	portrait_path = "gfx/leaders/BAT/Portrait_BAT_Heinrich_von_Behr.tga"
+	portrait_path = "gfx/leaders/BAT/Portrait_BAT_Heinrich_von_Behr.png"
 	traits = { panzer_leader }
 	skill = 3
 	attack_skill = 2
@@ -247,7 +247,7 @@ create_corps_commander = {
 
 create_corps_commander = {
 	name = "Harry Lutz"
-	portrait_path = "gfx/leaders/BAT/Portrait_BAT_Harry_Lutz.tga"
+	portrait_path = "gfx/leaders/BAT/Portrait_BAT_Harry_Lutz.png"
 	traits = { infantry_leader trait_reckless }
 	skill = 2
 	attack_skill = 3
@@ -259,7 +259,7 @@ create_corps_commander = {
 
 create_corps_commander = {
 	name = "Constantin von Weiss"
-	portrait_path = "gfx/leaders/BAT/Portrait_BAT_Constantin_von_Weiss.tga"
+	portrait_path = "gfx/leaders/BAT/Portrait_BAT_Constantin_von_Weiss.png"
 	traits = { old_guard infantry_officer }
 	skill = 2
 	attack_skill = 2
@@ -271,7 +271,7 @@ create_corps_commander = {
 
 create_corps_commander = {
 	name = "Hans von Manteuffel-Szoege"
-	portrait_path = "gfx/leaders/BAT/Portrait_BAT_Hans_Joachim_von_Manteuffel_Szoege.tga"
+	portrait_path = "gfx/leaders/BAT/Portrait_BAT_Hans_Joachim_von_Manteuffel_Szoege.png"
 	traits = { commando }
 	skill = 3
 	attack_skill = 3
@@ -283,7 +283,7 @@ create_corps_commander = {
 
 create_corps_commander = {
 	name = "Otto Goldfeld"
-	portrait_path = "gfx/leaders/BAT/Portrait_BAT_Otto_Goldfeld.tga"
+	portrait_path = "gfx/leaders/BAT/Portrait_BAT_Otto_Goldfeld.png"
 	traits = { }
 	skill = 2
 	attack_skill = 1
@@ -295,7 +295,7 @@ create_corps_commander = {
 
 create_navy_leader = {
 	name = "Alexander von Salza"
-	portrait_path = "gfx/leaders/EST/Portrait_EST_Alexander_von_Salza.tga"
+	portrait_path = "gfx/leaders/EST/Portrait_EST_Alexander_von_Salza.png"
 	traits = { superior_tactician }
 	skill = 3
 	attack_skill = 2
@@ -307,7 +307,7 @@ create_navy_leader = {
 
 create_navy_leader = {
 	name = "Archibald von Keyserling"
-	portrait_path = "gfx/leaders/BAT/Portrait_BAT_Archibald_von_Keyserling.tga"
+	portrait_path = "gfx/leaders/BAT/Portrait_BAT_Archibald_von_Keyserling.png"
 	traits = { spotter }
 	skill = 2
 	attack_skill = 2
@@ -318,7 +318,7 @@ create_navy_leader = {
 
 create_navy_leader = {
 	name = "Johan Pitka"
-	portrait_path = "gfx/leaders/EST/Portrait_EST_Johan_Pitka.tga"
+	portrait_path = "gfx/leaders/EST/Portrait_EST_Johan_Pitka.png"
 	traits = { blockade_runner }
 	skill = 2
 	attack_skill = 2

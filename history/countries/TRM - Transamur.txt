@@ -131,21 +131,21 @@ set_popularities = {
 
 create_country_leader = {
 	name = "Aleksandr Krasnoshchyekov"
-	picture = "gfx/leaders/RUS/Portrait_RUS_Aleksandr_Krasnoshchyokov.tga"
+	picture = "gfx/leaders/RUS/Portrait_RUS_Aleksandr_Krasnoshchyokov.png"
 	expire = "1965.1.1"
 	ideology = totalist_subtype
 }
 
 create_country_leader = {
 	name = "Aleksandr Krasnoshchyekov"
-	picture = "gfx/leaders/RUS/Portrait_RUS_Aleksandr_Krasnoshchyokov.tga"
+	picture = "gfx/leaders/RUS/Portrait_RUS_Aleksandr_Krasnoshchyokov.png"
 	expire = "1965.1.1"
 	ideology = syndicalist_subtype
 }
 
 create_country_leader = {
 	name = "Aleksandr Krasnoshchyekov"
-	picture = "gfx/leaders/RUS/Portrait_RUS_Aleksandr_Krasnoshchyokov.tga"
+	picture = "gfx/leaders/RUS/Portrait_RUS_Aleksandr_Krasnoshchyokov.png"
 	expire = "1965.1.1"
 	ideology = radical_socialist_subtype
 }
@@ -153,7 +153,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Boris Shumyatskiy"
 	desc = "POLITICS_SHUMYATSKY_DESC"
-	picture = "gfx/leaders/RUS/Portrait_RUS_Boris_Shumyatsky.tga"
+	picture = "gfx/leaders/RUS/Portrait_RUS_Boris_Shumyatsky.png"
 	expire = "1965.1.1"
 	ideology = social_democrat_subtype
 }
@@ -161,14 +161,14 @@ create_country_leader = {
 create_country_leader = {
 	name = "Boris Shumyatskiy"
 	desc = "POLITICS_SHUMYATSKY_DESC"
-	picture = "gfx/leaders/RUS/Portrait_RUS_Boris_Shumyatsky.tga"
+	picture = "gfx/leaders/RUS/Portrait_RUS_Boris_Shumyatsky.png"
 	expire = "1965.1.1"
 	ideology = social_liberal_subtype
 }
 
 create_country_leader = {
 	name = "Viktor Pepelyayev"
-	picture = "gfx/leaders/RUS/Portrait_RUS_Victor_Pepelyaev.tga"
+	picture = "gfx/leaders/RUS/Portrait_RUS_Victor_Pepelyaev.png"
 	expire = "1965.1.1"
 	ideology = market_liberal_subtype
 }
@@ -176,14 +176,14 @@ create_country_leader = {
 create_country_leader = {
 	name = "Spiridon Merkulov"
 	desc = "POLITICS_MERKULOV_DESC"
-	picture = "gfx/leaders/RUS/Portrait_RUS_Spiridon_Merkulov.tga"
+	picture = "gfx/leaders/RUS/Portrait_RUS_Spiridon_Merkulov.png"
 	expire = "1965.1.1"
 	ideology = social_conservative_subtype
 }
 
 create_country_leader = {
 	name = "Oi Shigemoto"
-	picture = "gfx/leaders/JAP/Portrait_JAP_Oi_Shigemoto.dds"
+	picture = "gfx/leaders/JAP/Portrait_JAP_Oi_Shigemoto.png"
 	expire = "1965.1.1"
 	ideology = authoritarian_democrat_subtype
 }
@@ -191,7 +191,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Aleksandr Kolchak"
 	desc = "POLITICS_ALEXANDR_KOLCHAK_DESC"
-	picture = "gfx/leaders/RUS/Portrait_RUS_Aleksandr_Kolchak.tga"
+	picture = "gfx/leaders/RUS/Portrait_RUS_Aleksandr_Kolchak.png"
 	expire = "1965.1.1"
 	ideology = paternal_autocrat_subtype
 	traits = { TRM_shaky_rule }
@@ -200,7 +200,7 @@ create_country_leader = {
 ### Field Marshals ###
 create_field_marshal = {
 	name = "Anatoliy Pepelyaev"
-	portrait_path = "gfx/leaders/RUS/Portrait_RUS_Anatoliy_Pepelyaev.tga"
+	portrait_path = "gfx/leaders/RUS/Portrait_RUS_Anatoliy_Pepelyaev.png"
 	traits = {
 		offensive_doctrine
 		career_officer
@@ -214,7 +214,7 @@ create_field_marshal = {
 
 create_field_marshal = {
 	name = "Grigoriy Semyenov"
-	portrait_path = "gfx/leaders/RUS/Portrait_RUS_Grigory_Semyonov.tga"
+	portrait_path = "gfx/leaders/RUS/Portrait_RUS_Grigory_Semyonov.png"
 	traits = {
 		defensive_doctrine
 		cavalry_leader
@@ -229,7 +229,7 @@ create_field_marshal = {
 ### Corps Commanders ###
 create_corps_commander = {
 	name = "Sergey Baranovskiy"
-	portrait_path = "gfx/leaders/RUS/Portrait_RUS_Sergey_Baranovskiy.tga"
+	portrait_path = "gfx/leaders/RUS/Portrait_RUS_Sergey_Baranovskiy.png"
 	traits = { }
 	skill = 2
 	attack_skill = 2
@@ -240,7 +240,7 @@ create_corps_commander = {
 
 create_corps_commander = {
 	name = "Mikhail Khanzhin"
-	portrait_path = "gfx/leaders/RUS/Portrait_RUS_Mikhail_Khanzhin.tga"
+	portrait_path = "gfx/leaders/RUS/Portrait_RUS_Mikhail_Khanzhin.png"
 	traits = {
 		old_guard
 	}
@@ -253,7 +253,7 @@ create_corps_commander = {
 
 create_corps_commander = {
 	name = "Dmitriy Semyenov"
-	portrait_path = "gfx/leaders/RUS/Portrait_RUS_Dmitriy_Semyenov.tga"
+	portrait_path = "gfx/leaders/RUS/Portrait_RUS_Dmitriy_Semyenov.png"
 	traits = {
 		organizer
 	}
@@ -266,7 +266,7 @@ create_corps_commander = {
 
 create_corps_commander = {
 	name = "Vladimir Gulidov"
-	portrait_path = "gfx/leaders/RUS/Portrait_RUS_Vladimir_Gulidov.tga"
+	portrait_path = "gfx/leaders/RUS/Portrait_RUS_Vladimir_Gulidov.png"
 	traits = {
 		commando
 	}
@@ -279,7 +279,7 @@ create_corps_commander = {
 
 create_corps_commander = {
 	name = "Vladimir Tolstov"
-	portrait_path = "gfx/leaders/RUS/Portrait_RUS_Vladimir_Tolstov.tga"
+	portrait_path = "gfx/leaders/RUS/Portrait_RUS_Vladimir_Tolstov.png"
 	traits = { }
 	skill = 2
 	attack_skill = 3
@@ -290,7 +290,7 @@ create_corps_commander = {
 
 create_corps_commander = {
 	name = "Leonid Skipetrov"
-	portrait_path = "gfx/leaders/RUS/Portrait_RUS_Leonid_Skipetrov.tga"
+	portrait_path = "gfx/leaders/RUS/Portrait_RUS_Leonid_Skipetrov.png"
 	traits = {
 		commando
 	}
@@ -303,7 +303,7 @@ create_corps_commander = {
 
 create_corps_commander = {
 	name = "Vasiliy Boldyrev"
-	portrait_path = "gfx/leaders/RUS/Portrait_RUS_Vasiliy_Boldyrev.tga"
+	portrait_path = "gfx/leaders/RUS/Portrait_RUS_Vasiliy_Boldyrev.png"
 	traits = { }
 	skill = 3
 	attack_skill = 2
@@ -315,7 +315,7 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Aleksandr Kolchak"
 	id = 50000
-	portrait_path = "gfx/leaders/RUS/Portrait_RUS_Aleksandr_Kolchak.tga"
+	portrait_path = "gfx/leaders/RUS/Portrait_RUS_Aleksandr_Kolchak.png"
 	traits = {
 		media_personality
 		politically_connected
@@ -330,7 +330,7 @@ create_corps_commander = {
 ### Admirals ###
 create_navy_leader = {
 	name = "Georgiy Stark"
-	portrait_path = "gfx/leaders/RUS/Portrait_RUS_Georgiy_Stark.tga"
+	portrait_path = "gfx/leaders/RUS/Portrait_RUS_Georgiy_Stark.png"
 	traits = { }
 	skill = 3
 	maneuvering_skill = 2
@@ -342,7 +342,7 @@ create_navy_leader = {
 create_navy_leader = {
 	name = "Aleksandr Kolchak"
 	id = 50001
-	portrait_path = "gfx/leaders/RUS/Portrait_RUS_Aleksandr_Kolchak.tga"
+	portrait_path = "gfx/leaders/RUS/Portrait_RUS_Aleksandr_Kolchak.png"
 	traits = {
 		superior_tactician
 	}
@@ -355,7 +355,7 @@ create_navy_leader = {
 
 create_navy_leader = {
 	name = "Aleksandr Gerasimov"
-	portrait_path = "gfx/leaders/RUS/Portrait_RUS_Aleksandr_Gerasimov.tga"
+	portrait_path = "gfx/leaders/RUS/Portrait_RUS_Aleksandr_Gerasimov.png"
 	traits = { }
 	skill = 1
 	maneuvering_skill = 1
