@@ -16743,6 +16743,7 @@ country_event = { #Event to Weaken Dying Factions (99%) (CSA)
 	fire_only_once = yes
 
 	trigger = {
+		tag = CSA
 		CSA = {
 		is_ai = yes
 		surrender_progress > 0.98
@@ -16772,6 +16773,7 @@ country_event = { #Event to Weaken Dying Factions (99%) (COR)
 	fire_only_once = yes
 
 	trigger = {
+		tag = COR
 		COR = {
 		is_ai = yes
 		surrender_progress > 0.98
@@ -16801,6 +16803,7 @@ country_event = { #Event to Weaken Dying Factions (99%) (USA)
 	fire_only_once = yes
 
 	trigger = {
+		tag = USA
 		USA = {
 		is_ai = yes
 		surrender_progress > 0.98
@@ -16830,6 +16833,7 @@ country_event = { #Event to Weaken Dying Factions (99%) (TEX)
 	fire_only_once = yes
 
 	trigger = {
+		tag = TEX
 		TEX = {
 		is_ai = yes
 		surrender_progress > 0.98
@@ -16859,6 +16863,7 @@ country_event = { #Event to Weaken Dying Factions (99%) (BBR)
 	fire_only_once = yes
 
 	trigger = {
+		tag = BBR
 		BBR = {
 		is_ai = yes
 		surrender_progress > 0.98
@@ -16888,6 +16893,7 @@ country_event = { #Event to Weaken Dying Factions (99%) (CAL)
 	fire_only_once = yes
 
 	trigger = {
+		tag = CAL
 		CAL = {
 		is_ai = yes
 		surrender_progress > 0.98
