@@ -91,6 +91,20 @@ TEX_military_industrial_complex_idea3:0 "Military Industrial Complex"
 TEX_military_industrial_complex_idea4:0 "Military Industrial Complex"
 TEX_military_industrial_complex_idea5:0 "Military Industrial Complex"
 
+TEX_political_chaos_idea:0 "Political Chaos"
+TEX_political_chaos_idea_desc:0 "In the aftermath of Huey Long's demise, the country has been thrown into chaos. Several of his most trusted lieutenants and confidants are now vying for power in the post-Huey government, and until someone is able to fully consolidate power and stabilize the new government, we will suffer."
+TEX_political_chaos_two_idea:0 "Improved Political Situation"
+TEX_political_chaos_two_idea_desc:0 "While there is still work to be done to bring the fractured AFP, and the country, back together, we have taken the first steps towards that goal. Now we must continue our work on this front and bring order to the nation once more."
+TEX_minor_support_idea:0 "AFP Unity"
+TEX_minor_support_idea_desc:0 "In addition to our existing coalition, we have also won the support of smaller figures within the AFP, and with their help, we can govern the country effectively."
+TEX_coughlin_support_idea:0 "Coughlin-Aligned Government"
+TEX_coughlin_support_idea_desc:0 "We have decided to include Charles Coughlin in the new AFP coalition, and with his powerful following, we will have a more secure grip over the country."
+TEX_smith_support_idea:0 "Smith-Aligned Government"
+TEX_smith_support_idea_desc:0 "We have decided to include Gerald L.K. Smith in the new AFP coalition, and with his charisma, we will have a more secure grip over the country."
+TEX_earl_support_idea:0 "Earl-Aligned Government"
+TEX_earl_support_idea_desc:0 "We have decided to include Earl Long in the new AFP coalition, and with his ties to Huey Long and irresistable charm, we will have a more secure grip over the country."
+TEX_bingham_support_idea:0 "Bingham-Aligned Government"
+TEX_bingham_support_idea_desc:0 "We have decided to include Alfred Mitchell Bingham in the new AFP coalition, and with his passionate following and industrial plans, we will have a more secure grip over the country."
 TEX_insurgent_america_idea:0 "New American Spirit"
 TEX_insurgent_america_idea_desc:0 "With America recovering from years of devastation, and now under the careful hand of Alfred Bingham, the country can now begin its journey towards a new prosperity; a new America. This will begin, of course, with construction and infrastructure."
 TEX_dewey_plan_idea:0 "The Dewey Plan"
@@ -399,6 +413,7 @@ TEX_earl_vision_tooltip:0 "§GWe will see what Earl Long can do§!\n"
 TEX_people_charmer_tooltip:0 "§CThe people of Louisiana have chosen good government, and they sure do like it!§!\n"
 TEX_huey_legacy:0 "We have decided to continue Huey's policies"
 TEX_earl_legacy:0 "We have built on what Huey started and gone our own way"
+TEX_heal_afp_divide:0 "Heal the AFP Divide"
 
 ### Opinion Modifiers ###
 TEX_explorer_dad:0 "Hiram Bingham III"
@@ -412,6 +427,7 @@ AFP_Victory:0 "The America First Party has Won"
 TEX_silver_legion_supported:0 "We accepted the support of the Silver Legion"
 TEX_texas_takeover_flag:0 "O'Daniel has won the election"
 TEX_huey_assassinated:0 "Huey Long has been assassinated!"
+TEX_unity_in_progress:0 "We are increasing support with another faction"
 
 ### Decisions ###
 TEX_call_up_silver_legion:0 "Call up the Silver Legion"
@@ -443,6 +459,17 @@ TEX_leftist_allies:0 "Ally [From.GetName]"
 TEX_nationalist_allies:0 "Ally Ultra-Nationalist [From.GetName]"
 TEX_hit_totalists:0 "Strike [From.GetName]"
 TEX_break_militarists_decision:0 "Attack Ultra-Nationalist [From.GetName]"
+
+TEX_unite_afp_decisions:0 "Reuniting the AFP Coalition"
+TEX_unite_afp_decisions_desc:0 "With Huey Long out of the picture, the AFP has become fractured, with a multitude of factions aiming to take over. If we want to heal the wounds inflicted by Huey's demise, we must work towards reconciliation with some of these factions."
+TEX_reconcile_coughlin:0 "Reconcile with Coughlin"
+TEX_reconcile_coughlin_desc:0 "Charles Coughlin has always had strained relations with [TEX.GetLeader], but this relationship has only worsened in recent weeks. With a powerful radio show and an intimidating following, Coughlin has never been the closest Huey Long confidant, instead more or less operating his own faction within the party. This has caused Coughlin some problems, and most of all, he has faced accusations of disloyalty. Regardless though, he wields a significant power base, and we would be wise to offer concessions in the form of a watered-down version of his 'Social Justice' plan."
+TEX_reconcile_smith:0 "Reconcile with Smith"
+TEX_reconcile_smith_desc:0 "Gerald L.K. Smith has sharply criticized [TEX.GetLeader] in the aftermath of Huey's demise, and most of our advisors speculate that this is because he expected to succeed his idol and lead the country in what he believes is Huey's vision. Others attribute his abrasiveness to a fear of being sidelined on the national political stage. Whatever the case may be, Smith is one of the most charismatic men in the country, and bringing him to our side would benefit us much more than eliminating him from politics altogether. However, Gerald L.K. Smith is not an easily tamed man, and to win his supoprt, we will have to offer certain concessions, ranging from farmer subsidies to going after groups Smith alledges were involved in Huey's assassination."
+TEX_reconcile_earl:0 "Reconcile with Earl Long"
+TEX_reconcile_earl_desc:0 "Earl Long, lovingly dubbed 'Uncle Earl' by his nephew and his supporters, is no fan of [TEX.GetLeader], a fact he has made clear in rousing speeches following Huey's demise. Though he had a mixed relationship with his brother, Earl insists that he now represents the interests of the Long family, and winning his support could mean a certain degree of legitimacy in the eyes of many. Further, Uncle Earl brings some talents of his own; he is a captivating storyteller, and an excellent orator beyond that. Most of all though, hidden behind his veneer of plainness, he is a shrewd political actor. We would do well to have his sharp mind on our side, before another group wins his loyalty."
+TEX_reconcile_bingham:0 "Reconcile with Bingham"
+TEX_reconcile_bingham_desc:0 "Alfred Mitchell Bingham leads a peculiar group, ranging from Bellamyists to Socialists to Technocrats, and everything in between. Whatever their preferred labels may be, however, none are too fond of [TEX.GetLeader], and this is not surprising. After all, their fringe wing of the AFP is rarely represented in party affairs, and we have done little to change that. However, if we wanted to seek out their support, we could give certain concessions in the form of leniency for some of the more left-wing traitors in the former CSA and PSA. Further, they would want us to continue what Huey started in public ownership of industries, going beyond his plans for it, or perhaps to act on healthcare and once and for all establish a national insurance system." 
 
 ### Ministers ###
 
@@ -1566,6 +1593,13 @@ unionstate.5127.t:0 "Earl Long and the Old Regulars"
 unionstate.5127.d:0 "In his time in Louisiana politics, Earl Long knew that few other organizations opposed his brother like the Louisiana Democratic Assocation, otherwise known as the 'Old Regulars', did. However, Huey Long broke their power in 1935, and now that he is gone, they have been forced into loyalty to Earl Long. These powerful Louisiana figures represent a godsend for Earl Long, who has struggled to shore up support in state governments around the country, with many still unconvinced of his ability to succeed his brother. The Old Regulars under their new Longist leader, Robert S. Maestri, have begun to change that impression. Seeing their success, Uncle Earl has decided that it might be worth it to expand the idea of state 'Old Regulars' nationally, or at least to states around the South. However, this might bring accusations of corruption..."
 unionstate.5127.a:0 "Keep 'em in Louisiana!"
 unionstate.5127.b:0 "Support similar groups in other states!"
+
+unionstate.5128.t:0 "Reaching Out to Minor AFP Figures"
+unionstate.5128.d:0 "Now that we have gained the support of several major AFP factions, we should now reach out to some of the more mainstream factions within the party as well. Men like Paul Maloney, 'Big Jim' Folsom, Sid McMath, and Bronson Cutting all have supporters of their own, as well as a certain degree of influence within the party. However, they are not in the position to demand concessions for their support-they aren't as powerful as many of the other lieutenants. Regardless, we should still meet with at least one of these figures, so who will it be?"
+unionstate.5128.a:0 "Paul Maloney is our man"
+unionstate.5128.b:0 "Big Jim Folsom will make us proud"
+unionstate.5128.c:0 "Sid McMath would be a good fit"
+unionstate.5128.e:0 "Cut a deal with Bronson Cutting"
 
 ### Pelley Events ###
 

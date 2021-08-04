@@ -4976,6 +4976,41 @@ country_event = { #Earl Long and the Old Regulars
 	}
 }
 
+country_event = { #Reaching Out to Minor AFP Figures
+	id = unionstate.5128
+	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.5128"}
+	title = unionstate.5128.t
+	desc = unionstate.5128.d
+	
+	picture = GFX_report_event_generic_diplomacy3
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = { #Paul Maloney
+		name = unionstate.5128.a
+		add_popularity = { ideology = social_conservative popularity = 0.05 }
+		add_ideas = TEX_minor_support_idea
+	}
+	option = { #Big Jim Folsom
+		name = unionstate.5128.b
+		add_popularity = { ideology = social_liberal popularity = 0.05 }
+		add_ideas = TEX_minor_support_idea
+	}
+	option = { #Sid McMath
+		name = unionstate.5128.c
+		add_popularity = { ideology = social_democrat popularity = 0.05 }
+		add_ideas = TEX_minor_support_idea
+	}
+	option = { #Bronson Cutting
+		name = unionstate.5128.e
+		add_popularity = { ideology = social_democrat popularity = 0.03 }
+		add_popularity = { ideology = social_liberal popularity = 0.02 }
+		add_ideas = TEX_minor_support_idea
+	}
+}
+
 country_event = { #Pelley Speech Attracts Controversy
 	id = unionstate.54
 	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.54"}

@@ -633,6 +633,91 @@ ideas = {
 			}
 		}
 		### Successors Ideas ###
+		TEX_minor_support_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_minor_support_idea"}
+			allowed = { always = no }
+			removal_cost = -1
+			picture = minorsupport
+			modifier = {
+				army_morale_factor = 0.01
+				industrial_capacity_factory = 0.01
+				stability_factor = 0.01
+			}
+		}
+		TEX_coughlin_support_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_coughlin_support_idea"}
+			allowed = { always = no }
+			removal_cost = -1
+			picture = ccoughlin
+			modifier = {
+				stability_factor = 0.02
+				political_power_factor = 0.01
+				war_support_factor = 0.02
+				industrial_capacity_factory = -0.01
+			}
+		}
+		TEX_smith_support_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_smith_support_idea"}
+			allowed = { always = no }
+			removal_cost = -1
+			picture = gsmith
+			modifier = {
+				conscription_factor = 0.02
+				max_command_power = 5
+				mobilization_speed = 0.03
+				stability_factor = -0.01
+			}
+		}
+		TEX_earl_support_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_earl_support_idea"}
+			allowed = { always = no }
+			removal_cost = -1
+			picture = elong
+			modifier = {
+				political_power_factor = 0.02
+				stability_factor = 0.01
+				army_morale_factor = 0.03
+				consumer_goods_factor = 0.01
+			}
+		}
+		TEX_bingham_support_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_bingham_support_idea"}
+			allowed = { always = no }
+			removal_cost = -1
+			picture = abingham
+			modifier = {
+				production_factory_start_efficiency_factor = 0.02
+				decryption_factor = 0.01
+				production_speed_buildings_factor = 0.05
+				political_power_factor = -0.02
+			}
+		}
+		TEX_political_chaos_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_political_chaos_idea"}
+			allowed = { always = no }
+			removal_cost = -1
+			picture = generic_destruction
+			modifier = {
+				stability_factor = -0.10
+				political_power_factor = -0.06
+				war_support_factor = -0.05
+				surrender_limit = -0.05
+				max_command_power = -10
+			}
+		}
+		TEX_political_chaos_two_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_political_chaos_two_idea"}
+			allowed = { always = no }
+			removal_cost = -1
+			picture = generic_destruction
+			modifier = {
+				stability_factor = -0.05
+				political_power_factor = -0.03
+				war_support_factor = -0.02
+				surrender_limit = -0.02
+				max_command_power = -5
+			}
+		}
 		TEX_insurgent_america_idea = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_insurgent_america_idea"}
 			allowed = { always = no }
