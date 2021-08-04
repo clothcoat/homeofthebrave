@@ -4,6 +4,29 @@
 
 leader_traits = {
 
+	#### NFA
+	NFA_lifetime_president = { #Pétain
+		random = no
+		party_popularity_stability_factor = 0.06
+		political_power_factor = 0.08
+		conscription_factor = 0.03
+		command_power_gain_mult = 0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	NFA_cult_of_personality = { #Pétain/DLR
+		random = no
+		stability_factor = 0.07
+		war_support_factor = 0.07
+		command_power_gain_mult = 0.03
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
 	#### CAR
 	the_prophet = { #Herbert W. Armstrong
 		random = no
@@ -244,6 +267,62 @@ leader_traits = {
 			factor = 1
 		}
 	}
+	american_visionary = { #Bingham #2
+		random = no
+		political_power_factor = 0.01
+		local_resources = 0.04
+		party_popularity_stability_factor = 0.04	
+	
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	earl_of_louisiana = { #Earl Long Imperial
+		random = no 
+		stability_factor = 0.03
+		political_power_gain = 0.02
+		authoritarian_democrat_drift = 0.01
+		paternal_autocrat_drift = 0.01
+		max_command_power = 25
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	rock_em_sock_em = { #Earl Long Democracy
+		random = no 
+		stability_factor = 0.02
+		political_power_gain = 0.03
+		party_popularity_stability_factor = 0.05	
+		mobilization_speed = 0.10
+		land_reinforce_rate = 0.02
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	fundamentalism_dogmatism_practicality = { #Smith's Final Trait
+		random = no 
+		stability_factor = 0.03
+		party_popularity_stability_factor = 0.02
+		max_command_power = 20
+		org_loss_when_moving = -0.02
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	father_of_the_people = { #Coughlin's Final Trait
+		random = no 
+		party_popularity_stability_factor = 0.05
+		surrender_limit = 0.05
+		conscription = 0.02
+		industrial_capacity_factory = 0.02
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
 	#####USA######
 	cactus_jack = { #Garner
 		random = no 
@@ -271,7 +350,7 @@ leader_traits = {
 			factor = 1
 		}
 	}
-	savior_of_america = {#To who can avoid the 2ACW
+	savior_of_america = { #To who can avoid the 2ACW
 		random = no
 		stability_factor = 0.05
 		political_power_gain = 0.03
