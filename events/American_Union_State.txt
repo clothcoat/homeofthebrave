@@ -2255,19 +2255,19 @@ country_event = { #Long Dead
 			}
 			set_country_flag = {
 			flag = AFP_smith_power
-			value = 1
+			value = 0
 			}
 			set_country_flag = {
 			flag = AFP_coughlin_power
-			value = 1
+			value = 0
 			}
 			set_country_flag = {
 			flag = AFP_long_power
-			value = 1
+			value = 0
 			}
 			set_country_flag = {
 			flag = AFP_bingham_power
-			value = 1
+			value = 0
 			}
 		}
 	}
@@ -2322,6 +2322,22 @@ country_event = { #Long Dead
 			election_frequency = 48
 			elections_allowed = yes
 			}
+		}
+		set_country_flag = {
+		flag = AFP_smith_power
+		value = 0
+		}
+		set_country_flag = {
+		flag = AFP_coughlin_power
+		value = 0
+		}
+		set_country_flag = {
+		flag = AFP_long_power
+		value = 0
+		}
+		set_country_flag = {
+		flag = AFP_bingham_power
+		value = 0
 		}
 	}
 	option = { #Charles Coughlin
@@ -2393,6 +2409,22 @@ country_event = { #Long Dead
 			elections_allowed = yes
 			}
 		}
+		set_country_flag = {
+		flag = AFP_smith_power
+		value = 0
+		}
+		set_country_flag = {
+		flag = AFP_coughlin_power
+		value = 0
+		}
+		set_country_flag = {
+		flag = AFP_long_power
+		value = 0
+		}
+		set_country_flag = {
+		flag = AFP_bingham_power
+		value = 0
+		}
 	}
 	option = { #Paul H. Maloney
 		name = unionstate.5101.c
@@ -2431,6 +2463,22 @@ country_event = { #Long Dead
 			ruling_party = social_conservative
 			election_frequency = 48
 			elections_allowed = yes
+		}
+		set_country_flag = {
+		flag = AFP_smith_power
+		value = 0
+		}
+		set_country_flag = {
+		flag = AFP_coughlin_power
+		value = 0
+		}
+		set_country_flag = {
+		flag = AFP_long_power
+		value = 0
+		}
+		set_country_flag = {
+		flag = AFP_bingham_power
+		value = 0
 		}
 	}
 	option = { #Big Jim Folsom
@@ -2475,6 +2523,22 @@ country_event = { #Long Dead
 			ruling_party = social_liberal
 			election_frequency = 48
 			elections_allowed = yes
+		}
+		set_country_flag = {
+		flag = AFP_smith_power
+		value = 0
+		}
+		set_country_flag = {
+		flag = AFP_coughlin_power
+		value = 0
+		}
+		set_country_flag = {
+		flag = AFP_long_power
+		value = 0
+		}
+		set_country_flag = {
+		flag = AFP_bingham_power
+		value = 0
 		}
 	}
 	option = { #Sid McMath
@@ -2523,6 +2587,22 @@ country_event = { #Long Dead
 			election_frequency = 48
 			elections_allowed = yes
 			}
+		}
+		set_country_flag = {
+		flag = AFP_smith_power
+		value = 0
+		}
+		set_country_flag = {
+		flag = AFP_coughlin_power
+		value = 0
+		}
+		set_country_flag = {
+		flag = AFP_long_power
+		value = 0
+		}
+		set_country_flag = {
+		flag = AFP_bingham_power
+		value = 0
 		}
 	}
 	option = { #Bronson M. Cutting
@@ -2591,6 +2671,22 @@ country_event = { #Long Dead
 			elections_allowed = yes
 			}
 		}
+		set_country_flag = {
+		flag = AFP_smith_power
+		value = 0
+		}
+		set_country_flag = {
+		flag = AFP_coughlin_power
+		value = 0
+		}
+		set_country_flag = {
+		flag = AFP_long_power
+		value = 0
+		}
+		set_country_flag = {
+		flag = AFP_bingham_power
+		value = 0
+		}
 	}
 	option = { #Alfred Mitchell Bingham
 		name = unionstate.5101.h
@@ -2657,6 +2753,22 @@ country_event = { #Long Dead
 			election_frequency = 48
 			elections_allowed = yes
 			}
+		}
+		set_country_flag = {
+		flag = AFP_smith_power
+		value = 0
+		}
+		set_country_flag = {
+		flag = AFP_coughlin_power
+		value = 0
+		}
+		set_country_flag = {
+		flag = AFP_long_power
+		value = 0
+		}
+		set_country_flag = {
+		flag = AFP_bingham_power
+		value = 0
 		}
 	}
 	option = { #Earl Long
@@ -2749,6 +2861,22 @@ country_event = { #Long Dead
 			election_frequency = 48
 			elections_allowed = yes
 			}
+		}
+		set_country_flag = {
+		flag = AFP_smith_power
+		value = 0
+		}
+		set_country_flag = {
+		flag = AFP_coughlin_power
+		value = 0
+		}
+		set_country_flag = {
+		flag = AFP_long_power
+		value = 0
+		}
+		set_country_flag = {
+		flag = AFP_bingham_power
+		value = 0
 		}
 	}
 }
@@ -3878,7 +4006,7 @@ country_event = { #Huey Long's Funeral: Who Shall Preside?
 			add_stability = 0.03
 			modify_country_flag = {
 			flag = AFP_smith_power
-			value = 1
+			value = 2
 			}
 		}
 	}
@@ -3900,7 +4028,7 @@ country_event = { #Huey Long's Funeral: Who Shall Preside?
 			add_stability = 0.01
 			modify_country_flag = {
 			flag = AFP_long_power
-			value = 1
+			value = 2
 			}
 		}
 	}
@@ -3922,7 +4050,7 @@ country_event = { #Huey Long's Funeral: Who Shall Preside?
 			add_stability = 0.02
 			modify_country_flag = {
 			flag = AFP_coughlin_power
-			value = 1
+			value = 2
 			}
 		}
 	}
@@ -3947,7 +4075,7 @@ country_event = { #Huey Long's Funeral: Who Shall Preside?
 			add_stability = -0.01
 			modify_country_flag = {
 			flag = AFP_bingham_power
-			value = 1
+			value = 2
 			}
 		}
 	}
@@ -3986,7 +4114,7 @@ country_event = { #Huey Long's Statue
 			add_stability = 0.01
 			modify_country_flag = {
 			flag = AFP_long_power
-			value = 1
+			value = 2
 			}
 		}
 		else_if = {
@@ -4001,7 +4129,7 @@ country_event = { #Huey Long's Statue
 			add_stability = 0.02
 			modify_country_flag = {
 			flag = AFP_smith_power
-			value = 1
+			value = 2
 			}
 		}
 		else = {
@@ -4013,11 +4141,11 @@ country_event = { #Huey Long's Statue
 			add_stability = -0.01
 			modify_country_flag = {
 			flag = AFP_smith_power
-			value = 1
+			value = 2
 			}
 			modify_country_flag = {
 			flag = AFP_long_power
-			value = 1
+			value = 2
 			}
 		}
 	}
@@ -4042,7 +4170,7 @@ country_event = { #Huey Long's Statue
 			add_stability = 0.01
 			modify_country_flag = {
 			flag = AFP_bingham_power
-			value = 1
+			value = 2
 			}
 		}
 	}
@@ -4066,7 +4194,7 @@ country_event = { #Huey Long's Statue
 			add_stability = 0.02
 			modify_country_flag = {
 			flag = AFP_coughlin_power
-			value = 1
+			value = 2
 			}
 		}
 	}
@@ -4098,7 +4226,7 @@ country_event = { #Huey Long's Assassination Inquest: Who to Investigate?
 			add_stability = 0.01
 			modify_country_flag = {
 			flag = AFP_coughlin_power
-			value = 1
+			value = 2
 			}
 		}
 		else_if = {
@@ -4113,7 +4241,7 @@ country_event = { #Huey Long's Assassination Inquest: Who to Investigate?
 			add_stability = 0.01
 			modify_country_flag = {
 			flag = AFP_smith_power
-			value = 1
+			value = 2
 			}
 		}
 		else = {
@@ -4125,11 +4253,11 @@ country_event = { #Huey Long's Assassination Inquest: Who to Investigate?
 			add_stability = 0.03
 			modify_country_flag = {
 			flag = AFP_smith_power
-			value = 1
+			value = 2
 			}
 			modify_country_flag = {
 			flag = AFP_coughlin_power
-			value = 1
+			value = 2
 			}
 		}
 	}
@@ -4147,7 +4275,7 @@ country_event = { #Huey Long's Assassination Inquest: Who to Investigate?
 			add_stability = -0.02
 			modify_country_flag = {
 			flag = AFP_bingham_power
-			value = 1
+			value = 2
 			}
 		}
 		else_if = {
@@ -4162,7 +4290,7 @@ country_event = { #Huey Long's Assassination Inquest: Who to Investigate?
 			add_stability = 0.03
 			modify_country_flag = {
 			flag = AFP_long_power
-			value = 1
+			value = 2
 			}
 		}
 		else = {
@@ -4174,11 +4302,11 @@ country_event = { #Huey Long's Assassination Inquest: Who to Investigate?
 			add_stability = 0.02
 			modify_country_flag = {
 			flag = AFP_long_power
-			value = 1
+			value = 2
 			}
 			modify_country_flag = {
 			flag = AFP_bingham_power
-			value = 1
+			value = 2
 			}
 		}
 	}
@@ -4201,7 +4329,7 @@ country_event = { #Huey Long's Assassination Inquest: Who to Investigate?
 			add_stability = -0.01
 			modify_country_flag = {
 			flag = AFP_smith_power
-			value = 1
+			value = 2
 			}
 		}
 	}
@@ -4223,7 +4351,7 @@ country_event = { #Huey Long's Assassination Inquest: Who to Investigate?
 			add_stability = -0.01
 			modify_country_flag = {
 			flag = AFP_bingham_power
-			value = 1
+			value = 2
 			}
 		}
 	}
@@ -4237,9 +4365,12 @@ country_event = { #Huey Long's Trial of Assassins
 	desc = { ###Smith Coup in the Capitol###
 	text = unionstate.5108.d.coupsmith
 	trigger = {
+		NOT = {
+		has_country_leader = { ruling_only = yes name = "Gerald L.K. Smith" }
+		}
 		has_country_flag = {
-			flag = AFL_smith_power
-			value > 2
+			flag = AFP_smith_power
+			value > 4
 			}
 		}
 	}
@@ -4247,9 +4378,12 @@ country_event = { #Huey Long's Trial of Assassins
 	desc = { ###Coughlin Coup in the Capitol###
 	text = unionstate.5108.d.coupcoughlin
 	trigger = {
+		NOT = {
+		has_country_leader = { ruling_only = yes name = "Charles Coughlin" }
+		}
 		has_country_flag = {
-			flag = AFL_coughlin_power
-			value > 2
+			flag = AFP_coughlin_power
+			value > 4
 			}
 		}
 	}
@@ -4257,9 +4391,12 @@ country_event = { #Huey Long's Trial of Assassins
 	desc = { ###Long Coup in the Capitol###
 	text = unionstate.5108.d.couplong
 	trigger = {
+		NOT = {
+		has_country_leader = { ruling_only = yes name = "Earl Long" }
+		}
 		has_country_flag = {
-			flag = AFL_long_power
-			value > 2
+			flag = AFP_long_power
+			value > 4
 			}
 		}
 	}
@@ -4267,9 +4404,12 @@ country_event = { #Huey Long's Trial of Assassins
 	desc = { ###Bingham Coup in the Capitol###
 	text = unionstate.5108.d.coupbingham
 	trigger = {
+		NOT = {
+		has_country_leader = { ruling_only = yes name = "Alfred Mitchell Bingham" }
+		}
 		has_country_flag = {
-			flag = AFL_bingham_power
-			value > 2
+			flag = AFP_bingham_power
+			value > 4
 			}
 		}
 	}
@@ -4279,20 +4419,20 @@ country_event = { #Huey Long's Trial of Assassins
 	trigger = {
 		AND = {
 			has_country_flag = {
-				flag = AFL_smith_power
-				value < 3
+				flag = AFP_smith_power
+				value < 5
 				}
 			has_country_flag = {
-				flag = AFL_coughlin_power
-				value < 3
+				flag = AFP_coughlin_power
+				value < 5
 				}
 			has_country_flag = {
-				flag = AFL_long_power
-				value < 3
+				flag = AFP_long_power
+				value < 5
 				}
 			has_country_flag = {
-				flag = AFL_bingham_power
-				value < 3
+				flag = AFP_bingham_power
+				value < 5
 				}
 			}
 		}
@@ -4306,11 +4446,54 @@ country_event = { #Huey Long's Trial of Assassins
 	
 	option = { #Coup
 		name = unionstate.5108.a
+		trigger = {
+			OR = {
+				AND = {
+					NOT = {
+					has_country_leader = { ruling_only = yes name = "Gerald L.K. Smith" }
+					}
+					has_country_flag = {
+					flag = AFP_smith_power
+					value > 4
+					}
+				}
+				AND = {
+					NOT = {
+					has_country_leader = { ruling_only = yes name = "Charles Coughlin" }
+					}
+					has_country_flag = {
+					flag = AFP_coughlin_power
+					value > 4
+					}
+				}
+				AND = {
+					NOT = {
+					has_country_leader = { ruling_only = yes name = "Earl Long" }
+					}
+					has_country_flag = {
+					flag = AFP_long_power
+					value > 4
+					}
+				}
+				AND = {
+					NOT = {
+					has_country_leader = { ruling_only = yes name = "Alfred Mitchell Bingham" }
+					}
+					has_country_flag = {
+					flag = AFP_bingham_power
+					value > 4
+					}
+				}
+			}
+		}
 		if = {
 			limit = {
+				NOT = {
+				has_country_leader = { ruling_only = yes name = "Gerald L.K. Smith" }
+				}
 				has_country_flag = {
-				flag = AFL_smith_power
-				value > 2
+				flag = AFP_smith_power
+				value > 4
 				}
 			}
 			create_country_leader = {
@@ -4329,9 +4512,12 @@ country_event = { #Huey Long's Trial of Assassins
 		}
 		else_if = {
 			limit = {
+				NOT = {
+				has_country_leader = { ruling_only = yes name = "Charles Coughlin" }
+				}
 				has_country_flag = {
-				flag = AFL_coughlin_power
-				value > 2
+				flag = AFP_coughlin_power
+				value > 4
 				}
 			}
 			create_country_leader = {
@@ -4350,9 +4536,12 @@ country_event = { #Huey Long's Trial of Assassins
 		}
 		else_if = {
 			limit = {
+				NOT = {
+				has_country_leader = { ruling_only = yes name = "Earl Long" }
+				}
 				has_country_flag = {
-				flag = AFL_long_power
-				value > 2
+				flag = AFP_long_power
+				value > 4
 				}
 			}
 			create_country_leader = {
@@ -4371,9 +4560,12 @@ country_event = { #Huey Long's Trial of Assassins
 		}
 		else_if = {
 			limit = {
+				NOT = {
+				has_country_leader = { ruling_only = yes name = "Alfred Mitchell Bingham" }
+				}
 				has_country_flag = {
-				flag = AFL_bingham_power
-				value > 2
+				flag = AFP_bingham_power
+				value > 4
 				}
 			}
 			create_country_leader = {
@@ -4393,6 +4585,26 @@ country_event = { #Huey Long's Trial of Assassins
 	}
 	option = { #Normal Trial
 		name = unionstate.5108.b
+		trigger = {
+		AND = {
+			has_country_flag = {
+				flag = AFP_smith_power
+				value < 5
+				}
+			has_country_flag = {
+				flag = AFP_coughlin_power
+				value < 5
+				}
+			has_country_flag = {
+				flag = AFP_long_power
+				value < 5
+				}
+			has_country_flag = {
+				flag = AFP_bingham_power
+				value < 5
+				}
+			}
+		}
 		increase_ruling_party_popularity_by_5 = yes
 		add_political_power = 25
 		add_stability = 0.05
@@ -5008,6 +5220,69 @@ country_event = { #Reaching Out to Minor AFP Figures
 		add_popularity = { ideology = social_democrat popularity = 0.03 }
 		add_popularity = { ideology = social_liberal popularity = 0.02 }
 		add_ideas = TEX_minor_support_idea
+	}
+}
+
+country_event = { #New Jerusalem
+	id = unionstate.5129
+	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.5129"}
+	title = unionstate.5129.t
+	desc = unionstate.5129.d
+	
+	picture = GFX_event_TEX_smith_donors
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = { #Christian Values Prevail!
+		name = unionstate.5129.a
+		increase_ruling_party_popularity_by_5 = yes
+		add_political_power = 5
+	}
+}
+
+country_event = { #Dealing with Sweeney
+	id = unionstate.5130
+	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.5130"}
+	title = unionstate.5130.t
+	desc = unionstate.5130.d
+	
+	picture = GFX_event_TEX_coughlin_speech
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = { #How annoying
+		name = unionstate.5130.a
+		add_popularity = { ideology = paternal_autocrat popularity = -0.02 }
+		add_stability = -0.01
+		hidden_effect = {
+			country_event = {
+			id = unionstate.5131
+			days = 7
+			}
+		}
+	}
+}
+
+country_event = { #Dealing with Sweeney Two
+	id = unionstate.5131
+	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.5131"}
+	title = unionstate.5131.t
+	desc = unionstate.5131.d
+	
+	picture = GFX_report_event_generic_trial_big
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = { #Out of my way!
+		name = unionstate.5131.a
+		add_popularity = { ideology = paternal_autocrat popularity = 0.05 }
+		add_political_power = 15
 	}
 }
 

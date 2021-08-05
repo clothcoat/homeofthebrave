@@ -3966,6 +3966,12 @@ focus_tree = {
 			id = unionstate.5118
 			days = 1
 			}
+			hidden_effect = {
+				country_event = {
+				id = unionstate.5129
+				days = 14
+				}
+			}
 		}
 	}
 
@@ -4034,6 +4040,12 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus TEX_national_sermons"
 			add_ideas = TEX_national_sermons_idea
 			increase_ruling_party_popularity_by_5 = yes
+			hidden_effect = {
+				country_event = {
+				id = unionstate.5130
+				days = 3
+				}
+			}
 		}
 	}
 
