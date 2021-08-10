@@ -2821,6 +2821,7 @@ country_event = { # The 1936 Election - You're Fucked (Or are you...)
 		custom_effect_tooltip = USA_democratic_deadlock_tooltip
 		set_country_flag = USA_had_1936_election
 		set_country_flag = USA_deadlock_norris
+		set_country_flag = USA_progressives_exist
 		hidden_effect = {
 			create_country_leader = {
 				name = "George Norris"
@@ -8743,6 +8744,9 @@ country_event = { # Division Over Big Business Support
 			has_global_flag = USA_civil_war_avoided_flag
 			has_global_flag = USA_civil_war_over_flag
 		}
+		NOT = {
+			has_global_flag = USA_deadlock_norris
+		}
 	}
 
 	mean_time_to_happen = {
@@ -9675,6 +9679,22 @@ country_event = { # The Upcoming Election
 					long_name = NPP_national_populist_coalition_long
 					name = NPP_national_populist_coalition
 				}
+				create_country_leader = { 
+					name = "William H. Murray"
+					desc = "POLITICS_WILLIAM_H_MURRAY_DESC"
+					picture = "gfx/leaders/COR/Portrait_William_H_Murray_2.tga"
+					expire = "1965.1.1"
+					ideology = authoritarian_democrat_subtype
+					traits = { alfalfa_bill }
+				}
+				create_country_leader = { 
+					name = "Charles Lindbergh"
+					desc = "POLITICS_CHARLES_LINDBERGH"
+					picture = "gfx/leaders/COR/COR_lindberg.tga"
+					expire = "1965.1.1"
+					ideology = paternal_autocrat_subtype
+					traits = { the_lone_eagle }
+				}
 			}
 		}
 
@@ -9730,14 +9750,14 @@ country_event = { # The San Fran Conference
 		custom_effect_tooltip = PP_gains_strength
 		add_popularity = { ideology = radical_socialist popularity = 0.05 }
 		hidden_effect = {
-				set_country_flag = Sinclair_endorses_PP
-				set_party_name = { #PP-L
-					ideology = radical_socialist
-					long_name = PP_radical_socialist_coalition_long
-					name = PP_radical_socialist_coalition
-				}
+			set_country_flag = Sinclair_endorses_PP
+			set_party_name = { #PP-L
+				ideology = radical_socialist
+				long_name = PP_radical_socialist_coalition_long
+				name = PP_radical_socialist_coalition
 			}
 		}
+	}
 	option = { # Failure
 		name = ustates.191.b
 		trigger = {
@@ -9747,8 +9767,8 @@ country_event = { # The San Fran Conference
 		add_popularity = { ideology = radical_socialist popularity = -0.05 }
 		hidden_effect = {
 				set_country_flag = Sinclair_does_not_endorse_PP
-			}
 		}
+	}
 	option = { # Success
 		name = ustates.191.c
 		trigger = {
@@ -9758,8 +9778,8 @@ country_event = { # The San Fran Conference
 		add_popularity = { ideology = authoritarian_democrat popularity = 0.05 }
 		hidden_effect = {
 				set_country_flag = Hearst_endorses_NPP
-			}
 		}
+	}
 	option = { # Failure
 		name = ustates.191.e
 		trigger = {
@@ -9769,9 +9789,9 @@ country_event = { # The San Fran Conference
 		add_popularity = { ideology = authoritarian_democrat popularity = -0.05 }
 		hidden_effect = {
 				set_country_flag = Hearst_does_not_endorse_NPP
-			}
 		}
 	}
+}
 	
 country_event = { # The Omaha Conference
 	id = ustates.192
@@ -9781,14 +9801,14 @@ country_event = { # The Omaha Conference
 		text = ustates.192.d.norris
 		trigger = {
 			has_country_flag = USA_deadlock_garner
-			}
 		}
+	}
 	desc = { # Pelley
 		text = ustates.192.d.pelley
 		trigger = {
 			has_country_flag = USA_deadlock_norris
-			}
 		}
+	}
 	picture = GFX_report_event_USA_congress
 
 	trigger = {
@@ -9811,14 +9831,14 @@ country_event = { # The Omaha Conference
 		custom_effect_tooltip = PP_gains_strength
 		add_popularity = { ideology = social_liberal popularity = 0.05 }
 		hidden_effect = {
-				set_country_flag = Norris_endorses_PP
-				set_party_name = { #PP-M
-					ideology = social_liberal
-					long_name = PP_social_liberal_coalition_long
-					name = PP_social_liberal_coalition
-				}
+			set_country_flag = Norris_endorses_PP
+			set_party_name = { #PP-M
+				ideology = social_liberal
+				long_name = PP_social_liberal_coalition_long
+				name = PP_social_liberal_coalition
 			}
 		}
+	}
 	option = { # Failure
 		name = ustates.192.b
 		trigger = {
@@ -9838,23 +9858,22 @@ country_event = { # The Omaha Conference
 		custom_effect_tooltip = NPP_gains_strength
 		add_popularity = { ideology = social_conservative popularity = 0.05 }
 		hidden_effect = {
-				set_country_flag = Pelley_endorses_NPP
-				set_party_name = { #NPP-P
-					ideology = social_conservative
-					long_name = NPP_social_conservative_coalition_long
-					name = NPP_social_conservative_coalition
-					
-				}
-				create_country_leader = { 
+			set_country_flag = Pelley_endorses_NPP
+			set_party_name = { #NPP-P
+				ideology = social_conservative
+				long_name = NPP_social_conservative_coalition_long
+				name = NPP_social_conservative_coalition
+			}
+			create_country_leader = { 
 					name = "William Dudley Pelley"
 					desc = "POLITICS_WILLIAM_DUDLEY_PELLEY_DESC"
-					picture = "Portrait_TEX_William_Dudley_Pelley.png"
+					picture = "gfx/leaders/TEX/Portrait_TEX_William_Dudley_Pelley.png"
 					expire = "1965.1.1"
 					ideology = authoritarian_democrat_subtype
 					traits = { authoritarian_tendencies }
-				}
 			}
 		}
+	}
 	option = { # Failure
 		name = ustates.192.e
 		trigger = {
@@ -9865,9 +9884,9 @@ country_event = { # The Omaha Conference
 		hidden_effect = {
 				set_country_flag = Pelley_does_not_endorse_NPP
 				
-			}
 		}
 	}
+}
 	
 country_event = { # The Boston Conference
 	id = ustates.193
@@ -9877,14 +9896,14 @@ country_event = { # The Boston Conference
 		text = ustates.193.d.aiken
 		trigger = {
 			has_country_flag = USA_deadlock_garner
-			}
 		}
+	}
 	desc = { # Nock
 		text = ustates.193.d.dupont
 		trigger = {
 			has_country_flag = USA_deadlock_norris
-			}
 		}
+	}
 	picture = GFX_report_event_USA_congress
 
 	trigger = {
@@ -9908,8 +9927,8 @@ country_event = { # The Boston Conference
 		add_popularity = { ideology = social_democrat popularity = 0.05 }
 		hidden_effect = {
 				set_country_flag = Aiken_endorses_PP
-			}
 		}
+	}
 	option = { # Failure
 		name = ustates.193.b
 		trigger = {
@@ -9919,8 +9938,8 @@ country_event = { # The Boston Conference
 		add_popularity = { ideology = social_democrat popularity = -0.05 }
 		hidden_effect = {
 				set_country_flag = Aiken_does_not_endorse_PP
-			}
 		}
+	}
 	option = { # Success
 		name = ustates.193.c
 		trigger = {
@@ -9930,20 +9949,20 @@ country_event = { # The Boston Conference
 		add_popularity = { ideology = paternal_autocrat popularity = 0.05 }
 			hidden_effect = {
 				set_country_flag = Nock_endorses_NPP
-			}
 		}
+	}
 	option = { # Failure
 		name = ustates.193.e
 		trigger = {
 			has_country_flag = USA_deadlock_norris
 		}
 		custom_effect_tooltip = NPP_loses_strength
-		add_popularity = { ideology = national_populist popularity = -0.05 }
+		add_popularity = { ideology = paternal_autocrat popularity = -0.05 }
 		hidden_effect = {
 				set_country_flag = Nock_does_not_endorse_NPP
-			}
 		}
 	}
+}
 
 country_event = { # The St. Louis Convention
 	id = ustates.194
@@ -9980,6 +9999,7 @@ country_event = { # The St. Louis Convention
 		country_event = { id = ustates.195 days = 1 }
 		country_event = { id = ustates.196 days = 2 }
 		country_event = { id = ustates.197 days = 3 }
+		custom_effect_tooltip = USA_convention_rules
 		}
 	}
 	
@@ -9991,14 +10011,14 @@ country_event = { # The St. Louis Convention
 		text = ustates.195.d.pp
 		trigger = {
 			has_country_flag = USA_deadlock_garner
-			}
 		}
+	}
 	desc = { # National People's Party
 		text = ustates.195.d.npp
 		trigger = {
 			has_country_flag = USA_deadlock_norris
-			}
 		}
+	}
 	picture = GFX_event_kiel_auditorium
 
 	trigger = {
@@ -10021,9 +10041,9 @@ country_event = { # The St. Louis Convention
 		custom_effect_tooltip = PP_reed_gains_strength_2
 		add_popularity = { ideology = syndicalist popularity = 0.01 }
 		hidden_effect = {
-				add_to_variable = { var = reed_PP_strength value = 2 }
-			}
+			add_to_variable = { var = reed_PP_strength value = 2 }
 		}
+	}
 	option = { # William Green
 		name = ustates.195.b
 		trigger = {
@@ -10032,9 +10052,9 @@ country_event = { # The St. Louis Convention
 		custom_effect_tooltip = PP_reed_gains_strength_1
 		add_popularity = { ideology = radical_socialist popularity = 0.01 }
 		hidden_effect = {
-				add_to_variable = { var = reed_PP_strength value = 1 }
-			}
+			add_to_variable = { var = reed_PP_strength value = 1 }
 		}
+	}
 	option = { # Robert LaFollette Jr.
 		name = ustates.195.c
 		trigger = {
@@ -10042,10 +10062,10 @@ country_event = { # The St. Louis Convention
 		}
 		custom_effect_tooltip = PP_long_gains_strength_2
 		add_popularity = { ideology = social_democrat popularity = 0.01 }
-			hidden_effect = {
-				add_to_variable = { var = long_PP_strength value = 2 }
-			}
+		hidden_effect = {
+			add_to_variable = { var = long_PP_strength value = 2 }
 		}
+	}
 	option = { # Philip LaFollette
 		name = ustates.195.e
 		trigger = {
@@ -10054,9 +10074,9 @@ country_event = { # The St. Louis Convention
 		custom_effect_tooltip = PP_long_gains_strength_1
 		add_popularity = { ideology = social_liberal popularity = 0.01 }
 		hidden_effect = {
-				add_to_variable = { var = long_PP_strength value = 1 }
-			}
+			add_to_variable = { var = long_PP_strength value = 1 }
 		}
+	}
 	option = { # Henry Ford
 		name = ustates.195.f
 		trigger = {
@@ -10065,9 +10085,9 @@ country_event = { # The St. Louis Convention
 		custom_effect_tooltip = NPP_lindbergh_gains_strength_2
 		add_popularity = { ideology = paternal_autocrat popularity = 0.01 }
 		hidden_effect = {
-				add_to_variable = { var = lindbergh_NPP_strength value = 2 }
-			}
+			add_to_variable = { var = lindbergh_NPP_strength value = 2 }
 		}
+	}
 	option = { # William Randolph Hearst Jr.
 		name = ustates.195.g
 		trigger = {
@@ -10076,9 +10096,9 @@ country_event = { # The St. Louis Convention
 		custom_effect_tooltip = NPP_lindbergh_gains_strength_1
 		add_popularity = { ideology = authoritarian_democrat popularity = 0.01 }
 		hidden_effect = {
-				add_to_variable = { var = lindbergh_NPP_strength value = 1 }
-			}
+			add_to_variable = { var = lindbergh_NPP_strength value = 1 }
 		}
+	}
 	option = { # Gerald L. K. Smith
 		name = ustates.195.h
 		trigger = {
@@ -10087,10 +10107,10 @@ country_event = { # The St. Louis Convention
 		custom_effect_tooltip = NPP_murray_gains_strength_2
 		add_popularity = { ideology = authoritarian_democrat popularity = 0.01 }
 		hidden_effect = {
-				add_to_variable = { var = murray_NPP_strength value = 2 }
-				set_country_flag = smith_NPP_convention_speaker
-			}
+			add_to_variable = { var = murray_NPP_strength value = 2 }
+			set_country_flag = smith_NPP_convention_speaker
 		}
+	}
 	option = { # Samuel Green
 		name = ustates.195.i
 		trigger = {
@@ -10099,10 +10119,10 @@ country_event = { # The St. Louis Convention
 		custom_effect_tooltip = NPP_murray_gains_strength_1
 		add_popularity = { ideology = national_populist popularity = 0.01 }
 		hidden_effect = {
-				add_to_variable = { var = murray_NPP_strength value = 1 }
-			}
+			add_to_variable = { var = murray_NPP_strength value = 1 }
 		}
 	}
+}
 	
 	country_event = { # The St. Louis Convention, second speech
 	id = ustates.196
@@ -10118,8 +10138,8 @@ country_event = { # The St. Louis Convention
 		text = ustates.196.d.npp
 		trigger = {
 			has_country_flag = USA_deadlock_norris
-			}
 		}
+	}
 	picture = GFX_event_kiel_auditorium
 
 	trigger = {
@@ -10143,9 +10163,9 @@ country_event = { # The St. Louis Convention
 		custom_effect_tooltip = PP_reed_gains_strength_1
 		add_popularity = { ideology = radical_socialist popularity = 0.01 }
 		hidden_effect = {
-				add_to_variable = { var = reed_PP_strength value = 1 }
-			}
+			add_to_variable = { var = reed_PP_strength value = 1 }
 		}
+	}
 	option = { # George Norris
 		name = ustates.196.b
 		trigger = {
@@ -10155,9 +10175,9 @@ country_event = { # The St. Louis Convention
 		custom_effect_tooltip = PP_long_gains_strength_2
 		add_popularity = { ideology = social_democrat popularity = 0.01 }
 		hidden_effect = {
-				add_to_variable = { var = long_PP_strength value = 2 }
-			}
+			add_to_variable = { var = long_PP_strength value = 2 }
 		}
+	}
 	option = { # George Aiken 
 		name = ustates.196.c
 		trigger = {
@@ -10166,27 +10186,27 @@ country_event = { # The St. Louis Convention
 		}
 		custom_effect_tooltip = PP_long_gains_strength_1
 		add_popularity = { ideology = social_democrat popularity = 0.01 }
-			hidden_effect = {
-				add_to_variable = { var = long_PP_strength value = 1 }
-			}
+		hidden_effect = {
+			add_to_variable = { var = long_PP_strength value = 1 }
 		}
+	}
 	option = { # Earl Browder
 		name = ustates.196.e
 		trigger = {
 			has_country_flag = USA_deadlock_garner
 		}
-		custom_effect_tooltip = PP_long_gains_strength_1
+		custom_effect_tooltip = PP_reed_gains_strength_1
 		add_popularity = { ideology = totalist popularity = 0.01 }
 		hidden_effect = {
-				add_to_variable = { var = reed_PP_strength value = 1 }
-				set_country_flag = browder_PP_convention_speaker
-				set_party_name = { #PP-T
-					ideology = totalist
-					long_name = PP_totalist_coalition_long
-					name = PP_totalist_coalition
-				}
+			add_to_variable = { var = reed_PP_strength value = 1 }
+			set_country_flag = browder_PP_convention_speaker
+			set_party_name = { #PP-T
+				ideology = totalist
+				long_name = PP_totalist_coalition_long
+				name = PP_totalist_coalition
 			}
 		}
+	}
 	option = { # William Randolph Hearst 
 		name = ustates.196.f
 		trigger = {
@@ -10197,8 +10217,8 @@ country_event = { # The St. Louis Convention
 		add_popularity = { ideology = authoritarian_democrat popularity = 0.01 }
 		hidden_effect = {
 				add_to_variable = { var = lindbergh_NPP_strength value = 2 }
-			}
 		}
+	}
 	option = { # William Dudley Pelley
 		name = ustates.196.g
 		trigger = {
@@ -10210,8 +10230,8 @@ country_event = { # The St. Louis Convention
 		hidden_effect = {
 				add_to_variable = { var = murray_NPP_strength value = 2 }
 				set_country_flag = pelley_NPP_convention_speaker
-			}
 		}
+	}
 	option = { # Albert Nock
 		name = ustates.196.h
 		trigger = {
@@ -10222,8 +10242,8 @@ country_event = { # The St. Louis Convention
 		add_popularity = { ideology = paternal_autocrat popularity = 0.01 }
 		hidden_effect = {
 				add_to_variable = { var = lindbergh_NPP_strength value = 1 }
-			}
 		}
+	}
 	option = { # Lothrop Stoddard
 		name = ustates.196.i
 		trigger = {
@@ -10233,9 +10253,9 @@ country_event = { # The St. Louis Convention
 		add_popularity = { ideology = national_populist popularity = 0.01 }
 		hidden_effect = {
 				add_to_variable = { var = murray_NPP_strength value = 1 }
-			}
 		}
 	}
+}
 	
 	country_event = { # The St. Louis Convention, third speech
 	id = ustates.197
@@ -10245,14 +10265,14 @@ country_event = { # The St. Louis Convention
 		text = ustates.197.d.pp
 		trigger = {
 			has_country_flag = USA_deadlock_garner
-			}
 		}
+	}
 	desc = { # National People's Party
 		text = ustates.197.d.npp
 		trigger = {
 			has_country_flag = USA_deadlock_norris
-			}
 		}
+	}
 	picture = GFX_event_kiel_auditorium
 
 	trigger = {
@@ -10275,10 +10295,14 @@ country_event = { # The St. Louis Convention
 		custom_effect_tooltip = PP_reed_gains_strength_3
 		add_popularity = { ideology = syndicalist popularity = 0.01 }
 		hidden_effect = {
-				add_to_variable = { var = reed_PP_strength value = 3 }
-				set_country_flag = convention_speeches_over
+			add_to_variable = { var = reed_PP_strength value = 3 }
+			set_country_flag = convention_speeches_over
+			country_event = {
+				id = ustates.198
+				day = 5
 			}
 		}
+	}
 	option = { # Earl Long
 		name = ustates.197.b
 		trigger = {
@@ -10287,10 +10311,14 @@ country_event = { # The St. Louis Convention
 		custom_effect_tooltip = PP_long_gains_strength_3
 		add_popularity = { ideology = social_democrat popularity = 0.01 }
 		hidden_effect = {
-				add_to_variable = { var = long_PP_strength value = 3 }
-				set_country_flag = convention_speeches_over
+			add_to_variable = { var = long_PP_strength value = 3 }
+			set_country_flag = convention_speeches_over
+			country_event = {
+				id = ustates.198
+				day = 5
 			}
 		}
+	}
 	option = { # Fred Chase Koch
 		name = ustates.197.c
 		trigger = {
@@ -10298,11 +10326,15 @@ country_event = { # The St. Louis Convention
 		}
 		custom_effect_tooltip = NPP_lindbergh_gains_strength_3
 		add_popularity = { ideology = paternal_autocrat popularity = 0.01 }
-			hidden_effect = {
-				add_to_variable = { var = lindbergh_NPP_strength value = 3 }
-				set_country_flag = convention_speeches_over
+		hidden_effect = {
+			add_to_variable = { var = lindbergh_NPP_strength value = 3 }
+			set_country_flag = convention_speeches_over
+			country_event = {
+				id = ustates.198
+				day = 5
 			}
 		}
+	}
 	option = { # John E. Rankin
 		name = ustates.197.e
 		trigger = {
@@ -10311,11 +10343,15 @@ country_event = { # The St. Louis Convention
 		custom_effect_tooltip = NPP_murray_gains_strength_3
 		add_popularity = { ideology = authoritarian_democrat popularity = 0.01 }
 		hidden_effect = {
-				add_to_variable = { var = murray_NPP_strength value = 3 }
-				set_country_flag = convention_speeches_over
+			add_to_variable = { var = murray_NPP_strength value = 3 }
+			set_country_flag = convention_speeches_over
+			country_event = {
+				id = ustates.198
+				day = 5
 			}
 		}
 	}
+}
 
 country_event = { # The St. Louis Convention, Presidential Nominee
 	id = ustates.198
@@ -10334,37 +10370,8 @@ country_event = { # The St. Louis Convention, Presidential Nominee
 			}
 		}
 	picture = GFX_event_kiel_auditorium
-	trigger = {
-		tag = USA
-		has_elected_government = yes
-		has_country_flag = USA_had_1936_election
-		has_country_flag = convention_speeches_over
-		NOT = {
-			has_country_flag = USA_had_1940_election
-		}
-		OR = {
-			check_variable = {
-					var = reed_PP_strength
-					value = 4
-					compare = greater_than_or_equals
-				}
-			check_variable = {
-					var = long_PP_strength
-					value = 4
-					compare = greater_than_or_equals
-				}
-			check_variable = {
-					var = murray_NPP_strength
-					value = 4
-					compare = greater_than_or_equals
-				}
-			check_variable = {
-					var = lindbergh_NPP_strength
-					value = 4
-					compare = greater_than_or_equals
-				}
-		}
-	}
+	
+	is_triggered_only = yes
 
 	fire_only_once = yes
 	
@@ -10376,29 +10383,44 @@ country_event = { # The St. Louis Convention, Presidential Nominee
 			check_variable = { reed_PP_strength = long_PP_strength }
 			}
 		}
-			hidden_effect = {
-				if = { # Long
-					limit = {
-						check_variable = {
-							var = long_PP_strength
-							value = 4
-							compare = greater_than_or_equals
-						}
+		hidden_effect = {
+			if = { # Long
+				limit = {
+					check_variable = {
+						var = long_PP_strength
+						value = 5
+						compare = greater_than_or_equals
 					}
-					country_event = { id = ustates.1981 hours = 1 }
 				}
-				if = { # Reed
-					limit = {
-						check_variable = {
-							var = reed_PP_strength
-							value = 4
-							compare = greater_than_or_equals
-						}
+				country_event = { id = ustates.1981 hours = 1 }
+			}
+			if = { # Reed
+				limit = {
+					check_variable = {
+						var = reed_PP_strength
+						value = 5
+						compare = greater_than_or_equals
 					}
-					country_event = { id = ustates.1982 hours = 1 }
 				}
+				country_event = { id = ustates.1982 hours = 1 }
+			}
+			if = { # deadlock
+				limit = {
+					check_variable = {
+						var = reed_PP_strength
+						value = 5
+						compare = less_than
+					}
+					check_variable = {
+						var = long_PP_strength
+						value = 5
+						compare = less_than
+					}
+				}
+				country_event = { id = ustates.199 hours = 1 }
 			}
 		}
+	}
 	option = { # NPP Party Nominee
 		name = ustates.198.b
 		trigger = {
@@ -10407,30 +10429,45 @@ country_event = { # The St. Louis Convention, Presidential Nominee
 			check_variable = { murray_NPP_strength = lindbergh_NPP_strength }
 			}
 		}
-			hidden_effect = {
-				if = { # Murray
-					limit = {
-						check_variable = {
-							var = murray_NPP_strength
-							value = 4
-							compare = greater_than_or_equals
-						}
+		hidden_effect = {
+			if = { # Murray
+				limit = {
+					check_variable = {
+						var = murray_NPP_strength
+						value = 5
+						compare = greater_than_or_equals
 					}
-					country_event = { id = ustates.1983 hours = 1 }
 				}
-				if = { # Lindbergh
-					limit = {
-						check_variable = {
-							var = lindbergh_NPP_strength
-							value = 4
-							compare = greater_than_or_equals
-						}
+				country_event = { id = ustates.1983 hours = 1 }
+			}
+			if = { # Lindbergh
+				limit = {
+					check_variable = {
+						var = lindbergh_NPP_strength
+						value = 5
+						compare = greater_than_or_equals
 					}
-					country_event = { id = ustates.1984 hours = 1 }
 				}
+				country_event = { id = ustates.1984 hours = 1 }
+			}
+			if = { # deadlock
+				limit = {
+					check_variable = {
+						var = murray_NPP_strength
+						value = 5
+						compare = less_than
+					}
+					check_variable = {
+						var = lindbergh_NPP_strength
+						value = 5
+						compare = less_than
+					}
+				}
+				country_event = { id = ustates.199 hours = 1 }
 			}
 		}
 	}
+}
 
 country_event = { # Huey is the PP Nominee
 	id = ustates.1981
@@ -10449,7 +10486,7 @@ country_event = { # Huey is the PP Nominee
 			create_country_leader = {
 				name = "Huey Long"
 				desc = "POLITICS_HUEY_LONG_DESC"
-				picture = "Portrait_TEX_Huey_Long.png"
+				picture = "gfx/leaders/TEX/Portrait_TEX_Huey_Long.png"
 				expire = "1965.1.1"
 				ideology = social_democrat_subtype
 				traits = { the_kingfish }
@@ -10475,7 +10512,7 @@ country_event = { # Reed is the PP Nominee
 			create_country_leader = { 
 				name = "Jack Reed"
 				desc = "POLITICS_JACK_REED_DESC"
-				picture = "Portrait_CSA_Jack_Reed.png"
+				picture = "gfx/leaders/CSA/Portrait_CSA_Jack_Reed.png"
 				expire = "1965.1.1"
 				ideology = radical_socialist_subtype
 				traits = { }
@@ -10554,41 +10591,7 @@ country_event = { # The St. Louis Convention, Deadlock
 		}
 	picture = GFX_report_event_USA_congress
 
-	trigger = {
-		tag = USA
-		has_elected_government = yes
-		has_country_flag = USA_had_1936_election
-		has_country_flag = convention_speeches_over
-		NOT = {
-			has_country_flag = USA_had_1940_election
-		}
-		OR = {
-			AND = {
-				check_variable = {
-						var = reed_PP_strength
-						value = 4
-						compare = less_than
-					}
-				check_variable = {
-						var = long_PP_strength
-						value = 4
-						compare = less_than
-					}
-			}
-			AND = {
-				check_variable = {
-						var = murray_NPP_strength
-						value = 4
-						compare = less_than
-					}
-				check_variable = {
-						var = lindbergh_NPP_strength
-						value = 4
-						compare = less_than
-					}
-			}
-		}
-	}
+	is_triggered_only  = yes
 
 	fire_only_once = yes
 	
@@ -10598,10 +10601,10 @@ country_event = { # The St. Louis Convention, Deadlock
 			has_country_flag = USA_deadlock_garner
 			NOT = {
 				AND = {
-				has_country_flag = browder_PP_convention_speaker
-				has_country_flag = Aiken_does_not_endorse_PP
-				has_country_flag = Norris_does_not_endorse_PP
-				has_country_flag = Sinclair_endorses_PP
+					has_country_flag = browder_PP_convention_speaker
+					has_country_flag = Aiken_does_not_endorse_PP
+					has_country_flag = Norris_does_not_endorse_PP
+					has_country_flag = Sinclair_endorses_PP
 				}
 			}
 		}
@@ -10612,10 +10615,10 @@ country_event = { # The St. Louis Convention, Deadlock
 		trigger = {
 			has_country_flag = USA_deadlock_garner
 			AND = {
-				has_country_flag = browder_PP_convention_speaker
-				has_country_flag = Aiken_does_not_endorse_PP
-				has_country_flag = Norris_does_not_endorse_PP
-				has_country_flag = Sinclair_endorses_PP
+					has_country_flag = browder_PP_convention_speaker
+					has_country_flag = Aiken_does_not_endorse_PP
+					has_country_flag = Norris_does_not_endorse_PP
+					has_country_flag = Sinclair_endorses_PP
 			}
 		}
 		country_event = { id = ustates.1993 hours = 1 }
@@ -10626,11 +10629,11 @@ country_event = { # The St. Louis Convention, Deadlock
 			has_country_flag = USA_deadlock_norris
 			NOT = {
 				AND = {
-				has_country_flag = pelley_NPP_convention_speaker
-				has_country_flag = smith_NPP_convention_speaker
-				has_country_flag = Pelley_endorses_NPP
-				has_country_flag = Hearst_does_not_endorse_NPP
-				has_country_flag = Nock_does_not_endorse_NPP
+					has_country_flag = pelley_NPP_convention_speaker
+					has_country_flag = smith_NPP_convention_speaker
+					has_country_flag = Pelley_endorses_NPP
+					has_country_flag = Hearst_does_not_endorse_NPP
+					has_country_flag = Nock_does_not_endorse_NPP
 				}
 			}
 		}
@@ -10642,11 +10645,11 @@ country_event = { # The St. Louis Convention, Deadlock
 		trigger = {
 			has_country_flag = USA_deadlock_norris
 			AND = {
-				has_country_flag = pelley_NPP_convention_speaker
-				has_country_flag = smith_NPP_convention_speaker
-				has_country_flag = Pelley_endorses_NPP
-				has_country_flag = Hearst_does_not_endorse_NPP
-				has_country_flag = Nock_does_not_endorse_NPP
+					has_country_flag = pelley_NPP_convention_speaker
+					has_country_flag = smith_NPP_convention_speaker
+					has_country_flag = Pelley_endorses_NPP
+					has_country_flag = Hearst_does_not_endorse_NPP
+					has_country_flag = Nock_does_not_endorse_NPP
 			}
 		}
 		country_event = { id = ustates.1994 hours = 1 }
@@ -10669,7 +10672,7 @@ country_event = { # Choosing the PP Unity Candidate
 			create_country_leader = { 
 				name = "Norman Thomas"
 				desc = "POLITICS_NORMAN_THOMAS_DESC"
-				picture = "Portrait_CSA_Norman_Thomas.png"
+				picture = "gfx/leaders/CSA/Portrait_CSA_Norman_Thomas.png"
 				expire = "1965.1.1"
 				ideology = radical_socialist_subtype
 				traits = { }
@@ -10684,7 +10687,7 @@ country_event = { # Choosing the PP Unity Candidate
 			create_country_leader = { 
 				name = "Paul H. Maloney"
 				desc = "POLITICS_PAUL_MALONEY_DESC"
-				picture = "TEX_Paul_H_maloney.png"
+				picture = "gfx/leaders/TEX/TEX_Paul_H_maloney.png"
 				expire = "1965.1.1"
 				ideology = social_democrat_subtype
 				traits = { }
@@ -10692,17 +10695,17 @@ country_event = { # Choosing the PP Unity Candidate
 		}
 	}
 	
-	option = { # Big Jim Folsom
+	option = { # Upton Sinclair
 		name = ustates.1991.c
 		hidden_effect = {
-			set_country_flag = USA_1940_PP_primary_folsom
+			set_country_flag = USA_1940_PP_primary_sinclair
 			create_country_leader = { 
-				name = "Jim Folsom"
-				desc = "POLITICS_JIM_FOLSOM_DESC"
-				picture = "TEX_Big_Jim_Folsom.png"
+				name = "Upton Sinclair"
+				desc = "POLITICS_UPTON_SINCLAIR_DESC"
+				picture = "gfx/leaders/CAL/Portrait_CAL_Upton_Sinclair.png"
 				expire = "1965.1.1"
-				ideology = social_democrat_subtype
-				traits = { big_jim }
+				ideology = radical_socialist_subtype
+				traits = { author }
 			}
 		}
 	}
@@ -10732,17 +10735,22 @@ country_event = { # Choosing the NPP Unity Candidate
 		}
 	}
 	
-	option = { # Eugen Talmadge
+	option = { # Eugene Talmadge
 		name = ustates.1992.b
 		hidden_effect = {
 			set_country_flag = USA_1940_NPP_primary_talmadge
 			create_country_leader = { 
-				name = "Eugen Talmadge"
+				name = "Eugene Talmadge"
 				desc = "POLITICS_EUGEN_TALMADGE"
 				picture = "gfx/leaders/COR/COR_Eugene_Talmadge.png"
 				expire = "1965.1.1"
 				ideology = paternal_autocrat_subtype
 				traits = { }
+			}
+			set_party_name = { #NPP-HD
+					ideology = paternal_autocrat
+					long_name = NPP_paternal_autocrat_southerner_long
+					name = NPP_paternal_autocrat_southerner
 			}
 		}
 	}
@@ -10758,6 +10766,11 @@ country_event = { # Choosing the NPP Unity Candidate
 				expire = "1965.1.1"
 				ideology = authoritarian_democrat_subtype
 				traits = { }
+			}
+			set_party_name = { #NPP-D
+					ideology = authoritarian_democrat
+					long_name = NPP_authoritarian_democrat_southerner_long
+					name = NPP_authoritarian_democrat_southerner
 			}
 		}
 	}
@@ -10780,7 +10793,7 @@ country_event = { # Louder with Browder
 			create_country_leader = { 
 				name = "Earl Browder"
 				desc = "POLITICS_EARL_BROWDER_DESC"
-				picture = "Portrait_CSA_Earl_Bowder.png"
+				picture = "gfx/leaders/CSA/Portrait_CSA_Earl_Bowder.png"
 				expire = "1965.1.1"
 				ideology = radical_socialist_subtype
 				traits = { }
@@ -10806,7 +10819,7 @@ country_event = { # Dark Souls BTFO
 			create_country_leader = { 
 				name = "William Dudley Pelley"
 				desc = "POLITICS_WILLIAM_DUDLEY_PELLEY_DESC"
-				picture = "Portrait_TEX_William_Dudley_Pelley.png"
+				picture = "gfx/leaders/TEX/Portrait_TEX_William_Dudley_Pelley.png"
 				expire = "1965.1.1"
 				ideology = authoritarian_democrat_subtype
 				traits = { authoritarian_tendencies }
@@ -11366,6 +11379,17 @@ country_event = { # 1940 Election
 				id = ustates.206
 				days = 1297
 			}
+			if = {
+				limit = {
+					has_country_flag = USA_deadlock_norris
+				}
+				hidden_effect = {
+					country_event = {
+					id = ustates.1996
+					days = 1276
+					}
+				}
+			}
 		}
 	}
 	option = { # Republican
@@ -11692,6 +11716,17 @@ country_event = { # 1940 Election
 				id = ustates.206
 				days = 1297
 			}
+			if = {
+				limit = {
+					has_country_flag = USA_deadlock_garner
+				}
+				hidden_effect = {
+					country_event = {
+					id = ustates.1995
+					days = 1276
+					}
+				}
+			}
 		}
 	}
 	option = { # Populist Party
@@ -11700,12 +11735,13 @@ country_event = { # 1940 Election
 			has_country_flag = USA_deadlock_garner
 		}
 		set_country_flag = USA_had_1940_election
+		set_country_flag = USA_1940_election_PP_victory
+		complete_national_focus = USA_by_the_people_for_the_people
 		if = {
 			limit = {
 				OR = { 
 					has_country_flag = USA_1940_PP_primary_huey
 					has_country_flag = USA_1940_PP_primary_maloney
-					has_country_flag = USA_1940_PP_primary_folsom
 				}
 			}
 			set_politics = {
@@ -11718,7 +11754,7 @@ country_event = { # 1940 Election
 			}
 			add_popularity = {
 				ideology = social_democrat
-				popularity = 0.12
+				popularity = 0.25
 			}
 			hidden_effect = {
 				country_event = {
@@ -11737,6 +11773,7 @@ country_event = { # 1940 Election
 					has_country_flag = USA_1940_PP_primary_reed
 					has_country_flag = USA_1940_PP_primary_thomas
 					has_country_flag = USA_1940_PP_primary_browder
+					has_country_flag = USA_1940_PP_primary_sinclair
 				}
 			}
 			set_politics = {
@@ -11749,7 +11786,7 @@ country_event = { # 1940 Election
 			}
 			add_popularity = {
 				ideology = radical_socialist
-				popularity = 0.12
+				popularity = 0.25
 			}
 			hidden_effect = {
 				country_event = {
@@ -11783,15 +11820,15 @@ country_event = { # 1940 Election
 				add_ideas = USA_Konrad_Knute_Solberg_sec_sde
 				set_country_flag = USA_1940_election_PP_maloney
 			}
-			if = { # Jim Folsom
+			if = { # Upton Sinclair
 				limit = {
-					has_country_flag = USA_1940_PP_primary_folsom
+					has_country_flag = USA_1940_PP_primary_sinclair
 				}
-				add_ideas = TEX_Rush_Limbaugh_sr_hog_sde
-				add_ideas = USA_Adolf_Augustus_Berle_Jr_for_sde
-				add_ideas = USA_Harry_Lloyd_Hopkins_eco_sde
-				add_ideas = USA_Harold_LeClair_Ickes_sec_sde
-				set_country_flag = USA_1940_election_PP_folsom
+				add_ideas = CAL_Upton_Sinclair_hog_rso
+				add_ideas = TEX_Gerald_Nye_for_rso
+				add_ideas = CAL_Jerry_Voorhis_eco_rso
+				add_ideas = TEX_Paul_Douglas_sec_rso
+				set_country_flag = USA_1940_election_PP_sinclair
 			}
 			if = { # Jack Reed
 				limit = {
@@ -11807,7 +11844,7 @@ country_event = { # 1940 Election
 				limit = {
 					has_country_flag = USA_1940_PP_primary_thomas
 				}
-				add_ideas = CAL_Upton_Sinclair_hog_rso
+				add_ideas = CSA_Norman_Thomas_hog_rso
 				add_ideas = CSA_Max_Eastman_for_rso
 				add_ideas = CSA_John_Gates_eco_rso
 				add_ideas = CSA_Lee_Pressman_sec_syn
@@ -11844,6 +11881,8 @@ country_event = { # 1940 Election
 			has_country_flag = USA_deadlock_norris
 		}
 		set_country_flag = USA_had_1940_election
+		set_country_flag = USA_1940_election_NPP_victory
+		complete_national_focus = USA_return_to_true_americanism
 		if = {
 			limit = {
 				OR = { 
@@ -11860,7 +11899,7 @@ country_event = { # 1940 Election
 			}
 			add_popularity = {
 				ideology = social_conservative
-				popularity = 0.12
+				popularity = 0.25
 			}
 			hidden_effect = {
 				country_event = {
@@ -11891,7 +11930,7 @@ country_event = { # 1940 Election
 			}
 			add_popularity = {
 				ideology = authoritarian_democrat
-				popularity = 0.12
+				popularity = 0.25
 			}
 			hidden_effect = {
 				country_event = {
@@ -11921,7 +11960,7 @@ country_event = { # 1940 Election
 			}
 			add_popularity = {
 				ideology = paternal_autocrat
-				popularity = 0.12
+				popularity = 0.25
 			}
 			hidden_effect = {
 				country_event = {
@@ -12027,7 +12066,7 @@ country_event = { # Choosing the PP Candidate
 				has_country_flag = USA_1940_election_PP_huey
 				has_country_flag = USA_1940_election_PP_reed
 				has_country_flag = USA_1940_election_PP_maloney
-				has_country_flag = USA_1940_election_PP_folsom
+				has_country_flag = USA_1940_election_PP_sinclair
 				has_country_flag = USA_1940_election_PP_thomas
 				has_country_flag = USA_1940_election_PP_browder
 			}
@@ -12087,9 +12126,9 @@ country_event = { # Choosing the PP Candidate
 		}
 		if = {
 			limit = {
-				has_country_flag = USA_1940_election_PP_folsom
+				has_country_flag = USA_1940_election_PP_sinclair
 			}
-			set_country_flag = USA_1944_PP_primary_folsom
+			set_country_flag = USA_1944_PP_primary_sinclair
 		}
 		if = {
 			limit = {
@@ -12112,7 +12151,7 @@ country_event = { # Choosing the PP Candidate
 			create_country_leader = { 
 				name = "Earl Browder"
 				desc = "POLITICS_EARL_BROWDER_DESC"
-				picture = "Portrait_CSA_Earl_Bowder.png"
+				picture = "gfx/leaders/CSA/Portrait_CSA_Earl_Bowder.png"
 				expire = "1965.1.1"
 				ideology = radical_socialist_subtype
 				traits = { }
@@ -12127,7 +12166,7 @@ country_event = { # Choosing the PP Candidate
 			create_country_leader = { 
 				name = "Upton Sinclair"
 				desc = "POLITICS_UPTON_SINCLAIR_DESC"
-				picture = "Portrait_CAL_Upton_Sinclair.png"
+				picture = "gfx/leaders/CAL/Portrait_CAL_Upton_Sinclair.png"
 				expire = "1965.1.1"
 				ideology = radical_socialist_subtype
 				traits = { author }
@@ -12142,7 +12181,7 @@ country_event = { # Choosing the PP Candidate
 			create_country_leader = { 
 				name = "Earl Long"
 				desc = "POLITICS_EARL_LONG_DESC"
-				picture = "Portrait_TEX_Earl_Kemp_Long.png"
+				picture = "gfx/leaders/TEX/Portrait_TEX_Earl_Kemp_Long.png"
 				expire = "1965.1.1"
 				ideology = social_democrat_subtype
 				traits = { }
@@ -12157,7 +12196,7 @@ country_event = { # Choosing the PP Candidate
 			create_country_leader = { 
 				name = " Robert M. La Follette Jr."
 				desc = "POLITICS_ROBERT_FOLLETTE_DESC"
-				picture = "Portrait_TEX_Bob_La_Follette_JR.png"
+				picture = "gfx/leaders/TEX/Portrait_TEX_Bob_La_Follette_JR.png"
 				expire = "1965.1.1"
 				ideology = social_liberal_subtype
 				traits = { spirit_of_fighting_bob }
@@ -12287,12 +12326,17 @@ country_event = { # Choosing the NPP Candidate
 		hidden_effect = {
 			set_country_flag = USA_1944_NPP_primary_talmadge
 			create_country_leader = { 
-				name = "Eugen Talmadge"
+				name = "Eugene Talmadge"
 				desc = "POLITICS_EUGEN_TALMADGE"
 				picture = "gfx/leaders/COR/COR_Eugene_Talmadge.png"
 				expire = "1965.1.1"
 				ideology = paternal_autocrat_subtype
 				traits = { }
+			}
+			set_party_name = { #NPP-HD
+					ideology = paternal_autocrat
+					long_name = NPP_paternal_autocrat_southerner_long
+					name = NPP_paternal_autocrat_southerner
 			}
 		}
 	}
@@ -12309,6 +12353,11 @@ country_event = { # Choosing the NPP Candidate
 				ideology = authoritarian_democrat_subtype
 				traits = { }
 			}
+			set_party_name = { #NPP-D
+					ideology = authoritarian_democrat
+					long_name = NPP_authoritarian_democrat_southerner_long
+					name = NPP_authoritarian_democrat_southerner
+			}
 		}
 	}
 	
@@ -12324,6 +12373,11 @@ country_event = { # Choosing the NPP Candidate
 				ideology = paternal_autocrat_subtype
 				traits = { the_lone_eagle }
 			}
+			set_party_name = { #NPP-F
+					ideology = paternal_autocrat
+					long_name = NPP_paternal_autocrat_coalition_long
+					name = NPP_paternal_autocrat_coalition
+			}
 		}
 	}
 }
@@ -12338,6 +12392,9 @@ country_event = { # 1944 Progressive Primary
 		text = ustates.204.d.president
 		trigger = {
 			has_government = social_democrat
+			NOT = {
+				has_country_flag = USA_NPP_dominance
+			}
 		}
 	}
 	desc = { # Progressive Party does not have the Presidency
@@ -12345,6 +12402,52 @@ country_event = { # 1944 Progressive Primary
 		trigger = {
 			NOT = {
 				has_government = social_democrat
+			}
+			if = {
+				limit = {
+					has_country_flag = USA_NPP_dominance
+				}
+				NOT = {
+					has_government = radical_socialist
+				}
+			}
+		}
+	}
+	
+	desc = { # NPP Rivals, Kept Name
+		text = ustates.204.d.NPP_rival_kept_name
+		trigger = {
+			has_country_flag = USA_NPP_rival_kept_name
+		}
+	}
+	
+	desc = { # NPP Rivals, New Name
+		text = ustates.204.d.NPP_rival_new_name
+		trigger = {
+			has_country_flag = USA_NPP_rival_new_name
+		}
+	}
+	
+	desc = { # Progressive Party has the Presidency-NPP Rivals, Kept Name
+		text = ustates.204.d.president_npp_rivals_kept_name
+		trigger = {
+			has_government = social_democrat
+			has_country_flag = USA_NPP_dominance
+			has_country_flag = USA_NPP_rival_kept_name
+			NOT = {
+				has_country_flag = USA_1940_election_progressive
+			}
+		}
+	}
+	
+	desc = { # Progressive Party has the Presidency-NPP Rivals, Kept Name
+		text = ustates.204.d.president_npp_rivals_new_name
+		trigger = {
+			has_government = social_democrat
+			has_country_flag = USA_NPP_dominance
+			has_country_flag = USA_NPP_rival_kept_name
+			NOT = {
+				has_country_flag = USA_1940_election_progressive
 			}
 		}
 	}
@@ -12381,6 +12484,24 @@ country_event = { # 1944 Progressive Primary
 		}
 		hidden_effect = {
 			set_country_flag = USA_1944_progressive_primary_follette
+		}
+	}
+	option = { # Alfred Mitchell Bingham
+		name = ustates.204.c
+		trigger = {
+			has_country_flag = USA_NPP_dominance
+		}
+		hidden_effect = {
+			set_country_flag = USA_1944_progressive_primary_bingham
+		}
+	}
+	option = { # Upton Sinclair
+		name = ustates.204.e
+		trigger = {
+			has_country_flag = USA_NPP_dominance
+		}
+		hidden_effect = {
+			set_country_flag = USA_1944_progressive_primary_sinclair
 		}
 	}
 }
@@ -12658,8 +12779,7 @@ country_event = { # 1944 Election
 			}
 			if = {
 				limit = {
-					NOT = {
-						has_country_flag = USA_1944_progressive_primary_follette
+						has_country_flag = USA_1944_progressive_primary_wallace
 					}
 				}
 				create_country_leader = {
@@ -12669,6 +12789,33 @@ country_event = { # 1944 Election
 					expire = "1965.1.1"
 					ideology = social_democrat_subtype
 					traits = { great_survivor }
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = USA_1944_progressive_primary_bingham
+				}
+				create_country_leader = {
+					name = "Alfred Mitchell Bingham"
+					desc = "POLITICS_ALFRED_MITCHELL_BINGHAM_DESC"
+					picture = "gfx/leaders/TEX/TEX_Alfred_Bingham.tga"
+					expire = "1965.1.1"
+					ideology = radical_socialist_subtype
+					traits = { educator }
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = USA_1944_progressive_primary_sinclair
+					}
+				}
+				create_country_leader = { 
+					name = "Upton Sinclair"
+					desc = "POLITICS_UPTON_SINCLAIR_DESC"
+					picture = "gfx/leaders/CAL/Portrait_CAL_Upton_Sinclair.png"
+					expire = "1965.1.1"
+					ideology = radical_socialist_subtype
+					traits = { author }
 				}
 			}
 			if = {
@@ -12726,8 +12873,6 @@ country_event = { # 1944 Election
 					traits = { silent_workhorse }
 				}
 			}
-		}
-	}
 
 	option = { # Progressive
 		name = ustates.207.a
@@ -12741,14 +12886,39 @@ country_event = { # 1944 Election
 		hidden_effect = {
 			set_country_flag = USA_1944_election_progressive
 		}
-		set_politics = {
-			ruling_party = social_democrat
-			election_frequency = 48
-			elections_allowed = yes
+		if = {
+			limit = {
+				OR = { 
+					has_country_flag = USA_1944_progressive_primary_follette
+					has_country_flag = USA_1944_progressive_primary_wallace
+				}
+			}
+			set_politics = {
+				ruling_party = social_democrat
+				election_frequency = 48
+				elections_allowed = yes
+			}
+			add_popularity = {
+				ideology = social_democrat
+				popularity = 0.20
+			}
 		}
-		add_popularity = {
-			ideology = social_democrat
-			popularity = 0.20
+		if = {
+			limit = {
+				OR = { 
+					has_country_flag = USA_1944_progressive_primary_bingham
+					has_country_flag = USA_1944_progressive_primary_sinclair
+				}
+			}
+			set_politics = {
+				ruling_party = radical_socialist
+				election_frequency = 48
+				elections_allowed = yes
+			}
+			add_popularity = {
+				ideology = radical_socialist
+				popularity = 0.20
+			}
 		}
 		hidden_effect = {
 			if = { # Philip La Follette
@@ -12771,6 +12941,28 @@ country_event = { # 1944 Election
 				add_ideas = USA_Hjalmar_Petersen_eco_sde
 				add_ideas = USA_Elmer_Austin_Benson_sec_sde
 			}
+			if = { # Alfred Mitchell Bingham
+				limit = {
+					NOT = {
+						has_country_flag = USA_1944_progressive_primary_sinclair
+					}
+				}
+				add_ideas = TEX_Thomas_Amlie_hog_rso
+				add_ideas = TEX_Gerald_Nye_for_rso
+				add_ideas = TEX_Alfred_Mitchell_Bingham_eco_rso
+				add_ideas = TEX_Paul_Douglas_sec_rso
+			}
+			if = { # Upton Sinclair
+				limit = {
+					NOT = {
+						has_country_flag = USA_1944_progressive_primary_sinclair
+					}
+				}
+				add_ideas = CAL_Upton_Sinclair_hog_rso
+				add_ideas = CAL_Ralph_Johnson_Bunche_for_sde
+				add_ideas = CAL_Jerry_Voorhis_eco_rso
+				add_ideas = CAL_Konrad_Knute_Solberg_sec_sde
+			}
 
 			# next primaries
 			country_event = {
@@ -12788,6 +12980,17 @@ country_event = { # 1944 Election
 			country_event = {
 				id = ustates.212
 				days = 1304
+			}
+			if = {
+				limit = {
+					has_country_flag = USA_deadlock_norris
+				}
+				hidden_effect = {
+					country_event = {
+					id = ustates.1998
+					days = 1276
+					}
+				}
 			}
 		}
 	}
@@ -12921,6 +13124,34 @@ country_event = { # 1944 Election
 				add_ideas = USA_Daniel_Calhoun_Roper_eco_sco
 				add_ideas = USA_Robert_Ferdinand_Wagner_I_sec_sde
 			}
+			# next primaries
+			country_event = {
+				id = ustates.209
+				days = 1283
+			}
+			country_event = {
+				id = ustates.210
+				days = 1290
+			}
+			country_event = {
+				id = ustates.211
+				days = 1297
+			}
+			country_event = {
+				id = ustates.212
+				days = 1304
+			}
+			if = {
+				limit = {
+					has_country_flag = USA_deadlock_norris
+				}
+				hidden_effect = {
+					country_event = {
+					id = ustates.1997
+					days = 1276
+					}
+				}
+			}
 		}
 	}
 	option = { # Populist Party
@@ -13051,7 +13282,7 @@ country_event = { # 1944 Election
 				limit = {
 					has_country_flag = USA_1944_PP_primary_thomas
 				}
-				add_ideas = CAL_Upton_Sinclair_hog_rso
+				add_ideas = CSA_Norman_Thomas_hog_rso
 				add_ideas = CSA_Max_Eastman_for_rso
 				add_ideas = CSA_John_Gates_eco_rso
 				add_ideas = CSA_Lee_Pressman_sec_syn
@@ -13062,9 +13293,9 @@ country_event = { # 1944 Election
 					has_country_flag = USA_1944_PP_primary_sinclair
 				}
 				add_ideas = CAL_Upton_Sinclair_hog_rso
-				add_ideas = CSA_Max_Eastman_for_rso
-				add_ideas = CSA_John_Gates_eco_rso
-				add_ideas = CSA_Lee_Pressman_sec_syn
+				add_ideas = TEX_Gerald_Nye_for_rso
+				add_ideas = CAL_Jerry_Voorhis_eco_rso
+				add_ideas = TEX_Paul_Douglas_sec_rso
 				set_country_flag = USA_1944_election_PP_sinclair
 			}
 			if = { # Earl Browder
@@ -13320,16 +13551,7 @@ country_event = { # Choosing the PP Candidate
 		}
 	}
 	desc = { # Browder's Third Term
-		text = ustates.1997.d.president_browder
-		trigger = {
-			AND = {
-				has_country_flag = USA_1940_election_PP_browder
-				has_country_flag = USA_1944_election_PP_browder
-			}
-		}
-	}
-	desc = { # Browder's Third Term
-		text = ustates.1997.d.president_browder
+		text = ustates.1997.d.president_browder_third_term
 		trigger = {
 			AND = {
 				has_country_flag = USA_1940_election_PP_browder
@@ -13414,7 +13636,7 @@ country_event = { # Choosing the PP Candidate
 			create_country_leader = { 
 				name = "Earl Browder"
 				desc = "POLITICS_EARL_BROWDER_DESC"
-				picture = "Portrait_CSA_Earl_Bowder.png"
+				picture = "gfx/leaders/CSA/Portrait_CSA_Earl_Bowder.png"
 				expire = "1965.1.1"
 				ideology = radical_socialist_subtype
 				traits = { }
@@ -13429,7 +13651,7 @@ country_event = { # Choosing the PP Candidate
 			create_country_leader = { 
 				name = "Sam DeWitt"
 				desc = "POLITICS_SAM_DEWITT_DESC"
-				picture = "Portrait_CSA_Sam_DeWitt.png"
+				picture = "gfx/leaders/CSA/Portrait_CSA_Sam_DeWitt.png"
 				expire = "1965.1.1"
 				ideology = radical_socialist_subtype
 				traits = { author }
@@ -13630,6 +13852,11 @@ country_event = { # Choosing the NPP Candidate
 				ideology = authoritarian_democrat_subtype
 				traits = { }
 			}
+			set_party_name = { #NPP-D
+					ideology = authoritarian_democrat
+					long_name = NPP_authoritarian_democrat_southerner_long
+					name = NPP_authoritarian_democrat_southerner
+			}
 		}
 	}
 	
@@ -13645,11 +13872,16 @@ country_event = { # Choosing the NPP Candidate
 				ideology = paternal_autocrat_subtype
 				traits = { the_lone_eagle }
 			}
+			set_party_name = { #NPP-F
+					ideology = paternal_autocrat
+					long_name = NPP_paternal_autocrat_coalition_long
+					name = NPP_paternal_autocrat_coalition
+			}
 		}
 	}
 }
 
-country_event = { # 1948 Progressive Party
+country_event = { # 1948 Progressive Primary
 	id = ustates.209
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.209"}
 	title = ustates.209.t
@@ -13661,6 +13893,9 @@ country_event = { # 1948 Progressive Party
 			NOT = {
 				has_country_flag = USA_1940_election_progressive
 			}
+			NOT = {
+				has_country_flag = USA_NPP_dominance
+			}
 		}
 	}
 	desc = { # Progressive Party won also in 1940
@@ -13669,6 +13904,9 @@ country_event = { # 1948 Progressive Party
 			has_government = social_democrat
 			has_country_flag = USA_1944_election_progressive
 			has_country_flag = USA_1940_election_progressive
+			NOT = {
+				has_country_flag = USA_NPP_dominance
+			}
 		}
 	}
 	desc = { # Progressive Party does not have the Presidency
@@ -13677,8 +13915,77 @@ country_event = { # 1948 Progressive Party
 			NOT = {
 				has_government = social_democrat
 			}
+			if = {
+				limit = {
+					has_country_flag = USA_NPP_dominance
+				}
+				NOT = {
+					has_government = radical_socialist
+				}
+			}
 		}
 	}
+	
+	desc = { # NPP Rivals, Kept Name
+		text = ustates.209.d.NPP_rival_kept_name
+		trigger = {
+			has_country_flag = USA_NPP_rival_kept_name
+			has_country_flag = USA_NPP_dominance
+		}
+	}
+	
+	desc = { # NPP Rivals, New Name
+		text = ustates.209.d.NPP_rival_new_name
+		trigger = {
+			has_country_flag = USA_NPP_rival_new_name
+			has_country_flag = USA_NPP_dominance
+		}
+	}
+	
+	desc = { # Progressive Party won the presidency just last time-NPP Rivals, Kept Name
+		text = ustates.209.d.president_npp_rivals_kept_name
+		trigger = {
+			has_country_flag = USA_1944_election_progressive
+			has_country_flag = USA_NPP_dominance
+			has_country_flag = USA_NPP_rival_kept_name
+			NOT = {
+				has_country_flag = USA_1940_election_progressive
+			}
+		}
+	}
+	
+	desc = { # Progressive Party won also in 1940-NPP Rivals, Kept Name
+		text = ustates.209.d.president_steps_down_npp_rivals_kept_name
+		trigger = {
+			has_country_flag = USA_NPP_dominance
+			has_country_flag = USA_NPP_rival_kept_name
+			has_country_flag = USA_1944_election_progressive
+			has_country_flag = USA_1940_election_progressive
+		}
+	}
+	
+	desc = { # Progressive Party won the presidency just last time-NPP Rivals, New Name
+		text = ustates.209.d.president_npp_rivals_new_name
+		trigger = {
+			has_country_flag = USA_1944_election_progressive
+			has_country_flag = USA_NPP_dominance
+			has_country_flag = USA_NPP_rival_kept_name
+			NOT = {
+				has_country_flag = USA_1940_election_progressive
+			}
+		}
+	}
+	
+	desc = { # Progressive Party won also in 1940-NPP Rivals, New Name
+		text = ustates.209.d.president_steps_down_npp_rivals_new_name
+		trigger = {
+			has_country_flag = USA_NPP_dominance
+			has_country_flag = USA_NPP_rival_kept_name
+			has_country_flag = USA_1944_election_progressive
+			has_country_flag = USA_1940_election_progressive
+		}
+	}
+	
 	picture = GFX_report_event_USA_congress
 
 	trigger = {
@@ -13727,16 +14034,56 @@ country_event = { # 1948 Progressive Party
 					has_country_flag = USA_1944_election_progressive
 				}
 				has_country_flag = USA_1940_election_progressive
+				has_country_flag = USA_NPP_dominance
 			}
 		}
 		hidden_effect = {
 			set_country_flag = USA_1948_progressive_primary_taylor
 		}
 	}
-	option = { # Keep the Presidency
+	option = { # Bingham
 		name = ustates.209.c
 		trigger = {
+			NOT = {
+				has_country_flag = USA_1944_election_progressive
+			}
+			has_country_flag = USA_1940_election_progressive
+			has_country_flag = USA_NPP_dominance
+		}
+		hidden_effect = {
+			set_country_flag = USA_1948_progressive_primary_bingham
+		}
+	}
+	option = { # Thomas
+		name = ustates.209.e
+		trigger = {
+			NOT = {
+				has_country_flag = USA_1944_election_progressive
+			}
+			has_country_flag = USA_1940_election_progressive
+			has_country_flag = USA_NPP_dominance
+		}
+		hidden_effect = {
+			set_country_flag = USA_1948_progressive_primary_thomas
+		}
+	}
+	option = { # Keep the Presidency
+		name = ustates.209.f
+		trigger = {
 			has_government = social_democrat
+			has_country_flag = USA_1944_election_progressive
+			NOT = {
+				has_country_flag = USA_1940_election_progressive
+			}
+		}
+		hidden_effect = {
+			set_country_flag = USA_1948_progressive_primary_president
+		}
+	}
+	option = { # Keep the Presidency Rad-Soc
+		name = ustates.209.g
+		trigger = {
+			has_government = radical_socialist
 			has_country_flag = USA_1944_election_progressive
 			NOT = {
 				has_country_flag = USA_1940_election_progressive
@@ -14183,6 +14530,32 @@ country_event = { # 1948 election
 					traits = { figurehead_president }
 				}
 			}
+			if = { # Norman Thomas
+				limit = {
+					has_country_flag = USA_1948_progressive_primary_thomas
+				}
+				create_country_leader = { 
+					name = "Norman Thomas"
+					desc = "POLITICS_NORMAN_THOMAS_DESC"
+					picture = "gfx/leaders/CSA/Portrait_CSA_Norman_Thomas.png"
+					expire = "1965.1.1"
+					ideology = radical_socialist_subtype
+					traits = { }
+				}
+			}
+			if = { # Alfred Mitchell Bingham 
+				limit = {
+					has_country_flag = USA_1948_progressive_primary_bingham
+				}
+				create_country_leader = {
+					name = "Alfred Mitchell Bingham"
+					desc = "POLITICS_ALFRED_MITCHELL_BINGHAM_DESC"
+					picture = "gfx/leaders/TEX/TEX_Alfred_Bingham.tga"
+					expire = "1965.1.1"
+					ideology = radical_socialist_subtype
+					traits = { educator }
+				}
+			}
 			if = { # Thomas Dewey
 				limit = {
 					has_country_flag = USA_1948_republican_primary_dewey
@@ -14302,14 +14675,39 @@ country_event = { # 1948 election
 		hidden_effect = {
 			set_country_flag = USA_1948_election_progressive
 		}
-		set_politics = {
-			ruling_party = social_democrat
-			election_frequency = 48
-			elections_allowed = yes
+		if = {
+			limit = {
+				OR = { 
+					has_country_flag = USA_1948_progressive_primary_folette
+					has_country_flag = USA_1948_progressive_primary_taylor
+				}
+			}
+			set_politics = {
+				ruling_party = social_democrat
+				election_frequency = 48
+				elections_allowed = yes
+			}
+			add_popularity = {
+				ideology = social_democrat
+				popularity = 0.20
+			}
 		}
-		add_popularity = {
-			ideology = social_democrat
-			popularity = 0.20
+		if = {
+			limit = {
+				OR = { 
+					has_country_flag = USA_1948_progressive_primary_thomas
+					has_country_flag = USA_1948_progressive_primary_bingham
+				}
+			}
+			set_politics = {
+				ruling_party = radical_socialist
+				election_frequency = 48
+				elections_allowed = yes
+			}
+			add_popularity = {
+				ideology = radical_socialist
+				popularity = 0.20
+			}
 		}
 		hidden_effect = {
 			if = { # Philip La Follette
@@ -14330,6 +14728,24 @@ country_event = { # 1948 election
 				add_ideas = USA_Hjalmar_Petersen_eco_sde
 				add_ideas = USA_Konrad_Knute_Solberg_sec_sde
 			}
+			if = { # Norman Thomas
+				limit = {
+					has_country_flag = USA_1948_progressive_primary_thomas
+				}
+				add_ideas = CSA_Norman_Thomas_hog_rso
+				add_ideas = CSA_Max_Eastman_for_rso
+				add_ideas = CSA_John_Gates_eco_rso
+				add_ideas = TEX_Paul_Douglas_sec_rso
+			}
+			if = { # Alfred Mitchell Bingham
+				limit = {
+					has_country_flag = USA_1948_progressive_primary_bingham
+				}
+				add_ideas = TEX_Thomas_Amlie_hog_rso
+				add_ideas = TEX_Gerald_Nye_for_rso
+				add_ideas = TEX_Alfred_Mitchell_Bingham_eco_rso
+				add_ideas = TEX_Paul_Douglas_sec_rso
+			}
 
 			# next primaries
 			country_event = {
@@ -14347,6 +14763,17 @@ country_event = { # 1948 election
 			country_event = {
 				id = ustates.217
 				days = 1304
+			}
+			if = {
+				limit = {
+					has_country_flag = USA_deadlock_garner
+				}
+				hidden_effect = {
+					country_event = {
+					id = ustates.1990
+					days = 1276
+					}
+				}
 			}
 		}
 	}
@@ -14487,6 +14914,17 @@ country_event = { # 1948 election
 				id = ustates.217
 				days = 1304
 			}
+			if = {
+				limit = {
+					has_country_flag = USA_deadlock_garner
+				}
+				hidden_effect = {
+					country_event = {
+					id = ustates.1999
+					days = 1276
+					}
+				}
+			}
 		}
 	}
 	option = { # Conservative Democrat
@@ -14545,6 +14983,17 @@ country_event = { # 1948 election
 			country_event = {
 				id = ustates.217
 				days = 1304
+			}
+			if = {
+				limit = {
+					has_country_flag = USA_deadlock_garner
+				}
+				hidden_effect = {
+					country_event = {
+					id = ustates.1999
+					days = 1276
+					}
+				}
 			}
 		}
 	}
@@ -14723,7 +15172,7 @@ country_event = { # 1948 election
 			}
 			hidden_effect = {
 				country_event = {
-				id = ustates.1998
+				id = ustates.1990
 				days = 1276
 				}
 			}
@@ -14918,20 +15367,20 @@ country_event = { # Choosing the PP Candidate
 			}
 		}
 	}
-	desc = { # Browder's Fourth Term
-		text = ustates.1999.d.president_browder
+	desc = { # Browder's Third Term
+		text = ustates.1999.d.president_browder_third_term
 		trigger = {
 			AND = {
-				has_country_flag = USA_1940_election_PP_browder
 				has_country_flag = USA_1944_election_PP_browder
 				has_country_flag = USA_1948_election_PP_browder
 			}
 		}
 	}
-	desc = { # Browder's Third Term
-		text = ustates.1999.d.president_browder
+	desc = { # Browder's Fourth Term
+		text = ustates.1999.d.president_browder_fourth_term
 		trigger = {
 			AND = {
+				has_country_flag = USA_1940_election_PP_browder
 				has_country_flag = USA_1944_election_PP_browder
 				has_country_flag = USA_1948_election_PP_browder
 			}
@@ -15014,7 +15463,7 @@ country_event = { # Choosing the PP Candidate
 			create_country_leader = { 
 				name = "Gus Hall"
 				desc = "POLITICS_GUS_HALL_DESC"
-				picture = "Portrait_CSA_Gus_Hall.png"
+				picture = "gfx/leaders/CSA/Portrait_CSA_Gus_Hall.png"
 				expire = "1965.1.1"
 				ideology = radical_socialist_subtype
 				traits = { }
@@ -15029,7 +15478,7 @@ country_event = { # Choosing the PP Candidate
 			create_country_leader = { 
 				name = "Darlington Hoopes"
 				desc = "POLITICS_DARLINGTON_HOOPES_DESC"
-				picture = "Portrait_CSA_Darlington_Hoopes.png"
+				picture = "gfx/leaders/CSA/Portrait_CSA_Darlington_Hoopes.png"
 				expire = "1965.1.1"
 				ideology = radical_socialist_subtype
 				traits = { }
@@ -15059,7 +15508,7 @@ country_event = { # Choosing the PP Candidate
 			create_country_leader = { 
 				name = "Jim Folsom"
 				desc = "POLITICS_JIM_FOLSOM_DESC"
-				picture = "TEX_Big_Jim_Folsom.png"
+				picture = "gfx/leaders/TEX/TEX_Big_Jim_Folsom.png"
 				expire = "1965.1.1"
 				ideology = social_democrat_subtype
 				traits = { big_jim }
@@ -15079,7 +15528,7 @@ country_event = { # Choosing the NPP Candidate
 		}
 	}
 	desc = { # Lindbergh's Third Term
-		text = ustates.1990.d.president_lindbergh
+		text = ustates.1990.d.president_lindbergh_third_term
 		trigger = {
 			AND = {
 				has_country_flag = USA_1944_election_NPP_lindbergh
@@ -15088,7 +15537,7 @@ country_event = { # Choosing the NPP Candidate
 		}
 	}
 	desc = { # Lindbergh's Fourth Term
-		text = ustates.1990.d.president_lindbergh
+		text = ustates.1990.d.president_lindbergh_fourth_term
 		trigger = {
 			AND = {
 				has_country_flag = USA_1940_election_NPP_lindbergh
@@ -15107,7 +15556,7 @@ country_event = { # Choosing the NPP Candidate
 		}
 	}
 	desc = { # Thurmond Steps Down
-		text = ustates.1990.d.two_term_russell
+		text = ustates.1990.d.two_term_thurmond
 		trigger = {
 			AND = {
 				has_country_flag = USA_1944_election_NPP_thurmond
@@ -15161,6 +15610,15 @@ country_event = { # Choosing the NPP Candidate
 			}
 			add_popularity = {
 				ideology = paternal_autocrat
+				popularity = 0.02
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = USA_1948_election_nat_pop_NPP
+			}
+			add_popularity = {
+				ideology = national_populist
 				popularity = 0.02
 			}
 		}
@@ -15236,6 +15694,11 @@ country_event = { # Choosing the NPP Candidate
 				ideology = authoritarian_democrat_subtype
 				traits = { }
 			}
+			set_party_name = { #NPP-D
+					ideology = authoritarian_democrat
+					long_name = NPP_authoritarian_democrat_southerner_long
+					name = NPP_authoritarian_democrat_southerner
+			}
 		}
 	}
 	
@@ -15251,6 +15714,11 @@ country_event = { # Choosing the NPP Candidate
 				ideology = paternal_autocrat_subtype
 				traits = { the_lone_eagle }
 			}
+			set_party_name = { #NPP-F
+					ideology = paternal_autocrat
+					long_name = NPP_paternal_autocrat_coalition_long
+					name = NPP_paternal_autocrat_coalition
+			}
 		}
 	}
 }
@@ -15262,29 +15730,102 @@ country_event = { # 1952 Progressive Primary
 	desc = { # Progressive Party won the presidency just last time
 		text = ustates.214.d.president
 		trigger = {
-			has_government = social_democrat
 			has_country_flag = USA_1948_election_progressive
 			NOT = {
 				has_country_flag = USA_1944_election_progressive
+			}
+			NOT = {
+				has_country_flag = USA_NPP_dominance
 			}
 		}
 	}
 	desc = { # Progressive Party won also in 1944
 		text = ustates.214.d.president_steps_down
 		trigger = {
-			has_government = social_democrat
 			has_country_flag = USA_1948_election_progressive
 			has_country_flag = USA_1944_election_progressive
+			NOT = {
+				has_country_flag = USA_NPP_dominance
+			}
 		}
 	}
-	desc = { # Progressive Party does not have the Presidency
+	desc = { # Progressive Party does not have the Presidency-Soc Dem
 		text = ustates.214.d.not_president
 		trigger = {
 			NOT = {
 				has_government = social_democrat
 			}
+			if = {
+				limit = {
+					has_country_flag = USA_NPP_dominance
+				}
+				NOT = {
+					has_government = radical_socialist
+				}
+			}
 		}
 	}
+	
+	desc = { # NPP Rivals, Kept Name
+		text = ustates.214.d.NPP_rival_kept_name
+		trigger = {
+			has_country_flag = USA_NPP_rival_kept_name
+			has_country_flag = USA_NPP_dominance
+		}
+	}
+	
+	desc = { # NPP Rivals, New Name
+		text = ustates.214.d.NPP_rival_new_name
+		trigger = {
+			has_country_flag = USA_NPP_rival_new_name
+			has_country_flag = USA_NPP_dominance
+		}
+	}
+	
+	desc = { # Progressive Party won the presidency just last time-NPP Rivals, Kept Name
+		text = ustates.214.d.president_npp_rivals_kept_name
+		trigger = {
+			has_country_flag = USA_1948_election_progressive
+			has_country_flag = USA_NPP_dominance
+			has_country_flag = USA_NPP_rival_kept_name
+			NOT = {
+				has_country_flag = USA_1944_election_progressive
+			}
+		}
+	}
+	
+	desc = { # Progressive Party won also in 1944-NPP Rivals, Kept Name
+		text = ustates.214.d.president_steps_down_npp_rivals_kept_name
+		trigger = {
+			has_country_flag = USA_NPP_dominance
+			has_country_flag = USA_NPP_rival_kept_name
+			has_country_flag = USA_1944_election_progressive
+			has_country_flag = USA_1948_election_progressive
+		}
+	}
+	
+	desc = { # Progressive Party won the presidency just last time-NPP Rivals, New Name
+		text = ustates.214.d.president_npp_rivals_new_name
+		trigger = {
+			has_country_flag = USA_1948_election_progressive
+			has_country_flag = USA_NPP_dominance
+			has_country_flag = USA_NPP_rival_kept_name
+			NOT = {
+				has_country_flag = USA_1944_election_progressive
+			}
+		}
+	}
+	
+	desc = { # Progressive Party won also in 1944-NPP Rivals, New Name
+		text = ustates.214.d.president_steps_down_npp_rivals_new_name
+		trigger = {
+			has_country_flag = USA_NPP_dominance
+			has_country_flag = USA_NPP_rival_kept_name
+			has_country_flag = USA_1948_election_progressive
+			has_country_flag = USA_1944_election_progressive
+		}
+	}
+	
 	picture = GFX_report_event_USA_congress
 
 	trigger = {
@@ -15337,15 +15878,50 @@ country_event = { # 1952 Progressive Primary
 			set_country_flag = USA_1952_progressive_primary_taylor
 		}
 	}
-	option = { # Keep the Presidency
+	option = { # Bingham
 		name = ustates.214.c
 		trigger = {
-			AND = {
-				has_government = social_democrat
+			NOT = {
 				has_country_flag = USA_1948_election_progressive
-				NOT = {
-					has_country_flag = USA_1944_election_progressive
-				}
+			}
+			has_country_flag = USA_NPP_dominance
+		}
+		hidden_effect = {
+			set_country_flag = USA_1952_progressive_primary_bingham
+		}
+	}
+	option = { # Hoopes
+		name = ustates.214.e
+		trigger = {
+			NOT = {
+				has_country_flag = USA_1948_election_progressive
+			}
+			has_country_flag = USA_NPP_dominance
+		}
+		hidden_effect = {
+			set_country_flag = USA_1952_progressive_primary_hoopes
+		}
+	}
+	option = { # Keep the Presidency
+		name = ustates.214.f
+		trigger = {
+			has_government = social_democrat
+			has_country_flag = USA_1948_election_progressive
+			NOT = {
+				has_country_flag = USA_1944_election_progressive
+			}
+		}
+		hidden_effect = {
+			set_country_flag = USA_1952_progressive_primary_president
+		}
+	}
+	option = { # Keep the Presidency Rad-Soc
+		name = ustates.214.g
+		trigger = {
+			has_government = radical_socialist
+			has_country_flag = USA_1948_election_progressive
+			NOT = {
+				has_country_flag = USA_1944_election_progressive
 			}
 		}
 		hidden_effect = {
@@ -15676,6 +16252,32 @@ country_event = { # 1952 election
 					traits = { figurehead_president }
 				}
 			}
+			if = { # Darlington Hoopes
+				limit = {
+					has_country_flag = USA_1952_progressive_primary_hoopes
+				}
+				create_country_leader = { 
+					name = "Darlington Hoopes"
+					desc = "POLITICS_DARLINGTON_HOOPES_DESC"
+					picture = "gfx/leaders/CSA/Portrait_CSA_Darlington_Hoopes.png"
+					expire = "1965.1.1"
+					ideology = radical_socialist_subtype
+					traits = { }
+				}
+			}
+			if = { # Alfred Mitchell Bingham 
+				limit = {
+					has_country_flag = USA_1952_progressive_primary_bingham
+				}
+				create_country_leader = {
+					name = "Alfred Mitchell Bingham"
+					desc = "POLITICS_ALFRED_MITCHELL_BINGHAM_DESC"
+					picture = "gfx/leaders/TEX/TEX_Alfred_Bingham.tga"
+					expire = "1965.1.1"
+					ideology = radical_socialist_subtype
+					traits = { educator }
+				}
+			}
 			if = { # John W. Bricker
 				limit = {
 					has_country_flag = USA_1952_republican_primary_bricker
@@ -15766,14 +16368,39 @@ country_event = { # 1952 election
 		hidden_effect = {
 			set_country_flag = USA_1952_election_progressive
 		}
-		set_politics = {
-			ruling_party = social_democrat
-			election_frequency = 48
-			elections_allowed = yes
+		if = {
+			limit = {
+				OR = { 
+					has_country_flag = USA_1952_progressive_primary_folette
+					has_country_flag = USA_1952_progressive_primary_taylor
+				}
+			}
+			set_politics = {
+				ruling_party = social_democrat
+				election_frequency = 48
+				elections_allowed = yes
+			}
+			add_popularity = {
+				ideology = social_democrat
+				popularity = 0.20
+			}
 		}
-		add_popularity = {
-			ideology = social_democrat
-			popularity = 0.20
+		if = {
+			limit = {
+				OR = { 
+					has_country_flag = USA_1952_progressive_primary_hoopes
+					has_country_flag = USA_1952_progressive_primary_bingham
+				}
+			}
+			set_politics = {
+				ruling_party = radical_socialist
+				election_frequency = 48
+				elections_allowed = yes
+			}
+			add_popularity = {
+				ideology = radical_socialist
+				popularity = 0.20
+			}
 		}
 		hidden_effect = {
 			if = { # Philip La Follette
@@ -15793,6 +16420,25 @@ country_event = { # 1952 election
 				add_ideas = USA_Hjalmar_Petersen_eco_sde
 				add_ideas = USA_Hjalmar_Petersen_eco_sde
 				add_ideas = USA_Konrad_Knute_Solberg_sec_sde
+			}
+			if = { # Darlington Hoopes
+				limit = {
+					has_country_flag = USA_1952_PP_primary_hoopes
+				}
+				add_ideas = CSA_Darlington_Hoopes_hog_rso
+				add_ideas = CSA_Max_Eastman_for_rso
+				add_ideas = CSA_John_Gates_eco_rso
+				add_ideas = TEX_Paul_Douglas_sec_rso
+				set_country_flag = USA_1952_election_PP_dewitt
+			}
+			if = { # Alfred Mitchell Bingham
+				limit = {
+					has_country_flag = USA_1948_progressive_primary_bingham
+				}
+				add_ideas = TEX_Thomas_Amlie_hog_rso
+				add_ideas = TEX_Gerald_Nye_for_rso
+				add_ideas = TEX_Alfred_Mitchell_Bingham_eco_rso
+				add_ideas = TEX_Paul_Douglas_sec_rso
 			}
 		}
 	}
@@ -18392,7 +19038,7 @@ country_event = { # Cincinnatus Progressive Convention
 			create_country_leader = {
 				name = "George Norris"
 				desc = "POLITICS_GEORGE_NORRIS_DESC"
-				picture = "gfx/leaders/USA/Portrait_George_W_Norris.png"
+				picture = "gfx/leaders/USA/Portrait_USA_Henry_Wilson_Temple.png"
 				expire = "1965.1.1"
 				ideology = social_democrat_subtype
 				traits = { the_fighting_liberal }
@@ -21025,20 +21671,14 @@ country_event = { # Fifth Political System-Deadlock, PP formed
 	desc = {
 	text = ustates.3161.d.PP
 	trigger = {
-			OR = {
-				has_country_flag = USA_1940_election_soc_dem_PP
-				has_country_flag = USA_1940_election_rad_soc_PP
-			}
+			has_country_flag = USA_1940_election_PP_victory
 		}
 	}
 	option = { # Very Well
 		name = ustates.3161.a
 		if = {
 			limit = {
-				OR = {
-					has_country_flag = USA_1940_election_soc_dem_PP
-					has_country_flag = USA_1940_election_rad_soc_PP
-				}
+				has_country_flag = USA_1940_election_PP_victory
 			}
 		add_popularity = { ideology = radical_socialist popularity = 0.05 }
 		add_popularity = { ideology = social_democrat popularity = 0.05 }
@@ -21082,7 +21722,25 @@ country_event = { # Fifth Political System-Deadlock, PP formed
 			ideology = national_populist
 			long_name = PP_opponent_national_populist_coalition_long
 			name = PP_opponent_national_populist_coalition }
-		set_country_flag = USA_PP_dominance
+		hidden_effect = {
+				set_country_flag = USA_PP_dominance
+				create_country_leader = {
+					name = "Charles Coughlin"
+					desc = "POLITICS_CHARLES_COUGHLIN_DESC"
+					picture = "gfx/leaders/TEX/TEX_Charles_Coughlin.tga"
+					expire = "1965.1.1"
+					ideology = authoritarian_democrat_subtype
+					traits = { radio_preist }
+				}
+				create_country_leader = {
+					name = "Gerald L.K. Smith"
+					desc = "POLITICS_GERALD_LK_SMITH_DESC"
+					picture = "gfx/leaders/TEX/Portrait_TEX_gearld_k_smith.tga"
+					expire = "1965.1.1"
+					ideology = paternal_autocrat_subtype
+					traits = { propaganda_expert }
+				}
+			}
 		}
 	}
 }
@@ -21097,22 +21755,16 @@ country_event = { # Fifth Political System-Deadlock, NPP formed
 	is_triggered_only = yes
 	
 	desc = {
-	text = ustates.3162.d.NPP
-	trigger = {
-			OR = {
-				has_country_flag = USA_1940_election_auth_dem_NPP
-				has_country_flag = USA_1940_election_pat_aut_NPP
-			}
+		text = ustates.3162.d.NPP
+		trigger = {
+			has_country_flag = USA_1940_election_NPP_victory
 		}
 	}
 	option = { # Very Well
 		name = ustates.3162.a
 		if = {
 			limit = {
-				OR = {
-					has_country_flag = USA_1940_election_auth_dem_NPP
-					has_country_flag = USA_1940_election_pat_aut_NPP
-				}
+				has_country_flag = USA_1940_election_NPP_victory
 			}
 		add_popularity = { ideology = social_conservative popularity = 0.03 }
 		add_popularity = { ideology = authoritarian_democrat popularity = 0.04 }
@@ -21120,45 +21772,121 @@ country_event = { # Fifth Political System-Deadlock, NPP formed
 		set_party_name = {
 			ideology = totalist
 			long_name = NNP_opponent_totalist_coalition_long
-			name = NNP_opponent_totalist_coalition }
+			name = NNP_opponent_totalist_coalition 
+		}
 		set_party_name = {
 			ideology = syndicalist
 			long_name = NNP_opponent_syndicalist_coalition_long
-			name = NNP_opponent_syndicalist_coalition }
+			name = NNP_opponent_syndicalist_coalition 
+		}
 		set_party_name = {
 			ideology = radical_socialist
 			long_name = NPP_opponent_radical_socialist_coalition_long
-			name = NPP_opponent_radical_socialist_coalition }	
+			name = NPP_opponent_radical_socialist_coalition 
+		}	
 		set_party_name = {
 			ideology = social_democrat
 			long_name = NPP_opponent_social_democrat_coalition_long
-			name = NPP_opponent_social_democrat_coalition }
+			name = NPP_opponent_social_democrat_coalition 
+		}
 		set_party_name = {
 			ideology = social_liberal
 			long_name = NPP_opponent_social_liberal_coalition_long
-			name = NPP_opponent_social_liberal_coalition }	
+			name = NPP_opponent_social_liberal_coalition 
+		}	
 		set_party_name = {
 			ideology = market_liberal
 			long_name = NPP_opponent_market_liberal_coalition_long
-			name = NPP_opponent_market_liberal_coalition }
+			name = NPP_opponent_market_liberal_coalition 
+		}
 		set_party_name = {
 			ideology = social_conservative
 			long_name = NPP_social_conservative_coalition_long
-			name = NPP_social_conservative_coalition }
-		set_party_name = {
-			ideology = authoritarian_democrat
-			long_name = NPP_authoritarian_democrat_coalition
-			name = NPP_authoritarian_democrat_coalition }
-		set_party_name = {
-			ideology = paternal_autocrat
-			long_name = NPP_paternal_autocrat_coalition_long
-			name = NPP_paternal_autocrat_coalition }
-		set_party_name = {
-			ideology = national_populist
-			long_name = NPP_national_populist_coalition_long
-			name = NPP_national_populist_coalition }
-		set_country_flag = USA_NPP_dominance
+			name = NPP_social_conservative_coalition 
 		}
+		hidden_effect = {
+			country_event = {
+					id = ustates.31621
+					days = 40
+			}
+			create_country_leader = {
+				name = "Earl Browder"
+				desc = "POLITICS_EARL_BROWDER_DESC"
+				picture = "gfx/leaders/CSA/Portrait_CSA_Earl_Bowder.tga"
+				expire = "1965.1.1"
+				ideology = totalist_subtype
+				traits = { the_director }
+			}
+			create_country_leader = {
+				name = "Harry Bridges"
+				desc = "POLITICS_HARRY_BRIDGES_DESC"
+				picture = "gfx/leaders/CSA/CSA_Harry_Bridges.tga"
+				expire = "1965.1.1"
+				ideology = syndicalist_subtype
+				traits = { anarchist_zeal }
+			}
+			create_country_leader = {
+				name = "Alfred Mitchell Bingham"
+				desc = "POLITICS_ALFRED_MITCHELL_BINGHAM_DESC"
+				picture = "gfx/leaders/TEX/TEX_Alfred_Bingham.tga"
+				expire = "1965.1.1"
+				ideology = radical_socialist_subtype
+				traits = { educator }
+			}
+			set_country_flag = USA_NPP_dominance
+		}
+		}
+	}
+}
+
+country_event = { # What's In A Name?-NPP Won
+	id = ustates.31621
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.31621"}
+	title = ustates.31621.t
+	picture = GFX_report_event_USA_congress
+
+	is_triggered_only = yes
+	
+	desc = {
+		text = ustates.31621.d.NPP
+		trigger = {
+			has_country_flag = USA_1940_election_NPP_victory
+		}
+	}
+	option = { # Very Well
+		name = ustates.31621.a
+		if = {
+			limit = {
+				has_country_flag = USA_1940_election_NPP_victory
+			}
+		add_popularity = { ideology = social_democrat popularity = 0.02 }	
+		}
+		set_country_flag = USA_NPP_rival_kept_name
+	}
+	option = { # Very Well
+		name = ustates.31621.b
+		if = {
+			limit = {
+				has_country_flag = USA_1940_election_NPP_victory
+			}
+		add_popularity = { ideology = social_liberal popularity = 0.02 }
+		set_party_name = {
+			ideology = radical_socialist
+			long_name = NPP_opponent_variant_name_radical_socialist_coalition_long
+			name = NPP_opponent_variant_name_radical_socialist_coalition 
+			}	
+		set_party_name = {
+			ideology = social_democrat
+			long_name = NPP_opponent_variant_name_social_democrat_coalition_long
+			name = NPP_opponent_variant_name_social_democrat_coalition 
+			}
+		set_party_name = {
+			ideology = social_liberal
+			long_name = NPP_opponent_variant_name_social_liberal_coalition_long
+			name = NPP_opponent_variant_name_social_liberal_coalition 
+			}	
+		}
+		set_country_flag = USA_NPP_rival_new_name
 	}
 }
 
@@ -21174,8 +21902,7 @@ country_event = { # Fifth Political System-Deadlock, PP formed but lost
 	text = ustates.3163.d.PP
 	trigger = {
 			NOT = {
-				has_country_flag = USA_1940_election_soc_dem_PP
-				has_country_flag = USA_1940_election_rad_soc_PP
+				has_country_flag = USA_1940_election_PP_victory
 			}
 		}
 	}
@@ -21230,7 +21957,25 @@ country_event = { # Fifth Political System-Deadlock, PP formed but lost
 			ideology = national_populist
 			long_name = PP_opponent_national_populist_coalition_long
 			name = PP_opponent_national_populist_coalition }
-		set_country_flag = USA_PP_dominance
+		hidden_effect = {
+				set_country_flag = USA_PP_dominance
+				create_country_leader = {
+					name = "Charles Coughlin"
+					desc = "POLITICS_CHARLES_COUGHLIN_DESC"
+					picture = "gfx/leaders/TEX/TEX_Charles_Coughlin.tga"
+					expire = "1965.1.1"
+					ideology = authoritarian_democrat_subtype
+					traits = { radio_preist }
+				}
+				create_country_leader = {
+					name = "Gerald L.K. Smith"
+					desc = "POLITICS_GERALD_LK_SMITH_DESC"
+					picture = "gfx/leaders/TEX/Portrait_TEX_gearld_k_smith.tga"
+					expire = "1965.1.1"
+					ideology = paternal_autocrat_subtype
+					traits = { propaganda_expert }
+				}
+			}
 		}
 	}
 }
@@ -21247,8 +21992,7 @@ country_event = { # Fifth Political System-Deadlock, NPP formed but lost
 	text = ustates.3164.d.NPP
 	trigger = {
 			NOT = {
-				has_country_flag = USA_1940_election_auth_dem_NPP
-				has_country_flag = USA_1940_election_pat_aut_NPP
+				has_country_flag = USA_1940_election_NPP_victory
 			}
 		}
 	}
@@ -21257,8 +22001,7 @@ country_event = { # Fifth Political System-Deadlock, NPP formed but lost
 		if = {
 			limit = {
 				NOT = {
-					has_country_flag = USA_1940_election_auth_dem_NPP
-					has_country_flag = USA_1940_election_pat_aut_NPP
+					has_country_flag = USA_1940_election_NPP_victory
 				}
 			}
 		add_popularity = { ideology = social_democrat popularity = 0.05 }
@@ -21303,8 +22046,95 @@ country_event = { # Fifth Political System-Deadlock, NPP formed but lost
 			ideology = national_populist
 			long_name = NPP_national_populist_coalition_long
 			name = NPP_national_populist_coalition }
-		set_country_flag = USA_NPP_dominance
+		hidden_effect = {
+			country_event = {
+					id = ustates.31641
+					days = 40
+			}
+			create_country_leader = {
+				name = "Earl Browder"
+				desc = "POLITICS_EARL_BROWDER_DESC"
+				picture = "gfx/leaders/CSA/Portrait_CSA_Earl_Bowder.tga"
+				expire = "1965.1.1"
+				ideology = totalist_subtype
+				traits = { the_director }
+			}
+			create_country_leader = {
+				name = "Harry Bridges"
+				desc = "POLITICS_HARRY_BRIDGES_DESC"
+				picture = "gfx/leaders/CSA/CSA_Harry_Bridges.tga"
+				expire = "1965.1.1"
+				ideology = syndicalist_subtype
+				traits = { anarchist_zeal }
+			}
+			create_country_leader = {
+				name = "Alfred Mitchell Bingham"
+				desc = "POLITICS_ALFRED_MITCHELL_BINGHAM_DESC"
+				picture = "gfx/leaders/TEX/TEX_Alfred_Bingham.tga"
+				expire = "1965.1.1"
+				ideology = radical_socialist_subtype
+				traits = { educator }
+			}
+			set_country_flag = USA_NPP_dominance
+		}	
 		}
+	}
+}
+
+country_event = { # What's In A Name?-NPP lost
+	id = ustates.31641
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.31641"}
+	title = ustates.31621.t
+	picture = GFX_report_event_USA_congress
+
+	is_triggered_only = yes
+	
+	desc = {
+		text = ustates.31621.d.NPP
+		trigger = {
+			NOT = {
+				has_country_flag = USA_1940_election_NPP_victory
+			}
+		}
+	}
+	option = { # Very Well
+		name = ustates.31621.a
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = USA_1940_election_NPP_victory
+				}
+			}
+		add_popularity = { ideology = social_democrat popularity = 0.02 }	
+		}
+		set_country_flag = USA_NPP_rival_kept_name
+	}
+	option = { # Very Well
+		name = ustates.31621.b
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = USA_1940_election_NPP_victory
+				}
+			}
+		add_popularity = { ideology = social_liberal popularity = 0.02 }
+		set_party_name = {
+			ideology = radical_socialist
+			long_name = NPP_opponent_variant_name_radical_socialist_coalition_long
+			name = NPP_opponent_variant_name_radical_socialist_coalition 
+			}	
+		set_party_name = {
+			ideology = social_democrat
+			long_name = NPP_opponent_variant_name_social_democrat_coalition_long
+			name = NPP_opponent_variant_name_social_democrat_coalition 
+			}
+		set_party_name = {
+			ideology = social_liberal
+			long_name = NPP_opponent_variant_name_social_liberal_coalition_long
+			name = NPP_opponent_variant_name_social_liberal_coalition 
+			}	
+		}
+		set_country_flag = USA_NPP_rival_new_name
 	}
 }
 
@@ -29187,5 +30017,729 @@ country_event = { #CrazyParnall
 			ideology = social_conservative
 			popularity = -0.09
 		}	
+	}
+}
+
+### NPP and PP Content ###
+country_event = { #NPP Critical Race Council
+	id = ustates.5002
+	title = ustates.5002.title
+	desc = ustates.5002.desc
+	picture = GFX_event_NEE_Stoddard_Catalogues
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { #Pelley
+		name = ustates.5002.a
+		ai_chance = { factor = 30}
+		add_political_power = 50	
+		add_popularity = {
+			ideology = social_conservative
+			popularity = 0.05
+		}
+	}
+	option = { #Greene
+		name = ustates.5002.b
+		ai_chance = { factor = 40}
+		add_stability = 0.03
+		add_political_power = 20
+		add_popularity = {
+			ideology = paternal_autocrat
+			popularity = 0.03
+		}		
+	}
+	option = { #Stoddard
+		name = ustates.5002.c
+		ai_chance = { factor = 30}
+		add_political_power = 50
+		add_popularity = {
+			ideology = national_populist
+			popularity = 0.05
+		}	
+	}
+}
+
+country_event = { #Japanese Repatriation?
+	id = ustates.5003
+	title = ustates.5003.title
+	desc = ustates.5003.desc
+	picture = GFX_report_event_USA_congress
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { #Deport the Japanese
+		name = ustates.5003.a
+		ai_chance = { factor = 70}
+		add_political_power = 30
+		add_stability = 0.03
+		add_manpower = -2000
+		JAP = {
+				add_opinion_modifier = { target = USA modifier = USA_asian_exclusion }
+		}
+	}
+	
+	option = { #Don't Deport the Japanese
+		name = ustates.5003.b
+		ai_chance = { factor = 30}
+		add_political_power = 10
+		add_stability = 0.01
+	}
+}
+
+country_event = { #Repeal Prohibition?
+	id = ustates.5004
+	title = ustates.5004.title
+	desc = ustates.5004.desc
+	picture = GFX_AUS_prohibition
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { #Repealed
+		name = ustates.5004.a
+		ai_chance = { factor = 70}
+		add_political_power = 20
+		remove_ideas = USA_prohibition_idea
+	}
+	
+	option = { #Kept
+		name = ustates.5004.b
+		ai_chance = { factor = 30}
+		add_stability = 0.02
+	}
+}
+
+country_event = { #The Death of Jack Reed
+	id = ustates.5005
+	title = ustates.5005.title
+	desc = ustates.5005.desc
+	picture = GFX_report_event_USA_reed
+	fire_only_once = yes
+	
+	trigger = {
+		has_country_flag = USA_beat_up_reed
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	option = { #Arrange a serious investigation
+		name = ustates.5005.a
+		ai_chance = { factor = 20}
+		add_political_power = 20
+		hidden_effect = {
+			country_event = {
+				id = ustates.5006
+				days = 30
+			} 
+		}
+	}
+	
+	option = { #Arrange a show trial
+		name = ustates.5005.b
+		ai_chance = { factor = 80}
+		add_political_power = 50
+		add_stability = -0.02
+		hidden_effect = {
+			country_event = {
+				id = ustates.5006
+				days = 30
+			} 
+		}
+	}
+}
+
+country_event = { #Louise Bryant rails against Reed's killers
+	id = ustates.5006
+	title = ustates.5006.title
+	desc = ustates.5006.desc
+	picture = GFX_AUS_prohibition
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { #Allow It
+		name = ustates.5006.a
+		ai_chance = { factor = 60}
+		add_stability = 0.02
+		add_popularity = { ideology = syndicalist popularity = 0.01 }
+	}
+	
+	option = { #Shut it down
+		name = ustates.5006.b
+		ai_chance = { factor = 40}
+		add_stability = -0.02
+		add_political_power = 40
+	}
+}
+
+country_event = { #Liberians feel insulted
+	id = ustates.5007
+	title = ustates.5007.title
+	desc = ustates.5007.desc
+	picture = GFX_report_event_generic_diplomacy1
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { #Let the insult slide
+		name = ustates.5007.a
+		ai_chance = { factor = 60}
+		add_stability = 0.02
+		hidden_effect = {
+			USA = { country_event = { id = ustates.5009 days = 5 } }
+		}
+	}
+	
+	option = { #Demand an apology
+		name = ustates.5007.b
+		ai_chance = { factor = 40}
+		add_political_power = 40
+		USA = {
+				add_opinion_modifier = { target = LIB modifier = DEN_diplomatic_row }
+		}
+		hidden_effect = {
+			USA = { country_event = { id = ustates.5008 days = 5 } }
+		}
+	}
+}
+
+country_event = { #Liberians feel insulted-Response
+	id = ustates.5008
+	title = ustates.5008.title
+	desc = ustates.5008.desc
+	picture = GFX_report_event_generic_diplomacy1
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { #Apologize
+		name = ustates.5008.a
+		ai_chance = { factor = 60}
+		add_stability = 0.01
+		hidden_effect = {
+			country_event = {
+				id = ustates.5009
+				days = 10
+			} 
+		}
+	}
+	
+	option = { #Refuse to apologize
+		name = ustates.5008.b
+		ai_chance = { factor = 40}
+		add_political_power = 20
+		LIB = {
+				add_opinion_modifier = { target = USA modifier = DEN_diplomatic_row }
+		}
+	}
+}
+
+country_event = { #Liberians Propose Repatriation Scheme
+	id = ustates.5009
+	title = ustates.5009.title
+	desc = ustates.5009.desc
+	picture = GFX_report_event_MAF_highlands
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { #Approve It
+		name = ustates.5009.a
+		ai_chance = { factor = 60}
+		add_popularity = { ideology = paternal_autocrat popularity = 0.01 }
+		add_political_power = 40
+		hidden_effect = {
+			country_event = {
+				id = ustates.5011
+				days = 5
+			} 
+		}
+	}
+	
+	option = { #Moderate Dixiecrats Shoot it Down
+		name = ustates.5009.b
+		ai_chance = { factor = 40}
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.02 }
+		add_stability = 0.02
+		hidden_effect = {
+			LIB = { country_event = { id = ustates.5010 days = 5 } }
+		} 
+	}
+}
+
+country_event = { #Americans Say No to Repatriation
+	id = ustates.5010
+	title = ustates.5010.title
+	desc = ustates.5010.desc
+	picture = GFX_report_event_generic_diplomacy1
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { #Damn It
+		name = ustates.5010.a
+		add_political_power = -10
+	}
+}
+
+country_event = { #Repatriation Scheme
+	id = ustates.5011
+	title = ustates.5011.title
+	desc = ustates.5011.desc
+	picture = GFX_BBR_Garvey
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { #Our Moses, Theodore Bilbo!
+		name = ustates.5011.a
+		ai_chance = { factor = 50}
+		add_political_power = 200
+		add_popularity = { ideology = paternal_autocrat popularity = 0.03 }
+		add_timed_idea = {
+			idea = USA_Liberia_plan_idea
+			days = 145
+		}
+		1116 = { add_manpower = -15000}
+		1115 = { add_manpower = -25000}
+		1113 = { add_manpower = -30000}
+		1114 = { add_manpower = -30000}
+		1117 = { add_manpower = -10000}
+		hidden_effect = {
+			LIB = { country_event = { id = ustates.5012 days = 10 } }
+		} 
+	}
+	
+	option = { #Just UNIA Diehards
+		name = ustates.5011.b
+		ai_chance = { factor = 50}
+		add_political_power = 50
+		add_popularity = { ideology = national_populist popularity = 0.01 }
+		add_manpower = -20000
+		hidden_effect = {
+			LIB = { country_event = { id = ustates.5013 days = 10 } }
+		} 
+	}
+}
+
+country_event = { #Repatriation Scheme-Bilbo Plan
+	id = ustates.5012
+	title = ustates.5012.title
+	desc = ustates.5012.desc
+	picture = GFX_event_BBR_UNIA
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { #Black Migrants Arrive
+		name = ustates.5012.a
+		add_political_power = 100
+		add_timed_idea = {
+			idea = COR_Liberian_plan_idea
+			days = 145
+		}
+		add_ideas = {
+			USA_Liberian_trade
+		}
+		298 = { add_manpower = 110000}
+		hidden_effect = {
+			create_corps_commander = { #Garvey
+				name = "Marcus Garvey"
+				#desc = "TEX_JOHN_HINES_DESC"
+				portrait_path = "gfx/leaders/LIB/Portrait_LIB_Marcus_Garvey.tga"
+				traits = {
+					war_hero
+					media_personality
+					politically_connected
+				}		
+				skill = 2
+				attack_skill = 2
+				defense_skill = 2
+				planning_skill = 2
+				logistics_skill = 1
+			}
+		} 
+	}
+}
+
+country_event = { #Repatriation Scheme-UNIA Migration
+	id = ustates.5013
+	title = ustates.5013.title
+	desc = ustates.5013.desc
+	picture = GFX_event_BBR_UNIA
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { #UNIA Diehards Arrive
+		name = ustates.5013.a
+		add_manpower = 20000
+		add_political_power = 50
+		hidden_effect = {
+			create_corps_commander = { #Garvey
+				name = "Marcus Garvey"
+				#desc = "TEX_JOHN_HINES_DESC"
+				portrait_path = "gfx/leaders/LIB/Portrait_LIB_Marcus_Garvey.tga"
+				traits = {
+					war_hero
+					media_personality
+					politically_connected
+				}		
+				skill = 2
+				attack_skill = 2
+				defense_skill = 2
+				planning_skill = 2
+				logistics_skill = 1
+			}
+		} 
+	}
+}
+
+country_event = { #Huey forces wealthy to accept Share Our Wealth
+	id = ustates.6002
+	title = ustates.6002.title
+	desc = { # Huey 
+		text = ustates.6002.desc.long
+		trigger = {
+			has_country_flag = USA_1940_election_PP_huey
+		}
+	}
+	desc = { # Not Huey
+		text = ustates.6002.desc.notlong
+		trigger = {
+			NOT = {
+			has_country_flag = USA_1940_election_PP_huey
+			}
+		}
+	}
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #Repossess their property
+		name = ustates.6002.a
+		add_political_power = 70
+		add_popularity = { ideology = social_democrat popularity = 0.04 }
+	}
+}
+
+country_event = { #Fate of Wealthy Opponents
+	id = ustates.6003
+	title = ustates.6003.title
+	desc = ustates.6003.desc
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #Repossess their property
+		name = ustates.6003.a
+		ai_chance = { factor = 60}
+		add_political_power = 100
+		add_popularity = { ideology = social_democrat popularity = 0.02 }
+		add_stability = -0.05
+	}
+	option = { #Massive fines will do
+		name = ustates.6003.b
+		ai_chance = { factor = 40}
+		add_political_power = 50
+		add_popularity = { ideology = totalist popularity = 0.01 }
+		add_popularity = { ideology = syndicalist popularity = 0.02 }
+	}
+}
+
+country_event = { #Fate of Wall Street
+	id = ustates.6004
+	title = ustates.6004.title
+	desc = ustates.6004.desc
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #Demolish
+		name = ustates.6004.a
+		ai_chance = { factor = 60}
+		every_owned_state = {
+				limit = {
+					is_controlled_by = USA
+					state = 358
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+		add_political_power = 50
+		add_stability = -0.05
+		hidden_effect = {
+			set_country_flag = PP_demolishes_wall_street
+		}
+	}
+	option = { #Heavily Restrict
+		name = ustates.6004.b
+		ai_chance = { factor = 40}
+		add_political_power = 75
+		add_popularity = { ideology = syndicalist popularity = 0.01 }
+		add_popularity = { ideology = radical_socialist popularity = 0.02 }
+	}
+}
+
+country_event = { #The Klan lies broken
+	id = ustates.6005
+	title = ustates.6005.title
+	desc = ustates.6005.desc
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = ustates.6005.a
+		add_political_power = 50
+		add_popularity = { ideology = national_populist popularity = -0.1 }
+	}
+}
+
+country_event = { #PP Southern Leader
+	id = ustates.6006
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.6006"}
+	title = ustates.6006.title
+	desc = ustates.6006.desc
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { # Paul Maloney
+		name = ustates.6006.a
+		ai_chance = { factor = 30}
+		add_political_power = 50
+		add_stability = 0.02
+		add_popularity = { ideology = social_democrat popularity = 0.02 }
+	}
+	option = { #Big Jim Folsom
+		name = ustates.6006.b
+		ai_chance = { factor = 30}
+		add_political_power = 40
+		add_stability = 0.03
+		add_popularity = { ideology = social_democrat popularity = 0.03}
+	}
+	option = { #Earl Long
+		name = ustates.6006.c
+		ai_chance = { factor = 40}
+		add_political_power = 20
+		add_stability = 0.05
+		add_popularity = { ideology = social_democrat popularity = 0.05 }
+	}
+}
+
+country_event = { #Crushing Southern Power
+	id = ustates.6007
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.6007"}
+	title = ustates.6007.title
+	desc = ustates.6007.desc
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #Boost Support
+		name = ustates.6007.a
+		ai_chance = { factor = 50}
+		add_political_power = 30
+		add_stability = 0.05
+		add_popularity = { ideology = radical_socialist popularity = 0.02 }
+	}
+	option = { #Crush Southern Political Power
+		name = ustates.6007.b
+		ai_chance = { factor = 50}
+		add_political_power = 50
+		add_stability = 0.03
+		add_popularity = { ideology = authoritarian_democrat popularity = -0.03}
+	}
+}
+
+country_event = { #Replacing J. Edgar with someone else
+	id = ustates.6008
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.6008"}
+	title = ustates.6008.title
+	desc = ustates.6008.desc
+
+	fire_only_once = yes
+	
+	trigger = {
+		has_completed_focus = USA_peace_and_justice_for_all	
+		has_completed_focus = USA_to_you_the_people
+	}
+
+	option = { #Longist FBI
+		name = ustates.6008.a
+		ai_chance = { factor = 50}
+		add_political_power = 30
+		add_stability = 0.05
+		add_popularity = { ideology = social_democrat popularity = 0.01 }
+	}
+	option = { #Leftist FBI
+		name = ustates.6008.b
+		ai_chance = { factor = 50}
+		add_political_power = 50
+		add_popularity = { ideology = radical_socialist popularity = 0.02 }
+		add_popularity = { ideology = totalist popularity = 0.01 }
+		hidden_effect = {
+			set_country_flag = PP_Gus_Hall_FBI
+		}
+	}
+}
+
+country_event = { #Changes to the Supreme Court
+	id = ustates.6009
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.6009"}
+	title = ustates.6009.title
+	desc = ustates.6009.desc
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #The Proper Size
+		name = ustates.6009.a
+		ai_chance = { factor = 50}
+		add_political_power = 30
+		add_stability = 0.05
+		add_popularity = { ideology = social_democrat popularity = 0.01 }
+	}
+	option = { #The Right Verdicts
+		name = ustates.6009.b
+		ai_chance = { factor = 50}
+		add_political_power = 50
+		add_popularity = { ideology = radical_socialist popularity = 0.02 }
+		add_popularity = { ideology = totalist popularity = 0.01 }
+		hidden_effect = {
+			set_country_flag = PP_politicized_supreme_court
+		}
+	}
+}
+
+country_event = { #Changes to the Electoral College
+	id = ustates.6010
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.6010"}
+	title = ustates.6010.title
+	desc = ustates.6010.desc
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #Penalize Faithless Electors
+		name = ustates.6010.a
+		ai_chance = { factor = 50}
+		add_stability = 0.03
+		add_popularity = { ideology = social_democrat popularity = 0.01 }
+	}
+	option = { #Abolish
+		name = ustates.6010.b
+		ai_chance = { factor = 50}
+		add_political_power = 40
+		add_popularity = { ideology = radical_socialist popularity = 0.02 }
+		hidden_effect = {
+			set_country_flag = PP_abolished_electoral_college
+		}
+	}
+}
+
+country_event = { #A Second Constitutional Convention
+	id = ustates.6011
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.6011"}
+	title = ustates.6011.title
+	desc = ustates.6011.desc
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #Paleocon Screeching
+		name = ustates.6011.a
+		ai_chance = { factor = 100}
+		add_political_power = 50
+		add_popularity = { ideology = radical_socialist popularity = 0.02 }
+	}
+}
+
+country_event = { #Bradley Coup
+	id = ustates.6012
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.6012"}
+	title = ustates.6012.title
+	desc = ustates.6012.desc
+
+	fire_only_once = yes
+
+	
+	trigger = {
+		has_country_flag = PP_demolishes_wall_street
+		has_country_flag = PP_politicized_supreme_court
+		has_country_flag = PP_abolished_electoral_college
+		has_completed_focus = USA_the_second_constitutional_convention
+	}
+
+	option = { #American Socialism Survives
+		name = ustates.6012.a
+		ai_chance = { factor = 80}
+		add_stability = -0.1
+		add_political_power = 100
+		add_popularity = { ideology = radical_socialist popularity = 0.05 }
+	}
+	option = { #My Commander, General Bradley!
+		name = ustates.6012.b
+		ai_chance = { factor = 20}
+		
+		create_country_leader = {
+			name = "Omar Bradley"
+			desc = "USA_OMAR_BRADLEY_POLITICS_DESC"
+			picture = "gfx/leaders/WCC/Portrait_WCC_gen_omar_bradley.tga"
+			expire = "1965.1.1"
+			ideology = authoritarian_democrat_subtype
+			traits = { desperate_defender }
+		}
+		set_politics = {
+			ruling_party = authoritarian_democrat
+			last_election = "1936.11.08"
+			election_frequency = 48
+			elections_allowed = no
+		}
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.25 }
+		hidden_effect = {
+			add_ideas = {
+				### cabinet ###
+				WCC_Dwight_D_Eisenhower_hog_ade
+				WCC_Patrick_J_Hurley_for_ade
+				WCC_James_Garesche_Ord_eco_ade
+				WCC_Leonard_T_Gerow_sec_ade
+				WCC_Omar_Nelson_Bradley_cos
+				WCC_Dwight_D_Eisenhower_carm
+			}
+			set_party_name = { #Bradley Junta
+				ideology = authoritarian_democrat
+				long_name = Bradley_authoritarian_democrat_long
+				name = Bradley_authoritarian_democrat
+			}
+		}
+	}
+	option = { #Browder Orchestrates a Self-Coup
+		name = ustates.6012.c
+		trigger = {
+			has_country_flag = USA_1940_election_PP_browder
+			has_country_flag = PP_Gus_Hall_FBI
+		}
+		create_country_leader = {
+				name = "Earl Browder"
+				desc = "POLITICS_EARL_BROWDER_DESC"
+				picture = "gfx/leaders/CSA/Portrait_CSA_Earl_Bowder.png"
+				expire = "1965.1.1"
+				ideology = totalist_subtype
+				traits = { the_director }
+		}
+		set_politics = {
+			ruling_party = totalist
+			last_election = "1936.11.08"
+			election_frequency = 48
+			elections_allowed = no
+		}
+		add_ideas = {
+			CSA_Gus_Hall_hog_tot
+			CSA_Anna_Louise_Strong_for_tot
+			CSA_Gus_Hall_eco_tot
+			CSA_Eugene_Dennis_sec_syn
+		}		
+		add_popularity = { ideology = totalist popularity = 0.3 }
+		hidden_effect = {
+			set_party_name = { #Browderite Self Coup
+				ideology = totalist
+				long_name = Browder_totalist_self_coup
+				name = Browder_totalist_self_coup_long
+			}
+		}
 	}
 }
