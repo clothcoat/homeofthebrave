@@ -1,4 +1,9 @@
 spriteTypes = {
+	### el generico ###			   
+	SpriteType = {
+		name = "GFX_generic_financial_markets"
+		texturefile = "gfx/interface/goals/generic_financial_markets.png"
+	}		  		
 
 	### Black Belt Republic ###
 	SpriteType = {# ABB
@@ -655,6 +660,10 @@ spriteTypes = {
 		name = "GFX_CAL_dewitt_raids"
 		texturefile = "gfx/interface/goals/CAL_dewitt_raids.png"
 	}
+	spriteType = {
+		name = "GFX_goal_CAL_dictatorship_wealth"
+		texturefile = "gfx/interface/goals/goal_CAL_dictatorship_wealth.png"
+	}		   
 	SpriteType = {# Eastern Patronage
 		name = "GFX_CAL_eastern_patronage"
 		texturefile = "gfx/interface/goals/CAL_eastern_patronage.png"
@@ -2484,6 +2493,11 @@ spriteTypes = {
 	}
 	
 	SpriteType = {# 
+		name = "GFX_USA_nat_justice"
+		texturefile = "gfx/interface/goals/USA_nat_justice.png"
+	}
+	
+	SpriteType = {# 				   
 		name = "GFX_USA_national_youth_administration"
 		texturefile = "gfx/interface/goals/USA_national_youth_administration.png"
 	}
@@ -2746,6 +2760,11 @@ spriteTypes = {
 		name = "GFX_goal_CSA_gift_economy"
 		texturefile = "gfx/interface/goals/CSA_gift_economy.png"
 	}
+	
+	SpriteType = {
+		name = "GFX_goal_CSA_great_purge"
+		texturefile = "gfx/interface/goals/CSA_great_purge.png"
+	}			   
 	
 	SpriteType = {# CSA
 		name = "GFX_goal_CSA_heresy"
@@ -4868,6 +4887,107 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_goal_CSA_CSS_radicalization_campaign"
 		texturefile = "gfx/interface/goals/CSA_CSS_radicalization_campaign.png"
+	}
+	### NPP Tree Icons
+	
+	SpriteType = {
+		name = "GFX_goal_USA_PPP"
+		texturefile = "gfx/interface/goals/goal_USA_PPP.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_USA_return_to_americanism"
+		texturefile = "gfx/interface/goals/goal_USA_return_to_americanism.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_USA_Privatized_Progress"
+		texturefile = "gfx/interface/goals/goal_USA_Privatized_Progress.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_USA_Parochial_Policing"
+		texturefile = "gfx/interface/goals/goal_USA_Parochial_Policing.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_USA_Liberty_Not_Legalism"
+		texturefile = "gfx/interface/goals/goal_USA_Liberty_Not_Legalism.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_USA_whittle_down_washington"
+		texturefile = "gfx/interface/goals/goal_USA_whittle_down_washington.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_USA_protestant_appeals"
+		texturefile = "gfx/interface/goals/goal_USA_protestant_appeals.png"
+	}
+	
+	### PP Tree Icons
+	
+	SpriteType = {
+		name = "GFX_goal_USA_Wealth_Ceiling"
+		texturefile = "gfx/interface/goals/goal_USA_Wealth_Ceiling.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_USA_SOW"
+		texturefile = "gfx/interface/goals/goal_USA_SOW.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_USA_No_Chauvinism"
+		texturefile = "gfx/interface/goals/goal_USA_No_Chauvinism.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_USA_Dismantle_Dixie"
+		texturefile = "gfx/interface/goals/goal_USA_Dismantle_Dixie.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_USA_National_Machine"
+		texturefile = "gfx/interface/goals/goal_USA_National_Machine.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_USA_20th_Century_Americanism"
+		texturefile = "gfx/interface/goals/goal_USA_20th_Century_Americanism.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_USA_End_Crashmaking"
+		texturefile = "gfx/interface/goals/goal_USA_End_Crashmaking.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_USA_Against_all_Tryrants"
+		texturefile = "gfx/interface/goals/goal_USA_Against_all_Tryrants.png"
+	}	
+	SpriteType = {
+		name = "GFX_goal_USA_Combat_Capitalism"
+		texturefile = "gfx/interface/goals/goal_USA_Combat_Capitalism.png"
+	}	
+	SpriteType = {
+		name = "GFX_goal_USA_Ensure_Election_Fairness"
+		texturefile = "gfx/interface/goals/goal_USA_Ensure_Election_Fairness.png"
+	}	
+	SpriteType = {
+		name = "GFX_goal_USA_Riding_to_Victory"
+		texturefile = "gfx/interface/goals/goal_USA_Riding_to_Victory.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_USA_Maintain_Excellence"
+		texturefile = "gfx/interface/goals/goal_USA_Maintain_Excellence.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_USA_Second_Constitutional_Convention"
+		texturefile = "gfx/interface/goals/goal_USA_Second_Constitutional_Convention.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_USA_Preserve_Founders_Vision"
+		texturefile = "gfx/interface/goals/goal_USA_Preserve_Founders_Vision.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_USA_The_Peoples_Court"
+		texturefile = "gfx/interface/goals/goal_USA_The_Peoples_Court.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_USA_To_You_The_People"
+		texturefile = "gfx/interface/goals/goal_USA_To_You_The_People.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_USA_By_the_People_For_the_People"
+		texturefile = "gfx/interface/goals/goal_USA_By_the_People_For_the_People.png"
 	}
 }
 
