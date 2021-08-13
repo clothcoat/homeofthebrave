@@ -5118,7 +5118,7 @@ focus_tree = {
 		y = 3
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TEX_veterans_bill"
-			add_idea = TEX_help_vets_idea
+			add_ideas = TEX_help_vets_idea
 			add_manpower = 3000
 		}
 	}
@@ -6828,7 +6828,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TEX_national_recovery"
 			TEX_increase_recovery = yes
-			TEX_increase_political_recovery
+			TEX_increase_political_recovery = yes
 			custom_effect_tooltip = USA_economic_recovery_tooltip
 			custom_effect_tooltip = USA_political_recovery_tooltip
 		}
