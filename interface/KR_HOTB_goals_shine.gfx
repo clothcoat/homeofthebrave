@@ -32503,10 +32503,10 @@ spriteTypes = {
 	### NPP and PP ###
 	spriteType = {
 		name = "GFX_goal_USA_PPP_shine"
-		texturefile = "gfx/interface/goals/GFX_goal_USA_PPP.png"
+		texturefile = "gfx/interface/goals/goal_USA_PPP.png"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/GFX_goal_USA_PPP.png"
+			animationmaskfile = "gfx/interface/goals/goal_USA_PPP.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -32518,7 +32518,7 @@ spriteTypes = {
 			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		animation = {
-			animationmaskfile = "gfx/interface/goals/GFX_goal_USA_PPP.png" 
+			animationmaskfile = "gfx/interface/goals/goal_USA_PPP.png" 
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -32533,10 +32533,10 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_goal_USA_return_to_americanism_shine"
-		texturefile = "gfx/interface/goals/GFX_goal_USA_return_to_americanism.png"
+		texturefile = "gfx/interface/goals/goal_USA_return_to_americanism.png"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/GFX_goal_USA_return_to_americanism.png"
+			animationmaskfile = "gfx/interface/goals/goal_USA_return_to_americanism.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -32548,7 +32548,7 @@ spriteTypes = {
 			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		animation = {
-			animationmaskfile = "gfx/interface/goals/GFX_goal_USA_return_to_americanism.png" 
+			animationmaskfile = "gfx/interface/goals/goal_USA_return_to_americanism.png" 
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -32563,10 +32563,10 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_goal_USA_Privatized_Progress_shine"
-		texturefile = "gfx/interface/goals/GFX_goal_USA_Privatized_Progress.png"
+		texturefile = "gfx/interface/goals/goal_USA_Privatized_Progress.png"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/GFX_goal_USA_Privatized_Progress.png"
+			animationmaskfile = "gfx/interface/goals/goal_USA_Privatized_Progress.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -32578,7 +32578,7 @@ spriteTypes = {
 			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		animation = {
-			animationmaskfile = "gfx/interface/goals/GFX_goal_USA_Privatized_Progress.png" 
+			animationmaskfile = "gfx/interface/goals/goal_USA_Privatized_Progress.png" 
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
