@@ -10299,7 +10299,7 @@ country_event = { # The St. Louis Convention
 			set_country_flag = convention_speeches_over
 			country_event = {
 				id = ustates.198
-				day = 5
+				days = 5
 			}
 		}
 	}
@@ -10315,7 +10315,7 @@ country_event = { # The St. Louis Convention
 			set_country_flag = convention_speeches_over
 			country_event = {
 				id = ustates.198
-				day = 5
+				days = 5
 			}
 		}
 	}
@@ -10331,7 +10331,7 @@ country_event = { # The St. Louis Convention
 			set_country_flag = convention_speeches_over
 			country_event = {
 				id = ustates.198
-				day = 5
+				days = 5
 			}
 		}
 	}
@@ -10347,7 +10347,7 @@ country_event = { # The St. Louis Convention
 			set_country_flag = convention_speeches_over
 			country_event = {
 				id = ustates.198
-				day = 5
+				days = 5
 			}
 		}
 	}
@@ -12808,7 +12808,6 @@ country_event = { # 1944 Election
 				limit = {
 					has_country_flag = USA_1944_progressive_primary_sinclair
 					}
-				}
 				create_country_leader = { 
 					name = "Upton Sinclair"
 					desc = "POLITICS_UPTON_SINCLAIR_DESC"
@@ -12873,6 +12872,7 @@ country_event = { # 1944 Election
 					traits = { silent_workhorse }
 				}
 			}
+		}
 
 	option = { # Progressive
 		name = ustates.207.a
