@@ -16489,10 +16489,10 @@ focus_tree = {
 			add_popularity = { ideology = syndicalist popularity = -0.02 }
 			add_ideas = CAL_family_law_idea
 			SRI = {
-				add_opinion_modifier = { target = USA modifier = USA_dumped_troublemakers }
+				add_opinion_modifier = { target = USA modifier = medium_decrease }
 			}
 			FRA = {
-				add_opinion_modifier = { target = USA modifier = USA_dumped_troublemakers }
+				add_opinion_modifier = { target = USA modifier = medium_decrease }
 			}
 			log = "[GetDateText]: [Root.GetName]: Focus USA_expel_foreign_anarchists"
 		}
@@ -16551,13 +16551,13 @@ focus_tree = {
 			add_political_power = 60
 			add_manpower = -4000
 			LIB = {
-				add_opinion_modifier = { target = USA modifier = USA_dumped_troublemakers }
+				add_opinion_modifier = { target = USA modifier = medium_decrease }
 			}
 			LIB = {
 				add_manpower = 2000
 			}
 			MEX = {
-				add_opinion_modifier = { target = USA modifier = USA_dumped_troublemakers }
+				add_opinion_modifier = { target = USA modifier = medium_decrease }
 			}
 			MEX = {
 				add_manpower = 2000
