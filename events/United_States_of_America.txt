@@ -9890,7 +9890,15 @@ country_event = { # The Omaha Conference
 	
 country_event = { # The Boston Conference
 	id = ustates.193
-	immediate = {log = "[GetDateText]: [Root.GetName]: event ustates.193"}
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event ustates.193"
+		hidden_effect = {
+			country_event = {
+				id = ustates.194
+				days = 5
+			}
+		}
+	}
 	title = ustates.193.t
 	desc = { # Aiken
 		text = ustates.193.d.aiken
@@ -12454,10 +12462,13 @@ country_event = { # 1944 Progressive Primary
 
 	trigger = {
 		tag = USA
-		has_elected_government = yes
 		has_country_flag = USA_progressives_exist
 		has_country_flag = USA_had_1936_election
 		has_country_flag = USA_had_1940_election
+		OR = {
+			has_elected_government = yes
+			has_country_flag = USA_NPP_dominance
+		}
 		NOT = {
 			has_country_flag = USA_had_1944_election
 		}
@@ -12535,7 +12546,11 @@ country_event = { # 1944 Republican Primary
 
 	trigger = {
 		tag = USA
-		has_elected_government = yes
+		OR = {
+			has_elected_government = yes
+			has_country_flag = USA_NPP_dominance
+			has_country_flag = USA_PP_dominance
+		}
 		has_country_flag = USA_had_1936_election
 		has_country_flag = USA_had_1940_election
 		NOT = {
@@ -12606,7 +12621,10 @@ country_event = { # 1944 Democrat Primary
 
 	trigger = {
 		tag = USA
-		has_elected_government = yes
+		OR = {
+			has_elected_government = yes
+			has_country_flag = USA_PP_dominance
+		}
 		has_country_flag = USA_had_1936_election
 		has_country_flag = USA_had_1940_election
 		NOT = {
@@ -12751,7 +12769,11 @@ country_event = { # 1944 Election
 
 	trigger = {
 		tag = USA
-		has_elected_government = yes
+		OR = {
+			has_elected_government = yes
+			has_country_flag = USA_PP_dominance
+			has_country_flag = USA_NPP_dominance
+		}
 		has_country_flag = USA_had_1936_election
 		has_country_flag = USA_had_1940_election
 		NOT = {
@@ -12780,7 +12802,6 @@ country_event = { # 1944 Election
 			if = {
 				limit = {
 						has_country_flag = USA_1944_progressive_primary_wallace
-					}
 				}
 				create_country_leader = {
 					name = "Henry Wallace"
@@ -13500,6 +13521,7 @@ country_event = { # 1944 Election
 			country_event = {
 				id = ustates.212
 				days = 1304
+				}
 			}
 		}
 	}
@@ -13990,7 +14012,10 @@ country_event = { # 1948 Progressive Primary
 
 	trigger = {
 		tag = USA
-		has_elected_government = yes
+		OR = {
+			has_elected_government = yes
+			has_country_flag = USA_NPP_dominance
+		}
 		has_country_flag = USA_progressives_exist
 		has_country_flag = USA_had_1936_election
 		has_country_flag = USA_had_1940_election
@@ -14127,7 +14152,11 @@ country_event = { # 1948 Republican Primary
 
 	trigger = {
 		tag = USA
-		has_elected_government = yes
+		OR = {
+			has_elected_government = yes
+			has_country_flag = USA_NPP_dominance
+			has_country_flag = USA_PP_dominance
+		}
 		has_country_flag = USA_had_1936_election
 		has_country_flag = USA_had_1940_election
 		has_country_flag = USA_had_1944_election
@@ -14293,7 +14322,10 @@ country_event = { # 1948 Liberal Democrat Primary
 
 	trigger = {
 		tag = USA
-		has_elected_government = yes
+		OR = {
+			has_elected_government = yes
+			has_country_flag = USA_PP_dominance
+		}
 		has_country_flag = USA_had_1936_election
 		has_country_flag = USA_had_1940_election
 		has_country_flag = USA_had_1944_election
@@ -14416,7 +14448,10 @@ country_event = { # 1948 Conservative Democrat Primary
 
 	trigger = {
 		tag = USA
-		has_elected_government = yes
+		OR = {
+			has_elected_government = yes
+			has_country_flag = USA_PP_dominance
+		}
 		has_country_flag = USA_had_1936_election
 		has_country_flag = USA_had_1940_election
 		has_country_flag = USA_had_1944_election
@@ -14493,7 +14528,11 @@ country_event = { # 1948 election
 
 	trigger = {
 		tag = USA
-		has_elected_government = yes
+		OR = {
+			has_elected_government = yes
+			has_country_flag = USA_PP_dominance
+			has_country_flag = USA_NPP_dominance
+		}
 		has_country_flag = USA_had_1936_election
 		has_country_flag = USA_had_1940_election
 		has_country_flag = USA_had_1944_election
@@ -15830,7 +15869,10 @@ country_event = { # 1952 Progressive Primary
 
 	trigger = {
 		tag = USA
-		has_elected_government = yes
+		OR = {
+			has_elected_government = yes
+			has_country_flag = USA_NPP_dominance
+		}
 		has_country_flag = USA_progressives_exist
 		has_country_flag = USA_had_1936_election
 		has_country_flag = USA_had_1940_election
@@ -15964,7 +16006,11 @@ country_event = { # 1952 Republican Primary
 
 	trigger = {
 		tag = USA
-		has_elected_government = yes
+		OR = {
+			has_elected_government = yes
+			has_country_flag = USA_NPP_dominance
+			has_country_flag = USA_PP_dominance
+		}
 		has_country_flag = USA_had_1936_election
 		has_country_flag = USA_had_1940_election
 		has_country_flag = USA_had_1944_election
@@ -16059,7 +16105,10 @@ country_event = { # 1952 Liberal Democrat Primary
 
 	trigger = {
 		tag = USA
-		has_elected_government = yes
+		OR = {
+			has_elected_government = yes
+			has_country_flag = USA_PP_dominance
+		}
 		has_country_flag = USA_had_1936_election
 		has_country_flag = USA_had_1940_election
 		has_country_flag = USA_had_1944_election
@@ -16147,7 +16196,10 @@ country_event = { # 1952 Conservative Democrat Primary
 
 	trigger = {
 		tag = USA
-		has_elected_government = yes
+		OR = {
+			has_elected_government = yes
+			has_country_flag = USA_PP_dominance
+		}
 		has_country_flag = USA_had_1936_election
 		has_country_flag = USA_had_1940_election
 		has_country_flag = USA_had_1944_election
@@ -16214,7 +16266,11 @@ country_event = { # 1952 election
 
 	trigger = {
 		tag = USA
-		has_elected_government = yes
+		OR = {
+			has_elected_government = yes
+			has_country_flag = USA_PP_dominance
+			has_country_flag = USA_NPP_dominance
+		}
 		has_country_flag = USA_had_1936_election
 		has_country_flag = USA_had_1940_election
 		has_country_flag = USA_had_1944_election
