@@ -2146,7 +2146,7 @@ country_event = { #Minutemen Want to Cancel Speech
 		has_completed_focus = TEX_perfect_democracy
 		}
 	has_completed_focus = TEX_employment_expansion
-	date > 1944.8.5
+	date > 1939.8.5
 	}
 	
 	desc = {
@@ -2358,7 +2358,7 @@ country_event = { #Long Dead
 		hidden_effect = {
 		add_ideas = TEX_Michael_Gallagher_hog_pau
 		add_ideas = TEX_John_Ryan_for_sde
-		add_ideas = TEX_Thomas_Malloy_eco_ade
+		add_ideas = TEX_Thomas_Molloy_eco_ade
 		add_ideas = TEX_Frank_Murphy_sec_ade
 		}
 		if = {
@@ -2720,6 +2720,11 @@ country_event = { #Long Dead
 			election_frequency = 48
 			elections_allowed = yes
 			}
+		}
+		set_party_name = {
+			ideology = radical_socialist
+			long_name = TEX_AFP_radical_socialist_party_long
+			name = TEX_AFP_radical_socialist_party }
 		}
 		else_if = {
 		limit = { has_government = authoritarian_democrat }
@@ -5283,6 +5288,32 @@ country_event = { #Dealing with Sweeney Two
 		name = unionstate.5131.a
 		add_popularity = { ideology = paternal_autocrat popularity = 0.05 }
 		add_political_power = 15
+	}
+}
+
+country_event = { #Government by Expert?
+	id = unionstate.5132
+	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.5132"}
+	title = unionstate.5132.t
+	desc = unionstate.5132.d
+	
+	picture = GFX_report_event_generic_diplomacy3
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { #Only qualified party insiders can run
+		name = unionstate.5132.a
+		custom_effect_tooltip = TEX_subtle_power_tooltip
+		add_ideas = TEX_party_insiders_idea
+		add_political_power = -15
+		add_stability = 0.02
+	}
+	option = { #On second thought
+		name = unionstate.5132.b
+		add_political_power = 20
+		add_stability = -0.02
 	}
 }
 
