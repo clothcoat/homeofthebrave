@@ -11318,37 +11318,61 @@ country_event = {
 		has_capitulated = yes
 		}
 		OR = {
+			AND = {
+			tag = TEX
 			TEX = {
 			controls_state = 382
 			controls_state = 389
 			}
+			}
+			AND = {
+			tag = TEX
 			TEX = {
 			controls_state = 382
 			controls_state = 1107
 			}
+			}
+			AND = {
+			tag = CSA
 			CSA = {
 			controls_state = 382
 			controls_state = 389
 			}
+			}
+			AND = {
+			tag = CSA
 			CSA = {
 			controls_state = 382
 			controls_state = 1107
 			}
+			}
+			AND = {
+			tag = COR
 			COR = {
 			controls_state = 382
 			controls_state = 389
 			}
+			}
+			AND = {
+			tag = COR
 			COR = {
 			controls_state = 382
 			controls_state = 1107
 			}
+			}
+			AND = {
+			tag = BBR
 			BBR = {
 			controls_state = 382
 			controls_state = 389
 			}
+			}
+			AND = {
+			tag = BBR
 			BBR = {
 			controls_state = 382
 			controls_state = 1107
+			}
 			}
 		}
 	}
