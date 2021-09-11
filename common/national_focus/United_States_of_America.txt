@@ -1830,9 +1830,20 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_austerity"
-			swap_ideas = {
-			remove_idea = USA_black_monday
-			add_idea = USA_austerity_garner
+			if = {
+				limit = {
+					has_idea = USA_black_monday2
+				}
+				swap_ideas = {
+				remove_idea = USA_black_monday2
+				add_idea = USA_austerity_garner
+				}
+			}
+			else = 	{
+				swap_ideas = {
+				remove_idea = USA_black_monday
+				add_idea = USA_austerity_garner
+				}
 			}
 			add_stability = 0.05
 			add_political_power = 20
@@ -2089,6 +2100,16 @@ focus_tree = {
 		icon = GFX_goal_liberty
 		cost = 5.00
 		available = {
+			OR = {
+				has_country_flag = USA_had_1936_election
+				has_country_flag = USA_macarthur_coup
+			}
+			OR = {
+				has_global_flag = USA_civil_war_avoided_flag
+				has_global_flag = USA_civil_war_over_flag
+			}
+		}
+		bypass = {
 			OR = {
 				has_country_flag = USA_had_1936_election
 				has_country_flag = USA_macarthur_coup
@@ -12785,6 +12806,8 @@ focus_tree = {
 		y = 0
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_quota_adjustments"
+			add_popularity = { ideology = social_liberal popularity = 0.02 }
+			add_popularity = { ideology = market_liberal popularity = 0.03 }
 			add_stability = 0.03
 			add_manpower = 3000
 		}
@@ -13305,6 +13328,7 @@ focus_tree = {
 		y = 4
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_encourage_integration"
+			add_ideas = CAL_impact_of_integration_idea
 			add_political_power = -50
 			add_manpower = 25000
 		}
@@ -15248,6 +15272,132 @@ focus_tree = {
 			}
 			if = {
 			limit = {
+			MEX = { has_socialist_government = yes }
+			}
+			create_wargoal = {
+			type = puppet_wargoal_focus
+			target = MEX
+				}
+			}
+			if = {
+			limit = {
+			CUB = { has_socialist_government = yes }
+			}
+			create_wargoal = {
+			type = puppet_wargoal_focus
+			target = CUB
+				}
+			}
+			if = {
+			limit = {
+			HAI = { has_socialist_government = yes }
+			}
+			create_wargoal = {
+			type = puppet_wargoal_focus
+			target = HAI
+				}
+			}
+			if = {
+			limit = {
+			DOM = { has_socialist_government = yes }
+			}
+			create_wargoal = {
+			type = puppet_wargoal_focus
+			target = DOM
+				}
+			}
+			if = {
+			limit = {
+			NIC = { has_socialist_government = yes }
+			}
+			create_wargoal = {
+			type = puppet_wargoal_focus
+			target = NIC
+				}
+			}
+			if = {
+			limit = {
+			COS = { has_socialist_government = yes }
+			}
+			create_wargoal = {
+			type = puppet_wargoal_focus
+			target = COS
+				}
+			}
+			if = {
+			limit = {
+			COL = { has_socialist_government = yes }
+			}
+			create_wargoal = {
+			type = puppet_wargoal_focus
+			target = COL
+				}
+			}
+			if = {
+			limit = {
+			VEN = { has_socialist_government = yes }
+			}
+			create_wargoal = {
+			type = puppet_wargoal_focus
+			target = VEN
+				}
+			}
+			if = {
+			limit = {
+			ECU = { has_socialist_government = yes }
+			}
+			create_wargoal = {
+			type = puppet_wargoal_focus
+			target = ECU
+				}
+			}
+			if = {
+			limit = {
+			FOP = { has_socialist_government = yes }
+			}
+			create_wargoal = {
+			type = puppet_wargoal_focus
+			target = FOP
+				}
+			}
+			if = {
+			limit = {
+			BRA = { has_socialist_government = yes }
+			}
+			create_wargoal = {
+			type = puppet_wargoal_focus
+			target = BRA
+				}
+			}
+			if = {
+			limit = {
+			PAR = { has_socialist_government = yes }
+			}
+			create_wargoal = {
+			type = puppet_wargoal_focus
+			target = PAR
+				}
+			}
+			if = {
+			limit = {
+			URG = { has_socialist_government = yes }
+			}
+			create_wargoal = {
+			type = puppet_wargoal_focus
+			target = URG
+				}
+			}
+			if = {
+			limit = {
+			BOL = { has_socialist_government = yes }
+			}
+			create_wargoal = {
+			type = puppet_wargoal_focus
+			target = BOL
+				}
+			}
+			if = {
+			limit = {
 			CHL = { has_socialist_government = yes }
 			}
 			create_wargoal = {
@@ -15515,6 +15665,33 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_banana_republics"
 			custom_effect_tooltip = USA_dominate_central_america
+			increase_ruling_party_popularity_by_5 = yes
+			hidden_effect = {
+			create_wargoal = {
+			type = puppet_wargoal_focus
+			target = GUA
+			}
+			create_wargoal = {
+			type = puppet_wargoal_focus
+			target = NIC
+			}
+			create_wargoal = {
+			type = puppet_wargoal_focus
+			target = ELS
+			}
+			create_wargoal = {
+			type = puppet_wargoal_focus
+			target = HON
+			}
+			create_wargoal = {
+			type = puppet_wargoal_focus
+			target = COS
+			}
+			create_wargoal = {
+			type = puppet_wargoal_focus
+			target = PAN
+			}
+			}
 		}
 	}
 	focus = {
@@ -15544,6 +15721,52 @@ focus_tree = {
 			custom_effect_tooltip = USA_claim_south_america
 			add_war_support = 0.1
 			increase_ruling_party_popularity_by_5 = yes
+			hidden_effect = {
+			create_wargoal = {
+			type = puppet_wargoal_focus
+			target = PRU
+			}
+			create_wargoal = {
+			type = puppet_wargoal_focus
+			target = COL
+			}
+			create_wargoal = {
+			type = puppet_wargoal_focus
+			target = ECU
+			}
+			create_wargoal = {
+			type = puppet_wargoal_focus
+			target = VEN
+			}
+			create_wargoal = {
+			type = puppet_wargoal_focus
+			target = BRA
+			}
+			create_wargoal = {
+			type = puppet_wargoal_focus
+			target = BOL
+			}
+			create_wargoal = {
+			type = puppet_wargoal_focus
+			target = ARG
+			}
+			create_wargoal = {
+			type = puppet_wargoal_focus
+			target = PAR
+			}
+			create_wargoal = {
+			type = puppet_wargoal_focus
+			target = URG
+			}
+			create_wargoal = {
+			type = puppet_wargoal_focus
+			target = CHL
+			}
+			create_wargoal = {
+			type = puppet_wargoal_focus
+			target = FOP
+			}
+			}
 		}
 	}
 	focus = {
@@ -16048,13 +16271,29 @@ focus_tree = {
 		cancel_if_invalid = yes
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_vietnam_yesterday"
+			if = {
+			limit = { VIE = {
+				exists = yes
+				owns_state = 857
+				owns_state = 671
+				owns_state = 827
+				owns_state = 286
+				owns_state = 856
+				}
+			}
 			create_wargoal = {
 			type = annex_everything
 			target = VIE
 			}
-			if = {
+			}
+			else_if = {
 			limit = { GEA = {
 				exists = yes
+				owns_state = 857
+				owns_state = 671
+				owns_state = 827
+				owns_state = 286
+				owns_state = 856
 				}
 			}
 			GER = {
