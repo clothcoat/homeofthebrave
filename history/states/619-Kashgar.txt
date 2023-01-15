@@ -1,16 +1,13 @@
-state = {
-	id = 619
-	name = "STATE_619" # Yarkand
-	manpower = 1424700
 
-	state_category = one
-
-	resources = {
-		aluminium = 2
-		chromium = 3
+state={
+	id=619
+	name="STATE_619"
+	resources={
+		aluminium=2.000
+		chromium=3.000
 	}
 
-	history = {
+	history={
 		owner = SIK
 		add_core_of = SIK
 		add_claim_by = QIE
@@ -18,13 +15,19 @@ state = {
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 1
+
 		}
 		victory_points = {
-			2015 3
+			2015 3 
 		}
+
 	}
 
-	provinces = {
-		1766 1928 1970 2015 4828 5016 5087 5216 7949 8112 8185 10754 10870 12119 12768 13323
+	provinces={
+		1766 2015 4828 5016 5087 7790 7949 10870 12119 12768 13323 
 	}
+	manpower=1424700
+	buildings_max_level_factor=1.000
+	state_category=one
+	local_supplies=0.000
 }

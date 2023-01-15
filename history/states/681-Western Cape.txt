@@ -1,10 +1,9 @@
-state = {
-	id = 681
-	name = "STATE_681"
-	manpower = 1799558
-	state_category = four
 
-	history = {
+state={
+	id=681
+	name="STATE_681"
+
+	history={
 		owner = SAF
 		add_core_of = SAF
 		buildings = {
@@ -14,14 +13,21 @@ state = {
 			dockyard = 1
 			12589 = {
 				naval_base = 4
+
 			}
+
 		}
 		victory_points = {
-			12589 20 #Cape Town
+			12589 20 
 		}
+
 	}
 
-	provinces = {
-		1358 1370 4226 4292 7437 10234 10291 12547 12589 12692 13760
+	provinces={
+		1358 1370 4226 7437 10234 12547 12589 12692 13760 
 	}
+	manpower=1799558
+	buildings_max_level_factor=1.000
+	state_category=four
+	local_supplies=0.000
 }

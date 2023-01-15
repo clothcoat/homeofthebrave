@@ -1,11 +1,9 @@
-state = {
-	id = 834
-	name = "STATE_834"
-	manpower = 199520
 
-	state_category = one
+state={
+	id=834
+	name="STATE_834"
 
-	history = {
+	history={
 		owner = NFA
 		add_core_of = NFA
 		add_core_of = SEN
@@ -13,11 +11,18 @@ state = {
 			infrastructure = 3
 			4989 = {
 				naval_base = 1
+
 			}
+
 		}
+
 	}
 
-	provinces = {
-		4989
+	provinces={
+		4989 12834 
 	}
+	manpower=199520
+	buildings_max_level_factor=1.000
+	state_category=one
+	local_supplies=0.000
 }

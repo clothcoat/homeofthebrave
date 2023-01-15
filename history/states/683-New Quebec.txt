@@ -1,25 +1,27 @@
-state = {
-	id = 683
-	name = "STATE_683"
 
-	state_category = wasteland
-	impassable = yes
-
-	resources = {
-		aluminium = 8
+state={
+	id=683
+	name="STATE_683"
+	resources={
+		aluminium=8.000
 	}
 
-	history = {
+	history={
 		owner = CAN
 		buildings = {
 			infrastructure = 1
+
 		}
 		add_core_of = CAN
 		add_core_of = QUE
+
 	}
 
-	provinces = {
-		1426 12147 13165 13166 13181 13184 13186
+	provinces={
+		1426 12147 13165 13166 13181 13184 13186 
 	}
-	manpower = 46190
+	manpower=46190
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+	local_supplies=0.000
 }

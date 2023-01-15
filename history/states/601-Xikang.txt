@@ -1,16 +1,13 @@
-state = {
-	id = 601
-	name = "STATE_601" # Xikang
-	manpower = 568200
 
-	state_category = one
-
-	resources = {
-		oil = 2
-		steel = 5
+state={
+	id=601
+	name="STATE_601"
+	resources={
+		oil=2.000
+		steel=5.000
 	}
 
-	history = {
+	history={
 		owner = SZC
 		add_core_of = SZC
 		add_claim_by = QIE
@@ -18,13 +15,19 @@ state = {
 		add_claim_by = TIB
 		buildings = {
 			infrastructure = 1
+
 		}
 		victory_points = {
-			10841 1
+			10841 1 
 		}
+
 	}
 
-	provinces = {
-		1918 1999 2165 2067 4999 5094 7294 7988 8068 8104 10726 10755 10841 12724 12801 12837
+	provinces={
+		1918 1999 2067 4999 5094 7294 7988 8104 10726 10755 10841 12724 12801 12837 
 	}
+	manpower=568200
+	buildings_max_level_factor=1.000
+	state_category=one
+	local_supplies=0.000
 }

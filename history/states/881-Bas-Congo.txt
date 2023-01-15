@@ -1,8 +1,9 @@
-state = {
-	id = 881
-	name = "STATE_881"
 
-	history = {
+state={
+	id=881
+	name="STATE_881"
+
+	history={
 		owner = MAF
 		add_core_of = MAF
 		add_core_of = COG
@@ -11,16 +12,21 @@ state = {
 			industrial_complex = 1
 			10968 = {
 				naval_base = 1
+
 			}
+
 		}
 		victory_points = {
-			10968 1
+			10968 1 
 		}
+
 	}
 
-	provinces = {
-		10968 12925
+	provinces={
+		10968 12925 12975 13945 13946 14316 14317 14319 14321 14322 14323 14325 
 	}
-	manpower = 755430
-	state_category = two
+	manpower=755430
+	buildings_max_level_factor=1.000
+	state_category=two
+	local_supplies=0.000
 }

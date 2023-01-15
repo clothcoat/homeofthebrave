@@ -1,27 +1,30 @@
-state = {
-	id = 542
-	name = "STATE_542"
-	manpower = 234000
 
-	state_category = one
-
-	resources = {
-		chromium = 168
+state={
+	id=542
+	name="STATE_542"
+	resources={
+		chromium=168.000
 	}
 
-	history = {
+	history={
 		owner = SAF
 		add_claim_by = SAF
 		add_core_of = BOT
 		buildings = {
 			infrastructure = 1
+
 		}
 		victory_points = {
-			8214 1 #Gaborone
+			8214 1 
 		}
+
 	}
 
-	provinces = {
-		1580 8214 10525 12940 12963 13084 13636 13807
+	provinces={
+		1580 8214 10525 12940 12963 13084 13636 13807 
 	}
+	manpower=234000
+	buildings_max_level_factor=1.000
+	state_category=one
+	local_supplies=0.000
 }

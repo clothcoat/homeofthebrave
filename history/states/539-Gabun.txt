@@ -1,23 +1,27 @@
-state = {
-	id = 539
-	name = "STATE_539"
-	manpower = 322740
 
-	state_category = one
+state={
+	id=539
+	name="STATE_539"
 
-	history = {
+	history={
 		owner = MAF
 		add_core_of = MAF
 		add_core_of = GAB
 		victory_points = {
-			5139 1
+			5139 1 
 		}
 		buildings = {
 			infrastructure = 3
+
 		}
+
 	}
 
-	provinces = {
-		5139 8207 10948
+	provinces={
+		8207 13870 13941 14091 14093 14094 14132 14173 14201 14202 14303 14307 14308 14309 14310 14311 14312 14313 14465 14466 
 	}
+	manpower=322740
+	buildings_max_level_factor=1.000
+	state_category=one
+	local_supplies=0.000
 }

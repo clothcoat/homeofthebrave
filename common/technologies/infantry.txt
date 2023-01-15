@@ -13,10 +13,15 @@ technologies = {
 	@1946 = 20
 
 	infantry_weapons = {
-		on_research_complete = { log = "[GetDateText]: [Root.GetName]: add tech infantry_weapons"}
 
 		enable_equipments = {
 			infantry_equipment_0
+		}
+
+		enable_equipment_modules = {
+			tank_heavy_machine_gun
+			secondary_turret_hmg
+			additional_machine_guns
 		}
 
 		enable_subunits = {
@@ -28,7 +33,6 @@ technologies = {
 			leads_to_tech = infantry_weapons1
 			research_cost_coeff = 1
 		}
-
 
 		research_cost = 1.5
 		start_year = 1918
@@ -43,16 +47,10 @@ technologies = {
 
 		ai_will_do = {
 			factor = 1
-
-			modifier = {
-				factor = 10
-				date > "1936.1.3"
-			}
 		}
 	}
 
 	infantry_weapons1 = {
-		on_research_complete = { log = "[GetDateText]: [Root.GetName]: add tech infantry_weapons1"}
 
 		enable_equipments = {
 			infantry_equipment_1
@@ -62,7 +60,6 @@ technologies = {
 			leads_to_tech = infantry_weapons2
 			research_cost_coeff = 1
 		}
-
 
 		research_cost = 1.5
 		start_year = 1936
@@ -78,7 +75,6 @@ technologies = {
 		ai_will_do = {
 			factor = 1
 
-
 			modifier = {
 				factor = 10
 				date > "1936.1.3"
@@ -87,13 +83,12 @@ technologies = {
 	}
 
 	infantry_weapons2 = {
-		on_research_complete = { log = "[GetDateText]: [Root.GetName]: add tech infantry_weapons2"}
 
 		category_light_infantry = {
 			soft_attack = 0.05
 		}
 
-		cavalry = {
+		category_mounted_inf = {
 			soft_attack = 0.05
 		}
 
@@ -104,12 +99,14 @@ technologies = {
 		mechanized = {
 			soft_attack = 0.05
 		}
+		amphibious_mechanized = {
+			soft_attack = 0.05
+		}
 
 		path = {
 			leads_to_tech = improved_infantry_weapons
 			research_cost_coeff = 1
 		}
-
 
 		research_cost = 1.5
 		start_year = 1938
@@ -126,10 +123,6 @@ technologies = {
 			factor = 2
 
 			modifier = {
-				factor = 0
-				date < "1938.1.1"
-			}
-			modifier = {
 				factor = 5
 				date > "1939.1.1"
 			}
@@ -137,7 +130,6 @@ technologies = {
 	}
 
 	improved_infantry_weapons = {
-		on_research_complete = { log = "[GetDateText]: [Root.GetName]: add tech improved_infantry_weapons"}
 
 		enable_equipments = {
 			infantry_equipment_2
@@ -152,7 +144,6 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-
 		research_cost = 2
 		start_year = 1939
 		folder = {
@@ -165,25 +156,28 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 2
+			factor = 3
 			modifier = {
-				factor = 0
-				date < "1939.1.1"
+				factor = 10
+				date > "1939.1.1"
 			}
 			modifier = {
 				factor = 5
 				date > "1940.1.1"
 			}
+			modifier = {
+				factor = 0.5
+				num_of_military_factories < 50
+			}
 		}
 	}
 	improved_infantry_weapons_2 = {
-		on_research_complete = { log = "[GetDateText]: [Root.GetName]: add tech improved_infantry_weapons_2"}
 
 		category_light_infantry = {
 			soft_attack = 0.05
 		}
 
-		cavalry = {
+		category_mounted_inf = {
 			soft_attack = 0.05
 		}
 
@@ -194,12 +188,14 @@ technologies = {
 		mechanized = {
 			soft_attack = 0.05
 		}
+		amphibious_mechanized = {
+			soft_attack = 0.05
+		}
 
 		path = {
 			leads_to_tech = advanced_infantry_weapons
 			research_cost_coeff = 1
 		}
-
 
 		research_cost = 2
 		start_year = 1940
@@ -213,11 +209,10 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 2
-
+			factor = 1
 			modifier = {
-				factor = 0
-				date < "1940.1.1"
+				factor = 2
+				date > "1940.1.6"
 			}
 			modifier = {
 				factor = 2
@@ -231,7 +226,6 @@ technologies = {
 	}
 
 	infantry_at = {
-		on_research_complete = { log = "[GetDateText]: [Root.GetName]: add tech infantry_at"}
 
 		category_all_infantry = {
 			hard_attack = 0.25
@@ -242,7 +236,6 @@ technologies = {
 			leads_to_tech = infantry_at2
 			research_cost_coeff = 1
 		}
-
 
 		research_cost = 1.5
 		start_year = 1942
@@ -257,11 +250,11 @@ technologies = {
 
 		ai_will_do = {
 			factor = 1
-
 			modifier = {
-				factor = 0
-				date < "1942.1.1"
+				factor = 2
+				date > "1942.1.6"
 			}
+
 			modifier = {
 				factor = 2
 				date > "1943.1.1"
@@ -274,7 +267,6 @@ technologies = {
 	}
 
 	infantry_at2 = {
-		on_research_complete = { log = "[GetDateText]: [Root.GetName]: add tech infantry_at2"}
 
 		category_all_infantry = {
 			hard_attack = 0.25
@@ -288,7 +280,6 @@ technologies = {
 			position = { x = 2 y = @1943 }
 		}
 
-
 		categories = {
 			infantry_weapons
 		}
@@ -297,8 +288,8 @@ technologies = {
 			factor = 1
 
 			modifier = {
-				factor = 0
-				date < "1943.1.1"
+				factor = 2
+				date > "1943.1.1"
 			}
 			modifier = {
 				factor = 2
@@ -312,7 +303,6 @@ technologies = {
 	}
 
 	advanced_infantry_weapons = {
-		on_research_complete = { log = "[GetDateText]: [Root.GetName]: add tech advanced_infantry_weapons"}
 
 		enable_equipments = {
 			infantry_equipment_3
@@ -322,7 +312,6 @@ technologies = {
 			leads_to_tech = advanced_infantry_weapons2
 			research_cost_coeff = 1
 		}
-
 
 		research_cost = 2
 		start_year = 1942
@@ -336,38 +325,37 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 2
-
+			factor = 0.8
 			modifier = {
-				factor = 0
-				date < "1942.1.1"
-			}
-			modifier = {
-				factor = 2
+				factor = 2.5
 				date > "1942.1.6"
 			}
 			modifier = {
-				factor = 5
-				date > "1943.1.1"
+				num_of_military_factories > 150
+				factor = 2.5
+			}
+			modifier = {
+				num_of_military_factories < 50
+				factor = 0.5
 			}
 		}
 	}
 
 	advanced_infantry_weapons2 = {
-		on_research_complete = { log = "[GetDateText]: [Root.GetName]: add tech advanced_infantry_weapons2"}
 
 		category_light_infantry = {
 			soft_attack = 0.05
 		}
-		cavalry = {
+		category_mounted_inf = {
 			soft_attack = 0.1
 		}
-
-
 		motorized = {
 			soft_attack = 0.1
 		}
 		mechanized = {
+			soft_attack = 0.1
+		}
+		amphibious_mechanized = {
 			soft_attack = 0.1
 		}
 
@@ -378,24 +366,19 @@ technologies = {
 			position = { x = 0 y = @1944 }
 		}
 
-
 		categories = {
 			infantry_weapons
 		}
 
 		ai_will_do = {
-			factor = 2
+			factor = 1
 
-			modifier = {
-				factor = 0
-				date < "1944.1.1"
-			}
 			modifier = {
 				factor = 2
 				date > "1944.1.6"
 			}
 			modifier = {
-				factor = 5
+				factor = 2
 				date > "1945.1.1"
 			}
 			modifier = {
@@ -416,31 +399,24 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-
 		research_cost = 2
 		start_year = 1936
 		folder = {
 			name = infantry_folder
-			position = { x = 0 y = @1936 }
+			position = { x = 2 y = @1936 }
 		}
 
+		on_research_complete_limit = {
+			NOT = { has_template_containing_unit = paratrooper }
+		}
 		on_research_complete = {
-			log = "[GetDateText]: [Root.GetName]: add tech paratroopers"
-			if = {
-				limit = {
-					NOT = {
-						has_template_containing_unit = paratrooper
-					}
-				}
-				custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
-				hidden_effect = {
-					load_oob = "unlock_paratroopers"
-				}
-			}
+			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
+			hidden_effect = { load_oob = "unlock_paratroopers" }
 		}
 
 		categories = {
 			para_tech
+			cat_special_forces_generic
 		}
 
 		ai_will_do = {
@@ -449,7 +425,6 @@ technologies = {
 	}
 
 	paratroopers2 = {
-		on_research_complete = { log = "[GetDateText]: [Root.GetName]: add tech paratroopers2"}
 
 		paratrooper = {
 			max_organisation = 5
@@ -461,16 +436,16 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-
 		research_cost = 1.5
 		start_year = 1939
 		folder = {
 			name = infantry_folder
-			position = { x = 0 y = @1939 }
+			position = { x = 2 y = @1939 }
 		}
 
 		categories = {
 			para_tech
+			cat_special_forces_generic
 		}
 
 		ai_will_do = {
@@ -479,23 +454,21 @@ technologies = {
 	}
 
 	paratroopers3 = {
-		on_research_complete = { log = "[GetDateText]: [Root.GetName]: add tech paratroopers3"}
 
 		paratrooper = {
 			max_organisation = 5
 		}
 
-
-
 		research_cost = 2.0
 		start_year = 1943
 		folder = {
 			name = infantry_folder
-			position = { x = 0 y = @1943 }
+			position = { x = 2 y = @1943 }
 		}
 
 		categories = {
 			para_tech
+			cat_special_forces_generic
 		}
 
 		ai_will_do = {
@@ -509,21 +482,13 @@ technologies = {
 			marine
 		}
 
-		on_research_complete = {
-			log = "[GetDateText]: [Root.GetName]: add tech marines"
-			if = {
-				limit = {
-					NOT = {
-						has_template_containing_unit = marine
-					}
-				}
-				custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
-				hidden_effect = {
-					load_oob = "unlock_marines"
-				}
-			}
+		on_research_complete_limit = {
+			NOT = { has_template_containing_unit = marine }
 		}
-
+		on_research_complete = {
+			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
+			hidden_effect = { load_oob = "unlock_marines" }
+		}
 
 		path = {
 			leads_to_tech = marines2
@@ -534,20 +499,28 @@ technologies = {
 		start_year = 1936
 		folder = {
 			name = infantry_folder
-			position = { x = 0 y = @1936 }
+			position = { x = 3 y = @1936 }
 		}
 
 		categories = {
 			marine_tech
+			cat_special_forces_generic
 		}
 
 		ai_will_do = {
 			factor = 0.7
+			modifier = {
+				factor = 3
+				num_of_naval_factories > 10
+			}
+			modifier = {
+				factor = 3
+				is_major = yes
+			}
 		}
 	}
 
 	marines2 = {
-		on_research_complete = { log = "[GetDateText]: [Root.GetName]: add tech marines2"}
 
 		marine = {
 			max_organisation = 5
@@ -558,30 +531,32 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-
-
 		research_cost = 1.5
 		start_year = 1939
 		folder = {
 			name = infantry_folder
-			position = { x = 0 y = @1939 }
+			position = { x = 3 y = @1939 }
 		}
 
 		categories = {
 			marine_tech
+			cat_special_forces_generic
 		}
 
 		ai_will_do = {
 			factor = 0.7
 			modifier = {
-				factor = 0
-				date < "1939.1.1"
+				factor = 3
+				num_of_naval_factories > 10
+			}
+			modifier = {
+				factor = 3
+				is_major = yes
 			}
 		}
 	}
 
 	marines3 = {
-		on_research_complete = { log = "[GetDateText]: [Root.GetName]: add tech marines3"}
 
 		marine = {
 			max_organisation = 5
@@ -591,19 +566,23 @@ technologies = {
 		start_year = 1943
 		folder = {
 			name = infantry_folder
-			position = { x = 0 y = @1943 }
+			position = { x = 3 y = @1943 }
 		}
-
 
 		categories = {
 			marine_tech
+			cat_special_forces_generic
 		}
 
 		ai_will_do = {
 			factor = 0.7
 			modifier = {
-				factor = 0
-				date < "1943.1.1"
+				factor = 3
+				num_of_naval_factories > 10
+			}
+			modifier = {
+				factor = 3
+				is_major = yes
 			}
 		}
 	}
@@ -614,21 +593,15 @@ technologies = {
 			mountaineers
 		}
 
-		on_research_complete = {
-			log = "[GetDateText]: [Root.GetName]: add tech tech_mountaineers"
-			if = {
-				limit = {
-					NOT = {
-						has_template_containing_unit = mountaineers
-					}
-				}
-				custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
-				hidden_effect = {
-					load_oob = "unlock_mountineers"
-				}
+		on_research_complete_limit = {
+			NOT = {
+				has_template_containing_unit = mountaineers
 			}
 		}
-
+		on_research_complete = {
+			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
+			hidden_effect = { load_oob = "unlock_mountineers" }
+		}
 
 		path = {
 			leads_to_tech = tech_mountaineers2
@@ -639,12 +612,13 @@ technologies = {
 		start_year = 1936
 		folder = {
 			name = infantry_folder
-			position = { x = 0 y = @1936 }
+			position = { x = 5 y = @1936 }
 		}
 
 		categories = {
 			infantry_tech
 			mountaineers_tech
+			cat_special_forces_generic
 		}
 
 		ai_will_do = {
@@ -653,7 +627,6 @@ technologies = {
 	}
 
 	tech_mountaineers2 = {
-		on_research_complete = { log = "[GetDateText]: [Root.GetName]: add tech tech_mountaineers2"}
 
 		mountaineers = {
 			max_organisation = 5
@@ -664,32 +637,25 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-
-
 		research_cost = 1.5
 		start_year = 1939
 		folder = {
 			name = infantry_folder
-			position = { x = 0 y = @1939 }
+			position = { x = 5 y = @1939 }
 		}
 
 		categories = {
 			infantry_tech
 			mountaineers_tech
+			cat_special_forces_generic
 		}
 
 		ai_will_do = {
 			factor = 0.7
-			modifier = {
-				factor = 0
-				date < "1939.1.1"
-			}
 		}
 	}
 
 	tech_mountaineers3 = {
-		on_research_complete = { log = "[GetDateText]: [Root.GetName]: add tech tech_mountaineers3"}
-
 		mountaineers = {
 			max_organisation = 5
 		}
@@ -698,26 +664,21 @@ technologies = {
 		start_year = 1943
 		folder = {
 			name = infantry_folder
-			position = { x = 0 y = @1943 }
+			position = { x = 5 y = @1943 }
 		}
-
 
 		categories = {
 			infantry_tech
 			mountaineers_tech
+			cat_special_forces_generic
 		}
 
 		ai_will_do = {
 			factor = 0.7
-			modifier = {
-				factor = 0
-				date < "1943.1.1"
-			}
 		}
 	}
 
 	tech_special_forces = {
-		on_research_complete = { log = "[GetDateText]: [Root.GetName]: add tech tech_special_forces"}
 		category_special_forces = {
 			acclimatization_hot_climate_gain_factor = 0.05
 			acclimatization_cold_climate_gain_factor = 0.05
@@ -741,33 +702,26 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-
 		research_cost = 2
 		start_year = 1938
 		folder = {
 			name = infantry_folder
-			position = { x = 0 y = @1938 }
+			position = { x = 4 y = @1938 }
 		}
 
 		categories = {
 			mountaineers_tech
 			marine_tech
 			para_tech
+			cat_special_forces_generic
 		}
 
 		ai_will_do = {
 			factor = 0.7
-			modifier = {
-				factor = 0
-				date < "1938.1.1"
-			}
 		}
 	}
 
-
 	advanced_special_forces = {
-		on_research_complete = { log = "[GetDateText]: [Root.GetName]: add tech advanced_special_forces"}
-
 		xor = {
 			improved_special_forces
 		}
@@ -784,31 +738,26 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-
 		research_cost = 2
 		start_year = 1940
 		folder = {
 			name = infantry_folder
-			position = { x = -1 y = @1940 }
+			position = { x = 3 y = @1940 }
 		}
 
 		categories = {
 			mountaineers_tech
 			marine_tech
 			para_tech
+			cat_special_forces_generic
 		}
 
 		ai_will_do = {
 			factor = 0.7
-			modifier = {
-				factor = 0
-				date < "1940.1.1"
-			}
 		}
 	}
 
 	improved_special_forces = {
-		on_research_complete = { log = "[GetDateText]: [Root.GetName]: add tech improved_special_forces"}
 
 		xor = {
 			advanced_special_forces
@@ -822,32 +771,26 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-
 		research_cost = 2
 		start_year = 1940
 		folder = {
 			name = infantry_folder
-			position = { x = 1 y = @1940 }
+			position = { x = 5 y = @1940 }
 		}
 
 		categories = {
 			mountaineers_tech
 			marine_tech
 			para_tech
+			cat_special_forces_generic
 		}
 
 		ai_will_do = {
 			factor = 0.7
-			modifier = {
-				factor = 0
-				date < "1940.1.1"
-			}
 		}
 	}
 
-
 	extreme_environment_training = {
-		on_research_complete = { log = "[GetDateText]: [Root.GetName]: add tech extreme_environment_training"}
 
 		category_special_forces = {
 			acclimatization_hot_climate_gain_factor = 0.50
@@ -862,32 +805,26 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-
 		research_cost = 2
 		start_year = 1942
 		folder = {
 			name = infantry_folder
-			position = { x = -1 y = @1942 }
+			position = { x = 3 y = @1942 }
 		}
 
 		categories = {
 			mountaineers_tech
 			marine_tech
 			para_tech
+			cat_special_forces_generic
 		}
 
 		ai_will_do = {
 			factor = 0.7
-			modifier = {
-				factor = 0
-				date < "1942.1.1"
-			}
 		}
 	}
 
-
 	survival_training = {
-		on_research_complete = { log = "[GetDateText]: [Root.GetName]: add tech survival_training"}
 
 		category_special_forces = {
 			acclimatization_hot_climate_gain_factor = 0.20
@@ -901,33 +838,26 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-
 		research_cost = 2
 		start_year = 1942
 		folder = {
 			name = infantry_folder
-			position = { x = 1 y = @1942 }
+			position = { x = 5 y = @1942 }
 		}
 
 		categories = {
 			mountaineers_tech
 			marine_tech
 			para_tech
+			cat_special_forces_generic
 		}
 
 		ai_will_do = {
 			factor = 0.7
-			modifier = {
-				factor = 0
-				date < "1942.1.1"
-			}
 		}
 	}
 
-
 	elite_forces = {
-		on_research_complete = { log = "[GetDateText]: [Root.GetName]: add tech elite_forces"}
-
 		category_special_forces = {
 			acclimatization_hot_climate_gain_factor = 0.20
 			acclimatization_cold_climate_gain_factor = 0.20
@@ -941,27 +871,22 @@ technologies = {
 		start_year = 1944
 		folder = {
 			name = infantry_folder
-			position = { x = 0 y = @1944 }
+			position = { x = 4 y = @1944 }
 		}
-
 
 		categories = {
 			mountaineers_tech
 			marine_tech
 			para_tech
+			cat_special_forces_generic
 		}
 
 		ai_will_do = {
 			factor = 0.7
-			modifier = {
-				factor = 0
-				date < "1944.1.1"
-			}
 		}
 	}
 
 	night_vision = {
-		on_research_complete = { log = "[GetDateText]: [Root.GetName]: add tech night_vision"}
 
 		land_night_attack = 0.1
 
@@ -969,7 +894,6 @@ technologies = {
 			leads_to_tech = night_vision2
 			research_cost_coeff = 1
 		}
-
 
 		research_cost = 2.5
 		start_year = 1943
@@ -986,9 +910,15 @@ technologies = {
 			factor = 4
 
 			modifier = {
-				factor = 0
-				date < "1943.1.1"
+				factor = 2
+				date > "1942.1.9"
 			}
+
+			modifier = {
+				factor = 2
+				date > "1943.1.1"
+			}
+
 			modifier = {
 				factor = 5
 				date > "1943.1.6"
@@ -1002,7 +932,6 @@ technologies = {
 	}
 
 	night_vision2 = {
-		on_research_complete = { log = "[GetDateText]: [Root.GetName]: add tech night_vision2"}
 
 		land_night_attack = 0.15
 
@@ -1013,7 +942,6 @@ technologies = {
 			position = { x = 0 y = @1946 }
 		}
 
-
 		categories = {
 			night_vision
 		}
@@ -1022,9 +950,15 @@ technologies = {
 			factor = 4
 
 			modifier = {
-				factor = 0
-				date < "1946.1.1"
+				factor = 2
+				date > "1945.1.9"
 			}
+
+			modifier = {
+				factor = 2
+				date > "1946.1.1"
+			}
+
 			modifier = {
 				factor = 5
 				date > "1946.1.6"
@@ -1033,13 +967,16 @@ technologies = {
 	}
 
 	support_weapons = {
-		on_research_complete = { log = "[GetDateText]: [Root.GetName]: add tech support_weapons"}
 
 		infantry = {
 			defense = 0.05
 			breakthrough = 0.05
 		}
-		cavalry = {
+		bicycle_battalion = {
+			defense = 0.05
+			breakthrough = 0.05
+		}
+		category_mounted_inf = {
 			defense = 0.02
 			breakthrough = 0.02
 		}
@@ -1063,12 +1000,15 @@ technologies = {
 			defense = 0.05
 			breakthrough = 0.05
 		}
+		amphibious_mechanized = {
+			defense = 0.05
+			breakthrough = 0.05
+		}
 
 		path = {
 			leads_to_tech = support_weapons2
 			research_cost_coeff = 1
 		}
-
 
 		research_cost = 1.5
 		start_year = 1918
@@ -1085,7 +1025,7 @@ technologies = {
 			factor = 1
 
 			modifier = {
-				factor = 5
+				factor = 2
 				date > "1937.1.1"
 			}
 			modifier = {
@@ -1096,17 +1036,24 @@ technologies = {
 				factor = 2
 				date > "1939.1.1"
 			}
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
 		}
 	}
 
 	support_weapons2 = {
-		on_research_complete = { log = "[GetDateText]: [Root.GetName]: add tech support_weapons2"}
 
 		infantry = {
 			defense = 0.05
 			breakthrough = 0.05
 		}
-		cavalry = {
+		bicycle_battalion = {
+			defense = 0.05
+			breakthrough = 0.05
+		}
+		category_mounted_inf = {
 			defense = 0.02
 			breakthrough = 0.02
 		}
@@ -1130,12 +1077,15 @@ technologies = {
 			defense = 0.05
 			breakthrough = 0.05
 		}
+		amphibious_mechanized = {
+			defense = 0.05
+			breakthrough = 0.05
+		}
 
 		path = {
 			leads_to_tech = support_weapons3
 			research_cost_coeff = 1
 		}
-
 
 		research_cost = 1.5
 		start_year = 1938
@@ -1152,15 +1102,11 @@ technologies = {
 			factor = 1
 
 			modifier = {
-				factor = 0
-				date < "1938.1.1"
-			}
-			modifier = {
 				factor = 2
 				date > "1938.1.6"
 			}
 			modifier = {
-				factor = 5
+				factor = 2
 				date > "1939.1.1"
 			}
 			modifier = {
@@ -1171,17 +1117,24 @@ technologies = {
 				factor = 2
 				date > "1941.1.1"
 			}
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
 		}
 	}
 
 	support_weapons3 = {
-		on_research_complete = { log = "[GetDateText]: [Root.GetName]: add tech support_weapons3"}
 
 		infantry = {
 			defense = 0.05
 			breakthrough = 0.05
 		}
-		cavalry = {
+		bicycle_battalion = {
+			defense = 0.05
+			breakthrough = 0.05
+		}
+		category_mounted_inf = {
 			defense = 0.02
 			breakthrough = 0.02
 		}
@@ -1205,12 +1158,15 @@ technologies = {
 			defense = 0.05
 			breakthrough = 0.05
 		}
+		amphibious_mechanized = {
+			defense = 0.05
+			breakthrough = 0.05
+		}
 
 		path = {
 			leads_to_tech = support_weapons4
 			research_cost_coeff = 1
 		}
-
 
 		research_cost = 1.5
 		start_year = 1940
@@ -1227,15 +1183,11 @@ technologies = {
 			factor = 1
 
 			modifier = {
-				factor = 0
-				date < "1940.1.1"
-			}
-			modifier = {
 				factor = 2
 				date > "1940.1.6"
 			}
 			modifier = {
-				factor = 5
+				factor = 2
 				date > "1941.1.1"
 			}
 			modifier = {
@@ -1246,17 +1198,24 @@ technologies = {
 				factor = 2
 				date > "1943.1.1"
 			}
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
 		}
 	}
 
 	support_weapons4 = {
-		on_research_complete = { log = "[GetDateText]: [Root.GetName]: add tech support_weapons4"}
 
 		infantry = {
 			defense = 0.05
 			breakthrough = 0.05
 		}
-		cavalry = {
+		bicycle_battalion = {
+			defense = 0.05
+			breakthrough = 0.05
+		}
+		category_mounted_inf = {
 			defense = 0.02
 			breakthrough = 0.02
 		}
@@ -1280,6 +1239,10 @@ technologies = {
 			defense = 0.05
 			breakthrough = 0.05
 		}
+		amphibious_mechanized = {
+			defense = 0.05
+			breakthrough = 0.05
+		}
 
 		research_cost = 1.5
 		start_year = 1942
@@ -1287,7 +1250,6 @@ technologies = {
 			name = infantry_folder
 			position = { x = 0 y = @1942 }
 		}
-
 
 		categories = {
 			infantry_weapons
@@ -1297,15 +1259,11 @@ technologies = {
 			factor = 1
 
 			modifier = {
-				factor = 0
-				date < "1942.1.1"
-			}
-			modifier = {
 				factor = 2
 				date > "1942.1.6"
 			}
 			modifier = {
-				factor = 5
+				factor = 2
 				date > "1943.1.1"
 			}
 			modifier = {
@@ -1315,6 +1273,10 @@ technologies = {
 			modifier = {
 				factor = 2
 				date > "1945.1.1"
+			}
+			modifier = {
+				factor = 2
+				has_war = yes
 			}
 		}
 	}
@@ -1329,21 +1291,17 @@ technologies = {
 			motorized_equipment_1
 		}
 
-		on_research_complete = {
-			log = "[GetDateText]: [Root.GetName]: add tech motorised_infantry"
-			if = {
-				limit = {
-					NOT = {
-						has_template_containing_unit = motorized
-					}
-				}
-				custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
-				hidden_effect = {
-					load_oob = "unlock_motorized_kr"
-				}
-			}
+		enable_equipment_modules = {
+			tank_wheeled_suspension
 		}
 
+		on_research_complete_limit = {
+			NOT = { has_template_containing_unit = motorized }
+		}
+		on_research_complete = {
+			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
+			hidden_effect = { load_oob = "unlock_motorized_kr" }
+		}
 
 		path = {
 			leads_to_tech = mechanised_infantry
@@ -1398,7 +1356,6 @@ technologies = {
 		}
 	}
 	motorized_rocket_unit = {
-		on_research_complete = { log = "[GetDateText]: [Root.GetName]: add tech motorized_rocket_unit"}
 
 		enable_subunits = {
 			motorized_rocket_brigade
@@ -1407,16 +1364,11 @@ technologies = {
 			motorized_rocket_equipment_1
 		}
 
-
 		research_cost = 1.5
 		start_year = 1939
 
 		ai_will_do = {
 			factor = 1
-			modifier = {
-				factor = 0
-				date < "1939.1.1"
-			}
 		}
 
 		categories = {
@@ -1433,7 +1385,7 @@ technologies = {
 		enable_equipments = {
 			gw_armored_car_equipment
 		}
-
+		allow_branch = { has_dlc = "La Resistance" }
 		path = {
 			leads_to_tech = armored_car2
 			research_cost_coeff = 1
@@ -1449,28 +1401,26 @@ technologies = {
 		categories = {
 			motorized_equipment
 			armor
+			cat_armored_cars
 		}
 
 		ai_will_do = {
 			factor = 1
-
 			modifier = {
 				factor = 2
 				date > "1937.1.1"
 			}
-
 			modifier = {
 				factor = 2
 				date > "1938.1.1"
 			}
-
 			modifier = {
 				factor = 2
 				date > "1939.1.1"
 			}
 			modifier = {
-				is_major = no
 				factor = 0.5
+				is_major = no
 			}
 		}
 	}
@@ -1496,28 +1446,26 @@ technologies = {
 		categories = {
 			motorized_equipment
 			armor
+			cat_armored_cars
 		}
 
 		ai_will_do = {
 			factor = 1
-
 			modifier = {
 				factor = 2
-				date > "1937.1.1"
+				date > "1940.1.1"
 			}
-
 			modifier = {
 				factor = 2
-				date > "1938.1.1"
+				date > "1941.1.1"
 			}
-
 			modifier = {
 				factor = 2
-				date > "1939.1.1"
+				date > "1942.1.1"
 			}
 			modifier = {
-				is_major = no
 				factor = 0.5
+				is_major = no
 			}
 		}
 	}
@@ -1538,6 +1486,7 @@ technologies = {
 		categories = {
 			motorized_equipment
 			armor
+			cat_armored_cars
 		}
 
 		sub_technologies = {
@@ -1546,24 +1495,21 @@ technologies = {
 
 		ai_will_do = {
 			factor = 1
-
 			modifier = {
 				factor = 2
-				date > "1937.1.1"
+				date > "1942.1.1"
 			}
-
 			modifier = {
 				factor = 2
-				date > "1938.1.1"
+				date > "1943.1.1"
 			}
-
 			modifier = {
 				factor = 2
-				date > "1939.1.1"
+				date > "1944.1.1"
 			}
 			modifier = {
-				is_major = no
 				factor = 0.5
+				is_major = no
 			}
 		}
 	}
@@ -1581,28 +1527,26 @@ technologies = {
 		categories = {
 			motorized_equipment
 			armor
+			cat_armored_cars
 		}
 
 		ai_will_do = {
 			factor = 1
-
 			modifier = {
 				factor = 2
-				date > "1937.1.1"
+				date > "1942.1.1"
 			}
-
 			modifier = {
 				factor = 2
-				date > "1938.1.1"
+				date > "1943.1.1"
 			}
-
 			modifier = {
 				factor = 2
-				date > "1939.1.1"
+				date > "1944.1.1"
 			}
 			modifier = {
-				is_major = no
 				factor = 0.5
+				is_major = no
 			}
 		}
 	}
@@ -1613,7 +1557,23 @@ technologies = {
 			mechanized_equipment_1
 		}
 
+		enable_equipment_modules = {
+			tank_half_track_suspension
+		}
+
 		motorized = {
+			hardness = 1.0
+		}
+		mot_artillery_brigade = {
+			hardness = 1.0
+		}
+		mot_anti_tank_brigade = {
+			hardness = 1.0
+		}
+		mot_anti_air_brigade = {
+			hardness = 1.0
+		}
+		mot_rocket_artillery_brigade = {
 			hardness = 1.0
 		}
 
@@ -1627,19 +1587,13 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
+		on_research_complete_limit = {
+			NOT = { has_template_containing_unit = mechanized }
+		}
 		on_research_complete = {
 			log = "[GetDateText]: [Root.GetName]: add tech mechanised_infantry"
-			if = {
-				limit = {
-					NOT = {
-						has_template_containing_unit = mechanized
-					}
-				}
-				custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
-				hidden_effect = {
-					load_oob = "unlock_mechanized"
-				}
-			}
+			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
+			hidden_effect = { load_oob = "unlock_mechanized" }
 		}
 
 		research_cost = 2
@@ -1657,136 +1611,14 @@ technologies = {
 
 		ai_will_do = {
 			factor = 2
-
-			modifier = {
-				factor = 0
-				date < 1940.1.1
-			}
 			modifier = {
 				factor = 2
-				date > 1941.1.1
-			}
-			modifier = {
-				factor = 2
-				date > 1942.1.1
-			}
-			modifier = {
-				factor = 2
-				date > 1943.1.1
-			}
-			modifier = {
-				factor = 2
-				num_of_military_factories > 20
-			}
-		}
-	}
-
-	mechanised_infantry2 = {
-		on_research_complete = { log = "[GetDateText]: [Root.GetName]: add tech mechanised_infantry2"}
-
-		enable_equipments = {
-			mechanized_equipment_2
-		}
-
-		path = {
-			leads_to_tech = mechanised_infantry3
-			research_cost_coeff = 1
-		}
-
-
-		research_cost = 2
-		start_year = 1942
-		folder = {
-			name = infantry_folder
-			position = { x = 0 y = @1942 }
-		}
-
-		categories = {
-			motorized_equipment
-			infantry_tech
-			cat_mechanized_equipment
-		}
-
-		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 0
-				date < 1942.1.1
-			}
-			modifier = {
-				factor = 2
-				date > 1943.1.1
-			}
-			modifier = {
-				factor = 2
-				date > 1944.1.1
-			}
-			modifier = {
-				factor = 2
-				date > 1945.1.1
-			}
-			modifier = {
-				factor = 2
-				num_of_military_factories > 20
-			}
-		}
-	}
-
-	mechanised_infantry3 = {
-		on_research_complete = { log = "[GetDateText]: [Root.GetName]: add tech mechanised_infantry3"}
-
-		enable_equipments = {
-			mechanized_equipment_3
-		}
-
-		mechanized = {
-			soft_attack = 0.15
-			hard_attack = 0.15
-		}
-
-		research_cost = 3
-		start_year = 1944
-		folder = {
-			name = infantry_folder
-			position = { x = 0 y = @1944 }
-		}
-
-
-		categories = {
-			motorized_equipment
-			infantry_tech
-			cat_mechanized_equipment
-		}
-
-		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 0
-				date < 1944.1.1
-			}
-			modifier = {
-				factor = 2
-				date > 1945.1.1
-			}
-			modifier = {
-				factor = 2
-				date > 1946.1.1
-			}
-			modifier = {
-				factor = 2
-				date > 1947.1.1
-			}
-			modifier = {
-				factor = 2
-				num_of_military_factories > 20
+				is_major = yes
 			}
 		}
 	}
 
 	amphibious_mechanized_infantry = {
-		on_research_complete = { log = "[GetDateText]: [Root.GetName]: add tech amphibious_mechanized_infantry"}
 
 		enable_equipments = {
 			amphibious_mechanized_equipment_1
@@ -1821,17 +1653,18 @@ technologies = {
 
 		ai_will_do = {
 			factor = 2
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
 		}
 	}
 
 	amphibious_mechanized_infantry_2 = {
-		on_research_complete = { log = "[GetDateText]: [Root.GetName]: add tech amphibious_mechanized_infantry_2"}
 
 		enable_equipments = {
 			amphibious_mechanized_equipment_2
 		}
-
-
 
 		research_cost = 2
 		start_year = 1943
@@ -1852,7 +1685,63 @@ technologies = {
 		}
 	}
 
+	mechanised_infantry2 = {
 
+		enable_equipments = {
+			mechanized_equipment_2
+		}
+
+		path = {
+			leads_to_tech = mechanised_infantry3
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1942
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = @1942 }
+		}
+
+		categories = {
+			motorized_equipment
+			infantry_tech
+			cat_mechanized_equipment
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	mechanised_infantry3 = {
+
+		enable_equipments = {
+			mechanized_equipment_3
+		}
+
+		mechanized = {
+			soft_attack = 0.15
+			hard_attack = 0.15
+		}
+
+		research_cost = 3
+		start_year = 1944
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = @1944 }
+		}
+
+		categories = {
+			motorized_equipment
+			infantry_tech
+			cat_mechanized_equipment
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
 	transport_n = {
 		on_research_complete = { log = "[GetDateText]: [Root.GetName]: add tech transport_n"}
 
@@ -1890,7 +1779,29 @@ technologies = {
 					tag = ENT
 					is_in_faction_with = ENT
 				}
-				NOT = { country_exists = GBR }
+				OR = {
+					NOT = { country_exists = GBR }
+					country_exists = FRA
+				}
+			}
+			modifier = {
+				factor = 3
+				tag = CAN
+				has_war_with = ENG
+			}
+			modifier = {
+				factor = 3
+				tag = NFA
+				has_war_with = FRA
+			}
+			modifier = {
+				factor = 10
+				OR = {
+					tag = JAP
+					tag = GBR
+					tag = ENG
+					tag = SRD
+				}
 			}
 		}
 
@@ -1938,7 +1849,29 @@ technologies = {
 					tag = ENT
 					is_in_faction_with = ENT
 				}
-				NOT = { country_exists = GBR }
+				OR = {
+					NOT = { country_exists = GBR }
+					country_exists = FRA
+				}
+			}
+			modifier = {
+				factor = 3
+				tag = CAN
+				has_war_with = ENG
+			}
+			modifier = {
+				factor = 3
+				tag = NFA
+				has_war_with = FRA
+			}
+			modifier = {
+				factor = 10
+				OR = {
+					tag = JAP
+					tag = GBR
+					tag = ENG
+					tag = SRD
+				}
 			}
 		}
 
@@ -1980,7 +1913,29 @@ technologies = {
 					tag = ENT
 					is_in_faction_with = ENT
 				}
-				NOT = { country_exists = GBR }
+				OR = {
+					NOT = { country_exists = GBR }
+					country_exists = FRA
+				}
+			}
+			modifier = {
+				factor = 3
+				tag = CAN
+				has_war_with = ENG
+			}
+			modifier = {
+				factor = 3
+				tag = NFA
+				has_war_with = FRA
+			}
+			modifier = {
+				factor = 10
+				OR = {
+					tag = JAP
+					tag = GBR
+					tag = ENG
+					tag = SRD
+				}
 			}
 		}
 
@@ -1989,21 +1944,62 @@ technologies = {
 			tp_tech
 		}
 	}
-
 	######### FROM JAPANESE FOCUS ##########
 	bicycle_infantry = {
-		on_research_complete = { log = "[GetDateText]: [Root.GetName]: add tech bicycle_infantry"}
 
 		allow = {
 			always = no
 		}
-
 
 		research_cost = 1
 		start_year = 1936
 
 		enable_subunits = {
 			bicycle_battalion
+		}
+	}
+
+	camelry = {
+
+		allow = {
+			always = no
+		}
+
+		research_cost = 1
+		start_year = 1936
+
+		enable_subunits = {
+			camelry
+		}
+	}
+
+	######### FROM SOVIET FOCUS ##########
+	penal_infantry = {
+		
+		allow = {
+			always = no
+		}
+
+		research_cost = 1
+		start_year = 1936
+
+		enable_subunits = {
+			penal_battalion
+		}
+	}
+	
+	######### FROM ITALIAN FOCUS ##########
+	blackshirt_assault_battalion_tech = {
+
+		allow = {
+			always = no
+		}
+
+		research_cost = 1
+		start_year = 1936
+
+		enable_subunits = {
+			blackshirt_assault_battalion
 		}
 	}
 }

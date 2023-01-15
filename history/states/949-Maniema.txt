@@ -1,19 +1,24 @@
-state = {
-	id = 949
-	name = "STATE_949"
 
-	history = {
+state={
+	id=949
+	name="STATE_949"
+
+	history={
 		owner = MAF
 		add_core_of = MAF
 		add_core_of = COG
 		buildings = {
 			infrastructure = 2
+
 		}
+
 	}
 
-	provinces = {
-		7161 10766 10858
+	provinces={
+		4902 5139 7161 10766 10858 13906 13938 13991 14074 14076 14077 14078 14079 14080 14083 14084 14085 14086 14087 14088 14089 14090 14092 14112 14122 14123 14124 14126 14127 14213 14214 14215 14216 14218 14219 14220 14221 14222 14223 14225 14470 
 	}
-	manpower = 316129
-	state_category = wasteland
+	manpower=316129
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+	local_supplies=0.000
 }

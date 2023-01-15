@@ -1,28 +1,32 @@
-state = {
-	id = 586
-	name = "STATE_586"
-	manpower = 2563404
-	state_category = five
 
-	resources = {
-		steel = 12
-		chromium = 44
+state={
+	id=586
+	name="STATE_586"
+	resources={
+		steel=12.000
+		chromium=44.000
 	}
 
-	history = {
+	history={
 		owner = ALO
 		add_core_of = ALO
 		buildings = {
 			infrastructure = 3
 			industrial_complex = 3
 			arms_factory = 1
+
 		}
 		victory_points = {
-			12583 1
+			12583 1 
 		}
+
 	}
 
-	provinces = {
-		1483 1675 1825 4316 4391 4768 5062 12370 12511 12583 13147
+	provinces={
+		1483 1675 1825 4316 4391 4768 5062 12370 12511 12583 13147 14733 14734 14739 
 	}
+	manpower=2563404
+	buildings_max_level_factor=1.000
+	state_category=five
+	local_supplies=0.000
 }

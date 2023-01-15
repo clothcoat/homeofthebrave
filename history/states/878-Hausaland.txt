@@ -1,28 +1,33 @@
-state = {
-	id = 878
-	name = "STATE_878"
-	manpower = 6634755
-	state_category = one
 
-	history = {
+state={
+	id=878
+	name="STATE_878"
+
+	history={
 		owner = MAF
 		add_claim_by = MAF
 		add_core_of = NGR
 		buildings = {
 			infrastructure = 3
+
 		}
 		victory_points = {
-			13214 3 #Kaduna
+			13214 3 
 		}
 		victory_points = {
-			1969 2 #Katsena
+			1969 2 
 		}
 		victory_points = {
-			1891 1 #Sokoto
+			1891 1 
 		}
+
 	}
 
-	provinces = {
-		1891 1969 4938 4972 12906 13214 13494
+	provinces={
+		1891 1969 4938 4972 13214 13494 
 	}
+	manpower=6634755
+	buildings_max_level_factor=1.000
+	state_category=one
+	local_supplies=0.000
 }

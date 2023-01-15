@@ -1,26 +1,31 @@
-state = {
-	id = 295
-	name = "STATE_295"
-	resources = {
-		tungsten = 2
+
+state={
+	id=295
+	name="STATE_295"
+	resources={
+		tungsten=2.000
 	}
 
-	history = {
+	history={
 		owner = MAF
 		add_core_of = MAF
 		add_core_of = COG
 		buildings = {
 			infrastructure = 3
 			arms_factory = 1
+
 		}
 		victory_points = {
-			5117 1
+			5117 1 
 		}
+
 	}
 
-	provinces = {
-		4128 5117 10025 12896 12945
+	provinces={
+		4128 5117 10025 12896 12945 13947 13948 13949 13950 13951 13952 13953 13954 13955 13956 13957 13958 13959 13960 13961 13962 13963 13964 13965 13966 13967 13968 13969 13970 13971 13972 13973 13974 13975 13976 
 	}
-	manpower = 2603965
-	state_category = two
+	manpower=2603965
+	buildings_max_level_factor=1.000
+	state_category=two
+	local_supplies=0.000
 }

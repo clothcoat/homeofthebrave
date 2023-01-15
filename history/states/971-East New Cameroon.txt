@@ -1,20 +1,24 @@
-state = {
-	id = 971
-	name = "STATE_971"
 
-	history = {
+state={
+	id=971
+	name="STATE_971"
+
+	history={
 		owner = MAF
 		add_core_of = MAF
 		add_core_of = CMR
 		buildings = {
 			infrastructure = 2
+
 		}
+
 	}
 
-	provinces = {
-		1993 11012 13599
+	provinces={
+		1993 11012 13599 13914 13916 
 	}
-	manpower = 707700
-	state_category = one
-	}#Chad-Kamerun population. 389700
-#CAR-Kamerun population. 318000
+	manpower=707700
+	buildings_max_level_factor=1.000
+	state_category=one
+	local_supplies=0.000
+}

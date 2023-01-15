@@ -8,7 +8,7 @@ state={
 		add_core_of = OTT
 		add_core_of = IRQ
 		victory_points = {
-			2097 20
+			2097 20 
 		}
 		buildings = {
 			infrastructure = 4
@@ -21,8 +21,10 @@ state={
 	}
 
 	provinces={
-		78 2004 2097 5095 7977 7994 8001 10876 12855 13747
+		78 2004 2097 5095 7977 7994 8001 10876 12855 13747 
 	}
 	manpower=1949760
+	buildings_max_level_factor=1.000
 	state_category=five
+	local_supplies=0.000
 }

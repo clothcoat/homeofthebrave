@@ -1,17 +1,23 @@
-state = {
-	id = 1035
-	name = "STATE_1035"
-	manpower = 41753
-	state_category = wasteland
 
-	history = {
+state={
+	id=1035
+	name="STATE_1035"
+
+	history={
 		owner = JBS
 		add_core_of = JBS
 		buildings = {
 			infrastructure = 1
+
 		}
+
 	}
-	provinces = {
-		4562 4951 5058 5099 10744 12316 12879
+
+	provinces={
+		4562 4951 5058 10744 12879 
 	}
+	manpower=41753
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+	local_supplies=0.000
 }

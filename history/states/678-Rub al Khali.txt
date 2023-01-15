@@ -1,21 +1,24 @@
-state = {
-	id = 678
-	name = "STATE_678"
 
-	history = {
+state={
+	id=678
+	name="STATE_678"
+
+	history={
 		owner = SAU
 		add_core_of = SAU
 		add_claim_by = JBS
 		buildings = {
 			infrastructure = 1
+
 		}
+
 	}
 
-	impassable = yes
-
-	provinces = {
-		5081
+	provinces={
+		5081 
 	}
-	manpower = 9376
-	state_category = wasteland
+	manpower=9376
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+	local_supplies=0.000
 }

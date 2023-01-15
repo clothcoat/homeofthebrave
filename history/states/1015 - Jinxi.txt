@@ -1,18 +1,24 @@
-state = { #Jinxi #Western Shanxi
-	id = 1015
-	name = "STATE_1015"
-	state_category = two
-	history = {
+
+state={
+	id=1015
+	name="STATE_1015"
+
+	history={
 		owner = SHX
 		add_claim_by = QIE
 		add_claim_by = FNG
-
 		buildings = {
 			infrastructure = 2
+
 		}
+
 	}
-	provinces = {
-		1034 1531 1575 4074 7041 7571 4634 10367 10507 12300
+
+	provinces={
+		1034 1531 1575 4074 4634 7041 7571 10367 10507 12300 
 	}
-	manpower = 3480000
+	manpower=3480000
+	buildings_max_level_factor=1.000
+	state_category=two
+	local_supplies=0.000
 }

@@ -1,22 +1,27 @@
-state = {
-	id = 546
-	name = "STATE_546"
 
-	history = {
+state={
+	id=546
+	name="STATE_546"
+
+	history={
 		owner = MAF
 		add_core_of = MAF
 		add_core_of = TZN
 		buildings = {
 			infrastructure = 3
+
 		}
 		victory_points = {
-			12911 1
+			12911 1 
 		}
+
 	}
 
-	provinces = {
-		2035 2206 5180 5224 8205 12911 13322 13328 13406 13414
+	provinces={
+		2035 2206 5180 5224 8183 8205 8254 10988 12911 13322 13328 13406 13414 
 	}
-	manpower = 923925
-	state_category = two
+	manpower=923925
+	buildings_max_level_factor=1.000
+	state_category=two
+	local_supplies=0.000
 }

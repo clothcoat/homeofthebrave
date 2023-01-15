@@ -1,20 +1,23 @@
-state = {
-	id = 766
-	name = "STATE_766"
-	manpower = 298965
 
+state={
+	id=766
+	name="STATE_766"
 
-	state_category = two
-
-	history = {
+	history={
 		owner = ALB
 		add_core_of = ALB
 		buildings = {
 			infrastructure = 3
+
 		}
+
 	}
 
-	provinces = {
-		914 3448 6900
+	provinces={
+		914 3448 6900 
 	}
+	manpower=298965
+	buildings_max_level_factor=1.000
+	state_category=two
+	local_supplies=0.000
 }

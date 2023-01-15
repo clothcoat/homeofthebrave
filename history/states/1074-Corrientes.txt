@@ -1,10 +1,9 @@
-state = {
-	id = 1074
-	name = "STATE_1074"
-	manpower = 563000
-	state_category = two
 
-	history = {
+state={
+	id=1074
+	name="STATE_1074"
+
+	history={
 		owner = ARG
 		set_demilitarized_zone = yes
 		add_core_of = ARG
@@ -12,16 +11,22 @@ state = {
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 1
+
 		}
 		victory_points = {
-			11007 3
+			11007 3 
 		}
 		victory_points = {
-			12964 10
+			12964 10 
 		}
+
 	}
 
-	provinces = {
-		4006 8187 8238 11007 11827 12964 13242
+	provinces={
+		8187 8238 11007 11827 12964 13242 
 	}
+	manpower=563000
+	buildings_max_level_factor=1.000
+	state_category=two
+	local_supplies=0.000
 }

@@ -1,21 +1,26 @@
-state = {
-	id = 418
-	name = "STATE_418"
 
-	history = {
+state={
+	id=418
+	name="STATE_418"
+
+	history={
 		owner = PER
 		buildings = {
 			infrastructure = 1
+
 		}
 		add_core_of = PER
 		victory_points = {
-			7602 1
+			7602 1 
 		}
+
 	}
 
-	provinces = {
-		7602 10351 12082
+	provinces={
+		7602 12082 
 	}
-	manpower = 34287
-	state_category = wasteland
+	manpower=34287
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+	local_supplies=0.000
 }

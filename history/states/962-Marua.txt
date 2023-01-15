@@ -1,19 +1,24 @@
-state = {
-	id = 962
-	name = "STATE_962"
 
-	history = {
+state={
+	id=962
+	name="STATE_962"
+
+	history={
 		owner = MAF
 		add_core_of = MAF
 		add_core_of = CMR
 		buildings = {
 			infrastructure = 2
+
 		}
+
 	}
 
-	provinces = {
-		7963
+	provinces={
+		7963 12936 13936 13937 13939 13940 13942 13943 13944 14455 14456 14457 
 	}
-	manpower = 700000
-	state_category = one
+	manpower=700000
+	buildings_max_level_factor=1.000
+	state_category=one
+	local_supplies=0.000
 }

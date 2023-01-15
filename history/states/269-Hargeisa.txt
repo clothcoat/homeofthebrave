@@ -1,23 +1,32 @@
-state = {
-	id = 269
-	name = "STATE_269"
-	manpower = 364700
 
-	state_category = two
-	history = {
+state={
+	id=269
+	name="STATE_269"
+
+	history={
 		owner = SOM
 		add_core_of = SOM
-		victory_points = { 5068 1 } #Hargeysa
+		victory_points = {
+			5068 1 
+		}
 		buildings = {
 			infrastructure = 3
 			industrial_complex = 1
 			arms_factory = 1
 			13496 = {
 				naval_base = 2
+
 			}
+
 		}
+
 	}
-	provinces = {
-		1905 5068 8094 10777 10833 12759 13496
+
+	provinces={
+		1905 5068 8094 10777 10833 12759 13496 
 	}
+	manpower=364700
+	buildings_max_level_factor=1.000
+	state_category=two
+	local_supplies=0.000
 }

@@ -8,7 +8,7 @@ state={
 		add_core_of = JOR
 		add_core_of = OTT
 		victory_points = {
-			10835 5
+			10835 5 
 		}
 		buildings = {
 			infrastructure = 3
@@ -20,8 +20,10 @@ state={
 	}
 
 	provinces={
-		1033 2027 2033 2095 4115 8092 10835 11976 12101 13668
+		1033 2027 2033 2095 4115 8092 11976 12101 13668 
 	}
 	manpower=234510
+	buildings_max_level_factor=1.000
 	state_category=one
+	local_supplies=0.000
 }

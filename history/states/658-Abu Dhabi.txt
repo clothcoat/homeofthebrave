@@ -1,3 +1,4 @@
+
 state={
 	id=658
 	name="STATE_658"
@@ -7,20 +8,23 @@ state={
 		add_claim_by = SAU
 		buildings = {
 			infrastructure = 2
-			2048 = {
+			10904 = {
 				naval_base = 3
 
 			}
 
 		}
 		victory_points = {
-			2048 1
+			10904 1 
 		}
+
 	}
 
 	provinces={
-		2048 10904
+		2048 10904 
 	}
 	manpower=108000
+	buildings_max_level_factor=1.000
 	state_category=one
+	local_supplies=0.000
 }

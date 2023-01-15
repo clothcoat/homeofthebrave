@@ -1,19 +1,26 @@
-state = {
-	id = 1042
-	name = "STATE_1042" #Osh
-	provinces = {
-		2058 4467 4542 4923 12430 12581
-	}
-	history = {
+
+state={
+	id=1042
+	name="STATE_1042"
+
+	history={
 		owner = TRK
 		add_core_of = TRK
 		buildings = {
 			infrastructure = 2
+
 		}
 		victory_points = {
-			2058 1
+			2058 1 
 		}
+
 	}
-	manpower = 428256
-	state_category = one
+
+	provinces={
+		2058 4467 4542 4923 12430 12581 14727 14731 14732 14735 14740 14741 14742 
+	}
+	manpower=428256
+	buildings_max_level_factor=1.000
+	state_category=one
+	local_supplies=0.000
 }

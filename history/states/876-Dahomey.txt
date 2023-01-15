@@ -1,8 +1,9 @@
-state = {
-	id = 876
-	name = "STATE_876"
 
-	history = {
+state={
+	id=876
+	name="STATE_876"
+
+	history={
 		owner = MAF
 		add_core_of = MAF
 		add_core_of = DAH
@@ -10,17 +11,21 @@ state = {
 			infrastructure = 3
 			10919 = {
 				naval_base = 2
+
 			}
+
 		}
 		victory_points = {
-			10919 1
+			10919 1 
 		}
 
 	}
 
-	provinces = {
-		10919 12762 12874
+	provinces={
+		10919 12762 12874 13875 13877 13878 13879 13880 13881 13882 13883 13884 
 	}
-	manpower = 2114000
-	state_category = one
+	manpower=2114000
+	buildings_max_level_factor=1.000
+	state_category=one
+	local_supplies=0.000
 }

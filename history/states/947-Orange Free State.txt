@@ -1,26 +1,29 @@
-state = {
-	id = 947
-	name = "STATE_947" # Oranje Free State
-	manpower = 772100
 
-	state_category = two
-
-	resources = {
-		chromium = 35
+state={
+	id=947
+	name="STATE_947"
+	resources={
+		chromium=35.000
 	}
 
-	history = {
+	history={
 		owner = SAF
 		add_core_of = SAF
 		buildings = {
 			infrastructure = 4
+
 		}
 		victory_points = {
-			5231 3 #Bloemfontein
+			5231 3 
 		}
+
 	}
 
-	provinces = {
-		5231 11122 12064 12648 13773 13774 13775 13776 13777 13778 13779
+	provinces={
+		5231 12064 12648 13060 13773 13774 13775 13776 13777 13778 13779 
 	}
+	manpower=772100
+	buildings_max_level_factor=1.000
+	state_category=two
+	local_supplies=0.000
 }

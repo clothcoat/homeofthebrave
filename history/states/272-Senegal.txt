@@ -1,22 +1,20 @@
-state = {
-	id = 272
-	name = "STATE_272" #Senegal
-	manpower = 1838000
-	state_category = three
-	
-	resources = {
-		steel = 4
+
+state={
+	id=272
+	name="STATE_272"
+	resources={
+		steel=4.000
 	}
 
-	history = {
+	history={
 		owner = NFA
 		add_core_of = NFA
 		add_core_of = SEN
 		victory_points = {
-			4948 10 #Dakar
+			4948 10 
 		}
 		victory_points = {
-			12710 1 #Saint Louis
+			12710 1 
 		}
 		buildings = {
 			infrastructure = 4
@@ -25,14 +23,22 @@ state = {
 			arms_factory = 1
 			4948 = {
 				naval_base = 3
+
 			}
 			12710 = {
 				naval_base = 1
+
 			}
+
 		}
+
 	}
 
-	provinces = {
-		2100 4948 7972 8015 8030 12710 12834
+	provinces={
+		2100 4948 7972 8015 8030 12710 13826 
 	}
+	manpower=1838000
+	buildings_max_level_factor=1.000
+	state_category=three
+	local_supplies=0.000
 }

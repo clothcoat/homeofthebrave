@@ -1,25 +1,31 @@
-state = {
-	id = 637
-	name = "STATE_637"
 
-	history = {
+state={
+	id=637
+	name="STATE_637"
+
+	history={
 		owner = RUS
 		buildings = {
 			infrastructure = 2
 			12207 = {
 				naval_base = 1
+
 			}
+
 		}
 		add_core_of = RUS
 		add_core_of = TRM
 		victory_points = {
-			4728 2
+			4728 2 
 		}
+
 	}
 
-	provinces = {
-		1823 1839 1863 4728 7878 12207 12522
+	provinces={
+		1823 1839 1863 4728 7878 12207 12522 14686 14687 
 	}
-	manpower = 48831
-	state_category = wasteland
+	manpower=48831
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+	local_supplies=0.000
 }

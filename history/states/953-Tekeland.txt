@@ -1,22 +1,27 @@
-state = {
-	id = 953
-	name = "STATE_953"
-	manpower = 89400
-	state_category = one #This state shoulnd't have a slot but it has one for balance reasons
 
-	history = {
+state={
+	id=953
+	name="STATE_953"
+
+	history={
 		owner = MAF
 		add_core_of = MAF
 		add_core_of = COG
 		buildings = {
 			infrastructure = 2
+
 		}
 		victory_points = {
-			3109 1
+			3109 1 
 		}
+
 	}
 
-	provinces = {
-		2192 3109 13605 13653
+	provinces={
+		2080 2192 3109 10948 13605 13625 13653 13891 13892 13893 13894 13895 13897 13900 13901 13902 13903 13908 13909 13910 13911 13912 13913 13915 14459 14460 14461 14462 14463 14580 14581 14582 14583 14584 14585 14586 14587 14588 14589 14590 14591 14593 14594 
 	}
+	manpower=89400
+	buildings_max_level_factor=1.000
+	state_category=one
+	local_supplies=0.000
 }
