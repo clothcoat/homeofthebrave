@@ -1,23 +1,28 @@
-state = {
-	id = 739
-	name = "STATE_739"
 
-	history = {
+state={
+	id=739
+	name="STATE_739"
+
+	history={
 		owner = CAN
 		buildings = {
 			infrastructure = 7
 			arms_factory = 1
 			industrial_complex = 1
+
 		}
 		add_core_of = CAN
 		victory_points = {
-			3778 15
+			3778 15 
 		}
+
 	}
 
-	provinces = {
-		3605 3635 3778 4270 6625 6630
+	provinces={
+		3605 3635 3778 4270 6625 
 	}
-	manpower = 780920
-	state_category = seven
+	manpower=780920
+	buildings_max_level_factor=1.000
+	state_category=seven
+	local_supplies=0.000
 }

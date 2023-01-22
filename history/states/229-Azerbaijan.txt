@@ -1,20 +1,16 @@
 
-state = {
-	id = 229
-	name = "STATE_229"
-	manpower = 1601029
-
-	state_category = four
-
-	resources = {
-		oil = 34
+state={
+	id=229
+	name="STATE_229"
+	resources={
+		oil=34.000
 	}
 
-	history = {
+	history={
 		owner = AZE
 		add_core_of = AZE
 		victory_points = {
-			11674 3
+			11674 3 
 		}
 		buildings = {
 			infrastructure = 3
@@ -22,11 +18,18 @@ state = {
 			arms_factory = 1
 			4463 = {
 				bunker = 1
+
 			}
+
 		}
+
 	}
 
-	provinces = {
-		1539 1610 4458 4463 4473 4477 4545 4614 7624 11645 11674 11704 12434
+	provinces={
+		4458 4463 4473 4477 4545 4614 7624 11645 12434 
 	}
+	manpower=1601029
+	buildings_max_level_factor=1.000
+	state_category=four
+	local_supplies=0.000
 }

@@ -1,32 +1,33 @@
-state = {
-	id = 325
-	name = "STATE_325"
-	manpower = 7329631
 
-	state_category = four
-
-	resources = {
-		tungsten = 8
-		aluminium = 6
+state={
+	id=325
+	name="STATE_325"
+	resources={
+		tungsten=8.000
+		aluminium=6.000
 	}
 
-	history = {
+	history={
 		owner = YUN
 		add_core_of = YUN
 		add_claim_by = QIE
 		add_claim_by = FNG
-
 		victory_points = {
-			1319 10
+			1319 10 
 		}
-
 		buildings = {
 			infrastructure = 3
 			arms_factory = 1
+
 		}
+
 	}
 
-	provinces = {
-		1114 1172 1196 1319 1383 1522 1653 4501 5072 7446 7606 8023 10346 10776 10819 12262 12282 12841
+	provinces={
+		1114 1172 1196 1319 1383 1522 1653 4501 7446 7606 8023 10346 10776 12262 12282 
 	}
+	manpower=7329631
+	buildings_max_level_factor=1.000
+	state_category=four
+	local_supplies=0.000
 }
